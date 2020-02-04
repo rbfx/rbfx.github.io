@@ -83,12 +83,16 @@ $(function() {
 , <a class="el" href="struct_urho3_d_1_1_batch_group_key.html#ab76653fe68cf3da8c19ce4ba49cc04bc">Urho3D::BatchGroupKey</a>
 , <a class="el" href="class_urho3_d_1_1_border_image.html#a2fecd58c4d4f4dbc491d2ddd18247901">Urho3D::BorderImage</a>
 , <a class="el" href="class_urho3_d_1_1_particle_effect.html#a9195f9042889625a67477b2d11400d15">Urho3D::ParticleEffect</a>
+, <a class="el" href="struct_urho3_d_1_1_raytracer_geometry.html#a5ee20b826b40a93703a2fdf87886f0c4">Urho3D::RaytracerGeometry</a>
 , <a class="el" href="class_urho3_d_1_1_renderer2_d.html#a61382fa51bfb26bd343bfab8cbf6f4eb">Urho3D::Renderer2D</a>
 , <a class="el" href="struct_urho3_d_1_1_source_batch2_d.html#ac63b99527f9acb5e4f61b946157705aa">Urho3D::SourceBatch2D</a>
 , <a class="el" href="struct_urho3_d_1_1_source_batch.html#ad179ea27ef8bf2919eab6ba630048e1c">Urho3D::SourceBatch</a>
 , <a class="el" href="class_urho3_d_1_1_terrain.html#aaf5870010772f3b2f194dbf94e447411">Urho3D::Terrain</a>
 , <a class="el" href="class_urho3_d_1_1_text3_d.html#a0f4a181b62708fc8808eaa4d77c743ae">Urho3D::Text3D</a>
 , <a class="el" href="class_urho3_d_1_1_u_i_component.html#af8599ca94b0fc4b3a38a1bc3e0ef13ef">Urho3D::UIComponent</a>
+</li>
+<li>materialName_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_geometry_baking_settings.html#a1b9cc56005d4c23c6d757e45368896ea">Urho3D::LightmapGeometryBakingSettings</a>
 </li>
 <li>materialPassIndex
 : <a class="el" href="class_urho3_d_1_1_technique.html#a5f02e7667abe200d5d4cba11bfd95a26">Urho3D::Technique</a>
@@ -107,6 +111,9 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_custom_geometry.html#aeeb8ecf62f54d5fcb3f11786b65ca749">Urho3D::CustomGeometry</a>
 , <a class="el" href="class_urho3_d_1_1_static_model.html#a1d412bf0a77b76403be4fa0e4d99172a">Urho3D::StaticModel</a>
 </li>
+<li>matrix_
+: <a class="el" href="struct_urho3_d_1_1_tetrahedron.html#a1da98e81df03d9bfb783f9636e0d4c11">Urho3D::Tetrahedron</a>
+</li>
 <li>max_
 : <a class="el" href="class_urho3_d_1_1_bounding_box.html#a4ea91e581483e751ee30971db82c9882">Urho3D::BoundingBox</a>
 , <a class="el" href="struct_urho3_d_1_1_depth_value.html#aeceb8de7d36abaecd64bdd448da0b8df">Urho3D::DepthValue</a>
@@ -121,8 +128,27 @@ $(function() {
 <li>maxAgents_
 : <a class="el" href="class_urho3_d_1_1_crowd_manager.html#a94f01df84b56ead54b99ebd7a3090aa3">Urho3D::CrowdManager</a>
 </li>
+<li>MaxAttributes
+: <a class="el" href="class_urho3_d_1_1_raytracer_scene.html#a6235945d886789705827f54d6a492489">Urho3D::RaytracerScene</a>
+</li>
+<li>MaxAutoGridSize
+: <a class="el" href="class_urho3_d_1_1_light_probe_group.html#a0351fec341a58f7c12414b2f8cd60727">Urho3D::LightProbeGroup</a>
+</li>
+<li>MaxAutoProbes
+: <a class="el" href="class_urho3_d_1_1_light_probe_group.html#acde2657304c7c8bec8707b1d9bafbd52">Urho3D::LightProbeGroup</a>
+</li>
+<li>MaxBounces
+: <a class="el" href="struct_urho3_d_1_1_indirect_light_tracing_settings.html#abcf9e56d33e49fc8f6f9eea93e012156">Urho3D::IndirectLightTracingSettings</a>
+</li>
+<li>maxBounces_
+: <a class="el" href="struct_urho3_d_1_1_indirect_light_tracing_settings.html#a9f2e2c9991d5b6377dde4a86dbcc18f6">Urho3D::IndirectLightTracingSettings</a>
+</li>
+<li>MaxColors
+: <a class="el" href="struct_urho3_d_1_1_model_vertex.html#aaffb7ca15e5da5ec77ca9d1eb6ab378f">Urho3D::ModelVertex</a>
+</li>
 <li>maxDistance_
 : <a class="el" href="class_urho3_d_1_1_ray_octree_query.html#afa4a7c030a345dc79ee04d44f3561302">Urho3D::RayOctreeQuery</a>
+, <a class="el" href="class_urho3_d_1_1_raytracer_scene.html#a05fca7506b4ddb6a0e7aab225437a937">Urho3D::RaytracerScene</a>
 </li>
 <li>maxDoubleClickDist_
 : <a class="el" href="class_urho3_d_1_1_u_i.html#aecf041a3fdeebe985a483a9baf2ca1cb">Urho3D::UI</a>
@@ -186,6 +212,10 @@ $(function() {
 <li>maxRadiusVariance_
 : <a class="el" href="class_urho3_d_1_1_particle_effect2_d.html#a37d4ca5c3bd3f66419ef39c82cd3a060">Urho3D::ParticleEffect2D</a>
 </li>
+<li>maxSamples_
+: <a class="el" href="struct_urho3_d_1_1_direct_light_tracing_settings.html#ae8c0d015354ae72471dc2efe8dafd84f">Urho3D::DirectLightTracingSettings</a>
+, <a class="el" href="struct_urho3_d_1_1_indirect_light_tracing_settings.html#ac8b5805cb7403bc14eca39d9cf446813">Urho3D::IndirectLightTracingSettings</a>
+</li>
 <li>maxScratchBufferRequest_
 : <a class="el" href="class_urho3_d_1_1_graphics.html#a94497bd08ce2f160a3578114780bc3a0">Urho3D::Graphics</a>
 </li>
@@ -211,6 +241,9 @@ $(function() {
 </li>
 <li>maxTriangles_
 : <a class="el" href="class_urho3_d_1_1_occlusion_buffer.html#abe0f1ac2e671946f471586dbab0716fb">Urho3D::OcclusionBuffer</a>
+</li>
+<li>MaxUVs
+: <a class="el" href="struct_urho3_d_1_1_model_vertex.html#a111727284176d4ec340350dfa3e38a2d">Urho3D::ModelVertex</a>
 </li>
 <li>maxVertices_
 : <a class="el" href="class_urho3_d_1_1_decal_set.html#aa4c1aec765552529a526f1b26b4d9939">Urho3D::DecalSet</a>
@@ -247,6 +280,7 @@ $(function() {
 </li>
 <li>metadata_
 : <a class="el" href="struct_urho3_d_1_1_attribute_info.html#a1d00cf1b7ab85264b861d368b1ae40e6">Urho3D::AttributeInfo</a>
+, <a class="el" href="class_urho3_d_1_1_model_view.html#a07f85b0b8faae57ee1fe2adbdf61f96e">Urho3D::ModelView</a>
 , <a class="el" href="struct_urho3_d_1_1_render_path_command.html#a012e5ae4fc237f6d6c6371d9dcce90f1">Urho3D::RenderPathCommand</a>
 , <a class="el" href="class_urho3_d_1_1_resource_with_metadata.html#a1aa155fda5f2d3d533e8d07eb0b7c744">Urho3D::ResourceWithMetadata</a>
 </li>
@@ -274,6 +308,9 @@ $(function() {
 <li>minInstances_
 : <a class="el" href="class_urho3_d_1_1_renderer.html#a15d05ab226e8813e64a65d0a5915f648">Urho3D::Renderer</a>
 , <a class="el" href="class_urho3_d_1_1_view.html#a72e5e68d72d9846da73b7e6cc50843f0">Urho3D::View</a>
+</li>
+<li>minObjectScale_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_charting_settings.html#a14589fa883b068182c91d2155d1a0b39">Urho3D::LightmapChartingSettings</a>
 </li>
 <li>minOffset_
 : <a class="el" href="class_urho3_d_1_1_u_i_element.html#a44954ddd03bfece762b868676fa06c67">Urho3D::UIElement</a>
@@ -432,7 +469,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 1 2020 09:42:56 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 4 2020 08:26:42 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

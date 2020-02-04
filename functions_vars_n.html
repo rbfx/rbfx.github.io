@@ -80,7 +80,8 @@ $(function() {
 , <a class="el" href="class_urho3_d_1_1_resource.html#ac63ea3836640d62751112e56627bfbcf">Urho3D::Resource</a>
 </li>
 <li>names_
-: <a class="el" href="struct_urho3_d_1_1_resource_ref_list.html#aa6d4bb302d8f0746cfacf273f94b50f2">Urho3D::ResourceRefList</a>
+: <a class="el" href="struct_urho3_d_1_1_light_probe_collection.html#ad5260b19afeff25223f154017724962f">Urho3D::LightProbeCollection</a>
+, <a class="el" href="struct_urho3_d_1_1_resource_ref_list.html#aa6d4bb302d8f0746cfacf273f94b50f2">Urho3D::ResourceRefList</a>
 </li>
 <li>nameToValueMapping_
 : <a class="el" href="class_urho3_d_1_1_property_set2_d.html#a639e461147b6c368b84ea4f9d44dbf69">Urho3D::PropertySet2D</a>
@@ -131,6 +132,10 @@ $(function() {
 </li>
 <li>negative_
 : <a class="el" href="struct_urho3_d_1_1_light_batch_queue.html#a5d30eb66d3bff8e1089aece788274379">Urho3D::LightBatchQueue</a>
+</li>
+<li>neighbors_
+: <a class="el" href="struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#ae2c67e16b45d7b3451d66320a289053a">Urho3D::TetrahedralMeshSurfaceTriangle</a>
+, <a class="el" href="struct_urho3_d_1_1_tetrahedron.html#a445df9841d7c6e84656c205d6ed7f61a">Urho3D::Tetrahedron</a>
 </li>
 <li>neighborsDirty_
 : <a class="el" href="class_urho3_d_1_1_terrain.html#acf063ab78bf2f1f163924d1d7bc6b7a3">Urho3D::Terrain</a>
@@ -258,13 +263,21 @@ $(function() {
 <li>normal_
 : <a class="el" href="struct_urho3_d_1_1_custom_geometry_vertex.html#a0ba2f922e405a682bbfece8785a697ac">Urho3D::CustomGeometryVertex</a>
 , <a class="el" href="struct_urho3_d_1_1_decal_vertex.html#aea7223797d2b166173d687f1a40470c7">Urho3D::DecalVertex</a>
+, <a class="el" href="struct_urho3_d_1_1_model_vertex.html#ae11fc80570bcf802f22002c11da039a7">Urho3D::ModelVertex</a>
+, <a class="el" href="struct_urho3_d_1_1_model_vertex_format.html#a76bd7a7628dcc8a6f7b4a54d28892623">Urho3D::ModelVertexFormat</a>
 , <a class="el" href="struct_urho3_d_1_1_physics_raycast_result2_d.html#a39e6fa5e506f844a1e0951a8a42fd246">Urho3D::PhysicsRaycastResult2D</a>
 , <a class="el" href="struct_urho3_d_1_1_physics_raycast_result.html#a37c126b5444e0e8bc1e063c719ca86b9">Urho3D::PhysicsRaycastResult</a>
 , <a class="el" href="class_urho3_d_1_1_plane.html#aba49f4c2645945fb023d6ae85386ff5b">Urho3D::Plane</a>
 , <a class="el" href="struct_urho3_d_1_1_ray_query_result.html#a94d74afd25a4aede5f5fab38b887261e">Urho3D::RayQueryResult</a>
 </li>
+<li>NormalAttribute
+: <a class="el" href="class_urho3_d_1_1_raytracer_scene.html#ad07dc97c77b674a92399aa26d900de72">Urho3D::RaytracerScene</a>
+</li>
 <li>normalOffset_
 : <a class="el" href="struct_urho3_d_1_1_bias_parameters.html#a9615444d83dadbc171d0dc15d416900b">Urho3D::BiasParameters</a>
+</li>
+<li>normalPower_
+: <a class="el" href="struct_urho3_d_1_1_edge_stopping_gauss_filter_parameters.html#a5657972e76f3160ac9231dd18faf4f10">Urho3D::EdgeStoppingGaussFilterParameters</a>
 </li>
 <li>north_
 : <a class="el" href="class_urho3_d_1_1_terrain.html#a031a305645f4411c18054d223e09e9be">Urho3D::Terrain</a>
@@ -286,6 +299,9 @@ $(function() {
 <li>numberValue_
 : <a class="el" href="class_urho3_d_1_1_j_s_o_n_value.html#ae940b2949bb09d3f57672cd7e36b1107">Urho3D::JSONValue</a>
 </li>
+<li>numChannels_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_stitching_context.html#a1b670346254d4987369a63c42a1ab672">Urho3D::LightmapStitchingContext</a>
+</li>
 <li>numCompressedLevels_
 : <a class="el" href="class_urho3_d_1_1_image.html#a72affcce1087d62d3fe98fbcdc8a8c10">Urho3D::Image</a>
 </li>
@@ -305,11 +321,20 @@ $(function() {
 <li>numIndices_
 : <a class="el" href="class_urho3_d_1_1_decal_set.html#aefde4f53b7b4708eaf7b9f9204f55e6b">Urho3D::DecalSet</a>
 </li>
+<li>numInnerTetrahedrons_
+: <a class="el" href="class_urho3_d_1_1_tetrahedral_mesh.html#aee7f5004d4efd27be4482550bceb8a32">Urho3D::TetrahedralMesh</a>
+</li>
+<li>numIterations_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_stitching_settings.html#af7c11756b4edf9a9840a2bcc46f456b1">Urho3D::LightmapStitchingSettings</a>
+</li>
 <li>numLevels_
 : <a class="el" href="class_urho3_d_1_1_octree.html#a9ce0763362743c80dcfbef5576049a89">Urho3D::Octree</a>
 </li>
 <li>numLodLevels_
 : <a class="el" href="class_urho3_d_1_1_terrain.html#a454a5f1f3307ee64b1c0266ebb0e72fe">Urho3D::Terrain</a>
+</li>
+<li>numLods_
+: <a class="el" href="struct_urho3_d_1_1_raytracer_geometry.html#a08da4b4af06f7d81e95e524a694007ff">Urho3D::RaytracerGeometry</a>
 </li>
 <li>numObstacleAvoidanceTypes_
 : <a class="el" href="class_urho3_d_1_1_crowd_manager.html#a6d14fcc7ea8c970238eeae2eabc1d1db">Urho3D::CrowdManager</a>
@@ -341,6 +366,15 @@ $(function() {
 <li>numSplits_
 : <a class="el" href="struct_urho3_d_1_1_light_query_result.html#a0a5751f7107d2c119ebafe7d835b3967">Urho3D::LightQueryResult</a>
 </li>
+<li>NumSuperMeshVertices
+: <a class="el" href="class_urho3_d_1_1_tetrahedral_mesh.html#a2b69d9fd2eb185f367f97fc8727d3b61">Urho3D::TetrahedralMesh</a>
+</li>
+<li>numTasks_
+: <a class="el" href="struct_urho3_d_1_1_direct_light_tracing_settings.html#a6dc2440fede7a2a9295ea03077cfa21d">Urho3D::DirectLightTracingSettings</a>
+, <a class="el" href="struct_urho3_d_1_1_emission_light_tracing_settings.html#a5b5952f0a3a47179badf1be720f80678">Urho3D::EmissionLightTracingSettings</a>
+, <a class="el" href="struct_urho3_d_1_1_geometry_buffer_preprocess_settings.html#a9a3e92903047c5b4b3b64f7f3b6a4d74">Urho3D::GeometryBufferPreprocessSettings</a>
+, <a class="el" href="struct_urho3_d_1_1_indirect_light_tracing_settings.html#a94838ac7c1d11e194a81695521983bc6">Urho3D::IndirectLightTracingSettings</a>
+</li>
 <li>numTilesX_
 : <a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a2503379650f28ad4163dcc9a7c776a67">Urho3D::NavigationMesh</a>
 </li>
@@ -349,6 +383,9 @@ $(function() {
 </li>
 <li>numTriangles_
 : <a class="el" href="class_urho3_d_1_1_occlusion_buffer.html#afbcb8716f7cfe4c341d1671b1c021935">Urho3D::OcclusionBuffer</a>
+</li>
+<li>numUniqueLightProbes_
+: <a class="el" href="struct_urho3_d_1_1_baked_scene_chunk.html#a44dd2eaf513e14abcb7184d246f6225e">Urho3D::BakedSceneChunk</a>
 </li>
 <li>numVariations_
 : <a class="el" href="class_urho3_d_1_1_shader.html#a8d251d6e21b46a17f812b199f2e6f4c0">Urho3D::Shader</a>
@@ -366,7 +403,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 1 2020 09:42:56 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 4 2020 08:26:42 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

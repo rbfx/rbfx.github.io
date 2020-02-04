@@ -58,6 +58,12 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_connection.html#a435331fd4e52aa9d6474b47128cad819">Urho3D::Connection</a>
 , <a class="el" href="class_urho3_d_1_1_network.html#aff33a10d55fa8099d629d82a7322cfc6">Urho3D::Network</a>
 </li>
+<li>idToObject_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_geometry_baking_scenes_array.html#a4b1812d3f9253cffc1fa6b37f07eaf2c">Urho3D::LightmapGeometryBakingScenesArray</a>
+</li>
+<li>ignoredVertices_
+: <a class="el" href="class_urho3_d_1_1_tetrahedral_mesh.html#a39d062cf7c6e55873a7f6982d50e85ea">Urho3D::TetrahedralMesh</a>
+</li>
 <li>ignoreEvents_
 : <a class="el" href="class_urho3_d_1_1_file_selector.html#a7320c97ff394bc809ce87e2a018801f3">Urho3D::FileSelector</a>
 , <a class="el" href="class_urho3_d_1_1_scroll_view.html#a6368690841151c0180bda96fb179034e">Urho3D::ScrollView</a>
@@ -84,6 +90,7 @@ $(function() {
 </li>
 <li>impl_
 : <a class="el" href="class_urho3_d_1_1_graphics.html#afe8e338376c4352cffc84b934af786c9">Urho3D::Graphics</a>
+, <a class="el" href="class_urho3_d_1_1_incremental_light_baker.html#aaa24a1d1a600084a43208ef336916190">Urho3D::IncrementalLightBaker</a>
 , <a class="el" href="class_urho3_d_1_1_log.html#aac9c13518c1f4234788b5b91135ca1c6">Urho3D::Log</a>
 , <a class="el" href="class_urho3_d_1_1_node.html#aabc214ecc59884aea0133e6ea5c472cb">Urho3D::Node</a>
 </li>
@@ -93,6 +100,9 @@ $(function() {
 <li>inAirRPM_
 : <a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a8c6b0f01d21e8471c7778201e09e2ba6">Urho3D::RaycastVehicle</a>
 </li>
+<li>incremental_
+: <a class="el" href="struct_urho3_d_1_1_light_baking_settings.html#ad3a5479e866e14f31919f00e59c8e8c2">Urho3D::LightBakingSettings</a>
+</li>
 <li>indent_
 : <a class="el" href="class_urho3_d_1_1_u_i_element.html#a123e7e4a99386b27f243f003e23c7ee5">Urho3D::UIElement</a>
 </li>
@@ -100,7 +110,10 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_u_i_element.html#abb02a5231e25253284a6903be47f903a">Urho3D::UIElement</a>
 </li>
 <li>index_
-: <a class="el" href="class_urho3_d_1_1_octant.html#a70211885df734b6607dc5e76df3a77dc">Urho3D::Octant</a>
+: <a class="el" href="struct_urho3_d_1_1_lightmap_chart.html#ac8a9f3415ab6f4b052c4ed9c0762bc8d">Urho3D::LightmapChart</a>
+, <a class="el" href="struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#af6e2b5076f2b102b46339a1f2930a263">Urho3D::LightmapChartGeometryBuffer</a>
+, <a class="el" href="struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#a3ca00dcc8429257f1cdedb0c59ae631f">Urho3D::LightmapGeometryBakingScene</a>
+, <a class="el" href="class_urho3_d_1_1_octant.html#a70211885df734b6607dc5e76df3a77dc">Urho3D::Octant</a>
 , <a class="el" href="class_urho3_d_1_1_pass.html#ac85cf66e3fcac7d9232ba2d6600b2618">Urho3D::Pass</a>
 , <a class="el" href="struct_urho3_d_1_1_vertex_element.html#a22ccfd76bdcec0423b8b6957f0523c1f">Urho3D::VertexElement</a>
 </li>
@@ -142,10 +155,36 @@ $(function() {
 </li>
 <li>indices_
 : <a class="el" href="struct_urho3_d_1_1_decal.html#ab303956396ce4c49f5592fb403d696ea">Urho3D::Decal</a>
+, <a class="el" href="struct_urho3_d_1_1_geometry_l_o_d_view.html#a404f605a6e38791a3c2cd9eab6a4e97d">Urho3D::GeometryLODView</a>
 , <a class="el" href="struct_urho3_d_1_1_nav_build_data.html#ab714c103390c7ee5ceba13424a9ba774">Urho3D::NavBuildData</a>
+, <a class="el" href="struct_urho3_d_1_1_tetrahedral_mesh_surface_edge.html#a1d0746f96ffca9c34ca379984df303f3">Urho3D::TetrahedralMeshSurfaceEdge</a>
+, <a class="el" href="struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#aac5a9d758fd3bda50aed782524accc6f">Urho3D::TetrahedralMeshSurfaceTriangle</a>
+, <a class="el" href="struct_urho3_d_1_1_tetrahedron.html#ae8dd0f76f08c378ddba10dd0220bb6fd">Urho3D::Tetrahedron</a>
+</li>
+<li>indirectBrightness_
+: <a class="el" href="struct_urho3_d_1_1_baked_light.html#a7853f59e52a8d77aa04ca1ee9089f701">Urho3D::BakedLight</a>
+, <a class="el" href="class_urho3_d_1_1_light.html#a5c4fd083b8fbc2220bc00a630ca1ec48">Urho3D::Light</a>
+</li>
+<li>indirectChartTracing_
+: <a class="el" href="struct_urho3_d_1_1_light_baking_settings.html#aac61a9bcc4a2b454ef825b116cb5b6ec">Urho3D::LightBakingSettings</a>
+</li>
+<li>indirectFilter_
+: <a class="el" href="struct_urho3_d_1_1_light_baking_settings.html#af6ba678d15b3300aaef6cf1f6da62831">Urho3D::LightBakingSettings</a>
 </li>
 <li>indirectionCubeMap_
 : <a class="el" href="class_urho3_d_1_1_renderer.html#a9e9377ed382da54b67658fd8f42270a9">Urho3D::Renderer</a>
+</li>
+<li>indirectPadding_
+: <a class="el" href="struct_urho3_d_1_1_incremental_light_baker_settings.html#a034958ee9ae8ed8f415aa5f79b56af9f">Urho3D::IncrementalLightBakerSettings</a>
+</li>
+<li>indirectProbesTracing_
+: <a class="el" href="struct_urho3_d_1_1_light_baking_settings.html#a6913628aee71031223721d45df80cb97">Urho3D::LightBakingSettings</a>
+</li>
+<li>Infinity2
+: <a class="el" href="struct_urho3_d_1_1_tetrahedron.html#aaeed13750eaef474cd76234c2997d23c">Urho3D::Tetrahedron</a>
+</li>
+<li>Infinity3
+: <a class="el" href="struct_urho3_d_1_1_tetrahedron.html#ac244cdd37cf5aeffc181b26b11963170">Urho3D::Tetrahedron</a>
 </li>
 <li>info_
 : <a class="el" href="class_urho3_d_1_1_tile_map2_d.html#a0bfa811feb03eb36d2b800bee9128159">Urho3D::TileMap2D</a>
@@ -294,7 +333,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 1 2020 09:42:56 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 4 2020 08:26:42 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

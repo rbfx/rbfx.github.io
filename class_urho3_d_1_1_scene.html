@@ -134,6 +134,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#aef92923d99f0bdecfc24d0d677a86c46">AddReplicationState</a> (<a class="el" href="struct_urho3_d_1_1_node_replication_state.html">NodeReplicationState</a> *state) override</td></tr>
 <tr class="memdesc:aef92923d99f0bdecfc24d0d677a86c46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a replication state that is tracking this scene. <br /></td></tr>
 <tr class="separator:aef92923d99f0bdecfc24d0d677a86c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c44188cf69a401a73ee50142328f01"><td class="memItemLeft" align="right" valign="top"><a id="a35c44188cf69a401a73ee50142328f01"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a35c44188cf69a401a73ee50142328f01">GetNumLightmaps</a> () const</td></tr>
+<tr class="memdesc:a35c44188cf69a401a73ee50142328f01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of lightmaps. <br /></td></tr>
+<tr class="separator:a35c44188cf69a401a73ee50142328f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03a6eb036bd5ee4bf11c1d76896ad043"><td class="memItemLeft" align="right" valign="top"><a id="a03a6eb036bd5ee4bf11c1d76896ad043"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a03a6eb036bd5ee4bf11c1d76896ad043">ResetLightmaps</a> ()</td></tr>
+<tr class="memdesc:a03a6eb036bd5ee4bf11c1d76896ad043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset lightmaps. <br /></td></tr>
+<tr class="separator:a03a6eb036bd5ee4bf11c1d76896ad043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2f2c3e528470f07a0cf2845c46b050e"><td class="memItemLeft" align="right" valign="top"><a id="aa2f2c3e528470f07a0cf2845c46b050e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#aa2f2c3e528470f07a0cf2845c46b050e">AddLightmap</a> (const ea::string &amp;lightmapTextureName)</td></tr>
+<tr class="memdesc:aa2f2c3e528470f07a0cf2845c46b050e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add lightmap texture. <br /></td></tr>
+<tr class="separator:aa2f2c3e528470f07a0cf2845c46b050e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a815b6bbcae9333fc39b1ac49f5e50067"><td class="memItemLeft" align="right" valign="top"><a id="a815b6bbcae9333fc39b1ac49f5e50067"></a>
+<a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a815b6bbcae9333fc39b1ac49f5e50067">GetLightmapTexture</a> (unsigned index)</td></tr>
+<tr class="memdesc:a815b6bbcae9333fc39b1ac49f5e50067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return lightmap texture. <br /></td></tr>
+<tr class="separator:a815b6bbcae9333fc39b1ac49f5e50067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2773f04916fe39bed1fbf0ee08f7c1c0"><td class="memItemLeft" align="right" valign="top"><a id="a2773f04916fe39bed1fbf0ee08f7c1c0"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a2773f04916fe39bed1fbf0ee08f7c1c0">LoadXML</a> (<a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;source)</td></tr>
 <tr class="memdesc:a2773f04916fe39bed1fbf0ee08f7c1c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from an XML file. Return true if successful. <br /></td></tr>
@@ -234,6 +250,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#aa696692927ca2360290f70d4d0ed73fd">UnregisterAllVars</a> ()</td></tr>
 <tr class="memdesc:aa696692927ca2360290f70d4d0ed73fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all registered node user variable hash reverse mappings. <br /></td></tr>
 <tr class="separator:aa696692927ca2360290f70d4d0ed73fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2d06b3da012a05e4f79968eecc926a3"><td class="memItemLeft" align="right" valign="top"><a id="ae2d06b3da012a05e4f79968eecc926a3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#ae2d06b3da012a05e4f79968eecc926a3">SetFileName</a> (const ea::string_view fileName)</td></tr>
+<tr class="memdesc:ae2d06b3da012a05e4f79968eecc926a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set source file name. <br /></td></tr>
+<tr class="separator:ae2d06b3da012a05e4f79968eecc926a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af130e2e88e5d29e1da2b9d4e52d73db2"><td class="memItemLeft" align="right" valign="top"><a id="af130e2e88e5d29e1da2b9d4e52d73db2"></a>
 <a class="el" href="class_urho3_d_1_1_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#af130e2e88e5d29e1da2b9d4e52d73db2">GetNode</a> (unsigned id) const</td></tr>
 <tr class="memdesc:af130e2e88e5d29e1da2b9d4e52d73db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return node from the whole scene by ID, or null if not found. <br /></td></tr>
@@ -1747,6 +1767,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 entt::storage&lt; entt::entity, <a class="el" href="class_urho3_d_1_1_component.html">Component</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#abb68426a76ae8f750549bb3f1cfae540">GetComponentIndexStorage</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> componentType)</td></tr>
 <tr class="memdesc:abb68426a76ae8f750549bb3f1cfae540"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return component index storage for given type. <br /></td></tr>
 <tr class="separator:abb68426a76ae8f750549bb3f1cfae540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5836a3c0703b4826785cd78ddd7a9cb8"><td class="memItemLeft" align="right" valign="top"><a id="a5836a3c0703b4826785cd78ddd7a9cb8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a5836a3c0703b4826785cd78ddd7a9cb8">MarkLightmapTexturesDirty</a> ()</td></tr>
+<tr class="memdesc:a5836a3c0703b4826785cd78ddd7a9cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark lightmap textures dirty. <br /></td></tr>
+<tr class="separator:a5836a3c0703b4826785cd78ddd7a9cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -1878,6 +1902,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a7227c5ff7062e69515996569c9ea8d7f">threadedUpdate_</a></td></tr>
 <tr class="memdesc:a7227c5ff7062e69515996569c9ea8d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Threaded update flag. <br /></td></tr>
 <tr class="separator:a7227c5ff7062e69515996569c9ea8d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcea86d6c2c6ac81d3a8eeb73e39cfca"><td class="memItemLeft" align="right" valign="top"><a id="afcea86d6c2c6ac81d3a8eeb73e39cfca"></a>
+<a class="el" href="struct_urho3_d_1_1_resource_ref_list.html">ResourceRefList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#afcea86d6c2c6ac81d3a8eeb73e39cfca">lightmaps_</a></td></tr>
+<tr class="memdesc:afcea86d6c2c6ac81d3a8eeb73e39cfca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lightmap textures names. <br /></td></tr>
+<tr class="separator:afcea86d6c2c6ac81d3a8eeb73e39cfca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa537a65dcc9f961f86e2afd78db2cad5"><td class="memItemLeft" align="right" valign="top"><a id="aa537a65dcc9f961f86e2afd78db2cad5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#aa537a65dcc9f961f86e2afd78db2cad5">lightmapTexturesDirty_</a> { false }</td></tr>
+<tr class="memdesc:aa537a65dcc9f961f86e2afd78db2cad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the lightmap textures are dirty. <br /></td></tr>
+<tr class="separator:aa537a65dcc9f961f86e2afd78db2cad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb9d4ef3f8e392f2a6419d1c3a7f9422"><td class="memItemLeft" align="right" valign="top"><a id="adb9d4ef3f8e392f2a6419d1c3a7f9422"></a>
+ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#adb9d4ef3f8e392f2a6419d1c3a7f9422">lightmapTextures_</a></td></tr>
+<tr class="memdesc:adb9d4ef3f8e392f2a6419d1c3a7f9422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loaded lightmap textures. <br /></td></tr>
+<tr class="separator:adb9d4ef3f8e392f2a6419d1c3a7f9422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -2014,7 +2050,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 1 2020 09:42:54 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 4 2020 08:26:41 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

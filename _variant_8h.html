@@ -55,6 +55,7 @@ $(function() {
 <code>#include &lt;EASTL/unordered_map.h&gt;</code><br />
 <code>#include &lt;EASTL/unique_ptr.h&gt;</code><br />
 <code>#include &quot;../Container/Ptr.h&quot;</code><br />
+<code>#include &quot;../Container/ByteVector.h&quot;</code><br />
 <code>#include &quot;../Core/TypeTrait.h&quot;</code><br />
 <code>#include &quot;../Math/Color.h&quot;</code><br />
 <code>#include &quot;../Math/Matrix3.h&quot;</code><br />
@@ -104,9 +105,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_va
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">Urho3D::VariantMap</a> = ea::unordered_map&lt; StringHash, Variant &gt;</td></tr>
 <tr class="memdesc:ad2c613c8f2d32d4994503b4c5c496e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of variants. <br /></td></tr>
 <tr class="separator:ad2c613c8f2d32d4994503b4c5c496e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6523001334373fc0bb4c63c3d6f4de07"><td class="memItemLeft" align="right" valign="top"><a id="a6523001334373fc0bb4c63c3d6f4de07"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_variant_8h.html#a6523001334373fc0bb4c63c3d6f4de07">Urho3D::VariantBuffer</a> = ea::vector&lt; unsigned char &gt;</td></tr>
-<tr class="memdesc:a6523001334373fc0bb4c63c3d6f4de07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Byte buffer used by variant. <br /></td></tr>
+<tr class="memitem:a6523001334373fc0bb4c63c3d6f4de07"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_variant_8h.html#a6523001334373fc0bb4c63c3d6f4de07">Urho3D::VariantBuffer</a> = ea::vector&lt; unsigned char &gt;</td></tr>
 <tr class="separator:a6523001334373fc0bb4c63c3d6f4de07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -303,10 +302,26 @@ static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a clas
 <tr class="memdesc:a7d207e6927cfcd578a3e0321afedf45e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of variant value. 16 bytes on 32-bit platform, 32 bytes on 64-bit platform. <br /></td></tr>
 <tr class="separator:a7d207e6927cfcd578a3e0321afedf45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="file_a6523001334373fc0bb4c63c3d6f4de07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a6523001334373fc0bb4c63c3d6f4de07">&#9670;&nbsp;</a></span>VariantBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="_variant_8h.html#a6523001334373fc0bb4c63c3d6f4de07">Urho3D::VariantBuffer</a> = typedef ea::vector&lt;unsigned char&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Deprecated. Use ByteVector instead. TODO: Rename all instances of VariantBuffer to ByteVector. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 1 2020 09:42:52 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 4 2020 08:26:38 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -44,6 +44,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
@@ -94,6 +95,14 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a8bb7f59202b524be53ad76492543f6ce">Color</a> (unsigned color, <a class="el" href="struct_urho3_d_1_1_color_1_1_channel_mask.html">ChannelMask</a> mask=<a class="el" href="class_urho3_d_1_1_color.html#ac24c54786bb5a34700ec33c7b0350058">ABGR</a>)</td></tr>
 <tr class="memdesc:a8bb7f59202b524be53ad76492543f6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from 32-bit integer. Default format is 0xAABBGGRR. <br /></td></tr>
 <tr class="separator:a8bb7f59202b524be53ad76492543f6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a13a0b9a48313359a0d2c178285aedb"><td class="memItemLeft" align="right" valign="top"><a id="a8a13a0b9a48313359a0d2c178285aedb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a8a13a0b9a48313359a0d2c178285aedb">Color</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;color)</td></tr>
+<tr class="memdesc:a8a13a0b9a48313359a0d2c178285aedb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from 3-vector. <br /></td></tr>
+<tr class="separator:a8a13a0b9a48313359a0d2c178285aedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1ad769af0188833f58185c7a38f8bc4"><td class="memItemLeft" align="right" valign="top"><a id="aa1ad769af0188833f58185c7a38f8bc4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#aa1ad769af0188833f58185c7a38f8bc4">Color</a> (const <a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a> &amp;color)</td></tr>
+<tr class="memdesc:aa1ad769af0188833f58185c7a38f8bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from 4-vector. <br /></td></tr>
+<tr class="separator:aa1ad769af0188833f58185c7a38f8bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf999ba87ee9e76c143c8645cd857fdd"><td class="memItemLeft" align="right" valign="top"><a id="acf999ba87ee9e76c143c8645cd857fdd"></a>
 <a class="el" href="class_urho3_d_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#acf999ba87ee9e76c143c8645cd857fdd">operator=</a> (const <a class="el" href="class_urho3_d_1_1_color.html">Color</a> &amp;rhs) noexcept=default</td></tr>
 <tr class="memdesc:acf999ba87ee9e76c143c8645cd857fdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign from another color. <br /></td></tr>
@@ -202,6 +211,14 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#aa185c5857a40a9bf4572b106a1727785">Value</a> () const</td></tr>
 <tr class="memdesc:aa185c5857a40a9bf4572b106a1727785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value as defined for HSV: largest value of the RGB components. Equivalent to calling <a class="el" href="class_urho3_d_1_1_color.html#a18a7975a4b514b07fc5c2079e40a03e1" title="Return the smallest value of the RGB components. ">MinRGB()</a>. <br /></td></tr>
 <tr class="separator:aa185c5857a40a9bf4572b106a1727785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f243d8dc1c10f612aa75a15a2f26c80"><td class="memItemLeft" align="right" valign="top"><a id="a9f243d8dc1c10f612aa75a15a2f26c80"></a>
+<a class="el" href="class_urho3_d_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a9f243d8dc1c10f612aa75a15a2f26c80">GammaToLinear</a> () const</td></tr>
+<tr class="memdesc:a9f243d8dc1c10f612aa75a15a2f26c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert color from gamma to linear space. <br /></td></tr>
+<tr class="separator:a9f243d8dc1c10f612aa75a15a2f26c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb7b3149ca7db7149e67c9aa01830ab3"><td class="memItemLeft" align="right" valign="top"><a id="aeb7b3149ca7db7149e67c9aa01830ab3"></a>
+<a class="el" href="class_urho3_d_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#aeb7b3149ca7db7149e67c9aa01830ab3">LinearToGamma</a> () const</td></tr>
+<tr class="memdesc:aeb7b3149ca7db7149e67c9aa01830ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert color from linear to gamma space. <br /></td></tr>
+<tr class="separator:aeb7b3149ca7db7149e67c9aa01830ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b9209964bb7c5878a2638e0f234e20d"><td class="memItemLeft" align="right" valign="top"><a id="a4b9209964bb7c5878a2638e0f234e20d"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a4b9209964bb7c5878a2638e0f234e20d">Lightness</a> () const</td></tr>
 <tr class="memdesc:a4b9209964bb7c5878a2638e0f234e20d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return lightness as defined for HSL: average of the largest and smallest values of the RGB components. <br /></td></tr>
@@ -254,6 +271,17 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a1381f88fcf4a08177087610e94d6bb9c">ToHash</a> () const</td></tr>
 <tr class="memdesc:a1381f88fcf4a08177087610e94d6bb9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hash value for HashSet &amp; HashMap. <br /></td></tr>
 <tr class="separator:a1381f88fcf4a08177087610e94d6bb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ac89ca3b4b70897fb89a42eccc3bc2716"><td class="memItemLeft" align="right" valign="top"><a id="ac89ca3b4b70897fb89a42eccc3bc2716"></a>
+static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#ac89ca3b4b70897fb89a42eccc3bc2716">ConvertGammaToLinear</a> (float value)</td></tr>
+<tr class="memdesc:ac89ca3b4b70897fb89a42eccc3bc2716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert single component of the color from gamma to linear space. <br /></td></tr>
+<tr class="separator:ac89ca3b4b70897fb89a42eccc3bc2716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da0b837ed0a184090412cb0c6b4033b"><td class="memItemLeft" align="right" valign="top"><a id="a7da0b837ed0a184090412cb0c6b4033b"></a>
+static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a7da0b837ed0a184090412cb0c6b4033b">ConvertLinearToGamma</a> (float value)</td></tr>
+<tr class="memdesc:a7da0b837ed0a184090412cb0c6b4033b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert single component of the color from linear to gamma space. <br /></td></tr>
+<tr class="separator:a7da0b837ed0a184090412cb0c6b4033b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -353,7 +381,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 1 2020 09:42:53 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 4 2020 08:26:39 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

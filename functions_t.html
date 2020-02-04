@@ -60,6 +60,8 @@ $(function() {
 <li>tangent_
 : <a class="el" href="struct_urho3_d_1_1_custom_geometry_vertex.html#a000ca86978dd9ecdbe611f8b25acecd0">Urho3D::CustomGeometryVertex</a>
 , <a class="el" href="struct_urho3_d_1_1_decal_vertex.html#ae0d33f8c2f9cca0054c52c28a6119ffb">Urho3D::DecalVertex</a>
+, <a class="el" href="struct_urho3_d_1_1_model_vertex.html#a9904fa4eb61b4d606830fcde11e2b082">Urho3D::ModelVertex</a>
+, <a class="el" href="struct_urho3_d_1_1_model_vertex_format.html#afa9c37a603fc3f78f5d9ff30ce25323f">Urho3D::ModelVertexFormat</a>
 </li>
 <li>tangentialAcceleration_
 : <a class="el" href="struct_urho3_d_1_1_particle2_d.html#a4a7376b75f013aae171d83ec68f1e54d">Urho3D::Particle2D</a>
@@ -90,6 +92,12 @@ $(function() {
 </li>
 <li>targetWeight_
 : <a class="el" href="struct_urho3_d_1_1_animation_control.html#a69b3578633f3e58abe36aacceb138812">Urho3D::AnimationControl</a>
+</li>
+<li>task_
+: <a class="el" href="class_urho3_d_1_1_light_baker.html#ac75348e202c6ea9296ee3553b2eec72a">Urho3D::LightBaker</a>
+</li>
+<li>taskData_
+: <a class="el" href="class_urho3_d_1_1_light_baker.html#a7afe4db66efccbdf24c8c73a18988ea1">Urho3D::LightBaker</a>
 </li>
 <li>Technique()
 : <a class="el" href="class_urho3_d_1_1_technique.html#ad80ba9a32af5c20d13a3cea3e35d2d9c">Urho3D::Technique</a>
@@ -154,9 +162,30 @@ $(function() {
 , <a class="el" href="class_urho3_d_1_1_point_octree_query.html#a854c9f9ad62a4a27b366bca61614d023">Urho3D::PointOctreeQuery</a>
 , <a class="el" href="class_urho3_d_1_1_sphere_octree_query.html#ad9265cf350b38d32df106489fd9b55b2">Urho3D::SphereOctreeQuery</a>
 </li>
+<li>tetFace_
+: <a class="el" href="struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#ab5efe735b86e83c7ed221aa3f7711efa">Urho3D::TetrahedralMeshSurfaceTriangle</a>
+</li>
+<li>tetIndex_
+: <a class="el" href="struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#a4af676e784a5467e5ec0160def05a0b4">Urho3D::TetrahedralMeshSurfaceTriangle</a>
+</li>
+<li>TetrahedralMeshSurfaceEdge()
+: <a class="el" href="struct_urho3_d_1_1_tetrahedral_mesh_surface_edge.html#a4761ff6f6e1bbf6cd9ecc1002b61116b">Urho3D::TetrahedralMeshSurfaceEdge</a>
+</li>
+<li>tetrahedrons_
+: <a class="el" href="class_urho3_d_1_1_tetrahedral_mesh.html#acdb0ad63131f727588a78a0ed226f08b">Urho3D::TetrahedralMesh</a>
+</li>
 <li>texCoord_
 : <a class="el" href="struct_urho3_d_1_1_custom_geometry_vertex.html#acd376efaa94f0a7434d33f7d8aef27d7">Urho3D::CustomGeometryVertex</a>
 , <a class="el" href="struct_urho3_d_1_1_decal_vertex.html#ad6bcbb759e982b5bbcd6e46b03216240">Urho3D::DecalVertex</a>
+</li>
+<li>texelDensity_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_charting_settings.html#a1c69f3adbc235f81757a8c25b77ab45c">Urho3D::LightmapChartingSettings</a>
+</li>
+<li>texelPerUnit_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a871a2891d45259ebd63d72e2bb06d132">Urho3D::LightmapUVGenerationSettings</a>
+</li>
+<li>texelRadiuses_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a70b5b86b4ab15234840c33ebc4c4c422">Urho3D::LightmapChartGeometryBuffer</a>
 </li>
 <li>texHeight_
 : <a class="el" href="struct_urho3_d_1_1_font_glyph.html#ac1d7c8a9301c119ba190a004294b156f">Urho3D::FontGlyph</a>
@@ -573,7 +602,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_animation.html#a1a24cca96c928e6ff7c967a8218a9a67">Urho3D::Animation</a>
 </li>
 <li>TrailPoint()
-: <a class="el" href="struct_urho3_d_1_1_trail_point.html#ae1404584a19cb8ce836db5fbbfa58945">Urho3D::TrailPoint</a>
+: <a class="el" href="struct_urho3_d_1_1_trail_point.html#abe81f96a3545340fb38bf50a94a66da5">Urho3D::TrailPoint</a>
 </li>
 <li>trailType_
 : <a class="el" href="class_urho3_d_1_1_ribbon_trail.html#af4771c59e12003490916d55168b6a9b0">Urho3D::RibbonTrail</a>
@@ -583,19 +612,20 @@ $(function() {
 </li>
 <li>Transform()
 : <a class="el" href="class_urho3_d_1_1_bounding_box.html#a7ee9407558d10f782fab69b455d2be5a">Urho3D::BoundingBox</a>
-, <a class="el" href="class_urho3_d_1_1_frustum.html#a9dead6563421f64027342b6467424ff5">Urho3D::Frustum</a>
-, <a class="el" href="class_urho3_d_1_1_plane.html#a90dc59c663add20eeef3603118962dac">Urho3D::Plane</a>
-, <a class="el" href="class_urho3_d_1_1_polyhedron.html#a8c03b29aab800b7930d224a54a2141c5">Urho3D::Polyhedron</a>
+, <a class="el" href="class_urho3_d_1_1_frustum.html#ae01df4b2f60fae6e716ebf5df506426c">Urho3D::Frustum</a>
+, <a class="el" href="class_urho3_d_1_1_plane.html#a755d98999dad8822740c040148aaae82">Urho3D::Plane</a>
+, <a class="el" href="class_urho3_d_1_1_polyhedron.html#a177c6652a4a183df4ead54b4657f0d6d">Urho3D::Polyhedron</a>
 </li>
 <li>transform_
 : <a class="el" href="struct_urho3_d_1_1_navigation_geometry_info.html#a3bdb847e60fae19421b243ba7f9127d0">Urho3D::NavigationGeometryInfo</a>
 , <a class="el" href="class_urho3_d_1_1_sprite.html#adf0e167b8fbc06287d79cb7d7b98d6f5">Urho3D::Sprite</a>
 </li>
 <li>Transformed()
-: <a class="el" href="class_urho3_d_1_1_bounding_box.html#a5ba8b6f96c6587ad5c70e8d01521ca28">Urho3D::BoundingBox</a>
-, <a class="el" href="class_urho3_d_1_1_frustum.html#aefe13185aadc4c62370e5d26fb97393b">Urho3D::Frustum</a>
-, <a class="el" href="class_urho3_d_1_1_plane.html#af9c2476237fbe223cca4fc84bd0b15ab">Urho3D::Plane</a>
-, <a class="el" href="class_urho3_d_1_1_polyhedron.html#ac049c992a7a2d428f691a8766916b01a">Urho3D::Polyhedron</a>
+: <a class="el" href="class_urho3_d_1_1_bounding_box.html#a00fe243d05516209a4ef6f83ff7179df">Urho3D::BoundingBox</a>
+, <a class="el" href="class_urho3_d_1_1_frustum.html#ac6a4f5d3566cc5a6745c20dea5372b1d">Urho3D::Frustum</a>
+, <a class="el" href="struct_urho3_d_1_1_lightmap_seam.html#a2c77451e1f69e89d269d38b43ffb9b54">Urho3D::LightmapSeam</a>
+, <a class="el" href="class_urho3_d_1_1_plane.html#a978b7430d24449a16592550e03340854">Urho3D::Plane</a>
+, <a class="el" href="class_urho3_d_1_1_polyhedron.html#a11b307c073b838e969124a73d266b84e">Urho3D::Polyhedron</a>
 , <a class="el" href="class_urho3_d_1_1_ray.html#ad118ea8accd0dca2689b4944a38a62bc">Urho3D::Ray</a>
 </li>
 <li>transforms_
@@ -630,7 +660,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_u_i_element.html#a40e15316ea2e305da55c6d37920385d6">Urho3D::UIElement</a>
 </li>
 <li>TriangleMeshData()
-: <a class="el" href="struct_urho3_d_1_1_triangle_mesh_data.html#a906045ada397f83997ef57ca766e35fb">Urho3D::TriangleMeshData</a>
+: <a class="el" href="struct_urho3_d_1_1_triangle_mesh_data.html#ae6a754cb25545d88e908408d88372f76">Urho3D::TriangleMeshData</a>
 </li>
 <li>triangles_
 : <a class="el" href="class_urho3_d_1_1_debug_renderer.html#a3285db7302fbf12f1d4b9048c0c1bcce">Urho3D::DebugRenderer</a>
@@ -693,7 +723,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 1 2020 09:42:56 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 4 2020 08:26:42 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

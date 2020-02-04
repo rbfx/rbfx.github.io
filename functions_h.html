@@ -40,6 +40,9 @@ $(function() {
 <div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
 
 <h3><a id="index_h"></a>- h -</h3><ul>
+<li>halfAngleTan_
+: <a class="el" href="struct_urho3_d_1_1_baked_light.html#acdfb9e4a6fdfd3be13396b287ada9cb3">Urho3D::BakedLight</a>
+</li>
 <li>HalfSize()
 : <a class="el" href="class_urho3_d_1_1_bounding_box.html#a0a9e6a1766bd3700e1512f22f2d8e6e4">Urho3D::BoundingBox</a>
 , <a class="el" href="class_urho3_d_1_1_rect.html#a8f0f57358302b9502349e2a741afdde1">Urho3D::Rect</a>
@@ -333,10 +336,13 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_crowd_agent.html#afd2b18da05e1a2e3b258de9ca0f80c7c">Urho3D::CrowdAgent</a>
 </li>
 <li>HasAttribute()
-: <a class="el" href="class_urho3_d_1_1_x_m_l_element.html#ad4a15f933b4bf72cba911a755b737a32">Urho3D::XMLElement</a>
+: <a class="el" href="class_urho3_d_1_1_x_m_l_element.html#afecd056ab91ce23f84810220cef39bd8">Urho3D::XMLElement</a>
 </li>
 <li>HasBasePass()
 : <a class="el" href="class_urho3_d_1_1_drawable.html#ad2faff010ee37e381ace91f59ef7dc1e">Urho3D::Drawable</a>
+</li>
+<li>HasBinormal()
+: <a class="el" href="struct_urho3_d_1_1_model_vertex.html#a81460b66d55614476958d52e818790ab">Urho3D::ModelVertex</a>
 </li>
 <li>HasChild()
 : <a class="el" href="class_urho3_d_1_1_x_m_l_element.html#aee93df8607ef23ad6fb4b435aecc51a8">Urho3D::XMLElement</a>
@@ -345,7 +351,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_u_i_element.html#a680569829aebc8ebe7aca354d74c6450">Urho3D::UIElement</a>
 </li>
 <li>HasComponent()
-: <a class="el" href="class_urho3_d_1_1_node.html#a01570d66b89fd1fa1ee8305cf00e9a3b">Urho3D::Node</a>
+: <a class="el" href="class_urho3_d_1_1_node.html#a6934ea2063a94f8a1e05c4b525a2972c">Urho3D::Node</a>
 </li>
 <li>HasContent()
 : <a class="el" href="class_urho3_d_1_1_debug_renderer.html#ae5fb0c2a44344a493b4a1bdb48a538e6">Urho3D::DebugRenderer</a>
@@ -392,9 +398,16 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_font_face.html#a95247bfe09ad75ad4fdd0255d089869f">Urho3D::FontFace</a>
 , <a class="el" href="class_urho3_d_1_1_font_face_free_type.html#a2f5658b1633ee8ae788038f9dbe42f17">Urho3D::FontFaceFreeType</a>
 </li>
+<li>HasNeighbor()
+: <a class="el" href="struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#a9ac777b153be4278171cc5eacac00611">Urho3D::TetrahedralMeshSurfaceTriangle</a>
+, <a class="el" href="struct_urho3_d_1_1_tetrahedron.html#ae459df021947a99bf01091c49e9bd480">Urho3D::Tetrahedron</a>
+</li>
 <li>HasNestedBlocks()
 : <a class="el" href="class_urho3_d_1_1_binary_input_archive_block.html#a806767a756ec9464d9a088e528f5717b">Urho3D::BinaryInputArchiveBlock</a>
 , <a class="el" href="class_urho3_d_1_1_binary_output_archive_block.html#a1f2289f453e4410c6a49b592fdf9b601">Urho3D::BinaryOutputArchiveBlock</a>
+</li>
+<li>HasNormal()
+: <a class="el" href="struct_urho3_d_1_1_model_vertex.html#a3c53f733a667752ec4124ee0e88924aa">Urho3D::ModelVertex</a>
 </li>
 <li>hasOrthoCamera_
 : <a class="el" href="class_urho3_d_1_1_billboard_set.html#a415ba21a044abe34e8f3b7936872aa21">Urho3D::BillboardSet</a>
@@ -436,7 +449,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_animation_set2_d.html#ab255c33f93c7df3f5939aa3ed12c78ae">Urho3D::AnimationSet2D</a>
 </li>
 <li>HasSubscribedToEvent()
-: <a class="el" href="class_urho3_d_1_1_object.html#add04b2157b76b6306db51d1202bd77f1">Urho3D::Object</a>
+: <a class="el" href="class_urho3_d_1_1_object.html#ae95c934d09a38268465f0ddbc3cc4a8d">Urho3D::Object</a>
 </li>
 <li>HasSubscribers()
 : <a class="el" href="class_urho3_d_1_1_signal.html#ac4c2b7dea54ed8f44153bdad75812e66">Urho3D::Signal&lt; T, Sender &gt;</a>
@@ -445,6 +458,12 @@ $(function() {
 <li>HasTag()
 : <a class="el" href="class_urho3_d_1_1_node.html#a4f8b14ff01ca5ecb850645c8ee45d3f8">Urho3D::Node</a>
 , <a class="el" href="class_urho3_d_1_1_u_i_element.html#a58b2141bf8e150d54358b4c62b570107">Urho3D::UIElement</a>
+</li>
+<li>HasTangent()
+: <a class="el" href="struct_urho3_d_1_1_model_vertex.html#adf55ce281d071bbaafe432a744d27436">Urho3D::ModelVertex</a>
+</li>
+<li>HasTangentBinormalCombined()
+: <a class="el" href="struct_urho3_d_1_1_model_vertex.html#acf58da6c58c423c67ce4332c5c64192a">Urho3D::ModelVertex</a>
 </li>
 <li>HasTextureUnit()
 : <a class="el" href="class_urho3_d_1_1_graphics.html#a82cdab6dc883ff0c20461de08e74b8e3">Urho3D::Graphics</a>
@@ -500,6 +519,9 @@ $(function() {
 <li>heightMap_
 : <a class="el" href="class_urho3_d_1_1_terrain.html#a3e1d29b27f0eaf2d3198ec20e8753228">Urho3D::Terrain</a>
 </li>
+<li>HeightMapToUV()
+: <a class="el" href="class_urho3_d_1_1_terrain.html#a944841643767b8a35731208b25d9ce13">Urho3D::Terrain</a>
+</li>
 <li>HeightMapToWorld()
 : <a class="el" href="class_urho3_d_1_1_terrain.html#a599aafd97db9a067b075dce29cd28707">Urho3D::Terrain</a>
 </li>
@@ -518,6 +540,9 @@ $(function() {
 <li>highLimit_
 : <a class="el" href="class_urho3_d_1_1_constraint.html#aa47ee750bb3573812e3ca8d7c4ff301d">Urho3D::Constraint</a>
 </li>
+<li>HighPrecisionVector3()
+: <a class="el" href="struct_urho3_d_1_1_high_precision_vector3.html#a78774cf1e61f00ee6973abbcfd545dd8">Urho3D::HighPrecisionVector3</a>
+</li>
 <li>hiresShadowMapFormat_
 : <a class="el" href="class_urho3_d_1_1_graphics.html#abecf32a2f80e7977f1882a463208c06c">Urho3D::Graphics</a>
 </li>
@@ -531,7 +556,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_console.html#a0792859cc98504b5c6ed5cc83c7ad0a4">Urho3D::Console</a>
 </li>
 <li>HitDistance()
-: <a class="el" href="class_urho3_d_1_1_ray.html#a163bd489388539877bc7b2748da35e72">Urho3D::Ray</a>
+: <a class="el" href="class_urho3_d_1_1_ray.html#a67d79637313133a9b743e9f7c4968097">Urho3D::Ray</a>
 </li>
 <li>hitFraction_
 : <a class="el" href="struct_urho3_d_1_1_physics_raycast_result.html#ab0146d82c34a7d55dffbc053b3c2a28b">Urho3D::PhysicsRaycastResult</a>
@@ -572,11 +597,14 @@ $(function() {
 <li>hullBody_
 : <a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a1c3ec6b149af01bf9ae1134197b348b2">Urho3D::RaycastVehicle</a>
 </li>
+<li>hullNormals_
+: <a class="el" href="class_urho3_d_1_1_tetrahedral_mesh.html#a1ded3fae0b795c9905e61e136953d5c3">Urho3D::TetrahedralMesh</a>
+</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 1 2020 09:42:56 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 4 2020 08:26:42 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

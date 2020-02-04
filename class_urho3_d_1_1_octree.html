@@ -113,6 +113,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_octree.html#a3f0f2c5115f5426593ad64d982544a3d">RaycastSingle</a> (<a class="el" href="class_urho3_d_1_1_ray_octree_query.html">RayOctreeQuery</a> &amp;query) const</td></tr>
 <tr class="memdesc:a3f0f2c5115f5426593ad64d982544a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the closest drawable object by a ray query. <br /></td></tr>
 <tr class="separator:a3f0f2c5115f5426593ad64d982544a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2700452995bdc404afc754630b1c47c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_zone.html">Zone</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_octree.html#a2700452995bdc404afc754630b1c47c0">GetZone</a> (unsigned viewMask=DEFAULT_VIEWMASK) const</td></tr>
+<tr class="separator:a2700452995bdc404afc754630b1c47c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1101b6d4c49d80658f3dbda41e803751"><td class="memItemLeft" align="right" valign="top"><a id="a1101b6d4c49d80658f3dbda41e803751"></a>
+<a class="el" href="class_urho3_d_1_1_skybox.html">Skybox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_octree.html#a1101b6d4c49d80658f3dbda41e803751">GetSkybox</a> (unsigned viewMask=DEFAULT_VIEWMASK) const</td></tr>
+<tr class="memdesc:a1101b6d4c49d80658f3dbda41e803751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return active <a class="el" href="class_urho3_d_1_1_skybox.html" title="Static model component with fixed position in relation to the camera. ">Skybox</a>. Behavior is underfined if there are multiple active skyboxes. <br /></td></tr>
+<tr class="separator:a1101b6d4c49d80658f3dbda41e803751"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6415464f2b93a8c9a89081cb0281b893"><td class="memItemLeft" align="right" valign="top"><a id="a6415464f2b93a8c9a89081cb0281b893"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_octree.html#a6415464f2b93a8c9a89081cb0281b893">GetNumLevels</a> () const</td></tr>
 <tr class="memdesc:a6415464f2b93a8c9a89081cb0281b893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return subdivision levels. <br /></td></tr>
@@ -1102,14 +1108,34 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Octree component. Should be added only to the root scene node </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2700452995bdc404afc754630b1c47c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2700452995bdc404afc754630b1c47c0">&#9670;&nbsp;</a></span>GetZone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_urho3_d_1_1_zone.html">Zone</a> * Urho3D::Octree::GetZone </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>viewMask</em> = <code>DEFAULT_VIEWMASK</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return active <a class="el" href="class_urho3_d_1_1_zone.html" title="Component that describes global rendering properties. ">Zone</a> or default renderer zone if none found. Behavior is underfined if there are multiple active zones. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/vsts/work/1/s/Source/Urho3D/Graphics/Octree.h</li>
 <li>/home/vsts/work/1/s/Source/Urho3D/Graphics/Octree.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 1 2020 09:42:54 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 4 2020 08:26:40 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

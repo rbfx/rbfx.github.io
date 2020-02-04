@@ -51,9 +51,11 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_particle_effect2_d.html#ad5e9d6093d7ce35c2e30783b554e7f07">Urho3D::ParticleEffect2D</a>
 </li>
 <li>radius_
-: <a class="el" href="struct_urho3_d_1_1_bone.html#a14b8d2b91bd31893cd7555003f8eb5c8">Urho3D::Bone</a>
+: <a class="el" href="struct_urho3_d_1_1_baked_light.html#aab80921b8b08678e8896f6da2030051b">Urho3D::BakedLight</a>
+, <a class="el" href="struct_urho3_d_1_1_bone.html#a14b8d2b91bd31893cd7555003f8eb5c8">Urho3D::Bone</a>
 , <a class="el" href="class_urho3_d_1_1_collision_circle2_d.html#a1833e5c15e8c79a5145b5f9227f95499">Urho3D::CollisionCircle2D</a>
 , <a class="el" href="class_urho3_d_1_1_crowd_agent.html#ad8703b79b0c2269f5a446224728acef1">Urho3D::CrowdAgent</a>
+, <a class="el" href="struct_urho3_d_1_1_high_precision_sphere.html#a81c6e71ec89365ccfe9c0222de46b132">Urho3D::HighPrecisionSphere</a>
 , <a class="el" href="class_urho3_d_1_1_obstacle.html#a5f62e52f5d41106508cc3f4458b5df1f">Urho3D::Obstacle</a>
 , <a class="el" href="class_urho3_d_1_1_off_mesh_connection.html#ac89149d1579016babcb7d78fe4a3b218">Urho3D::OffMeshConnection</a>
 , <a class="el" href="class_urho3_d_1_1_sphere.html#a97194148abd15ecea37c417304c1173c">Urho3D::Sphere</a>
@@ -93,6 +95,12 @@ $(function() {
 <li>rayQueryDrawables_
 : <a class="el" href="class_urho3_d_1_1_octree.html#a6c08b3517baa0291c2c208391495ba47">Urho3D::Octree</a>
 </li>
+<li>raytracerGeometryId_
+: <a class="el" href="struct_urho3_d_1_1_raytracer_geometry.html#a2ada42110df7835161025d1f445522e2">Urho3D::RaytracerGeometry</a>
+</li>
+<li>raytracerScene_
+: <a class="el" href="struct_urho3_d_1_1_baked_scene_chunk.html#ac76ec29c13e769d9ece836c1dc15bf11">Urho3D::BakedSceneChunk</a>
+</li>
 <li>readBuffer_
 : <a class="el" href="class_urho3_d_1_1_file.html#a32beada117a1d9ec373cc52ae2fd4a51">Urho3D::File</a>
 , <a class="el" href="class_urho3_d_1_1_http_request.html#a166b77d213c16019574c4ea4069cc25d">Urho3D::HttpRequest</a>
@@ -124,6 +132,9 @@ $(function() {
 <li>readSyncNeeded_
 : <a class="el" href="class_urho3_d_1_1_file.html#ad5184eceb8be643c3505509b9cfa6d4b">Urho3D::File</a>
 </li>
+<li>realLightmapSize_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a3b4da1f6e90cd38ff9e895de81ee8833">Urho3D::LightmapChartBakedDirect</a>
+</li>
 <li>receivedFragments_
 : <a class="el" href="struct_urho3_d_1_1_package_download.html#a9f06d96122b78a06ca53d4aaa0d83c67">Urho3D::PackageDownload</a>
 </li>
@@ -148,6 +159,12 @@ $(function() {
 </li>
 <li>rectangle_
 : <a class="el" href="class_urho3_d_1_1_sprite2_d.html#a4f7022771f8303e8372833791896312e">Urho3D::Sprite2D</a>
+</li>
+<li>rectTexels_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_chart_region.html#a4b31037378d776798babe3fcd4cbfc3a">Urho3D::LightmapChartRegion</a>
+</li>
+<li>rectUV_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_chart_region.html#a571ddafb364135bd2934bd1926a69d76">Urho3D::LightmapChartRegion</a>
 </li>
 <li>recursive_
 : <a class="el" href="class_urho3_d_1_1_navigable.html#af1d3b844a5699ca48a4f9078827c5746">Urho3D::Navigable</a>
@@ -180,6 +197,9 @@ $(function() {
 <li>regCount_
 : <a class="el" href="struct_urho3_d_1_1_shader_parameter.html#aeef921a16077df777b1cfc1901a7bf54">Urho3D::ShaderParameter</a>
 </li>
+<li>region_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_chart_element.html#a6c3fe8ee4c46a87782d0383c83255234">Urho3D::LightmapChartElement</a>
+</li>
 <li>regionMergeSize_
 : <a class="el" href="class_urho3_d_1_1_navigation_mesh.html#ad3c336bf8c694ca07bdb08811ba6fea4">Urho3D::NavigationMesh</a>
 </li>
@@ -205,6 +225,9 @@ $(function() {
 <li>remoteGUID_
 : <a class="el" href="class_urho3_d_1_1_network.html#ab02f80bf32f52c1190384f8c6650cbbe">Urho3D::Network</a>
 </li>
+<li>removed_
+: <a class="el" href="struct_urho3_d_1_1_tetrahedral_mesh_1_1_delaunay_context.html#a6559b9c839c5b7f2a8625066df236ff7">Urho3D::TetrahedralMesh::DelaunayContext</a>
+</li>
 <li>removeOnCompletion_
 : <a class="el" href="struct_urho3_d_1_1_animation_control.html#a53bafe67312147ff49aafb5c7fe39eb0">Urho3D::AnimationControl</a>
 </li>
@@ -226,8 +249,13 @@ $(function() {
 </li>
 <li>renderPath_
 : <a class="el" href="class_urho3_d_1_1_camera_viewport.html#a774697f2b73bb6e34d4621a7e5e8ff80">Urho3D::CameraViewport</a>
+, <a class="el" href="struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#a38634a42ace268011cc8216fbebb29ef">Urho3D::LightmapGeometryBakingScene</a>
 , <a class="el" href="class_urho3_d_1_1_view.html#a4db609fa2bf04ea27dc712c554bb8f67">Urho3D::View</a>
 , <a class="el" href="class_urho3_d_1_1_viewport.html#aee075d03a4b3ec13a0328b96eb1be5be">Urho3D::Viewport</a>
+</li>
+<li>renderPathName_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_geometry_baking_settings.html#a072609605deb959f12af33c0029ac6c2">Urho3D::LightmapGeometryBakingSettings</a>
+, <a class="el" href="struct_urho3_d_1_1_lightmap_stitching_settings.html#a8ab76ca786e8a631ac1d9e97ff477bb7">Urho3D::LightmapStitchingSettings</a>
 </li>
 <li>renderSurface_
 : <a class="el" href="class_urho3_d_1_1_scene_manager.html#ad653012eb1a0579580f03cb0c4653f0f">Urho3D::SceneManager</a>
@@ -285,6 +313,9 @@ $(function() {
 </li>
 <li>requestedTargetType_
 : <a class="el" href="class_urho3_d_1_1_crowd_agent.html#ae4075d8da7d84a8737675e32e07f8a18">Urho3D::CrowdAgent</a>
+</li>
+<li>requiredDirectLightmaps_
+: <a class="el" href="struct_urho3_d_1_1_baked_scene_chunk.html#aa3d48008b7ade0c53c71204128fe6679">Urho3D::BakedSceneChunk</a>
 </li>
 <li>requiredPackageFiles_
 : <a class="el" href="class_urho3_d_1_1_scene.html#ae4e114c362df6669f862da303adc558f">Urho3D::Scene</a>
@@ -432,6 +463,7 @@ $(function() {
 </li>
 <li>rotation_
 : <a class="el" href="struct_urho3_d_1_1_animation_key_frame.html#a10ca40167a8f7fd12cd9e72f82a4b340">Urho3D::AnimationKeyFrame</a>
+, <a class="el" href="struct_urho3_d_1_1_baked_light.html#a3809e44b1f56e91c087a9ff0426892f2">Urho3D::BakedLight</a>
 , <a class="el" href="struct_urho3_d_1_1_billboard.html#a67ab68e30781f391c495589a47f2cc10">Urho3D::Billboard</a>
 , <a class="el" href="class_urho3_d_1_1_collision_shape.html#a4267243c128aecd08bfc7c2998fb1690">Urho3D::CollisionShape</a>
 , <a class="el" href="class_urho3_d_1_1_connection.html#a0bd4e213476e037d48a8f131134232ba">Urho3D::Connection</a>
@@ -499,7 +531,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 1 2020 09:42:56 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 4 2020 08:26:42 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

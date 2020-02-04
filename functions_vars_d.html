@@ -50,6 +50,7 @@ $(function() {
 : <a class="el" href="struct_urho3_d_1_1_animation_trigger_point.html#a976791babf69c44295927bef7f91ee85">Urho3D::AnimationTriggerPoint</a>
 , <a class="el" href="struct_urho3_d_1_1_compressed_level.html#a8009d0316a5ce58caf36ec4b64a13994">Urho3D::CompressedLevel</a>
 , <a class="el" href="struct_urho3_d_1_1_dirty_bits.html#ab3a6fb68c4506b7366cb5acfec83caf8">Urho3D::DirtyBits</a>
+, <a class="el" href="struct_urho3_d_1_1_high_precision_vector3.html#a6c3477035519f36b27c084ab1856e70c">Urho3D::HighPrecisionVector3</a>
 , <a class="el" href="class_urho3_d_1_1_image.html#aa13724a585a36835ed13842ab2ce3535">Urho3D::Image</a>
 , <a class="el" href="struct_urho3_d_1_1_index_buffer_desc.html#adca8c7d71c7663c63f3d4267152ab96a">Urho3D::IndexBufferDesc</a>
 , <a class="el" href="struct_urho3_d_1_1_occlusion_buffer_data.html#a126460cb3b1cd3531db3ee042c6d4322">Urho3D::OcclusionBufferData</a>
@@ -85,6 +86,9 @@ $(function() {
 <li>debugGeometry_
 : <a class="el" href="class_urho3_d_1_1_terrain.html#a5e95bd6fb905661b7e50f69dbdcfcf72">Urho3D::Terrain</a>
 </li>
+<li>debugHighlightEdges_
+: <a class="el" href="class_urho3_d_1_1_tetrahedral_mesh.html#a2f0133b79403c60b8dec74a63b7382aa">Urho3D::TetrahedralMesh</a>
+</li>
 <li>debugMode_
 : <a class="el" href="class_urho3_d_1_1_physics_world.html#a2f2a072ed2c98f6babeaa1a494a5c833">Urho3D::PhysicsWorld</a>
 </li>
@@ -106,6 +110,9 @@ $(function() {
 </li>
 <li>defaultBlockName
 : <a class="el" href="class_urho3_d_1_1_x_m_l_archive_base.html#a36ba2245a5a30e2ab8853cf2321e17f8">Urho3D::XMLArchiveBase&lt; T, IsInputBool &gt;</a>
+</li>
+<li>defaultChartSize_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_charting_settings.html#a18ae8140c0874b69b2c1715d350ff4ec">Urho3D::LightmapChartingSettings</a>
 </li>
 <li>defaultElementName
 : <a class="el" href="class_urho3_d_1_1_x_m_l_archive_base.html#a9c7636ee98419386a495267f67f6369b">Urho3D::XMLArchiveBase&lt; T, IsInputBool &gt;</a>
@@ -267,12 +274,40 @@ $(function() {
 <li>detailSampleMaxError_
 : <a class="el" href="class_urho3_d_1_1_navigation_mesh.html#aacd0f13dd214d28bdd32a9662963ef09">Urho3D::NavigationMesh</a>
 </li>
+<li>device_
+: <a class="el" href="class_urho3_d_1_1_raytracer_scene.html#a2a0eb4ccfe3d113527aa022137a1362c">Urho3D::RaytracerScene</a>
+</li>
 <li>deviceID_
 : <a class="el" href="class_urho3_d_1_1_audio.html#a83d3076e516b61f4a0711bbecf3e2fa8">Urho3D::Audio</a>
 </li>
+<li>diffuseColor_
+: <a class="el" href="struct_urho3_d_1_1_raytracing_geometry_material.html#ac9fb02e86756124dcbbe1e9519993ac9">Urho3D::RaytracingGeometryMaterial</a>
+</li>
+<li>diffuseImage_
+: <a class="el" href="struct_urho3_d_1_1_raytracing_geometry_material.html#a1d228e1c78407d271ba3d7aaae20189b">Urho3D::RaytracingGeometryMaterial</a>
+</li>
+<li>diffuseImageHeight_
+: <a class="el" href="struct_urho3_d_1_1_raytracing_geometry_material.html#af0c3cd9a487b31db0766913fa81e0d16">Urho3D::RaytracingGeometryMaterial</a>
+</li>
+<li>diffuseImageName_
+: <a class="el" href="struct_urho3_d_1_1_raytracing_geometry_material.html#a520589c40980fa359762899ec16ed7df">Urho3D::RaytracingGeometryMaterial</a>
+</li>
+<li>diffuseImageWidth_
+: <a class="el" href="struct_urho3_d_1_1_raytracing_geometry_material.html#a37adedfaf98bee104dc6904fa4acce45">Urho3D::RaytracingGeometryMaterial</a>
+</li>
+<li>directChartTracing_
+: <a class="el" href="struct_urho3_d_1_1_light_baking_settings.html#a356652c1eb432b8b529d37c68535f74b">Urho3D::LightBakingSettings</a>
+</li>
+<li>directFilter_
+: <a class="el" href="struct_urho3_d_1_1_light_baking_settings.html#a535b1a5b5cae38a360d3c32531c14898">Urho3D::LightBakingSettings</a>
+</li>
 <li>direction_
-: <a class="el" href="struct_urho3_d_1_1_billboard.html#ab1bc4b5b70c58bc55b04ec8a5e0e5b38">Urho3D::Billboard</a>
+: <a class="el" href="struct_urho3_d_1_1_baked_light.html#aa566e9661bbff9d96ab32de8fd213ace">Urho3D::BakedLight</a>
+, <a class="el" href="struct_urho3_d_1_1_billboard.html#ab1bc4b5b70c58bc55b04ec8a5e0e5b38">Urho3D::Billboard</a>
 , <a class="el" href="class_urho3_d_1_1_ray.html#a1d85bded5863ada8e089037714a21a78">Urho3D::Ray</a>
+</li>
+<li>directionalLightShadowDistance_
+: <a class="el" href="struct_urho3_d_1_1_incremental_light_baker_settings.html#a92a34c5eb81ae603ff6fdf46ce1ae26c">Urho3D::IncrementalLightBakerSettings</a>
 </li>
 <li>directionMax_
 : <a class="el" href="class_urho3_d_1_1_particle_effect.html#ad9c9cb69a5552bd909cfd6e3bd53e7f8">Urho3D::ParticleEffect</a>
@@ -280,11 +315,23 @@ $(function() {
 <li>directionMin_
 : <a class="el" href="class_urho3_d_1_1_particle_effect.html#ad5889a5dc9848f948a20cda10c8f36dc">Urho3D::ParticleEffect</a>
 </li>
+<li>directLight_
+: <a class="el" href="struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a66fa6fc82336ef4e536dd71726edffdf">Urho3D::LightmapChartBakedDirect</a>
+</li>
+<li>directLightCache_
+: <a class="el" href="class_urho3_d_1_1_baked_light_memory_cache.html#aefbe8c6a93265e0b4c1dde2e158242de">Urho3D::BakedLightMemoryCache</a>
+</li>
 <li>directory_
 : <a class="el" href="struct_urho3_d_1_1_file_selector_entry.html#acdfa8e29ccccb40048f0762f0b66c38f">Urho3D::FileSelectorEntry</a>
 </li>
 <li>directoryMode_
 : <a class="el" href="class_urho3_d_1_1_file_selector.html#aef96106e5f38d6a9a1e42959bacedf7f">Urho3D::FileSelector</a>
+</li>
+<li>directProbesTracing_
+: <a class="el" href="struct_urho3_d_1_1_light_baking_settings.html#a35c16234fdf9380d41710e6a58c8bb30">Urho3D::LightBakingSettings</a>
+</li>
+<li>DirectShadowOnlyGeometry
+: <a class="el" href="class_urho3_d_1_1_raytracer_scene.html#a6a1368c930e18d98457f4ea9fae10617">Urho3D::RaytracerScene</a>
 </li>
 <li>dirLightGeometry_
 : <a class="el" href="class_urho3_d_1_1_renderer.html#a59998b0e5210e4856f347e8b992579e8">Urho3D::Renderer</a>
@@ -322,7 +369,8 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_tool_tip.html#a106b1e3e358cdc5542304bc3a60e28cd">Urho3D::ToolTip</a>
 </li>
 <li>distance_
-: <a class="el" href="struct_urho3_d_1_1_batch.html#ab67e488dbd06fb4ad5d4ca30a0c142b3">Urho3D::Batch</a>
+: <a class="el" href="struct_urho3_d_1_1_baked_light.html#a6f0cca4c41cea428563f735800a7c3be">Urho3D::BakedLight</a>
+, <a class="el" href="struct_urho3_d_1_1_batch.html#ab67e488dbd06fb4ad5d4ca30a0c142b3">Urho3D::Batch</a>
 , <a class="el" href="class_urho3_d_1_1_drawable.html#a786d899e2ebfd595ee15adc70d419175">Urho3D::Drawable</a>
 , <a class="el" href="struct_urho3_d_1_1_instance_data.html#a4df058d635b001f29bcfa5e197188bd1">Urho3D::InstanceData</a>
 , <a class="el" href="struct_urho3_d_1_1_physics_raycast_result2_d.html#a71a7b114170c03ffe8a87291e5b90c06">Urho3D::PhysicsRaycastResult2D</a>
@@ -498,7 +546,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 1 2020 09:42:56 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 4 2020 08:26:42 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

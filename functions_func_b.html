@@ -46,6 +46,19 @@ $(function() {
 <li>BackgroundLoadResource()
 : <a class="el" href="class_urho3_d_1_1_resource_cache.html#a6734284e986e0d4922e260cb617bd643">Urho3D::ResourceCache</a>
 </li>
+<li>Bake()
+: <a class="el" href="class_urho3_d_1_1_incremental_light_baker.html#a28c5fef49c0bd0b4cd8eea7316e14255">Urho3D::IncrementalLightBaker</a>
+, <a class="el" href="class_urho3_d_1_1_light_baker.html#a62145f233c62bd4ede837964f48ef471">Urho3D::LightBaker</a>
+</li>
+<li>BakeAsync()
+: <a class="el" href="class_urho3_d_1_1_light_baker.html#adeb2b9f665b82f3c1e635a6f15231d01">Urho3D::LightBaker</a>
+</li>
+<li>BakedLight()
+: <a class="el" href="struct_urho3_d_1_1_baked_light.html#af113571585cb7934a4d05276d2790455">Urho3D::BakedLight</a>
+</li>
+<li>BakedLightmap()
+: <a class="el" href="struct_urho3_d_1_1_baked_lightmap.html#ab8522a5f2460a4c60178a50e9af493bb">Urho3D::BakedLightmap</a>
+</li>
 <li>Ban()
 : <a class="el" href="class_urho3_d_1_1_connection.html#addd01b6f2fa366914376452d5b7520bc">Urho3D::Connection</a>
 </li>
@@ -56,7 +69,7 @@ $(function() {
 : <a class="el" href="struct_urho3_d_1_1_batch.html#a6d3e1acd6fa01bd44eca1ba5e4434e2d">Urho3D::Batch</a>
 </li>
 <li>BatchGroup()
-: <a class="el" href="struct_urho3_d_1_1_batch_group.html#adefedc16a2726e1471b8212b173eb7c6">Urho3D::BatchGroup</a>
+: <a class="el" href="struct_urho3_d_1_1_batch_group.html#a6050c30b8be3bca523d7372e2b89deda">Urho3D::BatchGroup</a>
 </li>
 <li>BatchGroupKey()
 : <a class="el" href="struct_urho3_d_1_1_batch_group_key.html#a77d9ab8e01e2d676a907153b07f393ce">Urho3D::BatchGroupKey</a>
@@ -86,8 +99,10 @@ $(function() {
 <li>BeginLoad()
 : <a class="el" href="class_urho3_d_1_1_animation.html#a457f24ea561a38677e2994741f6d863e">Urho3D::Animation</a>
 , <a class="el" href="class_urho3_d_1_1_animation_set2_d.html#a82602419beaca9fc9b988fe028a94ab0">Urho3D::AnimationSet2D</a>
+, <a class="el" href="class_urho3_d_1_1_binary_file.html#a4f305414e1ce72ae2373e8ae0acd4af9">Urho3D::BinaryFile</a>
 , <a class="el" href="class_urho3_d_1_1_font.html#ac55c3d9225ec249a9538fc6cb10ad8f4">Urho3D::Font</a>
 , <a class="el" href="class_urho3_d_1_1_image.html#a6a1eaaf219828f29ca0dad7c3665a900">Urho3D::Image</a>
+, <a class="el" href="class_urho3_d_1_1_image_cube.html#afecf66d3ecef60567ecaf23c58058012">Urho3D::ImageCube</a>
 , <a class="el" href="class_urho3_d_1_1_j_s_o_n_file.html#a04cc21734752ccfc870b75978de04ad7">Urho3D::JSONFile</a>
 , <a class="el" href="class_urho3_d_1_1_material.html#a112d8e95b1deb1fee8524f7cc69eb921">Urho3D::Material</a>
 , <a class="el" href="class_urho3_d_1_1_model.html#abc42a5abe2c69533897bdcd28c8b5f51">Urho3D::Model</a>
@@ -146,6 +161,9 @@ $(function() {
 <li>BinaryArchiveBase()
 : <a class="el" href="class_urho3_d_1_1_binary_archive_base.html#a5f17244f4ccd133cda69d4266c5b9d40">Urho3D::BinaryArchiveBase&lt; T, IsInputBool &gt;</a>
 </li>
+<li>BinaryFile()
+: <a class="el" href="class_urho3_d_1_1_binary_file.html#a1f276d9e00e4e0d1717fa065a25f9284">Urho3D::BinaryFile</a>
+</li>
 <li>BinaryInputArchive()
 : <a class="el" href="class_urho3_d_1_1_binary_input_archive.html#ab4f672e4596b6a747f88f93f1cbcb80d">Urho3D::BinaryInputArchive</a>
 </li>
@@ -193,7 +211,7 @@ $(function() {
 , <a class="el" href="class_urho3_d_1_1_rect.html#aa133edce0d726e98066e825f76f8049f">Urho3D::Rect</a>
 </li>
 <li>BoundingBox()
-: <a class="el" href="class_urho3_d_1_1_bounding_box.html#a8ec845693795ed6ca1b1f240dd7a5d28">Urho3D::BoundingBox</a>
+: <a class="el" href="class_urho3_d_1_1_bounding_box.html#aa37be086a6e9bf99d8632d4356a3efb9">Urho3D::BoundingBox</a>
 </li>
 <li>Bounds()
 : <a class="el" href="class_urho3_d_1_1_color.html#a2f1855c8fee16e39f3465fc1415dc31b">Urho3D::Color</a>
@@ -211,20 +229,29 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_network.html#aee2065f8e52cd936d15367c234fedd2d">Urho3D::Network</a>
 </li>
 <li>BroadcastRemoteEvent()
-: <a class="el" href="class_urho3_d_1_1_network.html#a737b8c83e6b42623dff10a5ed42c2cec">Urho3D::Network</a>
+: <a class="el" href="class_urho3_d_1_1_network.html#a7d3b29bdf0770ba3584d288779e0b1ce">Urho3D::Network</a>
 </li>
 <li>BufferedSoundStream()
 : <a class="el" href="class_urho3_d_1_1_buffered_sound_stream.html#a3666748faa0f231a8934f541a6d4ace1">Urho3D::BufferedSoundStream</a>
 </li>
 <li>Build()
-: <a class="el" href="class_urho3_d_1_1_dynamic_navigation_mesh.html#ac50303ab43f4c6b1b19867e6a3389af3">Urho3D::DynamicNavigationMesh</a>
-, <a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a38f762e87f10300096e08666fbafb443">Urho3D::NavigationMesh</a>
+: <a class="el" href="class_urho3_d_1_1_dynamic_navigation_mesh.html#a770e064c2824a40fb0448cd88b64fedf">Urho3D::DynamicNavigationMesh</a>
+, <a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a4e613d82cba64f687f1642d1b8e75862">Urho3D::NavigationMesh</a>
 </li>
 <li>BuildDepthHierarchy()
 : <a class="el" href="class_urho3_d_1_1_occlusion_buffer.html#aa697cf5ddca365cf1025520db938f0f3">Urho3D::OcclusionBuffer</a>
 </li>
 <li>BuildHull()
 : <a class="el" href="struct_urho3_d_1_1_convex_data.html#ab2515aed5145313d4c6314679cda1d04">Urho3D::ConvexData</a>
+</li>
+<li>BuildHullSurface()
+: <a class="el" href="class_urho3_d_1_1_tetrahedral_mesh.html#a221a3ee3e504a84d019d0802882c6b54">Urho3D::TetrahedralMesh</a>
+</li>
+<li>BuildOuterTetrahedrons()
+: <a class="el" href="class_urho3_d_1_1_tetrahedral_mesh.html#aea53b34af4c5f0d1bb4db374c0d38c09">Urho3D::TetrahedralMesh</a>
+</li>
+<li>BuildTetrahedrons()
+: <a class="el" href="class_urho3_d_1_1_tetrahedral_mesh.html#a697072b53db392a87b11165ad8a21f0a">Urho3D::TetrahedralMesh</a>
 </li>
 <li>BuildTile()
 : <a class="el" href="class_urho3_d_1_1_dynamic_navigation_mesh.html#a1dc68014d5196f110899308e3794100a">Urho3D::DynamicNavigationMesh</a>
@@ -249,7 +276,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 1 2020 09:42:56 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 4 2020 08:26:42 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

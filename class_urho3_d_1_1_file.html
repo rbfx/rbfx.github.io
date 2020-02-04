@@ -102,6 +102,10 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file.html#a78c1c81cde48a87a655c89a6b1845b1e">GetName</a> () const override</td></tr>
 <tr class="memdesc:a78c1c81cde48a87a655c89a6b1845b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the file name. <br /></td></tr>
 <tr class="separator:a78c1c81cde48a87a655c89a6b1845b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a012c38b5f8b27aa77f3066353907878c"><td class="memItemLeft" align="right" valign="top"><a id="a012c38b5f8b27aa77f3066353907878c"></a>
+const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file.html#a012c38b5f8b27aa77f3066353907878c">GetAbsoluteName</a> () const</td></tr>
+<tr class="memdesc:a012c38b5f8b27aa77f3066353907878c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return absolute file name in file system. <br /></td></tr>
+<tr class="separator:a012c38b5f8b27aa77f3066353907878c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9a8d2dbe6424e8b27ad503b02c5239b"><td class="memItemLeft" align="right" valign="top"><a id="af9a8d2dbe6424e8b27ad503b02c5239b"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file.html#af9a8d2dbe6424e8b27ad503b02c5239b">GetChecksum</a> () override</td></tr>
 <tr class="memdesc:af9a8d2dbe6424e8b27ad503b02c5239b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a checksum of the file contents using the SDBM hash algorithm. <br /></td></tr>
@@ -849,8 +853,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 Private Attributes</h2></td></tr>
 <tr class="memitem:a3a22b8f352da57e9a466446e874feff9"><td class="memItemLeft" align="right" valign="top"><a id="a3a22b8f352da57e9a466446e874feff9"></a>
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file.html#a3a22b8f352da57e9a466446e874feff9">fileName_</a></td></tr>
-<tr class="memdesc:a3a22b8f352da57e9a466446e874feff9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file. ">File</a> name. <br /></td></tr>
+<tr class="memdesc:a3a22b8f352da57e9a466446e874feff9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file. ">File</a> name. For files from <a class="el" href="class_urho3_d_1_1_resource_cache.html" title="Resource cache subsystem. Loads resources on demand and stores them for later access. ">ResourceCache</a>, relative to cache directory. <br /></td></tr>
 <tr class="separator:a3a22b8f352da57e9a466446e874feff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ef8ac670cc8a49768b711072b930af"><td class="memItemLeft" align="right" valign="top"><a id="a81ef8ac670cc8a49768b711072b930af"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file.html#a81ef8ac670cc8a49768b711072b930af">absoluteFileName_</a></td></tr>
+<tr class="memdesc:a81ef8ac670cc8a49768b711072b930af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute file name. <br /></td></tr>
+<tr class="separator:a81ef8ac670cc8a49768b711072b930af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a49ec5f446393372091c828ebffaf8f"><td class="memItemLeft" align="right" valign="top"><a id="a4a49ec5f446393372091c828ebffaf8f"></a>
 <a class="el" href="_file_8h.html#abc656bfd2ee0680fe192b473e6b06ed0">FileMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file.html#a4a49ec5f446393372091c828ebffaf8f">mode_</a></td></tr>
 <tr class="memdesc:a4a49ec5f446393372091c828ebffaf8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open mode. <br /></td></tr>
@@ -988,7 +996,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 1 2020 09:42:53 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 4 2020 08:26:39 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
