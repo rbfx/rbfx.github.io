@@ -185,16 +185,15 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5cba0374723cae00759052bcebc3960e"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_math_defs_8h.html#a5cba0374723cae00759052bcebc3960e">Urho3D::Sqrt</a> (T x)</td></tr>
 <tr class="memdesc:a5cba0374723cae00759052bcebc3960e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return square root of X. <br /></td></tr>
 <tr class="separator:a5cba0374723cae00759052bcebc3960e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f85ed243d4a793a76b0283a27f50302"><td class="memTemplParams" colspan="2"><a id="a8f85ed243d4a793a76b0283a27f50302"></a>
-template&lt;typename T , typename std::enable_if&lt; std::is_floating_point&lt; T &gt;::value &gt;::type *  = nullptr&gt; </td></tr>
+<tr class="memitem:a8f85ed243d4a793a76b0283a27f50302"><td class="memTemplParams" colspan="2">template&lt;class T , typename std::enable_if&lt; std::is_floating_point&lt; T &gt;::value &gt;::type *  = nullptr&gt; </td></tr>
 <tr class="memitem:a8f85ed243d4a793a76b0283a27f50302"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_math_defs_8h.html#a8f85ed243d4a793a76b0283a27f50302">Urho3D::Mod</a> (T x, T y)</td></tr>
-<tr class="memdesc:a8f85ed243d4a793a76b0283a27f50302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return remainder of X/Y. <br /></td></tr>
+<tr class="memdesc:a8f85ed243d4a793a76b0283a27f50302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return remainder of X/Y for float values.  <a href="_math_defs_8h.html#a8f85ed243d4a793a76b0283a27f50302">More...</a><br /></td></tr>
 <tr class="separator:a8f85ed243d4a793a76b0283a27f50302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a599c799f72f4a0f929c277f5860f80cb"><td class="memTemplParams" colspan="2"><a id="a599c799f72f4a0f929c277f5860f80cb"></a>
-template&lt;typename T , typename std::enable_if&lt; std::is_integral&lt; T &gt;::value &gt;::type *  = nullptr&gt; </td></tr>
-<tr class="memitem:a599c799f72f4a0f929c277f5860f80cb"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_math_defs_8h.html#a599c799f72f4a0f929c277f5860f80cb">Urho3D::AbsMod</a> (T x, T y)</td></tr>
-<tr class="memdesc:a599c799f72f4a0f929c277f5860f80cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return positive remainder of X/Y. <br /></td></tr>
-<tr class="separator:a599c799f72f4a0f929c277f5860f80cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a174186e576ebcfaaa293873bb2f01a19"><td class="memTemplParams" colspan="2"><a id="a174186e576ebcfaaa293873bb2f01a19"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a174186e576ebcfaaa293873bb2f01a19"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_math_defs_8h.html#a174186e576ebcfaaa293873bb2f01a19">Urho3D::AbsMod</a> (T x, T y)</td></tr>
+<tr class="memdesc:a174186e576ebcfaaa293873bb2f01a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return always positive remainder of X/Y. <br /></td></tr>
+<tr class="separator:a174186e576ebcfaaa293873bb2f01a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1addf32ffcf84cac95ca33a7d0bd8bc8"><td class="memTemplParams" colspan="2"><a id="a1addf32ffcf84cac95ca33a7d0bd8bc8"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a1addf32ffcf84cac95ca33a7d0bd8bc8"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_math_defs_8h.html#a1addf32ffcf84cac95ca33a7d0bd8bc8">Urho3D::Fract</a> (T value)</td></tr>
@@ -354,10 +353,52 @@ static const float&#160;</td><td class="memItemRight" valign="bottom"><b>Urho3D:
 static const float&#160;</td><td class="memItemRight" valign="bottom"><b>Urho3D::M_RADTODEG</b> = 1.0f / M_DEGTORAD</td></tr>
 <tr class="separator:aef1daaade12671fdd4f3ae2d024811d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="file_a8f85ed243d4a793a76b0283a27f50302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a8f85ed243d4a793a76b0283a27f50302">&#9670;&nbsp;</a></span>Mod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , typename std::enable_if&lt; std::is_floating_point&lt; T &gt;::value &gt;::type *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T Urho3D::Mod </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return remainder of X/Y for float values. </p>
+<p>Return remainder of X/Y for integer values. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 25 2020 21:58:29 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 28 2020 18:43:23 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -91,10 +91,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a764ac072cdbcc2f6de5c390e2c219647">Color</a> (const float data[]) noexcept</td></tr>
 <tr class="memdesc:a764ac072cdbcc2f6de5c390e2c219647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a float array. <br /></td></tr>
 <tr class="separator:a764ac072cdbcc2f6de5c390e2c219647"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bb7f59202b524be53ad76492543f6ce"><td class="memItemLeft" align="right" valign="top"><a id="a8bb7f59202b524be53ad76492543f6ce"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a8bb7f59202b524be53ad76492543f6ce">Color</a> (unsigned color, <a class="el" href="struct_urho3_d_1_1_color_1_1_channel_mask.html">ChannelMask</a> mask=<a class="el" href="class_urho3_d_1_1_color.html#ac24c54786bb5a34700ec33c7b0350058">ABGR</a>)</td></tr>
-<tr class="memdesc:a8bb7f59202b524be53ad76492543f6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from 32-bit integer. Default format is 0xAABBGGRR. <br /></td></tr>
-<tr class="separator:a8bb7f59202b524be53ad76492543f6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0920fec8ad71887d0865184f030cad0e"><td class="memItemLeft" align="right" valign="top"><a id="a0920fec8ad71887d0865184f030cad0e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a0920fec8ad71887d0865184f030cad0e">Color</a> (unsigned color, const <a class="el" href="struct_urho3_d_1_1_color_1_1_channel_mask.html">ChannelMask</a> &amp;mask=<a class="el" href="class_urho3_d_1_1_color.html#ac24c54786bb5a34700ec33c7b0350058">ABGR</a>)</td></tr>
+<tr class="memdesc:a0920fec8ad71887d0865184f030cad0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from 32-bit integer. Default format is 0xAABBGGRR. <br /></td></tr>
+<tr class="separator:a0920fec8ad71887d0865184f030cad0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a13a0b9a48313359a0d2c178285aedb"><td class="memItemLeft" align="right" valign="top"><a id="a8a13a0b9a48313359a0d2c178285aedb"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a8a13a0b9a48313359a0d2c178285aedb">Color</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;color)</td></tr>
 <tr class="memdesc:a8a13a0b9a48313359a0d2c178285aedb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from 3-vector. <br /></td></tr>
@@ -143,10 +143,10 @@ const float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a06623b98b5524439f8a243d103b214dd">ToUInt</a> () const</td></tr>
 <tr class="memdesc:a06623b98b5524439f8a243d103b214dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return color packed to a 32-bit integer, with R component in the lowest 8 bits. Components are clamped to [0, 1] range. <br /></td></tr>
 <tr class="separator:a06623b98b5524439f8a243d103b214dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1358031901ef6bb4d278dc4c4e94044d"><td class="memItemLeft" align="right" valign="top"><a id="a1358031901ef6bb4d278dc4c4e94044d"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a1358031901ef6bb4d278dc4c4e94044d">ToUIntMask</a> (<a class="el" href="struct_urho3_d_1_1_color_1_1_channel_mask.html">ChannelMask</a> mask) const</td></tr>
-<tr class="memdesc:a1358031901ef6bb4d278dc4c4e94044d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return color packed to a 32-bit integer with arbitrary channel mask. Components are clamped to [0, 1] range. <br /></td></tr>
-<tr class="separator:a1358031901ef6bb4d278dc4c4e94044d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7219b62964a242c52a86531658ba4713"><td class="memItemLeft" align="right" valign="top"><a id="a7219b62964a242c52a86531658ba4713"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a7219b62964a242c52a86531658ba4713">ToUIntMask</a> (const <a class="el" href="struct_urho3_d_1_1_color_1_1_channel_mask.html">ChannelMask</a> &amp;mask) const</td></tr>
+<tr class="memdesc:a7219b62964a242c52a86531658ba4713"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return color packed to a 32-bit integer with arbitrary channel mask. Components are clamped to [0, 1] range. <br /></td></tr>
+<tr class="separator:a7219b62964a242c52a86531658ba4713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada772e529628c588e6e080a8b9b2ddee"><td class="memItemLeft" align="right" valign="top"><a id="ada772e529628c588e6e080a8b9b2ddee"></a>
 <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#ada772e529628c588e6e080a8b9b2ddee">ToHSL</a> () const</td></tr>
 <tr class="memdesc:ada772e529628c588e6e080a8b9b2ddee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return HSL color-space representation as a <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector. ">Vector3</a>; the RGB values are clipped before conversion but not changed in the process. <br /></td></tr>
@@ -159,10 +159,10 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#acb5866e1447fd157ebd5a8292e6a5b6c">FromUInt</a> (unsigned color)</td></tr>
 <tr class="memdesc:acb5866e1447fd157ebd5a8292e6a5b6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set RGBA values from packed 32-bit integer, with R component in the lowest 8 bits (format 0xAABBGGRR). <br /></td></tr>
 <tr class="separator:acb5866e1447fd157ebd5a8292e6a5b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab48aaee4832b1d89d6f5c643a4a12b9f"><td class="memItemLeft" align="right" valign="top"><a id="ab48aaee4832b1d89d6f5c643a4a12b9f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#ab48aaee4832b1d89d6f5c643a4a12b9f">FromUIntMask</a> (unsigned color, <a class="el" href="struct_urho3_d_1_1_color_1_1_channel_mask.html">ChannelMask</a> mask)</td></tr>
-<tr class="memdesc:ab48aaee4832b1d89d6f5c643a4a12b9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set RGBA values from packed 32-bit integer with arbitrary channel mask. <br /></td></tr>
-<tr class="separator:ab48aaee4832b1d89d6f5c643a4a12b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae47cd7bef80d33b3df2061c066028c1"><td class="memItemLeft" align="right" valign="top"><a id="aae47cd7bef80d33b3df2061c066028c1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#aae47cd7bef80d33b3df2061c066028c1">FromUIntMask</a> (unsigned color, const <a class="el" href="struct_urho3_d_1_1_color_1_1_channel_mask.html">ChannelMask</a> &amp;mask)</td></tr>
+<tr class="memdesc:aae47cd7bef80d33b3df2061c066028c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set RGBA values from packed 32-bit integer with arbitrary channel mask. <br /></td></tr>
+<tr class="separator:aae47cd7bef80d33b3df2061c066028c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6bcb8a2d352a5fffddc30ffe5453141"><td class="memItemLeft" align="right" valign="top"><a id="ab6bcb8a2d352a5fffddc30ffe5453141"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#ab6bcb8a2d352a5fffddc30ffe5453141">FromHSL</a> (float h, float s, float l, float a=1.0f)</td></tr>
 <tr class="memdesc:ab6bcb8a2d352a5fffddc30ffe5453141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set RGBA values from specified HSL values and alpha. <br /></td></tr>
@@ -381,7 +381,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 25 2020 21:58:30 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 28 2020 18:43:24 for Urho3D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
