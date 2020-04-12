@@ -308,6 +308,10 @@ $(function() {
 <li>screenJoystick_
 : <a class="el" href="struct_urho3_d_1_1_joystick_state.html#a9f42ee72b0ac8945517943a3332c58a1">Urho3D::JoystickState</a>
 </li>
+<li>screenParams_
+: <a class="el" href="class_urho3_d_1_1_graphics.html#ab3b3bd278817fab3fd2e43dcec78ce3e">Urho3D::Graphics</a>
+, <a class="el" href="struct_urho3_d_1_1_window_mode_params.html#a32fee3048f0f878ce9b34cf0d0296ce9">Urho3D::WindowModeParams</a>
+</li>
 <li>screenPosition_
 : <a class="el" href="class_urho3_d_1_1_u_i_element.html#a18f79470004809bb6a429a9a5d26e45a">Urho3D::UIElement</a>
 </li>
@@ -385,6 +389,9 @@ $(function() {
 </li>
 <li>SecondaryLODGeometry
 : <a class="el" href="class_urho3_d_1_1_raytracer_scene.html#a87d2bda920c72f7f98a8797cce2197a4">Urho3D::RaytracerScene</a>
+</li>
+<li>secondaryWindowMode_
+: <a class="el" href="class_urho3_d_1_1_graphics.html#a3decc3942a2199fc4e99122972dd9c3f">Urho3D::Graphics</a>
 </li>
 <li>Seek()
 : <a class="el" href="class_urho3_d_1_1_deserializer.html#a04335b8bfc3e845d1e95599d362b2115">Urho3D::Deserializer</a>
@@ -536,7 +543,7 @@ $(function() {
 , <a class="el" href="class_urho3_d_1_1_application_settings.html#a9a1dbc42e87681bf7f1503a08e50cbdf">Urho3D::ApplicationSettings</a>
 , <a class="el" href="class_urho3_d_1_1_archive.html#a4104e502eab997c5f5123d37289d3d67">Urho3D::Archive</a>
 , <a class="el" href="class_urho3_d_1_1_binary_input_archive.html#ab4edc5645c0a1e63348b7d2c1412f379">Urho3D::BinaryInputArchive</a>
-, <a class="el" href="class_urho3_d_1_1_binary_output_archive.html#ad715c78bedb5782a2779dce00f0fac39">Urho3D::BinaryOutputArchive</a>
+, <a class="el" href="class_urho3_d_1_1_binary_output_archive.html#a38838e4e4eeb307db779c0512a1a7a01">Urho3D::BinaryOutputArchive</a>
 , <a class="el" href="class_urho3_d_1_1_custom_variant_value.html#ae9bf194d2d3f1badb3ff7b9a45eecaa0">Urho3D::CustomVariantValue</a>
 , <a class="el" href="class_urho3_d_1_1_custom_variant_value_impl.html#a77b32c3e2c61609773b77e9b977cc9b1">Urho3D::CustomVariantValueImpl&lt; T &gt;</a>
 , <a class="el" href="struct_urho3_d_1_1_custom_variant_value_traits.html#a6512a7c957f91080f85647c28ddb7223">Urho3D::CustomVariantValueTraits&lt; T &gt;</a>
@@ -1237,6 +1244,9 @@ $(function() {
 </li>
 <li>SetDefaultToolTipDelay()
 : <a class="el" href="class_urho3_d_1_1_u_i.html#a47ac88d68d9e4bc648e7b1b892d02778">Urho3D::UI</a>
+</li>
+<li>SetDefaultWindowModes()
+: <a class="el" href="class_urho3_d_1_1_graphics.html#a120f99124337d4775a2153c62ec329b1">Urho3D::Graphics</a>
 </li>
 <li>SetDefines()
 : <a class="el" href="class_urho3_d_1_1_shader_variation.html#a5575e14508baee77ac1de15f7e1157ae">Urho3D::ShaderVariation</a>
@@ -2757,7 +2767,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_u_i_element.html#af61488bebf9ccbc2c3c0ea9650714f63">Urho3D::UIElement</a>
 </li>
 <li>SetPixel()
-: <a class="el" href="class_urho3_d_1_1_image.html#af84412137d5531a8326970bebdfcb249">Urho3D::Image</a>
+: <a class="el" href="class_urho3_d_1_1_image.html#a10dd31278cec82fbf8a6fa3c29da2ff6">Urho3D::Image</a>
 </li>
 <li>SetPixelInt()
 : <a class="el" href="class_urho3_d_1_1_image.html#ad11764119a1cc4fd5cde9d038e905830">Urho3D::Image</a>
@@ -2817,7 +2827,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_button.html#a7da6b87c3d323a912ab3e97b17c6be46">Urho3D::Button</a>
 </li>
 <li>SetPressedChildOffset()
-: <a class="el" href="class_urho3_d_1_1_button.html#a12d178848e826cac1a3e2bf56b123967">Urho3D::Button</a>
+: <a class="el" href="class_urho3_d_1_1_button.html#afce660c2fa58d11872387787ea0f3c17">Urho3D::Button</a>
 </li>
 <li>SetPressedOffset()
 : <a class="el" href="class_urho3_d_1_1_button.html#a7919321e7cf4203134565161f53d40cb">Urho3D::Button</a>
@@ -2887,7 +2897,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_geometry.html#a049f24228ead8713102a6e5c9573dc19">Urho3D::Geometry</a>
 </li>
 <li>SetRawVertexData()
-: <a class="el" href="class_urho3_d_1_1_geometry.html#afe572e0cd4bb7071a79064c4594180de">Urho3D::Geometry</a>
+: <a class="el" href="class_urho3_d_1_1_geometry.html#a8e8477353a187bc8b15db0c3a5406012">Urho3D::Geometry</a>
 </li>
 <li>SetRect()
 : <a class="el" href="class_urho3_d_1_1_viewport.html#acc1acf4531e0762f0e19b6399aaf39a9">Urho3D::Viewport</a>
@@ -3081,6 +3091,9 @@ $(function() {
 <li>SetScreenKeyboardVisible()
 : <a class="el" href="class_urho3_d_1_1_input.html#a9a8e1073c5e29bac46a0183a803d6df4">Urho3D::Input</a>
 </li>
+<li>SetScreenMode()
+: <a class="el" href="class_urho3_d_1_1_graphics.html#afdcde1ab06c42a77cc58fb29e4594f0c">Urho3D::Graphics</a>
+</li>
 <li>SetScrollBarsAutoVisible()
 : <a class="el" href="class_urho3_d_1_1_scroll_view.html#a2998fa219809811935d6568a637b74bc">Urho3D::ScrollView</a>
 </li>
@@ -3133,7 +3146,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_graphics.html#ab3df3ac9a3477a2619eaba448be5dc19">Urho3D::Graphics</a>
 </li>
 <li>SetShaderParameter()
-: <a class="el" href="class_urho3_d_1_1_graphics.html#a85da55dc069731066ddeed7b6e3c5585">Urho3D::Graphics</a>
+: <a class="el" href="class_urho3_d_1_1_graphics.html#a6fb532c168ece083ecf3e70957dda5c5">Urho3D::Graphics</a>
 , <a class="el" href="class_urho3_d_1_1_material.html#a2345f76faf2deb8f79ce787900ace3a4">Urho3D::Material</a>
 , <a class="el" href="class_urho3_d_1_1_render_path.html#a3a8198aa5737752de8cfb422edb08458">Urho3D::RenderPath</a>
 , <a class="el" href="struct_urho3_d_1_1_render_path_command.html#a49df698c51a52ce1b99541c09b08b56c">Urho3D::RenderPathCommand</a>
@@ -3245,7 +3258,7 @@ $(function() {
 , <a class="el" href="class_urho3_d_1_1_texture3_d.html#aca029903e75e685f2c73975c51ed0627">Urho3D::Texture3D</a>
 , <a class="el" href="class_urho3_d_1_1_texture_cube.html#a6b635689647bfaf37a0be4e0e4e823fe">Urho3D::TextureCube</a>
 , <a class="el" href="class_urho3_d_1_1_u_i_element.html#a388303ecaef3a6d4764cf84f3dfcceb8">Urho3D::UIElement</a>
-, <a class="el" href="class_urho3_d_1_1_vertex_buffer.html#af7d13c87254863baf7021c3ec9ec7e61">Urho3D::VertexBuffer</a>
+, <a class="el" href="class_urho3_d_1_1_vertex_buffer.html#a18cac8752ebe9c88af66244b95299e3e">Urho3D::VertexBuffer</a>
 </li>
 <li>SetSizeAdd()
 : <a class="el" href="class_urho3_d_1_1_particle_effect.html#ac868940b6fc0269d079119f3f02eab85">Urho3D::ParticleEffect</a>
@@ -3394,7 +3407,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_x_m_l_element.html#af04273694b02a468b8a0a5b100a8d1dc">Urho3D::XMLElement</a>
 </li>
 <li>SetStyle()
-: <a class="el" href="class_urho3_d_1_1_u_i_element.html#a500a4ecfa2caff7ae8004334474eab01">Urho3D::UIElement</a>
+: <a class="el" href="class_urho3_d_1_1_u_i_element.html#a3b96ad0d397398e375156cffb9816329">Urho3D::UIElement</a>
 </li>
 <li>SetStyleAuto()
 : <a class="el" href="class_urho3_d_1_1_u_i_element.html#acd77f27ffb85ee3d41cbbdd0f7a80e4a">Urho3D::UIElement</a>
@@ -3605,7 +3618,7 @@ $(function() {
 , <a class="el" href="class_urho3_d_1_1_rigid_body.html#a054047e6c188046a76c16605e16a9b50">Urho3D::RigidBody</a>
 </li>
 <li>SetTransform2D()
-: <a class="el" href="class_urho3_d_1_1_node.html#a643cb639e8544153d892123b706c6f3c">Urho3D::Node</a>
+: <a class="el" href="class_urho3_d_1_1_node.html#a46d91113c18bcf0b7b1023691695c642">Urho3D::Node</a>
 </li>
 <li>SetTransformSilent()
 : <a class="el" href="class_urho3_d_1_1_node.html#acd850d0f20e84741b2034843beb86379">Urho3D::Node</a>
@@ -3738,7 +3751,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_progress_bar.html#a026c51c543f2f64d883f0fc14643be95">Urho3D::ProgressBar</a>
 , <a class="el" href="class_urho3_d_1_1_scroll_bar.html#a64a6b8b3da2f14f5ef23a46c88f1c403">Urho3D::ScrollBar</a>
 , <a class="el" href="class_urho3_d_1_1_slider.html#af1b2829c74564d63a9065d6a3e572bf8">Urho3D::Slider</a>
-, <a class="el" href="class_urho3_d_1_1_x_m_l_element.html#ae700c9db873be560e26ab83724fa97c5">Urho3D::XMLElement</a>
+, <a class="el" href="class_urho3_d_1_1_x_m_l_element.html#a26bba51994acc18861d2058c89ae3b38">Urho3D::XMLElement</a>
 </li>
 <li>SetValueMap()
 : <a class="el" href="class_urho3_d_1_1_p_list_value.html#aa245df0f9d49c6fb920e6b850635ee94">Urho3D::PListValue</a>
@@ -3754,7 +3767,7 @@ $(function() {
 , <a class="el" href="class_urho3_d_1_1_u_i_element.html#a7a085bb6b90aad996999804bd7e8a3e7">Urho3D::UIElement</a>
 </li>
 <li>SetVariable()
-: <a class="el" href="class_urho3_d_1_1_x_path_query.html#aba6c3126d669247fc97871759c526d26">Urho3D::XPathQuery</a>
+: <a class="el" href="class_urho3_d_1_1_x_path_query.html#a2024c667a17ec0fa0b9d3ab0d2f8cb59">Urho3D::XPathQuery</a>
 </li>
 <li>SetVariant()
 : <a class="el" href="class_urho3_d_1_1_j_s_o_n_value.html#a80c79eecad170464d49770972271564e">Urho3D::JSONValue</a>
@@ -3881,7 +3894,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_u_i_component.html#a72fbc64c5079690cf264aad7832c8a36">Urho3D::UIComponent</a>
 </li>
 <li>SetViewPosition()
-: <a class="el" href="class_urho3_d_1_1_scroll_view.html#a49653f90906d0db191f66fd21e8eeba8">Urho3D::ScrollView</a>
+: <a class="el" href="class_urho3_d_1_1_scroll_view.html#ae94d56b53ef42a14be5d6fc56a29656a">Urho3D::ScrollView</a>
 </li>
 <li>SetViewPositionAttr()
 : <a class="el" href="class_urho3_d_1_1_scroll_view.html#a82b03f9b619aba315428e9bc373b327e">Urho3D::ScrollView</a>
@@ -3965,6 +3978,9 @@ $(function() {
 <li>SetWindowIcon()
 : <a class="el" href="class_urho3_d_1_1_graphics.html#a965c4cfaa32842836185e84b97b57a8f">Urho3D::Graphics</a>
 </li>
+<li>SetWindowModes()
+: <a class="el" href="class_urho3_d_1_1_graphics.html#a2adea5d8adacf78e0a5e9093b0aa3f1d">Urho3D::Graphics</a>
+</li>
 <li>SetWindowPosition()
 : <a class="el" href="class_urho3_d_1_1_graphics.html#a6095d106f98d8feebf88a8e5d888cf29">Urho3D::Graphics</a>
 </li>
@@ -3995,16 +4011,16 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_node.html#aef9ea878535741c7f163580ea0dd729a">Urho3D::Node</a>
 </li>
 <li>SetWorldScale2D()
-: <a class="el" href="class_urho3_d_1_1_node.html#a0c4d99a21b176b525ace088f5f03a92f">Urho3D::Node</a>
+: <a class="el" href="class_urho3_d_1_1_node.html#a997e30a6d47064572b0d065cf64d71d6">Urho3D::Node</a>
 </li>
 <li>SetWorldTransform()
-: <a class="el" href="class_urho3_d_1_1_node.html#ae4eb180d8cfd3b80ba96ca14fd9f7797">Urho3D::Node</a>
+: <a class="el" href="class_urho3_d_1_1_node.html#aa10fa37436c6adf248a919ba8449532b">Urho3D::Node</a>
 </li>
 <li>setWorldTransform()
 : <a class="el" href="class_urho3_d_1_1_rigid_body.html#ab4840875f0cc02f2ea6f27d5aaf8401c">Urho3D::RigidBody</a>
 </li>
 <li>SetWorldTransform2D()
-: <a class="el" href="class_urho3_d_1_1_node.html#ad1fc5b8dd6e33e1656dbcb6f0d1624fe">Urho3D::Node</a>
+: <a class="el" href="class_urho3_d_1_1_node.html#a9f8238506bc70a58092012e812cc1a21">Urho3D::Node</a>
 </li>
 <li>SetWrapMode()
 : <a class="el" href="class_urho3_d_1_1_value_animation_info.html#af35217023984ff6073326cae7a7405e6">Urho3D::ValueAnimationInfo</a>
@@ -4038,7 +4054,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_graphics.html#a2770874dc27b7450529f7c3415fdf418">Urho3D::Graphics</a>
 </li>
 <li>ShaderParameter()
-: <a class="el" href="struct_urho3_d_1_1_shader_parameter.html#a90ef82b5ee3d7cd29bab4572e397ac0e">Urho3D::ShaderParameter</a>
+: <a class="el" href="struct_urho3_d_1_1_shader_parameter.html#a773659710b0dfc23a93717277c634ef9">Urho3D::ShaderParameter</a>
 </li>
 <li>ShaderParameterAnimationInfo()
 : <a class="el" href="class_urho3_d_1_1_shader_parameter_animation_info.html#a90f9764192139036a056a3a9ff157e6d">Urho3D::ShaderParameterAnimationInfo</a>
@@ -4232,7 +4248,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_collision_shape.html#af24b1dc1c635a2ab197ca0a6694030e4">Urho3D::CollisionShape</a>
 </li>
 <li>SharedPtr()
-: <a class="el" href="class_urho3_d_1_1_shared_ptr.html#a6a1b39346ccce7271064365b503b51c9">Urho3D::SharedPtr&lt; T &gt;</a>
+: <a class="el" href="class_urho3_d_1_1_shared_ptr.html#a5ebc446a08684b71637a875817dd2b7c">Urho3D::SharedPtr&lt; T &gt;</a>
 </li>
 <li>shiftedCompoundShape_
 : <a class="el" href="class_urho3_d_1_1_rigid_body.html#a1c07152ea8d7444507584648457232ee">Urho3D::RigidBody</a>
@@ -4592,20 +4608,20 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_sphere_octree_query.html#a4b21c9118d8dc3c66df8aa33a4125728">Urho3D::SphereOctreeQuery</a>
 </li>
 <li>SphericalHarmonics9()
-: <a class="el" href="struct_urho3_d_1_1_spherical_harmonics9.html#a5c0fbec67caf12089a78c79e8bfccd76">Urho3D::SphericalHarmonics9</a>
+: <a class="el" href="struct_urho3_d_1_1_spherical_harmonics9.html#a9dc7535186fccf88e91d1b2bd333be8f">Urho3D::SphericalHarmonics9</a>
 </li>
 <li>sphericalHarmonics_
 : <a class="el" href="struct_urho3_d_1_1_light_probe_collection_baked_data.html#a09d3ebaf16f29907f701a2a681ef6352">Urho3D::LightProbeCollectionBakedData</a>
 , <a class="el" href="class_urho3_d_1_1_renderer.html#ad583008de014d937225c4f87b5bea927">Urho3D::Renderer</a>
 </li>
 <li>SphericalHarmonicsColor9()
-: <a class="el" href="struct_urho3_d_1_1_spherical_harmonics_color9.html#a8aea11d9a32d85ca9237e06a3b8d0cf6">Urho3D::SphericalHarmonicsColor9</a>
+: <a class="el" href="struct_urho3_d_1_1_spherical_harmonics_color9.html#a7f8d6613897ce17f49b00a3976329765">Urho3D::SphericalHarmonicsColor9</a>
 </li>
 <li>SphericalHarmonicsDot9()
 : <a class="el" href="struct_urho3_d_1_1_spherical_harmonics_dot9.html#a7060b8b22c1926003716389d0e704ee3">Urho3D::SphericalHarmonicsDot9</a>
 </li>
 <li>Spline()
-: <a class="el" href="class_urho3_d_1_1_spline.html#ac53bf81997466016d00ed1e94500c4ea">Urho3D::Spline</a>
+: <a class="el" href="class_urho3_d_1_1_spline.html#ad6713729fcc73642aa7ad7e7433e18c0">Urho3D::Spline</a>
 </li>
 <li>spline_
 : <a class="el" href="class_urho3_d_1_1_spline_path.html#ad90a62d0880c970ee8d0396c242f73a6">Urho3D::SplinePath</a>
@@ -4905,7 +4921,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_stretchable_sprite2_d.html#a2de5fef0211a1b551eb84d36a9f8436a">Urho3D::StretchableSprite2D</a>
 </li>
 <li>StringHash()
-: <a class="el" href="class_urho3_d_1_1_string_hash.html#afc7d30fe25b54e6c86e5e3c08bae6310">Urho3D::StringHash</a>
+: <a class="el" href="class_urho3_d_1_1_string_hash.html#a7960e9deaf8be12c57dd3f364476041d">Urho3D::StringHash</a>
 </li>
 <li>StringHashRegister()
 : <a class="el" href="class_urho3_d_1_1_string_hash_register.html#a9c66e60e78d5bd9f6baf59046dadc5b0">Urho3D::StringHashRegister</a>
@@ -4933,7 +4949,7 @@ $(function() {
 </li>
 <li>Subscribe()
 : <a class="el" href="class_urho3_d_1_1_signal.html#a4be445afc34f51a990ca862243887fd0">Urho3D::Signal&lt; T, Sender &gt;</a>
-, <a class="el" href="class_urho3_d_1_1_signal_3_01void_00_01_sender_01_4.html#add630c962a56be511a6ba4c23a755204">Urho3D::Signal&lt; void, Sender &gt;</a>
+, <a class="el" href="class_urho3_d_1_1_signal_3_01void_00_01_sender_01_4.html#a88fc7d577a3c699002230d8a1f3a9f27">Urho3D::Signal&lt; void, Sender &gt;</a>
 </li>
 <li>subscribed_
 : <a class="el" href="class_urho3_d_1_1_decal_set.html#ad8e2369352397da4c46678701e03b1ed">Urho3D::DecalSet</a>
@@ -5006,7 +5022,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_file_system.html#a9223a22ab3dcd090fc223a0dcd4ff7fb">Urho3D::FileSystem</a>
 </li>
 <li>SystemRun()
-: <a class="el" href="class_urho3_d_1_1_file_system.html#a0d18fb2ffcb0b9c52f0d5082993f8907">Urho3D::FileSystem</a>
+: <a class="el" href="class_urho3_d_1_1_file_system.html#a300b5511a7ce0c45a13b355e6d701a60">Urho3D::FileSystem</a>
 </li>
 <li>SystemRunAsync()
 : <a class="el" href="class_urho3_d_1_1_file_system.html#a9871ed443cce15cbae5366676e950f10">Urho3D::FileSystem</a>
