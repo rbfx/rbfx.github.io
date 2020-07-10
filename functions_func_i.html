@@ -87,9 +87,13 @@ $(function() {
 , <a class="el" href="struct_urho3_d_1_1_joystick_state.html#a962557fcac9ee900967e083ce840a9b4">Urho3D::JoystickState</a>
 , <a class="el" href="class_urho3_d_1_1_octant.html#a6304500141e75a6b6537a334d3922cec">Urho3D::Octant</a>
 , <a class="el" href="class_urho3_d_1_1_renderer.html#ae0d765a240f7cf5f829ddc95cb2729c9">Urho3D::Renderer</a>
+, <a class="el" href="class_urho3_d_1_1_software_model_animator.html#ad8e1488056643ea5a6e7329c9337874a">Urho3D::SoftwareModelAnimator</a>
 , <a class="el" href="class_urho3_d_1_1_static_model_for_lightmap.html#adc11dfb97d70c26de5110236726cb3d2">Urho3D::StaticModelForLightmap</a>
 , <a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html#a54b4cdcb017c10ea0d4a0e92a708f5b0">Urho3D::TileMapLayer2D</a>
 , <a class="el" href="class_urho3_d_1_1_u_i.html#a5bb71ed105d2bb465a10f66c9bfcb275">Urho3D::UI</a>
+</li>
+<li>InitializeAnimationData()
+: <a class="el" href="class_urho3_d_1_1_software_model_animator.html#a7dc142e4aca7dd03394bd569078dbc15">Urho3D::SoftwareModelAnimator</a>
 </li>
 <li>InitializeJointDef()
 : <a class="el" href="class_urho3_d_1_1_constraint2_d.html#aed0dbf5de5e3a9f7f62ea460c1b3ce87">Urho3D::Constraint2D</a>
@@ -407,11 +411,11 @@ $(function() {
 <li>IsInside()
 : <a class="el" href="class_urho3_d_1_1_bounding_box.html#a03f691b8e5e7e0a83758321c89ac7e40">Urho3D::BoundingBox</a>
 , <a class="el" href="class_urho3_d_1_1_debug_renderer.html#a81f7b1227249e32b760c1c534c55ea8b">Urho3D::DebugRenderer</a>
-, <a class="el" href="class_urho3_d_1_1_frustum.html#a5a7c8953478449a7f2248d4de7ab4c2a">Urho3D::Frustum</a>
+, <a class="el" href="class_urho3_d_1_1_frustum.html#ac2c9d2c4f9b870519ea00affef089cd1">Urho3D::Frustum</a>
 , <a class="el" href="class_urho3_d_1_1_geometry.html#a5c39ea0ce09a7d0e344b7cced50e4bb4">Urho3D::Geometry</a>
 , <a class="el" href="class_urho3_d_1_1_int_rect.html#ab0f77dae86d5aea8a8e15571e91a52a8">Urho3D::IntRect</a>
 , <a class="el" href="class_urho3_d_1_1_rect.html#a5dce57a532757e374ffdebc8a26c19f9">Urho3D::Rect</a>
-, <a class="el" href="class_urho3_d_1_1_sphere.html#a23cedf63ba7aa18b8c3cb5300743ba2d">Urho3D::Sphere</a>
+, <a class="el" href="class_urho3_d_1_1_sphere.html#a72db7567431d6ca0b1edb796bf011602">Urho3D::Sphere</a>
 , <a class="el" href="class_urho3_d_1_1_static_model.html#a988aaa5d6115a1d179eacccf61bc0066">Urho3D::StaticModel</a>
 , <a class="el" href="class_urho3_d_1_1_u_i_element.html#a479f87ac369c89be8df4e9da40e6fa3a">Urho3D::UIElement</a>
 , <a class="el" href="class_urho3_d_1_1_zone.html#a3c96d32ee125b7dc64da6f99e74962b8">Urho3D::Zone</a>
@@ -424,20 +428,20 @@ $(function() {
 </li>
 <li>IsInsideFast()
 : <a class="el" href="class_urho3_d_1_1_bounding_box.html#aaf2af3166bfa73be242635232e36ab7c">Urho3D::BoundingBox</a>
-, <a class="el" href="class_urho3_d_1_1_frustum.html#ae98feba8cd681b9a5d023b43b71e56ff">Urho3D::Frustum</a>
-, <a class="el" href="class_urho3_d_1_1_sphere.html#a2b3a1756dbe4b426814fb2d58df16792">Urho3D::Sphere</a>
+, <a class="el" href="class_urho3_d_1_1_frustum.html#a14dc2400d17d695892ce4edfcc9b724e">Urho3D::Frustum</a>
+, <a class="el" href="class_urho3_d_1_1_sphere.html#a681c28b29e99b644f9a3cb89f4a68946">Urho3D::Sphere</a>
 </li>
 <li>IsInsideLocal()
 : <a class="el" href="class_urho3_d_1_1_static_model.html#abbf0d49e6096d1a269829cb9a19e445e">Urho3D::StaticModel</a>
 </li>
 <li>IsInstanceOf()
-: <a class="el" href="class_urho3_d_1_1_object.html#a17376e0a319ae50dca17ad91c5b1a55b">Urho3D::Object</a>
+: <a class="el" href="class_urho3_d_1_1_object.html#a7fade3952bd2a1fd71a419d9a0c84a83">Urho3D::Object</a>
 </li>
 <li>IsInternal()
 : <a class="el" href="class_urho3_d_1_1_u_i_element.html#a70c70d71d1e5ac6dcee293c942b76e96">Urho3D::UIElement</a>
 </li>
 <li>IsInView()
-: <a class="el" href="class_urho3_d_1_1_drawable.html#a868163988ad17c777699cd0226ffc68b">Urho3D::Drawable</a>
+: <a class="el" href="class_urho3_d_1_1_drawable.html#a4dd313eab9c863711b8e84d7ce30fc11">Urho3D::Drawable</a>
 </li>
 <li>IsKinematic()
 : <a class="el" href="class_urho3_d_1_1_rigid_body.html#a464c60d433f8298b5606369c26853773">Urho3D::RigidBody</a>
@@ -528,7 +532,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_file.html#ad6fd6841a277e4d6fcb74b28267641a3">Urho3D::File</a>
 </li>
 <li>IsPlaying()
-: <a class="el" href="class_urho3_d_1_1_animation_controller.html#a07df7a75643aad9ca200a325a5e13ab8">Urho3D::AnimationController</a>
+: <a class="el" href="class_urho3_d_1_1_animation_controller.html#adfb46090bfcb5a4064052b229b9ed71d">Urho3D::AnimationController</a>
 , <a class="el" href="class_urho3_d_1_1_audio.html#a05dc4c2afc9e5297a8fc3db221a90c36">Urho3D::Audio</a>
 , <a class="el" href="class_urho3_d_1_1_sound_source.html#a8dac4f4733a076eace3a300cef3be92e">Urho3D::SoundSource</a>
 </li>
@@ -670,7 +674,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_custom_variant_value.html#a1b2c97cd59aef872776d6bcae7039dd1">Urho3D::CustomVariantValue</a>
 </li>
 <li>IsTypeOf()
-: <a class="el" href="class_urho3_d_1_1_type_info.html#a2e71f411622fccd8aca2be6d9269563e">Urho3D::TypeInfo</a>
+: <a class="el" href="class_urho3_d_1_1_type_info.html#ac11e50a03d415754ff58cd70a0b1c2e3">Urho3D::TypeInfo</a>
 </li>
 <li>IsUnorderedSupportedNow()
 : <a class="el" href="class_urho3_d_1_1_archive.html#a4a5d72c8d09b3aad85359597c73e4c56">Urho3D::Archive</a>

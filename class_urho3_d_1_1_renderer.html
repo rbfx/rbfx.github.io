@@ -216,6 +216,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa76b73bc9215a63846a3e0be44391c0d">SetSphericalHarmonics</a> (bool enable)</td></tr>
 <tr class="memdesc:aa76b73bc9215a63846a3e0be44391c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether to enable spherical harmonics. <br /></td></tr>
 <tr class="separator:aa76b73bc9215a63846a3e0be44391c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80dc494c296e8c332a7398850a95ad94"><td class="memItemLeft" align="right" valign="top"><a id="a80dc494c296e8c332a7398850a95ad94"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a80dc494c296e8c332a7398850a95ad94">SetSkinningMode</a> (<a class="el" href="_renderer_8h.html#a650ff6dcc1d7e89a0e4a1c7932218121">SkinningMode</a> mode)</td></tr>
+<tr class="memdesc:a80dc494c296e8c332a7398850a95ad94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set skinning mode. <br /></td></tr>
+<tr class="separator:a80dc494c296e8c332a7398850a95ad94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c8813df1b6cf14ddd437b4fe71d8669"><td class="memItemLeft" align="right" valign="top"><a id="a0c8813df1b6cf14ddd437b4fe71d8669"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a0c8813df1b6cf14ddd437b4fe71d8669">SetNumSoftwareSkinningBones</a> (unsigned numBones)</td></tr>
+<tr class="memdesc:a0c8813df1b6cf14ddd437b4fe71d8669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of bones used for software skinning. <br /></td></tr>
+<tr class="separator:a0c8813df1b6cf14ddd437b4fe71d8669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97029f9ce4cb7b52240e97cc5b7f2861"><td class="memItemLeft" align="right" valign="top"><a id="a97029f9ce4cb7b52240e97cc5b7f2861"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a97029f9ce4cb7b52240e97cc5b7f2861">ReloadShaders</a> ()</td></tr>
 <tr class="memdesc:a97029f9ce4cb7b52240e97cc5b7f2861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force reload of shaders. <br /></td></tr>
@@ -348,6 +356,14 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa5d29412673b41a1ba77546bb9f5ce51">GetSphericalHarmonics</a> () const</td></tr>
 <tr class="memdesc:aa5d29412673b41a1ba77546bb9f5ce51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether to enable spherical harmonics. <br /></td></tr>
 <tr class="separator:aa5d29412673b41a1ba77546bb9f5ce51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17ff95456537a6c361a9373fe3d1016"><td class="memItemLeft" align="right" valign="top"><a id="aa17ff95456537a6c361a9373fe3d1016"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa17ff95456537a6c361a9373fe3d1016">GetUseHardwareSkinning</a> () const</td></tr>
+<tr class="memdesc:aa17ff95456537a6c361a9373fe3d1016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether hardware skinning is used. <br /></td></tr>
+<tr class="separator:aa17ff95456537a6c361a9373fe3d1016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b20d02b4e6331dbcae3902b9621653f"><td class="memItemLeft" align="right" valign="top"><a id="a7b20d02b4e6331dbcae3902b9621653f"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a7b20d02b4e6331dbcae3902b9621653f">GetNumSoftwareSkinningBones</a> () const</td></tr>
+<tr class="memdesc:a7b20d02b4e6331dbcae3902b9621653f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of bones used for software skinning. <br /></td></tr>
+<tr class="separator:a7b20d02b4e6331dbcae3902b9621653f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacd3512092dc5f292184df83315e89dc"><td class="memItemLeft" align="right" valign="top"><a id="aacd3512092dc5f292184df83315e89dc"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aacd3512092dc5f292184df83315e89dc">GetNumViews</a> () const</td></tr>
 <tr class="memdesc:aacd3512092dc5f292184df83315e89dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of views rendered. <br /></td></tr>
@@ -1166,6 +1182,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aced85881d60cdd72c878e932749dcda9">resetViews_</a> {}</td></tr>
 <tr class="memdesc:aced85881d60cdd72c878e932749dcda9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for views needing reset. <br /></td></tr>
 <tr class="separator:aced85881d60cdd72c878e932749dcda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af12c8c9bbdc4a5e6c3114cba61965a5e"><td class="memItemLeft" align="right" valign="top"><a id="af12c8c9bbdc4a5e6c3114cba61965a5e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#af12c8c9bbdc4a5e6c3114cba61965a5e">hardwareSkinningSupported_</a> { true }</td></tr>
+<tr class="memdesc:af12c8c9bbdc4a5e6c3114cba61965a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether hardware skinning is supported. <br /></td></tr>
+<tr class="separator:af12c8c9bbdc4a5e6c3114cba61965a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa8aa094c31f57cb5667a81b6b6038e5"><td class="memItemLeft" align="right" valign="top"><a id="aaa8aa094c31f57cb5667a81b6b6038e5"></a>
+<a class="el" href="_renderer_8h.html#a650ff6dcc1d7e89a0e4a1c7932218121">SkinningMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aaa8aa094c31f57cb5667a81b6b6038e5">skinningMode_</a> {}</td></tr>
+<tr class="memdesc:aaa8aa094c31f57cb5667a81b6b6038e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skinning mode. <br /></td></tr>
+<tr class="separator:aaa8aa094c31f57cb5667a81b6b6038e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d5cdc5d8cf3a4cba92a8014e75ca76e"><td class="memItemLeft" align="right" valign="top"><a id="a3d5cdc5d8cf3a4cba92a8014e75ca76e"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a3d5cdc5d8cf3a4cba92a8014e75ca76e">numSoftwareSkinningBones_</a> { 4 }</td></tr>
+<tr class="memdesc:a3d5cdc5d8cf3a4cba92a8014e75ca76e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bones used for software skinning. <br /></td></tr>
+<tr class="separator:a3d5cdc5d8cf3a4cba92a8014e75ca76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

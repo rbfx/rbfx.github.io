@@ -84,6 +84,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a2de4b384ea7057c33a9318d374711623">~AnimatedModel</a> () override</td></tr>
 <tr class="memdesc:a2de4b384ea7057c33a9318d374711623"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
 <tr class="separator:a2de4b384ea7057c33a9318d374711623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a219120b6959c138d431b16e2fe243bcb"><td class="memItemLeft" align="right" valign="top"><a id="a219120b6959c138d431b16e2fe243bcb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a219120b6959c138d431b16e2fe243bcb">Serialize</a> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;archive) override</td></tr>
+<tr class="memdesc:a219120b6959c138d431b16e2fe243bcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize from/to archive. Return true if successful. <br /></td></tr>
+<tr class="separator:a219120b6959c138d431b16e2fe243bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae21dcbd9bb8cb47c48caeb9c5aa0d16d"><td class="memItemLeft" align="right" valign="top"><a id="ae21dcbd9bb8cb47c48caeb9c5aa0d16d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#ae21dcbd9bb8cb47c48caeb9c5aa0d16d">Load</a> (<a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;source) override</td></tr>
 <tr class="memdesc:ae21dcbd9bb8cb47c48caeb9c5aa0d16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from binary data. Return true if successful. <br /></td></tr>
@@ -224,10 +228,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 const ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_model_morph.html">ModelMorph</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a52a329812c30fe681acbca53519acb15">GetMorphs</a> () const</td></tr>
 <tr class="memdesc:a52a329812c30fe681acbca53519acb15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all vertex morphs. <br /></td></tr>
 <tr class="separator:a52a329812c30fe681acbca53519acb15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30b2baaf3508cc3d6a84835092059c14"><td class="memItemLeft" align="right" valign="top"><a id="a30b2baaf3508cc3d6a84835092059c14"></a>
-const ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_vertex_buffer.html">VertexBuffer</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a30b2baaf3508cc3d6a84835092059c14">GetMorphVertexBuffers</a> () const</td></tr>
-<tr class="memdesc:a30b2baaf3508cc3d6a84835092059c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all morph vertex buffers. <br /></td></tr>
-<tr class="separator:a30b2baaf3508cc3d6a84835092059c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6725f1f1f198ea63d040cc6f97da2f2"><td class="memItemLeft" align="right" valign="top"><a id="ac6725f1f1f198ea63d040cc6f97da2f2"></a>
+const ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_vertex_buffer.html">VertexBuffer</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#ac6725f1f1f198ea63d040cc6f97da2f2">GetMorphVertexBuffers</a> () const</td></tr>
+<tr class="memdesc:ac6725f1f1f198ea63d040cc6f97da2f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all morph vertex buffers. <br /></td></tr>
+<tr class="separator:ac6725f1f1f198ea63d040cc6f97da2f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace33275729129b5bcab5d1b6adcaa2c2"><td class="memItemLeft" align="right" valign="top"><a id="ace33275729129b5bcab5d1b6adcaa2c2"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#ace33275729129b5bcab5d1b6adcaa2c2">GetNumMorphs</a> () const</td></tr>
 <tr class="memdesc:ace33275729129b5bcab5d1b6adcaa2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of vertex morphs. <br /></td></tr>
@@ -1490,10 +1494,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a1cee08d3a1d69d8d41397c0a99006369">CloneGeometries</a> ()</td></tr>
 <tr class="memdesc:a1cee08d3a1d69d8d41397c0a99006369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone geometries for vertex morphing. <br /></td></tr>
 <tr class="separator:a1cee08d3a1d69d8d41397c0a99006369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3089ac56ce8f602201ce67c81e7f9733"><td class="memItemLeft" align="right" valign="top"><a id="a3089ac56ce8f602201ce67c81e7f9733"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a3089ac56ce8f602201ce67c81e7f9733">CopyMorphVertices</a> (void *destVertexData, void *srcVertexData, unsigned vertexCount, <a class="el" href="class_urho3_d_1_1_vertex_buffer.html">VertexBuffer</a> *destBuffer, <a class="el" href="class_urho3_d_1_1_vertex_buffer.html">VertexBuffer</a> *srcBuffer)</td></tr>
-<tr class="memdesc:a3089ac56ce8f602201ce67c81e7f9733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy morph vertices. <br /></td></tr>
-<tr class="separator:a3089ac56ce8f602201ce67c81e7f9733"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4490aea6f65d9c5c617f8f6a4f762401"><td class="memItemLeft" align="right" valign="top"><a id="a4490aea6f65d9c5c617f8f6a4f762401"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a4490aea6f65d9c5c617f8f6a4f762401">UpdateAnimation</a> (const <a class="el" href="struct_urho3_d_1_1_frame_info.html">FrameInfo</a> &amp;frame)</td></tr>
 <tr class="memdesc:a4490aea6f65d9c5c617f8f6a4f762401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate animations. Called from <a class="el" href="class_urho3_d_1_1_animated_model.html#a4ddbe87cb65a57aadbd52a611fccea8b" title="Update before octree reinsertion. Is called from a worker thread. ">Update()</a>. <br /></td></tr>
@@ -1506,10 +1506,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#ae22d418c07fd8116bffd89288af3a4ae">UpdateMorphs</a> ()</td></tr>
 <tr class="memdesc:ae22d418c07fd8116bffd89288af3a4ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reapply all vertex morphs. <br /></td></tr>
 <tr class="separator:ae22d418c07fd8116bffd89288af3a4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8677800e4c82fc784375febc08a266e2"><td class="memItemLeft" align="right" valign="top"><a id="a8677800e4c82fc784375febc08a266e2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a8677800e4c82fc784375febc08a266e2">ApplyMorph</a> (<a class="el" href="class_urho3_d_1_1_vertex_buffer.html">VertexBuffer</a> *buffer, void *destVertexData, unsigned morphRangeStart, const <a class="el" href="struct_urho3_d_1_1_vertex_buffer_morph.html">VertexBufferMorph</a> &amp;morph, float weight)</td></tr>
-<tr class="memdesc:a8677800e4c82fc784375febc08a266e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply a vertex morph. <br /></td></tr>
-<tr class="separator:a8677800e4c82fc784375febc08a266e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6af95070304f3ecca53d9dee1ce63ad"><td class="memItemLeft" align="right" valign="top"><a id="af6af95070304f3ecca53d9dee1ce63ad"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#af6af95070304f3ecca53d9dee1ce63ad">HandleModelReloadFinished</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:af6af95070304f3ecca53d9dee1ce63ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle model reload finished. <br /></td></tr>
@@ -1521,10 +1517,10 @@ Private Attributes</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_skeleton.html">Skeleton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a40289fe73614fb3dac92b5db2b7f5e65">skeleton_</a></td></tr>
 <tr class="memdesc:a40289fe73614fb3dac92b5db2b7f5e65"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_skeleton.html" title="Hierarchical collection of bones. ">Skeleton</a>. <br /></td></tr>
 <tr class="separator:a40289fe73614fb3dac92b5db2b7f5e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0f9f7e35f5363504d2c83b31aecabc0"><td class="memItemLeft" align="right" valign="top"><a id="af0f9f7e35f5363504d2c83b31aecabc0"></a>
-ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_vertex_buffer.html">VertexBuffer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#af0f9f7e35f5363504d2c83b31aecabc0">morphVertexBuffers_</a></td></tr>
-<tr class="memdesc:af0f9f7e35f5363504d2c83b31aecabc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Morph vertex buffers. <br /></td></tr>
-<tr class="separator:af0f9f7e35f5363504d2c83b31aecabc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57094533029a4ccf5b6450d1d6c159e"><td class="memItemLeft" align="right" valign="top"><a id="ac57094533029a4ccf5b6450d1d6c159e"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_software_model_animator.html">SoftwareModelAnimator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#ac57094533029a4ccf5b6450d1d6c159e">modelAnimator_</a></td></tr>
+<tr class="memdesc:ac57094533029a4ccf5b6450d1d6c159e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Software model animator. <br /></td></tr>
+<tr class="separator:ac57094533029a4ccf5b6450d1d6c159e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0010686cd860dc23749553c334b2fac4"><td class="memItemLeft" align="right" valign="top"><a id="a0010686cd860dc23749553c334b2fac4"></a>
 ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_model_morph.html">ModelMorph</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a0010686cd860dc23749553c334b2fac4">morphs_</a></td></tr>
 <tr class="memdesc:a0010686cd860dc23749553c334b2fac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex morphs. <br /></td></tr>
@@ -1561,10 +1557,6 @@ ea::vector&lt; ea::vector&lt; <a class="el" href="class_urho3_d_1_1_matrix3x4.ht
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a78a619399b635e81082b98b8c73d3799">animationLodFrameNumber_</a></td></tr>
 <tr class="memdesc:a78a619399b635e81082b98b8c73d3799"><td class="mdescLeft">&#160;</td><td class="mdescRight">The frame number animation LOD distance was last calculated on. <br /></td></tr>
 <tr class="separator:a78a619399b635e81082b98b8c73d3799"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8af0a3f44df3ca9d74cc1f3ee4364c9"><td class="memItemLeft" align="right" valign="top"><a id="ab8af0a3f44df3ca9d74cc1f3ee4364c9"></a>
-VertexMaskFlags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#ab8af0a3f44df3ca9d74cc1f3ee4364c9">morphElementMask_</a></td></tr>
-<tr class="memdesc:ab8af0a3f44df3ca9d74cc1f3ee4364c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Morph vertex element mask. <br /></td></tr>
-<tr class="separator:ab8af0a3f44df3ca9d74cc1f3ee4364c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d15682b8b0c9a5bdf52c4cd82f61d1c"><td class="memItemLeft" align="right" valign="top"><a id="a3d15682b8b0c9a5bdf52c4cd82f61d1c"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a3d15682b8b0c9a5bdf52c4cd82f61d1c">animationLodBias_</a></td></tr>
 <tr class="memdesc:a3d15682b8b0c9a5bdf52c4cd82f61d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_animation.html" title="Skeletal animation resource. ">Animation</a> LOD bias. <br /></td></tr>
@@ -1601,6 +1593,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a74dabbe3d5301e927c040c76e46fdbc9">boneBoundingBoxDirty_</a></td></tr>
 <tr class="memdesc:a74dabbe3d5301e927c040c76e46fdbc9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_urho3_d_1_1_bone.html" title="Bone in a skeleton. ">Bone</a> bounding box dirty flag. <br /></td></tr>
 <tr class="separator:a74dabbe3d5301e927c040c76e46fdbc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd6744f294c9d416586e0421ed7358ee"><td class="memItemLeft" align="right" valign="top"><a id="acd6744f294c9d416586e0421ed7358ee"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#acd6744f294c9d416586e0421ed7358ee">softwareSkinning_</a> {}</td></tr>
+<tr class="memdesc:acd6744f294c9d416586e0421ed7358ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Software skinning flag. <br /></td></tr>
+<tr class="separator:acd6744f294c9d416586e0421ed7358ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eedb6bfc858f5063fa1c880f2cefb73"><td class="memItemLeft" align="right" valign="top"><a id="a1eedb6bfc858f5063fa1c880f2cefb73"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a1eedb6bfc858f5063fa1c880f2cefb73">numSoftwareSkinningBones_</a> { 4 }</td></tr>
+<tr class="memdesc:a1eedb6bfc858f5063fa1c880f2cefb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bones used for software skinning. <br /></td></tr>
+<tr class="separator:a1eedb6bfc858f5063fa1c880f2cefb73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4633183c56c1a46d609760e4e85b486"><td class="memItemLeft" align="right" valign="top"><a id="ab4633183c56c1a46d609760e4e85b486"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#ab4633183c56c1a46d609760e4e85b486">isMaster_</a></td></tr>
 <tr class="memdesc:ab4633183c56c1a46d609760e4e85b486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Master model flag. <br /></td></tr>

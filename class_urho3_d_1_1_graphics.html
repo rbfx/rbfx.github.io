@@ -559,6 +559,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_graphics.html#a13dd904efc25a01d54aa6bca51eb6882">GetSRGBWriteSupport</a> () const</td></tr>
 <tr class="memdesc:a13dd904efc25a01d54aa6bca51eb6882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether sRGB conversion on rendertarget writing is supported. <br /></td></tr>
 <tr class="separator:a13dd904efc25a01d54aa6bca51eb6882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94f654a888fdc353b49aaa09ec46a751"><td class="memItemLeft" align="right" valign="top"><a id="a94f654a888fdc353b49aaa09ec46a751"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_graphics.html#a94f654a888fdc353b49aaa09ec46a751">GetMaxVertexShaderUniforms</a> () const</td></tr>
+<tr class="memdesc:a94f654a888fdc353b49aaa09ec46a751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return max vertex shader uniforms support. <br /></td></tr>
+<tr class="separator:a94f654a888fdc353b49aaa09ec46a751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3b8e35bc3036a3960a397812629582"><td class="memItemLeft" align="right" valign="top"><a id="a6e3b8e35bc3036a3960a397812629582"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_graphics.html#a6e3b8e35bc3036a3960a397812629582">GetMaxPixelShaderUniforms</a> () const</td></tr>
+<tr class="memdesc:a6e3b8e35bc3036a3960a397812629582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return max pixel shader uniforms support. <br /></td></tr>
+<tr class="separator:a6e3b8e35bc3036a3960a397812629582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a692907bb257ca68a5435eb4f9dd0294e"><td class="memItemLeft" align="right" valign="top"><a id="a692907bb257ca68a5435eb4f9dd0294e"></a>
 ea::vector&lt; <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_graphics.html#a692907bb257ca68a5435eb4f9dd0294e">GetResolutions</a> (int monitor) const</td></tr>
 <tr class="memdesc:a692907bb257ca68a5435eb4f9dd0294e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return supported fullscreen resolutions (third component is refreshRate). Will be empty if listing the resolutions is not supported on the platform (e.g. Web). <br /></td></tr>
@@ -1447,6 +1455,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_graphics.html#a96e5f8860c5728bdc55705cdbdb2667b">sRGBWriteSupport_</a> {}</td></tr>
 <tr class="memdesc:a96e5f8860c5728bdc55705cdbdb2667b"><td class="mdescLeft">&#160;</td><td class="mdescRight">sRGB conversion on write support flag. <br /></td></tr>
 <tr class="separator:a96e5f8860c5728bdc55705cdbdb2667b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d9a3e5e9a8c39739adf52b32a5cc2b8"><td class="memItemLeft" align="right" valign="top"><a id="a1d9a3e5e9a8c39739adf52b32a5cc2b8"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_graphics.html#a1d9a3e5e9a8c39739adf52b32a5cc2b8">maxVertexShaderUniforms_</a> {}</td></tr>
+<tr class="memdesc:a1d9a3e5e9a8c39739adf52b32a5cc2b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max number of vertex shader uniforms. <br /></td></tr>
+<tr class="separator:a1d9a3e5e9a8c39739adf52b32a5cc2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee99ea0ef7208aefb2b73c16cf83031c"><td class="memItemLeft" align="right" valign="top"><a id="aee99ea0ef7208aefb2b73c16cf83031c"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_graphics.html#aee99ea0ef7208aefb2b73c16cf83031c">maxPixelShaderUniforms_</a> {}</td></tr>
+<tr class="memdesc:aee99ea0ef7208aefb2b73c16cf83031c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max number of pixel shader uniforms. <br /></td></tr>
+<tr class="separator:aee99ea0ef7208aefb2b73c16cf83031c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada43d9f4e129c03e0826de3a84464175"><td class="memItemLeft" align="right" valign="top"><a id="ada43d9f4e129c03e0826de3a84464175"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_graphics.html#ada43d9f4e129c03e0826de3a84464175">numPrimitives_</a> {}</td></tr>
 <tr class="memdesc:ada43d9f4e129c03e0826de3a84464175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of primitives this frame. <br /></td></tr>
