@@ -90,10 +90,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_system_u_i.html#a98ff5b6920d00334e6a49d139837c6cb">IsAnyItemHovered</a> () const</td></tr>
 <tr class="memdesc:a98ff5b6920d00334e6a49d139837c6cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether mouse is hovering any system ui component. <br /></td></tr>
 <tr class="separator:a98ff5b6920d00334e6a49d139837c6cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5b5414ecc96ccea3b24d5ad9393faf7"><td class="memItemLeft" align="right" valign="top"><a id="ad5b5414ecc96ccea3b24d5ad9393faf7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_system_u_i.html#ad5b5414ecc96ccea3b24d5ad9393faf7">Start</a> ()</td></tr>
-<tr class="memdesc:ad5b5414ecc96ccea3b24d5ad9393faf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepares font textures, updates projection matrix and does other things that are required to start this subsystem. <br /></td></tr>
-<tr class="separator:ad5b5414ecc96ccea3b24d5ad9393faf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93c3f6c417302063cbe85dab6e5f63d"><td class="memItemLeft" align="right" valign="top"><a id="aa93c3f6c417302063cbe85dab6e5f63d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_system_u_i.html#aa93c3f6c417302063cbe85dab6e5f63d">ReferenceTexture</a> (<a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> *texture)</td></tr>
 <tr class="memdesc:aa93c3f6c417302063cbe85dab6e5f63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold a reference to this texture until end of frame. <br /></td></tr>
@@ -419,6 +415,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>PlatformShutdown</b> 
 <tr class="memitem:a4100fb034b23974017f699a458a8a272"><td class="memItemLeft" align="right" valign="top"><a id="a4100fb034b23974017f699a458a8a272"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ReallocateFontTexture</b> ()</td></tr>
 <tr class="separator:a4100fb034b23974017f699a458a8a272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaf307391a26628790e02763485d61a7"><td class="memItemLeft" align="right" valign="top"><a id="aeaf307391a26628790e02763485d61a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearPerScreenFonts</b> ()</td></tr>
+<tr class="separator:aeaf307391a26628790e02763485d61a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6bc8ca18bb6bff26cbed99378729107"><td class="memItemLeft" align="right" valign="top"><a id="aa6bc8ca18bb6bff26cbed99378729107"></a>
+ImTextureID&#160;</td><td class="memItemRight" valign="bottom"><b>AllocateFontTexture</b> (ImFontAtlas *atlas)</td></tr>
+<tr class="separator:aa6bc8ca18bb6bff26cbed99378729107"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a496327734c45a8e11ccc7f984a164c41"><td class="memItemLeft" align="right" valign="top"><a id="a496327734c45a8e11ccc7f984a164c41"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnRawEvent</b> (<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;args)</td></tr>
 <tr class="separator:a496327734c45a8e11ccc7f984a164c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -443,9 +445,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ae659d30d6c9d55751064ae8c966bf44e"><td class="memItemLeft" align="right" valign="top"><a id="ae659d30d6c9d55751064ae8c966bf44e"></a>
 <a class="el" href="class_urho3_d_1_1_index_buffer.html">IndexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>indexBuffer_</b></td></tr>
 <tr class="separator:ae659d30d6c9d55751064ae8c966bf44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f3288888a2d2075c8b4001d9994cdd4"><td class="memItemLeft" align="right" valign="top"><a id="a9f3288888a2d2075c8b4001d9994cdd4"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>fontTexture_</b></td></tr>
-<tr class="separator:a9f3288888a2d2075c8b4001d9994cdd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5c9eee4b79ab4e15468a1e812aaeb87"><td class="memItemLeft" align="right" valign="top"><a id="ab5c9eee4b79ab4e15468a1e812aaeb87"></a>
+ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>fontTextures_</b></td></tr>
+<tr class="separator:ab5c9eee4b79ab4e15468a1e812aaeb87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0fef7eed668c2926b50b5fa79fd6243"><td class="memItemLeft" align="right" valign="top"><a id="ad0fef7eed668c2926b50b5fa79fd6243"></a>
 ea::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>fontSizes_</b></td></tr>
 <tr class="separator:ad0fef7eed668c2926b50b5fa79fd6243"><td class="memSeparator" colspan="2">&#160;</td></tr>
