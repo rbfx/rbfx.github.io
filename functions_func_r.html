@@ -255,6 +255,9 @@ $(function() {
 <li>RebuildTree()
 : <a class="el" href="class_urho3_d_1_1_i_k_solver.html#a215740ec5753a2347b9da9ec9d84cc07">Urho3D::IKSolver</a>
 </li>
+<li>RecalculateHash()
+: <a class="el" href="struct_urho3_d_1_1_text_params3_d.html#a7f345c25f6132a78b1a93e9c82293938">Urho3D::TextParams3D</a>
+</li>
 <li>RecalculateSegmentLengths()
 : <a class="el" href="class_urho3_d_1_1_i_k_solver.html#a547169965fa60c3cc22c44710ddfb4fe">Urho3D::IKSolver</a>
 </li>
@@ -323,7 +326,7 @@ $(function() {
 </li>
 <li>RegisterAttribute()
 : <a class="el" href="class_urho3_d_1_1_camera_viewport.html#ae8475168eef3bbbb29bd4d3d09d3aa8f">Urho3D::CameraViewport</a>
-, <a class="el" href="class_urho3_d_1_1_context.html#a55851d5ab03e8f1decedf34ccd510518">Urho3D::Context</a>
+, <a class="el" href="class_urho3_d_1_1_context.html#a5fba2d85bd03dec059392a71b83682bf">Urho3D::Context</a>
 </li>
 <li>RegisterFactory()
 : <a class="el" href="class_urho3_d_1_1_context.html#aa9b2cffef8d52fa18bfe533a2615a598">Urho3D::Context</a>
@@ -446,6 +449,7 @@ $(function() {
 , <a class="el" href="class_urho3_d_1_1_terrain_patch.html#a6685f06eaa98a59a3d915acb28a4c828">Urho3D::TerrainPatch</a>
 , <a class="el" href="class_urho3_d_1_1_text3_d.html#a8d7300ae719ca749d031f65acdc0a23b">Urho3D::Text3D</a>
 , <a class="el" href="class_urho3_d_1_1_text.html#a2fb2ab03e90e74039e58776c734751fe">Urho3D::Text</a>
+, <a class="el" href="class_urho3_d_1_1_text_renderer3_d.html#a89914a50bc69a4930b40a21673dfcf3a">Urho3D::TextRenderer3D</a>
 , <a class="el" href="class_urho3_d_1_1_texture2_d.html#af493be40d0401da3416a664af49bbb2e">Urho3D::Texture2D</a>
 , <a class="el" href="class_urho3_d_1_1_texture2_d_array.html#a8b79115e96a200b756dec9c3af158a32">Urho3D::Texture2DArray</a>
 , <a class="el" href="class_urho3_d_1_1_texture3_d.html#a64f80cd598c17742f276a890dddbac46">Urho3D::Texture3D</a>
@@ -492,6 +496,7 @@ $(function() {
 , <a class="el" href="class_urho3_d_1_1_render_surface.html#aecc06693e0e34733062927ac0468b263">Urho3D::RenderSurface</a>
 , <a class="el" href="class_urho3_d_1_1_shader_program.html#a0b36335e7b92899aeb9d61dcee632fad">Urho3D::ShaderProgram</a>
 , <a class="el" href="class_urho3_d_1_1_shader_variation.html#aa77a962f7219e6d416fcf5758867e0d6">Urho3D::ShaderVariation</a>
+, <a class="el" href="class_urho3_d_1_1_spin_lock_mutex.html#ae8f7678b0e0f2ee7c7275c56fd1ae8c0">Urho3D::SpinLockMutex</a>
 , <a class="el" href="class_urho3_d_1_1_texture2_d.html#a195cc225951abc4d87099dd2bd2f76f3">Urho3D::Texture2D</a>
 , <a class="el" href="class_urho3_d_1_1_texture2_d_array.html#a44f47d575bcb17bdc43061b6ffce2a75">Urho3D::Texture2DArray</a>
 , <a class="el" href="class_urho3_d_1_1_texture3_d.html#a0563f1ac71f57b98786f5ffc13621a7a">Urho3D::Texture3D</a>
@@ -641,7 +646,7 @@ $(function() {
 , <a class="el" href="class_urho3_d_1_1_animation_controller.html#a823a550e7e445dd9e0804da3c3f04b1a">Urho3D::AnimationController</a>
 </li>
 <li>RemoveAttribute()
-: <a class="el" href="class_urho3_d_1_1_context.html#a56979dc41e32e3393bb84af4ae42851b">Urho3D::Context</a>
+: <a class="el" href="class_urho3_d_1_1_context.html#a4dc6db283c1e3f05a4c5e3e3b3f90c5d">Urho3D::Context</a>
 , <a class="el" href="class_urho3_d_1_1_x_m_l_element.html#a79c0a9874f1b85615dd2b3028b6485b1">Urho3D::XMLElement</a>
 </li>
 <li>RemoveAttributeAnimation()
@@ -657,14 +662,14 @@ $(function() {
 <li>RemoveChild()
 : <a class="el" href="class_urho3_d_1_1_node.html#a3ffe2c6ea129ee77f6d2ed1d4a67f41f">Urho3D::Node</a>
 , <a class="el" href="class_urho3_d_1_1_u_i_element.html#a9ccf68e4882157d8fc2489ea9b10a658">Urho3D::UIElement</a>
-, <a class="el" href="class_urho3_d_1_1_x_m_l_element.html#a6945df895e5d9b648d5b9ac723d4b91d">Urho3D::XMLElement</a>
+, <a class="el" href="class_urho3_d_1_1_x_m_l_element.html#a562a34e40cd98016c3a770466a439a50">Urho3D::XMLElement</a>
 </li>
 <li>RemoveChildAtIndex()
 : <a class="el" href="class_urho3_d_1_1_u_i_element.html#a7f9a61d707abb6dcc23dbd95b52d70ac">Urho3D::UIElement</a>
 </li>
 <li>RemoveChildren()
 : <a class="el" href="class_urho3_d_1_1_node.html#ae184dc647767b28ff234b1c4e699370e">Urho3D::Node</a>
-, <a class="el" href="class_urho3_d_1_1_x_m_l_element.html#a3ae8741a6471982abcada1bc679f4249">Urho3D::XMLElement</a>
+, <a class="el" href="class_urho3_d_1_1_x_m_l_element.html#a0df2a361d34fc7a7238a1ef7742de6eb">Urho3D::XMLElement</a>
 </li>
 <li>RemoveChildXML()
 : <a class="el" href="class_urho3_d_1_1_u_i_element.html#a5f31b22e07ecd54b0d757a1879b94015">Urho3D::UIElement</a>
@@ -685,10 +690,10 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_render_path.html#a608c29643213c937018df922bf8eae0f">Urho3D::RenderPath</a>
 </li>
 <li>RemoveComponent()
-: <a class="el" href="class_urho3_d_1_1_node.html#a17d699c06496ef6996848ae9be33ffab">Urho3D::Node</a>
+: <a class="el" href="class_urho3_d_1_1_node.html#a235f422df5797827c7431077c62cf8b8">Urho3D::Node</a>
 </li>
 <li>RemoveComponents()
-: <a class="el" href="class_urho3_d_1_1_node.html#ab6c88401cefdaeccae1e098de0cf3109">Urho3D::Node</a>
+: <a class="el" href="class_urho3_d_1_1_node.html#a533ee53c16f6100f82ad00068dacbe8a">Urho3D::Node</a>
 </li>
 <li>RemoveConstraint()
 : <a class="el" href="class_urho3_d_1_1_physics_world.html#a59fcf28616c047f36c99e1b2f832d145">Urho3D::PhysicsWorld</a>
@@ -721,7 +726,7 @@ $(function() {
 , <a class="el" href="class_urho3_d_1_1_object.html#ad93a3d6587147656d278eb16807d57d9">Urho3D::Object</a>
 </li>
 <li>RemoveFactory()
-: <a class="el" href="class_urho3_d_1_1_context.html#a875452e5edf7b848259d95918775c306">Urho3D::Context</a>
+: <a class="el" href="class_urho3_d_1_1_context.html#a4cc5ad0463a611cc0197225783f8ae5b">Urho3D::Context</a>
 </li>
 <li>RemoveFromOctree()
 : <a class="el" href="class_urho3_d_1_1_drawable.html#a48c3be2aa6cb930b2ce959784d76fdbe">Urho3D::Drawable</a>
@@ -740,13 +745,13 @@ $(function() {
 </li>
 <li>RemoveItem()
 : <a class="el" href="class_urho3_d_1_1_drop_down_list.html#ac9e5f1b0eef814645c374fd456f3b64e">Urho3D::DropDownList</a>
-, <a class="el" href="class_urho3_d_1_1_list_view.html#afebca1ac4b38eaaa1d97bb3f64c2cddd">Urho3D::ListView</a>
+, <a class="el" href="class_urho3_d_1_1_list_view.html#a2c7adecbfcfc748d393a79f945d84faf">Urho3D::ListView</a>
 </li>
 <li>RemoveKeyFrame()
 : <a class="el" href="struct_urho3_d_1_1_animation_track.html#adee85ffc00bd6db8b259372fc2addcf1">Urho3D::AnimationTrack</a>
 </li>
 <li>RemoveKnot()
-: <a class="el" href="class_urho3_d_1_1_spline.html#aba4c008df1cac89a3b9b876184e6ad0a">Urho3D::Spline</a>
+: <a class="el" href="class_urho3_d_1_1_spline.html#afcdb84d33afd31139089a98079afe19d">Urho3D::Spline</a>
 </li>
 <li>RemoveListener()
 : <a class="el" href="class_urho3_d_1_1_node.html#a98f711e232ccff9b596e7846bdffab96">Urho3D::Node</a>
@@ -767,13 +772,13 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_dynamic_navigation_mesh.html#a58b536fcdd7771aaeb6bd8e623cd7177">Urho3D::DynamicNavigationMesh</a>
 </li>
 <li>RemovePackageFile()
-: <a class="el" href="class_urho3_d_1_1_resource_cache.html#adbd85ce2d31c96595b2067e9d2d39b41">Urho3D::ResourceCache</a>
+: <a class="el" href="class_urho3_d_1_1_resource_cache.html#a12a186a475bebc77493fcee3ae74c109">Urho3D::ResourceCache</a>
 </li>
 <li>RemovePass()
 : <a class="el" href="class_urho3_d_1_1_technique.html#a1deacbae56ff3828227bdb1110de60b4">Urho3D::Technique</a>
 </li>
 <li>RemoveRenderTarget()
-: <a class="el" href="class_urho3_d_1_1_render_path.html#a8b2b79104508d015714b3ed02f261c18">Urho3D::RenderPath</a>
+: <a class="el" href="class_urho3_d_1_1_render_path.html#ae4a6fba971b80e7995b3e27642b5ff6f">Urho3D::RenderPath</a>
 </li>
 <li>RemoveRenderTargets()
 : <a class="el" href="class_urho3_d_1_1_render_path.html#ad761bbca8e541d0001f5ce9b2a9ab396">Urho3D::RenderPath</a>
@@ -805,7 +810,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_audio.html#a36c77a2bb70700fc62d71959830bc6d5">Urho3D::Audio</a>
 </li>
 <li>RemoveSubsystem()
-: <a class="el" href="class_urho3_d_1_1_context.html#ac7b7976a5fa7e6b1866adf95780379d7">Urho3D::Context</a>
+: <a class="el" href="class_urho3_d_1_1_context.html#ac7a83577e0a76a0f04ac62e50b55a83e">Urho3D::Context</a>
 </li>
 <li>RemoveSuperMeshVertices()
 : <a class="el" href="class_urho3_d_1_1_tetrahedral_mesh.html#a7f18cf382595800043c592be53d7c619">Urho3D::TetrahedralMesh</a>
@@ -908,7 +913,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_context.html#a07f129c25cb7934168f07b14fcd4247a">Urho3D::Context</a>
 </li>
 <li>Reserve()
-: <a class="el" href="class_urho3_d_1_1_allocator.html#adf4970a58e1187ceb4b674a38f8ec7a6">Urho3D::Allocator&lt; T &gt;</a>
+: <a class="el" href="class_urho3_d_1_1_allocator.html#ab95e89656afe1fe10f035bf8b28f8d99">Urho3D::Allocator&lt; T &gt;</a>
 </li>
 <li>ReserveScratchBuffer()
 : <a class="el" href="class_urho3_d_1_1_graphics.html#a1310752620e1a218f8b842b8e80e331c">Urho3D::Graphics</a>
@@ -1068,7 +1073,7 @@ $(function() {
 : <a class="el" href="class_urho3_d_1_1_scene_resolver.html#a4322ce210921b372aa621462408597cc">Urho3D::SceneResolver</a>
 </li>
 <li>ResolveToTexture()
-: <a class="el" href="class_urho3_d_1_1_graphics.html#abd08617bb78ea63930fed43edff8d3db">Urho3D::Graphics</a>
+: <a class="el" href="class_urho3_d_1_1_graphics.html#ad7719998ec41fa9a835c233b0465a056">Urho3D::Graphics</a>
 </li>
 <li>Resource()
 : <a class="el" href="class_urho3_d_1_1_resource.html#ae3e1545370dec17a283705989a1cc682">Urho3D::Resource</a>
@@ -1083,7 +1088,7 @@ $(function() {
 : <a class="el" href="struct_urho3_d_1_1_resource_ref.html#a6335add9ec15162e7cdca3282b9d8cfe">Urho3D::ResourceRef</a>
 </li>
 <li>ResourceRefList()
-: <a class="el" href="struct_urho3_d_1_1_resource_ref_list.html#ae963d5077cf26428dd451b802c6a353e">Urho3D::ResourceRefList</a>
+: <a class="el" href="struct_urho3_d_1_1_resource_ref_list.html#a986ec68bb427b72311f7dceb978158e4">Urho3D::ResourceRefList</a>
 </li>
 <li>ResourceRouter()
 : <a class="el" href="class_urho3_d_1_1_resource_router.html#a41a0bdbd1b655dfa755598f10ec4e38c">Urho3D::ResourceRouter</a>

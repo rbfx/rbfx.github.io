@@ -186,6 +186,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_text3_d.html#a82c0c31ebe0c6dc46f1e4568dd2bc2c0">SetFixedScreenSize</a> (bool enable)</td></tr>
 <tr class="memdesc:a82c0c31ebe0c6dc46f1e4568dd2bc2c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether text has fixed size on screen (pixel-perfect) regardless of distance to camera. Works best when combined with face camera rotation. Default false. <br /></td></tr>
 <tr class="separator:a82c0c31ebe0c6dc46f1e4568dd2bc2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada14962561db3d794c8823c16e9ff389"><td class="memItemLeft" align="right" valign="top"><a id="ada14962561db3d794c8823c16e9ff389"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_text3_d.html#ada14962561db3d794c8823c16e9ff389">SetSnapToPixels</a> (bool enable)</td></tr>
+<tr class="memdesc:ada14962561db3d794c8823c16e9ff389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether to snap text to pixels. Has effect only if fixed screen size is enabled. <br /></td></tr>
+<tr class="separator:ada14962561db3d794c8823c16e9ff389"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a288d32895fa647af1dba51f468e5ca78"><td class="memItemLeft" align="right" valign="top"><a id="a288d32895fa647af1dba51f468e5ca78"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_text3_d.html#a288d32895fa647af1dba51f468e5ca78">SetFaceCameraMode</a> (<a class="el" href="_graphics_defs_8h.html#aef443f97b15d5c7ff39d3199a9a0c5c1">FaceCameraMode</a> mode)</td></tr>
 <tr class="memdesc:a288d32895fa647af1dba51f468e5ca78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set how the text should rotate in relation to the camera. Default is to not rotate (FC_NONE). <br /></td></tr>
@@ -294,6 +298,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_text3_d.html#adcb9ea54bc1359f52d90cb097a3b6222">IsFixedScreenSize</a> () const</td></tr>
 <tr class="memdesc:adcb9ea54bc1359f52d90cb097a3b6222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether text has fixed screen size. <br /></td></tr>
 <tr class="separator:adcb9ea54bc1359f52d90cb097a3b6222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa37cb6d9cbbce2221aefe2725946e5c"><td class="memItemLeft" align="right" valign="top"><a id="afa37cb6d9cbbce2221aefe2725946e5c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_text3_d.html#afa37cb6d9cbbce2221aefe2725946e5c">GetSnapToPixels</a> () const</td></tr>
+<tr class="memdesc:afa37cb6d9cbbce2221aefe2725946e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether text is snapped to pixels. <br /></td></tr>
+<tr class="separator:afa37cb6d9cbbce2221aefe2725946e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb6392b05faa4142ee63683776d8391a"><td class="memItemLeft" align="right" valign="top"><a id="adb6392b05faa4142ee63683776d8391a"></a>
 <a class="el" href="_graphics_defs_8h.html#aef443f97b15d5c7ff39d3199a9a0c5c1">FaceCameraMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_text3_d.html#adb6392b05faa4142ee63683776d8391a">GetFaceCameraMode</a> () const</td></tr>
 <tr class="memdesc:adb6392b05faa4142ee63683776d8391a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return how the text rotates in relation to the camera. <br /></td></tr>
@@ -1400,6 +1408,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_text3_d.html#ab4e670dbab45927a246e05c33ab93a1b">fixedScreenSize_</a></td></tr>
 <tr class="memdesc:ab4e670dbab45927a246e05c33ab93a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixed screen size flag. <br /></td></tr>
 <tr class="separator:ab4e670dbab45927a246e05c33ab93a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2bd730bfbae60e78463c24246e0f82d"><td class="memItemLeft" align="right" valign="top"><a id="aa2bd730bfbae60e78463c24246e0f82d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_text3_d.html#aa2bd730bfbae60e78463c24246e0f82d">snapToPixels_</a> {}</td></tr>
+<tr class="memdesc:aa2bd730bfbae60e78463c24246e0f82d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Snap to pixel flag. Has effect only if fixed screen size is enabled. <br /></td></tr>
+<tr class="separator:aa2bd730bfbae60e78463c24246e0f82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a613bee7306c65bdbd859a6723935fa69"><td class="memItemLeft" align="right" valign="top"><a id="a613bee7306c65bdbd859a6723935fa69"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_text3_d.html#a613bee7306c65bdbd859a6723935fa69">textDirty_</a></td></tr>
 <tr class="memdesc:a613bee7306c65bdbd859a6723935fa69"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_text.html" title="Text UI element. ">Text</a> needs update flag. <br /></td></tr>
