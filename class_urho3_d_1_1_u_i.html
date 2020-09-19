@@ -357,14 +357,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_u_i.html#a948bff47ec8e3acbb3980dd2d1fb4c63">IsRendered</a> () const</td></tr>
 <tr class="memdesc:a948bff47ec8e3acbb3980dd2d1fb4c63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if thus <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface. ">UI</a> is already rendered in this frame. <br /></td></tr>
 <tr class="separator:a948bff47ec8e3acbb3980dd2d1fb4c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49c899003eae1baedc3e8099c1e196aa"><td class="memItemLeft" align="right" valign="top"><a id="a49c899003eae1baedc3e8099c1e196aa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_u_i.html#a49c899003eae1baedc3e8099c1e196aa">SetRenderInSystemUI</a> (bool isSystemUIElement)</td></tr>
-<tr class="memdesc:a49c899003eae1baedc3e8099c1e196aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to true when <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface. ">UI</a> is rendered as part of <a class="el" href="class_urho3_d_1_1_system_u_i.html">SystemUI</a>. This will allow input to function properly. <br /></td></tr>
-<tr class="separator:a49c899003eae1baedc3e8099c1e196aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9aa29717b84501759a1bfb536d273a12"><td class="memItemLeft" align="right" valign="top"><a id="a9aa29717b84501759a1bfb536d273a12"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_u_i.html#a9aa29717b84501759a1bfb536d273a12">GetRenderInSystemUI</a> () const</td></tr>
-<tr class="memdesc:a9aa29717b84501759a1bfb536d273a12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true when <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface. ">UI</a> is set to render as part of <a class="el" href="class_urho3_d_1_1_system_u_i.html">SystemUI</a>. <br /></td></tr>
-<tr class="separator:a9aa29717b84501759a1bfb536d273a12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -832,10 +824,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_u_i.html#a38fcbcb1cdf8ba23084fe52d4601d6b8">GetEffectiveRootElementSize</a> (bool applyScale=true) const</td></tr>
 <tr class="memdesc:a38fcbcb1cdf8ba23084fe52d4601d6b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return effective size of the root element, according to <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface. ">UI</a> scale and resolution / custom size. <br /></td></tr>
 <tr class="separator:a38fcbcb1cdf8ba23084fe52d4601d6b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39046b73fc880bf91958dff1582f9b61"><td class="memItemLeft" align="right" valign="top"><a id="a39046b73fc880bf91958dff1582f9b61"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_u_i.html#a39046b73fc880bf91958dff1582f9b61">ShouldIgnoreInput</a> () const</td></tr>
-<tr class="memdesc:a39046b73fc880bf91958dff1582f9b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true when subsystem should not process any mouse/keyboard input. <br /></td></tr>
-<tr class="separator:a39046b73fc880bf91958dff1582f9b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba52f8c2e2511ed128ab392df7a7d37"><td class="memItemLeft" align="right" valign="top"><a id="afba52f8c2e2511ed128ab392df7a7d37"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_u_i.html#afba52f8c2e2511ed128ab392df7a7d37">IsHandlingInput</a> () const</td></tr>
+<tr class="memdesc:afba52f8c2e2511ed128ab392df7a7d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true when subsystem should not process any mouse/keyboard input. <br /></td></tr>
+<tr class="separator:afba52f8c2e2511ed128ab392df7a7d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -1027,10 +1019,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <a class="el" href="class_urho3_d_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_u_i.html#a3aaee5fd67784bdaaf8ee243da9b3a89">clearColor_</a> = <a class="el" href="class_urho3_d_1_1_color.html#a2a38c7a090d82b507f5600cb9f459a05">Color::TRANSPARENT_BLACK</a></td></tr>
 <tr class="memdesc:a3aaee5fd67784bdaaf8ee243da9b3a89"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_color.html" title="RGBA color. ">Color</a> which will be used to clear target texture. <br /></td></tr>
 <tr class="separator:a3aaee5fd67784bdaaf8ee243da9b3a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c60869fb6f04306f8b61d0166844522"><td class="memItemLeft" align="right" valign="top"><a id="a1c60869fb6f04306f8b61d0166844522"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_u_i.html#a1c60869fb6f04306f8b61d0166844522">partOfSystemUI_</a> = false</td></tr>
-<tr class="memdesc:a1c60869fb6f04306f8b61d0166844522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface. ">UI</a> should process input when mouse cursor hovers <a class="el" href="class_urho3_d_1_1_system_u_i.html">SystemUI</a> elements. <br /></td></tr>
-<tr class="separator:a1c60869fb6f04306f8b61d0166844522"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

@@ -82,14 +82,6 @@ ImFont *&#160;</td><td class="memItemRight" valign="bottom"><b>AddFontCompressed
 <tr class="separator:ae273d5456f75040e99fb420dd62f44e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a441ffb7449e6d125b7950391f164e7cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_system_u_i.html#a441ffb7449e6d125b7950391f164e7cd">ApplyStyleDefault</a> (bool darkStyle, float alpha)</td></tr>
 <tr class="separator:a441ffb7449e6d125b7950391f164e7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a073e711d5bbeeb3f74e5e20100213186"><td class="memItemLeft" align="right" valign="top"><a id="a073e711d5bbeeb3f74e5e20100213186"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_system_u_i.html#a073e711d5bbeeb3f74e5e20100213186">IsAnyItemActive</a> () const</td></tr>
-<tr class="memdesc:a073e711d5bbeeb3f74e5e20100213186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether user is interacting with any ui element. <br /></td></tr>
-<tr class="separator:a073e711d5bbeeb3f74e5e20100213186"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98ff5b6920d00334e6a49d139837c6cb"><td class="memItemLeft" align="right" valign="top"><a id="a98ff5b6920d00334e6a49d139837c6cb"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_system_u_i.html#a98ff5b6920d00334e6a49d139837c6cb">IsAnyItemHovered</a> () const</td></tr>
-<tr class="memdesc:a98ff5b6920d00334e6a49d139837c6cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether mouse is hovering any system ui component. <br /></td></tr>
-<tr class="separator:a98ff5b6920d00334e6a49d139837c6cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93c3f6c417302063cbe85dab6e5f63d"><td class="memItemLeft" align="right" valign="top"><a id="aa93c3f6c417302063cbe85dab6e5f63d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_system_u_i.html#aa93c3f6c417302063cbe85dab6e5f63d">ReferenceTexture</a> (<a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> *texture)</td></tr>
 <tr class="memdesc:aa93c3f6c417302063cbe85dab6e5f63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold a reference to this texture until end of frame. <br /></td></tr>
@@ -98,6 +90,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="class_urho3_d_1_1_value_cache.html">ValueCache</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_system_u_i.html#a891c11a002e36b134ba567a1d0cabe34">GetValueCache</a> ()</td></tr>
 <tr class="memdesc:a891c11a002e36b134ba567a1d0cabe34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value cache for storing temporary <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface. ">UI</a> state that expires when unused. <br /></td></tr>
 <tr class="separator:a891c11a002e36b134ba567a1d0cabe34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad13b1b262659aea7cb0368e7e3c38a66"><td class="memItemLeft" align="right" valign="top"><a id="ad13b1b262659aea7cb0368e7e3c38a66"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_system_u_i.html#ad13b1b262659aea7cb0368e7e3c38a66">SetPassThroughEvents</a> (bool enabled)</td></tr>
+<tr class="memdesc:ad13b1b262659aea7cb0368e7e3c38a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">When set to true, <a class="el" href="class_urho3_d_1_1_system_u_i.html">SystemUI</a> will not consume SDL events and they will be passed to to <a class="el" href="class_urho3_d_1_1_input.html" title="Input subsystem. Converts operating system window messages to input state and events. ">Input</a> and other subsystems. <br /></td></tr>
+<tr class="separator:ad13b1b262659aea7cb0368e7e3c38a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bbf85288cf7355d69fcac8e745be611"><td class="memItemLeft" align="right" valign="top"><a id="a9bbf85288cf7355d69fcac8e745be611"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_system_u_i.html#a9bbf85288cf7355d69fcac8e745be611">GetPassThroughEvents</a> () const</td></tr>
+<tr class="memdesc:a9bbf85288cf7355d69fcac8e745be611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if <a class="el" href="class_urho3_d_1_1_system_u_i.html">SystemUI</a> is allowing events through even when <a class="el" href="class_urho3_d_1_1_system_u_i.html">SystemUI</a> is handling them. <br /></td></tr>
+<tr class="separator:a9bbf85288cf7355d69fcac8e745be611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -460,6 +460,10 @@ ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr<
 <tr class="memitem:af8b442556f54e7a2096ef99141bc7cbc"><td class="memItemLeft" align="right" valign="top"><a id="af8b442556f54e7a2096ef99141bc7cbc"></a>
 <a class="el" href="class_urho3_d_1_1_value_cache.html">ValueCache</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cache_</b> {<a class="el" href="class_urho3_d_1_1_object.html#aecf686841d86be7e4a2c0092b60d31ad">context_</a>}</td></tr>
 <tr class="separator:af8b442556f54e7a2096ef99141bc7cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f17ed72ee3f6d45c37b8596adee1f2"><td class="memItemLeft" align="right" valign="top"><a id="ad1f17ed72ee3f6d45c37b8596adee1f2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_system_u_i.html#ad1f17ed72ee3f6d45c37b8596adee1f2">passThroughEvents_</a> = false</td></tr>
+<tr class="memdesc:ad1f17ed72ee3f6d45c37b8596adee1f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">When set to true, <a class="el" href="class_urho3_d_1_1_system_u_i.html">SystemUI</a> will not consume SDL events and they will be passed to to <a class="el" href="class_urho3_d_1_1_input.html" title="Input subsystem. Converts operating system window messages to input state and events. ">Input</a> and other subsystems. <br /></td></tr>
+<tr class="separator:ad1f17ed72ee3f6d45c37b8596adee1f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="aecf686841d86be7e4a2c0092b60d31ad"></a>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aecf686841d86be7e4a2c0092b60d31ad">context_</a></td></tr>

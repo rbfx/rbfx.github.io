@@ -313,14 +313,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a90e54d005be8cef46a9005d2296e5571">IsMinimized</a> () const</td></tr>
 <tr class="memdesc:a90e54d005be8cef46a9005d2296e5571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether application window is minimized. <br /></td></tr>
 <tr class="separator:a90e54d005be8cef46a9005d2296e5571"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1958fdf40eb93e933f0981805572ff95"><td class="memItemLeft" align="right" valign="top"><a id="a1958fdf40eb93e933f0981805572ff95"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a1958fdf40eb93e933f0981805572ff95">ShouldIgnoreInput</a> () const</td></tr>
-<tr class="memdesc:a1958fdf40eb93e933f0981805572ff95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether user should ignore input events. <br /></td></tr>
-<tr class="separator:a1958fdf40eb93e933f0981805572ff95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04f7af141176c11515c9c38f0fd054e3"><td class="memItemLeft" align="right" valign="top"><a id="a04f7af141176c11515c9c38f0fd054e3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a04f7af141176c11515c9c38f0fd054e3">SetShouldIgnoreInput</a> (bool ignore)</td></tr>
-<tr class="memdesc:a04f7af141176c11515c9c38f0fd054e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a flag indicating that user should ignore input. <br /></td></tr>
-<tr class="separator:a04f7af141176c11515c9c38f0fd054e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5fd80383d5b8cdda542e274532738c1"><td class="memItemLeft" align="right" valign="top"><a id="ac5fd80383d5b8cdda542e274532738c1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#ac5fd80383d5b8cdda542e274532738c1">SetEnabled</a> (bool enabled)</td></tr>
+<tr class="memdesc:ac5fd80383d5b8cdda542e274532738c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable input reporting. When disabled, only E_SDLRAWINPUT event will be sent sent. <br /></td></tr>
+<tr class="separator:ac5fd80383d5b8cdda542e274532738c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac78f422644d38e8f8c0108bb24496f"><td class="memItemLeft" align="right" valign="top"><a id="afac78f422644d38e8f8c0108bb24496f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#afac78f422644d38e8f8c0108bb24496f">GetEnabled</a> () const</td></tr>
+<tr class="memdesc:afac78f422644d38e8f8c0108bb24496f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if input reporting is enabled. <br /></td></tr>
+<tr class="separator:afac78f422644d38e8f8c0108bb24496f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -870,10 +870,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#a74ad807d1f7b3312cd0117843f519205">initialized_</a></td></tr>
 <tr class="memdesc:a74ad807d1f7b3312cd0117843f519205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialized flag. <br /></td></tr>
 <tr class="separator:a74ad807d1f7b3312cd0117843f519205"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca608a75800650df8024f3b5db091e9c"><td class="memItemLeft" align="right" valign="top"><a id="aca608a75800650df8024f3b5db091e9c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#aca608a75800650df8024f3b5db091e9c">shouldIgnoreInput_</a> = false</td></tr>
-<tr class="memdesc:aca608a75800650df8024f3b5db091e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether user should suspend input handling. <br /></td></tr>
-<tr class="separator:aca608a75800650df8024f3b5db091e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc693e19f85ae54aa0ee09b0ec3932cb"><td class="memItemLeft" align="right" valign="top"><a id="adc693e19f85ae54aa0ee09b0ec3932cb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_input.html#adc693e19f85ae54aa0ee09b0ec3932cb">enabled_</a> = true</td></tr>
+<tr class="memdesc:adc693e19f85ae54aa0ee09b0ec3932cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that input subsystem is reporting events. <br /></td></tr>
+<tr class="separator:adc693e19f85ae54aa0ee09b0ec3932cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
