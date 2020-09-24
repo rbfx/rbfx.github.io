@@ -176,6 +176,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_system.html#a5ef9327e788917bb3ce58038d651598a">GetProgramDir</a> () const</td></tr>
 <tr class="memdesc:a5ef9327e788917bb3ce58038d651598a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the program's directory. <br /></td></tr>
 <tr class="separator:a5ef9327e788917bb3ce58038d651598a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a478a378ad46a87c5340aa3cb3a824efa"><td class="memItemLeft" align="right" valign="top"><a id="a478a378ad46a87c5340aa3cb3a824efa"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_system.html#a478a378ad46a87c5340aa3cb3a824efa">GetProgramFileName</a> () const</td></tr>
+<tr class="memdesc:a478a378ad46a87c5340aa3cb3a824efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the program's executable file path, or empty string if not applicable. <br /></td></tr>
+<tr class="separator:a478a378ad46a87c5340aa3cb3a824efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a943d8a899a0b18ad8abfd0b98e4a3532"><td class="memItemLeft" align="right" valign="top">ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_system.html#a943d8a899a0b18ad8abfd0b98e4a3532">GetInterpreterFileName</a> () const</td></tr>
+<tr class="separator:a943d8a899a0b18ad8abfd0b98e4a3532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab0e0cc493a99dc397d551b5799c2d80"><td class="memItemLeft" align="right" valign="top"><a id="aab0e0cc493a99dc397d551b5799c2d80"></a>
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_system.html#aab0e0cc493a99dc397d551b5799c2d80">GetUserDocumentsDir</a> () const</td></tr>
 <tr class="memdesc:aab0e0cc493a99dc397d551b5799c2d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the user documents directory. <br /></td></tr>
@@ -566,6 +572,24 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Subsystem for file and directory operations and access control. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a943d8a899a0b18ad8abfd0b98e4a3532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943d8a899a0b18ad8abfd0b98e4a3532">&#9670;&nbsp;</a></span>GetInterpreterFileName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ea::string Urho3D::FileSystem::GetInterpreterFileName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return executable path of interpreter program (for example path to mono executable on unixes for C# application), or empty string if not applicable. If application is executed directly (no interpreter) this will return same result as <a class="el" href="class_urho3_d_1_1_file_system.html#a478a378ad46a87c5340aa3cb3a824efa" title="Return the program&#39;s executable file path, or empty string if not applicable. ">GetProgramFileName()</a>. </p>
+
+</div>
+</div>
 <a id="afd581de4ea6d6555cd830f207f9e1eef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd581de4ea6d6555cd830f207f9e1eef">&#9670;&nbsp;</a></span>ScanDirInternal()</h2>
 
