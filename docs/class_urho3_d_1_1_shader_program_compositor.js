@@ -1,0 +1,25 @@
+var class_urho3_d_1_1_shader_program_compositor =
+[
+    [ "ShaderProgramCompositor", "class_urho3_d_1_1_shader_program_compositor.html#a2dc60bb3f327420ad68b0cbbde133394", null ],
+    [ "ApplyAmbientLightingVertexAndCommonDefinesForUserPass", "class_urho3_d_1_1_shader_program_compositor.html#a87c2781af2ff24e4f560b8e34ad15d48", null ],
+    [ "ApplyCommonDefines", "class_urho3_d_1_1_shader_program_compositor.html#a22ffe9b7498035da939be290c93caec6", null ],
+    [ "ApplyDefinesForLightVolumePass", "class_urho3_d_1_1_shader_program_compositor.html#aca6d6884c2f96543ba581fbd5ea0945b", null ],
+    [ "ApplyDefinesForShadowPass", "class_urho3_d_1_1_shader_program_compositor.html#a3295786a271d73f1dddf7d676c4e6bf5", null ],
+    [ "ApplyGeometryVertexDefines", "class_urho3_d_1_1_shader_program_compositor.html#a857d5637d8f7d6453459fd3cd93ba958", null ],
+    [ "ApplyLayoutVertexAndCommonDefinesForUserPass", "class_urho3_d_1_1_shader_program_compositor.html#a8094f3e269a630ac3d7245f70ab81d38", null ],
+    [ "ApplyMaterialPixelDefinesForUserPass", "class_urho3_d_1_1_shader_program_compositor.html#abec76f71067fd034de794866f47ed9ce", null ],
+    [ "ApplyPixelLightPixelAndCommonDefines", "class_urho3_d_1_1_shader_program_compositor.html#a8776aae294f9fea80502942df11349fa", null ],
+    [ "IsInstancingUsed", "class_urho3_d_1_1_shader_program_compositor.html#a2c2774daa4b21f86bb05311f8e863167", null ],
+    [ "ProcessLightVolumeBatch", "class_urho3_d_1_1_shader_program_compositor.html#aa93a95fc440b913e695a9a9d1fa98510", null ],
+    [ "ProcessShadowBatch", "class_urho3_d_1_1_shader_program_compositor.html#a1ca1f6552ce8893b311ad52e08660c86", null ],
+    [ "ProcessUserBatch", "class_urho3_d_1_1_shader_program_compositor.html#a033b288f0696146d6e6b3a01b9f028c1", null ],
+    [ "SetFrameSettings", "class_urho3_d_1_1_shader_program_compositor.html#a2abeb8778afa2fbfc42bda0979fb8647", null ],
+    [ "SetSettings", "class_urho3_d_1_1_shader_program_compositor.html#a034f98e2e42823193f7957f50f25fac8", null ],
+    [ "SetupShaders", "class_urho3_d_1_1_shader_program_compositor.html#a69645135e95a1c6ba081652d8376c5bf", null ],
+    [ "URHO3D_OBJECT", "class_urho3_d_1_1_shader_program_compositor.html#afc32ba8747fa21baa1c38880f2e492e4", null ],
+    [ "constantBuffersSupported_", "class_urho3_d_1_1_shader_program_compositor.html#ac24cedf9930a62c422c660a3935de19f", null ],
+    [ "isCameraClipped_", "class_urho3_d_1_1_shader_program_compositor.html#a03ec0575db5d9641b4821089988da18c", null ],
+    [ "isCameraOrthographic_", "class_urho3_d_1_1_shader_program_compositor.html#a142215da49bbca04446e03a4456b1272", null ],
+    [ "isCameraReversed_", "class_urho3_d_1_1_shader_program_compositor.html#afb73581656c1bf3ff6bf28f143c28b6e", null ],
+    [ "settings_", "class_urho3_d_1_1_shader_program_compositor.html#a87d5083853279f09b542727bb5842077", null ]
+];

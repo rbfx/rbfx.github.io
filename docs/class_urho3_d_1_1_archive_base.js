@@ -1,0 +1,28 @@
+var class_urho3_d_1_1_archive_base =
+[
+    [ "ArchiveBase", "class_urho3_d_1_1_archive_base.html#a22d075050c014be65c1a2e67606e45fd", null ],
+    [ "~ArchiveBase", "class_urho3_d_1_1_archive_base.html#a6184ceacac961d8c51cd62cae9f46c96", null ],
+    [ "CheckBlockOrElementName", "class_urho3_d_1_1_archive_base.html#a686a15d2d2313ed727e954338ad44b30", null ],
+    [ "CheckIfNotEOF", "class_urho3_d_1_1_archive_base.html#a9c9c2aa2428376a3e8d14902f9dbd643", null ],
+    [ "CloseArchive", "class_urho3_d_1_1_archive_base.html#a3c60102990bdfea0bde373a73e94967a", null ],
+    [ "DuplicateElementException", "class_urho3_d_1_1_archive_base.html#a43cfa1c48b30c5ca67a23b08892b4645", null ],
+    [ "ElementNotFoundException", "class_urho3_d_1_1_archive_base.html#ade85b08cb35f8b85123d9023b1d24109", null ],
+    [ "ElementNotFoundException", "class_urho3_d_1_1_archive_base.html#a5f85d169fac591bc242990161952ef21", null ],
+    [ "Flush", "class_urho3_d_1_1_archive_base.html#a0880d9cdeff7445ff31fca4365af7fbb", null ],
+    [ "FlushDelayedException", "class_urho3_d_1_1_archive_base.html#a3ea56f62bbe9a55f7d9bf96eea9261d8", null ],
+    [ "GetChecksum", "class_urho3_d_1_1_archive_base.html#a176e5e3c65277d6270a7c438c9dbf1fb", null ],
+    [ "GetContext", "class_urho3_d_1_1_archive_base.html#aa875ee6c022a7af6fe21e4230dad98a4", null ],
+    [ "GetName", "class_urho3_d_1_1_archive_base.html#a1ed4863d7480d98019f20d95036f02e9", null ],
+    [ "IOFailureException", "class_urho3_d_1_1_archive_base.html#a2d942b6807febd31984d28fa9dbe5809", null ],
+    [ "IsEOF", "class_urho3_d_1_1_archive_base.html#ae7ac1b5fe0ac82368509fba2f6df7f70", null ],
+    [ "ReadBytesFromHexString", "class_urho3_d_1_1_archive_base.html#a859d7e0dfd48ffb44b3fc02e78945d8a", null ],
+    [ "SerializeVersion", "class_urho3_d_1_1_archive_base.html#aaa4242d79f062b9305388f847fb6b3c9", null ],
+    [ "SetDelayedException", "class_urho3_d_1_1_archive_base.html#aac1caa39affca40ef50cecaccf47afe4", null ],
+    [ "UnexpectedElementValueException", "class_urho3_d_1_1_archive_base.html#abc8eb5e45ba021d91f74f1435a9f5bf9", null ],
+    [ "UnexpectedEOFException", "class_urho3_d_1_1_archive_base.html#a7ee5523f4dc472e568ec4f38e6b410dc", null ],
+    [ "context_", "class_urho3_d_1_1_archive_base.html#a0061c58852d4c77a54132d064f2f418a", null ],
+    [ "delayedException_", "class_urho3_d_1_1_archive_base.html#a225273f54617389ce550e920059617eb", null ],
+    [ "eof_", "class_urho3_d_1_1_archive_base.html#ad2d687382a2528359e6b8ab3ff55b68f", null ],
+    [ "rootBlockName", "class_urho3_d_1_1_archive_base.html#a64245f896c128bdc6beffd636ebefba1", null ],
+    [ "versionElementName", "class_urho3_d_1_1_archive_base.html#af2ab9a0cf2ab6feae94adc76270721fb", null ]
+];

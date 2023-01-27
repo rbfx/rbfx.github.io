@@ -1,0 +1,26 @@
+var class_urho3_d_1_1_u_i_batch =
+[
+    [ "UIBatch", "class_urho3_d_1_1_u_i_batch.html#a96b2148cc7ea02f422e3da8501c22a1c", null ],
+    [ "UIBatch", "class_urho3_d_1_1_u_i_batch.html#ac6c035166bb38a10281cc0a1195dffe7", null ],
+    [ "AddOrMerge", "class_urho3_d_1_1_u_i_batch.html#a4b2e36f492027a3734b0aeb43e74aea6", null ],
+    [ "AddQuad", "class_urho3_d_1_1_u_i_batch.html#a12aff349197df6a945520b395f18e143", null ],
+    [ "AddQuad", "class_urho3_d_1_1_u_i_batch.html#a22b52217c01c9c2ee9854711efac7f5b", null ],
+    [ "AddQuad", "class_urho3_d_1_1_u_i_batch.html#aeb03b7acf1ad8e244bcb9407f30f09c3", null ],
+    [ "AddQuad", "class_urho3_d_1_1_u_i_batch.html#aadd10d72e59d9f8e1001b1b87d0ca40f", null ],
+    [ "AddQuad", "class_urho3_d_1_1_u_i_batch.html#a0c8fcf983576330117d1f3574a831821", null ],
+    [ "GetInterpolatedColor", "class_urho3_d_1_1_u_i_batch.html#a0419872b79f435029f6358e5e691075c", null ],
+    [ "Merge", "class_urho3_d_1_1_u_i_batch.html#a716bbd0567f4013b135ea1e132c79de7", null ],
+    [ "SetColor", "class_urho3_d_1_1_u_i_batch.html#abcc8c0f4f3221e3e814ffa0f8f11b73f", null ],
+    [ "SetDefaultColor", "class_urho3_d_1_1_u_i_batch.html#a2f2038027b731686692757da512dfc0f", null ],
+    [ "blendMode_", "class_urho3_d_1_1_u_i_batch.html#a2a64e2da2e5a1177e1b282cfe7dd345c", null ],
+    [ "color_", "class_urho3_d_1_1_u_i_batch.html#a07f32e8665a86591fd67cc45e2d9ed7e", null ],
+    [ "customMaterial_", "class_urho3_d_1_1_u_i_batch.html#a1420188d907b0a5743192d98bfc9dc0c", null ],
+    [ "element_", "class_urho3_d_1_1_u_i_batch.html#a49f1dde18676987818fad2642ca7e521", null ],
+    [ "invTextureSize_", "class_urho3_d_1_1_u_i_batch.html#a2864bb97d399431922ccfeea107466d1", null ],
+    [ "scissor_", "class_urho3_d_1_1_u_i_batch.html#a52e0f67a396cdd0fec777466249e30c5", null ],
+    [ "texture_", "class_urho3_d_1_1_u_i_batch.html#a592f7b92d6b37379f9b546d33bdd2f3b", null ],
+    [ "useGradient_", "class_urho3_d_1_1_u_i_batch.html#a0b86e140a3f8f7153d72d4b033a4ae6b", null ],
+    [ "vertexData_", "class_urho3_d_1_1_u_i_batch.html#a1fa293efb2ca8f23d482f6f91cc7bc46", null ],
+    [ "vertexEnd_", "class_urho3_d_1_1_u_i_batch.html#a4f5730fa1d908448352dc0405874f78d", null ],
+    [ "vertexStart_", "class_urho3_d_1_1_u_i_batch.html#a96d60ccf425a2e7a9bb46d9e6c63ca01", null ]
+];

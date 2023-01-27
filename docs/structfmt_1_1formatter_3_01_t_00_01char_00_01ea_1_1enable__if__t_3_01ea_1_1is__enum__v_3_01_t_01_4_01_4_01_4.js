@@ -1,0 +1,4 @@
+var structfmt_1_1formatter_3_01_t_00_01char_00_01ea_1_1enable__if__t_3_01ea_1_1is__enum__v_3_01_t_01_4_01_4_01_4 =
+[
+    [ "format", "structfmt_1_1formatter_3_01_t_00_01char_00_01ea_1_1enable__if__t_3_01ea_1_1is__enum__v_3_01_t_01_4_01_4_01_4.html#a67c8330319fdb21daa1ff71fd24e3c75", null ]
+];
