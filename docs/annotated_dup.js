@@ -685,6 +685,7 @@ var annotated_dup =
       [ "PointOctreeQuery", "class_urho3_d_1_1_point_octree_query.html", "class_urho3_d_1_1_point_octree_query" ],
       [ "Polyhedron", "class_urho3_d_1_1_polyhedron.html", "class_urho3_d_1_1_polyhedron" ],
       [ "PostProcessPass", "class_urho3_d_1_1_post_process_pass.html", "class_urho3_d_1_1_post_process_pass" ],
+      [ "PrefabNormalizer", "class_urho3_d_1_1_prefab_normalizer.html", "class_urho3_d_1_1_prefab_normalizer" ],
       [ "PrefabReader", "class_urho3_d_1_1_prefab_reader.html", "class_urho3_d_1_1_prefab_reader" ],
       [ "PrefabReaderFromArchive", "class_urho3_d_1_1_prefab_reader_from_archive.html", "class_urho3_d_1_1_prefab_reader_from_archive" ],
       [ "PrefabReaderFromMemory", "class_urho3_d_1_1_prefab_reader_from_memory.html", "class_urho3_d_1_1_prefab_reader_from_memory" ],

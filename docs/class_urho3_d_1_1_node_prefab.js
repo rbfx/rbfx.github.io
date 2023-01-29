@@ -9,6 +9,7 @@ var class_urho3_d_1_1_node_prefab =
     [ "GetMutableNode", "class_urho3_d_1_1_node_prefab.html#a3d811d187994f4cf07368a80244b489d", null ],
     [ "GetNode", "class_urho3_d_1_1_node_prefab.html#a090b4c2ee8c73bf6f2591ecbd264d277", null ],
     [ "IsEmpty", "class_urho3_d_1_1_node_prefab.html#a1a1fdba9bf254615a7a85ebf10e126df", null ],
+    [ "NormalizeIds", "class_urho3_d_1_1_node_prefab.html#acf18044572b2de7c68125c41d1475d8e", null ],
     [ "operator!=", "class_urho3_d_1_1_node_prefab.html#a3ab46c0099c1dc4248b960b5f2b17fb7", null ],
     [ "operator==", "class_urho3_d_1_1_node_prefab.html#ab606a4eceed6c0eafd9274a618abcb5b", null ],
     [ "SerializeInBlock", "class_urho3_d_1_1_node_prefab.html#aba663964a4c3e4f0c418b0c16f5cfbe2", null ],
