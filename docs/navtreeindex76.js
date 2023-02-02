@@ -1,7 +1,5 @@
 var NAVTREEINDEX76 =
 {
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a4efad7dd8c2ab02095c31f4891a662f1":[3,0,15,22],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a506003d2a606439b7cb97f4ba76afb01":[3,0,15,23],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a596f6b2061f647841b2d3531a53788dc":[3,0,15,0],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a5b81df574c7391d1cc79623b4f7a28e5":[3,0,15,27],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a5cfadfb0ada14d3590e7c5b6fe2b192d":[3,0,15,26],
@@ -163,13 +161,13 @@ var NAVTREEINDEX76 =
 "struct_urho3_d_1_1_application_flavor.html":[3,0,2,28],
 "struct_urho3_d_1_1_application_flavor.html#a0c28bf94caefec7f66e53d9fdc2c8d05":[3,0,2,28,5],
 "struct_urho3_d_1_1_application_flavor.html#a28de755c64f30678414988e6c21dcc1e":[3,0,2,28,4],
-"struct_urho3_d_1_1_application_flavor.html#a40a8cff7e62c77b7280010794e23c22a":[3,0,2,28,8],
+"struct_urho3_d_1_1_application_flavor.html#a402c5a75abcf86fd2543d2ee765e7cc2":[3,0,2,28,7],
 "struct_urho3_d_1_1_application_flavor.html#a7ce5c8ce6811dbf51764af4a15c61d14":[3,0,2,28,2],
-"struct_urho3_d_1_1_application_flavor.html#a9c29c769bac2eba32332b057c8cccccf":[3,0,2,28,6],
 "struct_urho3_d_1_1_application_flavor.html#abbacca689c98a2459709b0dd638ad724":[3,0,2,28,1],
 "struct_urho3_d_1_1_application_flavor.html#ac0ff66f357b5e7c40e4008dd1f4c7074":[3,0,2,28,3],
 "struct_urho3_d_1_1_application_flavor.html#ac6af3f435877cf0d84f19c1fceadf8e9":[3,0,2,28,0],
-"struct_urho3_d_1_1_application_flavor.html#ad1cce4a6e6b9be1f95b847360d79ba42":[3,0,2,28,7],
+"struct_urho3_d_1_1_application_flavor.html#adfb74c94dafa05e9d386caa7ea76999c":[3,0,2,28,8],
+"struct_urho3_d_1_1_application_flavor.html#ae0ac112893648a7421aefb5d6d0e6431":[3,0,2,28,6],
 "struct_urho3_d_1_1_application_flavor_pattern.html":[3,0,2,29],
 "struct_urho3_d_1_1_application_flavor_pattern.html#a0ec50447cf5390a7c761a25a85007e73":[3,0,2,29,0],
 "struct_urho3_d_1_1_application_flavor_pattern.html#a733498f3dc1d3dd23999ff7a93722c9d":[3,0,2,29,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX76 =
 "struct_urho3_d_1_1_attribute_info.html#a2562e346b9348dac9acb7deedb7b4ddc":[3,0,2,51,7],
 "struct_urho3_d_1_1_attribute_info.html#a347f06301f37db008036b7eeda9355cf":[3,0,2,51,2],
 "struct_urho3_d_1_1_attribute_info.html#a3c5455f9bd3427c38b895fda34169346":[3,0,2,51,15],
-"struct_urho3_d_1_1_attribute_info.html#a4e6874c208b23f645b138e14f25c88a4":[3,0,2,51,17]
+"struct_urho3_d_1_1_attribute_info.html#a4e6874c208b23f645b138e14f25c88a4":[3,0,2,51,17],
+"struct_urho3_d_1_1_attribute_info.html#a59dbc7cabef628ac98629a4ef6fee25e":[3,0,2,51,18],
+"struct_urho3_d_1_1_attribute_info.html#a6525b4285c0ddd489026ef6c800d6931":[3,0,2,51,11]
 };

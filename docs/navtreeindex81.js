@@ -1,7 +1,5 @@
 var NAVTREEINDEX81 =
 {
-"struct_urho3_d_1_1_joystick_state.html#a8b308ba714006c87974456da71cf0489":[3,0,2,328,20],
-"struct_urho3_d_1_1_joystick_state.html#a8e563bb07a85f4bffb1f0ef75003c959":[3,0,2,328,16],
 "struct_urho3_d_1_1_joystick_state.html#a949a92977b32b3d1b46aab942e3511a7":[3,0,2,328,7],
 "struct_urho3_d_1_1_joystick_state.html#a962557fcac9ee900967e083ce840a9b4":[3,0,2,328,8],
 "struct_urho3_d_1_1_joystick_state.html#a98b92e49d3334c8a346c31a24edba0ba":[3,0,2,328,11],
@@ -249,5 +247,7 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html#a132b5b51e3943c1af28c98dde3a667f4":[3,0,2,381,1,3],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html#acf5eb3403559d2972855b3f37150bbbf":[3,0,2,381,1,1],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html#acfd89153999ccc3ce529b839124ed9ab":[3,0,2,381,1,0],
-"struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html#af671242697189ffca68fb63ef5a90bc0":[3,0,2,381,1,2]
+"struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html#af671242697189ffca68fb63ef5a90bc0":[3,0,2,381,1,2],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html":[3,0,2,381,2],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html#a095c5d10b65f6f84b1bb4fd7e3743f8e":[3,0,2,381,2,0]
 };

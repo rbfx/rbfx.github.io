@@ -1,7 +1,5 @@
 var NAVTREEINDEX82 =
 {
-"struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html":[3,0,2,381,2],
-"struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html#a095c5d10b65f6f84b1bb4fd7e3743f8e":[3,0,2,381,2,0],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html#a30b47c62dba1c5a3597cd4c30e6db4a3":[3,0,2,381,2,1],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html#a30ee5e5f98749f26f2acd62102fe68c5":[3,0,2,381,2,3],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html#a8d17dee71dd746bf1ee7c1213446e399":[3,0,2,381,2,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_packed_scene_selection.html":[3,0,2,470],
 "struct_urho3_d_1_1_packed_scene_selection.html#a1b175923897a14c62d778eb0ae13508e":[3,0,2,470,6],
 "struct_urho3_d_1_1_packed_scene_selection.html#a301b2621154c4f227537821101264515":[3,0,2,470,2],
-"struct_urho3_d_1_1_packed_scene_selection.html#a326e8f86fa4c777bef5706b5e8cab240":[3,0,2,470,0]
+"struct_urho3_d_1_1_packed_scene_selection.html#a326e8f86fa4c777bef5706b5e8cab240":[3,0,2,470,0],
+"struct_urho3_d_1_1_packed_scene_selection.html#a491c3e82506fbc8dab9e98c68a2e5de4":[3,0,2,470,8],
+"struct_urho3_d_1_1_packed_scene_selection.html#a5ef64bddb80bfff0707e8b0552078ae8":[3,0,2,470,1]
 };

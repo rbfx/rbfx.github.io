@@ -1,7 +1,5 @@
 var NAVTREEINDEX75 =
 {
-"functions_b.html":[3,3,0,1],
-"functions_c.html":[3,3,0,2],
 "functions_d.html":[3,3,0,3],
 "functions_e.html":[3,3,0,4],
 "functions_enum.html":[3,3,4],
@@ -52,8 +50,8 @@ var NAVTREEINDEX75 =
 "functions_type.html":[3,3,3],
 "functions_u.html":[3,3,0,20],
 "functions_v.html":[3,3,0,21],
-"functions_vars.html":[3,3,2],
 "functions_vars.html":[3,3,2,0],
+"functions_vars.html":[3,3,2],
 "functions_vars_b.html":[3,3,2,1],
 "functions_vars_c.html":[3,3,2,2],
 "functions_vars_d.html":[3,3,2,3],
@@ -86,8 +84,8 @@ var NAVTREEINDEX75 =
 "functions_~.html":[3,3,0,26],
 "graphics-and-rendering.html":[0,0,1,1],
 "hierarchy.html":[3,2],
-"index.html":[],
 "index.html":[0],
+"index.html":[],
 "low-level-transport.html":[0,0,1,2,0],
 "md__home_runner_work_rbfx-docs_rbfx-docs__r_e_a_d_m_e.html":[1],
 "multiplayer-and-networking.html":[0,0,1,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX75 =
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a2fb2e1e4e1e5a941c4a17693c7830249":[3,0,15,3],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a31ad5966a794099b2563ba4749aaf0f7":[3,0,15,2],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a38723bb641e7b109cddf93e6446a54bd":[3,0,15,8],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a4bc580a9949abc0dd61b44b610848282":[3,0,15,12]
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a4bc580a9949abc0dd61b44b610848282":[3,0,15,12],
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a4efad7dd8c2ab02095c31f4891a662f1":[3,0,15,22],
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a506003d2a606439b7cb97f4ba76afb01":[3,0,15,23]
 };

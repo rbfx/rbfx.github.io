@@ -292,7 +292,6 @@ var class_urho3_d_1_1_u_i_element =
     [ "size_", "class_urho3_d_1_1_u_i_element.html#a670352442597aaf4a4e69cb12b97759e", null ],
     [ "sortChildren_", "class_urho3_d_1_1_u_i_element.html#a41464e5bb45dca9500d21c5c3bd539f0", null ],
     [ "sortOrderDirty_", "class_urho3_d_1_1_u_i_element.html#a423616c709cdbe79cdee688fbc505641", null ],
-    [ "styleXPathQuery_", "class_urho3_d_1_1_u_i_element.html#a55a6ea574da4fe3091e2edc380467740", null ],
     [ "tags_", "class_urho3_d_1_1_u_i_element.html#a3b26f8386e13d04eab578e098d90083c", null ],
     [ "traversalMode_", "class_urho3_d_1_1_u_i_element.html#a40e15316ea2e305da55c6d37920385d6", null ],
     [ "useDerivedOpacity_", "class_urho3_d_1_1_u_i_element.html#aeaa2c0db4840925b64dce802a0321613", null ],

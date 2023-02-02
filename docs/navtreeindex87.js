@@ -1,7 +1,5 @@
 var NAVTREEINDEX87 =
 {
-"struct_urho3_d_1_1_tetrahedral_mesh_surface.html#ab03d6fc56337d0cc2bd88b4bf2e2ae38":[3,0,2,715,2],
-"struct_urho3_d_1_1_tetrahedral_mesh_surface_edge.html":[3,0,2,716],
 "struct_urho3_d_1_1_tetrahedral_mesh_surface_edge.html#a1d0746f96ffca9c34ca379984df303f3":[3,0,2,716,5],
 "struct_urho3_d_1_1_tetrahedral_mesh_surface_edge.html#a1d9708b3de7a663d0bfa52450f6a1115":[3,0,2,716,3],
 "struct_urho3_d_1_1_tetrahedral_mesh_surface_edge.html#a4761ff6f6e1bbf6cd9ecc1002b61116b":[3,0,2,716,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX87 =
 "structeastl_1_1hash_3_01vector_3_01_t_00_01_allocator_01_4_01_4.html#ab1ca9f12ab45e276bfc60c52451193cb":[3,0,0,5,0],
 "structfmt_1_1formatter_3_01_t_00_01char_00_01ea_1_1enable__if__t_3_01ea_1_1is__enum__v_3_01_t_01_4_01_4_01_4.html":[3,0,1,2],
 "structfmt_1_1formatter_3_01_t_00_01char_00_01ea_1_1enable__if__t_3_01ea_1_1is__enum__v_3_01_t_01_4_01_4_01_4.html#a67c8330319fdb21daa1ff71fd24e3c75":[3,0,1,2,0],
-"structfmt_1_1formatter_3_01ea_1_1string_01_4.html":[3,0,1,0]
+"structfmt_1_1formatter_3_01ea_1_1string_01_4.html":[3,0,1,0],
+"structfmt_1_1formatter_3_01ea_1_1string_01_4.html#a9d00cc0db451d47d33734e3b06565cdc":[3,0,1,0,0],
+"structfmt_1_1formatter_3_01ea_1_1string__view_01_4.html":[3,0,1,1]
 };

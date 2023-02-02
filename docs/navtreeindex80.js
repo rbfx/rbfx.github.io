@@ -1,7 +1,5 @@
 var NAVTREEINDEX80 =
 {
-"struct_urho3_d_1_1_frame_info.html#afcd8002822f1cb69e41a72eb59dae5c5":[3,0,2,245,1],
-"struct_urho3_d_1_1_frame_statistics.html":[3,0,2,246],
 "struct_urho3_d_1_1_frame_statistics.html#a171380c20eae82c4f5610a47b71bb77c":[3,0,2,246,0],
 "struct_urho3_d_1_1_frame_statistics.html#a71bf26439af1ce0ebc6fe951d68f38bc":[3,0,2,246,1],
 "struct_urho3_d_1_1_free_fly_controller_1_1_movement.html":[3,0,2,247,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_joystick_state.html#a35fb31cd73fbea7e48ad588c44154fb3":[3,0,2,328,18],
 "struct_urho3_d_1_1_joystick_state.html#a3a3998913314b5f8029ac00b8285c0f2":[3,0,2,328,13],
 "struct_urho3_d_1_1_joystick_state.html#a521483ac87ec10a92a142e6d0e835601":[3,0,2,328,1],
-"struct_urho3_d_1_1_joystick_state.html#a76b61f21c2a119ff9e81dbc1fd10693f":[3,0,2,328,10]
+"struct_urho3_d_1_1_joystick_state.html#a76b61f21c2a119ff9e81dbc1fd10693f":[3,0,2,328,10],
+"struct_urho3_d_1_1_joystick_state.html#a8b308ba714006c87974456da71cf0489":[3,0,2,328,20],
+"struct_urho3_d_1_1_joystick_state.html#a8e563bb07a85f4bffb1f0ef75003c959":[3,0,2,328,16]
 };

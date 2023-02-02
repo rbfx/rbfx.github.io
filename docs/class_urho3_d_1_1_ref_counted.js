@@ -11,7 +11,5 @@ var class_urho3_d_1_1_ref_counted =
     [ "Refs", "class_urho3_d_1_1_ref_counted.html#a7e764b1f4b072a1a0dbfaeac62626244", null ],
     [ "ReleaseRef", "class_urho3_d_1_1_ref_counted.html#a8d7d984bb64df3b052095bbf4e55bbd5", null ],
     [ "WeakRefs", "class_urho3_d_1_1_ref_counted.html#a27960099d665fa2a05b7d488cfc56d90", null ],
-    [ "isScriptStrongRef_", "class_urho3_d_1_1_ref_counted.html#aecc31d7211c4eada85f1606fdd54507e", null ],
-    [ "refCount_", "class_urho3_d_1_1_ref_counted.html#a30b71da1409381e23230d9a33f23d625", null ],
-    [ "scriptObject_", "class_urho3_d_1_1_ref_counted.html#a953e4baefa0ac6df0d22e12507c4467c", null ]
+    [ "refCount_", "class_urho3_d_1_1_ref_counted.html#a30b71da1409381e23230d9a33f23d625", null ]
 ];

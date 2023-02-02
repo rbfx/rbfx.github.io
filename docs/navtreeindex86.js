@@ -1,7 +1,5 @@
 var NAVTREEINDEX86 =
 {
-"struct_urho3_d_1_1_span_variant_tuple_3_01_value0_00_01_value1_00_01_value2_00_01_value3_00_01_value4_01_4.html#a2eebdbec1e92059649c97a9b56373950":[3,0,2,675,0],
-"struct_urho3_d_1_1_span_variant_tuple_3_01_value0_00_01_value1_00_01_value2_00_01_value3_00_01_ve6b72e73caf0bc20f375ddecc4f917b6.html":[3,0,2,677],
 "struct_urho3_d_1_1_span_variant_tuple_3_01_value0_00_01_value1_00_01_value2_00_01_value3_00_01_ve6b72e73caf0bc20f375ddecc4f917b6.html#a00ae7d1cbf8ad36ab1dc8472df3744ca":[3,0,2,677,0],
 "struct_urho3_d_1_1_span_variant_tuple_3_01_value0_00_01_value1_00_01_value2_00_01_value3_01_4.html":[3,0,2,674],
 "struct_urho3_d_1_1_span_variant_tuple_3_01_value0_00_01_value1_00_01_value2_00_01_value3_01_4.html#a33dc65e271d4edd56f0ff2f0da6bef58":[3,0,2,674,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_tetrahedral_mesh_surface.html#a66d5973d29ec4f648e2d5893ae376e9a":[3,0,2,715,1],
 "struct_urho3_d_1_1_tetrahedral_mesh_surface.html#a671426dd6c0bde0327c6d23ca0b1bbd7":[3,0,2,715,3],
 "struct_urho3_d_1_1_tetrahedral_mesh_surface.html#a79f55af42b821d503af09588113bd497":[3,0,2,715,4],
-"struct_urho3_d_1_1_tetrahedral_mesh_surface.html#a8f920573f2d3b12fd80d05b8de10ac98":[3,0,2,715,5]
+"struct_urho3_d_1_1_tetrahedral_mesh_surface.html#a8f920573f2d3b12fd80d05b8de10ac98":[3,0,2,715,5],
+"struct_urho3_d_1_1_tetrahedral_mesh_surface.html#ab03d6fc56337d0cc2bd88b4bf2e2ae38":[3,0,2,715,2],
+"struct_urho3_d_1_1_tetrahedral_mesh_surface_edge.html":[3,0,2,716]
 };

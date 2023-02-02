@@ -1,7 +1,5 @@
 var NAVTREEINDEX84 =
 {
-"struct_urho3_d_1_1_pipeline_state_desc.html#a6ca15473918f4c937b039b23f40f33ef":[3,0,2,511,25],
-"struct_urho3_d_1_1_pipeline_state_desc.html#a748f207fbd3a4264e853990533b16534":[3,0,2,511,30],
 "struct_urho3_d_1_1_pipeline_state_desc.html#a77090484af783b383aa435b5fb73d6f2":[3,0,2,511,12],
 "struct_urho3_d_1_1_pipeline_state_desc.html#a85424f7b1313a7efe96ea3560c56713b":[3,0,2,511,21],
 "struct_urho3_d_1_1_pipeline_state_desc.html#a89e36ead406c31099337ba093e3610da":[3,0,2,511,8],
@@ -249,5 +247,7 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_resource_group.html#afbec02d8dae6a6d4162ebd90a24ac029":[3,0,2,582,1],
 "struct_urho3_d_1_1_resource_inspector_widget_1_1_property_desc.html":[3,0,2,583,0],
 "struct_urho3_d_1_1_resource_inspector_widget_1_1_property_desc.html#a1762558b1ebda6d888cf2344aa39b933":[3,0,2,583,0,5],
-"struct_urho3_d_1_1_resource_inspector_widget_1_1_property_desc.html#a325a9b7a091a1207acbf4b15c44377f1":[3,0,2,583,0,2]
+"struct_urho3_d_1_1_resource_inspector_widget_1_1_property_desc.html#a325a9b7a091a1207acbf4b15c44377f1":[3,0,2,583,0,2],
+"struct_urho3_d_1_1_resource_inspector_widget_1_1_property_desc.html#a80ccc1aefb17dd361fb38b3cb51e346f":[3,0,2,583,0,0],
+"struct_urho3_d_1_1_resource_inspector_widget_1_1_property_desc.html#aaa748b9d11bf2737a51ced1087cf38d8":[3,0,2,583,0,4]
 };

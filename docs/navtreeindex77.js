@@ -1,7 +1,5 @@
 var NAVTREEINDEX77 =
 {
-"struct_urho3_d_1_1_attribute_info.html#a59dbc7cabef628ac98629a4ef6fee25e":[3,0,2,51,18],
-"struct_urho3_d_1_1_attribute_info.html#a6525b4285c0ddd489026ef6c800d6931":[3,0,2,51,11],
 "struct_urho3_d_1_1_attribute_info.html#a8c90bc4440f1de79e9a2364efa70c0b3":[3,0,2,51,10],
 "struct_urho3_d_1_1_attribute_info.html#a96bd2573780bcabc0e46c282ae0089dc":[3,0,2,51,6],
 "struct_urho3_d_1_1_attribute_info.html#a9a88f6396b1b43e171610898cf85e962":[3,0,2,51,13],
@@ -249,5 +247,7 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_bone_view.html#a7bafe43ab26fa3417c0053d8b712bfad":[3,0,2,97,15],
 "struct_urho3_d_1_1_bone_view.html#aa3aa0e4bed8f4a23a0583e738e55667c":[3,0,2,97,11],
 "struct_urho3_d_1_1_bone_view.html#abd2fbacca53216fa2286381c43dab817":[3,0,2,97,10],
-"struct_urho3_d_1_1_bone_view.html#ac3c0392b6099610166385ff30804f96a":[3,0,2,97,12]
+"struct_urho3_d_1_1_bone_view.html#ac3c0392b6099610166385ff30804f96a":[3,0,2,97,12],
+"struct_urho3_d_1_1_bone_view.html#ae7641ec5635dabf01d1b6dd31721c2b6":[3,0,2,97,1],
+"struct_urho3_d_1_1_bone_view.html#aeb7cde5f0f6161d84f958bf5a6898776":[3,0,2,97,14]
 };
