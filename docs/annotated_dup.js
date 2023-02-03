@@ -187,6 +187,7 @@ var annotated_dup =
       [ "AnimationStateSource", "class_urho3_d_1_1_animation_state_source.html", "class_urho3_d_1_1_animation_state_source" ],
       [ "AnimationTrack", "struct_urho3_d_1_1_animation_track.html", "struct_urho3_d_1_1_animation_track" ],
       [ "AnimationTriggerPoint", "struct_urho3_d_1_1_animation_trigger_point.html", "struct_urho3_d_1_1_animation_trigger_point" ],
+      [ "AnimationVelocityExtractor", "class_urho3_d_1_1_animation_velocity_extractor.html", "class_urho3_d_1_1_animation_velocity_extractor" ],
       [ "Application", "class_urho3_d_1_1_application.html", "class_urho3_d_1_1_application" ],
       [ "ApplicationFlavor", "struct_urho3_d_1_1_application_flavor.html", "struct_urho3_d_1_1_application_flavor" ],
       [ "ApplicationFlavorPattern", "struct_urho3_d_1_1_application_flavor_pattern.html", "struct_urho3_d_1_1_application_flavor_pattern" ],
