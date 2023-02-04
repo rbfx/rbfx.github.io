@@ -1,5 +1,8 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_instancing_buffer_settings.html":[3,0,2,322],
+"struct_urho3_d_1_1_instancing_buffer_settings.html#a3257e1d7919998ea1d10a03b92eac652":[3,0,2,322,1],
+"struct_urho3_d_1_1_instancing_buffer_settings.html#a38313e462a4967e144364e678a049b9a":[3,0,2,322,5],
 "struct_urho3_d_1_1_instancing_buffer_settings.html#a88d82f2a0d9799abc85fab2687df4fa3":[3,0,2,322,6],
 "struct_urho3_d_1_1_instancing_buffer_settings.html#ada2cf8423d9e0767b0673273566a00de":[3,0,2,322,0],
 "struct_urho3_d_1_1_instancing_buffer_settings.html#ae643a44fe30d3a89712e301947481b39":[3,0,2,322,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_lightmap_stitching_settings.html#ae4bf315d0de676532762565cb9d85348":[3,0,2,361,2],
 "struct_urho3_d_1_1_lightmap_stitching_settings.html#af7c11756b4edf9a9840a2bcc46f456b1":[3,0,2,361,1],
 "struct_urho3_d_1_1_lightmap_u_v_generation_settings.html":[3,0,2,362],
-"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a0e4270af06dceaa2ca2080942148804f":[3,0,2,362,0],
-"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a11f6ce357eb4f8bd6e0162f428596d80":[3,0,2,362,4],
-"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a769e62d8583eb1c42129683f9597908c":[3,0,2,362,1],
-"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a871a2891d45259ebd63d72e2bb06d132":[3,0,2,362,3]
+"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a0e4270af06dceaa2ca2080942148804f":[3,0,2,362,0]
 };

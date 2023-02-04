@@ -1,5 +1,8 @@
 var NAVTREEINDEX77 =
 {
+"struct_urho3_d_1_1_async_progress.html#ae004ddfd0c3990fe626409f85b841ea6":[3,0,2,47,2],
+"struct_urho3_d_1_1_async_progress.html#af4591182c1ff1c7b34a16bfed73083c7":[3,0,2,47,8],
+"struct_urho3_d_1_1_attribute_animation_state_track.html":[3,0,2,50],
 "struct_urho3_d_1_1_attribute_animation_state_track.html#a405a16d9c7b309dd1850bc86a5219455":[3,0,2,50,2],
 "struct_urho3_d_1_1_attribute_animation_state_track.html#a61d6cf6fe92ba4535e690f908376aab0":[3,0,2,50,0],
 "struct_urho3_d_1_1_attribute_animation_state_track.html#a841bd6b35d56b9ea21f72d13d0cecf87":[3,0,2,50,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_bone.html#a3618c265920795818951817b79e88a66":[3,0,2,97,4],
 "struct_urho3_d_1_1_bone.html#a61217aea454e5d6211e96341e51a0b60":[3,0,2,97,3],
 "struct_urho3_d_1_1_bone.html#a65716a28a39713d7556b8b4ec19ca6c3":[3,0,2,97,5],
-"struct_urho3_d_1_1_bone.html#a6cfaa01387c2a5ab56da1fe316f6569a":[3,0,2,97,11],
-"struct_urho3_d_1_1_bone.html#a721ee42d4668df4c9f4fcf6758d1f2be":[3,0,2,97,9],
-"struct_urho3_d_1_1_bone.html#a72c09159b4bfb37d47d2b65c63b6a8bc":[3,0,2,97,7],
-"struct_urho3_d_1_1_bone.html#a79cab97bf6f6d8d44ee9bf26237c540f":[3,0,2,97,2]
+"struct_urho3_d_1_1_bone.html#a6cfaa01387c2a5ab56da1fe316f6569a":[3,0,2,97,11]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_custom_variant_value_traits_3_01ea_1_1unique__ptr_3_01_t_01_4_01_4.html#afd01c5f9a78f8d62b6e4dca04c230de6":[3,0,2,179,2],
+"struct_urho3_d_1_1_debug_frame_snapshot.html":[3,0,2,180],
+"struct_urho3_d_1_1_debug_frame_snapshot.html#a4a4a38bf5602b054a7fc1fe519510fed":[3,0,2,180,7],
 "struct_urho3_d_1_1_debug_frame_snapshot.html#a7803a7f462a5b3ef72aff47ed464943b":[3,0,2,180,2],
 "struct_urho3_d_1_1_debug_frame_snapshot.html#a8cf682e52f79e4bcb858bd58f886f0b4":[3,0,2,180,4],
 "struct_urho3_d_1_1_debug_frame_snapshot.html#ac80aa0f5d7acf376412dae47e4aec944":[3,0,2,180,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_focus_parameters.html#acef47ca405923a7671ec94eee4c153c3":[3,0,2,240,6],
 "struct_urho3_d_1_1_focus_parameters.html#ae026381a2e45b3ece810dd1e9a364623":[3,0,2,240,7],
 "struct_urho3_d_1_1_focus_parameters.html#aed7bfa42d9787271e1f92c5a2ac3d9ef":[3,0,2,240,0],
-"struct_urho3_d_1_1_font_glyph.html":[3,0,2,245],
-"struct_urho3_d_1_1_font_glyph.html#a0d23eef6db5287fcd800f0726588d58b":[3,0,2,245,9],
-"struct_urho3_d_1_1_font_glyph.html#a4454d1b67556156271cc913a05896be9":[3,0,2,245,7],
-"struct_urho3_d_1_1_font_glyph.html#a691d907c5d27fdcce9513f5391595bb5":[3,0,2,245,8]
+"struct_urho3_d_1_1_font_glyph.html":[3,0,2,245]
 };

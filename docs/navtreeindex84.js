@@ -1,5 +1,8 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_pipeline_batch_group.html":[3,0,2,508],
+"struct_urho3_d_1_1_pipeline_batch_group.html#a555905a36f6e1484ec50abe17a1ab300":[3,0,2,508,2],
+"struct_urho3_d_1_1_pipeline_batch_group.html#a5d7dceed8ef5d57822ea4b70c2f5fcb0":[3,0,2,508,3],
 "struct_urho3_d_1_1_pipeline_batch_group.html#a7006b6c92dce7bacd6fd2eca48301c23":[3,0,2,508,0],
 "struct_urho3_d_1_1_pipeline_batch_group.html#ac39b62c425b4f95977da5d61a41798b1":[3,0,2,508,4],
 "struct_urho3_d_1_1_pipeline_batch_group.html#ae5b6d961b686742676c0c70bf3f9fa56":[3,0,2,508,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_replication_manager_1_1_client_data.html#aa924e5ba82f25dac26fd5b0f91adb3d5":[3,0,2,578,0,5],
 "struct_urho3_d_1_1_replication_manager_1_1_client_data.html#aaac1aa95954af4965dfe21284ea6e0df":[3,0,2,578,0,3],
 "struct_urho3_d_1_1_replication_manager_1_1_client_data.html#ace407be41a22b940dc7f4d4d56c03224":[3,0,2,578,0,4],
-"struct_urho3_d_1_1_resource_file_descriptor.html":[3,0,2,582],
-"struct_urho3_d_1_1_resource_file_descriptor.html#a016afee8d1124de16cb94daf7d5bf60a":[3,0,2,582,0],
-"struct_urho3_d_1_1_resource_file_descriptor.html#a3a1f357677d7b4c89e2c61e30d551160":[3,0,2,582,1],
-"struct_urho3_d_1_1_resource_file_descriptor.html#a4fb93e84a268d38c0bf1700b0a7d9251":[3,0,2,582,6]
+"struct_urho3_d_1_1_resource_file_descriptor.html":[3,0,2,582]
 };

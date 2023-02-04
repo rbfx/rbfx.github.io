@@ -98,6 +98,9 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_k_spine_solver.html#a9c8a936a424880d5e86d9171194e6719">DrawDebugGeometry</a> (<a class="el" href="class_urho3_d_1_1_debug_renderer.html">DebugRenderer</a> *debug, bool depthTest) override</td></tr>
 <tr class="memdesc:a9c8a936a424880d5e86d9171194e6719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visualize the component as debug geometry. <br /></td></tr>
 <tr class="separator:a9c8a936a424880d5e86d9171194e6719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bd1768687e9bf6dc6409850a85625d9"><td class="memItemLeft" align="right" valign="top"><a id="a0bd1768687e9bf6dc6409850a85625d9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateProperties</b> ()</td></tr>
+<tr class="separator:a0bd1768687e9bf6dc6409850a85625d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a9129ce7ddf5dca192132beaf128cfde1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_k_spine_solver.html#a9129ce7ddf5dca192132beaf128cfde1">SetBoneNames</a> (const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;names)</td></tr>
 <tr class="separator:a9129ce7ddf5dca192132beaf128cfde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -652,15 +655,18 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a29d6b7ecf7390ba2ac2cd625eecdbf26"><td class="memItemLeft" align="right" valign="top"><a id="a29d6b7ecf7390ba2ac2cd625eecdbf26"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>EnsureInitialized</b> ()</td></tr>
 <tr class="separator:a29d6b7ecf7390ba2ac2cd625eecdbf26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e87ce44056c3b82707b89b9cb6164c"><td class="memItemLeft" align="right" valign="top"><a id="a64e87ce44056c3b82707b89b9cb6164c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateTwistRotationOffset</b> ()</td></tr>
+<tr class="separator:a64e87ce44056c3b82707b89b9cb6164c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7350e3d5a8b670f178631fad0e5df6e"><td class="memItemLeft" align="right" valign="top"><a id="ac7350e3d5a8b670f178631fad0e5df6e"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>WeightFunction</b> (float x) const</td></tr>
 <tr class="separator:ac7350e3d5a8b670f178631fad0e5df6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af92cdc2f9770de716136e29ffbad05a8"><td class="memItemLeft" align="right" valign="top"><a id="af92cdc2f9770de716136e29ffbad05a8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOriginalTransforms</b> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;frameOfReference)</td></tr>
 <tr class="separator:af92cdc2f9770de716136e29ffbad05a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a898c9beda6c03ff98d4d6e2213227287"><td class="memItemLeft" align="right" valign="top"><a id="a898c9beda6c03ff98d4d6e2213227287"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>GetTwistAngle</b> (const <a class="el" href="struct_urho3_d_1_1_i_k_node_segment.html">IKNodeSegment</a> &amp;segment, <a class="el" href="class_urho3_d_1_1_node.html">Node</a> *targetNode) const</td></tr>
-<tr class="separator:a898c9beda6c03ff98d4d6e2213227287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5c54ace5160fc4cf32a4da4ccb66063"><td class="memItemLeft" align="right" valign="top"><a id="ab5c54ace5160fc4cf32a4da4ccb66063"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>GetTwistAngle</b> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;frameOfReference, const <a class="el" href="struct_urho3_d_1_1_i_k_node_segment.html">IKNodeSegment</a> &amp;segment, <a class="el" href="class_urho3_d_1_1_node.html">Node</a> *targetNode) const</td></tr>
+<tr class="separator:ab5c54ace5160fc4cf32a4da4ccb66063"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -688,6 +694,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>maxAngle_</b> {90.0f
 <tr class="memitem:a4a225b2789ecfa2d2756197e0b921921"><td class="memItemLeft" align="right" valign="top"><a id="a4a225b2789ecfa2d2756197e0b921921"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>bendTweak_</b> {0.0f}</td></tr>
 <tr class="separator:a4a225b2789ecfa2d2756197e0b921921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a683ac05bc3c4157d757033c03452e1c0"><td class="memItemLeft" align="right" valign="top"><a id="a683ac05bc3c4157d757033c03452e1c0"></a>
+<a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>twistRotationOffset_</b> {<a class="el" href="class_urho3_d_1_1_quaternion.html#a228a2489bf539525b93a315f9b59de9a">Quaternion::ZERO</a>}</td></tr>
+<tr class="separator:a683ac05bc3c4157d757033c03452e1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b40f7cf479383a1f511dd6a135ad498"><td class="memItemLeft" align="right" valign="top"><a id="a5b40f7cf479383a1f511dd6a135ad498"></a>
 <a class="el" href="class_urho3_d_1_1_i_k_spine_chain.html">IKSpineChain</a>&#160;</td><td class="memItemRight" valign="bottom"><b>chain_</b></td></tr>
 <tr class="separator:a5b40f7cf479383a1f511dd6a135ad498"><td class="memSeparator" colspan="2">&#160;</td></tr>

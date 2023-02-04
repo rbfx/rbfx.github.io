@@ -1,5 +1,8 @@
 var NAVTREEINDEX86 =
 {
+"struct_urho3_d_1_1_source_batch2_d.html#a7fe5ed5d509e426813941c2f1b8f2841":[3,0,2,669,0],
+"struct_urho3_d_1_1_source_batch2_d.html#a974baf67b6ec836b721fd079e7295676":[3,0,2,669,2],
+"struct_urho3_d_1_1_source_batch2_d.html#abfb0950c4be7e5ac3700ba582901563b":[3,0,2,669,6],
 "struct_urho3_d_1_1_source_batch2_d.html#ac63b99527f9acb5e4f61b946157705aa":[3,0,2,669,5],
 "struct_urho3_d_1_1_source_batch2_d.html#ad54cdf9e7466fee133bf47eccff90862":[3,0,2,669,4],
 "struct_urho3_d_1_1_source_batch2_d.html#aea8c5dbdb7da67515d5aa4e6157360c5":[3,0,2,669,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_stored_log_message.html#aace2fcca52be12940060a354f78edee9":[3,0,2,702,1],
 "struct_urho3_d_1_1_stored_log_message.html#ab1263d4e2df0776dbe3d1aa138b855b1":[3,0,2,702,4],
 "struct_urho3_d_1_1_stored_log_message.html#aecf70df4733f98dfdf9072890dbdad80":[3,0,2,702,0],
-"struct_urho3_d_1_1_synchronized_physics_step.html":[3,0,2,707],
-"struct_urho3_d_1_1_synchronized_physics_step.html#a4f21b3a68c183641ff8ade9d3417aee5":[3,0,2,707,1],
-"struct_urho3_d_1_1_synchronized_physics_step.html#a6338e6de2abdcc735b037943b8df64d6":[3,0,2,707,0],
-"struct_urho3_d_1_1_technique_entry.html":[3,0,2,711]
+"struct_urho3_d_1_1_synchronized_physics_step.html":[3,0,2,707]
 };

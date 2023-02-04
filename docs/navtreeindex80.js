@@ -1,5 +1,8 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_font_glyph.html#a0d23eef6db5287fcd800f0726588d58b":[3,0,2,245,9],
+"struct_urho3_d_1_1_font_glyph.html#a4454d1b67556156271cc913a05896be9":[3,0,2,245,7],
+"struct_urho3_d_1_1_font_glyph.html#a691d907c5d27fdcce9513f5391595bb5":[3,0,2,245,8],
 "struct_urho3_d_1_1_font_glyph.html#a8b93092b27ef4f1aa27620692208ab3a":[3,0,2,245,3],
 "struct_urho3_d_1_1_font_glyph.html#a9fef4770f7ebe676d27ff83b996a3e6c":[3,0,2,245,6],
 "struct_urho3_d_1_1_font_glyph.html#aad29d591c4fda301cd4cae3b2aba196a":[3,0,2,245,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_instance_data.html#acdfeee3b7cd0e4b6cef77a236d7fbfb7":[3,0,2,319,1],
 "struct_urho3_d_1_1_instance_data.html#aeb3e7dd94dd1b5ff8c15117f3e9b00c3":[3,0,2,319,0],
 "struct_urho3_d_1_1_instance_shader_parameters.html":[3,0,2,320],
-"struct_urho3_d_1_1_instance_shader_parameters.html#a53f3f687443c3997fdc7dea9805db790":[3,0,2,320,0],
-"struct_urho3_d_1_1_instancing_buffer_settings.html":[3,0,2,322],
-"struct_urho3_d_1_1_instancing_buffer_settings.html#a3257e1d7919998ea1d10a03b92eac652":[3,0,2,322,1],
-"struct_urho3_d_1_1_instancing_buffer_settings.html#a38313e462a4967e144364e678a049b9a":[3,0,2,322,5]
+"struct_urho3_d_1_1_instance_shader_parameters.html#a53f3f687443c3997fdc7dea9805db790":[3,0,2,320,0]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a11f6ce357eb4f8bd6e0162f428596d80":[3,0,2,362,4],
+"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a769e62d8583eb1c42129683f9597908c":[3,0,2,362,1],
+"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a871a2891d45259ebd63d72e2bb06d132":[3,0,2,362,3],
 "struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a9d023cd3b7907392264585fc32bf2f33":[3,0,2,362,2],
 "struct_urho3_d_1_1_manifold_pair.html":[3,0,2,380],
 "struct_urho3_d_1_1_manifold_pair.html#a0595504fa42073c132fad93d2b4f9524":[3,0,2,380,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_outline_group_1_1_material_key.html#a001ae716476017dd0cb8aa8e5c478a2f":[3,0,2,460,0,0],
 "struct_urho3_d_1_1_outline_group_1_1_material_key.html#a04e64a0a120041fae85de80e9b6f6782":[3,0,2,460,0,1],
 "struct_urho3_d_1_1_outline_group_1_1_material_key.html#a40f677709464efcbd9e606d33394d963":[3,0,2,460,0,3],
-"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a742e34e8a072c32a821b09fe68414d68":[3,0,2,460,0,2],
-"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a8a06183dc1f2e69072baab49e1739e4b":[3,0,2,460,0,4],
-"struct_urho3_d_1_1_outline_group_1_1_material_key.html#aeac444530b984ce31ff8bec28ffa9aff":[3,0,2,460,0,5],
-"struct_urho3_d_1_1_package_download.html":[3,0,2,463]
+"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a742e34e8a072c32a821b09fe68414d68":[3,0,2,460,0,2]
 };
