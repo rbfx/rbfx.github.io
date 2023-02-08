@@ -17,6 +17,7 @@ var annotated_dup =
       [ "formatter< T, char, ea::enable_if_t< ea::is_enum_v< T > > >", "structfmt_1_1formatter_3_01_t_00_01char_00_01ea_1_1enable__if__t_3_01ea_1_1is__enum__v_3_01_t_01_4_01_4_01_4.html", "structfmt_1_1formatter_3_01_t_00_01char_00_01ea_1_1enable__if__t_3_01ea_1_1is__enum__v_3_01_t_01_4_01_4_01_4" ]
     ] ],
     [ "Urho3D", null, [
+      [ "Actions", "namespace_urho3_d_1_1_actions.html", "namespace_urho3_d_1_1_actions" ],
       [ "Detail", null, [
         [ "CustomEventListener", "class_urho3_d_1_1_detail_1_1_custom_event_listener.html", "class_urho3_d_1_1_detail_1_1_custom_event_listener" ],
         [ "DefaultSerializer", "struct_urho3_d_1_1_detail_1_1_default_serializer.html", "struct_urho3_d_1_1_detail_1_1_default_serializer" ],
@@ -166,6 +167,9 @@ var annotated_dup =
       ] ],
       [ "AbstractConnection", "class_urho3_d_1_1_abstract_connection.html", "class_urho3_d_1_1_abstract_connection" ],
       [ "AbstractFile", "class_urho3_d_1_1_abstract_file.html", "class_urho3_d_1_1_abstract_file" ],
+      [ "ActionBuilder", "class_urho3_d_1_1_action_builder.html", "class_urho3_d_1_1_action_builder" ],
+      [ "ActionManager", "class_urho3_d_1_1_action_manager.html", "class_urho3_d_1_1_action_manager" ],
+      [ "ActionSet", "class_urho3_d_1_1_action_set.html", "class_urho3_d_1_1_action_set" ],
       [ "AllContentOctreeQuery", "class_urho3_d_1_1_all_content_octree_query.html", "class_urho3_d_1_1_all_content_octree_query" ],
       [ "Allocator", "class_urho3_d_1_1_allocator.html", "class_urho3_d_1_1_allocator" ],
       [ "AllocatorBlock", "struct_urho3_d_1_1_allocator_block.html", "struct_urho3_d_1_1_allocator_block" ],

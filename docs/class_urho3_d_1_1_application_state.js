@@ -29,6 +29,8 @@ var class_urho3_d_1_1_application_state =
     [ "SetUICustomSize", "class_urho3_d_1_1_application_state.html#ab67f1050ecf46f3e6e8ea019859e6568", null ],
     [ "SetUICustomSize", "class_urho3_d_1_1_application_state.html#a8473d960d65c2b8a0cdfbecfb0bd7933", null ],
     [ "SetViewport", "class_urho3_d_1_1_application_state.html#a2014e78f0eb57e563bbbd5ab30ac0abd", null ],
+    [ "TransitionComplete", "class_urho3_d_1_1_application_state.html#a1e231c178396e50fe20b577f916fc136", null ],
+    [ "TransitionStarted", "class_urho3_d_1_1_application_state.html#af7f2e9e19b510f7480757edc32d7e96b", null ],
     [ "Update", "class_urho3_d_1_1_application_state.html#a72bffbea8a47e0f6c9c368a2131cb662", null ],
     [ "active_", "class_urho3_d_1_1_application_state.html#a5e15a29bf82022b2bf5e6573300fe6d8", null ],
     [ "cursor_", "class_urho3_d_1_1_application_state.html#a557117af6e4e83f7aa433dfb5c3a0f98", null ],
