@@ -134,14 +134,14 @@ var NAVTREEINDEX =
 "struct_urho3_d_1_1_bone.html#a721ee42d4668df4c9f4fcf6758d1f2be",
 "struct_urho3_d_1_1_custom_variant_value_traits_3_01ea_1_1unique__ptr_3_01_t_01_4_01_4.html#afd01c5f9a78f8d62b6e4dca04c230de6",
 "struct_urho3_d_1_1_font_glyph.html#a0d23eef6db5287fcd800f0726588d58b",
-"struct_urho3_d_1_1_instancing_buffer_settings.html",
-"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a11f6ce357eb4f8bd6e0162f428596d80",
-"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a8a06183dc1f2e69072baab49e1739e4b",
-"struct_urho3_d_1_1_pipeline_batch_group.html",
-"struct_urho3_d_1_1_resource_file_descriptor.html#a016afee8d1124de16cb94daf7d5bf60a",
-"struct_urho3_d_1_1_source_batch2_d.html#a7fe5ed5d509e426813941c2f1b8f2841",
-"struct_urho3_d_1_1_synchronized_physics_step.html#a4f21b3a68c183641ff8ade9d3417aee5",
-"struct_urho3_d_1_1_work_item.html#acea9ee2fdadbde90f74cd9207ecb09be"
+"struct_urho3_d_1_1_instance_shader_parameters.html#a53f3f687443c3997fdc7dea9805db790",
+"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a0e4270af06dceaa2ca2080942148804f",
+"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a742e34e8a072c32a821b09fe68414d68",
+"struct_urho3_d_1_1_pipeline_batch_desc.html#af5e20657f92306ca50a2f369e863af73",
+"struct_urho3_d_1_1_resource_file_descriptor.html",
+"struct_urho3_d_1_1_source_batch2_d.html#a7e62fd89cf3d21764c920864dd15d604",
+"struct_urho3_d_1_1_synchronized_physics_step.html",
+"struct_urho3_d_1_1_work_item.html#ab96d95fe9da1d444562d984f24b926be"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

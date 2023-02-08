@@ -1,5 +1,6 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_instance_shader_parameters.html#a53f3f687443c3997fdc7dea9805db790":[3,0,2,320,0],
 "struct_urho3_d_1_1_instancing_buffer_settings.html":[3,0,2,322],
 "struct_urho3_d_1_1_instancing_buffer_settings.html#a3257e1d7919998ea1d10a03b92eac652":[3,0,2,322,1],
 "struct_urho3_d_1_1_instancing_buffer_settings.html#a38313e462a4967e144364e678a049b9a":[3,0,2,322,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_lightmap_stitching_settings.html#a5ebf1381dd5aa47cdc34bab86c860703":[3,0,2,361,0],
 "struct_urho3_d_1_1_lightmap_stitching_settings.html#ae4bf315d0de676532762565cb9d85348":[3,0,2,361,2],
 "struct_urho3_d_1_1_lightmap_stitching_settings.html#af7c11756b4edf9a9840a2bcc46f456b1":[3,0,2,361,1],
-"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html":[3,0,2,362],
-"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a0e4270af06dceaa2ca2080942148804f":[3,0,2,362,0]
+"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html":[3,0,2,362]
 };
