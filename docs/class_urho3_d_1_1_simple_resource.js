@@ -6,6 +6,7 @@ var class_urho3_d_1_1_simple_resource =
     [ "GetBinaryMagic", "class_urho3_d_1_1_simple_resource.html#aa919e155de42950a99771c0c18a2fa80", null ],
     [ "GetDefaultInternalFormat", "class_urho3_d_1_1_simple_resource.html#adf77909adeddaaf4075271a699243576", null ],
     [ "GetRootBlockName", "class_urho3_d_1_1_simple_resource.html#aa9e1a759a8b0fbf640559140eb7aa555", null ],
+    [ "LoadLegacyXML", "class_urho3_d_1_1_simple_resource.html#af0873613b6318b26cbf8ac5565b0c3fc", null ],
     [ "Save", "class_urho3_d_1_1_simple_resource.html#a9eab5413f2fd71e8c85dc7deffb80d65", null ],
     [ "Save", "class_urho3_d_1_1_simple_resource.html#a874fcc0009b06f763294e7d8e1d84979", null ],
     [ "SaveFile", "class_urho3_d_1_1_simple_resource.html#a6da4d6b076f7ac869f2454e84ebed8f6", null ],

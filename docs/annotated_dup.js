@@ -467,6 +467,7 @@ var annotated_dup =
       [ "IKSolverComponent", "class_urho3_d_1_1_i_k_solver_component.html", "class_urho3_d_1_1_i_k_solver_component" ],
       [ "IKSpineChain", "class_urho3_d_1_1_i_k_spine_chain.html", "class_urho3_d_1_1_i_k_spine_chain" ],
       [ "IKSpineSolver", "class_urho3_d_1_1_i_k_spine_solver.html", "class_urho3_d_1_1_i_k_spine_solver" ],
+      [ "IKStickTargets", "class_urho3_d_1_1_i_k_stick_targets.html", "class_urho3_d_1_1_i_k_stick_targets" ],
       [ "IKTargetExtractor", "class_urho3_d_1_1_i_k_target_extractor.html", "class_urho3_d_1_1_i_k_target_extractor" ],
       [ "IKTrigonometricChain", "class_urho3_d_1_1_i_k_trigonometric_chain.html", "class_urho3_d_1_1_i_k_trigonometric_chain" ],
       [ "Image", "class_urho3_d_1_1_image.html", "class_urho3_d_1_1_image" ],
