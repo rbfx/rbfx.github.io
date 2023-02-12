@@ -24,6 +24,8 @@ var NAVTREE =
 [
   [ "Rebel Fork Framework", "index.html", [
     [ "Home", "index.html", "index" ],
+    [ "Rebel Fork Qick Start for C++ developers", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_cpp-quick-start.html", null ],
+    [ "Rebel Fork Qick Start for C# developers", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html", null ],
     [ "Documentation for Rebel Fork Framework", "md__home_runner_work_rbfx-docs_rbfx-docs__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -131,19 +133,19 @@ var NAVTREEINDEX =
 "class_urho3_d_1_1_weak_ptr.html#ac40f3a01fb44748b8c53fb6e0a6d384f",
 "class_urho3_d_1_1_x_m_l_element.html#ac21de35a82c3d3aa39f1b21e5e28c6d8",
 "dir_2eec8e1c636cc85df7fedbbfe6f954e4.html",
-"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#aa48f3f8e112b84edfd930b017aa22c7d",
-"struct_urho3_d_1_1_asset_transformer_input.html#ad38031041a95492162903e45f44a4b56",
-"struct_urho3_d_1_1_bloom_pass_settings.html#a2d28e651ba37266b9b816f786f614f2b",
-"struct_urho3_d_1_1_custom_geometry_vertex.html#a000ca86978dd9ecdbe611f8b25acecd0",
-"struct_urho3_d_1_1_file_system_entry.html#ab44ac4d5e73212f632ee03fc8469180b",
-"struct_urho3_d_1_1_incremental_light_baker_settings.html#ac7dcb976c43b14b1491f90fab5b2c591",
-"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html",
-"struct_urho3_d_1_1_numeric_range.html#ab3f025ceba4313d31732f7cbe5b20a00",
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a60c7b4bd9419cc59e426e4f39adc7ed7",
-"struct_urho3_d_1_1_render_target_info.html#af08b2a33481e5cc38ce29d135fac3588",
-"struct_urho3_d_1_1_shared_parameter_setter.html#ac9d1cdebf39f38ebd3ace6b2ec0989c7",
-"struct_urho3_d_1_1_spriter_1_1_timeline.html#ac3699c21175e544bd5c665f07f0319d1",
-"struct_urho3_d_1_1_view_batch_info2_d.html#a4ac1f85702ff462c33f0704aab2215b9"
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a7bb1e6e3a9954d7eba1efe0782ce63c6",
+"struct_urho3_d_1_1_asset_transformer_input.html#ac3f634d0fd6dc181e0fefa09f3da0810",
+"struct_urho3_d_1_1_bloom_pass_1_1_cached_textures.html#ae6de14270736219b5f7b2987b878f884",
+"struct_urho3_d_1_1_cursor_shape_info.html#afd0d14894ef7a291644de1f23e6aea3c",
+"struct_urho3_d_1_1_file_system_entry.html#a70ea898137e04536b31f9d025d67ede9",
+"struct_urho3_d_1_1_incremental_light_baker_settings.html#ab9cc104351e0956393763c96ab7af3d5",
+"struct_urho3_d_1_1_lightmap_charting_settings.html#aedc63fe84ee3dc5b2dc23767dead5a24",
+"struct_urho3_d_1_1_numeric_range.html#a840d3ca1e7a7934bf479a8b5becbf9f1",
+"struct_urho3_d_1_1_pipeline_batch_by_state.html#a57e9dfbe7a77bf1d46c264534d202452",
+"struct_urho3_d_1_1_render_target_info.html#ae2e49e01c642c1301ee8f9898ed6f637",
+"struct_urho3_d_1_1_shared_parameter_setter.html#a3651414af02d003b6fc86f6b32cf71c0",
+"struct_urho3_d_1_1_spriter_1_1_timeline.html#a9d14e0482a667a4234fbf1294913eea3",
+"struct_urho3_d_1_1_view_batch_info2_d.html#a287b26dbf631da8bf2674aae053540a9"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
