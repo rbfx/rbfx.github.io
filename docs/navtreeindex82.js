@@ -1,5 +1,12 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_file_system_entry.html#a1a404d3f1a9c9eaf1f69e13ca9db6454":[5,0,2,238,11],
+"struct_urho3_d_1_1_file_system_entry.html#a23609dbddf861b391f9c0caadf9980a4":[5,0,2,238,6],
+"struct_urho3_d_1_1_file_system_entry.html#a352703e9d37527afa7d3346e45bf8665":[5,0,2,238,7],
+"struct_urho3_d_1_1_file_system_entry.html#a3613761e1077210f3aec0f39b2ef1611":[5,0,2,238,3],
+"struct_urho3_d_1_1_file_system_entry.html#a565a65d31fe7c6f3fa23434eaad480c9":[5,0,2,238,0],
+"struct_urho3_d_1_1_file_system_entry.html#a57f566871a298736a9d8bb59a1674558":[5,0,2,238,5],
+"struct_urho3_d_1_1_file_system_entry.html#a5c679f111c39d975b9247834acb27dac":[5,0,2,238,4],
 "struct_urho3_d_1_1_file_system_entry.html#a70ea898137e04536b31f9d025d67ede9":[5,0,2,238,13],
 "struct_urho3_d_1_1_file_system_entry.html#aa8b9ea13faf77b8fd7a0ba90ec76dba2":[5,0,2,238,12],
 "struct_urho3_d_1_1_file_system_entry.html#ab44ac4d5e73212f632ee03fc8469180b":[5,0,2,238,8],
@@ -242,12 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#a63ea991aa8bb9263cf4d51b8e8f50d4d":[5,0,2,307,0,9],
 "struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#a71707fd6f8e84222f0779d2997ca3559":[5,0,2,307,0,6],
 "struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#aa81c831cfaca22b5d3f37f63c3f443ea":[5,0,2,307,0,4],
-"struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#ac2b3f811d8120d90e56a88593f170939":[5,0,2,307,0,2],
-"struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#adf107e11126b2ccdd25f1d8da1c20861":[5,0,2,307,0,10],
-"struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#ae7d71adcae77d7f0f58e21e7048d193f":[5,0,2,307,0,11],
-"struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#af41bba824cace9ccab6b6e5d7ba9aa9c":[5,0,2,307,0,8],
-"struct_urho3_d_1_1_incremental_light_baker_settings.html":[5,0,2,313],
-"struct_urho3_d_1_1_incremental_light_baker_settings.html#a034958ee9ae8ed8f415aa5f79b56af9f":[5,0,2,313,3],
-"struct_urho3_d_1_1_incremental_light_baker_settings.html#a8aa0d6e00db00f6a6e6c70fde5652da4":[5,0,2,313,6],
-"struct_urho3_d_1_1_incremental_light_baker_settings.html#a92a34c5eb81ae603ff6fdf46ce1ae26c":[5,0,2,313,1]
+"struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#ac2b3f811d8120d90e56a88593f170939":[5,0,2,307,0,2]
 };

@@ -1,5 +1,12 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#adf107e11126b2ccdd25f1d8da1c20861":[5,0,2,307,0,10],
+"struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#ae7d71adcae77d7f0f58e21e7048d193f":[5,0,2,307,0,11],
+"struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#af41bba824cace9ccab6b6e5d7ba9aa9c":[5,0,2,307,0,8],
+"struct_urho3_d_1_1_incremental_light_baker_settings.html":[5,0,2,313],
+"struct_urho3_d_1_1_incremental_light_baker_settings.html#a034958ee9ae8ed8f415aa5f79b56af9f":[5,0,2,313,3],
+"struct_urho3_d_1_1_incremental_light_baker_settings.html#a8aa0d6e00db00f6a6e6c70fde5652da4":[5,0,2,313,6],
+"struct_urho3_d_1_1_incremental_light_baker_settings.html#a92a34c5eb81ae603ff6fdf46ce1ae26c":[5,0,2,313,1],
 "struct_urho3_d_1_1_incremental_light_baker_settings.html#ab9cc104351e0956393763c96ab7af3d5":[5,0,2,313,0],
 "struct_urho3_d_1_1_incremental_light_baker_settings.html#abf83f97b9521111297b578a4e0097f9d":[5,0,2,313,5],
 "struct_urho3_d_1_1_incremental_light_baker_settings.html#ac7dcb976c43b14b1491f90fab5b2c591":[5,0,2,313,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_lightmap_chart_region.html#a4b31037378d776798babe3fcd4cbfc3a":[5,0,2,359,6],
 "struct_urho3_d_1_1_lightmap_chart_region.html#a571ddafb364135bd2934bd1926a69d76":[5,0,2,359,7],
 "struct_urho3_d_1_1_lightmap_chart_region.html#a97fec1ade12dac21d278eb05d2dc3fcc":[5,0,2,359,5],
-"struct_urho3_d_1_1_lightmap_chart_region.html#a9d13d2d19c314a1819fa80760c9e4188":[5,0,2,359,2],
-"struct_urho3_d_1_1_lightmap_chart_region.html#aab0bd8d19e10156ba054c193c5b22826":[5,0,2,359,3],
-"struct_urho3_d_1_1_lightmap_chart_region.html#ace706979a06a0ed9570d67a7a938d73c":[5,0,2,359,0],
-"struct_urho3_d_1_1_lightmap_chart_region.html#ad41252bd80c90f53903d90461c7d6482":[5,0,2,359,1],
-"struct_urho3_d_1_1_lightmap_charting_settings.html":[5,0,2,358],
-"struct_urho3_d_1_1_lightmap_charting_settings.html#a14589fa883b068182c91d2155d1a0b39":[5,0,2,358,2],
-"struct_urho3_d_1_1_lightmap_charting_settings.html#a18ae8140c0874b69b2c1715d350ff4ec":[5,0,2,358,0],
-"struct_urho3_d_1_1_lightmap_charting_settings.html#a1c69f3adbc235f81757a8c25b77ab45c":[5,0,2,358,4]
+"struct_urho3_d_1_1_lightmap_chart_region.html#a9d13d2d19c314a1819fa80760c9e4188":[5,0,2,359,2]
 };

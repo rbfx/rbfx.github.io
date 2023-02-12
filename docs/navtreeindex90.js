@@ -1,5 +1,12 @@
 var NAVTREEINDEX90 =
 {
+"struct_urho3_d_1_1_vertex_element.html#a92c570ed7aa36ae0a0d8ee96cc456255":[5,0,2,806,6],
+"struct_urho3_d_1_1_vertex_element.html#a9d1119a05ce234ebc3782c90c2eb8b03":[5,0,2,806,8],
+"struct_urho3_d_1_1_vertex_element.html#aa7d9e5797c193d179e5337989dade04d":[5,0,2,806,9],
+"struct_urho3_d_1_1_vertex_element.html#aae8d2e3073cb1dca5ae82d7777c3eb69":[5,0,2,806,4],
+"struct_urho3_d_1_1_view_batch_info2_d.html":[5,0,2,809],
+"struct_urho3_d_1_1_view_batch_info2_d.html#a01f3dd2b1d85be90c652f27fb3dd8145":[5,0,2,809,1],
+"struct_urho3_d_1_1_view_batch_info2_d.html#a150adc266bc05ad73dcfddcf8d447e8f":[5,0,2,809,2],
 "struct_urho3_d_1_1_view_batch_info2_d.html#a287b26dbf631da8bf2674aae053540a9":[5,0,2,809,10],
 "struct_urho3_d_1_1_view_batch_info2_d.html#a32e3a4c60b200a9405047b61c4b2524f":[5,0,2,809,0],
 "struct_urho3_d_1_1_view_batch_info2_d.html#a4ac1f85702ff462c33f0704aab2215b9":[5,0,2,809,5],

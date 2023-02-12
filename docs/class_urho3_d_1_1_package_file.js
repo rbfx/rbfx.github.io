@@ -12,7 +12,7 @@ var class_urho3_d_1_1_package_file =
     [ "GetEntryName", "class_urho3_d_1_1_package_file.html#adf7fe5bc13467fe6b0bb7e13840da6e2", null ],
     [ "GetEntryNames", "class_urho3_d_1_1_package_file.html#ac8268cb44ec31badb4b8056f49dc8a10", null ],
     [ "GetFileName", "class_urho3_d_1_1_package_file.html#a42f4001c4abbceb7c51b5d2e9713500c", null ],
-    [ "GetName", "class_urho3_d_1_1_package_file.html#ac3c8abe40373c6adfc8c5de207bb2596", null ],
+    [ "GetName", "class_urho3_d_1_1_package_file.html#a00786faf8d414dab701fb86384cb3dbc", null ],
     [ "GetNameHash", "class_urho3_d_1_1_package_file.html#a1afc0d40940bd07eea6eab662b04216b", null ],
     [ "GetNumFiles", "class_urho3_d_1_1_package_file.html#a2de4609d089b6ee7e15ad9679a3afbdf", null ],
     [ "GetTotalDataSize", "class_urho3_d_1_1_package_file.html#acc728cdb6a2e657270a8f12de07556d1", null ],

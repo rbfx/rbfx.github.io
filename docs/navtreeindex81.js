@@ -1,5 +1,12 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_cursor_shape_info.html#a3f9029ba978cb5f60bae56ac9afa6df7":[5,0,2,176,5],
+"struct_urho3_d_1_1_cursor_shape_info.html#a4e35e548d5faf7eb87987053feeb2a0c":[5,0,2,176,2],
+"struct_urho3_d_1_1_cursor_shape_info.html#a5cbbba2f4c8ff6c0529e4198686624d5":[5,0,2,176,4],
+"struct_urho3_d_1_1_cursor_shape_info.html#a5ce781087bba808d2aaf89946575b4be":[5,0,2,176,6],
+"struct_urho3_d_1_1_cursor_shape_info.html#a8fa34fb7d0ebf7ead52e8dd2a6a0a451":[5,0,2,176,7],
+"struct_urho3_d_1_1_cursor_shape_info.html#ac08ab0e347f1debdab12cdb1b8e50de9":[5,0,2,176,0],
+"struct_urho3_d_1_1_cursor_shape_info.html#ad5519bda04aded47665708691a351d70":[5,0,2,176,3],
 "struct_urho3_d_1_1_cursor_shape_info.html#afd0d14894ef7a291644de1f23e6aea3c":[5,0,2,176,8],
 "struct_urho3_d_1_1_custom_geometry_vertex.html":[5,0,2,179],
 "struct_urho3_d_1_1_custom_geometry_vertex.html#a000ca86978dd9ecdbe611f8b25acecd0":[5,0,2,179,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_file_selector_entry.html#a1fd617d3e446d6f4a62b8d35d6061464":[5,0,2,236,1],
 "struct_urho3_d_1_1_file_selector_entry.html#acdfa8e29ccccb40048f0762f0b66c38f":[5,0,2,236,0],
 "struct_urho3_d_1_1_file_system_entry.html":[5,0,2,238],
-"struct_urho3_d_1_1_file_system_entry.html#a0b9e89ae4606fd9819aaee6d5d13b931":[5,0,2,238,10],
-"struct_urho3_d_1_1_file_system_entry.html#a1a404d3f1a9c9eaf1f69e13ca9db6454":[5,0,2,238,11],
-"struct_urho3_d_1_1_file_system_entry.html#a23609dbddf861b391f9c0caadf9980a4":[5,0,2,238,6],
-"struct_urho3_d_1_1_file_system_entry.html#a352703e9d37527afa7d3346e45bf8665":[5,0,2,238,7],
-"struct_urho3_d_1_1_file_system_entry.html#a3613761e1077210f3aec0f39b2ef1611":[5,0,2,238,3],
-"struct_urho3_d_1_1_file_system_entry.html#a565a65d31fe7c6f3fa23434eaad480c9":[5,0,2,238,0],
-"struct_urho3_d_1_1_file_system_entry.html#a57f566871a298736a9d8bb59a1674558":[5,0,2,238,5],
-"struct_urho3_d_1_1_file_system_entry.html#a5c679f111c39d975b9247834acb27dac":[5,0,2,238,4]
+"struct_urho3_d_1_1_file_system_entry.html#a0b9e89ae4606fd9819aaee6d5d13b931":[5,0,2,238,10]
 };

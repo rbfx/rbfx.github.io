@@ -1,5 +1,12 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_lightmap_chart_region.html#aab0bd8d19e10156ba054c193c5b22826":[5,0,2,359,3],
+"struct_urho3_d_1_1_lightmap_chart_region.html#ace706979a06a0ed9570d67a7a938d73c":[5,0,2,359,0],
+"struct_urho3_d_1_1_lightmap_chart_region.html#ad41252bd80c90f53903d90461c7d6482":[5,0,2,359,1],
+"struct_urho3_d_1_1_lightmap_charting_settings.html":[5,0,2,358],
+"struct_urho3_d_1_1_lightmap_charting_settings.html#a14589fa883b068182c91d2155d1a0b39":[5,0,2,358,2],
+"struct_urho3_d_1_1_lightmap_charting_settings.html#a18ae8140c0874b69b2c1715d350ff4ec":[5,0,2,358,0],
+"struct_urho3_d_1_1_lightmap_charting_settings.html#a1c69f3adbc235f81757a8c25b77ab45c":[5,0,2,358,4],
 "struct_urho3_d_1_1_lightmap_charting_settings.html#aedc63fe84ee3dc5b2dc23767dead5a24":[5,0,2,358,3],
 "struct_urho3_d_1_1_lightmap_charting_settings.html#afc8c3edc70e7c56aea4edfd60f9b8469":[5,0,2,358,1],
 "struct_urho3_d_1_1_lightmap_geometry_baking_scene.html":[5,0,2,360],
@@ -242,12 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_node_impl.html#a87450bbd843019148f83db0e289c4486":[5,0,2,445,2],
 "struct_urho3_d_1_1_node_impl.html#a87b4540163c00e5b866d369a49e8a2f9":[5,0,2,445,0],
 "struct_urho3_d_1_1_node_impl.html#a8c698fd8c5742fb0f499ec76d7cf92d3":[5,0,2,445,1],
-"struct_urho3_d_1_1_node_impl.html#a9b81a830dd38b7a4fabd15956e2dd587":[5,0,2,445,3],
-"struct_urho3_d_1_1_node_impl.html#ab013a35d3004e7095c77309f59983d4e":[5,0,2,445,4],
-"struct_urho3_d_1_1_numeric_range.html":[5,0,2,449],
-"struct_urho3_d_1_1_numeric_range.html#a13128b976afb8ddec11d2b5291b1e549":[5,0,2,449,2],
-"struct_urho3_d_1_1_numeric_range.html#a38ea56fdc9ee3059dae001f61bd21d6f":[5,0,2,449,7],
-"struct_urho3_d_1_1_numeric_range.html#a3d62949c7425c69ce09f34425dd6174f":[5,0,2,449,9],
-"struct_urho3_d_1_1_numeric_range.html#a638376fbd16291fe13a35ff8356e6fee":[5,0,2,449,6],
-"struct_urho3_d_1_1_numeric_range.html#a77f4abe1faa9213d1076d9e8036a3471":[5,0,2,449,0]
+"struct_urho3_d_1_1_node_impl.html#a9b81a830dd38b7a4fabd15956e2dd587":[5,0,2,445,3]
 };

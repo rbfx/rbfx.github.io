@@ -1,5 +1,12 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_asset_transformer_input.html#a4d1043c4c6453e3f2312f01329688917":[5,0,2,49,12],
+"struct_urho3_d_1_1_asset_transformer_input.html#a7cdeefa0790ae2ab17e504c29cb2b778":[5,0,2,49,11],
+"struct_urho3_d_1_1_asset_transformer_input.html#a81aa22f626cca4a5f1742e0def0878ac":[5,0,2,49,1],
+"struct_urho3_d_1_1_asset_transformer_input.html#ab25f3f4400cc82883cf53d8225d2495b":[5,0,2,49,4],
+"struct_urho3_d_1_1_asset_transformer_input.html#ab98c446ea6574178aa617c10016a6894":[5,0,2,49,0],
+"struct_urho3_d_1_1_asset_transformer_input.html#ac314e669fde9d444eaf1bbf8590a4f22":[5,0,2,49,10],
+"struct_urho3_d_1_1_asset_transformer_input.html#ac37a817fbc3266804b27b7b0e6fb7a54":[5,0,2,49,9],
 "struct_urho3_d_1_1_asset_transformer_input.html#ac3f634d0fd6dc181e0fefa09f3da0810":[5,0,2,49,7],
 "struct_urho3_d_1_1_asset_transformer_input.html#ace4880ef4a018bbfd3484dd152c51d2b":[5,0,2,49,8],
 "struct_urho3_d_1_1_asset_transformer_input.html#ad38031041a95492162903e45f44a4b56":[5,0,2,49,5],
@@ -242,12 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_billboard.html#ab1bc4b5b70c58bc55b04ec8a5e0e5b38":[5,0,2,91,1],
 "struct_urho3_d_1_1_billboard.html#ab6349a8e25ec5026637595b07bea97d3":[5,0,2,91,3],
 "struct_urho3_d_1_1_billboard.html#ac9a895e24df50a5d89a8dd6650a7f29c":[5,0,2,91,8],
-"struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html":[5,0,2,99,0],
-"struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html#a48010398f2d9c7f95bdfa6d9331958c2":[5,0,2,99,0,2],
-"struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html#a5a5ac0226d8c34aafe59fee6e8a4dc15":[5,0,2,99,0,0],
-"struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html#a80ac44770e6cc821ca50188f6dbe3a3c":[5,0,2,99,0,1],
-"struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html#ad15d3bfaad1e9c85cc7cd9a889570d9a":[5,0,2,99,0,3],
-"struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html#af759892d0de12b0fb220b32d42498fbd":[5,0,2,99,0,4],
-"struct_urho3_d_1_1_bloom_pass_1_1_cached_textures.html":[5,0,2,99,1],
-"struct_urho3_d_1_1_bloom_pass_1_1_cached_textures.html#a01e284c506dff811142b6adbba5f85ac":[5,0,2,99,1,1]
+"struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html":[5,0,2,99,0]
 };

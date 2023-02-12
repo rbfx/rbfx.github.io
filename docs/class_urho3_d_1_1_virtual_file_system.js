@@ -2,6 +2,8 @@ var class_urho3_d_1_1_virtual_file_system =
 [
     [ "VirtualFileSystem", "class_urho3_d_1_1_virtual_file_system.html#a2aa20c64fe556df2217cf52608fb454f", null ],
     [ "~VirtualFileSystem", "class_urho3_d_1_1_virtual_file_system.html#a4dfcc062c233917a47791cc460e8df4f", null ],
+    [ "AutomountDir", "class_urho3_d_1_1_virtual_file_system.html#a474f8f2f927acf66b8c39182409b3fc4", null ],
+    [ "AutomountDir", "class_urho3_d_1_1_virtual_file_system.html#a02741cd543661054b5947d2e8cf483ca", null ],
     [ "Exists", "class_urho3_d_1_1_virtual_file_system.html#a606f0d8c5ab7fe644082328288bf7845", null ],
     [ "GetFileName", "class_urho3_d_1_1_virtual_file_system.html#aa9935c9b8d779b0fa4905e0622236d99", null ],
     [ "GetMountPoint", "class_urho3_d_1_1_virtual_file_system.html#a0fd1e006aec518d21b9c1d1f330aebd7", null ],

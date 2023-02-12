@@ -1,5 +1,12 @@
 var NAVTREEINDEX85 =
 {
+"struct_urho3_d_1_1_node_impl.html#ab013a35d3004e7095c77309f59983d4e":[5,0,2,445,4],
+"struct_urho3_d_1_1_numeric_range.html":[5,0,2,449],
+"struct_urho3_d_1_1_numeric_range.html#a13128b976afb8ddec11d2b5291b1e549":[5,0,2,449,2],
+"struct_urho3_d_1_1_numeric_range.html#a38ea56fdc9ee3059dae001f61bd21d6f":[5,0,2,449,7],
+"struct_urho3_d_1_1_numeric_range.html#a3d62949c7425c69ce09f34425dd6174f":[5,0,2,449,9],
+"struct_urho3_d_1_1_numeric_range.html#a638376fbd16291fe13a35ff8356e6fee":[5,0,2,449,6],
+"struct_urho3_d_1_1_numeric_range.html#a77f4abe1faa9213d1076d9e8036a3471":[5,0,2,449,0],
 "struct_urho3_d_1_1_numeric_range.html#a840d3ca1e7a7934bf479a8b5becbf9f1":[5,0,2,449,4],
 "struct_urho3_d_1_1_numeric_range.html#aac3ee75515ab47c7a46bb4d574611a03":[5,0,2,449,1],
 "struct_urho3_d_1_1_numeric_range.html#ab3f025ceba4313d31732f7cbe5b20a00":[5,0,2,449,5],
@@ -242,12 +249,5 @@ var NAVTREEINDEX85 =
 "struct_urho3_d_1_1_pipeline_batch_back_to_front.html#acee6bfeb4b828d1ac6d533a12049c42e":[5,0,2,510,0],
 "struct_urho3_d_1_1_pipeline_batch_back_to_front.html#afae0543e7f087d59e8743b3516554f2c":[5,0,2,510,4],
 "struct_urho3_d_1_1_pipeline_batch_by_state.html":[5,0,2,511],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a0e3b179abac7c0807030672aa8b19cd7":[5,0,2,511,17],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a1b56f166f9b386db4ae7ee3f06a8629c":[5,0,2,511,25],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a1b6415ee87123d381c0f11edd2a1ff75":[5,0,2,511,23],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a22b981f0e8b9a0cee714078dd17df9ee":[5,0,2,511,7],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a2d8a0b4e874de86522f109bd2cd30eea":[5,0,2,511,9],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a38ad77238aaedc615c4afba044e92e4b":[5,0,2,511,32],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a3c70ca5c3d29e55008ae017b3afbfc1d":[5,0,2,511,14],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a4b222610998dd64b58246685ef713d1c":[5,0,2,511,30]
+"struct_urho3_d_1_1_pipeline_batch_by_state.html#a0e3b179abac7c0807030672aa8b19cd7":[5,0,2,511,17]
 };

@@ -115,8 +115,6 @@ const <a class="el" href="struct_urho3_d_1_1_package_entry.html">PackageEntry</a
 const ea::unordered_map&lt; ea::string, <a class="el" href="struct_urho3_d_1_1_package_entry.html">PackageEntry</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_package_file.html#a62e86ce9a3580567e539ed0f98610e2d">GetEntries</a> () const</td></tr>
 <tr class="memdesc:a62e86ce9a3580567e539ed0f98610e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all file entries. <br /></td></tr>
 <tr class="separator:a62e86ce9a3580567e539ed0f98610e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3c8abe40373c6adfc8c5de207bb2596"><td class="memItemLeft" align="right" valign="top">const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_package_file.html#ac3c8abe40373c6adfc8c5de207bb2596">GetName</a> () const</td></tr>
-<tr class="separator:ac3c8abe40373c6adfc8c5de207bb2596"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1afc0d40940bd07eea6eab662b04216b"><td class="memItemLeft" align="right" valign="top"><a id="a1afc0d40940bd07eea6eab662b04216b"></a>
 <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_package_file.html#a1afc0d40940bd07eea6eab662b04216b">GetNameHash</a> () const</td></tr>
 <tr class="memdesc:a1afc0d40940bd07eea6eab662b04216b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return hash of the package file name. <br /></td></tr>
@@ -143,9 +141,9 @@ const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a cla
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_package_file.html#add457cfdc890dd4949bc37a45acaefb2">Scan</a> (ea::vector&lt; ea::string &gt; &amp;result, const ea::string &amp;pathName, const ea::string &amp;filter, bool recursive) const</td></tr>
 <tr class="memdesc:add457cfdc890dd4949bc37a45acaefb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scan package for specified files. <br /></td></tr>
 <tr class="separator:add457cfdc890dd4949bc37a45acaefb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9402f2bb45245be2bfcf6515a6d3494"><td class="memItemLeft" align="right" valign="top"><a id="ab9402f2bb45245be2bfcf6515a6d3494"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_package_file.html#ab9402f2bb45245be2bfcf6515a6d3494">AcceptsScheme</a> (const ea::string &amp;scheme) const override</td></tr>
-<tr class="memdesc:ab9402f2bb45245be2bfcf6515a6d3494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if mount point accepts scheme. <br /></td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ab9402f2bb45245be2bfcf6515a6d3494"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_package_file.html#ab9402f2bb45245be2bfcf6515a6d3494">AcceptsScheme</a> (const ea::string &amp;scheme) const override</td></tr>
+<tr class="memdesc:ab9402f2bb45245be2bfcf6515a6d3494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if mount point accepts scheme.  <a href="class_urho3_d_1_1_package_file.html#ab9402f2bb45245be2bfcf6515a6d3494">More...</a><br /></td></tr>
 <tr class="separator:ab9402f2bb45245be2bfcf6515a6d3494"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a03e268dfdb4ebec22238cd405d566e"><td class="memItemLeft" align="right" valign="top"><a id="a5a03e268dfdb4ebec22238cd405d566e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_package_file.html#a5a03e268dfdb4ebec22238cd405d566e">Exists</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName) const override</td></tr>
@@ -159,6 +157,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_package_file.html#a42f4001c4abbceb7c51b5d2e9713500c">GetFileName</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName) const override</td></tr>
 <tr class="memdesc:a42f4001c4abbceb7c51b5d2e9713500c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get full path to a file if it exists in a mount point. <br /></td></tr>
 <tr class="separator:a42f4001c4abbceb7c51b5d2e9713500c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00786faf8d414dab701fb86384cb3dbc"><td class="memItemLeft" align="right" valign="top"><a id="a00786faf8d414dab701fb86384cb3dbc"></a>
+const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_package_file.html#a00786faf8d414dab701fb86384cb3dbc">GetName</a> () const override</td></tr>
+<tr class="memdesc:a00786faf8d414dab701fb86384cb3dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns human-readable name of the mount point. <br /></td></tr>
+<tr class="separator:a00786faf8d414dab701fb86384cb3dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_mount_point"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_mount_point')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_mount_point.html">Urho3D::MountPoint</a></td></tr>
 <tr class="memitem:ab97cfd7b11742f14643f99761860e74a inherit pub_methods_class_urho3_d_1_1_mount_point"><td class="memItemLeft" align="right" valign="top"><a id="ab97cfd7b11742f14643f99761860e74a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mount_point.html#ab97cfd7b11742f14643f99761860e74a">MountPoint</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -427,6 +429,37 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Stores files of a directory tree sequentially for convenient access. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab9402f2bb45245be2bfcf6515a6d3494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9402f2bb45245be2bfcf6515a6d3494">&#9670;&nbsp;</a></span>AcceptsScheme()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Urho3D::PackageFile::AcceptsScheme </td>
+          <td>(</td>
+          <td class="paramtype">const ea::string &amp;&#160;</td>
+          <td class="paramname"><em>scheme</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if mount point accepts scheme. </p>
+<p>Implement <a class="el" href="class_urho3_d_1_1_mount_point.html" title="Access to engine file system mount point.">MountPoint</a>. </p>
+
+<p>Implements <a class="el" href="class_urho3_d_1_1_mount_point.html#ada42971118c5a2546579c5f90de00bd9">Urho3D::MountPoint</a>.</p>
+
+</div>
+</div>
 <a id="aa836d62e269e78a08a9ebb9e50f91d51"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa836d62e269e78a08a9ebb9e50f91d51">&#9670;&nbsp;</a></span>GetChecksum()</h2>
 
@@ -450,32 +483,6 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </table>
 </div><div class="memdoc">
 <p>Return checksum of the package file contents. </p>
-
-</div>
-</div>
-<a id="ac3c8abe40373c6adfc8c5de207bb2596"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3c8abe40373c6adfc8c5de207bb2596">&#9670;&nbsp;</a></span>GetName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const ea::string&amp; Urho3D::PackageFile::GetName </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return the package file name. </p>
 
 </div>
 </div>

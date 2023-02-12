@@ -166,11 +166,11 @@ const <a class="el" href="struct_urho3_d_1_1_animation_parameters.html">Animatio
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetRevision</b> () const</td></tr>
 <tr class="separator:af4c776db4fc86fb25941e4f168b490c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:af01a2e1ea08e82ece3210ecb61b1a451"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_controller.html#af01a2e1ea08e82ece3210ecb61b1a451">FindLastAnimation</a> (<a class="el" href="class_urho3_d_1_1_animation.html">Animation</a> *animation) const</td></tr>
-<tr class="separator:af01a2e1ea08e82ece3210ecb61b1a451"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb21ac0c06aeaf0ee44f230b01c5bd52"><td class="memItemLeft" align="right" valign="top"><a id="abb21ac0c06aeaf0ee44f230b01c5bd52"></a>
-const <a class="el" href="struct_urho3_d_1_1_animation_parameters.html">AnimationParameters</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetLastAnimationParameters</b> (<a class="el" href="class_urho3_d_1_1_animation.html">Animation</a> *animation) const</td></tr>
-<tr class="separator:abb21ac0c06aeaf0ee44f230b01c5bd52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49c514b414581517091573e515b5beb5"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_controller.html#a49c514b414581517091573e515b5beb5">FindLastAnimation</a> (<a class="el" href="class_urho3_d_1_1_animation.html">Animation</a> *animation, unsigned layer=M_MAX_UNSIGNED) const</td></tr>
+<tr class="separator:a49c514b414581517091573e515b5beb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45b0e0790efc8c3293d881b799bcf358"><td class="memItemLeft" align="right" valign="top"><a id="a45b0e0790efc8c3293d881b799bcf358"></a>
+const <a class="el" href="struct_urho3_d_1_1_animation_parameters.html">AnimationParameters</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetLastAnimationParameters</b> (<a class="el" href="class_urho3_d_1_1_animation.html">Animation</a> *animation, unsigned layer=M_MAX_UNSIGNED) const</td></tr>
+<tr class="separator:a45b0e0790efc8c3293d881b799bcf358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e3f9ae3c8466b960f85cadba7f06f6f"><td class="memItemLeft" align="right" valign="top"><a id="a9e3f9ae3c8466b960f85cadba7f06f6f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsPlaying</b> (<a class="el" href="class_urho3_d_1_1_animation.html">Animation</a> *animation) const</td></tr>
 <tr class="separator:a9e3f9ae3c8466b960f85cadba7f06f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -829,8 +829,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="af01a2e1ea08e82ece3210ecb61b1a451"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af01a2e1ea08e82ece3210ecb61b1a451">&#9670;&nbsp;</a></span>FindLastAnimation()</h2>
+<a id="a49c514b414581517091573e515b5beb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49c514b414581517091573e515b5beb5">&#9670;&nbsp;</a></span>FindLastAnimation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -839,8 +839,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="memname">unsigned Urho3D::AnimationController::FindLastAnimation </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_urho3_d_1_1_animation.html">Animation</a> *&#160;</td>
-          <td class="paramname"><em>animation</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>animation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>layer</em> = <code>M_MAX_UNSIGNED</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">

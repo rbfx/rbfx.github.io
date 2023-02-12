@@ -1,5 +1,12 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_render_target_info.html#a27a9df29b0b768ff0db56d1ef3842361":[5,0,2,580,5],
+"struct_urho3_d_1_1_render_target_info.html#a2fd159ee76d198b21cd78fe6cd68ebaa":[5,0,2,580,6],
+"struct_urho3_d_1_1_render_target_info.html#a40f3c51785092f02d35ecee34718a4ee":[5,0,2,580,11],
+"struct_urho3_d_1_1_render_target_info.html#a49e791471e38e04c7d847b68fd4e9d35":[5,0,2,580,2],
+"struct_urho3_d_1_1_render_target_info.html#a80a074cfc77ee5fdf652a58f0e2934d7":[5,0,2,580,4],
+"struct_urho3_d_1_1_render_target_info.html#aad23d6601783c84dfcfab0c36e23bac8":[5,0,2,580,7],
+"struct_urho3_d_1_1_render_target_info.html#ae21b30e290ea8707e3db36f4be9e4bd0":[5,0,2,580,9],
 "struct_urho3_d_1_1_render_target_info.html#ae2e49e01c642c1301ee8f9898ed6f637":[5,0,2,580,1],
 "struct_urho3_d_1_1_render_target_info.html#aecb4839bdcd03ff52e2be36401f183a2":[5,0,2,580,8],
 "struct_urho3_d_1_1_render_target_info.html#af08b2a33481e5cc38ce29d135fac3588":[5,0,2,580,10],
@@ -242,12 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#a8322fb895f31980086496072d6bc8451":[5,0,2,651,7],
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#aa453d58d6aaedf8ff11eb56cf1912805":[5,0,2,651,2],
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#ada40b107699dcd3050a0d3d0a3072663":[5,0,2,651,4],
-"struct_urho3_d_1_1_shadow_map_region.html":[5,0,2,652],
-"struct_urho3_d_1_1_shadow_map_region.html#a37c0d8be6d3c38121f6e75af2dc2ad0c":[5,0,2,652,1],
-"struct_urho3_d_1_1_shadow_map_region.html#a683066c4db22f7f97106db783049b17e":[5,0,2,652,0],
-"struct_urho3_d_1_1_shadow_map_region.html#aa22bab664963bb6dfdf1be9fa92e9739":[5,0,2,652,2],
-"struct_urho3_d_1_1_shadow_map_region.html#af74de4280d22b5ae7eefdea8bc8e2373":[5,0,2,652,4],
-"struct_urho3_d_1_1_shadow_map_region.html#afe65069e68205626c51190cd017b1bb5":[5,0,2,652,3],
-"struct_urho3_d_1_1_shared_parameter_setter.html":[5,0,2,654],
-"struct_urho3_d_1_1_shared_parameter_setter.html#a0e381eb5ffbdf1675e4f108bff09300a":[5,0,2,654,2]
+"struct_urho3_d_1_1_shadow_map_region.html":[5,0,2,652]
 };
