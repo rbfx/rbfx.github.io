@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rebel Fork Framework: Qick Start for C++ developers</title>
+<title>Rebel Fork Framework: Quick Start for C++ developers</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,7 +60,7 @@ $(document).ready(function(){initNavTree('md__home_runner_work_rbfx-docs_rbfx-do
 <div id="doc-content">
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Qick Start for C++ developers </div>  </div>
+<div class="title">Quick Start for C++ developers </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1>Create a project from template</h1>
@@ -159,6 +159,14 @@ GitExtensions How to update submodule</div></div>
 <p>For Ubuntu:</p>
 <p>Open a terminal window and run the following command to install CMake: </p><div class="fragment"><div class="line">sudo apt-get install cmake</div>
 </div><!-- fragment --><p>The easiest way to configure project is to run a <a href="https://github.com/rbfx/sample-project/tree/master/Script">configuration script</a>. Pick one that suits you.</p>
+<p>When picking a cmake configuration script file, you should consider the target CPU architecture and operating system (OS) that you are building for. The triplet name follows the pattern "configure-{architecture}-{system}-{build-system}".</p>
+<p>Here's an example of how to pick a cmake configuration script file for a 64-bit Windows system:</p><ol type="1">
+<li>Determine the target CPU architecture. For a 64-bit system, the architecture is x64.</li>
+<li>Determine the name of the operating system. For Windows, the name is "windows".</li>
+<li>Determine the name of the build system. For Windows the most popular and up to date build system would be Visual Studio 2022, the name is "vs2022".</li>
+<li>Combine the architecture and system name to form the file name. In this case, the name would be "configure-x64-windows-vs2022".</li>
+</ol>
+<p>So, for a 64-bit Windows system, you should use the cmake configuration script file "configure-x64-windows-vs2022.bat". You can use a similar process to pick a script name for other target CPU architectures and operating systems.</p>
 <p>Make sure that cmake is available from the console when you run the script.</p>
 <p>When configuration is done you'll find a new folder in the repository. The name of the folder should start with "cmake-build-".</p>
 <p>You can use selected build tools to compile the project or you can run </p><div class="fragment"><div class="line">cmake --build .</div>

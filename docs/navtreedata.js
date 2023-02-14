@@ -24,8 +24,8 @@ var NAVTREE =
 [
   [ "Rebel Fork Framework", "index.html", [
     [ "Home", "index.html", "index" ],
-    [ "Qick Start for C++ developers", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_cpp-quick-start.html", null ],
-    [ "Qick Start for C# developers", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html", null ],
+    [ "Quick Start for C++ developers", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_cpp-quick-start.html", null ],
+    [ "Quick Start for C# developers", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html", null ],
     [ "Documentation for Rebel Fork Framework", "md__home_runner_work_rbfx-docs_rbfx-docs__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
