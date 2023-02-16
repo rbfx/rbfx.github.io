@@ -109,19 +109,19 @@ Debugging</h2>
 <h2><a class="anchor" id="SplinePath_SampleCode"></a>
 Sample code</h2>
 <p>The following sample demonstrates how to build a path from 2 points, assign a controlled node and move it along the path according to speed and interpolation mode. </p><div class="fragment"><div class="line"><span class="comment">// Initial point</span></div>
-<div class="line">Node* startNode = scene_-&gt;<a class="code" href="class_urho3_d_1_1_node.html#ad7475f25827d084c870b20eb01508596">CreateChild</a>(<span class="stringliteral">&quot;Start&quot;</span>);</div>
-<div class="line">startNode-&gt;<a class="code" href="class_urho3_d_1_1_node.html#aa2fd960b4c5641cd38771280a6b84fb8">SetPosition</a>(Vector3(-20.0f, 0.0f, -20.0f));</div>
+<div class="line">Node* startNode = scene_-&gt;CreateChild(<span class="stringliteral">&quot;Start&quot;</span>);</div>
+<div class="line">startNode-&gt;SetPosition(Vector3(-20.0f, 0.0f, -20.0f));</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Target point</span></div>
-<div class="line">Node* targetNode = scene_-&gt;<a class="code" href="class_urho3_d_1_1_node.html#ad7475f25827d084c870b20eb01508596">CreateChild</a>(<span class="stringliteral">&quot;Target&quot;</span>);</div>
-<div class="line">targetNode-&gt;<a class="code" href="class_urho3_d_1_1_node.html#aa2fd960b4c5641cd38771280a6b84fb8">SetPosition</a>(Vector3(20.0f, 2.0f, 20.0f));</div>
+<div class="line">Node* targetNode = scene_-&gt;CreateChild(<span class="stringliteral">&quot;Target&quot;</span>);</div>
+<div class="line">targetNode-&gt;SetPosition(Vector3(20.0f, 2.0f, 20.0f));</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Node to move along the path (&#39;controlled node&#39;)</span></div>
-<div class="line">Node* movingNode =  scene_-&gt;<a class="code" href="class_urho3_d_1_1_node.html#ad7475f25827d084c870b20eb01508596">CreateChild</a>(<span class="stringliteral">&quot;MovingNode&quot;</span>);</div>
+<div class="line">Node* movingNode =  scene_-&gt;CreateChild(<span class="stringliteral">&quot;MovingNode&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Spline path</span></div>
-<div class="line">Node* pathNode = scene_-&gt;<a class="code" href="class_urho3_d_1_1_node.html#ad7475f25827d084c870b20eb01508596">CreateChild</a>(<span class="stringliteral">&quot;PathNode&quot;</span>);</div>
-<div class="line">SplinePath* path = pathNode-&gt;<a class="code" href="class_urho3_d_1_1_node.html#aa030d81d27e4ecfe9087b1670e4a6faa">CreateComponent</a>&lt;SplinePath&gt;();</div>
+<div class="line">Node* pathNode = scene_-&gt;CreateChild(<span class="stringliteral">&quot;PathNode&quot;</span>);</div>
+<div class="line">SplinePath* path = pathNode-&gt;CreateComponent&lt;SplinePath&gt;();</div>
 <div class="line">path-&gt;AddControlPoint(startNode, 0);</div>
 <div class="line">path-&gt;AddControlPoint(targetNode, 1);</div>
 <div class="line">path-&gt;SetInterpolationMode(LINEAR_CURVE);</div>
@@ -131,9 +131,6 @@ Sample code</h2>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_urho3_d_1_1_node_html_aa030d81d27e4ecfe9087b1670e4a6faa"><div class="ttname"><a href="class_urho3_d_1_1_node.html#aa030d81d27e4ecfe9087b1670e4a6faa">Urho3D::Node::CreateComponent</a></div><div class="ttdeci">Component * CreateComponent(StringHash type, unsigned id=0)</div><div class="ttdoc">Create a component to this node (with specified ID if provided).</div><div class="ttdef"><b>Definition:</b> Node.cpp:1070</div></div>
-<div class="ttc" id="aclass_urho3_d_1_1_node_html_ad7475f25827d084c870b20eb01508596"><div class="ttname"><a href="class_urho3_d_1_1_node.html#ad7475f25827d084c870b20eb01508596">Urho3D::Node::CreateChild</a></div><div class="ttdeci">Node * CreateChild(const ea::string &amp;name=EMPTY_STRING, unsigned id=0, bool temporary=false)</div><div class="ttdoc">Create a child scene node (with specified ID if provided).</div><div class="ttdef"><b>Definition:</b> Node.cpp:968</div></div>
-<div class="ttc" id="aclass_urho3_d_1_1_node_html_aa2fd960b4c5641cd38771280a6b84fb8"><div class="ttname"><a href="class_urho3_d_1_1_node.html#aa2fd960b4c5641cd38771280a6b84fb8">Urho3D::Node::SetPosition</a></div><div class="ttdeci">void SetPosition(const Vector3 &amp;position)</div><div class="ttdef"><b>Definition:</b> Node.cpp:606</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
     <ul>

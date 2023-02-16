@@ -79,10 +79,10 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_transform_nodes_gizm
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1c76a61caf75ac163415323d2151de61"><td class="memTemplParams" colspan="2"><a id="a1c76a61caf75ac163415323d2151de61"></a>
 template&lt;class Iter &gt; </td></tr>
-<tr class="memitem:a1c76a61caf75ac163415323d2151de61"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>TransformNodesGizmo</b> (const <a class="el" href="class_urho3_d_1_1_node.html">Node</a> *activeNode, Iter begin, Iter end)</td></tr>
+<tr class="memitem:a1c76a61caf75ac163415323d2151de61"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>TransformNodesGizmo</b> (const Node *activeNode, Iter begin, Iter end)</td></tr>
 <tr class="separator:a1c76a61caf75ac163415323d2151de61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36a469a3b9c99e9773879bcf05a551a6"><td class="memItemLeft" align="right" valign="top"><a id="a36a469a3b9c99e9773879bcf05a551a6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TransformNodesGizmo</b> (<a class="el" href="class_urho3_d_1_1_node.html">Node</a> *activeNode)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TransformNodesGizmo</b> (Node *activeNode)</td></tr>
 <tr class="separator:a36a469a3b9c99e9773879bcf05a551a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcd50934e65ad0b690b02c3d1b73eac5"><td class="memItemLeft" align="right" valign="top"><a id="afcd50934e65ad0b690b02c3d1b73eac5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_transform_nodes_gizmo.html#afcd50934e65ad0b690b02c3d1b73eac5">Manipulate</a> (const <a class="el" href="class_urho3_d_1_1_transform_gizmo.html">TransformGizmo</a> &amp;gizmo, TransformGizmoOperation op, bool local, bool pivoted, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;snap)</td></tr>
@@ -92,7 +92,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a4eaefc543ff572e0d6aa1ebada268489"><td class="memItemLeft" align="right" valign="top"><a id="a4eaefc543ff572e0d6aa1ebada268489"></a>
-<a class="el" href="class_urho3_d_1_1_signal.html">Signal</a>&lt; void(<a class="el" href="class_urho3_d_1_1_node.html">Node</a> *node, const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;oldTransform), <a class="el" href="class_urho3_d_1_1_transform_nodes_gizmo.html">TransformNodesGizmo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnNodeTransformChanged</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_signal.html">Signal</a>&lt; void(Node *node, const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;oldTransform), <a class="el" href="class_urho3_d_1_1_transform_nodes_gizmo.html">TransformNodesGizmo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnNodeTransformChanged</b></td></tr>
 <tr class="separator:a4eaefc543ff572e0d6aa1ebada268489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
@@ -113,10 +113,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ManipulateScale</b> (
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a16958d0c7f9518a7a95c0935b651cf0e"><td class="memItemLeft" align="right" valign="top"><a id="a16958d0c7f9518a7a95c0935b651cf0e"></a>
-<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; const <a class="el" href="class_urho3_d_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>activeNode_</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; const Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>activeNode_</b></td></tr>
 <tr class="separator:a16958d0c7f9518a7a95c0935b651cf0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ff913b1674e81e6521829aaf0ad2107"><td class="memItemLeft" align="right" valign="top"><a id="a3ff913b1674e81e6521829aaf0ad2107"></a>
-ea::vector&lt; <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_node.html">Node</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nodes_</b></td></tr>
+ea::vector&lt; <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; Node &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nodes_</b></td></tr>
 <tr class="separator:a3ff913b1674e81e6521829aaf0ad2107"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

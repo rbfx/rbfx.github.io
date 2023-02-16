@@ -72,8 +72,8 @@ $(document).ready(function(){initNavTree('_urho2_d_and__physics2_d.html',''); in
 <h1><a class="anchor" id="Urho2D_Orthographic"></a>
 Orthographic camera</h1>
 <p>In order to use Urho2D we need to set camera to orthographic mode first; it can be done with following code:</p>
-<p>C++: </p><div class="fragment"><div class="line">Node* cameraNode = scene_-&gt;<a class="code" href="class_urho3_d_1_1_node.html#ad7475f25827d084c870b20eb01508596">CreateChild</a>(<span class="stringliteral">&quot;Camera&quot;</span>); <span class="comment">// Create camera node</span></div>
-<div class="line">Camera* camera = cameraNode-&gt;<a class="code" href="class_urho3_d_1_1_node.html#aa030d81d27e4ecfe9087b1670e4a6faa">CreateComponent</a>&lt;Camera&gt;(); <span class="comment">// Create camera</span></div>
+<p>C++: </p><div class="fragment"><div class="line">Node* cameraNode = scene_-&gt;CreateChild(<span class="stringliteral">&quot;Camera&quot;</span>); <span class="comment">// Create camera node</span></div>
+<div class="line">Camera* camera = cameraNode-&gt;CreateComponent&lt;Camera&gt;(); <span class="comment">// Create camera</span></div>
 <div class="line">camera-&gt;SetOrthographic(<span class="keyword">true</span>); <span class="comment">// Set camera orthographic</span></div>
 <div class="line">camera-&gt;SetOrthoSize((<span class="keywordtype">float</span>)graphics-&gt;GetHeight() * PIXEL_SIZE); <span class="comment">// Set camera ortho size (the value of PIXEL_SIZE is 0.01)</span></div>
 </div><!-- fragment --> <p>To zoom in/out, use <a class="el" href="class_urho3_d_1_1_camera.html#aef7f8a3cb5229d3fb8636520ffaaf2da">SetZoom()</a>.</p>
@@ -260,7 +260,7 @@ Tile maps</h1>
 <h2><a class="anchor" id="Urho2D_LoadingTMX"></a>
 "Loading" a TMX tile map file</h2>
 <p>A tmx file is loaded using <a class="el" href="class_urho3_d_1_1_tmx_file2_d.html">TmxFile2D resource class</a> and rendered using <a class="el" href="class_urho3_d_1_1_tile_map2_d.html">TileMap2D component class</a>. You just have to create a <a class="el" href="class_urho3_d_1_1_tile_map2_d.html">TileMap2D</a> component inside a node and then assign the tmx resource file to it.</p>
-<p>C++: </p><div class="fragment"><div class="line">SharedPtr&lt;Node&gt; tileMapNode(scene_-&gt;<a class="code" href="class_urho3_d_1_1_node.html#ad7475f25827d084c870b20eb01508596">CreateChild</a>(<span class="stringliteral">&quot;TileMap&quot;</span>)); <span class="comment">// Create a standard Urho3D node</span></div>
+<p>C++: </p><div class="fragment"><div class="line">SharedPtr&lt;Node&gt; tileMapNode(scene_-&gt;CreateChild(<span class="stringliteral">&quot;TileMap&quot;</span>)); <span class="comment">// Create a standard Urho3D node</span></div>
 <div class="line">TileMap2D* tileMap = tileMapNode-&gt;CreateComponent&lt;TileMap2D&gt;(); <span class="comment">// Create the TileMap2D component</span></div>
 <div class="line">tileMap-&gt;SetTmxFile(cache-&gt;GetResource&lt;TmxFile2D&gt;(<span class="stringliteral">&quot;Urho2D/isometric_grass_and_water.tmx&quot;</span>)); <span class="comment">// Assign tmx resource file to component</span></div>
 </div><!-- fragment --><p>Note that:</p><ul>
@@ -329,8 +329,6 @@ TMX tile map objects</h2>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_urho3_d_1_1_node_html_aa030d81d27e4ecfe9087b1670e4a6faa"><div class="ttname"><a href="class_urho3_d_1_1_node.html#aa030d81d27e4ecfe9087b1670e4a6faa">Urho3D::Node::CreateComponent</a></div><div class="ttdeci">Component * CreateComponent(StringHash type, unsigned id=0)</div><div class="ttdoc">Create a component to this node (with specified ID if provided).</div><div class="ttdef"><b>Definition:</b> Node.cpp:1070</div></div>
-<div class="ttc" id="aclass_urho3_d_1_1_node_html_ad7475f25827d084c870b20eb01508596"><div class="ttname"><a href="class_urho3_d_1_1_node.html#ad7475f25827d084c870b20eb01508596">Urho3D::Node::CreateChild</a></div><div class="ttdeci">Node * CreateChild(const ea::string &amp;name=EMPTY_STRING, unsigned id=0, bool temporary=false)</div><div class="ttdoc">Create a child scene node (with specified ID if provided).</div><div class="ttdef"><b>Definition:</b> Node.cpp:968</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
     <ul>

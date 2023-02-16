@@ -123,7 +123,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a42701c4ace869354b8ff3f61aedbdb6d inherit pro_methods_class_urho3_d_1_1_non_copyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Interface of a class that writes prefab data. Useful for writing generic code in <a class="el" href="class_urho3_d_1_1_node.html" title="Scene node that may contain components and child nodes.">Node</a> and <a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a> serialization. Call order:</p><ul>
+<div class="textblock"><p>Interface of a class that writes prefab data. Useful for writing generic code in Node and <a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a> serialization. Call order:</p><ul>
 <li>WriteNode() should be called first exactly once.</li>
 <li>WriteNumComponents() should be called after WriteNode() exactly once.</li>
 <li>WriteComponent() should be called after WriteNumComponents() the exact number of times.</li>
