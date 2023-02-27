@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"class_urho3_d_1_1_application_state.html#adabedf69585a86b8e62ff612a883cf21":[5,0,2,35,42],
 "class_urho3_d_1_1_application_state.html#ade11f54366da032229fe6a5d82c57eee":[5,0,2,35,38],
 "class_urho3_d_1_1_application_state.html#ae1e19c544605a2991139bd527d5c6ab9":[5,0,2,35,8],
 "class_urho3_d_1_1_application_state.html#ae6fb5e8e356e9ea94052c64775436553":[5,0,2,35,43],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "class_urho3_d_1_1_attribute_prefab.html#abda5a97729b18e6665ca47549a0efea8":[5,0,2,57,19],
 "class_urho3_d_1_1_attribute_prefab.html#ac2693760ad3be1bc187157a98fdc56d6":[5,0,2,57,6],
 "class_urho3_d_1_1_attribute_prefab.html#ac69504d1416371b89ec82ad3f513a8c6":[5,0,2,57,9],
-"class_urho3_d_1_1_attribute_prefab.html#ac8204ca44c554fb422f8e0c13f59707d":[5,0,2,57,8],
-"class_urho3_d_1_1_attribute_prefab.html#acafb2857b2fc8b25d5831ec8eed5aa9c":[5,0,2,57,0]
+"class_urho3_d_1_1_attribute_prefab.html#ac8204ca44c554fb422f8e0c13f59707d":[5,0,2,57,8]
 };

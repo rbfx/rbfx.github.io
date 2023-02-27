@@ -1,5 +1,11 @@
 var NAVTREEINDEX77 =
 {
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a4da52507d3157d5236c1d9ebb844b165":[5,0,14,2],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a52687879784f2e82a39bf095fcab60bf":[5,0,14,11],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a5fd182ae5f73a673cf4269a780904862":[5,0,14,7],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a6037d120e40a891e9be7f44eb0688375":[5,0,14,4],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a61fa5f39d10600e4f4e665c977ee8924":[5,0,14,13],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a65eb5dd050add94e308612286f5e9033":[5,0,14,8],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a6b9600e42eecab088ae45f3dada88231":[5,0,14,6],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a7bb1e6e3a9954d7eba1efe0782ce63c6":[5,0,14,17],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a94c706746a381548bba44683d7304176":[5,0,14,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_asset_transformer_input.html":[5,0,2,49],
 "struct_urho3_d_1_1_asset_transformer_input.html#a052d87a449eba2f417aeb5a42679244f":[5,0,2,49,2],
 "struct_urho3_d_1_1_asset_transformer_input.html#a1d6f22a587537b1bb5dfe44182390241":[5,0,2,49,6],
-"struct_urho3_d_1_1_asset_transformer_input.html#a45011b5f6a97d726975e13e5f696e88c":[5,0,2,49,3],
-"struct_urho3_d_1_1_asset_transformer_input.html#a4d1043c4c6453e3f2312f01329688917":[5,0,2,49,12],
-"struct_urho3_d_1_1_asset_transformer_input.html#a7cdeefa0790ae2ab17e504c29cb2b778":[5,0,2,49,11],
-"struct_urho3_d_1_1_asset_transformer_input.html#a81aa22f626cca4a5f1742e0def0878ac":[5,0,2,49,1],
-"struct_urho3_d_1_1_asset_transformer_input.html#ab25f3f4400cc82883cf53d8225d2495b":[5,0,2,49,4],
-"struct_urho3_d_1_1_asset_transformer_input.html#ab98c446ea6574178aa617c10016a6894":[5,0,2,49,0],
-"struct_urho3_d_1_1_asset_transformer_input.html#ac314e669fde9d444eaf1bbf8590a4f22":[5,0,2,49,10]
+"struct_urho3_d_1_1_asset_transformer_input.html#a45011b5f6a97d726975e13e5f696e88c":[5,0,2,49,3]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_lightmap_chart_region.html#aab0bd8d19e10156ba054c193c5b22826":[5,0,2,359,3],
+"struct_urho3_d_1_1_lightmap_chart_region.html#ace706979a06a0ed9570d67a7a938d73c":[5,0,2,359,0],
+"struct_urho3_d_1_1_lightmap_chart_region.html#ad41252bd80c90f53903d90461c7d6482":[5,0,2,359,1],
+"struct_urho3_d_1_1_lightmap_charting_settings.html":[5,0,2,358],
+"struct_urho3_d_1_1_lightmap_charting_settings.html#a14589fa883b068182c91d2155d1a0b39":[5,0,2,358,2],
+"struct_urho3_d_1_1_lightmap_charting_settings.html#a18ae8140c0874b69b2c1715d350ff4ec":[5,0,2,358,0],
 "struct_urho3_d_1_1_lightmap_charting_settings.html#a1c69f3adbc235f81757a8c25b77ab45c":[5,0,2,358,4],
 "struct_urho3_d_1_1_lightmap_charting_settings.html#aedc63fe84ee3dc5b2dc23767dead5a24":[5,0,2,358,3],
 "struct_urho3_d_1_1_lightmap_charting_settings.html#afc8c3edc70e7c56aea4edfd60f9b8469":[5,0,2,358,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_numeric_range.html#a13128b976afb8ddec11d2b5291b1e549":[5,0,2,447,2],
 "struct_urho3_d_1_1_numeric_range.html#a38ea56fdc9ee3059dae001f61bd21d6f":[5,0,2,447,7],
 "struct_urho3_d_1_1_numeric_range.html#a3d62949c7425c69ce09f34425dd6174f":[5,0,2,447,9],
-"struct_urho3_d_1_1_numeric_range.html#a638376fbd16291fe13a35ff8356e6fee":[5,0,2,447,6],
-"struct_urho3_d_1_1_numeric_range.html#a77f4abe1faa9213d1076d9e8036a3471":[5,0,2,447,0],
-"struct_urho3_d_1_1_numeric_range.html#a840d3ca1e7a7934bf479a8b5becbf9f1":[5,0,2,447,4],
-"struct_urho3_d_1_1_numeric_range.html#aac3ee75515ab47c7a46bb4d574611a03":[5,0,2,447,1],
-"struct_urho3_d_1_1_numeric_range.html#ab3f025ceba4313d31732f7cbe5b20a00":[5,0,2,447,5],
-"struct_urho3_d_1_1_numeric_range.html#abde91a0e3d4b379d514904bfe7602c52":[5,0,2,447,8],
-"struct_urho3_d_1_1_numeric_range.html#afdb194a4f30c965f53c6c6868bab51d1":[5,0,2,447,3]
+"struct_urho3_d_1_1_numeric_range.html#a638376fbd16291fe13a35ff8356e6fee":[5,0,2,447,6]
 };

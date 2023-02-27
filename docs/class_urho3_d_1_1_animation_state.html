@@ -206,14 +206,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:aa50b95609026f8128ff5e5f6b0a16bcd"><td class="memItemLeft" align="right" valign="top"><a id="aa50b95609026f8128ff5e5f6b0a16bcd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_state.html#aa50b95609026f8128ff5e5f6b0a16bcd">CalulcateTransformTrack</a> (<a class="el" href="struct_urho3_d_1_1_node_animation_output.html">NodeAnimationOutput</a> &amp;output, const <a class="el" href="struct_urho3_d_1_1_animation_track.html">AnimationTrack</a> &amp;track, unsigned &amp;frame, float weight) const</td></tr>
-<tr class="memdesc:aa50b95609026f8128ff5e5f6b0a16bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply value of transformation track to the output. <br /></td></tr>
-<tr class="separator:aa50b95609026f8128ff5e5f6b0a16bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcf85efcaaea628a3b16f331a0242167"><td class="memItemLeft" align="right" valign="top"><a id="abcf85efcaaea628a3b16f331a0242167"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_state.html#abcf85efcaaea628a3b16f331a0242167">CalulcateAttributeTrack</a> (<a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;output, const <a class="el" href="struct_urho3_d_1_1_variant_animation_track.html">VariantAnimationTrack</a> &amp;track, unsigned &amp;frame, float weight) const</td></tr>
-<tr class="memdesc:abcf85efcaaea628a3b16f331a0242167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply single attribute track to target object. Key frame hint is updated on call. <br /></td></tr>
-<tr class="separator:abcf85efcaaea628a3b16f331a0242167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9f249e4b762acc1c03991354632a262"><td class="memItemLeft" align="right" valign="top"><a id="ae9f249e4b762acc1c03991354632a262"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_state.html#ae9f249e4b762acc1c03991354632a262">CalculateTransformTrack</a> (<a class="el" href="struct_urho3_d_1_1_node_animation_output.html">NodeAnimationOutput</a> &amp;output, const <a class="el" href="struct_urho3_d_1_1_animation_track.html">AnimationTrack</a> &amp;track, unsigned &amp;frame, float weight) const</td></tr>
+<tr class="memdesc:ae9f249e4b762acc1c03991354632a262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply value of transformation track to the output. <br /></td></tr>
+<tr class="separator:ae9f249e4b762acc1c03991354632a262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd2a5159c7ad19aeaa4860fcb7979ef"><td class="memItemLeft" align="right" valign="top"><a id="a5cd2a5159c7ad19aeaa4860fcb7979ef"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_state.html#a5cd2a5159c7ad19aeaa4860fcb7979ef">CalculateAttributeTrack</a> (<a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;output, const <a class="el" href="struct_urho3_d_1_1_variant_animation_track.html">VariantAnimationTrack</a> &amp;track, unsigned &amp;frame, float weight) const</td></tr>
+<tr class="memdesc:a5cd2a5159c7ad19aeaa4860fcb7979ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply single attribute track to target object. Key frame hint is updated on call. <br /></td></tr>
+<tr class="separator:a5cd2a5159c7ad19aeaa4860fcb7979ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -237,6 +237,10 @@ Private Attributes</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_state.html#a968f0007dc12dbf4d56e736066dbcf0f">tracksDirty_</a> { true }</td></tr>
 <tr class="memdesc:a968f0007dc12dbf4d56e736066dbcf0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the animation state tracks are dirty and should be updated. <br /></td></tr>
 <tr class="separator:a968f0007dc12dbf4d56e736066dbcf0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad252efd23d05c511fd50c5cb7d490757"><td class="memItemLeft" align="right" valign="top"><a id="ad252efd23d05c511fd50c5cb7d490757"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_state.html#ad252efd23d05c511fd50c5cb7d490757">animationRevision_</a> {}</td></tr>
+<tr class="memdesc:ad252efd23d05c511fd50c5cb7d490757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revision of <a class="el" href="class_urho3_d_1_1_animation.html">Animation</a> object. Used to detect changes in animation. <br /></td></tr>
+<tr class="separator:ad252efd23d05c511fd50c5cb7d490757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a6718a0b465223e93d2781ad38ada2dcf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_state.html#a6718a0b465223e93d2781ad38ada2dcf">looped_</a> {}</td></tr>
 <tr class="separator:a6718a0b465223e93d2781ad38ada2dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>

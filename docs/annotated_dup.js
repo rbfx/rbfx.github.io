@@ -612,6 +612,7 @@ var annotated_dup =
       [ "ObjectAnimation", "class_urho3_d_1_1_object_animation.html", "class_urho3_d_1_1_object_animation" ],
       [ "ObjectReflection", "class_urho3_d_1_1_object_reflection.html", "class_urho3_d_1_1_object_reflection" ],
       [ "ObjectReflectionRegistry", "class_urho3_d_1_1_object_reflection_registry.html", "class_urho3_d_1_1_object_reflection_registry" ],
+      [ "ObjectRevisionTracker", "class_urho3_d_1_1_object_revision_tracker.html", "class_urho3_d_1_1_object_revision_tracker" ],
       [ "Obstacle", "class_urho3_d_1_1_obstacle.html", "class_urho3_d_1_1_obstacle" ],
       [ "OcclusionBatch", "struct_urho3_d_1_1_occlusion_batch.html", "struct_urho3_d_1_1_occlusion_batch" ],
       [ "OcclusionBuffer", "class_urho3_d_1_1_occlusion_buffer.html", "class_urho3_d_1_1_occlusion_buffer" ],
