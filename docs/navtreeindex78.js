@@ -1,5 +1,6 @@
 var NAVTREEINDEX78 =
 {
+"struct_urho3_d_1_1_asset_transformer_input.html#a45011b5f6a97d726975e13e5f696e88c":[5,0,2,49,3],
 "struct_urho3_d_1_1_asset_transformer_input.html#a4d1043c4c6453e3f2312f01329688917":[5,0,2,49,12],
 "struct_urho3_d_1_1_asset_transformer_input.html#a7cdeefa0790ae2ab17e504c29cb2b778":[5,0,2,49,11],
 "struct_urho3_d_1_1_asset_transformer_input.html#a81aa22f626cca4a5f1742e0def0878ac":[5,0,2,49,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_billboard.html#a7149155e52988df7fc2ae9955f213a38":[5,0,2,91,0],
 "struct_urho3_d_1_1_billboard.html#ab1bc4b5b70c58bc55b04ec8a5e0e5b38":[5,0,2,91,1],
 "struct_urho3_d_1_1_billboard.html#ab6349a8e25ec5026637595b07bea97d3":[5,0,2,91,3],
-"struct_urho3_d_1_1_billboard.html#ac9a895e24df50a5d89a8dd6650a7f29c":[5,0,2,91,8],
-"struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html":[5,0,2,99,0]
+"struct_urho3_d_1_1_billboard.html#ac9a895e24df50a5d89a8dd6650a7f29c":[5,0,2,91,8]
 };

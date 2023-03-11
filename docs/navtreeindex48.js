@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"class_urho3_d_1_1_physics_world.html#aff6bfe4c35cf79881dca69a1041b6ac4":[5,0,2,505,104],
 "class_urho3_d_1_1_physics_world2_d.html":[5,0,2,506],
 "class_urho3_d_1_1_physics_world2_d.html#a01b92aab74fe06254d8d59e6401e24b0":[5,0,2,506,66],
 "class_urho3_d_1_1_physics_world2_d.html#a02f039600424cb8f77177136cc28d7b1":[5,0,2,506,36],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "class_urho3_d_1_1_plugin_manager.html#a69bd8f0772623db3205a4f3bcd95efe9":[5,0,2,524,8],
 "class_urho3_d_1_1_plugin_manager.html#a6aec06babbffe0a16becbbd84e54e9db":[5,0,2,524,7],
 "class_urho3_d_1_1_plugin_manager.html#a6cdd8032b41165c95fefe8fd41bc2743":[5,0,2,524,39],
-"class_urho3_d_1_1_plugin_manager.html#a6df7a6cce5270a055fd47262ac00193f":[5,0,2,524,31],
-"class_urho3_d_1_1_plugin_manager.html#a70b9bf967c371e4daf97aebbb9553f2e":[5,0,2,524,4]
+"class_urho3_d_1_1_plugin_manager.html#a6df7a6cce5270a055fd47262ac00193f":[5,0,2,524,31]
 };

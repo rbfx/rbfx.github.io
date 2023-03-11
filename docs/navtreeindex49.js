@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"class_urho3_d_1_1_plugin_manager.html#a70b9bf967c371e4daf97aebbb9553f2e":[5,0,2,524,4],
 "class_urho3_d_1_1_plugin_manager.html#a72bfe6d2fd1d6c03435897ad5d32db5b":[5,0,2,524,40],
 "class_urho3_d_1_1_plugin_manager.html#a7bb367a9d33a78e05373c1cd789f6952":[5,0,2,524,44],
 "class_urho3_d_1_1_plugin_manager.html#a7d1b117aa063b78512c3eea4863020f6":[5,0,2,524,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "class_urho3_d_1_1_progress_bar.html#a112facd65ffe2377a41ff1dec55079d8":[5,0,2,541,0],
 "class_urho3_d_1_1_progress_bar.html#a1eb07377b4d432f5927c0b005086381a":[5,0,2,541,23],
 "class_urho3_d_1_1_progress_bar.html#a424b2643ef555bbeb38ba10555fa2a88":[5,0,2,541,8],
-"class_urho3_d_1_1_progress_bar.html#a47347e9bdbb72e9b0b4b9a9318d9b5ae":[5,0,2,541,25],
-"class_urho3_d_1_1_progress_bar.html#a4d654864e847e0fe13c05e56c6a46708":[5,0,2,541,4]
+"class_urho3_d_1_1_progress_bar.html#a47347e9bdbb72e9b0b4b9a9318d9b5ae":[5,0,2,541,25]
 };

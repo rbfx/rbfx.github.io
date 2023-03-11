@@ -1,5 +1,6 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html":[5,0,2,99,0],
 "struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html#a48010398f2d9c7f95bdfa6d9331958c2":[5,0,2,99,0,2],
 "struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html#a5a5ac0226d8c34aafe59fee6e8a4dc15":[5,0,2,99,0,0],
 "struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html#a80ac44770e6cc821ca50188f6dbe3a3c":[5,0,2,99,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_cubemap_update_result.html":[5,0,2,174],
 "struct_urho3_d_1_1_cubemap_update_result.html#a412e22ab6cf7766b145eccc766727572":[5,0,2,174,0],
 "struct_urho3_d_1_1_cubemap_update_result.html#a7c3ccef5ffa1a9bc14b16a674e43ebd9":[5,0,2,174,1],
-"struct_urho3_d_1_1_cursor_shape_info.html":[5,0,2,176],
-"struct_urho3_d_1_1_cursor_shape_info.html#a29ed68f4290ae7a8d3366fb21dbd7d5a":[5,0,2,176,1]
+"struct_urho3_d_1_1_cursor_shape_info.html":[5,0,2,176]
 };

@@ -2,6 +2,7 @@ var class_urho3_d_1_1_i_k_solver =
 [
     [ "IKSolver", "class_urho3_d_1_1_i_k_solver.html#acec072f80435bb30c78fa98e3f13edcc", null ],
     [ "~IKSolver", "class_urho3_d_1_1_i_k_solver.html#a9b79b4d91157fa508c985811ee56fd98", null ],
+    [ "GetNodeData", "class_urho3_d_1_1_i_k_solver.html#a2986951e6053992e1725563e9820c352", null ],
     [ "GetPostUpdateEvent", "class_urho3_d_1_1_i_k_solver.html#a2e20c62b58de3a5ff99167e14a4dd42d", null ],
     [ "IsChainTreeExpired", "class_urho3_d_1_1_i_k_solver.html#a0681510c977a8bcab84617d281e30b30", null ],
     [ "IsContinuousRotation", "class_urho3_d_1_1_i_k_solver.html#a1cb8e2717ef1855cfabdf2027fe1e450", null ],
