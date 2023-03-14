@@ -1,5 +1,12 @@
 var NAVTREEINDEX89 =
 {
+"struct_urho3_d_1_1_vertex_element.html#a371f63709e37725849c799a4a6552506":[5,0,2,805,2],
+"struct_urho3_d_1_1_vertex_element.html#a3dd05f543e8309269479297d00f87e75":[5,0,2,805,0],
+"struct_urho3_d_1_1_vertex_element.html#a7d056f7b878fb9f3a23f9a94738f22bf":[5,0,2,805,1],
+"struct_urho3_d_1_1_vertex_element.html#a92c570ed7aa36ae0a0d8ee96cc456255":[5,0,2,805,6],
+"struct_urho3_d_1_1_vertex_element.html#a9d1119a05ce234ebc3782c90c2eb8b03":[5,0,2,805,8],
+"struct_urho3_d_1_1_vertex_element.html#aa7d9e5797c193d179e5337989dade04d":[5,0,2,805,9],
+"struct_urho3_d_1_1_vertex_element.html#aae8d2e3073cb1dca5ae82d7777c3eb69":[5,0,2,805,4],
 "struct_urho3_d_1_1_view_batch_info2_d.html":[5,0,2,808],
 "struct_urho3_d_1_1_view_batch_info2_d.html#a01f3dd2b1d85be90c652f27fb3dd8145":[5,0,2,808,1],
 "struct_urho3_d_1_1_view_batch_info2_d.html#a150adc266bc05ad73dcfddcf8d447e8f":[5,0,2,808,2],

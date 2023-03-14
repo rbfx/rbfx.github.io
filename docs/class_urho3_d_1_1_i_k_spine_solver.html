@@ -664,9 +664,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>WeightFunction</b> (
 <tr class="memitem:af92cdc2f9770de716136e29ffbad05a8"><td class="memItemLeft" align="right" valign="top"><a id="af92cdc2f9770de716136e29ffbad05a8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOriginalTransforms</b> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;frameOfReference)</td></tr>
 <tr class="separator:af92cdc2f9770de716136e29ffbad05a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5c54ace5160fc4cf32a4da4ccb66063"><td class="memItemLeft" align="right" valign="top"><a id="ab5c54ace5160fc4cf32a4da4ccb66063"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>GetTwistAngle</b> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;frameOfReference, const <a class="el" href="struct_urho3_d_1_1_i_k_node_segment.html">IKNodeSegment</a> &amp;segment, Node *targetNode) const</td></tr>
-<tr class="separator:ab5c54ace5160fc4cf32a4da4ccb66063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a898c9beda6c03ff98d4d6e2213227287"><td class="memItemLeft" align="right" valign="top"><a id="a898c9beda6c03ff98d4d6e2213227287"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>GetTwistAngle</b> (const <a class="el" href="struct_urho3_d_1_1_i_k_node_segment.html">IKNodeSegment</a> &amp;segment, Node *targetNode) const</td></tr>
+<tr class="separator:a898c9beda6c03ff98d4d6e2213227287"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -695,7 +695,8 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>maxAngle_</b> {90.0f
 float&#160;</td><td class="memItemRight" valign="bottom"><b>bendTweak_</b> {0.0f}</td></tr>
 <tr class="separator:a4a225b2789ecfa2d2756197e0b921921"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a683ac05bc3c4157d757033c03452e1c0"><td class="memItemLeft" align="right" valign="top"><a id="a683ac05bc3c4157d757033c03452e1c0"></a>
-<a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>twistRotationOffset_</b> {<a class="el" href="class_urho3_d_1_1_quaternion.html#a228a2489bf539525b93a315f9b59de9a">Quaternion::ZERO</a>}</td></tr>
+<a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_k_spine_solver.html#a683ac05bc3c4157d757033c03452e1c0">twistRotationOffset_</a> {<a class="el" href="class_urho3_d_1_1_quaternion.html#a228a2489bf539525b93a315f9b59de9a">Quaternion::ZERO</a>}</td></tr>
+<tr class="memdesc:a683ac05bc3c4157d757033c03452e1c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This orientation of twist bone in object space is equivalent to having no twist. <br /></td></tr>
 <tr class="separator:a683ac05bc3c4157d757033c03452e1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b40f7cf479383a1f511dd6a135ad498"><td class="memItemLeft" align="right" valign="top"><a id="a5b40f7cf479383a1f511dd6a135ad498"></a>
 <a class="el" href="class_urho3_d_1_1_i_k_spine_chain.html">IKSpineChain</a>&#160;</td><td class="memItemRight" valign="bottom"><b>chain_</b></td></tr>

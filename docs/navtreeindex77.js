@@ -1,5 +1,9 @@
 var NAVTREEINDEX77 =
 {
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a0e0720fe98c91d13c7d012a5f2f43237":[5,0,14,9],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a13806f8ead77941e6fadc0c0e1a38b2b":[5,0,14,3],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a246f834c7d4a11138a717646a0446277":[5,0,14,12],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a2e6cd5ba8d80e0b945e05ab7728f2200":[5,0,14,22],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a4d18f7a7d258c8aee52e754dd4baf440":[5,0,14,21],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a4da52507d3157d5236c1d9ebb844b165":[5,0,14,2],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a52687879784f2e82a39bf095fcab60bf":[5,0,14,11],
@@ -245,9 +249,5 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#afaa9459a2a53555815c1b93d8f873c6e":[5,0,2,48,1,5],
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node_1_1_by_name.html":[5,0,2,48,1,0],
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node_1_1_by_name.html#a0868f496b8f9efe144596f03c834efd9":[5,0,2,48,1,0,2],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node_1_1_by_name.html#a969d2e3743ebaf125f9bb85a1ba79329":[5,0,2,48,1,0,1],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node_1_1_by_name.html#aa5f4f25c4518de8e657b1aef6dfe0670":[5,0,2,48,1,0,0],
-"struct_urho3_d_1_1_asset_transformer_input.html":[5,0,2,49],
-"struct_urho3_d_1_1_asset_transformer_input.html#a052d87a449eba2f417aeb5a42679244f":[5,0,2,49,2],
-"struct_urho3_d_1_1_asset_transformer_input.html#a1d6f22a587537b1bb5dfe44182390241":[5,0,2,49,6]
+"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node_1_1_by_name.html#a969d2e3743ebaf125f9bb85a1ba79329":[5,0,2,48,1,0,1]
 };

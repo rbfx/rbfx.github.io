@@ -1,5 +1,12 @@
 var NAVTREEINDEX86 =
 {
+"struct_urho3_d_1_1_render_target_info.html":[5,0,2,579],
+"struct_urho3_d_1_1_render_target_info.html#a0d7419e5517658e93c2aea4627294cf1":[5,0,2,579,0],
+"struct_urho3_d_1_1_render_target_info.html#a25adcc357c0e2369c954fdf19606f28f":[5,0,2,579,12],
+"struct_urho3_d_1_1_render_target_info.html#a27a9df29b0b768ff0db56d1ef3842361":[5,0,2,579,5],
+"struct_urho3_d_1_1_render_target_info.html#a2fd159ee76d198b21cd78fe6cd68ebaa":[5,0,2,579,6],
+"struct_urho3_d_1_1_render_target_info.html#a40f3c51785092f02d35ecee34718a4ee":[5,0,2,579,11],
+"struct_urho3_d_1_1_render_target_info.html#a49e791471e38e04c7d847b68fd4e9d35":[5,0,2,579,2],
 "struct_urho3_d_1_1_render_target_info.html#a80a074cfc77ee5fdf652a58f0e2934d7":[5,0,2,579,4],
 "struct_urho3_d_1_1_render_target_info.html#aad23d6601783c84dfcfab0c36e23bac8":[5,0,2,579,7],
 "struct_urho3_d_1_1_render_target_info.html#ae21b30e290ea8707e3db36f4be9e4bd0":[5,0,2,579,9],
@@ -242,12 +249,5 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#a498aef5dff8ff3d1b0d8e75705efecbd":[5,0,2,650,5],
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#a4990a354f55c27e772a799823de69039":[5,0,2,650,1],
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#a4cd5b53835323d6e3716e14e1eea7000":[5,0,2,650,0],
-"struct_urho3_d_1_1_shadow_map_allocator_settings.html#a8322fb895f31980086496072d6bc8451":[5,0,2,650,7],
-"struct_urho3_d_1_1_shadow_map_allocator_settings.html#aa453d58d6aaedf8ff11eb56cf1912805":[5,0,2,650,2],
-"struct_urho3_d_1_1_shadow_map_allocator_settings.html#ada40b107699dcd3050a0d3d0a3072663":[5,0,2,650,4],
-"struct_urho3_d_1_1_shadow_map_region.html":[5,0,2,651],
-"struct_urho3_d_1_1_shadow_map_region.html#a37c0d8be6d3c38121f6e75af2dc2ad0c":[5,0,2,651,1],
-"struct_urho3_d_1_1_shadow_map_region.html#a683066c4db22f7f97106db783049b17e":[5,0,2,651,0],
-"struct_urho3_d_1_1_shadow_map_region.html#aa22bab664963bb6dfdf1be9fa92e9739":[5,0,2,651,2],
-"struct_urho3_d_1_1_shadow_map_region.html#af74de4280d22b5ae7eefdea8bc8e2373":[5,0,2,651,4]
+"struct_urho3_d_1_1_shadow_map_allocator_settings.html#a8322fb895f31980086496072d6bc8451":[5,0,2,650,7]
 };

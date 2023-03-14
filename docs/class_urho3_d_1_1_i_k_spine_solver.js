@@ -11,7 +11,7 @@ var class_urho3_d_1_1_i_k_spine_solver =
     [ "GetPositionWeight", "class_urho3_d_1_1_i_k_spine_solver.html#a24a6b3ab723462081860a86c170bcf81", null ],
     [ "GetRotationWeight", "class_urho3_d_1_1_i_k_spine_solver.html#ae95956a18e575b430c5077fc00351d7b", null ],
     [ "GetTargetName", "class_urho3_d_1_1_i_k_spine_solver.html#ad69b84492eea65239051bc721be35e82", null ],
-    [ "GetTwistAngle", "class_urho3_d_1_1_i_k_spine_solver.html#ab5c54ace5160fc4cf32a4da4ccb66063", null ],
+    [ "GetTwistAngle", "class_urho3_d_1_1_i_k_spine_solver.html#a898c9beda6c03ff98d4d6e2213227287", null ],
     [ "GetTwistTargetName", "class_urho3_d_1_1_i_k_spine_solver.html#a08e1f5477df7518110001bd0dd26c62b", null ],
     [ "GetTwistWeight", "class_urho3_d_1_1_i_k_spine_solver.html#a6e05909467f1356763a4251b5e825fc8", null ],
     [ "InitializeNodes", "class_urho3_d_1_1_i_k_spine_solver.html#aa4acd7d70ef21f61ea266dd8a54ad127", null ],

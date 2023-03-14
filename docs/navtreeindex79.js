@@ -1,5 +1,11 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_billboard.html#a5a7d3440eaccc295f0a8de5161363691":[5,0,2,91,7],
+"struct_urho3_d_1_1_billboard.html#a67ab68e30781f391c495589a47f2cc10":[5,0,2,91,4],
+"struct_urho3_d_1_1_billboard.html#a7149155e52988df7fc2ae9955f213a38":[5,0,2,91,0],
+"struct_urho3_d_1_1_billboard.html#ab1bc4b5b70c58bc55b04ec8a5e0e5b38":[5,0,2,91,1],
+"struct_urho3_d_1_1_billboard.html#ab6349a8e25ec5026637595b07bea97d3":[5,0,2,91,3],
+"struct_urho3_d_1_1_billboard.html#ac9a895e24df50a5d89a8dd6650a7f29c":[5,0,2,91,8],
 "struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html":[5,0,2,99,0],
 "struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html#a48010398f2d9c7f95bdfa6d9331958c2":[5,0,2,99,0,2],
 "struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html#a5a5ac0226d8c34aafe59fee6e8a4dc15":[5,0,2,99,0,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_cubemap_update_parameters.html#a05b56a66d716d60b67933e9cf11ecac3":[5,0,2,173,1],
 "struct_urho3_d_1_1_cubemap_update_parameters.html#a14bf0218d0e9c4d8ad7c546966029c24":[5,0,2,173,0],
 "struct_urho3_d_1_1_cubemap_update_parameters.html#a3fbe7dc1cab7757d429b40b7faf9d1dc":[5,0,2,173,3],
-"struct_urho3_d_1_1_cubemap_update_parameters.html#ab79128dfe0de6da3aec0b01dce56e940":[5,0,2,173,5],
-"struct_urho3_d_1_1_cubemap_update_parameters.html#ae8e6b5767580dfaf45e21a5006e2cb6c":[5,0,2,173,4],
-"struct_urho3_d_1_1_cubemap_update_parameters.html#afb0b92be8af04376d45ca7d35ffb34da":[5,0,2,173,2],
-"struct_urho3_d_1_1_cubemap_update_result.html":[5,0,2,174],
-"struct_urho3_d_1_1_cubemap_update_result.html#a412e22ab6cf7766b145eccc766727572":[5,0,2,174,0],
-"struct_urho3_d_1_1_cubemap_update_result.html#a7c3ccef5ffa1a9bc14b16a674e43ebd9":[5,0,2,174,1],
-"struct_urho3_d_1_1_cursor_shape_info.html":[5,0,2,176]
+"struct_urho3_d_1_1_cubemap_update_parameters.html#ab79128dfe0de6da3aec0b01dce56e940":[5,0,2,173,5]
 };

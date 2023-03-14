@@ -1,5 +1,12 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#aeae5a117c81e8cfa61051d72c61a7100":[5,0,2,357,5],
+"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#af6e2b5076f2b102b46339a1f2930a263":[5,0,2,357,10],
+"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#af846d1fed94fbfbb8036dcd0fc9a1a97":[5,0,2,357,6],
+"struct_urho3_d_1_1_lightmap_chart_region.html":[5,0,2,359],
+"struct_urho3_d_1_1_lightmap_chart_region.html#a22522fb2b472f5b232cf47d688e3a9c1":[5,0,2,359,4],
+"struct_urho3_d_1_1_lightmap_chart_region.html#a4b31037378d776798babe3fcd4cbfc3a":[5,0,2,359,6],
+"struct_urho3_d_1_1_lightmap_chart_region.html#a571ddafb364135bd2934bd1926a69d76":[5,0,2,359,7],
 "struct_urho3_d_1_1_lightmap_chart_region.html#a97fec1ade12dac21d278eb05d2dc3fcc":[5,0,2,359,5],
 "struct_urho3_d_1_1_lightmap_chart_region.html#a9d13d2d19c314a1819fa80760c9e4188":[5,0,2,359,2],
 "struct_urho3_d_1_1_lightmap_chart_region.html#aab0bd8d19e10156ba054c193c5b22826":[5,0,2,359,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html#af83cb5e54e4f26023f29b3554ed3d3c4":[5,0,2,439,5],
 "struct_urho3_d_1_1_node_animation_output.html":[5,0,2,441],
 "struct_urho3_d_1_1_node_animation_output.html#a0a8f6749a8c0d8419779f848b9194a3b":[5,0,2,441,0],
-"struct_urho3_d_1_1_node_animation_output.html#ade0c0223db28f7f60cddc1d1963e83cc":[5,0,2,441,1],
-"struct_urho3_d_1_1_node_animation_state_track.html":[5,0,2,442],
-"struct_urho3_d_1_1_node_animation_state_track.html#a2dceaf7600dda940c935781a9c5fdccb":[5,0,2,442,0],
-"struct_urho3_d_1_1_node_animation_state_track.html#a988386bb4b034ea199529dc787388f61":[5,0,2,442,2],
-"struct_urho3_d_1_1_node_animation_state_track.html#ac28de2536fdcfbfbb3f81326c26c6c2e":[5,0,2,442,1],
-"struct_urho3_d_1_1_numeric_range.html":[5,0,2,447],
-"struct_urho3_d_1_1_numeric_range.html#a13128b976afb8ddec11d2b5291b1e549":[5,0,2,447,2],
-"struct_urho3_d_1_1_numeric_range.html#a38ea56fdc9ee3059dae001f61bd21d6f":[5,0,2,447,7]
+"struct_urho3_d_1_1_node_animation_output.html#ade0c0223db28f7f60cddc1d1963e83cc":[5,0,2,441,1]
 };

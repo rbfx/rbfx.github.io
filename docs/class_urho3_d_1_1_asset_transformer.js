@@ -1,6 +1,7 @@
 var class_urho3_d_1_1_asset_transformer =
 [
     [ "AssetTransformer", "class_urho3_d_1_1_asset_transformer.html#aa4a75ae130fcc6d1b1654bbb6df3e7b7", null ],
+    [ "AddDependency", "class_urho3_d_1_1_asset_transformer.html#a2a057cfd693a3b2fec9d7c44d1818325", null ],
     [ "Execute", "class_urho3_d_1_1_asset_transformer.html#a1bdba4d72f2f7f6275b850020df11257", null ],
     [ "ExecuteTransformers", "class_urho3_d_1_1_asset_transformer.html#a95041a12aa08639ba4c52fd4744bb50c", null ],
     [ "ExecuteTransformersAndStore", "class_urho3_d_1_1_asset_transformer.html#a8f9fd6eae728bca7be0e7292e58236e9", null ],

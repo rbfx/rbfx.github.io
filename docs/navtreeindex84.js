@@ -1,5 +1,12 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_node_animation_state_track.html":[5,0,2,442],
+"struct_urho3_d_1_1_node_animation_state_track.html#a2dceaf7600dda940c935781a9c5fdccb":[5,0,2,442,0],
+"struct_urho3_d_1_1_node_animation_state_track.html#a988386bb4b034ea199529dc787388f61":[5,0,2,442,2],
+"struct_urho3_d_1_1_node_animation_state_track.html#ac28de2536fdcfbfbb3f81326c26c6c2e":[5,0,2,442,1],
+"struct_urho3_d_1_1_numeric_range.html":[5,0,2,447],
+"struct_urho3_d_1_1_numeric_range.html#a13128b976afb8ddec11d2b5291b1e549":[5,0,2,447,2],
+"struct_urho3_d_1_1_numeric_range.html#a38ea56fdc9ee3059dae001f61bd21d6f":[5,0,2,447,7],
 "struct_urho3_d_1_1_numeric_range.html#a3d62949c7425c69ce09f34425dd6174f":[5,0,2,447,9],
 "struct_urho3_d_1_1_numeric_range.html#a638376fbd16291fe13a35ff8356e6fee":[5,0,2,447,6],
 "struct_urho3_d_1_1_numeric_range.html#a77f4abe1faa9213d1076d9e8036a3471":[5,0,2,447,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_pipeline_batch_back_to_front.html#a271cc82a53029c60f0f4ac0a7748b39c":[5,0,2,509,5],
 "struct_urho3_d_1_1_pipeline_batch_back_to_front.html#a492c3f20b2470119764b6c7d99ac2dca":[5,0,2,509,1],
 "struct_urho3_d_1_1_pipeline_batch_back_to_front.html#a8fec93093b030e0728b988705699d141":[5,0,2,509,3],
-"struct_urho3_d_1_1_pipeline_batch_back_to_front.html#acee6bfeb4b828d1ac6d533a12049c42e":[5,0,2,509,0],
-"struct_urho3_d_1_1_pipeline_batch_back_to_front.html#afae0543e7f087d59e8743b3516554f2c":[5,0,2,509,4],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html":[5,0,2,510],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a0e3b179abac7c0807030672aa8b19cd7":[5,0,2,510,17],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a1b56f166f9b386db4ae7ee3f06a8629c":[5,0,2,510,25],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a1b6415ee87123d381c0f11edd2a1ff75":[5,0,2,510,23],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a22b981f0e8b9a0cee714078dd17df9ee":[5,0,2,510,7],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a2d8a0b4e874de86522f109bd2cd30eea":[5,0,2,510,9]
+"struct_urho3_d_1_1_pipeline_batch_back_to_front.html#acee6bfeb4b828d1ac6d533a12049c42e":[5,0,2,509,0]
 };

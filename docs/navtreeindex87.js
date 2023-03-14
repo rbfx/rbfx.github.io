@@ -1,5 +1,12 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_shadow_map_allocator_settings.html#aa453d58d6aaedf8ff11eb56cf1912805":[5,0,2,650,2],
+"struct_urho3_d_1_1_shadow_map_allocator_settings.html#ada40b107699dcd3050a0d3d0a3072663":[5,0,2,650,4],
+"struct_urho3_d_1_1_shadow_map_region.html":[5,0,2,651],
+"struct_urho3_d_1_1_shadow_map_region.html#a37c0d8be6d3c38121f6e75af2dc2ad0c":[5,0,2,651,1],
+"struct_urho3_d_1_1_shadow_map_region.html#a683066c4db22f7f97106db783049b17e":[5,0,2,651,0],
+"struct_urho3_d_1_1_shadow_map_region.html#aa22bab664963bb6dfdf1be9fa92e9739":[5,0,2,651,2],
+"struct_urho3_d_1_1_shadow_map_region.html#af74de4280d22b5ae7eefdea8bc8e2373":[5,0,2,651,4],
 "struct_urho3_d_1_1_shadow_map_region.html#afe65069e68205626c51190cd017b1bb5":[5,0,2,651,3],
 "struct_urho3_d_1_1_shared_parameter_setter.html":[5,0,2,653],
 "struct_urho3_d_1_1_shared_parameter_setter.html#a0e381eb5ffbdf1675e4f108bff09300a":[5,0,2,653,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a1254d0cc34ee558a703c537063fe2973":[5,0,2,3,11,5],
 "struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a17785326174996d92b1c6db054e3e60e":[5,0,2,3,11,1],
 "struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a4d71224a64939fb234f951a4fa3db3da":[5,0,2,3,11,4],
-"struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a526f622a0f6453149697549aa3bdcb5d":[5,0,2,3,11,9],
-"struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a57ced2310dbfbcac68f0eae848a32a92":[5,0,2,3,11,8],
-"struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a93cd13458c3681d3f522d7170f687beb":[5,0,2,3,11,7],
-"struct_urho3_d_1_1_spriter_1_1_spriter_data.html#ad420700d8b31b98141cf347098fc2ce1":[5,0,2,3,11,2],
-"struct_urho3_d_1_1_spriter_1_1_spriter_data.html#ae3d8d9c8b50565e4e15cea0ccd62f2ce":[5,0,2,3,11,6],
-"struct_urho3_d_1_1_spriter_1_1_spriter_data.html#afaf68df64e75d3144f23fd52ed3000b8":[5,0,2,3,11,0],
-"struct_urho3_d_1_1_spriter_1_1_timeline.html":[5,0,2,3,14],
-"struct_urho3_d_1_1_spriter_1_1_timeline.html#a0e48f77a795421c6069f68db4418add2":[5,0,2,3,14,3]
+"struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a526f622a0f6453149697549aa3bdcb5d":[5,0,2,3,11,9]
 };

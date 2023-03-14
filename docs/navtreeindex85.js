@@ -1,5 +1,12 @@
 var NAVTREEINDEX85 =
 {
+"struct_urho3_d_1_1_pipeline_batch_back_to_front.html#afae0543e7f087d59e8743b3516554f2c":[5,0,2,509,4],
+"struct_urho3_d_1_1_pipeline_batch_by_state.html":[5,0,2,510],
+"struct_urho3_d_1_1_pipeline_batch_by_state.html#a0e3b179abac7c0807030672aa8b19cd7":[5,0,2,510,17],
+"struct_urho3_d_1_1_pipeline_batch_by_state.html#a1b56f166f9b386db4ae7ee3f06a8629c":[5,0,2,510,25],
+"struct_urho3_d_1_1_pipeline_batch_by_state.html#a1b6415ee87123d381c0f11edd2a1ff75":[5,0,2,510,23],
+"struct_urho3_d_1_1_pipeline_batch_by_state.html#a22b981f0e8b9a0cee714078dd17df9ee":[5,0,2,510,7],
+"struct_urho3_d_1_1_pipeline_batch_by_state.html#a2d8a0b4e874de86522f109bd2cd30eea":[5,0,2,510,9],
 "struct_urho3_d_1_1_pipeline_batch_by_state.html#a38ad77238aaedc615c4afba044e92e4b":[5,0,2,510,32],
 "struct_urho3_d_1_1_pipeline_batch_by_state.html#a3c70ca5c3d29e55008ae017b3afbfc1d":[5,0,2,510,14],
 "struct_urho3_d_1_1_pipeline_batch_by_state.html#a4b222610998dd64b58246685ef713d1c":[5,0,2,510,30],
@@ -242,12 +249,5 @@ var NAVTREEINDEX85 =
 "struct_urho3_d_1_1_render_pipeline_stats.html":[5,0,2,576],
 "struct_urho3_d_1_1_render_pipeline_stats.html#a0f364098b35ead3c94dea4aa799fc320":[5,0,2,576,2],
 "struct_urho3_d_1_1_render_pipeline_stats.html#a22bc888cf14fe77f4275dbebf8a0856a":[5,0,2,576,1],
-"struct_urho3_d_1_1_render_pipeline_stats.html#ad93a500123ff94adb9d7122643537d8a":[5,0,2,576,0],
-"struct_urho3_d_1_1_render_target_info.html":[5,0,2,579],
-"struct_urho3_d_1_1_render_target_info.html#a0d7419e5517658e93c2aea4627294cf1":[5,0,2,579,0],
-"struct_urho3_d_1_1_render_target_info.html#a25adcc357c0e2369c954fdf19606f28f":[5,0,2,579,12],
-"struct_urho3_d_1_1_render_target_info.html#a27a9df29b0b768ff0db56d1ef3842361":[5,0,2,579,5],
-"struct_urho3_d_1_1_render_target_info.html#a2fd159ee76d198b21cd78fe6cd68ebaa":[5,0,2,579,6],
-"struct_urho3_d_1_1_render_target_info.html#a40f3c51785092f02d35ecee34718a4ee":[5,0,2,579,11],
-"struct_urho3_d_1_1_render_target_info.html#a49e791471e38e04c7d847b68fd4e9d35":[5,0,2,579,2]
+"struct_urho3_d_1_1_render_pipeline_stats.html#ad93a500123ff94adb9d7122643537d8a":[5,0,2,576,0]
 };
