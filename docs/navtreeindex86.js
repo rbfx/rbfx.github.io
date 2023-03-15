@@ -1,5 +1,6 @@
 var NAVTREEINDEX86 =
 {
+"struct_urho3_d_1_1_render_pipeline_stats.html#a22bc888cf14fe77f4275dbebf8a0856a":[5,0,2,576,1],
 "struct_urho3_d_1_1_render_pipeline_stats.html#ad93a500123ff94adb9d7122643537d8a":[5,0,2,576,0],
 "struct_urho3_d_1_1_render_target_info.html":[5,0,2,579],
 "struct_urho3_d_1_1_render_target_info.html#a0d7419e5517658e93c2aea4627294cf1":[5,0,2,579,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#a1f29b451a988c3525db68b000b0414c5":[5,0,2,650,6],
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#a343085ab7eca1889a95e36dbee1b0d80":[5,0,2,650,3],
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#a498aef5dff8ff3d1b0d8e75705efecbd":[5,0,2,650,5],
-"struct_urho3_d_1_1_shadow_map_allocator_settings.html#a4990a354f55c27e772a799823de69039":[5,0,2,650,1],
-"struct_urho3_d_1_1_shadow_map_allocator_settings.html#a4cd5b53835323d6e3716e14e1eea7000":[5,0,2,650,0]
+"struct_urho3_d_1_1_shadow_map_allocator_settings.html#a4990a354f55c27e772a799823de69039":[5,0,2,650,1]
 };

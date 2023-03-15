@@ -1,5 +1,6 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_shadow_map_allocator_settings.html#a4cd5b53835323d6e3716e14e1eea7000":[5,0,2,650,0],
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#a8322fb895f31980086496072d6bc8451":[5,0,2,650,7],
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#aa453d58d6aaedf8ff11eb56cf1912805":[5,0,2,650,2],
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#ada40b107699dcd3050a0d3d0a3072663":[5,0,2,650,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_spriter_1_1_spriter_data.html":[5,0,2,3,11],
 "struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a0350a9cc53d30c0279cd218fe7a0ae46":[5,0,2,3,11,3],
 "struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a1254d0cc34ee558a703c537063fe2973":[5,0,2,3,11,5],
-"struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a17785326174996d92b1c6db054e3e60e":[5,0,2,3,11,1],
-"struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a4d71224a64939fb234f951a4fa3db3da":[5,0,2,3,11,4]
+"struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a17785326174996d92b1c6db054e3e60e":[5,0,2,3,11,1]
 };
