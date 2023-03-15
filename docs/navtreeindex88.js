@@ -1,5 +1,6 @@
 var NAVTREEINDEX88 =
 {
+"struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a526f622a0f6453149697549aa3bdcb5d":[5,0,2,3,11,9],
 "struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a57ced2310dbfbcac68f0eae848a32a92":[5,0,2,3,11,8],
 "struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a93cd13458c3681d3f522d7170f687beb":[5,0,2,3,11,7],
 "struct_urho3_d_1_1_spriter_1_1_spriter_data.html#ad420700d8b31b98141cf347098fc2ce1":[5,0,2,3,11,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX88 =
 "struct_urho3_d_1_1_vertex_buffer_morph.html#af2dd64322a122bb210dc620bb4d903e9":[5,0,2,804,3],
 "struct_urho3_d_1_1_vertex_element.html":[5,0,2,805],
 "struct_urho3_d_1_1_vertex_element.html#a0ef2367495a06a1973309beba0da2b51":[5,0,2,805,3],
-"struct_urho3_d_1_1_vertex_element.html#a1406df6f9357cb7874737dedc197d985":[5,0,2,805,7],
-"struct_urho3_d_1_1_vertex_element.html#a22ccfd76bdcec0423b8b6957f0523c1f":[5,0,2,805,5]
+"struct_urho3_d_1_1_vertex_element.html#a1406df6f9357cb7874737dedc197d985":[5,0,2,805,7]
 };

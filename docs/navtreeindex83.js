@@ -1,5 +1,6 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#ae6158881f356ce8e312cf1ed252fc5ef":[5,0,2,357,9],
 "struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#aeae5a117c81e8cfa61051d72c61a7100":[5,0,2,357,5],
 "struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#af6e2b5076f2b102b46339a1f2930a263":[5,0,2,357,10],
 "struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#af846d1fed94fbfbb8036dcd0fc9a1a97":[5,0,2,357,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html#af71e05339d6e1d4f456da6d0bba01790":[5,0,2,439,3],
 "struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html#af83cb5e54e4f26023f29b3554ed3d3c4":[5,0,2,439,5],
 "struct_urho3_d_1_1_node_animation_output.html":[5,0,2,441],
-"struct_urho3_d_1_1_node_animation_output.html#a0a8f6749a8c0d8419779f848b9194a3b":[5,0,2,441,0],
-"struct_urho3_d_1_1_node_animation_output.html#ade0c0223db28f7f60cddc1d1963e83cc":[5,0,2,441,1]
+"struct_urho3_d_1_1_node_animation_output.html#a0a8f6749a8c0d8419779f848b9194a3b":[5,0,2,441,0]
 };
