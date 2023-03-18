@@ -80,18 +80,15 @@ Inheritance diagram for Urho3D::MountedDirectory:</div>
  <div class="center">
   <img src="class_urho3_d_1_1_mounted_directory.png" usemap="#Urho3D::MountedDirectory_map" alt=""/>
   <map id="Urho3D::MountedDirectory_map" name="Urho3D::MountedDirectory_map">
-<area href="class_urho3_d_1_1_mount_point.html" title="Access to engine file system mount point." alt="Urho3D::MountPoint" shape="rect" coords="0,112,163,136"/>
-<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="0,56,163,80"/>
-<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="0,0,163,24"/>
+<area href="class_urho3_d_1_1_watchable_mount_point.html" title="Base implementation of watchable mount point." alt="Urho3D::WatchableMountPoint" shape="rect" coords="0,168,183,192"/>
+<area href="class_urho3_d_1_1_mount_point.html" title="Access to engine file system mount point." alt="Urho3D::MountPoint" shape="rect" coords="0,112,183,136"/>
+<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="0,56,183,80"/>
+<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="0,0,183,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2b68e003750e187c8e5d5de78f613e5a"><td class="memItemLeft" align="right" valign="top"><a id="a2b68e003750e187c8e5d5de78f613e5a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a2b68e003750e187c8e5d5de78f613e5a">MountedDirectory</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
-<tr class="memdesc:a2b68e003750e187c8e5d5de78f613e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br /></td></tr>
-<tr class="separator:a2b68e003750e187c8e5d5de78f613e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa4ee0b8808b78b7c00106de5beca4c3"><td class="memItemLeft" align="right" valign="top"><a id="aaa4ee0b8808b78b7c00106de5beca4c3"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#aaa4ee0b8808b78b7c00106de5beca4c3">MountedDirectory</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context, const ea::string &amp;directory, ea::string scheme=EMPTY_STRING)</td></tr>
 <tr class="memdesc:aaa4ee0b8808b78b7c00106de5beca4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct and open. <br /></td></tr>
@@ -100,34 +97,41 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a0b0c0a7bde9352519b479eb21c536437">~MountedDirectory</a> () override</td></tr>
 <tr class="memdesc:a0b0c0a7bde9352519b479eb21c536437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
 <tr class="separator:a0b0c0a7bde9352519b479eb21c536437"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c61ac85e11984894eed6afe8b2ad597"><td class="memItemLeft" align="right" valign="top"><a id="a8c61ac85e11984894eed6afe8b2ad597"></a>
-const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a8c61ac85e11984894eed6afe8b2ad597">GetScheme</a> () const</td></tr>
-<tr class="memdesc:a8c61ac85e11984894eed6afe8b2ad597"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scheme. <br /></td></tr>
-<tr class="separator:a8c61ac85e11984894eed6afe8b2ad597"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2479ce1369743a329b2fbd17e3df56a2"><td class="memItemLeft" align="right" valign="top"><a id="a2479ce1369743a329b2fbd17e3df56a2"></a>
 const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a2479ce1369743a329b2fbd17e3df56a2">GetDirectory</a> () const</td></tr>
 <tr class="memdesc:a2479ce1369743a329b2fbd17e3df56a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mounted directory path. <br /></td></tr>
 <tr class="separator:a2479ce1369743a329b2fbd17e3df56a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:aa32e163829fba26f9802d34f4da7167c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#aa32e163829fba26f9802d34f4da7167c">AcceptsScheme</a> (const ea::string &amp;scheme) const override</td></tr>
-<tr class="memdesc:aa32e163829fba26f9802d34f4da7167c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if mount point accepts scheme.  <a href="class_urho3_d_1_1_mounted_directory.html#aa32e163829fba26f9802d34f4da7167c">More...</a><br /></td></tr>
 <tr class="separator:aa32e163829fba26f9802d34f4da7167c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a2939ee21bc44b754d6854fa6e78c1d"><td class="memItemLeft" align="right" valign="top"><a id="a6a2939ee21bc44b754d6854fa6e78c1d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a6a2939ee21bc44b754d6854fa6e78c1d">Exists</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName) const override</td></tr>
-<tr class="memdesc:a6a2939ee21bc44b754d6854fa6e78c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a file exists within the mount point. <br /></td></tr>
+<tr class="memitem:a6a2939ee21bc44b754d6854fa6e78c1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a6a2939ee21bc44b754d6854fa6e78c1d">Exists</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName) const override</td></tr>
 <tr class="separator:a6a2939ee21bc44b754d6854fa6e78c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c43170af4dcf4b448d9f54628074c6b"><td class="memItemLeft" align="right" valign="top"><a id="a3c43170af4dcf4b448d9f54628074c6b"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">AbstractFilePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a3c43170af4dcf4b448d9f54628074c6b">OpenFile</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName, FileMode mode) override</td></tr>
-<tr class="memdesc:a3c43170af4dcf4b448d9f54628074c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open file in a virtual file system. Returns null if file not found. <br /></td></tr>
+<tr class="memitem:a3c43170af4dcf4b448d9f54628074c6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_shared_ptr.html">AbstractFilePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a3c43170af4dcf4b448d9f54628074c6b">OpenFile</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName, FileMode mode) override</td></tr>
 <tr class="separator:a3c43170af4dcf4b448d9f54628074c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc16aa5b2c7c93f49861f9d3a0b6eac2"><td class="memItemLeft" align="right" valign="top"><a id="acc16aa5b2c7c93f49861f9d3a0b6eac2"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#acc16aa5b2c7c93f49861f9d3a0b6eac2">GetFileName</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName) const override</td></tr>
-<tr class="memdesc:acc16aa5b2c7c93f49861f9d3a0b6eac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return full absolute file name of the file if possible, or empty if not found. <br /></td></tr>
-<tr class="separator:acc16aa5b2c7c93f49861f9d3a0b6eac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80b7844117fd6ab8989b2c096a5c5ec1"><td class="memItemLeft" align="right" valign="top"><a id="a80b7844117fd6ab8989b2c096a5c5ec1"></a>
 const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a80b7844117fd6ab8989b2c096a5c5ec1">GetName</a> () const override</td></tr>
 <tr class="memdesc:a80b7844117fd6ab8989b2c096a5c5ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns human-readable name of the mount point. <br /></td></tr>
 <tr class="separator:a80b7844117fd6ab8989b2c096a5c5ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff81c7c0e7a196ef7acc6feed42cfe48"><td class="memItemLeft" align="right" valign="top"><a id="aff81c7c0e7a196ef7acc6feed42cfe48"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#aff81c7c0e7a196ef7acc6feed42cfe48">GetAbsoluteNameFromIdentifier</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName) const override</td></tr>
+<tr class="memdesc:aff81c7c0e7a196ef7acc6feed42cfe48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return absolute file name for <em>existing</em> identifier in this mount point, if supported. <br /></td></tr>
+<tr class="separator:aff81c7c0e7a196ef7acc6feed42cfe48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3422de7bb378fed1e50fd2ab68705ff6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a3422de7bb378fed1e50fd2ab68705ff6">GetIdentifierFromAbsoluteName</a> (const ea::string &amp;absoluteFileName) const override</td></tr>
+<tr class="separator:a3422de7bb378fed1e50fd2ab68705ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3bc635cf7f89860936fb1e7ebdd9125"><td class="memItemLeft" align="right" valign="top"><a id="ac3bc635cf7f89860936fb1e7ebdd9125"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#ac3bc635cf7f89860936fb1e7ebdd9125">Scan</a> (ea::vector&lt; ea::string &gt; &amp;result, const ea::string &amp;pathName, const ea::string &amp;filter, ScanFlags flags) const override</td></tr>
+<tr class="memdesc:ac3bc635cf7f89860936fb1e7ebdd9125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate objects in the mount point. Only files enumeration is guaranteed to be supported. <br /></td></tr>
+<tr class="separator:ac3bc635cf7f89860936fb1e7ebdd9125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_urho3_d_1_1_watchable_mount_point"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_watchable_mount_point')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_watchable_mount_point.html">Urho3D::WatchableMountPoint</a></td></tr>
+<tr class="memitem:a90ed74570844cee060d35f90cfc0dfaf inherit pub_methods_class_urho3_d_1_1_watchable_mount_point"><td class="memItemLeft" align="right" valign="top"><a id="a90ed74570844cee060d35f90cfc0dfaf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>WatchableMountPoint</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
+<tr class="separator:a90ed74570844cee060d35f90cfc0dfaf inherit pub_methods_class_urho3_d_1_1_watchable_mount_point"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a431dd461b02223a77f163c168f74455e inherit pub_methods_class_urho3_d_1_1_watchable_mount_point"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_watchable_mount_point.html#a431dd461b02223a77f163c168f74455e">SetWatching</a> (bool enable) override</td></tr>
+<tr class="separator:a431dd461b02223a77f163c168f74455e inherit pub_methods_class_urho3_d_1_1_watchable_mount_point"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a176b38e41ce96d348fd81c2c853b2235 inherit pub_methods_class_urho3_d_1_1_watchable_mount_point"><td class="memItemLeft" align="right" valign="top"><a id="a176b38e41ce96d348fd81c2c853b2235"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_watchable_mount_point.html#a176b38e41ce96d348fd81c2c853b2235">IsWatching</a> () const override</td></tr>
+<tr class="memdesc:a176b38e41ce96d348fd81c2c853b2235 inherit pub_methods_class_urho3_d_1_1_watchable_mount_point"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if FileChanged events are enabled. <br /></td></tr>
+<tr class="separator:a176b38e41ce96d348fd81c2c853b2235 inherit pub_methods_class_urho3_d_1_1_watchable_mount_point"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_mount_point"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_mount_point')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_mount_point.html">Urho3D::MountPoint</a></td></tr>
 <tr class="memitem:ab97cfd7b11742f14643f99761860e74a inherit pub_methods_class_urho3_d_1_1_mount_point"><td class="memItemLeft" align="right" valign="top"><a id="ab97cfd7b11742f14643f99761860e74a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mount_point.html#ab97cfd7b11742f14643f99761860e74a">MountPoint</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -348,12 +352,22 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ae370b30743129797312a29a0254e90b8"><td class="memItemLeft" align="right" valign="top"><a id="ae370b30743129797312a29a0254e90b8"></a>
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>SanitizeDirName</b> (const ea::string &amp;name) const</td></tr>
 <tr class="separator:ae370b30743129797312a29a0254e90b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a787888c00331f9aaa9b378e2f6b2a8e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a787888c00331f9aaa9b378e2f6b2a8e7">StartWatching</a> () override</td></tr>
+<tr class="separator:a787888c00331f9aaa9b378e2f6b2a8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9a465641e2ff0de6ecda7666285505e"><td class="memItemLeft" align="right" valign="top"><a id="ae9a465641e2ff0de6ecda7666285505e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#ae9a465641e2ff0de6ecda7666285505e">StopWatching</a> () override</td></tr>
+<tr class="memdesc:ae9a465641e2ff0de6ecda7666285505e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop file watcher. <br /></td></tr>
+<tr class="separator:ae9a465641e2ff0de6ecda7666285505e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a8d3fd243999b211350d631aab67fe28c"><td class="memItemLeft" align="right" valign="top"><a id="a8d3fd243999b211350d631aab67fe28c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_mounted_directory.html">MountedDirectory</a>, <a class="el" href="class_urho3_d_1_1_mount_point.html">MountPoint</a>)</td></tr>
-<tr class="separator:a8d3fd243999b211350d631aab67fe28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af141d0bb4d3757747aab3b7c3694f8b1"><td class="memItemLeft" align="right" valign="top"><a id="af141d0bb4d3757747aab3b7c3694f8b1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_mounted_directory.html">MountedDirectory</a>, <a class="el" href="class_urho3_d_1_1_watchable_mount_point.html">WatchableMountPoint</a>)</td></tr>
+<tr class="separator:af141d0bb4d3757747aab3b7c3694f8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e068a521ac9fc7c4c298e11946e5b7c"><td class="memItemLeft" align="right" valign="top"><a id="a9e068a521ac9fc7c4c298e11946e5b7c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessUpdates</b> ()</td></tr>
+<tr class="separator:a9e068a521ac9fc7c4c298e11946e5b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -369,6 +383,10 @@ const ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 const ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a9341554c37cc200a3855cca919406dbb">name_</a></td></tr>
 <tr class="memdesc:a9341554c37cc200a3855cca919406dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the mount point. <br /></td></tr>
 <tr class="separator:a9341554c37cc200a3855cca919406dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9993d4bf31e4ef3a8e2aa031354421cb"><td class="memItemLeft" align="right" valign="top"><a id="a9993d4bf31e4ef3a8e2aa031354421cb"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_file_watcher.html">FileWatcher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a9993d4bf31e4ef3a8e2aa031354421cb">fileWatcher_</a></td></tr>
+<tr class="memdesc:a9993d4bf31e4ef3a8e2aa031354421cb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a> watcher for resource directory, if automatic reloading enabled. <br /></td></tr>
+<tr class="separator:a9993d4bf31e4ef3a8e2aa031354421cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -409,11 +427,134 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Checks if mount point accepts scheme. </p>
 <p>Implement <a class="el" href="class_urho3_d_1_1_mount_point.html" title="Access to engine file system mount point.">MountPoint</a>. </p>
 
 <p>Implements <a class="el" href="class_urho3_d_1_1_mount_point.html#ada42971118c5a2546579c5f90de00bd9">Urho3D::MountPoint</a>.</p>
+
+</div>
+</div>
+<a id="a6a2939ee21bc44b754d6854fa6e78c1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a2939ee21bc44b754d6854fa6e78c1d">&#9670;&nbsp;</a></span>Exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Urho3D::MountedDirectory::Exists </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if a file exists within the mount point. The file name may be be case-insensitive on Windows and case-sensitive on other platforms. </p>
+
+<p>Implements <a class="el" href="class_urho3_d_1_1_mount_point.html#a56c4ec5639f92d423da2573da8fee915">Urho3D::MountPoint</a>.</p>
+
+</div>
+</div>
+<a id="a3422de7bb378fed1e50fd2ab68705ff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3422de7bb378fed1e50fd2ab68705ff6">&#9670;&nbsp;</a></span>GetIdentifierFromAbsoluteName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> Urho3D::MountedDirectory::GetIdentifierFromAbsoluteName </td>
+          <td>(</td>
+          <td class="paramtype">const ea::string &amp;&#160;</td>
+          <td class="paramname"><em>absoluteFileName</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return identifier in this mount point for absolute file name, if supported. Works even if the file does not exist. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_mount_point.html#a3262bc2c3d375237e6bdade5b8f9adca">Urho3D::MountPoint</a>.</p>
+
+</div>
+</div>
+<a id="a3c43170af4dcf4b448d9f54628074c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c43170af4dcf4b448d9f54628074c6b">&#9670;&nbsp;</a></span>OpenFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_urho3_d_1_1_shared_ptr.html">AbstractFilePtr</a> Urho3D::MountedDirectory::OpenFile </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FileMode&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Open file in a virtual file system. Returns null if file not found. The file name may be be case-insensitive on Windows and case-sensitive on other platforms. </p>
+
+<p>Implements <a class="el" href="class_urho3_d_1_1_mount_point.html#ab919773c1913a0264bbbe2d1b79c3465">Urho3D::MountPoint</a>.</p>
+
+</div>
+</div>
+<a id="a787888c00331f9aaa9b378e2f6b2a8e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a787888c00331f9aaa9b378e2f6b2a8e7">&#9670;&nbsp;</a></span>StartWatching()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::MountedDirectory::StartWatching </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Implement <a class="el" href="class_urho3_d_1_1_watchable_mount_point.html" title="Base implementation of watchable mount point.">WatchableMountPoint</a>. </p>
+
+<p>Implements <a class="el" href="class_urho3_d_1_1_watchable_mount_point.html#a940b9197f31d2d99ef80f2f89f156ca9">Urho3D::WatchableMountPoint</a>.</p>
 
 </div>
 </div>

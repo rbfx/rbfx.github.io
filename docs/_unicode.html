@@ -65,7 +65,7 @@ $(document).ready(function(){initNavTree('_unicode.html',''); initResizable(); }
 <div class="contents">
 <div class="textblock"><p>The String class supports UTF-8 encoding. However, by default strings are treated as a sequence of bytes without regard to the encoding. There is a separate API for operating on Unicode characters, see for example LengthUTF8(), AtUTF8() and SubstringUTF8(). Urho3D itself needs to be aware of the Unicode characters only in the <a class="el" href="_u_i.html">user interface</a>, when displaying text and manipulating it through user input.</p>
 <p>On Windows, wide char strings are used in all calls to the operating system, such as accessing the command line, files, and the window title. The WString class is used as a helper for conversion. On Linux &amp; Mac OS X 8-bit strings are used directly and they are assumed to contain UTF-8.</p>
-<p>Note that <a class="el" href="class_urho3_d_1_1_file_system.html#aa2254917219f34a41079b684fcd8addf">ScanDir()</a> function may return filenames in unnormalized Unicode on Mac OS X. Unicode re-normalization is not yet implemented. </p>
+<p>Note that <a class="el" href="class_urho3_d_1_1_file_system.html#a109a1c21cfbf2608dada78bf986bdbcd">ScanDir()</a> function may return filenames in unnormalized Unicode on Mac OS X. Unicode re-normalization is not yet implemented. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

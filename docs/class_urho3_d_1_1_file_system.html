@@ -178,14 +178,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_system.html#a07b474ed5f75ea736a0a7208865ebd59">DirExists</a> (const ea::string &amp;pathName) const</td></tr>
 <tr class="memdesc:a07b474ed5f75ea736a0a7208865ebd59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a directory exists. <br /></td></tr>
 <tr class="separator:a07b474ed5f75ea736a0a7208865ebd59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2254917219f34a41079b684fcd8addf"><td class="memItemLeft" align="right" valign="top"><a id="aa2254917219f34a41079b684fcd8addf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_system.html#aa2254917219f34a41079b684fcd8addf">ScanDir</a> (ea::vector&lt; ea::string &gt; &amp;result, const ea::string &amp;pathName, const ea::string &amp;filter, unsigned flags, bool recursive) const</td></tr>
-<tr class="memdesc:aa2254917219f34a41079b684fcd8addf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scan a directory for specified files. <br /></td></tr>
-<tr class="separator:aa2254917219f34a41079b684fcd8addf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0226b63b03ecb5210ed4660e4b48dd96"><td class="memItemLeft" align="right" valign="top"><a id="a0226b63b03ecb5210ed4660e4b48dd96"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_system.html#a0226b63b03ecb5210ed4660e4b48dd96">ScanDirAdd</a> (ea::vector&lt; ea::string &gt; &amp;result, const ea::string &amp;pathName, const ea::string &amp;filter, unsigned flags, bool recursive) const</td></tr>
-<tr class="memdesc:a0226b63b03ecb5210ed4660e4b48dd96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scan a directory for specified files. Appends to result container instead of clearing it. <br /></td></tr>
-<tr class="separator:a0226b63b03ecb5210ed4660e4b48dd96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a109a1c21cfbf2608dada78bf986bdbcd"><td class="memItemLeft" align="right" valign="top"><a id="a109a1c21cfbf2608dada78bf986bdbcd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_system.html#a109a1c21cfbf2608dada78bf986bdbcd">ScanDir</a> (ea::vector&lt; ea::string &gt; &amp;result, const ea::string &amp;pathName, const ea::string &amp;filter, ScanFlags flags) const</td></tr>
+<tr class="memdesc:a109a1c21cfbf2608dada78bf986bdbcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scan a directory for specified files. <br /></td></tr>
+<tr class="separator:a109a1c21cfbf2608dada78bf986bdbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ef9327e788917bb3ce58038d651598a"><td class="memItemLeft" align="right" valign="top">ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_system.html#a5ef9327e788917bb3ce58038d651598a">GetProgramDir</a> () const</td></tr>
 <tr class="separator:a5ef9327e788917bb3ce58038d651598a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a478a378ad46a87c5340aa3cb3a824efa"><td class="memItemLeft" align="right" valign="top"><a id="a478a378ad46a87c5340aa3cb3a824efa"></a>
@@ -435,9 +431,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a853137f03255a18cca509fe8c8d6f6bd"><td class="memItemLeft" align="right" valign="top"><a id="a853137f03255a18cca509fe8c8d6f6bd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_file_system.html">FileSystem</a>, <a class="el" href="class_urho3_d_1_1_object.html">Object</a>)</td></tr>
 <tr class="separator:a853137f03255a18cca509fe8c8d6f6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd581de4ea6d6555cd830f207f9e1eef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_system.html#afd581de4ea6d6555cd830f207f9e1eef">ScanDirInternal</a> (ea::vector&lt; ea::string &gt; &amp;result, ea::string path, const ea::string &amp;startPath, const ea::string &amp;filter, unsigned flags, bool recursive) const</td></tr>
-<tr class="memdesc:afd581de4ea6d6555cd830f207f9e1eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scan directory, called internally.  <a href="class_urho3_d_1_1_file_system.html#afd581de4ea6d6555cd830f207f9e1eef">More...</a><br /></td></tr>
-<tr class="separator:afd581de4ea6d6555cd830f207f9e1eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9493f2c439b20bc086816c31822f17f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_system.html#a9493f2c439b20bc086816c31822f17f7">ScanDirInternal</a> (ea::vector&lt; ea::string &gt; &amp;result, ea::string path, const ea::string &amp;startPath, const ea::string &amp;filter, ScanFlags flags) const</td></tr>
+<tr class="memdesc:a9493f2c439b20bc086816c31822f17f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scan directory, called internally.  <a href="class_urho3_d_1_1_file_system.html#a9493f2c439b20bc086816c31822f17f7">More...</a><br /></td></tr>
+<tr class="separator:a9493f2c439b20bc086816c31822f17f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67d807c13f09d57b1c2e96618ddcbfb8"><td class="memItemLeft" align="right" valign="top"><a id="a67d807c13f09d57b1c2e96618ddcbfb8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_file_system.html#a67d807c13f09d57b1c2e96618ddcbfb8">HandleBeginFrame</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:a67d807c13f09d57b1c2e96618ddcbfb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle begin frame event to check for completed async executions. <br /></td></tr>
@@ -580,8 +576,8 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 
 </div>
 </div>
-<a id="afd581de4ea6d6555cd830f207f9e1eef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd581de4ea6d6555cd830f207f9e1eef">&#9670;&nbsp;</a></span>ScanDirInternal()</h2>
+<a id="a9493f2c439b20bc086816c31822f17f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9493f2c439b20bc086816c31822f17f7">&#9670;&nbsp;</a></span>ScanDirInternal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -616,14 +612,8 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>flags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>recursive</em>&#160;</td>
+          <td class="paramtype">ScanFlags&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

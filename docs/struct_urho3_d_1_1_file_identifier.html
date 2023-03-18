@@ -148,6 +148,7 @@ static const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileId
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a> identifier, similar to Uniform <a class="el" href="class_urho3_d_1_1_resource.html">Resource</a> Identifier (URI). Known differences:</p><ul>
+<li>If URI starts with <code>/</code> or <code>x:/</code> it is treated as <code>file</code> scheme automatically.</li>
 <li>Host names are not supported for <code>file:</code> scheme. All of <code><a href="file:/path/to/file">file:/path/to/file</a></code>, <code><a href="file://path/to/file">file://path/to/file</a></code>, and <code><a href="file:///path/to/file">file:///path/to/file</a></code> are supported and denote absolute file path.</li>
 <li>If URI does not contain <code>:</code>, it is treated as special "empty" scheme, and the entire URI is treated as relative path.</li>
 <li>Conversion to URI string uses <code>scheme://</code> format. </li>

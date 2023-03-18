@@ -78,10 +78,13 @@ Inheritance diagram for Urho3D::MountPoint:</div>
  <div class="center">
   <img src="class_urho3_d_1_1_mount_point.png" usemap="#Urho3D::MountPoint_map" alt=""/>
   <map id="Urho3D::MountPoint_map" name="Urho3D::MountPoint_map">
-<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="86,56,249,80"/>
-<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="86,0,249,24"/>
-<area href="class_urho3_d_1_1_mounted_directory.html" title="Stores files of a directory tree sequentially for convenient access." alt="Urho3D::MountedDirectory" shape="rect" coords="0,168,163,192"/>
-<area href="class_urho3_d_1_1_package_file.html" title="Stores files of a directory tree sequentially for convenient access." alt="Urho3D::PackageFile" shape="rect" coords="173,168,336,192"/>
+<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="318,56,520,80"/>
+<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="318,0,520,24"/>
+<area href="class_urho3_d_1_1_mounted_external_memory.html" title="Lightweight mount point that provides read-only access to the externally managed memory." alt="Urho3D::MountedExternalMemory" shape="rect" coords="0,168,202,192"/>
+<area href="class_urho3_d_1_1_mounted_root.html" title="Lightweight mount point that provides read-only access to the externally managed memory." alt="Urho3D::MountedRoot" shape="rect" coords="212,168,414,192"/>
+<area href="class_urho3_d_1_1_package_file.html" title="Stores files of a directory tree sequentially for convenient access." alt="Urho3D::PackageFile" shape="rect" coords="424,168,626,192"/>
+<area href="class_urho3_d_1_1_watchable_mount_point.html" title="Base implementation of watchable mount point." alt="Urho3D::WatchableMountPoint" shape="rect" coords="636,168,838,192"/>
+<area href="class_urho3_d_1_1_mounted_directory.html" title="Stores files of a directory tree sequentially for convenient access." alt="Urho3D::MountedDirectory" shape="rect" coords="636,224,838,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -103,14 +106,28 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a56c4ec5639f92d423da2573da8fee915"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab919773c1913a0264bbbe2d1b79c3465"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_shared_ptr.html">AbstractFilePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mount_point.html#ab919773c1913a0264bbbe2d1b79c3465">OpenFile</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName, FileMode mode)=0</td></tr>
 <tr class="separator:ab919773c1913a0264bbbe2d1b79c3465"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a565e6c0af7499842fa185d7acb80d6b2"><td class="memItemLeft" align="right" valign="top"><a id="a565e6c0af7499842fa185d7acb80d6b2"></a>
-virtual ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mount_point.html#a565e6c0af7499842fa185d7acb80d6b2">GetFileName</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName) const =0</td></tr>
-<tr class="memdesc:a565e6c0af7499842fa185d7acb80d6b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get full path to a file if it exists in a mount point. <br /></td></tr>
-<tr class="separator:a565e6c0af7499842fa185d7acb80d6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff933e53cb98a85b69a2c15609a82b60"><td class="memItemLeft" align="right" valign="top"><a id="aff933e53cb98a85b69a2c15609a82b60"></a>
 virtual const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mount_point.html#aff933e53cb98a85b69a2c15609a82b60">GetName</a> () const =0</td></tr>
 <tr class="memdesc:aff933e53cb98a85b69a2c15609a82b60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns human-readable name of the mount point. <br /></td></tr>
 <tr class="separator:aff933e53cb98a85b69a2c15609a82b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff252df942e0eddb0227cfda2a7389c1"><td class="memItemLeft" align="right" valign="top"><a id="aff252df942e0eddb0227cfda2a7389c1"></a>
+virtual ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mount_point.html#aff252df942e0eddb0227cfda2a7389c1">GetAbsoluteNameFromIdentifier</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName) const</td></tr>
+<tr class="memdesc:aff252df942e0eddb0227cfda2a7389c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return absolute file name for <em>existing</em> identifier in this mount point, if supported. <br /></td></tr>
+<tr class="separator:aff252df942e0eddb0227cfda2a7389c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3262bc2c3d375237e6bdade5b8f9adca"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mount_point.html#a3262bc2c3d375237e6bdade5b8f9adca">GetIdentifierFromAbsoluteName</a> (const ea::string &amp;absoluteFileName) const</td></tr>
+<tr class="separator:a3262bc2c3d375237e6bdade5b8f9adca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cff94a4122ea82538359c6da7acde95"><td class="memItemLeft" align="right" valign="top"><a id="a7cff94a4122ea82538359c6da7acde95"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mount_point.html#a7cff94a4122ea82538359c6da7acde95">SetWatching</a> (bool enable)</td></tr>
+<tr class="memdesc:a7cff94a4122ea82538359c6da7acde95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable FileChanged events. <br /></td></tr>
+<tr class="separator:a7cff94a4122ea82538359c6da7acde95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32a9a56796ffbfcec20d5a82fe78d28a"><td class="memItemLeft" align="right" valign="top"><a id="a32a9a56796ffbfcec20d5a82fe78d28a"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mount_point.html#a32a9a56796ffbfcec20d5a82fe78d28a">IsWatching</a> () const</td></tr>
+<tr class="memdesc:a32a9a56796ffbfcec20d5a82fe78d28a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if FileChanged events are enabled. <br /></td></tr>
+<tr class="separator:a32a9a56796ffbfcec20d5a82fe78d28a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebe7984739c9cd6bbb2262621a6c188d"><td class="memItemLeft" align="right" valign="top"><a id="aebe7984739c9cd6bbb2262621a6c188d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mount_point.html#aebe7984739c9cd6bbb2262621a6c188d">Scan</a> (ea::vector&lt; ea::string &gt; &amp;result, const ea::string &amp;pathName, const ea::string &amp;filter, ScanFlags flags) const =0</td></tr>
+<tr class="memdesc:aebe7984739c9cd6bbb2262621a6c188d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate objects in the mount point. Only files enumeration is guaranteed to be supported. <br /></td></tr>
+<tr class="separator:aebe7984739c9cd6bbb2262621a6c188d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -364,7 +381,36 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </div><div class="memdoc">
 <p>Check if a file exists within the mount point. The file name may be be case-insensitive on Windows and case-sensitive on other platforms. </p>
 
-<p>Implemented in <a class="el" href="class_urho3_d_1_1_package_file.html#a5a03e268dfdb4ebec22238cd405d566e">Urho3D::PackageFile</a>, and <a class="el" href="class_urho3_d_1_1_mounted_directory.html#a6a2939ee21bc44b754d6854fa6e78c1d">Urho3D::MountedDirectory</a>.</p>
+<p>Implemented in <a class="el" href="class_urho3_d_1_1_package_file.html#a5a03e268dfdb4ebec22238cd405d566e">Urho3D::PackageFile</a>, <a class="el" href="class_urho3_d_1_1_mounted_external_memory.html#a458f5e1d1ab01fb6c78efe3981c7ac14">Urho3D::MountedExternalMemory</a>, <a class="el" href="class_urho3_d_1_1_mounted_directory.html#a6a2939ee21bc44b754d6854fa6e78c1d">Urho3D::MountedDirectory</a>, and <a class="el" href="class_urho3_d_1_1_mounted_root.html#af6e388017ad457670fdda77376237613">Urho3D::MountedRoot</a>.</p>
+
+</div>
+</div>
+<a id="a3262bc2c3d375237e6bdade5b8f9adca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3262bc2c3d375237e6bdade5b8f9adca">&#9670;&nbsp;</a></span>GetIdentifierFromAbsoluteName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> Urho3D::MountPoint::GetIdentifierFromAbsoluteName </td>
+          <td>(</td>
+          <td class="paramtype">const ea::string &amp;&#160;</td>
+          <td class="paramname"><em>absoluteFileName</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return identifier in this mount point for absolute file name, if supported. Works even if the file does not exist. </p>
+
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_mounted_root.html#a1a48b1b9760b81d74586e3211a90d7ee">Urho3D::MountedRoot</a>, and <a class="el" href="class_urho3_d_1_1_mounted_directory.html#a3422de7bb378fed1e50fd2ab68705ff6">Urho3D::MountedDirectory</a>.</p>
 
 </div>
 </div>
@@ -403,7 +449,7 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </div><div class="memdoc">
 <p>Open file in a virtual file system. Returns null if file not found. The file name may be be case-insensitive on Windows and case-sensitive on other platforms. </p>
 
-<p>Implemented in <a class="el" href="class_urho3_d_1_1_package_file.html#ad25d482271772ea63f51d931d66760ff">Urho3D::PackageFile</a>, and <a class="el" href="class_urho3_d_1_1_mounted_directory.html#a3c43170af4dcf4b448d9f54628074c6b">Urho3D::MountedDirectory</a>.</p>
+<p>Implemented in <a class="el" href="class_urho3_d_1_1_package_file.html#ad25d482271772ea63f51d931d66760ff">Urho3D::PackageFile</a>, <a class="el" href="class_urho3_d_1_1_mounted_external_memory.html#af8af18f0f52d15630bb3ba17d3a27457">Urho3D::MountedExternalMemory</a>, <a class="el" href="class_urho3_d_1_1_mounted_root.html#af66e8da8bc2c855b3ae0ddf40a89055d">Urho3D::MountedRoot</a>, and <a class="el" href="class_urho3_d_1_1_mounted_directory.html#a3c43170af4dcf4b448d9f54628074c6b">Urho3D::MountedDirectory</a>.</p>
 
 </div>
 </div>

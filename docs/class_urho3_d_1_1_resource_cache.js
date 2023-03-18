@@ -64,7 +64,7 @@ var class_urho3_d_1_1_resource_cache =
     [ "RouteResourceName", "class_urho3_d_1_1_resource_cache.html#a77e1823dbe835da7c18a9db617088461", null ],
     [ "SanitateResourceDirName", "class_urho3_d_1_1_resource_cache.html#a152c7460ac3b60f086a3c0344aa725a7", null ],
     [ "SanitateResourceName", "class_urho3_d_1_1_resource_cache.html#a8e78760a40d483e95a9fd8362b4e3f37", null ],
-    [ "Scan", "class_urho3_d_1_1_resource_cache.html#ac068005f516fdd15304930816eb75c2b", null ],
+    [ "Scan", "class_urho3_d_1_1_resource_cache.html#a467cf9e9a1696037186eed80435a41bd", null ],
     [ "SearchPackages", "class_urho3_d_1_1_resource_cache.html#a5177ad9f13f828fd1688d0fd17b85d25", null ],
     [ "SearchResourceDirs", "class_urho3_d_1_1_resource_cache.html#a5f29782502b63ddd57a8a86aed14fb55", null ],
     [ "SetAutoReloadResources", "class_urho3_d_1_1_resource_cache.html#a6607638a54d3051d14226cfd2873a1d3", null ],
