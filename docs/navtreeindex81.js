@@ -1,7 +1,14 @@
 var NAVTREEINDEX81 =
 {
-"struct_urho3_d_1_1_file_identifier.html#a971b2a1495eb0b3931603bf7cc07557c":[5,0,2,234,7],
-"struct_urho3_d_1_1_file_identifier.html#aba5db33f345d7fde47a2a2dbca7824bd":[5,0,2,234,0],
+"struct_urho3_d_1_1_file_identifier.html#a63b5dd70c156163aa4224b7d33070fad":[5,0,2,234,13],
+"struct_urho3_d_1_1_file_identifier.html#a68539954a8812190f9d69a6cf03b4d73":[5,0,2,234,11],
+"struct_urho3_d_1_1_file_identifier.html#a7b0b90ed512a5ae9dcda2264a4b41282":[5,0,2,234,8],
+"struct_urho3_d_1_1_file_identifier.html#a7de94dce95cb67d7ae9e1dfc888ec0be":[5,0,2,234,7],
+"struct_urho3_d_1_1_file_identifier.html#a8dece7a3c3734cd9ef31e3c3cb031836":[5,0,2,234,14],
+"struct_urho3_d_1_1_file_identifier.html#a971b2a1495eb0b3931603bf7cc07557c":[5,0,2,234,12],
+"struct_urho3_d_1_1_file_identifier.html#a979f3c4424a3ef0a01ba2993e7a79a03":[5,0,2,234,4],
+"struct_urho3_d_1_1_file_identifier.html#ad5f729de52a08a0af523759ed1029222":[5,0,2,234,2],
+"struct_urho3_d_1_1_file_identifier.html#af0acbccf4239be02232c0d329da3f6bf":[5,0,2,234,1],
 "struct_urho3_d_1_1_file_selector_entry.html":[5,0,2,236],
 "struct_urho3_d_1_1_file_selector_entry.html#a1fd617d3e446d6f4a62b8d35d6061464":[5,0,2,236,1],
 "struct_urho3_d_1_1_file_selector_entry.html#acdfa8e29ccccb40048f0762f0b66c38f":[5,0,2,236,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_i_k_node_segment.html#aa7f38f3f9b46f30c9fa5e85a41775b5d":[5,0,2,301,7],
 "struct_urho3_d_1_1_i_k_node_segment.html#aeb98a0163ce1a11007d342facfc1baa3":[5,0,2,301,8],
 "struct_urho3_d_1_1_i_k_settings.html":[5,0,2,302],
-"struct_urho3_d_1_1_i_k_settings.html#a0b0a603cb7e687faf7ab6ea78f6fb0f6":[5,0,2,302,0],
-"struct_urho3_d_1_1_i_k_settings.html#a0eab7c9b1deddc8d5cd5c45006c844e0":[5,0,2,302,2],
-"struct_urho3_d_1_1_i_k_settings.html#a4e1102ded4f106f7fe4e149a0b924144":[5,0,2,302,1],
-"struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html":[5,0,2,306,0],
-"struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html#a356060649986220208cf3d749fa1dbb6":[5,0,2,306,0,1],
-"struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html#a9db85d9a5cdde36b4bff7cca9da1d0a1":[5,0,2,306,0,0],
-"struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html#ad777f49238e14071bf96229f109d4d8f":[5,0,2,306,0,2],
-"struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html":[5,0,2,307,0]
+"struct_urho3_d_1_1_i_k_settings.html#a0b0a603cb7e687faf7ab6ea78f6fb0f6":[5,0,2,302,0]
 };

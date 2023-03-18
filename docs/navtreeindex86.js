@@ -1,5 +1,12 @@
 var NAVTREEINDEX86 =
 {
+"struct_urho3_d_1_1_render_pipeline_settings.html#adec4e413e8d559d5a59880d61b3d99de":[5,0,2,575,0],
+"struct_urho3_d_1_1_render_pipeline_settings.html#afa7e77b4d999e610317ffb949b02e561":[5,0,2,575,10],
+"struct_urho3_d_1_1_render_pipeline_settings.html#afcf83a8558488128a4c1a9a739928fec":[5,0,2,575,4],
+"struct_urho3_d_1_1_render_pipeline_settings.html#afd0976d79730e8efeb2cb93f640b0596":[5,0,2,575,7],
+"struct_urho3_d_1_1_render_pipeline_settings.html#afd5998f43e6996a802536a0d5714c18c":[5,0,2,575,6],
+"struct_urho3_d_1_1_render_pipeline_stats.html":[5,0,2,576],
+"struct_urho3_d_1_1_render_pipeline_stats.html#a0f364098b35ead3c94dea4aa799fc320":[5,0,2,576,2],
 "struct_urho3_d_1_1_render_pipeline_stats.html#a22bc888cf14fe77f4275dbebf8a0856a":[5,0,2,576,1],
 "struct_urho3_d_1_1_render_pipeline_stats.html#ad93a500123ff94adb9d7122643537d8a":[5,0,2,576,0],
 "struct_urho3_d_1_1_render_target_info.html":[5,0,2,579],
@@ -242,12 +249,5 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_shadow_map_allocator_1_1_atlas_page.html":[5,0,2,649,0],
 "struct_urho3_d_1_1_shadow_map_allocator_1_1_atlas_page.html#a3b171ad95c64b597e1ee5da90b09e14d":[5,0,2,649,0,3],
 "struct_urho3_d_1_1_shadow_map_allocator_1_1_atlas_page.html#a62560bbe75678e3c8b603b81b9750144":[5,0,2,649,0,4],
-"struct_urho3_d_1_1_shadow_map_allocator_1_1_atlas_page.html#a9c34eaad65097b0cd783e1cb69abed17":[5,0,2,649,0,2],
-"struct_urho3_d_1_1_shadow_map_allocator_1_1_atlas_page.html#ad221c55567e894b83095cdf62f97eea9":[5,0,2,649,0,0],
-"struct_urho3_d_1_1_shadow_map_allocator_1_1_atlas_page.html#ae0c724ed97e90b0090e3c8351565a5f5":[5,0,2,649,0,1],
-"struct_urho3_d_1_1_shadow_map_allocator_settings.html":[5,0,2,650],
-"struct_urho3_d_1_1_shadow_map_allocator_settings.html#a1f29b451a988c3525db68b000b0414c5":[5,0,2,650,6],
-"struct_urho3_d_1_1_shadow_map_allocator_settings.html#a343085ab7eca1889a95e36dbee1b0d80":[5,0,2,650,3],
-"struct_urho3_d_1_1_shadow_map_allocator_settings.html#a498aef5dff8ff3d1b0d8e75705efecbd":[5,0,2,650,5],
-"struct_urho3_d_1_1_shadow_map_allocator_settings.html#a4990a354f55c27e772a799823de69039":[5,0,2,650,1]
+"struct_urho3_d_1_1_shadow_map_allocator_1_1_atlas_page.html#a9c34eaad65097b0cd783e1cb69abed17":[5,0,2,649,0,2]
 };

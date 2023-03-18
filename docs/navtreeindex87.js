@@ -1,5 +1,12 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_shadow_map_allocator_1_1_atlas_page.html#ad221c55567e894b83095cdf62f97eea9":[5,0,2,649,0,0],
+"struct_urho3_d_1_1_shadow_map_allocator_1_1_atlas_page.html#ae0c724ed97e90b0090e3c8351565a5f5":[5,0,2,649,0,1],
+"struct_urho3_d_1_1_shadow_map_allocator_settings.html":[5,0,2,650],
+"struct_urho3_d_1_1_shadow_map_allocator_settings.html#a1f29b451a988c3525db68b000b0414c5":[5,0,2,650,6],
+"struct_urho3_d_1_1_shadow_map_allocator_settings.html#a343085ab7eca1889a95e36dbee1b0d80":[5,0,2,650,3],
+"struct_urho3_d_1_1_shadow_map_allocator_settings.html#a498aef5dff8ff3d1b0d8e75705efecbd":[5,0,2,650,5],
+"struct_urho3_d_1_1_shadow_map_allocator_settings.html#a4990a354f55c27e772a799823de69039":[5,0,2,650,1],
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#a4cd5b53835323d6e3716e14e1eea7000":[5,0,2,650,0],
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#a8322fb895f31980086496072d6bc8451":[5,0,2,650,7],
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#aa453d58d6aaedf8ff11eb56cf1912805":[5,0,2,650,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#a4429c8cb57bdaa5b732bca7addf297bc":[5,0,2,3,13,3],
 "struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#a612defb7576b9bdc60db08c28409e758":[5,0,2,3,13,7],
 "struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#a901443e72dd19bb6968f4a2274148b31":[5,0,2,3,13,1],
-"struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#aa6373940c4db5b3c2b2fdae7f26fe253":[5,0,2,3,13,10],
-"struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#aa968f9184b9f36bae7f34f9f024c4599":[5,0,2,3,13,6],
-"struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#aacecd9453390b794b06c8a73cb5be964":[5,0,2,3,13,8],
-"struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#aff9827155b44bf1b6af59fff3e1df6d1":[5,0,2,3,13,4],
-"struct_urho3_d_1_1_spriter_1_1_spriter_data.html":[5,0,2,3,11],
-"struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a0350a9cc53d30c0279cd218fe7a0ae46":[5,0,2,3,11,3],
-"struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a1254d0cc34ee558a703c537063fe2973":[5,0,2,3,11,5],
-"struct_urho3_d_1_1_spriter_1_1_spriter_data.html#a17785326174996d92b1c6db054e3e60e":[5,0,2,3,11,1]
+"struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#aa6373940c4db5b3c2b2fdae7f26fe253":[5,0,2,3,13,10]
 };

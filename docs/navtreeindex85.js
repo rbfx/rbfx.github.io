@@ -1,5 +1,12 @@
 var NAVTREEINDEX85 =
 {
+"struct_urho3_d_1_1_pipeline_batch.html#ae7a180b8fb1b9af4f1b6378a95e117ca":[5,0,2,508,2],
+"struct_urho3_d_1_1_pipeline_batch.html#af106aa7e648625465cd883e35308a713":[5,0,2,508,9],
+"struct_urho3_d_1_1_pipeline_batch.html#afcfc4a546e7f7b769e7f7d96ac4f8ce3":[5,0,2,508,14],
+"struct_urho3_d_1_1_pipeline_batch_back_to_front.html":[5,0,2,509],
+"struct_urho3_d_1_1_pipeline_batch_back_to_front.html#a165ba4967d3e1084e79ccdfbc9237d85":[5,0,2,509,2],
+"struct_urho3_d_1_1_pipeline_batch_back_to_front.html#a271cc82a53029c60f0f4ac0a7748b39c":[5,0,2,509,5],
+"struct_urho3_d_1_1_pipeline_batch_back_to_front.html#a492c3f20b2470119764b6c7d99ac2dca":[5,0,2,509,1],
 "struct_urho3_d_1_1_pipeline_batch_back_to_front.html#a8fec93093b030e0728b988705699d141":[5,0,2,509,3],
 "struct_urho3_d_1_1_pipeline_batch_back_to_front.html#acee6bfeb4b828d1ac6d533a12049c42e":[5,0,2,509,0],
 "struct_urho3_d_1_1_pipeline_batch_back_to_front.html#afae0543e7f087d59e8743b3516554f2c":[5,0,2,509,4],
@@ -242,12 +249,5 @@ var NAVTREEINDEX85 =
 "struct_urho3_d_1_1_render_pipeline_settings.html#ab391b169e7cdfe0ae89fcfbd8eb3f1e5":[5,0,2,575,1],
 "struct_urho3_d_1_1_render_pipeline_settings.html#ab740ab4ad29672e88eaf3523fc3af0bf":[5,0,2,575,13],
 "struct_urho3_d_1_1_render_pipeline_settings.html#ac6f92bb70b18d109185f0d03860e88af":[5,0,2,575,5],
-"struct_urho3_d_1_1_render_pipeline_settings.html#ac9eb43f8f10d413bb25560e9b66a4821":[5,0,2,575,8],
-"struct_urho3_d_1_1_render_pipeline_settings.html#adec4e413e8d559d5a59880d61b3d99de":[5,0,2,575,0],
-"struct_urho3_d_1_1_render_pipeline_settings.html#afa7e77b4d999e610317ffb949b02e561":[5,0,2,575,10],
-"struct_urho3_d_1_1_render_pipeline_settings.html#afcf83a8558488128a4c1a9a739928fec":[5,0,2,575,4],
-"struct_urho3_d_1_1_render_pipeline_settings.html#afd0976d79730e8efeb2cb93f640b0596":[5,0,2,575,7],
-"struct_urho3_d_1_1_render_pipeline_settings.html#afd5998f43e6996a802536a0d5714c18c":[5,0,2,575,6],
-"struct_urho3_d_1_1_render_pipeline_stats.html":[5,0,2,576],
-"struct_urho3_d_1_1_render_pipeline_stats.html#a0f364098b35ead3c94dea4aa799fc320":[5,0,2,576,2]
+"struct_urho3_d_1_1_render_pipeline_settings.html#ac9eb43f8f10d413bb25560e9b66a4821":[5,0,2,575,8]
 };

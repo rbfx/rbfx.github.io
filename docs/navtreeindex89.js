@@ -1,5 +1,12 @@
 var NAVTREEINDEX89 =
 {
+"struct_urho3_d_1_1_vertex_buffer_morph.html":[5,0,2,804],
+"struct_urho3_d_1_1_vertex_buffer_morph.html#a2abfcea565f9e414c559825580b52751":[5,0,2,804,0],
+"struct_urho3_d_1_1_vertex_buffer_morph.html#a46d6de9ef807eed3d0ab82c420f346e3":[5,0,2,804,1],
+"struct_urho3_d_1_1_vertex_buffer_morph.html#a55c96f4c973469d676bd45f1bf1ea846":[5,0,2,804,2],
+"struct_urho3_d_1_1_vertex_buffer_morph.html#af2dd64322a122bb210dc620bb4d903e9":[5,0,2,804,3],
+"struct_urho3_d_1_1_vertex_element.html":[5,0,2,805],
+"struct_urho3_d_1_1_vertex_element.html#a0ef2367495a06a1973309beba0da2b51":[5,0,2,805,3],
 "struct_urho3_d_1_1_vertex_element.html#a1406df6f9357cb7874737dedc197d985":[5,0,2,805,7],
 "struct_urho3_d_1_1_vertex_element.html#a22ccfd76bdcec0423b8b6957f0523c1f":[5,0,2,805,5],
 "struct_urho3_d_1_1_vertex_element.html#a371f63709e37725849c799a4a6552506":[5,0,2,805,2],

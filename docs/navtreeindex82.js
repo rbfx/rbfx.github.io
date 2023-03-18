@@ -1,5 +1,12 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_i_k_settings.html#a0eab7c9b1deddc8d5cd5c45006c844e0":[5,0,2,302,2],
+"struct_urho3_d_1_1_i_k_settings.html#a4e1102ded4f106f7fe4e149a0b924144":[5,0,2,302,1],
+"struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html":[5,0,2,306,0],
+"struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html#a356060649986220208cf3d749fa1dbb6":[5,0,2,306,0,1],
+"struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html#a9db85d9a5cdde36b4bff7cca9da1d0a1":[5,0,2,306,0,0],
+"struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html#ad777f49238e14071bf96229f109d4d8f":[5,0,2,306,0,2],
+"struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html":[5,0,2,307,0],
 "struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#a0918a9c75295b3ea564201e766d4db6b":[5,0,2,307,0,13],
 "struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#a0e1f532dc91a022a9bb4e732e1d44e0e":[5,0,2,307,0,3],
 "struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#a192c85239217f65f1b99f607aad7cb27":[5,0,2,307,0,12],
@@ -242,12 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a0a6956c7563a32f0beccfac60a07d539":[5,0,2,357,14],
 "struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a0f61d4232bad493cb505140a1b84afbb":[5,0,2,357,15],
 "struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a11ce45adf41a111b2f799d63e0dc87fd":[5,0,2,357,1],
-"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a2a668c7c4a11c811c2d1117d168dd2b4":[5,0,2,357,3],
-"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a2e9f22264a859aedb026ce8db526aa3c":[5,0,2,357,2],
-"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a3bf9981a9195f0351ee94a294073cce2":[5,0,2,357,4],
-"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a68cd303b567ce49b0af8dece9504efdc":[5,0,2,357,0],
-"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a70b5b86b4ab15234840c33ebc4c4c422":[5,0,2,357,17],
-"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a7336dcd6d14a006fea2e835245398dde":[5,0,2,357,12],
-"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a97f1ca0c18415fcc4ab43dca145c56be":[5,0,2,357,8],
-"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a9f683b686a14d9ef14cb69b2efb2c64e":[5,0,2,357,7]
+"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a2a668c7c4a11c811c2d1117d168dd2b4":[5,0,2,357,3]
 };
