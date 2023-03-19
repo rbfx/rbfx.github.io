@@ -153,16 +153,20 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a3490c5547f6af8f73a05af3e85835a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94a2d64b66d9ce5de7a788fab691d73d"><td class="memItemLeft" align="right" valign="top"><a id="a94a2d64b66d9ce5de7a788fab691d73d"></a>
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a94a2d64b66d9ce5de7a788fab691d73d">GetAbsoluteNameFromIdentifier</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName) const</td></tr>
-<tr class="memdesc:a94a2d64b66d9ce5de7a788fab691d73d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return full absolute file name of the file if possible, or empty if not found. <br /></td></tr>
+<tr class="memdesc:a94a2d64b66d9ce5de7a788fab691d73d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return absolute file name for <em>existing</em> identifier in this mount point, if supported. <br /></td></tr>
 <tr class="separator:a94a2d64b66d9ce5de7a788fab691d73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9d35917b90f4ffc7d777fce14908785"><td class="memItemLeft" align="right" valign="top"><a id="ae9d35917b90f4ffc7d777fce14908785"></a>
-<a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#ae9d35917b90f4ffc7d777fce14908785">GetIdentifierFromAbsoluteName</a> (const ea::string &amp;absoluteFileName)</td></tr>
-<tr class="memdesc:ae9d35917b90f4ffc7d777fce14908785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return relative file name of the file, or empty if not found. <br /></td></tr>
-<tr class="separator:ae9d35917b90f4ffc7d777fce14908785"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f2eb2475b5346f502ddebc691c47857"><td class="memItemLeft" align="right" valign="top"><a id="a9f2eb2475b5346f502ddebc691c47857"></a>
-<a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a9f2eb2475b5346f502ddebc691c47857">GetIdentifierFromAbsoluteName</a> (const ea::string &amp;scheme, const ea::string &amp;absoluteFileName)</td></tr>
-<tr class="memdesc:a9f2eb2475b5346f502ddebc691c47857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return relative file name of the file, or empty if not found. <br /></td></tr>
-<tr class="separator:a9f2eb2475b5346f502ddebc691c47857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada562bcb36daafdfea3bfdfd366739d3"><td class="memItemLeft" align="right" valign="top"><a id="ada562bcb36daafdfea3bfdfd366739d3"></a>
+<a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#ada562bcb36daafdfea3bfdfd366739d3">GetCanonicalIdentifier</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName) const</td></tr>
+<tr class="memdesc:ada562bcb36daafdfea3bfdfd366739d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return canonical file identifier, if possible. <br /></td></tr>
+<tr class="separator:ada562bcb36daafdfea3bfdfd366739d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd1a6b4767d16c8805f7bfe0a5a5bc6"><td class="memItemLeft" align="right" valign="top"><a id="a7cd1a6b4767d16c8805f7bfe0a5a5bc6"></a>
+<a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a7cd1a6b4767d16c8805f7bfe0a5a5bc6">GetIdentifierFromAbsoluteName</a> (const ea::string &amp;absoluteFileName) const</td></tr>
+<tr class="memdesc:a7cd1a6b4767d16c8805f7bfe0a5a5bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Works even if the file does not exist. <br /></td></tr>
+<tr class="separator:a7cd1a6b4767d16c8805f7bfe0a5a5bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7186f060c7aa7cf2d8d94ec5eb49800e"><td class="memItemLeft" align="right" valign="top"><a id="a7186f060c7aa7cf2d8d94ec5eb49800e"></a>
+<a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a7186f060c7aa7cf2d8d94ec5eb49800e">GetIdentifierFromAbsoluteName</a> (const ea::string &amp;scheme, const ea::string &amp;absoluteFileName) const</td></tr>
+<tr class="memdesc:a7186f060c7aa7cf2d8d94ec5eb49800e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return relative file name of the file, or empty if not found. <br /></td></tr>
+<tr class="separator:a7186f060c7aa7cf2d8d94ec5eb49800e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf9f069650312f04c211c86fec15bf50"><td class="memItemLeft" align="right" valign="top"><a id="adf9f069650312f04c211c86fec15bf50"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#adf9f069650312f04c211c86fec15bf50">SetWatching</a> (bool enable)</td></tr>
 <tr class="memdesc:adf9f069650312f04c211c86fec15bf50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable file watchers. <br /></td></tr>
@@ -171,10 +175,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a40e548b4b3ec8cc2fc690606a830cb3d">IsWatching</a> () const</td></tr>
 <tr class="memdesc:a40e548b4b3ec8cc2fc690606a830cb3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the file watchers are enabled. <br /></td></tr>
 <tr class="separator:a40e548b4b3ec8cc2fc690606a830cb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac021a176de27a79933236f0e1c2c7269"><td class="memItemLeft" align="right" valign="top"><a id="ac021a176de27a79933236f0e1c2c7269"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#ac021a176de27a79933236f0e1c2c7269">Scan</a> (ea::vector&lt; ea::string &gt; &amp;result, const ea::string &amp;pathName, const ea::string &amp;filter, ScanFlags flags) const</td></tr>
-<tr class="memdesc:ac021a176de27a79933236f0e1c2c7269"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scan for specified files. <br /></td></tr>
-<tr class="separator:ac021a176de27a79933236f0e1c2c7269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9257d14d29b6ce9c9c3425cca6b46a8a"><td class="memItemLeft" align="right" valign="top"><a id="a9257d14d29b6ce9c9c3425cca6b46a8a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a9257d14d29b6ce9c9c3425cca6b46a8a">Scan</a> (ea::vector&lt; ea::string &gt; &amp;result, const ea::string &amp;scheme, const ea::string &amp;pathName, const ea::string &amp;filter, ScanFlags flags) const</td></tr>
+<tr class="memdesc:a9257d14d29b6ce9c9c3425cca6b46a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scan for specified files. <br /></td></tr>
+<tr class="separator:a9257d14d29b6ce9c9c3425cca6b46a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b1ec0f7e98593a95b406dc02fdbb8b3"><td class="memItemLeft" align="right" valign="top"><a id="a9b1ec0f7e98593a95b406dc02fdbb8b3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Scan</b> (ea::vector&lt; ea::string &gt; &amp;result, const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;pathName, const ea::string &amp;filter, ScanFlags flags) const</td></tr>
+<tr class="separator:a9b1ec0f7e98593a95b406dc02fdbb8b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
