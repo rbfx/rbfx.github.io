@@ -9,6 +9,7 @@ var class_urho3_d_1_1_virtual_file_system =
     [ "GetCanonicalIdentifier", "class_urho3_d_1_1_virtual_file_system.html#ada562bcb36daafdfea3bfdfd366739d3", null ],
     [ "GetIdentifierFromAbsoluteName", "class_urho3_d_1_1_virtual_file_system.html#a7cd1a6b4767d16c8805f7bfe0a5a5bc6", null ],
     [ "GetIdentifierFromAbsoluteName", "class_urho3_d_1_1_virtual_file_system.html#a7186f060c7aa7cf2d8d94ec5eb49800e", null ],
+    [ "GetLastModifiedTime", "class_urho3_d_1_1_virtual_file_system.html#a7d1b0453e805d43c81f45f1de1090a43", null ],
     [ "GetMountPoint", "class_urho3_d_1_1_virtual_file_system.html#a0fd1e006aec518d21b9c1d1f330aebd7", null ],
     [ "IsWatching", "class_urho3_d_1_1_virtual_file_system.html#a40e548b4b3ec8cc2fc690606a830cb3d", null ],
     [ "Mount", "class_urho3_d_1_1_virtual_file_system.html#ae1c17fb3cb05a2e7a7a40c7b73d372e8", null ],

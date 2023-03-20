@@ -1,5 +1,8 @@
 var NAVTREEINDEX72 =
 {
+"class_urho3_d_1_1_variant_attribute_accessor_impl.html#a63440b07e253d216f524a2c676057ef4":[5,0,2,794,2],
+"class_urho3_d_1_1_variant_attribute_accessor_impl.html#a9a3bc7d14c3661040291b9c71e989d69":[5,0,2,794,3],
+"class_urho3_d_1_1_variant_curve.html":[5,0,2,795],
 "class_urho3_d_1_1_variant_curve.html#a297e73b66f99fdffcdaabce6791f0f97":[5,0,2,795,12],
 "class_urho3_d_1_1_variant_curve.html#a2da42b42ec49b3069c0d6416ac448311":[5,0,2,795,9],
 "class_urho3_d_1_1_variant_curve.html#a47a764a8f5a31e1d5a8ac75426340824":[5,0,2,795,14],
@@ -246,8 +249,5 @@ var NAVTREEINDEX72 =
 "class_urho3_d_1_1_vertex_buffer.html#a934de75e2d05d0cd5190176f7a0cf745":[5,0,2,803,6],
 "class_urho3_d_1_1_vertex_buffer.html#a94827548eb89601da1097f2ef982c94d":[5,0,2,803,28],
 "class_urho3_d_1_1_vertex_buffer.html#a9e948d0ae9be03c2287c54af01eace67":[5,0,2,803,46],
-"class_urho3_d_1_1_vertex_buffer.html#a9ffb4421860e3421726f4a6b949766ee":[5,0,2,803,17],
-"class_urho3_d_1_1_vertex_buffer.html#aab26d69a0f2557f4d48525b7293a086d":[5,0,2,803,19],
-"class_urho3_d_1_1_vertex_buffer.html#aacfd14a32eceb95cda03e87c4b19513f":[5,0,2,803,47],
-"class_urho3_d_1_1_vertex_buffer.html#ab19285169ae884083fcbd608818b1420":[5,0,2,803,24]
+"class_urho3_d_1_1_vertex_buffer.html#a9ffb4421860e3421726f4a6b949766ee":[5,0,2,803,17]
 };

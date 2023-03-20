@@ -149,6 +149,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">AbstractFilePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_package_file.html#ad25d482271772ea63f51d931d66760ff">OpenFile</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName, FileMode mode) override</td></tr>
 <tr class="memdesc:ad25d482271772ea63f51d931d66760ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open package file. Returns null if file not found. <br /></td></tr>
 <tr class="separator:ad25d482271772ea63f51d931d66760ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb5a040f95efc43017400c412de256c"><td class="memItemLeft" align="right" valign="top">ea::optional&lt; FileTime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_package_file.html#a1cb5a040f95efc43017400c412de256c">GetLastModifiedTime</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName, bool creationIsModification) const override</td></tr>
+<tr class="separator:a1cb5a040f95efc43017400c412de256c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00786faf8d414dab701fb86384cb3dbc"><td class="memItemLeft" align="right" valign="top"><a id="a00786faf8d414dab701fb86384cb3dbc"></a>
 const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_package_file.html#a00786faf8d414dab701fb86384cb3dbc">GetName</a> () const override</td></tr>
 <tr class="memdesc:a00786faf8d414dab701fb86384cb3dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns human-readable name of the mount point. <br /></td></tr>
@@ -493,6 +495,45 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </table>
 </div><div class="memdoc">
 <p>Return checksum of the package file contents. </p>
+
+</div>
+</div>
+<a id="a1cb5a040f95efc43017400c412de256c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cb5a040f95efc43017400c412de256c">&#9670;&nbsp;</a></span>GetLastModifiedTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ea::optional&lt; FileTime &gt; Urho3D::PackageFile::GetLastModifiedTime </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>creationIsModification</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return modification time, or 0 if not supported. Return nullopt if file does not exist. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_mount_point.html#abacd869b6a3c0f848a009c6f6a01197b">Urho3D::MountPoint</a>.</p>
 
 </div>
 </div>

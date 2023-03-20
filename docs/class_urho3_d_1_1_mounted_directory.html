@@ -108,6 +108,8 @@ const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a cla
 <tr class="separator:a6a2939ee21bc44b754d6854fa6e78c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c43170af4dcf4b448d9f54628074c6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_shared_ptr.html">AbstractFilePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a3c43170af4dcf4b448d9f54628074c6b">OpenFile</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName, FileMode mode) override</td></tr>
 <tr class="separator:a3c43170af4dcf4b448d9f54628074c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22a7919c0d59b8273bfb5910f9e23295"><td class="memItemLeft" align="right" valign="top">ea::optional&lt; FileTime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a22a7919c0d59b8273bfb5910f9e23295">GetLastModifiedTime</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName, bool creationIsModification) const override</td></tr>
+<tr class="separator:a22a7919c0d59b8273bfb5910f9e23295"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80b7844117fd6ab8989b2c096a5c5ec1"><td class="memItemLeft" align="right" valign="top"><a id="a80b7844117fd6ab8989b2c096a5c5ec1"></a>
 const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_mounted_directory.html#a80b7844117fd6ab8989b2c096a5c5ec1">GetName</a> () const override</td></tr>
 <tr class="memdesc:a80b7844117fd6ab8989b2c096a5c5ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns human-readable name of the mount point. <br /></td></tr>
@@ -488,6 +490,45 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <p>Return identifier in this mount point for absolute file name, if supported. Works even if the file does not exist. </p>
 
 <p>Reimplemented from <a class="el" href="class_urho3_d_1_1_mount_point.html#a3262bc2c3d375237e6bdade5b8f9adca">Urho3D::MountPoint</a>.</p>
+
+</div>
+</div>
+<a id="a22a7919c0d59b8273bfb5910f9e23295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22a7919c0d59b8273bfb5910f9e23295">&#9670;&nbsp;</a></span>GetLastModifiedTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ea::optional&lt; FileTime &gt; Urho3D::MountedDirectory::GetLastModifiedTime </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>creationIsModification</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return modification time, or 0 if not supported. Return nullopt if file does not exist. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_mount_point.html#abacd869b6a3c0f848a009c6f6a01197b">Urho3D::MountPoint</a>.</p>
 
 </div>
 </div>

@@ -7,6 +7,7 @@ var class_urho3_d_1_1_mounted_directory =
     [ "GetAbsoluteNameFromIdentifier", "class_urho3_d_1_1_mounted_directory.html#aff81c7c0e7a196ef7acc6feed42cfe48", null ],
     [ "GetDirectory", "class_urho3_d_1_1_mounted_directory.html#a2479ce1369743a329b2fbd17e3df56a2", null ],
     [ "GetIdentifierFromAbsoluteName", "class_urho3_d_1_1_mounted_directory.html#a3422de7bb378fed1e50fd2ab68705ff6", null ],
+    [ "GetLastModifiedTime", "class_urho3_d_1_1_mounted_directory.html#a22a7919c0d59b8273bfb5910f9e23295", null ],
     [ "GetName", "class_urho3_d_1_1_mounted_directory.html#a80b7844117fd6ab8989b2c096a5c5ec1", null ],
     [ "OpenFile", "class_urho3_d_1_1_mounted_directory.html#a3c43170af4dcf4b448d9f54628074c6b", null ],
     [ "ProcessUpdates", "class_urho3_d_1_1_mounted_directory.html#a9e068a521ac9fc7c4c298e11946e5b7c", null ],

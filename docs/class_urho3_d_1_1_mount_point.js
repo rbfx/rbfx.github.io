@@ -6,6 +6,7 @@ var class_urho3_d_1_1_mount_point =
     [ "Exists", "class_urho3_d_1_1_mount_point.html#a56c4ec5639f92d423da2573da8fee915", null ],
     [ "GetAbsoluteNameFromIdentifier", "class_urho3_d_1_1_mount_point.html#aff252df942e0eddb0227cfda2a7389c1", null ],
     [ "GetIdentifierFromAbsoluteName", "class_urho3_d_1_1_mount_point.html#a3262bc2c3d375237e6bdade5b8f9adca", null ],
+    [ "GetLastModifiedTime", "class_urho3_d_1_1_mount_point.html#abacd869b6a3c0f848a009c6f6a01197b", null ],
     [ "GetName", "class_urho3_d_1_1_mount_point.html#aff933e53cb98a85b69a2c15609a82b60", null ],
     [ "IsWatching", "class_urho3_d_1_1_mount_point.html#a32a9a56796ffbfcec20d5a82fe78d28a", null ],
     [ "OpenFile", "class_urho3_d_1_1_mount_point.html#ab919773c1913a0264bbbe2d1b79c3465", null ],
