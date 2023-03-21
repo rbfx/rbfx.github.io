@@ -19,7 +19,7 @@ var class_urho3_d_1_1_light_probe_group =
     [ "OnNodeSet", "class_urho3_d_1_1_light_probe_group.html#aedbf70b8d258dfd682a5ba9c7e218119", null ],
     [ "RegisterObject", "class_urho3_d_1_1_light_probe_group.html#ac2c5d85bf58be8eb0c3cb088cae4ae5e", null ],
     [ "ReloadBakedData", "class_urho3_d_1_1_light_probe_group.html#a06c40af1e375efa4e5527eb7211c1800", null ],
-    [ "SaveLightProbesBakedData", "class_urho3_d_1_1_light_probe_group.html#a5b05ae814ef3353adc25b58838bfd78f", null ],
+    [ "SaveLightProbesBakedData", "class_urho3_d_1_1_light_probe_group.html#acf3266536eefa63ff9e9cbec958c1dcd", null ],
     [ "SerializeLightProbes", "class_urho3_d_1_1_light_probe_group.html#af4aa29953200684fe4a89c79f96b3079", null ],
     [ "SetAutoPlacementEnabled", "class_urho3_d_1_1_light_probe_group.html#a8ae8ddda82e7a07a7766cdb9c61d8b50", null ],
     [ "SetAutoPlacementStep", "class_urho3_d_1_1_light_probe_group.html#a50b67b1af8f2b57932908a92e11ea50b", null ],

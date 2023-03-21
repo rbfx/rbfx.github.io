@@ -94,38 +94,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a2e124f006be5be76c5f842ab63a5b8eb">~ResourceCache</a> () override</td></tr>
 <tr class="memdesc:a2e124f006be5be76c5f842ab63a5b8eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Free all resources. <br /></td></tr>
 <tr class="separator:a2e124f006be5be76c5f842ab63a5b8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83716023bbefb2c25aa9e56570716495"><td class="memItemLeft" align="right" valign="top"><a id="a83716023bbefb2c25aa9e56570716495"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a83716023bbefb2c25aa9e56570716495">AddResourceDir</a> (const ea::string &amp;pathName, unsigned priority=PRIORITY_LAST)</td></tr>
-<tr class="memdesc:a83716023bbefb2c25aa9e56570716495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a resource load directory. Optional priority parameter which will control search order. <br /></td></tr>
-<tr class="separator:a83716023bbefb2c25aa9e56570716495"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a286aba429fd463fbc3eba29e44d69cf3"><td class="memItemLeft" align="right" valign="top"><a id="a286aba429fd463fbc3eba29e44d69cf3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a286aba429fd463fbc3eba29e44d69cf3">AddPackageFile</a> (<a class="el" href="class_urho3_d_1_1_package_file.html">PackageFile</a> *package, unsigned priority=PRIORITY_LAST)</td></tr>
-<tr class="memdesc:a286aba429fd463fbc3eba29e44d69cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a package file for loading resources from. Optional priority parameter which will control search order. <br /></td></tr>
-<tr class="separator:a286aba429fd463fbc3eba29e44d69cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08f730180530964eb041b08d7f98a27f"><td class="memItemLeft" align="right" valign="top"><a id="a08f730180530964eb041b08d7f98a27f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a08f730180530964eb041b08d7f98a27f">AddPackageFile</a> (const ea::string &amp;fileName, unsigned priority=PRIORITY_LAST)</td></tr>
-<tr class="memdesc:a08f730180530964eb041b08d7f98a27f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a package file for loading resources from by name. Optional priority parameter which will control search order. <br /></td></tr>
-<tr class="separator:a08f730180530964eb041b08d7f98a27f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae277181563b9fd28edec13c109fc8b98"><td class="memItemLeft" align="right" valign="top"><a id="ae277181563b9fd28edec13c109fc8b98"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#ae277181563b9fd28edec13c109fc8b98">AddManualResource</a> (<a class="el" href="class_urho3_d_1_1_resource.html">Resource</a> *resource)</td></tr>
 <tr class="memdesc:ae277181563b9fd28edec13c109fc8b98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a manually created resource. Must be uniquely named within its type. <br /></td></tr>
 <tr class="separator:ae277181563b9fd28edec13c109fc8b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a240331b21f249ec48b26aace0e696c0d"><td class="memItemLeft" align="right" valign="top"><a id="a240331b21f249ec48b26aace0e696c0d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a240331b21f249ec48b26aace0e696c0d">RemoveResourceDir</a> (const ea::string &amp;pathName)</td></tr>
-<tr class="memdesc:a240331b21f249ec48b26aace0e696c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a resource load directory. <br /></td></tr>
-<tr class="separator:a240331b21f249ec48b26aace0e696c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a527400e6a68cc52a1613a39a1f072a80"><td class="memItemLeft" align="right" valign="top"><a id="a527400e6a68cc52a1613a39a1f072a80"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a527400e6a68cc52a1613a39a1f072a80">RemoveAllResourceDirs</a> ()</td></tr>
-<tr class="memdesc:a527400e6a68cc52a1613a39a1f072a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all resource directories. At least one directory should be added before cache is used again! <br /></td></tr>
-<tr class="separator:a527400e6a68cc52a1613a39a1f072a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbd85ce2d31c96595b2067e9d2d39b41"><td class="memItemLeft" align="right" valign="top"><a id="adbd85ce2d31c96595b2067e9d2d39b41"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#adbd85ce2d31c96595b2067e9d2d39b41">RemovePackageFile</a> (<a class="el" href="class_urho3_d_1_1_package_file.html">PackageFile</a> *package, bool releaseResources=true, bool forceRelease=false)</td></tr>
-<tr class="memdesc:adbd85ce2d31c96595b2067e9d2d39b41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a package file. Optionally release the resources loaded from it. <br /></td></tr>
-<tr class="separator:adbd85ce2d31c96595b2067e9d2d39b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12a186a475bebc77493fcee3ae74c109"><td class="memItemLeft" align="right" valign="top"><a id="a12a186a475bebc77493fcee3ae74c109"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a12a186a475bebc77493fcee3ae74c109">RemovePackageFile</a> (const ea::string &amp;fileName, bool releaseResources=true, bool forceRelease=false)</td></tr>
-<tr class="memdesc:a12a186a475bebc77493fcee3ae74c109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a package file by name. Optionally release the resources loaded from it. <br /></td></tr>
-<tr class="separator:a12a186a475bebc77493fcee3ae74c109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1314c0d15ece99a496858f2769af706b"><td class="memItemLeft" align="right" valign="top"><a id="a1314c0d15ece99a496858f2769af706b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a1314c0d15ece99a496858f2769af706b">ReleaseResource</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type, const ea::string &amp;name, bool force=false)</td></tr>
 <tr class="memdesc:a1314c0d15ece99a496858f2769af706b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release a resource by name. <br /></td></tr>
@@ -164,8 +136,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a640e0465bd37f2de77560ee2fc205c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1210f3bd5a5c88d09c6b7081b1bf20a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a1210f3bd5a5c88d09c6b7081b1bf20a0">SetMemoryBudget</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type, unsigned long long budget)</td></tr>
 <tr class="separator:a1210f3bd5a5c88d09c6b7081b1bf20a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6607638a54d3051d14226cfd2873a1d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a6607638a54d3051d14226cfd2873a1d3">SetAutoReloadResources</a> (bool enable)</td></tr>
-<tr class="separator:a6607638a54d3051d14226cfd2873a1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73f74689d1714ebdca92913da3f4ce39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a73f74689d1714ebdca92913da3f4ce39">SetReturnFailedResources</a> (bool enable)</td></tr>
 <tr class="separator:a73f74689d1714ebdca92913da3f4ce39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa04ba54e17fbc01455c76bb1a5720b62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#aa04ba54e17fbc01455c76bb1a5720b62">SetSearchPackagesFirst</a> (bool value)</td></tr>
@@ -210,10 +180,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 const ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, <a class="el" href="struct_urho3_d_1_1_resource_group.html">ResourceGroup</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a94d2fafeba4a9b55e8d509b61b6d26d0">GetAllResources</a> () const</td></tr>
 <tr class="memdesc:a94d2fafeba4a9b55e8d509b61b6d26d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all loaded resources. <br /></td></tr>
 <tr class="separator:a94d2fafeba4a9b55e8d509b61b6d26d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b5df6d213a0aee62ba7358869d5a55f"><td class="memItemLeft" align="right" valign="top">const ea::vector&lt; ea::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a9b5df6d213a0aee62ba7358869d5a55f">GetResourceDirs</a> () const</td></tr>
-<tr class="separator:a9b5df6d213a0aee62ba7358869d5a55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a727ad734e17676cd454fc1cc49cf1463"><td class="memItemLeft" align="right" valign="top">const ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_package_file.html">PackageFile</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a727ad734e17676cd454fc1cc49cf1463">GetPackageFiles</a> () const</td></tr>
-<tr class="separator:a727ad734e17676cd454fc1cc49cf1463"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad38f817fdd5b969d6aa15db14ccfe18"><td class="memTemplParams" colspan="2"><a id="aad38f817fdd5b969d6aa15db14ccfe18"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:aad38f817fdd5b969d6aa15db14ccfe18"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#aad38f817fdd5b969d6aa15db14ccfe18">GetResource</a> (const ea::string &amp;name, bool sendEventOnFailure=true)</td></tr>
@@ -258,8 +224,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a40bc9c9c9f41fbff9c703f67f363c404">GetResourceFileName</a> (const ea::string &amp;name) const</td></tr>
 <tr class="memdesc:a40bc9c9c9f41fbff9c703f67f363c404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return full absolute file name of resource if possible, or empty if not found. <br /></td></tr>
 <tr class="separator:a40bc9c9c9f41fbff9c703f67f363c404"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0425f2d723c329eeca5e567fb4b52835"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a0425f2d723c329eeca5e567fb4b52835">GetAutoReloadResources</a> () const</td></tr>
-<tr class="separator:a0425f2d723c329eeca5e567fb4b52835"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae25a0af4ccd67c2c11e0988cf3492c8e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#ae25a0af4ccd67c2c11e0988cf3492c8e">GetReturnFailedResources</a> () const</td></tr>
 <tr class="separator:ae25a0af4ccd67c2c11e0988cf3492c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaddca1d53b72cbbf9528a684838dfd05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#aaddca1d53b72cbbf9528a684838dfd05">GetSearchPackagesFirst</a> () const</td></tr>
@@ -270,18 +234,10 @@ ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <a class="el" href="class_urho3_d_1_1_resource_router.html">ResourceRouter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a7007870f5571cb32176a63368cb9c061">GetResourceRouter</a> (unsigned index) const</td></tr>
 <tr class="memdesc:a7007870f5571cb32176a63368cb9c061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a resource router by index. <br /></td></tr>
 <tr class="separator:a7007870f5571cb32176a63368cb9c061"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a68d59931269ee6ae494d3e1126d3df"><td class="memItemLeft" align="right" valign="top"><a id="a1a68d59931269ee6ae494d3e1126d3df"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a1a68d59931269ee6ae494d3e1126d3df">GetPreferredResourceDir</a> (const ea::string &amp;path) const</td></tr>
-<tr class="memdesc:a1a68d59931269ee6ae494d3e1126d3df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return either the path itself or its parent, based on which of them has recognized resource subdirectories. <br /></td></tr>
-<tr class="separator:a1a68d59931269ee6ae494d3e1126d3df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e78760a40d483e95a9fd8362b4e3f37"><td class="memItemLeft" align="right" valign="top"><a id="a8e78760a40d483e95a9fd8362b4e3f37"></a>
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a8e78760a40d483e95a9fd8362b4e3f37">SanitateResourceName</a> (const ea::string &amp;name) const</td></tr>
 <tr class="memdesc:a8e78760a40d483e95a9fd8362b4e3f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove unsupported constructs from the resource name to prevent ambiguity, and normalize absolute filename to resource path relative if possible. <br /></td></tr>
 <tr class="separator:a8e78760a40d483e95a9fd8362b4e3f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a152c7460ac3b60f086a3c0344aa725a7"><td class="memItemLeft" align="right" valign="top"><a id="a152c7460ac3b60f086a3c0344aa725a7"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a152c7460ac3b60f086a3c0344aa725a7">SanitateResourceDirName</a> (const ea::string &amp;name) const</td></tr>
-<tr class="memdesc:a152c7460ac3b60f086a3c0344aa725a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove unnecessary constructs from a resource directory name and ensure it to be an absolute path. <br /></td></tr>
-<tr class="separator:a152c7460ac3b60f086a3c0344aa725a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a892dfbb8ca08221436ac2b0f4ba32cbb"><td class="memItemLeft" align="right" valign="top"><a id="a892dfbb8ca08221436ac2b0f4ba32cbb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a892dfbb8ca08221436ac2b0f4ba32cbb">StoreResourceDependency</a> (<a class="el" href="class_urho3_d_1_1_resource.html">Resource</a> *resource, const ea::string &amp;dependency)</td></tr>
 <tr class="memdesc:a892dfbb8ca08221436ac2b0f4ba32cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a dependency for a resource. If a dependency file changes, the resource will be reloaded. <br /></td></tr>
@@ -294,14 +250,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#ab6998fa1b17b9bcac0636abcc1c6a65b">PrintMemoryUsage</a> () const</td></tr>
 <tr class="memdesc:ab6998fa1b17b9bcac0636abcc1c6a65b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a formatted string containing the memory actively used. <br /></td></tr>
 <tr class="separator:ab6998fa1b17b9bcac0636abcc1c6a65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4981abb79045c59ecfd86b32d386be5f"><td class="memItemLeft" align="right" valign="top"><a id="a4981abb79045c59ecfd86b32d386be5f"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a4981abb79045c59ecfd86b32d386be5f">GetNumResourceDirs</a> () const</td></tr>
-<tr class="memdesc:a4981abb79045c59ecfd86b32d386be5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of resource directories. <br /></td></tr>
-<tr class="separator:a4981abb79045c59ecfd86b32d386be5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71593c0df16ae2a0b6796c165f6cd965"><td class="memItemLeft" align="right" valign="top"><a id="a71593c0df16ae2a0b6796c165f6cd965"></a>
-const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a71593c0df16ae2a0b6796c165f6cd965">GetResourceDir</a> (unsigned index) const</td></tr>
-<tr class="memdesc:a71593c0df16ae2a0b6796c165f6cd965"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get resource directory at a given index. <br /></td></tr>
-<tr class="separator:a71593c0df16ae2a0b6796c165f6cd965"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a467cf9e9a1696037186eed80435a41bd"><td class="memItemLeft" align="right" valign="top"><a id="a467cf9e9a1696037186eed80435a41bd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a467cf9e9a1696037186eed80435a41bd">Scan</a> (ea::vector&lt; ea::string &gt; &amp;result, const ea::string &amp;pathName, const ea::string &amp;filter, ScanFlags flags) const</td></tr>
 <tr class="memdesc:a467cf9e9a1696037186eed80435a41bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scan for specified files. <br /></td></tr>
@@ -310,8 +258,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#adc87211644cd43a54fa7515975cc619e">PrintResources</a> (const ea::string &amp;typeName=EMPTY_STRING) const</td></tr>
 <tr class="memdesc:adc87211644cd43a54fa7515975cc619e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a formatted string containing the currently loaded resources with optional type name filter. <br /></td></tr>
 <tr class="separator:adc87211644cd43a54fa7515975cc619e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e1f42f1afe44da5baa410b4de48e8fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a2e1f42f1afe44da5baa410b4de48e8fe">RenameResource</a> (const ea::string &amp;source, const ea::string &amp;destination)</td></tr>
-<tr class="separator:a2e1f42f1afe44da5baa410b4de48e8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14c1de4a42077aef21add1a433bc5a55"><td class="memItemLeft" align="right" valign="top"><a id="a14c1de4a42077aef21add1a433bc5a55"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a14c1de4a42077aef21add1a433bc5a55">IgnoreResourceReload</a> (const ea::string &amp;name)</td></tr>
 <tr class="memdesc:a14c1de4a42077aef21add1a433bc5a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">When resource auto-reloading is enabled ignore reloading resource once. <br /></td></tr>
@@ -320,14 +266,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#ae56936c93a393c9ec5e496602b3d9f19">IgnoreResourceReload</a> (const <a class="el" href="class_urho3_d_1_1_resource.html">Resource</a> *resource)</td></tr>
 <tr class="memdesc:ae56936c93a393c9ec5e496602b3d9f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">When resource auto-reloading is enabled ignore reloading resource once. <br /></td></tr>
 <tr class="separator:ae56936c93a393c9ec5e496602b3d9f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77e1823dbe835da7c18a9db617088461"><td class="memItemLeft" align="right" valign="top"><a id="a77e1823dbe835da7c18a9db617088461"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a77e1823dbe835da7c18a9db617088461">RouteResourceName</a> (ea::string &amp;name, <a class="el" href="_resource_cache_8h.html#a520754b076c8baa94edf24c5c7d65924">ResourceRequest</a> requestType) const</td></tr>
-<tr class="memdesc:a77e1823dbe835da7c18a9db617088461"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a> name through resource routers and return final resource name. <br /></td></tr>
-<tr class="separator:a77e1823dbe835da7c18a9db617088461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54aa0190e63f293d1bd6bf4be410784d"><td class="memItemLeft" align="right" valign="top"><a id="a54aa0190e63f293d1bd6bf4be410784d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a54aa0190e63f293d1bd6bf4be410784d">RouteResourceName</a> (<a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;name) const</td></tr>
+<tr class="memdesc:a54aa0190e63f293d1bd6bf4be410784d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_pass.html" title="Material rendering pass, which defines shaders and render state.">Pass</a> name through resource routers and return final resource name. <br /></td></tr>
+<tr class="separator:a54aa0190e63f293d1bd6bf4be410784d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49d24c07346441076d9645d5be4e315c"><td class="memItemLeft" align="right" valign="top"><a id="a49d24c07346441076d9645d5be4e315c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a49d24c07346441076d9645d5be4e315c">Clear</a> ()</td></tr>
 <tr class="memdesc:a49d24c07346441076d9645d5be4e315c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all resources from resource cache. <br /></td></tr>
 <tr class="separator:a49d24c07346441076d9645d5be4e315c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68484666fbeb5f5661c93e4e125ef6d7"><td class="memItemLeft" align="right" valign="top"><a id="a68484666fbeb5f5661c93e4e125ef6d7"></a>
+<a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a68484666fbeb5f5661c93e4e125ef6d7">GetCanonicalIdentifier</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;name) const</td></tr>
+<tr class="memdesc:a68484666fbeb5f5661c93e4e125ef6d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return canonical resource identifier without resource routing. <br /></td></tr>
+<tr class="separator:a68484666fbeb5f5661c93e4e125ef6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab75c2efdd515437afd6fe952d8bfc658"><td class="memItemLeft" align="right" valign="top"><a id="ab75c2efdd515437afd6fe952d8bfc658"></a>
+<a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#ab75c2efdd515437afd6fe952d8bfc658">GetResolvedIdentifier</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;name) const</td></tr>
+<tr class="memdesc:ab75c2efdd515437afd6fe952d8bfc658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return canonical resource identifier with resource routing applied. <br /></td></tr>
+<tr class="separator:ab75c2efdd515437afd6fe952d8bfc658"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -557,16 +511,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a4318c338dc69d899ed1e28c0e5c6fccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cc5a76256fc43875016a8ae85c15ab3"><td class="memItemLeft" align="right" valign="top"><a id="a8cc5a76256fc43875016a8ae85c15ab3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a8cc5a76256fc43875016a8ae85c15ab3">HandleBeginFrame</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
-<tr class="memdesc:a8cc5a76256fc43875016a8ae85c15ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle begin frame event. Automatic resource reloads and the finalization of background loaded resources are processed here. <br /></td></tr>
+<tr class="memdesc:a8cc5a76256fc43875016a8ae85c15ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle begin frame event. The finalization of background loaded resources are processed here. <br /></td></tr>
 <tr class="separator:a8cc5a76256fc43875016a8ae85c15ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f29782502b63ddd57a8a86aed14fb55"><td class="memItemLeft" align="right" valign="top"><a id="a5f29782502b63ddd57a8a86aed14fb55"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">AbstractFilePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a5f29782502b63ddd57a8a86aed14fb55">SearchResourceDirs</a> (const ea::string &amp;name)</td></tr>
-<tr class="memdesc:a5f29782502b63ddd57a8a86aed14fb55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search <a class="el" href="class_urho3_d_1_1_file_system.html" title="Subsystem for file and directory operations and access control.">FileSystem</a> for file. <br /></td></tr>
-<tr class="separator:a5f29782502b63ddd57a8a86aed14fb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5177ad9f13f828fd1688d0fd17b85d25"><td class="memItemLeft" align="right" valign="top"><a id="a5177ad9f13f828fd1688d0fd17b85d25"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">AbstractFilePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a5177ad9f13f828fd1688d0fd17b85d25">SearchPackages</a> (const ea::string &amp;name)</td></tr>
-<tr class="memdesc:a5177ad9f13f828fd1688d0fd17b85d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search resource packages for file. <br /></td></tr>
-<tr class="separator:a5177ad9f13f828fd1688d0fd17b85d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05bb8c57c2a772bd5a18c35e48236ce9"><td class="memItemLeft" align="right" valign="top"><a id="a05bb8c57c2a772bd5a18c35e48236ce9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a05bb8c57c2a772bd5a18c35e48236ce9">HandleFileChanged</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:a05bb8c57c2a772bd5a18c35e48236ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle file changed to reload resource. <br /></td></tr>
+<tr class="separator:a05bb8c57c2a772bd5a18c35e48236ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -578,18 +528,6 @@ Private Attributes</h2></td></tr>
 ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, <a class="el" href="struct_urho3_d_1_1_resource_group.html">ResourceGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a68dd7be43f6a091023afc5db88565dc1">resourceGroups_</a></td></tr>
 <tr class="memdesc:a68dd7be43f6a091023afc5db88565dc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resources by type. <br /></td></tr>
 <tr class="separator:a68dd7be43f6a091023afc5db88565dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96bc79eb85e4f57a0b0bc85e16fb9652"><td class="memItemLeft" align="right" valign="top"><a id="a96bc79eb85e4f57a0b0bc85e16fb9652"></a>
-ea::vector&lt; ea::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a96bc79eb85e4f57a0b0bc85e16fb9652">resourceDirs_</a></td></tr>
-<tr class="memdesc:a96bc79eb85e4f57a0b0bc85e16fb9652"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_resource.html">Resource</a> load directories. <br /></td></tr>
-<tr class="separator:a96bc79eb85e4f57a0b0bc85e16fb9652"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a206f104fb4ea3d1ced995d4efd4c00e4"><td class="memItemLeft" align="right" valign="top"><a id="a206f104fb4ea3d1ced995d4efd4c00e4"></a>
-ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_file_watcher.html">FileWatcher</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a206f104fb4ea3d1ced995d4efd4c00e4">fileWatchers_</a></td></tr>
-<tr class="memdesc:a206f104fb4ea3d1ced995d4efd4c00e4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a> watchers for resource directories, if automatic reloading enabled. <br /></td></tr>
-<tr class="separator:a206f104fb4ea3d1ced995d4efd4c00e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba26ba52b08ae257b80069fbd913a6a5"><td class="memItemLeft" align="right" valign="top"><a id="aba26ba52b08ae257b80069fbd913a6a5"></a>
-ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_package_file.html">PackageFile</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#aba26ba52b08ae257b80069fbd913a6a5">packages_</a></td></tr>
-<tr class="memdesc:aba26ba52b08ae257b80069fbd913a6a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Package files. <br /></td></tr>
-<tr class="separator:aba26ba52b08ae257b80069fbd913a6a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeb8e9e2fd012eee5b18099ccfc76428"><td class="memItemLeft" align="right" valign="top"><a id="aaeb8e9e2fd012eee5b18099ccfc76428"></a>
 ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, ea::hash_set&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#aaeb8e9e2fd012eee5b18099ccfc76428">dependentResources_</a></td></tr>
 <tr class="memdesc:aaeb8e9e2fd012eee5b18099ccfc76428"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dependent resources. Only used with automatic reload to eg. trigger reload of a cube texture when any of its faces change. <br /></td></tr>
@@ -602,10 +540,6 @@ ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">St
 ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_resource_router.html">ResourceRouter</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a82a2bf141b8c88ad0ea5d7bb08f5e3dd">resourceRouters_</a></td></tr>
 <tr class="memdesc:a82a2bf141b8c88ad0ea5d7bb08f5e3dd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_resource.html">Resource</a> routers. <br /></td></tr>
 <tr class="separator:a82a2bf141b8c88ad0ea5d7bb08f5e3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dfcdd45c58adcb85922ba36000d97b5"><td class="memItemLeft" align="right" valign="top"><a id="a6dfcdd45c58adcb85922ba36000d97b5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a6dfcdd45c58adcb85922ba36000d97b5">autoReloadResources_</a></td></tr>
-<tr class="memdesc:a6dfcdd45c58adcb85922ba36000d97b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatic resource reloading flag. <br /></td></tr>
-<tr class="separator:a6dfcdd45c58adcb85922ba36000d97b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1396e2b0a006c67c61cbc47a529fddba"><td class="memItemLeft" align="right" valign="top"><a id="a1396e2b0a006c67c61cbc47a529fddba"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a1396e2b0a006c67c61cbc47a529fddba">returnFailedResources_</a></td></tr>
 <tr class="memdesc:a1396e2b0a006c67c61cbc47a529fddba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return failed resources flag. <br /></td></tr>
@@ -614,10 +548,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a5bf69cbb17aa18a4b17a3c28f41b3580">searchPackagesFirst_</a></td></tr>
 <tr class="memdesc:a5bf69cbb17aa18a4b17a3c28f41b3580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search priority flag. <br /></td></tr>
 <tr class="separator:a5bf69cbb17aa18a4b17a3c28f41b3580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa903df2d5687121884269ddcd84737da"><td class="memItemLeft" align="right" valign="top"><a id="aa903df2d5687121884269ddcd84737da"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#aa903df2d5687121884269ddcd84737da">isRouting_</a></td></tr>
-<tr class="memdesc:aa903df2d5687121884269ddcd84737da"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_resource.html">Resource</a> routing flag to prevent endless recursion. <br /></td></tr>
-<tr class="separator:aa903df2d5687121884269ddcd84737da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e0fc9fc5a62ecc0f0cfb6f1f09200ea"><td class="memItemLeft" align="right" valign="top"><a id="a1e0fc9fc5a62ecc0f0cfb6f1f09200ea"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a1e0fc9fc5a62ecc0f0cfb6f1f09200ea">finishBackgroundResourcesMs_</a></td></tr>
 <tr class="memdesc:a1e0fc9fc5a62ecc0f0cfb6f1f09200ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many milliseconds maximum per frame to spend on finishing background loaded resources. <br /></td></tr>
@@ -626,10 +556,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 ea::vector&lt; ea::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a9fbadabb5f8788cb96df9766b25881c6">ignoreResourceAutoReload_</a></td></tr>
 <tr class="memdesc:a9fbadabb5f8788cb96df9766b25881c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of resources that will not be auto-reloaded if reloading event triggers. <br /></td></tr>
 <tr class="separator:a9fbadabb5f8788cb96df9766b25881c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac84a5f4d3a477e0a520237b67ef87803"><td class="memItemLeft" align="right" valign="top"><a id="ac84a5f4d3a477e0a520237b67ef87803"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#ac84a5f4d3a477e0a520237b67ef87803">exePath_</a></td></tr>
-<tr class="memdesc:ac84a5f4d3a477e0a520237b67ef87803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sanitized path to executable. <br /></td></tr>
-<tr class="separator:ac84a5f4d3a477e0a520237b67ef87803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -647,32 +573,6 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Resource cache subsystem. Loads resources on demand and stores them for later access. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0425f2d723c329eeca5e567fb4b52835"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0425f2d723c329eeca5e567fb4b52835">&#9670;&nbsp;</a></span>GetAutoReloadResources()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::ResourceCache::GetAutoReloadResources </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return whether automatic resource reloading is enabled. </p>
-
-</div>
-</div>
 <a id="a55a7491c387f62d909efbd42344435c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55a7491c387f62d909efbd42344435c2">&#9670;&nbsp;</a></span>GetFinishBackgroundResourcesMs()</h2>
 
@@ -755,58 +655,6 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 
 </div>
 </div>
-<a id="a727ad734e17676cd454fc1cc49cf1463"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a727ad734e17676cd454fc1cc49cf1463">&#9670;&nbsp;</a></span>GetPackageFiles()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const ea::vector&lt;<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt;<a class="el" href="class_urho3_d_1_1_package_file.html">PackageFile</a>&gt; &gt;&amp; Urho3D::ResourceCache::GetPackageFiles </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return added package files. </p>
-
-</div>
-</div>
-<a id="a9b5df6d213a0aee62ba7358869d5a55f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b5df6d213a0aee62ba7358869d5a55f">&#9670;&nbsp;</a></span>GetResourceDirs()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const ea::vector&lt;ea::string&gt;&amp; Urho3D::ResourceCache::GetResourceDirs </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return added resource load directories. </p>
-
-</div>
-</div>
 <a id="ae25a0af4ccd67c2c11e0988cf3492c8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae25a0af4ccd67c2c11e0988cf3492c8e">&#9670;&nbsp;</a></span>GetReturnFailedResources()</h2>
 
@@ -874,54 +722,6 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
       </table>
 </div><div class="memdoc">
 <p>Return total memory use for all resources. </p>
-
-</div>
-</div>
-<a id="a2e1f42f1afe44da5baa410b4de48e8fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e1f42f1afe44da5baa410b4de48e8fe">&#9670;&nbsp;</a></span>RenameResource()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::ResourceCache::RenameResource </td>
-          <td>(</td>
-          <td class="paramtype">const ea::string &amp;&#160;</td>
-          <td class="paramname"><em>source</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const ea::string &amp;&#160;</td>
-          <td class="paramname"><em>destination</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Renames resource without deleting it from cache. <code>source</code> and <code>destination</code> may be resource names or absolute paths to files in resource directories. If destination is a resource name then source file is renamed within same data directory. </p>
-
-</div>
-</div>
-<a id="a6607638a54d3051d14226cfd2873a1d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6607638a54d3051d14226cfd2873a1d3">&#9670;&nbsp;</a></span>SetAutoReloadResources()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::ResourceCache::SetAutoReloadResources </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Enable or disable automatic reloading of resources as files are modified. Default false. </p>
 
 </div>
 </div>

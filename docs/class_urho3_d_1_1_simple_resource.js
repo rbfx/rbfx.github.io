@@ -9,8 +9,8 @@ var class_urho3_d_1_1_simple_resource =
     [ "LoadLegacyXML", "class_urho3_d_1_1_simple_resource.html#af0873613b6318b26cbf8ac5565b0c3fc", null ],
     [ "Save", "class_urho3_d_1_1_simple_resource.html#a9eab5413f2fd71e8c85dc7deffb80d65", null ],
     [ "Save", "class_urho3_d_1_1_simple_resource.html#a874fcc0009b06f763294e7d8e1d84979", null ],
-    [ "SaveFile", "class_urho3_d_1_1_simple_resource.html#a6da4d6b076f7ac869f2454e84ebed8f6", null ],
-    [ "SaveFile", "class_urho3_d_1_1_simple_resource.html#a645c73f47838518006cf19c4129f02fa", null ],
+    [ "SaveFile", "class_urho3_d_1_1_simple_resource.html#af76760959bfdfbbc9227c20fa80b26bd", null ],
+    [ "SaveFile", "class_urho3_d_1_1_simple_resource.html#a792b62769d1f791c7243e065ce678d6a", null ],
     [ "SerializeInBlock", "class_urho3_d_1_1_simple_resource.html#af14304c741a3cb38b98721212e7ba353", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_simple_resource.html#aa1f80fce3207a34a1132dc1040aa6960", null ],
     [ "loadFormat_", "class_urho3_d_1_1_simple_resource.html#a00a261bb552cae9df4bd086e7291e7a6", null ]

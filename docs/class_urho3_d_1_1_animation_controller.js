@@ -65,6 +65,7 @@ var class_urho3_d_1_1_animation_controller =
     [ "UpdateInstance", "class_urho3_d_1_1_animation_controller.html#a68cfb1266022018c3b06b1f56f1d6830", null ],
     [ "UpdateInstanceTime", "class_urho3_d_1_1_animation_controller.html#a12bd9faad85aee8c75dcdda846c44529", null ],
     [ "UpdateInstanceWeight", "class_urho3_d_1_1_animation_controller.html#a54a1441e16355ad3be68fb24e27143e8", null ],
+    [ "UpdatePose", "class_urho3_d_1_1_animation_controller.html#af9a276ae20faf091b9ad6a0ba08da357", null ],
     [ "UpdateState", "class_urho3_d_1_1_animation_controller.html#a6ce968425038be6ab68df0636c4bd638", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_animation_controller.html#a9412d2a671152daedd3f3e1aafe23b3d", null ],
     [ "animatedAttributes_", "class_urho3_d_1_1_animation_controller.html#a430f22fe62bd69dd6bb85c972da9b995", null ],

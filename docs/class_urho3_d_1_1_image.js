@@ -46,7 +46,7 @@ var class_urho3_d_1_1_image =
     [ "Save", "class_urho3_d_1_1_image.html#a5c3047b0fe26178f7245f964f16e63b6", null ],
     [ "SaveBMP", "class_urho3_d_1_1_image.html#a55cebf6172e201d0f4da39caa47e4ade", null ],
     [ "SaveDDS", "class_urho3_d_1_1_image.html#aebf40f8d5d4965ab21de48d7a36fed22", null ],
-    [ "SaveFile", "class_urho3_d_1_1_image.html#ad9925b6bc684644a3d1f395599ba05b9", null ],
+    [ "SaveFile", "class_urho3_d_1_1_image.html#a4fab626b201504b3e6f52e7cf9bba2a1", null ],
     [ "SaveJPG", "class_urho3_d_1_1_image.html#a52917f1ea0ae3b95dc76b04e9f6455bb", null ],
     [ "SavePNG", "class_urho3_d_1_1_image.html#a9977e40c7a860504950a6eeec59ac0a0", null ],
     [ "SaveTGA", "class_urho3_d_1_1_image.html#a2ac9854ae2cbe0c2083cacd81875f02f", null ],

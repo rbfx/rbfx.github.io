@@ -121,10 +121,10 @@ const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a cla
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shader.html#a1d86af0882b16436684c58e022ef8c10">IsGLSL</a> () const</td></tr>
 <tr class="memdesc:a1d86af0882b16436684c58e022ef8c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the shader is GLSL shader. Used for universal shader support by DX11. <br /></td></tr>
 <tr class="separator:a1d86af0882b16436684c58e022ef8c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62950b6bf5722e6dacd08e8befafc32c"><td class="memItemLeft" align="right" valign="top"><a id="a62950b6bf5722e6dacd08e8befafc32c"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shader.html#a62950b6bf5722e6dacd08e8befafc32c">GetTimeStamp</a> () const</td></tr>
-<tr class="memdesc:a62950b6bf5722e6dacd08e8befafc32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the latest timestamp of the shader code and its includes. <br /></td></tr>
-<tr class="separator:a62950b6bf5722e6dacd08e8befafc32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0246f8759dc649f19d585f70af2886b6"><td class="memItemLeft" align="right" valign="top"><a id="a0246f8759dc649f19d585f70af2886b6"></a>
+FileTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shader.html#a0246f8759dc649f19d585f70af2886b6">GetTimeStamp</a> () const</td></tr>
+<tr class="memdesc:a0246f8759dc649f19d585f70af2886b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the latest timestamp of the shader code and its includes. <br /></td></tr>
+<tr class="separator:a0246f8759dc649f19d585f70af2886b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_resource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_resource')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_resource.html">Urho3D::Resource</a></td></tr>
 <tr class="memitem:ae3e1545370dec17a283705989a1cc682 inherit pub_methods_class_urho3_d_1_1_resource"><td class="memItemLeft" align="right" valign="top"><a id="ae3e1545370dec17a283705989a1cc682"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#ae3e1545370dec17a283705989a1cc682">Resource</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -138,10 +138,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#ad7aa95d3679876703b1147e49f8d07b0">Save</a> (<a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) const</td></tr>
 <tr class="memdesc:ad7aa95d3679876703b1147e49f8d07b0 inherit pub_methods_class_urho3_d_1_1_resource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save resource. Return true if successful. <br /></td></tr>
 <tr class="separator:ad7aa95d3679876703b1147e49f8d07b0 inherit pub_methods_class_urho3_d_1_1_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e693442dd603ef7e515f63e5153f61e inherit pub_methods_class_urho3_d_1_1_resource"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#a3e693442dd603ef7e515f63e5153f61e">LoadFile</a> (const ea::string &amp;fileName)</td></tr>
-<tr class="separator:a3e693442dd603ef7e515f63e5153f61e inherit pub_methods_class_urho3_d_1_1_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7df3044717de23d595607968dda84bc1 inherit pub_methods_class_urho3_d_1_1_resource"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#a7df3044717de23d595607968dda84bc1">SaveFile</a> (const ea::string &amp;fileName) const</td></tr>
-<tr class="separator:a7df3044717de23d595607968dda84bc1 inherit pub_methods_class_urho3_d_1_1_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a676f12a30a82ba2a42d0a0c166eca2a4 inherit pub_methods_class_urho3_d_1_1_resource"><td class="memItemLeft" align="right" valign="top"><a id="a676f12a30a82ba2a42d0a0c166eca2a4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#a676f12a30a82ba2a42d0a0c166eca2a4">LoadFile</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName)</td></tr>
+<tr class="memdesc:a676f12a30a82ba2a42d0a0c166eca2a4 inherit pub_methods_class_urho3_d_1_1_resource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load resource from file. <br /></td></tr>
+<tr class="separator:a676f12a30a82ba2a42d0a0c166eca2a4 inherit pub_methods_class_urho3_d_1_1_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4270eabe83459a3addeb32dba6824969 inherit pub_methods_class_urho3_d_1_1_resource"><td class="memItemLeft" align="right" valign="top"><a id="a4270eabe83459a3addeb32dba6824969"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#a4270eabe83459a3addeb32dba6824969">SaveFile</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName) const</td></tr>
+<tr class="memdesc:a4270eabe83459a3addeb32dba6824969 inherit pub_methods_class_urho3_d_1_1_resource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save resource to file. <br /></td></tr>
+<tr class="separator:a4270eabe83459a3addeb32dba6824969 inherit pub_methods_class_urho3_d_1_1_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8308964fa4ee07002ac4fb5d4049b10b inherit pub_methods_class_urho3_d_1_1_resource"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#a8308964fa4ee07002ac4fb5d4049b10b">SetName</a> (const ea::string &amp;name)</td></tr>
 <tr class="separator:a8308964fa4ee07002ac4fb5d4049b10b inherit pub_methods_class_urho3_d_1_1_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a965ad58111e131f7725edec44358c75e inherit pub_methods_class_urho3_d_1_1_resource"><td class="memItemLeft" align="right" valign="top"><a id="a965ad58111e131f7725edec44358c75e"></a>
@@ -451,10 +455,10 @@ ea::unordered_map&lt; unsigned, <a class="el" href="class_urho3_d_1_1_shared_ptr
 ea::unordered_map&lt; unsigned, <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_shader_variation.html">ShaderVariation</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shader.html#a145172751af070d74efffe0fb4f1c39b">csVariations_</a></td></tr>
 <tr class="memdesc:a145172751af070d74efffe0fb4f1c39b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute shader variations. <br /></td></tr>
 <tr class="separator:a145172751af070d74efffe0fb4f1c39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf02703badf2b949b0a6ab135e451582"><td class="memItemLeft" align="right" valign="top"><a id="adf02703badf2b949b0a6ab135e451582"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shader.html#adf02703badf2b949b0a6ab135e451582">timeStamp_</a></td></tr>
-<tr class="memdesc:adf02703badf2b949b0a6ab135e451582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source code timestamp. <br /></td></tr>
-<tr class="separator:adf02703badf2b949b0a6ab135e451582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e4f679aaaace84b7f2d15a076a93bd"><td class="memItemLeft" align="right" valign="top"><a id="a01e4f679aaaace84b7f2d15a076a93bd"></a>
+FileTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shader.html#a01e4f679aaaace84b7f2d15a076a93bd">timeStamp_</a></td></tr>
+<tr class="memdesc:a01e4f679aaaace84b7f2d15a076a93bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source code timestamp. <br /></td></tr>
+<tr class="separator:a01e4f679aaaace84b7f2d15a076a93bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d251d6e21b46a17f812b199f2e6f4c0"><td class="memItemLeft" align="right" valign="top"><a id="a8d251d6e21b46a17f812b199f2e6f4c0"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shader.html#a8d251d6e21b46a17f812b199f2e6f4c0">numVariations_</a></td></tr>
 <tr class="memdesc:a8d251d6e21b46a17f812b199f2e6f4c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of unique variations so far. <br /></td></tr>

@@ -85,10 +85,8 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_router.html#a41a0bdbd1b655dfa755598f10ec4e38c">ResourceRouter</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
 <tr class="memdesc:a41a0bdbd1b655dfa755598f10ec4e38c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br /></td></tr>
 <tr class="separator:a41a0bdbd1b655dfa755598f10ec4e38c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31a439b258d51b6fa42a9dc411e90045"><td class="memItemLeft" align="right" valign="top"><a id="a31a439b258d51b6fa42a9dc411e90045"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_router.html#a31a439b258d51b6fa42a9dc411e90045">Route</a> (ea::string &amp;name, <a class="el" href="_resource_cache_8h.html#a520754b076c8baa94edf24c5c7d65924">ResourceRequest</a> requestType)=0</td></tr>
-<tr class="memdesc:a31a439b258d51b6fa42a9dc411e90045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the resource request and optionally modify the resource name string. Empty name string means the resource is not found or not allowed. <br /></td></tr>
-<tr class="separator:a31a439b258d51b6fa42a9dc411e90045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2fc45d9a4e0894f5850e141e6fb7e6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_router.html#a7b2fc45d9a4e0894f5850e141e6fb7e6">Route</a> (<a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;name)=0</td></tr>
+<tr class="separator:a7b2fc45d9a4e0894f5850e141e6fb7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -310,7 +308,35 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Optional resource request processor. Can deny requests, re-route resource file names, or perform other processing per request. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7b2fc45d9a4e0894f5850e141e6fb7e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2fc45d9a4e0894f5850e141e6fb7e6">&#9670;&nbsp;</a></span>Route()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Urho3D::ResourceRouter::Route </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Process the resource request and optionally modify the resource identifier. Empty identifier means the resource is not found or not allowed. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>Urho3D/Resource/<a class="el" href="_resource_cache_8h.html">ResourceCache.h</a></li>
 </ul>
 </div><!-- contents -->

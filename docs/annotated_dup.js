@@ -572,6 +572,7 @@ var annotated_dup =
       [ "MountedExternalMemory", "class_urho3_d_1_1_mounted_external_memory.html", "class_urho3_d_1_1_mounted_external_memory" ],
       [ "MountedRoot", "class_urho3_d_1_1_mounted_root.html", "class_urho3_d_1_1_mounted_root" ],
       [ "MountPoint", "class_urho3_d_1_1_mount_point.html", "class_urho3_d_1_1_mount_point" ],
+      [ "MountPointGuard", "class_urho3_d_1_1_mount_point_guard.html", "class_urho3_d_1_1_mount_point_guard" ],
       [ "MovableNonCopyable", "class_urho3_d_1_1_movable_non_copyable.html", "class_urho3_d_1_1_movable_non_copyable" ],
       [ "MsgConfigure", "struct_urho3_d_1_1_msg_configure.html", "struct_urho3_d_1_1_msg_configure" ],
       [ "MsgSceneClock", "struct_urho3_d_1_1_msg_scene_clock.html", "struct_urho3_d_1_1_msg_scene_clock" ],

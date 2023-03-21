@@ -128,10 +128,14 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#ad7aa95d3679876703b1147e49f8d07b0">Save</a> (<a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) const</td></tr>
 <tr class="memdesc:ad7aa95d3679876703b1147e49f8d07b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save resource. Return true if successful. <br /></td></tr>
 <tr class="separator:ad7aa95d3679876703b1147e49f8d07b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e693442dd603ef7e515f63e5153f61e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#a3e693442dd603ef7e515f63e5153f61e">LoadFile</a> (const ea::string &amp;fileName)</td></tr>
-<tr class="separator:a3e693442dd603ef7e515f63e5153f61e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7df3044717de23d595607968dda84bc1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#a7df3044717de23d595607968dda84bc1">SaveFile</a> (const ea::string &amp;fileName) const</td></tr>
-<tr class="separator:a7df3044717de23d595607968dda84bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a676f12a30a82ba2a42d0a0c166eca2a4"><td class="memItemLeft" align="right" valign="top"><a id="a676f12a30a82ba2a42d0a0c166eca2a4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#a676f12a30a82ba2a42d0a0c166eca2a4">LoadFile</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName)</td></tr>
+<tr class="memdesc:a676f12a30a82ba2a42d0a0c166eca2a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load resource from file. <br /></td></tr>
+<tr class="separator:a676f12a30a82ba2a42d0a0c166eca2a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4270eabe83459a3addeb32dba6824969"><td class="memItemLeft" align="right" valign="top"><a id="a4270eabe83459a3addeb32dba6824969"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#a4270eabe83459a3addeb32dba6824969">SaveFile</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName) const</td></tr>
+<tr class="memdesc:a4270eabe83459a3addeb32dba6824969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save resource to file. <br /></td></tr>
+<tr class="separator:a4270eabe83459a3addeb32dba6824969"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8308964fa4ee07002ac4fb5d4049b10b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource.html#a8308964fa4ee07002ac4fb5d4049b10b">SetName</a> (const ea::string &amp;name)</td></tr>
 <tr class="separator:a8308964fa4ee07002ac4fb5d4049b10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a965ad58111e131f7725edec44358c75e"><td class="memItemLeft" align="right" valign="top"><a id="a965ad58111e131f7725edec44358c75e"></a>
@@ -497,54 +501,6 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Return time since last use in milliseconds. If referred to elsewhere than in the resource cache, returns always zero. </p>
-
-</div>
-</div>
-<a id="a3e693442dd603ef7e515f63e5153f61e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e693442dd603ef7e515f63e5153f61e">&#9670;&nbsp;</a></span>LoadFile()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::Resource::LoadFile </td>
-          <td>(</td>
-          <td class="paramtype">const ea::string &amp;&#160;</td>
-          <td class="paramname"><em>fileName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Load resource from file. </p>
-
-</div>
-</div>
-<a id="a7df3044717de23d595607968dda84bc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7df3044717de23d595607968dda84bc1">&#9670;&nbsp;</a></span>SaveFile()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::Resource::SaveFile </td>
-          <td>(</td>
-          <td class="paramtype">const ea::string &amp;&#160;</td>
-          <td class="paramname"><em>fileName</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Save resource to file. </p>
-
-<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_simple_resource.html#a6da4d6b076f7ac869f2454e84ebed8f6">Urho3D::SimpleResource</a>, <a class="el" href="class_urho3_d_1_1_image.html#ad9925b6bc684644a3d1f395599ba05b9">Urho3D::Image</a>, and <a class="el" href="class_urho3_d_1_1_scene_resource.html#abc75229d5254324b5b86ce5defaca58f">Urho3D::SceneResource</a>.</p>
 
 </div>
 </div>
