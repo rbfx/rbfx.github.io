@@ -4,6 +4,7 @@ var class_urho3_d_1_1_collision_shape =
     [ "~CollisionShape", "class_urho3_d_1_1_collision_shape.html#a39099239a52b6dbc34d7775b4d89428f", null ],
     [ "ApplyAttributes", "class_urho3_d_1_1_collision_shape.html#a517a06a7d33f243c3dfcab32263bde1e", null ],
     [ "DrawDebugGeometry", "class_urho3_d_1_1_collision_shape.html#a603207bf68d4a4ed1bdecd8430fa1568", null ],
+    [ "DrawDebugGeometry", "class_urho3_d_1_1_collision_shape.html#ae7544e0d4886a138b117173df5f5ee56", null ],
     [ "GetCollisionShape", "class_urho3_d_1_1_collision_shape.html#a76cfde7c11d4092e76f8f5d045471e47", null ],
     [ "GetGeometryData", "class_urho3_d_1_1_collision_shape.html#a30350e223bda835cbda34dc21b5e288f", null ],
     [ "GetLodLevel", "class_urho3_d_1_1_collision_shape.html#a282c0504a35695d5242bcfed4cf263ba", null ],

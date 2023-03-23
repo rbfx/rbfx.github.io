@@ -1,5 +1,8 @@
 var NAVTREEINDEX76 =
 {
+"class_urho3_d_1_1_zone.html#a7cfe4accbca78647bb904c5feb96e95f":[5,0,2,835,42],
+"class_urho3_d_1_1_zone.html#a841f9a2663aaff3096288f8b7c9c7326":[5,0,2,835,11],
+"class_urho3_d_1_1_zone.html#a859af470a234207443bb86e3b50eba1f":[5,0,2,835,33],
 "class_urho3_d_1_1_zone.html#a87b200b7a3e70e3c4bb617f015f6633b":[5,0,2,835,37],
 "class_urho3_d_1_1_zone.html#a8df80c2747d07193cdeecdcc0358588f":[5,0,2,835,58],
 "class_urho3_d_1_1_zone.html#a944527d6518ba1523a0cd73265738bfb":[5,0,2,835,56],
@@ -70,8 +73,8 @@ var NAVTREEINDEX76 =
 "files.html":[6,0],
 "folder-structure.html":[0,0,0],
 "framework-overview.html":[0,0,1],
-"functions.html":[5,3,0],
 "functions.html":[5,3,0,0],
+"functions.html":[5,3,0],
 "functions_a.html":[5,3,0,1],
 "functions_b.html":[5,3,0,2],
 "functions_c.html":[5,3,0,3],
@@ -167,8 +170,8 @@ var NAVTREEINDEX76 =
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_cpp-quick-start.html":[1],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html":[2],
 "multiplayer-and-networking.html":[0,0,1,2],
-"namespace_urho3_d_1_1_actions.html":[5,0,2,0],
 "namespace_urho3_d_1_1_actions.html":[4,0,0,0],
+"namespace_urho3_d_1_1_actions.html":[5,0,2,0],
 "namespace_urho3_d_1_1_attribute_metadata.html":[4,0,0,1],
 "namespace_urho3_d_1_1_network_settings.html":[4,0,0,2],
 "namespace_urho3_d_1_1_shader_consts.html":[4,0,0,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX76 =
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#ad35a1a6aeea497a7b40c5814a75b8cd0":[5,0,7,7],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#adc82e9d76c744ac32830580e81965b58":[5,0,7,11],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#af8ecda6472aa89fe948232a80d14d25e":[5,0,7,10],
-"struct___i_m_a_g_e___e_x_p_o_r_t___d_i_r_e_c_t_o_r_y.html":[5,0,8],
-"struct___i_m_a_g_e___e_x_p_o_r_t___d_i_r_e_c_t_o_r_y.html#a228cb42c109e308f129cbf02c8788a13":[5,0,8,1],
-"struct___i_m_a_g_e___e_x_p_o_r_t___d_i_r_e_c_t_o_r_y.html#a557283e4483874dbfa7fab5f4ad11316":[5,0,8,10],
-"struct___i_m_a_g_e___e_x_p_o_r_t___d_i_r_e_c_t_o_r_y.html#a5f9fb525413d7a223190538cec5fbf9b":[5,0,8,2]
+"struct___i_m_a_g_e___e_x_p_o_r_t___d_i_r_e_c_t_o_r_y.html":[5,0,8]
 };
