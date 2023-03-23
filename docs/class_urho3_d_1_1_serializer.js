@@ -1,6 +1,7 @@
 var class_urho3_d_1_1_serializer =
 [
     [ "~Serializer", "class_urho3_d_1_1_serializer.html#a88c2430fe7a8733e032400a2b9ee4a24", null ],
+    [ "GetName", "class_urho3_d_1_1_serializer.html#a0f202bc0ca899f25301e996c774d815a", null ],
     [ "Write", "class_urho3_d_1_1_serializer.html#af1212487507dad99d9f389f9c8b48a60", null ],
     [ "WriteBool", "class_urho3_d_1_1_serializer.html#a44ddefbaf5a7b7b67a002ed1c6d6d0da", null ],
     [ "WriteBoundingBox", "class_urho3_d_1_1_serializer.html#a5b72d159d2d843c9ffaf3e17be25fef7", null ],

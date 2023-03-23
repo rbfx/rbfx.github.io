@@ -1,5 +1,6 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_shader_parameter.html#aa49c661f0af1496d3bfa9b47a980f5c7":[5,0,2,639,0],
 "struct_urho3_d_1_1_shader_parameter.html#ac2a4ec1b397aa2319956dd739eb482fa":[5,0,2,639,4],
 "struct_urho3_d_1_1_shader_parameter.html#acbf924c93efcc845daaf0e669aaddc3a":[5,0,2,639,3],
 "struct_urho3_d_1_1_shader_parameter_desc.html":[5,0,2,642],
@@ -248,6 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_spriter_1_1_map_instruction.html#a800a5aabb2681cee19ed9cc651063335":[5,0,2,3,7,4],
 "struct_urho3_d_1_1_spriter_1_1_map_instruction.html#a9eed2079c8268e4e905f87608e7388ed":[5,0,2,3,7,2],
 "struct_urho3_d_1_1_spriter_1_1_map_instruction.html#abe7fe8c36d2d093c350dbc5f46be1fac":[5,0,2,3,7,6],
-"struct_urho3_d_1_1_spriter_1_1_map_instruction.html#add8afce67b0c8e3117a8367969eb3316":[5,0,2,3,7,3],
-"struct_urho3_d_1_1_spriter_1_1_map_instruction.html#aea64f434ef80fb5108f69a2b61c4a567":[5,0,2,3,7,5]
+"struct_urho3_d_1_1_spriter_1_1_map_instruction.html#add8afce67b0c8e3117a8367969eb3316":[5,0,2,3,7,3]
 };
