@@ -1,5 +1,7 @@
 var NAVTREEINDEX77 =
 {
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#adc82e9d76c744ac32830580e81965b58":[5,0,7,11],
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#af8ecda6472aa89fe948232a80d14d25e":[5,0,7,10],
 "struct___i_m_a_g_e___e_x_p_o_r_t___d_i_r_e_c_t_o_r_y.html":[5,0,8],
 "struct___i_m_a_g_e___e_x_p_o_r_t___d_i_r_e_c_t_o_r_y.html#a228cb42c109e308f129cbf02c8788a13":[5,0,8,1],
 "struct___i_m_a_g_e___e_x_p_o_r_t___d_i_r_e_c_t_o_r_y.html#a557283e4483874dbfa7fab5f4ad11316":[5,0,8,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_animation_track.html#af5613a1767cf5226f7e6469fce11703b":[5,0,2,29,3],
 "struct_urho3_d_1_1_animation_track.html#aff37bb7241811f95f6051626f0719fe5":[5,0,2,29,4],
 "struct_urho3_d_1_1_animation_trigger_point.html":[5,0,2,30],
-"struct_urho3_d_1_1_animation_trigger_point.html#a2122535dd432d8624e2cc895d520ff41":[5,0,2,30,1],
-"struct_urho3_d_1_1_animation_trigger_point.html#a976791babf69c44295927bef7f91ee85":[5,0,2,30,0],
-"struct_urho3_d_1_1_animation_velocity_extractor_1_1_extracted_track_set.html":[5,0,2,31,0]
+"struct_urho3_d_1_1_animation_trigger_point.html#a2122535dd432d8624e2cc895d520ff41":[5,0,2,30,1]
 };

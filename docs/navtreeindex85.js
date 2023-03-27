@@ -1,5 +1,7 @@
 var NAVTREEINDEX85 =
 {
+"struct_urho3_d_1_1_physics_raycast_result.html#ab0146d82c34a7d55dffbc053b3c2a28b":[5,0,2,505,3],
+"struct_urho3_d_1_1_physics_raycast_result.html#ab4d67be66ed31f1607a7c118a3547d7d":[5,0,2,505,1],
 "struct_urho3_d_1_1_physics_raycast_result.html#abcc01ca7bf8007086c033b4f25884a80":[5,0,2,505,2],
 "struct_urho3_d_1_1_physics_raycast_result.html#ac546be78168a69e04a3cb4328c893108":[5,0,2,505,5],
 "struct_urho3_d_1_1_physics_raycast_result.html#ac903d2e2f945dd50ff02e387e5799f28":[5,0,2,505,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX85 =
 "struct_urho3_d_1_1_render_path_command.html#a21a99438b99616e6609edc79f83393d7":[5,0,2,574,5],
 "struct_urho3_d_1_1_render_path_command.html#a22df999c2f0073e9dcbefe87771facb1":[5,0,2,574,16],
 "struct_urho3_d_1_1_render_path_command.html#a27f2257701f839922fd41ede97a7ff4d":[5,0,2,574,11],
-"struct_urho3_d_1_1_render_path_command.html#a30d2a1b8b7fe7e1cd0a1e9c5eae55c7d":[5,0,2,574,14],
-"struct_urho3_d_1_1_render_path_command.html#a33589a36898aaf812af40020dc76acc1":[5,0,2,574,25],
-"struct_urho3_d_1_1_render_path_command.html#a3522eedd27cb926745b78be7c258daed":[5,0,2,574,38]
+"struct_urho3_d_1_1_render_path_command.html#a30d2a1b8b7fe7e1cd0a1e9c5eae55c7d":[5,0,2,574,14]
 };

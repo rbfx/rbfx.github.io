@@ -1,5 +1,7 @@
 var NAVTREEINDEX76 =
 {
+"class_urho3_d_1_1_zone.html#a74ba6596a17a4cd58f0d2f8b73d48c8d":[5,0,2,835,4],
+"class_urho3_d_1_1_zone.html#a77bf82702c1c0e5728863fe46a74ebd2":[5,0,2,835,1],
 "class_urho3_d_1_1_zone.html#a7ccacfcdafdec86719bfd084d6643e56":[5,0,2,835,28],
 "class_urho3_d_1_1_zone.html#a7cfe4accbca78647bb904c5feb96e95f":[5,0,2,835,42],
 "class_urho3_d_1_1_zone.html#a841f9a2663aaff3096288f8b7c9c7326":[5,0,2,835,11],
@@ -129,8 +131,8 @@ var NAVTREEINDEX76 =
 "functions_type.html":[5,3,3],
 "functions_u.html":[5,3,0,21],
 "functions_v.html":[5,3,0,22],
-"functions_vars.html":[5,3,2],
 "functions_vars.html":[5,3,2,0],
+"functions_vars.html":[5,3,2],
 "functions_vars_a.html":[5,3,2,1],
 "functions_vars_b.html":[5,3,2,2],
 "functions_vars_c.html":[5,3,2,3],
@@ -171,8 +173,8 @@ var NAVTREEINDEX76 =
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_cpp-quick-start.html":[1],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html":[2],
 "multiplayer-and-networking.html":[0,0,1,2],
-"namespace_urho3_d_1_1_actions.html":[5,0,2,0],
 "namespace_urho3_d_1_1_actions.html":[4,0,0,0],
+"namespace_urho3_d_1_1_actions.html":[5,0,2,0],
 "namespace_urho3_d_1_1_attribute_metadata.html":[4,0,0,1],
 "namespace_urho3_d_1_1_network_settings.html":[4,0,0,2],
 "namespace_urho3_d_1_1_shader_consts.html":[4,0,0,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX76 =
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a9bae00443b5bd44c47221750dbb6bc54":[5,0,7,13],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#aacafd312aaa3ed17724f9b247a6b4911":[5,0,7,0],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#acbbb307234fc199a4d56c1d0d2910dd0":[5,0,7,17],
-"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#ad35a1a6aeea497a7b40c5814a75b8cd0":[5,0,7,7],
-"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#adc82e9d76c744ac32830580e81965b58":[5,0,7,11],
-"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#af8ecda6472aa89fe948232a80d14d25e":[5,0,7,10]
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#ad35a1a6aeea497a7b40c5814a75b8cd0":[5,0,7,7]
 };
