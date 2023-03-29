@@ -1,5 +1,6 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_light_query_result.html#a35998ae67ea64b0865b39b0c803bc332":[5,0,2,377,3],
 "struct_urho3_d_1_1_light_query_result.html#a6e640cda762714fad87d4338e3e20c70":[5,0,2,377,0],
 "struct_urho3_d_1_1_light_query_result.html#a7c233bb3441ee360085959a3cf027ced":[5,0,2,377,4],
 "struct_urho3_d_1_1_light_query_result.html#a8d69f790ea052774cc99f3ee714f9deb":[5,0,2,377,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_navigation_geometry_info.html#a3bdb847e60fae19421b243ba7f9127d0":[5,0,2,427,3],
 "struct_urho3_d_1_1_navigation_geometry_info.html#ae268c39f11a4082c07787f7cd6f83e2e":[5,0,2,427,0],
 "struct_urho3_d_1_1_navigation_path_point.html":[5,0,2,429],
-"struct_urho3_d_1_1_navigation_path_point.html#a06946288e67c1990193f4637be138d8e":[5,0,2,429,2],
-"struct_urho3_d_1_1_navigation_path_point.html#a3c8d77ac8f9122158bcac0872627ec7e":[5,0,2,429,1]
+"struct_urho3_d_1_1_navigation_path_point.html#a06946288e67c1990193f4637be138d8e":[5,0,2,429,2]
 };

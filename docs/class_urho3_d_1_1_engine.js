@@ -12,6 +12,7 @@ var class_urho3_d_1_1_engine =
     [ "Exit", "class_urho3_d_1_1_engine.html#afeccd853454e5deee375a3570f7bc4b2", null ],
     [ "GetAppPreferencesDir", "class_urho3_d_1_1_engine.html#adf08018597f877d1ead89de8b20f7608", null ],
     [ "GetAutoExit", "class_urho3_d_1_1_engine.html#aa7ae6b6f827d871ad1421ecc0fa399fc", null ],
+    [ "GetLogFileName", "class_urho3_d_1_1_engine.html#ae0922e08798fdb7e5f3d497eb3962201", null ],
     [ "GetMaxFps", "class_urho3_d_1_1_engine.html#a194b9f0f4199c0d7ddb6d76a3356041c", null ],
     [ "GetMaxInactiveFps", "class_urho3_d_1_1_engine.html#aca3bd45b2cab029498d3a6fcc7566923", null ],
     [ "GetMinFps", "class_urho3_d_1_1_engine.html#ac665fba0fbeddfb5c5879a754648e848", null ],

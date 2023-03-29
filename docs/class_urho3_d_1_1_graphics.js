@@ -4,7 +4,7 @@ var class_urho3_d_1_1_graphics =
     [ "~Graphics", "class_urho3_d_1_1_graphics.html#a4383e66635b706dfece4ff0f2b9eb40d", null ],
     [ "AddGPUObject", "class_urho3_d_1_1_graphics.html#ae23ebe8c56633082c5829893efc5c757", null ],
     [ "AdjustScreenMode", "class_urho3_d_1_1_graphics.html#a617dbdca8c85e1fb12029dd9b8209894", null ],
-    [ "AdjustWindow", "class_urho3_d_1_1_graphics.html#ad0d9f600a60a64790818080295e54436", null ],
+    [ "AdjustWindow", "class_urho3_d_1_1_graphics.html#acf08349e60c62ab02fe9fe0cf7f72a53", null ],
     [ "BeginDumpShaders", "class_urho3_d_1_1_graphics.html#a45540d2b6abc72fe871e773e464c6a0f", null ],
     [ "BeginFrame", "class_urho3_d_1_1_graphics.html#a87d6974090e42a8c0d8ec676ca4da504", null ],
     [ "BindColorAttachment", "class_urho3_d_1_1_graphics.html#a5f50cd062d2ef3cde9fa62a708bb2acb", null ],

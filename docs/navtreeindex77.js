@@ -1,5 +1,6 @@
 var NAVTREEINDEX77 =
 {
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#ad35a1a6aeea497a7b40c5814a75b8cd0":[5,0,7,7],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#adc82e9d76c744ac32830580e81965b58":[5,0,7,11],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#af8ecda6472aa89fe948232a80d14d25e":[5,0,7,10],
 "struct___i_m_a_g_e___e_x_p_o_r_t___d_i_r_e_c_t_o_r_y.html":[5,0,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_animation_track.html#a8908add3b8fef1c89e52e58af79e0a45":[5,0,2,29,2],
 "struct_urho3_d_1_1_animation_track.html#af5613a1767cf5226f7e6469fce11703b":[5,0,2,29,3],
 "struct_urho3_d_1_1_animation_track.html#aff37bb7241811f95f6051626f0719fe5":[5,0,2,29,4],
-"struct_urho3_d_1_1_animation_trigger_point.html":[5,0,2,30],
-"struct_urho3_d_1_1_animation_trigger_point.html#a2122535dd432d8624e2cc895d520ff41":[5,0,2,30,1]
+"struct_urho3_d_1_1_animation_trigger_point.html":[5,0,2,30]
 };

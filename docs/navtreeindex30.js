@@ -1,5 +1,6 @@
 var NAVTREEINDEX30 =
 {
+"class_urho3_d_1_1_i_k_head_solver.html#ae860336d3f1a6bbe0ac7565c6a16dd6c":[5,0,2,296,51],
 "class_urho3_d_1_1_i_k_head_solver.html#ae8f3a1021b59670a6cfcaedc5ff86c3b":[5,0,2,296,39],
 "class_urho3_d_1_1_i_k_head_solver.html#ae8f7f5c02603f24ed49769fa74fbedca":[5,0,2,296,37],
 "class_urho3_d_1_1_i_k_head_solver.html#aea5f626f66a517d09bd92c16d8ee4022":[5,0,2,296,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX30 =
 "class_urho3_d_1_1_i_k_spine_solver.html#a6b98b9bee8092dee5d344e8981d9b1f7":[5,0,2,306,25],
 "class_urho3_d_1_1_i_k_spine_solver.html#a6e05909467f1356763a4251b5e825fc8":[5,0,2,306,13],
 "class_urho3_d_1_1_i_k_spine_solver.html#a72ac42728ab65347714f02e009310cdd":[5,0,2,306,7],
-"class_urho3_d_1_1_i_k_spine_solver.html#a78a4dda5ea06402f10ab3908a0c1cb73":[5,0,2,306,21],
-"class_urho3_d_1_1_i_k_spine_solver.html#a8035a56adb8462a01f1275d277e8290d":[5,0,2,306,34]
+"class_urho3_d_1_1_i_k_spine_solver.html#a78a4dda5ea06402f10ab3908a0c1cb73":[5,0,2,306,21]
 };

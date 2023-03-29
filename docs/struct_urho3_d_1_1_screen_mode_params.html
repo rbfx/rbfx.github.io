@@ -79,6 +79,15 @@ Public Member Functions</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_screen_mode_params.html#ad78d2e0e768685b3b0040c917e6d881e">EqualsExceptVSync</a> (const <a class="el" href="struct_urho3_d_1_1_screen_mode_params.html">ScreenModeParams</a> &amp;rhs) const</td></tr>
 <tr class="memdesc:ad78d2e0e768685b3b0040c917e6d881e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare contents except vsync flag. <br /></td></tr>
 <tr class="separator:ad78d2e0e768685b3b0040c917e6d881e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa07051df572c3a07be72bee6e749a148"><td class="memItemLeft" align="right" valign="top"><a id="aa07051df572c3a07be72bee6e749a148"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsWindowed</b> () const</td></tr>
+<tr class="separator:aa07051df572c3a07be72bee6e749a148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c0aced2977764ef5bf97d08cedd0b8c"><td class="memItemLeft" align="right" valign="top"><a id="a4c0aced2977764ef5bf97d08cedd0b8c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsFullscreen</b> () const</td></tr>
+<tr class="separator:a4c0aced2977764ef5bf97d08cedd0b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64c7c180e4e952eacfbbb3f4f8b91206"><td class="memItemLeft" align="right" valign="top"><a id="a64c7c180e4e952eacfbbb3f4f8b91206"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsBorderless</b> () const</td></tr>
+<tr class="separator:a64c7c180e4e952eacfbbb3f4f8b91206"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32b9cf3ae1be3bf48ed54bb30a6145d6"><td class="memItemLeft" align="right" valign="top"><a id="a32b9cf3ae1be3bf48ed54bb30a6145d6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_screen_mode_params.html#a32b9cf3ae1be3bf48ed54bb30a6145d6">operator==</a> (const <a class="el" href="struct_urho3_d_1_1_screen_mode_params.html">ScreenModeParams</a> &amp;rhs) const</td></tr>
 <tr class="memdesc:a32b9cf3ae1be3bf48ed54bb30a6145d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare for equality with another parameter set. <br /></td></tr>
@@ -90,14 +99,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aa28f4ba13b0be1eee45a627d6438ca4f"><td class="memItemLeft" align="right" valign="top"><a id="aa28f4ba13b0be1eee45a627d6438ca4f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_screen_mode_params.html#aa28f4ba13b0be1eee45a627d6438ca4f">fullscreen_</a> {}</td></tr>
-<tr class="memdesc:aa28f4ba13b0be1eee45a627d6438ca4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to use fullscreen mode. <br /></td></tr>
-<tr class="separator:aa28f4ba13b0be1eee45a627d6438ca4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fb6755b1fcc4568f02a037160aa17d0"><td class="memItemLeft" align="right" valign="top"><a id="a9fb6755b1fcc4568f02a037160aa17d0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_screen_mode_params.html#a9fb6755b1fcc4568f02a037160aa17d0">borderless_</a> {}</td></tr>
-<tr class="memdesc:a9fb6755b1fcc4568f02a037160aa17d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to hide window borders. <a class="el" href="class_urho3_d_1_1_window.html" title="Window UI element that can optionally by moved or resized.">Window</a> is always borderless in fullscreen. <br /></td></tr>
-<tr class="separator:a9fb6755b1fcc4568f02a037160aa17d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af275503eebcd0b91a4c50f70635bc0a3"><td class="memItemLeft" align="right" valign="top"><a id="af275503eebcd0b91a4c50f70635bc0a3"></a>
+WindowMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_screen_mode_params.html#af275503eebcd0b91a4c50f70635bc0a3">windowMode_</a> {}</td></tr>
+<tr class="memdesc:af275503eebcd0b91a4c50f70635bc0a3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_window.html" title="Window UI element that can optionally by moved or resized.">Window</a> mode. <br /></td></tr>
+<tr class="separator:af275503eebcd0b91a4c50f70635bc0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb59f6acfca4eb1866a4f590adc0410b"><td class="memItemLeft" align="right" valign="top"><a id="afb59f6acfca4eb1866a4f590adc0410b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_screen_mode_params.html#afb59f6acfca4eb1866a4f590adc0410b">resizable_</a> {}</td></tr>
 <tr class="memdesc:afb59f6acfca4eb1866a4f590adc0410b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the window is resizable. <br /></td></tr>
