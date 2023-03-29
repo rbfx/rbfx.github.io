@@ -104,14 +104,14 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_detail_1_1_rml_file.html#ab36c8e61b05b6def1f9ed61d3542f7e8">Length</a> (Rml::FileHandle file) override</td></tr>
 <tr class="memdesc:ab36c8e61b05b6def1f9ed61d3542f7e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of the file. <br /></td></tr>
 <tr class="separator:ab36c8e61b05b6def1f9ed61d3542f7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbeebd062509774f9b624c3b0ad269d2"><td class="memItemLeft" align="right" valign="top"><a id="abbeebd062509774f9b624c3b0ad269d2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_detail_1_1_rml_file.html#abbeebd062509774f9b624c3b0ad269d2">IsFileLoaded</a> (const ea::string &amp;path)</td></tr>
-<tr class="memdesc:abbeebd062509774f9b624c3b0ad269d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if file was opened since last call to ClearOpenedFiles(). <br /></td></tr>
-<tr class="separator:abbeebd062509774f9b624c3b0ad269d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4506f7e46c7ba9a8e9da985076ef1670"><td class="memItemLeft" align="right" valign="top"><a id="a4506f7e46c7ba9a8e9da985076ef1670"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_detail_1_1_rml_file.html#a4506f7e46c7ba9a8e9da985076ef1670">ClearLoadedFiles</a> ()</td></tr>
-<tr class="memdesc:a4506f7e46c7ba9a8e9da985076ef1670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear a set of opened files. <br /></td></tr>
-<tr class="separator:a4506f7e46c7ba9a8e9da985076ef1670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeea98762762fa29fe016a25f712abd4a"><td class="memItemLeft" align="right" valign="top"><a id="aeea98762762fa29fe016a25f712abd4a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_detail_1_1_rml_file.html#aeea98762762fa29fe016a25f712abd4a">IsResourceLoaded</a> (const ea::string &amp;resourceName)</td></tr>
+<tr class="memdesc:aeea98762762fa29fe016a25f712abd4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if file was opened since last call to ClearOpenedFiles(). <br /></td></tr>
+<tr class="separator:aeea98762762fa29fe016a25f712abd4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b809075b0b50a5388e775ceefc6cb8"><td class="memItemLeft" align="right" valign="top"><a id="a47b809075b0b50a5388e775ceefc6cb8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_detail_1_1_rml_file.html#a47b809075b0b50a5388e775ceefc6cb8">ClearLoadedResources</a> ()</td></tr>
+<tr class="memdesc:a47b809075b0b50a5388e775ceefc6cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear a set of opened files. <br /></td></tr>
+<tr class="separator:a47b809075b0b50a5388e775ceefc6cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -119,10 +119,10 @@ Private Attributes</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_detail_1_1_rml_file.html#a818d19abb6453aa1cf62ba959c78cc58">context_</a></td></tr>
 <tr class="memdesc:a818d19abb6453aa1cf62ba959c78cc58"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_context.html" title="Urho3D execution context. Provides access to subsystems, object factories and attributes,...">Context</a> pointer. <br /></td></tr>
 <tr class="separator:a818d19abb6453aa1cf62ba959c78cc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91357bc5d7d2e4692fbab8fd6cbbf0a7"><td class="memItemLeft" align="right" valign="top"><a id="a91357bc5d7d2e4692fbab8fd6cbbf0a7"></a>
-ea::unordered_set&lt; ea::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_detail_1_1_rml_file.html#a91357bc5d7d2e4692fbab8fd6cbbf0a7">loadedFiles_</a></td></tr>
-<tr class="memdesc:a91357bc5d7d2e4692fbab8fd6cbbf0a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A set of loaded files. Used to trigger <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> reloads when resource cache reloads a modified file. <br /></td></tr>
-<tr class="separator:a91357bc5d7d2e4692fbab8fd6cbbf0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8270e34ce40722580c75571e6a65daa4"><td class="memItemLeft" align="right" valign="top"><a id="a8270e34ce40722580c75571e6a65daa4"></a>
+ea::unordered_set&lt; ea::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_detail_1_1_rml_file.html#a8270e34ce40722580c75571e6a65daa4">loadedResources_</a></td></tr>
+<tr class="memdesc:a8270e34ce40722580c75571e6a65daa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A set of loaded files. Used to trigger <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> reloads when resource cache reloads a modified file. <br /></td></tr>
+<tr class="separator:a8270e34ce40722580c75571e6a65daa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Urho3D/RmlUI/RmlFile.h</li>
