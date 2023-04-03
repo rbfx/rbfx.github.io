@@ -1,5 +1,6 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_cooked_light_params.html#a48b88843f3d2c0da0debbc7c1884560e":[5,0,2,167,17],
 "struct_urho3_d_1_1_cooked_light_params.html#a48db01507edcf57b1cc405d6243bc40b":[5,0,2,167,14],
 "struct_urho3_d_1_1_cooked_light_params.html#a6a715e5b199798590f57ede08d697db2":[5,0,2,167,0],
 "struct_urho3_d_1_1_cooked_light_params.html#a6dd8248465b31d30238ac8357d5feaa4":[5,0,2,167,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_drawable_processor_pass_1_1_add_batch_result.html":[5,0,2,211,0],
 "struct_urho3_d_1_1_drawable_processor_pass_1_1_add_batch_result.html#a05bdff7176488d0a2efd3371b3458c90":[5,0,2,211,0,0],
 "struct_urho3_d_1_1_drawable_processor_pass_1_1_add_batch_result.html#a0ab6c58062d333d6cded4ca62bd61126":[5,0,2,211,0,1],
-"struct_urho3_d_1_1_drawable_processor_settings.html":[5,0,2,212],
-"struct_urho3_d_1_1_drawable_processor_settings.html#a0d470815510072feb7794f33f8f9d1d2":[5,0,2,212,3]
+"struct_urho3_d_1_1_drawable_processor_settings.html":[5,0,2,212]
 };

@@ -17,7 +17,6 @@ var class_urho3_d_1_1_renderer2_d =
     [ "UpdateBatchesDelayed", "class_urho3_d_1_1_renderer2_d.html#a703175c61f8b96b59a4eb825000ffe4f", null ],
     [ "UpdateViewBatchInfo", "class_urho3_d_1_1_renderer2_d.html#ae127168c2b2da295851213616b059caa", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_renderer2_d.html#a0b39716749cb4b2d78fb29ad6af1790c", null ],
-    [ "CheckDrawableVisibilityWork", "class_urho3_d_1_1_renderer2_d.html#a9191e1a9f06be189da5dc896655888c3", null ],
     [ "cachedMaterials_", "class_urho3_d_1_1_renderer2_d.html#a6d3ce88301a225ad42e0369a40edc339", null ],
     [ "cachedTechniques_", "class_urho3_d_1_1_renderer2_d.html#a2fd6cbe7a864469f8395007d64d5d97b", null ],
     [ "drawables_", "class_urho3_d_1_1_renderer2_d.html#ae4fb1749669b50a2f141b7e41ef9f185", null ],

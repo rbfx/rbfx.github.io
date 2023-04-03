@@ -1,6 +1,7 @@
 var struct_urho3_d_1_1_g_l_t_f_importer_settings =
 [
     [ "PreviewSettings", "struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings.html", "struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings" ],
+    [ "addEmptyNodesToSkeleton_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#a3b176a8344383251408031bfccf308a9", null ],
     [ "assetName_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#a2a6721de6a96fea9c1cd2ab211e19304", null ],
     [ "cleanupBoneNames_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#a79e13a07f263d35becce372235a3a02f", null ],
     [ "cleanupRootNodes_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#a21075f5f704c177cc6df33b08de08b6f", null ],

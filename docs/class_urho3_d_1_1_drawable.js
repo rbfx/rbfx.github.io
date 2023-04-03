@@ -93,7 +93,6 @@ var class_urho3_d_1_1_drawable =
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_drawable.html#a24e97e062ad85b544b47c190cb2140f9", null ],
     [ "Octant", "class_urho3_d_1_1_drawable.html#adf9c5f571516c8a90b68742a384d0a09", null ],
     [ "Octree", "class_urho3_d_1_1_drawable.html#acc8a7ec8cf44f290482ad3d68f6a7719", null ],
-    [ "UpdateDrawablesWork", "class_urho3_d_1_1_drawable.html#a6b6c8bf21a508589b5733bc3d545b76f", null ],
     [ "basePassFlags_", "class_urho3_d_1_1_drawable.html#ad0416c01ec4088197c2207971bd046aa", null ],
     [ "batches_", "class_urho3_d_1_1_drawable.html#a91c0b1544158480259edd88545326fc3", null ],
     [ "boundingBox_", "class_urho3_d_1_1_drawable.html#abfead28f2b8293a8699d6ac84b8476c9", null ],

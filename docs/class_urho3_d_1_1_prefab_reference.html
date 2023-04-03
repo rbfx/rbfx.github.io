@@ -115,14 +115,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a35fb6c2022328f6c1dd9a633b73b8448"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle enabled/disabled state change. <br /></td></tr>
 <tr class="separator:a35fb6c2022328f6c1dd9a633b73b8448"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a6e113b47605bdf2d36a2c76ba9297195"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_prefab_reference.html#a6e113b47605bdf2d36a2c76ba9297195">SetPrefab</a> (<a class="el" href="class_urho3_d_1_1_prefab_resource.html">PrefabResource</a> *prefab, bool createInstance=true)</td></tr>
-<tr class="separator:a6e113b47605bdf2d36a2c76ba9297195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4889655d1b829e63a22d21f9c4267293"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_prefab_reference.html#a4889655d1b829e63a22d21f9c4267293">SetPrefab</a> (<a class="el" href="class_urho3_d_1_1_prefab_resource.html">PrefabResource</a> *prefab, ea::string_view path={}, bool createInstance=true)</td></tr>
+<tr class="separator:a4889655d1b829e63a22d21f9c4267293"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a282b717ab6976eedf72a67a38745dcc9"><td class="memItemLeft" align="right" valign="top"><a id="a282b717ab6976eedf72a67a38745dcc9"></a>
 <a class="el" href="class_urho3_d_1_1_prefab_resource.html">PrefabResource</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetPrefab</b> () const</td></tr>
 <tr class="separator:a282b717ab6976eedf72a67a38745dcc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4525c93481b6eca0692d1ee7a2cf77d5"><td class="memItemLeft" align="right" valign="top"><a id="a4525c93481b6eca0692d1ee7a2cf77d5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPath</b> (ea::string_view path)</td></tr>
+<tr class="separator:a4525c93481b6eca0692d1ee7a2cf77d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a847c208169bf044266749e99a41540"><td class="memItemLeft" align="right" valign="top"><a id="a8a847c208169bf044266749e99a41540"></a>
+const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetPath</b> () const</td></tr>
+<tr class="separator:a8a847c208169bf044266749e99a41540"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9792280049266e56d775a19075bdf74"><td class="memItemLeft" align="right" valign="top"><a id="af9792280049266e56d775a19075bdf74"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_prefab_reference.html#af9792280049266e56d775a19075bdf74">SetPrefabAttr</a> (<a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a> prefab)</td></tr>
-<tr class="memdesc:af9792280049266e56d775a19075bdf74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set reference to prefab resource. <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPrefabAttr</b> (<a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a> prefab)</td></tr>
 <tr class="separator:af9792280049266e56d775a19075bdf74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d243df32163066b55e992a2314c7c4b"><td class="memItemLeft" align="right" valign="top"><a id="a4d243df32163066b55e992a2314c7c4b"></a>
 <a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetPrefabAttr</b> () const</td></tr>
@@ -546,6 +551,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveTemporaryChildr
 <tr class="memitem:a6bf11f4b36febd81d8acd278856615cd"><td class="memItemLeft" align="right" valign="top"><a id="a6bf11f4b36febd81d8acd278856615cd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>InstantiatePrefab</b> (const <a class="el" href="class_urho3_d_1_1_node_prefab.html">NodePrefab</a> &amp;nodePrefab)</td></tr>
 <tr class="separator:a6bf11f4b36febd81d8acd278856615cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa5f32d179d3fa2c82fd0a822bd570ad"><td class="memItemLeft" align="right" valign="top"><a id="afa5f32d179d3fa2c82fd0a822bd570ad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>MarkPrefabDirty</b> ()</td></tr>
+<tr class="separator:afa5f32d179d3fa2c82fd0a822bd570ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a173b979cdcb62caedf06a89b2d3c18ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_prefab_reference.html#a173b979cdcb62caedf06a89b2d3c18ed">TryCreateInplace</a> ()</td></tr>
 <tr class="separator:a173b979cdcb62caedf06a89b2d3c18ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72b96c495c85bd32c8d4c755514f7625"><td class="memItemLeft" align="right" valign="top"><a id="a72b96c495c85bd32c8d4c755514f7625"></a>
@@ -563,6 +571,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a9735293ca6d5ea7061396b4b6cac15ea"><td class="memItemLeft" align="right" valign="top"><a id="a9735293ca6d5ea7061396b4b6cac15ea"></a>
 <a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prefabRef_</b></td></tr>
 <tr class="separator:a9735293ca6d5ea7061396b4b6cac15ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc41ab320fdb7baec17abbb4fbb3803"><td class="memItemLeft" align="right" valign="top"><a id="a6fc41ab320fdb7baec17abbb4fbb3803"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>path_</b></td></tr>
+<tr class="separator:a6fc41ab320fdb7baec17abbb4fbb3803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b364c8720e5afed3f59c9fa93340040"><td class="memItemLeft" align="right" valign="top"><a id="a7b364c8720e5afed3f59c9fa93340040"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>prefabDirty_</b> {}</td></tr>
 <tr class="separator:a7b364c8720e5afed3f59c9fa93340040"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -674,8 +685,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="a6e113b47605bdf2d36a2c76ba9297195"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e113b47605bdf2d36a2c76ba9297195">&#9670;&nbsp;</a></span>SetPrefab()</h2>
+<a id="a4889655d1b829e63a22d21f9c4267293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4889655d1b829e63a22d21f9c4267293">&#9670;&nbsp;</a></span>SetPrefab()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -685,6 +696,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_urho3_d_1_1_prefab_resource.html">PrefabResource</a> *&#160;</td>
           <td class="paramname"><em>prefab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ea::string_view&#160;</td>
+          <td class="paramname"><em>path</em> = <code>{}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

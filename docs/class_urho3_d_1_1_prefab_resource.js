@@ -5,6 +5,7 @@ var class_urho3_d_1_1_prefab_resource =
     [ "GetMutableNodePrefab", "class_urho3_d_1_1_prefab_resource.html#ae4fb7f5eab41a166afcfa2d88b8af536", null ],
     [ "GetMutableScenePrefab", "class_urho3_d_1_1_prefab_resource.html#ae4254ad7b507886953fe5542e204f1a9", null ],
     [ "GetNodePrefab", "class_urho3_d_1_1_prefab_resource.html#a3b4ba9b9401deb17bafc34033b4328a8", null ],
+    [ "GetNodePrefabSlice", "class_urho3_d_1_1_prefab_resource.html#a3bd7b6d1c5f75df625f5ee4c9691993a", null ],
     [ "GetScenePrefab", "class_urho3_d_1_1_prefab_resource.html#ac8b030a86e76fd4911e9f7b285c93905", null ],
     [ "LoadLegacyXML", "class_urho3_d_1_1_prefab_resource.html#acb0980418d500532b4bb49b8e82c4cec", null ],
     [ "NormalizeIds", "class_urho3_d_1_1_prefab_resource.html#ab8a92a6ac022ba63e863a70f1f70a522", null ],
