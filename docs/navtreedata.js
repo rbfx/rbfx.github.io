@@ -144,7 +144,7 @@ var NAVTREEINDEX =
 "struct_urho3_d_1_1_render_path_command.html#a22df999c2f0073e9dcbefe87771facb1",
 "struct_urho3_d_1_1_shader_parameter.html#a0b1e33d71015e1e3c5b4066781e4e12e",
 "struct_urho3_d_1_1_spriter_1_1_map_instruction.html",
-"struct_urho3_d_1_1_update_context.html#a0524a7705a1bc7ef2b8941e8e5e2e4bb"
+"struct_urho3_d_1_1_update_context.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

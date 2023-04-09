@@ -13,7 +13,7 @@ var class_urho3_d_1_1_sprite =
     [ "GetScreenPosition", "class_urho3_d_1_1_sprite.html#aaec7766825ed1f56c3fb217dc6ff2c34", null ],
     [ "GetTexture", "class_urho3_d_1_1_sprite.html#a234b3df625022a90de2c871321abd188", null ],
     [ "GetTextureAttr", "class_urho3_d_1_1_sprite.html#a94cf089002c6fa7f20108248af3da3b7", null ],
-    [ "GetTransform", "class_urho3_d_1_1_sprite.html#af2e7d710eaa1236116799c499a95d86c", null ],
+    [ "GetTransformMatrix", "class_urho3_d_1_1_sprite.html#a3974b8a5104b920855f03058289b2adf", null ],
     [ "IsWithinScissor", "class_urho3_d_1_1_sprite.html#af3d3e34628297a887c3200937a412000", null ],
     [ "OnPositionSet", "class_urho3_d_1_1_sprite.html#ab07633c8b57fd85efa2e37a4cb2b6996", null ],
     [ "RegisterObject", "class_urho3_d_1_1_sprite.html#aedada728de8e83b44472e1dd798a1b0d", null ],

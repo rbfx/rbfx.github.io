@@ -61,7 +61,9 @@ $(document).ready(function(){initNavTree('struct_urho3_d_1_1_transform.html','')
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="struct_urho3_d_1_1_transform-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Urho3D::Transform Struct Reference</div>  </div>
@@ -82,7 +84,8 @@ Inheritance diagram for Urho3D::Transform:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adfd4d684b1fb96e55ef4ef75cfc9f836"><td class="memItemLeft" align="right" valign="top"><a id="adfd4d684b1fb96e55ef4ef75cfc9f836"></a>
-<a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ToMatrix3x4</b> () const</td></tr>
+<a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_transform.html#adfd4d684b1fb96e55ef4ef75cfc9f836">ToMatrix3x4</a> () const</td></tr>
+<tr class="memdesc:adfd4d684b1fb96e55ef4ef75cfc9f836"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="class_urho3_d_1_1_matrix3x4.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a> from <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a>. <br /></td></tr>
 <tr class="separator:adfd4d684b1fb96e55ef4ef75cfc9f836"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af82d4ce5b3ba86b08c404d330f04d683"><td class="memItemLeft" align="right" valign="top"><a id="af82d4ce5b3ba86b08c404d330f04d683"></a>
 <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_transform.html#af82d4ce5b3ba86b08c404d330f04d683">Lerp</a> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;rhs, float t) const</td></tr>
@@ -105,6 +108,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5e837df06c238c56ef75221c28224169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return rotation multiplied by the transform. <br /></td></tr>
 <tr class="separator:a5e837df06c238c56ef75221c28224169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a895fec489653519ee62eb7e09c962a7f"><td class="memItemLeft" align="right" valign="top"><a id="a895fec489653519ee62eb7e09c962a7f"></a>
+static <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_transform.html#a895fec489653519ee62eb7e09c962a7f">FromMatrix3x4</a> (const <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &amp;matrix)</td></tr>
+<tr class="memdesc:a895fec489653519ee62eb7e09c962a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> from <a class="el" href="class_urho3_d_1_1_matrix3x4.html" title="3x4 matrix for scene node transform calculations.">Matrix3x4</a>. It is not precise for non-uniform scale. <br /></td></tr>
+<tr class="separator:a895fec489653519ee62eb7e09c962a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a3d09fc3b2a520aed00db90c7aa238e5a"><td class="memItemLeft" align="right" valign="top"><a id="a3d09fc3b2a520aed00db90c7aa238e5a"></a>
@@ -116,11 +126,18 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad333f04ed7c270cc435f4354a2120e02"><td class="memItemLeft" align="right" valign="top"><a id="ad333f04ed7c270cc435f4354a2120e02"></a>
 <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>scale_</b> {<a class="el" href="class_urho3_d_1_1_vector3.html#a402fdc96e79366f13803eb238a5623ed">Vector3::ONE</a>}</td></tr>
 <tr class="separator:ad333f04ed7c270cc435f4354a2120e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a1b6dc5e4fd94b82bdf2fbe91abbfadbd"><td class="memItemLeft" align="right" valign="top"><a id="a1b6dc5e4fd94b82bdf2fbe91abbfadbd"></a>
+static const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Identity</b></td></tr>
+<tr class="separator:a1b6dc5e4fd94b82bdf2fbe91abbfadbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Position, rotation and scale in 3D. TODO: Expand it into something more user-friendly. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<div class="textblock"><p>3D transform decomposed into translation, rotation and scale components. TODO: Expand it into something more user-friendly. </p>
+</div><hr/>The documentation for this struct was generated from the following files:<ul>
 <li>Urho3D/Math/Transform.h</li>
+<li>Urho3D/Math/Transform.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
