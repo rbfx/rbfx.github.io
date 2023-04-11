@@ -12,6 +12,7 @@ var class_urho3_d_1_1_i_k_solver =
     [ "PostUpdate", "class_urho3_d_1_1_i_k_solver.html#a79b2305b4f89b216880d9b53a1445d63", null ],
     [ "RebuildSolvers", "class_urho3_d_1_1_i_k_solver.html#a18c7a3080524b59ea1f3884d19761e78", null ],
     [ "RegisterObject", "class_urho3_d_1_1_i_k_solver.html#ad5339a36d93aab3d3302ed48ede3157e", null ],
+    [ "SendIKEvent", "class_urho3_d_1_1_i_k_solver.html#a227be7d24235115655fa8fe435e5b76c", null ],
     [ "SetContinuousRotation", "class_urho3_d_1_1_i_k_solver.html#ab92b0fc59ec694e01fea9e1576d8d86d", null ],
     [ "SetOriginalTransforms", "class_urho3_d_1_1_i_k_solver.html#aad8d1da6365f51931569b8d4a9b7fd21", null ],
     [ "SetSolveWhenPaused", "class_urho3_d_1_1_i_k_solver.html#a99580197ab9b6639267f9cfd10c4c702", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"class_urho3_d_1_1_prefab_writer.html#af2ff5fc9fb75e075324c36deef122097":[5,0,2,539,2],
 "class_urho3_d_1_1_prefab_writer_to_archive.html":[5,0,2,540],
 "class_urho3_d_1_1_prefab_writer_to_archive.html#a06947a23496f46010c44de530b1e5427":[5,0,2,540,16],
 "class_urho3_d_1_1_prefab_writer_to_archive.html#a07832df27eb91f7f49ddfaa9d37d1e53":[5,0,2,540,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "class_urho3_d_1_1_raycast_vehicle.html#a8dc65b90d005aa9c5d5a626d287f1acf":[5,0,2,549,72],
 "class_urho3_d_1_1_raycast_vehicle.html#a8e2e3792ddb12f51df7f785804084c1e":[5,0,2,549,39],
 "class_urho3_d_1_1_raycast_vehicle.html#a915fa41ae3ecb2367b9632f94b12731f":[5,0,2,549,48],
-"class_urho3_d_1_1_raycast_vehicle.html#a92d99b123a3f09358a79e3f5041f6f35":[5,0,2,549,47],
-"class_urho3_d_1_1_raycast_vehicle.html#a93296fc3cd8d0bae3a2de42c41969785":[5,0,2,549,79]
+"class_urho3_d_1_1_raycast_vehicle.html#a92d99b123a3f09358a79e3f5041f6f35":[5,0,2,549,47]
 };

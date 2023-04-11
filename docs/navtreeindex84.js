@@ -1,5 +1,6 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_navigation_geometry_info.html#ae268c39f11a4082c07787f7cd6f83e2e":[5,0,2,427,0],
 "struct_urho3_d_1_1_navigation_path_point.html":[5,0,2,429],
 "struct_urho3_d_1_1_navigation_path_point.html#a06946288e67c1990193f4637be138d8e":[5,0,2,429,2],
 "struct_urho3_d_1_1_navigation_path_point.html#a3c8d77ac8f9122158bcac0872627ec7e":[5,0,2,429,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_particle_graph_typed_pin.html#abec7e8dd554b8db3f13ab0d149664a6a":[5,0,2,500,2],
 "struct_urho3_d_1_1_per_thread_scene_result.html":[5,0,2,504],
 "struct_urho3_d_1_1_per_thread_scene_result.html#a3218346e5489961a266138d5b28f9451":[5,0,2,504,2],
-"struct_urho3_d_1_1_per_thread_scene_result.html#a3a8336b9adce447956dd0a112a1f7274":[5,0,2,504,1],
-"struct_urho3_d_1_1_per_thread_scene_result.html#aa9aff827eddb60fbfe4247211e3bda73":[5,0,2,504,3]
+"struct_urho3_d_1_1_per_thread_scene_result.html#a3a8336b9adce447956dd0a112a1f7274":[5,0,2,504,1]
 };
