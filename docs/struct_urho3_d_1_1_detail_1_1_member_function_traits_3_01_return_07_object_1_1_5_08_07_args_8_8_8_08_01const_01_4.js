@@ -1,0 +1,5 @@
+var struct_urho3_d_1_1_detail_1_1_member_function_traits_3_01_return_07_object_1_1_5_08_07_args_8_8_8_08_01const_01_4 =
+[
+    [ "ObjectType", "struct_urho3_d_1_1_detail_1_1_member_function_traits_3_01_return_07_object_1_1_5_08_07_args_8_8_8_08_01const_01_4.html#abff0003869fa5275dbad36cfb67d9162", null ],
+    [ "ReturnType", "struct_urho3_d_1_1_detail_1_1_member_function_traits_3_01_return_07_object_1_1_5_08_07_args_8_8_8_08_01const_01_4.html#aa28f9225662e9261e4cb4161317fb073", null ]
+];

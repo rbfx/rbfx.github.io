@@ -1,16 +1,5 @@
 var NAVTREEINDEX78 =
 {
-"struct_urho3_d_1_1_animation_track.html#aff37bb7241811f95f6051626f0719fe5":[5,0,2,29,4],
-"struct_urho3_d_1_1_animation_trigger_point.html":[5,0,2,30],
-"struct_urho3_d_1_1_animation_trigger_point.html#a2122535dd432d8624e2cc895d520ff41":[5,0,2,30,1],
-"struct_urho3_d_1_1_animation_trigger_point.html#a976791babf69c44295927bef7f91ee85":[5,0,2,30,0],
-"struct_urho3_d_1_1_animation_velocity_extractor_1_1_extracted_track_set.html":[5,0,2,31,0],
-"struct_urho3_d_1_1_animation_velocity_extractor_1_1_extracted_track_set.html#ab6853cfbc5f3596afb0a4e3b6b00580b":[5,0,2,31,0,0],
-"struct_urho3_d_1_1_animation_velocity_extractor_1_1_extracted_track_set.html#abccb8c31985fd51a584b9620fe0b9e05":[5,0,2,31,0,1],
-"struct_urho3_d_1_1_application_flavor.html":[5,0,2,33],
-"struct_urho3_d_1_1_application_flavor.html#a0c28bf94caefec7f66e53d9fdc2c8d05":[5,0,2,33,5],
-"struct_urho3_d_1_1_application_flavor.html#a28de755c64f30678414988e6c21dcc1e":[5,0,2,33,4],
-"struct_urho3_d_1_1_application_flavor.html#a402c5a75abcf86fd2543d2ee765e7cc2":[5,0,2,33,7],
 "struct_urho3_d_1_1_application_flavor.html#a7ce5c8ce6811dbf51764af4a15c61d14":[5,0,2,33,2],
 "struct_urho3_d_1_1_application_flavor.html#abbacca689c98a2459709b0dd638ad724":[5,0,2,33,1],
 "struct_urho3_d_1_1_application_flavor.html#ac0ff66f357b5e7c40e4008dd1f4c7074":[5,0,2,33,3],
@@ -249,5 +238,16 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_batch_renderer_settings.html#a5befbc57165aa713db1d6b5d46e2ab01":[5,0,2,82,1],
 "struct_urho3_d_1_1_batch_renderer_settings.html#a68f6ab09233f216299990fd746cca80d":[5,0,2,82,2],
 "struct_urho3_d_1_1_batch_renderer_settings.html#a69a6ab4227092f0053d2c20afa2bd2ce":[5,0,2,82,4],
-"struct_urho3_d_1_1_batch_renderer_settings.html#a76acb1f615da0725ea8f5949754f9206":[5,0,2,82,3]
+"struct_urho3_d_1_1_batch_renderer_settings.html#a76acb1f615da0725ea8f5949754f9206":[5,0,2,82,3],
+"struct_urho3_d_1_1_batch_renderer_settings.html#a8b35dcd72e925c9f685883a0f734c5e8":[5,0,2,82,0],
+"struct_urho3_d_1_1_batch_renderer_settings.html#a8e15b5534e5cf5e535f913b0f2166bc8":[5,0,2,82,7],
+"struct_urho3_d_1_1_batch_renderer_settings.html#aab6b38865cdde1a5d85916313fc9f3de":[5,0,2,82,6],
+"struct_urho3_d_1_1_batch_rendering_context.html":[5,0,2,83],
+"struct_urho3_d_1_1_batch_rendering_context.html#a29becf6c4f4914dc89c1a52cecb7913a":[5,0,2,83,5],
+"struct_urho3_d_1_1_batch_rendering_context.html#a38a58c7298f062085bcaa810db2a4fb2":[5,0,2,83,2],
+"struct_urho3_d_1_1_batch_rendering_context.html#a5de6b0d0246aa90b2aee90268b41547f":[5,0,2,83,7],
+"struct_urho3_d_1_1_batch_rendering_context.html#a6d4812709509f223403d3cdf8065a15c":[5,0,2,83,4],
+"struct_urho3_d_1_1_batch_rendering_context.html#a7b686c9f7db5c7c4157b380b350a130c":[5,0,2,83,0],
+"struct_urho3_d_1_1_batch_rendering_context.html#aa045ac0cacfd1ca8d46ee7fd961b39e3":[5,0,2,83,3],
+"struct_urho3_d_1_1_batch_rendering_context.html#aea92c5a405bd04d0fb2463f166ce46a0":[5,0,2,83,6]
 };
