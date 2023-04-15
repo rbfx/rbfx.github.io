@@ -1,5 +1,13 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_batch_rendering_context.html":[5,0,2,83],
+"struct_urho3_d_1_1_batch_rendering_context.html#a29becf6c4f4914dc89c1a52cecb7913a":[5,0,2,83,5],
+"struct_urho3_d_1_1_batch_rendering_context.html#a38a58c7298f062085bcaa810db2a4fb2":[5,0,2,83,2],
+"struct_urho3_d_1_1_batch_rendering_context.html#a5de6b0d0246aa90b2aee90268b41547f":[5,0,2,83,7],
+"struct_urho3_d_1_1_batch_rendering_context.html#a6d4812709509f223403d3cdf8065a15c":[5,0,2,83,4],
+"struct_urho3_d_1_1_batch_rendering_context.html#a7b686c9f7db5c7c4157b380b350a130c":[5,0,2,83,0],
+"struct_urho3_d_1_1_batch_rendering_context.html#aa045ac0cacfd1ca8d46ee7fd961b39e3":[5,0,2,83,3],
+"struct_urho3_d_1_1_batch_rendering_context.html#aea92c5a405bd04d0fb2463f166ce46a0":[5,0,2,83,6],
 "struct_urho3_d_1_1_batch_rendering_context.html#afefe180169e1913bb721102a6bdbdda3":[5,0,2,83,1],
 "struct_urho3_d_1_1_batch_state_create_context.html":[5,0,2,86],
 "struct_urho3_d_1_1_batch_state_create_context.html#a54de270a26139c175ccfd948d18474d9":[5,0,2,86,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_cooked_light_params.html#a3faaa7576bebcb44a53d46f10e3494a1":[5,0,2,167,3],
 "struct_urho3_d_1_1_cooked_light_params.html#a427a47a2926c32fdbeec10dd938bf17d":[5,0,2,167,8],
 "struct_urho3_d_1_1_cooked_light_params.html#a48b88843f3d2c0da0debbc7c1884560e":[5,0,2,167,17],
-"struct_urho3_d_1_1_cooked_light_params.html#a48db01507edcf57b1cc405d6243bc40b":[5,0,2,167,14],
-"struct_urho3_d_1_1_cooked_light_params.html#a6a715e5b199798590f57ede08d697db2":[5,0,2,167,0],
-"struct_urho3_d_1_1_cooked_light_params.html#a6dd8248465b31d30238ac8357d5feaa4":[5,0,2,167,9],
-"struct_urho3_d_1_1_cooked_light_params.html#a7871ff343e0c596483793574b69f23d4":[5,0,2,167,5],
-"struct_urho3_d_1_1_cooked_light_params.html#a901ffd164a44e63ace13d1ee6d198032":[5,0,2,167,22],
-"struct_urho3_d_1_1_cooked_light_params.html#a969a1728a446a25cf7bd3444c4cab8fd":[5,0,2,167,10],
-"struct_urho3_d_1_1_cooked_light_params.html#aa3e80e310c702bcdafb937cd5378211c":[5,0,2,167,23],
-"struct_urho3_d_1_1_cooked_light_params.html#aa5f0d843aa57cb4dc4a91f381c66eae5":[5,0,2,167,16],
-"struct_urho3_d_1_1_cooked_light_params.html#ab30329f29f5a3e92af9bd8e42c38a52d":[5,0,2,167,21]
+"struct_urho3_d_1_1_cooked_light_params.html#a48db01507edcf57b1cc405d6243bc40b":[5,0,2,167,14]
 };

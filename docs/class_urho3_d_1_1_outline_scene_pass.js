@@ -7,7 +7,7 @@ var class_urho3_d_1_1_outline_scene_pass =
     [ "HasBatches", "class_urho3_d_1_1_outline_scene_pass.html#a9fc88bb7c5c8be70be8914721feee24a", null ],
     [ "OnBatchesReady", "class_urho3_d_1_1_outline_scene_pass.html#a061fe6ae9e158a6b60a645b9faf0319b", null ],
     [ "PrepareInstancingBuffer", "class_urho3_d_1_1_outline_scene_pass.html#a027c442adc10e065abb517b79b003452", null ],
-    [ "SetOutlineGroups", "class_urho3_d_1_1_outline_scene_pass.html#a38aa57fd225ffeced7572b6fa0ba4563", null ],
+    [ "SetOutlineGroups", "class_urho3_d_1_1_outline_scene_pass.html#ae987dab86db49029adf3d6ca0ea2a6ff", null ],
     [ "batchGroup_", "class_urho3_d_1_1_outline_scene_pass.html#a23e29494fa40863cdedab2c06233479d", null ],
     [ "outlinedPasses_", "class_urho3_d_1_1_outline_scene_pass.html#a91870ba9c7d69d36a91ebe7f36509fdf", null ],
     [ "outlineGroups_", "class_urho3_d_1_1_outline_scene_pass.html#ac79c5eeaf159cb081f86a4bb88aa627d", null ],

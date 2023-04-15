@@ -1,5 +1,13 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_cooked_light_params.html#a6a715e5b199798590f57ede08d697db2":[5,0,2,167,0],
+"struct_urho3_d_1_1_cooked_light_params.html#a6dd8248465b31d30238ac8357d5feaa4":[5,0,2,167,9],
+"struct_urho3_d_1_1_cooked_light_params.html#a7871ff343e0c596483793574b69f23d4":[5,0,2,167,5],
+"struct_urho3_d_1_1_cooked_light_params.html#a901ffd164a44e63ace13d1ee6d198032":[5,0,2,167,22],
+"struct_urho3_d_1_1_cooked_light_params.html#a969a1728a446a25cf7bd3444c4cab8fd":[5,0,2,167,10],
+"struct_urho3_d_1_1_cooked_light_params.html#aa3e80e310c702bcdafb937cd5378211c":[5,0,2,167,23],
+"struct_urho3_d_1_1_cooked_light_params.html#aa5f0d843aa57cb4dc4a91f381c66eae5":[5,0,2,167,16],
+"struct_urho3_d_1_1_cooked_light_params.html#ab30329f29f5a3e92af9bd8e42c38a52d":[5,0,2,167,21],
 "struct_urho3_d_1_1_cooked_light_params.html#abeba2bd21b16d392fb3d26982a2f64a2":[5,0,2,167,18],
 "struct_urho3_d_1_1_cooked_light_params.html#ac95fc18d76e81a2544dca99221e68af5":[5,0,2,167,19],
 "struct_urho3_d_1_1_cooked_light_params.html#adfe38fe4e31999d21bb3cddd6a664e5b":[5,0,2,167,4],
@@ -241,13 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_draw_quad_params.html#ad7c9b02b3a7b904e7c591c3bb6dfba6d":[5,0,2,215,0],
 "struct_urho3_d_1_1_drawable_processor_1_1_update_flag.html":[5,0,2,210,0],
 "struct_urho3_d_1_1_drawable_processor_1_1_update_flag.html#a4731d3523670eaf8fa750a3fe3c17425":[5,0,2,210,0,2],
-"struct_urho3_d_1_1_drawable_processor_1_1_update_flag.html#a58e6d3728b07e6ccaca63441b334aafc":[5,0,2,210,0,1],
-"struct_urho3_d_1_1_drawable_processor_1_1_update_flag.html#afbcd729433d10e4d0bce9e0ae5818cde":[5,0,2,210,0,0],
-"struct_urho3_d_1_1_drawable_processor_pass_1_1_add_batch_result.html":[5,0,2,211,0],
-"struct_urho3_d_1_1_drawable_processor_pass_1_1_add_batch_result.html#a05bdff7176488d0a2efd3371b3458c90":[5,0,2,211,0,0],
-"struct_urho3_d_1_1_drawable_processor_pass_1_1_add_batch_result.html#a0ab6c58062d333d6cded4ca62bd61126":[5,0,2,211,0,1],
-"struct_urho3_d_1_1_drawable_processor_settings.html":[5,0,2,212],
-"struct_urho3_d_1_1_drawable_processor_settings.html#a0d470815510072feb7794f33f8f9d1d2":[5,0,2,212,3],
-"struct_urho3_d_1_1_drawable_processor_settings.html#a1a959521131cdd2be3f024cb1bdc5a75":[5,0,2,212,8],
-"struct_urho3_d_1_1_drawable_processor_settings.html#a4708a7c97b5d4a486182e3ba0b60e030":[5,0,2,212,2]
+"struct_urho3_d_1_1_drawable_processor_1_1_update_flag.html#a58e6d3728b07e6ccaca63441b334aafc":[5,0,2,210,0,1]
 };

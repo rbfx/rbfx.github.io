@@ -1,5 +1,13 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_navigation_geometry_info.html":[5,0,2,425],
+"struct_urho3_d_1_1_navigation_geometry_info.html#a07aff5a8aa1e373595e14262cad30ef8":[5,0,2,425,1],
+"struct_urho3_d_1_1_navigation_geometry_info.html#a108878cba545561bd28629267a177658":[5,0,2,425,2],
+"struct_urho3_d_1_1_navigation_geometry_info.html#a3bdb847e60fae19421b243ba7f9127d0":[5,0,2,425,3],
+"struct_urho3_d_1_1_navigation_geometry_info.html#ae268c39f11a4082c07787f7cd6f83e2e":[5,0,2,425,0],
+"struct_urho3_d_1_1_navigation_path_point.html":[5,0,2,427],
+"struct_urho3_d_1_1_navigation_path_point.html#a06946288e67c1990193f4637be138d8e":[5,0,2,427,2],
+"struct_urho3_d_1_1_navigation_path_point.html#a3c8d77ac8f9122158bcac0872627ec7e":[5,0,2,427,1],
 "struct_urho3_d_1_1_navigation_path_point.html#a401162867056b637ab62219d0b8f319d":[5,0,2,427,0],
 "struct_urho3_d_1_1_network_setting.html":[5,0,2,433],
 "struct_urho3_d_1_1_network_setting.html#a5064abdd17c6ade97718f45e6381ab23":[5,0,2,433,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_particle_graph_span.html#a5adf8ccae927b05999c3ce8734e2626e":[5,0,2,496,4],
 "struct_urho3_d_1_1_particle_graph_typed_pin.html":[5,0,2,498],
 "struct_urho3_d_1_1_particle_graph_typed_pin.html#a76fe33e12a00398e2bfa06a6b9030aaa":[5,0,2,498,1],
-"struct_urho3_d_1_1_particle_graph_typed_pin.html#aaa9ad154bb307408cd79188cbcbe9366":[5,0,2,498,0],
-"struct_urho3_d_1_1_particle_graph_typed_pin.html#abec7e8dd554b8db3f13ab0d149664a6a":[5,0,2,498,2],
-"struct_urho3_d_1_1_per_thread_scene_result.html":[5,0,2,502],
-"struct_urho3_d_1_1_per_thread_scene_result.html#a3218346e5489961a266138d5b28f9451":[5,0,2,502,2],
-"struct_urho3_d_1_1_per_thread_scene_result.html#a3a8336b9adce447956dd0a112a1f7274":[5,0,2,502,1],
-"struct_urho3_d_1_1_per_thread_scene_result.html#aa9aff827eddb60fbfe4247211e3bda73":[5,0,2,502,3],
-"struct_urho3_d_1_1_per_thread_scene_result.html#af5d79347eca6b99613f1508ce04d23f9":[5,0,2,502,0],
-"struct_urho3_d_1_1_physics_raycast_result.html":[5,0,2,503],
-"struct_urho3_d_1_1_physics_raycast_result.html#a37c126b5444e0e8bc1e063c719ca86b9":[5,0,2,503,4]
+"struct_urho3_d_1_1_particle_graph_typed_pin.html#aaa9ad154bb307408cd79188cbcbe9366":[5,0,2,498,0]
 };

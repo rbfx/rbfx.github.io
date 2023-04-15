@@ -1,5 +1,13 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_light_processor_cache_settings.html#a856fa6a515fbae4b1471ca4782a40588":[5,0,2,373,3],
+"struct_urho3_d_1_1_light_processor_cache_settings.html#a9ad4dfa770a49806b4afa4d71267a3ba":[5,0,2,373,1],
+"struct_urho3_d_1_1_light_processor_cache_settings.html#aeb539647fb73c6951e928ee43da3c83a":[5,0,2,373,4],
+"struct_urho3_d_1_1_light_query_result.html":[5,0,2,375],
+"struct_urho3_d_1_1_light_query_result.html#a0a5751f7107d2c119ebafe7d835b3967":[5,0,2,375,2],
+"struct_urho3_d_1_1_light_query_result.html#a0e1de03c769b30bd91c49b08b9764ff3":[5,0,2,375,9],
+"struct_urho3_d_1_1_light_query_result.html#a29936299a8297abae9fb89a61272a78d":[5,0,2,375,5],
+"struct_urho3_d_1_1_light_query_result.html#a35998ae67ea64b0865b39b0c803bc332":[5,0,2,375,3],
 "struct_urho3_d_1_1_light_query_result.html#a6e640cda762714fad87d4338e3e20c70":[5,0,2,375,0],
 "struct_urho3_d_1_1_light_query_result.html#a7c233bb3441ee360085959a3cf027ced":[5,0,2,375,4],
 "struct_urho3_d_1_1_light_query_result.html#a8d69f790ea052774cc99f3ee714f9deb":[5,0,2,375,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_nav_build_data.html#aac2b65e18c6cbe27a24d5553b4439f44":[5,0,2,423,13],
 "struct_urho3_d_1_1_nav_build_data.html#ab714c103390c7ee5ceba13424a9ba774":[5,0,2,423,5],
 "struct_urho3_d_1_1_nav_build_data.html#adb1b37dc2eb8a24c9d2cd1e49349d395":[5,0,2,423,6],
-"struct_urho3_d_1_1_nav_build_data.html#af20f0bb9b527efe066b8ad5134bbe115":[5,0,2,423,10],
-"struct_urho3_d_1_1_navigation_geometry_info.html":[5,0,2,425],
-"struct_urho3_d_1_1_navigation_geometry_info.html#a07aff5a8aa1e373595e14262cad30ef8":[5,0,2,425,1],
-"struct_urho3_d_1_1_navigation_geometry_info.html#a108878cba545561bd28629267a177658":[5,0,2,425,2],
-"struct_urho3_d_1_1_navigation_geometry_info.html#a3bdb847e60fae19421b243ba7f9127d0":[5,0,2,425,3],
-"struct_urho3_d_1_1_navigation_geometry_info.html#ae268c39f11a4082c07787f7cd6f83e2e":[5,0,2,425,0],
-"struct_urho3_d_1_1_navigation_path_point.html":[5,0,2,427],
-"struct_urho3_d_1_1_navigation_path_point.html#a06946288e67c1990193f4637be138d8e":[5,0,2,427,2],
-"struct_urho3_d_1_1_navigation_path_point.html#a3c8d77ac8f9122158bcac0872627ec7e":[5,0,2,427,1]
+"struct_urho3_d_1_1_nav_build_data.html#af20f0bb9b527efe066b8ad5134bbe115":[5,0,2,423,10]
 };

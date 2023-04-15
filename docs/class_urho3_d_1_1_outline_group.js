@@ -13,9 +13,11 @@ var class_urho3_d_1_1_outline_group =
     [ "GetRenderOrder", "class_urho3_d_1_1_outline_group.html#a0c5f99ded199f3793b6b08959d7db3eb", null ],
     [ "HasDrawable", "class_urho3_d_1_1_outline_group.html#affed4fc94d6aa1a9d9b546f25eef383e", null ],
     [ "HasDrawables", "class_urho3_d_1_1_outline_group.html#a73c6eaad33dcc2d17142aa7a6358ab91", null ],
+    [ "IsDebug", "class_urho3_d_1_1_outline_group.html#a4a39eff3b1d62fda058b2b4e9155443c", null ],
     [ "RegisterObject", "class_urho3_d_1_1_outline_group.html#ab8f01ecc309f23ad2a8460e1f598de4e", null ],
     [ "RemoveDrawable", "class_urho3_d_1_1_outline_group.html#abaa9989d926e5c93f7a2b19135500176", null ],
     [ "SetColor", "class_urho3_d_1_1_outline_group.html#a95c4aeb309539d28dcc22a6dccbf2e9a", null ],
+    [ "SetDebug", "class_urho3_d_1_1_outline_group.html#a15002389b864e6510e24ec5e6df87b16", null ],
     [ "SetDrawablesAttr", "class_urho3_d_1_1_outline_group.html#a96570f4ec1b0f47b2412d8f4723504dc", null ],
     [ "SetRenderOrder", "class_urho3_d_1_1_outline_group.html#ae558d43c1702b0a11765e8a63be48769", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_outline_group.html#a8c50934f60f752e031bda76f61d4d616", null ],
@@ -23,6 +25,7 @@ var class_urho3_d_1_1_outline_group =
     [ "drawables_", "class_urho3_d_1_1_outline_group.html#abf27a58e69e040ceef83cdc90bffc451", null ],
     [ "drawablesAttr_", "class_urho3_d_1_1_outline_group.html#ad36457df17b9de391fae2def19804db9", null ],
     [ "drawablesDirty_", "class_urho3_d_1_1_outline_group.html#a9a08f3007b9c84abc30ff23af06a2ef2", null ],
+    [ "isDebug_", "class_urho3_d_1_1_outline_group.html#ae36f38e86090fad346504a16ed9a0314", null ],
     [ "materials_", "class_urho3_d_1_1_outline_group.html#afa9c10ccd370dd9684ee907166bc5f8c", null ],
     [ "renderOrder_", "class_urho3_d_1_1_outline_group.html#a173df7bd54f6068a038a09e3c9743690", null ]
 ];

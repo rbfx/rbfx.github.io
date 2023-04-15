@@ -1,5 +1,13 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_i_k_arm_solver_1_1_local_cache.html#a93b388e5e73eccf4906f002dc4bb5b36":[5,0,2,289,0,3],
+"struct_urho3_d_1_1_i_k_arm_solver_1_1_local_cache.html#a9a3466254ae94325e0467566420cf190":[5,0,2,289,0,4],
+"struct_urho3_d_1_1_i_k_arm_solver_1_1_local_cache.html#ace734786c625691d320fc62d12c69ba8":[5,0,2,289,0,2],
+"struct_urho3_d_1_1_i_k_head_solver_1_1_local_cache.html":[5,0,2,294,0],
+"struct_urho3_d_1_1_i_k_head_solver_1_1_local_cache.html#a048d07e444db5c190c1f98380ce64c6d":[5,0,2,294,0,0],
+"struct_urho3_d_1_1_i_k_head_solver_1_1_local_cache.html#a165aa0f4906e00fb20d91e016ee09266":[5,0,2,294,0,1],
+"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html":[5,0,2,296,0],
+"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a0e1e8f5b2d90903b7b3a4a08fdf4e55d":[5,0,2,296,0,2],
 "struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a1c3e9f2f37b72edc69a276cc20c60f54":[5,0,2,296,0,3],
 "struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a42a0d1582634a47b75ac0eeea0863b52":[5,0,2,296,0,0],
 "struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a77685987a4a6fa224eaba816ce9f7560":[5,0,2,296,0,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_light_processor_cache_1_1_cached_light_processor.html#af6242d17bdd64b7a6fa4d302c7b9c96c":[5,0,2,372,0,1],
 "struct_urho3_d_1_1_light_processor_cache_settings.html":[5,0,2,373],
 "struct_urho3_d_1_1_light_processor_cache_settings.html#a3cf9991fa5b48b1af8615d123ae1be46":[5,0,2,373,2],
-"struct_urho3_d_1_1_light_processor_cache_settings.html#a60528f0a9c2825ccdba3bd36599d2152":[5,0,2,373,0],
-"struct_urho3_d_1_1_light_processor_cache_settings.html#a856fa6a515fbae4b1471ca4782a40588":[5,0,2,373,3],
-"struct_urho3_d_1_1_light_processor_cache_settings.html#a9ad4dfa770a49806b4afa4d71267a3ba":[5,0,2,373,1],
-"struct_urho3_d_1_1_light_processor_cache_settings.html#aeb539647fb73c6951e928ee43da3c83a":[5,0,2,373,4],
-"struct_urho3_d_1_1_light_query_result.html":[5,0,2,375],
-"struct_urho3_d_1_1_light_query_result.html#a0a5751f7107d2c119ebafe7d835b3967":[5,0,2,375,2],
-"struct_urho3_d_1_1_light_query_result.html#a0e1de03c769b30bd91c49b08b9764ff3":[5,0,2,375,9],
-"struct_urho3_d_1_1_light_query_result.html#a29936299a8297abae9fb89a61272a78d":[5,0,2,375,5],
-"struct_urho3_d_1_1_light_query_result.html#a35998ae67ea64b0865b39b0c803bc332":[5,0,2,375,3]
+"struct_urho3_d_1_1_light_processor_cache_settings.html#a60528f0a9c2825ccdba3bd36599d2152":[5,0,2,373,0]
 };

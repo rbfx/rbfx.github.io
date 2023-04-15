@@ -1,5 +1,13 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_shader_define_array.html#acb244daa8a3f1d09dca4c0556e05d3be":[5,0,2,636,3],
+"struct_urho3_d_1_1_shader_define_array.html#acc1f3d1211b152ad48dd75e64d022152":[5,0,2,636,4],
+"struct_urho3_d_1_1_shader_define_array.html#ae392e8cd4ef329f47b205b7921bbefe7":[5,0,2,636,2],
+"struct_urho3_d_1_1_shader_parameter.html":[5,0,2,637],
+"struct_urho3_d_1_1_shader_parameter.html#a03fbc3b22095a254211795767f828382":[5,0,2,637,10],
+"struct_urho3_d_1_1_shader_parameter.html#a0b1e33d71015e1e3c5b4066781e4e12e":[5,0,2,637,1],
+"struct_urho3_d_1_1_shader_parameter.html#a323fc7a5afda031d4d512a5dc2d66fb4":[5,0,2,637,7],
+"struct_urho3_d_1_1_shader_parameter.html#a7b98ca1011053aec26dd13e447a8c234":[5,0,2,637,5],
 "struct_urho3_d_1_1_shader_parameter.html#a8570015f2e30a727156ffe3afce9d2f0":[5,0,2,637,8],
 "struct_urho3_d_1_1_shader_parameter.html#a90ef82b5ee3d7cd29bab4572e397ac0e":[5,0,2,637,2],
 "struct_urho3_d_1_1_shader_parameter.html#a9a5ecc1b95daa0f26c7bb4e57cd7ecd3":[5,0,2,637,9],
@@ -241,13 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_spriter_1_1_mainline_key.html":[5,0,2,3,6],
 "struct_urho3_d_1_1_spriter_1_1_mainline_key.html#a07eed5ab8aefe9ac45843c0be3065250":[5,0,2,3,6,5],
 "struct_urho3_d_1_1_spriter_1_1_mainline_key.html#a1865df332aa1c446fbf08c4882a14a68":[5,0,2,3,6,1],
-"struct_urho3_d_1_1_spriter_1_1_mainline_key.html#a4f94cac647a7c757894043aea750c495":[5,0,2,3,6,7],
-"struct_urho3_d_1_1_spriter_1_1_mainline_key.html#a5ed563b242446fc019535b6ae0cc9812":[5,0,2,3,6,0],
-"struct_urho3_d_1_1_spriter_1_1_mainline_key.html#a79cf0654ea544bad5087290c900c8cd2":[5,0,2,3,6,6],
-"struct_urho3_d_1_1_spriter_1_1_mainline_key.html#a8eb831e4ec2ac5b2f4ea045aeeb3ca53":[5,0,2,3,6,4],
-"struct_urho3_d_1_1_spriter_1_1_mainline_key.html#ab25a9bbf350fc92d0c9700adbd36f8a3":[5,0,2,3,6,3],
-"struct_urho3_d_1_1_spriter_1_1_mainline_key.html#af7496d13f35d7c9aea7aa93879f8b55b":[5,0,2,3,6,2],
-"struct_urho3_d_1_1_spriter_1_1_map_instruction.html":[5,0,2,3,7],
-"struct_urho3_d_1_1_spriter_1_1_map_instruction.html#a2baa011d8927335a81018cb5bb5ade29":[5,0,2,3,7,0],
-"struct_urho3_d_1_1_spriter_1_1_map_instruction.html#a6280264f1c0219d120ff55a3db4b9530":[5,0,2,3,7,1]
+"struct_urho3_d_1_1_spriter_1_1_mainline_key.html#a4f94cac647a7c757894043aea750c495":[5,0,2,3,6,7]
 };
