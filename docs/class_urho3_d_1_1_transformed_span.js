@@ -7,6 +7,6 @@ var class_urho3_d_1_1_transformed_span =
     [ "TransformedSpan", "class_urho3_d_1_1_transformed_span.html#aa69edbdd32d2968d19476d1fe8f1661a", null ],
     [ "Begin", "class_urho3_d_1_1_transformed_span.html#a99e84b284b1556f7996fd05141c39b12", null ],
     [ "End", "class_urho3_d_1_1_transformed_span.html#a054eeb44a602bfe64a1d33197816e891", null ],
-    [ "Size", "class_urho3_d_1_1_transformed_span.html#aff52563a640d40df96474369f8b4bc13", null ],
+    [ "Size", "class_urho3_d_1_1_transformed_span.html#a4b969330d1c961ec710f5d23319ee76a", null ],
     [ "span_", "class_urho3_d_1_1_transformed_span.html#accc651cc018eb4865cbb58ceccd1d304", null ]
 ];
