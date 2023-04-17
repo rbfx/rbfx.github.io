@@ -1,7 +1,6 @@
 var class_urho3_d_1_1_string_hash =
 [
     [ "StringHash", "class_urho3_d_1_1_string_hash.html#afc7d30fe25b54e6c86e5e3c08bae6310", null ],
-    [ "StringHash", "class_urho3_d_1_1_string_hash.html#a7334654adbb0631f60bb3cd88686d79e", null ],
     [ "StringHash", "class_urho3_d_1_1_string_hash.html#adde1fc058cb45f4efcf193a29b6cd7b8", null ],
     [ "StringHash", "class_urho3_d_1_1_string_hash.html#a4e83d309b01baa30067a3a4385d35810", null ],
     [ "StringHash", "class_urho3_d_1_1_string_hash.html#a4f7a529c539266b252f684db6333bd91", null ],
@@ -13,10 +12,7 @@ var class_urho3_d_1_1_string_hash =
     [ "MutableValue", "class_urho3_d_1_1_string_hash.html#a05f80f3945a77b1bc4e494a096a92c00", null ],
     [ "operator bool", "class_urho3_d_1_1_string_hash.html#ab27547417589950b16b1575da5a6432e", null ],
     [ "operator!=", "class_urho3_d_1_1_string_hash.html#a77564832ddc5236289e23a6410da88cd", null ],
-    [ "operator+", "class_urho3_d_1_1_string_hash.html#a672fa4fcbd486724708052343923b367", null ],
-    [ "operator+=", "class_urho3_d_1_1_string_hash.html#a6f513f0e074be950f60aee451367ec8a", null ],
     [ "operator<", "class_urho3_d_1_1_string_hash.html#afeb1ef3cea7d96dc12bad4fbf8b40ac7", null ],
-    [ "operator=", "class_urho3_d_1_1_string_hash.html#a0df8cdfbbeea2b9a98665d2e1b094047", null ],
     [ "operator==", "class_urho3_d_1_1_string_hash.html#aba7b4a63aab12ef3e59acf9fecca507c", null ],
     [ "operator>", "class_urho3_d_1_1_string_hash.html#a060b1db7ebccaf4e6b39fc12a75faad8", null ],
     [ "Reverse", "class_urho3_d_1_1_string_hash.html#a057510eb2cba5733be2969d1d87ca59c", null ],
