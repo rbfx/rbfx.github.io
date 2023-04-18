@@ -11,6 +11,6 @@ var class_urho3_d_1_1_scene_renderer_to_texture =
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_scene_renderer_to_texture.html#a0f053a821854925c3124db666ca026d7", null ],
     [ "camera_", "class_urho3_d_1_1_scene_renderer_to_texture.html#a3843b0dca4a49834be8fb3649544e6d0", null ],
     [ "cameraNode_", "class_urho3_d_1_1_scene_renderer_to_texture.html#a4893e08889b7a7d7d9ad3579eff2eb89", null ],
-    [ "scene_", "class_urho3_d_1_1_scene_renderer_to_texture.html#acf60ff3c56ab05d4685df73083abb92d", null ],
+    [ "scene_", "class_urho3_d_1_1_scene_renderer_to_texture.html#a29c2b02b933db4687b7022576eef98ec", null ],
     [ "viewport_", "class_urho3_d_1_1_scene_renderer_to_texture.html#a3fb6d208f1c9ec69ad571a3941a0cbfa", null ]
 ];
