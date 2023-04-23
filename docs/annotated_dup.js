@@ -691,6 +691,7 @@ var annotated_dup =
       [ "PluginApplication", "class_urho3_d_1_1_plugin_application.html", "class_urho3_d_1_1_plugin_application" ],
       [ "PluginManager", "class_urho3_d_1_1_plugin_manager.html", "class_urho3_d_1_1_plugin_manager" ],
       [ "PluginStack", "class_urho3_d_1_1_plugin_stack.html", "class_urho3_d_1_1_plugin_stack" ],
+      [ "PointerAdapter", "class_urho3_d_1_1_pointer_adapter.html", "class_urho3_d_1_1_pointer_adapter" ],
       [ "PointLightGeometryQuery", "class_urho3_d_1_1_point_light_geometry_query.html", "class_urho3_d_1_1_point_light_geometry_query" ],
       [ "PointOctreeQuery", "class_urho3_d_1_1_point_octree_query.html", "class_urho3_d_1_1_point_octree_query" ],
       [ "Polyhedron", "class_urho3_d_1_1_polyhedron.html", "class_urho3_d_1_1_polyhedron" ],

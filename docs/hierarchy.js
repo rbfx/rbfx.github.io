@@ -430,49 +430,46 @@ var hierarchy =
     ] ],
     [ "Urho3D::IndirectLightTracingSettings", "struct_urho3_d_1_1_indirect_light_tracing_settings.html", null ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::WorldToLocalInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_world_to_local_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::TimeStepInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_time_step_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::HemisphereInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::RenderBillboardInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::SphereInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::BoxInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_box_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::Noise3DInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_noise3_d_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::CircleInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_circle_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::ConeInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::EmitterRotationInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_rotation_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::SlerpInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_slerp_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::BurstTimerInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::CircleInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_circle_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::EffectTimeInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_effect_time_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::Noise3DInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_noise3_d_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::CurlNoise3DInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_curl_noise3_d_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::LimitVelocityInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_limit_velocity_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::EmitterPositionInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_position_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::ApplyForceInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_apply_force_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::EffectTimeInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_effect_time_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::BoxInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_box_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::LocalToWorldInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_local_to_world_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::RenderBillboardInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::BounceInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_bounce_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::LocalToWorldInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_local_to_world_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::ConeInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::DestroyInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_destroy_instance.html", null ]
@@ -481,7 +478,7 @@ var hierarchy =
       [ "Urho3D::ParticleGraphNodes::EmitInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_emit_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::EmitterScaleInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_scale_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::EmitterPositionInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_position_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::ExpireInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_expire_instance.html", null ]
@@ -493,19 +490,22 @@ var hierarchy =
       [ "Urho3D::ParticleGraphNodes::NormalizedEffectTimeInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_normalized_effect_time_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::EmitterScaleInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_scale_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::RenderMeshInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_mesh_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::TimeStepInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_time_step_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::SphereInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::ApplyForceInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_apply_force_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::WorldToLocalInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_world_to_local_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::EmitterRotationInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_rotation_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::HemisphereInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::CurlNoise3DInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_curl_noise3_d_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::BurstTimerInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer_instance.html", null ]
     ] ],
     [ "Urho3D::InstanceData", "struct_urho3_d_1_1_instance_data.html", null ],
     [ "Urho3D::InstanceShaderParameters", "struct_urho3_d_1_1_instance_shader_parameters.html", null ],
@@ -985,6 +985,7 @@ var hierarchy =
         ] ],
         [ "Urho3D::PluginManager", "class_urho3_d_1_1_plugin_manager.html", null ],
         [ "Urho3D::PluginStack", "class_urho3_d_1_1_plugin_stack.html", null ],
+        [ "Urho3D::PointerAdapter", "class_urho3_d_1_1_pointer_adapter.html", null ],
         [ "Urho3D::PostProcessPass", "class_urho3_d_1_1_post_process_pass.html", [
           [ "Urho3D::AmbientOcclusionPass", "class_urho3_d_1_1_ambient_occlusion_pass.html", null ],
           [ "Urho3D::AutoExposurePass", "class_urho3_d_1_1_auto_exposure_pass.html", null ],
@@ -1552,6 +1553,9 @@ var hierarchy =
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::DefaultUIBatchStateCache, Urho3D::DefaultUIBatchStateCache >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::DefaultUIBatchStateCache >", "class_urho3_d_1_1_shared_ptr.html", null ]
     ] ],
+    [ "Urho3D::Detail::SharedPtrBase< Urho3D::DirectionAggregator, Urho3D::DirectionAggregator >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
+      [ "Urho3D::SharedPtr< Urho3D::DirectionAggregator >", "class_urho3_d_1_1_shared_ptr.html", null ]
+    ] ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::DirectionalPadAdapter, Urho3D::DirectionalPadAdapter >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::DirectionalPadAdapter >", "class_urho3_d_1_1_shared_ptr.html", null ]
     ] ],
@@ -1945,10 +1949,10 @@ var hierarchy =
     [ "Urho3D::TransformNodesGizmo", "class_urho3_d_1_1_transform_nodes_gizmo.html", null ],
     [ "Urho3D::AssetTransformerHierarchy::TreeNode", "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html", null ],
     [ "true_type", null, [
-      [ "eastl::detail::is_hashable< T, decltype(void(&T::ToHash))>", "structeastl_1_1detail_1_1is__hashable_3_01_t_00_01decltype_07void_07_6_t_1_1_to_hash_08_08_4.html", null ]
+      [ "Urho3D::TupleHasType< T, ea::tuple< T, Types... > >", "struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01ea_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html", null ]
     ] ],
     [ "true_type", null, [
-      [ "Urho3D::TupleHasType< T, ea::tuple< T, Types... > >", "struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01ea_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html", null ]
+      [ "eastl::detail::is_hashable< T, decltype(void(&T::ToHash))>", "structeastl_1_1detail_1_1is__hashable_3_01_t_00_01decltype_07void_07_6_t_1_1_to_hash_08_08_4.html", null ]
     ] ],
     [ "Urho3D::TupleHasType< T, Tuple >", "struct_urho3_d_1_1_tuple_has_type.html", null ],
     [ "Urho3D::TupleHasType< T, ea::tuple< Types... > >", "struct_urho3_d_1_1_tuple_has_type.html", [
