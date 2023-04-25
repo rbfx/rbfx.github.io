@@ -1,5 +1,15 @@
 var NAVTREEINDEX49 =
 {
+"class_urho3_d_1_1_plugin_application.html#a97e4198da8bf54e412130c8b6b1e5860":[5,0,2,525,33],
+"class_urho3_d_1_1_plugin_application.html#aae94a72d8c05e461f35b3e855dd06332":[5,0,2,525,12],
+"class_urho3_d_1_1_plugin_application.html#ab2a5bb043c868d34e9a14a5514ad0aae":[5,0,2,525,14],
+"class_urho3_d_1_1_plugin_application.html#ac90b596c9768bd34e5f360195b03c0ba":[5,0,2,525,28],
+"class_urho3_d_1_1_plugin_application.html#aca425a6ec40733074eeb40a8e4d1e23a":[5,0,2,525,27],
+"class_urho3_d_1_1_plugin_application.html#aced8302559c04b73a768ac5c38f8fb3e":[5,0,2,525,5],
+"class_urho3_d_1_1_plugin_application.html#ad18ad3d9ebef07f4c5d4d9c6dca80ffb":[5,0,2,525,32],
+"class_urho3_d_1_1_plugin_application.html#ad3ac1494e0f01acd24ca5b3eea574563":[5,0,2,525,22],
+"class_urho3_d_1_1_plugin_application.html#ad87532dd75d03d4da3a6216de312444c":[5,0,2,525,11],
+"class_urho3_d_1_1_plugin_application.html#ae141ee68221a3d14c38a80830b751d32":[5,0,2,525,31],
 "class_urho3_d_1_1_plugin_application.html#ae7202de3df998a8c082f01458ce48a3f":[5,0,2,525,19],
 "class_urho3_d_1_1_plugin_application.html#af60b9546dcaa8f25880048a5655dc67b":[5,0,2,525,9],
 "class_urho3_d_1_1_plugin_application.html#af681c08ed54d7a0081d0a15525053a29":[5,0,2,525,13],
@@ -239,15 +249,5 @@ var NAVTREEINDEX49 =
 "class_urho3_d_1_1_prefab_reference.html#a99f806268349667b5eae7b2184483c2a":[5,0,2,537,5],
 "class_urho3_d_1_1_prefab_reference.html#a9de8e3a60c2e2111cfca7b58a9589877":[5,0,2,537,14],
 "class_urho3_d_1_1_prefab_reference.html#aa6490c226ce8f388beb109bc5af72de3":[5,0,2,537,10],
-"class_urho3_d_1_1_prefab_reference.html#ab871044c1186e3205a36ffe8d45cdff1":[5,0,2,537,9],
-"class_urho3_d_1_1_prefab_reference.html#ac997bb08505739be26ed3833522344de":[5,0,2,537,0],
-"class_urho3_d_1_1_prefab_reference.html#aced64516c8a24bcc5839536ae5ad8e59":[5,0,2,537,3],
-"class_urho3_d_1_1_prefab_reference.html#ad586fa924106cad921814594759022ff":[5,0,2,537,4],
-"class_urho3_d_1_1_prefab_reference.html#adcc0130dde51cf4d048d01093873724b":[5,0,2,537,24],
-"class_urho3_d_1_1_prefab_reference.html#ae866703d28e47a300d8324928af69fe3":[5,0,2,537,8],
-"class_urho3_d_1_1_prefab_reference.html#af9792280049266e56d775a19075bdf74":[5,0,2,537,27],
-"class_urho3_d_1_1_prefab_reference.html#afa5f32d179d3fa2c82fd0a822bd570ad":[5,0,2,537,19],
-"class_urho3_d_1_1_prefab_resource.html":[5,0,2,538],
-"class_urho3_d_1_1_prefab_resource.html#a3b4ba9b9401deb17bafc34033b4328a8":[5,0,2,538,4],
-"class_urho3_d_1_1_prefab_resource.html#a3bd7b6d1c5f75df625f5ee4c9691993a":[5,0,2,538,5]
+"class_urho3_d_1_1_prefab_reference.html#ab871044c1186e3205a36ffe8d45cdff1":[5,0,2,537,9]
 };

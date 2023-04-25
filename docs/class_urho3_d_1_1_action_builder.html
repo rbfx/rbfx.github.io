@@ -94,6 +94,13 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_action_builder.html">ActionBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_action_builder.html#ad2c050c416085952fda7dfdbabc89ed7">MoveBy</a> (float duration, const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;offset, ea::string_view attributeName=Actions::POSITION_ATTRIBUTE)</td></tr>
 <tr class="memdesc:ad2c050c416085952fda7dfdbabc89ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue with MoveBy action. <br /></td></tr>
 <tr class="separator:ad2c050c416085952fda7dfdbabc89ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b555024ed8f552f2945edacc94f5e3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_action_builder.html">ActionBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_action_builder.html#a4b555024ed8f552f2945edacc94f5e3d">MoveByQuadratic</a> (float duration, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;controlOffset, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;targetOffset, ea::string_view attributeName=Actions::POSITION_ATTRIBUTE)</td></tr>
+<tr class="memdesc:a4b555024ed8f552f2945edacc94f5e3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue with MoveBy action with quad .  <a href="class_urho3_d_1_1_action_builder.html#a4b555024ed8f552f2945edacc94f5e3d">More...</a><br /></td></tr>
+<tr class="separator:a4b555024ed8f552f2945edacc94f5e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b2051d765e5e3fc6a294d1254b30f49"><td class="memItemLeft" align="right" valign="top"><a id="a1b2051d765e5e3fc6a294d1254b30f49"></a>
+<a class="el" href="class_urho3_d_1_1_action_builder.html">ActionBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_action_builder.html#a1b2051d765e5e3fc6a294d1254b30f49">MoveByQuadratic</a> (float duration, const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;controlOffset, const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;targetOffset, ea::string_view attributeName=Actions::POSITION_ATTRIBUTE)</td></tr>
+<tr class="memdesc:a1b2051d765e5e3fc6a294d1254b30f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue with MoveBy action. <br /></td></tr>
+<tr class="separator:a1b2051d765e5e3fc6a294d1254b30f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96c7793688bf29e4cd347ad3fbb7a9c1"><td class="memItemLeft" align="right" valign="top"><a id="a96c7793688bf29e4cd347ad3fbb7a9c1"></a>
 <a class="el" href="class_urho3_d_1_1_action_builder.html">ActionBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_action_builder.html#a96c7793688bf29e4cd347ad3fbb7a9c1">JumpBy</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;offset, ea::string_view attributeName=Actions::POSITION_ATTRIBUTE)</td></tr>
 <tr class="memdesc:a96c7793688bf29e4cd347ad3fbb7a9c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue with JumpBy action. <br /></td></tr>
@@ -299,6 +306,49 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Continue with MoveBy action. </p>
+<p>Build MoveBy action. </p>
+
+</div>
+</div>
+<a id="a4b555024ed8f552f2945edacc94f5e3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b555024ed8f552f2945edacc94f5e3d">&#9670;&nbsp;</a></span>MoveByQuadratic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_urho3_d_1_1_action_builder.html">ActionBuilder</a> &amp; Urho3D::ActionBuilder::MoveByQuadratic </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>duration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>controlOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>targetOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ea::string_view&#160;</td>
+          <td class="paramname"><em>attributeName</em> = <code>Actions::POSITION_ATTRIBUTE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Continue with MoveBy action with quad . </p>
 <p>Build MoveBy action. </p>
 
 </div>

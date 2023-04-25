@@ -28,6 +28,8 @@ var class_urho3_d_1_1_action_builder =
     [ "JumpBy", "class_urho3_d_1_1_action_builder.html#a96c7793688bf29e4cd347ad3fbb7a9c1", null ],
     [ "MoveBy", "class_urho3_d_1_1_action_builder.html#ad2c050c416085952fda7dfdbabc89ed7", null ],
     [ "MoveBy", "class_urho3_d_1_1_action_builder.html#a958ce617e987ed96da26199f73b2a5f9", null ],
+    [ "MoveByQuadratic", "class_urho3_d_1_1_action_builder.html#a1b2051d765e5e3fc6a294d1254b30f49", null ],
+    [ "MoveByQuadratic", "class_urho3_d_1_1_action_builder.html#a4b555024ed8f552f2945edacc94f5e3d", null ],
     [ "RemoveSelf", "class_urho3_d_1_1_action_builder.html#a24807ab5e0ce11904fdad4ed11fc9b9d", null ],
     [ "Repeat", "class_urho3_d_1_1_action_builder.html#aa075304198dc2ae2fa8941a52a57f3b3", null ],
     [ "RepeatForever", "class_urho3_d_1_1_action_builder.html#a3b24b5b1ab7949c2279400ec3704f824", null ],

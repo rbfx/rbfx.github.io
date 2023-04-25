@@ -1,5 +1,15 @@
 var NAVTREEINDEX85 =
 {
+"struct_urho3_d_1_1_particle_graph_nodes_1_1_make_instance_3_01_value0_00_01_value1_00_01_value2_01_4.html#a789c5305602600cdfb1e4c59dd148808":[5,0,2,2,62,0],
+"struct_urho3_d_1_1_particle_graph_nodes_1_1_multiply_instance.html":[5,0,2,2,67],
+"struct_urho3_d_1_1_particle_graph_nodes_1_1_multiply_instance.html#a3fcc0ec0eb53feee6fc5a26e256cdb7d":[5,0,2,2,67,0],
+"struct_urho3_d_1_1_particle_graph_nodes_1_1_negate_instance.html":[5,0,2,2,69],
+"struct_urho3_d_1_1_particle_graph_nodes_1_1_negate_instance.html#a0787604b5d2bd7292e1782dd4a1a618d":[5,0,2,2,69,0],
+"struct_urho3_d_1_1_particle_graph_nodes_1_1_node_pattern.html":[5,0,2,2,70],
+"struct_urho3_d_1_1_particle_graph_nodes_1_1_node_pattern.html#a30ed1a7c70e54f47a35925de044e61e3":[5,0,2,2,70,5],
+"struct_urho3_d_1_1_particle_graph_nodes_1_1_node_pattern.html#a3366dc5658beded2f80806684cf1f296":[5,0,2,2,70,6],
+"struct_urho3_d_1_1_particle_graph_nodes_1_1_node_pattern.html#a582fc0d3d2227af91a61caa45f920b6b":[5,0,2,2,70,4],
+"struct_urho3_d_1_1_particle_graph_nodes_1_1_node_pattern.html#a6f818412ead67ec34471568f034c0f86":[5,0,2,2,70,0],
 "struct_urho3_d_1_1_particle_graph_nodes_1_1_node_pattern.html#a899e9e41f8dbae4a77e80798e755cf18":[5,0,2,2,70,2],
 "struct_urho3_d_1_1_particle_graph_nodes_1_1_node_pattern.html#a9da6b1527a5bcf0138cd37fea226902c":[5,0,2,2,70,9],
 "struct_urho3_d_1_1_particle_graph_nodes_1_1_node_pattern.html#aa2099feb4cc0c72ae902af420c61020d":[5,0,2,2,70,7],
@@ -239,15 +249,5 @@ var NAVTREEINDEX85 =
 "struct_urho3_d_1_1_reflection_probe_manager_1_1_queued_reflection_probe.html":[5,0,2,563,1],
 "struct_urho3_d_1_1_reflection_probe_manager_1_1_queued_reflection_probe.html#a673355a98433f12fa9c20e90c3dc104b":[5,0,2,563,1,1],
 "struct_urho3_d_1_1_reflection_probe_manager_1_1_queued_reflection_probe.html#aacb886afd684ab92ca3e0bb6cb2f467d":[5,0,2,563,1,0],
-"struct_urho3_d_1_1_reflection_probe_manager_1_1_spatial_cache.html":[5,0,2,563,2],
-"struct_urho3_d_1_1_reflection_probe_manager_1_1_spatial_cache.html#a076761972ee15579817967752d7fe9fb":[5,0,2,563,2,1],
-"struct_urho3_d_1_1_reflection_probe_manager_1_1_spatial_cache.html#a270d0731496b013b36e414154f62bfbf":[5,0,2,563,2,3],
-"struct_urho3_d_1_1_reflection_probe_manager_1_1_spatial_cache.html#a8cfde288fc10d6c1bb0e02472fc9d542":[5,0,2,563,2,4],
-"struct_urho3_d_1_1_reflection_probe_manager_1_1_spatial_cache.html#a92f8bc3ee9d15a7268f1fc4a0fb90e18":[5,0,2,563,2,2],
-"struct_urho3_d_1_1_reflection_probe_manager_1_1_spatial_cache.html#ad6f4809438431950f2f8b74dc96da8fa":[5,0,2,563,2,0],
-"struct_urho3_d_1_1_reflection_probe_reference.html":[5,0,2,564],
-"struct_urho3_d_1_1_reflection_probe_reference.html#a136c9ca3714dd4d44f6f51163ba40a1e":[5,0,2,564,2],
-"struct_urho3_d_1_1_reflection_probe_reference.html#a2b45414427d8d9276551b29500d60f47":[5,0,2,564,4],
-"struct_urho3_d_1_1_reflection_probe_reference.html#a919158aa074c1e38c336784f76bfc2b1":[5,0,2,564,5],
-"struct_urho3_d_1_1_reflection_probe_reference.html#ab2c3e59d52e913ff506986d17882a990":[5,0,2,564,3]
+"struct_urho3_d_1_1_reflection_probe_manager_1_1_spatial_cache.html":[5,0,2,563,2]
 };

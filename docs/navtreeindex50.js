@@ -1,5 +1,15 @@
 var NAVTREEINDEX50 =
 {
+"class_urho3_d_1_1_prefab_reference.html#ac997bb08505739be26ed3833522344de":[5,0,2,537,0],
+"class_urho3_d_1_1_prefab_reference.html#aced64516c8a24bcc5839536ae5ad8e59":[5,0,2,537,3],
+"class_urho3_d_1_1_prefab_reference.html#ad586fa924106cad921814594759022ff":[5,0,2,537,4],
+"class_urho3_d_1_1_prefab_reference.html#adcc0130dde51cf4d048d01093873724b":[5,0,2,537,24],
+"class_urho3_d_1_1_prefab_reference.html#ae866703d28e47a300d8324928af69fe3":[5,0,2,537,8],
+"class_urho3_d_1_1_prefab_reference.html#af9792280049266e56d775a19075bdf74":[5,0,2,537,27],
+"class_urho3_d_1_1_prefab_reference.html#afa5f32d179d3fa2c82fd0a822bd570ad":[5,0,2,537,19],
+"class_urho3_d_1_1_prefab_resource.html":[5,0,2,538],
+"class_urho3_d_1_1_prefab_resource.html#a3b4ba9b9401deb17bafc34033b4328a8":[5,0,2,538,4],
+"class_urho3_d_1_1_prefab_resource.html#a3bd7b6d1c5f75df625f5ee4c9691993a":[5,0,2,538,5],
 "class_urho3_d_1_1_prefab_resource.html#a65e281c5db6986e8ea97a6a6000b61bc":[5,0,2,538,11],
 "class_urho3_d_1_1_prefab_resource.html#a6bc0ecaf656d2452616e6cc41436bc83":[5,0,2,538,0],
 "class_urho3_d_1_1_prefab_resource.html#a8aff8945200fa01a3f0d365195a84549":[5,0,2,538,10],
@@ -239,15 +249,5 @@ var NAVTREEINDEX50 =
 "class_urho3_d_1_1_raycast_vehicle.html#a1e88fbea39f52e869b11d3e810a2a412":[5,0,2,549,36],
 "class_urho3_d_1_1_raycast_vehicle.html#a1ec2533337fa2d04343a0006f8472bdd":[5,0,2,549,71],
 "class_urho3_d_1_1_raycast_vehicle.html#a1f5040ade15d86b4711f1fc92be2c41d":[5,0,2,549,15],
-"class_urho3_d_1_1_raycast_vehicle.html#a1f7947587bdcb7e31d74a638948ede05":[5,0,2,549,27],
-"class_urho3_d_1_1_raycast_vehicle.html#a1f7cb2a80aeff1b13b0e85fdd2eb5cfe":[5,0,2,549,64],
-"class_urho3_d_1_1_raycast_vehicle.html#a23d3ca7446bf71b76f36a0f178e6020f":[5,0,2,549,29],
-"class_urho3_d_1_1_raycast_vehicle.html#a2fa84ed88b59ea05511267e89ab8fdb9":[5,0,2,549,66],
-"class_urho3_d_1_1_raycast_vehicle.html#a311759e072f5eb4bed939081c433d34f":[5,0,2,549,44],
-"class_urho3_d_1_1_raycast_vehicle.html#a3345e1ff51fcd8c5f399eb321e1e90aa":[5,0,2,549,59],
-"class_urho3_d_1_1_raycast_vehicle.html#a369f3d6f9179838142820e1e315b3cde":[5,0,2,549,18],
-"class_urho3_d_1_1_raycast_vehicle.html#a3d2336c76dc89cb18a63ba1ae4098105":[5,0,2,549,73],
-"class_urho3_d_1_1_raycast_vehicle.html#a3d3498dae909b1e329365213bc9bf21e":[5,0,2,549,42],
-"class_urho3_d_1_1_raycast_vehicle.html#a3f04499f21b162be602817d9cdb15e94":[5,0,2,549,57],
-"class_urho3_d_1_1_raycast_vehicle.html#a46b0766c61d51f5f656d4e9317f530c8":[5,0,2,549,58]
+"class_urho3_d_1_1_raycast_vehicle.html#a1f7947587bdcb7e31d74a638948ede05":[5,0,2,549,27]
 };

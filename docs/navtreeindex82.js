@@ -1,5 +1,15 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_geometry_view.html#a7b2c89bc7ff1248c642d18677ba842b4":[5,0,2,263,2],
+"struct_urho3_d_1_1_geometry_view.html#a9c9183b1d91ac4af6a9b70dc5fa3e39f":[5,0,2,263,1],
+"struct_urho3_d_1_1_glyph_location.html":[5,0,2,268],
+"struct_urho3_d_1_1_glyph_location.html#a1fdb67259eae90481d40c0221ff0baae":[5,0,2,268,3],
+"struct_urho3_d_1_1_glyph_location.html#a50560b8d5367d02a1bdade5ca5afd544":[5,0,2,268,0],
+"struct_urho3_d_1_1_glyph_location.html#a6d17f5e562260b89d4723f671a054a1c":[5,0,2,268,1],
+"struct_urho3_d_1_1_glyph_location.html#ab6cbaec11f6614a9d533d71e5fdc86d0":[5,0,2,268,2],
+"struct_urho3_d_1_1_graphics_caps.html":[5,0,2,276],
+"struct_urho3_d_1_1_graphics_caps.html#a0b99647625535b2386c3a4c206fa2dbf":[5,0,2,276,6],
+"struct_urho3_d_1_1_graphics_caps.html#a62a3b6127c4a7197f96a5e3271cd266a":[5,0,2,276,2],
 "struct_urho3_d_1_1_graphics_caps.html#a721307f8f994334c6f346ca830dbf69c":[5,0,2,276,3],
 "struct_urho3_d_1_1_graphics_caps.html#a7fe883f23ad7c7b3e58a43c98fe0eb65":[5,0,2,276,0],
 "struct_urho3_d_1_1_graphics_caps.html#aa725f6b85347bd3843da596a4aad4f91":[5,0,2,276,5],
@@ -239,15 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_light_data_for_accumulator.html":[5,0,2,350],
 "struct_urho3_d_1_1_light_data_for_accumulator.html#a002aa3745902e10f9d758eb004855ecb":[5,0,2,350,7],
 "struct_urho3_d_1_1_light_data_for_accumulator.html#a2060c94463b70933abcf1935a269e977":[5,0,2,350,3],
-"struct_urho3_d_1_1_light_data_for_accumulator.html#a378b27bb8fb541b03441ea2574b11a98":[5,0,2,350,11],
-"struct_urho3_d_1_1_light_data_for_accumulator.html#a4debb269c236b6618f6ac47228369f01":[5,0,2,350,8],
-"struct_urho3_d_1_1_light_data_for_accumulator.html#a7332f7c5241941b7fab40f1da8190135":[5,0,2,350,6],
-"struct_urho3_d_1_1_light_data_for_accumulator.html#a7cb4b264c66d2436a4ed445e680f2ad1":[5,0,2,350,9],
-"struct_urho3_d_1_1_light_data_for_accumulator.html#a88e9605f57e272506dc9e48ecaa9a036":[5,0,2,350,2],
-"struct_urho3_d_1_1_light_data_for_accumulator.html#a8d14f7e8de5b2ebec8e01000691c1f80":[5,0,2,350,1],
-"struct_urho3_d_1_1_light_data_for_accumulator.html#ab77f5266b4f6641145a433859c446a41":[5,0,2,350,0],
-"struct_urho3_d_1_1_light_data_for_accumulator.html#acde3cf9e4406f941d7ef5d1016253b17":[5,0,2,350,4],
-"struct_urho3_d_1_1_light_data_for_accumulator.html#add21ecf24f5862ebe78595a4b847ce71":[5,0,2,350,5],
-"struct_urho3_d_1_1_light_data_for_accumulator.html#af023572ef0d6030bff91fd924916573a":[5,0,2,350,10],
-"struct_urho3_d_1_1_light_geometry_query_result.html":[5,0,2,351]
+"struct_urho3_d_1_1_light_data_for_accumulator.html#a378b27bb8fb541b03441ea2574b11a98":[5,0,2,350,11]
 };

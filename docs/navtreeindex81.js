@@ -1,5 +1,15 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a2837b4576e8aa092fbdc230803640842":[5,0,2,205,0,7],
+"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a3e47a1a3386d18f093ed1af64bc71eb3":[5,0,2,205,0,3],
+"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a3ef23911724c4eb9a4788464984d169f":[5,0,2,205,0,2],
+"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a6d8887f0c74f7e0e24c9b554df70ba33":[5,0,2,205,0,1],
+"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a8e53526a97593e28fbc9096bb1b5a2bd":[5,0,2,205,0,5],
+"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a910b135e5c7a7b5d75f838ea3fda8c9e":[5,0,2,205,0,0],
+"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#ac5ef8a80a1f02d0e0bf5316cd683c46f":[5,0,2,205,0,4],
+"struct_urho3_d_1_1_distance_and_normal.html":[5,0,2,207],
+"struct_urho3_d_1_1_distance_and_normal.html#a69d389aa00d892ae18800e1788839b26":[5,0,2,207,0],
+"struct_urho3_d_1_1_distance_and_normal.html#ad2f5c72e9e1997949322f5a6cd8f7653":[5,0,2,207,1],
 "struct_urho3_d_1_1_draw_command_description.html":[5,0,2,214],
 "struct_urho3_d_1_1_draw_command_description.html#a1241987099e7bc5523a0527a6798942f":[5,0,2,214,10],
 "struct_urho3_d_1_1_draw_command_description.html#a2503b5ed7c42a00b305582fc578d406d":[5,0,2,214,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_geometry_view.html#a0486ec221cfbc411e8d7a0ac88dfa368":[5,0,2,263,4],
 "struct_urho3_d_1_1_geometry_view.html#a1891b0c7cfd1ec8068a416874795f87e":[5,0,2,263,5],
 "struct_urho3_d_1_1_geometry_view.html#a25b1934d7a8b0d486f3bc496c27e30fc":[5,0,2,263,3],
-"struct_urho3_d_1_1_geometry_view.html#a2d72f8fd04232133e2188895b1d1216b":[5,0,2,263,0],
-"struct_urho3_d_1_1_geometry_view.html#a7b2c89bc7ff1248c642d18677ba842b4":[5,0,2,263,2],
-"struct_urho3_d_1_1_geometry_view.html#a9c9183b1d91ac4af6a9b70dc5fa3e39f":[5,0,2,263,1],
-"struct_urho3_d_1_1_glyph_location.html":[5,0,2,268],
-"struct_urho3_d_1_1_glyph_location.html#a1fdb67259eae90481d40c0221ff0baae":[5,0,2,268,3],
-"struct_urho3_d_1_1_glyph_location.html#a50560b8d5367d02a1bdade5ca5afd544":[5,0,2,268,0],
-"struct_urho3_d_1_1_glyph_location.html#a6d17f5e562260b89d4723f671a054a1c":[5,0,2,268,1],
-"struct_urho3_d_1_1_glyph_location.html#ab6cbaec11f6614a9d533d71e5fdc86d0":[5,0,2,268,2],
-"struct_urho3_d_1_1_graphics_caps.html":[5,0,2,276],
-"struct_urho3_d_1_1_graphics_caps.html#a0b99647625535b2386c3a4c206fa2dbf":[5,0,2,276,6],
-"struct_urho3_d_1_1_graphics_caps.html#a62a3b6127c4a7197f96a5e3271cd266a":[5,0,2,276,2]
+"struct_urho3_d_1_1_geometry_view.html#a2d72f8fd04232133e2188895b1d1216b":[5,0,2,263,0]
 };

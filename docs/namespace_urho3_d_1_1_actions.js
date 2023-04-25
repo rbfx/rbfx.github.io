@@ -39,6 +39,7 @@ var namespace_urho3_d_1_1_actions =
     [ "Hide", "class_urho3_d_1_1_actions_1_1_hide.html", "class_urho3_d_1_1_actions_1_1_hide" ],
     [ "JumpBy", "class_urho3_d_1_1_actions_1_1_jump_by.html", "class_urho3_d_1_1_actions_1_1_jump_by" ],
     [ "MoveBy", "class_urho3_d_1_1_actions_1_1_move_by.html", "class_urho3_d_1_1_actions_1_1_move_by" ],
+    [ "MoveByQuadratic", "class_urho3_d_1_1_actions_1_1_move_by_quadratic.html", "class_urho3_d_1_1_actions_1_1_move_by_quadratic" ],
     [ "Parallel", "class_urho3_d_1_1_actions_1_1_parallel.html", "class_urho3_d_1_1_actions_1_1_parallel" ],
     [ "RemoveSelf", "class_urho3_d_1_1_actions_1_1_remove_self.html", "class_urho3_d_1_1_actions_1_1_remove_self" ],
     [ "Repeat", "class_urho3_d_1_1_actions_1_1_repeat.html", "class_urho3_d_1_1_actions_1_1_repeat" ],

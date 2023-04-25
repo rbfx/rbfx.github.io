@@ -1,5 +1,15 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_scene_processor_settings.html#a37d20a057982dcce1a6cf074c73f6b26":[5,0,2,616,3],
+"struct_urho3_d_1_1_scene_processor_settings.html#a48dbd0625b62c1c8eef305866b6b5de2":[5,0,2,616,2],
+"struct_urho3_d_1_1_scene_processor_settings.html#a499dad497f7366ec53752155253d0ecd":[5,0,2,616,5],
+"struct_urho3_d_1_1_scene_processor_settings.html#a7b4427214caf783fea5792744dad8024":[5,0,2,616,10],
+"struct_urho3_d_1_1_scene_processor_settings.html#a7fc8153a42a855ab07b7b4631f998728":[5,0,2,616,4],
+"struct_urho3_d_1_1_scene_processor_settings.html#a8593d0bd77c84a839fd1d476e35522e8":[5,0,2,616,8],
+"struct_urho3_d_1_1_scene_processor_settings.html#a9418f554672ff1bb8c5af057f4972892":[5,0,2,616,11],
+"struct_urho3_d_1_1_scene_processor_settings.html#aa95055416d991dfcdd4d5a1213244d92":[5,0,2,616,0],
+"struct_urho3_d_1_1_scene_processor_settings.html#aeb3884200d87c727f0c4183240958ec0":[5,0,2,616,1],
+"struct_urho3_d_1_1_scene_processor_settings.html#afab6603ea9e93ec76fce2d9af3bf1483":[5,0,2,616,7],
 "struct_urho3_d_1_1_scratch_buffer.html":[5,0,2,623],
 "struct_urho3_d_1_1_scratch_buffer.html#a153407a435b94c3a6382b6299798ae27":[5,0,2,623,0],
 "struct_urho3_d_1_1_scratch_buffer.html#ad50918e61767b420a98b6cbf5b040b88":[5,0,2,623,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_spriter_1_1_character_map.html":[5,0,2,3,2],
 "struct_urho3_d_1_1_spriter_1_1_character_map.html#a0085549ded96e27e53c47072a708d837":[5,0,2,3,2,2],
 "struct_urho3_d_1_1_spriter_1_1_character_map.html#a2704a96fc15bf21ededc99d9b75966a2":[5,0,2,3,2,5],
-"struct_urho3_d_1_1_spriter_1_1_character_map.html#a7782727dcf8794291cb8af7092f99405":[5,0,2,3,2,4],
-"struct_urho3_d_1_1_spriter_1_1_character_map.html#a8275835351eac1676895b39491e3074d":[5,0,2,3,2,6],
-"struct_urho3_d_1_1_spriter_1_1_character_map.html#aab3ed25e053559c563ceadc88a99506e":[5,0,2,3,2,3],
-"struct_urho3_d_1_1_spriter_1_1_character_map.html#ac51fade99cc597be227087d64c621d7f":[5,0,2,3,2,1],
-"struct_urho3_d_1_1_spriter_1_1_character_map.html#aefb2ec79042e5fb187f0c777a5bf130d":[5,0,2,3,2,0],
-"struct_urho3_d_1_1_spriter_1_1_entity.html":[5,0,2,3,3],
-"struct_urho3_d_1_1_spriter_1_1_entity.html#a082f500e2a01cefa398ee474a36f27b9":[5,0,2,3,3,0],
-"struct_urho3_d_1_1_spriter_1_1_entity.html#a388f250f0764ba121563a75dda3f8879":[5,0,2,3,3,6],
-"struct_urho3_d_1_1_spriter_1_1_entity.html#a686904a58e156baa6f2e4184cf918036":[5,0,2,3,3,1],
-"struct_urho3_d_1_1_spriter_1_1_entity.html#a6b8f761636f5b642571c86739fbc5781":[5,0,2,3,3,5],
-"struct_urho3_d_1_1_spriter_1_1_entity.html#a81c473667df66f904842d75d34b5042a":[5,0,2,3,3,3]
+"struct_urho3_d_1_1_spriter_1_1_character_map.html#a7782727dcf8794291cb8af7092f99405":[5,0,2,3,2,4]
 };

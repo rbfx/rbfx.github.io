@@ -1,5 +1,15 @@
 var NAVTREEINDEX78 =
 {
+"struct_urho3_d_1_1_animation_parameters.html#a4fe9c58ed0c12ed666b39c374cd7aa29":[5,0,2,25,20],
+"struct_urho3_d_1_1_animation_parameters.html#a501bfc2c63e2a16374c66cae0a137f20":[5,0,2,25,33],
+"struct_urho3_d_1_1_animation_parameters.html#a51d6321c8faffc9f73f2d265d153174c":[5,0,2,25,8],
+"struct_urho3_d_1_1_animation_parameters.html#a5b0fb6f057d9c51697ea05d732d4111e":[5,0,2,25,12],
+"struct_urho3_d_1_1_animation_parameters.html#a5d5008cbb71ed93896c0774bcb6f65b8":[5,0,2,25,23],
+"struct_urho3_d_1_1_animation_parameters.html#a618cc8fd805acab0dc13fa9b6a6428a3":[5,0,2,25,14],
+"struct_urho3_d_1_1_animation_parameters.html#a677f447bcf51dff5c52017d26484e3c7":[5,0,2,25,32],
+"struct_urho3_d_1_1_animation_parameters.html#a691ddb3378fd7ccae3eef786e10ea3f9":[5,0,2,25,1],
+"struct_urho3_d_1_1_animation_parameters.html#a69a7b9d9c70876180d443a50fcae81ae":[5,0,2,25,17],
+"struct_urho3_d_1_1_animation_parameters.html#a69a8a68a2526c5471bbd03631477ab90":[5,0,2,25,7],
 "struct_urho3_d_1_1_animation_parameters.html#a6b119213b2f8bb957e5f7105c7fd94d8":[5,0,2,25,37],
 "struct_urho3_d_1_1_animation_parameters.html#a6de062fc12c56524cdbe2b63b09e1b31":[5,0,2,25,28],
 "struct_urho3_d_1_1_animation_parameters.html#a8d1cdf063e6d8284887bcd6d92bc6df2":[5,0,2,25,34],
@@ -239,15 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_batch_group.html#adefedc16a2726e1471b8212b173eb7c6":[5,0,2,79,0],
 "struct_urho3_d_1_1_batch_group.html#ae44c18517fde1462221ddc7c7a1b2cd4":[5,0,2,79,4],
 "struct_urho3_d_1_1_batch_group_key.html":[5,0,2,80],
-"struct_urho3_d_1_1_batch_group_key.html#a092f081ffc1d6dcfe3b79ea3c59cfb08":[5,0,2,80,3],
-"struct_urho3_d_1_1_batch_group_key.html#a2c820c423411aba7bfccb31677bde116":[5,0,2,80,2],
-"struct_urho3_d_1_1_batch_group_key.html#a38491874d78cda662bec55b2f14dd588":[5,0,2,80,6],
-"struct_urho3_d_1_1_batch_group_key.html#a546b352ddf630757d264ac631b2c6f9e":[5,0,2,80,9],
-"struct_urho3_d_1_1_batch_group_key.html#a77d9ab8e01e2d676a907153b07f393ce":[5,0,2,80,0],
-"struct_urho3_d_1_1_batch_group_key.html#a8ec9f45634c1c5afa34c577e5e0f0668":[5,0,2,80,4],
-"struct_urho3_d_1_1_batch_group_key.html#a9df16e3f3b8d86cf99c0a14812e20500":[5,0,2,80,1],
-"struct_urho3_d_1_1_batch_group_key.html#ab76653fe68cf3da8c19ce4ba49cc04bc":[5,0,2,80,7],
-"struct_urho3_d_1_1_batch_group_key.html#ac12564e52af2f659008445ff25800acb":[5,0,2,80,5],
-"struct_urho3_d_1_1_batch_group_key.html#add3b68e944464cf80e61cd25af2943a4":[5,0,2,80,10],
-"struct_urho3_d_1_1_batch_group_key.html#ae39fd6505ecbfa4c73d1b126a842e214":[5,0,2,80,8]
+"struct_urho3_d_1_1_batch_group_key.html#a092f081ffc1d6dcfe3b79ea3c59cfb08":[5,0,2,80,3]
 };

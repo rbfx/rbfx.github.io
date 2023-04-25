@@ -1,5 +1,15 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_config_variable_definition.html#aa15f7b6f38c2a4183d624c167044a41b":[5,0,2,143,3],
+"struct_urho3_d_1_1_config_variable_definition.html#af294783a84bec8cb4ff7119edb537e9a":[5,0,2,143,1],
+"struct_urho3_d_1_1_console_1_1_log_entry.html":[5,0,2,145,0],
+"struct_urho3_d_1_1_console_1_1_log_entry.html#a15a50a18eaba8c67b6ff401c5b2b7edd":[5,0,2,145,0,2],
+"struct_urho3_d_1_1_console_1_1_log_entry.html#a39bd6aaa5d462d53aa2a8030ad8425e7":[5,0,2,145,0,3],
+"struct_urho3_d_1_1_console_1_1_log_entry.html#a67a0c39b65ba6d8be93d3fd0614d0f1c":[5,0,2,145,0,0],
+"struct_urho3_d_1_1_console_1_1_log_entry.html#a8d534c1eb9e12bc4524029ec13910e8c":[5,0,2,145,0,1],
+"struct_urho3_d_1_1_constant_buffer_collection_ref.html":[5,0,2,148],
+"struct_urho3_d_1_1_constant_buffer_collection_ref.html#a0b8d08c9a557230d1bd482b1f355b9d9":[5,0,2,148,1],
+"struct_urho3_d_1_1_constant_buffer_collection_ref.html#a85a445a57f4aeac4158de90bd7770f86":[5,0,2,148,0],
 "struct_urho3_d_1_1_constant_buffer_collection_ref.html#a87211f22b5e00ae4af3304bb8311cc86":[5,0,2,148,2],
 "struct_urho3_d_1_1_constant_buffer_element.html":[5,0,2,149],
 "struct_urho3_d_1_1_constant_buffer_element.html#a1458fe0ea041d8474c9d9e5921f9681a":[5,0,2,149,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_direction_aggregator_1_1_axis_state.html#a7e23af174aa3aeb939213d90c78684fa":[5,0,2,203,0,2],
 "struct_urho3_d_1_1_direction_aggregator_1_1_axis_state.html#ae49785c67305de4bd83d7a589742f87f":[5,0,2,203,0,0],
 "struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html":[5,0,2,205,0],
-"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a0a9a4f87227df855f2e36786863cb1c9":[5,0,2,205,0,6],
-"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a2837b4576e8aa092fbdc230803640842":[5,0,2,205,0,7],
-"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a3e47a1a3386d18f093ed1af64bc71eb3":[5,0,2,205,0,3],
-"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a3ef23911724c4eb9a4788464984d169f":[5,0,2,205,0,2],
-"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a6d8887f0c74f7e0e24c9b554df70ba33":[5,0,2,205,0,1],
-"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a8e53526a97593e28fbc9096bb1b5a2bd":[5,0,2,205,0,5],
-"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a910b135e5c7a7b5d75f838ea3fda8c9e":[5,0,2,205,0,0],
-"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#ac5ef8a80a1f02d0e0bf5316cd683c46f":[5,0,2,205,0,4],
-"struct_urho3_d_1_1_distance_and_normal.html":[5,0,2,207],
-"struct_urho3_d_1_1_distance_and_normal.html#a69d389aa00d892ae18800e1788839b26":[5,0,2,207,0],
-"struct_urho3_d_1_1_distance_and_normal.html#ad2f5c72e9e1997949322f5a6cd8f7653":[5,0,2,207,1]
+"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a0a9a4f87227df855f2e36786863cb1c9":[5,0,2,205,0,6]
 };
