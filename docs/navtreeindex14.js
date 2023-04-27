@@ -1,5 +1,14 @@
 var NAVTREEINDEX14 =
 {
+"class_urho3_d_1_1_batch_renderer.html#a12cba1f4bba61a14083010e45cba7b50":[5,0,2,82,5],
+"class_urho3_d_1_1_batch_renderer.html#a4545c1e589b46c6f5fa68ed4a5951b54":[5,0,2,82,9],
+"class_urho3_d_1_1_batch_renderer.html#a4f4303c87461addfc1be4d7f41ce6957":[5,0,2,82,13],
+"class_urho3_d_1_1_batch_renderer.html#a5e2dc308e04e8d20d023f4c06b0a5354":[5,0,2,82,6],
+"class_urho3_d_1_1_batch_renderer.html#a79c6d04da073b2aa1d2063e9e0a8d56f":[5,0,2,82,2],
+"class_urho3_d_1_1_batch_renderer.html#a8accd0d175db05624edb024daae881ea":[5,0,2,82,0],
+"class_urho3_d_1_1_batch_renderer.html#a8c359d6701eaa07d86a939126fd3d382":[5,0,2,82,8],
+"class_urho3_d_1_1_batch_renderer.html#a90e45a14117a97a8e6f545560dc7d818":[5,0,2,82,3],
+"class_urho3_d_1_1_batch_renderer.html#a93f2d8ab3f0735e55f976f2f1eec6677":[5,0,2,82,4],
 "class_urho3_d_1_1_batch_renderer.html#a9e65fc225c60677be6470ef20ca7929b":[5,0,2,82,11],
 "class_urho3_d_1_1_batch_renderer.html#aa37de62cdaa8254be03285cfd51ac3b7":[5,0,2,82,1],
 "class_urho3_d_1_1_batch_renderer.html#ab49f311d67a30d9f334f11af2f7459bb":[5,0,2,82,7],
@@ -240,14 +249,5 @@ var NAVTREEINDEX14 =
 "class_urho3_d_1_1_border_image.html#a723929dfb648738a606411163892d8e6":[5,0,2,104,19],
 "class_urho3_d_1_1_border_image.html#a89050b6f00b52f03cafc34bd0a4b27d6":[5,0,2,104,5],
 "class_urho3_d_1_1_border_image.html#a916a4522c5005d22400a0eba007fc642":[5,0,2,104,31],
-"class_urho3_d_1_1_border_image.html#a92e32e67fbae5ccb0b99923c326b9a8d":[5,0,2,104,12],
-"class_urho3_d_1_1_border_image.html#a96baa020c36b2ddf3bf65d40fc5b24d2":[5,0,2,104,23],
-"class_urho3_d_1_1_border_image.html#a9fec4802c6904eda5b3feb579c5a1414":[5,0,2,104,6],
-"class_urho3_d_1_1_border_image.html#aa3de52ab9018458150ed420bf26834aa":[5,0,2,104,0],
-"class_urho3_d_1_1_border_image.html#abc6fbb9e672e706975d3ab46c9b4cc8f":[5,0,2,104,17],
-"class_urho3_d_1_1_border_image.html#abedae06a241a10e4862ea4c2fa6a965c":[5,0,2,104,8],
-"class_urho3_d_1_1_border_image.html#acfa54cf112ece8f397809439e4edf067":[5,0,2,104,18],
-"class_urho3_d_1_1_border_image.html#acfdf153f8a78512721ce5d1af2da23eb":[5,0,2,104,25],
-"class_urho3_d_1_1_border_image.html#ad69498b4030d000a2d100ba3a2626441":[5,0,2,104,39],
-"class_urho3_d_1_1_border_image.html#ada7a78e31d7ca4557aabfc34fc39d6aa":[5,0,2,104,4]
+"class_urho3_d_1_1_border_image.html#a92e32e67fbae5ccb0b99923c326b9a8d":[5,0,2,104,12]
 };

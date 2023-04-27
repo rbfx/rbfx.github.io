@@ -133,6 +133,11 @@ var _graphics_defs_8h =
       [ "SP_CUSTOM", "_graphics_defs_8h.html#a66f0a7cd11164a570c965fe17b803c37ae51a227e3d38a40d9fc82005095586a6", null ],
       [ "MAX_SHADER_PARAMETER_GROUPS", "_graphics_defs_8h.html#a66f0a7cd11164a570c965fe17b803c37a55305fa9c6724f45017a4b0f30aec3a8", null ]
     ] ],
+    [ "ShaderTranslationPolicy", "_graphics_defs_8h.html#ae747d059c6c773d47a400caa47de6ce6", [
+      [ "Verbatim", "_graphics_defs_8h.html#ae747d059c6c773d47a400caa47de6ce6a9125d6de13eac2095f2dfc0d817bba12", null ],
+      [ "Translate", "_graphics_defs_8h.html#ae747d059c6c773d47a400caa47de6ce6adeccbe4e9083c3b5f7cd2632722765bb", null ],
+      [ "Optimize", "_graphics_defs_8h.html#ae747d059c6c773d47a400caa47de6ce6a8346db516e5f3aa534827e7d6c166744", null ]
+    ] ],
     [ "ShaderType", "_graphics_defs_8h.html#a63169a73c8df024b3ef76297da56862e", [
       [ "VS", "_graphics_defs_8h.html#a63169a73c8df024b3ef76297da56862ea699a87af09b6648e81fae87ea043f35f", null ],
       [ "PS", "_graphics_defs_8h.html#a63169a73c8df024b3ef76297da56862ea971678269258b67cd3890d2a51ceb756", null ],

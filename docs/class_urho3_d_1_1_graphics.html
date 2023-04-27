@@ -765,6 +765,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_graphics.html#a0d08f13644a60a35d3d70b825262f39f">GetSDLWindow</a> ()</td></tr>
 <tr class="memdesc:a0d08f13644a60a35d3d70b825262f39f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the SDL_Window as a void* to avoid having to include the graphics implementation. <br /></td></tr>
 <tr class="separator:a0d08f13644a60a35d3d70b825262f39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfa6794d7521893af4b04f6aff92d385"><td class="memItemLeft" align="right" valign="top"><a id="acfa6794d7521893af4b04f6aff92d385"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLogShaderSources</b> (bool enable)</td></tr>
+<tr class="separator:acfa6794d7521893af4b04f6aff92d385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0142af2847ac56adff33035b479ed72e"><td class="memItemLeft" align="right" valign="top"><a id="a0142af2847ac56adff33035b479ed72e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetLogShaderSources</b> () const</td></tr>
+<tr class="separator:a0142af2847ac56adff33035b479ed72e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a138d48d0a58c24146c5b8245d8a06244"><td class="memItemLeft" align="right" valign="top"><a id="a138d48d0a58c24146c5b8245d8a06244"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPolicyGLSL</b> (<a class="el" href="_graphics_defs_8h.html#ae747d059c6c773d47a400caa47de6ce6">ShaderTranslationPolicy</a> policy)</td></tr>
+<tr class="separator:a138d48d0a58c24146c5b8245d8a06244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b89c92fa6a12726d6f11dfee8ec3edb"><td class="memItemLeft" align="right" valign="top"><a id="a8b89c92fa6a12726d6f11dfee8ec3edb"></a>
+<a class="el" href="_graphics_defs_8h.html#ae747d059c6c773d47a400caa47de6ce6">ShaderTranslationPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetPolicyGLSL</b> () const</td></tr>
+<tr class="separator:a8b89c92fa6a12726d6f11dfee8ec3edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7a805ee07f26ce103d3cb56ccbdbaed"><td class="memItemLeft" align="right" valign="top"><a id="ae7a805ee07f26ce103d3cb56ccbdbaed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPolicyHLSL</b> (<a class="el" href="_graphics_defs_8h.html#ae747d059c6c773d47a400caa47de6ce6">ShaderTranslationPolicy</a> policy)</td></tr>
+<tr class="separator:ae7a805ee07f26ce103d3cb56ccbdbaed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae32ce792335d0c64fcf4cc520f642d2"><td class="memItemLeft" align="right" valign="top"><a id="aae32ce792335d0c64fcf4cc520f642d2"></a>
+<a class="el" href="_graphics_defs_8h.html#ae747d059c6c773d47a400caa47de6ce6">ShaderTranslationPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetPolicyHLSL</b> () const</td></tr>
+<tr class="separator:aae32ce792335d0c64fcf4cc520f642d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -1489,6 +1507,15 @@ ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_graphics.html#afb64665653e17aa892cdd081105969b1">globalShaderDefinesHash_</a></td></tr>
 <tr class="memdesc:afb64665653e17aa892cdd081105969b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash of global shader defines. <br /></td></tr>
 <tr class="separator:afb64665653e17aa892cdd081105969b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68a406877fe98a89c10e0446946c1ba9"><td class="memItemLeft" align="right" valign="top"><a id="a68a406877fe98a89c10e0446946c1ba9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logShaderSources_</b> {}</td></tr>
+<tr class="separator:a68a406877fe98a89c10e0446946c1ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ce2e3f1218cd78a86073ba7cc789c79"><td class="memItemLeft" align="right" valign="top"><a id="a6ce2e3f1218cd78a86073ba7cc789c79"></a>
+<a class="el" href="_graphics_defs_8h.html#ae747d059c6c773d47a400caa47de6ce6">ShaderTranslationPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>policyGlsl_</b> {ShaderTranslationPolicy::Verbatim}</td></tr>
+<tr class="separator:a6ce2e3f1218cd78a86073ba7cc789c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6617932b95f8a8bc2f20d3ceb734d126"><td class="memItemLeft" align="right" valign="top"><a id="a6617932b95f8a8bc2f20d3ceb734d126"></a>
+<a class="el" href="_graphics_defs_8h.html#ae747d059c6c773d47a400caa47de6ce6">ShaderTranslationPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>policyHlsl_</b> {ShaderTranslationPolicy::Translate}</td></tr>
+<tr class="separator:a6617932b95f8a8bc2f20d3ceb734d126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
