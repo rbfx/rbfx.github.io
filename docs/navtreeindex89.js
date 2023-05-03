@@ -1,5 +1,8 @@
 var NAVTREEINDEX89 =
 {
+"struct_urho3_d_1_1_texture_frame.html#a96af72e30e803932e3900b4652520447":[5,0,2,740,0],
+"struct_urho3_d_1_1_texture_frame.html#ad2d69579af25f51ae2278f97b2bee681":[5,0,2,740,3],
+"struct_urho3_d_1_1_texture_frame.html#aefa30b2c6fcd4329d49b7ac7de4cb083":[5,0,2,740,2],
 "struct_urho3_d_1_1_texture_frame.html#af2be510a9c741da4506ab3aa0cd71118":[5,0,2,740,4],
 "struct_urho3_d_1_1_tile_map_info2_d.html":[5,0,2,747],
 "struct_urho3_d_1_1_tile_map_info2_d.html#a3ee0159983d648eadec68b85eb15f0d5":[5,0,2,747,6],

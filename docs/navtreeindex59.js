@@ -1,5 +1,8 @@
 var NAVTREEINDEX59 =
 {
+"class_urho3_d_1_1_serializable.html#accaf6b2938d392f127885f6673f6985e":[5,0,2,630,37],
+"class_urho3_d_1_1_serializable.html#adda34bdd5647ece5fd395a0fc5615984":[5,0,2,630,11],
+"class_urho3_d_1_1_serializable.html#adfdafa80730bc8a34fca96b97c874c57":[5,0,2,630,33],
 "class_urho3_d_1_1_serializable.html#ae7c4c6b4aaa1375ac927e2c0fdb4537e":[5,0,2,630,32],
 "class_urho3_d_1_1_serializable.html#af65920406168944f258a9f0087b564b7":[5,0,2,630,3],
 "class_urho3_d_1_1_serializable_inspector_widget.html":[5,0,2,631],
@@ -246,8 +249,5 @@ var NAVTREEINDEX59 =
 "class_urho3_d_1_1_shader_variation.html#a5575e14508baee77ac1de15f7e1157ae":[5,0,2,649,23],
 "class_urho3_d_1_1_shader_variation.html#a55da24c2c821f46953dd4e946a676d21":[5,0,2,649,1],
 "class_urho3_d_1_1_shader_variation.html#a5de6afdd12b53204e1464d98f7645340":[5,0,2,649,7],
-"class_urho3_d_1_1_shader_variation.html#a60dc586b51e374cb909d2a650813d84e":[5,0,2,649,18],
-"class_urho3_d_1_1_shader_variation.html#a7563da895b4b0ba138e7b96767f36557":[5,0,2,649,29],
-"class_urho3_d_1_1_shader_variation.html#a75a3ff981114c39fbce07a4b281e07ce":[5,0,2,649,13],
-"class_urho3_d_1_1_shader_variation.html#a796302110897b35c3faf6c18208e289c":[5,0,2,649,5]
+"class_urho3_d_1_1_shader_variation.html#a60dc586b51e374cb909d2a650813d84e":[5,0,2,649,18]
 };

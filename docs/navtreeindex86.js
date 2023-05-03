@@ -1,5 +1,8 @@
 var NAVTREEINDEX86 =
 {
+"struct_urho3_d_1_1_ref_count.html#a7bb14e7c38c198e3bb1b0b5a0d618203":[5,0,2,556,3],
+"struct_urho3_d_1_1_ref_count.html#a85244bf8dacf81a87451b23294ccd3cd":[5,0,2,556,1],
+"struct_urho3_d_1_1_ref_count.html#a95993f5cb65b6c17ac2cde4a31724370":[5,0,2,556,2],
 "struct_urho3_d_1_1_ref_count.html#addcd94eecde33fc782dfa156aab8fe2b":[5,0,2,556,6],
 "struct_urho3_d_1_1_referenced_component_registry_base_1_1_registry_entry.html":[5,0,2,559,0],
 "struct_urho3_d_1_1_referenced_component_registry_base_1_1_registry_entry.html#ac2230192cb712496b3aad15998f69fa0":[5,0,2,559,0,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html":[5,0,2,612,1],
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html#a1f5c1e76b48caf1165e81965049d3e33":[5,0,2,612,1,3],
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html#a37fa556d832b6ed814c8c01548388cd9":[5,0,2,612,1,2],
-"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html#a6a787d88af6de596a34c664fd54e7976":[5,0,2,612,1,0],
-"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html#aa43a85da8502f0ec2ec51b8afa6f2888":[5,0,2,612,1,1],
-"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection_request.html":[5,0,2,612,2],
-"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection_request.html#a2dbbf7d00644c58743e0b90e62fa37b6":[5,0,2,612,2,2]
+"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html#a6a787d88af6de596a34c664fd54e7976":[5,0,2,612,1,0]
 };

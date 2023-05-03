@@ -1,5 +1,8 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html#aa43a85da8502f0ec2ec51b8afa6f2888":[5,0,2,612,1,1],
+"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection_request.html":[5,0,2,612,2],
+"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection_request.html#a2dbbf7d00644c58743e0b90e62fa37b6":[5,0,2,612,2,2],
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection_request.html#a9a2e8ce7f2102a0f2357ccc96caa39cf":[5,0,2,612,2,1],
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection_request.html#a9ec2dfb74ab7123813ff54ac8f98ebae":[5,0,2,612,2,0],
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_reorder_info.html":[5,0,2,612,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_spherical_harmonics_dot9.html#adc1be0053e20c6220f521d3e96baf22e":[5,0,2,690,11],
 "struct_urho3_d_1_1_spir_v_shader.html":[5,0,2,692],
 "struct_urho3_d_1_1_spir_v_shader.html#a2912c6c11e8445a25c2725b36283d0c6":[5,0,2,692,3],
-"struct_urho3_d_1_1_spir_v_shader.html#a2f4ea486c89a1aa4cdca1328cea4618c":[5,0,2,692,1],
-"struct_urho3_d_1_1_spir_v_shader.html#a8aec09c468c694c2557d466675c196ba":[5,0,2,692,2],
-"struct_urho3_d_1_1_spir_v_shader.html#aae1ecac7d0ad3146a11d21a098fb636a":[5,0,2,692,0],
-"struct_urho3_d_1_1_spriter_1_1_animation.html":[5,0,2,3,0]
+"struct_urho3_d_1_1_spir_v_shader.html#a2f4ea486c89a1aa4cdca1328cea4618c":[5,0,2,692,1]
 };

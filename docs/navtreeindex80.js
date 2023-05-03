@@ -1,5 +1,8 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_common_frame_info.html#a2b93e6e88600f98ad366fcd1377b90c6":[5,0,2,138,3],
+"struct_urho3_d_1_1_common_frame_info.html#a58769cdd2bf17814997749b86b0042e6":[5,0,2,138,5],
+"struct_urho3_d_1_1_common_frame_info.html#a782270e9fa6f10c3901cdb07c3aedd2d":[5,0,2,138,0],
 "struct_urho3_d_1_1_common_frame_info.html#af87d8c6f21d196102d3bc7858283024e":[5,0,2,138,1],
 "struct_urho3_d_1_1_compressed_level.html":[5,0,2,140],
 "struct_urho3_d_1_1_compressed_level.html#a0d065edbabdb9bb221c8e16e46e2d364":[5,0,2,140,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_detail_1_1_network_value_base_1_1_interpolation_base.html#ab9c3998e4f77da3b9ea68739661b9a0b":[5,0,2,1,10,0,2],
 "struct_urho3_d_1_1_detail_1_1_priority_signal_subscription.html":[5,0,2,1,12],
 "struct_urho3_d_1_1_detail_1_1_priority_signal_subscription.html#a04e0834f86726fe9353edc52688e5335":[5,0,2,1,12,3],
-"struct_urho3_d_1_1_detail_1_1_priority_signal_subscription.html#a6c59860c89a701d43c2b6a999d32bce5":[5,0,2,1,12,0],
-"struct_urho3_d_1_1_detail_1_1_priority_signal_subscription.html#ad906eca7844b6e2ea47de395ae28a7ac":[5,0,2,1,12,1],
-"struct_urho3_d_1_1_detail_1_1_priority_signal_subscription.html#aeb559fd07115ee77a2546b7f4be05e7e":[5,0,2,1,12,2],
-"struct_urho3_d_1_1_detail_1_1_signal_subscription.html":[5,0,2,1,21]
+"struct_urho3_d_1_1_detail_1_1_priority_signal_subscription.html#a6c59860c89a701d43c2b6a999d32bce5":[5,0,2,1,12,0]
 };
