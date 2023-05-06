@@ -82,6 +82,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> (<a class="e
 <tr class="memitem:ab4860d1fa24634e8c8265c27b95edc61"><td class="memItemLeft" align="right" valign="top"><a id="ab4860d1fa24634e8c8265c27b95edc61"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnSceneSet</b> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene) override</td></tr>
 <tr class="separator:ab4860d1fa24634e8c8265c27b95edc61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a846d0e0a7a62ac0a91532715d411a483"><td class="memItemLeft" align="right" valign="top"><a id="a846d0e0a7a62ac0a91532715d411a483"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateDrawableAttributes</b> () override</td></tr>
+<tr class="separator:a846d0e0a7a62ac0a91532715d411a483"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5705faa663899388bdfd77cf4285d9be"><td class="memItemLeft" align="right" valign="top"><a id="a5705faa663899388bdfd77cf4285d9be"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Prepare</b> (unsigned numParticles)</td></tr>
 <tr class="separator:a5705faa663899388bdfd77cf4285d9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -91,10 +94,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateParticle</b> (u
 <tr class="memitem:a382501d97aaf76cf158927660dbcfde8"><td class="memItemLeft" align="right" valign="top"><a id="a382501d97aaf76cf158927660dbcfde8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Commit</b> ()</td></tr>
 <tr class="separator:a382501d97aaf76cf158927660dbcfde8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ebeef9684ded6f99ab211d2146bdd0c"><td class="memTemplParams" colspan="2"><a id="a5ebeef9684ded6f99ab211d2146bdd0c"></a>
-template&lt;typename Pin0 , typename Pin1 , typename Frame , typename Color , typename Rotation , typename Direction &gt; </td></tr>
-<tr class="memitem:a5ebeef9684ded6f99ab211d2146bdd0c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="struct_urho3_d_1_1_update_context.html">UpdateContext</a> &amp;context, unsigned numParticles, Pin0 pin0, Pin1 pin1, Frame frame, <a class="el" href="class_urho3_d_1_1_color.html">Color</a> color, Rotation rotation, Direction direction)</td></tr>
-<tr class="separator:a5ebeef9684ded6f99ab211d2146bdd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a180ceb32cf50f2518fccebb110cda986"><td class="memItemLeft" align="right" valign="top"><a id="a180ceb32cf50f2518fccebb110cda986"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const <a class="el" href="struct_urho3_d_1_1_update_context.html">UpdateContext</a> &amp;context, unsigned numParticles, const <a class="el" href="struct_urho3_d_1_1_sparse_span.html">SparseSpan</a>&lt; <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &gt; &amp;pin0, const <a class="el" href="struct_urho3_d_1_1_sparse_span.html">SparseSpan</a>&lt; <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &gt; &amp;pin1, const <a class="el" href="struct_urho3_d_1_1_sparse_span.html">SparseSpan</a>&lt; float &gt; &amp;frame, const <a class="el" href="struct_urho3_d_1_1_sparse_span.html">SparseSpan</a>&lt; <a class="el" href="class_urho3_d_1_1_color.html">Color</a> &gt; &amp;color, const <a class="el" href="struct_urho3_d_1_1_sparse_span.html">SparseSpan</a>&lt; float &gt; &amp;rotation, const <a class="el" href="struct_urho3_d_1_1_sparse_span.html">SparseSpan</a>&lt; <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &gt; &amp;direction)</td></tr>
+<tr class="separator:a180ceb32cf50f2518fccebb110cda986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
