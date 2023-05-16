@@ -1,5 +1,7 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_rml_navigable_1_1_cache.html#ad2f07a9a9e2f8272563080ffca03d432":[5,0,2,602,0,3],
+"struct_urho3_d_1_1_rml_navigation_manager_1_1_navigation_stack_frame.html":[5,0,2,603,0],
 "struct_urho3_d_1_1_rml_navigation_manager_1_1_navigation_stack_frame.html#aadeff97eb96a2e15f57e882092410fbc":[5,0,2,603,0,0],
 "struct_urho3_d_1_1_rml_navigation_manager_1_1_navigation_stack_frame.html#af630823f454c92ed7b948e90d5bb5b63":[5,0,2,603,0,1],
 "struct_urho3_d_1_1_scene_hierarchy_settings.html":[5,0,2,610],
@@ -247,7 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_spherical_harmonics_dot9.html#aaef2b4098b3e31d72323a968d969e1be":[5,0,2,688,10],
 "struct_urho3_d_1_1_spherical_harmonics_dot9.html#ab774fcf7c126c06c3284d34cea09acd5":[5,0,2,688,4],
 "struct_urho3_d_1_1_spherical_harmonics_dot9.html#abf408c2681a4d762743eb34b9aa10f4c":[5,0,2,688,7],
-"struct_urho3_d_1_1_spherical_harmonics_dot9.html#ad8f12ccd5e5bc98f3982cc52f58f1176":[5,0,2,688,8],
-"struct_urho3_d_1_1_spherical_harmonics_dot9.html#adc1be0053e20c6220f521d3e96baf22e":[5,0,2,688,11],
-"struct_urho3_d_1_1_spir_v_shader.html":[5,0,2,690]
+"struct_urho3_d_1_1_spherical_harmonics_dot9.html#ad8f12ccd5e5bc98f3982cc52f58f1176":[5,0,2,688,8]
 };

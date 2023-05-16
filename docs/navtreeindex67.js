@@ -1,5 +1,7 @@
 var NAVTREEINDEX67 =
 {
+"class_urho3_d_1_1_texture_render_buffer.html#a20ad81b38e1b7f86cadbd20dd7b0a6b2":[5,0,2,739,2],
+"class_urho3_d_1_1_texture_render_buffer.html#a4d01712f333fe7d98651f025c176a5a3":[5,0,2,739,8],
 "class_urho3_d_1_1_texture_render_buffer.html#a68ef9e185ab12d56064866419e471a62":[5,0,2,739,9],
 "class_urho3_d_1_1_texture_render_buffer.html#a7e11de9987d09bfb4edae2904aeb40c0":[5,0,2,739,6],
 "class_urho3_d_1_1_texture_render_buffer.html#a7ee09e28f046c338f3a3046295513f7b":[5,0,2,739,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX67 =
 "class_urho3_d_1_1_tone_mapping_pass.html#a1f0433eb17787e9f9a795e09663e0321":[5,0,2,755,6],
 "class_urho3_d_1_1_tone_mapping_pass.html#a22f9d87c3f59ca93296a929ba1b2485e":[5,0,2,755,2],
 "class_urho3_d_1_1_tone_mapping_pass.html#a43e5ca536f3979bb7b9cd81c956c2d6d":[5,0,2,755,3],
-"class_urho3_d_1_1_tone_mapping_pass.html#a4e34dff08919719bf8e758d855711757":[5,0,2,755,5],
-"class_urho3_d_1_1_tone_mapping_pass.html#a5f6c3c99ad468ccbbccf07c62f4f55d0":[5,0,2,755,1],
-"class_urho3_d_1_1_tone_mapping_pass.html#aab4bb8efbc26fd28a6b61f7ff69d251b":[5,0,2,755,7]
+"class_urho3_d_1_1_tone_mapping_pass.html#a4e34dff08919719bf8e758d855711757":[5,0,2,755,5]
 };

@@ -1,8 +1,10 @@
 var NAVTREEINDEX77 =
 {
+"md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_cpp-quick-start.html":[1],
+"md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html":[2],
 "multiplayer-and-networking.html":[0,0,1,2],
-"namespace_urho3_d_1_1_actions.html":[5,0,2,0],
 "namespace_urho3_d_1_1_actions.html":[4,0,0,0],
+"namespace_urho3_d_1_1_actions.html":[5,0,2,0],
 "namespace_urho3_d_1_1_attribute_metadata.html":[4,0,0,1],
 "namespace_urho3_d_1_1_network_settings.html":[4,0,0,2],
 "namespace_urho3_d_1_1_shader_consts.html":[4,0,0,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_textures.html#a358174fa2213a5907fa0dcb33e91d887":[5,0,2,15,1,0],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_textures.html#a9b062aefe4ac92f566e41024cdb6a0b0":[5,0,2,15,1,2],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_textures.html#ab813ca20cc85580d247fb02edf98a991":[5,0,2,15,1,1],
-"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html":[5,0,2,16],
-"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a05570dcebba6ad17c056bfe5d3effb9c":[5,0,2,16,7],
-"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a1a695fccaf2bbc24d2c811b37cb96ff8":[5,0,2,16,11]
+"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html":[5,0,2,16]
 };

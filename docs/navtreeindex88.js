@@ -1,5 +1,7 @@
 var NAVTREEINDEX88 =
 {
+"struct_urho3_d_1_1_spherical_harmonics_dot9.html#adc1be0053e20c6220f521d3e96baf22e":[5,0,2,688,11],
+"struct_urho3_d_1_1_spir_v_shader.html":[5,0,2,690],
 "struct_urho3_d_1_1_spir_v_shader.html#a2912c6c11e8445a25c2725b36283d0c6":[5,0,2,690,3],
 "struct_urho3_d_1_1_spir_v_shader.html#a2f4ea486c89a1aa4cdca1328cea4618c":[5,0,2,690,1],
 "struct_urho3_d_1_1_spir_v_shader.html#a8aec09c468c694c2557d466675c196ba":[5,0,2,690,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX88 =
 "struct_urho3_d_1_1_text_renderer3_d_1_1_cached_text_element.html#a5d6ab8e899ddd2693c7e860fb553abb6":[5,0,2,729,0,0],
 "struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html":[5,0,2,729,1],
 "struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html#a1b6d31a0ec5bc5650db9b6275dcc88a3":[5,0,2,729,1,0],
-"struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html#a4151580f3ef577dbeae7b53d88670ecc":[5,0,2,729,1,2],
-"struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html#a4aa32da41f59be1c413d988c618bcd29":[5,0,2,729,1,3],
-"struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html#a933df964c7a8e2e6628572874aba701a":[5,0,2,729,1,1]
+"struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html#a4151580f3ef577dbeae7b53d88670ecc":[5,0,2,729,1,2]
 };

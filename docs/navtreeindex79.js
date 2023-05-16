@@ -1,5 +1,7 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_baked_scene_chunk.html#a241f558270630ca79dc8d01eb21088fb":[5,0,2,71,1],
+"struct_urho3_d_1_1_baked_scene_chunk.html#a44dd2eaf513e14abcb7184d246f6225e":[5,0,2,71,5],
 "struct_urho3_d_1_1_baked_scene_chunk.html#a52c942bf49f737d82e6c83c9fb25e44c":[5,0,2,71,4],
 "struct_urho3_d_1_1_baked_scene_chunk.html#a89a4341e763d59e357c95960017e1f4b":[5,0,2,71,0],
 "struct_urho3_d_1_1_baked_scene_chunk.html#aa3d48008b7ade0c53c71204128fe6679":[5,0,2,71,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_pong.html#a66262053259c8cb81c7b766a25d9aaa0":[5,0,2,125,1,0],
 "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_pong.html#a68717347d82dddbd812db9318465c0b4":[5,0,2,125,1,2],
 "struct_urho3_d_1_1_clock_synchronizer_message.html":[5,0,2,126],
-"struct_urho3_d_1_1_clock_synchronizer_message.html#a044bbc2fe3a234f56e1e3bd738909e1b":[5,0,2,126,0],
-"struct_urho3_d_1_1_clock_synchronizer_message.html#a33c14f0b19f40bf8acc9241cda0320ee":[5,0,2,126,4],
-"struct_urho3_d_1_1_clock_synchronizer_message.html#a51b882cb0f388191e4368e6d8e6f9381":[5,0,2,126,5]
+"struct_urho3_d_1_1_clock_synchronizer_message.html#a044bbc2fe3a234f56e1e3bd738909e1b":[5,0,2,126,0]
 };

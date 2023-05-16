@@ -1,5 +1,7 @@
 var NAVTREEINDEX78 =
 {
+"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a05570dcebba6ad17c056bfe5d3effb9c":[5,0,2,16,7],
+"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a1a695fccaf2bbc24d2c811b37cb96ff8":[5,0,2,16,11],
 "struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a216c23d329f9f1b986c7477c1d8c9669":[5,0,2,16,12],
 "struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a2c01f1f412eb382e6b7223a785f07efb":[5,0,2,16,10],
 "struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a33be32f4fbea4bab809763461b993c3f":[5,0,2,16,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_baked_scene_background.html#a3f8acaa928a15c20966e9b5a4f2f08fe":[5,0,2,70,4],
 "struct_urho3_d_1_1_baked_scene_background.html#a3f95d56af6c634b54dd7fbf21df14227":[5,0,2,70,2],
 "struct_urho3_d_1_1_baked_scene_background.html#aafe894705f87f5b68d9042fdfe9650a8":[5,0,2,70,3],
-"struct_urho3_d_1_1_baked_scene_chunk.html":[5,0,2,71],
-"struct_urho3_d_1_1_baked_scene_chunk.html#a241f558270630ca79dc8d01eb21088fb":[5,0,2,71,1],
-"struct_urho3_d_1_1_baked_scene_chunk.html#a44dd2eaf513e14abcb7184d246f6225e":[5,0,2,71,5]
+"struct_urho3_d_1_1_baked_scene_chunk.html":[5,0,2,71]
 };
