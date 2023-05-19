@@ -140,7 +140,7 @@ if (ENVIRONMENT_IS_NODE) {
 
 var out = Module["print"] || console.log.bind(console);
 
-var err = Module["printErr"] || console.warn.bind(console);
+var err = Module["printErr"] || console.error.bind(console);
 
 Object.assign(Module, moduleOverrides);
 
@@ -418,14 +418,14 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 1783348: () => {
+ 1783092: () => {
   FS.syncfs(function(err) {
    if (err) {
     console.error(err);
    }
   });
  },
- 1783412: $0 => {
+ 1783156: $0 => {
   var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
   var reply = window.prompt(str, "i");
   if (reply === null) {
@@ -433,10 +433,10 @@ var ASM_CONSTS = {
   }
   return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
  },
- 1783637: ($0, $1) => {
+ 1783381: ($0, $1) => {
   alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
  },
- 1783694: () => {
+ 1783438: () => {
   if (typeof AudioContext !== "undefined") {
    return true;
   } else if (typeof webkitAudioContext !== "undefined") {
@@ -444,7 +444,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1783841: () => {
+ 1783585: () => {
   if (typeof navigator.mediaDevices !== "undefined" && typeof navigator.mediaDevices.getUserMedia !== "undefined") {
    return true;
   } else if (typeof navigator.webkitGetUserMedia !== "undefined") {
@@ -452,7 +452,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1784075: $0 => {
+ 1783819: $0 => {
   if (typeof Module["SDL2"] === "undefined") {
    Module["SDL2"] = {};
   }
@@ -474,11 +474,11 @@ var ASM_CONSTS = {
   }
   return SDL2.audioContext === undefined ? -1 : 0;
  },
- 1784568: () => {
+ 1784312: () => {
   var SDL2 = Module["SDL2"];
   return SDL2.audioContext.sampleRate;
  },
- 1784636: ($0, $1, $2, $3) => {
+ 1784380: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   var have_microphone = function(stream) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -519,7 +519,7 @@ var ASM_CONSTS = {
    }, have_microphone, no_microphone);
   }
  },
- 1786288: ($0, $1, $2, $3) => {
+ 1786032: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
   SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -531,7 +531,7 @@ var ASM_CONSTS = {
   };
   SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
  },
- 1786698: ($0, $1) => {
+ 1786442: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
   for (var c = 0; c < numChannels; ++c) {
@@ -550,7 +550,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1787303: ($0, $1) => {
+ 1787047: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
   for (var c = 0; c < numChannels; ++c) {
@@ -563,7 +563,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1787783: $0 => {
+ 1787527: $0 => {
   var SDL2 = Module["SDL2"];
   if ($0) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -601,7 +601,7 @@ var ASM_CONSTS = {
    SDL2.audioContext = undefined;
   }
  },
- 1788955: ($0, $1, $2) => {
+ 1788699: ($0, $1, $2) => {
   var w = $0;
   var h = $1;
   var pixels = $2;
@@ -672,7 +672,7 @@ var ASM_CONSTS = {
   }
   SDL2.ctx.putImageData(SDL2.image, 0, 0);
  },
- 1790424: ($0, $1, $2, $3, $4) => {
+ 1790168: ($0, $1, $2, $3, $4) => {
   var w = $0;
   var h = $1;
   var hot_x = $2;
@@ -709,20 +709,20 @@ var ASM_CONSTS = {
   stringToUTF8(url, urlBuf, url.length + 1);
   return urlBuf;
  },
- 1791413: $0 => {
+ 1791157: $0 => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = UTF8ToString($0);
   }
  },
- 1791496: () => {
+ 1791240: () => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = "none";
   }
  },
- 1791565: () => {
+ 1791309: () => {
   return window.innerWidth;
  },
- 1791595: () => {
+ 1791339: () => {
   return window.innerHeight;
  }
 };
@@ -776,7 +776,7 @@ function setValue(ptr, value, type = "i8") {
   break;
 
  default:
-  abort("invalid type for setValue: " + type);
+  abort(`invalid type for setValue: ${type}`);
  }
 }
 
@@ -1526,7 +1526,7 @@ var MEMFS = {
 };
 
 function asyncLoad(url, onload, onerror, noRunDep) {
- var dep = !noRunDep ? getUniqueRunDependency("al " + url) : "";
+ var dep = !noRunDep ? getUniqueRunDependency(`al ${url}`) : "";
  readAsync(url, arrayBuffer => {
   assert(arrayBuffer, `Loading data file "${url}" failed (no arrayBuffer).`);
   onload(new Uint8Array(arrayBuffer));
@@ -1558,7 +1558,7 @@ function FS_handledByPreloadPlugin(byteArray, fullname, finish, onerror) {
 
 function FS_createPreloadedFile(parent, name, url, canRead, canWrite, onload, onerror, dontCreateFile, canOwn, preFinish) {
  var fullname = name ? PATH_FS.resolve(PATH.join2(parent, name)) : parent;
- var dep = getUniqueRunDependency("cp " + fullname);
+ var dep = getUniqueRunDependency(`cp ${fullname}`);
  function processData(byteArray) {
   function finish(byteArray) {
    if (preFinish) preFinish();
@@ -1595,7 +1595,7 @@ function FS_modeStringToFlags(str) {
  };
  var flags = flagModes[str];
  if (typeof flags == "undefined") {
-  throw new Error("Unknown file open mode: " + str);
+  throw new Error(`Unknown file open mode: ${str}`);
  }
  return flags;
 }
@@ -1960,9 +1960,9 @@ var FS = {
    if (FS.isRoot(node)) {
     var mount = node.mount.mountpoint;
     if (!path) return mount;
-    return mount[mount.length - 1] !== "/" ? mount + "/" + path : mount + path;
+    return mount[mount.length - 1] !== "/" ? `${mount}/${path}` : mount + path;
    }
-   path = path ? node.name + "/" + path : node.name;
+   path = path ? `${node.name}/${path}` : node.name;
    node = node.parent;
   }
  },
@@ -2218,7 +2218,7 @@ var FS = {
   }
   FS.syncFSRequests++;
   if (FS.syncFSRequests > 1) {
-   err("warning: " + FS.syncFSRequests + " FS.syncfs operations in flight at once, probably just doing extra work");
+   err(`warning: ${FS.syncFSRequests} FS.syncfs operations in flight at once, probably just doing extra work`);
   }
   var mounts = FS.getMounts(FS.root.mount);
   var completed = 0;
@@ -2840,7 +2840,7 @@ var FS = {
   opts.flags = opts.flags || 0;
   opts.encoding = opts.encoding || "binary";
   if (opts.encoding !== "utf8" && opts.encoding !== "binary") {
-   throw new Error('Invalid encoding type "' + opts.encoding + '"');
+   throw new Error(`Invalid encoding type "${opts.encoding}"`);
   }
   var ret;
   var stream = FS.open(path, opts.flags);
@@ -3689,7 +3689,7 @@ function getShiftFromSize(size) {
   return 3;
 
  default:
-  throw new TypeError("Unknown type size: " + size);
+  throw new TypeError(`Unknown type size: ${size}`);
  }
 }
 
@@ -3729,7 +3729,7 @@ function makeLegalFunctionName(name) {
  name = name.replace(/[^a-zA-Z0-9_]/g, "$");
  var f = name.charCodeAt(0);
  if (f >= char_0 && f <= char_9) {
-  return "_" + name;
+  return `_${name}`;
  }
  return name;
 }
@@ -3758,7 +3758,7 @@ function extendError(baseErrorType, errorName) {
   if (this.message === undefined) {
    return this.name;
   } else {
-   return this.name + ": " + this.message;
+   return `${this.name}: ${this.message}`;
   }
  };
  return errorClass;
@@ -3872,6 +3872,9 @@ function HandleAllocator() {
  this.freelist = [];
  this.get = function(id) {
   return this.allocated[id];
+ };
+ this.has = function(id) {
+  return this.allocated[id] !== undefined;
  };
  this.allocate = function(handle) {
   var id = this.freelist.pop() || this.allocated.length;
@@ -4043,7 +4046,7 @@ function craftInvokerFunction(humanName, argTypes, classType, cppInvokerFunc, cp
   argsList += (i !== 0 ? ", " : "") + "arg" + i;
   argsListWired += (i !== 0 ? ", " : "") + "arg" + i + "Wired";
  }
- var invokerFnBody = "return function " + makeLegalFunctionName(humanName) + "(" + argsList + ") {\n" + "if (arguments.length !== " + (argCount - 2) + ") {\n" + "throwBindingError('function " + humanName + " called with ' + arguments.length + ' arguments, expected " + (argCount - 2) + " args!');\n" + "}\n";
+ var invokerFnBody = `\n        return function ${makeLegalFunctionName(humanName)}(${argsList}) {\n        if (arguments.length !== ${argCount - 2}) {\n          throwBindingError('function ${humanName} called with ${arguments.length} arguments, expected ${argCount - 2} args!');\n        }`;
  if (needsDestructorStack) {
   invokerFnBody += "var destructors = [];\n";
  }
@@ -4209,7 +4212,7 @@ function throwUnboundTypeError(message, types) {
   seen[type] = true;
  }
  types.forEach(visit);
- throw new UnboundTypeError(message + ": " + unboundTypes.map(getTypeName).join([ ", " ]));
+ throw new UnboundTypeError(`${message}: ` + unboundTypes.map(getTypeName).join([ ", " ]));
 }
 
 function __embind_register_function(name, argCount, rawArgTypesAddr, signature, rawInvoker, fn, isAsync) {
@@ -4522,7 +4525,7 @@ function __embind_register_std_wstring(rawType, charSize, name) {
   },
   "toWireType": function(destructors, value) {
    if (!(typeof value == "string")) {
-    throwBindingError("Cannot pass non-string to C++ string type " + name);
+    throwBindingError(`Cannot pass non-string to C++ string type ${name}`);
    }
    var length = lengthBytesUTF(value);
    var ptr = _malloc(4 + length + charSize);
@@ -4763,7 +4766,11 @@ function setMainLoop(browserIterationFunc, fps, simulateInfiniteLoop, arg, noSet
   Browser.mainLoop.scheduler();
  };
  if (!noSetTiming) {
-  if (fps && fps > 0) _emscripten_set_main_loop_timing(0, 1e3 / fps); else _emscripten_set_main_loop_timing(1, 1);
+  if (fps && fps > 0) {
+   _emscripten_set_main_loop_timing(0, 1e3 / fps);
+  } else {
+   _emscripten_set_main_loop_timing(1, 1);
+  }
   Browser.mainLoop.scheduler();
  }
  if (simulateInfiniteLoop) {
@@ -6115,6 +6122,9 @@ var JSEvents = {
   JSEvents.eventHandlers.splice(i, 1);
  },
  registerOrRemoveHandler: function(eventHandler) {
+  if (!eventHandler.target) {
+   return -4;
+  }
   var jsEventHandler = function jsEventHandler(event) {
    ++JSEvents.inEventHandler;
    JSEvents.currentEventHandler = eventHandler;
@@ -6135,6 +6145,7 @@ var JSEvents = {
     }
    }
   }
+  return 0;
  },
  getNodeNameForTarget: function(target) {
   if (!target) return "";
@@ -9345,14 +9356,13 @@ function registerBeforeUnloadEventCallback(target, userData, useCapture, callbac
   handlerFunc: beforeUnloadEventHandlerFunc,
   useCapture: useCapture
  };
- JSEvents.registerOrRemoveHandler(eventHandler);
+ return JSEvents.registerOrRemoveHandler(eventHandler);
 }
 
 function _emscripten_set_beforeunload_callback_on_thread(userData, callbackfunc, targetThread) {
  if (typeof onbeforeunload == "undefined") return -1;
  if (targetThread !== 1) return -5;
- registerBeforeUnloadEventCallback(2, userData, true, callbackfunc, 28, "beforeunload");
- return 0;
+ return registerBeforeUnloadEventCallback(2, userData, true, callbackfunc, 28, "beforeunload");
 }
 
 function registerFocusEventCallback(target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) {
@@ -9372,12 +9382,11 @@ function registerFocusEventCallback(target, userData, useCapture, callbackfunc, 
   handlerFunc: focusEventHandlerFunc,
   useCapture: useCapture
  };
- JSEvents.registerOrRemoveHandler(eventHandler);
+ return JSEvents.registerOrRemoveHandler(eventHandler);
 }
 
 function _emscripten_set_blur_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerFocusEventCallback(target, userData, useCapture, callbackfunc, 12, "blur", targetThread);
- return 0;
+ return registerFocusEventCallback(target, userData, useCapture, callbackfunc, 12, "blur", targetThread);
 }
 
 function _emscripten_set_element_css_size(target, width, height) {
@@ -9389,8 +9398,7 @@ function _emscripten_set_element_css_size(target, width, height) {
 }
 
 function _emscripten_set_focus_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerFocusEventCallback(target, userData, useCapture, callbackfunc, 13, "focus", targetThread);
- return 0;
+ return registerFocusEventCallback(target, userData, useCapture, callbackfunc, 13, "focus", targetThread);
 }
 
 function fillFullscreenChangeEventData(eventStruct) {
@@ -9426,16 +9434,15 @@ function registerFullscreenChangeEventCallback(target, userData, useCapture, cal
   handlerFunc: fullscreenChangeEventhandlerFunc,
   useCapture: useCapture
  };
- JSEvents.registerOrRemoveHandler(eventHandler);
+ return JSEvents.registerOrRemoveHandler(eventHandler);
 }
 
 function _emscripten_set_fullscreenchange_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
  if (!JSEvents.fullscreenEnabled()) return -1;
  target = target ? findEventTarget(target) : specialHTMLTargets[1];
  if (!target) return -4;
- registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "fullscreenchange", targetThread);
  registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "webkitfullscreenchange", targetThread);
- return 0;
+ return registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "fullscreenchange", targetThread);
 }
 
 function registerGamepadEventCallback(target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) {
@@ -9453,19 +9460,17 @@ function registerGamepadEventCallback(target, userData, useCapture, callbackfunc
   handlerFunc: gamepadEventHandlerFunc,
   useCapture: useCapture
  };
- JSEvents.registerOrRemoveHandler(eventHandler);
+ return JSEvents.registerOrRemoveHandler(eventHandler);
 }
 
 function _emscripten_set_gamepadconnected_callback_on_thread(userData, useCapture, callbackfunc, targetThread) {
  if (!navigator.getGamepads && !navigator.webkitGetGamepads) return -1;
- registerGamepadEventCallback(2, userData, useCapture, callbackfunc, 26, "gamepadconnected", targetThread);
- return 0;
+ return registerGamepadEventCallback(2, userData, useCapture, callbackfunc, 26, "gamepadconnected", targetThread);
 }
 
 function _emscripten_set_gamepaddisconnected_callback_on_thread(userData, useCapture, callbackfunc, targetThread) {
  if (!navigator.getGamepads && !navigator.webkitGetGamepads) return -1;
- registerGamepadEventCallback(2, userData, useCapture, callbackfunc, 27, "gamepaddisconnected", targetThread);
- return 0;
+ return registerGamepadEventCallback(2, userData, useCapture, callbackfunc, 27, "gamepaddisconnected", targetThread);
 }
 
 function registerKeyEventCallback(target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) {
@@ -9497,22 +9502,19 @@ function registerKeyEventCallback(target, userData, useCapture, callbackfunc, ev
   handlerFunc: keyEventHandlerFunc,
   useCapture: useCapture
  };
- JSEvents.registerOrRemoveHandler(eventHandler);
+ return JSEvents.registerOrRemoveHandler(eventHandler);
 }
 
 function _emscripten_set_keydown_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerKeyEventCallback(target, userData, useCapture, callbackfunc, 2, "keydown", targetThread);
- return 0;
+ return registerKeyEventCallback(target, userData, useCapture, callbackfunc, 2, "keydown", targetThread);
 }
 
 function _emscripten_set_keypress_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerKeyEventCallback(target, userData, useCapture, callbackfunc, 1, "keypress", targetThread);
- return 0;
+ return registerKeyEventCallback(target, userData, useCapture, callbackfunc, 1, "keypress", targetThread);
 }
 
 function _emscripten_set_keyup_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerKeyEventCallback(target, userData, useCapture, callbackfunc, 3, "keyup", targetThread);
- return 0;
+ return registerKeyEventCallback(target, userData, useCapture, callbackfunc, 3, "keyup", targetThread);
 }
 
 function _emscripten_set_main_loop_arg(func, arg, fps, simulateInfiniteLoop) {
@@ -9563,32 +9565,27 @@ function registerMouseEventCallback(target, userData, useCapture, callbackfunc, 
   handlerFunc: mouseEventHandlerFunc,
   useCapture: useCapture
  };
- JSEvents.registerOrRemoveHandler(eventHandler);
+ return JSEvents.registerOrRemoveHandler(eventHandler);
 }
 
 function _emscripten_set_mousedown_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerMouseEventCallback(target, userData, useCapture, callbackfunc, 5, "mousedown", targetThread);
- return 0;
+ return registerMouseEventCallback(target, userData, useCapture, callbackfunc, 5, "mousedown", targetThread);
 }
 
 function _emscripten_set_mouseenter_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerMouseEventCallback(target, userData, useCapture, callbackfunc, 33, "mouseenter", targetThread);
- return 0;
+ return registerMouseEventCallback(target, userData, useCapture, callbackfunc, 33, "mouseenter", targetThread);
 }
 
 function _emscripten_set_mouseleave_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerMouseEventCallback(target, userData, useCapture, callbackfunc, 34, "mouseleave", targetThread);
- return 0;
+ return registerMouseEventCallback(target, userData, useCapture, callbackfunc, 34, "mouseleave", targetThread);
 }
 
 function _emscripten_set_mousemove_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerMouseEventCallback(target, userData, useCapture, callbackfunc, 8, "mousemove", targetThread);
- return 0;
+ return registerMouseEventCallback(target, userData, useCapture, callbackfunc, 8, "mousemove", targetThread);
 }
 
 function _emscripten_set_mouseup_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerMouseEventCallback(target, userData, useCapture, callbackfunc, 6, "mouseup", targetThread);
- return 0;
+ return registerMouseEventCallback(target, userData, useCapture, callbackfunc, 6, "mouseup", targetThread);
 }
 
 function fillPointerlockChangeEventData(eventStruct) {
@@ -9615,7 +9612,7 @@ function registerPointerlockChangeEventCallback(target, userData, useCapture, ca
   handlerFunc: pointerlockChangeEventHandlerFunc,
   useCapture: useCapture
  };
- JSEvents.registerOrRemoveHandler(eventHandler);
+ return JSEvents.registerOrRemoveHandler(eventHandler);
 }
 
 function _emscripten_set_pointerlockchange_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
@@ -9624,11 +9621,10 @@ function _emscripten_set_pointerlockchange_callback_on_thread(target, userData, 
  }
  target = target ? findEventTarget(target) : specialHTMLTargets[1];
  if (!target) return -4;
- registerPointerlockChangeEventCallback(target, userData, useCapture, callbackfunc, 20, "pointerlockchange", targetThread);
  registerPointerlockChangeEventCallback(target, userData, useCapture, callbackfunc, 20, "mozpointerlockchange", targetThread);
  registerPointerlockChangeEventCallback(target, userData, useCapture, callbackfunc, 20, "webkitpointerlockchange", targetThread);
  registerPointerlockChangeEventCallback(target, userData, useCapture, callbackfunc, 20, "mspointerlockchange", targetThread);
- return 0;
+ return registerPointerlockChangeEventCallback(target, userData, useCapture, callbackfunc, 20, "pointerlockchange", targetThread);
 }
 
 function registerUiEventCallback(target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) {
@@ -9665,12 +9661,11 @@ function registerUiEventCallback(target, userData, useCapture, callbackfunc, eve
   handlerFunc: uiEventHandlerFunc,
   useCapture: useCapture
  };
- JSEvents.registerOrRemoveHandler(eventHandler);
+ return JSEvents.registerOrRemoveHandler(eventHandler);
 }
 
 function _emscripten_set_resize_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerUiEventCallback(target, userData, useCapture, callbackfunc, 10, "resize", targetThread);
- return 0;
+ return registerUiEventCallback(target, userData, useCapture, callbackfunc, 10, "resize", targetThread);
 }
 
 function registerTouchEventCallback(target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) {
@@ -9733,27 +9728,23 @@ function registerTouchEventCallback(target, userData, useCapture, callbackfunc, 
   handlerFunc: touchEventHandlerFunc,
   useCapture: useCapture
  };
- JSEvents.registerOrRemoveHandler(eventHandler);
+ return JSEvents.registerOrRemoveHandler(eventHandler);
 }
 
 function _emscripten_set_touchcancel_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerTouchEventCallback(target, userData, useCapture, callbackfunc, 25, "touchcancel", targetThread);
- return 0;
+ return registerTouchEventCallback(target, userData, useCapture, callbackfunc, 25, "touchcancel", targetThread);
 }
 
 function _emscripten_set_touchend_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerTouchEventCallback(target, userData, useCapture, callbackfunc, 23, "touchend", targetThread);
- return 0;
+ return registerTouchEventCallback(target, userData, useCapture, callbackfunc, 23, "touchend", targetThread);
 }
 
 function _emscripten_set_touchmove_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerTouchEventCallback(target, userData, useCapture, callbackfunc, 24, "touchmove", targetThread);
- return 0;
+ return registerTouchEventCallback(target, userData, useCapture, callbackfunc, 24, "touchmove", targetThread);
 }
 
 function _emscripten_set_touchstart_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
- registerTouchEventCallback(target, userData, useCapture, callbackfunc, 22, "touchstart", targetThread);
- return 0;
+ return registerTouchEventCallback(target, userData, useCapture, callbackfunc, 22, "touchstart", targetThread);
 }
 
 function fillVisibilityChangeEventData(eventStruct) {
@@ -9777,15 +9768,14 @@ function registerVisibilityChangeEventCallback(target, userData, useCapture, cal
   handlerFunc: visibilityChangeEventHandlerFunc,
   useCapture: useCapture
  };
- JSEvents.registerOrRemoveHandler(eventHandler);
+ return JSEvents.registerOrRemoveHandler(eventHandler);
 }
 
 function _emscripten_set_visibilitychange_callback_on_thread(userData, useCapture, callbackfunc, targetThread) {
  if (!specialHTMLTargets[1]) {
   return -4;
  }
- registerVisibilityChangeEventCallback(specialHTMLTargets[1], userData, useCapture, callbackfunc, 21, "visibilitychange", targetThread);
- return 0;
+ return registerVisibilityChangeEventCallback(specialHTMLTargets[1], userData, useCapture, callbackfunc, 21, "visibilitychange", targetThread);
 }
 
 function registerWheelEventCallback(target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) {
@@ -9807,14 +9797,14 @@ function registerWheelEventCallback(target, userData, useCapture, callbackfunc, 
   handlerFunc: wheelHandlerFunc,
   useCapture: useCapture
  };
- JSEvents.registerOrRemoveHandler(eventHandler);
+ return JSEvents.registerOrRemoveHandler(eventHandler);
 }
 
 function _emscripten_set_wheel_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
  target = findEventTarget(target);
+ if (!target) return -4;
  if (typeof target.onwheel != "undefined") {
-  registerWheelEventCallback(target, userData, useCapture, callbackfunc, 9, "wheel", targetThread);
-  return 0;
+  return registerWheelEventCallback(target, userData, useCapture, callbackfunc, 9, "wheel", targetThread);
  } else {
   return -1;
  }

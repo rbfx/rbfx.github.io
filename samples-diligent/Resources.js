@@ -66,7 +66,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
               num++;
             }
             total = Math.ceil(total * Module.expectedDataFileDownloads/num);
-            if (Module['setStatus']) Module['setStatus']('Downloading data... (' + loaded + '/' + total + ')');
+            if (Module['setStatus']) Module['setStatus'](`Downloading data... (${loaded}/${total})`);
           } else if (!Module.dataFileDownloads) {
             if (Module['setStatus']) Module['setStatus']('Downloading data...');
           }
@@ -106,7 +106,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
         open: function(mode, name) {
           this.name = name;
           this.requests[name] = this;
-          Module['addRunDependency']('fp ' + this.name);
+          Module['addRunDependency'](`fp ${this.name}`);
         },
         send: function() {},
         onload: function() {
@@ -117,7 +117,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
           var that = this;
           // canOwn this data in the filesystem, it is a slide into the heap that will never change
           Module['FS_createDataFile'](this.name, null, byteArray, true, true, true);
-          Module['removeRunDependency']('fp ' + that.name);
+          Module['removeRunDependency'](`fp ${that.name}`);
           this.requests[this.name] = null;
         }
       };
@@ -195,7 +195,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
             nextChunkSliceStart += CHUNK_SIZE;
             var putPackageRequest = packages.put(
               packageData.slice(chunkSliceStart, nextChunkSliceStart),
-              'package/' + packageName + '/' + chunkId
+              `package/${packageName}/${chunkId}`
             );
             chunkSliceStart = nextChunkSliceStart;
             putPackageRequest.onsuccess = function(event) {
@@ -211,7 +211,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
                     'uuid': packageMeta.uuid,
                     'chunkCount': chunkCount
                   },
-                  'metadata/' + packageName
+                  `metadata/${packageName}`
                 );
                 putMetadataRequest.onsuccess = function(event) {
                   callback(packageData);
@@ -231,7 +231,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
         function checkCachedPackage(db, packageName, callback, errback) {
           var transaction = db.transaction([METADATA_STORE_NAME], IDB_RO);
           var metadata = transaction.objectStore(METADATA_STORE_NAME);
-          var getRequest = metadata.get('metadata/' + packageName);
+          var getRequest = metadata.get(`metadata/${packageName}`);
           getRequest.onsuccess = function(event) {
             var result = event.target.result;
             if (!result) {
@@ -255,7 +255,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
           var chunks = new Array(chunkCount);
 
           for (var chunkId = 0; chunkId < chunkCount; chunkId++) {
-            var getRequest = packages.get('package/' + packageName + '/' + chunkId);
+            var getRequest = packages.get(`package/${packageName}/${chunkId}`);
             getRequest.onsuccess = function(event) {
               // If there's only 1 chunk, there's nothing to concatenate it with so we can just return it now
               if (chunkCount == 1) {
