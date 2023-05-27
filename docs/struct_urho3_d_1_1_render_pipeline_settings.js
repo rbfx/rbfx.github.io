@@ -10,8 +10,11 @@ var struct_urho3_d_1_1_render_pipeline_settings =
     [ "antialiasing_", "struct_urho3_d_1_1_render_pipeline_settings.html#afd0976d79730e8efeb2cb93f640b0596", null ],
     [ "autoExposure_", "struct_urho3_d_1_1_render_pipeline_settings.html#ac9eb43f8f10d413bb25560e9b66a4821", null ],
     [ "bloom_", "struct_urho3_d_1_1_render_pipeline_settings.html#a75582852374f336a4bfb54bf80f3c4f6", null ],
+    [ "brightness_", "struct_urho3_d_1_1_render_pipeline_settings.html#a05da09b851c64d389b50693daa38a35f", null ],
+    [ "contrast_", "struct_urho3_d_1_1_render_pipeline_settings.html#a921a87152949649b1ef62831acc8e975", null ],
     [ "drawDebugGeometry_", "struct_urho3_d_1_1_render_pipeline_settings.html#afa7e77b4d999e610317ffb949b02e561", null ],
-    [ "greyScale_", "struct_urho3_d_1_1_render_pipeline_settings.html#a3906f8e79014154552af918e7d04c90a", null ],
+    [ "hueShift_", "struct_urho3_d_1_1_render_pipeline_settings.html#aa084eb4fd1381d48ea2b8d0e8f9a3334", null ],
+    [ "saturation_", "struct_urho3_d_1_1_render_pipeline_settings.html#af71762ae55cf0f20e2578a768a86e4fb", null ],
     [ "ssao_", "struct_urho3_d_1_1_render_pipeline_settings.html#a9b969f3e17ab4d0c044f36a6292c799e", null ],
     [ "toneMapping_", "struct_urho3_d_1_1_render_pipeline_settings.html#ab740ab4ad29672e88eaf3523fc3af0bf", null ]
 ];
