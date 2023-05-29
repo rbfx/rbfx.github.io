@@ -1,5 +1,7 @@
 var NAVTREEINDEX86 =
 {
+"struct_urho3_d_1_1_raytracer_geometry.html":[5,0,2,552],
+"struct_urho3_d_1_1_raytracer_geometry.html#a08da4b4af06f7d81e95e524a694007ff":[5,0,2,552,5],
 "struct_urho3_d_1_1_raytracer_geometry.html#a2ada42110df7835161025d1f445522e2":[5,0,2,552,7],
 "struct_urho3_d_1_1_raytracer_geometry.html#a59c7f74309ef3070cc0c6512377dccbd":[5,0,2,552,2],
 "struct_urho3_d_1_1_raytracer_geometry.html#a5ee20b826b40a93703a2fdf87886f0c4":[5,0,2,552,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_rml_canvas_resized_args.html#af1cbc816bcec60757660382eb3d994bb":[5,0,2,600,1],
 "struct_urho3_d_1_1_rml_document_reloaded_args.html":[5,0,2,601],
 "struct_urho3_d_1_1_rml_document_reloaded_args.html#a7f2b571a9f800172807ee47efbfe1bcc":[5,0,2,601,0],
-"struct_urho3_d_1_1_rml_document_reloaded_args.html#aea296395c9b345125a6ca458c1caca3f":[5,0,2,601,1],
-"struct_urho3_d_1_1_rml_navigable_1_1_cache.html":[5,0,2,602,0],
-"struct_urho3_d_1_1_rml_navigable_1_1_cache.html#a321cacaa14191dafadf7b51ea72efaea":[5,0,2,602,0,4]
+"struct_urho3_d_1_1_rml_document_reloaded_args.html#aea296395c9b345125a6ca458c1caca3f":[5,0,2,601,1]
 };

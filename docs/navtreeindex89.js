@@ -1,5 +1,7 @@
 var NAVTREEINDEX89 =
 {
+"struct_urho3_d_1_1_text_renderer3_d_1_1_cached_text_element.html#a564906ded4b86d60268c3150bcc41e88":[5,0,2,729,0,1],
+"struct_urho3_d_1_1_text_renderer3_d_1_1_cached_text_element.html#a5d6ab8e899ddd2693c7e860fb553abb6":[5,0,2,729,0,0],
 "struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html":[5,0,2,729,1],
 "struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html#a1b6d31a0ec5bc5650db9b6275dcc88a3":[5,0,2,729,1,0],
 "struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html#a4151580f3ef577dbeae7b53d88670ecc":[5,0,2,729,1,2],
