@@ -418,14 +418,14 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 1842724: () => {
+ 1880596: () => {
   FS.syncfs(function(err) {
    if (err) {
     console.error(err);
    }
   });
  },
- 1842788: $0 => {
+ 1880660: $0 => {
   var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
   var reply = window.prompt(str, "i");
   if (reply === null) {
@@ -433,10 +433,10 @@ var ASM_CONSTS = {
   }
   return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
  },
- 1843013: ($0, $1) => {
+ 1880885: ($0, $1) => {
   alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
  },
- 1843070: () => {
+ 1880942: () => {
   if (typeof AudioContext !== "undefined") {
    return true;
   } else if (typeof webkitAudioContext !== "undefined") {
@@ -444,7 +444,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1843217: () => {
+ 1881089: () => {
   if (typeof navigator.mediaDevices !== "undefined" && typeof navigator.mediaDevices.getUserMedia !== "undefined") {
    return true;
   } else if (typeof navigator.webkitGetUserMedia !== "undefined") {
@@ -452,7 +452,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1843451: $0 => {
+ 1881323: $0 => {
   if (typeof Module["SDL2"] === "undefined") {
    Module["SDL2"] = {};
   }
@@ -474,11 +474,11 @@ var ASM_CONSTS = {
   }
   return SDL2.audioContext === undefined ? -1 : 0;
  },
- 1843944: () => {
+ 1881816: () => {
   var SDL2 = Module["SDL2"];
   return SDL2.audioContext.sampleRate;
  },
- 1844012: ($0, $1, $2, $3) => {
+ 1881884: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   var have_microphone = function(stream) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -519,7 +519,7 @@ var ASM_CONSTS = {
    }, have_microphone, no_microphone);
   }
  },
- 1845664: ($0, $1, $2, $3) => {
+ 1883536: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
   SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -531,7 +531,7 @@ var ASM_CONSTS = {
   };
   SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
  },
- 1846074: ($0, $1) => {
+ 1883946: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
   for (var c = 0; c < numChannels; ++c) {
@@ -550,7 +550,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1846679: ($0, $1) => {
+ 1884551: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
   for (var c = 0; c < numChannels; ++c) {
@@ -563,7 +563,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1847159: $0 => {
+ 1885031: $0 => {
   var SDL2 = Module["SDL2"];
   if ($0) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -601,7 +601,7 @@ var ASM_CONSTS = {
    SDL2.audioContext = undefined;
   }
  },
- 1848331: ($0, $1, $2) => {
+ 1886203: ($0, $1, $2) => {
   var w = $0;
   var h = $1;
   var pixels = $2;
@@ -672,7 +672,7 @@ var ASM_CONSTS = {
   }
   SDL2.ctx.putImageData(SDL2.image, 0, 0);
  },
- 1849800: ($0, $1, $2, $3, $4) => {
+ 1887672: ($0, $1, $2, $3, $4) => {
   var w = $0;
   var h = $1;
   var hot_x = $2;
@@ -709,27 +709,27 @@ var ASM_CONSTS = {
   stringToUTF8(url, urlBuf, url.length + 1);
   return urlBuf;
  },
- 1850789: $0 => {
+ 1888661: $0 => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = UTF8ToString($0);
   }
  },
- 1850872: () => {
+ 1888744: () => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = "none";
   }
  },
- 1850941: () => {
+ 1888813: () => {
   return window.innerWidth;
  },
- 1850971: () => {
+ 1888843: () => {
   return window.innerHeight;
  }
 };
 
 function ExitStatus(status) {
  this.name = "ExitStatus";
- this.message = "Program terminated with exit(" + status + ")";
+ this.message = `Program terminated with exit(${status})`;
  this.status = status;
 }
 
@@ -2114,8 +2114,8 @@ var FS = {
   return FS.nodePermissions(node, FS.flagsToPermissionString(flags));
  },
  MAX_OPEN_FDS: 4096,
- nextfd: (fd_start = 0, fd_end = FS.MAX_OPEN_FDS) => {
-  for (var fd = fd_start; fd <= fd_end; fd++) {
+ nextfd: () => {
+  for (var fd = 0; fd <= FS.MAX_OPEN_FDS; fd++) {
    if (!FS.streams[fd]) {
     return fd;
    }
@@ -2123,7 +2123,7 @@ var FS = {
   throw new FS.ErrnoError(33);
  },
  getStream: fd => FS.streams[fd],
- createStream: (stream, fd_start, fd_end) => {
+ createStream: (stream, fd = -1) => {
   if (!FS.FSStream) {
    FS.FSStream = function() {
     this.shared = {};
@@ -2172,7 +2172,9 @@ var FS = {
    });
   }
   stream = Object.assign(new FS.FSStream(), stream);
-  var fd = FS.nextfd(fd_start, fd_end);
+  if (fd == -1) {
+   fd = FS.nextfd();
+  }
   stream.fd = fd;
   FS.streams[fd] = stream;
   return stream;
@@ -4711,11 +4713,10 @@ function _emscripten_set_main_loop_timing(mode, value) {
 var _emscripten_get_now;
 
 if (ENVIRONMENT_IS_NODE) {
- _emscripten_get_now = () => {
-  var t = process.hrtime();
-  return t[0] * 1e3 + t[1] / 1e6;
- };
-} else _emscripten_get_now = () => performance.now();
+ global.performance = require("perf_hooks").performance;
+}
+
+_emscripten_get_now = () => performance.now();
 
 function setMainLoop(browserIterationFunc, fps, simulateInfiniteLoop, arg, noSetTiming) {
  assert(!Browser.mainLoop.func, "emscripten_set_main_loop: there can only be one main loop function at once: call emscripten_cancel_main_loop to cancel the previous one before setting a new one with different parameters.");
@@ -9899,7 +9900,7 @@ function getEnvStrings() {
   }
   var strings = [];
   for (var x in env) {
-   strings.push(x + "=" + env[x]);
+   strings.push(`${x}=${env[x]}`);
   }
   getEnvStrings.strings = strings;
  }
@@ -10300,6 +10301,52 @@ function _strftime(s, maxsize, format, tm) {
 
 function _strftime_l(s, maxsize, format, tm, loc) {
  return _strftime(s, maxsize, format, tm);
+}
+
+function _system(command) {
+ if (ENVIRONMENT_IS_NODE) {
+  if (!command) return 1;
+  var cmdstr = UTF8ToString(command);
+  if (!cmdstr.length) return 0;
+  var cp = require("child_process");
+  var ret = cp.spawnSync(cmdstr, [], {
+   shell: true,
+   stdio: "inherit"
+  });
+  var _W_EXITCODE = (ret, sig) => ret << 8 | sig;
+  if (ret.status === null) {
+   var signalToNumber = sig => {
+    switch (sig) {
+    case "SIGHUP":
+     return 1;
+
+    case "SIGINT":
+     return 2;
+
+    case "SIGQUIT":
+     return 3;
+
+    case "SIGFPE":
+     return 8;
+
+    case "SIGKILL":
+     return 9;
+
+    case "SIGALRM":
+     return 14;
+
+    case "SIGTERM":
+     return 15;
+    }
+    return 2;
+   };
+   return _W_EXITCODE(0, signalToNumber(ret.signal));
+  }
+  return _W_EXITCODE(ret.status, 0);
+ }
+ if (!command) return 0;
+ setErrNo(52);
+ return -1;
 }
 
 function listenOnce(object, event, func) {
@@ -10971,7 +11018,8 @@ var wasmImports = {
  "invoke_vii": invoke_vii,
  "invoke_viiii": invoke_viiii,
  "strftime": _strftime,
- "strftime_l": _strftime_l
+ "strftime_l": _strftime_l,
+ "system": _system
 };
 
 var asm = createWasm();
@@ -11024,16 +11072,20 @@ var ___cxa_is_pointer_type = function() {
  return (___cxa_is_pointer_type = Module["asm"]["__cxa_is_pointer_type"]).apply(null, arguments);
 };
 
+var dynCall_jiiii = Module["dynCall_jiiii"] = function() {
+ return (dynCall_jiiii = Module["dynCall_jiiii"] = Module["asm"]["dynCall_jiiii"]).apply(null, arguments);
+};
+
+var dynCall_iijii = Module["dynCall_iijii"] = function() {
+ return (dynCall_iijii = Module["dynCall_iijii"] = Module["asm"]["dynCall_iijii"]).apply(null, arguments);
+};
+
 var dynCall_jiji = Module["dynCall_jiji"] = function() {
  return (dynCall_jiji = Module["dynCall_jiji"] = Module["asm"]["dynCall_jiji"]).apply(null, arguments);
 };
 
 var dynCall_ji = Module["dynCall_ji"] = function() {
  return (dynCall_ji = Module["dynCall_ji"] = Module["asm"]["dynCall_ji"]).apply(null, arguments);
-};
-
-var dynCall_jiiii = Module["dynCall_jiiii"] = function() {
- return (dynCall_jiiii = Module["dynCall_jiiii"] = Module["asm"]["dynCall_jiiii"]).apply(null, arguments);
 };
 
 var dynCall_vijj = Module["dynCall_vijj"] = function() {
