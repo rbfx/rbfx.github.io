@@ -1,5 +1,7 @@
 var NAVTREEINDEX67 =
 {
+"class_urho3_d_1_1_texture_cube_inspector_widget.html#a6a408bd6a4447723db4daa72a6cbb8cd":[5,0,2,737,2],
+"class_urho3_d_1_1_texture_cube_inspector_widget.html#a9f18651bc03e91d18e1f113652a817c3":[5,0,2,737,4],
 "class_urho3_d_1_1_texture_cube_inspector_widget.html#aa35df52851974ab938fb80e08c1483bc":[5,0,2,737,1],
 "class_urho3_d_1_1_texture_render_buffer.html":[5,0,2,739],
 "class_urho3_d_1_1_texture_render_buffer.html#a20ad81b38e1b7f86cadbd20dd7b0a6b2":[5,0,2,739,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX67 =
 "class_urho3_d_1_1_tmx_tile_layer2_d.html#aa63c454737f036166e5c70edd3421ae7":[5,0,2,754,2],
 "class_urho3_d_1_1_tmx_tile_layer2_d.html#aeafe06d4936798ef1e84dc3c311f854c":[5,0,2,754,1],
 "class_urho3_d_1_1_tmx_tile_layer2_d.html#af5b2331a7739579f34353e67030febd8":[5,0,2,754,0],
-"class_urho3_d_1_1_tone_mapping_pass.html":[5,0,2,755],
-"class_urho3_d_1_1_tone_mapping_pass.html#a1f0433eb17787e9f9a795e09663e0321":[5,0,2,755,6],
-"class_urho3_d_1_1_tone_mapping_pass.html#a22f9d87c3f59ca93296a929ba1b2485e":[5,0,2,755,2]
+"class_urho3_d_1_1_tone_mapping_pass.html":[5,0,2,755]
 };

@@ -15,6 +15,8 @@ var class_urho3_d_1_1_sprite_sheet2_d =
     [ "GetSpriteMapping", "class_urho3_d_1_1_sprite_sheet2_d.html#a6db2edac455be696cf7f482a4cbf0fce", null ],
     [ "GetTexture", "class_urho3_d_1_1_sprite_sheet2_d.html#ad985af2a61cc890b7ee89497a2e47ef6", null ],
     [ "RegisterObject", "class_urho3_d_1_1_sprite_sheet2_d.html#ae662e6cfeaf450448f5cd549bea5a3e4", null ],
+    [ "Save", "class_urho3_d_1_1_sprite_sheet2_d.html#aefed6901c0e7dedbe28ea049008bd13c", null ],
+    [ "Save", "class_urho3_d_1_1_sprite_sheet2_d.html#a1017eb91da62512cc0771c04ca7407fd", null ],
     [ "SetTexture", "class_urho3_d_1_1_sprite_sheet2_d.html#a125c491bd1d2977cc57815438f2d0e67", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_sprite_sheet2_d.html#a8e8f48e95f60359076fa23572ad93ba6", null ],
     [ "loadJSONFile_", "class_urho3_d_1_1_sprite_sheet2_d.html#a3e32bf80a988aa01392a575944035c6f", null ],
