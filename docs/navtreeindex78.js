@@ -1,6 +1,5 @@
 var NAVTREEINDEX78 =
 {
-"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_textures.html":[5,0,2,15,1],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_textures.html#a358174fa2213a5907fa0dcb33e91d887":[5,0,2,15,1,0],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_textures.html#a9b062aefe4ac92f566e41024cdb6a0b0":[5,0,2,15,1,2],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_textures.html#ab813ca20cc85580d247fb02edf98a991":[5,0,2,15,1,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_baked_lightmap.html#ab8522a5f2460a4c60178a50e9af493bb":[5,0,2,68,0],
 "struct_urho3_d_1_1_baked_lightmap.html#af11e310849710c6c75336463a4116ff8":[5,0,2,68,3],
 "struct_urho3_d_1_1_baked_scene_background.html":[5,0,2,70],
-"struct_urho3_d_1_1_baked_scene_background.html#a11f5b55fc16efecc84a0f99bf6722d3c":[5,0,2,70,1]
+"struct_urho3_d_1_1_baked_scene_background.html#a11f5b55fc16efecc84a0f99bf6722d3c":[5,0,2,70,1],
+"struct_urho3_d_1_1_baked_scene_background.html#a257572c07a80a674462a4bddc3876076":[5,0,2,70,0]
 };

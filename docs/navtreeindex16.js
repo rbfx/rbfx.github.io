@@ -1,6 +1,5 @@
 var NAVTREEINDEX16 =
 {
-"class_urho3_d_1_1_camera_processor.html#a6771dbfce6d1ce85bd6c4d862ef3d276":[5,0,2,114,9],
 "class_urho3_d_1_1_camera_processor.html#a7a5c2b39e77bf2e716aa90a4f78eec93":[5,0,2,114,12],
 "class_urho3_d_1_1_camera_processor.html#a7aef0b91c539720a747ffa75bb98fbad":[5,0,2,114,17],
 "class_urho3_d_1_1_camera_processor.html#a7ed52e02195554dbb995c8e74d429f24":[5,0,2,114,14],
@@ -249,5 +248,6 @@ var NAVTREEINDEX16 =
 "class_urho3_d_1_1_collision_polygon2_d.html#ab133aa1d8c85eab11c9439f5206cfe06":[5,0,2,132,2],
 "class_urho3_d_1_1_collision_polygon2_d.html#ab4e3b6c65e36659b590378966989db13":[5,0,2,132,3],
 "class_urho3_d_1_1_collision_polygon2_d.html#abcbdc099b88e38faa70358853a026323":[5,0,2,132,12],
-"class_urho3_d_1_1_collision_polygon2_d.html#ad5f2154f4892f6f102e18a388b1f267b":[5,0,2,132,4]
+"class_urho3_d_1_1_collision_polygon2_d.html#ad5f2154f4892f6f102e18a388b1f267b":[5,0,2,132,4],
+"class_urho3_d_1_1_collision_polygon2_d.html#ae409aca3f798e175296fac995df77d1d":[5,0,2,132,7]
 };
