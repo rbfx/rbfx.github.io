@@ -1,5 +1,6 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_model_vertex.html#a3c53f733a667752ec4124ee0e88924aa":[5,0,2,402,7],
 "struct_urho3_d_1_1_model_vertex.html#a3f9f49f6c5aaafcf53f9e5b3f7624b08":[5,0,2,402,12],
 "struct_urho3_d_1_1_model_vertex.html#a526d5fb94fee19cd34175f5e3d9534e7":[5,0,2,402,10],
 "struct_urho3_d_1_1_model_vertex.html#a6d29e9a17f7038cbe23ed2425875db71":[5,0,2,402,18],
@@ -248,6 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_particle2_d.html#ad2737c492dcbc866614f37f4a5d68476":[5,0,2,480,0],
 "struct_urho3_d_1_1_particle2_d.html#adaf6a976cadba95ce85fec58ff8a1933":[5,0,2,480,6],
 "struct_urho3_d_1_1_particle2_d.html#af50f733fb358a3e0fcbb5649567f1698":[5,0,2,480,11],
-"struct_urho3_d_1_1_particle_graph_attribute_layout_1_1_attr_span.html":[5,0,2,486,0],
-"struct_urho3_d_1_1_particle_graph_attribute_layout_1_1_attr_span.html#a417028b3e91df2acb8ab0aa8ee07fa7b":[5,0,2,486,0,1]
+"struct_urho3_d_1_1_particle_graph_attribute_layout_1_1_attr_span.html":[5,0,2,486,0]
 };

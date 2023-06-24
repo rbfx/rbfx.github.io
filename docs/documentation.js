@@ -1,5 +1,6 @@
 var documentation =
 [
+    [ "Building the Project", "build.html", null ],
     [ "Folder Structure", "folder-structure.html", null ],
     [ "Framework Overview", "framework-overview.html", "framework-overview" ],
     [ "Project Goals", "project-goals.html", null ],

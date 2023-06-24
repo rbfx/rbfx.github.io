@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"class_urho3_d_1_1_slider.html#a80f407f724621aa1ccf449d9c41b795e":[5,0,2,664,22],
 "class_urho3_d_1_1_slider.html#a82235b9b0a60fb7f36a3b2c8ade6193d":[5,0,2,664,0],
 "class_urho3_d_1_1_slider.html#a852d8f37333dfeed13dc592d7b0bd013":[5,0,2,664,28],
 "class_urho3_d_1_1_slider.html#a8626f68f630006ee68c9d9861ee37112":[5,0,2,664,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "class_urho3_d_1_1_sphere.html#a87d3287a4cae266144da2ae624933ef1":[5,0,2,684,17],
 "class_urho3_d_1_1_sphere.html#a97194148abd15ecea37c417304c1173c":[5,0,2,684,34],
 "class_urho3_d_1_1_sphere.html#a97bc52f5276301bf63a2e3a36ea22469":[5,0,2,684,32],
-"class_urho3_d_1_1_sphere.html#a97d624c4eb77e300556222e5e5898821":[5,0,2,684,24],
-"class_urho3_d_1_1_sphere.html#a9c36975933ebb46c9be6a788e82e4dc5":[5,0,2,684,3]
+"class_urho3_d_1_1_sphere.html#a97d624c4eb77e300556222e5e5898821":[5,0,2,684,24]
 };
