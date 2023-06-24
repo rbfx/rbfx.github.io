@@ -177,7 +177,8 @@ $(document).ready(function(){initNavTree('build.html',''); initResizable(); });
 <li>Run the following command to build the project:</li>
 </ol>
 <div class="fragment"><div class="line">cmake --build cmake-build-win32 --config Release</div>
-</div><!-- fragment --><p>This command builds the project in Release mode.</p>
+</div><!-- fragment --><p>This command builds the project in Release configuration.</p>
+<p>Alternatively, you may open the Visual Studio project a generated in <code>cmake-build-win32</code> directory.</p>
 <h1>Building on Windows (UWP)</h1>
 <p>To build the project on Windows, targetting UWP platform, follow these steps:</p>
 <ol type="1">
@@ -194,7 +195,8 @@ $(document).ready(function(){initNavTree('build.html',''); initResizable(); });
 <li>Run the following command to build the project:</li>
 </ol>
 <div class="fragment"><div class="line">cmake --build cmake-build-uwp --config Release</div>
-</div><!-- fragment --><p>This command builds the project in Release mode.</p>
+</div><!-- fragment --><p>This command builds the project in Release configuration.</p>
+<p>Alternatively, you may open the Visual Studio project a generated in <code>cmake-build-uwp</code> directory.</p>
 <h1>Building on Linux</h1>
 <p>To build the project on Linux, follow these steps:</p>
 <ol type="1">
@@ -204,7 +206,7 @@ $(document).ready(function(){initNavTree('build.html',''); initResizable(); });
 <div class="fragment"><div class="line">cmake -S. -Bcmake-build-linux    \</div>
 <div class="line">      -DCMAKE_BUILD_TYPE=Release \</div>
 <div class="line">      -DURHO3D_SAMPLES=ON</div>
-</div><!-- fragment --><p>This command configures the build for Release mode.</p>
+</div><!-- fragment --><p>This command configures the build for Release configuration.</p>
 <ol type="1">
 <li>Run the following command to build the project:</li>
 </ol>
@@ -220,13 +222,13 @@ $(document).ready(function(){initNavTree('build.html',''); initResizable(); });
 <div class="line">      -S. -Bcmake-build-macos    \</div>
 <div class="line">      -DCMAKE_BUILD_TYPE=Release \</div>
 <div class="line">      -DURHO3D_SAMPLES=ON</div>
-</div><!-- fragment --><p>This command configures the build for Release mode.</p>
+</div><!-- fragment --><p>This command configures the build for Release configuration.</p>
 <ol type="1">
 <li>Run the following command to build the project:</li>
 </ol>
 <div class="fragment"><div class="line">cmake --build cmake-build-macos</div>
 </div><!-- fragment --><p>This command builds the project.</p>
-<p>Alternatively, you may open the Xcode project a generated in <code>cmake-build</code>` directory.</p>
+<p>Alternatively, you may open the Xcode project a generated in <code>cmake-build-macos</code> directory.</p>
 <h1>Building on Android</h1>
 <p>To build the project on Android, follow these steps:</p>
 <ol type="1">
@@ -253,7 +255,7 @@ $(document).ready(function(){initNavTree('build.html',''); initResizable(); });
 </ol>
 <div class="fragment"><div class="line">cmake --build cmake-build-ios</div>
 </div><!-- fragment --><p>This command builds the project.</p>
-<p>Alternatively, you may open the Xcode project a generated in <code>cmake-build</code>` directory.</p>
+<p>Alternatively, you may open the Xcode project a generated in <code>cmake-build-ios</code> directory.</p>
 <h1>Building for Web (Emscripten)</h1>
 <p>To build the project for Web using Emscripten, follow these steps:</p>
 <ol type="1">
@@ -275,7 +277,7 @@ $(document).ready(function(){initNavTree('build.html',''); initResizable(); });
 <div class="line">      &quot;-DEMSCRIPTEN_ROOT_PATH=$EMSDK/upstream/emscripten/&quot; \</div>
 <div class="line">      -DCMAKE_BUILD_TYPE=Release \</div>
 <div class="line">      -DURHO3D_SAMPLES=ON</div>
-</div><!-- fragment --><p>This command configures the build for Release mode and Emscripten.</p>
+</div><!-- fragment --><p>This command configures the build for Release configuration.</p>
 <ol type="1">
 <li>Run the following command to build the project:</li>
 </ol>
