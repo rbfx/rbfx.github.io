@@ -82,12 +82,6 @@ if (ENVIRONMENT_IS_NODE) {
    throw ex;
   }
  });
- var nodeMajor = process.versions.node.split(".")[0];
- if (nodeMajor < 15) {
-  process.on("unhandledRejection", reason => {
-   throw reason;
-  });
- }
  quit_ = (status, toThrow) => {
   process.exitCode = status;
   throw toThrow;
@@ -733,11 +727,11 @@ function ExitStatus(status) {
  this.status = status;
 }
 
-function callRuntimeCallbacks(callbacks) {
+var callRuntimeCallbacks = callbacks => {
  while (callbacks.length > 0) {
   callbacks.shift()(Module);
  }
-}
+};
 
 function setValue(ptr, value, type = "i8") {
  if (type.endsWith("*")) type = "*";
@@ -841,10 +835,10 @@ function ___cxa_throw(ptr, type, destructor) {
  throw exceptionLast;
 }
 
-function setErrNo(value) {
+var setErrNo = value => {
  HEAP32[___errno_location() >> 2] = value;
  return value;
-}
+};
 
 var PATH = {
  isAbs: path => path.charAt(0) === "/",
@@ -911,7 +905,7 @@ var PATH = {
  }
 };
 
-function initRandomFill() {
+var initRandomFill = () => {
  if (typeof crypto == "object" && typeof crypto["getRandomValues"] == "function") {
   return view => crypto.getRandomValues(view);
  } else if (ENVIRONMENT_IS_NODE) {
@@ -926,11 +920,11 @@ function initRandomFill() {
   } catch (e) {}
  }
  abort("initRandomDevice");
-}
+};
 
-function randomFill(view) {
+var randomFill = view => {
  return (randomFill = initRandomFill())(view);
-}
+};
 
 var PATH_FS = {
  resolve: function() {
@@ -982,7 +976,7 @@ var PATH_FS = {
  }
 };
 
-function lengthBytesUTF8(str) {
+var lengthBytesUTF8 = str => {
  var len = 0;
  for (var i = 0; i < str.length; ++i) {
   var c = str.charCodeAt(i);
@@ -998,9 +992,9 @@ function lengthBytesUTF8(str) {
   }
  }
  return len;
-}
+};
 
-function stringToUTF8Array(str, heap, outIdx, maxBytesToWrite) {
+var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
  if (!(maxBytesToWrite > 0)) return 0;
  var startIdx = outIdx;
  var endIdx = outIdx + maxBytesToWrite - 1;
@@ -1032,7 +1026,7 @@ function stringToUTF8Array(str, heap, outIdx, maxBytesToWrite) {
  }
  heap[outIdx] = 0;
  return outIdx - startIdx;
-}
+};
 
 function intArrayFromString(stringy, dontAddNull, length) {
  var len = length > 0 ? length : lengthBytesUTF8(stringy) + 1;
@@ -1044,7 +1038,7 @@ function intArrayFromString(stringy, dontAddNull, length) {
 
 var UTF8Decoder = typeof TextDecoder != "undefined" ? new TextDecoder("utf8") : undefined;
 
-function UTF8ArrayToString(heapOrArray, idx, maxBytesToRead) {
+var UTF8ArrayToString = (heapOrArray, idx, maxBytesToRead) => {
  var endIdx = idx + maxBytesToRead;
  var endPtr = idx;
  while (heapOrArray[endPtr] && !(endPtr >= endIdx)) ++endPtr;
@@ -1077,7 +1071,7 @@ function UTF8ArrayToString(heapOrArray, idx, maxBytesToRead) {
   }
  }
  return str;
-}
+};
 
 var TTY = {
  ttys: [],
@@ -1196,6 +1190,21 @@ var TTY = {
     out(UTF8ArrayToString(tty.output, 0));
     tty.output = [];
    }
+  },
+  ioctl_tcgets: function(tty) {
+   return {
+    c_iflag: 25856,
+    c_oflag: 5,
+    c_cflag: 191,
+    c_lflag: 35387,
+    c_cc: [ 3, 28, 127, 21, 4, 0, 1, 0, 17, 19, 26, 0, 18, 15, 23, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+   };
+  },
+  ioctl_tcsets: function(tty, optional_actions, data) {
+   return 0;
+  },
+  ioctl_tiocgwinsz: function(tty) {
+   return [ 24, 80 ];
   }
  },
  default_tty1_ops: {
@@ -1216,9 +1225,9 @@ var TTY = {
  }
 };
 
-function mmapAlloc(size) {
+var mmapAlloc = size => {
  abort();
-}
+};
 
 var MEMFS = {
  ops_table: null,
@@ -1523,7 +1532,7 @@ var MEMFS = {
  }
 };
 
-function asyncLoad(url, onload, onerror, noRunDep) {
+var asyncLoad = (url, onload, onerror, noRunDep) => {
  var dep = !noRunDep ? getUniqueRunDependency(`al ${url}`) : "";
  readAsync(url, arrayBuffer => {
   assert(arrayBuffer, `Loading data file "${url}" failed (no arrayBuffer).`);
@@ -1537,7 +1546,7 @@ function asyncLoad(url, onload, onerror, noRunDep) {
   }
  });
  if (dep) addRunDependency(dep);
-}
+};
 
 var preloadPlugins = Module["preloadPlugins"] || [];
 
@@ -2120,6 +2129,13 @@ var FS = {
   }
   throw new FS.ErrnoError(33);
  },
+ getStreamChecked: fd => {
+  var stream = FS.getStream(fd);
+  if (!stream) {
+   throw new FS.ErrnoError(8);
+  }
+  return stream;
+ },
  getStream: fd => FS.streams[fd],
  createStream: (stream, fd = -1) => {
   if (!FS.FSStream) {
@@ -2548,10 +2564,7 @@ var FS = {
   FS.chmod(path, mode, true);
  },
  fchmod: (fd, mode) => {
-  var stream = FS.getStream(fd);
-  if (!stream) {
-   throw new FS.ErrnoError(8);
-  }
+  var stream = FS.getStreamChecked(fd);
   FS.chmod(stream.node, mode);
  },
  chown: (path, uid, gid, dontFollow) => {
@@ -2575,10 +2588,7 @@ var FS = {
   FS.chown(path, uid, gid, true);
  },
  fchown: (fd, uid, gid) => {
-  var stream = FS.getStream(fd);
-  if (!stream) {
-   throw new FS.ErrnoError(8);
-  }
+  var stream = FS.getStreamChecked(fd);
   FS.chown(stream.node, uid, gid);
  },
  truncate: (path, len) => {
@@ -2613,10 +2623,7 @@ var FS = {
   });
  },
  ftruncate: (fd, len) => {
-  var stream = FS.getStream(fd);
-  if (!stream) {
-   throw new FS.ErrnoError(8);
-  }
+  var stream = FS.getStreamChecked(fd);
   if ((stream.flags & 2097155) === 0) {
    throw new FS.ErrnoError(28);
   }
@@ -2925,8 +2932,7 @@ var FS = {
     node.node_ops = {
      lookup: (parent, name) => {
       var fd = +name;
-      var stream = FS.getStream(fd);
-      if (!stream) throw new FS.ErrnoError(8);
+      var stream = FS.getStreamChecked(fd);
       var ret = {
        parent: null,
        mount: {
@@ -3320,9 +3326,9 @@ var FS = {
  }
 };
 
-function UTF8ToString(ptr, maxBytesToRead) {
+var UTF8ToString = (ptr, maxBytesToRead) => {
  return ptr ? UTF8ArrayToString(HEAPU8, ptr, maxBytesToRead) : "";
-}
+};
 
 var SYSCALLS = {
  DEFAULT_POLLMASK: 5,
@@ -3355,33 +3361,32 @@ var SYSCALLS = {
    throw e;
   }
   HEAP32[buf >> 2] = stat.dev;
-  HEAP32[buf + 8 >> 2] = stat.ino;
-  HEAP32[buf + 12 >> 2] = stat.mode;
-  HEAPU32[buf + 16 >> 2] = stat.nlink;
-  HEAP32[buf + 20 >> 2] = stat.uid;
-  HEAP32[buf + 24 >> 2] = stat.gid;
-  HEAP32[buf + 28 >> 2] = stat.rdev;
+  HEAP32[buf + 4 >> 2] = stat.mode;
+  HEAPU32[buf + 8 >> 2] = stat.nlink;
+  HEAP32[buf + 12 >> 2] = stat.uid;
+  HEAP32[buf + 16 >> 2] = stat.gid;
+  HEAP32[buf + 20 >> 2] = stat.rdev;
   tempI64 = [ stat.size >>> 0, (tempDouble = stat.size, +Math.abs(tempDouble) >= 1 ? tempDouble > 0 ? +Math.floor(tempDouble / 4294967296) >>> 0 : ~~+Math.ceil((tempDouble - +(~~tempDouble >>> 0)) / 4294967296) >>> 0 : 0) ], 
-  HEAP32[buf + 40 >> 2] = tempI64[0], HEAP32[buf + 44 >> 2] = tempI64[1];
-  HEAP32[buf + 48 >> 2] = 4096;
-  HEAP32[buf + 52 >> 2] = stat.blocks;
+  HEAP32[buf + 24 >> 2] = tempI64[0], HEAP32[buf + 28 >> 2] = tempI64[1];
+  HEAP32[buf + 32 >> 2] = 4096;
+  HEAP32[buf + 36 >> 2] = stat.blocks;
   var atime = stat.atime.getTime();
   var mtime = stat.mtime.getTime();
   var ctime = stat.ctime.getTime();
   tempI64 = [ Math.floor(atime / 1e3) >>> 0, (tempDouble = Math.floor(atime / 1e3), 
   +Math.abs(tempDouble) >= 1 ? tempDouble > 0 ? +Math.floor(tempDouble / 4294967296) >>> 0 : ~~+Math.ceil((tempDouble - +(~~tempDouble >>> 0)) / 4294967296) >>> 0 : 0) ], 
-  HEAP32[buf + 56 >> 2] = tempI64[0], HEAP32[buf + 60 >> 2] = tempI64[1];
-  HEAPU32[buf + 64 >> 2] = atime % 1e3 * 1e3;
+  HEAP32[buf + 40 >> 2] = tempI64[0], HEAP32[buf + 44 >> 2] = tempI64[1];
+  HEAPU32[buf + 48 >> 2] = atime % 1e3 * 1e3;
   tempI64 = [ Math.floor(mtime / 1e3) >>> 0, (tempDouble = Math.floor(mtime / 1e3), 
   +Math.abs(tempDouble) >= 1 ? tempDouble > 0 ? +Math.floor(tempDouble / 4294967296) >>> 0 : ~~+Math.ceil((tempDouble - +(~~tempDouble >>> 0)) / 4294967296) >>> 0 : 0) ], 
-  HEAP32[buf + 72 >> 2] = tempI64[0], HEAP32[buf + 76 >> 2] = tempI64[1];
-  HEAPU32[buf + 80 >> 2] = mtime % 1e3 * 1e3;
+  HEAP32[buf + 56 >> 2] = tempI64[0], HEAP32[buf + 60 >> 2] = tempI64[1];
+  HEAPU32[buf + 64 >> 2] = mtime % 1e3 * 1e3;
   tempI64 = [ Math.floor(ctime / 1e3) >>> 0, (tempDouble = Math.floor(ctime / 1e3), 
   +Math.abs(tempDouble) >= 1 ? tempDouble > 0 ? +Math.floor(tempDouble / 4294967296) >>> 0 : ~~+Math.ceil((tempDouble - +(~~tempDouble >>> 0)) / 4294967296) >>> 0 : 0) ], 
-  HEAP32[buf + 88 >> 2] = tempI64[0], HEAP32[buf + 92 >> 2] = tempI64[1];
-  HEAPU32[buf + 96 >> 2] = ctime % 1e3 * 1e3;
+  HEAP32[buf + 72 >> 2] = tempI64[0], HEAP32[buf + 76 >> 2] = tempI64[1];
+  HEAPU32[buf + 80 >> 2] = ctime % 1e3 * 1e3;
   tempI64 = [ stat.ino >>> 0, (tempDouble = stat.ino, +Math.abs(tempDouble) >= 1 ? tempDouble > 0 ? +Math.floor(tempDouble / 4294967296) >>> 0 : ~~+Math.ceil((tempDouble - +(~~tempDouble >>> 0)) / 4294967296) >>> 0 : 0) ], 
-  HEAP32[buf + 104 >> 2] = tempI64[0], HEAP32[buf + 108 >> 2] = tempI64[1];
+  HEAP32[buf + 88 >> 2] = tempI64[0], HEAP32[buf + 92 >> 2] = tempI64[1];
   return 0;
  },
  doMsync: function(addr, stream, len, flags, offset) {
@@ -3405,8 +3410,7 @@ var SYSCALLS = {
   return ret;
  },
  getStreamFromFD: function(fd) {
-  var stream = FS.getStream(fd);
-  if (!stream) throw new FS.ErrnoError(8);
+  var stream = FS.getStreamChecked(fd);
   return stream;
  }
 };
@@ -3482,9 +3486,9 @@ function ___syscall_fstat64(fd, buf) {
  }
 }
 
-function stringToUTF8(str, outPtr, maxBytesToWrite) {
+var stringToUTF8 = (str, outPtr, maxBytesToWrite) => {
  return stringToUTF8Array(str, HEAPU8, outPtr, maxBytesToWrite);
-}
+};
 
 function ___syscall_getcwd(buf, size) {
  try {
@@ -3553,20 +3557,60 @@ function ___syscall_ioctl(fd, op, varargs) {
   var stream = SYSCALLS.getStreamFromFD(fd);
   switch (op) {
   case 21509:
+   {
+    if (!stream.tty) return -59;
+    return 0;
+   }
+
   case 21505:
    {
     if (!stream.tty) return -59;
+    if (stream.tty.ops.ioctl_tcgets) {
+     var termios = stream.tty.ops.ioctl_tcgets(stream);
+     var argp = SYSCALLS.get();
+     HEAP32[argp >> 2] = termios.c_iflag || 0;
+     HEAP32[argp + 4 >> 2] = termios.c_oflag || 0;
+     HEAP32[argp + 8 >> 2] = termios.c_cflag || 0;
+     HEAP32[argp + 12 >> 2] = termios.c_lflag || 0;
+     for (var i = 0; i < 32; i++) {
+      HEAP8[argp + i + 17 >> 0] = termios.c_cc[i] || 0;
+     }
+     return 0;
+    }
     return 0;
    }
 
   case 21510:
   case 21511:
   case 21512:
+   {
+    if (!stream.tty) return -59;
+    return 0;
+   }
+
   case 21506:
   case 21507:
   case 21508:
    {
     if (!stream.tty) return -59;
+    if (stream.tty.ops.ioctl_tcsets) {
+     var argp = SYSCALLS.get();
+     var c_iflag = HEAP32[argp >> 2];
+     var c_oflag = HEAP32[argp + 4 >> 2];
+     var c_cflag = HEAP32[argp + 8 >> 2];
+     var c_lflag = HEAP32[argp + 12 >> 2];
+     var c_cc = [];
+     for (var i = 0; i < 32; i++) {
+      c_cc.push(HEAP8[argp + i + 17 >> 0]);
+     }
+     return stream.tty.ops.ioctl_tcsets(stream.tty, op, {
+      c_iflag: c_iflag,
+      c_oflag: c_oflag,
+      c_cflag: c_cflag,
+      c_lflag: c_lflag,
+      c_cc: c_cc
+     });
+    }
     return 0;
    }
 
@@ -3593,10 +3637,22 @@ function ___syscall_ioctl(fd, op, varargs) {
   case 21523:
    {
     if (!stream.tty) return -59;
+    if (stream.tty.ops.ioctl_tiocgwinsz) {
+     var winsize = stream.tty.ops.ioctl_tiocgwinsz(stream.tty);
+     var argp = SYSCALLS.get();
+     HEAP16[argp >> 1] = winsize[0];
+     HEAP16[argp + 2 >> 1] = winsize[1];
+    }
     return 0;
    }
 
   case 21524:
+   {
+    if (!stream.tty) return -59;
+    return 0;
+   }
+
+  case 21515:
    {
     if (!stream.tty) return -59;
     return 0;
@@ -4137,38 +4193,38 @@ function replacePublicSymbol(name, value, numArguments) {
  }
 }
 
-function dynCallLegacy(sig, ptr, args) {
+var dynCallLegacy = (sig, ptr, args) => {
  var f = Module["dynCall_" + sig];
  return args && args.length ? f.apply(null, [ ptr ].concat(args)) : f.call(null, ptr);
-}
+};
 
 var wasmTableMirror = [];
 
-function getWasmTableEntry(funcPtr) {
+var getWasmTableEntry = funcPtr => {
  var func = wasmTableMirror[funcPtr];
  if (!func) {
   if (funcPtr >= wasmTableMirror.length) wasmTableMirror.length = funcPtr + 1;
   wasmTableMirror[funcPtr] = func = wasmTable.get(funcPtr);
  }
  return func;
-}
+};
 
-function dynCall(sig, ptr, args) {
+var dynCall = (sig, ptr, args) => {
  if (sig.includes("j")) {
   return dynCallLegacy(sig, ptr, args);
  }
  var rtn = getWasmTableEntry(ptr).apply(null, args);
  return rtn;
-}
+};
 
-function getDynCaller(sig, ptr) {
+var getDynCaller = (sig, ptr) => {
  var argCache = [];
  return function() {
   argCache.length = 0;
   Object.assign(argCache, arguments);
   return dynCall(sig, ptr, argCache);
  };
-}
+};
 
 function embind__requireFunction(signature, rawFunction) {
  signature = readLatin1String(signature);
@@ -4398,7 +4454,7 @@ function __embind_register_std_string(rawType, name) {
 
 var UTF16Decoder = typeof TextDecoder != "undefined" ? new TextDecoder("utf-16le") : undefined;
 
-function UTF16ToString(ptr, maxBytesToRead) {
+var UTF16ToString = (ptr, maxBytesToRead) => {
  var endPtr = ptr;
  var idx = endPtr >> 1;
  var maxIdx = idx + maxBytesToRead / 2;
@@ -4412,9 +4468,9 @@ function UTF16ToString(ptr, maxBytesToRead) {
   str += String.fromCharCode(codeUnit);
  }
  return str;
-}
+};
 
-function stringToUTF16(str, outPtr, maxBytesToWrite) {
+var stringToUTF16 = (str, outPtr, maxBytesToWrite) => {
  if (maxBytesToWrite === undefined) {
   maxBytesToWrite = 2147483647;
  }
@@ -4429,13 +4485,13 @@ function stringToUTF16(str, outPtr, maxBytesToWrite) {
  }
  HEAP16[outPtr >> 1] = 0;
  return outPtr - startPtr;
-}
+};
 
-function lengthBytesUTF16(str) {
+var lengthBytesUTF16 = str => {
  return str.length * 2;
-}
+};
 
-function UTF32ToString(ptr, maxBytesToRead) {
+var UTF32ToString = (ptr, maxBytesToRead) => {
  var i = 0;
  var str = "";
  while (!(i >= maxBytesToRead / 4)) {
@@ -4450,9 +4506,9 @@ function UTF32ToString(ptr, maxBytesToRead) {
   }
  }
  return str;
-}
+};
 
-function stringToUTF32(str, outPtr, maxBytesToWrite) {
+var stringToUTF32 = (str, outPtr, maxBytesToWrite) => {
  if (maxBytesToWrite === undefined) {
   maxBytesToWrite = 2147483647;
  }
@@ -4471,9 +4527,9 @@ function stringToUTF32(str, outPtr, maxBytesToWrite) {
  }
  HEAP32[outPtr >> 2] = 0;
  return outPtr - startPtr;
-}
+};
 
-function lengthBytesUTF32(str) {
+var lengthBytesUTF32 = str => {
  var len = 0;
  for (var i = 0; i < str.length; ++i) {
   var codeUnit = str.charCodeAt(i);
@@ -4481,9 +4537,9 @@ function lengthBytesUTF32(str) {
   len += 4;
  }
  return len;
-}
+};
 
-function __embind_register_std_wstring(rawType, charSize, name) {
+var __embind_register_std_wstring = function(rawType, charSize, name) {
  name = readLatin1String(name);
  var decodeString, encodeString, getHeap, lengthBytesUTF, shift;
  if (charSize === 2) {
@@ -4542,7 +4598,7 @@ function __embind_register_std_wstring(rawType, charSize, name) {
    _free(ptr);
   }
  });
-}
+};
 
 function __embind_register_void(rawType, name) {
  name = readLatin1String(name);
@@ -4561,19 +4617,17 @@ function __embind_register_void(rawType, name) {
 
 var nowIsMonotonic = true;
 
-function __emscripten_get_now_is_monotonic() {
- return nowIsMonotonic;
-}
+var __emscripten_get_now_is_monotonic = () => nowIsMonotonic;
 
-function __emscripten_throw_longjmp() {
+var __emscripten_throw_longjmp = () => {
  throw Infinity;
-}
+};
 
 function readI53FromI64(ptr) {
  return HEAPU32[ptr >> 2] + HEAP32[ptr + 4 >> 2] * 4294967296;
 }
 
-function __gmtime_js(time, tmPtr) {
+var __gmtime_js = (time, tmPtr) => {
  var date = new Date(readI53FromI64(time) * 1e3);
  HEAP32[tmPtr >> 2] = date.getUTCSeconds();
  HEAP32[tmPtr + 4 >> 2] = date.getUTCMinutes();
@@ -4585,24 +4639,24 @@ function __gmtime_js(time, tmPtr) {
  var start = Date.UTC(date.getUTCFullYear(), 0, 1, 0, 0, 0, 0);
  var yday = (date.getTime() - start) / (1e3 * 60 * 60 * 24) | 0;
  HEAP32[tmPtr + 28 >> 2] = yday;
-}
+};
 
-function isLeapYear(year) {
+var isLeapYear = year => {
  return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
-}
+};
 
 var MONTH_DAYS_LEAP_CUMULATIVE = [ 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335 ];
 
 var MONTH_DAYS_REGULAR_CUMULATIVE = [ 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334 ];
 
-function ydayFromDate(date) {
+var ydayFromDate = date => {
  var leap = isLeapYear(date.getFullYear());
  var monthDaysCumulative = leap ? MONTH_DAYS_LEAP_CUMULATIVE : MONTH_DAYS_REGULAR_CUMULATIVE;
  var yday = monthDaysCumulative[date.getMonth()] + date.getDate() - 1;
  return yday;
-}
+};
 
-function __localtime_js(time, tmPtr) {
+var __localtime_js = (time, tmPtr) => {
  var date = new Date(readI53FromI64(time) * 1e3);
  HEAP32[tmPtr >> 2] = date.getSeconds();
  HEAP32[tmPtr + 4 >> 2] = date.getMinutes();
@@ -4619,16 +4673,16 @@ function __localtime_js(time, tmPtr) {
  var winterOffset = start.getTimezoneOffset();
  var dst = (summerOffset != winterOffset && date.getTimezoneOffset() == Math.min(winterOffset, summerOffset)) | 0;
  HEAP32[tmPtr + 32 >> 2] = dst;
-}
+};
 
-function stringToNewUTF8(str) {
+var stringToNewUTF8 = str => {
  var size = lengthBytesUTF8(str) + 1;
  var ret = _malloc(size);
  if (ret) stringToUTF8(str, ret, size);
  return ret;
-}
+};
 
-function __tzset_js(timezone, daylight, tzname) {
+var __tzset_js = (timezone, daylight, tzname) => {
  var currentYear = new Date().getFullYear();
  var winter = new Date(currentYear, 0, 1);
  var summer = new Date(currentYear, 6, 1);
@@ -4652,11 +4706,11 @@ function __tzset_js(timezone, daylight, tzname) {
   HEAPU32[tzname >> 2] = summerNamePtr;
   HEAPU32[tzname + 4 >> 2] = winterNamePtr;
  }
-}
+};
 
-function _abort() {
+var _abort = () => {
  abort("");
-}
+};
 
 function _emscripten_set_main_loop_timing(mode, value) {
  Browser.mainLoop.timingMode = mode;
@@ -4709,10 +4763,6 @@ function _emscripten_set_main_loop_timing(mode, value) {
 }
 
 var _emscripten_get_now;
-
-if (ENVIRONMENT_IS_NODE) {
- global.performance = require("perf_hooks").performance;
-}
 
 _emscripten_get_now = () => performance.now();
 
@@ -4777,30 +4827,30 @@ function setMainLoop(browserIterationFunc, fps, simulateInfiniteLoop, arg, noSet
  }
 }
 
-function handleException(e) {
+var handleException = e => {
  if (e instanceof ExitStatus || e == "unwind") {
   return EXITSTATUS;
  }
  quit_(1, e);
-}
+};
 
-function _proc_exit(code) {
+var _proc_exit = code => {
  EXITSTATUS = code;
  if (!keepRuntimeAlive()) {
   if (Module["onExit"]) Module["onExit"](code);
   ABORT = true;
  }
  quit_(code, new ExitStatus(code));
-}
+};
 
-function exitJS(status, implicit) {
+var exitJS = (status, implicit) => {
  EXITSTATUS = status;
  _proc_exit(status);
-}
+};
 
 var _exit = exitJS;
 
-function maybeExit() {
+var maybeExit = () => {
  if (!keepRuntimeAlive()) {
   try {
    _exit(EXITSTATUS);
@@ -4808,9 +4858,9 @@ function maybeExit() {
    handleException(e);
   }
  }
-}
+};
 
-function callUserCallback(func) {
+var callUserCallback = func => {
  if (ABORT) {
   return;
  }
@@ -4820,13 +4870,22 @@ function callUserCallback(func) {
  } catch (e) {
   handleException(e);
  }
-}
+};
 
-function safeSetTimeout(func, timeout) {
+var safeSetTimeout = (func, timeout) => {
  return setTimeout(() => {
   callUserCallback(func);
  }, timeout);
-}
+};
+
+var warnOnce = text => {
+ if (!warnOnce.shown) warnOnce.shown = {};
+ if (!warnOnce.shown[text]) {
+  warnOnce.shown[text] = 1;
+  if (ENVIRONMENT_IS_NODE) text = "warning: " + text;
+  err(text);
+ }
+};
 
 var Browser = {
  mainLoop: {
@@ -6005,7 +6064,7 @@ function _eglWaitNative(nativeEngineId) {
 
 var readEmAsmArgsArray = [];
 
-function readEmAsmArgs(sigPtr, buf) {
+var readEmAsmArgs = (sigPtr, buf) => {
  readEmAsmArgsArray.length = 0;
  var ch;
  buf >>= 2;
@@ -6015,36 +6074,36 @@ function readEmAsmArgs(sigPtr, buf) {
   ++buf;
  }
  return readEmAsmArgsArray;
-}
+};
 
-function runEmAsmFunction(code, sigPtr, argbuf) {
+var runEmAsmFunction = (code, sigPtr, argbuf) => {
  var args = readEmAsmArgs(sigPtr, argbuf);
  return ASM_CONSTS[code].apply(null, args);
-}
+};
 
-function _emscripten_asm_const_int(code, sigPtr, argbuf) {
+var _emscripten_asm_const_int = (code, sigPtr, argbuf) => {
  return runEmAsmFunction(code, sigPtr, argbuf);
-}
+};
 
-function runMainThreadEmAsm(code, sigPtr, argbuf, sync) {
+var runMainThreadEmAsm = (code, sigPtr, argbuf, sync) => {
  var args = readEmAsmArgs(sigPtr, argbuf);
  return ASM_CONSTS[code].apply(null, args);
-}
+};
 
-function _emscripten_asm_const_int_sync_on_main_thread(code, sigPtr, argbuf) {
+var _emscripten_asm_const_int_sync_on_main_thread = (code, sigPtr, argbuf) => {
  return runMainThreadEmAsm(code, sigPtr, argbuf, 1);
-}
+};
 
 function _emscripten_date_now() {
  return Date.now();
 }
 
-function withStackSave(f) {
+var withStackSave = f => {
  var stack = stackSave();
  var ret = f();
  stackRestore(stack);
  return ret;
-}
+};
 
 var JSEvents = {
  inEventHandler: 0,
@@ -6189,23 +6248,21 @@ function _emscripten_get_canvas_element_size(target, width, height) {
  HEAP32[height >> 2] = canvas.height;
 }
 
-function stringToUTF8OnStack(str) {
+var stringToUTF8OnStack = str => {
  var size = lengthBytesUTF8(str) + 1;
  var ret = stackAlloc(size);
  stringToUTF8(str, ret, size);
  return ret;
-}
+};
 
-function getCanvasElementSize(target) {
- return withStackSave(function() {
-  var w = stackAlloc(8);
-  var h = w + 4;
-  var targetInt = stringToUTF8OnStack(target.id);
-  var ret = _emscripten_get_canvas_element_size(targetInt, w, h);
-  var size = [ HEAP32[w >> 2], HEAP32[h >> 2] ];
-  return size;
- });
-}
+var getCanvasElementSize = target => withStackSave(() => {
+ var w = stackAlloc(8);
+ var h = w + 4;
+ var targetInt = stringToUTF8OnStack(target.id);
+ var ret = _emscripten_get_canvas_element_size(targetInt, w, h);
+ var size = [ HEAP32[w >> 2], HEAP32[h >> 2] ];
+ return size;
+});
 
 function _emscripten_set_canvas_element_size(target, width, height) {
  var canvas = findCanvasEventTarget(target);
@@ -8169,9 +8226,7 @@ function _glGetUniformIndices(program, uniformCount, uniformNames, uniformIndice
 
 var _emscripten_glGetUniformIndices = _glGetUniformIndices;
 
-function jstoi_q(str) {
- return parseInt(str);
-}
+var jstoi_q = str => parseInt(str);
 
 function webglGetLeftBracePos(name) {
  return name.slice(-1) == "]" && name.lastIndexOf("[");
@@ -8530,14 +8585,14 @@ function _glMapBufferRange(target, offset, length, access) {
   err("GL_INVALID_ENUM in glMapBufferRange");
   return 0;
  }
- var mem = _malloc(length);
+ var mem = _malloc(length), binding = emscriptenWebGLGetBufferBinding(target);
  if (!mem) return 0;
- GL.mappedBuffers[emscriptenWebGLGetBufferBinding(target)] = {
-  offset: offset,
-  length: length,
-  mem: mem,
-  access: access
- };
+ if (!GL.mappedBuffers[binding]) GL.mappedBuffers[binding] = {};
+ binding = GL.mappedBuffers[binding];
+ binding.offset = offset;
+ binding.length = length;
+ binding.mem = mem;
+ binding.access = access;
  return mem;
 }
 
@@ -9087,18 +9142,18 @@ function _glUnmapBuffer(target) {
  }
  var buffer = emscriptenWebGLGetBufferBinding(target);
  var mapping = GL.mappedBuffers[buffer];
- if (!mapping) {
+ if (!mapping || !mapping.mem) {
   GL.recordError(1282);
   err("buffer was never mapped in glUnmapBuffer");
   return 0;
  }
- GL.mappedBuffers[buffer] = null;
  if (!(mapping.access & 16)) if (true) {
   GLctx.bufferSubData(target, mapping.offset, HEAPU8, mapping.mem, mapping.length);
  } else {
   GLctx.bufferSubData(target, mapping.offset, HEAPU8.subarray(mapping.mem, mapping.mem + mapping.length));
  }
  _free(mapping.mem);
+ mapping.mem = 0;
  return 1;
 }
 
@@ -9265,13 +9320,9 @@ function _glWaitSync(sync, flags, timeout_low, timeout_high) {
 
 var _emscripten_glWaitSync = _glWaitSync;
 
-function _emscripten_has_asyncify() {
- return 0;
-}
+var _emscripten_has_asyncify = () => 0;
 
-function _emscripten_memcpy_big(dest, src, num) {
- HEAPU8.copyWithin(dest, src, src + num);
-}
+var _emscripten_memcpy_big = (dest, src, num) => HEAPU8.copyWithin(dest, src, src + num);
 
 function doRequestFullscreen(target, strategy) {
  if (!JSEvents.fullscreenEnabled()) return -1;
@@ -9322,15 +9373,15 @@ function _emscripten_request_pointerlock(target, deferUntilInEventHandler) {
  return requestPointerLock(target);
 }
 
-function abortOnCannotGrowMemory(requestedSize) {
+var abortOnCannotGrowMemory = requestedSize => {
  abort("OOM");
-}
+};
 
-function _emscripten_resize_heap(requestedSize) {
+var _emscripten_resize_heap = requestedSize => {
  var oldSize = HEAPU8.length;
  requestedSize = requestedSize >>> 0;
  abortOnCannotGrowMemory(requestedSize);
-}
+};
 
 function _emscripten_sample_gamepad_data() {
  return (JSEvents.lastGamepadState = navigator.getGamepads ? navigator.getGamepads() : navigator.webkitGetGamepads ? navigator.webkitGetGamepads() : null) ? 0 : -1;
@@ -9516,10 +9567,10 @@ function _emscripten_set_keyup_callback_on_thread(target, userData, useCapture, 
  return registerKeyEventCallback(target, userData, useCapture, callbackfunc, 3, "keyup", targetThread);
 }
 
-function _emscripten_set_main_loop_arg(func, arg, fps, simulateInfiniteLoop) {
+var _emscripten_set_main_loop_arg = function(func, arg, fps, simulateInfiniteLoop) {
  var browserIterationFunc = () => getWasmTableEntry(func)(arg);
  setMainLoop(browserIterationFunc, fps, simulateInfiniteLoop, arg);
-}
+};
 
 function fillMouseEventData(eventStruct, e, target) {
  HEAPF64[eventStruct >> 3] = e.timeStamp;
@@ -9877,11 +9928,11 @@ function _emscripten_webgl_make_context_current(contextHandle) {
 
 var ENV = {};
 
-function getExecutableName() {
+var getExecutableName = () => {
  return thisProgram || "./this.program";
-}
+};
 
-function getEnvStrings() {
+var getEnvStrings = () => {
  if (!getEnvStrings.strings) {
   var lang = (typeof navigator == "object" && navigator.languages && navigator.languages[0] || "C").replace("-", "_") + ".UTF-8";
   var env = {
@@ -9903,16 +9954,16 @@ function getEnvStrings() {
   getEnvStrings.strings = strings;
  }
  return getEnvStrings.strings;
-}
+};
 
-function stringToAscii(str, buffer) {
+var stringToAscii = (str, buffer) => {
  for (var i = 0; i < str.length; ++i) {
   HEAP8[buffer++ >> 0] = str.charCodeAt(i);
  }
  HEAP8[buffer >> 0] = 0;
-}
+};
 
-function _environ_get(__environ, environ_buf) {
+var _environ_get = (__environ, environ_buf) => {
  var bufSize = 0;
  getEnvStrings().forEach(function(string, i) {
   var ptr = environ_buf + bufSize;
@@ -9921,9 +9972,9 @@ function _environ_get(__environ, environ_buf) {
   bufSize += string.length + 1;
  });
  return 0;
-}
+};
 
-function _environ_sizes_get(penviron_count, penviron_buf_size) {
+var _environ_sizes_get = (penviron_count, penviron_buf_size) => {
  var strings = getEnvStrings();
  HEAPU32[penviron_count >> 2] = strings.length;
  var bufSize = 0;
@@ -9932,7 +9983,7 @@ function _environ_sizes_get(penviron_count, penviron_buf_size) {
  });
  HEAPU32[penviron_buf_size >> 2] = bufSize;
  return 0;
-}
+};
 
 function _fd_close(fd) {
  try {
@@ -9945,7 +9996,7 @@ function _fd_close(fd) {
  }
 }
 
-function doReadv(stream, iov, iovcnt, offset) {
+var doReadv = (stream, iov, iovcnt, offset) => {
  var ret = 0;
  for (var i = 0; i < iovcnt; i++) {
   var ptr = HEAPU32[iov >> 2];
@@ -9960,7 +10011,7 @@ function doReadv(stream, iov, iovcnt, offset) {
   }
  }
  return ret;
-}
+};
 
 function _fd_read(fd, iov, iovcnt, pnum) {
  try {
@@ -9994,7 +10045,7 @@ function _fd_seek(fd, offset_low, offset_high, whence, newOffset) {
  }
 }
 
-function doWritev(stream, iov, iovcnt, offset) {
+var doWritev = (stream, iov, iovcnt, offset) => {
  var ret = 0;
  for (var i = 0; i < iovcnt; i++) {
   var ptr = HEAPU32[iov >> 2];
@@ -10008,7 +10059,7 @@ function doWritev(stream, iov, iovcnt, offset) {
   }
  }
  return ret;
-}
+};
 
 function _fd_write(fd, iov, iovcnt, pnum) {
  try {
@@ -10022,17 +10073,17 @@ function _fd_write(fd, iov, iovcnt, pnum) {
  }
 }
 
-function arraySum(array, index) {
+var arraySum = (array, index) => {
  var sum = 0;
  for (var i = 0; i <= index; sum += array[i++]) {}
  return sum;
-}
+};
 
 var MONTH_DAYS_LEAP = [ 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
 
 var MONTH_DAYS_REGULAR = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
 
-function addDays(date, days) {
+var addDays = (date, days) => {
  var newDate = new Date(date.getTime());
  while (days > 0) {
   var leap = isLeapYear(newDate.getFullYear());
@@ -10053,13 +10104,13 @@ function addDays(date, days) {
   }
  }
  return newDate;
-}
+};
 
-function writeArrayToMemory(array, buffer) {
+var writeArrayToMemory = (array, buffer) => {
  HEAP8.set(array, buffer);
-}
+};
 
-function _strftime(s, maxsize, format, tm) {
+var _strftime = (s, maxsize, format, tm) => {
  var tm_zone = HEAP32[tm + 40 >> 2];
  var date = {
   tm_sec: HEAP32[tm >> 2],
@@ -10171,74 +10222,46 @@ function _strftime(s, maxsize, format, tm) {
   return thisDate.getFullYear() - 1;
  }
  var EXPANSION_RULES_2 = {
-  "%a": function(date) {
-   return WEEKDAYS[date.tm_wday].substring(0, 3);
-  },
-  "%A": function(date) {
-   return WEEKDAYS[date.tm_wday];
-  },
-  "%b": function(date) {
-   return MONTHS[date.tm_mon].substring(0, 3);
-  },
-  "%B": function(date) {
-   return MONTHS[date.tm_mon];
-  },
-  "%C": function(date) {
+  "%a": date => WEEKDAYS[date.tm_wday].substring(0, 3),
+  "%A": date => WEEKDAYS[date.tm_wday],
+  "%b": date => MONTHS[date.tm_mon].substring(0, 3),
+  "%B": date => MONTHS[date.tm_mon],
+  "%C": date => {
    var year = date.tm_year + 1900;
    return leadingNulls(year / 100 | 0, 2);
   },
-  "%d": function(date) {
-   return leadingNulls(date.tm_mday, 2);
-  },
-  "%e": function(date) {
-   return leadingSomething(date.tm_mday, 2, " ");
-  },
-  "%g": function(date) {
+  "%d": date => leadingNulls(date.tm_mday, 2),
+  "%e": date => leadingSomething(date.tm_mday, 2, " "),
+  "%g": date => {
    return getWeekBasedYear(date).toString().substring(2);
   },
-  "%G": function(date) {
-   return getWeekBasedYear(date);
-  },
-  "%H": function(date) {
-   return leadingNulls(date.tm_hour, 2);
-  },
-  "%I": function(date) {
+  "%G": date => getWeekBasedYear(date),
+  "%H": date => leadingNulls(date.tm_hour, 2),
+  "%I": date => {
    var twelveHour = date.tm_hour;
    if (twelveHour == 0) twelveHour = 12; else if (twelveHour > 12) twelveHour -= 12;
    return leadingNulls(twelveHour, 2);
   },
-  "%j": function(date) {
+  "%j": date => {
    return leadingNulls(date.tm_mday + arraySum(isLeapYear(date.tm_year + 1900) ? MONTH_DAYS_LEAP : MONTH_DAYS_REGULAR, date.tm_mon - 1), 3);
   },
-  "%m": function(date) {
-   return leadingNulls(date.tm_mon + 1, 2);
-  },
-  "%M": function(date) {
-   return leadingNulls(date.tm_min, 2);
-  },
-  "%n": function() {
-   return "\n";
-  },
-  "%p": function(date) {
+  "%m": date => leadingNulls(date.tm_mon + 1, 2),
+  "%M": date => leadingNulls(date.tm_min, 2),
+  "%n": () => "\n",
+  "%p": date => {
    if (date.tm_hour >= 0 && date.tm_hour < 12) {
     return "AM";
    }
    return "PM";
   },
-  "%S": function(date) {
-   return leadingNulls(date.tm_sec, 2);
-  },
-  "%t": function() {
-   return "\t";
-  },
-  "%u": function(date) {
-   return date.tm_wday || 7;
-  },
-  "%U": function(date) {
+  "%S": date => leadingNulls(date.tm_sec, 2),
+  "%t": () => "\t",
+  "%u": date => date.tm_wday || 7,
+  "%U": date => {
    var days = date.tm_yday + 7 - date.tm_wday;
    return leadingNulls(Math.floor(days / 7), 2);
   },
-  "%V": function(date) {
+  "%V": date => {
    var val = Math.floor((date.tm_yday + 7 - (date.tm_wday + 6) % 7) / 7);
    if ((date.tm_wday + 371 - date.tm_yday - 2) % 7 <= 2) {
     val++;
@@ -10255,32 +10278,24 @@ function _strftime(s, maxsize, format, tm) {
    }
    return leadingNulls(val, 2);
   },
-  "%w": function(date) {
-   return date.tm_wday;
-  },
-  "%W": function(date) {
+  "%w": date => date.tm_wday,
+  "%W": date => {
    var days = date.tm_yday + 7 - (date.tm_wday + 6) % 7;
    return leadingNulls(Math.floor(days / 7), 2);
   },
-  "%y": function(date) {
+  "%y": date => {
    return (date.tm_year + 1900).toString().substring(2);
   },
-  "%Y": function(date) {
-   return date.tm_year + 1900;
-  },
-  "%z": function(date) {
+  "%Y": date => date.tm_year + 1900,
+  "%z": date => {
    var off = date.tm_gmtoff;
    var ahead = off >= 0;
    off = Math.abs(off) / 60;
    off = off / 60 * 100 + off % 60;
    return (ahead ? "+" : "-") + String("0000" + off).slice(-4);
   },
-  "%Z": function(date) {
-   return date.tm_zone;
-  },
-  "%%": function() {
-   return "%";
-  }
+  "%Z": date => date.tm_zone,
+  "%%": () => "%"
  };
  pattern = pattern.replace(/%%/g, "\0\0");
  for (var rule in EXPANSION_RULES_2) {
@@ -10295,13 +10310,13 @@ function _strftime(s, maxsize, format, tm) {
  }
  writeArrayToMemory(bytes, s);
  return bytes.length - 1;
-}
+};
 
-function _strftime_l(s, maxsize, format, tm, loc) {
+var _strftime_l = (s, maxsize, format, tm, loc) => {
  return _strftime(s, maxsize, format, tm);
-}
+};
 
-function _system(command) {
+var _system = command => {
  if (ENVIRONMENT_IS_NODE) {
   if (!command) return 1;
   var cmdstr = UTF8ToString(command);
@@ -10345,15 +10360,15 @@ function _system(command) {
  if (!command) return 0;
  setErrNo(52);
  return -1;
-}
+};
 
-function listenOnce(object, event, func) {
+var listenOnce = (object, event, func) => {
  object.addEventListener(event, func, {
   "once": true
  });
-}
+};
 
-function autoResumeAudioContext(ctx, elements) {
+var autoResumeAudioContext = (ctx, elements) => {
  if (!elements) {
   elements = [ document, document.getElementById("canvas") ];
  }
@@ -10366,7 +10381,7 @@ function autoResumeAudioContext(ctx, elements) {
    }
   });
  });
-}
+};
 
 var FSNode = function(parent, name, mode, rdev) {
  if (!parent) {
@@ -10479,49 +10494,6 @@ var preloadedAudios = {};
 var GLctx;
 
 for (var i = 0; i < 32; ++i) tempFixedLengthArray.push(new Array(i));
-
-var decodeBase64 = typeof atob == "function" ? atob : function(input) {
- var keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
- var output = "";
- var chr1, chr2, chr3;
- var enc1, enc2, enc3, enc4;
- var i = 0;
- input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
- do {
-  enc1 = keyStr.indexOf(input.charAt(i++));
-  enc2 = keyStr.indexOf(input.charAt(i++));
-  enc3 = keyStr.indexOf(input.charAt(i++));
-  enc4 = keyStr.indexOf(input.charAt(i++));
-  chr1 = enc1 << 2 | enc2 >> 4;
-  chr2 = (enc2 & 15) << 4 | enc3 >> 2;
-  chr3 = (enc3 & 3) << 6 | enc4;
-  output = output + String.fromCharCode(chr1);
-  if (enc3 !== 64) {
-   output = output + String.fromCharCode(chr2);
-  }
-  if (enc4 !== 64) {
-   output = output + String.fromCharCode(chr3);
-  }
- } while (i < input.length);
- return output;
-};
-
-function intArrayFromBase64(s) {
- if (typeof ENVIRONMENT_IS_NODE == "boolean" && ENVIRONMENT_IS_NODE) {
-  var buf = Buffer.from(s, "base64");
-  return new Uint8Array(buf["buffer"], buf["byteOffset"], buf["byteLength"]);
- }
- try {
-  var decoded = decodeBase64(s);
-  var bytes = new Uint8Array(decoded.length);
-  for (var i = 0; i < decoded.length; ++i) {
-   bytes[i] = decoded.charCodeAt(i);
-  }
-  return bytes;
- } catch (_) {
-  throw new Error("Converting base64 string to bytes failed.");
- }
-}
 
 var wasmImports = {
  "__cxa_throw": ___cxa_throw,
@@ -11178,6 +11150,23 @@ function invoke_vii(index, a1, a2) {
   stackRestore(sp);
   if (e !== e + 0) throw e;
   _setThrew(1, 0);
+ }
+}
+
+function intArrayFromBase64(s) {
+ if (typeof ENVIRONMENT_IS_NODE != "undefined" && ENVIRONMENT_IS_NODE) {
+  var buf = Buffer.from(s, "base64");
+  return new Uint8Array(buf["buffer"], buf["byteOffset"], buf["byteLength"]);
+ }
+ try {
+  var decoded = atob(s);
+  var bytes = new Uint8Array(decoded.length);
+  for (var i = 0; i < decoded.length; ++i) {
+   bytes[i] = decoded.charCodeAt(i);
+  }
+  return bytes;
+ } catch (_) {
+  throw new Error("Converting base64 string to bytes failed.");
  }
 }
 
