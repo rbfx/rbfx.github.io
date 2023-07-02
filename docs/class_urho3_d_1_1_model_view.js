@@ -6,7 +6,7 @@ var class_urho3_d_1_1_model_view =
     [ "CalculateMissingNormals", "class_urho3_d_1_1_model_view.html#aefccb5dfb9dc835d11fde42c491dc482", null ],
     [ "CalculateMissingTangents", "class_urho3_d_1_1_model_view.html#adf130083579e597eb601db626c934907", null ],
     [ "Clear", "class_urho3_d_1_1_model_view.html#aff55c856b41cb86443cd41c9825a3ffa", null ],
-    [ "ExportMaterialList", "class_urho3_d_1_1_model_view.html#a3c5d4d900e477248b0425620a7c78a1f", null ],
+    [ "ExportMaterialList", "class_urho3_d_1_1_model_view.html#a9514add7b35669e0fa38a1a1bf979cc2", null ],
     [ "ExportModel", "class_urho3_d_1_1_model_view.html#a6f07f313df595afe2673eb73fa75830f", null ],
     [ "ExportModel", "class_urho3_d_1_1_model_view.html#af61aad3a21ed7cd39a6625a21b5fe842", null ],
     [ "GetBones", "class_urho3_d_1_1_model_view.html#a1842e4837695ad260690d4954f1d8dc2", null ],

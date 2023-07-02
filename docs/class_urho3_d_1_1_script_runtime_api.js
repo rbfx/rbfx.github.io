@@ -1,5 +1,6 @@
 var class_urho3_d_1_1_script_runtime_api =
 [
+    [ "~ScriptRuntimeApi", "class_urho3_d_1_1_script_runtime_api.html#ab004719e1de75839912d3b26437acbf2", null ],
     [ "CloneGCHandle", "class_urho3_d_1_1_script_runtime_api.html#af61ebe385fb727f8d9c699f75fa287c1", null ],
     [ "CompileResourceScriptPlugin", "class_urho3_d_1_1_script_runtime_api.html#a1bf2da2242162edc9a3c10cbb2630610", null ],
     [ "CreatePluginApplication", "class_urho3_d_1_1_script_runtime_api.html#a9b4764a582659487b1c733f47daee7a9", null ],

@@ -1,6 +1,7 @@
 var class_urho3_d_1_1_pipeline_state_tracker =
 [
     [ "DependantVector", "class_urho3_d_1_1_pipeline_state_tracker.html#a6ded38353b8b3c011815ac23d53f649a", null ],
+    [ "~PipelineStateTracker", "class_urho3_d_1_1_pipeline_state_tracker.html#a951795731e52a00bb4f78579e00599ac", null ],
     [ "AddSubscriberReference", "class_urho3_d_1_1_pipeline_state_tracker.html#a27462da7e5a3ce7ed40ff65111ab7857", null ],
     [ "CreateDependency", "class_urho3_d_1_1_pipeline_state_tracker.html#a9f4bb893aa599b680880876b3aa59efa", null ],
     [ "FindSubscriberIter", "class_urho3_d_1_1_pipeline_state_tracker.html#aa89831097ab2ea0526b46b23e541de72", null ],

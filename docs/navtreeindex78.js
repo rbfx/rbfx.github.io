@@ -1,5 +1,11 @@
 var NAVTREEINDEX78 =
 {
+"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a87053abf98c41f1d6f9c502a7ad19d6b":[5,0,2,15,0,4],
+"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a9f9319dde27c3e04a533eec9915eb4bc":[5,0,2,15,0,6],
+"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#aec2ada8be5c442a43c41a67c23067a98":[5,0,2,15,0,0],
+"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#af626aab77684130f2f2f90b6de9d362c":[5,0,2,15,0,1],
+"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#af95db714ce8065cccd67d5b8a0db1e76":[5,0,2,15,0,2],
+"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_textures.html":[5,0,2,15,1],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_textures.html#a358174fa2213a5907fa0dcb33e91d887":[5,0,2,15,1,0],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_textures.html#a9b062aefe4ac92f566e41024cdb6a0b0":[5,0,2,15,1,2],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_textures.html#ab813ca20cc85580d247fb02edf98a991":[5,0,2,15,1,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_baked_light.html#adc3963ceebda9fbc8b44849a78e355b5":[5,0,2,66,0],
 "struct_urho3_d_1_1_baked_light.html#af113571585cb7934a4d05276d2790455":[5,0,2,66,1],
 "struct_urho3_d_1_1_baked_lightmap.html":[5,0,2,68],
-"struct_urho3_d_1_1_baked_lightmap.html#a4d1442aff608568ee8a77ed572749260":[5,0,2,68,1],
-"struct_urho3_d_1_1_baked_lightmap.html#aa83e7282e3135d8e416d5b84d54d074b":[5,0,2,68,2],
-"struct_urho3_d_1_1_baked_lightmap.html#ab8522a5f2460a4c60178a50e9af493bb":[5,0,2,68,0],
-"struct_urho3_d_1_1_baked_lightmap.html#af11e310849710c6c75336463a4116ff8":[5,0,2,68,3],
-"struct_urho3_d_1_1_baked_scene_background.html":[5,0,2,70],
-"struct_urho3_d_1_1_baked_scene_background.html#a11f5b55fc16efecc84a0f99bf6722d3c":[5,0,2,70,1],
-"struct_urho3_d_1_1_baked_scene_background.html#a257572c07a80a674462a4bddc3876076":[5,0,2,70,0]
+"struct_urho3_d_1_1_baked_lightmap.html#a4d1442aff608568ee8a77ed572749260":[5,0,2,68,1]
 };

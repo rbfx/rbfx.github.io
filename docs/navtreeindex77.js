@@ -1,14 +1,20 @@
 var NAVTREEINDEX77 =
 {
-"index.html":[0],
+"functions_x.html":[5,3,0,24],
+"functions_y.html":[5,3,0,25],
+"functions_z.html":[5,3,0,26],
+"functions_~.html":[5,3,0,27],
+"graphics-and-rendering.html":[0,0,1,1],
+"hierarchy.html":[5,2],
 "index.html":[],
+"index.html":[0],
 "low-level-transport.html":[0,0,1,2,0],
 "md__home_runner_work_rbfx-docs_rbfx-docs__r_e_a_d_m_e.html":[3],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_cpp-quick-start.html":[1],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html":[2],
 "multiplayer-and-networking.html":[0,0,1,2],
-"namespace_urho3_d_1_1_actions.html":[5,0,2,0],
 "namespace_urho3_d_1_1_actions.html":[4,0,0,0],
+"namespace_urho3_d_1_1_actions.html":[5,0,2,0],
 "namespace_urho3_d_1_1_attribute_metadata.html":[4,0,0,1],
 "namespace_urho3_d_1_1_network_settings.html":[4,0,0,2],
 "namespace_urho3_d_1_1_shader_consts.html":[4,0,0,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_always_serialize.html#a383ee023c3c59178a1aaf404edae373c":[5,0,2,14,0],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html":[5,0,2,15,0],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a11fe8d543d7ddd22adc2e4a24ff3131c":[5,0,2,15,0,3],
-"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a85bf2c446af8cebbae8c21fee00e0204":[5,0,2,15,0,5],
-"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a87053abf98c41f1d6f9c502a7ad19d6b":[5,0,2,15,0,4],
-"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a9f9319dde27c3e04a533eec9915eb4bc":[5,0,2,15,0,6],
-"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#aec2ada8be5c442a43c41a67c23067a98":[5,0,2,15,0,0],
-"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#af626aab77684130f2f2f90b6de9d362c":[5,0,2,15,0,1],
-"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#af95db714ce8065cccd67d5b8a0db1e76":[5,0,2,15,0,2],
-"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_textures.html":[5,0,2,15,1]
+"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a85bf2c446af8cebbae8c21fee00e0204":[5,0,2,15,0,5]
 };
