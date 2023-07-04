@@ -1,5 +1,6 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_delayed_world_transform2_d.html#a94a9bcfc4970de4a3e965c89de51e24f":[5,0,2,200,0],
 "struct_urho3_d_1_1_delayed_world_transform2_d.html#aaf1cedae520e77b284b0ce901815463f":[5,0,2,200,1],
 "struct_urho3_d_1_1_delayed_world_transform2_d.html#ac34dd3adb53d2a3feb8c4b16896d3720":[5,0,2,200,3],
 "struct_urho3_d_1_1_delayed_world_transform2_d.html#af906036df9c8aabfe01b7fbd1f90b8df":[5,0,2,200,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_geometry_batch.html#a56299c10e3bc298e7486f0ad09d9dc68":[5,0,2,256,5],
 "struct_urho3_d_1_1_geometry_batch.html#aa5d72bad3d7350577c11ae2941ebe02a":[5,0,2,256,7],
 "struct_urho3_d_1_1_geometry_batch.html#ab3860aa6c3fdf1c53589263f22b1f39c":[5,0,2,256,1],
-"struct_urho3_d_1_1_geometry_batch.html#ae1dcd08d885a1fd2125b1f59d96c7acd":[5,0,2,256,2],
-"struct_urho3_d_1_1_geometry_batch.html#aeacc65e00ab59be22fdecf700fbad24b":[5,0,2,256,8]
+"struct_urho3_d_1_1_geometry_batch.html#ae1dcd08d885a1fd2125b1f59d96c7acd":[5,0,2,256,2]
 };

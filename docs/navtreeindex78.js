@@ -1,5 +1,6 @@
 var NAVTREEINDEX78 =
 {
+"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a85bf2c446af8cebbae8c21fee00e0204":[5,0,2,15,0,5],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a87053abf98c41f1d6f9c502a7ad19d6b":[5,0,2,15,0,4],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a9f9319dde27c3e04a533eec9915eb4bc":[5,0,2,15,0,6],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#aec2ada8be5c442a43c41a67c23067a98":[5,0,2,15,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_baked_light.html#adbad290a5593f43f523a265a28247ac7":[5,0,2,66,3],
 "struct_urho3_d_1_1_baked_light.html#adc3963ceebda9fbc8b44849a78e355b5":[5,0,2,66,0],
 "struct_urho3_d_1_1_baked_light.html#af113571585cb7934a4d05276d2790455":[5,0,2,66,1],
-"struct_urho3_d_1_1_baked_lightmap.html":[5,0,2,68],
-"struct_urho3_d_1_1_baked_lightmap.html#a4d1442aff608568ee8a77ed572749260":[5,0,2,68,1]
+"struct_urho3_d_1_1_baked_lightmap.html":[5,0,2,68]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX76 =
 {
+"class_urho3_d_1_1_x_m_l_output_archive.html#ab20f98aa291a880f38e948657a79008f":[5,0,2,830,8],
 "class_urho3_d_1_1_x_m_l_output_archive.html#ac1bde6a09fd946759232f29b5a420415":[5,0,2,830,14],
 "class_urho3_d_1_1_x_m_l_output_archive.html#ad2ab63ebff97cd976c17bae640d04444":[5,0,2,830,9],
 "class_urho3_d_1_1_x_m_l_output_archive.html#aedb3aecbd534375e02a5b00389fdaa76":[5,0,2,830,2],
@@ -164,8 +165,8 @@ var NAVTREEINDEX76 =
 "dir_f0168828032f384c20f94ae6f5d41150.html":[6,0,0,2],
 "documentation.html":[0,0],
 "files.html":[6,0],
-"folder-structure.html":[0,0,0],
-"framework-overview.html":[0,0,1],
+"folder-structure.html":[0,0,1],
+"framework-overview.html":[0,0,2],
 "functions.html":[5,3,0],
 "functions.html":[5,3,0,0],
 "functions_a.html":[5,3,0,1],
@@ -221,8 +222,8 @@ var NAVTREEINDEX76 =
 "functions_type.html":[5,3,3],
 "functions_u.html":[5,3,0,21],
 "functions_v.html":[5,3,0,22],
-"functions_vars.html":[5,3,2,0],
 "functions_vars.html":[5,3,2],
+"functions_vars.html":[5,3,2,0],
 "functions_vars_a.html":[5,3,2,1],
 "functions_vars_b.html":[5,3,2,2],
 "functions_vars_c.html":[5,3,2,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX76 =
 "functions_vars_w.html":[5,3,2,23],
 "functions_vars_x.html":[5,3,2,24],
 "functions_vars_y.html":[5,3,2,25],
-"functions_vars_z.html":[5,3,2,26],
-"functions_w.html":[5,3,0,23]
+"functions_vars_z.html":[5,3,2,26]
 };

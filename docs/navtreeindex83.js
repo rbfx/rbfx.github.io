@@ -1,5 +1,6 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_key_frame_set.html#af745d6c8fbc70931285cf88be035cca7":[5,0,2,341,0],
 "struct_urho3_d_1_1_light_accumulator.html":[5,0,2,344],
 "struct_urho3_d_1_1_light_accumulator.html#a0eabe9a56557ebf053abc1d801908a7a":[5,0,2,344,14],
 "struct_urho3_d_1_1_light_accumulator.html#a0fe26a2d776145ecebc133e4e58ea62a":[5,0,2,344,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_model_morph_view.html":[5,0,2,401],
 "struct_urho3_d_1_1_model_morph_view.html#a67d031a3b264e5a21649579545e31d33":[5,0,2,401,1],
 "struct_urho3_d_1_1_model_morph_view.html#aa0cda0cf4108e5e12c8986497c178d42":[5,0,2,401,0],
-"struct_urho3_d_1_1_model_vertex.html":[5,0,2,402],
-"struct_urho3_d_1_1_model_vertex.html#a0375b15126f44daec433af12f6f82080":[5,0,2,402,2]
+"struct_urho3_d_1_1_model_vertex.html":[5,0,2,402]
 };

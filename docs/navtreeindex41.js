@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"class_urho3_d_1_1_object_animation.html#a80d57153db448d3e9039d88813d8a406":[5,0,2,451,17],
 "class_urho3_d_1_1_object_animation.html#a8e68f3384d41fd12fddc84fbe60ef554":[5,0,2,451,5],
 "class_urho3_d_1_1_object_animation.html#aa4fb077633ea7146b843553b406110c8":[5,0,2,451,12],
 "class_urho3_d_1_1_object_animation.html#aa72046e84ffa262860a07c9b3d86f33b":[5,0,2,451,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "class_urho3_d_1_1_octree_query.html#a5963c8409ce72b85bd9377b773d40c73":[5,0,2,462,2],
 "class_urho3_d_1_1_octree_query.html#a8e6e7966103b4a5482ea36829027e2cd":[5,0,2,462,6],
 "class_urho3_d_1_1_octree_query.html#af28bf23a587178c2f04fadaf934d556b":[5,0,2,462,0],
-"class_urho3_d_1_1_off_mesh_connection.html":[5,0,2,464],
-"class_urho3_d_1_1_off_mesh_connection.html#a0a048b8f3d0cd96a21c5524c69462549":[5,0,2,464,3]
+"class_urho3_d_1_1_off_mesh_connection.html":[5,0,2,464]
 };
