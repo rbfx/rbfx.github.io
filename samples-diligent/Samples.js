@@ -10,9 +10,9 @@ s.src = "Resources.js";
 
 document.body.appendChild(s);
 
-Module["preRun"].push(function() {
+Module["preRun"].push((function() {
  Module["addRunDependency"]("Resources.js.loader");
-});
+}));
 
 s.onload = function() {
  if (Module.finishedDataFileDownloads < Module.expectedDataFileDownloads) setTimeout(s.onload, 100); else Module["removeRunDependency"]("Resources.js.loader");
@@ -66,9 +66,9 @@ if (ENVIRONMENT_IS_NODE) {
  };
  readAsync = (filename, onload, onerror, binary = true) => {
   filename = isFileURI(filename) ? new URL(filename) : nodePath.normalize(filename);
-  fs.readFile(filename, binary ? undefined : "utf8", (err, data) => {
+  fs.readFile(filename, binary ? undefined : "utf8", ((err, data) => {
    if (err) onerror(err); else onload(binary ? data.buffer : data);
-  });
+  }));
  };
  if (!Module["thisProgram"] && process.argv.length > 1) {
   thisProgram = process.argv[1].replace(/\\/g, "/");
@@ -77,11 +77,11 @@ if (ENVIRONMENT_IS_NODE) {
  if (typeof module != "undefined") {
   module["exports"] = Module;
  }
- process.on("uncaughtException", ex => {
+ process.on("uncaughtException", (ex => {
   if (ex !== "unwind" && !(ex instanceof ExitStatus) && !(ex.context instanceof ExitStatus)) {
    throw ex;
   }
- });
+ }));
  quit_ = (status, toThrow) => {
   process.exitCode = status;
   throw toThrow;
@@ -100,14 +100,14 @@ if (ENVIRONMENT_IS_NODE) {
  }
  {
   read_ = url => {
-   var xhr = new XMLHttpRequest();
+   var xhr = new XMLHttpRequest;
    xhr.open("GET", url, false);
    xhr.send(null);
    return xhr.responseText;
   };
   if (ENVIRONMENT_IS_WORKER) {
    readBinary = url => {
-    var xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest;
     xhr.open("GET", url, false);
     xhr.responseType = "arraybuffer";
     xhr.send(null);
@@ -115,7 +115,7 @@ if (ENVIRONMENT_IS_NODE) {
    };
   }
   readAsync = (url, onload, onerror) => {
-   var xhr = new XMLHttpRequest();
+   var xhr = new XMLHttpRequest;
    xhr.open("GET", url, true);
    xhr.responseType = "arraybuffer";
    xhr.onload = () => {
@@ -312,18 +312,14 @@ if (!isDataURI(wasmBinaryFile)) {
  wasmBinaryFile = locateFile(wasmBinaryFile);
 }
 
-function getBinary(file) {
- try {
-  if (file == wasmBinaryFile && wasmBinary) {
-   return new Uint8Array(wasmBinary);
-  }
-  if (readBinary) {
-   return readBinary(file);
-  }
-  throw "both async and sync fetching of the wasm failed";
- } catch (err) {
-  abort(err);
+function getBinarySync(file) {
+ if (file == wasmBinaryFile && wasmBinary) {
+  return new Uint8Array(wasmBinary);
  }
+ if (readBinary) {
+  return readBinary(file);
+ }
+ throw "both async and sync fetching of the wasm failed";
 }
 
 function getBinaryPromise(binaryFile) {
@@ -331,49 +327,42 @@ function getBinaryPromise(binaryFile) {
   if (typeof fetch == "function" && !isFileURI(binaryFile)) {
    return fetch(binaryFile, {
     credentials: "same-origin"
-   }).then(response => {
+   }).then((response => {
     if (!response["ok"]) {
      throw "failed to load wasm binary file at '" + binaryFile + "'";
     }
     return response["arrayBuffer"]();
-   }).catch(() => getBinary(binaryFile));
-  } else {
-   if (readAsync) {
-    return new Promise((resolve, reject) => {
-     readAsync(binaryFile, response => resolve(new Uint8Array(response)), reject);
-    });
-   }
+   })).catch((() => getBinarySync(binaryFile)));
+  } else if (readAsync) {
+   return new Promise(((resolve, reject) => {
+    readAsync(binaryFile, (response => resolve(new Uint8Array(response))), reject);
+   }));
   }
  }
- return Promise.resolve().then(() => getBinary(binaryFile));
+ return Promise.resolve().then((() => getBinarySync(binaryFile)));
 }
 
 function instantiateArrayBuffer(binaryFile, imports, receiver) {
- return getBinaryPromise(binaryFile).then(binary => {
-  return WebAssembly.instantiate(binary, imports);
- }).then(instance => {
-  return instance;
- }).then(receiver, reason => {
+ return getBinaryPromise(binaryFile).then((binary => WebAssembly.instantiate(binary, imports))).then((instance => instance)).then(receiver, (reason => {
   err("failed to asynchronously prepare wasm: " + reason);
   abort(reason);
- });
+ }));
 }
 
 function instantiateAsync(binary, binaryFile, imports, callback) {
  if (!binary && typeof WebAssembly.instantiateStreaming == "function" && !isDataURI(binaryFile) && !isFileURI(binaryFile) && !ENVIRONMENT_IS_NODE && typeof fetch == "function") {
   return fetch(binaryFile, {
    credentials: "same-origin"
-  }).then(response => {
+  }).then((response => {
    var result = WebAssembly.instantiateStreaming(response, imports);
-   return result.then(callback, function(reason) {
+   return result.then(callback, (function(reason) {
     err("wasm streaming compile failed: " + reason);
     err("falling back to ArrayBuffer instantiation");
     return instantiateArrayBuffer(binaryFile, imports, callback);
-   });
-  });
- } else {
-  return instantiateArrayBuffer(binaryFile, imports, callback);
+   }));
+  }));
  }
+ return instantiateArrayBuffer(binaryFile, imports, callback);
 }
 
 function createWasm() {
@@ -412,14 +401,14 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 1881620: () => {
-  FS.syncfs(function(err) {
+ 1882052: () => {
+  FS.syncfs((function(err) {
    if (err) {
     console.error(err);
    }
-  });
+  }));
  },
- 1881684: $0 => {
+ 1882116: $0 => {
   var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
   var reply = window.prompt(str, "i");
   if (reply === null) {
@@ -427,10 +416,10 @@ var ASM_CONSTS = {
   }
   return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
  },
- 1881909: ($0, $1) => {
+ 1882341: ($0, $1) => {
   alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
  },
- 1881966: () => {
+ 1882398: () => {
   if (typeof AudioContext !== "undefined") {
    return true;
   } else if (typeof webkitAudioContext !== "undefined") {
@@ -438,7 +427,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1882113: () => {
+ 1882545: () => {
   if (typeof navigator.mediaDevices !== "undefined" && typeof navigator.mediaDevices.getUserMedia !== "undefined") {
    return true;
   } else if (typeof navigator.webkitGetUserMedia !== "undefined") {
@@ -446,7 +435,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1882347: $0 => {
+ 1882779: $0 => {
   if (typeof Module["SDL2"] === "undefined") {
    Module["SDL2"] = {};
   }
@@ -458,9 +447,9 @@ var ASM_CONSTS = {
   }
   if (!SDL2.audioContext) {
    if (typeof AudioContext !== "undefined") {
-    SDL2.audioContext = new AudioContext();
+    SDL2.audioContext = new AudioContext;
    } else if (typeof webkitAudioContext !== "undefined") {
-    SDL2.audioContext = new webkitAudioContext();
+    SDL2.audioContext = new webkitAudioContext;
    }
    if (SDL2.audioContext) {
     autoResumeAudioContext(SDL2.audioContext);
@@ -468,11 +457,11 @@ var ASM_CONSTS = {
   }
   return SDL2.audioContext === undefined ? -1 : 0;
  },
- 1882840: () => {
+ 1883272: () => {
   var SDL2 = Module["SDL2"];
   return SDL2.audioContext.sampleRate;
  },
- 1882908: ($0, $1, $2, $3) => {
+ 1883340: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   var have_microphone = function(stream) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -513,7 +502,7 @@ var ASM_CONSTS = {
    }, have_microphone, no_microphone);
   }
  },
- 1884560: ($0, $1, $2, $3) => {
+ 1884992: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
   SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -525,7 +514,7 @@ var ASM_CONSTS = {
   };
   SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
  },
- 1884970: ($0, $1) => {
+ 1885402: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
   for (var c = 0; c < numChannels; ++c) {
@@ -544,7 +533,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1885575: ($0, $1) => {
+ 1886007: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
   for (var c = 0; c < numChannels; ++c) {
@@ -557,7 +546,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1886055: $0 => {
+ 1886487: $0 => {
   var SDL2 = Module["SDL2"];
   if ($0) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -595,7 +584,7 @@ var ASM_CONSTS = {
    SDL2.audioContext = undefined;
   }
  },
- 1887227: ($0, $1, $2) => {
+ 1887659: ($0, $1, $2) => {
   var w = $0;
   var h = $1;
   var pixels = $2;
@@ -666,7 +655,7 @@ var ASM_CONSTS = {
   }
   SDL2.ctx.putImageData(SDL2.image, 0, 0);
  },
- 1888696: ($0, $1, $2, $3, $4) => {
+ 1889128: ($0, $1, $2, $3, $4) => {
   var w = $0;
   var h = $1;
   var hot_x = $2;
@@ -703,22 +692,18 @@ var ASM_CONSTS = {
   stringToUTF8(url, urlBuf, url.length + 1);
   return urlBuf;
  },
- 1889685: $0 => {
+ 1890117: $0 => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = UTF8ToString($0);
   }
  },
- 1889768: () => {
+ 1890200: () => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = "none";
   }
  },
- 1889837: () => {
-  return window.innerWidth;
- },
- 1889867: () => {
-  return window.innerHeight;
- }
+ 1890269: () => window.innerWidth,
+ 1890299: () => window.innerHeight
 };
 
 function ExitStatus(status) {
@@ -869,7 +854,7 @@ var PATH = {
  },
  normalize: path => {
   var isAbsolute = PATH.isAbs(path), trailingSlash = path.substr(-1) === "/";
-  path = PATH.normalizeArray(path.split("/").filter(p => !!p), !isAbsolute).join("/");
+  path = PATH.normalizeArray(path.split("/").filter((p => !!p)), !isAbsolute).join("/");
   if (!path && !isAbsolute) {
    path = ".";
   }
@@ -900,9 +885,7 @@ var PATH = {
   var paths = Array.prototype.slice.call(arguments);
   return PATH.normalize(paths.join("/"));
  },
- join2: (l, r) => {
-  return PATH.normalize(l + "/" + r);
- }
+ join2: (l, r) => PATH.normalize(l + "/" + r)
 };
 
 var initRandomFill = () => {
@@ -922,9 +905,7 @@ var initRandomFill = () => {
  abort("initRandomDevice");
 };
 
-var randomFill = view => {
- return (randomFill = initRandomFill())(view);
-};
+var randomFill = view => (randomFill = initRandomFill())(view);
 
 var PATH_FS = {
  resolve: function() {
@@ -939,7 +920,7 @@ var PATH_FS = {
    resolvedPath = path + "/" + resolvedPath;
    resolvedAbsolute = PATH.isAbs(path);
   }
-  resolvedPath = PATH.normalizeArray(resolvedPath.split("/").filter(p => !!p), !resolvedAbsolute).join("/");
+  resolvedPath = PATH.normalizeArray(resolvedPath.split("/").filter((p => !!p)), !resolvedAbsolute).join("/");
   return (resolvedAbsolute ? "/" : "") + resolvedPath || ".";
  },
  relative: (from, to) => {
@@ -975,6 +956,45 @@ var PATH_FS = {
   return outputParts.join("/");
  }
 };
+
+var UTF8Decoder = typeof TextDecoder != "undefined" ? new TextDecoder("utf8") : undefined;
+
+var UTF8ArrayToString = (heapOrArray, idx, maxBytesToRead) => {
+ var endIdx = idx + maxBytesToRead;
+ var endPtr = idx;
+ while (heapOrArray[endPtr] && !(endPtr >= endIdx)) ++endPtr;
+ if (endPtr - idx > 16 && heapOrArray.buffer && UTF8Decoder) {
+  return UTF8Decoder.decode(heapOrArray.subarray(idx, endPtr));
+ }
+ var str = "";
+ while (idx < endPtr) {
+  var u0 = heapOrArray[idx++];
+  if (!(u0 & 128)) {
+   str += String.fromCharCode(u0);
+   continue;
+  }
+  var u1 = heapOrArray[idx++] & 63;
+  if ((u0 & 224) == 192) {
+   str += String.fromCharCode((u0 & 31) << 6 | u1);
+   continue;
+  }
+  var u2 = heapOrArray[idx++] & 63;
+  if ((u0 & 240) == 224) {
+   u0 = (u0 & 15) << 12 | u1 << 6 | u2;
+  } else {
+   u0 = (u0 & 7) << 18 | u1 << 12 | u2 << 6 | heapOrArray[idx++] & 63;
+  }
+  if (u0 < 65536) {
+   str += String.fromCharCode(u0);
+  } else {
+   var ch = u0 - 65536;
+   str += String.fromCharCode(55296 | ch >> 10, 56320 | ch & 1023);
+  }
+ }
+ return str;
+};
+
+var FS_stdin_getChar_buffer = [];
 
 var lengthBytesUTF8 = str => {
  var len = 0;
@@ -1036,41 +1056,41 @@ function intArrayFromString(stringy, dontAddNull, length) {
  return u8array;
 }
 
-var UTF8Decoder = typeof TextDecoder != "undefined" ? new TextDecoder("utf8") : undefined;
-
-var UTF8ArrayToString = (heapOrArray, idx, maxBytesToRead) => {
- var endIdx = idx + maxBytesToRead;
- var endPtr = idx;
- while (heapOrArray[endPtr] && !(endPtr >= endIdx)) ++endPtr;
- if (endPtr - idx > 16 && heapOrArray.buffer && UTF8Decoder) {
-  return UTF8Decoder.decode(heapOrArray.subarray(idx, endPtr));
+var FS_stdin_getChar = () => {
+ if (!FS_stdin_getChar_buffer.length) {
+  var result = null;
+  if (ENVIRONMENT_IS_NODE) {
+   var BUFSIZE = 256;
+   var buf = Buffer.alloc(BUFSIZE);
+   var bytesRead = 0;
+   var fd = process.stdin.fd;
+   try {
+    bytesRead = fs.readSync(fd, buf, 0, BUFSIZE, -1);
+   } catch (e) {
+    if (e.toString().includes("EOF")) bytesRead = 0; else throw e;
+   }
+   if (bytesRead > 0) {
+    result = buf.slice(0, bytesRead).toString("utf-8");
+   } else {
+    result = null;
+   }
+  } else if (typeof window != "undefined" && typeof window.prompt == "function") {
+   result = window.prompt("Input: ");
+   if (result !== null) {
+    result += "\n";
+   }
+  } else if (typeof readline == "function") {
+   result = readline();
+   if (result !== null) {
+    result += "\n";
+   }
+  }
+  if (!result) {
+   return null;
+  }
+  FS_stdin_getChar_buffer = intArrayFromString(result, true);
  }
- var str = "";
- while (idx < endPtr) {
-  var u0 = heapOrArray[idx++];
-  if (!(u0 & 128)) {
-   str += String.fromCharCode(u0);
-   continue;
-  }
-  var u1 = heapOrArray[idx++] & 63;
-  if ((u0 & 224) == 192) {
-   str += String.fromCharCode((u0 & 31) << 6 | u1);
-   continue;
-  }
-  var u2 = heapOrArray[idx++] & 63;
-  if ((u0 & 240) == 224) {
-   u0 = (u0 & 15) << 12 | u1 << 6 | u2;
-  } else {
-   u0 = (u0 & 7) << 18 | u1 << 12 | u2 << 6 | heapOrArray[idx++] & 63;
-  }
-  if (u0 < 65536) {
-   str += String.fromCharCode(u0);
-  } else {
-   var ch = u0 - 65536;
-   str += String.fromCharCode(55296 | ch >> 10, 56320 | ch & 1023);
-  }
- }
- return str;
+ return FS_stdin_getChar_buffer.shift();
 };
 
 var TTY = {
@@ -1143,39 +1163,7 @@ var TTY = {
  },
  default_tty_ops: {
   get_char: function(tty) {
-   if (!tty.input.length) {
-    var result = null;
-    if (ENVIRONMENT_IS_NODE) {
-     var BUFSIZE = 256;
-     var buf = Buffer.alloc(BUFSIZE);
-     var bytesRead = 0;
-     try {
-      bytesRead = fs.readSync(process.stdin.fd, buf, 0, BUFSIZE, -1);
-     } catch (e) {
-      if (e.toString().includes("EOF")) bytesRead = 0; else throw e;
-     }
-     if (bytesRead > 0) {
-      result = buf.slice(0, bytesRead).toString("utf-8");
-     } else {
-      result = null;
-     }
-    } else if (typeof window != "undefined" && typeof window.prompt == "function") {
-     result = window.prompt("Input: ");
-     if (result !== null) {
-      result += "\n";
-     }
-    } else if (typeof readline == "function") {
-     result = readline();
-     if (result !== null) {
-      result += "\n";
-     }
-    }
-    if (!result) {
-     return null;
-    }
-    tty.input = intArrayFromString(result, true);
-   }
-   return tty.input.shift();
+   return FS_stdin_getChar();
   },
   put_char: function(tty, val) {
    if (val === null || val === 10) {
@@ -1231,10 +1219,10 @@ var mmapAlloc = size => {
 
 var MEMFS = {
  ops_table: null,
- mount: function(mount) {
+ mount(mount) {
   return MEMFS.createNode(null, "/", 16384 | 511, 0);
  },
- createNode: function(parent, name, mode, dev) {
+ createNode(parent, name, mode, dev) {
   if (FS.isBlkdev(mode) || FS.isFIFO(mode)) {
    throw new FS.ErrnoError(63);
   }
@@ -1311,12 +1299,12 @@ var MEMFS = {
   }
   return node;
  },
- getFileDataAsTypedArray: function(node) {
+ getFileDataAsTypedArray(node) {
   if (!node.contents) return new Uint8Array(0);
   if (node.contents.subarray) return node.contents.subarray(0, node.usedBytes);
   return new Uint8Array(node.contents);
  },
- expandFileStorage: function(node, newCapacity) {
+ expandFileStorage(node, newCapacity) {
   var prevCapacity = node.contents ? node.contents.length : 0;
   if (prevCapacity >= newCapacity) return;
   var CAPACITY_DOUBLING_MAX = 1024 * 1024;
@@ -1326,7 +1314,7 @@ var MEMFS = {
   node.contents = new Uint8Array(newCapacity);
   if (node.usedBytes > 0) node.contents.set(oldContents.subarray(0, node.usedBytes), 0);
  },
- resizeFileStorage: function(node, newSize) {
+ resizeFileStorage(node, newSize) {
   if (node.usedBytes == newSize) return;
   if (newSize == 0) {
    node.contents = null;
@@ -1341,7 +1329,7 @@ var MEMFS = {
   }
  },
  node_ops: {
-  getattr: function(node) {
+  getattr(node) {
    var attr = {};
    attr.dev = FS.isChrdev(node.mode) ? node.id : 1;
    attr.ino = node.id;
@@ -1366,7 +1354,7 @@ var MEMFS = {
    attr.blocks = Math.ceil(attr.size / attr.blksize);
    return attr;
   },
-  setattr: function(node, attr) {
+  setattr(node, attr) {
    if (attr.mode !== undefined) {
     node.mode = attr.mode;
    }
@@ -1377,13 +1365,13 @@ var MEMFS = {
     MEMFS.resizeFileStorage(node, attr.size);
    }
   },
-  lookup: function(parent, name) {
+  lookup(parent, name) {
    throw FS.genericErrors[44];
   },
-  mknod: function(parent, name, mode, dev) {
+  mknod(parent, name, mode, dev) {
    return MEMFS.createNode(parent, name, mode, dev);
   },
-  rename: function(old_node, new_dir, new_name) {
+  rename(old_node, new_dir, new_name) {
    if (FS.isDir(old_node.mode)) {
     var new_node;
     try {
@@ -1402,11 +1390,11 @@ var MEMFS = {
    new_dir.timestamp = old_node.parent.timestamp;
    old_node.parent = new_dir;
   },
-  unlink: function(parent, name) {
+  unlink(parent, name) {
    delete parent.contents[name];
    parent.timestamp = Date.now();
   },
-  rmdir: function(parent, name) {
+  rmdir(parent, name) {
    var node = FS.lookupNode(parent, name);
    for (var i in node.contents) {
     throw new FS.ErrnoError(55);
@@ -1414,7 +1402,7 @@ var MEMFS = {
    delete parent.contents[name];
    parent.timestamp = Date.now();
   },
-  readdir: function(node) {
+  readdir(node) {
    var entries = [ ".", ".." ];
    for (var key in node.contents) {
     if (!node.contents.hasOwnProperty(key)) {
@@ -1424,12 +1412,12 @@ var MEMFS = {
    }
    return entries;
   },
-  symlink: function(parent, newname, oldpath) {
+  symlink(parent, newname, oldpath) {
    var node = MEMFS.createNode(parent, newname, 511 | 40960, 0);
    node.link = oldpath;
    return node;
   },
-  readlink: function(node) {
+  readlink(node) {
    if (!FS.isLink(node.mode)) {
     throw new FS.ErrnoError(28);
    }
@@ -1437,7 +1425,7 @@ var MEMFS = {
   }
  },
  stream_ops: {
-  read: function(stream, buffer, offset, length, position) {
+  read(stream, buffer, offset, length, position) {
    var contents = stream.node.contents;
    if (position >= stream.node.usedBytes) return 0;
    var size = Math.min(stream.node.usedBytes - position, length);
@@ -1448,7 +1436,7 @@ var MEMFS = {
    }
    return size;
   },
-  write: function(stream, buffer, offset, length, position, canOwn) {
+  write(stream, buffer, offset, length, position, canOwn) {
    if (!length) return 0;
    var node = stream.node;
    node.timestamp = Date.now();
@@ -1477,7 +1465,7 @@ var MEMFS = {
    node.usedBytes = Math.max(node.usedBytes, position + length);
    return length;
   },
-  llseek: function(stream, offset, whence) {
+  llseek(stream, offset, whence) {
    var position = offset;
    if (whence === 1) {
     position += stream.position;
@@ -1491,11 +1479,11 @@ var MEMFS = {
    }
    return position;
   },
-  allocate: function(stream, offset, length) {
+  allocate(stream, offset, length) {
    MEMFS.expandFileStorage(stream.node, offset + length);
    stream.node.usedBytes = Math.max(stream.node.usedBytes, offset + length);
   },
-  mmap: function(stream, length, position, prot, flags) {
+  mmap(stream, length, position, prot, flags) {
    if (!FS.isFile(stream.node.mode)) {
     throw new FS.ErrnoError(43);
    }
@@ -1525,7 +1513,7 @@ var MEMFS = {
     allocated: allocated
    };
   },
-  msync: function(stream, buffer, offset, length, mmapFlags) {
+  msync(stream, buffer, offset, length, mmapFlags) {
    MEMFS.stream_ops.write(stream, buffer, 0, length, offset, false);
    return 0;
   }
@@ -1534,17 +1522,17 @@ var MEMFS = {
 
 var asyncLoad = (url, onload, onerror, noRunDep) => {
  var dep = !noRunDep ? getUniqueRunDependency(`al ${url}`) : "";
- readAsync(url, arrayBuffer => {
+ readAsync(url, (arrayBuffer => {
   assert(arrayBuffer, `Loading data file "${url}" failed (no arrayBuffer).`);
   onload(new Uint8Array(arrayBuffer));
   if (dep) removeRunDependency(dep);
- }, event => {
+ }), (event => {
   if (onerror) {
    onerror();
   } else {
    throw `Loading data file "${url}" failed.`;
   }
- });
+ }));
  if (dep) addRunDependency(dep);
 };
 
@@ -1553,13 +1541,13 @@ var preloadPlugins = Module["preloadPlugins"] || [];
 function FS_handledByPreloadPlugin(byteArray, fullname, finish, onerror) {
  if (typeof Browser != "undefined") Browser.init();
  var handled = false;
- preloadPlugins.forEach(function(plugin) {
+ preloadPlugins.forEach((function(plugin) {
   if (handled) return;
   if (plugin["canHandle"](fullname)) {
    plugin["handle"](byteArray, fullname, finish, onerror);
    handled = true;
   }
- });
+ }));
  return handled;
 }
 
@@ -1575,17 +1563,17 @@ function FS_createPreloadedFile(parent, name, url, canRead, canWrite, onload, on
    if (onload) onload();
    removeRunDependency(dep);
   }
-  if (FS_handledByPreloadPlugin(byteArray, fullname, finish, () => {
+  if (FS_handledByPreloadPlugin(byteArray, fullname, finish, (() => {
    if (onerror) onerror();
    removeRunDependency(dep);
-  })) {
+  }))) {
    return;
   }
   finish(byteArray);
  }
  addRunDependency(dep);
  if (typeof url == "string") {
-  asyncLoad(url, byteArray => processData(byteArray), onerror);
+  asyncLoad(url, (byteArray => processData(byteArray)), onerror);
  } else {
   processData(url);
  }
@@ -1629,18 +1617,18 @@ var IDBFS = {
   return MEMFS.mount.apply(null, arguments);
  },
  syncfs: (mount, populate, callback) => {
-  IDBFS.getLocalSet(mount, (err, local) => {
+  IDBFS.getLocalSet(mount, ((err, local) => {
    if (err) return callback(err);
-   IDBFS.getRemoteSet(mount, (err, remote) => {
+   IDBFS.getRemoteSet(mount, ((err, remote) => {
     if (err) return callback(err);
     var src = populate ? remote : local;
     var dst = populate ? local : remote;
     IDBFS.reconcile(src, dst, callback);
-   });
-  });
+   }));
+  }));
  },
  quit: () => {
-  Object.values(IDBFS.dbs).forEach(value => value.close());
+  Object.values(IDBFS.dbs).forEach((value => value.close()));
   IDBFS.dbs = {};
  },
  getDB: (name, callback) => {
@@ -1678,7 +1666,7 @@ var IDBFS = {
    callback(null, db);
   };
   req.onerror = e => {
-   callback(this.error);
+   callback(e.target.error);
    e.preventDefault();
   };
  },
@@ -1688,9 +1676,7 @@ var IDBFS = {
    return p !== "." && p !== "..";
   }
   function toAbsolute(root) {
-   return p => {
-    return PATH.join2(root, p);
-   };
+   return p => PATH.join2(root, p);
   }
   var check = FS.readdir(mount.mountpoint).filter(isRealDir).map(toAbsolute(mount.mountpoint));
   while (check.length) {
@@ -1715,12 +1701,12 @@ var IDBFS = {
  },
  getRemoteSet: (mount, callback) => {
   var entries = {};
-  IDBFS.getDB(mount.mountpoint, (err, db) => {
+  IDBFS.getDB(mount.mountpoint, ((err, db) => {
    if (err) return callback(err);
    try {
     var transaction = db.transaction([ IDBFS.DB_STORE_NAME ], "readonly");
     transaction.onerror = e => {
-     callback(this.error);
+     callback(e.target.error);
      e.preventDefault();
     };
     var store = transaction.objectStore(IDBFS.DB_STORE_NAME);
@@ -1742,7 +1728,7 @@ var IDBFS = {
    } catch (e) {
     return callback(e);
    }
-  });
+  }));
  },
  loadLocalEntry: (path, callback) => {
   var stat, node;
@@ -1806,7 +1792,7 @@ var IDBFS = {
    callback(null, event.target.result);
   };
   req.onerror = e => {
-   callback(this.error);
+   callback(e.target.error);
    e.preventDefault();
   };
  },
@@ -1821,7 +1807,7 @@ var IDBFS = {
    callback(null);
   };
   req.onerror = e => {
-   callback(this.error);
+   callback(e.target.error);
    e.preventDefault();
   };
  },
@@ -1831,28 +1817,28 @@ var IDBFS = {
    callback(null);
   };
   req.onerror = e => {
-   callback(this.error);
+   callback(e.target.error);
    e.preventDefault();
   };
  },
  reconcile: (src, dst, callback) => {
   var total = 0;
   var create = [];
-  Object.keys(src.entries).forEach(function(key) {
+  Object.keys(src.entries).forEach((function(key) {
    var e = src.entries[key];
    var e2 = dst.entries[key];
    if (!e2 || e["timestamp"].getTime() != e2["timestamp"].getTime()) {
     create.push(key);
     total++;
    }
-  });
+  }));
   var remove = [];
-  Object.keys(dst.entries).forEach(function(key) {
+  Object.keys(dst.entries).forEach((function(key) {
    if (!src.entries[key]) {
     remove.push(key);
     total++;
    }
-  });
+  }));
   if (!total) {
    return callback(null);
   }
@@ -1875,26 +1861,26 @@ var IDBFS = {
     callback(null);
    }
   };
-  create.sort().forEach(path => {
+  create.sort().forEach((path => {
    if (dst.type === "local") {
-    IDBFS.loadRemoteEntry(store, path, (err, entry) => {
+    IDBFS.loadRemoteEntry(store, path, ((err, entry) => {
      if (err) return done(err);
      IDBFS.storeLocalEntry(path, entry, done);
-    });
+    }));
    } else {
-    IDBFS.loadLocalEntry(path, (err, entry) => {
+    IDBFS.loadLocalEntry(path, ((err, entry) => {
      if (err) return done(err);
      IDBFS.storeRemoteEntry(store, path, entry, done);
-    });
+    }));
    }
-  });
-  remove.sort().reverse().forEach(path => {
+  }));
+  remove.sort().reverse().forEach((path => {
    if (dst.type === "local") {
     IDBFS.removeLocalEntry(path, done);
    } else {
     IDBFS.removeRemoteEntry(store, path, done);
    }
-  });
+  }));
  }
 };
 
@@ -1926,7 +1912,7 @@ var FS = {
   if (opts.recurse_count > 8) {
    throw new FS.ErrnoError(32);
   }
-  var parts = path.split("/").filter(p => !!p);
+  var parts = path.split("/").filter((p => !!p));
   var current = FS.root;
   var current_path = "/";
   for (var i = 0; i < parts.length; i++) {
@@ -2022,33 +2008,15 @@ var FS = {
  destroyNode: node => {
   FS.hashRemoveNode(node);
  },
- isRoot: node => {
-  return node === node.parent;
- },
- isMountpoint: node => {
-  return !!node.mounted;
- },
- isFile: mode => {
-  return (mode & 61440) === 32768;
- },
- isDir: mode => {
-  return (mode & 61440) === 16384;
- },
- isLink: mode => {
-  return (mode & 61440) === 40960;
- },
- isChrdev: mode => {
-  return (mode & 61440) === 8192;
- },
- isBlkdev: mode => {
-  return (mode & 61440) === 24576;
- },
- isFIFO: mode => {
-  return (mode & 61440) === 4096;
- },
- isSocket: mode => {
-  return (mode & 49152) === 49152;
- },
+ isRoot: node => node === node.parent,
+ isMountpoint: node => !!node.mounted,
+ isFile: mode => (mode & 61440) === 32768,
+ isDir: mode => (mode & 61440) === 16384,
+ isLink: mode => (mode & 61440) === 40960,
+ isChrdev: mode => (mode & 61440) === 8192,
+ isBlkdev: mode => (mode & 61440) === 24576,
+ isFIFO: mode => (mode & 61440) === 4096,
+ isSocket: mode => (mode & 49152) === 49152,
  flagsToPermissionString: flag => {
   var perms = [ "r", "w", "rw" ][flag & 3];
   if (flag & 512) {
@@ -2145,47 +2113,47 @@ var FS = {
    FS.FSStream.prototype = {};
    Object.defineProperties(FS.FSStream.prototype, {
     object: {
-     get: function() {
+     get() {
       return this.node;
      },
-     set: function(val) {
+     set(val) {
       this.node = val;
      }
     },
     isRead: {
-     get: function() {
+     get() {
       return (this.flags & 2097155) !== 1;
      }
     },
     isWrite: {
-     get: function() {
+     get() {
       return (this.flags & 2097155) !== 0;
      }
     },
     isAppend: {
-     get: function() {
+     get() {
       return this.flags & 1024;
      }
     },
     flags: {
-     get: function() {
+     get() {
       return this.shared.flags;
      },
-     set: function(val) {
+     set(val) {
       this.shared.flags = val;
      }
     },
     position: {
-     get: function() {
+     get() {
       return this.shared.position;
      },
-     set: function(val) {
+     set(val) {
       this.shared.position = val;
      }
     }
    });
   }
-  stream = Object.assign(new FS.FSStream(), stream);
+  stream = Object.assign(new FS.FSStream, stream);
   if (fd == -1) {
    fd = FS.nextfd();
   }
@@ -2254,12 +2222,12 @@ var FS = {
     doCallback(null);
    }
   }
-  mounts.forEach(mount => {
+  mounts.forEach((mount => {
    if (!mount.type.syncfs) {
     return done(null);
    }
    mount.type.syncfs(mount, populate, done);
-  });
+  }));
  },
  mount: (type, opts, mountpoint) => {
   var root = mountpoint === "/";
@@ -2309,7 +2277,7 @@ var FS = {
   var node = lookup.node;
   var mount = node.mounted;
   var mounts = FS.getMounts(mount);
-  Object.keys(FS.nameTable).forEach(hash => {
+  Object.keys(FS.nameTable).forEach((hash => {
    var current = FS.nameTable[hash];
    while (current) {
     var next = current.name_next;
@@ -2318,14 +2286,12 @@ var FS = {
     }
     current = next;
    }
-  });
+  }));
   node.mounted = null;
   var idx = node.mount.mounts.indexOf(mount);
   node.mount.mounts.splice(idx, 1);
  },
- lookup: (parent, name) => {
-  return parent.node_ops.lookup(parent, name);
- },
+ lookup: (parent, name) => parent.node_ops.lookup(parent, name),
  mknod: (path, mode, dev) => {
   var lookup = FS.lookupPath(path, {
    parent: true
@@ -2539,9 +2505,7 @@ var FS = {
   }
   return node.node_ops.getattr(node);
  },
- lstat: path => {
-  return FS.stat(path, true);
- },
+ lstat: path => FS.stat(path, true),
  chmod: (path, mode, dontFollow) => {
   var node;
   if (typeof path == "string") {
@@ -2728,9 +2692,7 @@ var FS = {
   }
   stream.fd = null;
  },
- isClosed: stream => {
-  return stream.fd === null;
- },
+ isClosed: stream => stream.fd === null,
  llseek: (stream, offset, whence) => {
   if (FS.isClosed(stream)) {
    throw new FS.ErrnoError(8);
@@ -2981,12 +2943,12 @@ var FS = {
    this.setErrno(errno);
    this.message = "FS error";
   };
-  FS.ErrnoError.prototype = new Error();
+  FS.ErrnoError.prototype = new Error;
   FS.ErrnoError.prototype.constructor = FS.ErrnoError;
-  [ 44 ].forEach(code => {
+  [ 44 ].forEach((code => {
    FS.genericErrors[code] = new FS.ErrnoError(code);
    FS.genericErrors[code].stack = "<generic error, no stack>";
-  });
+  }));
  },
  staticInit: () => {
   FS.ensureErrnoError();
@@ -3188,7 +3150,7 @@ var FS = {
    this.getter = getter;
   };
   LazyUint8Array.prototype.cacheLength = function LazyUint8Array_cacheLength() {
-   var xhr = new XMLHttpRequest();
+   var xhr = new XMLHttpRequest;
    xhr.open("HEAD", url, false);
    xhr.send(null);
    if (!(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304)) throw new Error("Couldn't load " + url + ". Status: " + xhr.status);
@@ -3201,7 +3163,7 @@ var FS = {
    var doXHR = (from, to) => {
     if (from > to) throw new Error("invalid range (" + from + ", " + to + ") or no bytes requested!");
     if (to > datalength - 1) throw new Error("only " + datalength + " bytes available! programmer error!");
-    var xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest;
     xhr.open("GET", url, false);
     if (datalength !== chunkSize) xhr.setRequestHeader("Range", "bytes=" + from + "-" + to);
     xhr.responseType = "arraybuffer";
@@ -3216,7 +3178,7 @@ var FS = {
     return intArrayFromString(xhr.responseText || "", true);
    };
    var lazyArray = this;
-   lazyArray.setDataGetter(chunkNum => {
+   lazyArray.setDataGetter((chunkNum => {
     var start = chunkNum * chunkSize;
     var end = (chunkNum + 1) * chunkSize - 1;
     end = Math.min(end, datalength - 1);
@@ -3225,7 +3187,7 @@ var FS = {
     }
     if (typeof lazyArray.chunks[chunkNum] == "undefined") throw new Error("doXHR failed!");
     return lazyArray.chunks[chunkNum];
-   });
+   }));
    if (usesGzip || !datalength) {
     chunkSize = datalength = 1;
     datalength = this.getter(0).length;
@@ -3238,7 +3200,7 @@ var FS = {
   };
   if (typeof XMLHttpRequest != "undefined") {
    if (!ENVIRONMENT_IS_WORKER) throw "Cannot do synchronous binary XHRs outside webworkers in modern browsers. Use --embed-file or --preload-file in emcc";
-   var lazyArray = new LazyUint8Array();
+   var lazyArray = new LazyUint8Array;
    Object.defineProperties(lazyArray, {
     length: {
      get: function() {
@@ -3283,13 +3245,13 @@ var FS = {
   });
   var stream_ops = {};
   var keys = Object.keys(node.stream_ops);
-  keys.forEach(key => {
+  keys.forEach((key => {
    var fn = node.stream_ops[key];
    stream_ops[key] = function forceLoadLazyFile() {
     FS.forceLoadFile(node);
     return fn.apply(null, arguments);
    };
-  });
+  }));
   function writeChunks(stream, buffer, offset, length, position) {
    var contents = stream.node.contents;
    if (position >= contents.length) return 0;
@@ -3326,9 +3288,7 @@ var FS = {
  }
 };
 
-var UTF8ToString = (ptr, maxBytesToRead) => {
- return ptr ? UTF8ArrayToString(HEAPU8, ptr, maxBytesToRead) : "";
-};
+var UTF8ToString = (ptr, maxBytesToRead) => ptr ? UTF8ArrayToString(HEAPU8, ptr, maxBytesToRead) : "";
 
 var SYSCALLS = {
  DEFAULT_POLLMASK: 5,
@@ -3400,12 +3360,12 @@ var SYSCALLS = {
   FS.msync(stream, buffer, offset, len, flags);
  },
  varargs: undefined,
- get: function() {
+ get() {
   SYSCALLS.varargs += 4;
   var ret = HEAP32[SYSCALLS.varargs - 4 >> 2];
   return ret;
  },
- getStr: function(ptr) {
+ getStr(ptr) {
   var ret = UTF8ToString(ptr);
   return ret;
  },
@@ -3486,9 +3446,7 @@ function ___syscall_fstat64(fd, buf) {
  }
 }
 
-var stringToUTF8 = (str, outPtr, maxBytesToWrite) => {
- return stringToUTF8Array(str, HEAPU8, outPtr, maxBytesToWrite);
-};
+var stringToUTF8 = (str, outPtr, maxBytesToWrite) => stringToUTF8Array(str, HEAPU8, outPtr, maxBytesToWrite);
 
 function ___syscall_getcwd(buf, size) {
  try {
@@ -3774,52 +3732,6 @@ var registeredTypes = {};
 
 var typeDependencies = {};
 
-var char_0 = 48;
-
-var char_9 = 57;
-
-function makeLegalFunctionName(name) {
- if (undefined === name) {
-  return "_unknown";
- }
- name = name.replace(/[^a-zA-Z0-9_]/g, "$");
- var f = name.charCodeAt(0);
- if (f >= char_0 && f <= char_9) {
-  return `_${name}`;
- }
- return name;
-}
-
-function createNamedFunction(name, body) {
- name = makeLegalFunctionName(name);
- return {
-  [name]: function() {
-   return body.apply(this, arguments);
-  }
- }[name];
-}
-
-function extendError(baseErrorType, errorName) {
- var errorClass = createNamedFunction(errorName, function(message) {
-  this.name = errorName;
-  this.message = message;
-  var stack = new Error(message).stack;
-  if (stack !== undefined) {
-   this.stack = this.toString() + "\n" + stack.replace(/^Error(:[^\n]*)?\n/, "");
-  }
- });
- errorClass.prototype = Object.create(baseErrorType.prototype);
- errorClass.prototype.constructor = errorClass;
- errorClass.prototype.toString = function() {
-  if (this.message === undefined) {
-   return this.name;
-  } else {
-   return `${this.name}: ${this.message}`;
-  }
- };
- return errorClass;
-}
-
 var BindingError = undefined;
 
 function throwBindingError(message) {
@@ -3833,9 +3745,9 @@ function throwInternalError(message) {
 }
 
 function whenDependentTypesAreResolved(myTypes, dependentTypes, getTypeConverters) {
- myTypes.forEach(function(type) {
+ myTypes.forEach((function(type) {
   typeDependencies[type] = dependentTypes;
- });
+ }));
  function onComplete(typeConverters) {
   var myTypeConverters = getTypeConverters(typeConverters);
   if (myTypeConverters.length !== myTypes.length) {
@@ -3848,7 +3760,7 @@ function whenDependentTypesAreResolved(myTypes, dependentTypes, getTypeConverter
  var typeConverters = new Array(dependentTypes.length);
  var unregisteredTypes = [];
  var registered = 0;
- dependentTypes.forEach((dt, i) => {
+ dependentTypes.forEach(((dt, i) => {
   if (registeredTypes.hasOwnProperty(dt)) {
    typeConverters[i] = registeredTypes[dt];
   } else {
@@ -3856,24 +3768,21 @@ function whenDependentTypesAreResolved(myTypes, dependentTypes, getTypeConverter
    if (!awaitingDependencies.hasOwnProperty(dt)) {
     awaitingDependencies[dt] = [];
    }
-   awaitingDependencies[dt].push(() => {
+   awaitingDependencies[dt].push((() => {
     typeConverters[i] = registeredTypes[dt];
     ++registered;
     if (registered === unregisteredTypes.length) {
      onComplete(typeConverters);
     }
-   });
+   }));
   }
- });
+ }));
  if (0 === unregisteredTypes.length) {
   onComplete(typeConverters);
  }
 }
 
-function registerType(rawType, registeredInstance, options = {}) {
- if (!("argPackAdvance" in registeredInstance)) {
-  throw new TypeError("registerType registeredInstance requires argPackAdvance");
- }
+function sharedRegisterType(rawType, registeredInstance, options = {}) {
  var name = registeredInstance.name;
  if (!rawType) {
   throwBindingError(`type "${name}" must have a positive integer typeid pointer`);
@@ -3890,8 +3799,15 @@ function registerType(rawType, registeredInstance, options = {}) {
  if (awaitingDependencies.hasOwnProperty(rawType)) {
   var callbacks = awaitingDependencies[rawType];
   delete awaitingDependencies[rawType];
-  callbacks.forEach(cb => cb());
+  callbacks.forEach((cb => cb()));
  }
+}
+
+function registerType(rawType, registeredInstance, options = {}) {
+ if (!("argPackAdvance" in registeredInstance)) {
+  throw new TypeError("registerType registeredInstance requires argPackAdvance");
+ }
+ return sharedRegisterType(rawType, registeredInstance, options);
 }
 
 function __embind_register_bool(rawType, name, size, trueValue, falseValue) {
@@ -3923,27 +3839,32 @@ function __embind_register_bool(rawType, name, size, trueValue, falseValue) {
  });
 }
 
+function handleAllocatorInit() {
+ Object.assign(HandleAllocator.prototype, {
+  get(id) {
+   return this.allocated[id];
+  },
+  has(id) {
+   return this.allocated[id] !== undefined;
+  },
+  allocate(handle) {
+   var id = this.freelist.pop() || this.allocated.length;
+   this.allocated[id] = handle;
+   return id;
+  },
+  free(id) {
+   this.allocated[id] = undefined;
+   this.freelist.push(id);
+  }
+ });
+}
+
 function HandleAllocator() {
  this.allocated = [ undefined ];
  this.freelist = [];
- this.get = function(id) {
-  return this.allocated[id];
- };
- this.has = function(id) {
-  return this.allocated[id] !== undefined;
- };
- this.allocate = function(handle) {
-  var id = this.freelist.pop() || this.allocated.length;
-  this.allocated[id] = handle;
-  return id;
- };
- this.free = function(id) {
-  this.allocated[id] = undefined;
-  this.freelist.push(id);
- };
 }
 
-var emval_handles = new HandleAllocator();
+var emval_handles = new HandleAllocator;
 
 function __emval_decref(handle) {
  if (handle >= emval_handles.reserved && 0 === --emval_handles.get(handle).refcount) {
@@ -4063,6 +3984,22 @@ function __embind_register_float(rawType, name, size) {
  });
 }
 
+var char_0 = 48;
+
+var char_9 = 57;
+
+function makeLegalFunctionName(name) {
+ if (undefined === name) {
+  return "_unknown";
+ }
+ name = name.replace(/[^a-zA-Z0-9_]/g, "$");
+ var f = name.charCodeAt(0);
+ if (f >= char_0 && f <= char_9) {
+  return `_${name}`;
+ }
+ return name;
+}
+
 function runDestructors(destructors) {
  while (destructors.length) {
   var ptr = destructors.pop();
@@ -4071,13 +4008,22 @@ function runDestructors(destructors) {
  }
 }
 
+function createNamedFunction(name, body) {
+ name = makeLegalFunctionName(name);
+ return {
+  [name]: function() {
+   return body.apply(this, arguments);
+  }
+ }[name];
+}
+
 function newFunc(constructor, argumentList) {
  if (!(constructor instanceof Function)) {
   throw new TypeError(`new_ called with constructor type ${typeof constructor} which is not a function`);
  }
- var dummy = createNamedFunction(constructor.name || "unknownFunctionName", function() {});
+ var dummy = createNamedFunction(constructor.name || "unknownFunctionName", (function() {}));
  dummy.prototype = constructor.prototype;
- var obj = new dummy();
+ var obj = new dummy;
  var r = constructor.apply(obj, argumentList);
  return r instanceof Object ? r : obj;
 }
@@ -4241,6 +4187,27 @@ function embind__requireFunction(signature, rawFunction) {
  return fp;
 }
 
+function extendError(baseErrorType, errorName) {
+ var errorClass = createNamedFunction(errorName, (function(message) {
+  this.name = errorName;
+  this.message = message;
+  var stack = new Error(message).stack;
+  if (stack !== undefined) {
+   this.stack = this.toString() + "\n" + stack.replace(/^Error(:[^\n]*)?\n/, "");
+  }
+ }));
+ errorClass.prototype = Object.create(baseErrorType.prototype);
+ errorClass.prototype.constructor = errorClass;
+ errorClass.prototype.toString = function() {
+  if (this.message === undefined) {
+   return this.name;
+  } else {
+   return `${this.name}: ${this.message}`;
+  }
+ };
+ return errorClass;
+}
+
 var UnboundTypeError = undefined;
 
 function getTypeName(type) {
@@ -4275,14 +4242,14 @@ function __embind_register_function(name, argCount, rawArgTypesAddr, signature, 
  var argTypes = heap32VectorToArray(argCount, rawArgTypesAddr);
  name = readLatin1String(name);
  rawInvoker = embind__requireFunction(signature, rawInvoker);
- exposePublicSymbol(name, function() {
+ exposePublicSymbol(name, (function() {
   throwUnboundTypeError(`Cannot call ${name} due to unbound types`, argTypes);
- }, argCount - 1);
- whenDependentTypesAreResolved([], argTypes, function(argTypes) {
+ }), argCount - 1);
+ whenDependentTypesAreResolved([], argTypes, (function(argTypes) {
   var invokerArgsArray = [ argTypes[0], null ].concat(argTypes.slice(1));
   replacePublicSymbol(name, craftInvokerFunction(name, invokerArgsArray, null, rawInvoker, fn, isAsync), argCount - 1);
   return [];
- });
+ }));
 }
 
 function integerReadValueFromPointer(name, shift, signed) {
@@ -4487,9 +4454,7 @@ var stringToUTF16 = (str, outPtr, maxBytesToWrite) => {
  return outPtr - startPtr;
 };
 
-var lengthBytesUTF16 = str => {
- return str.length * 2;
-};
+var lengthBytesUTF16 = str => str.length * 2;
 
 var UTF32ToString = (ptr, maxBytesToRead) => {
  var i = 0;
@@ -4623,12 +4588,13 @@ var __emscripten_throw_longjmp = () => {
  throw Infinity;
 };
 
-function readI53FromI64(ptr) {
- return HEAPU32[ptr >> 2] + HEAP32[ptr + 4 >> 2] * 4294967296;
+function convertI32PairToI53Checked(lo, hi) {
+ return hi + 2097152 >>> 0 < 4194305 - !!lo ? (lo >>> 0) + hi * 4294967296 : NaN;
 }
 
-var __gmtime_js = (time, tmPtr) => {
- var date = new Date(readI53FromI64(time) * 1e3);
+function __gmtime_js(time_low, time_high, tmPtr) {
+ var time = convertI32PairToI53Checked(time_low, time_high);
+ var date = new Date(time * 1e3);
  HEAP32[tmPtr >> 2] = date.getUTCSeconds();
  HEAP32[tmPtr + 4 >> 2] = date.getUTCMinutes();
  HEAP32[tmPtr + 8 >> 2] = date.getUTCHours();
@@ -4639,11 +4605,9 @@ var __gmtime_js = (time, tmPtr) => {
  var start = Date.UTC(date.getUTCFullYear(), 0, 1, 0, 0, 0, 0);
  var yday = (date.getTime() - start) / (1e3 * 60 * 60 * 24) | 0;
  HEAP32[tmPtr + 28 >> 2] = yday;
-};
+}
 
-var isLeapYear = year => {
- return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
-};
+var isLeapYear = year => year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
 
 var MONTH_DAYS_LEAP_CUMULATIVE = [ 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335 ];
 
@@ -4656,8 +4620,9 @@ var ydayFromDate = date => {
  return yday;
 };
 
-var __localtime_js = (time, tmPtr) => {
- var date = new Date(readI53FromI64(time) * 1e3);
+function __localtime_js(time_low, time_high, tmPtr) {
+ var time = convertI32PairToI53Checked(time_low, time_high);
+ var date = new Date(time * 1e3);
  HEAP32[tmPtr >> 2] = date.getSeconds();
  HEAP32[tmPtr + 4 >> 2] = date.getMinutes();
  HEAP32[tmPtr + 8 >> 2] = date.getHours();
@@ -4673,7 +4638,7 @@ var __localtime_js = (time, tmPtr) => {
  var winterOffset = start.getTimezoneOffset();
  var dst = (summerOffset != winterOffset && date.getTimezoneOffset() == Math.min(winterOffset, summerOffset)) | 0;
  HEAP32[tmPtr + 32 >> 2] = dst;
-};
+}
 
 var stringToNewUTF8 = str => {
  var size = lengthBytesUTF8(str) + 1;
@@ -4683,7 +4648,7 @@ var stringToNewUTF8 = str => {
 };
 
 var __tzset_js = (timezone, daylight, tzname) => {
- var currentYear = new Date().getFullYear();
+ var currentYear = (new Date).getFullYear();
  var winter = new Date(currentYear, 0, 1);
  var summer = new Date(currentYear, 6, 1);
  var winterOffset = winter.getTimezoneOffset();
@@ -4872,11 +4837,9 @@ var callUserCallback = func => {
  }
 };
 
-var safeSetTimeout = (func, timeout) => {
- return setTimeout(() => {
-  callUserCallback(func);
- }, timeout);
-};
+var safeSetTimeout = (func, timeout) => setTimeout((() => {
+ callUserCallback(func);
+}), timeout);
 
 var warnOnce = text => {
  if (!warnOnce.shown) warnOnce.shown = {};
@@ -4962,7 +4925,7 @@ var Browser = {
     });
    }
    var url = URL.createObjectURL(b);
-   var img = new Image();
+   var img = new Image;
    img.onload = () => {
     assert(img.complete, "Image " + name + " could not be decoded");
     var canvas = document.createElement("canvas");
@@ -5001,8 +4964,8 @@ var Browser = {
     type: Browser.getMimetype(name)
    });
    var url = URL.createObjectURL(b);
-   var audio = new Audio();
-   audio.addEventListener("canplaythrough", () => finish(audio), false);
+   var audio = new Audio;
+   audio.addEventListener("canplaythrough", (() => finish(audio)), false);
    audio.onerror = function audio_onerror(event) {
     if (done) return;
     err("warning: browser could not fully decode audio " + name + ", trying slower base64 approach");
@@ -5034,9 +4997,9 @@ var Browser = {
     finish(audio);
    };
    audio.src = url;
-   safeSetTimeout(() => {
+   safeSetTimeout((() => {
     finish(audio);
-   }, 1e4);
+   }), 1e4);
   };
   preloadPlugins.push(audioPlugin);
   function pointerLockChange() {
@@ -5052,12 +5015,12 @@ var Browser = {
    document.addEventListener("webkitpointerlockchange", pointerLockChange, false);
    document.addEventListener("mspointerlockchange", pointerLockChange, false);
    if (Module["elementPointerLock"]) {
-    canvas.addEventListener("click", ev => {
+    canvas.addEventListener("click", (ev => {
      if (!Browser.pointerLock && Module["canvas"].requestPointerLock) {
       Module["canvas"].requestPointerLock();
       ev.preventDefault();
      }
-    }, false);
+    }), false);
    }
   }
  },
@@ -5091,7 +5054,7 @@ var Browser = {
    Module.ctx = ctx;
    if (useWebGL) GL.makeContextCurrent(contextHandle);
    Module.useWebGL = useWebGL;
-   Browser.moduleContextCreatedCallbacks.forEach(callback => callback());
+   Browser.moduleContextCreatedCallbacks.forEach((callback => callback()));
    Browser.init();
   }
   return ctx;
@@ -5176,9 +5139,9 @@ var Browser = {
   return safeSetTimeout(func, timeout);
  },
  safeRequestAnimationFrame: function(func) {
-  return Browser.requestAnimationFrame(() => {
+  return Browser.requestAnimationFrame((() => {
    callUserCallback(func);
-  });
+  }));
  },
  getMimetype: function(name) {
   return {
@@ -5303,7 +5266,7 @@ var Browser = {
  resizeListeners: [],
  updateResizeListeners: function() {
   var canvas = Module["canvas"];
-  Browser.resizeListeners.forEach(listener => listener(canvas.width, canvas.height));
+  Browser.resizeListeners.forEach((listener => listener(canvas.width, canvas.height)));
  },
  setCanvasSize: function(width, height, noUpdates) {
   var canvas = Module["canvas"];
@@ -5700,11 +5663,11 @@ var GL = {
   }
   webgl_enable_WEBGL_multi_draw(GLctx);
   var exts = GLctx.getSupportedExtensions() || [];
-  exts.forEach(function(ext) {
+  exts.forEach((function(ext) {
    if (!ext.includes("lose_context") && !ext.includes("debug")) {
     GLctx.getExtension(ext);
    }
-  });
+  }));
  }
 };
 
@@ -5737,9 +5700,9 @@ function _eglCreateContext(display, config, hmm, contextAttribs) {
   EGL.setErrorCode(12288);
   GL.makeContextCurrent(EGL.context);
   Module.useWebGL = true;
-  Browser.moduleContextCreatedCallbacks.forEach(function(callback) {
+  Browser.moduleContextCreatedCallbacks.forEach((function(callback) {
    callback();
-  });
+  }));
   GL.makeContextCurrent(null);
   return 62004;
  } else {
@@ -6081,18 +6044,14 @@ var runEmAsmFunction = (code, sigPtr, argbuf) => {
  return ASM_CONSTS[code].apply(null, args);
 };
 
-var _emscripten_asm_const_int = (code, sigPtr, argbuf) => {
- return runEmAsmFunction(code, sigPtr, argbuf);
-};
+var _emscripten_asm_const_int = (code, sigPtr, argbuf) => runEmAsmFunction(code, sigPtr, argbuf);
 
 var runMainThreadEmAsm = (code, sigPtr, argbuf, sync) => {
  var args = readEmAsmArgs(sigPtr, argbuf);
  return ASM_CONSTS[code].apply(null, args);
 };
 
-var _emscripten_asm_const_int_sync_on_main_thread = (code, sigPtr, argbuf) => {
- return runMainThreadEmAsm(code, sigPtr, argbuf, 1);
-};
+var _emscripten_asm_const_int_sync_on_main_thread = (code, sigPtr, argbuf) => runMainThreadEmAsm(code, sigPtr, argbuf, 1);
 
 function _emscripten_date_now() {
  return Date.now();
@@ -6140,9 +6099,9 @@ var JSEvents = {
    precedence: precedence,
    argsList: argsList
   });
-  JSEvents.deferredCalls.sort(function(x, y) {
+  JSEvents.deferredCalls.sort((function(x, y) {
    return x.precedence < y.precedence;
-  });
+  }));
  },
  removeDeferredCalls: function(targetFunction) {
   for (var i = 0; i < JSEvents.deferredCalls.length; ++i) {
@@ -6153,6 +6112,9 @@ var JSEvents = {
   }
  },
  canPerformEventHandlerRequests: function() {
+  if (navigator.userActivation) {
+   return navigator.userActivation.isActive;
+  }
   return JSEvents.inEventHandler && JSEvents.currentEventHandler.allowsDeferredCalls;
  },
  runDeferredCalls: function() {
@@ -6255,14 +6217,14 @@ var stringToUTF8OnStack = str => {
  return ret;
 };
 
-var getCanvasElementSize = target => withStackSave(() => {
+var getCanvasElementSize = target => withStackSave((() => {
  var w = stackAlloc(8);
  var h = w + 4;
  var targetInt = stringToUTF8OnStack(target.id);
  var ret = _emscripten_get_canvas_element_size(targetInt, w, h);
  var size = [ HEAP32[w >> 2], HEAP32[h >> 2] ];
  return size;
-});
+}));
 
 function _emscripten_set_canvas_element_size(target, width, height) {
  var canvas = findCanvasEventTarget(target);
@@ -6277,10 +6239,10 @@ function setCanvasElementSize(target, width, height) {
   target.width = width;
   target.height = height;
  } else {
-  withStackSave(function() {
+  withStackSave((function() {
    var targetInt = stringToUTF8OnStack(target.id);
    _emscripten_set_canvas_element_size(targetInt, width, height);
-  });
+  }));
  }
 }
 
@@ -8061,9 +8023,9 @@ function _glGetString(name_) {
   switch (name_) {
   case 7939:
    var exts = GLctx.getSupportedExtensions() || [];
-   exts = exts.concat(exts.map(function(e) {
+   exts = exts.concat(exts.map((function(e) {
     return "GL_" + e;
-   }));
+   })));
    ret = stringToNewUTF8(exts.join(" "));
    break;
 
@@ -8123,12 +8085,12 @@ function _glGetStringi(name, index) {
  switch (name) {
  case 7939:
   var exts = GLctx.getSupportedExtensions() || [];
-  exts = exts.concat(exts.map(function(e) {
+  exts = exts.concat(exts.map((function(e) {
    return "GL_" + e;
-  }));
-  exts = exts.map(function(e) {
+  })));
+  exts = exts.map((function(e) {
    return stringToNewUTF8(e);
-  });
+  }));
   stringiCache = GL.stringiCache[name] = exts;
   if (index < 0 || index >= stringiCache.length) {
    GL.recordError(1281);
@@ -9379,7 +9341,7 @@ var abortOnCannotGrowMemory = requestedSize => {
 
 var _emscripten_resize_heap = requestedSize => {
  var oldSize = HEAPU8.length;
- requestedSize = requestedSize >>> 0;
+ requestedSize >>>= 0;
  abortOnCannotGrowMemory(requestedSize);
 };
 
@@ -9928,9 +9890,7 @@ function _emscripten_webgl_make_context_current(contextHandle) {
 
 var ENV = {};
 
-var getExecutableName = () => {
- return thisProgram || "./this.program";
-};
+var getExecutableName = () => thisProgram || "./this.program";
 
 var getEnvStrings = () => {
  if (!getEnvStrings.strings) {
@@ -9965,12 +9925,12 @@ var stringToAscii = (str, buffer) => {
 
 var _environ_get = (__environ, environ_buf) => {
  var bufSize = 0;
- getEnvStrings().forEach(function(string, i) {
+ getEnvStrings().forEach((function(string, i) {
   var ptr = environ_buf + bufSize;
   HEAPU32[__environ + i * 4 >> 2] = ptr;
   stringToAscii(string, ptr);
   bufSize += string.length + 1;
- });
+ }));
  return 0;
 };
 
@@ -9978,9 +9938,9 @@ var _environ_sizes_get = (penviron_count, penviron_buf_size) => {
  var strings = getEnvStrings();
  HEAPU32[penviron_count >> 2] = strings.length;
  var bufSize = 0;
- strings.forEach(function(string) {
+ strings.forEach((function(string) {
   bufSize += string.length + 1;
- });
+ }));
  HEAPU32[penviron_buf_size >> 2] = bufSize;
  return 0;
 };
@@ -10025,13 +9985,9 @@ function _fd_read(fd, iov, iovcnt, pnum) {
  }
 }
 
-function convertI32PairToI53Checked(lo, hi) {
- return hi + 2097152 >>> 0 < 4194305 - !!lo ? (lo >>> 0) + hi * 4294967296 : NaN;
-}
-
 function _fd_seek(fd, offset_low, offset_high, whence, newOffset) {
+ var offset = convertI32PairToI53Checked(offset_low, offset_high);
  try {
-  var offset = convertI32PairToI53Checked(offset_low, offset_high);
   if (isNaN(offset)) return 61;
   var stream = SYSCALLS.getStreamFromFD(fd);
   FS.llseek(stream, offset, whence);
@@ -10232,9 +10188,7 @@ var _strftime = (s, maxsize, format, tm) => {
   },
   "%d": date => leadingNulls(date.tm_mday, 2),
   "%e": date => leadingSomething(date.tm_mday, 2, " "),
-  "%g": date => {
-   return getWeekBasedYear(date).toString().substring(2);
-  },
+  "%g": date => getWeekBasedYear(date).toString().substring(2),
   "%G": date => getWeekBasedYear(date),
   "%H": date => leadingNulls(date.tm_hour, 2),
   "%I": date => {
@@ -10242,9 +10196,7 @@ var _strftime = (s, maxsize, format, tm) => {
    if (twelveHour == 0) twelveHour = 12; else if (twelveHour > 12) twelveHour -= 12;
    return leadingNulls(twelveHour, 2);
   },
-  "%j": date => {
-   return leadingNulls(date.tm_mday + arraySum(isLeapYear(date.tm_year + 1900) ? MONTH_DAYS_LEAP : MONTH_DAYS_REGULAR, date.tm_mon - 1), 3);
-  },
+  "%j": date => leadingNulls(date.tm_mday + arraySum(isLeapYear(date.tm_year + 1900) ? MONTH_DAYS_LEAP : MONTH_DAYS_REGULAR, date.tm_mon - 1), 3),
   "%m": date => leadingNulls(date.tm_mon + 1, 2),
   "%M": date => leadingNulls(date.tm_min, 2),
   "%n": () => "\n",
@@ -10283,9 +10235,7 @@ var _strftime = (s, maxsize, format, tm) => {
    var days = date.tm_yday + 7 - (date.tm_wday + 6) % 7;
    return leadingNulls(Math.floor(days / 7), 2);
   },
-  "%y": date => {
-   return (date.tm_year + 1900).toString().substring(2);
-  },
+  "%y": date => (date.tm_year + 1900).toString().substring(2),
   "%Y": date => date.tm_year + 1900,
   "%z": date => {
    var off = date.tm_gmtoff;
@@ -10312,9 +10262,7 @@ var _strftime = (s, maxsize, format, tm) => {
  return bytes.length - 1;
 };
 
-var _strftime_l = (s, maxsize, format, tm, loc) => {
- return _strftime(s, maxsize, format, tm);
-};
+var _strftime_l = (s, maxsize, format, tm, loc) => _strftime(s, maxsize, format, tm);
 
 var _system = command => {
  if (ENVIRONMENT_IS_NODE) {
@@ -10372,15 +10320,15 @@ var autoResumeAudioContext = (ctx, elements) => {
  if (!elements) {
   elements = [ document, document.getElementById("canvas") ];
  }
- [ "keydown", "mousedown", "touchstart" ].forEach(event => {
-  elements.forEach(element => {
+ [ "keydown", "mousedown", "touchstart" ].forEach((event => {
+  elements.forEach((element => {
    if (element) {
-    listenOnce(element, event, () => {
+    listenOnce(element, event, (() => {
      if (ctx.state === "suspended") ctx.resume();
-    });
+    }));
    }
-  });
- });
+  }));
+ }));
 };
 
 var FSNode = function(parent, name, mode, rdev) {
@@ -10451,9 +10399,21 @@ Module["FS_createDevice"] = FS.createDevice;
 
 embind_init_charCodes();
 
-BindingError = Module["BindingError"] = extendError(Error, "BindingError");
+BindingError = Module["BindingError"] = class BindingError extends Error {
+ constructor(message) {
+  super(message);
+  this.name = "BindingError";
+ }
+};
 
-InternalError = Module["InternalError"] = extendError(Error, "InternalError");
+InternalError = Module["InternalError"] = class InternalError extends Error {
+ constructor(message) {
+  super(message);
+  this.name = "InternalError";
+ }
+};
+
+handleAllocatorInit();
 
 init_emval();
 
@@ -10496,500 +10456,500 @@ var GLctx;
 for (var i = 0; i < 32; ++i) tempFixedLengthArray.push(new Array(i));
 
 var wasmImports = {
- "__cxa_throw": ___cxa_throw,
- "__syscall_fcntl64": ___syscall_fcntl64,
- "__syscall_fstat64": ___syscall_fstat64,
- "__syscall_getcwd": ___syscall_getcwd,
- "__syscall_getdents64": ___syscall_getdents64,
- "__syscall_ioctl": ___syscall_ioctl,
- "__syscall_lstat64": ___syscall_lstat64,
- "__syscall_mkdirat": ___syscall_mkdirat,
- "__syscall_newfstatat": ___syscall_newfstatat,
- "__syscall_openat": ___syscall_openat,
- "__syscall_stat64": ___syscall_stat64,
- "_embind_register_bigint": __embind_register_bigint,
- "_embind_register_bool": __embind_register_bool,
- "_embind_register_emval": __embind_register_emval,
- "_embind_register_float": __embind_register_float,
- "_embind_register_function": __embind_register_function,
- "_embind_register_integer": __embind_register_integer,
- "_embind_register_memory_view": __embind_register_memory_view,
- "_embind_register_std_string": __embind_register_std_string,
- "_embind_register_std_wstring": __embind_register_std_wstring,
- "_embind_register_void": __embind_register_void,
- "_emscripten_get_now_is_monotonic": __emscripten_get_now_is_monotonic,
- "_emscripten_throw_longjmp": __emscripten_throw_longjmp,
- "_gmtime_js": __gmtime_js,
- "_localtime_js": __localtime_js,
- "_tzset_js": __tzset_js,
- "abort": _abort,
- "eglBindAPI": _eglBindAPI,
- "eglChooseConfig": _eglChooseConfig,
- "eglCreateContext": _eglCreateContext,
- "eglCreateWindowSurface": _eglCreateWindowSurface,
- "eglDestroyContext": _eglDestroyContext,
- "eglDestroySurface": _eglDestroySurface,
- "eglGetConfigAttrib": _eglGetConfigAttrib,
- "eglGetDisplay": _eglGetDisplay,
- "eglGetError": _eglGetError,
- "eglInitialize": _eglInitialize,
- "eglMakeCurrent": _eglMakeCurrent,
- "eglQueryString": _eglQueryString,
- "eglSwapBuffers": _eglSwapBuffers,
- "eglSwapInterval": _eglSwapInterval,
- "eglTerminate": _eglTerminate,
- "eglWaitGL": _eglWaitGL,
- "eglWaitNative": _eglWaitNative,
- "emscripten_asm_const_int": _emscripten_asm_const_int,
- "emscripten_asm_const_int_sync_on_main_thread": _emscripten_asm_const_int_sync_on_main_thread,
- "emscripten_date_now": _emscripten_date_now,
- "emscripten_exit_fullscreen": _emscripten_exit_fullscreen,
- "emscripten_exit_pointerlock": _emscripten_exit_pointerlock,
- "emscripten_get_device_pixel_ratio": _emscripten_get_device_pixel_ratio,
- "emscripten_get_element_css_size": _emscripten_get_element_css_size,
- "emscripten_get_gamepad_status": _emscripten_get_gamepad_status,
- "emscripten_get_now": _emscripten_get_now,
- "emscripten_get_num_gamepads": _emscripten_get_num_gamepads,
- "emscripten_get_screen_size": _emscripten_get_screen_size,
- "emscripten_glActiveTexture": _emscripten_glActiveTexture,
- "emscripten_glAttachShader": _emscripten_glAttachShader,
- "emscripten_glBeginQuery": _emscripten_glBeginQuery,
- "emscripten_glBeginQueryEXT": _emscripten_glBeginQueryEXT,
- "emscripten_glBeginTransformFeedback": _emscripten_glBeginTransformFeedback,
- "emscripten_glBindAttribLocation": _emscripten_glBindAttribLocation,
- "emscripten_glBindBuffer": _emscripten_glBindBuffer,
- "emscripten_glBindBufferBase": _emscripten_glBindBufferBase,
- "emscripten_glBindBufferRange": _emscripten_glBindBufferRange,
- "emscripten_glBindFramebuffer": _emscripten_glBindFramebuffer,
- "emscripten_glBindRenderbuffer": _emscripten_glBindRenderbuffer,
- "emscripten_glBindSampler": _emscripten_glBindSampler,
- "emscripten_glBindTexture": _emscripten_glBindTexture,
- "emscripten_glBindTransformFeedback": _emscripten_glBindTransformFeedback,
- "emscripten_glBindVertexArray": _emscripten_glBindVertexArray,
- "emscripten_glBindVertexArrayOES": _emscripten_glBindVertexArrayOES,
- "emscripten_glBlendColor": _emscripten_glBlendColor,
- "emscripten_glBlendEquation": _emscripten_glBlendEquation,
- "emscripten_glBlendEquationSeparate": _emscripten_glBlendEquationSeparate,
- "emscripten_glBlendFunc": _emscripten_glBlendFunc,
- "emscripten_glBlendFuncSeparate": _emscripten_glBlendFuncSeparate,
- "emscripten_glBlitFramebuffer": _emscripten_glBlitFramebuffer,
- "emscripten_glBufferData": _emscripten_glBufferData,
- "emscripten_glBufferSubData": _emscripten_glBufferSubData,
- "emscripten_glCheckFramebufferStatus": _emscripten_glCheckFramebufferStatus,
- "emscripten_glClear": _emscripten_glClear,
- "emscripten_glClearBufferfi": _emscripten_glClearBufferfi,
- "emscripten_glClearBufferfv": _emscripten_glClearBufferfv,
- "emscripten_glClearBufferiv": _emscripten_glClearBufferiv,
- "emscripten_glClearBufferuiv": _emscripten_glClearBufferuiv,
- "emscripten_glClearColor": _emscripten_glClearColor,
- "emscripten_glClearDepthf": _emscripten_glClearDepthf,
- "emscripten_glClearStencil": _emscripten_glClearStencil,
- "emscripten_glClientWaitSync": _emscripten_glClientWaitSync,
- "emscripten_glColorMask": _emscripten_glColorMask,
- "emscripten_glCompileShader": _emscripten_glCompileShader,
- "emscripten_glCompressedTexImage2D": _emscripten_glCompressedTexImage2D,
- "emscripten_glCompressedTexImage3D": _emscripten_glCompressedTexImage3D,
- "emscripten_glCompressedTexSubImage2D": _emscripten_glCompressedTexSubImage2D,
- "emscripten_glCompressedTexSubImage3D": _emscripten_glCompressedTexSubImage3D,
- "emscripten_glCopyBufferSubData": _emscripten_glCopyBufferSubData,
- "emscripten_glCopyTexImage2D": _emscripten_glCopyTexImage2D,
- "emscripten_glCopyTexSubImage2D": _emscripten_glCopyTexSubImage2D,
- "emscripten_glCopyTexSubImage3D": _emscripten_glCopyTexSubImage3D,
- "emscripten_glCreateProgram": _emscripten_glCreateProgram,
- "emscripten_glCreateShader": _emscripten_glCreateShader,
- "emscripten_glCullFace": _emscripten_glCullFace,
- "emscripten_glDeleteBuffers": _emscripten_glDeleteBuffers,
- "emscripten_glDeleteFramebuffers": _emscripten_glDeleteFramebuffers,
- "emscripten_glDeleteProgram": _emscripten_glDeleteProgram,
- "emscripten_glDeleteQueries": _emscripten_glDeleteQueries,
- "emscripten_glDeleteQueriesEXT": _emscripten_glDeleteQueriesEXT,
- "emscripten_glDeleteRenderbuffers": _emscripten_glDeleteRenderbuffers,
- "emscripten_glDeleteSamplers": _emscripten_glDeleteSamplers,
- "emscripten_glDeleteShader": _emscripten_glDeleteShader,
- "emscripten_glDeleteSync": _emscripten_glDeleteSync,
- "emscripten_glDeleteTextures": _emscripten_glDeleteTextures,
- "emscripten_glDeleteTransformFeedbacks": _emscripten_glDeleteTransformFeedbacks,
- "emscripten_glDeleteVertexArrays": _emscripten_glDeleteVertexArrays,
- "emscripten_glDeleteVertexArraysOES": _emscripten_glDeleteVertexArraysOES,
- "emscripten_glDepthFunc": _emscripten_glDepthFunc,
- "emscripten_glDepthMask": _emscripten_glDepthMask,
- "emscripten_glDepthRangef": _emscripten_glDepthRangef,
- "emscripten_glDetachShader": _emscripten_glDetachShader,
- "emscripten_glDisable": _emscripten_glDisable,
- "emscripten_glDisableVertexAttribArray": _emscripten_glDisableVertexAttribArray,
- "emscripten_glDrawArrays": _emscripten_glDrawArrays,
- "emscripten_glDrawArraysInstanced": _emscripten_glDrawArraysInstanced,
- "emscripten_glDrawArraysInstancedANGLE": _emscripten_glDrawArraysInstancedANGLE,
- "emscripten_glDrawArraysInstancedARB": _emscripten_glDrawArraysInstancedARB,
- "emscripten_glDrawArraysInstancedEXT": _emscripten_glDrawArraysInstancedEXT,
- "emscripten_glDrawArraysInstancedNV": _emscripten_glDrawArraysInstancedNV,
- "emscripten_glDrawBuffers": _emscripten_glDrawBuffers,
- "emscripten_glDrawBuffersEXT": _emscripten_glDrawBuffersEXT,
- "emscripten_glDrawBuffersWEBGL": _emscripten_glDrawBuffersWEBGL,
- "emscripten_glDrawElements": _emscripten_glDrawElements,
- "emscripten_glDrawElementsInstanced": _emscripten_glDrawElementsInstanced,
- "emscripten_glDrawElementsInstancedANGLE": _emscripten_glDrawElementsInstancedANGLE,
- "emscripten_glDrawElementsInstancedARB": _emscripten_glDrawElementsInstancedARB,
- "emscripten_glDrawElementsInstancedEXT": _emscripten_glDrawElementsInstancedEXT,
- "emscripten_glDrawElementsInstancedNV": _emscripten_glDrawElementsInstancedNV,
- "emscripten_glDrawRangeElements": _emscripten_glDrawRangeElements,
- "emscripten_glEnable": _emscripten_glEnable,
- "emscripten_glEnableVertexAttribArray": _emscripten_glEnableVertexAttribArray,
- "emscripten_glEndQuery": _emscripten_glEndQuery,
- "emscripten_glEndQueryEXT": _emscripten_glEndQueryEXT,
- "emscripten_glEndTransformFeedback": _emscripten_glEndTransformFeedback,
- "emscripten_glFenceSync": _emscripten_glFenceSync,
- "emscripten_glFinish": _emscripten_glFinish,
- "emscripten_glFlush": _emscripten_glFlush,
- "emscripten_glFlushMappedBufferRange": _emscripten_glFlushMappedBufferRange,
- "emscripten_glFramebufferRenderbuffer": _emscripten_glFramebufferRenderbuffer,
- "emscripten_glFramebufferTexture2D": _emscripten_glFramebufferTexture2D,
- "emscripten_glFramebufferTextureLayer": _emscripten_glFramebufferTextureLayer,
- "emscripten_glFrontFace": _emscripten_glFrontFace,
- "emscripten_glGenBuffers": _emscripten_glGenBuffers,
- "emscripten_glGenFramebuffers": _emscripten_glGenFramebuffers,
- "emscripten_glGenQueries": _emscripten_glGenQueries,
- "emscripten_glGenQueriesEXT": _emscripten_glGenQueriesEXT,
- "emscripten_glGenRenderbuffers": _emscripten_glGenRenderbuffers,
- "emscripten_glGenSamplers": _emscripten_glGenSamplers,
- "emscripten_glGenTextures": _emscripten_glGenTextures,
- "emscripten_glGenTransformFeedbacks": _emscripten_glGenTransformFeedbacks,
- "emscripten_glGenVertexArrays": _emscripten_glGenVertexArrays,
- "emscripten_glGenVertexArraysOES": _emscripten_glGenVertexArraysOES,
- "emscripten_glGenerateMipmap": _emscripten_glGenerateMipmap,
- "emscripten_glGetActiveAttrib": _emscripten_glGetActiveAttrib,
- "emscripten_glGetActiveUniform": _emscripten_glGetActiveUniform,
- "emscripten_glGetActiveUniformBlockName": _emscripten_glGetActiveUniformBlockName,
- "emscripten_glGetActiveUniformBlockiv": _emscripten_glGetActiveUniformBlockiv,
- "emscripten_glGetActiveUniformsiv": _emscripten_glGetActiveUniformsiv,
- "emscripten_glGetAttachedShaders": _emscripten_glGetAttachedShaders,
- "emscripten_glGetAttribLocation": _emscripten_glGetAttribLocation,
- "emscripten_glGetBooleanv": _emscripten_glGetBooleanv,
- "emscripten_glGetBufferParameteri64v": _emscripten_glGetBufferParameteri64v,
- "emscripten_glGetBufferParameteriv": _emscripten_glGetBufferParameteriv,
- "emscripten_glGetBufferPointerv": _emscripten_glGetBufferPointerv,
- "emscripten_glGetError": _emscripten_glGetError,
- "emscripten_glGetFloatv": _emscripten_glGetFloatv,
- "emscripten_glGetFragDataLocation": _emscripten_glGetFragDataLocation,
- "emscripten_glGetFramebufferAttachmentParameteriv": _emscripten_glGetFramebufferAttachmentParameteriv,
- "emscripten_glGetInteger64i_v": _emscripten_glGetInteger64i_v,
- "emscripten_glGetInteger64v": _emscripten_glGetInteger64v,
- "emscripten_glGetIntegeri_v": _emscripten_glGetIntegeri_v,
- "emscripten_glGetIntegerv": _emscripten_glGetIntegerv,
- "emscripten_glGetInternalformativ": _emscripten_glGetInternalformativ,
- "emscripten_glGetProgramBinary": _emscripten_glGetProgramBinary,
- "emscripten_glGetProgramInfoLog": _emscripten_glGetProgramInfoLog,
- "emscripten_glGetProgramiv": _emscripten_glGetProgramiv,
- "emscripten_glGetQueryObjecti64vEXT": _emscripten_glGetQueryObjecti64vEXT,
- "emscripten_glGetQueryObjectivEXT": _emscripten_glGetQueryObjectivEXT,
- "emscripten_glGetQueryObjectui64vEXT": _emscripten_glGetQueryObjectui64vEXT,
- "emscripten_glGetQueryObjectuiv": _emscripten_glGetQueryObjectuiv,
- "emscripten_glGetQueryObjectuivEXT": _emscripten_glGetQueryObjectuivEXT,
- "emscripten_glGetQueryiv": _emscripten_glGetQueryiv,
- "emscripten_glGetQueryivEXT": _emscripten_glGetQueryivEXT,
- "emscripten_glGetRenderbufferParameteriv": _emscripten_glGetRenderbufferParameteriv,
- "emscripten_glGetSamplerParameterfv": _emscripten_glGetSamplerParameterfv,
- "emscripten_glGetSamplerParameteriv": _emscripten_glGetSamplerParameteriv,
- "emscripten_glGetShaderInfoLog": _emscripten_glGetShaderInfoLog,
- "emscripten_glGetShaderPrecisionFormat": _emscripten_glGetShaderPrecisionFormat,
- "emscripten_glGetShaderSource": _emscripten_glGetShaderSource,
- "emscripten_glGetShaderiv": _emscripten_glGetShaderiv,
- "emscripten_glGetString": _emscripten_glGetString,
- "emscripten_glGetStringi": _emscripten_glGetStringi,
- "emscripten_glGetSynciv": _emscripten_glGetSynciv,
- "emscripten_glGetTexParameterfv": _emscripten_glGetTexParameterfv,
- "emscripten_glGetTexParameteriv": _emscripten_glGetTexParameteriv,
- "emscripten_glGetTransformFeedbackVarying": _emscripten_glGetTransformFeedbackVarying,
- "emscripten_glGetUniformBlockIndex": _emscripten_glGetUniformBlockIndex,
- "emscripten_glGetUniformIndices": _emscripten_glGetUniformIndices,
- "emscripten_glGetUniformLocation": _emscripten_glGetUniformLocation,
- "emscripten_glGetUniformfv": _emscripten_glGetUniformfv,
- "emscripten_glGetUniformiv": _emscripten_glGetUniformiv,
- "emscripten_glGetUniformuiv": _emscripten_glGetUniformuiv,
- "emscripten_glGetVertexAttribIiv": _emscripten_glGetVertexAttribIiv,
- "emscripten_glGetVertexAttribIuiv": _emscripten_glGetVertexAttribIuiv,
- "emscripten_glGetVertexAttribPointerv": _emscripten_glGetVertexAttribPointerv,
- "emscripten_glGetVertexAttribfv": _emscripten_glGetVertexAttribfv,
- "emscripten_glGetVertexAttribiv": _emscripten_glGetVertexAttribiv,
- "emscripten_glHint": _emscripten_glHint,
- "emscripten_glInvalidateFramebuffer": _emscripten_glInvalidateFramebuffer,
- "emscripten_glInvalidateSubFramebuffer": _emscripten_glInvalidateSubFramebuffer,
- "emscripten_glIsBuffer": _emscripten_glIsBuffer,
- "emscripten_glIsEnabled": _emscripten_glIsEnabled,
- "emscripten_glIsFramebuffer": _emscripten_glIsFramebuffer,
- "emscripten_glIsProgram": _emscripten_glIsProgram,
- "emscripten_glIsQuery": _emscripten_glIsQuery,
- "emscripten_glIsQueryEXT": _emscripten_glIsQueryEXT,
- "emscripten_glIsRenderbuffer": _emscripten_glIsRenderbuffer,
- "emscripten_glIsSampler": _emscripten_glIsSampler,
- "emscripten_glIsShader": _emscripten_glIsShader,
- "emscripten_glIsSync": _emscripten_glIsSync,
- "emscripten_glIsTexture": _emscripten_glIsTexture,
- "emscripten_glIsTransformFeedback": _emscripten_glIsTransformFeedback,
- "emscripten_glIsVertexArray": _emscripten_glIsVertexArray,
- "emscripten_glIsVertexArrayOES": _emscripten_glIsVertexArrayOES,
- "emscripten_glLineWidth": _emscripten_glLineWidth,
- "emscripten_glLinkProgram": _emscripten_glLinkProgram,
- "emscripten_glMapBufferRange": _emscripten_glMapBufferRange,
- "emscripten_glPauseTransformFeedback": _emscripten_glPauseTransformFeedback,
- "emscripten_glPixelStorei": _emscripten_glPixelStorei,
- "emscripten_glPolygonOffset": _emscripten_glPolygonOffset,
- "emscripten_glProgramBinary": _emscripten_glProgramBinary,
- "emscripten_glProgramParameteri": _emscripten_glProgramParameteri,
- "emscripten_glQueryCounterEXT": _emscripten_glQueryCounterEXT,
- "emscripten_glReadBuffer": _emscripten_glReadBuffer,
- "emscripten_glReadPixels": _emscripten_glReadPixels,
- "emscripten_glReleaseShaderCompiler": _emscripten_glReleaseShaderCompiler,
- "emscripten_glRenderbufferStorage": _emscripten_glRenderbufferStorage,
- "emscripten_glRenderbufferStorageMultisample": _emscripten_glRenderbufferStorageMultisample,
- "emscripten_glResumeTransformFeedback": _emscripten_glResumeTransformFeedback,
- "emscripten_glSampleCoverage": _emscripten_glSampleCoverage,
- "emscripten_glSamplerParameterf": _emscripten_glSamplerParameterf,
- "emscripten_glSamplerParameterfv": _emscripten_glSamplerParameterfv,
- "emscripten_glSamplerParameteri": _emscripten_glSamplerParameteri,
- "emscripten_glSamplerParameteriv": _emscripten_glSamplerParameteriv,
- "emscripten_glScissor": _emscripten_glScissor,
- "emscripten_glShaderBinary": _emscripten_glShaderBinary,
- "emscripten_glShaderSource": _emscripten_glShaderSource,
- "emscripten_glStencilFunc": _emscripten_glStencilFunc,
- "emscripten_glStencilFuncSeparate": _emscripten_glStencilFuncSeparate,
- "emscripten_glStencilMask": _emscripten_glStencilMask,
- "emscripten_glStencilMaskSeparate": _emscripten_glStencilMaskSeparate,
- "emscripten_glStencilOp": _emscripten_glStencilOp,
- "emscripten_glStencilOpSeparate": _emscripten_glStencilOpSeparate,
- "emscripten_glTexImage2D": _emscripten_glTexImage2D,
- "emscripten_glTexImage3D": _emscripten_glTexImage3D,
- "emscripten_glTexParameterf": _emscripten_glTexParameterf,
- "emscripten_glTexParameterfv": _emscripten_glTexParameterfv,
- "emscripten_glTexParameteri": _emscripten_glTexParameteri,
- "emscripten_glTexParameteriv": _emscripten_glTexParameteriv,
- "emscripten_glTexStorage2D": _emscripten_glTexStorage2D,
- "emscripten_glTexStorage3D": _emscripten_glTexStorage3D,
- "emscripten_glTexSubImage2D": _emscripten_glTexSubImage2D,
- "emscripten_glTexSubImage3D": _emscripten_glTexSubImage3D,
- "emscripten_glTransformFeedbackVaryings": _emscripten_glTransformFeedbackVaryings,
- "emscripten_glUniform1f": _emscripten_glUniform1f,
- "emscripten_glUniform1fv": _emscripten_glUniform1fv,
- "emscripten_glUniform1i": _emscripten_glUniform1i,
- "emscripten_glUniform1iv": _emscripten_glUniform1iv,
- "emscripten_glUniform1ui": _emscripten_glUniform1ui,
- "emscripten_glUniform1uiv": _emscripten_glUniform1uiv,
- "emscripten_glUniform2f": _emscripten_glUniform2f,
- "emscripten_glUniform2fv": _emscripten_glUniform2fv,
- "emscripten_glUniform2i": _emscripten_glUniform2i,
- "emscripten_glUniform2iv": _emscripten_glUniform2iv,
- "emscripten_glUniform2ui": _emscripten_glUniform2ui,
- "emscripten_glUniform2uiv": _emscripten_glUniform2uiv,
- "emscripten_glUniform3f": _emscripten_glUniform3f,
- "emscripten_glUniform3fv": _emscripten_glUniform3fv,
- "emscripten_glUniform3i": _emscripten_glUniform3i,
- "emscripten_glUniform3iv": _emscripten_glUniform3iv,
- "emscripten_glUniform3ui": _emscripten_glUniform3ui,
- "emscripten_glUniform3uiv": _emscripten_glUniform3uiv,
- "emscripten_glUniform4f": _emscripten_glUniform4f,
- "emscripten_glUniform4fv": _emscripten_glUniform4fv,
- "emscripten_glUniform4i": _emscripten_glUniform4i,
- "emscripten_glUniform4iv": _emscripten_glUniform4iv,
- "emscripten_glUniform4ui": _emscripten_glUniform4ui,
- "emscripten_glUniform4uiv": _emscripten_glUniform4uiv,
- "emscripten_glUniformBlockBinding": _emscripten_glUniformBlockBinding,
- "emscripten_glUniformMatrix2fv": _emscripten_glUniformMatrix2fv,
- "emscripten_glUniformMatrix2x3fv": _emscripten_glUniformMatrix2x3fv,
- "emscripten_glUniformMatrix2x4fv": _emscripten_glUniformMatrix2x4fv,
- "emscripten_glUniformMatrix3fv": _emscripten_glUniformMatrix3fv,
- "emscripten_glUniformMatrix3x2fv": _emscripten_glUniformMatrix3x2fv,
- "emscripten_glUniformMatrix3x4fv": _emscripten_glUniformMatrix3x4fv,
- "emscripten_glUniformMatrix4fv": _emscripten_glUniformMatrix4fv,
- "emscripten_glUniformMatrix4x2fv": _emscripten_glUniformMatrix4x2fv,
- "emscripten_glUniformMatrix4x3fv": _emscripten_glUniformMatrix4x3fv,
- "emscripten_glUnmapBuffer": _emscripten_glUnmapBuffer,
- "emscripten_glUseProgram": _emscripten_glUseProgram,
- "emscripten_glValidateProgram": _emscripten_glValidateProgram,
- "emscripten_glVertexAttrib1f": _emscripten_glVertexAttrib1f,
- "emscripten_glVertexAttrib1fv": _emscripten_glVertexAttrib1fv,
- "emscripten_glVertexAttrib2f": _emscripten_glVertexAttrib2f,
- "emscripten_glVertexAttrib2fv": _emscripten_glVertexAttrib2fv,
- "emscripten_glVertexAttrib3f": _emscripten_glVertexAttrib3f,
- "emscripten_glVertexAttrib3fv": _emscripten_glVertexAttrib3fv,
- "emscripten_glVertexAttrib4f": _emscripten_glVertexAttrib4f,
- "emscripten_glVertexAttrib4fv": _emscripten_glVertexAttrib4fv,
- "emscripten_glVertexAttribDivisor": _emscripten_glVertexAttribDivisor,
- "emscripten_glVertexAttribDivisorANGLE": _emscripten_glVertexAttribDivisorANGLE,
- "emscripten_glVertexAttribDivisorARB": _emscripten_glVertexAttribDivisorARB,
- "emscripten_glVertexAttribDivisorEXT": _emscripten_glVertexAttribDivisorEXT,
- "emscripten_glVertexAttribDivisorNV": _emscripten_glVertexAttribDivisorNV,
- "emscripten_glVertexAttribI4i": _emscripten_glVertexAttribI4i,
- "emscripten_glVertexAttribI4iv": _emscripten_glVertexAttribI4iv,
- "emscripten_glVertexAttribI4ui": _emscripten_glVertexAttribI4ui,
- "emscripten_glVertexAttribI4uiv": _emscripten_glVertexAttribI4uiv,
- "emscripten_glVertexAttribIPointer": _emscripten_glVertexAttribIPointer,
- "emscripten_glVertexAttribPointer": _emscripten_glVertexAttribPointer,
- "emscripten_glViewport": _emscripten_glViewport,
- "emscripten_glWaitSync": _emscripten_glWaitSync,
- "emscripten_has_asyncify": _emscripten_has_asyncify,
- "emscripten_memcpy_big": _emscripten_memcpy_big,
- "emscripten_request_fullscreen_strategy": _emscripten_request_fullscreen_strategy,
- "emscripten_request_pointerlock": _emscripten_request_pointerlock,
- "emscripten_resize_heap": _emscripten_resize_heap,
- "emscripten_sample_gamepad_data": _emscripten_sample_gamepad_data,
- "emscripten_set_beforeunload_callback_on_thread": _emscripten_set_beforeunload_callback_on_thread,
- "emscripten_set_blur_callback_on_thread": _emscripten_set_blur_callback_on_thread,
- "emscripten_set_canvas_element_size": _emscripten_set_canvas_element_size,
- "emscripten_set_element_css_size": _emscripten_set_element_css_size,
- "emscripten_set_focus_callback_on_thread": _emscripten_set_focus_callback_on_thread,
- "emscripten_set_fullscreenchange_callback_on_thread": _emscripten_set_fullscreenchange_callback_on_thread,
- "emscripten_set_gamepadconnected_callback_on_thread": _emscripten_set_gamepadconnected_callback_on_thread,
- "emscripten_set_gamepaddisconnected_callback_on_thread": _emscripten_set_gamepaddisconnected_callback_on_thread,
- "emscripten_set_keydown_callback_on_thread": _emscripten_set_keydown_callback_on_thread,
- "emscripten_set_keypress_callback_on_thread": _emscripten_set_keypress_callback_on_thread,
- "emscripten_set_keyup_callback_on_thread": _emscripten_set_keyup_callback_on_thread,
- "emscripten_set_main_loop_arg": _emscripten_set_main_loop_arg,
- "emscripten_set_mousedown_callback_on_thread": _emscripten_set_mousedown_callback_on_thread,
- "emscripten_set_mouseenter_callback_on_thread": _emscripten_set_mouseenter_callback_on_thread,
- "emscripten_set_mouseleave_callback_on_thread": _emscripten_set_mouseleave_callback_on_thread,
- "emscripten_set_mousemove_callback_on_thread": _emscripten_set_mousemove_callback_on_thread,
- "emscripten_set_mouseup_callback_on_thread": _emscripten_set_mouseup_callback_on_thread,
- "emscripten_set_pointerlockchange_callback_on_thread": _emscripten_set_pointerlockchange_callback_on_thread,
- "emscripten_set_resize_callback_on_thread": _emscripten_set_resize_callback_on_thread,
- "emscripten_set_touchcancel_callback_on_thread": _emscripten_set_touchcancel_callback_on_thread,
- "emscripten_set_touchend_callback_on_thread": _emscripten_set_touchend_callback_on_thread,
- "emscripten_set_touchmove_callback_on_thread": _emscripten_set_touchmove_callback_on_thread,
- "emscripten_set_touchstart_callback_on_thread": _emscripten_set_touchstart_callback_on_thread,
- "emscripten_set_visibilitychange_callback_on_thread": _emscripten_set_visibilitychange_callback_on_thread,
- "emscripten_set_wheel_callback_on_thread": _emscripten_set_wheel_callback_on_thread,
- "emscripten_set_window_title": _emscripten_set_window_title,
- "emscripten_sleep": _emscripten_sleep,
- "emscripten_webgl_create_context": _emscripten_webgl_create_context,
- "emscripten_webgl_destroy_context": _emscripten_webgl_destroy_context,
- "emscripten_webgl_get_current_context": _emscripten_webgl_get_current_context,
- "emscripten_webgl_init_context_attributes": _emscripten_webgl_init_context_attributes,
- "emscripten_webgl_make_context_current": _emscripten_webgl_make_context_current,
- "environ_get": _environ_get,
- "environ_sizes_get": _environ_sizes_get,
- "fd_close": _fd_close,
- "fd_read": _fd_read,
- "fd_seek": _fd_seek,
- "fd_write": _fd_write,
- "glActiveTexture": _glActiveTexture,
- "glAttachShader": _glAttachShader,
- "glBeginQuery": _glBeginQuery,
- "glBindBuffer": _glBindBuffer,
- "glBindBufferRange": _glBindBufferRange,
- "glBindFramebuffer": _glBindFramebuffer,
- "glBindSampler": _glBindSampler,
- "glBindTexture": _glBindTexture,
- "glBindVertexArray": _glBindVertexArray,
- "glBlendColor": _glBlendColor,
- "glBlendEquationSeparate": _glBlendEquationSeparate,
- "glBlendFuncSeparate": _glBlendFuncSeparate,
- "glBlitFramebuffer": _glBlitFramebuffer,
- "glBufferData": _glBufferData,
- "glBufferSubData": _glBufferSubData,
- "glCheckFramebufferStatus": _glCheckFramebufferStatus,
- "glClear": _glClear,
- "glClearBufferfv": _glClearBufferfv,
- "glClearDepthf": _glClearDepthf,
- "glClearStencil": _glClearStencil,
- "glClientWaitSync": _glClientWaitSync,
- "glColorMask": _glColorMask,
- "glCompileShader": _glCompileShader,
- "glCompressedTexSubImage2D": _glCompressedTexSubImage2D,
- "glCompressedTexSubImage3D": _glCompressedTexSubImage3D,
- "glCopyBufferSubData": _glCopyBufferSubData,
- "glCreateProgram": _glCreateProgram,
- "glCreateShader": _glCreateShader,
- "glCullFace": _glCullFace,
- "glDeleteBuffers": _glDeleteBuffers,
- "glDeleteFramebuffers": _glDeleteFramebuffers,
- "glDeleteProgram": _glDeleteProgram,
- "glDeleteQueries": _glDeleteQueries,
- "glDeleteSamplers": _glDeleteSamplers,
- "glDeleteShader": _glDeleteShader,
- "glDeleteSync": _glDeleteSync,
- "glDeleteTextures": _glDeleteTextures,
- "glDeleteVertexArrays": _glDeleteVertexArrays,
- "glDepthFunc": _glDepthFunc,
- "glDepthMask": _glDepthMask,
- "glDepthRangef": _glDepthRangef,
- "glDetachShader": _glDetachShader,
- "glDisable": _glDisable,
- "glDrawArrays": _glDrawArrays,
- "glDrawArraysInstanced": _glDrawArraysInstanced,
- "glDrawBuffers": _glDrawBuffers,
- "glDrawElements": _glDrawElements,
- "glDrawElementsInstanced": _glDrawElementsInstanced,
- "glEnable": _glEnable,
- "glEnableVertexAttribArray": _glEnableVertexAttribArray,
- "glEndQuery": _glEndQuery,
- "glFenceSync": _glFenceSync,
- "glFinish": _glFinish,
- "glFlush": _glFlush,
- "glFramebufferTexture2D": _glFramebufferTexture2D,
- "glFramebufferTextureLayer": _glFramebufferTextureLayer,
- "glFrontFace": _glFrontFace,
- "glGenBuffers": _glGenBuffers,
- "glGenFramebuffers": _glGenFramebuffers,
- "glGenQueries": _glGenQueries,
- "glGenSamplers": _glGenSamplers,
- "glGenTextures": _glGenTextures,
- "glGenVertexArrays": _glGenVertexArrays,
- "glGenerateMipmap": _glGenerateMipmap,
- "glGetActiveAttrib": _glGetActiveAttrib,
- "glGetActiveUniform": _glGetActiveUniform,
- "glGetActiveUniformBlockName": _glGetActiveUniformBlockName,
- "glGetActiveUniformBlockiv": _glGetActiveUniformBlockiv,
- "glGetActiveUniformsiv": _glGetActiveUniformsiv,
- "glGetAttribLocation": _glGetAttribLocation,
- "glGetBufferParameteriv": _glGetBufferParameteriv,
- "glGetError": _glGetError,
- "glGetIntegerv": _glGetIntegerv,
- "glGetProgramInfoLog": _glGetProgramInfoLog,
- "glGetProgramiv": _glGetProgramiv,
- "glGetQueryObjectuiv": _glGetQueryObjectuiv,
- "glGetShaderInfoLog": _glGetShaderInfoLog,
- "glGetShaderiv": _glGetShaderiv,
- "glGetString": _glGetString,
- "glGetStringi": _glGetStringi,
- "glGetTexParameteriv": _glGetTexParameteriv,
- "glGetUniformBlockIndex": _glGetUniformBlockIndex,
- "glGetUniformLocation": _glGetUniformLocation,
- "glInvalidateFramebuffer": _glInvalidateFramebuffer,
- "glLinkProgram": _glLinkProgram,
- "glMapBufferRange": _glMapBufferRange,
- "glPixelStorei": _glPixelStorei,
- "glPolygonOffset": _glPolygonOffset,
- "glProgramParameteri": _glProgramParameteri,
- "glReadPixels": _glReadPixels,
- "glSamplerParameterf": _glSamplerParameterf,
- "glSamplerParameterfv": _glSamplerParameterfv,
- "glSamplerParameteri": _glSamplerParameteri,
- "glScissor": _glScissor,
- "glShaderSource": _glShaderSource,
- "glStencilFuncSeparate": _glStencilFuncSeparate,
- "glStencilMask": _glStencilMask,
- "glStencilOpSeparate": _glStencilOpSeparate,
- "glTexParameteri": _glTexParameteri,
- "glTexStorage2D": _glTexStorage2D,
- "glTexStorage3D": _glTexStorage3D,
- "glTexSubImage2D": _glTexSubImage2D,
- "glTexSubImage3D": _glTexSubImage3D,
- "glUniform1i": _glUniform1i,
- "glUniformBlockBinding": _glUniformBlockBinding,
- "glUnmapBuffer": _glUnmapBuffer,
- "glUseProgram": _glUseProgram,
- "glVertexAttribDivisor": _glVertexAttribDivisor,
- "glVertexAttribIPointer": _glVertexAttribIPointer,
- "glVertexAttribPointer": _glVertexAttribPointer,
- "glViewport": _glViewport,
- "glWaitSync": _glWaitSync,
- "invoke_iii": invoke_iii,
- "invoke_iiii": invoke_iiii,
- "invoke_iiiii": invoke_iiiii,
- "invoke_vii": invoke_vii,
- "invoke_viiii": invoke_viiii,
- "strftime": _strftime,
- "strftime_l": _strftime_l,
- "system": _system
+ __cxa_throw: ___cxa_throw,
+ __syscall_fcntl64: ___syscall_fcntl64,
+ __syscall_fstat64: ___syscall_fstat64,
+ __syscall_getcwd: ___syscall_getcwd,
+ __syscall_getdents64: ___syscall_getdents64,
+ __syscall_ioctl: ___syscall_ioctl,
+ __syscall_lstat64: ___syscall_lstat64,
+ __syscall_mkdirat: ___syscall_mkdirat,
+ __syscall_newfstatat: ___syscall_newfstatat,
+ __syscall_openat: ___syscall_openat,
+ __syscall_stat64: ___syscall_stat64,
+ _embind_register_bigint: __embind_register_bigint,
+ _embind_register_bool: __embind_register_bool,
+ _embind_register_emval: __embind_register_emval,
+ _embind_register_float: __embind_register_float,
+ _embind_register_function: __embind_register_function,
+ _embind_register_integer: __embind_register_integer,
+ _embind_register_memory_view: __embind_register_memory_view,
+ _embind_register_std_string: __embind_register_std_string,
+ _embind_register_std_wstring: __embind_register_std_wstring,
+ _embind_register_void: __embind_register_void,
+ _emscripten_get_now_is_monotonic: __emscripten_get_now_is_monotonic,
+ _emscripten_throw_longjmp: __emscripten_throw_longjmp,
+ _gmtime_js: __gmtime_js,
+ _localtime_js: __localtime_js,
+ _tzset_js: __tzset_js,
+ abort: _abort,
+ eglBindAPI: _eglBindAPI,
+ eglChooseConfig: _eglChooseConfig,
+ eglCreateContext: _eglCreateContext,
+ eglCreateWindowSurface: _eglCreateWindowSurface,
+ eglDestroyContext: _eglDestroyContext,
+ eglDestroySurface: _eglDestroySurface,
+ eglGetConfigAttrib: _eglGetConfigAttrib,
+ eglGetDisplay: _eglGetDisplay,
+ eglGetError: _eglGetError,
+ eglInitialize: _eglInitialize,
+ eglMakeCurrent: _eglMakeCurrent,
+ eglQueryString: _eglQueryString,
+ eglSwapBuffers: _eglSwapBuffers,
+ eglSwapInterval: _eglSwapInterval,
+ eglTerminate: _eglTerminate,
+ eglWaitGL: _eglWaitGL,
+ eglWaitNative: _eglWaitNative,
+ emscripten_asm_const_int: _emscripten_asm_const_int,
+ emscripten_asm_const_int_sync_on_main_thread: _emscripten_asm_const_int_sync_on_main_thread,
+ emscripten_date_now: _emscripten_date_now,
+ emscripten_exit_fullscreen: _emscripten_exit_fullscreen,
+ emscripten_exit_pointerlock: _emscripten_exit_pointerlock,
+ emscripten_get_device_pixel_ratio: _emscripten_get_device_pixel_ratio,
+ emscripten_get_element_css_size: _emscripten_get_element_css_size,
+ emscripten_get_gamepad_status: _emscripten_get_gamepad_status,
+ emscripten_get_now: _emscripten_get_now,
+ emscripten_get_num_gamepads: _emscripten_get_num_gamepads,
+ emscripten_get_screen_size: _emscripten_get_screen_size,
+ emscripten_glActiveTexture: _emscripten_glActiveTexture,
+ emscripten_glAttachShader: _emscripten_glAttachShader,
+ emscripten_glBeginQuery: _emscripten_glBeginQuery,
+ emscripten_glBeginQueryEXT: _emscripten_glBeginQueryEXT,
+ emscripten_glBeginTransformFeedback: _emscripten_glBeginTransformFeedback,
+ emscripten_glBindAttribLocation: _emscripten_glBindAttribLocation,
+ emscripten_glBindBuffer: _emscripten_glBindBuffer,
+ emscripten_glBindBufferBase: _emscripten_glBindBufferBase,
+ emscripten_glBindBufferRange: _emscripten_glBindBufferRange,
+ emscripten_glBindFramebuffer: _emscripten_glBindFramebuffer,
+ emscripten_glBindRenderbuffer: _emscripten_glBindRenderbuffer,
+ emscripten_glBindSampler: _emscripten_glBindSampler,
+ emscripten_glBindTexture: _emscripten_glBindTexture,
+ emscripten_glBindTransformFeedback: _emscripten_glBindTransformFeedback,
+ emscripten_glBindVertexArray: _emscripten_glBindVertexArray,
+ emscripten_glBindVertexArrayOES: _emscripten_glBindVertexArrayOES,
+ emscripten_glBlendColor: _emscripten_glBlendColor,
+ emscripten_glBlendEquation: _emscripten_glBlendEquation,
+ emscripten_glBlendEquationSeparate: _emscripten_glBlendEquationSeparate,
+ emscripten_glBlendFunc: _emscripten_glBlendFunc,
+ emscripten_glBlendFuncSeparate: _emscripten_glBlendFuncSeparate,
+ emscripten_glBlitFramebuffer: _emscripten_glBlitFramebuffer,
+ emscripten_glBufferData: _emscripten_glBufferData,
+ emscripten_glBufferSubData: _emscripten_glBufferSubData,
+ emscripten_glCheckFramebufferStatus: _emscripten_glCheckFramebufferStatus,
+ emscripten_glClear: _emscripten_glClear,
+ emscripten_glClearBufferfi: _emscripten_glClearBufferfi,
+ emscripten_glClearBufferfv: _emscripten_glClearBufferfv,
+ emscripten_glClearBufferiv: _emscripten_glClearBufferiv,
+ emscripten_glClearBufferuiv: _emscripten_glClearBufferuiv,
+ emscripten_glClearColor: _emscripten_glClearColor,
+ emscripten_glClearDepthf: _emscripten_glClearDepthf,
+ emscripten_glClearStencil: _emscripten_glClearStencil,
+ emscripten_glClientWaitSync: _emscripten_glClientWaitSync,
+ emscripten_glColorMask: _emscripten_glColorMask,
+ emscripten_glCompileShader: _emscripten_glCompileShader,
+ emscripten_glCompressedTexImage2D: _emscripten_glCompressedTexImage2D,
+ emscripten_glCompressedTexImage3D: _emscripten_glCompressedTexImage3D,
+ emscripten_glCompressedTexSubImage2D: _emscripten_glCompressedTexSubImage2D,
+ emscripten_glCompressedTexSubImage3D: _emscripten_glCompressedTexSubImage3D,
+ emscripten_glCopyBufferSubData: _emscripten_glCopyBufferSubData,
+ emscripten_glCopyTexImage2D: _emscripten_glCopyTexImage2D,
+ emscripten_glCopyTexSubImage2D: _emscripten_glCopyTexSubImage2D,
+ emscripten_glCopyTexSubImage3D: _emscripten_glCopyTexSubImage3D,
+ emscripten_glCreateProgram: _emscripten_glCreateProgram,
+ emscripten_glCreateShader: _emscripten_glCreateShader,
+ emscripten_glCullFace: _emscripten_glCullFace,
+ emscripten_glDeleteBuffers: _emscripten_glDeleteBuffers,
+ emscripten_glDeleteFramebuffers: _emscripten_glDeleteFramebuffers,
+ emscripten_glDeleteProgram: _emscripten_glDeleteProgram,
+ emscripten_glDeleteQueries: _emscripten_glDeleteQueries,
+ emscripten_glDeleteQueriesEXT: _emscripten_glDeleteQueriesEXT,
+ emscripten_glDeleteRenderbuffers: _emscripten_glDeleteRenderbuffers,
+ emscripten_glDeleteSamplers: _emscripten_glDeleteSamplers,
+ emscripten_glDeleteShader: _emscripten_glDeleteShader,
+ emscripten_glDeleteSync: _emscripten_glDeleteSync,
+ emscripten_glDeleteTextures: _emscripten_glDeleteTextures,
+ emscripten_glDeleteTransformFeedbacks: _emscripten_glDeleteTransformFeedbacks,
+ emscripten_glDeleteVertexArrays: _emscripten_glDeleteVertexArrays,
+ emscripten_glDeleteVertexArraysOES: _emscripten_glDeleteVertexArraysOES,
+ emscripten_glDepthFunc: _emscripten_glDepthFunc,
+ emscripten_glDepthMask: _emscripten_glDepthMask,
+ emscripten_glDepthRangef: _emscripten_glDepthRangef,
+ emscripten_glDetachShader: _emscripten_glDetachShader,
+ emscripten_glDisable: _emscripten_glDisable,
+ emscripten_glDisableVertexAttribArray: _emscripten_glDisableVertexAttribArray,
+ emscripten_glDrawArrays: _emscripten_glDrawArrays,
+ emscripten_glDrawArraysInstanced: _emscripten_glDrawArraysInstanced,
+ emscripten_glDrawArraysInstancedANGLE: _emscripten_glDrawArraysInstancedANGLE,
+ emscripten_glDrawArraysInstancedARB: _emscripten_glDrawArraysInstancedARB,
+ emscripten_glDrawArraysInstancedEXT: _emscripten_glDrawArraysInstancedEXT,
+ emscripten_glDrawArraysInstancedNV: _emscripten_glDrawArraysInstancedNV,
+ emscripten_glDrawBuffers: _emscripten_glDrawBuffers,
+ emscripten_glDrawBuffersEXT: _emscripten_glDrawBuffersEXT,
+ emscripten_glDrawBuffersWEBGL: _emscripten_glDrawBuffersWEBGL,
+ emscripten_glDrawElements: _emscripten_glDrawElements,
+ emscripten_glDrawElementsInstanced: _emscripten_glDrawElementsInstanced,
+ emscripten_glDrawElementsInstancedANGLE: _emscripten_glDrawElementsInstancedANGLE,
+ emscripten_glDrawElementsInstancedARB: _emscripten_glDrawElementsInstancedARB,
+ emscripten_glDrawElementsInstancedEXT: _emscripten_glDrawElementsInstancedEXT,
+ emscripten_glDrawElementsInstancedNV: _emscripten_glDrawElementsInstancedNV,
+ emscripten_glDrawRangeElements: _emscripten_glDrawRangeElements,
+ emscripten_glEnable: _emscripten_glEnable,
+ emscripten_glEnableVertexAttribArray: _emscripten_glEnableVertexAttribArray,
+ emscripten_glEndQuery: _emscripten_glEndQuery,
+ emscripten_glEndQueryEXT: _emscripten_glEndQueryEXT,
+ emscripten_glEndTransformFeedback: _emscripten_glEndTransformFeedback,
+ emscripten_glFenceSync: _emscripten_glFenceSync,
+ emscripten_glFinish: _emscripten_glFinish,
+ emscripten_glFlush: _emscripten_glFlush,
+ emscripten_glFlushMappedBufferRange: _emscripten_glFlushMappedBufferRange,
+ emscripten_glFramebufferRenderbuffer: _emscripten_glFramebufferRenderbuffer,
+ emscripten_glFramebufferTexture2D: _emscripten_glFramebufferTexture2D,
+ emscripten_glFramebufferTextureLayer: _emscripten_glFramebufferTextureLayer,
+ emscripten_glFrontFace: _emscripten_glFrontFace,
+ emscripten_glGenBuffers: _emscripten_glGenBuffers,
+ emscripten_glGenFramebuffers: _emscripten_glGenFramebuffers,
+ emscripten_glGenQueries: _emscripten_glGenQueries,
+ emscripten_glGenQueriesEXT: _emscripten_glGenQueriesEXT,
+ emscripten_glGenRenderbuffers: _emscripten_glGenRenderbuffers,
+ emscripten_glGenSamplers: _emscripten_glGenSamplers,
+ emscripten_glGenTextures: _emscripten_glGenTextures,
+ emscripten_glGenTransformFeedbacks: _emscripten_glGenTransformFeedbacks,
+ emscripten_glGenVertexArrays: _emscripten_glGenVertexArrays,
+ emscripten_glGenVertexArraysOES: _emscripten_glGenVertexArraysOES,
+ emscripten_glGenerateMipmap: _emscripten_glGenerateMipmap,
+ emscripten_glGetActiveAttrib: _emscripten_glGetActiveAttrib,
+ emscripten_glGetActiveUniform: _emscripten_glGetActiveUniform,
+ emscripten_glGetActiveUniformBlockName: _emscripten_glGetActiveUniformBlockName,
+ emscripten_glGetActiveUniformBlockiv: _emscripten_glGetActiveUniformBlockiv,
+ emscripten_glGetActiveUniformsiv: _emscripten_glGetActiveUniformsiv,
+ emscripten_glGetAttachedShaders: _emscripten_glGetAttachedShaders,
+ emscripten_glGetAttribLocation: _emscripten_glGetAttribLocation,
+ emscripten_glGetBooleanv: _emscripten_glGetBooleanv,
+ emscripten_glGetBufferParameteri64v: _emscripten_glGetBufferParameteri64v,
+ emscripten_glGetBufferParameteriv: _emscripten_glGetBufferParameteriv,
+ emscripten_glGetBufferPointerv: _emscripten_glGetBufferPointerv,
+ emscripten_glGetError: _emscripten_glGetError,
+ emscripten_glGetFloatv: _emscripten_glGetFloatv,
+ emscripten_glGetFragDataLocation: _emscripten_glGetFragDataLocation,
+ emscripten_glGetFramebufferAttachmentParameteriv: _emscripten_glGetFramebufferAttachmentParameteriv,
+ emscripten_glGetInteger64i_v: _emscripten_glGetInteger64i_v,
+ emscripten_glGetInteger64v: _emscripten_glGetInteger64v,
+ emscripten_glGetIntegeri_v: _emscripten_glGetIntegeri_v,
+ emscripten_glGetIntegerv: _emscripten_glGetIntegerv,
+ emscripten_glGetInternalformativ: _emscripten_glGetInternalformativ,
+ emscripten_glGetProgramBinary: _emscripten_glGetProgramBinary,
+ emscripten_glGetProgramInfoLog: _emscripten_glGetProgramInfoLog,
+ emscripten_glGetProgramiv: _emscripten_glGetProgramiv,
+ emscripten_glGetQueryObjecti64vEXT: _emscripten_glGetQueryObjecti64vEXT,
+ emscripten_glGetQueryObjectivEXT: _emscripten_glGetQueryObjectivEXT,
+ emscripten_glGetQueryObjectui64vEXT: _emscripten_glGetQueryObjectui64vEXT,
+ emscripten_glGetQueryObjectuiv: _emscripten_glGetQueryObjectuiv,
+ emscripten_glGetQueryObjectuivEXT: _emscripten_glGetQueryObjectuivEXT,
+ emscripten_glGetQueryiv: _emscripten_glGetQueryiv,
+ emscripten_glGetQueryivEXT: _emscripten_glGetQueryivEXT,
+ emscripten_glGetRenderbufferParameteriv: _emscripten_glGetRenderbufferParameteriv,
+ emscripten_glGetSamplerParameterfv: _emscripten_glGetSamplerParameterfv,
+ emscripten_glGetSamplerParameteriv: _emscripten_glGetSamplerParameteriv,
+ emscripten_glGetShaderInfoLog: _emscripten_glGetShaderInfoLog,
+ emscripten_glGetShaderPrecisionFormat: _emscripten_glGetShaderPrecisionFormat,
+ emscripten_glGetShaderSource: _emscripten_glGetShaderSource,
+ emscripten_glGetShaderiv: _emscripten_glGetShaderiv,
+ emscripten_glGetString: _emscripten_glGetString,
+ emscripten_glGetStringi: _emscripten_glGetStringi,
+ emscripten_glGetSynciv: _emscripten_glGetSynciv,
+ emscripten_glGetTexParameterfv: _emscripten_glGetTexParameterfv,
+ emscripten_glGetTexParameteriv: _emscripten_glGetTexParameteriv,
+ emscripten_glGetTransformFeedbackVarying: _emscripten_glGetTransformFeedbackVarying,
+ emscripten_glGetUniformBlockIndex: _emscripten_glGetUniformBlockIndex,
+ emscripten_glGetUniformIndices: _emscripten_glGetUniformIndices,
+ emscripten_glGetUniformLocation: _emscripten_glGetUniformLocation,
+ emscripten_glGetUniformfv: _emscripten_glGetUniformfv,
+ emscripten_glGetUniformiv: _emscripten_glGetUniformiv,
+ emscripten_glGetUniformuiv: _emscripten_glGetUniformuiv,
+ emscripten_glGetVertexAttribIiv: _emscripten_glGetVertexAttribIiv,
+ emscripten_glGetVertexAttribIuiv: _emscripten_glGetVertexAttribIuiv,
+ emscripten_glGetVertexAttribPointerv: _emscripten_glGetVertexAttribPointerv,
+ emscripten_glGetVertexAttribfv: _emscripten_glGetVertexAttribfv,
+ emscripten_glGetVertexAttribiv: _emscripten_glGetVertexAttribiv,
+ emscripten_glHint: _emscripten_glHint,
+ emscripten_glInvalidateFramebuffer: _emscripten_glInvalidateFramebuffer,
+ emscripten_glInvalidateSubFramebuffer: _emscripten_glInvalidateSubFramebuffer,
+ emscripten_glIsBuffer: _emscripten_glIsBuffer,
+ emscripten_glIsEnabled: _emscripten_glIsEnabled,
+ emscripten_glIsFramebuffer: _emscripten_glIsFramebuffer,
+ emscripten_glIsProgram: _emscripten_glIsProgram,
+ emscripten_glIsQuery: _emscripten_glIsQuery,
+ emscripten_glIsQueryEXT: _emscripten_glIsQueryEXT,
+ emscripten_glIsRenderbuffer: _emscripten_glIsRenderbuffer,
+ emscripten_glIsSampler: _emscripten_glIsSampler,
+ emscripten_glIsShader: _emscripten_glIsShader,
+ emscripten_glIsSync: _emscripten_glIsSync,
+ emscripten_glIsTexture: _emscripten_glIsTexture,
+ emscripten_glIsTransformFeedback: _emscripten_glIsTransformFeedback,
+ emscripten_glIsVertexArray: _emscripten_glIsVertexArray,
+ emscripten_glIsVertexArrayOES: _emscripten_glIsVertexArrayOES,
+ emscripten_glLineWidth: _emscripten_glLineWidth,
+ emscripten_glLinkProgram: _emscripten_glLinkProgram,
+ emscripten_glMapBufferRange: _emscripten_glMapBufferRange,
+ emscripten_glPauseTransformFeedback: _emscripten_glPauseTransformFeedback,
+ emscripten_glPixelStorei: _emscripten_glPixelStorei,
+ emscripten_glPolygonOffset: _emscripten_glPolygonOffset,
+ emscripten_glProgramBinary: _emscripten_glProgramBinary,
+ emscripten_glProgramParameteri: _emscripten_glProgramParameteri,
+ emscripten_glQueryCounterEXT: _emscripten_glQueryCounterEXT,
+ emscripten_glReadBuffer: _emscripten_glReadBuffer,
+ emscripten_glReadPixels: _emscripten_glReadPixels,
+ emscripten_glReleaseShaderCompiler: _emscripten_glReleaseShaderCompiler,
+ emscripten_glRenderbufferStorage: _emscripten_glRenderbufferStorage,
+ emscripten_glRenderbufferStorageMultisample: _emscripten_glRenderbufferStorageMultisample,
+ emscripten_glResumeTransformFeedback: _emscripten_glResumeTransformFeedback,
+ emscripten_glSampleCoverage: _emscripten_glSampleCoverage,
+ emscripten_glSamplerParameterf: _emscripten_glSamplerParameterf,
+ emscripten_glSamplerParameterfv: _emscripten_glSamplerParameterfv,
+ emscripten_glSamplerParameteri: _emscripten_glSamplerParameteri,
+ emscripten_glSamplerParameteriv: _emscripten_glSamplerParameteriv,
+ emscripten_glScissor: _emscripten_glScissor,
+ emscripten_glShaderBinary: _emscripten_glShaderBinary,
+ emscripten_glShaderSource: _emscripten_glShaderSource,
+ emscripten_glStencilFunc: _emscripten_glStencilFunc,
+ emscripten_glStencilFuncSeparate: _emscripten_glStencilFuncSeparate,
+ emscripten_glStencilMask: _emscripten_glStencilMask,
+ emscripten_glStencilMaskSeparate: _emscripten_glStencilMaskSeparate,
+ emscripten_glStencilOp: _emscripten_glStencilOp,
+ emscripten_glStencilOpSeparate: _emscripten_glStencilOpSeparate,
+ emscripten_glTexImage2D: _emscripten_glTexImage2D,
+ emscripten_glTexImage3D: _emscripten_glTexImage3D,
+ emscripten_glTexParameterf: _emscripten_glTexParameterf,
+ emscripten_glTexParameterfv: _emscripten_glTexParameterfv,
+ emscripten_glTexParameteri: _emscripten_glTexParameteri,
+ emscripten_glTexParameteriv: _emscripten_glTexParameteriv,
+ emscripten_glTexStorage2D: _emscripten_glTexStorage2D,
+ emscripten_glTexStorage3D: _emscripten_glTexStorage3D,
+ emscripten_glTexSubImage2D: _emscripten_glTexSubImage2D,
+ emscripten_glTexSubImage3D: _emscripten_glTexSubImage3D,
+ emscripten_glTransformFeedbackVaryings: _emscripten_glTransformFeedbackVaryings,
+ emscripten_glUniform1f: _emscripten_glUniform1f,
+ emscripten_glUniform1fv: _emscripten_glUniform1fv,
+ emscripten_glUniform1i: _emscripten_glUniform1i,
+ emscripten_glUniform1iv: _emscripten_glUniform1iv,
+ emscripten_glUniform1ui: _emscripten_glUniform1ui,
+ emscripten_glUniform1uiv: _emscripten_glUniform1uiv,
+ emscripten_glUniform2f: _emscripten_glUniform2f,
+ emscripten_glUniform2fv: _emscripten_glUniform2fv,
+ emscripten_glUniform2i: _emscripten_glUniform2i,
+ emscripten_glUniform2iv: _emscripten_glUniform2iv,
+ emscripten_glUniform2ui: _emscripten_glUniform2ui,
+ emscripten_glUniform2uiv: _emscripten_glUniform2uiv,
+ emscripten_glUniform3f: _emscripten_glUniform3f,
+ emscripten_glUniform3fv: _emscripten_glUniform3fv,
+ emscripten_glUniform3i: _emscripten_glUniform3i,
+ emscripten_glUniform3iv: _emscripten_glUniform3iv,
+ emscripten_glUniform3ui: _emscripten_glUniform3ui,
+ emscripten_glUniform3uiv: _emscripten_glUniform3uiv,
+ emscripten_glUniform4f: _emscripten_glUniform4f,
+ emscripten_glUniform4fv: _emscripten_glUniform4fv,
+ emscripten_glUniform4i: _emscripten_glUniform4i,
+ emscripten_glUniform4iv: _emscripten_glUniform4iv,
+ emscripten_glUniform4ui: _emscripten_glUniform4ui,
+ emscripten_glUniform4uiv: _emscripten_glUniform4uiv,
+ emscripten_glUniformBlockBinding: _emscripten_glUniformBlockBinding,
+ emscripten_glUniformMatrix2fv: _emscripten_glUniformMatrix2fv,
+ emscripten_glUniformMatrix2x3fv: _emscripten_glUniformMatrix2x3fv,
+ emscripten_glUniformMatrix2x4fv: _emscripten_glUniformMatrix2x4fv,
+ emscripten_glUniformMatrix3fv: _emscripten_glUniformMatrix3fv,
+ emscripten_glUniformMatrix3x2fv: _emscripten_glUniformMatrix3x2fv,
+ emscripten_glUniformMatrix3x4fv: _emscripten_glUniformMatrix3x4fv,
+ emscripten_glUniformMatrix4fv: _emscripten_glUniformMatrix4fv,
+ emscripten_glUniformMatrix4x2fv: _emscripten_glUniformMatrix4x2fv,
+ emscripten_glUniformMatrix4x3fv: _emscripten_glUniformMatrix4x3fv,
+ emscripten_glUnmapBuffer: _emscripten_glUnmapBuffer,
+ emscripten_glUseProgram: _emscripten_glUseProgram,
+ emscripten_glValidateProgram: _emscripten_glValidateProgram,
+ emscripten_glVertexAttrib1f: _emscripten_glVertexAttrib1f,
+ emscripten_glVertexAttrib1fv: _emscripten_glVertexAttrib1fv,
+ emscripten_glVertexAttrib2f: _emscripten_glVertexAttrib2f,
+ emscripten_glVertexAttrib2fv: _emscripten_glVertexAttrib2fv,
+ emscripten_glVertexAttrib3f: _emscripten_glVertexAttrib3f,
+ emscripten_glVertexAttrib3fv: _emscripten_glVertexAttrib3fv,
+ emscripten_glVertexAttrib4f: _emscripten_glVertexAttrib4f,
+ emscripten_glVertexAttrib4fv: _emscripten_glVertexAttrib4fv,
+ emscripten_glVertexAttribDivisor: _emscripten_glVertexAttribDivisor,
+ emscripten_glVertexAttribDivisorANGLE: _emscripten_glVertexAttribDivisorANGLE,
+ emscripten_glVertexAttribDivisorARB: _emscripten_glVertexAttribDivisorARB,
+ emscripten_glVertexAttribDivisorEXT: _emscripten_glVertexAttribDivisorEXT,
+ emscripten_glVertexAttribDivisorNV: _emscripten_glVertexAttribDivisorNV,
+ emscripten_glVertexAttribI4i: _emscripten_glVertexAttribI4i,
+ emscripten_glVertexAttribI4iv: _emscripten_glVertexAttribI4iv,
+ emscripten_glVertexAttribI4ui: _emscripten_glVertexAttribI4ui,
+ emscripten_glVertexAttribI4uiv: _emscripten_glVertexAttribI4uiv,
+ emscripten_glVertexAttribIPointer: _emscripten_glVertexAttribIPointer,
+ emscripten_glVertexAttribPointer: _emscripten_glVertexAttribPointer,
+ emscripten_glViewport: _emscripten_glViewport,
+ emscripten_glWaitSync: _emscripten_glWaitSync,
+ emscripten_has_asyncify: _emscripten_has_asyncify,
+ emscripten_memcpy_big: _emscripten_memcpy_big,
+ emscripten_request_fullscreen_strategy: _emscripten_request_fullscreen_strategy,
+ emscripten_request_pointerlock: _emscripten_request_pointerlock,
+ emscripten_resize_heap: _emscripten_resize_heap,
+ emscripten_sample_gamepad_data: _emscripten_sample_gamepad_data,
+ emscripten_set_beforeunload_callback_on_thread: _emscripten_set_beforeunload_callback_on_thread,
+ emscripten_set_blur_callback_on_thread: _emscripten_set_blur_callback_on_thread,
+ emscripten_set_canvas_element_size: _emscripten_set_canvas_element_size,
+ emscripten_set_element_css_size: _emscripten_set_element_css_size,
+ emscripten_set_focus_callback_on_thread: _emscripten_set_focus_callback_on_thread,
+ emscripten_set_fullscreenchange_callback_on_thread: _emscripten_set_fullscreenchange_callback_on_thread,
+ emscripten_set_gamepadconnected_callback_on_thread: _emscripten_set_gamepadconnected_callback_on_thread,
+ emscripten_set_gamepaddisconnected_callback_on_thread: _emscripten_set_gamepaddisconnected_callback_on_thread,
+ emscripten_set_keydown_callback_on_thread: _emscripten_set_keydown_callback_on_thread,
+ emscripten_set_keypress_callback_on_thread: _emscripten_set_keypress_callback_on_thread,
+ emscripten_set_keyup_callback_on_thread: _emscripten_set_keyup_callback_on_thread,
+ emscripten_set_main_loop_arg: _emscripten_set_main_loop_arg,
+ emscripten_set_mousedown_callback_on_thread: _emscripten_set_mousedown_callback_on_thread,
+ emscripten_set_mouseenter_callback_on_thread: _emscripten_set_mouseenter_callback_on_thread,
+ emscripten_set_mouseleave_callback_on_thread: _emscripten_set_mouseleave_callback_on_thread,
+ emscripten_set_mousemove_callback_on_thread: _emscripten_set_mousemove_callback_on_thread,
+ emscripten_set_mouseup_callback_on_thread: _emscripten_set_mouseup_callback_on_thread,
+ emscripten_set_pointerlockchange_callback_on_thread: _emscripten_set_pointerlockchange_callback_on_thread,
+ emscripten_set_resize_callback_on_thread: _emscripten_set_resize_callback_on_thread,
+ emscripten_set_touchcancel_callback_on_thread: _emscripten_set_touchcancel_callback_on_thread,
+ emscripten_set_touchend_callback_on_thread: _emscripten_set_touchend_callback_on_thread,
+ emscripten_set_touchmove_callback_on_thread: _emscripten_set_touchmove_callback_on_thread,
+ emscripten_set_touchstart_callback_on_thread: _emscripten_set_touchstart_callback_on_thread,
+ emscripten_set_visibilitychange_callback_on_thread: _emscripten_set_visibilitychange_callback_on_thread,
+ emscripten_set_wheel_callback_on_thread: _emscripten_set_wheel_callback_on_thread,
+ emscripten_set_window_title: _emscripten_set_window_title,
+ emscripten_sleep: _emscripten_sleep,
+ emscripten_webgl_create_context: _emscripten_webgl_create_context,
+ emscripten_webgl_destroy_context: _emscripten_webgl_destroy_context,
+ emscripten_webgl_get_current_context: _emscripten_webgl_get_current_context,
+ emscripten_webgl_init_context_attributes: _emscripten_webgl_init_context_attributes,
+ emscripten_webgl_make_context_current: _emscripten_webgl_make_context_current,
+ environ_get: _environ_get,
+ environ_sizes_get: _environ_sizes_get,
+ fd_close: _fd_close,
+ fd_read: _fd_read,
+ fd_seek: _fd_seek,
+ fd_write: _fd_write,
+ glActiveTexture: _glActiveTexture,
+ glAttachShader: _glAttachShader,
+ glBeginQuery: _glBeginQuery,
+ glBindBuffer: _glBindBuffer,
+ glBindBufferRange: _glBindBufferRange,
+ glBindFramebuffer: _glBindFramebuffer,
+ glBindSampler: _glBindSampler,
+ glBindTexture: _glBindTexture,
+ glBindVertexArray: _glBindVertexArray,
+ glBlendColor: _glBlendColor,
+ glBlendEquationSeparate: _glBlendEquationSeparate,
+ glBlendFuncSeparate: _glBlendFuncSeparate,
+ glBlitFramebuffer: _glBlitFramebuffer,
+ glBufferData: _glBufferData,
+ glBufferSubData: _glBufferSubData,
+ glCheckFramebufferStatus: _glCheckFramebufferStatus,
+ glClear: _glClear,
+ glClearBufferfv: _glClearBufferfv,
+ glClearDepthf: _glClearDepthf,
+ glClearStencil: _glClearStencil,
+ glClientWaitSync: _glClientWaitSync,
+ glColorMask: _glColorMask,
+ glCompileShader: _glCompileShader,
+ glCompressedTexSubImage2D: _glCompressedTexSubImage2D,
+ glCompressedTexSubImage3D: _glCompressedTexSubImage3D,
+ glCopyBufferSubData: _glCopyBufferSubData,
+ glCreateProgram: _glCreateProgram,
+ glCreateShader: _glCreateShader,
+ glCullFace: _glCullFace,
+ glDeleteBuffers: _glDeleteBuffers,
+ glDeleteFramebuffers: _glDeleteFramebuffers,
+ glDeleteProgram: _glDeleteProgram,
+ glDeleteQueries: _glDeleteQueries,
+ glDeleteSamplers: _glDeleteSamplers,
+ glDeleteShader: _glDeleteShader,
+ glDeleteSync: _glDeleteSync,
+ glDeleteTextures: _glDeleteTextures,
+ glDeleteVertexArrays: _glDeleteVertexArrays,
+ glDepthFunc: _glDepthFunc,
+ glDepthMask: _glDepthMask,
+ glDepthRangef: _glDepthRangef,
+ glDetachShader: _glDetachShader,
+ glDisable: _glDisable,
+ glDrawArrays: _glDrawArrays,
+ glDrawArraysInstanced: _glDrawArraysInstanced,
+ glDrawBuffers: _glDrawBuffers,
+ glDrawElements: _glDrawElements,
+ glDrawElementsInstanced: _glDrawElementsInstanced,
+ glEnable: _glEnable,
+ glEnableVertexAttribArray: _glEnableVertexAttribArray,
+ glEndQuery: _glEndQuery,
+ glFenceSync: _glFenceSync,
+ glFinish: _glFinish,
+ glFlush: _glFlush,
+ glFramebufferTexture2D: _glFramebufferTexture2D,
+ glFramebufferTextureLayer: _glFramebufferTextureLayer,
+ glFrontFace: _glFrontFace,
+ glGenBuffers: _glGenBuffers,
+ glGenFramebuffers: _glGenFramebuffers,
+ glGenQueries: _glGenQueries,
+ glGenSamplers: _glGenSamplers,
+ glGenTextures: _glGenTextures,
+ glGenVertexArrays: _glGenVertexArrays,
+ glGenerateMipmap: _glGenerateMipmap,
+ glGetActiveAttrib: _glGetActiveAttrib,
+ glGetActiveUniform: _glGetActiveUniform,
+ glGetActiveUniformBlockName: _glGetActiveUniformBlockName,
+ glGetActiveUniformBlockiv: _glGetActiveUniformBlockiv,
+ glGetActiveUniformsiv: _glGetActiveUniformsiv,
+ glGetAttribLocation: _glGetAttribLocation,
+ glGetBufferParameteriv: _glGetBufferParameteriv,
+ glGetError: _glGetError,
+ glGetIntegerv: _glGetIntegerv,
+ glGetProgramInfoLog: _glGetProgramInfoLog,
+ glGetProgramiv: _glGetProgramiv,
+ glGetQueryObjectuiv: _glGetQueryObjectuiv,
+ glGetShaderInfoLog: _glGetShaderInfoLog,
+ glGetShaderiv: _glGetShaderiv,
+ glGetString: _glGetString,
+ glGetStringi: _glGetStringi,
+ glGetTexParameteriv: _glGetTexParameteriv,
+ glGetUniformBlockIndex: _glGetUniformBlockIndex,
+ glGetUniformLocation: _glGetUniformLocation,
+ glInvalidateFramebuffer: _glInvalidateFramebuffer,
+ glLinkProgram: _glLinkProgram,
+ glMapBufferRange: _glMapBufferRange,
+ glPixelStorei: _glPixelStorei,
+ glPolygonOffset: _glPolygonOffset,
+ glProgramParameteri: _glProgramParameteri,
+ glReadPixels: _glReadPixels,
+ glSamplerParameterf: _glSamplerParameterf,
+ glSamplerParameterfv: _glSamplerParameterfv,
+ glSamplerParameteri: _glSamplerParameteri,
+ glScissor: _glScissor,
+ glShaderSource: _glShaderSource,
+ glStencilFuncSeparate: _glStencilFuncSeparate,
+ glStencilMask: _glStencilMask,
+ glStencilOpSeparate: _glStencilOpSeparate,
+ glTexParameteri: _glTexParameteri,
+ glTexStorage2D: _glTexStorage2D,
+ glTexStorage3D: _glTexStorage3D,
+ glTexSubImage2D: _glTexSubImage2D,
+ glTexSubImage3D: _glTexSubImage3D,
+ glUniform1i: _glUniform1i,
+ glUniformBlockBinding: _glUniformBlockBinding,
+ glUnmapBuffer: _glUnmapBuffer,
+ glUseProgram: _glUseProgram,
+ glVertexAttribDivisor: _glVertexAttribDivisor,
+ glVertexAttribIPointer: _glVertexAttribIPointer,
+ glVertexAttribPointer: _glVertexAttribPointer,
+ glViewport: _glViewport,
+ glWaitSync: _glWaitSync,
+ invoke_iii: invoke_iii,
+ invoke_iiii: invoke_iiii,
+ invoke_iiiii: invoke_iiiii,
+ invoke_vii: invoke_vii,
+ invoke_viiii: invoke_viiii,
+ strftime: _strftime,
+ strftime_l: _strftime_l,
+ system: _system
 };
 
 var asm = createWasm();
@@ -11012,6 +10972,10 @@ var _free = function() {
 
 var _malloc = function() {
  return (_malloc = Module["asm"]["malloc"]).apply(null, arguments);
+};
+
+var setTempRet0 = function() {
+ return (setTempRet0 = Module["asm"]["setTempRet0"]).apply(null, arguments);
 };
 
 var ___getTypeName = function() {
@@ -11199,9 +11163,9 @@ function callMain(args = []) {
  var argc = args.length;
  var argv = stackAlloc((argc + 1) * 4);
  var argv_ptr = argv >> 2;
- args.forEach(arg => {
+ args.forEach((arg => {
   HEAP32[argv_ptr++] = stringToUTF8OnStack(arg);
- });
+ }));
  HEAP32[argv_ptr] = 0;
  try {
   var ret = entryFunction(argc, argv);
@@ -11233,12 +11197,12 @@ function run(args = arguments_) {
  }
  if (Module["setStatus"]) {
   Module["setStatus"]("Running...");
-  setTimeout(function() {
-   setTimeout(function() {
+  setTimeout((function() {
+   setTimeout((function() {
     Module["setStatus"]("");
-   }, 1);
+   }), 1);
    doRun();
-  }, 1);
+  }), 1);
  } else {
   doRun();
  }
