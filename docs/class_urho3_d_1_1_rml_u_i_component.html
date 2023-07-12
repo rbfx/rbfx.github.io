@@ -63,6 +63,7 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_rml_u_i_component.ht
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_urho3_d_1_1_rml_u_i_component-members.html">List of all members</a>  </div>
@@ -112,6 +113,12 @@ Rml::ElementDocument *&#160;</td><td class="memItemRight" valign="bottom"><a cla
 <a class="el" href="class_urho3_d_1_1_rml_navigation_manager.html">RmlNavigationManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#af069c2939c4d67547438b4f3571eb2af">GetNavigationManager</a> () const</td></tr>
 <tr class="memdesc:af069c2939c4d67547438b4f3571eb2af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return navigation manager. <br /></td></tr>
 <tr class="separator:af069c2939c4d67547438b4f3571eb2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46942206ab0399cbe640a89f78eb4ee8"><td class="memItemLeft" align="right" valign="top"><a id="a46942206ab0399cbe640a89f78eb4ee8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>BindDataModelProperty</b> (const ea::string &amp;name, GetterFunc getter, SetterFunc setter)</td></tr>
+<tr class="separator:a46942206ab0399cbe640a89f78eb4ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd9849f8426c791fa164b1ce83638e9"><td class="memItemLeft" align="right" valign="top"><a id="a1bd9849f8426c791fa164b1ce83638e9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>BindDataModelEvent</b> (const ea::string &amp;name, EventFunc eventCallback)</td></tr>
+<tr class="separator:a1bd9849f8426c791fa164b1ce83638e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:abeaf30e644601a600477e400267e3d69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#abeaf30e644601a600477e400267e3d69">Update</a> (float timeStep) override</td></tr>
 <tr class="separator:abeaf30e644601a600477e400267e3d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -547,6 +554,10 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:abbdde7af237e597a2f4d986efec2efa0"><td class="memTemplItemLeft" align="right" valign="top">Rml::DataEventFunc&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#abbdde7af237e597a2f4d986efec2efa0">WrapCallback</a> (void(T::*callback)())</td></tr>
 <tr class="memdesc:abbdde7af237e597a2f4d986efec2efa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap data event callback. <br /></td></tr>
 <tr class="separator:abbdde7af237e597a2f4d986efec2efa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6dbbbd735b5db7ded71bcf83db7e5f7"><td class="memItemLeft" align="right" valign="top"><a id="af6dbbbd735b5db7ded71bcf83db7e5f7"></a>
+Rml::DataModelConstructor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#af6dbbbd735b5db7ded71bcf83db7e5f7">GetDataModelConstructor</a> () const</td></tr>
+<tr class="memdesc:af6dbbbd735b5db7ded71bcf83db7e5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get data model constructor. Only available in OnDataModelInitialized method. <br /></td></tr>
+<tr class="separator:af6dbbbd735b5db7ded71bcf83db7e5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ad52c26e379a0f236d26d281094e37512"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#ad52c26e379a0f236d26d281094e37512">IsVariableDirty</a> (const ea::string &amp;variableName)</td></tr>
 <tr class="separator:ad52c26e379a0f236d26d281094e37512"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -559,9 +570,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DirtyAllVariables</b>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a2cdb905888f369c530fec01ef9e3f4de"><td class="memItemLeft" align="right" valign="top">virtual ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a2cdb905888f369c530fec01ef9e3f4de">GetDataModelName</a> ()</td></tr>
 <tr class="separator:a2cdb905888f369c530fec01ef9e3f4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a627aa5e5a87485f8bf250a04a88703cb"><td class="memItemLeft" align="right" valign="top"><a id="a627aa5e5a87485f8bf250a04a88703cb"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDataModelInitialized</b> (Rml::DataModelConstructor &amp;constructor)</td></tr>
-<tr class="separator:a627aa5e5a87485f8bf250a04a88703cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2adbae0fe9a6da11fa10b8ad8c6448b7"><td class="memItemLeft" align="right" valign="top"><a id="a2adbae0fe9a6da11fa10b8ad8c6448b7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDataModelInitialized</b> ()</td></tr>
+<tr class="separator:a2adbae0fe9a6da11fa10b8ad8c6448b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add66052304354e2033dce4f796f1a3de"><td class="memItemLeft" align="right" valign="top"><a id="add66052304354e2033dce4f796f1a3de"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDocumentPreLoad</b> ()</td></tr>
 <tr class="separator:add66052304354e2033dce4f796f1a3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -574,6 +585,13 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDocumentPre
 <tr class="memitem:a3109decc3c7613337b00c5c2932a18d2"><td class="memItemLeft" align="right" valign="top"><a id="a3109decc3c7613337b00c5c2932a18d2"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDocumentPostUnload</b> ()</td></tr>
 <tr class="separator:a3109decc3c7613337b00c5c2932a18d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:aabc86b3e561fc6685ce7d6b4e8839963"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#aabc86b3e561fc6685ce7d6b4e8839963">OnSetEnabled</a> () override</td></tr>
+<tr class="separator:aabc86b3e561fc6685ce7d6b4e8839963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c7cfcdfc53fb0b4187c5d2cb05e74d4"><td class="memItemLeft" align="right" valign="top"><a id="a1c7cfcdfc53fb0b4187c5d2cb05e74d4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a1c7cfcdfc53fb0b4187c5d2cb05e74d4">OnNodeSet</a> (Node *previousNode, Node *currentNode) override</td></tr>
+<tr class="memdesc:a1c7cfcdfc53fb0b4187c5d2cb05e74d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node being assigned at creation. <br /></td></tr>
+<tr class="separator:a1c7cfcdfc53fb0b4187c5d2cb05e74d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_urho3_d_1_1_logic_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_logic_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_logic_component.html">Urho3D::LogicComponent</a></td></tr>
 <tr class="memitem:aaeead90990d9c3a8837f9b359300f681 inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="memItemLeft" align="right" valign="top"><a id="aaeead90990d9c3a8837f9b359300f681"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#aaeead90990d9c3a8837f9b359300f681">OnNodeSet</a> (Node *previousNode, Node *currentNode) override</td></tr>
@@ -607,6 +625,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform autoremove. Called by subclasses. Caller should keep a weak pointer to itself to check whether was actually removed, and return immediately without further member operations in that case. <br /></td></tr>
 <tr class="separator:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a185126014d17f9cb8103eee6233ce405"><td class="memItemLeft" align="right" valign="top"><a id="a185126014d17f9cb8103eee6233ce405"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>GetterFunc</b> = eastl::function&lt; void(<a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;)&gt;</td></tr>
+<tr class="separator:a185126014d17f9cb8103eee6233ce405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65561b534f59735a0d658754ec0f140d"><td class="memItemLeft" align="right" valign="top"><a id="a65561b534f59735a0d658754ec0f140d"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SetterFunc</b> = eastl::function&lt; void(const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;)&gt;</td></tr>
+<tr class="separator:a65561b534f59735a0d658754ec0f140d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34a68eec36966ee4f19daf323b9b6183"><td class="memItemLeft" align="right" valign="top"><a id="a34a68eec36966ee4f19daf323b9b6183"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>EventFunc</b> = eastl::function&lt; void(const <a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a> &amp;)&gt;</td></tr>
+<tr class="separator:a34a68eec36966ee4f19daf323b9b6183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:aae6117cb5343344e520b5572dbb3589a"><td class="memItemLeft" align="right" valign="top"><a id="aae6117cb5343344e520b5572dbb3589a"></a>
@@ -630,9 +660,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateDocumentOpen</b
 <tr class="memitem:a93a265bfd37e3fc3a3ab473fb25229c9"><td class="memItemLeft" align="right" valign="top"><a id="a93a265bfd37e3fc3a3ab473fb25229c9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateConnectedCanvas</b> ()</td></tr>
 <tr class="separator:a93a265bfd37e3fc3a3ab473fb25229c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4081964ec82ad383d8d376d247fe10f"><td class="memItemLeft" align="right" valign="top"><a id="aa4081964ec82ad383d8d376d247fe10f"></a>
-Rml::DataModelConstructor&#160;</td><td class="memItemRight" valign="bottom"><b>CreateDataModel</b> ()</td></tr>
-<tr class="separator:aa4081964ec82ad383d8d376d247fe10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60e37783815d2680d447ad59b5a0747f"><td class="memItemLeft" align="right" valign="top"><a id="a60e37783815d2680d447ad59b5a0747f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CreateDataModel</b> ()</td></tr>
+<tr class="separator:a60e37783815d2680d447ad59b5a0747f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bd3105a1f9c4f764fe42ed80f1f0962"><td class="memItemLeft" align="right" valign="top"><a id="a4bd3105a1f9c4f764fe42ed80f1f0962"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveDataModel</b> ()</td></tr>
 <tr class="separator:a4bd3105a1f9c4f764fe42ed80f1f0962"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -645,13 +675,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DoNavigablePush</b> (
 <tr class="memitem:ae0416281c84bd4c82eea5a742f93ea17"><td class="memItemLeft" align="right" valign="top"><a id="ae0416281c84bd4c82eea5a742f93ea17"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>DoNavigablePop</b> (Rml::DataModelHandle model, Rml::Event &amp;event, const Rml::VariantList &amp;args)</td></tr>
 <tr class="separator:ae0416281c84bd4c82eea5a742f93ea17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:aabc86b3e561fc6685ce7d6b4e8839963"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#aabc86b3e561fc6685ce7d6b4e8839963">OnSetEnabled</a> () override</td></tr>
-<tr class="separator:aabc86b3e561fc6685ce7d6b4e8839963"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c7cfcdfc53fb0b4187c5d2cb05e74d4"><td class="memItemLeft" align="right" valign="top"><a id="a1c7cfcdfc53fb0b4187c5d2cb05e74d4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a1c7cfcdfc53fb0b4187c5d2cb05e74d4">OnNodeSet</a> (Node *previousNode, Node *currentNode) override</td></tr>
-<tr class="memdesc:a1c7cfcdfc53fb0b4187c5d2cb05e74d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node being assigned at creation. <br /></td></tr>
-<tr class="separator:a1c7cfcdfc53fb0b4187c5d2cb05e74d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a62cd8c66a61f45a44a12cdc2f42758f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a62cd8c66a61f45a44a12cdc2f42758f1">OnDocumentClosed</a> (Rml::ElementDocument *document)</td></tr>
 <tr class="separator:a62cd8c66a61f45a44a12cdc2f42758f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -688,6 +711,10 @@ Rml::DataModelHandle&#160;</td><td class="memItemRight" valign="bottom"><a class
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a84497f4c8b736894617196fd3f3d5956">dataModelName_</a></td></tr>
 <tr class="memdesc:a84497f4c8b736894617196fd3f3d5956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the data model. <br /></td></tr>
 <tr class="separator:a84497f4c8b736894617196fd3f3d5956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f6d25e0f8ccb4209eff15d3dabea5d"><td class="memItemLeft" align="right" valign="top"><a id="ae5f6d25e0f8ccb4209eff15d3dabea5d"></a>
+ea::unique_ptr&lt; Rml::DataModelConstructor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#ae5f6d25e0f8ccb4209eff15d3dabea5d">modelConstructor_</a></td></tr>
+<tr class="memdesc:ae5f6d25e0f8ccb4209eff15d3dabea5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data model constructor. <br /></td></tr>
+<tr class="separator:ae5f6d25e0f8ccb4209eff15d3dabea5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a88f3aed2c26cd270157d0755bf9636b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a88f3aed2c26cd270157d0755bf9636b0">resource_</a></td></tr>
 <tr class="separator:a88f3aed2c26cd270157d0755bf9636b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -843,7 +870,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

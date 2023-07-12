@@ -1,5 +1,14 @@
 var NAVTREEINDEX46 =
 {
+"class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_scale.html#a829c249398a49f79b90fcac057acad2a":[5,0,2,2,42,0],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_scale.html#ab96927945dd0316ce774c3dd93917f34":[5,0,2,2,42,1],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_scale_instance.html":[5,0,2,2,43],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_scale_instance.html#aa213405ef7916b9c4f58a85e2206ec68":[5,0,2,2,43,0],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_expire.html":[5,0,2,2,44],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_expire.html#a407bc284036836292dd1b72a21771674":[5,0,2,2,44,1],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_expire.html#a417de57d9df7c2fa47331a8c5be7f0a9":[5,0,2,2,44,2],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_expire.html#ab0c3074a5ab8b76f335d90bfe7d49eaf":[5,0,2,2,44,3],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_expire.html#abfc27bd1bd8a5f79f5312d5ac0fe35c6":[5,0,2,2,44,0],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_expire_instance.html":[5,0,2,2,45],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_expire_instance.html#a3cd46430444c3606df97471d73eab921":[5,0,2,2,45,0],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_get_attribute.html":[5,0,2,2,46],
@@ -240,14 +249,5 @@ var NAVTREEINDEX46 =
 "class_urho3_d_1_1_particle_graph_nodes_1_1_set_attribute.html#ad36ec038639cfc2f812f3a84d6987b08":[5,0,2,2,85,4],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_set_attribute.html#ae778306380c47daee32886cd5602fdaf":[5,0,2,2,85,7],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_set_attribute_1_1_instance.html":[5,0,2,2,85,0],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_set_attribute_1_1_instance.html#a746feb47f41ef39f9f93cfd34c911b8d":[5,0,2,2,85,0,2],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_set_attribute_1_1_instance.html#ae90c01d4655e5edab18f8821ce9fddd9":[5,0,2,2,85,0,1],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_set_attribute_1_1_instance.html#af2611308289f6b03e09a06fa6c9ae5fe":[5,0,2,2,85,0,0],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_set_uniform.html":[5,0,2,2,86],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_set_uniform.html#a3c4f59abb90ad479936678c5237be4df":[5,0,2,2,86,3],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_set_uniform.html#a45ff50ee60047c0e5d07b3a516d7c05d":[5,0,2,2,86,10],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_set_uniform.html#a56e8941b91d10826779d79c1c440132e":[5,0,2,2,86,7],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_set_uniform.html#a59045d87230bccf2ab1fec41922a7705":[5,0,2,2,86,5],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_set_uniform.html#ab040d5620f2bee6ce6534408c6ca3e50":[5,0,2,2,86,9],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_set_uniform.html#ab9f207bc29a5115d41d039aa2e81371d":[5,0,2,2,86,2]
+"class_urho3_d_1_1_particle_graph_nodes_1_1_set_attribute_1_1_instance.html#a746feb47f41ef39f9f93cfd34c911b8d":[5,0,2,2,85,0,2]
 };

@@ -1,5 +1,14 @@
 var NAVTREEINDEX12 =
 {
+"class_urho3_d_1_1_application_state.html#a4c0e0c77c181d19ef8240c0f5d2b3d5f":[5,0,2,35,10],
+"class_urho3_d_1_1_application_state.html#a533d45773fd832230208b476acad1638":[5,0,2,35,34],
+"class_urho3_d_1_1_application_state.html#a557117af6e4e83f7aa433dfb5c3a0f98":[5,0,2,35,33],
+"class_urho3_d_1_1_application_state.html#a587e93c17b3c83742bec60ee35bd3d46":[5,0,2,35,40],
+"class_urho3_d_1_1_application_state.html#a5e15a29bf82022b2bf5e6573300fe6d8":[5,0,2,35,32],
+"class_urho3_d_1_1_application_state.html#a6121321efd42d0a10dc43dcac6142690":[5,0,2,35,4],
+"class_urho3_d_1_1_application_state.html#a64fcd5054a3224d9bcb4ee23a186fd98":[5,0,2,35,41],
+"class_urho3_d_1_1_application_state.html#a66355356e341286b307bf4603bbdb563":[5,0,2,35,37],
+"class_urho3_d_1_1_application_state.html#a664cc377f1360421f5f796b719cbe5e8":[5,0,2,35,17],
 "class_urho3_d_1_1_application_state.html#a668981f71d28485900c01366dc3ad06c":[5,0,2,35,25],
 "class_urho3_d_1_1_application_state.html#a6caedd0868f09e0d47af01ff511b86ce":[5,0,2,35,14],
 "class_urho3_d_1_1_application_state.html#a71b300fdf7dbb115530b2d9e0fc84cb7":[5,0,2,35,24],
@@ -240,14 +249,5 @@ var NAVTREEINDEX12 =
 "class_urho3_d_1_1_asset_transformer_hierarchy.html#ad44e499a2bde537384ba9f2a539d59df":[5,0,2,48,9],
 "class_urho3_d_1_1_asset_transformer_hierarchy.html#ae8f77ca859e99425f47578982435bcc6":[5,0,2,48,4],
 "class_urho3_d_1_1_asset_transformer_hierarchy.html#af29631128f9ba86014211d038a17ba8c":[5,0,2,48,18],
-"class_urho3_d_1_1_asset_transformer_hierarchy.html#afc59022d6323f5c48034fdbaca8dcdd1":[5,0,2,48,12],
-"class_urho3_d_1_1_asset_transformer_hierarchy.html#aff0b12364fe61ca5304d5f00c237b869":[5,0,2,48,10],
-"class_urho3_d_1_1_attribute_accessor.html":[5,0,2,52],
-"class_urho3_d_1_1_attribute_accessor.html#a26e506b4496daa2de3a1cb72e73f0247":[5,0,2,52,0],
-"class_urho3_d_1_1_attribute_accessor.html#ab10c560c6d7c5ac6a16a3a27ce016866":[5,0,2,52,2],
-"class_urho3_d_1_1_attribute_accessor.html#ad22675cbea70682b45d1e78e9c0e36df":[5,0,2,52,1],
-"class_urho3_d_1_1_attribute_animation_info.html":[5,0,2,53],
-"class_urho3_d_1_1_attribute_animation_info.html#a3f1d360beb85781adaa998f844bc2d28":[5,0,2,53,0],
-"class_urho3_d_1_1_attribute_animation_info.html#a414b633feb6a96aa861f20e5ee0985e2":[5,0,2,53,4],
-"class_urho3_d_1_1_attribute_animation_info.html#a4bf67153d584c07221ce2792971959ff":[5,0,2,53,5]
+"class_urho3_d_1_1_asset_transformer_hierarchy.html#afc59022d6323f5c48034fdbaca8dcdd1":[5,0,2,48,12]
 };

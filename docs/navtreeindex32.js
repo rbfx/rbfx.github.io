@@ -1,5 +1,14 @@
 var NAVTREEINDEX32 =
 {
+"class_urho3_d_1_1_index_allocator.html#a3aeb0cbbba3b024d2d4c478dca29f9d2":[5,0,2,314,2],
+"class_urho3_d_1_1_index_allocator.html#a56537a81080f3362d1bbe4c53595d36c":[5,0,2,314,4],
+"class_urho3_d_1_1_index_allocator.html#aaa92a6e86efb0a2e141d5ff976b603a7":[5,0,2,314,3],
+"class_urho3_d_1_1_index_allocator.html#ab3a832af8fbdc8fb5d790ee9b3ab2bc4":[5,0,2,314,5],
+"class_urho3_d_1_1_index_allocator.html#ac490a8cf98524bae323e42579d8fec0b":[5,0,2,314,7],
+"class_urho3_d_1_1_index_allocator.html#ac69ca857b332a88ce72b762378141467":[5,0,2,314,9],
+"class_urho3_d_1_1_index_allocator.html#ad84c1d38c8ad9cf293467348c0d2b551":[5,0,2,314,0],
+"class_urho3_d_1_1_index_allocator.html#ade2c2463bc992857816df0fc0c6176dd":[5,0,2,314,8],
+"class_urho3_d_1_1_index_allocator.html#aee75488ccbbf8110d6214625500f5d8f":[5,0,2,314,1],
 "class_urho3_d_1_1_index_buffer.html":[5,0,2,315],
 "class_urho3_d_1_1_index_buffer.html#a039f7bd1e0d92f2d98b2a651cfe22659":[5,0,2,315,4],
 "class_urho3_d_1_1_index_buffer.html#a05130917f4e71f58100209bb2118f48f":[5,0,2,315,35],
@@ -240,14 +249,5 @@ var NAVTREEINDEX32 =
 "class_urho3_d_1_1_int_rect_iterator.html#a53d7b524a4fb0c5e5460b9a48d7ab6a7":[5,0,2,329,2],
 "class_urho3_d_1_1_int_rect_iterator.html#a822d586d91b1887c66a95bb5256ec6cb":[5,0,2,329,8],
 "class_urho3_d_1_1_int_rect_iterator.html#a992b845838dba885576afba8e43aa6db":[5,0,2,329,1],
-"class_urho3_d_1_1_int_rect_iterator.html#aa3f623702968fb08f5f62e1625dc675a":[5,0,2,329,4],
-"class_urho3_d_1_1_int_rect_iterator.html#abe3379ff447e18976703ca78a01dc38f":[5,0,2,329,0],
-"class_urho3_d_1_1_int_rect_iterator.html#ac9d9c05c011fa9e6eaf7d216b420a679":[5,0,2,329,6],
-"class_urho3_d_1_1_int_rect_iterator.html#adeb7eeebe03447eefced33ff6753af5e":[5,0,2,329,7],
-"class_urho3_d_1_1_int_rect_iterator.html#ae161656e4ee206902e3d91067344a290":[5,0,2,329,5],
-"class_urho3_d_1_1_int_rect_iterator.html#aed84443345c7bd438aefacd7191c6d0d":[5,0,2,329,3],
-"class_urho3_d_1_1_int_vector2.html":[5,0,2,330],
-"class_urho3_d_1_1_int_vector2.html#a1021e8071ba4b417a742b6141ea000b5":[5,0,2,330,14],
-"class_urho3_d_1_1_int_vector2.html#a10ec2c9441ba87d426bba50c8b6b8833":[5,0,2,330,18],
-"class_urho3_d_1_1_int_vector2.html#a2250b5264c0867949a8260d256179d9d":[5,0,2,330,10]
+"class_urho3_d_1_1_int_rect_iterator.html#aa3f623702968fb08f5f62e1625dc675a":[5,0,2,329,4]
 };

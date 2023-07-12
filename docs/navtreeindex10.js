@@ -1,5 +1,14 @@
 var NAVTREEINDEX10 =
 {
+"class_urho3_d_1_1_actions_1_1_rotate_by.html#a42efb9cc20fbd9e55af08cfb16c2f8d9":[5,0,2,0,45,6],
+"class_urho3_d_1_1_actions_1_1_rotate_by.html#a5fe8ab6ebbaa5362ba66a7442781a5c2":[5,0,2,0,45,5],
+"class_urho3_d_1_1_actions_1_1_rotate_by.html#a9e5c1ed9aca16e227d53e16d7def85dc":[5,0,2,0,45,1],
+"class_urho3_d_1_1_actions_1_1_rotate_by.html#ac2a6a5f69b525fda0840f782367c096f":[5,0,2,0,45,3],
+"class_urho3_d_1_1_actions_1_1_rotate_by.html#addc81ff6439718bd2cafb85ae54650ca":[5,0,2,0,45,2],
+"class_urho3_d_1_1_actions_1_1_scale_by.html":[5,0,2,0,46],
+"class_urho3_d_1_1_actions_1_1_scale_by.html#a26029495ab412321ac615f5b26dc4189":[5,0,2,0,46,5],
+"class_urho3_d_1_1_actions_1_1_scale_by.html#a41eaecd3fe03ad467a527ab916e8b09d":[5,0,2,0,46,0],
+"class_urho3_d_1_1_actions_1_1_scale_by.html#a8e513b8a450d0b07a12415371346f915":[5,0,2,0,46,4],
 "class_urho3_d_1_1_actions_1_1_scale_by.html#a9041e7703d664582630598641fd7059c":[5,0,2,0,46,3],
 "class_urho3_d_1_1_actions_1_1_scale_by.html#aa6900e37857a226d64bbfc6328df87f5":[5,0,2,0,46,2],
 "class_urho3_d_1_1_actions_1_1_scale_by.html#adb188a740141046ad44d2d0723cd6eec":[5,0,2,0,46,6],
@@ -240,14 +249,5 @@ var NAVTREEINDEX10 =
 "class_urho3_d_1_1_animated_sprite2_d.html#aae0628705bf3fc71fa138d4a2c395741":[5,0,2,20,17],
 "class_urho3_d_1_1_animated_sprite2_d.html#ac6f1cd008158892b6772010706f4e151":[5,0,2,20,4],
 "class_urho3_d_1_1_animated_sprite2_d.html#ac84ad93ee772e5da5a64b63bd5ab43b7":[5,0,2,20,30],
-"class_urho3_d_1_1_animated_sprite2_d.html#adc6066eecb6179790d7cc67c5b46fe98":[5,0,2,20,21],
-"class_urho3_d_1_1_animated_sprite2_d.html#ae3255ba15b94ff8c099fd69dac6f175b":[5,0,2,20,9],
-"class_urho3_d_1_1_animated_sprite2_d.html#af7b84f335d000c77e475176b232083b4":[5,0,2,20,16],
-"class_urho3_d_1_1_animation.html":[5,0,2,21],
-"class_urho3_d_1_1_animation.html#a037b1050f42cc78e7d541429e8f9f354":[5,0,2,21,37],
-"class_urho3_d_1_1_animation.html#a0685c7c487633492079f037d4ced5ebc":[5,0,2,21,7],
-"class_urho3_d_1_1_animation.html#a08fab2ac03e7071e2e89b178adbb499d":[5,0,2,21,17],
-"class_urho3_d_1_1_animation.html#a0c5547c18a8fd783b3b139f7bb53a925":[5,0,2,21,0],
-"class_urho3_d_1_1_animation.html#a0cff889b81251ffef679dae84a4bb89a":[5,0,2,21,31],
-"class_urho3_d_1_1_animation.html#a197eb07ff8ed27c212e23a76a1765e4e":[5,0,2,21,12]
+"class_urho3_d_1_1_animated_sprite2_d.html#adc6066eecb6179790d7cc67c5b46fe98":[5,0,2,20,21]
 };
