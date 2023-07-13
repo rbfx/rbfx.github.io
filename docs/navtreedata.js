@@ -26,6 +26,7 @@ var NAVTREE =
     [ "Home", "index.html", "index" ],
     [ "Quick Start for C++ developers", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_cpp-quick-start.html", null ],
     [ "Quick Start for C# developers", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html", null ],
+    [ "Math Cheatsheet", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html", null ],
     [ "Documentation for Rebel Fork Framework", "md__home_runner_work_rbfx-docs_rbfx-docs__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -133,19 +134,19 @@ var NAVTREEINDEX =
 "class_urho3_d_1_1_work_queue.html#ab717544bbd92f6bece773423b50a13f3",
 "class_urho3_d_1_1_x_m_l_input_archive_block.html#af57803e55ae5c2f410f2afe59400a23c",
 "functions_vars_k.html",
-"struct_urho3_d_1_1_action_manager_1_1_hash_element.html#a7a3d3c252bfbd071f0ce6a5a0f9775df",
-"struct_urho3_d_1_1_baked_light.html#a1337bae195f189d1435573591ebc0d7b",
-"struct_urho3_d_1_1_client_replication_state.html",
-"struct_urho3_d_1_1_decal_vertex.html#ae0d33f8c2f9cca0054c52c28a6119ffb",
-"struct_urho3_d_1_1_g_l_t_f_importer_settings.html#af99af562633c72baf25f9721326bcdbd",
-"struct_urho3_d_1_1_joystick_state.html#ab79205d20e80cfae00d27ecb543256f1",
-"struct_urho3_d_1_1_material_shader_parameter.html#a458d8be40b614a8f948217f5141c05d0",
-"struct_urho3_d_1_1_particle.html#a3aa5403437170c4da46fcc88dbad4292",
-"struct_urho3_d_1_1_pipeline_state_desc.html#abb4b12f406867119d667b49786a3eafc",
-"struct_urho3_d_1_1_resource_ref.html#a742cd28ac5541ff1223d93d6f054b986",
-"struct_urho3_d_1_1_spherical_harmonics_color9.html#a46ef476925ca503c9d18dfccd91a830e",
-"struct_urho3_d_1_1_tetrahedron.html#a1da98e81df03d9bfb783f9636e0d4c11",
-"union_urho3_d_1_1_variant_value.html#a6b234ce4cc5ac0285a96bc4ab11e7ccd"
+"struct_urho3_d_1_1_action_manager_1_1_hash_element.html#a15802be4dde143c56c559dc18cd19a16",
+"struct_urho3_d_1_1_baked_light.html#a0efef339d0b3bd1b440f92e60a711afe",
+"struct_urho3_d_1_1_char_location.html#ab3b36b9b14878c2fcab07b509a52a5fc",
+"struct_urho3_d_1_1_decal_vertex.html#ad6bcbb759e982b5bbcd6e46b03216240",
+"struct_urho3_d_1_1_g_l_t_f_importer_settings.html#af942aeae4c9408b54a35e43637861e5e",
+"struct_urho3_d_1_1_joystick_state.html#aab83e9ee6722dbbd004a8d704bb6fabc",
+"struct_urho3_d_1_1_material_shader_parameter.html#a2dc8840ac74e8d51601ac6bdd6b31924",
+"struct_urho3_d_1_1_particle.html#a3274f839e5f03b395e26301b39f45208",
+"struct_urho3_d_1_1_pipeline_state_desc.html#ab5071caf8a36bf6bd2c169f0386cf22c",
+"struct_urho3_d_1_1_resource_ref.html#a6335add9ec15162e7cdca3282b9d8cfe",
+"struct_urho3_d_1_1_spherical_harmonics_color9.html#a0b90856983dcccab7b06c20cf39a2009",
+"struct_urho3_d_1_1_tetrahedron.html",
+"union_urho3_d_1_1_variant_value.html#a682eb43268e6c3d84a8920982a43596d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
