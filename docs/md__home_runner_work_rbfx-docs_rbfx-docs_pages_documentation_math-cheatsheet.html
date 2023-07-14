@@ -95,6 +95,10 @@ $(document).ready(function(){initNavTree('md__home_runner_work_rbfx-docs_rbfx-do
 <div class="line">Vector3 translated = mat * vec3;  <span class="comment">// The result is {13, 22, 29}</span></div>
 <div class="line"><span class="comment">// Rotate vector by matrix</span></div>
 <div class="line">Vector3 rotated = mat * vec3.ToVector4(0.0f); <span class="comment">// The result is {3, 2, -1}</span></div>
+</div><!-- fragment --><p>All rotations in the engine performed in a clockwise order. Here is what going to happen with a vector {x,y,z} if rotated around an axis at 90 degrees:</p>
+<div class="fragment"><div class="line">Axis X (Vector::RIGHT):   { x, y, z } =&gt; { x,-z, y }</div>
+<div class="line">Axis Y (Vector::UP):      { x, y, z } =&gt; { z, y,-x }</div>
+<div class="line">Axis Z (Vector::FORWARD): { x, y, z } =&gt; {-y, x, z }</div>
 </div><!-- fragment --><h1>Matrix operations</h1>
 <p>In the engine, matrices are column-major (like in OpenGL) while in DirectX they are row-major.</p>
 <p>In general, for a column-vector on the right (OpenGL convention), M1 * (M2 * (M3 * v)) = (M1 M2 M3) * v, i.e. the left-most matrix is at the root node while the right-most is at the leaf node.</p>
@@ -108,6 +112,20 @@ $(document).ready(function(){initNavTree('md__home_runner_work_rbfx-docs_rbfx-do
 <div class="line">Vector3 rt = (rotation * translation) * vec3; <span class="comment">//33, 22, -11</span></div>
 <div class="line">Vector3 expl = rotation * (translation * vec3); <span class="comment">//33, 22, -11</span></div>
 <div class="line">Vector3 tr = (translation * rotation) * vec3; <span class="comment">//13, 22, 29</span></div>
+</div><!-- fragment --><h2>Node transform matrices</h2>
+<p>To combine world transform matrices to make a matrix that would transform from one game object space into another object space, you can multiply the inverse of the world transform matrix of the second object by the world transform matrix of the first object. This will give you a matrix that will transform from one object space to another object space.</p>
+<p>Here is an example code: </p><div class="fragment"><div class="line">Matrix3x4 transformA = nodeA-&gt;GetWorldTransform();</div>
+<div class="line">Matrix3x4 transformB = nodeA-&gt;GetWorldTransform();</div>
+<div class="line">Matrix3x4 transformAtoB = transformB.Inverse() * transformA;</div>
+<div class="line"><span class="keyword">const</span> Vector3 positionInA{1, 2, 3};</div>
+<div class="line"><span class="keyword">const</span> Vector3 positionInB = transformAtoB * positionInA;</div>
+</div><!-- fragment --><p>The transformAtoB matrix will now transform from the nodeA object’s space to the nodeB object’s space.</p>
+<h2>Bone bind pose matrices</h2>
+<p>The bind pose matrix is the matrix that represents the position and orientation of a joint in its default pose. It is used as a reference for skinning, which is the process of deforming a mesh based on the movement of joints in a skeleton.</p>
+<p>When an animation is played, each joint in the skeleton is transformed by its animation matrix. The bind pose matrix is then used to transform the vertices of the mesh into the space of the joint. This is done by multiplying each vertex by the inverse of the bind pose matrix for the joint it is associated with.</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> Vector3 worldSpacePosition{1, 2, 3};</div>
+<div class="line"><span class="keyword">const</span> Matrix3x4 offsetMatrix = animatedModel-&gt;GetSkeleton().GetBone(0u)-&gt;offsetMatrix_;</div>
+<div class="line"><span class="keyword">const</span> Vector3 localSpacePosition = offsetMatrix * worldSpacePosition;</div>
 </div><!-- fragment --><h1>Quaternion operations</h1>
 <p>Quaternion multiplication order is the same as with matrices. Here is an example to illustrate it:</p>
 <div class="fragment"><div class="line"><span class="comment">// Make Vector3</span></div>
@@ -119,7 +137,7 @@ $(document).ready(function(){initNavTree('md__home_runner_work_rbfx-docs_rbfx-do
 <div class="line">Vector3 expl = rotationY * (rotationX * vec3); <span class="comment">//2,-3,-1</span></div>
 <div class="line">Vector3 yx = (rotationY * rotationX) * vec3; <span class="comment">//2,-3,-1</span></div>
 <div class="line">Vector3 xy = (rotationX * rotationY) * vec3; <span class="comment">//3,1,2</span></div>
-</div><!-- fragment --><p>To revert rotation take result of the Inverse() method: </p><div class="fragment"><div class="line"><span class="comment">// Make Vector3</span></div>
+</div><!-- fragment --><p>To reverse rotation take result of the Inverse() method: </p><div class="fragment"><div class="line"><span class="comment">// Make Vector3</span></div>
 <div class="line"><span class="keyword">const</span> Vector3 vec3{1, 2, 3};</div>
 <div class="line"><span class="comment">// Make quaternions</span></div>
 <div class="line">Quaternion rotationY{90.0f, Vector3::UP};</div>
