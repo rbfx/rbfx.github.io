@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('md__home_runner_work_rbfx-docs_rbfx-do
 </div><!-- fragment --><h2>Node transform matrices</h2>
 <p>To combine world transform matrices to make a matrix that would transform from one game object space into another object space, you can multiply the inverse of the world transform matrix of the second object by the world transform matrix of the first object. This will give you a matrix that will transform from one object space to another object space.</p>
 <p>Here is an example code: </p><div class="fragment"><div class="line">Matrix3x4 transformA = nodeA-&gt;GetWorldTransform();</div>
-<div class="line">Matrix3x4 transformB = nodeA-&gt;GetWorldTransform();</div>
+<div class="line">Matrix3x4 transformB = nodeB-&gt;GetWorldTransform();</div>
 <div class="line">Matrix3x4 transformAtoB = transformB.Inverse() * transformA;</div>
 <div class="line"><span class="keyword">const</span> Vector3 positionInA{1, 2, 3};</div>
 <div class="line"><span class="keyword">const</span> Vector3 positionInB = transformAtoB * positionInA;</div>
