@@ -113,7 +113,7 @@ Interest management</h1>
 <p>For now, creation and removal of nodes is always sent immediately, without consulting interest management. This is based on the assumption that nodes' motion updates consume the most bandwidth.</p>
 <h1><a class="anchor" id="Network_Controls"></a>
 Client controls update</h1>
-<p>The <a class="el" href="class_urho3_d_1_1_controls.html" title="Controls sent over the network.">Controls</a> structure is used to send controls information from the client to the server, by default also at 30 FPS. This includes held down buttons, which is an application-defined 32-bit bitfield, floating point yaw and pitch, and possible extra data (for example the currently selected weapon) stored within a VariantMap.</p>
+<p>The Controls structure is used to send controls information from the client to the server, by default also at 30 FPS. This includes held down buttons, which is an application-defined 32-bit bitfield, floating point yaw and pitch, and possible extra data (for example the currently selected weapon) stored within a VariantMap.</p>
 <p>It is up to the client code to ensure they are kept up-to-date, by calling SetControls() on the server connection. The event E_NETWORKUPDDATE will be sent to remind of the impending update, and the event E_NETWORKUPDATESENT will be sent after the update. The controls can then be inspected on the server side by calling GetControls().</p>
 <p>The controls update message also includes a running 8-bit timestamp, see GetTimeStamp(), and the client's observer position / rotation for interest management. To conserve bandwidth, the position and rotation values are left out if they have never been assigned.</p>
 <h1><a class="anchor" id="Network_ClientPrediction"></a>

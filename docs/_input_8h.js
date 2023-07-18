@@ -18,5 +18,6 @@ var _input_8h =
       [ "SDLRawInput", "_input_8h.html#aaf08543a8865610f5c2d4d41fa8d17a7ad74c5d9a1b9fdcef865174fdb83e0a12", null ],
       [ "Highest", "_input_8h.html#aaf08543a8865610f5c2d4d41fa8d17a7a582996407922dab08d5cf2b3d2a7c1c9", null ]
     ] ],
+    [ "RegisterInputLibrary", "_input_8h.html#a0a8bd21bb7570f7c36d6c5d50986626a", null ],
     [ "MOUSE_POSITION_OFFSCREEN", "_input_8h.html#a90a3db31bf2eb6813a63f5e6cd39304b", null ]
 ];

@@ -36,7 +36,7 @@ var class_urho3_d_1_1_direction_aggregator =
     [ "enabled_", "class_urho3_d_1_1_direction_aggregator.html#ace3ef96709132386b2f6120e9783a508", null ],
     [ "enabledSubscriptions_", "class_urho3_d_1_1_direction_aggregator.html#a0e90844cb60f3abe3fbbf205ac68ca76", null ],
     [ "horizontalAxis_", "class_urho3_d_1_1_direction_aggregator.html#a85e888f32baf69eca602c5aa7cf2e126", null ],
-    [ "ignoreJoystickId_", "class_urho3_d_1_1_direction_aggregator.html#acdf49000f00e5c4892e6517f4d6225bf", null ],
+    [ "ignoreJoystickId_", "class_urho3_d_1_1_direction_aggregator.html#a5b0698b4543538304524b9689b964286", null ],
     [ "input_", "class_urho3_d_1_1_direction_aggregator.html#a585163611801c9c8ad4f84f32a4b8be3", null ],
     [ "subscriptionFlags_", "class_urho3_d_1_1_direction_aggregator.html#ac0f7feb78f84ea5179fe49afc7ae4e5f", null ],
     [ "touchOrigin_", "class_urho3_d_1_1_direction_aggregator.html#aa48636ff3de97b01ae8552eb928d03d8", null ],

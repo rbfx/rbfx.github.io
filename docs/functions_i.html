@@ -94,7 +94,9 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 , <a class="el" href="class_urho3_d_1_1_scroll_view.html#a6368690841151c0180bda96fb179034e">Urho3D::ScrollView</a>
 </li>
 <li>ignoreJoystickId_
-: <a class="el" href="class_urho3_d_1_1_direction_aggregator.html#acdf49000f00e5c4892e6517f4d6225bf">Urho3D::DirectionAggregator</a>
+: <a class="el" href="class_urho3_d_1_1_direction_aggregator.html#a5b0698b4543538304524b9689b964286">Urho3D::DirectionAggregator</a>
+, <a class="el" href="class_urho3_d_1_1_free_fly_controller.html#a7b13807d33020cc884af87f6bc9e489f">Urho3D::FreeFlyController</a>
+, <a class="el" href="class_urho3_d_1_1_input_map.html#a5179f695781ce3c25bf5f359188d5a6b">Urho3D::InputMap</a>
 </li>
 <li>ignoreResourceAutoReload_
 : <a class="el" href="class_urho3_d_1_1_resource_cache.html#a9fbadabb5f8788cb96df9766b25881c6">Urho3D::ResourceCache</a>
@@ -416,6 +418,12 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 </li>
 <li>inputFocus_
 : <a class="el" href="class_urho3_d_1_1_input.html#a471e35b5ce1544455116fe4d0e3da753">Urho3D::Input</a>
+</li>
+<li>InputMap()
+: <a class="el" href="class_urho3_d_1_1_input_map.html#a15a693ca113b3767911ebbbb7c5cb09a">Urho3D::InputMap</a>
+</li>
+<li>inputMap_
+: <a class="el" href="class_urho3_d_1_1_move_and_orbit_controller.html#a5e16d7438c646de01270dbd866186cf8">Urho3D::MoveAndOrbitController</a>
 </li>
 <li>inputPins_
 : <a class="el" href="class_urho3_d_1_1_graph_node.html#aff4e561f916129be3869d43778ee5f31">Urho3D::GraphNode</a>
@@ -769,9 +777,6 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 , <a class="el" href="class_urho3_d_1_1_actions_1_1_action_state.html#ad88d8060617f968d979adaf992e712bd">Urho3D::Actions::ActionState</a>
 , <a class="el" href="class_urho3_d_1_1_actions_1_1_finite_time_action_state.html#a8b31dd990d09d97f198363ba8b9624aa">Urho3D::Actions::FiniteTimeActionState</a>
 </li>
-<li>IsDown()
-: <a class="el" href="class_urho3_d_1_1_controls.html#a1207031d599f459981753b57a33ca566">Urho3D::Controls</a>
-</li>
 <li>IsDragging()
 : <a class="el" href="class_urho3_d_1_1_u_i.html#a2425df9cf0640d7ec66e4504a03a13ab">Urho3D::UI</a>
 </li>
@@ -917,11 +922,11 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 : <a class="el" href="class_urho3_d_1_1_rml_u_i.html#a2932b8bd9f5b820eb73ad871689e2a02">Urho3D::RmlUI</a>
 </li>
 <li>IsInside()
-: <a class="el" href="class_urho3_d_1_1_bounding_box.html#a03f691b8e5e7e0a83758321c89ac7e40">Urho3D::BoundingBox</a>
+: <a class="el" href="class_urho3_d_1_1_bounding_box.html#a0e5b7a76ebc77489a405984245efaf63">Urho3D::BoundingBox</a>
 , <a class="el" href="class_urho3_d_1_1_debug_renderer.html#a81f7b1227249e32b760c1c534c55ea8b">Urho3D::DebugRenderer</a>
-, <a class="el" href="class_urho3_d_1_1_frustum.html#ae0de3431d6acbb6dcc47f668d98dd469">Urho3D::Frustum</a>
+, <a class="el" href="class_urho3_d_1_1_frustum.html#ac2c9d2c4f9b870519ea00affef089cd1">Urho3D::Frustum</a>
 , <a class="el" href="class_urho3_d_1_1_geometry.html#a5c39ea0ce09a7d0e344b7cced50e4bb4">Urho3D::Geometry</a>
-, <a class="el" href="class_urho3_d_1_1_int_rect.html#ab0f77dae86d5aea8a8e15571e91a52a8">Urho3D::IntRect</a>
+, <a class="el" href="class_urho3_d_1_1_int_rect.html#a840b437946c00670f288bed08f86318e">Urho3D::IntRect</a>
 , <a class="el" href="class_urho3_d_1_1_rect.html#a5dce57a532757e374ffdebc8a26c19f9">Urho3D::Rect</a>
 , <a class="el" href="class_urho3_d_1_1_sphere.html#a0e49adf9ae70c3c6505298dda44eeeac">Urho3D::Sphere</a>
 , <a class="el" href="class_urho3_d_1_1_static_model.html#a988aaa5d6115a1d179eacccf61bc0066">Urho3D::StaticModel</a>
@@ -935,8 +940,8 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 : <a class="el" href="class_urho3_d_1_1_u_i_element.html#aaa6b4eddcd2e94d531ef885a68e0f13a">Urho3D::UIElement</a>
 </li>
 <li>IsInsideFast()
-: <a class="el" href="class_urho3_d_1_1_bounding_box.html#ad53338229e6d0725a008654203ce441e">Urho3D::BoundingBox</a>
-, <a class="el" href="class_urho3_d_1_1_frustum.html#a14dc2400d17d695892ce4edfcc9b724e">Urho3D::Frustum</a>
+: <a class="el" href="class_urho3_d_1_1_bounding_box.html#aaf2af3166bfa73be242635232e36ab7c">Urho3D::BoundingBox</a>
+, <a class="el" href="class_urho3_d_1_1_frustum.html#ae98feba8cd681b9a5d023b43b71e56ff">Urho3D::Frustum</a>
 , <a class="el" href="class_urho3_d_1_1_sphere.html#a2b3a1756dbe4b426814fb2d58df16792">Urho3D::Sphere</a>
 </li>
 <li>IsInsideLocal()
@@ -1099,7 +1104,6 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 </li>
 <li>IsPressed()
 : <a class="el" href="class_urho3_d_1_1_button.html#ad8d791cdfab31e29a152f5bb1453c885">Urho3D::Button</a>
-, <a class="el" href="class_urho3_d_1_1_controls.html#ab5ce6c1126339376f90d1e002fefd175">Urho3D::Controls</a>
 </li>
 <li>IsProcessingThread()
 : <a class="el" href="class_urho3_d_1_1_work_queue.html#a22022196eba75128658ae37ffc6ece6e">Urho3D::WorkQueue</a>
@@ -1264,7 +1268,7 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 : <a class="el" href="class_urho3_d_1_1_custom_variant_value.html#a1b2c97cd59aef872776d6bcae7039dd1">Urho3D::CustomVariantValue</a>
 </li>
 <li>IsTypeOf()
-: <a class="el" href="class_urho3_d_1_1_type_info.html#a2e71f411622fccd8aca2be6d9269563e">Urho3D::TypeInfo</a>
+: <a class="el" href="class_urho3_d_1_1_type_info.html#ad148c5bc8875d7cb3838cdb8ed7a2f22">Urho3D::TypeInfo</a>
 </li>
 <li>IsUnloading()
 : <a class="el" href="class_urho3_d_1_1_plugin.html#aca3de417c375bec5f1244c83e4a6ce87">Urho3D::Plugin</a>

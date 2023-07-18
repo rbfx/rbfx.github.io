@@ -5,6 +5,7 @@ var class_urho3_d_1_1_input =
     [ "AddScreenJoystick", "class_urho3_d_1_1_input.html#ae6e2a0dd7db2be45379d5551187afb7b", null ],
     [ "BackbufferToSystem", "class_urho3_d_1_1_input.html#a153c5241806fd5f681985dcda1a0bc1d", null ],
     [ "CenterMousePosition", "class_urho3_d_1_1_input.html#a136ad9cea7501ca5d032b19c73d0dcb7", null ],
+    [ "FindAccelerometerJoystickId", "class_urho3_d_1_1_input.html#a9f2d5f6e5ce9047f3405d3ff6efc0474", null ],
     [ "GainFocus", "class_urho3_d_1_1_input.html#a31ac853b836e1c4bb1106a984aefd1f6", null ],
     [ "GetBackbufferSize", "class_urho3_d_1_1_input.html#a7878c75968c6ce3d732a3397e4aae880", null ],
     [ "GetEnabled", "class_urho3_d_1_1_input.html#afac78f422644d38e8f8c0108bb24496f", null ],

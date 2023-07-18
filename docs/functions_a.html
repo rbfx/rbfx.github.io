@@ -146,6 +146,9 @@ $(document).ready(function(){initNavTree('functions_a.html',''); initResizable()
 <li>ActionInstantState()
 : <a class="el" href="class_urho3_d_1_1_actions_1_1_action_instant_state.html#aeb2475d9be795ef9e3fee76e2c37df3d">Urho3D::Actions::ActionInstantState</a>
 </li>
+<li>actions_
+: <a class="el" href="class_urho3_d_1_1_input_map.html#ae922c4a050efe47af9bedb5aa14da934">Urho3D::InputMap</a>
+</li>
 <li>ActionSet()
 : <a class="el" href="class_urho3_d_1_1_action_set.html#adf80ca99d03582c391b70897f84fcdd7">Urho3D::ActionSet</a>
 </li>
@@ -373,7 +376,8 @@ $(document).ready(function(){initNavTree('functions_a.html',''); initResizable()
 : <a class="el" href="class_urho3_d_1_1_resource_cache.html#ae277181563b9fd28edec13c109fc8b98">Urho3D::ResourceCache</a>
 </li>
 <li>AddMetadata()
-: <a class="el" href="class_urho3_d_1_1_resource_with_metadata.html#a457e2408203edbb3375377bb1a9935d1">Urho3D::ResourceWithMetadata</a>
+: <a class="el" href="class_urho3_d_1_1_input_map.html#aca8517a72f24443edbdcff9dbc27b1a1">Urho3D::InputMap</a>
+, <a class="el" href="class_urho3_d_1_1_resource_with_metadata.html#a457e2408203edbb3375377bb1a9935d1">Urho3D::ResourceWithMetadata</a>
 </li>
 <li>AddNavigable()
 : <a class="el" href="class_urho3_d_1_1_rml_navigation_manager.html#a91c84676f7fbf3d4450b4f98669ac6af">Urho3D::RmlNavigationManager</a>
@@ -851,6 +855,7 @@ $(document).ready(function(){initNavTree('functions_a.html',''); initResizable()
 , <a class="el" href="class_urho3_d_1_1_drop_down_list.html#a1d37039abffd86163ab104cea4e35996">Urho3D::DropDownList</a>
 , <a class="el" href="class_urho3_d_1_1_kinematic_character_controller.html#a5d08455e5802d1f73066102c02f9b959">Urho3D::KinematicCharacterController</a>
 , <a class="el" href="class_urho3_d_1_1_line_edit.html#af2ddaf1055930cae3a7b4118cfa67d5c">Urho3D::LineEdit</a>
+, <a class="el" href="class_urho3_d_1_1_move_and_orbit_controller.html#a2cbe516622cbc51ed5427176be6c695c">Urho3D::MoveAndOrbitController</a>
 , <a class="el" href="class_urho3_d_1_1_off_mesh_connection.html#a4e86ebaa97f280cdcaa15c60eb18792d">Urho3D::OffMeshConnection</a>
 , <a class="el" href="class_urho3_d_1_1_outline_group.html#a8a969a7c0c24e542a2058b88f792889d">Urho3D::OutlineGroup</a>
 , <a class="el" href="class_urho3_d_1_1_prefab_reference.html#a14534fc1536e7fc0852946fa81b24c08">Urho3D::PrefabReference</a>
@@ -876,7 +881,7 @@ $(document).ready(function(){initNavTree('functions_a.html',''); initResizable()
 <li>ApplyForce()
 : <a class="el" href="class_urho3_d_1_1_particle_graph_nodes_1_1_apply_force.html#a753fb4ce3b13b483e81eb511b90bf874">Urho3D::ParticleGraphNodes::ApplyForce</a>
 , <a class="el" href="class_urho3_d_1_1_rigid_body2_d.html#a9a18d658ff476dce80f7a54c3e48f6d0">Urho3D::RigidBody2D</a>
-, <a class="el" href="class_urho3_d_1_1_rigid_body.html#a66ee18f75b0b977bcf3b64e391192b30">Urho3D::RigidBody</a>
+, <a class="el" href="class_urho3_d_1_1_rigid_body.html#ad71c51143f22fdfce0f807a090324b69">Urho3D::RigidBody</a>
 </li>
 <li>ApplyForceToCenter()
 : <a class="el" href="class_urho3_d_1_1_rigid_body2_d.html#a006a8f6909385747ae378636fd8d8225">Urho3D::RigidBody2D</a>
@@ -892,7 +897,7 @@ $(document).ready(function(){initNavTree('functions_a.html',''); initResizable()
 </li>
 <li>ApplyImpulse()
 : <a class="el" href="class_urho3_d_1_1_kinematic_character_controller.html#a2488089a7c1fefdddb2c545861c9c7fe">Urho3D::KinematicCharacterController</a>
-, <a class="el" href="class_urho3_d_1_1_rigid_body.html#a1e2ca50ee06821ff47a8da40dc450870">Urho3D::RigidBody</a>
+, <a class="el" href="class_urho3_d_1_1_rigid_body.html#afec9b85dd406e38510a5968f767fc86a">Urho3D::RigidBody</a>
 </li>
 <li>applyingTransforms_
 : <a class="el" href="class_urho3_d_1_1_physics_world2_d.html#abcc33675704ad7e514ba6579e8754c87">Urho3D::PhysicsWorld2D</a>
@@ -977,10 +982,10 @@ $(document).ready(function(){initNavTree('functions_a.html',''); initResizable()
 : <a class="el" href="class_urho3_d_1_1_archive_block.html#a6e254e42bf4ea26e418ac138ff47412d">Urho3D::ArchiveBlock</a>
 </li>
 <li>ArchiveBlock()
-: <a class="el" href="class_urho3_d_1_1_archive_block.html#a5203b300094d746c3ac12272416f8469">Urho3D::ArchiveBlock</a>
+: <a class="el" href="class_urho3_d_1_1_archive_block.html#af026976816d00580e01618f52e0f28d1">Urho3D::ArchiveBlock</a>
 </li>
 <li>AreaAllocator()
-: <a class="el" href="class_urho3_d_1_1_area_allocator.html#a7d419c98fbce83fa0b106202dffe46e2">Urho3D::AreaAllocator</a>
+: <a class="el" href="class_urho3_d_1_1_area_allocator.html#afa363c8e94933422b5947ca23aec24ca">Urho3D::AreaAllocator</a>
 </li>
 <li>areaID_
 : <a class="el" href="class_urho3_d_1_1_nav_area.html#a6e956b64fb147ae2573cd2ecf00ff999">Urho3D::NavArea</a>
@@ -1006,13 +1011,13 @@ $(document).ready(function(){initNavTree('functions_a.html',''); initResizable()
 : <a class="el" href="class_urho3_d_1_1_light_probe_group.html#a5369376f6abdaa3601d219a18df3193d">Urho3D::LightProbeGroup</a>
 </li>
 <li>Array2D()
-: <a class="el" href="class_urho3_d_1_1_array2_d.html#a96f30086ac3cadb9f1dba03b697afd42">Urho3D::Array2D&lt; T, Container &gt;</a>
+: <a class="el" href="class_urho3_d_1_1_array2_d.html#a51d80db26013a0c16176a501379bbb7a">Urho3D::Array2D&lt; T, Container &gt;</a>
 </li>
 <li>array_
 : <a class="el" href="class_urho3_d_1_1_image.html#a55d6f68569c11381b620fe8b103a836e">Urho3D::Image</a>
 </li>
 <li>ArrayDimensions2D()
-: <a class="el" href="class_urho3_d_1_1_array_dimensions2_d.html#af5f84d6639398922a05a41b5bac73bb7">Urho3D::ArrayDimensions2D</a>
+: <a class="el" href="class_urho3_d_1_1_array_dimensions2_d.html#a0a807b8450e0eabdaaebbc6fdd66cc3f">Urho3D::ArrayDimensions2D</a>
 </li>
 <li>arrayValue_
 : <a class="el" href="class_urho3_d_1_1_j_s_o_n_value.html#addba3c784bfc5a4a9c4a00b208b68e67">Urho3D::JSONValue</a>
@@ -1085,7 +1090,7 @@ $(document).ready(function(){initNavTree('functions_a.html',''); initResizable()
 : <a class="el" href="class_urho3_d_1_1_attribute_accessor.html#a26e506b4496daa2de3a1cb72e73f0247">Urho3D::AttributeAccessor</a>
 </li>
 <li>AttributeAction()
-: <a class="el" href="class_urho3_d_1_1_actions_1_1_attribute_action.html#a9d45502954d8f715980ab194694deeab">Urho3D::Actions::AttributeAction</a>
+: <a class="el" href="class_urho3_d_1_1_actions_1_1_attribute_action.html#a38b36571d12d62f980e37065ff275712">Urho3D::Actions::AttributeAction</a>
 </li>
 <li>AttributeActionState()
 : <a class="el" href="class_urho3_d_1_1_actions_1_1_attribute_action_state.html#ae83091d42b516021dd2c8272ca47a8fb">Urho3D::Actions::AttributeActionState</a>
@@ -1114,7 +1119,7 @@ $(document).ready(function(){initNavTree('functions_a.html',''); initResizable()
 : <a class="el" href="class_urho3_d_1_1_particle_graph_pin.html#adda4a5096620e1750ab3209d5727a993">Urho3D::ParticleGraphPin</a>
 </li>
 <li>AttributeInfo()
-: <a class="el" href="struct_urho3_d_1_1_attribute_info.html#a347f06301f37db008036b7eeda9355cf">Urho3D::AttributeInfo</a>
+: <a class="el" href="struct_urho3_d_1_1_attribute_info.html#a0aed1b995fec36f15d8f60e513295e81">Urho3D::AttributeInfo</a>
 </li>
 <li>attributeInfo_
 : <a class="el" href="class_urho3_d_1_1_attribute_animation_info.html#a4bf67153d584c07221ce2792971959ff">Urho3D::AttributeAnimationInfo</a>

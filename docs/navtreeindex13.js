@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"class_urho3_d_1_1_asset_transformer_hierarchy.html#afc59022d6323f5c48034fdbaca8dcdd1":[6,0,2,48,12],
 "class_urho3_d_1_1_asset_transformer_hierarchy.html#aff0b12364fe61ca5304d5f00c237b869":[6,0,2,48,10],
 "class_urho3_d_1_1_attribute_accessor.html":[6,0,2,52],
 "class_urho3_d_1_1_attribute_accessor.html#a26e506b4496daa2de3a1cb72e73f0247":[6,0,2,52,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "class_urho3_d_1_1_batch_compositor_pass.html#a76b70c4c82f65d2b03569f65fdfa6ae8":[6,0,2,78,16],
 "class_urho3_d_1_1_batch_compositor_pass.html#a77dd45426dc9694a88168e47ca37feb0":[6,0,2,78,5],
 "class_urho3_d_1_1_batch_compositor_pass.html#a7ceb54a5ad712a029af18e8ac7d2edef":[6,0,2,78,27],
-"class_urho3_d_1_1_batch_compositor_pass.html#a7cfb6c84e37a1adf642dd997a23794c3":[6,0,2,78,17],
-"class_urho3_d_1_1_batch_compositor_pass.html#a8f216a5b97d806f624ebf2078dbdb638":[6,0,2,78,25]
+"class_urho3_d_1_1_batch_compositor_pass.html#a7cfb6c84e37a1adf642dd997a23794c3":[6,0,2,78,17]
 };

@@ -31,6 +31,7 @@ var class_urho3_d_1_1_free_fly_controller =
     [ "acceleratedSpeed_", "class_urho3_d_1_1_free_fly_controller.html#af3343e4e3b5ddf245ad03a7d82fd5351", null ],
     [ "axisAdapter_", "class_urho3_d_1_1_free_fly_controller.html#afef6719c69376a503f238d7383024039", null ],
     [ "axisSensitivity_", "class_urho3_d_1_1_free_fly_controller.html#aa415e1d4b702f12353946b2d351f80b4", null ],
+    [ "ignoreJoystickId_", "class_urho3_d_1_1_free_fly_controller.html#a7b13807d33020cc884af87f6bc9e489f", null ],
     [ "isActive_", "class_urho3_d_1_1_free_fly_controller.html#ae1487ce1ce56e93a9cfbecb97d3b9fd3", null ],
     [ "lastKnownCameraRotation_", "class_urho3_d_1_1_free_fly_controller.html#a5b1edd34e450cab83e90e132da081d1f", null ],
     [ "lastKnownEulerAngles_", "class_urho3_d_1_1_free_fly_controller.html#ac13d4ed63a24779d04c49359bb2d18b4", null ],
