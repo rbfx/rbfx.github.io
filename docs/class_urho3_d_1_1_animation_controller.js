@@ -17,7 +17,7 @@ var class_urho3_d_1_1_animation_controller =
     [ "GetAnimationLayer", "class_urho3_d_1_1_animation_controller.html#a7de37c7623521821c9a924f78f5653ad", null ],
     [ "GetAnimationParameters", "class_urho3_d_1_1_animation_controller.html#a7af10ddeb428d9e0442dbb3450c2cdb1", null ],
     [ "GetAnimationParameters", "class_urho3_d_1_1_animation_controller.html#a2a1ce51a889a4899e3a0e5db5b82c735", null ],
-    [ "GetAnimationParameters", "class_urho3_d_1_1_animation_controller.html#a781cbb32cb78b3cac945ce67858f07e4", null ],
+    [ "GetAnimationParameters", "class_urho3_d_1_1_animation_controller.html#a8734d4dc8caf12267c3143e43dfd499f", null ],
     [ "GetAnimationsAttr", "class_urho3_d_1_1_animation_controller.html#a60629371354088d670b30d3806c02a85", null ],
     [ "GetLastAnimationParameters", "class_urho3_d_1_1_animation_controller.html#a45b0e0790efc8c3293d881b799bcf358", null ],
     [ "GetNumAnimations", "class_urho3_d_1_1_animation_controller.html#a5e936b46d92b7e1434fc78e95b489177", null ],

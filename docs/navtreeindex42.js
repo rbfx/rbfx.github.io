@@ -1,5 +1,14 @@
 var NAVTREEINDEX42 =
 {
+"class_urho3_d_1_1_occlusion_buffer.html#a84f6a1d53edb6d1e91ad9f70b2a58f8a":[6,0,2,459,29],
+"class_urho3_d_1_1_occlusion_buffer.html#a89372e3ed24930ecd3d331d430f60ad1":[6,0,2,459,22],
+"class_urho3_d_1_1_occlusion_buffer.html#a8e7bbdce8ae8719462f5674e0211170f":[6,0,2,459,7],
+"class_urho3_d_1_1_occlusion_buffer.html#a936a4ca8b52704b3594f058bc345dcd2":[6,0,2,459,44],
+"class_urho3_d_1_1_occlusion_buffer.html#a959d9e7ad060ebab9769b866ac66e94b":[6,0,2,459,13],
+"class_urho3_d_1_1_occlusion_buffer.html#a9d3b28454264d832db67116570ec613d":[6,0,2,459,12],
+"class_urho3_d_1_1_occlusion_buffer.html#a9fe2f94c9e2247995cb279224e97eb6e":[6,0,2,459,1],
+"class_urho3_d_1_1_occlusion_buffer.html#aa296d96dbd952c5ecba275dbc790e3c9":[6,0,2,459,38],
+"class_urho3_d_1_1_occlusion_buffer.html#aa3614b52aec7b3fd6ea0aae00d1c5ac9":[6,0,2,459,58],
 "class_urho3_d_1_1_occlusion_buffer.html#aa3b312a2b8966c852a0d65c26b64f9fd":[6,0,2,459,31],
 "class_urho3_d_1_1_occlusion_buffer.html#aa615a744b8133b91f62ad92b0da4d8c8":[6,0,2,459,49],
 "class_urho3_d_1_1_occlusion_buffer.html#aa697cf5ddca365cf1025520db938f0f3":[6,0,2,459,4],
@@ -240,14 +249,5 @@ var NAVTREEINDEX42 =
 "class_urho3_d_1_1_p_list_value.html#af5a0e8898ca1334dcd220c259d73b631":[6,0,2,525,37],
 "class_urho3_d_1_1_p_list_value.html#afb464095b47a43982a3494b38cafc238":[6,0,2,525,20],
 "class_urho3_d_1_1_package_file.html":[6,0,2,473],
-"class_urho3_d_1_1_package_file.html#a00786faf8d414dab701fb86384cb3dbc":[6,0,2,473,12],
-"class_urho3_d_1_1_package_file.html#a08bdb2f8a1e8c229c840af9079707207":[6,0,2,473,20],
-"class_urho3_d_1_1_package_file.html#a1afc0d40940bd07eea6eab662b04216b":[6,0,2,473,13],
-"class_urho3_d_1_1_package_file.html#a1cb5a040f95efc43017400c412de256c":[6,0,2,473,11],
-"class_urho3_d_1_1_package_file.html#a2663e56702a57dbc7f0fd31c091514d3":[6,0,2,473,0],
-"class_urho3_d_1_1_package_file.html#a2de4609d089b6ee7e15ad9679a3afbdf":[6,0,2,473,14],
-"class_urho3_d_1_1_package_file.html#a339418bea8996afefaeee77c66929032":[6,0,2,473,16],
-"class_urho3_d_1_1_package_file.html#a37d2b2029a412074f8c5da8b2bac0618":[6,0,2,473,26],
-"class_urho3_d_1_1_package_file.html#a48d649eec32e00d0c94145ebd4690c58":[6,0,2,473,23],
-"class_urho3_d_1_1_package_file.html#a4c6068d3a8777cf52887462b0c4c0ad2":[6,0,2,473,21]
+"class_urho3_d_1_1_package_file.html#a00786faf8d414dab701fb86384cb3dbc":[6,0,2,473,12]
 };

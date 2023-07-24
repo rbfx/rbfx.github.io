@@ -1,5 +1,14 @@
 var NAVTREEINDEX37 =
 {
+"class_urho3_d_1_1_material_inspector_widget.html#af0e991f358858e8b27c20af33c7da037":[6,0,2,386,44],
+"class_urho3_d_1_1_material_inspector_widget.html#af2d33280df01537777cb7d659f787c89":[6,0,2,386,21],
+"class_urho3_d_1_1_material_inspector_widget.html#af6c1e982b116a1483ed7b959b755df9f":[6,0,2,386,19],
+"class_urho3_d_1_1_material_inspector_widget.html#afae9b67cc001c9f42dcda403d97f5561":[6,0,2,386,24],
+"class_urho3_d_1_1_matrix2.html":[6,0,2,388],
+"class_urho3_d_1_1_matrix2.html#a01a7b24a439b26cfa39441a2599fb7e5":[6,0,2,388,28],
+"class_urho3_d_1_1_matrix2.html#a03aec0a4613a0177d8bdb97cc9bc00cd":[6,0,2,388,25],
+"class_urho3_d_1_1_matrix2.html#a0b7109cc0d1087ff78be60914c95619a":[6,0,2,388,1],
+"class_urho3_d_1_1_matrix2.html#a1d4a7616e4e30841971a7c6e99d7974a":[6,0,2,388,21],
 "class_urho3_d_1_1_matrix2.html#a3862f1c76c89ab7fae975ea0a02254c0":[6,0,2,388,19],
 "class_urho3_d_1_1_matrix2.html#a43b56f25fa90b4bffeaf566c9753e4ed":[6,0,2,388,16],
 "class_urho3_d_1_1_matrix2.html#a46908a5e478cf6af37b18290933e2368":[6,0,2,388,29],
@@ -240,14 +249,5 @@ var NAVTREEINDEX37 =
 "class_urho3_d_1_1_menu.html#ae96184f7190a7b1992785bdae642710d":[6,0,2,393,25],
 "class_urho3_d_1_1_menu.html#af4bfb56034b79f1eea40e3b4a8b1ca3e":[6,0,2,393,3],
 "class_urho3_d_1_1_message_box.html":[6,0,2,394],
-"class_urho3_d_1_1_message_box.html#a1c48bda555a992c6197363c8ec365554":[6,0,2,394,6],
-"class_urho3_d_1_1_message_box.html#a23dbb6bb0e11630d8ffcba2eea2cf8c5":[6,0,2,394,2],
-"class_urho3_d_1_1_message_box.html#a30d6770b2802ceb52e1b55be58c17f55":[6,0,2,394,0],
-"class_urho3_d_1_1_message_box.html#a321eb825c9aeed179c5961e16713f1d0":[6,0,2,394,4],
-"class_urho3_d_1_1_message_box.html#a5fa05c2e27ce51f3a2c2ab02542d8c03":[6,0,2,394,9],
-"class_urho3_d_1_1_message_box.html#a838e525a87b768d803c8119a4226d9dd":[6,0,2,394,13],
-"class_urho3_d_1_1_message_box.html#a87ad69edbdba14d0a51889e99aa95a2b":[6,0,2,394,10],
-"class_urho3_d_1_1_message_box.html#a8ac4be6d15acb9d23f79cdedce5f2c85":[6,0,2,394,8],
-"class_urho3_d_1_1_message_box.html#a8ad7e2adb8dac6213c5d5afe29db22b4":[6,0,2,394,11],
-"class_urho3_d_1_1_message_box.html#a9e26b439397f905f374243a647a6c514":[6,0,2,394,1]
+"class_urho3_d_1_1_message_box.html#a1c48bda555a992c6197363c8ec365554":[6,0,2,394,6]
 };

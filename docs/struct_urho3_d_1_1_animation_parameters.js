@@ -25,6 +25,7 @@ var struct_urho3_d_1_1_animation_parameters =
     [ "animationName_", "struct_urho3_d_1_1_animation_parameters.html#a2f90d672c5a7937e8cf5fd232d4f9163", null ],
     [ "autoFadeOutTime_", "struct_urho3_d_1_1_animation_parameters.html#a5d5008cbb71ed93896c0774bcb6f65b8", null ],
     [ "blendMode_", "struct_urho3_d_1_1_animation_parameters.html#ada10cced3c07ac9679fcff1255f2f803", null ],
+    [ "EMPTY", "struct_urho3_d_1_1_animation_parameters.html#af6068ae51b465e7d1930a1bd46af08d9", null ],
     [ "instanceIndex_", "struct_urho3_d_1_1_animation_parameters.html#ad72b794e97bd8ce10717fac9ac4e0b0b", null ],
     [ "layer_", "struct_urho3_d_1_1_animation_parameters.html#a0d8aa69ec2e6dff5bd90bff4a26c1f83", null ],
     [ "looped_", "struct_urho3_d_1_1_animation_parameters.html#a31e0de546d372669d111ee6c5eefbc2d", null ],

@@ -943,6 +943,7 @@ var annotated_dup =
       [ "TransformGizmo", "class_urho3_d_1_1_transform_gizmo.html", "class_urho3_d_1_1_transform_gizmo" ],
       [ "TransformNodesGizmo", "class_urho3_d_1_1_transform_nodes_gizmo.html", "class_urho3_d_1_1_transform_nodes_gizmo" ],
       [ "TriangleMeshData", "struct_urho3_d_1_1_triangle_mesh_data.html", "struct_urho3_d_1_1_triangle_mesh_data" ],
+      [ "TriggerAnimator", "class_urho3_d_1_1_trigger_animator.html", "class_urho3_d_1_1_trigger_animator" ],
       [ "TupleHasType", "struct_urho3_d_1_1_tuple_has_type.html", null ],
       [ "TupleHasType< T, ea::tuple< T, Types... > >", "struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01ea_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html", null ],
       [ "TupleHasType< T, ea::tuple< U, Types... > >", "struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01ea_1_1tuple_3_01_u_00_01_types_8_8_8_01_4_01_4.html", null ],

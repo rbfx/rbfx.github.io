@@ -5,6 +5,7 @@ var class_urho3_d_1_1_scene_resource =
     [ "BeginLoad", "class_urho3_d_1_1_scene_resource.html#a71a9f880f99e253d16d3ed82ade53491", null ],
     [ "EndLoad", "class_urho3_d_1_1_scene_resource.html#a1771c9ee80ee23985371ee3d3e16e5e4", null ],
     [ "GetScene", "class_urho3_d_1_1_scene_resource.html#a39177f011aeccb97daf38d564f2509ec", null ],
+    [ "GetXmlRootName", "class_urho3_d_1_1_scene_resource.html#ae24673d3797b251364b1f308a1c1fae1", null ],
     [ "RegisterObject", "class_urho3_d_1_1_scene_resource.html#af5434af78b9ca79871b2550a2c3c6264", null ],
     [ "Save", "class_urho3_d_1_1_scene_resource.html#a3c7fa5cacdcaf8b4803c2d4af1659525", null ],
     [ "Save", "class_urho3_d_1_1_scene_resource.html#a1898abe2c29141a51c43091684a7adbe", null ],
