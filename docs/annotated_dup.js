@@ -829,6 +829,7 @@ var annotated_dup =
       [ "ShadowMapAllocatorSettings", "struct_urho3_d_1_1_shadow_map_allocator_settings.html", "struct_urho3_d_1_1_shadow_map_allocator_settings" ],
       [ "ShadowMapRegion", "struct_urho3_d_1_1_shadow_map_region.html", "struct_urho3_d_1_1_shadow_map_region" ],
       [ "ShadowSplitProcessor", "class_urho3_d_1_1_shadow_split_processor.html", "class_urho3_d_1_1_shadow_split_processor" ],
+      [ "ShakeComponent", "class_urho3_d_1_1_shake_component.html", "class_urho3_d_1_1_shake_component" ],
       [ "SharedParameterSetter", "struct_urho3_d_1_1_shared_parameter_setter.html", "struct_urho3_d_1_1_shared_parameter_setter" ],
       [ "SharedPtr", "class_urho3_d_1_1_shared_ptr.html", "class_urho3_d_1_1_shared_ptr" ],
       [ "SharedReplicationState", "class_urho3_d_1_1_shared_replication_state.html", "class_urho3_d_1_1_shared_replication_state" ],
