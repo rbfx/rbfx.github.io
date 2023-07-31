@@ -31,7 +31,7 @@ var hierarchy =
     [ "Urho3D::AnimatedAttributeReference", "struct_urho3_d_1_1_animated_attribute_reference.html", null ],
     [ "Urho3D::Spriter::Animation", "struct_urho3_d_1_1_spriter_1_1_animation.html", null ],
     [ "Urho3D::AnimationController::AnimationInstance", "struct_urho3_d_1_1_animation_controller_1_1_animation_instance.html", null ],
-    [ "Urho3D::AnimationParameters", "struct_urho3_d_1_1_animation_parameters.html", null ],
+    [ "Urho3D::AnimationParameters", "class_urho3_d_1_1_animation_parameters.html", null ],
     [ "Urho3D::AnimationTriggerPoint", "struct_urho3_d_1_1_animation_trigger_point.html", null ],
     [ "Urho3D::ApplicationFlavor", "struct_urho3_d_1_1_application_flavor.html", null ],
     [ "Urho3D::ApplicationFlavorPattern", "struct_urho3_d_1_1_application_flavor_pattern.html", null ],

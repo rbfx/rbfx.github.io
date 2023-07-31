@@ -1,5 +1,13 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster_3_01unsigned_01_4.html":[6,0,2,1,10],
+"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster_3_01unsigned_01_4.html#a3c6bbf332348109198831b8f57e5abf1":[6,0,2,1,10,1],
+"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster_3_01unsigned_01_4.html#a9960952bf4149a7368298aaf0f2f7211":[6,0,2,1,10,0],
+"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster_3_01unsigned_01_4.html#ac11acf0c3e3c3e41b16c02e3f0800946":[6,0,2,1,10,2],
+"struct_urho3_d_1_1_detail_1_1_keyboard_key_mapping.html":[6,0,2,1,12],
+"struct_urho3_d_1_1_detail_1_1_keyboard_key_mapping.html#a15ae038132a23fe87cbc7df8d8c2849a":[6,0,2,1,12,1],
+"struct_urho3_d_1_1_detail_1_1_keyboard_key_mapping.html#a6fc715abd634dfc7fa33bc2b4af0837f":[6,0,2,1,12,3],
+"struct_urho3_d_1_1_detail_1_1_keyboard_key_mapping.html#a75c95e8297d9f5d25e5cfbca74eb7a12":[6,0,2,1,12,2],
 "struct_urho3_d_1_1_detail_1_1_keyboard_key_mapping.html#afd229e0191230ead206cb7c9c3a1a45d":[6,0,2,1,12,0],
 "struct_urho3_d_1_1_detail_1_1_member_function_traits.html":[6,0,2,1,13],
 "struct_urho3_d_1_1_detail_1_1_member_function_traits_3_01_return_07_object_1_1_5_08_07_args_8_8_8_08_01const_01_4.html":[6,0,2,1,14],
@@ -241,13 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_geometry_batch.html#a03e66f163ce60a40032bcfa06f5b61ac":[6,0,2,255,3],
 "struct_urho3_d_1_1_geometry_batch.html#a0e733566d9a199927c89cc99d94168e3":[6,0,2,255,6],
 "struct_urho3_d_1_1_geometry_batch.html#a26aa655380b0fa3a2d04c6abbec2cd51":[6,0,2,255,0],
-"struct_urho3_d_1_1_geometry_batch.html#a56299c10e3bc298e7486f0ad09d9dc68":[6,0,2,255,5],
-"struct_urho3_d_1_1_geometry_batch.html#aa5d72bad3d7350577c11ae2941ebe02a":[6,0,2,255,7],
-"struct_urho3_d_1_1_geometry_batch.html#ab3860aa6c3fdf1c53589263f22b1f39c":[6,0,2,255,1],
-"struct_urho3_d_1_1_geometry_batch.html#ae1dcd08d885a1fd2125b1f59d96c7acd":[6,0,2,255,2],
-"struct_urho3_d_1_1_geometry_batch.html#aeacc65e00ab59be22fdecf700fbad24b":[6,0,2,255,8],
-"struct_urho3_d_1_1_geometry_batch.html#af3239ddb965e66170dc120326a89881a":[6,0,2,255,4],
-"struct_urho3_d_1_1_geometry_buffer_array.html":[6,0,2,256],
-"struct_urho3_d_1_1_geometry_buffer_array.html#a0db67c0f91c80eaf86409738107fe01f":[6,0,2,256,3],
-"struct_urho3_d_1_1_geometry_buffer_array.html#a698a90e68c5b7fd87565f696fbde9181":[6,0,2,256,6]
+"struct_urho3_d_1_1_geometry_batch.html#a56299c10e3bc298e7486f0ad09d9dc68":[6,0,2,255,5]
 };

@@ -198,7 +198,7 @@ var annotated_dup =
       [ "AnimationController", "class_urho3_d_1_1_animation_controller.html", "class_urho3_d_1_1_animation_controller" ],
       [ "AnimationInspectorWidget", "class_urho3_d_1_1_animation_inspector_widget.html", "class_urho3_d_1_1_animation_inspector_widget" ],
       [ "AnimationKeyFrame", "struct_urho3_d_1_1_animation_key_frame.html", "struct_urho3_d_1_1_animation_key_frame" ],
-      [ "AnimationParameters", "struct_urho3_d_1_1_animation_parameters.html", "struct_urho3_d_1_1_animation_parameters" ],
+      [ "AnimationParameters", "class_urho3_d_1_1_animation_parameters.html", "class_urho3_d_1_1_animation_parameters" ],
       [ "AnimationSet2D", "class_urho3_d_1_1_animation_set2_d.html", "class_urho3_d_1_1_animation_set2_d" ],
       [ "AnimationState", "class_urho3_d_1_1_animation_state.html", "class_urho3_d_1_1_animation_state" ],
       [ "AnimationStateSource", "class_urho3_d_1_1_animation_state_source.html", "class_urho3_d_1_1_animation_state_source" ],

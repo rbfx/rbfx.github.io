@@ -1,5 +1,13 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_batch_group_key.html#ac12564e52af2f659008445ff25800acb":[6,0,2,80,5],
+"struct_urho3_d_1_1_batch_group_key.html#add3b68e944464cf80e61cd25af2943a4":[6,0,2,80,10],
+"struct_urho3_d_1_1_batch_group_key.html#ae39fd6505ecbfa4c73d1b126a842e214":[6,0,2,80,8],
+"struct_urho3_d_1_1_batch_queue.html":[6,0,2,81],
+"struct_urho3_d_1_1_batch_queue.html#a0f92c1eaa67e79f6a446199bb407c76d":[6,0,2,81,20],
+"struct_urho3_d_1_1_batch_queue.html#a2fd921eba260b1c3a0fc9423069c7bf0":[6,0,2,81,8],
+"struct_urho3_d_1_1_batch_queue.html#a3a976380d972abcae73ee091c581ffb0":[6,0,2,81,17],
+"struct_urho3_d_1_1_batch_queue.html#a3de6ed457bfb65457f36e48a51c6fee8":[6,0,2,81,18],
 "struct_urho3_d_1_1_batch_queue.html#a4587b87890798f79d65204bfb1b8a23f":[6,0,2,81,10],
 "struct_urho3_d_1_1_batch_queue.html#a57504a4385194704f362698719a3b691":[6,0,2,81,16],
 "struct_urho3_d_1_1_batch_queue.html#a60a4ba2f189a46fef79af7523708d7f1":[6,0,2,81,5],
@@ -241,13 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_console_1_1_log_entry.html#a15a50a18eaba8c67b6ff401c5b2b7edd":[6,0,2,145,0,2],
 "struct_urho3_d_1_1_console_1_1_log_entry.html#a39bd6aaa5d462d53aa2a8030ad8425e7":[6,0,2,145,0,3],
 "struct_urho3_d_1_1_console_1_1_log_entry.html#a67a0c39b65ba6d8be93d3fd0614d0f1c":[6,0,2,145,0,0],
-"struct_urho3_d_1_1_console_1_1_log_entry.html#a8d534c1eb9e12bc4524029ec13910e8c":[6,0,2,145,0,1],
-"struct_urho3_d_1_1_constant_buffer_collection_ref.html":[6,0,2,148],
-"struct_urho3_d_1_1_constant_buffer_collection_ref.html#a0b8d08c9a557230d1bd482b1f355b9d9":[6,0,2,148,1],
-"struct_urho3_d_1_1_constant_buffer_collection_ref.html#a85a445a57f4aeac4158de90bd7770f86":[6,0,2,148,0],
-"struct_urho3_d_1_1_constant_buffer_collection_ref.html#a87211f22b5e00ae4af3304bb8311cc86":[6,0,2,148,2],
-"struct_urho3_d_1_1_constant_buffer_element.html":[6,0,2,149],
-"struct_urho3_d_1_1_constant_buffer_element.html#a1458fe0ea041d8474c9d9e5921f9681a":[6,0,2,149,0],
-"struct_urho3_d_1_1_constant_buffer_element.html#a49ae9f7c950397dcfa644669bc324d7a":[6,0,2,149,2],
-"struct_urho3_d_1_1_constant_buffer_element.html#ab931867e4d22c1b981191617cde89a9a":[6,0,2,149,1]
+"struct_urho3_d_1_1_console_1_1_log_entry.html#a8d534c1eb9e12bc4524029ec13910e8c":[6,0,2,145,0,1]
 };

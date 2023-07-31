@@ -1,5 +1,13 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_geometry_batch.html#aa5d72bad3d7350577c11ae2941ebe02a":[6,0,2,255,7],
+"struct_urho3_d_1_1_geometry_batch.html#ab3860aa6c3fdf1c53589263f22b1f39c":[6,0,2,255,1],
+"struct_urho3_d_1_1_geometry_batch.html#ae1dcd08d885a1fd2125b1f59d96c7acd":[6,0,2,255,2],
+"struct_urho3_d_1_1_geometry_batch.html#aeacc65e00ab59be22fdecf700fbad24b":[6,0,2,255,8],
+"struct_urho3_d_1_1_geometry_batch.html#af3239ddb965e66170dc120326a89881a":[6,0,2,255,4],
+"struct_urho3_d_1_1_geometry_buffer_array.html":[6,0,2,256],
+"struct_urho3_d_1_1_geometry_buffer_array.html#a0db67c0f91c80eaf86409738107fe01f":[6,0,2,256,3],
+"struct_urho3_d_1_1_geometry_buffer_array.html#a698a90e68c5b7fd87565f696fbde9181":[6,0,2,256,6],
 "struct_urho3_d_1_1_geometry_buffer_array.html#a77d36169dd0d4a45daeeb56cf6ddc3d3":[6,0,2,256,4],
 "struct_urho3_d_1_1_geometry_buffer_array.html#a8333281a6eeddc37998a7dfb8d6fc51b":[6,0,2,256,0],
 "struct_urho3_d_1_1_geometry_buffer_array.html#adb58ccd4849f0726b92c9a817abe362d":[6,0,2,256,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_key_frame_set.html#a2b2550f56ab916233ef4f63e7d068165":[6,0,2,341,1],
 "struct_urho3_d_1_1_key_frame_set.html#a2f21d34dd46d6aaf17a9b0ecc1072a8e":[6,0,2,341,5],
 "struct_urho3_d_1_1_key_frame_set.html#a3c93039e7f5c5cc785022b48a2c91bc2":[6,0,2,341,6],
-"struct_urho3_d_1_1_key_frame_set.html#a474ff1e6f2f377527165ef03725eecc2":[6,0,2,341,8],
-"struct_urho3_d_1_1_key_frame_set.html#a84b5d96f407f5b74c17396325f833028":[6,0,2,341,4],
-"struct_urho3_d_1_1_key_frame_set.html#ac9843cd808c2aba65188fdbab2ef9992":[6,0,2,341,9],
-"struct_urho3_d_1_1_key_frame_set.html#ace9a6b8630d70d6b7edffe3529baf512":[6,0,2,341,3],
-"struct_urho3_d_1_1_key_frame_set.html#af745d6c8fbc70931285cf88be035cca7":[6,0,2,341,0],
-"struct_urho3_d_1_1_light_accumulator.html":[6,0,2,344],
-"struct_urho3_d_1_1_light_accumulator.html#a0eabe9a56557ebf053abc1d801908a7a":[6,0,2,344,14],
-"struct_urho3_d_1_1_light_accumulator.html#a0fe26a2d776145ecebc133e4e58ea62a":[6,0,2,344,6],
-"struct_urho3_d_1_1_light_accumulator.html#a118864508a029a1455097a746bf4b4bd":[6,0,2,344,11]
+"struct_urho3_d_1_1_key_frame_set.html#a474ff1e6f2f377527165ef03725eecc2":[6,0,2,341,8]
 };

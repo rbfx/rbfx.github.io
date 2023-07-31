@@ -1,5 +1,13 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html#abaf9b8fafc7da6c200f96288129b687b":[6,0,2,529,0,1],
+"struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html#aea56cce130d686ac6d5720a39f0fa433":[6,0,2,529,0,0],
+"struct_urho3_d_1_1_ray_query_result.html":[6,0,2,553],
+"struct_urho3_d_1_1_ray_query_result.html#a1b3e7a655ad248c700c891dd0fb2cbdd":[6,0,2,553,0],
+"struct_urho3_d_1_1_ray_query_result.html#a3639c0c1b9857cba19eccf53261019de":[6,0,2,553,6],
+"struct_urho3_d_1_1_ray_query_result.html#a48ec7438ad7e3e4a4bb1a5b93582b8eb":[6,0,2,553,2],
+"struct_urho3_d_1_1_ray_query_result.html#a7f595f6027f1cdfcdb1bc286c551ce04":[6,0,2,553,7],
+"struct_urho3_d_1_1_ray_query_result.html#a844538e0f53394d318f90c653073eac6":[6,0,2,553,8],
 "struct_urho3_d_1_1_ray_query_result.html#a94d74afd25a4aede5f5fab38b887261e":[6,0,2,553,5],
 "struct_urho3_d_1_1_ray_query_result.html#aa6cf1605fa0dfc2017a57573afce1de8":[6,0,2,553,3],
 "struct_urho3_d_1_1_ray_query_result.html#aad9b754e53a09ad1af407032fd950cce":[6,0,2,553,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_resource_ref.html#af93e94bbd524e1d56613da988be3517c":[6,0,2,594,8],
 "struct_urho3_d_1_1_resource_ref_list.html":[6,0,2,595],
 "struct_urho3_d_1_1_resource_ref_list.html#a20ab60977844d31fdb7567d60c69a63c":[6,0,2,595,5],
-"struct_urho3_d_1_1_resource_ref_list.html#a2eddd663043605d1ddef851a60ea3a0a":[6,0,2,595,4],
-"struct_urho3_d_1_1_resource_ref_list.html#a8451f4c21479660e4cd25fd50f6bd0af":[6,0,2,595,1],
-"struct_urho3_d_1_1_resource_ref_list.html#a986ec68bb427b72311f7dceb978158e4":[6,0,2,595,0],
-"struct_urho3_d_1_1_resource_ref_list.html#aa6d4bb302d8f0746cfacf273f94b50f2":[6,0,2,595,6],
-"struct_urho3_d_1_1_resource_ref_list.html#ae963d5077cf26428dd451b802c6a353e":[6,0,2,595,2],
-"struct_urho3_d_1_1_resource_ref_list.html#aebbfd3e8b73ea956d54c393ec76169f8":[6,0,2,595,7],
-"struct_urho3_d_1_1_resource_ref_list.html#aef92eac5f46dd053b5e152207a386886":[6,0,2,595,3],
-"struct_urho3_d_1_1_rml_canvas_resized_args.html":[6,0,2,602],
-"struct_urho3_d_1_1_rml_canvas_resized_args.html#a2f8635a2ffad2071df12ea13051bfdb1":[6,0,2,602,0]
+"struct_urho3_d_1_1_resource_ref_list.html#a2eddd663043605d1ddef851a60ea3a0a":[6,0,2,595,4]
 };

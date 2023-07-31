@@ -1,5 +1,13 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_constant_buffer_collection_ref.html":[6,0,2,148],
+"struct_urho3_d_1_1_constant_buffer_collection_ref.html#a0b8d08c9a557230d1bd482b1f355b9d9":[6,0,2,148,1],
+"struct_urho3_d_1_1_constant_buffer_collection_ref.html#a85a445a57f4aeac4158de90bd7770f86":[6,0,2,148,0],
+"struct_urho3_d_1_1_constant_buffer_collection_ref.html#a87211f22b5e00ae4af3304bb8311cc86":[6,0,2,148,2],
+"struct_urho3_d_1_1_constant_buffer_element.html":[6,0,2,149],
+"struct_urho3_d_1_1_constant_buffer_element.html#a1458fe0ea041d8474c9d9e5921f9681a":[6,0,2,149,0],
+"struct_urho3_d_1_1_constant_buffer_element.html#a49ae9f7c950397dcfa644669bc324d7a":[6,0,2,149,2],
+"struct_urho3_d_1_1_constant_buffer_element.html#ab931867e4d22c1b981191617cde89a9a":[6,0,2,149,1],
 "struct_urho3_d_1_1_constant_buffer_range.html":[6,0,2,150],
 "struct_urho3_d_1_1_constant_buffer_range.html#a1a53b97ba2dacb97ce7dc3f5ff4dd9a8":[6,0,2,150,0],
 "struct_urho3_d_1_1_constant_buffer_range.html#a3f4cd81e81210d98928d4b82867a4799":[6,0,2,150,2],
@@ -241,13 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html#a17e358e6e78741ee627f6d59f4c8c107":[6,0,2,1,9,0],
 "struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html#a4e89abaa06c82c2a3b395eae2bbbd99d":[6,0,2,1,9,1],
 "struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html#a57e5ea40f05db9d48bc9906251508775":[6,0,2,1,9,2],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html#aa9f69e6254c4dafdcac698c9105ce76d":[6,0,2,1,9,3],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster_3_01unsigned_01_4.html":[6,0,2,1,10],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster_3_01unsigned_01_4.html#a3c6bbf332348109198831b8f57e5abf1":[6,0,2,1,10,1],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster_3_01unsigned_01_4.html#a9960952bf4149a7368298aaf0f2f7211":[6,0,2,1,10,0],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster_3_01unsigned_01_4.html#ac11acf0c3e3c3e41b16c02e3f0800946":[6,0,2,1,10,2],
-"struct_urho3_d_1_1_detail_1_1_keyboard_key_mapping.html":[6,0,2,1,12],
-"struct_urho3_d_1_1_detail_1_1_keyboard_key_mapping.html#a15ae038132a23fe87cbc7df8d8c2849a":[6,0,2,1,12,1],
-"struct_urho3_d_1_1_detail_1_1_keyboard_key_mapping.html#a6fc715abd634dfc7fa33bc2b4af0837f":[6,0,2,1,12,3],
-"struct_urho3_d_1_1_detail_1_1_keyboard_key_mapping.html#a75c95e8297d9f5d25e5cfbca74eb7a12":[6,0,2,1,12,2]
+"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html#aa9f69e6254c4dafdcac698c9105ce76d":[6,0,2,1,9,3]
 };

@@ -1,5 +1,13 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_key_frame_set.html#a84b5d96f407f5b74c17396325f833028":[6,0,2,341,4],
+"struct_urho3_d_1_1_key_frame_set.html#ac9843cd808c2aba65188fdbab2ef9992":[6,0,2,341,9],
+"struct_urho3_d_1_1_key_frame_set.html#ace9a6b8630d70d6b7edffe3529baf512":[6,0,2,341,3],
+"struct_urho3_d_1_1_key_frame_set.html#af745d6c8fbc70931285cf88be035cca7":[6,0,2,341,0],
+"struct_urho3_d_1_1_light_accumulator.html":[6,0,2,344],
+"struct_urho3_d_1_1_light_accumulator.html#a0eabe9a56557ebf053abc1d801908a7a":[6,0,2,344,14],
+"struct_urho3_d_1_1_light_accumulator.html#a0fe26a2d776145ecebc133e4e58ea62a":[6,0,2,344,6],
+"struct_urho3_d_1_1_light_accumulator.html#a118864508a029a1455097a746bf4b4bd":[6,0,2,344,11],
 "struct_urho3_d_1_1_light_accumulator.html#a1f32cd421d1c51f75dcb91a37d865cad":[6,0,2,344,10],
 "struct_urho3_d_1_1_light_accumulator.html#a3faad16921b154655e39018123c0cc06":[6,0,2,344,13],
 "struct_urho3_d_1_1_light_accumulator.html#a468f6b2a37148de30f43c4deb85c4a23":[6,0,2,344,15],
@@ -241,13 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_model_morph.html#ab962ecd5d68bbc004cac74002763b341":[6,0,2,400,1],
 "struct_urho3_d_1_1_model_morph.html#ad54d23a53cb91eab40c80671386caa1f":[6,0,2,400,0],
 "struct_urho3_d_1_1_model_morph.html#af717215ccd7ddfb636e1ebba0f1f17ae":[6,0,2,400,3],
-"struct_urho3_d_1_1_model_morph_view.html":[6,0,2,401],
-"struct_urho3_d_1_1_model_morph_view.html#a67d031a3b264e5a21649579545e31d33":[6,0,2,401,1],
-"struct_urho3_d_1_1_model_morph_view.html#aa0cda0cf4108e5e12c8986497c178d42":[6,0,2,401,0],
-"struct_urho3_d_1_1_model_vertex.html":[6,0,2,402],
-"struct_urho3_d_1_1_model_vertex.html#a0375b15126f44daec433af12f6f82080":[6,0,2,402,2],
-"struct_urho3_d_1_1_model_vertex.html#a087618c28205f5ccdbe9486ca80c46c5":[6,0,2,402,29],
-"struct_urho3_d_1_1_model_vertex.html#a10d542721719ab9fd92ec527e40ee9eb":[6,0,2,402,1],
-"struct_urho3_d_1_1_model_vertex.html#a111727284176d4ec340350dfa3e38a2d":[6,0,2,402,24],
-"struct_urho3_d_1_1_model_vertex.html#a1e91083f746f2552a94fc39a721f64fa":[6,0,2,402,17]
+"struct_urho3_d_1_1_model_morph_view.html":[6,0,2,401]
 };
