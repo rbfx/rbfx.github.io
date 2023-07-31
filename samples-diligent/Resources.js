@@ -346,6 +346,6 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
     }
 
     }
-    loadPackage({"files": [{"filename": "/CoreData.pak", "start": 0, "end": 698535}, {"filename": "/Data.pak", "start": 698535, "end": 48892078}], "remote_package_size": 48892078, "package_uuid": "sha256-ff40cf7f72f28dceada813f1d6cd9216e5ca77659dd135f1d8415507d5e2a2d7"});
+    loadPackage({"files": [{"filename": "/CoreData.pak", "start": 0, "end": 698820}, {"filename": "/Data.pak", "start": 698820, "end": 48892363}], "remote_package_size": 48892363, "package_uuid": "sha256-321fdddbec97fc8e179c51b1a466cb04157bc840e3ba3ae6426d74fdaf0926b3"});
 
   })();
