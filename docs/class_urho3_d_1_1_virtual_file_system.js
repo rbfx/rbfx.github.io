@@ -21,11 +21,13 @@ var class_urho3_d_1_1_virtual_file_system =
     [ "MountRoot", "class_urho3_d_1_1_virtual_file_system.html#a7ff1e661e3004fac931cf4ce1f06bae9", null ],
     [ "NumMountPoints", "class_urho3_d_1_1_virtual_file_system.html#a63b60ef3eeeff5264201f3b8fc934ff4", null ],
     [ "OpenFile", "class_urho3_d_1_1_virtual_file_system.html#a3490c5547f6af8f73a05af3e85835a79", null ],
+    [ "ReadAllText", "class_urho3_d_1_1_virtual_file_system.html#a6980f036914c04a5ed08dd7a545b79bc", null ],
     [ "Scan", "class_urho3_d_1_1_virtual_file_system.html#a9257d14d29b6ce9c9c3425cca6b46a8a", null ],
     [ "Scan", "class_urho3_d_1_1_virtual_file_system.html#a9b1ec0f7e98593a95b406dc02fdbb8b3", null ],
     [ "SetWatching", "class_urho3_d_1_1_virtual_file_system.html#adf9f069650312f04c211c86fec15bf50", null ],
     [ "Unmount", "class_urho3_d_1_1_virtual_file_system.html#a004260a8bb3347edefa90089697471c4", null ],
     [ "UnmountAll", "class_urho3_d_1_1_virtual_file_system.html#af79452c84572cb9a118ebb701a4ffd00", null ],
+    [ "WriteAllText", "class_urho3_d_1_1_virtual_file_system.html#aa350d5111f96fb05a02d8b7c5642c059", null ],
     [ "isWatching_", "class_urho3_d_1_1_virtual_file_system.html#a7a2d798c421124dd5dca5708977acd4c", null ],
     [ "mountMutex_", "class_urho3_d_1_1_virtual_file_system.html#a02667ab1ca16dd06c61ec0d22d37e90b", null ],
     [ "mountPoints_", "class_urho3_d_1_1_virtual_file_system.html#a2de8a545b9cba5f26c6d003a4f50129b", null ]

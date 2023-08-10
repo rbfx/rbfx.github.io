@@ -1,5 +1,7 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a4a8b36ce0a319e669be61c04da815ec9":[6,0,2,16,1],
+"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a64bc8d4f04d90c71b4f15e4bc9fb9218":[6,0,2,16,8],
 "struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a9f731fd287c3041923c345538792a5e2":[6,0,2,16,9],
 "struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#aa7bd933861928281bfcbdb15393a0673":[6,0,2,16,2],
 "struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#ae53252783f91df305d74e119e5c76fe4":[6,0,2,16,13],
@@ -247,7 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_batch_group_key.html#a38491874d78cda662bec55b2f14dd588":[6,0,2,80,6],
 "struct_urho3_d_1_1_batch_group_key.html#a546b352ddf630757d264ac631b2c6f9e":[6,0,2,80,9],
 "struct_urho3_d_1_1_batch_group_key.html#a77d9ab8e01e2d676a907153b07f393ce":[6,0,2,80,0],
-"struct_urho3_d_1_1_batch_group_key.html#a8ec9f45634c1c5afa34c577e5e0f0668":[6,0,2,80,4],
-"struct_urho3_d_1_1_batch_group_key.html#a9df16e3f3b8d86cf99c0a14812e20500":[6,0,2,80,1],
-"struct_urho3_d_1_1_batch_group_key.html#ab76653fe68cf3da8c19ce4ba49cc04bc":[6,0,2,80,7]
+"struct_urho3_d_1_1_batch_group_key.html#a8ec9f45634c1c5afa34c577e5e0f0668":[6,0,2,80,4]
 };

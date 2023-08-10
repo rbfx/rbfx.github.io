@@ -1,5 +1,7 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_console_1_1_log_entry.html#a67a0c39b65ba6d8be93d3fd0614d0f1c":[6,0,2,145,0,0],
+"struct_urho3_d_1_1_console_1_1_log_entry.html#a8d534c1eb9e12bc4524029ec13910e8c":[6,0,2,145,0,1],
 "struct_urho3_d_1_1_constant_buffer_collection_ref.html":[6,0,2,148],
 "struct_urho3_d_1_1_constant_buffer_collection_ref.html#a0b8d08c9a557230d1bd482b1f355b9d9":[6,0,2,148,1],
 "struct_urho3_d_1_1_constant_buffer_collection_ref.html#a85a445a57f4aeac4158de90bd7770f86":[6,0,2,148,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_detail_1_1_enum_string_caster_3_01unsigned_01_4.html#aa434cfed00d8449b17fa43f7b7c2e8d3":[6,0,2,1,8,1],
 "struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html":[6,0,2,1,9],
 "struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html#a17e358e6e78741ee627f6d59f4c8c107":[6,0,2,1,9,0],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html#a4e89abaa06c82c2a3b395eae2bbbd99d":[6,0,2,1,9,1],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html#a57e5ea40f05db9d48bc9906251508775":[6,0,2,1,9,2],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html#aa9f69e6254c4dafdcac698c9105ce76d":[6,0,2,1,9,3]
+"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html#a4e89abaa06c82c2a3b395eae2bbbd99d":[6,0,2,1,9,1]
 };

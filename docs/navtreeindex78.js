@@ -1,5 +1,7 @@
 var NAVTREEINDEX78 =
 {
+"namespacemembers_func.html":[5,1,1],
+"namespaces.html":[5,0],
 "network-objects.html":[0,0,2,2,2],
 "outdated-csharp-support.html":[0,0,8],
 "outdated-feature-overview.html":[0,0,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a386ee316ff3b964cbfeca4088de6f3de":[6,0,2,16,3],
 "struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a3e269ee26da276bfbe044ea03c7c4c93":[6,0,2,16,5],
 "struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a41b15ed4e2d24b6fd0f4e53f6cb05da4":[6,0,2,16,6],
-"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a472bb6a70b8d4ca6078537c537b039fa":[6,0,2,16,15],
-"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a4a8b36ce0a319e669be61c04da815ec9":[6,0,2,16,1],
-"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a64bc8d4f04d90c71b4f15e4bc9fb9218":[6,0,2,16,8]
+"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#a472bb6a70b8d4ca6078537c537b039fa":[6,0,2,16,15]
 };
