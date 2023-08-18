@@ -68,7 +68,9 @@ $(document).ready(function(){initNavTree('md__home_runner_work_rbfx-docs_rbfx-do
 <p>To convert an angle from degrees to radians, you can use the following formula: </p><div class="fragment"><div class="line">radians = degrees * M_DEGTORAD;</div>
 </div><!-- fragment --><p>To convert an angle from radians to degrees, you can use the following formula: </p><div class="fragment"><div class="line">degrees = radians * M_RADTODEG;</div>
 </div><!-- fragment --><p>The Urho3D::Atan2 function is a two-argument arctangent function that calculates the angle between the positive x-axis and the ray from the origin to the point (x, y) in the Cartesian plane. The result is given in degrees and is confined to the range (-180, 180].</p>
-<p>The yaw angle is the angle between the positive x-axis and the projection of the direction vector onto the x-z plane. You can calculate the yaw angle from a direction vector using the Urho3D::Atan2 function as follows: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">float</span> angle = <a class="code" href="_math_defs_8h.html#a3a083bb08e1de7805912aafa7f087ebd">Urho3D::Atan2</a>(dir.z_, dir.x_);</div>
+<p>The yaw angle is the angle between the positive x-axis and the projection of the direction vector onto the x-z plane. You can calculate the yaw angle from a direction vector using the Urho3D::Atan2 function as follows: </p><div class="fragment"><div class="line">Quaternion rot(0, 70, 0);</div>
+<div class="line"><span class="keyword">auto</span> dir = rot * Vector3::FORWARD;</div>
+<div class="line"><span class="keywordtype">float</span> angle = <a class="code" href="_math_defs_8h.html#a3a083bb08e1de7805912aafa7f087ebd">Atan2</a>(dir.x_, dir.z_); <span class="comment">// 70.0f</span></div>
 </div><!-- fragment --><p>Some Atan2 result values for reference: </p><div class="fragment"><div class="line">Atan2( 0.0f,  0.0f) =&gt;  0.0f</div>
 <div class="line">Atan2( 0.0f,  1.0f) =&gt;  0.0f</div>
 <div class="line">Atan2( 1.0f,  1.0f) =&gt; 45.0f</div>
