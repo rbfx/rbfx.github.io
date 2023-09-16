@@ -17,6 +17,7 @@ var class_urho3_d_1_1_image =
     [ "GetDecompressedImage", "class_urho3_d_1_1_image.html#ab0314fcd1455d08f6b411af04ddc0183", null ],
     [ "GetDecompressedImageLevel", "class_urho3_d_1_1_image.html#a22cd6091c6c9e9f59be937fe885a0f19", null ],
     [ "GetDepth", "class_urho3_d_1_1_image.html#a4d496d8e85691aa6181df109298d902b", null ],
+    [ "GetGPUFormat", "class_urho3_d_1_1_image.html#a2938c5b55a4c9ce87d584854c9f5fd91", null ],
     [ "GetHeight", "class_urho3_d_1_1_image.html#ab7d68f0d57c07c8ad29229ef886052e5", null ],
     [ "GetImageData", "class_urho3_d_1_1_image.html#a4c6f247559a46bdfcc8111a0ad8c8102", null ],
     [ "GetLevels", "class_urho3_d_1_1_image.html#a594632b46a848bd937dc73b4fd65917c", null ],

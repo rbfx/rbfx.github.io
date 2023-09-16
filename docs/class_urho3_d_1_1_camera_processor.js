@@ -15,6 +15,7 @@ var class_urho3_d_1_1_camera_processor =
     [ "cameraFillMode_", "class_urho3_d_1_1_camera_processor.html#a7a5c2b39e77bf2e716aa90a4f78eec93", null ],
     [ "cameras_", "class_urho3_d_1_1_camera_processor.html#aa69b2bc1f8c825f095b2d276c277176c", null ],
     [ "flipCameraForRendering_", "class_urho3_d_1_1_camera_processor.html#a7ed52e02195554dbb995c8e74d429f24", null ],
+    [ "graphics_", "class_urho3_d_1_1_camera_processor.html#a649937ee3af0940b0247dc823e190107", null ],
     [ "isCameraClipped_", "class_urho3_d_1_1_camera_processor.html#a3c3e17b24d5cddff502ec127b23a27a8", null ],
     [ "isCameraFlippedByUser_", "class_urho3_d_1_1_camera_processor.html#af547201b71c779103e376193157514e5", null ],
     [ "isCameraOrthographic_", "class_urho3_d_1_1_camera_processor.html#a7aef0b91c539720a747ffa75bb98fbad", null ],

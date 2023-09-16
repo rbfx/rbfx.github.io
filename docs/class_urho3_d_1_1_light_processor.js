@@ -38,6 +38,7 @@ var class_urho3_d_1_1_light_processor =
     [ "numActiveSplits_", "class_urho3_d_1_1_light_processor.html#a5535800e2a5addd4c986138ec4ba68b2", null ],
     [ "NumSplitFramesToLive", "class_urho3_d_1_1_light_processor.html#a71ba6b46dd158bbdb627b713737a7ac5", null ],
     [ "numSplitsRequested_", "class_urho3_d_1_1_light_processor.html#ae3064da441a71b36f3d448786dc73874", null ],
+    [ "renderBackend_", "class_urho3_d_1_1_light_processor.html#a3cfe6c62fe394fbc2a43b81a0ab1e8e8", null ],
     [ "shadowBatchStateHashes_", "class_urho3_d_1_1_light_processor.html#aec4a52c109bca62777d162cc67fd5f7f", null ],
     [ "shadowCasterCandidates_", "class_urho3_d_1_1_light_processor.html#af9925f7c63fcccbe605b5bcb4e4bc01b", null ],
     [ "shadowMap_", "class_urho3_d_1_1_light_processor.html#abb3f434fc1fd2abfc31727ad7810631d", null ],

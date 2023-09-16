@@ -60,6 +60,7 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_cubemap_renderer.htm
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
@@ -86,6 +87,11 @@ Inheritance diagram for Urho3D::CubemapRenderer:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_cubemap_renderer_1_1_cached_pipeline_states.html">CachedPipelineStates</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a370be9444a798e176aedfd52459f5541"><td class="memItemLeft" align="right" valign="top"><a id="a370be9444a798e176aedfd52459f5541"></a>
@@ -294,9 +300,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a136d3f1ca2bcece96fce747cbd21d41f"><td class="memItemLeft" align="right" valign="top"><a id="a136d3f1ca2bcece96fce747cbd21d41f"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>DefineTexture</b> (<a class="el" href="class_urho3_d_1_1_texture_cube.html">TextureCube</a> *texture, const <a class="el" href="struct_urho3_d_1_1_cubemap_rendering_settings.html">CubemapRenderingSettings</a> &amp;settings)</td></tr>
-<tr class="separator:a136d3f1ca2bcece96fce747cbd21d41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc33ea53cf3b52660441047aba82cd38"><td class="memItemLeft" align="right" valign="top"><a id="acc33ea53cf3b52660441047aba82cd38"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>DefineTexture</b> (<a class="el" href="class_urho3_d_1_1_texture_cube.html">TextureCube</a> *texture, const <a class="el" href="struct_urho3_d_1_1_cubemap_rendering_settings.html">CubemapRenderingSettings</a> &amp;settings, TextureFlags flags=TextureFlag::None)</td></tr>
+<tr class="separator:acc33ea53cf3b52660441047aba82cd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="aaf5a648d6c449dd14b273c10fdd498a9"></a>
 static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aaf5a648d6c449dd14b273c10fdd498a9">GetTypeInfoStatic</a> ()</td></tr>
@@ -347,9 +353,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessFaceRendered</
 <tr class="memitem:a1938163648ee6990afce574c39d1c1ce"><td class="memItemLeft" align="right" valign="top"><a id="a1938163648ee6990afce574c39d1c1ce"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessCubemapRendered</b> ()</td></tr>
 <tr class="separator:a1938163648ee6990afce574c39d1c1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1d440be01d0dfd59f5d454c0b8755c8"><td class="memItemLeft" align="right" valign="top"><a id="af1d440be01d0dfd59f5d454c0b8755c8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>FilterCubemap</b> (<a class="el" href="class_urho3_d_1_1_texture_cube.html">TextureCube</a> *sourceTexture, <a class="el" href="class_urho3_d_1_1_texture_cube.html">TextureCube</a> *destTexture, ea::span&lt; const unsigned &gt; rayCounts)</td></tr>
-<tr class="separator:af1d440be01d0dfd59f5d454c0b8755c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4babf8c23db076e4618a8bcdae4dc4b4"><td class="memItemLeft" align="right" valign="top"><a id="a4babf8c23db076e4618a8bcdae4dc4b4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>EnsurePipelineStates</b> (unsigned numLevels)</td></tr>
+<tr class="separator:a4babf8c23db076e4618a8bcdae4dc4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58a51dce4b143f0dd104acfd77ebc4c2"><td class="memItemLeft" align="right" valign="top"><a id="a58a51dce4b143f0dd104acfd77ebc4c2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>FilterCubemap</b> (<a class="el" href="class_urho3_d_1_1_texture_cube.html">TextureCube</a> *sourceTexture, <a class="el" href="class_urho3_d_1_1_texture_cube.html">TextureCube</a> *destTexture)</td></tr>
 <tr class="separator:a58a51dce4b143f0dd104acfd77ebc4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -395,6 +401,9 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>numFacesToRender_
 <tr class="memitem:a2e5ca35de1f5f9b9f05365a023a7efc7"><td class="memItemLeft" align="right" valign="top"><a id="a2e5ca35de1f5f9b9f05365a023a7efc7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>viewportsConnectedToSelf_</b> {}</td></tr>
 <tr class="separator:a2e5ca35de1f5f9b9f05365a023a7efc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a432e182af02bf9ffc2eb4e4a19850811"><td class="memItemLeft" align="right" valign="top"><a id="a432e182af02bf9ffc2eb4e4a19850811"></a>
+ea::optional&lt; <a class="el" href="struct_urho3_d_1_1_cubemap_renderer_1_1_cached_pipeline_states.html">CachedPipelineStates</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cachedPipelineStates_</b></td></tr>
+<tr class="separator:a432e182af02bf9ffc2eb4e4a19850811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

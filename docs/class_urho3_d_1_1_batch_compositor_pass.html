@@ -70,7 +70,7 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_batch_compositor_pas
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="struct_urho3_d_1_1_batch.html" title="Queued 3D geometry draw call.">Batch</a> compositor for single scene pass.  
+<p>Batch compositor for single scene pass.  
  <a href="class_urho3_d_1_1_batch_compositor_pass.html#details">More...</a></p>
 
 <p><code>#include &lt;Urho3D/RenderPipeline/BatchCompositor.h&gt;</code></p>
@@ -95,10 +95,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a18bf84fb77d41d3034c366d84ff3924a"><td class="memItemLeft" align="right" valign="top"><a id="a18bf84fb77d41d3034c366d84ff3924a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BatchCompositorPass</b> (<a class="el" href="class_urho3_d_1_1_render_pipeline_interface.html">RenderPipelineInterface</a> *renderPipeline, <a class="el" href="class_urho3_d_1_1_drawable_processor.html">DrawableProcessor</a> *drawableProcessor, <a class="el" href="class_urho3_d_1_1_batch_state_cache_callback.html">BatchStateCacheCallback</a> *callback, DrawableProcessorPassFlags flags, unsigned deferredPassIndex, unsigned unlitBasePassIndex, unsigned litBasePassIndex, unsigned lightPassIndex)</td></tr>
 <tr class="separator:a18bf84fb77d41d3034c366d84ff3924a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16e4799d4bcedc10a29f24fbce3cd02a"><td class="memItemLeft" align="right" valign="top"><a id="a16e4799d4bcedc10a29f24fbce3cd02a"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_compositor_pass.html#a16e4799d4bcedc10a29f24fbce3cd02a">CreatePipelineState</a> (<a class="el" href="struct_urho3_d_1_1_pipeline_state_desc.html">PipelineStateDesc</a> &amp;desc, <a class="el" href="class_urho3_d_1_1_pipeline_state_builder.html">PipelineStateBuilder</a> *builder, const <a class="el" href="struct_urho3_d_1_1_batch_state_create_key.html">BatchStateCreateKey</a> &amp;key, const <a class="el" href="struct_urho3_d_1_1_batch_state_create_context.html">BatchStateCreateContext</a> &amp;ctx)</td></tr>
-<tr class="memdesc:a16e4799d4bcedc10a29f24fbce3cd02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for pipeline state initialization. <br /></td></tr>
-<tr class="separator:a16e4799d4bcedc10a29f24fbce3cd02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0912a071edd31feacb4b8b8712daf472"><td class="memItemLeft" align="right" valign="top"><a id="a0912a071edd31feacb4b8b8712daf472"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_compositor_pass.html#a0912a071edd31feacb4b8b8712daf472">CreatePipelineState</a> (GraphicsPipelineStateDesc &amp;desc, <a class="el" href="class_urho3_d_1_1_pipeline_state_builder.html">PipelineStateBuilder</a> *builder, const <a class="el" href="struct_urho3_d_1_1_batch_state_create_key.html">BatchStateCreateKey</a> &amp;key, const <a class="el" href="struct_urho3_d_1_1_batch_state_create_context.html">BatchStateCreateContext</a> &amp;ctx)</td></tr>
+<tr class="memdesc:a0912a071edd31feacb4b8b8712daf472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for pipeline state initialization. <br /></td></tr>
+<tr class="separator:a0912a071edd31feacb4b8b8712daf472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2ad5addcd4dbff246433ee1f686e8a8"><td class="memItemLeft" align="right" valign="top"><a id="ab2ad5addcd4dbff246433ee1f686e8a8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetForwardOutputDesc</b> (const PipelineStateOutputDesc &amp;desc)</td></tr>
+<tr class="separator:ab2ad5addcd4dbff246433ee1f686e8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae88ca5f679e7d93af360f1ebe253185c"><td class="memItemLeft" align="right" valign="top"><a id="ae88ca5f679e7d93af360f1ebe253185c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDeferredOutputDesc</b> (const PipelineStateOutputDesc &amp;desc)</td></tr>
+<tr class="separator:ae88ca5f679e7d93af360f1ebe253185c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06e6bd1eba04c37b84422bd31af217b1"><td class="memItemLeft" align="right" valign="top"><a id="a06e6bd1eba04c37b84422bd31af217b1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ComposeBatches</b> ()</td></tr>
 <tr class="separator:a06e6bd1eba04c37b84422bd31af217b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -393,6 +399,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessGeometryBatch<
 <tr class="memitem:a54f330c9cb9a87fc7ff8470df74252ac"><td class="memItemLeft" align="right" valign="top"><a id="a54f330c9cb9a87fc7ff8470df74252ac"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ResolveDelayedBatches</b> (BatchCompositorSubpass subpass, const <a class="el" href="class_urho3_d_1_1_work_queue_vector.html">WorkQueueVector</a>&lt; <a class="el" href="struct_urho3_d_1_1_pipeline_batch_desc.html">PipelineBatchDesc</a> &gt; &amp;delayedBatches, <a class="el" href="class_urho3_d_1_1_batch_state_cache.html">BatchStateCache</a> &amp;cache, <a class="el" href="class_urho3_d_1_1_work_queue_vector.html">WorkQueueVector</a>&lt; <a class="el" href="struct_urho3_d_1_1_pipeline_batch.html">PipelineBatch</a> &gt; &amp;batches)</td></tr>
 <tr class="separator:a54f330c9cb9a87fc7ff8470df74252ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c01434603275189052ffdc2d5fe422"><td class="memItemLeft" align="right" valign="top"><a id="a76c01434603275189052ffdc2d5fe422"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddPipelineBatch</b> (const <a class="el" href="struct_urho3_d_1_1_pipeline_batch_desc.html">PipelineBatchDesc</a> &amp;desc, <a class="el" href="class_urho3_d_1_1_batch_state_cache.html">BatchStateCache</a> &amp;cache, <a class="el" href="class_urho3_d_1_1_work_queue_vector.html">WorkQueueVector</a>&lt; <a class="el" href="struct_urho3_d_1_1_pipeline_batch.html">PipelineBatch</a> &gt; &amp;batches, <a class="el" href="class_urho3_d_1_1_work_queue_vector.html">WorkQueueVector</a>&lt; <a class="el" href="struct_urho3_d_1_1_pipeline_batch_desc.html">PipelineBatchDesc</a> &gt; &amp;delayedBatches)</td></tr>
+<tr class="separator:a76c01434603275189052ffdc2d5fe422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd416c9ac50a80199c96ad9757474e2"><td class="memItemLeft" align="right" valign="top"><a id="a8dd416c9ac50a80199c96ad9757474e2"></a>
+PipelineState *&#160;</td><td class="memItemRight" valign="bottom"><b>GetPlaceholderPipelineState</b> (<a class="el" href="class_urho3_d_1_1_batch_state_cache.html">BatchStateCache</a> &amp;cache, PipelineState *original)</td></tr>
+<tr class="separator:a8dd416c9ac50a80199c96ad9757474e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -433,7 +445,7 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <tr class="separator:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="struct_urho3_d_1_1_batch.html" title="Queued 3D geometry draw call.">Batch</a> compositor for single scene pass. </p>
+<div class="textblock"><p>Batch compositor for single scene pass. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a92ecdf52cf34b93291d4dc523b96cc97"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a92ecdf52cf34b93291d4dc523b96cc97">&#9670;&nbsp;</a></span>OnUpdateBegin()</h2>

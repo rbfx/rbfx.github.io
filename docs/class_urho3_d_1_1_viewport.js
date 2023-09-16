@@ -1,8 +1,8 @@
 var class_urho3_d_1_1_viewport =
 [
     [ "Viewport", "class_urho3_d_1_1_viewport.html#a95f90f11837436f3ca78e99212dc9b5f", null ],
-    [ "Viewport", "class_urho3_d_1_1_viewport.html#a5a272a0475417d611703727f99e60394", null ],
-    [ "Viewport", "class_urho3_d_1_1_viewport.html#a7a541d293d73ad0d4a4e3a32ad4b3729", null ],
+    [ "Viewport", "class_urho3_d_1_1_viewport.html#a4ad0155eebfd0b3fad2d9bb6562f93e6", null ],
+    [ "Viewport", "class_urho3_d_1_1_viewport.html#a63cd7ec10b5d8134f0efc4a1dbdd1a75", null ],
     [ "Viewport", "class_urho3_d_1_1_viewport.html#a1d291b6ad8f3b13caea8bbde7b9e07ec", null ],
     [ "~Viewport", "class_urho3_d_1_1_viewport.html#ac27ebd9e15afeae5a4d86bc209a03524", null ],
     [ "AllocateView", "class_urho3_d_1_1_viewport.html#a90420e62386ac8b50fd35d33a07784b0", null ],
@@ -11,19 +11,15 @@ var class_urho3_d_1_1_viewport =
     [ "GetDrawDebug", "class_urho3_d_1_1_viewport.html#ad96fbac45fe545c78bcf10acc5e31a65", null ],
     [ "GetEffectiveRect", "class_urho3_d_1_1_viewport.html#ae8e96980badde1e3e0fb78ace6692077", null ],
     [ "GetRect", "class_urho3_d_1_1_viewport.html#af3ac752ae3130a8b91e029688ae846cc", null ],
-    [ "GetRenderPath", "class_urho3_d_1_1_viewport.html#a79693beecd3cd15bc867f3f0f46158ff", null ],
     [ "GetRenderPipelineView", "class_urho3_d_1_1_viewport.html#a3978f0f2b3ae2befb40c0d0a777f4ad7", null ],
     [ "GetScene", "class_urho3_d_1_1_viewport.html#a2d603e8c21c8ace61bd51fdbe260e22b", null ],
     [ "GetScreenRay", "class_urho3_d_1_1_viewport.html#a8c4201376e14c0703281473d43527089", null ],
-    [ "GetView", "class_urho3_d_1_1_viewport.html#a51ff6a154ec1ecfe25813a3e4e0a5bf2", null ],
     [ "RegisterObject", "class_urho3_d_1_1_viewport.html#ac62e5fc5a8fce1d16d33ce55c8a4c06f", null ],
     [ "ScreenToWorldPoint", "class_urho3_d_1_1_viewport.html#aada0c3ada21f92bac763432c8754fecd", null ],
     [ "SetCamera", "class_urho3_d_1_1_viewport.html#a72e5a9959eb95b23512d52efb1e831b1", null ],
     [ "SetCullCamera", "class_urho3_d_1_1_viewport.html#a2fa469c632b7be317d974c4d3ca4bffb", null ],
     [ "SetDrawDebug", "class_urho3_d_1_1_viewport.html#a463ebb4f490c112393a3ac573c74cd84", null ],
     [ "SetRect", "class_urho3_d_1_1_viewport.html#acc1acf4531e0762f0e19b6399aaf39a9", null ],
-    [ "SetRenderPath", "class_urho3_d_1_1_viewport.html#ab1ea665002993b6e7308ef85ce4ffbd6", null ],
-    [ "SetRenderPath", "class_urho3_d_1_1_viewport.html#a62b971d68362fbe3f455ddf7ab676fa1", null ],
     [ "SetScene", "class_urho3_d_1_1_viewport.html#a631f6576eb25ae4ad1f24a95e1947e19", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_viewport.html#a96c170977f274778eb4b792ce8a8abef", null ],
     [ "WorldToScreenPoint", "class_urho3_d_1_1_viewport.html#a5a57ee091281b06807b541d491bd5875", null ],
@@ -32,9 +28,7 @@ var class_urho3_d_1_1_viewport =
     [ "cullCamera_", "class_urho3_d_1_1_viewport.html#a7cc7fa89a3bf96206901c1219084753f", null ],
     [ "drawDebug_", "class_urho3_d_1_1_viewport.html#ae77cb162865a6fa07a3380ba3e169a19", null ],
     [ "rect_", "class_urho3_d_1_1_viewport.html#a9b6eba519b5efd927370038e312c0628", null ],
-    [ "renderPath_", "class_urho3_d_1_1_viewport.html#aee075d03a4b3ec13a0328b96eb1be5be", null ],
     [ "renderPipeline_", "class_urho3_d_1_1_viewport.html#a24db078cc3a382cdcac09727c2d09bd5", null ],
     [ "renderPipelineView_", "class_urho3_d_1_1_viewport.html#aef423f5bf77703f066da62d1faf1e65c", null ],
-    [ "scene_", "class_urho3_d_1_1_viewport.html#afb4d8a76f88f9b043e868cc2b497fbf2", null ],
-    [ "view_", "class_urho3_d_1_1_viewport.html#a2824ab5524aebc02eba89c92efbef09d", null ]
+    [ "scene_", "class_urho3_d_1_1_viewport.html#afb4d8a76f88f9b043e868cc2b497fbf2", null ]
 ];

@@ -2,8 +2,6 @@ var class_urho3_d_1_1_geometry =
 [
     [ "Geometry", "class_urho3_d_1_1_geometry.html#a01ca8248a9fef5f91dcea32dbfbc4e2d", null ],
     [ "~Geometry", "class_urho3_d_1_1_geometry.html#a8d230be4c825ab0602c5755d311b6a4a", null ],
-    [ "Draw", "class_urho3_d_1_1_geometry.html#a4a7263e950743d3a59f18469766bfe19", null ],
-    [ "GetBufferHash", "class_urho3_d_1_1_geometry.html#a1ac5664e37d8c59e0f69d10dce35cc6f", null ],
     [ "GetEffectiveIndexCount", "class_urho3_d_1_1_geometry.html#a4b0a4731c5c936ac8494fcf358ef251c", null ],
     [ "GetHitDistance", "class_urho3_d_1_1_geometry.html#af24681caecc64ad63e7aa44fce638947", null ],
     [ "GetIndexBuffer", "class_urho3_d_1_1_geometry.html#a27a254ba37e7259991b576e548f9dd9a", null ],

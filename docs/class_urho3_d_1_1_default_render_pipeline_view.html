@@ -126,6 +126,14 @@ const <a class="el" href="struct_urho3_d_1_1_frame_info.html">FrameInfo</a> &amp
 const <a class="el" href="struct_urho3_d_1_1_render_pipeline_stats.html">RenderPipelineStats</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_default_render_pipeline_view.html#a2a03cf65d52ca3a4abb349826f14ad59">GetStats</a> () const override</td></tr>
 <tr class="memdesc:a2a03cf65d52ca3a4abb349826f14ad59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return render pipeline statistics for profiling. <br /></td></tr>
 <tr class="separator:a2a03cf65d52ca3a4abb349826f14ad59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbdee33a5f25728c01cdde806d42838c"><td class="memItemLeft" align="right" valign="top"><a id="abbdee33a5f25728c01cdde806d42838c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_default_render_pipeline_view.html#abbdee33a5f25728c01cdde806d42838c">DrawDebugGeometries</a> (bool depthTest) override</td></tr>
+<tr class="memdesc:abbdee33a5f25728c01cdde806d42838c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw debug geometries, if applicable. <br /></td></tr>
+<tr class="separator:abbdee33a5f25728c01cdde806d42838c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a926f7def34c5a0736fef73514105de5f"><td class="memItemLeft" align="right" valign="top"><a id="a926f7def34c5a0736fef73514105de5f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_default_render_pipeline_view.html#a926f7def34c5a0736fef73514105de5f">DrawDebugLights</a> (bool depthTest) override</td></tr>
+<tr class="memdesc:a926f7def34c5a0736fef73514105de5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw debug lights, if applicable. <br /></td></tr>
+<tr class="separator:a926f7def34c5a0736fef73514105de5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_render_pipeline_view"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_render_pipeline_view')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_render_pipeline_view.html">Urho3D::RenderPipelineView</a></td></tr>
 <tr class="memitem:adcda6f30fd19b8f5cd8ee4e67387382a inherit pub_methods_class_urho3_d_1_1_render_pipeline_view"><td class="memItemLeft" align="right" valign="top"><a id="adcda6f30fd19b8f5cd8ee4e67387382a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>RenderPipelineView</b> (<a class="el" href="class_urho3_d_1_1_render_pipeline.html">RenderPipeline</a> *renderPipeline)</td></tr>
@@ -365,6 +373,15 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>settingsPipelineS
 <tr class="memitem:a369b6d457c96927442c567d1802414ea"><td class="memItemLeft" align="right" valign="top"><a id="a369b6d457c96927442c567d1802414ea"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>settingsDirty_</b> {}</td></tr>
 <tr class="separator:a369b6d457c96927442c567d1802414ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd39f9c38ad4f07395cf461dff397ba7"><td class="memItemLeft" align="right" valign="top"><a id="abd39f9c38ad4f07395cf461dff397ba7"></a>
+TextureFormat&#160;</td><td class="memItemRight" valign="bottom"><b>albedoFormat_</b> {TextureFormat::TEX_FORMAT_RGBA8_UNORM}</td></tr>
+<tr class="separator:abd39f9c38ad4f07395cf461dff397ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad24abfb2d9d1f153f1c617012d76a517"><td class="memItemLeft" align="right" valign="top"><a id="ad24abfb2d9d1f153f1c617012d76a517"></a>
+TextureFormat&#160;</td><td class="memItemRight" valign="bottom"><b>normalFormat_</b> {TextureFormat::TEX_FORMAT_RGBA8_UNORM}</td></tr>
+<tr class="separator:ad24abfb2d9d1f153f1c617012d76a517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc72c1f80aae11bb1a6b98290fc5de81"><td class="memItemLeft" align="right" valign="top"><a id="afc72c1f80aae11bb1a6b98290fc5de81"></a>
+TextureFormat&#160;</td><td class="memItemRight" valign="bottom"><b>specularFormat_</b> {TextureFormat::TEX_FORMAT_RGBA8_UNORM}</td></tr>
+<tr class="separator:afc72c1f80aae11bb1a6b98290fc5de81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c143f32ec9733b128b908779ce3ca0a"><td class="memItemLeft" align="right" valign="top"><a id="a6c143f32ec9733b128b908779ce3ca0a"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_default_render_pipeline_view.html#a6c143f32ec9733b128b908779ce3ca0a">oldPipelineStateHash_</a> {}</td></tr>
 <tr class="memdesc:a6c143f32ec9733b128b908779ce3ca0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Previous pipeline state hash. <br /></td></tr>

@@ -330,9 +330,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ReallocateFontTexture
 <tr class="memitem:aeaf307391a26628790e02763485d61a7"><td class="memItemLeft" align="right" valign="top"><a id="aeaf307391a26628790e02763485d61a7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearPerScreenFonts</b> ()</td></tr>
 <tr class="separator:aeaf307391a26628790e02763485d61a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6bc8ca18bb6bff26cbed99378729107"><td class="memItemLeft" align="right" valign="top"><a id="aa6bc8ca18bb6bff26cbed99378729107"></a>
-ImTextureID&#160;</td><td class="memItemRight" valign="bottom"><b>AllocateFontTexture</b> (ImFontAtlas *atlas)</td></tr>
-<tr class="separator:aa6bc8ca18bb6bff26cbed99378729107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade7690b13a53586a96627d3c830d1f5e"><td class="memItemLeft" align="right" valign="top"><a id="ade7690b13a53586a96627d3c830d1f5e"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>AllocateFontTexture</b> (ImFontAtlas *atlas) const</td></tr>
+<tr class="separator:ade7690b13a53586a96627d3c830d1f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a496327734c45a8e11ccc7f984a164c41"><td class="memItemLeft" align="right" valign="top"><a id="a496327734c45a8e11ccc7f984a164c41"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnRawEvent</b> (<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;args)</td></tr>
 <tr class="separator:a496327734c45a8e11ccc7f984a164c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -354,12 +354,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>OnMouseVisibilityChan
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ac5ca1cf6b57068d3ab8e948d1a0c0fa4"><td class="memItemLeft" align="right" valign="top"><a id="ac5ca1cf6b57068d3ab8e948d1a0c0fa4"></a>
-<a class="el" href="class_urho3_d_1_1_vertex_buffer.html">VertexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vertexBuffer_</b></td></tr>
-<tr class="separator:ac5ca1cf6b57068d3ab8e948d1a0c0fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae659d30d6c9d55751064ae8c966bf44e"><td class="memItemLeft" align="right" valign="top"><a id="ae659d30d6c9d55751064ae8c966bf44e"></a>
-<a class="el" href="class_urho3_d_1_1_index_buffer.html">IndexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>indexBuffer_</b></td></tr>
-<tr class="separator:ae659d30d6c9d55751064ae8c966bf44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5c9eee4b79ab4e15468a1e812aaeb87"><td class="memItemLeft" align="right" valign="top"><a id="ab5c9eee4b79ab4e15468a1e812aaeb87"></a>
 ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>fontTextures_</b></td></tr>
 <tr class="separator:ab5c9eee4b79ab4e15468a1e812aaeb87"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -367,7 +361,7 @@ ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr<
 ea::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>fontSizes_</b></td></tr>
 <tr class="separator:ad0fef7eed668c2926b50b5fa79fd6243"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65c6d1261e3292741730d60fdbaf4ff6"><td class="memItemLeft" align="right" valign="top"><a id="a65c6d1261e3292741730d60fdbaf4ff6"></a>
-ImGuiContext *&#160;</td><td class="memItemRight" valign="bottom"><b>imContext_</b></td></tr>
+ImGuiContext *&#160;</td><td class="memItemRight" valign="bottom"><b>imContext_</b> {}</td></tr>
 <tr class="separator:a65c6d1261e3292741730d60fdbaf4ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4aa28c686bd0fa66a435bbdf92773041"><td class="memItemLeft" align="right" valign="top"><a id="a4aa28c686bd0fa66a435bbdf92773041"></a>
 ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>referencedTextures_</b></td></tr>
@@ -388,6 +382,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>revertMousePositionOn
 <tr class="memitem:a06df5d13c5af3681b225ec4154972e28"><td class="memItemLeft" align="right" valign="top"><a id="a06df5d13c5af3681b225ec4154972e28"></a>
 ImVec2&#160;</td><td class="memItemRight" valign="bottom"><b>revertMousePosition_</b></td></tr>
 <tr class="separator:a06df5d13c5af3681b225ec4154972e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c1751cbcb4ddad91f3bf4056d20f43e"><td class="memItemLeft" align="right" valign="top"><a id="a1c1751cbcb4ddad91f3bf4056d20f43e"></a>
+ea::unique_ptr&lt; <a class="el" href="class_urho3_d_1_1_im_gui_diligent_renderer_ex.html">ImGuiDiligentRendererEx</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>impl_</b></td></tr>
+<tr class="separator:a1c1751cbcb4ddad91f3bf4056d20f43e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="aecf686841d86be7e4a2c0092b60d31ad"></a>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aecf686841d86be7e4a2c0092b60d31ad">context_</a></td></tr>

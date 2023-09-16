@@ -372,9 +372,24 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>EditQualityInEntry</b
 <tr class="memitem:a9fe72646bbfb2e462436aa8993f30e1b"><td class="memItemLeft" align="right" valign="top"><a id="a9fe72646bbfb2e462436aa8993f30e1b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderProperty</b> (const <a class="el" href="struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html">PropertyDesc</a> &amp;desc)</td></tr>
 <tr class="separator:a9fe72646bbfb2e462436aa8993f30e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264c3238fffab03350dda64c43d28ea0"><td class="memItemLeft" align="right" valign="top"><a id="a264c3238fffab03350dda64c43d28ea0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderShaderDefines</b> ()</td></tr>
+<tr class="separator:a264c3238fffab03350dda64c43d28ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afae9b67cc001c9f42dcda403d97f5561"><td class="memItemLeft" align="right" valign="top"><a id="afae9b67cc001c9f42dcda403d97f5561"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderTextureUnit</b> (const <a class="el" href="struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html">TextureUnitDesc</a> &amp;desc)</td></tr>
 <tr class="separator:afae9b67cc001c9f42dcda403d97f5561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11f2708ac7a537e3719d8f79b8e39a0b"><td class="memItemLeft" align="right" valign="top"><a id="a11f2708ac7a537e3719d8f79b8e39a0b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsDefaultTextureUnit</b> (const ea::string &amp;unit) const</td></tr>
+<tr class="separator:a11f2708ac7a537e3719d8f79b8e39a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44bb441963cf11ebeaf25b1db675fd72"><td class="memItemLeft" align="right" valign="top"><a id="a44bb441963cf11ebeaf25b1db675fd72"></a>
+ea::set&lt; ea::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetCustomTextureUnits</b> () const</td></tr>
+<tr class="separator:a44bb441963cf11ebeaf25b1db675fd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e7440c387a1c1ece5a91002ce2b27b4"><td class="memItemLeft" align="right" valign="top"><a id="a3e7440c387a1c1ece5a91002ce2b27b4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderCustomTextureUnit</b> (const ea::string &amp;unit)</td></tr>
+<tr class="separator:a3e7440c387a1c1ece5a91002ce2b27b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203c898e7dbb51eb12e5d60e04e5b06f"><td class="memItemLeft" align="right" valign="top"><a id="a203c898e7dbb51eb12e5d60e04e5b06f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderAddCustomTextureUnit</b> (const ea::set&lt; ea::string &gt; &amp;customTextureUnits)</td></tr>
+<tr class="separator:a203c898e7dbb51eb12e5d60e04e5b06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abac1ba9038660fe293224140de23239e"><td class="memItemLeft" align="right" valign="top"><a id="abac1ba9038660fe293224140de23239e"></a>
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetTechniqueDisplayName</b> (const ea::string &amp;resourceName) const</td></tr>
 <tr class="separator:abac1ba9038660fe293224140de23239e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -420,9 +435,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>pendingSetTechniques_
 <tr class="memitem:a1b7efa14e3ed5dc15a2c89b65be22016"><td class="memItemLeft" align="right" valign="top"><a id="a1b7efa14e3ed5dc15a2c89b65be22016"></a>
 ea::vector&lt; ea::pair&lt; const <a class="el" href="struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html">PropertyDesc</a> *, <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pendingSetProperties_</b></td></tr>
 <tr class="separator:a1b7efa14e3ed5dc15a2c89b65be22016"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac63c8953fd056c554eace21b1ced904a"><td class="memItemLeft" align="right" valign="top"><a id="ac63c8953fd056c554eace21b1ced904a"></a>
-ea::vector&lt; ea::pair&lt; <a class="el" href="_graphics_defs_8h.html#a4042c84b872f2caaa29c6cb585b82f96">TextureUnit</a>, <a class="el" href="class_urho3_d_1_1_texture.html">Texture</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pendingSetTextures_</b></td></tr>
-<tr class="separator:ac63c8953fd056c554eace21b1ced904a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9854d77c26515e0cd2213e43453f221b"><td class="memItemLeft" align="right" valign="top"><a id="a9854d77c26515e0cd2213e43453f221b"></a>
+ea::vector&lt; ea::pair&lt; ea::string, <a class="el" href="class_urho3_d_1_1_texture.html">Texture</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pendingSetTextures_</b></td></tr>
+<tr class="separator:a9854d77c26515e0cd2213e43453f221b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac13eb205101105ad9461d32bd7116d12"><td class="memItemLeft" align="right" valign="top"><a id="ac13eb205101105ad9461d32bd7116d12"></a>
 ShaderParameterNames&#160;</td><td class="memItemRight" valign="bottom"><b>shaderParameterNames_</b></td></tr>
 <tr class="separator:ac13eb205101105ad9461d32bd7116d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -435,12 +450,19 @@ ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>newParameterNam
 <tr class="memitem:a9bb77eb536fd3e939ae4c146bffbfd07"><td class="memItemLeft" align="right" valign="top"><a id="a9bb77eb536fd3e939ae4c146bffbfd07"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>newParameterType_</b> {}</td></tr>
 <tr class="separator:a9bb77eb536fd3e939ae4c146bffbfd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a589ac25ef4f7ea99b54a642522bd68b1"><td class="memItemLeft" align="right" valign="top"><a id="a589ac25ef4f7ea99b54a642522bd68b1"></a>
+ea::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>separateShaderDefines_</b></td></tr>
+<tr class="separator:a589ac25ef4f7ea99b54a642522bd68b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:abf6a0cf5fd8c5a03d4b96798f179f7f4"><td class="memItemLeft" align="right" valign="top"><a id="abf6a0cf5fd8c5a03d4b96798f179f7f4"></a>
 static const ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html">PropertyDesc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>properties</b></td></tr>
 <tr class="separator:abf6a0cf5fd8c5a03d4b96798f179f7f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35cfb7fe48edae3889271f60be93514d"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html">PropertyDesc</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vertexDefinesProperty</b></td></tr>
+<tr class="separator:a35cfb7fe48edae3889271f60be93514d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eb13055c4af14b6e5baa809fb6d160b"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html">PropertyDesc</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pixelDefinesProperty</b></td></tr>
+<tr class="separator:a5eb13055c4af14b6e5baa809fb6d160b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca610dbe1fd75174e7ba0866595e1af3"><td class="memItemLeft" align="right" valign="top">static const ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html">TextureUnitDesc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>textureUnits</b></td></tr>
 <tr class="separator:aca610dbe1fd75174e7ba0866595e1af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -460,6 +482,36 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_urho3_d_1_1_system_u_i.html">SystemUI</a> widget used to edit materials. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5eb13055c4af14b6e5baa809fb6d160b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eb13055c4af14b6e5baa809fb6d160b">&#9670;&nbsp;</a></span>pixelDefinesProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html">MaterialInspectorWidget::PropertyDesc</a> Urho3D::MaterialInspectorWidget::pixelDefinesProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="stringliteral">&quot;Pixel Defines&quot;</span>,</div>
+<div class="line">    Variant{EMPTY_STRING},</div>
+<div class="line">    [](<span class="keyword">const</span> Material* material) { <span class="keywordflow">return</span> Variant{material-&gt;GetPixelShaderDefines()}; },</div>
+<div class="line">    [](Material* material, <span class="keyword">const</span> Variant&amp; value) { material-&gt;SetPixelShaderDefines(value.GetString()); },</div>
+<div class="line">    <span class="stringliteral">&quot;Additional shader defines applied to pixel shader. Should be space-separated list of DEFINES. &quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;Example: VOLUMETRIC SOFTPARTICLES&quot;</span>,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="aca610dbe1fd75174e7ba0866595e1af3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca610dbe1fd75174e7ba0866595e1af3">&#9670;&nbsp;</a></span>textureUnits</h2>
 
@@ -480,16 +532,41 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">    {<span class="keyword">false</span>, TU_DIFFUSE,     <span class="stringliteral">&quot;Albedo&quot;</span>,       <span class="stringliteral">&quot;TU_DIFFUSE: Albedo map or Diffuse texture with optional alpha channel&quot;</span>},</div>
-<div class="line">    {<span class="keyword">false</span>, TU_NORMAL,      <span class="stringliteral">&quot;Normal&quot;</span>,       <span class="stringliteral">&quot;TU_NORMAL: Normal map&quot;</span>},</div>
-<div class="line">    {<span class="keyword">false</span>, TU_SPECULAR,    <span class="stringliteral">&quot;Specular&quot;</span>,     <span class="stringliteral">&quot;TU_SPECULAR: Metallic-Roughness-Occlusion map or Specular texture&quot;</span>},</div>
-<div class="line">    {<span class="keyword">false</span>, TU_EMISSIVE,    <span class="stringliteral">&quot;Emissive&quot;</span>,     <span class="stringliteral">&quot;TU_EMISSIVE: Emissive map or light map&quot;</span>},</div>
-<div class="line">    {<span class="keyword">false</span>, TU_ENVIRONMENT, <span class="stringliteral">&quot;Environment&quot;</span>,  <span class="stringliteral">&quot;TU_ENVIRONMENT: Texture with environment reflection&quot;</span>},</div>
-<div class="line"> </div>
-<div class="line">    {<span class="keyword">true</span>,  TU_VOLUMEMAP,   <span class="stringliteral">&quot;* Volume&quot;</span>,     <span class="stringliteral">&quot;TU_VOLUMEMAP: Desktop only, custom unit&quot;</span>},</div>
-<div class="line">    {<span class="keyword">true</span>,  TU_CUSTOM1,     <span class="stringliteral">&quot;* Custom 1&quot;</span>,   <span class="stringliteral">&quot;TU_CUSTOM1: Desktop only, custom unit&quot;</span>},</div>
-<div class="line">    {<span class="keyword">true</span>,  TU_CUSTOM2,     <span class="stringliteral">&quot;* Custom 2&quot;</span>,   <span class="stringliteral">&quot;TU_CUSTOM2: Desktop only, custom unit&quot;</span>},</div>
-<div class="line"> </div>
+<div class="line">    {ShaderResources::Albedo,       <span class="stringliteral">&quot;Albedo map or Diffuse texture with optional alpha channel.&quot;</span>},</div>
+<div class="line">    {ShaderResources::Normal,       <span class="stringliteral">&quot;Normal map, ignored unless normal mapping is enabled.&quot;</span>},</div>
+<div class="line">    {ShaderResources::Properties,   <span class="stringliteral">&quot;Roughness-Metalness-Occlusion map or Specular map.&quot;</span>},</div>
+<div class="line">    {ShaderResources::Emission,     <span class="stringliteral">&quot;Emission map. May also be used as AO map for legacy materials.&quot;</span>},</div>
+<div class="line">    {ShaderResources::Reflection0,  <span class="stringliteral">&quot;Reflection map override.&quot;</span>},</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a35cfb7fe48edae3889271f60be93514d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35cfb7fe48edae3889271f60be93514d">&#9670;&nbsp;</a></span>vertexDefinesProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html">MaterialInspectorWidget::PropertyDesc</a> Urho3D::MaterialInspectorWidget::vertexDefinesProperty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">    <span class="stringliteral">&quot;Vertex Defines&quot;</span>,</div>
+<div class="line">    Variant{EMPTY_STRING},</div>
+<div class="line">    [](<span class="keyword">const</span> Material* material) { <span class="keywordflow">return</span> Variant{material-&gt;GetVertexShaderDefines()}; },</div>
+<div class="line">    [](Material* material, <span class="keyword">const</span> Variant&amp; value) { material-&gt;SetVertexShaderDefines(value.GetString()); },</div>
+<div class="line">    <span class="stringliteral">&quot;Additional shader defines applied to vertex shader. Should be space-separated list of DEFINES. &quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;Example: VOLUMETRIC SOFTPARTICLES&quot;</span>,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>

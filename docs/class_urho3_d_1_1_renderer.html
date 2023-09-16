@@ -60,9 +60,7 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_renderer.html',''); 
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_urho3_d_1_1_renderer-members.html">List of all members</a>  </div>
@@ -86,12 +84,6 @@ Inheritance diagram for Urho3D::Renderer:</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a0b6451ddb74b827395afe40169b8b56f"><td class="memItemLeft" align="right" valign="top"><a id="a0b6451ddb74b827395afe40169b8b56f"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ShadowMapFilter</b> = void(Object::*)(<a class="el" href="class_urho3_d_1_1_view.html">View</a> *view, <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> *shadowMap, float blurScale)</td></tr>
-<tr class="separator:a0b6451ddb74b827395afe40169b8b56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e41f9dda2e33e9e208c5ccfd0d1c6ac"><td class="memItemLeft" align="right" valign="top"><a id="a8e41f9dda2e33e9e208c5ccfd0d1c6ac"></a>
@@ -106,80 +98,18 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a6dca821a3d62ccc1a97d11ece0fa43e4">SetBackbufferRenderSurface</a> (<a class="el" href="class_urho3_d_1_1_render_surface.html">RenderSurface</a> *renderSurface)</td></tr>
 <tr class="memdesc:a6dca821a3d62ccc1a97d11ece0fa43e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set backbuffer render surface. Null corresponds to the application backbuffer. <br /></td></tr>
 <tr class="separator:a6dca821a3d62ccc1a97d11ece0fa43e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6eb66444844006dcd76b0fff11e2b98"><td class="memItemLeft" align="right" valign="top"><a id="ad6eb66444844006dcd76b0fff11e2b98"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ad6eb66444844006dcd76b0fff11e2b98">SetGlobalShaderDefine</a> (ea::string_view define, bool enabled)</td></tr>
-<tr class="memdesc:ad6eb66444844006dcd76b0fff11e2b98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set global shader define on or off. <br /></td></tr>
-<tr class="separator:ad6eb66444844006dcd76b0fff11e2b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22da80417d1fe5b0bedd955b9fe836cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a22da80417d1fe5b0bedd955b9fe836cf">SetNumViewports</a> (unsigned num)</td></tr>
 <tr class="separator:a22da80417d1fe5b0bedd955b9fe836cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ea48bfca77a69f1d2f4e2182c0e6a50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a0ea48bfca77a69f1d2f4e2182c0e6a50">SetViewport</a> (unsigned index, <a class="el" href="class_urho3_d_1_1_viewport.html">Viewport</a> *viewport)</td></tr>
 <tr class="separator:a0ea48bfca77a69f1d2f4e2182c0e6a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e9a7903978c7f793a95a3eedd93d370"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a0e9a7903978c7f793a95a3eedd93d370">SetDefaultRenderPath</a> (<a class="el" href="class_urho3_d_1_1_render_path.html">RenderPath</a> *renderPath)</td></tr>
-<tr class="separator:a0e9a7903978c7f793a95a3eedd93d370"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f3998ce99365b62438c5b894b19876d"><td class="memItemLeft" align="right" valign="top"><a id="a3f3998ce99365b62438c5b894b19876d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a3f3998ce99365b62438c5b894b19876d">SetDefaultRenderPath</a> (<a class="el" href="class_urho3_d_1_1_x_m_l_file.html">XMLFile</a> *xmlFile)</td></tr>
-<tr class="memdesc:a3f3998ce99365b62438c5b894b19876d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set default renderpath from an XML file. <br /></td></tr>
-<tr class="separator:a3f3998ce99365b62438c5b894b19876d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ca7ce5d69784850d3a940540d0536bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a4ca7ce5d69784850d3a940540d0536bb">SetDefaultTechnique</a> (<a class="el" href="class_urho3_d_1_1_technique.html">Technique</a> *technique)</td></tr>
 <tr class="separator:a4ca7ce5d69784850d3a940540d0536bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac701b0041a1932397f71f9775aacb536"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ac701b0041a1932397f71f9775aacb536">SetHDRRendering</a> (bool enable)</td></tr>
-<tr class="separator:ac701b0041a1932397f71f9775aacb536"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe38959b89dbcfb34b61eab3ac7ea8e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#abe38959b89dbcfb34b61eab3ac7ea8e0">SetSpecularLighting</a> (bool enable)</td></tr>
-<tr class="separator:abe38959b89dbcfb34b61eab3ac7ea8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b5f2617525693c666631f2f69c55986"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a4b5f2617525693c666631f2f69c55986">SetTextureAnisotropy</a> (int level)</td></tr>
 <tr class="separator:a4b5f2617525693c666631f2f69c55986"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa081451e57fcc1a754bf876ef0bb1802"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa081451e57fcc1a754bf876ef0bb1802">SetTextureFilterMode</a> (<a class="el" href="_graphics_defs_8h.html#aa76618ce244fbf4560ec541b4a45845d">TextureFilterMode</a> mode)</td></tr>
+<tr class="memitem:aa081451e57fcc1a754bf876ef0bb1802"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa081451e57fcc1a754bf876ef0bb1802">SetTextureFilterMode</a> (TextureFilterMode mode)</td></tr>
 <tr class="separator:aa081451e57fcc1a754bf876ef0bb1802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e2ab1818d4427dfb6eee05be23a2009"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a8e2ab1818d4427dfb6eee05be23a2009">SetTextureQuality</a> (MaterialQuality quality)</td></tr>
 <tr class="separator:a8e2ab1818d4427dfb6eee05be23a2009"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1a1e53c1d464fe4daf510d2454522f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#af1a1e53c1d464fe4daf510d2454522f6">SetMaterialQuality</a> (MaterialQuality quality)</td></tr>
-<tr class="separator:af1a1e53c1d464fe4daf510d2454522f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4467251481d7f71628384d3367a1e105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a4467251481d7f71628384d3367a1e105">SetDrawShadows</a> (bool enable)</td></tr>
-<tr class="separator:a4467251481d7f71628384d3367a1e105"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2e2e6cb90eca5a60ec6fe4160b57f58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa2e2e6cb90eca5a60ec6fe4160b57f58">SetShadowMapSize</a> (int size)</td></tr>
-<tr class="separator:aa2e2e6cb90eca5a60ec6fe4160b57f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3cd417832137ad7fca7704fb0f40af1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ad3cd417832137ad7fca7704fb0f40af1">SetShadowQuality</a> (<a class="el" href="_graphics_defs_8h.html#a54881b5c2aee8c0e8b59587bc2f7e94b">ShadowQuality</a> quality)</td></tr>
-<tr class="separator:ad3cd417832137ad7fca7704fb0f40af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4846e087e96d9158812a74f21b05bea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ae4846e087e96d9158812a74f21b05bea">SetShadowSoftness</a> (float shadowSoftness)</td></tr>
-<tr class="separator:ae4846e087e96d9158812a74f21b05bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3ba4b664628d49e14ae43bb747894b3"><td class="memItemLeft" align="right" valign="top"><a id="aa3ba4b664628d49e14ae43bb747894b3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa3ba4b664628d49e14ae43bb747894b3">SetVSMShadowParameters</a> (float minVariance, float lightBleedingReduction)</td></tr>
-<tr class="memdesc:aa3ba4b664628d49e14ae43bb747894b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shadow parameters when VSM is used, they help to reduce light bleeding. LightBleeding must be in [0, 1]. <br /></td></tr>
-<tr class="separator:aa3ba4b664628d49e14ae43bb747894b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9efc7144132d4286d2cf4bdc64755668"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a9efc7144132d4286d2cf4bdc64755668">SetVSMMultiSample</a> (int multiSample)</td></tr>
-<tr class="separator:a9efc7144132d4286d2cf4bdc64755668"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d500a70c61963017f40b2948cd27fef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a4d500a70c61963017f40b2948cd27fef">SetShadowMapFilter</a> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *instance, ShadowMapFilter functionPtr)</td></tr>
-<tr class="separator:a4d500a70c61963017f40b2948cd27fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa4ea9bd7d3a0942c27071082d1419c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#afa4ea9bd7d3a0942c27071082d1419c9">SetReuseShadowMaps</a> (bool enable)</td></tr>
-<tr class="separator:afa4ea9bd7d3a0942c27071082d1419c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ce616cf2ae0af4773e0dc36ef6a441a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a8ce616cf2ae0af4773e0dc36ef6a441a">SetMaxShadowMaps</a> (int shadowMaps)</td></tr>
-<tr class="separator:a8ce616cf2ae0af4773e0dc36ef6a441a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2d9abee635f8713f8ca92cf41790596"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ab2d9abee635f8713f8ca92cf41790596">SetDynamicInstancing</a> (bool enable)</td></tr>
-<tr class="separator:ab2d9abee635f8713f8ca92cf41790596"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2643fed4c08cc81a1fcd6ba637bcfbd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a2643fed4c08cc81a1fcd6ba637bcfbd1">SetNumExtraInstancingBufferElements</a> (int elements)</td></tr>
-<tr class="separator:a2643fed4c08cc81a1fcd6ba637bcfbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26e087b58ea5e19d4677f28b2100797e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a26e087b58ea5e19d4677f28b2100797e">SetMinInstances</a> (int instances)</td></tr>
-<tr class="separator:a26e087b58ea5e19d4677f28b2100797e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81d948f4cfbb215a4fba49541350eb5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a81d948f4cfbb215a4fba49541350eb5b">SetMaxSortedInstances</a> (int instances)</td></tr>
-<tr class="separator:a81d948f4cfbb215a4fba49541350eb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f8f74b8fdee7f55b1ecc128141eb176"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a6f8f74b8fdee7f55b1ecc128141eb176">SetMaxOccluderTriangles</a> (int triangles)</td></tr>
-<tr class="separator:a6f8f74b8fdee7f55b1ecc128141eb176"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1af74251ac39634daa7e9a8df816fd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ae1af74251ac39634daa7e9a8df816fd7">SetOcclusionBufferSize</a> (int size)</td></tr>
-<tr class="separator:ae1af74251ac39634daa7e9a8df816fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fcccde75cf5c79fcc05180a60eb44d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a3fcccde75cf5c79fcc05180a60eb44d8">SetOccluderSizeThreshold</a> (float screenSize)</td></tr>
-<tr class="separator:a3fcccde75cf5c79fcc05180a60eb44d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49da632fd775c568d98894674caebd39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a49da632fd775c568d98894674caebd39">SetThreadedOcclusion</a> (bool enable)</td></tr>
-<tr class="separator:a49da632fd775c568d98894674caebd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26fd3f9815f6b05f92be26e45269f093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a26fd3f9815f6b05f92be26e45269f093">SetMobileShadowBiasMul</a> (float mul)</td></tr>
-<tr class="separator:a26fd3f9815f6b05f92be26e45269f093"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a797137c1b7e4a8016830d49b02b09a5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a797137c1b7e4a8016830d49b02b09a5d">SetMobileShadowBiasAdd</a> (float add)</td></tr>
-<tr class="separator:a797137c1b7e4a8016830d49b02b09a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3ad445f87277344006f69fc5879126d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ae3ad445f87277344006f69fc5879126d">SetMobileNormalOffsetMul</a> (float mul)</td></tr>
-<tr class="separator:ae3ad445f87277344006f69fc5879126d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa76b73bc9215a63846a3e0be44391c0d"><td class="memItemLeft" align="right" valign="top"><a id="aa76b73bc9215a63846a3e0be44391c0d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa76b73bc9215a63846a3e0be44391c0d">SetSphericalHarmonics</a> (bool enable)</td></tr>
-<tr class="memdesc:aa76b73bc9215a63846a3e0be44391c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether to enable spherical harmonics. <br /></td></tr>
-<tr class="separator:aa76b73bc9215a63846a3e0be44391c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80dc494c296e8c332a7398850a95ad94"><td class="memItemLeft" align="right" valign="top"><a id="a80dc494c296e8c332a7398850a95ad94"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a80dc494c296e8c332a7398850a95ad94">SetSkinningMode</a> (<a class="el" href="_renderer_8h.html#a650ff6dcc1d7e89a0e4a1c7932218121">SkinningMode</a> mode)</td></tr>
 <tr class="memdesc:a80dc494c296e8c332a7398850a95ad94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set skinning mode. <br /></td></tr>
@@ -188,88 +118,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a0c8813df1b6cf14ddd437b4fe71d8669">SetNumSoftwareSkinningBones</a> (unsigned numBones)</td></tr>
 <tr class="memdesc:a0c8813df1b6cf14ddd437b4fe71d8669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of bones used for software skinning. <br /></td></tr>
 <tr class="separator:a0c8813df1b6cf14ddd437b4fe71d8669"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97029f9ce4cb7b52240e97cc5b7f2861"><td class="memItemLeft" align="right" valign="top"><a id="a97029f9ce4cb7b52240e97cc5b7f2861"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a97029f9ce4cb7b52240e97cc5b7f2861">ReloadShaders</a> ()</td></tr>
-<tr class="memdesc:a97029f9ce4cb7b52240e97cc5b7f2861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force reload of shaders. <br /></td></tr>
-<tr class="separator:a97029f9ce4cb7b52240e97cc5b7f2861"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eee11f59a5dd3c7e958209ea616a317"><td class="memItemLeft" align="right" valign="top"><a id="a8eee11f59a5dd3c7e958209ea616a317"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a8eee11f59a5dd3c7e958209ea616a317">ApplyShadowMapFilter</a> (<a class="el" href="class_urho3_d_1_1_view.html">View</a> *view, <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> *shadowMap, float blurScale)</td></tr>
-<tr class="memdesc:a8eee11f59a5dd3c7e958209ea616a317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply post processing filter to the shadow map. Called by <a class="el" href="class_urho3_d_1_1_view.html" title="Internal structure for 3D rendering work. Created for each backbuffer and texture viewport,...">View</a>. <br /></td></tr>
-<tr class="separator:a8eee11f59a5dd3c7e958209ea616a317"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07873ee498c66430e3bd0b85fad88c12"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a07873ee498c66430e3bd0b85fad88c12">GetNumViewports</a> () const</td></tr>
 <tr class="separator:a07873ee498c66430e3bd0b85fad88c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed105c8e7e081b36cfa9b156725265d5"><td class="memItemLeft" align="right" valign="top"><a id="aed105c8e7e081b36cfa9b156725265d5"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_pipeline_state.html">PipelineState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aed105c8e7e081b36cfa9b156725265d5">GetOrCreatePipelineState</a> (const <a class="el" href="struct_urho3_d_1_1_pipeline_state_desc.html">PipelineStateDesc</a> &amp;desc)</td></tr>
-<tr class="memdesc:aed105c8e7e081b36cfa9b156725265d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return new or existing pipeline state. <br /></td></tr>
-<tr class="separator:aed105c8e7e081b36cfa9b156725265d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a457b4ae124de6074c35e710375b814a5"><td class="memItemLeft" align="right" valign="top"><a id="a457b4ae124de6074c35e710375b814a5"></a>
-<a class="el" href="class_urho3_d_1_1_draw_command_queue.html">DrawCommandQueue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a457b4ae124de6074c35e710375b814a5">GetDefaultDrawQueue</a> ()</td></tr>
-<tr class="memdesc:a457b4ae124de6074c35e710375b814a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return default draw queue that can be used to cook and execute draw commands from main thread. <br /></td></tr>
-<tr class="separator:a457b4ae124de6074c35e710375b814a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34c866484e63eef1c50f0205629f4c40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_viewport.html">Viewport</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a34c866484e63eef1c50f0205629f4c40">GetViewport</a> (unsigned index) const</td></tr>
 <tr class="separator:a34c866484e63eef1c50f0205629f4c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a775e5a05ebebab42f6c32ab252622b90"><td class="memItemLeft" align="right" valign="top"><a id="a775e5a05ebebab42f6c32ab252622b90"></a>
 <a class="el" href="class_urho3_d_1_1_viewport.html">Viewport</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a775e5a05ebebab42f6c32ab252622b90">GetViewportForScene</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene, unsigned index) const</td></tr>
 <tr class="memdesc:a775e5a05ebebab42f6c32ab252622b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return nth backbuffer viewport associated to a scene. Index 0 returns the first. <br /></td></tr>
 <tr class="separator:a775e5a05ebebab42f6c32ab252622b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1d3806e6d0ceeb9895ddb8976b60849"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_render_path.html">RenderPath</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ac1d3806e6d0ceeb9895ddb8976b60849">GetDefaultRenderPath</a> () const</td></tr>
-<tr class="separator:ac1d3806e6d0ceeb9895ddb8976b60849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c8d1e673d6eaf0d49b165b0ac75515d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_technique.html">Technique</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a2c8d1e673d6eaf0d49b165b0ac75515d">GetDefaultTechnique</a> () const</td></tr>
 <tr class="separator:a2c8d1e673d6eaf0d49b165b0ac75515d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed7b8426e072778e2fd43b74f9abab54"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aed7b8426e072778e2fd43b74f9abab54">GetHDRRendering</a> () const</td></tr>
-<tr class="separator:aed7b8426e072778e2fd43b74f9abab54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0013b1e6c011d0cd5fb1b0e26a6a7bcb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a0013b1e6c011d0cd5fb1b0e26a6a7bcb">GetSpecularLighting</a> () const</td></tr>
-<tr class="separator:a0013b1e6c011d0cd5fb1b0e26a6a7bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5571b840256300f80a8afe4eb7b6eea0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a5571b840256300f80a8afe4eb7b6eea0">GetDrawShadows</a> () const</td></tr>
-<tr class="separator:a5571b840256300f80a8afe4eb7b6eea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37ca29b43c271766b52f8ba765aab9fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a37ca29b43c271766b52f8ba765aab9fa">GetTextureAnisotropy</a> () const</td></tr>
 <tr class="separator:a37ca29b43c271766b52f8ba765aab9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04941a6ceb9568f340d7f925d46d079d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_graphics_defs_8h.html#aa76618ce244fbf4560ec541b4a45845d">TextureFilterMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a04941a6ceb9568f340d7f925d46d079d">GetTextureFilterMode</a> () const</td></tr>
+<tr class="memitem:a04941a6ceb9568f340d7f925d46d079d"><td class="memItemLeft" align="right" valign="top">TextureFilterMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a04941a6ceb9568f340d7f925d46d079d">GetTextureFilterMode</a> () const</td></tr>
 <tr class="separator:a04941a6ceb9568f340d7f925d46d079d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfa80a2ed97a4bb50b280f545ac98dfc"><td class="memItemLeft" align="right" valign="top">MaterialQuality&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#abfa80a2ed97a4bb50b280f545ac98dfc">GetTextureQuality</a> () const</td></tr>
 <tr class="separator:abfa80a2ed97a4bb50b280f545ac98dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a348f759bd9e2e06a02029937c2871a98"><td class="memItemLeft" align="right" valign="top">MaterialQuality&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a348f759bd9e2e06a02029937c2871a98">GetMaterialQuality</a> () const</td></tr>
-<tr class="separator:a348f759bd9e2e06a02029937c2871a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2295e6dff84877baada6298ba53cda90"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a2295e6dff84877baada6298ba53cda90">GetShadowMapSize</a> () const</td></tr>
-<tr class="separator:a2295e6dff84877baada6298ba53cda90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d2fbdd5cb3d94980cb7816fe7382c6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_graphics_defs_8h.html#a54881b5c2aee8c0e8b59587bc2f7e94b">ShadowQuality</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a0d2fbdd5cb3d94980cb7816fe7382c6f">GetShadowQuality</a> () const</td></tr>
-<tr class="separator:a0d2fbdd5cb3d94980cb7816fe7382c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54b6ee908d42613c4739461c83f4b40f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a54b6ee908d42613c4739461c83f4b40f">GetShadowSoftness</a> () const</td></tr>
-<tr class="separator:a54b6ee908d42613c4739461c83f4b40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d325c9ba437dca64777ba9bc94c5a39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a3d325c9ba437dca64777ba9bc94c5a39">GetVSMShadowParameters</a> () const</td></tr>
-<tr class="separator:a3d325c9ba437dca64777ba9bc94c5a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ec637dca3a23d3bbd6d259d7d925a23"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a8ec637dca3a23d3bbd6d259d7d925a23">GetVSMMultiSample</a> () const</td></tr>
-<tr class="separator:a8ec637dca3a23d3bbd6d259d7d925a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29ebf1c99563ddc51a12f121c0cf8349"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a29ebf1c99563ddc51a12f121c0cf8349">GetReuseShadowMaps</a> () const</td></tr>
-<tr class="separator:a29ebf1c99563ddc51a12f121c0cf8349"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d91d7fe8d96b9de48d5c544900fa7d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a6d91d7fe8d96b9de48d5c544900fa7d3">GetMaxShadowMaps</a> () const</td></tr>
-<tr class="separator:a6d91d7fe8d96b9de48d5c544900fa7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ed8775ad11a3248dc254e5935705de0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a9ed8775ad11a3248dc254e5935705de0">GetDynamicInstancing</a> () const</td></tr>
-<tr class="separator:a9ed8775ad11a3248dc254e5935705de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0c4e5f5237310cafe4b3b56b3cdb560"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#af0c4e5f5237310cafe4b3b56b3cdb560">GetNumExtraInstancingBufferElements</a> () const</td></tr>
-<tr class="separator:af0c4e5f5237310cafe4b3b56b3cdb560"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae2896082dfe1857df4b9991d155a265"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aae2896082dfe1857df4b9991d155a265">GetMinInstances</a> () const</td></tr>
-<tr class="separator:aae2896082dfe1857df4b9991d155a265"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ac83e48e79f573165503845d7c451ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a5ac83e48e79f573165503845d7c451ed">GetMaxSortedInstances</a> () const</td></tr>
-<tr class="separator:a5ac83e48e79f573165503845d7c451ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4fe9b88cfd95b5a02efa5cb162dabcb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa4fe9b88cfd95b5a02efa5cb162dabcb">GetMaxOccluderTriangles</a> () const</td></tr>
-<tr class="separator:aa4fe9b88cfd95b5a02efa5cb162dabcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad16e6b44ef3e673bfa30d6efa4eefc83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ad16e6b44ef3e673bfa30d6efa4eefc83">GetOcclusionBufferSize</a> () const</td></tr>
-<tr class="separator:ad16e6b44ef3e673bfa30d6efa4eefc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71d49cec7a1826844e2d1068fd590e64"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a71d49cec7a1826844e2d1068fd590e64">GetOccluderSizeThreshold</a> () const</td></tr>
-<tr class="separator:a71d49cec7a1826844e2d1068fd590e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eb22cf21067850614e2d126ed653d34"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a1eb22cf21067850614e2d126ed653d34">GetThreadedOcclusion</a> () const</td></tr>
-<tr class="separator:a1eb22cf21067850614e2d126ed653d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7c9a77ec0fbf6ff9058bfeb6f4a0417"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#af7c9a77ec0fbf6ff9058bfeb6f4a0417">GetMobileShadowBiasMul</a> () const</td></tr>
-<tr class="separator:af7c9a77ec0fbf6ff9058bfeb6f4a0417"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af39960197f8d7bd86c09618fd1f9aab7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#af39960197f8d7bd86c09618fd1f9aab7">GetMobileShadowBiasAdd</a> () const</td></tr>
-<tr class="separator:af39960197f8d7bd86c09618fd1f9aab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a457f0694c72cf1d4456972db19921ea7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a457f0694c72cf1d4456972db19921ea7">GetMobileNormalOffsetMul</a> () const</td></tr>
-<tr class="separator:a457f0694c72cf1d4456972db19921ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5d29412673b41a1ba77546bb9f5ce51"><td class="memItemLeft" align="right" valign="top"><a id="aa5d29412673b41a1ba77546bb9f5ce51"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa5d29412673b41a1ba77546bb9f5ce51">GetSphericalHarmonics</a> () const</td></tr>
-<tr class="memdesc:aa5d29412673b41a1ba77546bb9f5ce51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether to enable spherical harmonics. <br /></td></tr>
-<tr class="separator:aa5d29412673b41a1ba77546bb9f5ce51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae23301a36886fc50852795717d309cdd"><td class="memItemLeft" align="right" valign="top"><a id="ae23301a36886fc50852795717d309cdd"></a>
 <a class="el" href="_renderer_8h.html#a650ff6dcc1d7e89a0e4a1c7932218121">SkinningMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ae23301a36886fc50852795717d309cdd">GetSkinningMode</a> () const</td></tr>
 <tr class="memdesc:ae23301a36886fc50852795717d309cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return skinning mode. <br /></td></tr>
@@ -284,18 +148,14 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="separator:a7b20d02b4e6331dbcae3902b9621653f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacd3512092dc5f292184df83315e89dc"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aacd3512092dc5f292184df83315e89dc">GetNumViews</a> () const</td></tr>
 <tr class="separator:aacd3512092dc5f292184df83315e89dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9cac72f82e299d6820df883806740d1"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ae9cac72f82e299d6820df883806740d1">GetNumPrimitives</a> () const</td></tr>
-<tr class="separator:ae9cac72f82e299d6820df883806740d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae265e9d1870578bf530898b027806671"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ae265e9d1870578bf530898b027806671">GetNumBatches</a> () const</td></tr>
-<tr class="separator:ae265e9d1870578bf530898b027806671"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58d2eee67f16b91208502c3cc4383f0e"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a58d2eee67f16b91208502c3cc4383f0e">GetNumGeometries</a> (bool allViews=false) const</td></tr>
-<tr class="separator:a58d2eee67f16b91208502c3cc4383f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39e25afdedc9f543d32a0ee32e7a1880"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a39e25afdedc9f543d32a0ee32e7a1880">GetNumLights</a> (bool allViews=false) const</td></tr>
-<tr class="separator:a39e25afdedc9f543d32a0ee32e7a1880"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa14491f007a2b220c3d2724bb7ccb855"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa14491f007a2b220c3d2724bb7ccb855">GetNumShadowMaps</a> (bool allViews=false) const</td></tr>
-<tr class="separator:aa14491f007a2b220c3d2724bb7ccb855"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ab692755ae1125103483504ac1eae09"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a3ab692755ae1125103483504ac1eae09">GetNumOccluders</a> (bool allViews=false) const</td></tr>
-<tr class="separator:a3ab692755ae1125103483504ac1eae09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab111479dd453d5fef2f52cd0396418"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#abab111479dd453d5fef2f52cd0396418">GetNumGeometries</a> () const</td></tr>
+<tr class="separator:abab111479dd453d5fef2f52cd0396418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42c1e67fc0a955b917fd20e93db4e765"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a42c1e67fc0a955b917fd20e93db4e765">GetNumLights</a> () const</td></tr>
+<tr class="separator:a42c1e67fc0a955b917fd20e93db4e765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac74ee2b46929868480b7e37ef0ebd676"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ac74ee2b46929868480b7e37ef0ebd676">GetNumShadowMaps</a> () const</td></tr>
+<tr class="separator:ac74ee2b46929868480b7e37ef0ebd676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f244fe14ebb01d13159a64aa27b17b"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#af1f244fe14ebb01d13159a64aa27b17b">GetNumOccluders</a> () const</td></tr>
+<tr class="separator:af1f244fe14ebb01d13159a64aa27b17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b8cb717c7ddd7814d4c6b3f22aec02a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_zone.html">Zone</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a9b8cb717c7ddd7814d4c6b3f22aec02a">GetDefaultZone</a> () const</td></tr>
 <tr class="separator:a9b8cb717c7ddd7814d4c6b3f22aec02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9213ab957f99928d7a37a16a06bd217"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_material.html">Material</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ae9213ab957f99928d7a37a16a06bd217">GetDefaultMaterial</a> () const</td></tr>
@@ -304,22 +164,10 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="separator:adce0c6842dce3689cc7b561dfae9ca54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e40b41dfe06843ebf6c52db6a47882f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a8e40b41dfe06843ebf6c52db6a47882f">GetDefaultLightSpot</a> () const</td></tr>
 <tr class="separator:a8e40b41dfe06843ebf6c52db6a47882f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e409599ac7877bc78f0e3d9141d8dbc"><td class="memItemLeft" align="right" valign="top"><a id="a9e409599ac7877bc78f0e3d9141d8dbc"></a>
-<a class="el" href="class_urho3_d_1_1_texture_cube.html">TextureCube</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a9e409599ac7877bc78f0e3d9141d8dbc">GetFaceSelectCubeMap</a> () const</td></tr>
-<tr class="memdesc:a9e409599ac7877bc78f0e3d9141d8dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the shadowed pointlight face selection cube map. <br /></td></tr>
-<tr class="separator:a9e409599ac7877bc78f0e3d9141d8dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc0b3848761107013e8d1c61042cc71d"><td class="memItemLeft" align="right" valign="top"><a id="adc0b3848761107013e8d1c61042cc71d"></a>
-<a class="el" href="class_urho3_d_1_1_texture_cube.html">TextureCube</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#adc0b3848761107013e8d1c61042cc71d">GetIndirectionCubeMap</a> () const</td></tr>
-<tr class="memdesc:adc0b3848761107013e8d1c61042cc71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the shadowed pointlight indirection cube map. <br /></td></tr>
-<tr class="separator:adc0b3848761107013e8d1c61042cc71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a417687da8851998b348d6d7beac2c2cb"><td class="memItemLeft" align="right" valign="top"><a id="a417687da8851998b348d6d7beac2c2cb"></a>
 <a class="el" href="class_urho3_d_1_1_texture_cube.html">TextureCube</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a417687da8851998b348d6d7beac2c2cb">GetBlackCubeMap</a> () const</td></tr>
 <tr class="memdesc:a417687da8851998b348d6d7beac2c2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return completely black 1x1x1 cubemap. <br /></td></tr>
 <tr class="separator:a417687da8851998b348d6d7beac2c2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e86b7367bbc48bda81ea02bf13aa954"><td class="memItemLeft" align="right" valign="top"><a id="a5e86b7367bbc48bda81ea02bf13aa954"></a>
-<a class="el" href="class_urho3_d_1_1_vertex_buffer.html">VertexBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a5e86b7367bbc48bda81ea02bf13aa954">GetInstancingBuffer</a> () const</td></tr>
-<tr class="memdesc:a5e86b7367bbc48bda81ea02bf13aa954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the instancing vertex buffer. <br /></td></tr>
-<tr class="separator:a5e86b7367bbc48bda81ea02bf13aa954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb2fac63acad9ec6514387c7c06ae5cf"><td class="memItemLeft" align="right" valign="top"><a id="abb2fac63acad9ec6514387c7c06ae5cf"></a>
 const <a class="el" href="struct_urho3_d_1_1_frame_info.html">FrameInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#abb2fac63acad9ec6514387c7c06ae5cf">GetFrameInfo</a> () const</td></tr>
 <tr class="memdesc:abb2fac63acad9ec6514387c7c06ae5cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the frame update parameters. <br /></td></tr>
@@ -339,12 +187,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ab246b6b23f39f3cdff9c279782b48993">Render</a> ()</td></tr>
 <tr class="memdesc:ab246b6b23f39f3cdff9c279782b48993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render. Called by <a class="el" href="class_urho3_d_1_1_engine.html" title="Urho3D engine. Creates the other subsystems.">Engine</a>. <br /></td></tr>
 <tr class="separator:ab246b6b23f39f3cdff9c279782b48993"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2edda10af9679e17b00db07891945c73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a2edda10af9679e17b00db07891945c73">DrawDebugGeometry</a> (bool depthTest)</td></tr>
-<tr class="memdesc:a2edda10af9679e17b00db07891945c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add debug geometry to the debug renderer.  <a href="class_urho3_d_1_1_renderer.html#a2edda10af9679e17b00db07891945c73">More...</a><br /></td></tr>
+<tr class="memitem:a2edda10af9679e17b00db07891945c73"><td class="memItemLeft" align="right" valign="top"><a id="a2edda10af9679e17b00db07891945c73"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a2edda10af9679e17b00db07891945c73">DrawDebugGeometry</a> (bool depthTest)</td></tr>
+<tr class="memdesc:a2edda10af9679e17b00db07891945c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add debug geometry to the debug renderer. <br /></td></tr>
 <tr class="separator:a2edda10af9679e17b00db07891945c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeb454d44341ed3f84ab04880a7553f5"><td class="memItemLeft" align="right" valign="top"><a id="afeb454d44341ed3f84ab04880a7553f5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#afeb454d44341ed3f84ab04880a7553f5">QueueRenderSurface</a> (<a class="el" href="class_urho3_d_1_1_render_surface.html">RenderSurface</a> *renderTarget)</td></tr>
-<tr class="memdesc:afeb454d44341ed3f84ab04880a7553f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue a render surface's viewports for rendering. Called by the surface, or by <a class="el" href="class_urho3_d_1_1_view.html" title="Internal structure for 3D rendering work. Created for each backbuffer and texture viewport,...">View</a>. <br /></td></tr>
+<tr class="memdesc:afeb454d44341ed3f84ab04880a7553f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue a render surface's viewports for rendering. Called by the surface, or by View. <br /></td></tr>
 <tr class="separator:afeb454d44341ed3f84ab04880a7553f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8faee04d4f315f7bb12e54965d79c4f4"><td class="memItemLeft" align="right" valign="top"><a id="a8faee04d4f315f7bb12e54965d79c4f4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a8faee04d4f315f7bb12e54965d79c4f4">QueueViewport</a> (<a class="el" href="class_urho3_d_1_1_render_surface.html">RenderSurface</a> *renderTarget, <a class="el" href="class_urho3_d_1_1_viewport.html">Viewport</a> *viewport)</td></tr>
@@ -358,64 +207,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a887e9961f27af8db3298c0c0ba0e582c">GetQuadGeometry</a> ()</td></tr>
 <tr class="memdesc:a887e9961f27af8db3298c0c0ba0e582c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return quad geometry used in postprocessing. <br /></td></tr>
 <tr class="separator:a887e9961f27af8db3298c0c0ba0e582c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d4509e32b17bff5f3069f8fe6fd448d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a7d4509e32b17bff5f3069f8fe6fd448d">GetShadowMap</a> (<a class="el" href="class_urho3_d_1_1_light.html">Light</a> *light, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera, unsigned viewWidth, unsigned viewHeight)</td></tr>
-<tr class="memdesc:a7d4509e32b17bff5f3069f8fe6fd448d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a shadow map. If shadow map reuse is disabled, a different map is returned each time.  <a href="class_urho3_d_1_1_renderer.html#a7d4509e32b17bff5f3069f8fe6fd448d">More...</a><br /></td></tr>
-<tr class="separator:a7d4509e32b17bff5f3069f8fe6fd448d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44c45f4e35cbce39ed18336ad8ff318d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a44c45f4e35cbce39ed18336ad8ff318d">GetScreenBuffer</a> (int width, int height, unsigned format, int multiSample, bool autoResolve, bool cubemap, bool filtered, bool srgb, unsigned persistentKey=0)</td></tr>
-<tr class="memdesc:a44c45f4e35cbce39ed18336ad8ff318d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a rendertarget or depth-stencil texture for deferred rendering or postprocessing. Should only be called during actual rendering, not before.  <a href="class_urho3_d_1_1_renderer.html#a44c45f4e35cbce39ed18336ad8ff318d">More...</a><br /></td></tr>
-<tr class="separator:a44c45f4e35cbce39ed18336ad8ff318d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8239321fb6b01bc3be5fb4df152983f"><td class="memItemLeft" align="right" valign="top"><a id="aa8239321fb6b01bc3be5fb4df152983f"></a>
-<a class="el" href="class_urho3_d_1_1_render_surface.html">RenderSurface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa8239321fb6b01bc3be5fb4df152983f">GetDepthStencil</a> (int width, int height, int multiSample, bool autoResolve)</td></tr>
-<tr class="memdesc:aa8239321fb6b01bc3be5fb4df152983f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a depth-stencil surface that does not need to be readable. Should only be called during actual rendering, not before. <br /></td></tr>
-<tr class="separator:aa8239321fb6b01bc3be5fb4df152983f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37afe6067a94ca5e7ec08ea2ba45a59e"><td class="memItemLeft" align="right" valign="top"><a id="a37afe6067a94ca5e7ec08ea2ba45a59e"></a>
-<a class="el" href="class_urho3_d_1_1_render_surface.html">RenderSurface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a37afe6067a94ca5e7ec08ea2ba45a59e">GetDepthStencil</a> (<a class="el" href="class_urho3_d_1_1_render_surface.html">RenderSurface</a> *renderSurface)</td></tr>
-<tr class="memdesc:a37afe6067a94ca5e7ec08ea2ba45a59e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a depth-stencil surface that does not need to be readable. Should only be called during actual rendering, not before. <br /></td></tr>
-<tr class="separator:a37afe6067a94ca5e7ec08ea2ba45a59e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1019022bc7420a27a99aeac2434980ba"><td class="memItemLeft" align="right" valign="top"><a id="a1019022bc7420a27a99aeac2434980ba"></a>
-<a class="el" href="class_urho3_d_1_1_occlusion_buffer.html">OcclusionBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a1019022bc7420a27a99aeac2434980ba">GetOcclusionBuffer</a> (<a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera)</td></tr>
-<tr class="memdesc:a1019022bc7420a27a99aeac2434980ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate an occlusion buffer. <br /></td></tr>
-<tr class="separator:a1019022bc7420a27a99aeac2434980ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c0831e08bf00013bbc106da1dd6a8c5"><td class="memItemLeft" align="right" valign="top"><a id="a5c0831e08bf00013bbc106da1dd6a8c5"></a>
-<a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a5c0831e08bf00013bbc106da1dd6a8c5">GetShadowCamera</a> ()</td></tr>
-<tr class="memdesc:a5c0831e08bf00013bbc106da1dd6a8c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a temporary shadow camera and a scene node for it. Is thread-safe. <br /></td></tr>
-<tr class="separator:a5c0831e08bf00013bbc106da1dd6a8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1d3a0a16401f7e146aae507f8084b45"><td class="memItemLeft" align="right" valign="top"><a id="ac1d3a0a16401f7e146aae507f8084b45"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ac1d3a0a16401f7e146aae507f8084b45">StorePreparedView</a> (<a class="el" href="class_urho3_d_1_1_view.html">View</a> *view, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera)</td></tr>
-<tr class="memdesc:ac1d3a0a16401f7e146aae507f8084b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark a view as prepared by the specified culling camera. <br /></td></tr>
-<tr class="separator:ac1d3a0a16401f7e146aae507f8084b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab884eb1bc762895d5611a94a43dac76a"><td class="memItemLeft" align="right" valign="top"><a id="ab884eb1bc762895d5611a94a43dac76a"></a>
-<a class="el" href="class_urho3_d_1_1_view.html">View</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ab884eb1bc762895d5611a94a43dac76a">GetPreparedView</a> (<a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera)</td></tr>
-<tr class="memdesc:ab884eb1bc762895d5611a94a43dac76a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a prepared view if exists for the specified camera. Used to avoid duplicate view preparation CPU work. <br /></td></tr>
-<tr class="separator:ab884eb1bc762895d5611a94a43dac76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f48ac64f450dc7cb8ef339d84de223f"><td class="memItemLeft" align="right" valign="top"><a id="a4f48ac64f450dc7cb8ef339d84de223f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a4f48ac64f450dc7cb8ef339d84de223f">SetBatchShaders</a> (<a class="el" href="struct_urho3_d_1_1_batch.html">Batch</a> &amp;batch, <a class="el" href="class_urho3_d_1_1_technique.html">Technique</a> *tech, bool allowShadows, const <a class="el" href="struct_urho3_d_1_1_batch_queue.html">BatchQueue</a> &amp;queue)</td></tr>
-<tr class="memdesc:a4f48ac64f450dc7cb8ef339d84de223f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose shaders for a forward rendering batch. The related batch queue is provided in case it has extra shader compilation defines. <br /></td></tr>
-<tr class="separator:a4f48ac64f450dc7cb8ef339d84de223f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a872a77c2a5a5069d685ba45c257a9903"><td class="memItemLeft" align="right" valign="top"><a id="a872a77c2a5a5069d685ba45c257a9903"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a872a77c2a5a5069d685ba45c257a9903">SetLightVolumeBatchShaders</a> (<a class="el" href="struct_urho3_d_1_1_batch.html">Batch</a> &amp;batch, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera, const ea::string &amp;vsName, const ea::string &amp;psName, const ea::string &amp;vsDefines, const ea::string &amp;psDefines)</td></tr>
-<tr class="memdesc:a872a77c2a5a5069d685ba45c257a9903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose shaders for a deferred light volume batch. <br /></td></tr>
-<tr class="separator:a872a77c2a5a5069d685ba45c257a9903"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cf64510e7fdd35d5387413a242e2e52"><td class="memItemLeft" align="right" valign="top"><a id="a3cf64510e7fdd35d5387413a242e2e52"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a3cf64510e7fdd35d5387413a242e2e52">SetCullMode</a> (<a class="el" href="_graphics_defs_8h.html#a13f034bf0ac8f9317994bb9e91225449">CullMode</a> mode, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera)</td></tr>
-<tr class="memdesc:a3cf64510e7fdd35d5387413a242e2e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set cull mode while taking possible projection flipping into account. <br /></td></tr>
-<tr class="separator:a3cf64510e7fdd35d5387413a242e2e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a262f02617ee83376acefea529668e183"><td class="memItemLeft" align="right" valign="top"><a id="a262f02617ee83376acefea529668e183"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a262f02617ee83376acefea529668e183">ResizeInstancingBuffer</a> (unsigned numInstances)</td></tr>
-<tr class="memdesc:a262f02617ee83376acefea529668e183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure sufficient size of the instancing vertex buffer. Return true if successful. <br /></td></tr>
-<tr class="separator:a262f02617ee83376acefea529668e183"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f8fe99765e7b8700c68577eca16103d"><td class="memItemLeft" align="right" valign="top"><a id="a7f8fe99765e7b8700c68577eca16103d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a7f8fe99765e7b8700c68577eca16103d">OptimizeLightByScissor</a> (<a class="el" href="class_urho3_d_1_1_light.html">Light</a> *light, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera)</td></tr>
-<tr class="memdesc:a7f8fe99765e7b8700c68577eca16103d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimize a light by scissor rectangle. <br /></td></tr>
-<tr class="separator:a7f8fe99765e7b8700c68577eca16103d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a408789b2d93f27c7884360b7ecccec55"><td class="memItemLeft" align="right" valign="top"><a id="a408789b2d93f27c7884360b7ecccec55"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a408789b2d93f27c7884360b7ecccec55">OptimizeLightByStencil</a> (<a class="el" href="class_urho3_d_1_1_light.html">Light</a> *light, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera)</td></tr>
-<tr class="memdesc:a408789b2d93f27c7884360b7ecccec55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimize a light by marking it to the stencil buffer and setting a stencil test. <br /></td></tr>
-<tr class="separator:a408789b2d93f27c7884360b7ecccec55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f4c5f6c7f7490e74f15349dc16a6c69"><td class="memItemLeft" align="right" valign="top"><a id="a3f4c5f6c7f7490e74f15349dc16a6c69"></a>
-const <a class="el" href="class_urho3_d_1_1_rect.html">Rect</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a3f4c5f6c7f7490e74f15349dc16a6c69">GetLightScissor</a> (<a class="el" href="class_urho3_d_1_1_light.html">Light</a> *light, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera)</td></tr>
-<tr class="memdesc:a3f4c5f6c7f7490e74f15349dc16a6c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a scissor rectangle for a light. <br /></td></tr>
-<tr class="separator:a3f4c5f6c7f7490e74f15349dc16a6c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -614,18 +405,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if script reference is strong. <br /></td></tr>
 <tr class="separator:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ac5cf9622733d9268d4ce4584cd63fd22"><td class="memItemLeft" align="right" valign="top"><a id="ac5cf9622733d9268d4ce4584cd63fd22"></a>
-static <a class="el" href="class_urho3_d_1_1_view.html">View</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ac5cf9622733d9268d4ce4584cd63fd22">GetActualView</a> (<a class="el" href="class_urho3_d_1_1_view.html">View</a> *view)</td></tr>
-<tr class="memdesc:ac5cf9622733d9268d4ce4584cd63fd22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a view or its source view if it uses one. Used internally for render statistics. <br /></td></tr>
-<tr class="separator:ac5cf9622733d9268d4ce4584cd63fd22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
-<tr class="memitem:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="aaf5a648d6c449dd14b273c10fdd498a9"></a>
-static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aaf5a648d6c449dd14b273c10fdd498a9">GetTypeInfoStatic</a> ()</td></tr>
-<tr class="memdesc:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type info static. <br /></td></tr>
-<tr class="separator:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a9d59e3044b7561dd49184b709a97c274"><td class="memItemLeft" align="right" valign="top"><a id="a9d59e3044b7561dd49184b709a97c274"></a>
@@ -635,14 +414,6 @@ Private Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ae0d765a240f7cf5f829ddc95cb2729c9">Initialize</a> ()</td></tr>
 <tr class="memdesc:ae0d765a240f7cf5f829ddc95cb2729c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize when screen mode initially set. <br /></td></tr>
 <tr class="separator:ae0d765a240f7cf5f829ddc95cb2729c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7091de5f9dcce8312bc85b3342fe1ac2"><td class="memItemLeft" align="right" valign="top"><a id="a7091de5f9dcce8312bc85b3342fe1ac2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a7091de5f9dcce8312bc85b3342fe1ac2">LoadShaders</a> ()</td></tr>
-<tr class="memdesc:a7091de5f9dcce8312bc85b3342fe1ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload shaders. <br /></td></tr>
-<tr class="separator:a7091de5f9dcce8312bc85b3342fe1ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abebc2edd65e84271e2df1331cf6af718"><td class="memItemLeft" align="right" valign="top"><a id="abebc2edd65e84271e2df1331cf6af718"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#abebc2edd65e84271e2df1331cf6af718">LoadPassShaders</a> (<a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *pass, ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_shader_variation.html">ShaderVariation</a> &gt; &gt; &amp;vertexShaders, ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_shader_variation.html">ShaderVariation</a> &gt; &gt; &amp;pixelShaders, const <a class="el" href="struct_urho3_d_1_1_batch_queue.html">BatchQueue</a> &amp;queue)</td></tr>
-<tr class="memdesc:abebc2edd65e84271e2df1331cf6af718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload shaders for a material pass. The related batch queue is provided in case it has extra shader compilation defines. <br /></td></tr>
-<tr class="separator:abebc2edd65e84271e2df1331cf6af718"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac938d98240b1d9f33201d4aad78c9086"><td class="memItemLeft" align="right" valign="top"><a id="ac938d98240b1d9f33201d4aad78c9086"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ac938d98240b1d9f33201d4aad78c9086">ReleaseMaterialShaders</a> ()</td></tr>
 <tr class="memdesc:ac938d98240b1d9f33201d4aad78c9086"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release shaders used in materials. <br /></td></tr>
@@ -655,45 +426,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a5121b95333802032e65b2bac639b9eef">CreateGeometries</a> ()</td></tr>
 <tr class="memdesc:a5121b95333802032e65b2bac639b9eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create light volume geometries. <br /></td></tr>
 <tr class="separator:a5121b95333802032e65b2bac639b9eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a480f38bdf27906657d1e483d9be30411"><td class="memItemLeft" align="right" valign="top"><a id="a480f38bdf27906657d1e483d9be30411"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a480f38bdf27906657d1e483d9be30411">CreateInstancingBuffer</a> ()</td></tr>
-<tr class="memdesc:a480f38bdf27906657d1e483d9be30411"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create instancing vertex buffer. <br /></td></tr>
-<tr class="separator:a480f38bdf27906657d1e483d9be30411"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a572d9c18b1b2c5c0db85d3f1c310e48e"><td class="memItemLeft" align="right" valign="top"><a id="a572d9c18b1b2c5c0db85d3f1c310e48e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a572d9c18b1b2c5c0db85d3f1c310e48e">SetIndirectionTextureData</a> ()</td></tr>
-<tr class="memdesc:a572d9c18b1b2c5c0db85d3f1c310e48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create point light shadow indirection texture data. <br /></td></tr>
-<tr class="separator:a572d9c18b1b2c5c0db85d3f1c310e48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fa71f5839321a9d68def7a2978f452a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a0fa71f5839321a9d68def7a2978f452a">UpdateQueuedViewport</a> (unsigned index)</td></tr>
 <tr class="memdesc:a0fa71f5839321a9d68def7a2978f452a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update a queued viewport for rendering.  <a href="class_urho3_d_1_1_renderer.html#a0fa71f5839321a9d68def7a2978f452a">More...</a><br /></td></tr>
 <tr class="separator:a0fa71f5839321a9d68def7a2978f452a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b6d8f978872348f1c4ab32b88072c26"><td class="memItemLeft" align="right" valign="top"><a id="a1b6d8f978872348f1c4ab32b88072c26"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a1b6d8f978872348f1c4ab32b88072c26">PrepareViewRender</a> ()</td></tr>
-<tr class="memdesc:a1b6d8f978872348f1c4ab32b88072c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare for rendering of a new view. <br /></td></tr>
-<tr class="separator:a1b6d8f978872348f1c4ab32b88072c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f1b359a3daee56e5186fff085178d50"><td class="memItemLeft" align="right" valign="top"><a id="a3f1b359a3daee56e5186fff085178d50"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a3f1b359a3daee56e5186fff085178d50">RemoveUnusedBuffers</a> ()</td></tr>
-<tr class="memdesc:a3f1b359a3daee56e5186fff085178d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove unused occlusion and screen buffers. <br /></td></tr>
-<tr class="separator:a3f1b359a3daee56e5186fff085178d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adea49989775cfdab341fd9e1a20b75f4"><td class="memItemLeft" align="right" valign="top"><a id="adea49989775cfdab341fd9e1a20b75f4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#adea49989775cfdab341fd9e1a20b75f4">ResetShadowMapAllocations</a> ()</td></tr>
-<tr class="memdesc:adea49989775cfdab341fd9e1a20b75f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset shadow map allocation counts. <br /></td></tr>
-<tr class="separator:adea49989775cfdab341fd9e1a20b75f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac835927a9548d704df5323816c00971b"><td class="memItemLeft" align="right" valign="top"><a id="ac835927a9548d704df5323816c00971b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ac835927a9548d704df5323816c00971b">ResetScreenBufferAllocations</a> ()</td></tr>
-<tr class="memdesc:ac835927a9548d704df5323816c00971b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset screem buffer allocation counts. <br /></td></tr>
-<tr class="separator:ac835927a9548d704df5323816c00971b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03b35442eee1c6071cf8e06c0514bb9e"><td class="memItemLeft" align="right" valign="top"><a id="a03b35442eee1c6071cf8e06c0514bb9e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a03b35442eee1c6071cf8e06c0514bb9e">ResetShadowMaps</a> ()</td></tr>
-<tr class="memdesc:a03b35442eee1c6071cf8e06c0514bb9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all shadow maps. Called when global shadow map resolution or format is changed. <br /></td></tr>
-<tr class="separator:a03b35442eee1c6071cf8e06c0514bb9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6340987dcb954d220d729c9797dd6b26"><td class="memItemLeft" align="right" valign="top"><a id="a6340987dcb954d220d729c9797dd6b26"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a6340987dcb954d220d729c9797dd6b26">ResetBuffers</a> ()</td></tr>
-<tr class="memdesc:a6340987dcb954d220d729c9797dd6b26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all occlusion and screen buffers. <br /></td></tr>
-<tr class="separator:a6340987dcb954d220d729c9797dd6b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa26eb8ae2632c100830e8af56df913ed"><td class="memItemLeft" align="right" valign="top"><a id="aa26eb8ae2632c100830e8af56df913ed"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa26eb8ae2632c100830e8af56df913ed">GetShadowVariations</a> () const</td></tr>
-<tr class="memdesc:aa26eb8ae2632c100830e8af56df913ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find variations for shadow shaders. <br /></td></tr>
-<tr class="separator:aa26eb8ae2632c100830e8af56df913ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade42fa3aa8f7f48620bffc61ab32c635"><td class="memItemLeft" align="right" valign="top"><a id="ade42fa3aa8f7f48620bffc61ab32c635"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ade42fa3aa8f7f48620bffc61ab32c635">HandleScreenMode</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:ade42fa3aa8f7f48620bffc61ab32c635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle screen mode event. <br /></td></tr>
@@ -702,10 +437,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#adf594e7a524f6e003e8370cf23dbee13">HandleRenderUpdate</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:adf594e7a524f6e003e8370cf23dbee13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle render update event. <br /></td></tr>
 <tr class="separator:adf594e7a524f6e003e8370cf23dbee13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e44255580c9a9665ae72d4a4f77c705"><td class="memItemLeft" align="right" valign="top"><a id="a4e44255580c9a9665ae72d4a4f77c705"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a4e44255580c9a9665ae72d4a4f77c705">BlurShadowMap</a> (<a class="el" href="class_urho3_d_1_1_view.html">View</a> *view, <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> *shadowMap, float blurScale)</td></tr>
-<tr class="memdesc:a4e44255580c9a9665ae72d4a4f77c705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blur the shadow map. <br /></td></tr>
-<tr class="separator:a4e44255580c9a9665ae72d4a4f77c705"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b81d710689e3aad3cb0be988b9a0870"><td class="memItemLeft" align="right" valign="top"><a id="a3b81d710689e3aad3cb0be988b9a0870"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateMousePositionsForMainViewports</b> ()</td></tr>
 <tr class="separator:a3b81d710689e3aad3cb0be988b9a0870"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -723,10 +454,6 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:aaa1dc45cf0f3a7e68ad90d23fe3935c7"><td class="memItemLeft" align="right" valign="top"><a id="aaa1dc45cf0f3a7e68ad90d23fe3935c7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>backbufferSurfaceViewportsDirty_</b> {}</td></tr>
 <tr class="separator:aaa1dc45cf0f3a7e68ad90d23fe3935c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93b168441232f752b6ad7330d80c63d1"><td class="memItemLeft" align="right" valign="top"><a id="a93b168441232f752b6ad7330d80c63d1"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_render_path.html">RenderPath</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a93b168441232f752b6ad7330d80c63d1">defaultRenderPath_</a></td></tr>
-<tr class="memdesc:a93b168441232f752b6ad7330d80c63d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default renderpath. <br /></td></tr>
-<tr class="separator:a93b168441232f752b6ad7330d80c63d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae2dead67543415113109ffde49e4073"><td class="memItemLeft" align="right" valign="top"><a id="aae2dead67543415113109ffde49e4073"></a>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_technique.html">Technique</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aae2dead67543415113109ffde49e4073">defaultTechnique_</a></td></tr>
 <tr class="memdesc:aae2dead67543415113109ffde49e4073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default non-textured material technique. <br /></td></tr>
@@ -747,10 +474,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>backbufferSurfaceView
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a32796f4c8445e629cfc85493ca045f57">pointLightGeometry_</a></td></tr>
 <tr class="memdesc:a32796f4c8445e629cfc85493ca045f57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point light volume geometry. <br /></td></tr>
 <tr class="separator:a32796f4c8445e629cfc85493ca045f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a793c483e504e7d6495bb2627131b4e71"><td class="memItemLeft" align="right" valign="top"><a id="a793c483e504e7d6495bb2627131b4e71"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_vertex_buffer.html">VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a793c483e504e7d6495bb2627131b4e71">instancingBuffer_</a></td></tr>
-<tr class="memdesc:a793c483e504e7d6495bb2627131b4e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance stream vertex buffer. <br /></td></tr>
-<tr class="separator:a793c483e504e7d6495bb2627131b4e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1c6dcff483e98d99408abfb0081fb49"><td class="memItemLeft" align="right" valign="top"><a id="ab1c6dcff483e98d99408abfb0081fb49"></a>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_material.html">Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ab1c6dcff483e98d99408abfb0081fb49">defaultMaterial_</a></td></tr>
 <tr class="memdesc:ab1c6dcff483e98d99408abfb0081fb49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default material. <br /></td></tr>
@@ -763,57 +486,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>backbufferSurfaceView
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a147cda37c6d6869d9cc3429009ee1290">defaultLightSpot_</a></td></tr>
 <tr class="memdesc:a147cda37c6d6869d9cc3429009ee1290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default spotlight attenuation texture. <br /></td></tr>
 <tr class="separator:a147cda37c6d6869d9cc3429009ee1290"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a670cda81c63d38d2f5028aa46adfb889"><td class="memItemLeft" align="right" valign="top"><a id="a670cda81c63d38d2f5028aa46adfb889"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture_cube.html">TextureCube</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a670cda81c63d38d2f5028aa46adfb889">faceSelectCubeMap_</a></td></tr>
-<tr class="memdesc:a670cda81c63d38d2f5028aa46adfb889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Face selection cube map for shadowed pointlights. <br /></td></tr>
-<tr class="separator:a670cda81c63d38d2f5028aa46adfb889"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e9377ed382da54b67658fd8f42270a9"><td class="memItemLeft" align="right" valign="top"><a id="a9e9377ed382da54b67658fd8f42270a9"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture_cube.html">TextureCube</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a9e9377ed382da54b67658fd8f42270a9">indirectionCubeMap_</a></td></tr>
-<tr class="memdesc:a9e9377ed382da54b67658fd8f42270a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indirection cube map for shadowed pointlights. <br /></td></tr>
-<tr class="separator:a9e9377ed382da54b67658fd8f42270a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5390e47de96d601d83488043eb345305"><td class="memItemLeft" align="right" valign="top"><a id="a5390e47de96d601d83488043eb345305"></a>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture_cube.html">TextureCube</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>blackCubeMap_</b></td></tr>
 <tr class="separator:a5390e47de96d601d83488043eb345305"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8edcc9d413ccd30220e89fd81965fbb"><td class="memItemLeft" align="right" valign="top"><a id="aa8edcc9d413ccd30220e89fd81965fbb"></a>
-ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; Node &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa8edcc9d413ccd30220e89fd81965fbb">shadowCameraNodes_</a></td></tr>
-<tr class="memdesc:aa8edcc9d413ccd30220e89fd81965fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reusable scene nodes with shadow camera components. <br /></td></tr>
-<tr class="separator:aa8edcc9d413ccd30220e89fd81965fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0f858eaff90a037b165637a8e98814c"><td class="memItemLeft" align="right" valign="top"><a id="ad0f858eaff90a037b165637a8e98814c"></a>
-ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_occlusion_buffer.html">OcclusionBuffer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ad0f858eaff90a037b165637a8e98814c">occlusionBuffers_</a></td></tr>
-<tr class="memdesc:ad0f858eaff90a037b165637a8e98814c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reusable occlusion buffers. <br /></td></tr>
-<tr class="separator:ad0f858eaff90a037b165637a8e98814c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae70324bcd0322952445c3ad5052a196e"><td class="memItemLeft" align="right" valign="top"><a id="ae70324bcd0322952445c3ad5052a196e"></a>
-ea::unordered_map&lt; int, ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ae70324bcd0322952445c3ad5052a196e">shadowMaps_</a></td></tr>
-<tr class="memdesc:ae70324bcd0322952445c3ad5052a196e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow maps by resolution. <br /></td></tr>
-<tr class="separator:ae70324bcd0322952445c3ad5052a196e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85846f166713fca0202b046f00ea4826"><td class="memItemLeft" align="right" valign="top"><a id="a85846f166713fca0202b046f00ea4826"></a>
-ea::unordered_map&lt; int, <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a85846f166713fca0202b046f00ea4826">colorShadowMaps_</a></td></tr>
-<tr class="memdesc:a85846f166713fca0202b046f00ea4826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow map dummy color buffers by resolution. <br /></td></tr>
-<tr class="separator:a85846f166713fca0202b046f00ea4826"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac79db885cbb1ae777e5d270aabb8e059"><td class="memItemLeft" align="right" valign="top"><a id="ac79db885cbb1ae777e5d270aabb8e059"></a>
-ea::unordered_map&lt; int, ea::vector&lt; <a class="el" href="class_urho3_d_1_1_light.html">Light</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ac79db885cbb1ae777e5d270aabb8e059">shadowMapAllocations_</a></td></tr>
-<tr class="memdesc:ac79db885cbb1ae777e5d270aabb8e059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow map allocations by resolution. <br /></td></tr>
-<tr class="separator:ac79db885cbb1ae777e5d270aabb8e059"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a581f4dac82d959c1b234f140177d168c"><td class="memItemLeft" align="right" valign="top"><a id="a581f4dac82d959c1b234f140177d168c"></a>
-<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a581f4dac82d959c1b234f140177d168c">shadowMapFilterInstance_</a> {}</td></tr>
-<tr class="memdesc:a581f4dac82d959c1b234f140177d168c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance of shadow map filter. <br /></td></tr>
-<tr class="separator:a581f4dac82d959c1b234f140177d168c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2e65987265f20624de5912f97aa83e9"><td class="memItemLeft" align="right" valign="top"><a id="ab2e65987265f20624de5912f97aa83e9"></a>
-ShadowMapFilter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ab2e65987265f20624de5912f97aa83e9">shadowMapFilter_</a> {}</td></tr>
-<tr class="memdesc:ab2e65987265f20624de5912f97aa83e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function pointer of shadow map filter. <br /></td></tr>
-<tr class="separator:ab2e65987265f20624de5912f97aa83e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add6fc863029a944de1637f0304ed089b"><td class="memItemLeft" align="right" valign="top"><a id="add6fc863029a944de1637f0304ed089b"></a>
-ea::unordered_map&lt; unsigned long long, ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture.html">Texture</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#add6fc863029a944de1637f0304ed089b">screenBuffers_</a></td></tr>
-<tr class="memdesc:add6fc863029a944de1637f0304ed089b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Screen buffers by resolution and format. <br /></td></tr>
-<tr class="separator:add6fc863029a944de1637f0304ed089b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fd55ca20a3f1da50472e25e2f236a88"><td class="memItemLeft" align="right" valign="top"><a id="a4fd55ca20a3f1da50472e25e2f236a88"></a>
-ea::unordered_map&lt; unsigned long long, unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a4fd55ca20a3f1da50472e25e2f236a88">screenBufferAllocations_</a></td></tr>
-<tr class="memdesc:a4fd55ca20a3f1da50472e25e2f236a88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current screen buffer allocations by resolution and format. <br /></td></tr>
-<tr class="separator:a4fd55ca20a3f1da50472e25e2f236a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a427c9e749fbd49d7847a6ab2acaf8e39"><td class="memItemLeft" align="right" valign="top"><a id="a427c9e749fbd49d7847a6ab2acaf8e39"></a>
-ea::unordered_map&lt; ea::pair&lt; <a class="el" href="class_urho3_d_1_1_light.html">Light</a> *, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> * &gt;, <a class="el" href="class_urho3_d_1_1_rect.html">Rect</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a427c9e749fbd49d7847a6ab2acaf8e39">lightScissorCache_</a></td></tr>
-<tr class="memdesc:a427c9e749fbd49d7847a6ab2acaf8e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache for light scissor queries. <br /></td></tr>
-<tr class="separator:a427c9e749fbd49d7847a6ab2acaf8e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6b7b5172cd3eacb0f9380204f794660"><td class="memItemLeft" align="right" valign="top"><a id="ad6b7b5172cd3eacb0f9380204f794660"></a>
 ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_viewport.html">Viewport</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ad6b7b5172cd3eacb0f9380204f794660">viewports_</a></td></tr>
 <tr class="memdesc:ad6b7b5172cd3eacb0f9380204f794660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Backbuffer viewports. <br /></td></tr>
@@ -822,18 +497,10 @@ ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr<
 ea::vector&lt; ea::pair&lt; <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_render_surface.html">RenderSurface</a> &gt;, <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_viewport.html">Viewport</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ade72dd527550a06e2e39b10362190f56">queuedViewports_</a></td></tr>
 <tr class="memdesc:ade72dd527550a06e2e39b10362190f56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render surface viewports queued for update. <br /></td></tr>
 <tr class="separator:ade72dd527550a06e2e39b10362190f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa35c5e1a2a5be06a3eb3cc929a24f0fa"><td class="memItemLeft" align="right" valign="top"><a id="aa35c5e1a2a5be06a3eb3cc929a24f0fa"></a>
-ea::vector&lt; <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_view.html">View</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aa35c5e1a2a5be06a3eb3cc929a24f0fa">views_</a></td></tr>
-<tr class="memdesc:aa35c5e1a2a5be06a3eb3cc929a24f0fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Views that have been processed this frame. <br /></td></tr>
-<tr class="separator:aa35c5e1a2a5be06a3eb3cc929a24f0fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7b9c2d607b8e56bc37d824e8a6eab0f"><td class="memItemLeft" align="right" valign="top"><a id="ae7b9c2d607b8e56bc37d824e8a6eab0f"></a>
 ea::vector&lt; <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_render_pipeline_view.html">RenderPipelineView</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ae7b9c2d607b8e56bc37d824e8a6eab0f">renderPipelineViews_</a></td></tr>
 <tr class="memdesc:ae7b9c2d607b8e56bc37d824e8a6eab0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render pipeline views that have been processed this frame. <br /></td></tr>
 <tr class="separator:ae7b9c2d607b8e56bc37d824e8a6eab0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c348da3de3893916267a482d5316c2d"><td class="memItemLeft" align="right" valign="top"><a id="a0c348da3de3893916267a482d5316c2d"></a>
-ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *, <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_view.html">View</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a0c348da3de3893916267a482d5316c2d">preparedViews_</a></td></tr>
-<tr class="memdesc:a0c348da3de3893916267a482d5316c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepared views by culling camera. <br /></td></tr>
-<tr class="separator:a0c348da3de3893916267a482d5316c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2da236f90612e77cb7f1e1b8cf0cafef"><td class="memItemLeft" align="right" valign="top"><a id="a2da236f90612e77cb7f1e1b8cf0cafef"></a>
 ea::hash_set&lt; <a class="el" href="class_urho3_d_1_1_octree.html">Octree</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a2da236f90612e77cb7f1e1b8cf0cafef">updatedOctrees_</a></td></tr>
 <tr class="memdesc:a2da236f90612e77cb7f1e1b8cf0cafef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Octrees that have been updated during the frame. <br /></td></tr>
@@ -842,22 +509,6 @@ ea::hash_set&lt; <a class="el" href="class_urho3_d_1_1_octree.html">Octree</a> *
 ea::hash_set&lt; <a class="el" href="class_urho3_d_1_1_technique.html">Technique</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a1a7e33d8191a849dcf1b45ea8ef354d5">shaderErrorDisplayed_</a></td></tr>
 <tr class="memdesc:a1a7e33d8191a849dcf1b45ea8ef354d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Techniques for which missing shader error has been displayed. <br /></td></tr>
 <tr class="separator:a1a7e33d8191a849dcf1b45ea8ef354d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb692bcbbf7c1a7b107b9ca17b89c9ac"><td class="memItemLeft" align="right" valign="top"><a id="abb692bcbbf7c1a7b107b9ca17b89c9ac"></a>
-<a class="el" href="class_urho3_d_1_1_mutex.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#abb692bcbbf7c1a7b107b9ca17b89c9ac">rendererMutex_</a></td></tr>
-<tr class="memdesc:abb692bcbbf7c1a7b107b9ca17b89c9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_mutex.html" title="Operating system mutual exclusion primitive.">Mutex</a> for shadow camera allocation. <br /></td></tr>
-<tr class="separator:abb692bcbbf7c1a7b107b9ca17b89c9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f22f3bed43c63fc978dad809ca01cb0"><td class="memItemLeft" align="right" valign="top"><a id="a1f22f3bed43c63fc978dad809ca01cb0"></a>
-ea::vector&lt; ea::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a1f22f3bed43c63fc978dad809ca01cb0">deferredLightPSVariations_</a></td></tr>
-<tr class="memdesc:a1f22f3bed43c63fc978dad809ca01cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current variation names for deferred light volume shaders. <br /></td></tr>
-<tr class="separator:a1f22f3bed43c63fc978dad809ca01cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae51c37958c5c8b6e2ce280c200ec30c8"><td class="memItemLeft" align="right" valign="top"><a id="ae51c37958c5c8b6e2ce280c200ec30c8"></a>
-ea::set&lt; ea::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ae51c37958c5c8b6e2ce280c200ec30c8">globalShaderDefines_</a></td></tr>
-<tr class="memdesc:ae51c37958c5c8b6e2ce280c200ec30c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global shader defines, sorted to reduce amount of variations. <br /></td></tr>
-<tr class="separator:ae51c37958c5c8b6e2ce280c200ec30c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8634af32ec41ccb5a9eb67c94040ef63"><td class="memItemLeft" align="right" valign="top"><a id="a8634af32ec41ccb5a9eb67c94040ef63"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a8634af32ec41ccb5a9eb67c94040ef63">globalShaderDefinesString_</a></td></tr>
-<tr class="memdesc:a8634af32ec41ccb5a9eb67c94040ef63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global shader defines as string. <br /></td></tr>
-<tr class="separator:a8634af32ec41ccb5a9eb67c94040ef63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3a17617912bd09668caa7deb78ea43a"><td class="memItemLeft" align="right" valign="top"><a id="af3a17617912bd09668caa7deb78ea43a"></a>
 <a class="el" href="struct_urho3_d_1_1_frame_info.html">FrameInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#af3a17617912bd09668caa7deb78ea43a">frame_</a></td></tr>
 <tr class="memdesc:af3a17617912bd09668caa7deb78ea43a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame info for rendering. <br /></td></tr>
@@ -867,133 +518,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memdesc:af4ee29caaf7ba7750cf142412652c2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_texture.html" title="Base class for texture resources.">Texture</a> anisotropy level. <br /></td></tr>
 <tr class="separator:af4ee29caaf7ba7750cf142412652c2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a205d92770a013011483c20bc546c777c"><td class="memItemLeft" align="right" valign="top"><a id="a205d92770a013011483c20bc546c777c"></a>
-<a class="el" href="_graphics_defs_8h.html#aa76618ce244fbf4560ec541b4a45845d">TextureFilterMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a205d92770a013011483c20bc546c777c">textureFilterMode_</a> {FILTER_TRILINEAR}</td></tr>
+TextureFilterMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a205d92770a013011483c20bc546c777c">textureFilterMode_</a> {FILTER_TRILINEAR}</td></tr>
 <tr class="memdesc:a205d92770a013011483c20bc546c777c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_texture.html" title="Base class for texture resources.">Texture</a> filtering mode. <br /></td></tr>
 <tr class="separator:a205d92770a013011483c20bc546c777c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a13f5bb375dbfb2e63421983cd366f9"><td class="memItemLeft" align="right" valign="top"><a id="a0a13f5bb375dbfb2e63421983cd366f9"></a>
 MaterialQuality&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a0a13f5bb375dbfb2e63421983cd366f9">textureQuality_</a> {QUALITY_HIGH}</td></tr>
 <tr class="memdesc:a0a13f5bb375dbfb2e63421983cd366f9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_texture.html" title="Base class for texture resources.">Texture</a> quality level. <br /></td></tr>
 <tr class="separator:a0a13f5bb375dbfb2e63421983cd366f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad35e5ff3b74e39ea1b711ee1b4b4b8aa"><td class="memItemLeft" align="right" valign="top"><a id="ad35e5ff3b74e39ea1b711ee1b4b4b8aa"></a>
-MaterialQuality&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ad35e5ff3b74e39ea1b711ee1b4b4b8aa">materialQuality_</a> {QUALITY_HIGH}</td></tr>
-<tr class="memdesc:ad35e5ff3b74e39ea1b711ee1b4b4b8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_material.html" title="Describes how to render 3D geometries.">Material</a> quality level. <br /></td></tr>
-<tr class="separator:ad35e5ff3b74e39ea1b711ee1b4b4b8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac352a52df9305f168da3c5e9336a293b"><td class="memItemLeft" align="right" valign="top"><a id="ac352a52df9305f168da3c5e9336a293b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ac352a52df9305f168da3c5e9336a293b">shadowMapSize_</a> {1024}</td></tr>
-<tr class="memdesc:ac352a52df9305f168da3c5e9336a293b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow map resolution. <br /></td></tr>
-<tr class="separator:ac352a52df9305f168da3c5e9336a293b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9be17ca9910cc87b0537989cb89570a"><td class="memItemLeft" align="right" valign="top"><a id="ac9be17ca9910cc87b0537989cb89570a"></a>
-<a class="el" href="_graphics_defs_8h.html#a54881b5c2aee8c0e8b59587bc2f7e94b">ShadowQuality</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ac9be17ca9910cc87b0537989cb89570a">shadowQuality_</a> {SHADOWQUALITY_PCF_16BIT}</td></tr>
-<tr class="memdesc:ac9be17ca9910cc87b0537989cb89570a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow quality. <br /></td></tr>
-<tr class="separator:ac9be17ca9910cc87b0537989cb89570a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31afa38b699c62019c8f9e14fc6e7845"><td class="memItemLeft" align="right" valign="top"><a id="a31afa38b699c62019c8f9e14fc6e7845"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a31afa38b699c62019c8f9e14fc6e7845">shadowSoftness_</a> {1.0f}</td></tr>
-<tr class="memdesc:a31afa38b699c62019c8f9e14fc6e7845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow softness, only works when SHADOWQUALITY_BLUR_VSM is used. <br /></td></tr>
-<tr class="separator:a31afa38b699c62019c8f9e14fc6e7845"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40e0df7b981d629d9f01c0e9def5fdcf"><td class="memItemLeft" align="right" valign="top"><a id="a40e0df7b981d629d9f01c0e9def5fdcf"></a>
-<a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a40e0df7b981d629d9f01c0e9def5fdcf">vsmShadowParams_</a> {0.0000001f, 0.9f}</td></tr>
-<tr class="memdesc:a40e0df7b981d629d9f01c0e9def5fdcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow parameters when VSM is used, they help to reduce light bleeding. <br /></td></tr>
-<tr class="separator:a40e0df7b981d629d9f01c0e9def5fdcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a108c35c967b877f408bbfd191baa473f"><td class="memItemLeft" align="right" valign="top"><a id="a108c35c967b877f408bbfd191baa473f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a108c35c967b877f408bbfd191baa473f">vsmMultiSample_</a> {1}</td></tr>
-<tr class="memdesc:a108c35c967b877f408bbfd191baa473f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multisample level for VSM shadows. <br /></td></tr>
-<tr class="separator:a108c35c967b877f408bbfd191baa473f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96eb6e090a492cb81de47d8a3bdd7d7a"><td class="memItemLeft" align="right" valign="top"><a id="a96eb6e090a492cb81de47d8a3bdd7d7a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a96eb6e090a492cb81de47d8a3bdd7d7a">maxShadowMaps_</a> {1}</td></tr>
-<tr class="memdesc:a96eb6e090a492cb81de47d8a3bdd7d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of shadow maps per resolution. <br /></td></tr>
-<tr class="separator:a96eb6e090a492cb81de47d8a3bdd7d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15d05ab226e8813e64a65d0a5915f648"><td class="memItemLeft" align="right" valign="top"><a id="a15d05ab226e8813e64a65d0a5915f648"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a15d05ab226e8813e64a65d0a5915f648">minInstances_</a> {2}</td></tr>
-<tr class="memdesc:a15d05ab226e8813e64a65d0a5915f648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum number of instances required in a batch group to render as instanced. <br /></td></tr>
-<tr class="separator:a15d05ab226e8813e64a65d0a5915f648"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b8824354b9c769b40765ae790aeb797"><td class="memItemLeft" align="right" valign="top"><a id="a0b8824354b9c769b40765ae790aeb797"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a0b8824354b9c769b40765ae790aeb797">maxSortedInstances_</a> {1000}</td></tr>
-<tr class="memdesc:a0b8824354b9c769b40765ae790aeb797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum sorted instances per batch group. <br /></td></tr>
-<tr class="separator:a0b8824354b9c769b40765ae790aeb797"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eaeebaebcaed8f9533fcf9596254b01"><td class="memItemLeft" align="right" valign="top"><a id="a1eaeebaebcaed8f9533fcf9596254b01"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a1eaeebaebcaed8f9533fcf9596254b01">maxOccluderTriangles_</a> {5000}</td></tr>
-<tr class="memdesc:a1eaeebaebcaed8f9533fcf9596254b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum occluder triangles. <br /></td></tr>
-<tr class="separator:a1eaeebaebcaed8f9533fcf9596254b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad6ed15800d43fb8835835f0f872409c"><td class="memItemLeft" align="right" valign="top"><a id="aad6ed15800d43fb8835835f0f872409c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aad6ed15800d43fb8835835f0f872409c">occlusionBufferSize_</a> {256}</td></tr>
-<tr class="memdesc:aad6ed15800d43fb8835835f0f872409c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Occlusion buffer width. <br /></td></tr>
-<tr class="separator:aad6ed15800d43fb8835835f0f872409c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab76d590bcdbaf51a73671d7c0415fcba"><td class="memItemLeft" align="right" valign="top"><a id="ab76d590bcdbaf51a73671d7c0415fcba"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ab76d590bcdbaf51a73671d7c0415fcba">occluderSizeThreshold_</a> {0.025f}</td></tr>
-<tr class="memdesc:ab76d590bcdbaf51a73671d7c0415fcba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Occluder screen size threshold. <br /></td></tr>
-<tr class="separator:ab76d590bcdbaf51a73671d7c0415fcba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf7f0691bb72891b71f8eab813787db0"><td class="memItemLeft" align="right" valign="top"><a id="adf7f0691bb72891b71f8eab813787db0"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#adf7f0691bb72891b71f8eab813787db0">mobileShadowBiasMul_</a> {1.0f}</td></tr>
-<tr class="memdesc:adf7f0691bb72891b71f8eab813787db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mobile platform shadow depth bias multiplier. <br /></td></tr>
-<tr class="separator:adf7f0691bb72891b71f8eab813787db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58442c973568bbefbd9b4d98cbe07488"><td class="memItemLeft" align="right" valign="top"><a id="a58442c973568bbefbd9b4d98cbe07488"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a58442c973568bbefbd9b4d98cbe07488">mobileShadowBiasAdd_</a> {}</td></tr>
-<tr class="memdesc:a58442c973568bbefbd9b4d98cbe07488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mobile platform shadow depth bias addition. <br /></td></tr>
-<tr class="separator:a58442c973568bbefbd9b4d98cbe07488"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f28a6f10a8ad65e1d7c168cef21f7a1"><td class="memItemLeft" align="right" valign="top"><a id="a9f28a6f10a8ad65e1d7c168cef21f7a1"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a9f28a6f10a8ad65e1d7c168cef21f7a1">mobileNormalOffsetMul_</a> {1.0f}</td></tr>
-<tr class="memdesc:a9f28a6f10a8ad65e1d7c168cef21f7a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mobile platform shadow normal offset multiplier. <br /></td></tr>
-<tr class="separator:a9f28a6f10a8ad65e1d7c168cef21f7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad583008de014d937225c4f87b5bea927"><td class="memItemLeft" align="right" valign="top"><a id="ad583008de014d937225c4f87b5bea927"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ad583008de014d937225c4f87b5bea927">sphericalHarmonics_</a> {}</td></tr>
-<tr class="memdesc:ad583008de014d937225c4f87b5bea927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to enable spherical harmonics. <br /></td></tr>
-<tr class="separator:ad583008de014d937225c4f87b5bea927"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f0848ab6de6c9d08aa24ff423328e2b"><td class="memItemLeft" align="right" valign="top"><a id="a5f0848ab6de6c9d08aa24ff423328e2b"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a5f0848ab6de6c9d08aa24ff423328e2b">numOcclusionBuffers_</a> {}</td></tr>
-<tr class="memdesc:a5f0848ab6de6c9d08aa24ff423328e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of occlusion buffers in use. <br /></td></tr>
-<tr class="separator:a5f0848ab6de6c9d08aa24ff423328e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64242d0fd8685a99e0d247777bb7d762"><td class="memItemLeft" align="right" valign="top"><a id="a64242d0fd8685a99e0d247777bb7d762"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a64242d0fd8685a99e0d247777bb7d762">numShadowCameras_</a> {}</td></tr>
-<tr class="memdesc:a64242d0fd8685a99e0d247777bb7d762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of temporary shadow cameras in use. <br /></td></tr>
-<tr class="separator:a64242d0fd8685a99e0d247777bb7d762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a355e32f194ab93f8ce86a70b980c2795"><td class="memItemLeft" align="right" valign="top"><a id="a355e32f194ab93f8ce86a70b980c2795"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a355e32f194ab93f8ce86a70b980c2795">numPrimitives_</a> {}</td></tr>
-<tr class="memdesc:a355e32f194ab93f8ce86a70b980c2795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of primitives (3D geometry only). <br /></td></tr>
-<tr class="separator:a355e32f194ab93f8ce86a70b980c2795"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb6308918f5dc498d37d38fddb88c8c6"><td class="memItemLeft" align="right" valign="top"><a id="abb6308918f5dc498d37d38fddb88c8c6"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#abb6308918f5dc498d37d38fddb88c8c6">numBatches_</a> {}</td></tr>
-<tr class="memdesc:abb6308918f5dc498d37d38fddb88c8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of batches (3D geometry only). <br /></td></tr>
-<tr class="separator:abb6308918f5dc498d37d38fddb88c8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34bd74acb709df4bdc4f436c4b224b8b"><td class="memItemLeft" align="right" valign="top"><a id="a34bd74acb709df4bdc4f436c4b224b8b"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a34bd74acb709df4bdc4f436c4b224b8b">shadersChangedFrameNumber_</a> {M_MAX_UNSIGNED}</td></tr>
-<tr class="memdesc:a34bd74acb709df4bdc4f436c4b224b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame number on which shaders last changed. <br /></td></tr>
-<tr class="separator:a34bd74acb709df4bdc4f436c4b224b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadfbf3d4fd0bdf3845ae9d38c3736989"><td class="memItemLeft" align="right" valign="top"><a id="aadfbf3d4fd0bdf3845ae9d38c3736989"></a>
-unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#aadfbf3d4fd0bdf3845ae9d38c3736989">lightStencilValue_</a> {}</td></tr>
-<tr class="memdesc:aadfbf3d4fd0bdf3845ae9d38c3736989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current stencil value for light optimization. <br /></td></tr>
-<tr class="separator:aadfbf3d4fd0bdf3845ae9d38c3736989"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c78f6308d4784d3f85ad839a483ed84"><td class="memItemLeft" align="right" valign="top"><a id="a8c78f6308d4784d3f85ad839a483ed84"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a8c78f6308d4784d3f85ad839a483ed84">hdrRendering_</a> {}</td></tr>
-<tr class="memdesc:a8c78f6308d4784d3f85ad839a483ed84"><td class="mdescLeft">&#160;</td><td class="mdescRight">HDR rendering flag. <br /></td></tr>
-<tr class="separator:a8c78f6308d4784d3f85ad839a483ed84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f5e813636b61c572778d2a5681b29ee"><td class="memItemLeft" align="right" valign="top"><a id="a3f5e813636b61c572778d2a5681b29ee"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a3f5e813636b61c572778d2a5681b29ee">specularLighting_</a> {true}</td></tr>
-<tr class="memdesc:a3f5e813636b61c572778d2a5681b29ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specular lighting flag. <br /></td></tr>
-<tr class="separator:a3f5e813636b61c572778d2a5681b29ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb85a9c8df99589179ae59a8269b38bf"><td class="memItemLeft" align="right" valign="top"><a id="acb85a9c8df99589179ae59a8269b38bf"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#acb85a9c8df99589179ae59a8269b38bf">drawShadows_</a> {true}</td></tr>
-<tr class="memdesc:acb85a9c8df99589179ae59a8269b38bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw shadows flag. <br /></td></tr>
-<tr class="separator:acb85a9c8df99589179ae59a8269b38bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05ccfe5b4f61cd36de93d33946f2b83b"><td class="memItemLeft" align="right" valign="top"><a id="a05ccfe5b4f61cd36de93d33946f2b83b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a05ccfe5b4f61cd36de93d33946f2b83b">reuseShadowMaps_</a> {true}</td></tr>
-<tr class="memdesc:a05ccfe5b4f61cd36de93d33946f2b83b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shadow map reuse flag. <br /></td></tr>
-<tr class="separator:a05ccfe5b4f61cd36de93d33946f2b83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae39627e4cb9059d27df4c00ae872f3e5"><td class="memItemLeft" align="right" valign="top"><a id="ae39627e4cb9059d27df4c00ae872f3e5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#ae39627e4cb9059d27df4c00ae872f3e5">dynamicInstancing_</a> {true}</td></tr>
-<tr class="memdesc:ae39627e4cb9059d27df4c00ae872f3e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic instancing flag. <br /></td></tr>
-<tr class="separator:ae39627e4cb9059d27df4c00ae872f3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e866122261209df9baa9b7b639c7048"><td class="memItemLeft" align="right" valign="top"><a id="a1e866122261209df9baa9b7b639c7048"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a1e866122261209df9baa9b7b639c7048">numExtraInstancingBufferElements_</a> {}</td></tr>
-<tr class="memdesc:a1e866122261209df9baa9b7b639c7048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of extra instancing data elements. <br /></td></tr>
-<tr class="separator:a1e866122261209df9baa9b7b639c7048"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d9b4ee6336045b840c4bb2bf8b53b76"><td class="memItemLeft" align="right" valign="top"><a id="a2d9b4ee6336045b840c4bb2bf8b53b76"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a2d9b4ee6336045b840c4bb2bf8b53b76">threadedOcclusion_</a> {}</td></tr>
-<tr class="memdesc:a2d9b4ee6336045b840c4bb2bf8b53b76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Threaded occlusion rendering flag. <br /></td></tr>
-<tr class="separator:a2d9b4ee6336045b840c4bb2bf8b53b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af87b33b1aa1fd46a404210ad1adbae26"><td class="memItemLeft" align="right" valign="top"><a id="af87b33b1aa1fd46a404210ad1adbae26"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#af87b33b1aa1fd46a404210ad1adbae26">shadersDirty_</a> {true}</td></tr>
-<tr class="memdesc:af87b33b1aa1fd46a404210ad1adbae26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shaders need reloading flag. <br /></td></tr>
-<tr class="separator:af87b33b1aa1fd46a404210ad1adbae26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affe5a1cbf23909eb8df2b3d5f38833b3"><td class="memItemLeft" align="right" valign="top"><a id="affe5a1cbf23909eb8df2b3d5f38833b3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#affe5a1cbf23909eb8df2b3d5f38833b3">initialized_</a> {}</td></tr>
 <tr class="memdesc:affe5a1cbf23909eb8df2b3d5f38833b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialized flag. <br /></td></tr>
@@ -1014,19 +545,17 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a3d5cdc5d8cf3a4cba92a8014e75ca76e">numSoftwareSkinningBones_</a> { 4 }</td></tr>
 <tr class="memdesc:a3d5cdc5d8cf3a4cba92a8014e75ca76e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bones used for software skinning. <br /></td></tr>
 <tr class="separator:a3d5cdc5d8cf3a4cba92a8014e75ca76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06b967aec8d559ac7fec76c73aef9f57"><td class="memItemLeft" align="right" valign="top"><a id="a06b967aec8d559ac7fec76c73aef9f57"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_pipeline_state_cache.html">PipelineStateCache</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer.html#a06b967aec8d559ac7fec76c73aef9f57">pipelineStateCache_</a></td></tr>
-<tr class="memdesc:a06b967aec8d559ac7fec76c73aef9f57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pipeline state cache. <br /></td></tr>
-<tr class="separator:a06b967aec8d559ac7fec76c73aef9f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcae0e05c720e902aceae8338249cca1"><td class="memItemLeft" align="right" valign="top"><a id="adcae0e05c720e902aceae8338249cca1"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_draw_command_queue.html">DrawCommandQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>defaultDrawQueue_</b></td></tr>
-<tr class="separator:adcae0e05c720e902aceae8338249cca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9365d71c2b78ededbf8af0497305916a"><td class="memItemLeft" align="right" valign="top"><a id="a9365d71c2b78ededbf8af0497305916a"></a>
 <a class="el" href="struct_urho3_d_1_1_frame_statistics.html">FrameStatistics</a>&#160;</td><td class="memItemRight" valign="bottom"><b>frameStats_</b></td></tr>
 <tr class="separator:a9365d71c2b78ededbf8af0497305916a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
+<tr class="memitem:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="aaf5a648d6c449dd14b273c10fdd498a9"></a>
+static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aaf5a648d6c449dd14b273c10fdd498a9">GetTypeInfoStatic</a> ()</td></tr>
+<tr class="memdesc:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type info static. <br /></td></tr>
+<tr class="separator:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="aecf686841d86be7e4a2c0092b60d31ad"></a>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aecf686841d86be7e4a2c0092b60d31ad">context_</a></td></tr>
@@ -1036,26 +565,6 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>High-level rendering subsystem. Manages drawing of 3D views. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2edda10af9679e17b00db07891945c73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2edda10af9679e17b00db07891945c73">&#9670;&nbsp;</a></span>DrawDebugGeometry()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::DrawDebugGeometry </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>depthTest</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add debug geometry to the debug renderer. </p>
-
-</div>
-</div>
 <a id="adce0c6842dce3689cc7b561dfae9ca54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adce0c6842dce3689cc7b561dfae9ca54">&#9670;&nbsp;</a></span>GetDefaultLightRamp()</h2>
 
@@ -1134,24 +643,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac1d3806e6d0ceeb9895ddb8976b60849"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1d3806e6d0ceeb9895ddb8976b60849">&#9670;&nbsp;</a></span>GetDefaultRenderPath()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_urho3_d_1_1_render_path.html">RenderPath</a> * Urho3D::Renderer::GetDefaultRenderPath </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Return default renderpath. </p>
-
-</div>
-</div>
 <a id="a2c8d1e673d6eaf0d49b165b0ac75515d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c8d1e673d6eaf0d49b165b0ac75515d">&#9670;&nbsp;</a></span>GetDefaultTechnique()</h2>
 
@@ -1196,346 +687,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a5571b840256300f80a8afe4eb7b6eea0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5571b840256300f80a8afe4eb7b6eea0">&#9670;&nbsp;</a></span>GetDrawShadows()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::Renderer::GetDrawShadows </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return whether drawing shadows is enabled. </p>
-
-</div>
-</div>
-<a id="a9ed8775ad11a3248dc254e5935705de0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ed8775ad11a3248dc254e5935705de0">&#9670;&nbsp;</a></span>GetDynamicInstancing()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::Renderer::GetDynamicInstancing </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return whether dynamic instancing is in use. </p>
-
-</div>
-</div>
-<a id="aed7b8426e072778e2fd43b74f9abab54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed7b8426e072778e2fd43b74f9abab54">&#9670;&nbsp;</a></span>GetHDRRendering()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::Renderer::GetHDRRendering </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return whether HDR rendering is enabled. </p>
-
-</div>
-</div>
-<a id="a348f759bd9e2e06a02029937c2871a98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a348f759bd9e2e06a02029937c2871a98">&#9670;&nbsp;</a></span>GetMaterialQuality()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">MaterialQuality Urho3D::Renderer::GetMaterialQuality </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return material quality level. </p>
-
-</div>
-</div>
-<a id="aa4fe9b88cfd95b5a02efa5cb162dabcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4fe9b88cfd95b5a02efa5cb162dabcb">&#9670;&nbsp;</a></span>GetMaxOccluderTriangles()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Urho3D::Renderer::GetMaxOccluderTriangles </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return maximum number of occluder triangles. </p>
-
-</div>
-</div>
-<a id="a6d91d7fe8d96b9de48d5c544900fa7d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d91d7fe8d96b9de48d5c544900fa7d3">&#9670;&nbsp;</a></span>GetMaxShadowMaps()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Urho3D::Renderer::GetMaxShadowMaps </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return maximum number of shadow maps per resolution. </p>
-
-</div>
-</div>
-<a id="a5ac83e48e79f573165503845d7c451ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ac83e48e79f573165503845d7c451ed">&#9670;&nbsp;</a></span>GetMaxSortedInstances()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Urho3D::Renderer::GetMaxSortedInstances </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return maximum number of sorted instances per batch group. </p>
-
-</div>
-</div>
-<a id="aae2896082dfe1857df4b9991d155a265"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae2896082dfe1857df4b9991d155a265">&#9670;&nbsp;</a></span>GetMinInstances()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Urho3D::Renderer::GetMinInstances </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return minimum number of instances required in a batch group to render as instanced. </p>
-
-</div>
-</div>
-<a id="a457f0694c72cf1d4456972db19921ea7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a457f0694c72cf1d4456972db19921ea7">&#9670;&nbsp;</a></span>GetMobileNormalOffsetMul()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Urho3D::Renderer::GetMobileNormalOffsetMul </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return shadow normal offset multiplier for mobile platforms. </p>
-
-</div>
-</div>
-<a id="af39960197f8d7bd86c09618fd1f9aab7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af39960197f8d7bd86c09618fd1f9aab7">&#9670;&nbsp;</a></span>GetMobileShadowBiasAdd()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Urho3D::Renderer::GetMobileShadowBiasAdd </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return shadow depth bias addition for mobile platforms. </p>
-
-</div>
-</div>
-<a id="af7c9a77ec0fbf6ff9058bfeb6f4a0417"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7c9a77ec0fbf6ff9058bfeb6f4a0417">&#9670;&nbsp;</a></span>GetMobileShadowBiasMul()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Urho3D::Renderer::GetMobileShadowBiasMul </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return shadow depth bias multiplier for mobile platforms. </p>
-
-</div>
-</div>
-<a id="ae265e9d1870578bf530898b027806671"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae265e9d1870578bf530898b027806671">&#9670;&nbsp;</a></span>GetNumBatches()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned Urho3D::Renderer::GetNumBatches </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return number of batches rendered. </p>
-
-</div>
-</div>
-<a id="af0c4e5f5237310cafe4b3b56b3cdb560"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0c4e5f5237310cafe4b3b56b3cdb560">&#9670;&nbsp;</a></span>GetNumExtraInstancingBufferElements()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Urho3D::Renderer::GetNumExtraInstancingBufferElements </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return number of extra instancing buffer elements. </p>
-
-</div>
-</div>
-<a id="a58d2eee67f16b91208502c3cc4383f0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58d2eee67f16b91208502c3cc4383f0e">&#9670;&nbsp;</a></span>GetNumGeometries()</h2>
+<a id="abab111479dd453d5fef2f52cd0396418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abab111479dd453d5fef2f52cd0396418">&#9670;&nbsp;</a></span>GetNumGeometries()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1543,8 +696,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">unsigned Urho3D::Renderer::GetNumGeometries </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>allViews</em> = <code>false</code></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1553,8 +705,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a39e25afdedc9f543d32a0ee32e7a1880"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39e25afdedc9f543d32a0ee32e7a1880">&#9670;&nbsp;</a></span>GetNumLights()</h2>
+<a id="a42c1e67fc0a955b917fd20e93db4e765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42c1e67fc0a955b917fd20e93db4e765">&#9670;&nbsp;</a></span>GetNumLights()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1562,8 +714,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">unsigned Urho3D::Renderer::GetNumLights </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>allViews</em> = <code>false</code></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1572,8 +723,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a3ab692755ae1125103483504ac1eae09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ab692755ae1125103483504ac1eae09">&#9670;&nbsp;</a></span>GetNumOccluders()</h2>
+<a id="af1f244fe14ebb01d13159a64aa27b17b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1f244fe14ebb01d13159a64aa27b17b">&#9670;&nbsp;</a></span>GetNumOccluders()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1581,8 +732,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">unsigned Urho3D::Renderer::GetNumOccluders </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>allViews</em> = <code>false</code></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1591,34 +741,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ae9cac72f82e299d6820df883806740d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9cac72f82e299d6820df883806740d1">&#9670;&nbsp;</a></span>GetNumPrimitives()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned Urho3D::Renderer::GetNumPrimitives </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return number of primitives rendered. </p>
-
-</div>
-</div>
-<a id="aa14491f007a2b220c3d2724bb7ccb855"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa14491f007a2b220c3d2724bb7ccb855">&#9670;&nbsp;</a></span>GetNumShadowMaps()</h2>
+<a id="ac74ee2b46929868480b7e37ef0ebd676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac74ee2b46929868480b7e37ef0ebd676">&#9670;&nbsp;</a></span>GetNumShadowMaps()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1626,8 +750,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">unsigned Urho3D::Renderer::GetNumShadowMaps </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>allViews</em> = <code>false</code></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1688,302 +811,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a71d49cec7a1826844e2d1068fd590e64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71d49cec7a1826844e2d1068fd590e64">&#9670;&nbsp;</a></span>GetOccluderSizeThreshold()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Urho3D::Renderer::GetOccluderSizeThreshold </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return occluder screen size threshold. </p>
-
-</div>
-</div>
-<a id="ad16e6b44ef3e673bfa30d6efa4eefc83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad16e6b44ef3e673bfa30d6efa4eefc83">&#9670;&nbsp;</a></span>GetOcclusionBufferSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Urho3D::Renderer::GetOcclusionBufferSize </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return occlusion buffer width. </p>
-
-</div>
-</div>
-<a id="a29ebf1c99563ddc51a12f121c0cf8349"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29ebf1c99563ddc51a12f121c0cf8349">&#9670;&nbsp;</a></span>GetReuseShadowMaps()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::Renderer::GetReuseShadowMaps </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return whether shadow maps are reused. </p>
-
-</div>
-</div>
-<a id="a44c45f4e35cbce39ed18336ad8ff318d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44c45f4e35cbce39ed18336ad8ff318d">&#9670;&nbsp;</a></span>GetScreenBuffer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_urho3_d_1_1_texture.html">Texture</a> * Urho3D::Renderer::GetScreenBuffer </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>height</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>format</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>multiSample</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>autoResolve</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>cubemap</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>filtered</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>srgb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>persistentKey</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Allocate a rendertarget or depth-stencil texture for deferred rendering or postprocessing. Should only be called during actual rendering, not before. </p>
-
-</div>
-</div>
-<a id="a7d4509e32b17bff5f3069f8fe6fd448d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d4509e32b17bff5f3069f8fe6fd448d">&#9670;&nbsp;</a></span>GetShadowMap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> * Urho3D::Renderer::GetShadowMap </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_light.html">Light</a> *&#160;</td>
-          <td class="paramname"><em>light</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *&#160;</td>
-          <td class="paramname"><em>camera</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>viewWidth</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>viewHeight</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Allocate a shadow map. If shadow map reuse is disabled, a different map is returned each time. </p>
-
-</div>
-</div>
-<a id="a2295e6dff84877baada6298ba53cda90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2295e6dff84877baada6298ba53cda90">&#9670;&nbsp;</a></span>GetShadowMapSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Urho3D::Renderer::GetShadowMapSize </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return shadow map resolution. </p>
-
-</div>
-</div>
-<a id="a0d2fbdd5cb3d94980cb7816fe7382c6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d2fbdd5cb3d94980cb7816fe7382c6f">&#9670;&nbsp;</a></span>GetShadowQuality()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="_graphics_defs_8h.html#a54881b5c2aee8c0e8b59587bc2f7e94b">ShadowQuality</a> Urho3D::Renderer::GetShadowQuality </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return shadow quality. </p>
-
-</div>
-</div>
-<a id="a54b6ee908d42613c4739461c83f4b40f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54b6ee908d42613c4739461c83f4b40f">&#9670;&nbsp;</a></span>GetShadowSoftness()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Urho3D::Renderer::GetShadowSoftness </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return shadow softness. </p>
-
-</div>
-</div>
-<a id="a0013b1e6c011d0cd5fb1b0e26a6a7bcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0013b1e6c011d0cd5fb1b0e26a6a7bcb">&#9670;&nbsp;</a></span>GetSpecularLighting()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::Renderer::GetSpecularLighting </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return whether specular lighting is enabled. </p>
-
-</div>
-</div>
 <a id="a37ca29b43c271766b52f8ba765aab9fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a37ca29b43c271766b52f8ba765aab9fa">&#9670;&nbsp;</a></span>GetTextureAnisotropy()</h2>
 
@@ -2020,7 +847,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_graphics_defs_8h.html#aa76618ce244fbf4560ec541b4a45845d">TextureFilterMode</a> Urho3D::Renderer::GetTextureFilterMode </td>
+          <td class="memname">TextureFilterMode Urho3D::Renderer::GetTextureFilterMode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -2062,32 +889,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a1eb22cf21067850614e2d126ed653d34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1eb22cf21067850614e2d126ed653d34">&#9670;&nbsp;</a></span>GetThreadedOcclusion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::Renderer::GetThreadedOcclusion </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return whether occlusion rendering is threaded. </p>
-
-</div>
-</div>
 <a id="a34c866484e63eef1c50f0205629f4c40"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a34c866484e63eef1c50f0205629f4c40">&#9670;&nbsp;</a></span>GetViewport()</h2>
 
@@ -2104,77 +905,6 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Return backbuffer viewport by index. </p>
-
-</div>
-</div>
-<a id="a8ec637dca3a23d3bbd6d259d7d925a23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ec637dca3a23d3bbd6d259d7d925a23">&#9670;&nbsp;</a></span>GetVSMMultiSample()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Urho3D::Renderer::GetVSMMultiSample </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return VSM shadow multisample level. </p>
-
-</div>
-</div>
-<a id="a3d325c9ba437dca64777ba9bc94c5a39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d325c9ba437dca64777ba9bc94c5a39">&#9670;&nbsp;</a></span>GetVSMShadowParameters()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> Urho3D::Renderer::GetVSMShadowParameters </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return VSM shadow parameters. </p>
-
-</div>
-</div>
-<a id="a0e9a7903978c7f793a95a3eedd93d370"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e9a7903978c7f793a95a3eedd93d370">&#9670;&nbsp;</a></span>SetDefaultRenderPath()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetDefaultRenderPath </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_render_path.html">RenderPath</a> *&#160;</td>
-          <td class="paramname"><em>renderPath</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set default renderpath. </p>
 
 </div>
 </div>
@@ -2197,234 +927,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a4467251481d7f71628384d3367a1e105"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4467251481d7f71628384d3367a1e105">&#9670;&nbsp;</a></span>SetDrawShadows()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetDrawShadows </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set shadows on/off. </p>
-
-</div>
-</div>
-<a id="ab2d9abee635f8713f8ca92cf41790596"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2d9abee635f8713f8ca92cf41790596">&#9670;&nbsp;</a></span>SetDynamicInstancing()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetDynamicInstancing </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set dynamic instancing on/off. When on (default), drawables using the same static-type geometry and material will be automatically combined to an instanced draw call. </p>
-
-</div>
-</div>
-<a id="ac701b0041a1932397f71f9775aacb536"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac701b0041a1932397f71f9775aacb536">&#9670;&nbsp;</a></span>SetHDRRendering()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetHDRRendering </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set HDR rendering on/off. </p>
-
-</div>
-</div>
-<a id="af1a1e53c1d464fe4daf510d2454522f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1a1e53c1d464fe4daf510d2454522f6">&#9670;&nbsp;</a></span>SetMaterialQuality()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetMaterialQuality </td>
-          <td>(</td>
-          <td class="paramtype">MaterialQuality&#160;</td>
-          <td class="paramname"><em>quality</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set material quality level. See the QUALITY constants in <a class="el" href="_graphics_defs_8h.html">GraphicsDefs.h</a>. </p>
-
-</div>
-</div>
-<a id="a6f8f74b8fdee7f55b1ecc128141eb176"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f8f74b8fdee7f55b1ecc128141eb176">&#9670;&nbsp;</a></span>SetMaxOccluderTriangles()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetMaxOccluderTriangles </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>triangles</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set maximum number of occluder triangles. </p>
-
-</div>
-</div>
-<a id="a8ce616cf2ae0af4773e0dc36ef6a441a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ce616cf2ae0af4773e0dc36ef6a441a">&#9670;&nbsp;</a></span>SetMaxShadowMaps()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetMaxShadowMaps </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>shadowMaps</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set maximum number of shadow maps created for one resolution. Only has effect if reuse of shadow maps is disabled. </p>
-
-</div>
-</div>
-<a id="a81d948f4cfbb215a4fba49541350eb5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81d948f4cfbb215a4fba49541350eb5b">&#9670;&nbsp;</a></span>SetMaxSortedInstances()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetMaxSortedInstances </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>instances</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set maximum number of sorted instances per batch group. If exceeded, instances are rendered unsorted. </p>
-
-</div>
-</div>
-<a id="a26e087b58ea5e19d4677f28b2100797e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26e087b58ea5e19d4677f28b2100797e">&#9670;&nbsp;</a></span>SetMinInstances()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetMinInstances </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>instances</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set minimum number of instances required in a batch group to render as instanced. </p>
-
-</div>
-</div>
-<a id="ae3ad445f87277344006f69fc5879126d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3ad445f87277344006f69fc5879126d">&#9670;&nbsp;</a></span>SetMobileNormalOffsetMul()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetMobileNormalOffsetMul </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>mul</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set shadow normal offset multiplier for mobile platforms to counteract possible worse shadow map precision. Default 1.0 (no effect). </p>
-
-</div>
-</div>
-<a id="a797137c1b7e4a8016830d49b02b09a5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a797137c1b7e4a8016830d49b02b09a5d">&#9670;&nbsp;</a></span>SetMobileShadowBiasAdd()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetMobileShadowBiasAdd </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>add</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set shadow depth bias addition for mobile platforms to counteract possible worse shadow map precision. Default 0.0 (no effect). </p>
-
-</div>
-</div>
-<a id="a26fd3f9815f6b05f92be26e45269f093"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26fd3f9815f6b05f92be26e45269f093">&#9670;&nbsp;</a></span>SetMobileShadowBiasMul()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetMobileShadowBiasMul </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>mul</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set shadow depth bias multiplier for mobile platforms to counteract possible worse shadow map precision. Default 1.0 (no effect). </p>
-
-</div>
-</div>
-<a id="a2643fed4c08cc81a1fcd6ba637bcfbd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2643fed4c08cc81a1fcd6ba637bcfbd1">&#9670;&nbsp;</a></span>SetNumExtraInstancingBufferElements()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetNumExtraInstancingBufferElements </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>elements</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set number of extra instancing buffer elements. Default is 0. Extra 4-vectors are available through TEXCOORD7 and further. </p>
-
-</div>
-</div>
 <a id="a22da80417d1fe5b0bedd955b9fe836cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a22da80417d1fe5b0bedd955b9fe836cf">&#9670;&nbsp;</a></span>SetNumViewports()</h2>
 
@@ -2441,168 +943,6 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Set number of backbuffer viewports to render. </p>
-
-</div>
-</div>
-<a id="a3fcccde75cf5c79fcc05180a60eb44d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fcccde75cf5c79fcc05180a60eb44d8">&#9670;&nbsp;</a></span>SetOccluderSizeThreshold()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetOccluderSizeThreshold </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>screenSize</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set required screen size (1.0 = full screen) for occluders. </p>
-
-</div>
-</div>
-<a id="ae1af74251ac39634daa7e9a8df816fd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1af74251ac39634daa7e9a8df816fd7">&#9670;&nbsp;</a></span>SetOcclusionBufferSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetOcclusionBufferSize </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set occluder buffer width. </p>
-
-</div>
-</div>
-<a id="afa4ea9bd7d3a0942c27071082d1419c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa4ea9bd7d3a0942c27071082d1419c9">&#9670;&nbsp;</a></span>SetReuseShadowMaps()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetReuseShadowMaps </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set reuse of shadow maps. Default is true. If disabled, also transparent geometry can be shadowed. </p>
-
-</div>
-</div>
-<a id="a4d500a70c61963017f40b2948cd27fef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d500a70c61963017f40b2948cd27fef">&#9670;&nbsp;</a></span>SetShadowMapFilter()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetShadowMapFilter </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_object.html">Object</a> *&#160;</td>
-          <td class="paramname"><em>instance</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ShadowMapFilter&#160;</td>
-          <td class="paramname"><em>functionPtr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set post processing filter to the shadow map. </p>
-
-</div>
-</div>
-<a id="aa2e2e6cb90eca5a60ec6fe4160b57f58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2e2e6cb90eca5a60ec6fe4160b57f58">&#9670;&nbsp;</a></span>SetShadowMapSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetShadowMapSize </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set shadow map resolution. </p>
-
-</div>
-</div>
-<a id="ad3cd417832137ad7fca7704fb0f40af1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3cd417832137ad7fca7704fb0f40af1">&#9670;&nbsp;</a></span>SetShadowQuality()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetShadowQuality </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="_graphics_defs_8h.html#a54881b5c2aee8c0e8b59587bc2f7e94b">ShadowQuality</a>&#160;</td>
-          <td class="paramname"><em>quality</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set shadow quality mode. See the SHADOWQUALITY enum in <a class="el" href="_graphics_defs_8h.html">GraphicsDefs.h</a>. </p>
-
-</div>
-</div>
-<a id="ae4846e087e96d9158812a74f21b05bea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4846e087e96d9158812a74f21b05bea">&#9670;&nbsp;</a></span>SetShadowSoftness()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetShadowSoftness </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>shadowSoftness</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set shadow softness, only works when SHADOWQUALITY_BLUR_VSM is used. </p>
-
-</div>
-</div>
-<a id="abe38959b89dbcfb34b61eab3ac7ea8e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe38959b89dbcfb34b61eab3ac7ea8e0">&#9670;&nbsp;</a></span>SetSpecularLighting()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetSpecularLighting </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set specular lighting on/off. </p>
 
 </div>
 </div>
@@ -2634,7 +974,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void Urho3D::Renderer::SetTextureFilterMode </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_graphics_defs_8h.html#aa76618ce244fbf4560ec541b4a45845d">TextureFilterMode</a>&#160;</td>
+          <td class="paramtype">TextureFilterMode&#160;</td>
           <td class="paramname"><em>mode</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2660,25 +1000,6 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Set texture quality level. See the QUALITY constants in <a class="el" href="_graphics_defs_8h.html">GraphicsDefs.h</a>. </p>
-
-</div>
-</div>
-<a id="a49da632fd775c568d98894674caebd39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49da632fd775c568d98894674caebd39">&#9670;&nbsp;</a></span>SetThreadedOcclusion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetThreadedOcclusion </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set whether to thread occluder rendering. Default false. </p>
 
 </div>
 </div>
@@ -2708,25 +1029,6 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Set a backbuffer viewport. </p>
-
-</div>
-</div>
-<a id="a9efc7144132d4286d2cf4bdc64755668"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9efc7144132d4286d2cf4bdc64755668">&#9670;&nbsp;</a></span>SetVSMMultiSample()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Renderer::SetVSMMultiSample </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>multiSample</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set VSM shadow map multisampling level. Default 1 (no multisampling). </p>
 
 </div>
 </div>

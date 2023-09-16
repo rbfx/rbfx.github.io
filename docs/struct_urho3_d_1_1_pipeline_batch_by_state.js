@@ -27,9 +27,6 @@ var struct_urho3_d_1_1_pipeline_batch_by_state =
     [ "ReservedMask", "struct_urho3_d_1_1_pipeline_batch_by_state.html#a57e9dfbe7a77bf1d46c264534d202452", null ],
     [ "ReservedOffset", "struct_urho3_d_1_1_pipeline_batch_by_state.html#a1b56f166f9b386db4ae7ee3f06a8629c", null ],
     [ "secondaryKey_", "struct_urho3_d_1_1_pipeline_batch_by_state.html#abaf5f151e898f9c98a068aad77571b5e", null ],
-    [ "ShaderProgramBits", "struct_urho3_d_1_1_pipeline_batch_by_state.html#aa690a1dfc37f3abbe76a0c3dae368ed7", null ],
-    [ "ShaderProgramMask", "struct_urho3_d_1_1_pipeline_batch_by_state.html#acfc0c56bd88151dfe0ee1c09b0cb75ff", null ],
-    [ "ShaderProgramOffset", "struct_urho3_d_1_1_pipeline_batch_by_state.html#ace10163648b85964b1de1e5a112798a4", null ],
     [ "VertexLightsBits", "struct_urho3_d_1_1_pipeline_batch_by_state.html#a4b222610998dd64b58246685ef713d1c", null ],
     [ "VertexLightsMask", "struct_urho3_d_1_1_pipeline_batch_by_state.html#a60c7b4bd9419cc59e426e4f39adc7ed7", null ],
     [ "VertexLightsOffset", "struct_urho3_d_1_1_pipeline_batch_by_state.html#a38ad77238aaedc615c4afba044e92e4b", null ]

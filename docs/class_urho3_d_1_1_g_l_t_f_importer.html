@@ -99,10 +99,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:aa5a9267660e54b0be1e6f00700c6de97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a595e470af1087d60a01a455af3131573"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_g_l_t_f_importer.html#a595e470af1087d60a01a455af3131573">MergeFile</a> (const ea::string &amp;fileName, const ea::string &amp;assetName)</td></tr>
 <tr class="separator:a595e470af1087d60a01a455af3131573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d11f17eaf0916b9b0f8a6b76d96e162"><td class="memItemLeft" align="right" valign="top"><a id="a3d11f17eaf0916b9b0f8a6b76d96e162"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_g_l_t_f_importer.html#a3d11f17eaf0916b9b0f8a6b76d96e162">Process</a> (const ea::string &amp;outputPath, const ea::string &amp;resourceNamePrefix)</td></tr>
-<tr class="memdesc:a3d11f17eaf0916b9b0f8a6b76d96e162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process loaded GLTF files and import resources. Injects resources into resource cache! <br /></td></tr>
-<tr class="separator:a3d11f17eaf0916b9b0f8a6b76d96e162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a602ebf2c6f3725c709a2de168d370657"><td class="memItemLeft" align="right" valign="top"><a id="a602ebf2c6f3725c709a2de168d370657"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_g_l_t_f_importer.html#a602ebf2c6f3725c709a2de168d370657">Process</a> (const ea::string &amp;outputPath, const ea::string &amp;resourceNamePrefix, <a class="el" href="class_urho3_d_1_1_g_l_t_f_importer_callback.html">GLTFImporterCallback</a> *callback)</td></tr>
+<tr class="memdesc:a602ebf2c6f3725c709a2de168d370657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process loaded GLTF files and import resources. Injects resources into resource cache! <br /></td></tr>
+<tr class="separator:a602ebf2c6f3725c709a2de168d370657"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9286fb840896b5bf55a68f6ff2976541"><td class="memItemLeft" align="right" valign="top"><a id="a9286fb840896b5bf55a68f6ff2976541"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_g_l_t_f_importer.html#a9286fb840896b5bf55a68f6ff2976541">SaveResources</a> ()</td></tr>
 <tr class="memdesc:a9286fb840896b5bf55a68f6ff2976541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save generated resources. <br /></td></tr>
@@ -326,6 +326,9 @@ ea::unique_ptr&lt; tinygltf::Model &gt;&#160;</td><td class="memItemRight" valig
 <tr class="memitem:a368945581422e4c1a208c8280d88bc37"><td class="memItemLeft" align="right" valign="top"><a id="a368945581422e4c1a208c8280d88bc37"></a>
 ea::unique_ptr&lt; Impl &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>impl_</b></td></tr>
 <tr class="separator:a368945581422e4c1a208c8280d88bc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b16fe923b1e67f67db2ae16ed660dd8"><td class="memItemLeft" align="right" valign="top"><a id="a7b16fe923b1e67f67db2ae16ed660dd8"></a>
+<a class="el" href="class_urho3_d_1_1_g_l_t_f_importer_callback.html">GLTFImporterCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><b>defaultCallback_</b></td></tr>
+<tr class="separator:a7b16fe923b1e67f67db2ae16ed660dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

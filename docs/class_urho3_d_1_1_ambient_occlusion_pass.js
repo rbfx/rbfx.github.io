@@ -3,7 +3,7 @@ var class_urho3_d_1_1_ambient_occlusion_pass =
     [ "CachedStates", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states" ],
     [ "CachedTextures", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_textures.html", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_textures" ],
     [ "AmbientOcclusionPass", "class_urho3_d_1_1_ambient_occlusion_pass.html#a172f5ddb6b5840014a55edebb1551f0a", null ],
-    [ "Blit", "class_urho3_d_1_1_ambient_occlusion_pass.html#a10f55fe44c74c335b843a8dc20479371", null ],
+    [ "Blit", "class_urho3_d_1_1_ambient_occlusion_pass.html#af37be9204a41aa358bfdb8bd30c65803", null ],
     [ "BlurTexture", "class_urho3_d_1_1_ambient_occlusion_pass.html#a64af9d9a3b2e3acfe617f3f3748d89fa", null ],
     [ "EvaluateAO", "class_urho3_d_1_1_ambient_occlusion_pass.html#a9fab40a1939edd908a3103abc9a33634", null ],
     [ "Execute", "class_urho3_d_1_1_ambient_occlusion_pass.html#afbdb515c740c6d1bf0ed6f5759477904", null ],

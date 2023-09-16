@@ -1,5 +1,5 @@
 var struct_urho3_d_1_1_shader_resource_desc =
 [
-    [ "texture_", "struct_urho3_d_1_1_shader_resource_desc.html#a74e22b915cd3bb95daf472e5109a676b", null ],
-    [ "unit_", "struct_urho3_d_1_1_shader_resource_desc.html#a7b6c265dc841ec7a9bc33019f0621e59", null ]
+    [ "name_", "struct_urho3_d_1_1_shader_resource_desc.html#a698a40b040abac09daa674c5bf00e358", null ],
+    [ "texture_", "struct_urho3_d_1_1_shader_resource_desc.html#a9d94ef4648b021ef4394ee317a6b00a4", null ]
 ];

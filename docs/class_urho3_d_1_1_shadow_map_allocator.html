@@ -113,6 +113,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a577fcf383e5d00fad3fb81734128cd44"><td class="memItemLeft" align="right" valign="top"><a id="a577fcf383e5d00fad3fb81734128cd44"></a>
 const <a class="el" href="struct_urho3_d_1_1_shadow_map_allocator_settings.html">ShadowMapAllocatorSettings</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSettings</b> () const</td></tr>
 <tr class="separator:a577fcf383e5d00fad3fb81734128cd44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af57ff8c492b61d00fc8a8acfc4a1dc1d"><td class="memItemLeft" align="right" valign="top"><a id="af57ff8c492b61d00fc8a8acfc4a1dc1d"></a>
+const SamplerStateDesc &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSamplerStateDesc</b> () const</td></tr>
+<tr class="separator:af57ff8c492b61d00fc8a8acfc4a1dc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76fb133d152c3a319429c28c42ec3fa2"><td class="memItemLeft" align="right" valign="top"><a id="a76fb133d152c3a319429c28c42ec3fa2"></a>
+const PipelineStateOutputDesc &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetShadowOutputDesc</b> () const</td></tr>
+<tr class="separator:a76fb133d152c3a319429c28c42ec3fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -325,25 +331,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>AllocatePage</b> ()</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:af3cc7c5f190d44792cca88fbfc37d317"><td class="memItemLeft" align="right" valign="top"><a id="af3cc7c5f190d44792cca88fbfc37d317"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shadow_map_allocator.html#af3cc7c5f190d44792cca88fbfc37d317">dummyColorTexture_</a></td></tr>
-<tr class="memdesc:af3cc7c5f190d44792cca88fbfc37d317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dummy color map for workaround, if needed. <br /></td></tr>
-<tr class="separator:af3cc7c5f190d44792cca88fbfc37d317"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abadb549db854270e4a8e21377d3c4b90"><td class="memItemLeft" align="right" valign="top"><a id="abadb549db854270e4a8e21377d3c4b90"></a>
 ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_shadow_map_allocator_1_1_atlas_page.html">AtlasPage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pages_</b></td></tr>
 <tr class="separator:abadb549db854270e4a8e21377d3c4b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d59f46a427fe43167c1b9b753e306d"><td class="memItemLeft" align="right" valign="top"><a id="a40d59f46a427fe43167c1b9b753e306d"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vsmDepthTexture_</b></td></tr>
+<tr class="separator:a40d59f46a427fe43167c1b9b753e306d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:afd544088786dc1d29d7c8f5d35773d52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_graphics.html">Graphics</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shadow_map_allocator.html#afd544088786dc1d29d7c8f5d35773d52">graphics_</a> {}</td></tr>
-<tr class="separator:afd544088786dc1d29d7c8f5d35773d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1673c25de34ca158513d5cad72d5a00"><td class="memItemLeft" align="right" valign="top"><a id="ae1673c25de34ca158513d5cad72d5a00"></a>
-<a class="el" href="class_urho3_d_1_1_renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>renderer_</b> {}</td></tr>
-<tr class="separator:ae1673c25de34ca158513d5cad72d5a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b1f02f7bc67a82559c3eefd1fd0e86"><td class="memItemLeft" align="right" valign="top">RenderDevice *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shadow_map_allocator.html#a94b1f02f7bc67a82559c3eefd1fd0e86">renderDevice_</a> {}</td></tr>
+<tr class="separator:a94b1f02f7bc67a82559c3eefd1fd0e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4c5787cc3b6986976ec0137b892131"><td class="memItemLeft" align="right" valign="top"><a id="a5b4c5787cc3b6986976ec0137b892131"></a>
+RenderContext *&#160;</td><td class="memItemRight" valign="bottom"><b>renderContext_</b> {}</td></tr>
+<tr class="separator:a5b4c5787cc3b6986976ec0137b892131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a4c3c0991e645d6c8902bbd84898f4f66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_urho3_d_1_1_shadow_map_allocator_settings.html">ShadowMapAllocatorSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shadow_map_allocator.html#a4c3c0991e645d6c8902bbd84898f4f66">settings_</a></td></tr>
 <tr class="separator:a4c3c0991e645d6c8902bbd84898f4f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f0fc457f251a81674387ac1998b239d"><td class="memItemLeft" align="right" valign="top"><a id="a0f0fc457f251a81674387ac1998b239d"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>shadowMapFormat_</b> {}</td></tr>
-<tr class="separator:a0f0fc457f251a81674387ac1998b239d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0110b25f3676e1f0a159c64e259898a3"><td class="memItemLeft" align="right" valign="top"><a id="a0110b25f3676e1f0a159c64e259898a3"></a>
+SamplerStateDesc&#160;</td><td class="memItemRight" valign="bottom"><b>samplerStateDesc_</b></td></tr>
+<tr class="separator:a0110b25f3676e1f0a159c64e259898a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee3f62f7af61743dbccfc71dd75a30fb"><td class="memItemLeft" align="right" valign="top"><a id="aee3f62f7af61743dbccfc71dd75a30fb"></a>
+PipelineStateOutputDesc&#160;</td><td class="memItemRight" valign="bottom"><b>shadowOutputDesc_</b></td></tr>
+<tr class="separator:aee3f62f7af61743dbccfc71dd75a30fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e326386662afeeb6ef007ef9d0b44b7"><td class="memItemLeft" align="right" valign="top"><a id="a9e326386662afeeb6ef007ef9d0b44b7"></a>
+TextureFormat&#160;</td><td class="memItemRight" valign="bottom"><b>shadowMapFormat_</b> {}</td></tr>
+<tr class="separator:a9e326386662afeeb6ef007ef9d0b44b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9cefcb120ea47422ede7e8c4824742e"><td class="memItemLeft" align="right" valign="top"><a id="aa9cefcb120ea47422ede7e8c4824742e"></a>
 <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>shadowAtlasPageSize_</b></td></tr>
 <tr class="separator:aa9cefcb120ea47422ede7e8c4824742e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -364,8 +375,8 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Utility to allocate shadow maps in texture atlas. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="afd544088786dc1d29d7c8f5d35773d52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd544088786dc1d29d7c8f5d35773d52">&#9670;&nbsp;</a></span>graphics_</h2>
+<a id="a94b1f02f7bc67a82559c3eefd1fd0e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94b1f02f7bc67a82559c3eefd1fd0e86">&#9670;&nbsp;</a></span>renderDevice_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,7 +385,7 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_urho3_d_1_1_graphics.html">Graphics</a>* Urho3D::ShadowMapAllocator::graphics_ {}</td>
+          <td class="memname">RenderDevice* Urho3D::ShadowMapAllocator::renderDevice_ {}</td>
         </tr>
       </table>
   </td>

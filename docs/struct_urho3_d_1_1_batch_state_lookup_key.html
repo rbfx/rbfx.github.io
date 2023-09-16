@@ -111,7 +111,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>pixelLightHash_</
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Key used to lookup cached pipeline states for <a class="el" href="struct_urho3_d_1_1_pipeline_batch.html" title="Self-sufficient batch that can be sorted and rendered by RenderPipeline.">PipelineBatch</a>.</p>
-<p><a class="el" href="class_urho3_d_1_1_pipeline_state.html" title="Cooked pipeline state. It&#39;s not an Object to keep it lightweight.">PipelineState</a> creation may depend only on variables that contribute to <a class="el" href="struct_urho3_d_1_1_batch_state_lookup_key.html">BatchStateLookupKey</a>:</p>
+<p>PipelineState creation may depend only on variables that contribute to <a class="el" href="struct_urho3_d_1_1_batch_state_lookup_key.html">BatchStateLookupKey</a>:</p>
 <ul>
 <li>Parameters of <a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a> that contribute to hash calculation. Key does not depend on <a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a> for better reuse.</li>
 <li>Parameters of per-pixel <a class="el" href="class_urho3_d_1_1_light.html" title="Light component.">Light</a> that contribute to hash calculation (for both lit and shadow geometry rendering).</li>

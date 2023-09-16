@@ -72,7 +72,7 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_batch_compositor.htm
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="struct_urho3_d_1_1_batch.html" title="Queued 3D geometry draw call.">Batch</a> composition manager.  
+<p>Batch composition manager.  
  <a href="class_urho3_d_1_1_batch_compositor.html#details">More...</a></p>
 
 <p><code>#include &lt;Urho3D/RenderPipeline/BatchCompositor.h&gt;</code></p>
@@ -89,11 +89,11 @@ Inheritance diagram for Urho3D::BatchCompositor:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a53834b6b00b0617aead8af13b22fa0a6"><td class="memItemLeft" align="right" valign="top"><a id="a53834b6b00b0617aead8af13b22fa0a6"></a>enum &#160;</td><td class="memItemRight" valign="bottom">: unsigned { <b>ShadowSubpass</b> = 0, 
+<tr class="memitem:a4610ef4ce1c2108a38566fd15e1f933b"><td class="memItemLeft" align="right" valign="top"><a id="a4610ef4ce1c2108a38566fd15e1f933b"></a>enum &#160;</td><td class="memItemRight" valign="bottom">: unsigned { <b>ShadowSubpass</b> = 0, 
 <b>LitVolumeSubpass</b>
  }</td></tr>
-<tr class="memdesc:a53834b6b00b0617aead8af13b22fa0a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subpass indices. <br /></td></tr>
-<tr class="separator:a53834b6b00b0617aead8af13b22fa0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a4610ef4ce1c2108a38566fd15e1f933b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subpass indices. <br /></td></tr>
+<tr class="separator:a4610ef4ce1c2108a38566fd15e1f933b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -106,6 +106,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPasses</b> (ea::ve
 <tr class="memitem:a9757348b8a2d7eb69d0a0d84b12d4d22"><td class="memItemLeft" align="right" valign="top"><a id="a9757348b8a2d7eb69d0a0d84b12d4d22"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetShadowMaterialQuality</b> (MaterialQuality materialQuality)</td></tr>
 <tr class="separator:a9757348b8a2d7eb69d0a0d84b12d4d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af662b85c372330a41bc3a09514cd2954"><td class="memItemLeft" align="right" valign="top"><a id="af662b85c372330a41bc3a09514cd2954"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetShadowOutputDesc</b> (const PipelineStateOutputDesc &amp;desc)</td></tr>
+<tr class="separator:af662b85c372330a41bc3a09514cd2954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca58e40a492ed1d8ee8ec882363d6ba"><td class="memItemLeft" align="right" valign="top"><a id="a7ca58e40a492ed1d8ee8ec882363d6ba"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLightVolumesOutputDesc</b> (const PipelineStateOutputDesc &amp;desc)</td></tr>
+<tr class="separator:a7ca58e40a492ed1d8ee8ec882363d6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5874b5111dc2a600fdc955838f885534"><td class="memItemLeft" align="right" valign="top"><a id="a5874b5111dc2a600fdc955838f885534"></a>
 const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_compositor.html#a5874b5111dc2a600fdc955838f885534">GetLightVolumeBatches</a> () const</td></tr>
 <tr class="memdesc:a5874b5111dc2a600fdc955838f885534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return sorted light volume batches. <br /></td></tr>
@@ -416,7 +422,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="struct_urho3_d_1_1_batch.html" title="Queued 3D geometry draw call.">Batch</a> composition manager. </p>
+<div class="textblock"><p>Batch composition manager. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a086af977750a9ea733b75224811c41b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a086af977750a9ea733b75224811c41b8">&#9670;&nbsp;</a></span>ComposeShadowBatches()</h2>

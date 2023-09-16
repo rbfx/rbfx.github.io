@@ -5,7 +5,7 @@ var class_urho3_d_1_1_system_u_i =
     [ "AddFont", "class_urho3_d_1_1_system_u_i.html#a72a835e3cd4748fcc741e3db2703f476", null ],
     [ "AddFont", "class_urho3_d_1_1_system_u_i.html#acf3e137666e6b1f541f7658f88c355d9", null ],
     [ "AddFontCompressed", "class_urho3_d_1_1_system_u_i.html#ae273d5456f75040e99fb420dd62f44e5", null ],
-    [ "AllocateFontTexture", "class_urho3_d_1_1_system_u_i.html#aa6bc8ca18bb6bff26cbed99378729107", null ],
+    [ "AllocateFontTexture", "class_urho3_d_1_1_system_u_i.html#ade7690b13a53586a96627d3c830d1f5e", null ],
     [ "ApplyStyleDefault", "class_urho3_d_1_1_system_u_i.html#a441ffb7449e6d125b7950391f164e7cd", null ],
     [ "ClearPerScreenFonts", "class_urho3_d_1_1_system_u_i.html#aeaf307391a26628790e02763485d61a7", null ],
     [ "GetPassThroughEvents", "class_urho3_d_1_1_system_u_i.html#a9bbf85288cf7355d69fcac8e745be611", null ],
@@ -27,11 +27,10 @@ var class_urho3_d_1_1_system_u_i =
     [ "fontSizes_", "class_urho3_d_1_1_system_u_i.html#ad0fef7eed668c2926b50b5fa79fd6243", null ],
     [ "fontTextures_", "class_urho3_d_1_1_system_u_i.html#ab5c9eee4b79ab4e15468a1e812aaeb87", null ],
     [ "imContext_", "class_urho3_d_1_1_system_u_i.html#a65c6d1261e3292741730d60fdbaf4ff6", null ],
-    [ "indexBuffer_", "class_urho3_d_1_1_system_u_i.html#ae659d30d6c9d55751064ae8c966bf44e", null ],
+    [ "impl_", "class_urho3_d_1_1_system_u_i.html#a1c1751cbcb4ddad91f3bf4056d20f43e", null ],
     [ "passThroughEvents_", "class_urho3_d_1_1_system_u_i.html#ad1f17ed72ee3f6d45c37b8596adee1f2", null ],
     [ "referencedTextures_", "class_urho3_d_1_1_system_u_i.html#a4aa28c686bd0fa66a435bbdf92773041", null ],
     [ "relativeMouseMove_", "class_urho3_d_1_1_system_u_i.html#ade27df400dd8251d03d69d6fb3b44cf1", null ],
     [ "revertMousePosition_", "class_urho3_d_1_1_system_u_i.html#a06df5d13c5af3681b225ec4154972e28", null ],
-    [ "revertMousePositionOnDisable_", "class_urho3_d_1_1_system_u_i.html#aa605d40efc88ad95ab61ef3a104cf88e", null ],
-    [ "vertexBuffer_", "class_urho3_d_1_1_system_u_i.html#ac5ca1cf6b57068d3ab8e948d1a0c0fa4", null ]
+    [ "revertMousePositionOnDisable_", "class_urho3_d_1_1_system_u_i.html#aa605d40efc88ad95ab61ef3a104cf88e", null ]
 ];

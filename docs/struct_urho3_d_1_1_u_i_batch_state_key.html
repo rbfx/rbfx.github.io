@@ -60,7 +60,6 @@ $(document).ready(function(){initNavTree('struct_urho3_d_1_1_u_i_batch_state_key
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="struct_urho3_d_1_1_u_i_batch_state_key-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -72,9 +71,12 @@ $(document).ready(function(){initNavTree('struct_urho3_d_1_1_u_i_batch_state_key
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a81c0fb0c2ed3a8b007ae1b2396d02eee"><td class="memItemLeft" align="right" valign="top"><a id="a81c0fb0c2ed3a8b007ae1b2396d02eee"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="struct_urho3_d_1_1_u_i_batch_state_key.html">UIBatchStateKey</a> &amp;rhs) const</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a81c0fb0c2ed3a8b007ae1b2396d02eee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_u_i_batch_state_key.html#a81c0fb0c2ed3a8b007ae1b2396d02eee">operator==</a> (const <a class="el" href="struct_urho3_d_1_1_u_i_batch_state_key.html">UIBatchStateKey</a> &amp;rhs) const</td></tr>
 <tr class="separator:a81c0fb0c2ed3a8b007ae1b2396d02eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ed6141d6eab0fef15cb0b3e531167e3"><td class="memItemLeft" align="right" valign="top"><a id="a5ed6141d6eab0fef15cb0b3e531167e3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="struct_urho3_d_1_1_u_i_batch_state_key.html">UIBatchStateKey</a> &amp;rhs) const</td></tr>
+<tr class="separator:a5ed6141d6eab0fef15cb0b3e531167e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99e0b42d3b72570c4dfe5f7edea7440b"><td class="memItemLeft" align="right" valign="top"><a id="a99e0b42d3b72570c4dfe5f7edea7440b"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>ToHash</b> () const</td></tr>
 <tr class="separator:a99e0b42d3b72570c4dfe5f7edea7440b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -84,6 +86,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a4ddd56aaf91c6e1538bbb6fdeca2f82d"><td class="memItemLeft" align="right" valign="top"><a id="a4ddd56aaf91c6e1538bbb6fdeca2f82d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>linearOutput_</b> {}</td></tr>
 <tr class="separator:a4ddd56aaf91c6e1538bbb6fdeca2f82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0219ef585552acdaa4abde7b8ffff226"><td class="memItemLeft" align="right" valign="top"><a id="a0219ef585552acdaa4abde7b8ffff226"></a>
+PipelineStateOutputDesc&#160;</td><td class="memItemRight" valign="bottom"><b>outputDesc_</b> {}</td></tr>
+<tr class="separator:a0219ef585552acdaa4abde7b8ffff226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ed0f6ac283e8f3323f82156182889b6"><td class="memItemLeft" align="right" valign="top"><a id="a7ed0f6ac283e8f3323f82156182889b6"></a>
 <a class="el" href="class_urho3_d_1_1_material.html">Material</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>material_</b> {}</td></tr>
 <tr class="separator:a7ed0f6ac283e8f3323f82156182889b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -91,12 +96,43 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>linearOutput_</b> {}<
 <a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pass_</b> {}</td></tr>
 <tr class="separator:a1e7b6fe95b7e1bdf1ef13d7da7f7652d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5716ac637233493c62898d1222ce3821"><td class="memItemLeft" align="right" valign="top"><a id="a5716ac637233493c62898d1222ce3821"></a>
-<a class="el" href="_graphics_defs_8h.html#a2697a2bc51d21a1bf33367cb01c93d2f">BlendMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>blendMode_</b> {}</td></tr>
+BlendMode&#160;</td><td class="memItemRight" valign="bottom"><b>blendMode_</b> {}</td></tr>
 <tr class="separator:a5716ac637233493c62898d1222ce3821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c6e44f05b5cb718514678c0d350d781"><td class="memItemLeft" align="right" valign="top"><a id="a3c6e44f05b5cb718514678c0d350d781"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>samplerStateHash_</b> {}</td></tr>
+<tr class="separator:a3c6e44f05b5cb718514678c0d350d781"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Key used to lookup cached pipeline states for <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> batches. It's assumed that all <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> batches use the same vertex and index buffer formats and material pass. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a81c0fb0c2ed3a8b007ae1b2396d02eee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81c0fb0c2ed3a8b007ae1b2396d02eee">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Urho3D::UIBatchStateKey::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_u_i_batch_state_key.html">UIBatchStateKey</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Operators. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>Urho3D/RenderPipeline/BatchStateCache.h</li>
 </ul>
 </div><!-- contents -->

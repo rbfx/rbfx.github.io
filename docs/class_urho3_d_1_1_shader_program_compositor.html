@@ -330,9 +330,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ApplyNormalTangentSpa
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a8094f3e269a630ac3d7245f70ab81d38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shader_program_compositor.html#a8094f3e269a630ac3d7245f70ab81d38">ApplyLayoutVertexAndCommonDefinesForUserPass</a> (<a class="el" href="struct_urho3_d_1_1_shader_program_desc.html">ShaderProgramDesc</a> &amp;result, <a class="el" href="class_urho3_d_1_1_vertex_buffer.html">VertexBuffer</a> *vertexBuffer) const</td></tr>
 <tr class="separator:a8094f3e269a630ac3d7245f70ab81d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abec76f71067fd034de794866f47ed9ce"><td class="memItemLeft" align="right" valign="top"><a id="abec76f71067fd034de794866f47ed9ce"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ApplyMaterialPixelDefinesForUserPass</b> (<a class="el" href="struct_urho3_d_1_1_shader_program_desc.html">ShaderProgramDesc</a> &amp;result, <a class="el" href="class_urho3_d_1_1_material.html">Material</a> *material) const</td></tr>
-<tr class="separator:abec76f71067fd034de794866f47ed9ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a946463f8cbe6e81446517b52a7dcab3e"><td class="memItemLeft" align="right" valign="top"><a id="a946463f8cbe6e81446517b52a7dcab3e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApplyMaterialPixelDefinesForUserPass</b> (<a class="el" href="struct_urho3_d_1_1_shader_program_desc.html">ShaderProgramDesc</a> &amp;result, <a class="el" href="class_urho3_d_1_1_material.html">Material</a> *material, <a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *pass) const</td></tr>
+<tr class="separator:a946463f8cbe6e81446517b52a7dcab3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87c2781af2ff24e4f560b8e34ad15d48"><td class="memItemLeft" align="right" valign="top"><a id="a87c2781af2ff24e4f560b8e34ad15d48"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ApplyAmbientLightingVertexAndCommonDefinesForUserPass</b> (<a class="el" href="struct_urho3_d_1_1_shader_program_desc.html">ShaderProgramDesc</a> &amp;result, <a class="el" href="class_urho3_d_1_1_drawable.html">Drawable</a> *drawable, bool isGeometryBufferPass) const</td></tr>
 <tr class="separator:a87c2781af2ff24e4f560b8e34ad15d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -346,10 +346,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ApplyDefinesForLightV
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ac24cedf9930a62c422c660a3935de19f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shader_program_compositor.html#ac24cedf9930a62c422c660a3935de19f">constantBuffersSupported_</a> {}</td></tr>
-<tr class="separator:ac24cedf9930a62c422c660a3935de19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87d5083853279f09b542727bb5842077"><td class="memItemLeft" align="right" valign="top"><a id="a87d5083853279f09b542727bb5842077"></a>
-<a class="el" href="struct_urho3_d_1_1_shader_program_compositor_settings.html">ShaderProgramCompositorSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><b>settings_</b></td></tr>
+<tr class="memitem:a87d5083853279f09b542727bb5842077"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_urho3_d_1_1_shader_program_compositor_settings.html">ShaderProgramCompositorSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shader_program_compositor.html#a87d5083853279f09b542727bb5842077">settings_</a></td></tr>
 <tr class="separator:a87d5083853279f09b542727bb5842077"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a142215da49bbca04446e03a4456b1272"><td class="memItemLeft" align="right" valign="top"><a id="a142215da49bbca04446e03a4456b1272"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isCameraOrthographic_</b> {}</td></tr>
@@ -584,8 +581,8 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac24cedf9930a62c422c660a3935de19f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac24cedf9930a62c422c660a3935de19f">&#9670;&nbsp;</a></span>constantBuffersSupported_</h2>
+<a id="a87d5083853279f09b542727bb5842077"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87d5083853279f09b542727bb5842077">&#9670;&nbsp;</a></span>settings_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -594,7 +591,7 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Urho3D::ShaderProgramCompositor::constantBuffersSupported_ {}</td>
+          <td class="memname"><a class="el" href="struct_urho3_d_1_1_shader_program_compositor_settings.html">ShaderProgramCompositorSettings</a> Urho3D::ShaderProgramCompositor::settings_</td>
         </tr>
       </table>
   </td>

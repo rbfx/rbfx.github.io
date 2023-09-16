@@ -100,7 +100,7 @@ unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <tr class="separator:abaf5f151e898f9c98a068aad77571b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe728582d9c0cf5dd0b243158be3f701"><td class="memItemLeft" align="right" valign="top"><a id="abe728582d9c0cf5dd0b243158be3f701"></a>
 const <a class="el" href="struct_urho3_d_1_1_pipeline_batch.html">PipelineBatch</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_pipeline_batch_by_state.html#abe728582d9c0cf5dd0b243158be3f701">pipelineBatch_</a> {}</td></tr>
-<tr class="memdesc:abe728582d9c0cf5dd0b243158be3f701"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_urho3_d_1_1_batch.html" title="Queued 3D geometry draw call.">Batch</a> to be sorted. <br /></td></tr>
+<tr class="memdesc:abe728582d9c0cf5dd0b243158be3f701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Batch to be sorted. <br /></td></tr>
 <tr class="separator:abe728582d9c0cf5dd0b243158be3f701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -115,11 +115,8 @@ static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="b
 static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>MaterialBits</b> = 16</td></tr>
 <tr class="separator:a2d8a0b4e874de86522f109bd2cd30eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f5b660992f15dc4c7a3ce9dde80232a"><td class="memItemLeft" align="right" valign="top"><a id="a5f5b660992f15dc4c7a3ce9dde80232a"></a>
-static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>PipelineStateBits</b> = 8</td></tr>
+static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>PipelineStateBits</b> = 24</td></tr>
 <tr class="separator:a5f5b660992f15dc4c7a3ce9dde80232a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa690a1dfc37f3abbe76a0c3dae368ed7"><td class="memItemLeft" align="right" valign="top"><a id="aa690a1dfc37f3abbe76a0c3dae368ed7"></a>
-static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>ShaderProgramBits</b> = 16</td></tr>
-<tr class="separator:aa690a1dfc37f3abbe76a0c3dae368ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaade309f550fbc40d97ecef021935254"><td class="memItemLeft" align="right" valign="top"><a id="aaade309f550fbc40d97ecef021935254"></a>
 static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>RenderOrderBits</b> = 8</td></tr>
 <tr class="separator:aaade309f550fbc40d97ecef021935254"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,9 +132,6 @@ static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="b
 <tr class="memitem:a3c70ca5c3d29e55008ae017b3afbfc1d"><td class="memItemLeft" align="right" valign="top"><a id="a3c70ca5c3d29e55008ae017b3afbfc1d"></a>
 static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>PipelineStateMask</b> = (1ull &lt;&lt; PipelineStateBits) - 1</td></tr>
 <tr class="separator:a3c70ca5c3d29e55008ae017b3afbfc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfc0c56bd88151dfe0ee1c09b0cb75ff"><td class="memItemLeft" align="right" valign="top"><a id="acfc0c56bd88151dfe0ee1c09b0cb75ff"></a>
-static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>ShaderProgramMask</b> = (1ull &lt;&lt; ShaderProgramBits) - 1</td></tr>
-<tr class="separator:acfc0c56bd88151dfe0ee1c09b0cb75ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fec6aa694ed50b789992882e916a26e"><td class="memItemLeft" align="right" valign="top"><a id="a6fec6aa694ed50b789992882e916a26e"></a>
 static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>RenderOrderMask</b> = (1ull &lt;&lt; RenderOrderBits) - 1</td></tr>
 <tr class="separator:a6fec6aa694ed50b789992882e916a26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,11 +147,8 @@ static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="b
 <tr class="memitem:a712c98dfde523fb24f31c952136e7cd1"><td class="memItemLeft" align="right" valign="top"><a id="a712c98dfde523fb24f31c952136e7cd1"></a>
 static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>PipelineStateOffset</b> = MaterialOffset + MaterialBits</td></tr>
 <tr class="separator:a712c98dfde523fb24f31c952136e7cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace10163648b85964b1de1e5a112798a4"><td class="memItemLeft" align="right" valign="top"><a id="ace10163648b85964b1de1e5a112798a4"></a>
-static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>ShaderProgramOffset</b> = PipelineStateOffset + PipelineStateBits</td></tr>
-<tr class="separator:ace10163648b85964b1de1e5a112798a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f91672f8f0ae2640d80d839f9e588e0"><td class="memItemLeft" align="right" valign="top"><a id="a9f91672f8f0ae2640d80d839f9e588e0"></a>
-static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>RenderOrderOffset</b> = ShaderProgramOffset + ShaderProgramBits</td></tr>
+static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><b>RenderOrderOffset</b> = PipelineStateOffset + PipelineStateBits</td></tr>
 <tr class="separator:a9f91672f8f0ae2640d80d839f9e588e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a1b6415ee87123d381c0f11edd2a1ff75"><td class="memItemLeft" align="right" valign="top">static constexpr unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_pipeline_batch_by_state.html#a1b6415ee87123d381c0f11edd2a1ff75">ReservedBits</a> = 16</td></tr>

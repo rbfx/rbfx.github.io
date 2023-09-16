@@ -32,6 +32,7 @@ var class_urho3_d_1_1_shadow_split_processor =
     [ "focusedCascadeZRange_", "class_urho3_d_1_1_shadow_split_processor.html#a59f87c1508bbefee947efc766020ba52", null ],
     [ "light_", "class_urho3_d_1_1_shadow_split_processor.html#abc2cd667eeaa94d266d8015864446de7", null ],
     [ "lightProcessor_", "class_urho3_d_1_1_shadow_split_processor.html#a0745caa317a044cb47f1a661d1faf968", null ],
+    [ "renderBackend_", "class_urho3_d_1_1_shadow_split_processor.html#a2318262cb43293468fb15f14a8ee335b", null ],
     [ "shadowBatches_", "class_urho3_d_1_1_shadow_split_processor.html#a52dad90f9cd7f97038517f282d41282d", null ],
     [ "shadowCamera_", "class_urho3_d_1_1_shadow_split_processor.html#a0a5ed499a2d41f9edf47cfcbf3e6ddca", null ],
     [ "shadowCameraNode_", "class_urho3_d_1_1_shadow_split_processor.html#a603dd2a881d4bfbc5a48d6b700491864", null ],

@@ -87,15 +87,15 @@ Inheritance diagram for Urho3D::SimplePostProcessPass:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3932b916bcbe0ae48fe05acf884afe04"><td class="memItemLeft" align="right" valign="top"><a id="a3932b916bcbe0ae48fe05acf884afe04"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SimplePostProcessPass</b> (<a class="el" href="class_urho3_d_1_1_render_pipeline_interface.html">RenderPipelineInterface</a> *renderPipeline, <a class="el" href="class_urho3_d_1_1_render_buffer_manager.html">RenderBufferManager</a> *renderBufferManager, PostProcessPassFlags flags, <a class="el" href="_graphics_defs_8h.html#a2697a2bc51d21a1bf33367cb01c93d2f">BlendMode</a> blendMode, const ea::string &amp;shaderName, const ea::string &amp;shaderDefines)</td></tr>
-<tr class="separator:a3932b916bcbe0ae48fe05acf884afe04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce485c159abee515bb881c2b7bf0379"><td class="memItemLeft" align="right" valign="top"><a id="acce485c159abee515bb881c2b7bf0379"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SimplePostProcessPass</b> (<a class="el" href="class_urho3_d_1_1_render_pipeline_interface.html">RenderPipelineInterface</a> *renderPipeline, <a class="el" href="class_urho3_d_1_1_render_buffer_manager.html">RenderBufferManager</a> *renderBufferManager, PostProcessPassFlags flags, BlendMode blendMode, const ea::string &amp;shaderName, const ea::string &amp;shaderDefines, ea::span&lt; const NamedSamplerStateDesc &gt; samplers={})</td></tr>
+<tr class="separator:acce485c159abee515bb881c2b7bf0379"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76d0e8071a36fe42c71b2ee54490d939"><td class="memItemLeft" align="right" valign="top"><a id="a76d0e8071a36fe42c71b2ee54490d939"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>AddShaderParameter</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> name, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;value)</td></tr>
 <tr class="separator:a76d0e8071a36fe42c71b2ee54490d939"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8984d515990688646a187fbbef9595ea"><td class="memItemLeft" align="right" valign="top"><a id="a8984d515990688646a187fbbef9595ea"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddShaderResource</b> (<a class="el" href="_graphics_defs_8h.html#a4042c84b872f2caaa29c6cb585b82f96">TextureUnit</a> unit, <a class="el" href="class_urho3_d_1_1_texture.html">Texture</a> *texture)</td></tr>
-<tr class="separator:a8984d515990688646a187fbbef9595ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2467ad44f206621b7f8540f19b481e8"><td class="memItemLeft" align="right" valign="top"><a id="af2467ad44f206621b7f8540f19b481e8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddShaderResource</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> name, <a class="el" href="class_urho3_d_1_1_texture.html">Texture</a> *texture)</td></tr>
+<tr class="separator:af2467ad44f206621b7f8540f19b481e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abff7575f191b967e988c204b390979d5"><td class="memItemLeft" align="right" valign="top"><a id="abff7575f191b967e988c204b390979d5"></a>
 PostProcessPassFlags&#160;</td><td class="memItemRight" valign="bottom"><b>GetExecutionFlags</b> () const override</td></tr>
 <tr class="separator:abff7575f191b967e988c204b390979d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -312,9 +312,9 @@ const PostProcessPassFlags&#160;</td><td class="memItemRight" valign="bottom"><b
 <tr class="memitem:ab2e9693f0b42783447299e40ebc2cd55"><td class="memItemLeft" align="right" valign="top"><a id="ab2e9693f0b42783447299e40ebc2cd55"></a>
 const ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>debugComment_</b></td></tr>
 <tr class="separator:ab2e9693f0b42783447299e40ebc2cd55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee3a8f1152dfa13d9c826d59f8e69d16"><td class="memItemLeft" align="right" valign="top"><a id="aee3a8f1152dfa13d9c826d59f8e69d16"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_pipeline_state.html">PipelineState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pipelineState_</b></td></tr>
-<tr class="separator:aee3a8f1152dfa13d9c826d59f8e69d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ec5f51f7ea6234fa04e69b6bfcf3361"><td class="memItemLeft" align="right" valign="top"><a id="a4ec5f51f7ea6234fa04e69b6bfcf3361"></a>
+StaticPipelineStateId&#160;</td><td class="memItemRight" valign="bottom"><b>pipelineState_</b> {}</td></tr>
+<tr class="separator:a4ec5f51f7ea6234fa04e69b6bfcf3361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a502957e126c383e0ef0889839d66d6f4"><td class="memItemLeft" align="right" valign="top"><a id="a502957e126c383e0ef0889839d66d6f4"></a>
 ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_shader_parameter_desc.html">ShaderParameterDesc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>shaderParameters_</b></td></tr>
 <tr class="separator:a502957e126c383e0ef0889839d66d6f4"><td class="memSeparator" colspan="2">&#160;</td></tr>

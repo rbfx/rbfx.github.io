@@ -5,5 +5,6 @@ var struct_urho3_d_1_1_draw_quad_params =
     [ "invInputSize_", "struct_urho3_d_1_1_draw_quad_params.html#a3df25849ada0277c8b790aaf898ba834", null ],
     [ "parameters_", "struct_urho3_d_1_1_draw_quad_params.html#abf4bc126992800798455b38f561b512f", null ],
     [ "pipelineState_", "struct_urho3_d_1_1_draw_quad_params.html#a46aab2688723a67b99b956a2207c3067", null ],
+    [ "pipelineStateId_", "struct_urho3_d_1_1_draw_quad_params.html#acdd35786cf4f0382ce40c730f6249792", null ],
     [ "resources_", "struct_urho3_d_1_1_draw_quad_params.html#a97adfe65270176e8e6454e4d64889553", null ]
 ];

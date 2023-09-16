@@ -3,7 +3,7 @@ var class_urho3_d_1_1_i_k_limb_solver =
     [ "LocalCache", "struct_urho3_d_1_1_i_k_limb_solver_1_1_local_cache.html", "struct_urho3_d_1_1_i_k_limb_solver_1_1_local_cache" ],
     [ "IKLimbSolver", "class_urho3_d_1_1_i_k_limb_solver.html#a7e6337213ec23a6c7f1e9a91682e30a3", null ],
     [ "~IKLimbSolver", "class_urho3_d_1_1_i_k_limb_solver.html#ac9c63849de7b0fe8afe0e4f7fe37e06d", null ],
-    [ "CalculateBendDirections", "class_urho3_d_1_1_i_k_limb_solver.html#a30b3ee575847bd608a8c1d53a3a2dd8c", null ],
+    [ "CalculateBendDirections", "class_urho3_d_1_1_i_k_limb_solver.html#abee456eaae58995bbb0e47cd8c92ec37", null ],
     [ "DrawDebugGeometry", "class_urho3_d_1_1_i_k_limb_solver.html#aef864598268ee6beadcf8dc3f2cb2d82", null ],
     [ "EnsureInitialized", "class_urho3_d_1_1_i_k_limb_solver.html#aeacd59af0fa45decb7990d4ba204ad5d", null ],
     [ "GetBendDirection", "class_urho3_d_1_1_i_k_limb_solver.html#af78bd7fdb0cec9b118241ada0353a339", null ],

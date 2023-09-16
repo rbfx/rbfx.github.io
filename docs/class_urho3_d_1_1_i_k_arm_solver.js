@@ -3,7 +3,7 @@ var class_urho3_d_1_1_i_k_arm_solver =
     [ "LocalCache", "struct_urho3_d_1_1_i_k_arm_solver_1_1_local_cache.html", "struct_urho3_d_1_1_i_k_arm_solver_1_1_local_cache" ],
     [ "IKArmSolver", "class_urho3_d_1_1_i_k_arm_solver.html#ace50918ab24d6fd6c999dc4d5360ebda", null ],
     [ "~IKArmSolver", "class_urho3_d_1_1_i_k_arm_solver.html#a2b9ff708178065f136627b31db49d7bd", null ],
-    [ "CalculateBendDirections", "class_urho3_d_1_1_i_k_arm_solver.html#a0178464b6801361d247d00cbbce866a4", null ],
+    [ "CalculateBendDirections", "class_urho3_d_1_1_i_k_arm_solver.html#abe9e0feacc90d9ed8a2605ef23982c57", null ],
     [ "CalculateMaxShoulderRotation", "class_urho3_d_1_1_i_k_arm_solver.html#a72731c401944e11f4fb0fe9a0b97f0cb", null ],
     [ "DrawDebugGeometry", "class_urho3_d_1_1_i_k_arm_solver.html#ac87e05962bb156bf39a6fea41bbac921", null ],
     [ "EnsureInitialized", "class_urho3_d_1_1_i_k_arm_solver.html#aa05388f5b9078348d09e5978a1df9bc8", null ],

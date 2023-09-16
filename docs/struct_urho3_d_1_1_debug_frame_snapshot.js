@@ -7,5 +7,5 @@ var struct_urho3_d_1_1_debug_frame_snapshot =
     [ "passes_", "struct_urho3_d_1_1_debug_frame_snapshot.html#a8cf682e52f79e4bcb858bd58f886f0b4", null ],
     [ "sceneMaterials_", "struct_urho3_d_1_1_debug_frame_snapshot.html#ac80aa0f5d7acf376412dae47e4aec944", null ],
     [ "scenePipelineStates_", "struct_urho3_d_1_1_debug_frame_snapshot.html#ae07a5a5331b499df461b16bb569463c3", null ],
-    [ "sceneShaders_", "struct_urho3_d_1_1_debug_frame_snapshot.html#a4a4a38bf5602b054a7fc1fe519510fed", null ]
+    [ "sceneShaders_", "struct_urho3_d_1_1_debug_frame_snapshot.html#ab843f83b43b7ab4c23f243752a1249be", null ]
 ];

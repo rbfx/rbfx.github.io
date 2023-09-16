@@ -83,7 +83,7 @@ var _variant_8h =
     [ "URHO3D_TYPE_TRAIT", "_variant_8h.html#a6334b1405d7b428e26745d5cbdf1314b", null ],
     [ "URHO3D_TYPE_TRAIT", "_variant_8h.html#a095223e4fb171a34b62d48e9a7671b27", null ],
     [ "URHO3D_TYPE_TRAIT", "_variant_8h.html#a3846b6dd3366c9f2f658363b5c8e4a16", null ],
-    [ "Variant::Get< const ea::string & >", "_variant_8h.html#a4c63117e473ce38e9402699a21bd4160", null ],
-    [ "Variant::Get< ea::string >", "_variant_8h.html#a187f99eeb6f61d991f18ff2f4f20ed16", null ],
+    [ "Variant::Get< const ea::string & >", "_variant_8h.html#abc3f8a0edd45dba4034e71a0e6cecc52", null ],
+    [ "Variant::Get< ea::string >", "_variant_8h.html#ac70be4c569aa7c35f5248a3fac9865a6", null ],
     [ "VARIANT_VALUE_SIZE", "_variant_8h.html#a7d207e6927cfcd578a3e0321afedf45e", null ]
 ];

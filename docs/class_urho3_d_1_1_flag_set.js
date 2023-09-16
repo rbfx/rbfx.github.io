@@ -36,5 +36,7 @@ var class_urho3_d_1_1_flag_set =
     [ "Test", "class_urho3_d_1_1_flag_set.html#a17d9e15700602d2a0e267d8e244fa226", null ],
     [ "Test", "class_urho3_d_1_1_flag_set.html#a94a3c34bff6c92709a75ab64fdfb9969", null ],
     [ "ToHash", "class_urho3_d_1_1_flag_set.html#accc9704b711f986d095cb1a845589fa0", null ],
+    [ "Unset", "class_urho3_d_1_1_flag_set.html#addfa7cede46710749c8c22ba8cc7071e", null ],
+    [ "Unset", "class_urho3_d_1_1_flag_set.html#af5975e6e21ee5dd62234da181769cb2e", null ],
     [ "value_", "class_urho3_d_1_1_flag_set.html#a6fdad97533424fa37a98a89cc14453ea", null ]
 ];

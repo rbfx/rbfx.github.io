@@ -105,6 +105,7 @@ var class_urho3_d_1_1_camera =
     [ "fillMode_", "class_urho3_d_1_1_camera.html#a8f1086a3e4ed079a1a3a1e171efc4cc6", null ],
     [ "flipVertical_", "class_urho3_d_1_1_camera.html#aba03af3574d98e875aed7e97deffedd8", null ],
     [ "fov_", "class_urho3_d_1_1_camera.html#a98f3fa73b5faf6cfd2a7adf5aa6421b1", null ],
+    [ "graphics_", "class_urho3_d_1_1_camera.html#ae1133eec25146261a947da074139d62f", null ],
     [ "lodBias_", "class_urho3_d_1_1_camera.html#a3c69b7f8dabacfea0de748af823d8868", null ],
     [ "mousePosition_", "class_urho3_d_1_1_camera.html#a7d72b057ab72d597dca465371560ea3d", null ],
     [ "nearClip_", "class_urho3_d_1_1_camera.html#a841253060ee1b515c4007ef14d7bcda7", null ],

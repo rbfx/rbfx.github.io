@@ -649,7 +649,7 @@ ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_debug_triangle.html">Debug
 <tr class="separator:a565a2944578f19647259dded1e729ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3f9d08c13e4bce480d051fdb4aa41f7"><td class="memItemLeft" align="right" valign="top"><a id="ac3f9d08c13e4bce480d051fdb4aa41f7"></a>
 <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_debug_renderer.html#ac3f9d08c13e4bce480d051fdb4aa41f7">view_</a></td></tr>
-<tr class="memdesc:ac3f9d08c13e4bce480d051fdb4aa41f7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_view.html" title="Internal structure for 3D rendering work. Created for each backbuffer and texture viewport,...">View</a> transform. <br /></td></tr>
+<tr class="memdesc:ac3f9d08c13e4bce480d051fdb4aa41f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">View transform. <br /></td></tr>
 <tr class="separator:ac3f9d08c13e4bce480d051fdb4aa41f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad754a555ee799deeeedf66b1cef4b261"><td class="memItemLeft" align="right" valign="top"><a id="ad754a555ee799deeeedf66b1cef4b261"></a>
 <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_debug_renderer.html#ad754a555ee799deeeedf66b1cef4b261">projection_</a></td></tr>
@@ -661,7 +661,7 @@ ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_debug_triangle.html">Debug
 <tr class="separator:a8c65575813a970b3e4ed5d46218daf00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2301dd350a4487a6dda90f0458af6275"><td class="memItemLeft" align="right" valign="top"><a id="a2301dd350a4487a6dda90f0458af6275"></a>
 <a class="el" href="class_urho3_d_1_1_frustum.html">Frustum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_debug_renderer.html#a2301dd350a4487a6dda90f0458af6275">frustum_</a></td></tr>
-<tr class="memdesc:a2301dd350a4487a6dda90f0458af6275"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_view.html" title="Internal structure for 3D rendering work. Created for each backbuffer and texture viewport,...">View</a> frustum. <br /></td></tr>
+<tr class="memdesc:a2301dd350a4487a6dda90f0458af6275"><td class="mdescLeft">&#160;</td><td class="mdescRight">View frustum. <br /></td></tr>
 <tr class="separator:a2301dd350a4487a6dda90f0458af6275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b08a7c5a1ec28fb968cae8329d9b49c"><td class="memItemLeft" align="right" valign="top"><a id="a3b08a7c5a1ec28fb968cae8329d9b49c"></a>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_vertex_buffer.html">VertexBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_debug_renderer.html#a3b08a7c5a1ec28fb968cae8329d9b49c">vertexBuffer_</a></td></tr>
@@ -676,21 +676,24 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a2da62c8378ac56a99d0d43868384ce6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active camera. <br /></td></tr>
 <tr class="separator:a2da62c8378ac56a99d0d43868384ce6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Pipeline states</div></td></tr>
+<tr class="memitem:a2670fe06ebe86448993e6120c620939e"><td class="memItemLeft" align="right" valign="top"><a id="a2670fe06ebe86448993e6120c620939e"></a>
+<a class="el" href="class_urho3_d_1_1_static_pipeline_state_cache.html">StaticPipelineStateCache</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pipelineStates_</b></td></tr>
+<tr class="separator:a2670fe06ebe86448993e6120c620939e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7355bd81590be9d3551325f253f73300"><td class="memItemLeft" align="right" valign="top"><a id="a7355bd81590be9d3551325f253f73300"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>pipelineStatesInitialized_</b> {}</td></tr>
 <tr class="separator:a7355bd81590be9d3551325f253f73300"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab23b39de10c8a8f1b654cb561a8fbadc"><td class="memItemLeft" align="right" valign="top"><a id="ab23b39de10c8a8f1b654cb561a8fbadc"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_pipeline_state.html">PipelineState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>depthLinesPipelineState_</b> [2]</td></tr>
-<tr class="separator:ab23b39de10c8a8f1b654cb561a8fbadc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9d045dd408fb82cc9e7b618d433984b"><td class="memItemLeft" align="right" valign="top"><a id="ae9d045dd408fb82cc9e7b618d433984b"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_pipeline_state.html">PipelineState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>noDepthLinesPipelineState_</b> [2]</td></tr>
-<tr class="separator:ae9d045dd408fb82cc9e7b618d433984b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7aaa94d53bdda276f230d02052bc8bc4"><td class="memItemLeft" align="right" valign="top"><a id="a7aaa94d53bdda276f230d02052bc8bc4"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_pipeline_state.html">PipelineState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>depthTrianglesPipelineState_</b></td></tr>
-<tr class="separator:a7aaa94d53bdda276f230d02052bc8bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa792852b37cba828a6d1af745e253274"><td class="memItemLeft" align="right" valign="top"><a id="aa792852b37cba828a6d1af745e253274"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_pipeline_state.html">PipelineState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>noDepthTrianglesPipelineState_</b></td></tr>
-<tr class="separator:aa792852b37cba828a6d1af745e253274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5a2704085188e05bcb22553f76ee6f"><td class="memItemLeft" align="right" valign="top"><a id="a3a5a2704085188e05bcb22553f76ee6f"></a>
+StaticPipelineStateId&#160;</td><td class="memItemRight" valign="bottom"><b>depthLinesPipelineState_</b> [2] {}</td></tr>
+<tr class="separator:a3a5a2704085188e05bcb22553f76ee6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16117aedea5482e8de9a0793eae4782e"><td class="memItemLeft" align="right" valign="top"><a id="a16117aedea5482e8de9a0793eae4782e"></a>
+StaticPipelineStateId&#160;</td><td class="memItemRight" valign="bottom"><b>noDepthLinesPipelineState_</b> [2] {}</td></tr>
+<tr class="separator:a16117aedea5482e8de9a0793eae4782e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bbfd31ffc8490d4724e16d523242dad"><td class="memItemLeft" align="right" valign="top"><a id="a6bbfd31ffc8490d4724e16d523242dad"></a>
+StaticPipelineStateId&#160;</td><td class="memItemRight" valign="bottom"><b>depthTrianglesPipelineState_</b> {}</td></tr>
+<tr class="separator:a6bbfd31ffc8490d4724e16d523242dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc322148edb220458107d1108b7898c"><td class="memItemLeft" align="right" valign="top"><a id="a8dc322148edb220458107d1108b7898c"></a>
+StaticPipelineStateId&#160;</td><td class="memItemRight" valign="bottom"><b>noDepthTrianglesPipelineState_</b> {}</td></tr>
+<tr class="separator:a8dc322148edb220458107d1108b7898c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

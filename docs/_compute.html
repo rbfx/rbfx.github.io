@@ -64,7 +64,7 @@ $(document).ready(function(){initNavTree('_compute.html',''); initResizable(); }
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Limited GPU compute capability is exposed through the Compute Device class. Compute is currently only available on desktop targets.</p>
-<p>The interface for compute is raw and expects the caller to perform all setup, manage <a class="el" href="class_urho3_d_1_1_constant_buffer.html">constant buffers</a>, as well as textures and even fetch the <a class="el" href="class_urho3_d_1_1_shader_variation.html">shader variations</a> oneself.</p>
+<p>The interface for compute is raw and expects the caller to perform all setup, manage constant buffers, as well as textures and even fetch the <a class="el" href="class_urho3_d_1_1_shader_variation.html">shader variations</a> oneself.</p>
 <p>Notably compute provides a clean means to directly write into texture layers and mipmaps which is of value for filtering tasks. Currently the only supported write-targets are images which must be of the RGBA8, RGBA16F, RGBA32F, or R32F formats to allow writing.</p>
 <div class="fragment"><div class="line"><span class="comment">// C#</span></div>
 <div class="line">ComputeDevice cd = Context.GetSubsystem&lt;ComputeDevice&gt;();</div>

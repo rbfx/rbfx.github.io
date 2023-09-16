@@ -103,8 +103,6 @@ Public Member Functions</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a4760819cb750bd6c268ae6456df3493a">BeginLoad</a> (<a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;source) override</td></tr>
 <tr class="memdesc:a4760819cb750bd6c268ae6456df3493a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load resource from stream. May be called from a worker thread. Return true if successful. <br /></td></tr>
 <tr class="separator:a4760819cb750bd6c268ae6456df3493a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab22bafdfa04b26d5134581d79521959d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#ab22bafdfa04b26d5134581d79521959d">SetIsDesktop</a> (bool enable)</td></tr>
-<tr class="separator:ab22bafdfa04b26d5134581d79521959d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c2a5f6c176726a041fcc38e166ef440"><td class="memItemLeft" align="right" valign="top"><a id="a9c2a5f6c176726a041fcc38e166ef440"></a>
 <a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a9c2a5f6c176726a041fcc38e166ef440">CreatePass</a> (const ea::string &amp;name)</td></tr>
 <tr class="memdesc:a9c2a5f6c176726a041fcc38e166ef440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new pass. <br /></td></tr>
@@ -121,10 +119,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_technique.html">Technique</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a086a6acea109a63959c9ef9324ea1cd7">Clone</a> (const ea::string &amp;cloneName=EMPTY_STRING) const</td></tr>
 <tr class="memdesc:a086a6acea109a63959c9ef9324ea1cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone the technique. Passes will be deep copied to allow independent modification. <br /></td></tr>
 <tr class="separator:a086a6acea109a63959c9ef9324ea1cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae70af1cb3a560e7e61b421c543dd089a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#ae70af1cb3a560e7e61b421c543dd089a">IsDesktop</a> () const</td></tr>
-<tr class="separator:ae70af1cb3a560e7e61b421c543dd089a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af60527b88f9000baa2162449df401de1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#af60527b88f9000baa2162449df401de1">IsSupported</a> () const</td></tr>
-<tr class="separator:af60527b88f9000baa2162449df401de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcbb590842f1208d608dbc7314516b3b"><td class="memItemLeft" align="right" valign="top"><a id="afcbb590842f1208d608dbc7314516b3b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#afcbb590842f1208d608dbc7314516b3b">HasPass</a> (unsigned passIndex) const</td></tr>
 <tr class="memdesc:afcbb590842f1208d608dbc7314516b3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether has a pass. <br /></td></tr>
@@ -141,14 +135,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a6213a4404709707fb5846ce238c6794b">GetPass</a> (const ea::string &amp;name) const</td></tr>
 <tr class="memdesc:a6213a4404709707fb5846ce238c6794b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pass by name, or null if not found. This overload should not be called in time-critical rendering loops; use a pre-acquired pass index instead. <br /></td></tr>
 <tr class="separator:a6213a4404709707fb5846ce238c6794b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7b81482eec548fe9cada9ca05afa61b"><td class="memItemLeft" align="right" valign="top"><a id="af7b81482eec548fe9cada9ca05afa61b"></a>
-<a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#af7b81482eec548fe9cada9ca05afa61b">GetSupportedPass</a> (unsigned passIndex) const</td></tr>
-<tr class="memdesc:af7b81482eec548fe9cada9ca05afa61b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pass that is supported for rendering, or null if not found. <br /></td></tr>
-<tr class="separator:af7b81482eec548fe9cada9ca05afa61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ee31fa991a9ab177d2c9ebba0645ce6"><td class="memItemLeft" align="right" valign="top"><a id="a1ee31fa991a9ab177d2c9ebba0645ce6"></a>
-<a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a1ee31fa991a9ab177d2c9ebba0645ce6">GetSupportedPass</a> (const ea::string &amp;name) const</td></tr>
-<tr class="memdesc:a1ee31fa991a9ab177d2c9ebba0645ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a supported pass by name. This overload should not be called in time-critical rendering loops; use a pre-acquired pass index instead. <br /></td></tr>
-<tr class="separator:a1ee31fa991a9ab177d2c9ebba0645ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab057594403d9ff53c0038014a369348b"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#ab057594403d9ff53c0038014a369348b">GetNumPasses</a> () const</td></tr>
 <tr class="separator:ab057594403d9ff53c0038014a369348b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a297a60518696e6ca79d851a705cc24d8"><td class="memItemLeft" align="right" valign="top">ea::vector&lt; ea::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a297a60518696e6ca79d851a705cc24d8">GetPassNames</a> () const</td></tr>
@@ -480,14 +466,6 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a8723319320fdb9f1a1146fcdf8a3217e"><td class="memItemLeft" align="right" valign="top"><a id="a8723319320fdb9f1a1146fcdf8a3217e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a8723319320fdb9f1a1146fcdf8a3217e">isDesktop_</a></td></tr>
-<tr class="memdesc:a8723319320fdb9f1a1146fcdf8a3217e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Require desktop GPU flag. <br /></td></tr>
-<tr class="separator:a8723319320fdb9f1a1146fcdf8a3217e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63c5838361341744eff51bf1c0ea4ebf"><td class="memItemLeft" align="right" valign="top"><a id="a63c5838361341744eff51bf1c0ea4ebf"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a63c5838361341744eff51bf1c0ea4ebf">desktopSupport_</a></td></tr>
-<tr class="memdesc:a63c5838361341744eff51bf1c0ea4ebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached desktop GPU support flag. <br /></td></tr>
-<tr class="separator:a63c5838361341744eff51bf1c0ea4ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b3616c7525c83dcb321ff61973ee8e0"><td class="memItemLeft" align="right" valign="top"><a id="a7b3616c7525c83dcb321ff61973ee8e0"></a>
 ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_technique.html#a7b3616c7525c83dcb321ff61973ee8e0">passes_</a></td></tr>
 <tr class="memdesc:a7b3616c7525c83dcb321ff61973ee8e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes. <br /></td></tr>
@@ -575,58 +553,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ae70af1cb3a560e7e61b421c543dd089a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae70af1cb3a560e7e61b421c543dd089a">&#9670;&nbsp;</a></span>IsDesktop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::Technique::IsDesktop </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return whether requires desktop level hardware. </p>
-
-</div>
-</div>
-<a id="af60527b88f9000baa2162449df401de1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af60527b88f9000baa2162449df401de1">&#9670;&nbsp;</a></span>IsSupported()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::Technique::IsSupported </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return whether technique is supported by the current hardware. </p>
-
-</div>
-</div>
 <a id="a18b550e40df9a0c1fd21d47f01b024a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a18b550e40df9a0c1fd21d47f01b024a6">&#9670;&nbsp;</a></span>RegisterObject()</h2>
 
@@ -651,25 +577,6 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Register object factory. </p>
-
-</div>
-</div>
-<a id="ab22bafdfa04b26d5134581d79521959d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab22bafdfa04b26d5134581d79521959d">&#9670;&nbsp;</a></span>SetIsDesktop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Technique::SetIsDesktop </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enable</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Set whether requires desktop level hardware. </p>
 
 </div>
 </div>

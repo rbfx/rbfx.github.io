@@ -80,9 +80,8 @@ Inheritance diagram for Urho3D::RenderBuffer:</div>
  <div class="center">
   <img src="class_urho3_d_1_1_render_buffer.png" usemap="#Urho3D::RenderBuffer_map" alt=""/>
   <map id="Urho3D::RenderBuffer_map" name="Urho3D::RenderBuffer_map">
-<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="134,56,392,80"/>
-<area href="class_urho3_d_1_1_i_d_family.html" alt="Urho3D::IDFamily&lt; RenderBuffer &gt;" shape="rect" coords="402,56,660,80"/>
-<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="134,0,392,24"/>
+<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="268,56,526,80"/>
+<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="268,0,526,24"/>
 <area href="class_urho3_d_1_1_texture_render_buffer.html" title="Writable and readable render buffer texture (2D or cubemap)." alt="Urho3D::TextureRenderBuffer" shape="rect" coords="0,168,258,192"/>
 <area href="class_urho3_d_1_1_viewport_color_render_buffer.html" title="Write-only viewport color render buffer." alt="Urho3D::ViewportColorRenderBuffer" shape="rect" coords="268,168,526,192"/>
 <area href="class_urho3_d_1_1_viewport_depth_stencil_render_buffer.html" title="Write-only viewport depth-stenil texture." alt="Urho3D::ViewportDepthStencilRenderBuffer" shape="rect" coords="536,168,794,192"/>
@@ -91,20 +90,19 @@ Inheritance diagram for Urho3D::RenderBuffer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7bd222ac3d34a920e89d9f57a4c34425"><td class="memItemLeft" align="right" valign="top"><a id="a7bd222ac3d34a920e89d9f57a4c34425"></a>
-virtual <a class="el" href="class_urho3_d_1_1_texture.html">Texture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_buffer.html#a7bd222ac3d34a920e89d9f57a4c34425">GetTexture</a> () const =0</td></tr>
-<tr class="memdesc:a7bd222ac3d34a920e89d9f57a4c34425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return readable texture. May return null if not supported. <br /></td></tr>
-<tr class="separator:a7bd222ac3d34a920e89d9f57a4c34425"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab994404b2c6ad15921e1e18cd1d68a53"><td class="memItemLeft" align="right" valign="top"><a id="ab994404b2c6ad15921e1e18cd1d68a53"></a>
-virtual <a class="el" href="class_urho3_d_1_1_render_surface.html">RenderSurface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_buffer.html#ab994404b2c6ad15921e1e18cd1d68a53">GetRenderSurface</a> (<a class="el" href="_graphics_defs_8h.html#a7ce449a91c063bbb178d2faee315ca0e">CubeMapFace</a> face=FACE_POSITIVE_X) const =0</td></tr>
-<tr class="memdesc:ab994404b2c6ad15921e1e18cd1d68a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return render surface. Face could be specified for cubemap texture. <br /></td></tr>
-<tr class="separator:ab994404b2c6ad15921e1e18cd1d68a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab461d2da5fe5d79d1ef9618db3476958"><td class="memItemLeft" align="right" valign="top"><a id="ab461d2da5fe5d79d1ef9618db3476958"></a>
+virtual RawTexture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_buffer.html#ab461d2da5fe5d79d1ef9618db3476958">GetTexture</a> () const =0</td></tr>
+<tr class="memdesc:ab461d2da5fe5d79d1ef9618db3476958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return readable texture. May return null if not supported. <br /></td></tr>
+<tr class="separator:ab461d2da5fe5d79d1ef9618db3476958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac615a2356362fc9276327fc24609db43"><td class="memItemLeft" align="right" valign="top"><a id="ac615a2356362fc9276327fc24609db43"></a>
+virtual RenderTargetView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_buffer.html#ac615a2356362fc9276327fc24609db43">GetView</a> (unsigned slice=0) const =0</td></tr>
+<tr class="memdesc:ac615a2356362fc9276327fc24609db43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return render surface. Face could be specified for cubemap texture. <br /></td></tr>
+<tr class="separator:ac615a2356362fc9276327fc24609db43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6420659d78a1434ba0fb63a645e06b2"><td class="memItemLeft" align="right" valign="top"><a id="ad6420659d78a1434ba0fb63a645e06b2"></a>
+virtual RenderTargetView&#160;</td><td class="memItemRight" valign="bottom"><b>GetReadOnlyDepthView</b> (unsigned slice=0) const =0</td></tr>
+<tr class="separator:ad6420659d78a1434ba0fb63a645e06b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3e98bcd8de152d1396163597e2eed6a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_buffer.html#ad3e98bcd8de152d1396163597e2eed6a">GetViewportRect</a> () const =0</td></tr>
 <tr class="separator:ad3e98bcd8de152d1396163597e2eed6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2242276d0cbb733b5fa6c0fd965310b3"><td class="memItemLeft" align="right" valign="top"><a id="a2242276d0cbb733b5fa6c0fd965310b3"></a>
-<a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_buffer.html#a2242276d0cbb733b5fa6c0fd965310b3">GetTexture2D</a> () const</td></tr>
-<tr class="memdesc:a2242276d0cbb733b5fa6c0fd965310b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return readable <a class="el" href="class_urho3_d_1_1_texture2_d.html" title="2D texture resource.">Texture2D</a> or null if not supported or use different texture type. <br /></td></tr>
-<tr class="separator:a2242276d0cbb733b5fa6c0fd965310b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -302,27 +300,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_ref_counted.html#a99cdc62c2d95adb6fe79aa1f6e301b79">IsScriptStrongRef</a> () const</td></tr>
 <tr class="memdesc:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if script reference is strong. <br /></td></tr>
 <tr class="separator:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_urho3_d_1_1_i_d_family"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_i_d_family')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_i_d_family.html">Urho3D::IDFamily&lt; RenderBuffer &gt;</a></td></tr>
-<tr class="memitem:aa97875bea8a805b7762c534d08e13339 inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="memItemLeft" align="right" valign="top"><a id="aa97875bea8a805b7762c534d08e13339"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_d_family.html#aa97875bea8a805b7762c534d08e13339">IDFamily</a> ()</td></tr>
-<tr class="memdesc:aa97875bea8a805b7762c534d08e13339 inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br /></td></tr>
-<tr class="separator:aa97875bea8a805b7762c534d08e13339 inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43da57501ee9ed4d938f2fccf9ed8d74 inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="memItemLeft" align="right" valign="top"><a id="a43da57501ee9ed4d938f2fccf9ed8d74"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_d_family.html#a43da57501ee9ed4d938f2fccf9ed8d74">~IDFamily</a> ()</td></tr>
-<tr class="memdesc:a43da57501ee9ed4d938f2fccf9ed8d74 inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
-<tr class="separator:a43da57501ee9ed4d938f2fccf9ed8d74 inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cb8f08a6e66474cbb321841ac541c0f inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="memItemLeft" align="right" valign="top"><a id="a4cb8f08a6e66474cbb321841ac541c0f"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_d_family.html#a4cb8f08a6e66474cbb321841ac541c0f">GetObjectID</a> () const</td></tr>
-<tr class="memdesc:a4cb8f08a6e66474cbb321841ac541c0f inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return unique object ID or 0 if not assigned. <br /></td></tr>
-<tr class="separator:a4cb8f08a6e66474cbb321841ac541c0f inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6932576911525caa3fa39b9c446214aa inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="memItemLeft" align="right" valign="top"><a id="a6932576911525caa3fa39b9c446214aa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_d_family.html#a6932576911525caa3fa39b9c446214aa">AcquireObjectID</a> ()</td></tr>
-<tr class="memdesc:a6932576911525caa3fa39b9c446214aa inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acquire unique object ID. Ignored if unique ID is already acquired. <br /></td></tr>
-<tr class="separator:a6932576911525caa3fa39b9c446214aa inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0ba36c523c9bfb30e0304f367422c8d inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="memItemLeft" align="right" valign="top"><a id="ac0ba36c523c9bfb30e0304f367422c8d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_d_family.html#ac0ba36c523c9bfb30e0304f367422c8d">ReleaseObjectID</a> ()</td></tr>
-<tr class="memdesc:ac0ba36c523c9bfb30e0304f367422c8d inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release unique object ID. Ignored if unique ID is already released. <br /></td></tr>
-<tr class="separator:ac0ba36c523c9bfb30e0304f367422c8d inherit pub_methods_class_urho3_d_1_1_i_d_family"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -341,9 +318,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnRenderEnd</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a5be13aec47c83be4c0e0c7fe0e6e8b0b"><td class="memItemLeft" align="right" valign="top"><a id="a5be13aec47c83be4c0e0c7fe0e6e8b0b"></a>
-<a class="el" href="class_urho3_d_1_1_renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>renderer_</b> {}</td></tr>
-<tr class="separator:a5be13aec47c83be4c0e0c7fe0e6e8b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeedf070baf42981951bbdd8abd67ed9a"><td class="memItemLeft" align="right" valign="top"><a id="aeedf070baf42981951bbdd8abd67ed9a"></a>
+RenderDevice *&#160;</td><td class="memItemRight" valign="bottom"><b>renderDevice_</b> {}</td></tr>
+<tr class="separator:aeedf070baf42981951bbdd8abd67ed9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acee9665b85822af87783708080165750"><td class="memItemLeft" align="right" valign="top"><a id="acee9665b85822af87783708080165750"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>bufferIsReady_</b> {}</td></tr>
 <tr class="separator:acee9665b85822af87783708080165750"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -366,11 +343,6 @@ Additional Inherited Members</h2></td></tr>
 static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aaf5a648d6c449dd14b273c10fdd498a9">GetTypeInfoStatic</a> ()</td></tr>
 <tr class="memdesc:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type info static. <br /></td></tr>
 <tr class="separator:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_class_urho3_d_1_1_i_d_family"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_urho3_d_1_1_i_d_family')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_i_d_family.html">Urho3D::IDFamily&lt; RenderBuffer &gt;</a></td></tr>
-<tr class="memitem:a66e20cff21279474f974dc4c4337eacc inherit pub_static_methods_class_urho3_d_1_1_i_d_family"><td class="memItemLeft" align="right" valign="top"><a id="a66e20cff21279474f974dc4c4337eacc"></a>
-static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_d_family.html#a66e20cff21279474f974dc4c4337eacc">GetNextFreeObjectID</a> ()</td></tr>
-<tr class="memdesc:a66e20cff21279474f974dc4c4337eacc inherit pub_static_methods_class_urho3_d_1_1_i_d_family"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return upper bound of all used object IDs within family. <br /></td></tr>
-<tr class="separator:a66e20cff21279474f974dc4c4337eacc inherit pub_static_methods_class_urho3_d_1_1_i_d_family"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class fro writable texture or texture region. Readability is not guaranteed. </p>

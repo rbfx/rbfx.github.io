@@ -1,10 +1,9 @@
 var struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states =
 [
-    [ "IsValid", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#aec2ada8be5c442a43c41a67c23067a98", null ],
-    [ "blurDeferred_", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#af626aab77684130f2f2f90b6de9d362c", null ],
-    [ "blurForward_", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#af95db714ce8065cccd67d5b8a0db1e76", null ],
-    [ "combine_", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a11fe8d543d7ddd22adc2e4a24ff3131c", null ],
-    [ "preview_", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a87053abf98c41f1d6f9c502a7ad19d6b", null ],
-    [ "ssaoDeferred_", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a85bf2c446af8cebbae8c21fee00e0204", null ],
-    [ "ssaoForward_", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a9f9319dde27c3e04a533eec9915eb4bc", null ]
+    [ "blurDeferred_", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a263c9aa98d5125bf03c44d8acaef7171", null ],
+    [ "blurForward_", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#acad6a05a4b8793318082f0531faf483d", null ],
+    [ "combine_", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a8fd20733bb49b03cfcb817c844254423", null ],
+    [ "preview_", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a92376426792c29f6fdc1ee7780e6e915", null ],
+    [ "ssaoDeferred_", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#aea9646951bbd51b330f40f61a70a6fde", null ],
+    [ "ssaoForward_", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html#a1f4964597c7914d43f6041c3edfa935c", null ]
 ];

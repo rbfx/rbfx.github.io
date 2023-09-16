@@ -8,6 +8,7 @@ var class_urho3_d_1_1_dynamic_index_buffer =
     [ "GetIndexBuffer", "class_urho3_d_1_1_dynamic_index_buffer.html#a3349a3b34a9d59311b2bbdfcf81afaeb", null ],
     [ "GrowBuffer", "class_urho3_d_1_1_dynamic_index_buffer.html#ac562ce9582033b48d2e1e1eea9574e68", null ],
     [ "Initialize", "class_urho3_d_1_1_dynamic_index_buffer.html#ae53b00322de823f5ca9868b61d8b4bd6", null ],
+    [ "SetDebugName", "class_urho3_d_1_1_dynamic_index_buffer.html#ab32326ef56d5c542994ec769c6a71420", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_dynamic_index_buffer.html#af543f738815401455d9f484055c79f22", null ],
     [ "indexBuffer_", "class_urho3_d_1_1_dynamic_index_buffer.html#a95f5e48fc842c57926f5639b2e21f560", null ],
     [ "indexBufferNeedResize_", "class_urho3_d_1_1_dynamic_index_buffer.html#a66a5c0e941c45a383d7d0dd179de0fd1", null ],

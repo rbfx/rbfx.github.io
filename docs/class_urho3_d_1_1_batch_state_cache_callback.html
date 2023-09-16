@@ -87,14 +87,18 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_state_cache_callback.html#aac63da8b4ceddcf2a66a5d6cb8f4f23e">~BatchStateCacheCallback</a> ()</td></tr>
 <tr class="memdesc:aac63da8b4ceddcf2a66a5d6cb8f4f23e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
 <tr class="separator:aac63da8b4ceddcf2a66a5d6cb8f4f23e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7c78249a699feffe6f349508fcfe087"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_pipeline_state.html">PipelineState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_state_cache_callback.html#af7c78249a699feffe6f349508fcfe087">CreateBatchPipelineState</a> (const <a class="el" href="struct_urho3_d_1_1_batch_state_create_key.html">BatchStateCreateKey</a> &amp;key, const <a class="el" href="struct_urho3_d_1_1_batch_state_create_context.html">BatchStateCreateContext</a> &amp;ctx)=0</td></tr>
-<tr class="separator:af7c78249a699feffe6f349508fcfe087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e4601a355d5bc2db318a1e6274efbb6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; PipelineState &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_state_cache_callback.html#a2e4601a355d5bc2db318a1e6274efbb6">CreateBatchPipelineState</a> (const <a class="el" href="struct_urho3_d_1_1_batch_state_create_key.html">BatchStateCreateKey</a> &amp;key, const <a class="el" href="struct_urho3_d_1_1_batch_state_create_context.html">BatchStateCreateContext</a> &amp;ctx, const PipelineStateOutputDesc &amp;outputDesc)=0</td></tr>
+<tr class="separator:a2e4601a355d5bc2db318a1e6274efbb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27df7788c55961ad2aa66272131379bd"><td class="memItemLeft" align="right" valign="top"><a id="a27df7788c55961ad2aa66272131379bd"></a>
+virtual <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; PipelineState &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_state_cache_callback.html#a27df7788c55961ad2aa66272131379bd">CreateBatchPipelineStatePlaceholder</a> (unsigned vertexStride, const PipelineStateOutputDesc &amp;outputDesc)=0</td></tr>
+<tr class="memdesc:a27df7788c55961ad2aa66272131379bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create placeholder pipeline state when actual pipeline state creation fails. <br /></td></tr>
+<tr class="separator:a27df7788c55961ad2aa66272131379bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Pipeline state cache callback used to create actual pipeline state. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="af7c78249a699feffe6f349508fcfe087"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7c78249a699feffe6f349508fcfe087">&#9670;&nbsp;</a></span>CreateBatchPipelineState()</h2>
+<a id="a2e4601a355d5bc2db318a1e6274efbb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e4601a355d5bc2db318a1e6274efbb6">&#9670;&nbsp;</a></span>CreateBatchPipelineState()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -103,7 +107,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt;<a class="el" href="class_urho3_d_1_1_pipeline_state.html">PipelineState</a>&gt; Urho3D::BatchStateCacheCallback::CreateBatchPipelineState </td>
+          <td class="memname">virtual <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt;PipelineState&gt; Urho3D::BatchStateCacheCallback::CreateBatchPipelineState </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_batch_state_create_key.html">BatchStateCreateKey</a> &amp;&#160;</td>
           <td class="paramname"><em>key</em>, </td>
@@ -112,7 +116,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_batch_state_create_context.html">BatchStateCreateContext</a> &amp;&#160;</td>
-          <td class="paramname"><em>ctx</em>&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const PipelineStateOutputDesc &amp;&#160;</td>
+          <td class="paramname"><em>outputDesc</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -126,9 +136,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Create pipeline state for given context and key. Only attributes that constribute to pipeline state hashes are safe to use. </p>
+<p>Create pipeline state for given context and key. Only attributes that contribute to pipeline state hashes are safe to use. </p>
 
-<p>Implemented in <a class="el" href="class_urho3_d_1_1_pipeline_state_builder.html#ae598f3a9bfb87b9ff6ad563b1ee38450">Urho3D::PipelineStateBuilder</a>.</p>
+<p>Implemented in <a class="el" href="class_urho3_d_1_1_pipeline_state_builder.html#ae9b8996cebb22a2c05269deb5789ca63">Urho3D::PipelineStateBuilder</a>.</p>
 
 </div>
 </div>

@@ -15,7 +15,7 @@ var class_urho3_d_1_1_view3_d =
     [ "RegisterObject", "class_urho3_d_1_1_view3_d.html#a7b233076f1e3c8cf49d24b25f46c196d", null ],
     [ "ResetScene", "class_urho3_d_1_1_view3_d.html#a071577dfa56d56f6872a9097567d40f4", null ],
     [ "SetAutoUpdate", "class_urho3_d_1_1_view3_d.html#aa9264b2d957319c70c8f933c5bb53942", null ],
-    [ "SetFormat", "class_urho3_d_1_1_view3_d.html#aaa28ee84d605f8d668fbf46f2ec36848", null ],
+    [ "SetFormat", "class_urho3_d_1_1_view3_d.html#a1274e28e32b4b2af5301644b5ecb1520", null ],
     [ "SetView", "class_urho3_d_1_1_view3_d.html#a4d36ddc63ab180ac825aae19bad7dfce", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_view3_d.html#a16015ad45284a6267e07e0f1faa9d8f3", null ],
     [ "autoUpdate_", "class_urho3_d_1_1_view3_d.html#a86ee2cdcfb1e943b57a2ff253c3de8bf", null ],
@@ -23,7 +23,7 @@ var class_urho3_d_1_1_view3_d =
     [ "depthTexture_", "class_urho3_d_1_1_view3_d.html#a0bca07889a9b69e6f6b2a35710912a28", null ],
     [ "ownScene_", "class_urho3_d_1_1_view3_d.html#ad1495d3721b479ffc54dbd1f147526d7", null ],
     [ "renderTexture_", "class_urho3_d_1_1_view3_d.html#a30b64f6c0b79d556a704f7e408862ff0", null ],
-    [ "rttFormat_", "class_urho3_d_1_1_view3_d.html#a77ee5cec241181120eb107560bdb06e2", null ],
+    [ "rttFormat_", "class_urho3_d_1_1_view3_d.html#a67f8e0b40c81dba847e2db2e7c657296", null ],
     [ "scene_", "class_urho3_d_1_1_view3_d.html#ab297fa6628831011334e300ebecab208", null ],
     [ "viewport_", "class_urho3_d_1_1_view3_d.html#ab92ddd0ba888db6b66ff175577b9a9b4", null ]
 ];

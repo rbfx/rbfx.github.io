@@ -1,8 +1,10 @@
 var class_urho3_d_1_1_batch_compositor_pass =
 [
     [ "BatchCompositorPass", "class_urho3_d_1_1_batch_compositor_pass.html#a18bf84fb77d41d3034c366d84ff3924a", null ],
+    [ "AddPipelineBatch", "class_urho3_d_1_1_batch_compositor_pass.html#a76c01434603275189052ffdc2d5fe422", null ],
     [ "ComposeBatches", "class_urho3_d_1_1_batch_compositor_pass.html#a06e6bd1eba04c37b84422bd31af217b1", null ],
-    [ "CreatePipelineState", "class_urho3_d_1_1_batch_compositor_pass.html#a16e4799d4bcedc10a29f24fbce3cd02a", null ],
+    [ "CreatePipelineState", "class_urho3_d_1_1_batch_compositor_pass.html#a0912a071edd31feacb4b8b8712daf472", null ],
+    [ "GetPlaceholderPipelineState", "class_urho3_d_1_1_batch_compositor_pass.html#a8dd416c9ac50a80199c96ad9757474e2", null ],
     [ "HasBatches", "class_urho3_d_1_1_batch_compositor_pass.html#aaf9fbbdcfa922cf0655173389a1f1e4c", null ],
     [ "OnBatchesReady", "class_urho3_d_1_1_batch_compositor_pass.html#a6921a68150e2d3370c6bb638c8c127ad", null ],
     [ "OnPipelineStatesInvalidated", "class_urho3_d_1_1_batch_compositor_pass.html#a77dd45426dc9694a88168e47ca37feb0", null ],
@@ -10,6 +12,8 @@ var class_urho3_d_1_1_batch_compositor_pass =
     [ "PreparePipelineBatch", "class_urho3_d_1_1_batch_compositor_pass.html#a0681a902cfa6ab7b8fefd9605b8c19df", null ],
     [ "ProcessGeometryBatch", "class_urho3_d_1_1_batch_compositor_pass.html#a35b86652cd88ba777477666fb7a9af01", null ],
     [ "ResolveDelayedBatches", "class_urho3_d_1_1_batch_compositor_pass.html#a54f330c9cb9a87fc7ff8470df74252ac", null ],
+    [ "SetDeferredOutputDesc", "class_urho3_d_1_1_batch_compositor_pass.html#ae88ca5f679e7d93af360f1ebe253185c", null ],
+    [ "SetForwardOutputDesc", "class_urho3_d_1_1_batch_compositor_pass.html#ab2ad5addcd4dbff246433ee1f686e8a8", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_batch_compositor_pass.html#ae5fbba29605e301e6c15368f974d63ea", null ],
     [ "baseBatches_", "class_urho3_d_1_1_batch_compositor_pass.html#a918de2d8494da295fa6cd53227ae2d5d", null ],
     [ "batchStateCacheCallback_", "class_urho3_d_1_1_batch_compositor_pass.html#ab45c3936367f9417c2a0fa5eb1852627", null ],

@@ -841,11 +841,21 @@ ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <tr class="separator:a35e6bb4c446ecda94bd92d8d4e53d853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cdfda6b6a036a4d462f45669734dcd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_variant.html#a5cdfda6b6a036a4d462f45669734dcd4">IsEmpty</a> () const</td></tr>
 <tr class="separator:a5cdfda6b6a036a4d462f45669734dcd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d9f0ab56422ed0d1942abb71a42e654"><td class="memTemplParams" colspan="2"><a id="a4d9f0ab56422ed0d1942abb71a42e654"></a>
+<tr class="memitem:a277ec1627c00fbf6a82cab02a88ff9a2"><td class="memTemplParams" colspan="2"><a id="a277ec1627c00fbf6a82cab02a88ff9a2"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:a4d9f0ab56422ed0d1942abb71a42e654"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_variant.html#a4d9f0ab56422ed0d1942abb71a42e654">Get</a> () const</td></tr>
-<tr class="memdesc:a4d9f0ab56422ed0d1942abb71a42e654"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value, template version. <br /></td></tr>
-<tr class="separator:a4d9f0ab56422ed0d1942abb71a42e654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a277ec1627c00fbf6a82cab02a88ff9a2"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_variant.html#a277ec1627c00fbf6a82cab02a88ff9a2">Get</a> (ea::enable_if_t&lt;!ea::is_enum_v&lt; T &gt;, int &gt;=0) const</td></tr>
+<tr class="memdesc:a277ec1627c00fbf6a82cab02a88ff9a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value, template version. <br /></td></tr>
+<tr class="separator:a277ec1627c00fbf6a82cab02a88ff9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa41aff97b3eec1185b716b9629548dc4"><td class="memTemplParams" colspan="2"><a id="aa41aff97b3eec1185b716b9629548dc4"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:aa41aff97b3eec1185b716b9629548dc4"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_variant.html#aa41aff97b3eec1185b716b9629548dc4">Get</a> (ea::enable_if_t&lt; ea::is_enum_v&lt; T &gt;, int &gt;=0) const</td></tr>
+<tr class="memdesc:aa41aff97b3eec1185b716b9629548dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value casted to enum. <br /></td></tr>
+<tr class="separator:aa41aff97b3eec1185b716b9629548dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b5c7110231e942d0cc28d5bc8fe2089"><td class="memTemplParams" colspan="2"><a id="a3b5c7110231e942d0cc28d5bc8fe2089"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a3b5c7110231e942d0cc28d5bc8fe2089"><td class="memTemplItemLeft" align="right" valign="top">ea::optional&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_variant.html#a3b5c7110231e942d0cc28d5bc8fe2089">GetOptional</a> () const</td></tr>
+<tr class="memdesc:a3b5c7110231e942d0cc28d5bc8fe2089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value as optional. <br /></td></tr>
+<tr class="separator:a3b5c7110231e942d0cc28d5bc8fe2089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f358ecfa3e59fb6545c23d45a871a94"><td class="memItemLeft" align="right" valign="top"><a id="a7f358ecfa3e59fb6545c23d45a871a94"></a>
 <a class="el" href="_variant_8h.html#aa52d33cc56888f12bdfcbe86ea3f7884">VariantBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_variant.html#a7f358ecfa3e59fb6545c23d45a871a94">GetBufferPtr</a> ()</td></tr>
 <tr class="memdesc:a7f358ecfa3e59fb6545c23d45a871a94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to a modifiable buffer or null on type mismatch. <br /></td></tr>
@@ -884,366 +894,366 @@ template&lt;class T &gt; </td></tr>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_variant.html#a18aacc02d1e9720c8e29eadc6e8d5f7a">ToHash</a> () const</td></tr>
 <tr class="memdesc:a18aacc02d1e9720c8e29eadc6e8d5f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash function for containers. <br /></td></tr>
 <tr class="separator:a18aacc02d1e9720c8e29eadc6e8d5f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59086099cc57f29b9c90af59764c29c9"><td class="memItemLeft" align="right" valign="top"><a id="a59086099cc57f29b9c90af59764c29c9"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a59086099cc57f29b9c90af59764c29c9"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a59086099cc57f29b9c90af59764c29c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8767377165e34d4bc71a9aada8f5e9a5"><td class="memItemLeft" align="right" valign="top"><a id="a8767377165e34d4bc71a9aada8f5e9a5"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a8767377165e34d4bc71a9aada8f5e9a5"><td class="memTemplItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a8767377165e34d4bc71a9aada8f5e9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6fd147d064c9d07ad4facee771a0475"><td class="memItemLeft" align="right" valign="top"><a id="aa6fd147d064c9d07ad4facee771a0475"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:aa6fd147d064c9d07ad4facee771a0475"><td class="memTemplItemLeft" align="right" valign="top">long long&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:aa6fd147d064c9d07ad4facee771a0475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51e8ff65df0a5696dd421c935dff8bb4"><td class="memItemLeft" align="right" valign="top"><a id="a51e8ff65df0a5696dd421c935dff8bb4"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a51e8ff65df0a5696dd421c935dff8bb4"><td class="memTemplItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a51e8ff65df0a5696dd421c935dff8bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76b7470d69f649da399df7b9f2907824"><td class="memItemLeft" align="right" valign="top"><a id="a76b7470d69f649da399df7b9f2907824"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a76b7470d69f649da399df7b9f2907824"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a76b7470d69f649da399df7b9f2907824"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af720c09036bcb5b9709c80aae24b413d"><td class="memItemLeft" align="right" valign="top"><a id="af720c09036bcb5b9709c80aae24b413d"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:af720c09036bcb5b9709c80aae24b413d"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:af720c09036bcb5b9709c80aae24b413d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75e26e73e623ffde7f0621ec2611135d"><td class="memItemLeft" align="right" valign="top"><a id="a75e26e73e623ffde7f0621ec2611135d"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a75e26e73e623ffde7f0621ec2611135d"><td class="memTemplItemLeft" align="right" valign="top">float&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a75e26e73e623ffde7f0621ec2611135d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2056ec9784c168b107a9f7bc05456436"><td class="memItemLeft" align="right" valign="top"><a id="a2056ec9784c168b107a9f7bc05456436"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a2056ec9784c168b107a9f7bc05456436"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a2056ec9784c168b107a9f7bc05456436"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac80aacadcfcc1ca411cb7328d5bf2549"><td class="memItemLeft" align="right" valign="top"><a id="ac80aacadcfcc1ca411cb7328d5bf2549"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ac80aacadcfcc1ca411cb7328d5bf2549"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ac80aacadcfcc1ca411cb7328d5bf2549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a078bcb20cb9aacdbc8cce9a199d4b169"><td class="memItemLeft" align="right" valign="top"><a id="a078bcb20cb9aacdbc8cce9a199d4b169"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a078bcb20cb9aacdbc8cce9a199d4b169"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a078bcb20cb9aacdbc8cce9a199d4b169"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab45d675fca71563a126f44304d074dc2"><td class="memItemLeft" align="right" valign="top"><a id="ab45d675fca71563a126f44304d074dc2"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ab45d675fca71563a126f44304d074dc2"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ab45d675fca71563a126f44304d074dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a200f8b8e1c93f3bc7147110433beedae"><td class="memItemLeft" align="right" valign="top"><a id="a200f8b8e1c93f3bc7147110433beedae"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a200f8b8e1c93f3bc7147110433beedae"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a200f8b8e1c93f3bc7147110433beedae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07991f322f1153c412ebc03abcb9bd8c"><td class="memItemLeft" align="right" valign="top"><a id="a07991f322f1153c412ebc03abcb9bd8c"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a07991f322f1153c412ebc03abcb9bd8c"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_color.html">Color</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a07991f322f1153c412ebc03abcb9bd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a135a826c5a5ade3ac2a3dfa2928c30b1"><td class="memItemLeft" align="right" valign="top"><a id="a135a826c5a5ade3ac2a3dfa2928c30b1"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a135a826c5a5ade3ac2a3dfa2928c30b1"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_rect.html">Rect</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a135a826c5a5ade3ac2a3dfa2928c30b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac15e2bdf7830ad2c578cd5b8f434c413"><td class="memItemLeft" align="right" valign="top"><a id="ac15e2bdf7830ad2c578cd5b8f434c413"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ac15e2bdf7830ad2c578cd5b8f434c413"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ac15e2bdf7830ad2c578cd5b8f434c413"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6772a27ae9a738525ae42eb72bad94df"><td class="memItemLeft" align="right" valign="top"><a id="a6772a27ae9a738525ae42eb72bad94df"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a6772a27ae9a738525ae42eb72bad94df"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a6772a27ae9a738525ae42eb72bad94df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ff1ef291af42f83534e25e968ba682d"><td class="memItemLeft" align="right" valign="top"><a id="a1ff1ef291af42f83534e25e968ba682d"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a1ff1ef291af42f83534e25e968ba682d"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a1ff1ef291af42f83534e25e968ba682d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e74f9c65dbd935c9c5934987d2fe5e2"><td class="memItemLeft" align="right" valign="top"><a id="a5e74f9c65dbd935c9c5934987d2fe5e2"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a5e74f9c65dbd935c9c5934987d2fe5e2"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="_variant_8h.html#aa52d33cc56888f12bdfcbe86ea3f7884">VariantBuffer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a5e74f9c65dbd935c9c5934987d2fe5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09e4cf6f4f87c59253126202588b3259"><td class="memItemLeft" align="right" valign="top"><a id="a09e4cf6f4f87c59253126202588b3259"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a09e4cf6f4f87c59253126202588b3259"><td class="memTemplItemLeft" align="right" valign="top">void *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a09e4cf6f4f87c59253126202588b3259"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace259e30385c1a17d0220341e7ce2145"><td class="memItemLeft" align="right" valign="top"><a id="ace259e30385c1a17d0220341e7ce2145"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ace259e30385c1a17d0220341e7ce2145"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ace259e30385c1a17d0220341e7ce2145"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a58a01d612a85b18dc6d3734bb3745c"><td class="memItemLeft" align="right" valign="top"><a id="a0a58a01d612a85b18dc6d3734bb3745c"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a0a58a01d612a85b18dc6d3734bb3745c"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_matrix3.html">Matrix3</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a0a58a01d612a85b18dc6d3734bb3745c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca3138eaa79a51bf790c8f8ecb978c10"><td class="memItemLeft" align="right" valign="top"><a id="aca3138eaa79a51bf790c8f8ecb978c10"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:aca3138eaa79a51bf790c8f8ecb978c10"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:aca3138eaa79a51bf790c8f8ecb978c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6a8f92cd3cdf48aedd0a5f083ae19d5"><td class="memItemLeft" align="right" valign="top"><a id="ae6a8f92cd3cdf48aedd0a5f083ae19d5"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ae6a8f92cd3cdf48aedd0a5f083ae19d5"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ae6a8f92cd3cdf48aedd0a5f083ae19d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a24c5f5bc00026e71ab7031a83467b8"><td class="memItemLeft" align="right" valign="top"><a id="a9a24c5f5bc00026e71ab7031a83467b8"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a9a24c5f5bc00026e71ab7031a83467b8"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_variant_curve.html">VariantCurve</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a9a24c5f5bc00026e71ab7031a83467b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8d6514200678788ec49003ced906eda"><td class="memItemLeft" align="right" valign="top"><a id="ac8d6514200678788ec49003ced906eda"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ac8d6514200678788ec49003ced906eda"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ac8d6514200678788ec49003ced906eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af829a6eda36cf54355034eedf38ec383"><td class="memItemLeft" align="right" valign="top"><a id="af829a6eda36cf54355034eedf38ec383"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:af829a6eda36cf54355034eedf38ec383"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="struct_urho3_d_1_1_resource_ref_list.html">ResourceRefList</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:af829a6eda36cf54355034eedf38ec383"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ebc6d616803c5c86f3c08c7d43f551f"><td class="memItemLeft" align="right" valign="top"><a id="a5ebc6d616803c5c86f3c08c7d43f551f"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a5ebc6d616803c5c86f3c08c7d43f551f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a5ebc6d616803c5c86f3c08c7d43f551f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac53b227b012bd62184f26fde78450803"><td class="memItemLeft" align="right" valign="top"><a id="ac53b227b012bd62184f26fde78450803"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ac53b227b012bd62184f26fde78450803"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ac53b227b012bd62184f26fde78450803"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e22673ae9789752b197475f37708c12"><td class="memItemLeft" align="right" valign="top"><a id="a1e22673ae9789752b197475f37708c12"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a1e22673ae9789752b197475f37708c12"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a1e22673ae9789752b197475f37708c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc1da096287e7c2a2ee3c64a7d990e62"><td class="memItemLeft" align="right" valign="top"><a id="afc1da096287e7c2a2ee3c64a7d990e62"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:afc1da096287e7c2a2ee3c64a7d990e62"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:afc1da096287e7c2a2ee3c64a7d990e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9952fa568af1fedc1df3d6a2897568c"><td class="memItemLeft" align="right" valign="top"><a id="ab9952fa568af1fedc1df3d6a2897568c"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ab9952fa568af1fedc1df3d6a2897568c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ab9952fa568af1fedc1df3d6a2897568c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6f6e3863dc91d93b859eb3f41db41c1"><td class="memItemLeft" align="right" valign="top"><a id="af6f6e3863dc91d93b859eb3f41db41c1"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:af6f6e3863dc91d93b859eb3f41db41c1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:af6f6e3863dc91d93b859eb3f41db41c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c1cc076e667c9b58232d86529b920b4"><td class="memItemLeft" align="right" valign="top"><a id="a0c1cc076e667c9b58232d86529b920b4"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a0c1cc076e667c9b58232d86529b920b4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a0c1cc076e667c9b58232d86529b920b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0878f19c503f047b2e1f1af953f071c5"><td class="memItemLeft" align="right" valign="top"><a id="a0878f19c503f047b2e1f1af953f071c5"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a0878f19c503f047b2e1f1af953f071c5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_color.html">Color</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a0878f19c503f047b2e1f1af953f071c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66b5ce7b7abfb80e538cd66bf280eccb"><td class="memItemLeft" align="right" valign="top"><a id="a66b5ce7b7abfb80e538cd66bf280eccb"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a66b5ce7b7abfb80e538cd66bf280eccb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_rect.html">Rect</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a66b5ce7b7abfb80e538cd66bf280eccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10e85c943524ac52bc09d2cdb746bf8c"><td class="memItemLeft" align="right" valign="top"><a id="a10e85c943524ac52bc09d2cdb746bf8c"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a10e85c943524ac52bc09d2cdb746bf8c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a10e85c943524ac52bc09d2cdb746bf8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac95628e5ffc7e9b55160d27f9cb8c81"><td class="memItemLeft" align="right" valign="top"><a id="aac95628e5ffc7e9b55160d27f9cb8c81"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:aac95628e5ffc7e9b55160d27f9cb8c81"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:aac95628e5ffc7e9b55160d27f9cb8c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9324e33601684ed0b7c68adc10dd2bc"><td class="memItemLeft" align="right" valign="top"><a id="aa9324e33601684ed0b7c68adc10dd2bc"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:aa9324e33601684ed0b7c68adc10dd2bc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:aa9324e33601684ed0b7c68adc10dd2bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c3b330057c113727e4699269580fd5a"><td class="memItemLeft" align="right" valign="top"><a id="a5c3b330057c113727e4699269580fd5a"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a5c3b330057c113727e4699269580fd5a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_variant_8h.html#aa52d33cc56888f12bdfcbe86ea3f7884">VariantBuffer</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a5c3b330057c113727e4699269580fd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa09ffc4d58334221e6bcc17dc335dc95"><td class="memItemLeft" align="right" valign="top"><a id="aa09ffc4d58334221e6bcc17dc335dc95"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:aa09ffc4d58334221e6bcc17dc335dc95"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_matrix3.html">Matrix3</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:aa09ffc4d58334221e6bcc17dc335dc95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ad3d250a0dfc8ddb1d73316a2cd4941"><td class="memItemLeft" align="right" valign="top"><a id="a9ad3d250a0dfc8ddb1d73316a2cd4941"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a9ad3d250a0dfc8ddb1d73316a2cd4941"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a9ad3d250a0dfc8ddb1d73316a2cd4941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8f9e7337b8e3cc87efeaa96a95af885"><td class="memItemLeft" align="right" valign="top"><a id="ab8f9e7337b8e3cc87efeaa96a95af885"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ab8f9e7337b8e3cc87efeaa96a95af885"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ab8f9e7337b8e3cc87efeaa96a95af885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2aef7a9d665fced722201af22b6ed7e"><td class="memItemLeft" align="right" valign="top"><a id="ab2aef7a9d665fced722201af22b6ed7e"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ab2aef7a9d665fced722201af22b6ed7e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_variant_curve.html">VariantCurve</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ab2aef7a9d665fced722201af22b6ed7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5684796203917f50008e6b2e63cfdeb6"><td class="memItemLeft" align="right" valign="top"><a id="a5684796203917f50008e6b2e63cfdeb6"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a5684796203917f50008e6b2e63cfdeb6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a5684796203917f50008e6b2e63cfdeb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb03cf6212a735f5353c05cd1097e5a0"><td class="memItemLeft" align="right" valign="top"><a id="acb03cf6212a735f5353c05cd1097e5a0"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:acb03cf6212a735f5353c05cd1097e5a0"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:acb03cf6212a735f5353c05cd1097e5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30852acb2412e5130783f04cf3807eae"><td class="memItemLeft" align="right" valign="top"><a id="a30852acb2412e5130783f04cf3807eae"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a30852acb2412e5130783f04cf3807eae"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API unsigned&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a30852acb2412e5130783f04cf3807eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5f03466fc6207cb2b8d22b691349a4e"><td class="memItemLeft" align="right" valign="top"><a id="ab5f03466fc6207cb2b8d22b691349a4e"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ab5f03466fc6207cb2b8d22b691349a4e"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API long long&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ab5f03466fc6207cb2b8d22b691349a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a676fbbbc4b3579f5daebe0e5b3ed9aff"><td class="memItemLeft" align="right" valign="top"><a id="a676fbbbc4b3579f5daebe0e5b3ed9aff"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a676fbbbc4b3579f5daebe0e5b3ed9aff"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API unsigned long long&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a676fbbbc4b3579f5daebe0e5b3ed9aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53465686c1657d69be370d833b257e21"><td class="memItemLeft" align="right" valign="top"><a id="a53465686c1657d69be370d833b257e21"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a53465686c1657d69be370d833b257e21"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a53465686c1657d69be370d833b257e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e8e3cefdb928322749d6172a7621df1"><td class="memItemLeft" align="right" valign="top"><a id="a9e8e3cefdb928322749d6172a7621df1"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a9e8e3cefdb928322749d6172a7621df1"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a9e8e3cefdb928322749d6172a7621df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc7e8a178b1b0043e6564e27f75d9f6c"><td class="memItemLeft" align="right" valign="top"><a id="acc7e8a178b1b0043e6564e27f75d9f6c"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:acc7e8a178b1b0043e6564e27f75d9f6c"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API float&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:acc7e8a178b1b0043e6564e27f75d9f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1f3773a3c917b4fbb51ce4025ab551b"><td class="memItemLeft" align="right" valign="top"><a id="ad1f3773a3c917b4fbb51ce4025ab551b"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ad1f3773a3c917b4fbb51ce4025ab551b"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ad1f3773a3c917b4fbb51ce4025ab551b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a556f6bbdf30adc3b4c1f76502314f986"><td class="memItemLeft" align="right" valign="top"><a id="a556f6bbdf30adc3b4c1f76502314f986"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a556f6bbdf30adc3b4c1f76502314f986"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a556f6bbdf30adc3b4c1f76502314f986"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bfa0e9281e52f9a4983fb424104c3e9"><td class="memItemLeft" align="right" valign="top"><a id="a1bfa0e9281e52f9a4983fb424104c3e9"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a1bfa0e9281e52f9a4983fb424104c3e9"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a1bfa0e9281e52f9a4983fb424104c3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4456beb8dd42c760618b77722f0d592"><td class="memItemLeft" align="right" valign="top"><a id="ab4456beb8dd42c760618b77722f0d592"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ab4456beb8dd42c760618b77722f0d592"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ab4456beb8dd42c760618b77722f0d592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d265c790471d0af858c814b5dd9a0ab"><td class="memItemLeft" align="right" valign="top"><a id="a8d265c790471d0af858c814b5dd9a0ab"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a8d265c790471d0af858c814b5dd9a0ab"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a8d265c790471d0af858c814b5dd9a0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8383cdeef18f3e36fc814ac450ec90fe"><td class="memItemLeft" align="right" valign="top"><a id="a8383cdeef18f3e36fc814ac450ec90fe"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a8383cdeef18f3e36fc814ac450ec90fe"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_color.html">Color</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a8383cdeef18f3e36fc814ac450ec90fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff0990aba4d55e36b8ef803b4ccc16f9"><td class="memItemLeft" align="right" valign="top"><a id="aff0990aba4d55e36b8ef803b4ccc16f9"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:aff0990aba4d55e36b8ef803b4ccc16f9"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API ea::string &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:aff0990aba4d55e36b8ef803b4ccc16f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34cf1d8deb09fc5142a54955588e21bd"><td class="memItemLeft" align="right" valign="top"><a id="a34cf1d8deb09fc5142a54955588e21bd"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a34cf1d8deb09fc5142a54955588e21bd"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_rect.html">Rect</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a34cf1d8deb09fc5142a54955588e21bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada1fba6d613ffa447b7ea1b10004d821"><td class="memItemLeft" align="right" valign="top"><a id="ada1fba6d613ffa447b7ea1b10004d821"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ada1fba6d613ffa447b7ea1b10004d821"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ada1fba6d613ffa447b7ea1b10004d821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6865843b24ef53c913fa6a069825643"><td class="memItemLeft" align="right" valign="top"><a id="ad6865843b24ef53c913fa6a069825643"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ad6865843b24ef53c913fa6a069825643"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ad6865843b24ef53c913fa6a069825643"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a061e7be33ed608701dae489c845f43bb"><td class="memItemLeft" align="right" valign="top"><a id="a061e7be33ed608701dae489c845f43bb"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a061e7be33ed608701dae489c845f43bb"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a061e7be33ed608701dae489c845f43bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a2fd84e2c89f02f23889942d10a4938"><td class="memItemLeft" align="right" valign="top"><a id="a4a2fd84e2c89f02f23889942d10a4938"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a4a2fd84e2c89f02f23889942d10a4938"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="_variant_8h.html#aa52d33cc56888f12bdfcbe86ea3f7884">VariantBuffer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a4a2fd84e2c89f02f23889942d10a4938"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad6eac2d0267d4d3c54c4d5d5e39e97c"><td class="memItemLeft" align="right" valign="top"><a id="aad6eac2d0267d4d3c54c4d5d5e39e97c"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:aad6eac2d0267d4d3c54c4d5d5e39e97c"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API void *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:aad6eac2d0267d4d3c54c4d5d5e39e97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22c8d0ee35e45c79a74239ad6e16b52c"><td class="memItemLeft" align="right" valign="top"><a id="a22c8d0ee35e45c79a74239ad6e16b52c"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a22c8d0ee35e45c79a74239ad6e16b52c"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a22c8d0ee35e45c79a74239ad6e16b52c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a876c779eed05a8d25fffb1d76c802aac"><td class="memItemLeft" align="right" valign="top"><a id="a876c779eed05a8d25fffb1d76c802aac"></a>
+<tr class="memitem:acd6ad4afa456e1555fc2f1916ae6a577"><td class="memItemLeft" align="right" valign="top"><a id="acd6ad4afa456e1555fc2f1916ae6a577"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:acd6ad4afa456e1555fc2f1916ae6a577"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:acd6ad4afa456e1555fc2f1916ae6a577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f2c7bd95cd9fedba1cf57ff9561f177"><td class="memItemLeft" align="right" valign="top"><a id="a0f2c7bd95cd9fedba1cf57ff9561f177"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a0f2c7bd95cd9fedba1cf57ff9561f177"><td class="memTemplItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a0f2c7bd95cd9fedba1cf57ff9561f177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afff279cdbf1f0608e2832e824029932a"><td class="memItemLeft" align="right" valign="top"><a id="afff279cdbf1f0608e2832e824029932a"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:afff279cdbf1f0608e2832e824029932a"><td class="memTemplItemLeft" align="right" valign="top">long long&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:afff279cdbf1f0608e2832e824029932a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e8f9dd67757cc485af54ac244f13e42"><td class="memItemLeft" align="right" valign="top"><a id="a2e8f9dd67757cc485af54ac244f13e42"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a2e8f9dd67757cc485af54ac244f13e42"><td class="memTemplItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a2e8f9dd67757cc485af54ac244f13e42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0329c8dd01badc28422ac430e8782965"><td class="memItemLeft" align="right" valign="top"><a id="a0329c8dd01badc28422ac430e8782965"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a0329c8dd01badc28422ac430e8782965"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a0329c8dd01badc28422ac430e8782965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4733fdd44993de3b96941b4ec2edc6a8"><td class="memItemLeft" align="right" valign="top"><a id="a4733fdd44993de3b96941b4ec2edc6a8"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a4733fdd44993de3b96941b4ec2edc6a8"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a4733fdd44993de3b96941b4ec2edc6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cbfbab2e372413f0f00aa4b03ed1229"><td class="memItemLeft" align="right" valign="top"><a id="a8cbfbab2e372413f0f00aa4b03ed1229"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a8cbfbab2e372413f0f00aa4b03ed1229"><td class="memTemplItemLeft" align="right" valign="top">float&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a8cbfbab2e372413f0f00aa4b03ed1229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2624fbe2a4bdb4b04c4274e641e4320b"><td class="memItemLeft" align="right" valign="top"><a id="a2624fbe2a4bdb4b04c4274e641e4320b"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a2624fbe2a4bdb4b04c4274e641e4320b"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a2624fbe2a4bdb4b04c4274e641e4320b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cccc3117839086442dc4a8392dfe47b"><td class="memItemLeft" align="right" valign="top"><a id="a6cccc3117839086442dc4a8392dfe47b"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a6cccc3117839086442dc4a8392dfe47b"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a6cccc3117839086442dc4a8392dfe47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95cd645ca830fdd1e023ca62b1048456"><td class="memItemLeft" align="right" valign="top"><a id="a95cd645ca830fdd1e023ca62b1048456"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a95cd645ca830fdd1e023ca62b1048456"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a95cd645ca830fdd1e023ca62b1048456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ce5dbc8d3b6d25c02ed589a0723d80c"><td class="memItemLeft" align="right" valign="top"><a id="a7ce5dbc8d3b6d25c02ed589a0723d80c"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a7ce5dbc8d3b6d25c02ed589a0723d80c"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a7ce5dbc8d3b6d25c02ed589a0723d80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0facf7825e71de22f56c96fd2118d2d"><td class="memItemLeft" align="right" valign="top"><a id="ad0facf7825e71de22f56c96fd2118d2d"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ad0facf7825e71de22f56c96fd2118d2d"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ad0facf7825e71de22f56c96fd2118d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5540afc0d62c98107d343a1fb71e5a34"><td class="memItemLeft" align="right" valign="top"><a id="a5540afc0d62c98107d343a1fb71e5a34"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a5540afc0d62c98107d343a1fb71e5a34"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_color.html">Color</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a5540afc0d62c98107d343a1fb71e5a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a926755a1c0023e88a85d10f9d2e41023"><td class="memItemLeft" align="right" valign="top"><a id="a926755a1c0023e88a85d10f9d2e41023"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a926755a1c0023e88a85d10f9d2e41023"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_rect.html">Rect</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a926755a1c0023e88a85d10f9d2e41023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca58cb8ceaa35d770a861170834041c8"><td class="memItemLeft" align="right" valign="top"><a id="aca58cb8ceaa35d770a861170834041c8"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:aca58cb8ceaa35d770a861170834041c8"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:aca58cb8ceaa35d770a861170834041c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9698c2c399452459e29179a8cfad48f0"><td class="memItemLeft" align="right" valign="top"><a id="a9698c2c399452459e29179a8cfad48f0"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a9698c2c399452459e29179a8cfad48f0"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a9698c2c399452459e29179a8cfad48f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678bd9c20440e9f4cf84629e73fec23f"><td class="memItemLeft" align="right" valign="top"><a id="a678bd9c20440e9f4cf84629e73fec23f"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a678bd9c20440e9f4cf84629e73fec23f"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a678bd9c20440e9f4cf84629e73fec23f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52614ed27ccf57544f184b5e01f637b1"><td class="memItemLeft" align="right" valign="top"><a id="a52614ed27ccf57544f184b5e01f637b1"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a52614ed27ccf57544f184b5e01f637b1"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="_variant_8h.html#aa52d33cc56888f12bdfcbe86ea3f7884">VariantBuffer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a52614ed27ccf57544f184b5e01f637b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3bf517aedd291de6e8a19c9875152b5"><td class="memItemLeft" align="right" valign="top"><a id="af3bf517aedd291de6e8a19c9875152b5"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:af3bf517aedd291de6e8a19c9875152b5"><td class="memTemplItemLeft" align="right" valign="top">void *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:af3bf517aedd291de6e8a19c9875152b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1734bc7cb3f82cc09d4497983f7f5145"><td class="memItemLeft" align="right" valign="top"><a id="a1734bc7cb3f82cc09d4497983f7f5145"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a1734bc7cb3f82cc09d4497983f7f5145"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a1734bc7cb3f82cc09d4497983f7f5145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a806ce2a61f6cec011238f3eb1640fbfa"><td class="memItemLeft" align="right" valign="top"><a id="a806ce2a61f6cec011238f3eb1640fbfa"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a806ce2a61f6cec011238f3eb1640fbfa"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_matrix3.html">Matrix3</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a806ce2a61f6cec011238f3eb1640fbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc2e1ee66a526f01e7bcb9e040ab4c8"><td class="memItemLeft" align="right" valign="top"><a id="afbc2e1ee66a526f01e7bcb9e040ab4c8"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:afbc2e1ee66a526f01e7bcb9e040ab4c8"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:afbc2e1ee66a526f01e7bcb9e040ab4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203d7fef0eba881c2673ed58285f7f35"><td class="memItemLeft" align="right" valign="top"><a id="a203d7fef0eba881c2673ed58285f7f35"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a203d7fef0eba881c2673ed58285f7f35"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a203d7fef0eba881c2673ed58285f7f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70289a142236e28b373f284ea09aeb46"><td class="memItemLeft" align="right" valign="top"><a id="a70289a142236e28b373f284ea09aeb46"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a70289a142236e28b373f284ea09aeb46"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_variant_curve.html">VariantCurve</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a70289a142236e28b373f284ea09aeb46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d6c5a1f02de5ac4d28e6e0c8d377192"><td class="memItemLeft" align="right" valign="top"><a id="a4d6c5a1f02de5ac4d28e6e0c8d377192"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a4d6c5a1f02de5ac4d28e6e0c8d377192"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a4d6c5a1f02de5ac4d28e6e0c8d377192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9479cae81b0d813a6a01c73f9d3ec1eb"><td class="memItemLeft" align="right" valign="top"><a id="a9479cae81b0d813a6a01c73f9d3ec1eb"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a9479cae81b0d813a6a01c73f9d3ec1eb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="struct_urho3_d_1_1_resource_ref_list.html">ResourceRefList</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a9479cae81b0d813a6a01c73f9d3ec1eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f68037d32d28b40953faf490926b4d7"><td class="memItemLeft" align="right" valign="top"><a id="a9f68037d32d28b40953faf490926b4d7"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a9f68037d32d28b40953faf490926b4d7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a9f68037d32d28b40953faf490926b4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa892461ea55e2090ebd1e0d4d96221fc"><td class="memItemLeft" align="right" valign="top"><a id="aa892461ea55e2090ebd1e0d4d96221fc"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:aa892461ea55e2090ebd1e0d4d96221fc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:aa892461ea55e2090ebd1e0d4d96221fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7314fb11be659609b8cbd53c3620074b"><td class="memItemLeft" align="right" valign="top"><a id="a7314fb11be659609b8cbd53c3620074b"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a7314fb11be659609b8cbd53c3620074b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a7314fb11be659609b8cbd53c3620074b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a2521965d84a6eb7d1422046bb2af12"><td class="memItemLeft" align="right" valign="top"><a id="a4a2521965d84a6eb7d1422046bb2af12"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a4a2521965d84a6eb7d1422046bb2af12"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a4a2521965d84a6eb7d1422046bb2af12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a930bf0232a9eb4498d7ec0bac19c4fc6"><td class="memItemLeft" align="right" valign="top"><a id="a930bf0232a9eb4498d7ec0bac19c4fc6"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a930bf0232a9eb4498d7ec0bac19c4fc6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a930bf0232a9eb4498d7ec0bac19c4fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22f2e725e73bde76e2b4c81fd01be839"><td class="memItemLeft" align="right" valign="top"><a id="a22f2e725e73bde76e2b4c81fd01be839"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a22f2e725e73bde76e2b4c81fd01be839"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a22f2e725e73bde76e2b4c81fd01be839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e4eab291c75b75546dae5ee2206a669"><td class="memItemLeft" align="right" valign="top"><a id="a4e4eab291c75b75546dae5ee2206a669"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a4e4eab291c75b75546dae5ee2206a669"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a4e4eab291c75b75546dae5ee2206a669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3510f35809880fe71979aca68aeb3d75"><td class="memItemLeft" align="right" valign="top"><a id="a3510f35809880fe71979aca68aeb3d75"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a3510f35809880fe71979aca68aeb3d75"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_color.html">Color</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a3510f35809880fe71979aca68aeb3d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a014bbee3aece1ca76711aec5f0dfbf8e"><td class="memItemLeft" align="right" valign="top"><a id="a014bbee3aece1ca76711aec5f0dfbf8e"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a014bbee3aece1ca76711aec5f0dfbf8e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_rect.html">Rect</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a014bbee3aece1ca76711aec5f0dfbf8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad50072728b9cfc1ab10d30089a81269f"><td class="memItemLeft" align="right" valign="top"><a id="ad50072728b9cfc1ab10d30089a81269f"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ad50072728b9cfc1ab10d30089a81269f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ad50072728b9cfc1ab10d30089a81269f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae45981b49698b49a84bd5e6ad83e63d5"><td class="memItemLeft" align="right" valign="top"><a id="ae45981b49698b49a84bd5e6ad83e63d5"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ae45981b49698b49a84bd5e6ad83e63d5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ae45981b49698b49a84bd5e6ad83e63d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0457269649abff1487aa6f5dcbd6ee5"><td class="memItemLeft" align="right" valign="top"><a id="ac0457269649abff1487aa6f5dcbd6ee5"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ac0457269649abff1487aa6f5dcbd6ee5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ac0457269649abff1487aa6f5dcbd6ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af33e3fe375994b1e9ec14990e56599fc"><td class="memItemLeft" align="right" valign="top"><a id="af33e3fe375994b1e9ec14990e56599fc"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:af33e3fe375994b1e9ec14990e56599fc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_variant_8h.html#aa52d33cc56888f12bdfcbe86ea3f7884">VariantBuffer</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:af33e3fe375994b1e9ec14990e56599fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8c4a1785f1e2a6dc6316e8e8b19fff"><td class="memItemLeft" align="right" valign="top"><a id="ade8c4a1785f1e2a6dc6316e8e8b19fff"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ade8c4a1785f1e2a6dc6316e8e8b19fff"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_matrix3.html">Matrix3</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ade8c4a1785f1e2a6dc6316e8e8b19fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab335af4bc6c9a98eab8543679da42999"><td class="memItemLeft" align="right" valign="top"><a id="ab335af4bc6c9a98eab8543679da42999"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ab335af4bc6c9a98eab8543679da42999"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ab335af4bc6c9a98eab8543679da42999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaa3cddb6442ebf5e4f59403fc27389f"><td class="memItemLeft" align="right" valign="top"><a id="abaa3cddb6442ebf5e4f59403fc27389f"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:abaa3cddb6442ebf5e4f59403fc27389f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:abaa3cddb6442ebf5e4f59403fc27389f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c2204cdb6828a10fab32a825ae3541a"><td class="memItemLeft" align="right" valign="top"><a id="a8c2204cdb6828a10fab32a825ae3541a"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a8c2204cdb6828a10fab32a825ae3541a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_variant_curve.html">VariantCurve</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a8c2204cdb6828a10fab32a825ae3541a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a423e176ac91e73619a571991198d3"><td class="memItemLeft" align="right" valign="top"><a id="a54a423e176ac91e73619a571991198d3"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a54a423e176ac91e73619a571991198d3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a54a423e176ac91e73619a571991198d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569f9e7b298896ba448d103f1bc4e117"><td class="memItemLeft" align="right" valign="top"><a id="a569f9e7b298896ba448d103f1bc4e117"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a569f9e7b298896ba448d103f1bc4e117"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a569f9e7b298896ba448d103f1bc4e117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29253f069e34bc9f9963fb33e6325e8e"><td class="memItemLeft" align="right" valign="top"><a id="a29253f069e34bc9f9963fb33e6325e8e"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a29253f069e34bc9f9963fb33e6325e8e"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API unsigned&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a29253f069e34bc9f9963fb33e6325e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97a8ecc1fd12a179e38a58b327d512f2"><td class="memItemLeft" align="right" valign="top"><a id="a97a8ecc1fd12a179e38a58b327d512f2"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a97a8ecc1fd12a179e38a58b327d512f2"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API long long&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a97a8ecc1fd12a179e38a58b327d512f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76de688680dc7d5694fccb1c1dda6e81"><td class="memItemLeft" align="right" valign="top"><a id="a76de688680dc7d5694fccb1c1dda6e81"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a76de688680dc7d5694fccb1c1dda6e81"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API unsigned long long&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a76de688680dc7d5694fccb1c1dda6e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0176ea3e82432cf36ce8545c560727c5"><td class="memItemLeft" align="right" valign="top"><a id="a0176ea3e82432cf36ce8545c560727c5"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a0176ea3e82432cf36ce8545c560727c5"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a0176ea3e82432cf36ce8545c560727c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87646a3965059eac27d2aaa5925d4a2f"><td class="memItemLeft" align="right" valign="top"><a id="a87646a3965059eac27d2aaa5925d4a2f"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a87646a3965059eac27d2aaa5925d4a2f"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a87646a3965059eac27d2aaa5925d4a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a761d685be92d7875dc86fd495aa9283c"><td class="memItemLeft" align="right" valign="top"><a id="a761d685be92d7875dc86fd495aa9283c"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a761d685be92d7875dc86fd495aa9283c"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API float&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a761d685be92d7875dc86fd495aa9283c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17733328505c77c36e553061bf1817ae"><td class="memItemLeft" align="right" valign="top"><a id="a17733328505c77c36e553061bf1817ae"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a17733328505c77c36e553061bf1817ae"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a17733328505c77c36e553061bf1817ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65299c4b0699242849985310f2f13a6e"><td class="memItemLeft" align="right" valign="top"><a id="a65299c4b0699242849985310f2f13a6e"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a65299c4b0699242849985310f2f13a6e"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a65299c4b0699242849985310f2f13a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6290dd816cee86418b80297d7cfccf26"><td class="memItemLeft" align="right" valign="top"><a id="a6290dd816cee86418b80297d7cfccf26"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a6290dd816cee86418b80297d7cfccf26"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a6290dd816cee86418b80297d7cfccf26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae504e2e7d8bb416368815b9d68021b7e"><td class="memItemLeft" align="right" valign="top"><a id="ae504e2e7d8bb416368815b9d68021b7e"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ae504e2e7d8bb416368815b9d68021b7e"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ae504e2e7d8bb416368815b9d68021b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f2239bb73e65f43d9447145b133dbca"><td class="memItemLeft" align="right" valign="top"><a id="a2f2239bb73e65f43d9447145b133dbca"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a2f2239bb73e65f43d9447145b133dbca"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a2f2239bb73e65f43d9447145b133dbca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407c776ebec11a01ea72d58d943801c9"><td class="memItemLeft" align="right" valign="top"><a id="a407c776ebec11a01ea72d58d943801c9"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a407c776ebec11a01ea72d58d943801c9"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_color.html">Color</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a407c776ebec11a01ea72d58d943801c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8cfd44db5042ce19c6479f5693fab59"><td class="memItemLeft" align="right" valign="top"><a id="ae8cfd44db5042ce19c6479f5693fab59"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ae8cfd44db5042ce19c6479f5693fab59"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API ea::string &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ae8cfd44db5042ce19c6479f5693fab59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb6f2d706d4775ad3bb42ae0f304b620"><td class="memItemLeft" align="right" valign="top"><a id="aeb6f2d706d4775ad3bb42ae0f304b620"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:aeb6f2d706d4775ad3bb42ae0f304b620"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_rect.html">Rect</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:aeb6f2d706d4775ad3bb42ae0f304b620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1274d8bd305d2b1006dcdda95712bef0"><td class="memItemLeft" align="right" valign="top"><a id="a1274d8bd305d2b1006dcdda95712bef0"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a1274d8bd305d2b1006dcdda95712bef0"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a1274d8bd305d2b1006dcdda95712bef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2427da8cd7e5b469ddf5fe264e7d12ed"><td class="memItemLeft" align="right" valign="top"><a id="a2427da8cd7e5b469ddf5fe264e7d12ed"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a2427da8cd7e5b469ddf5fe264e7d12ed"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a2427da8cd7e5b469ddf5fe264e7d12ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25358f40160f73b8050111e7ff8927a4"><td class="memItemLeft" align="right" valign="top"><a id="a25358f40160f73b8050111e7ff8927a4"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a25358f40160f73b8050111e7ff8927a4"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a25358f40160f73b8050111e7ff8927a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb3777814ee84d5c7c5eeb88a59c2f2"><td class="memItemLeft" align="right" valign="top"><a id="a1eb3777814ee84d5c7c5eeb88a59c2f2"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a1eb3777814ee84d5c7c5eeb88a59c2f2"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="_variant_8h.html#aa52d33cc56888f12bdfcbe86ea3f7884">VariantBuffer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a1eb3777814ee84d5c7c5eeb88a59c2f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f38c81652cd5cfaa5c9db841dd886f"><td class="memItemLeft" align="right" valign="top"><a id="a73f38c81652cd5cfaa5c9db841dd886f"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a73f38c81652cd5cfaa5c9db841dd886f"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API void *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a73f38c81652cd5cfaa5c9db841dd886f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae49019a6b3adc14ce008c6a8be8b9d1c"><td class="memItemLeft" align="right" valign="top"><a id="ae49019a6b3adc14ce008c6a8be8b9d1c"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ae49019a6b3adc14ce008c6a8be8b9d1c"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ae49019a6b3adc14ce008c6a8be8b9d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71140d34c636ea41f0896cca2b86dc1f"><td class="memItemLeft" align="right" valign="top"><a id="a71140d34c636ea41f0896cca2b86dc1f"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a876c779eed05a8d25fffb1d76c802aac"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_matrix3.html">Matrix3</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a876c779eed05a8d25fffb1d76c802aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0e7bd32bef715567bde6c8b148c9a5e"><td class="memItemLeft" align="right" valign="top"><a id="ac0e7bd32bef715567bde6c8b148c9a5e"></a>
+<tr class="memitem:a71140d34c636ea41f0896cca2b86dc1f"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_matrix3.html">Matrix3</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a71140d34c636ea41f0896cca2b86dc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eceba237239586258fb225ecfee3045"><td class="memItemLeft" align="right" valign="top"><a id="a5eceba237239586258fb225ecfee3045"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:ac0e7bd32bef715567bde6c8b148c9a5e"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ac0e7bd32bef715567bde6c8b148c9a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d71cf9b24b7096f8575c0a2ef0b07c5"><td class="memItemLeft" align="right" valign="top"><a id="a2d71cf9b24b7096f8575c0a2ef0b07c5"></a>
+<tr class="memitem:a5eceba237239586258fb225ecfee3045"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a5eceba237239586258fb225ecfee3045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5544d3cbe00163342750324100031980"><td class="memItemLeft" align="right" valign="top"><a id="a5544d3cbe00163342750324100031980"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a2d71cf9b24b7096f8575c0a2ef0b07c5"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a2d71cf9b24b7096f8575c0a2ef0b07c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00532e9c97a72b638e636c04b7ee2a43"><td class="memItemLeft" align="right" valign="top"><a id="a00532e9c97a72b638e636c04b7ee2a43"></a>
+<tr class="memitem:a5544d3cbe00163342750324100031980"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a5544d3cbe00163342750324100031980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a8b0a5f36af70d175cdb1ff6501adb0"><td class="memItemLeft" align="right" valign="top"><a id="a4a8b0a5f36af70d175cdb1ff6501adb0"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a00532e9c97a72b638e636c04b7ee2a43"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_variant_curve.html">VariantCurve</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a00532e9c97a72b638e636c04b7ee2a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5982e01f9e244da69bc175f9cd1dc9d"><td class="memItemLeft" align="right" valign="top"><a id="aa5982e01f9e244da69bc175f9cd1dc9d"></a>
+<tr class="memitem:a4a8b0a5f36af70d175cdb1ff6501adb0"><td class="memTemplItemLeft" align="right" valign="top">const URHO3D_API <a class="el" href="class_urho3_d_1_1_variant_curve.html">VariantCurve</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a4a8b0a5f36af70d175cdb1ff6501adb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d59e00cb64daf6705e3b998db339c2d"><td class="memItemLeft" align="right" valign="top"><a id="a9d59e00cb64daf6705e3b998db339c2d"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:aa5982e01f9e244da69bc175f9cd1dc9d"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:aa5982e01f9e244da69bc175f9cd1dc9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ef2551dcf1a89a2b4272346ac25144b"><td class="memItemLeft" align="right" valign="top"><a id="a4ef2551dcf1a89a2b4272346ac25144b"></a>
+<tr class="memitem:a9d59e00cb64daf6705e3b998db339c2d"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a9d59e00cb64daf6705e3b998db339c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2245755e826021d712895b7c95be0af"><td class="memItemLeft" align="right" valign="top"><a id="ab2245755e826021d712895b7c95be0af"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a4ef2551dcf1a89a2b4272346ac25144b"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="struct_urho3_d_1_1_resource_ref_list.html">ResourceRefList</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a4ef2551dcf1a89a2b4272346ac25144b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59e3e5275a09c0c545b81163735b0300"><td class="memItemLeft" align="right" valign="top"><a id="a59e3e5275a09c0c545b81163735b0300"></a>
+<tr class="memitem:ab2245755e826021d712895b7c95be0af"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="struct_urho3_d_1_1_resource_ref_list.html">ResourceRefList</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ab2245755e826021d712895b7c95be0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad00e4257f8629f78f1282fdd14cb0e91"><td class="memItemLeft" align="right" valign="top"><a id="ad00e4257f8629f78f1282fdd14cb0e91"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a59e3e5275a09c0c545b81163735b0300"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a59e3e5275a09c0c545b81163735b0300"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96c492724a159b360312900914dc60c9"><td class="memItemLeft" align="right" valign="top"><a id="a96c492724a159b360312900914dc60c9"></a>
+<tr class="memitem:ad00e4257f8629f78f1282fdd14cb0e91"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ad00e4257f8629f78f1282fdd14cb0e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05adaafd62f2fb9cdaf59c05fb8aeb26"><td class="memItemLeft" align="right" valign="top"><a id="a05adaafd62f2fb9cdaf59c05fb8aeb26"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a96c492724a159b360312900914dc60c9"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a96c492724a159b360312900914dc60c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11f09421cbee45346543c3e2190ddac7"><td class="memItemLeft" align="right" valign="top"><a id="a11f09421cbee45346543c3e2190ddac7"></a>
+<tr class="memitem:a05adaafd62f2fb9cdaf59c05fb8aeb26"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a05adaafd62f2fb9cdaf59c05fb8aeb26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5c5972d3b59220709cad6979812c4b"><td class="memItemLeft" align="right" valign="top"><a id="a0c5c5972d3b59220709cad6979812c4b"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a11f09421cbee45346543c3e2190ddac7"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a11f09421cbee45346543c3e2190ddac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09b21754c22a4fb1ed538b093459eeb8"><td class="memItemLeft" align="right" valign="top"><a id="a09b21754c22a4fb1ed538b093459eeb8"></a>
+<tr class="memitem:a0c5c5972d3b59220709cad6979812c4b"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a0c5c5972d3b59220709cad6979812c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3857691a7da25ce7435addd7a3926929"><td class="memItemLeft" align="right" valign="top"><a id="a3857691a7da25ce7435addd7a3926929"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a09b21754c22a4fb1ed538b093459eeb8"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a09b21754c22a4fb1ed538b093459eeb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b7291c36df10325079534956b121317"><td class="memItemLeft" align="right" valign="top"><a id="a4b7291c36df10325079534956b121317"></a>
+<tr class="memitem:a3857691a7da25ce7435addd7a3926929"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a3857691a7da25ce7435addd7a3926929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9a061fc86ab267822b6781f7973d019"><td class="memItemLeft" align="right" valign="top"><a id="ab9a061fc86ab267822b6781f7973d019"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a4b7291c36df10325079534956b121317"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a4b7291c36df10325079534956b121317"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2544f71fb4e23fad518d5d875db3b2c9"><td class="memItemLeft" align="right" valign="top"><a id="a2544f71fb4e23fad518d5d875db3b2c9"></a>
+<tr class="memitem:ab9a061fc86ab267822b6781f7973d019"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ab9a061fc86ab267822b6781f7973d019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2dffbfab0429c96863490cf2264399b"><td class="memItemLeft" align="right" valign="top"><a id="ad2dffbfab0429c96863490cf2264399b"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a2544f71fb4e23fad518d5d875db3b2c9"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a2544f71fb4e23fad518d5d875db3b2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7aa58bcf2a1c3fe9f6fa38d25f82c1a7"><td class="memItemLeft" align="right" valign="top"><a id="a7aa58bcf2a1c3fe9f6fa38d25f82c1a7"></a>
+<tr class="memitem:ad2dffbfab0429c96863490cf2264399b"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ad2dffbfab0429c96863490cf2264399b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4136a17defa2d4772ff1231367ebb9d"><td class="memItemLeft" align="right" valign="top"><a id="ac4136a17defa2d4772ff1231367ebb9d"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a7aa58bcf2a1c3fe9f6fa38d25f82c1a7"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a7aa58bcf2a1c3fe9f6fa38d25f82c1a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a182aec27b4798fc3d8e774cb5e095e07"><td class="memItemLeft" align="right" valign="top"><a id="a182aec27b4798fc3d8e774cb5e095e07"></a>
+<tr class="memitem:ac4136a17defa2d4772ff1231367ebb9d"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ac4136a17defa2d4772ff1231367ebb9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f85df2fa9c0b32b221547ad60917e4"><td class="memItemLeft" align="right" valign="top"><a id="ac2f85df2fa9c0b32b221547ad60917e4"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a182aec27b4798fc3d8e774cb5e095e07"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_color.html">Color</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a182aec27b4798fc3d8e774cb5e095e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af371d6799d6d42cb4adcc9223e15704b"><td class="memItemLeft" align="right" valign="top"><a id="af371d6799d6d42cb4adcc9223e15704b"></a>
+<tr class="memitem:ac2f85df2fa9c0b32b221547ad60917e4"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_color.html">Color</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ac2f85df2fa9c0b32b221547ad60917e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5e34c317ac748f9cd6e6cc5f2fe872"><td class="memItemLeft" align="right" valign="top"><a id="a6d5e34c317ac748f9cd6e6cc5f2fe872"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:af371d6799d6d42cb4adcc9223e15704b"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API ea::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:af371d6799d6d42cb4adcc9223e15704b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9390cf2ce8f029bfa580ef8c5f18dc75"><td class="memItemLeft" align="right" valign="top"><a id="a9390cf2ce8f029bfa580ef8c5f18dc75"></a>
+<tr class="memitem:a6d5e34c317ac748f9cd6e6cc5f2fe872"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API ea::string&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a6d5e34c317ac748f9cd6e6cc5f2fe872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdef74d005286e723f799ccc625a571c"><td class="memItemLeft" align="right" valign="top"><a id="afdef74d005286e723f799ccc625a571c"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a9390cf2ce8f029bfa580ef8c5f18dc75"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_rect.html">Rect</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a9390cf2ce8f029bfa580ef8c5f18dc75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6214161eeacaba5cc2f1b88b3c36ee32"><td class="memItemLeft" align="right" valign="top"><a id="a6214161eeacaba5cc2f1b88b3c36ee32"></a>
+<tr class="memitem:afdef74d005286e723f799ccc625a571c"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_rect.html">Rect</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:afdef74d005286e723f799ccc625a571c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13e5d51ba48d0a03f1ca577cac3a519"><td class="memItemLeft" align="right" valign="top"><a id="ae13e5d51ba48d0a03f1ca577cac3a519"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a6214161eeacaba5cc2f1b88b3c36ee32"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a6214161eeacaba5cc2f1b88b3c36ee32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a656e2405b93f5bb77f303e15deadf668"><td class="memItemLeft" align="right" valign="top"><a id="a656e2405b93f5bb77f303e15deadf668"></a>
+<tr class="memitem:ae13e5d51ba48d0a03f1ca577cac3a519"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:ae13e5d51ba48d0a03f1ca577cac3a519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ec3caf832743d9fd77eba8c0b91aecd"><td class="memItemLeft" align="right" valign="top"><a id="a7ec3caf832743d9fd77eba8c0b91aecd"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a656e2405b93f5bb77f303e15deadf668"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a656e2405b93f5bb77f303e15deadf668"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a004f45f98f75823783c67936a82ee016"><td class="memItemLeft" align="right" valign="top"><a id="a004f45f98f75823783c67936a82ee016"></a>
+<tr class="memitem:a7ec3caf832743d9fd77eba8c0b91aecd"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a7ec3caf832743d9fd77eba8c0b91aecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42eb176933781bdc3ff0f5cda15d84fd"><td class="memItemLeft" align="right" valign="top"><a id="a42eb176933781bdc3ff0f5cda15d84fd"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a004f45f98f75823783c67936a82ee016"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a004f45f98f75823783c67936a82ee016"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8a3cda3608bc035e0f6b2e8f818e991"><td class="memItemLeft" align="right" valign="top"><a id="ad8a3cda3608bc035e0f6b2e8f818e991"></a>
+<tr class="memitem:a42eb176933781bdc3ff0f5cda15d84fd"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a42eb176933781bdc3ff0f5cda15d84fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a793f869cc939db95844ab8e2735e9097"><td class="memItemLeft" align="right" valign="top"><a id="a793f869cc939db95844ab8e2735e9097"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:ad8a3cda3608bc035e0f6b2e8f818e991"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="_variant_8h.html#aa52d33cc56888f12bdfcbe86ea3f7884">VariantBuffer</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ad8a3cda3608bc035e0f6b2e8f818e991"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c850559b853815f97945cf4577df1b6"><td class="memItemLeft" align="right" valign="top"><a id="a6c850559b853815f97945cf4577df1b6"></a>
+<tr class="memitem:a793f869cc939db95844ab8e2735e9097"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="_variant_8h.html#aa52d33cc56888f12bdfcbe86ea3f7884">VariantBuffer</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a793f869cc939db95844ab8e2735e9097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c6a3a87054055148f20a42f05e70bf"><td class="memItemLeft" align="right" valign="top"><a id="a29c6a3a87054055148f20a42f05e70bf"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a6c850559b853815f97945cf4577df1b6"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_matrix3.html">Matrix3</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a6c850559b853815f97945cf4577df1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a039e52e95197562528a0ad5be242fe23"><td class="memItemLeft" align="right" valign="top"><a id="a039e52e95197562528a0ad5be242fe23"></a>
+<tr class="memitem:a29c6a3a87054055148f20a42f05e70bf"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_matrix3.html">Matrix3</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a29c6a3a87054055148f20a42f05e70bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accd592709f6385367c4e10ccd83ec351"><td class="memItemLeft" align="right" valign="top"><a id="accd592709f6385367c4e10ccd83ec351"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a039e52e95197562528a0ad5be242fe23"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a039e52e95197562528a0ad5be242fe23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5ab63ad8314da55fcac778fee2b1004"><td class="memItemLeft" align="right" valign="top"><a id="ad5ab63ad8314da55fcac778fee2b1004"></a>
+<tr class="memitem:accd592709f6385367c4e10ccd83ec351"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:accd592709f6385367c4e10ccd83ec351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f8eadc21df5df9e752ba24422e76cf0"><td class="memItemLeft" align="right" valign="top"><a id="a8f8eadc21df5df9e752ba24422e76cf0"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:ad5ab63ad8314da55fcac778fee2b1004"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ad5ab63ad8314da55fcac778fee2b1004"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad14cfb8df74461e62d4bfbecc558ac6e"><td class="memItemLeft" align="right" valign="top"><a id="ad14cfb8df74461e62d4bfbecc558ac6e"></a>
+<tr class="memitem:a8f8eadc21df5df9e752ba24422e76cf0"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a8f8eadc21df5df9e752ba24422e76cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a508bb3b1346b072f33475b2aa7155956"><td class="memItemLeft" align="right" valign="top"><a id="a508bb3b1346b072f33475b2aa7155956"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:ad14cfb8df74461e62d4bfbecc558ac6e"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_variant_curve.html">VariantCurve</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:ad14cfb8df74461e62d4bfbecc558ac6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3815501719174ae307ed78da1274db36"><td class="memItemLeft" align="right" valign="top"><a id="a3815501719174ae307ed78da1274db36"></a>
+<tr class="memitem:a508bb3b1346b072f33475b2aa7155956"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="class_urho3_d_1_1_variant_curve.html">VariantCurve</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a508bb3b1346b072f33475b2aa7155956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10e152d86366bef7c671857db50542aa"><td class="memItemLeft" align="right" valign="top"><a id="a10e152d86366bef7c671857db50542aa"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:a3815501719174ae307ed78da1274db36"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> () const</td></tr>
-<tr class="separator:a3815501719174ae307ed78da1274db36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10e152d86366bef7c671857db50542aa"><td class="memTemplItemLeft" align="right" valign="top">URHO3D_API <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (int) const</td></tr>
+<tr class="separator:a10e152d86366bef7c671857db50542aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>

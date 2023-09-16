@@ -9,6 +9,7 @@ var class_urho3_d_1_1_dynamic_vertex_buffer =
     [ "GetVertexCount", "class_urho3_d_1_1_dynamic_vertex_buffer.html#a8bba5290f3918440a009a5093206e211", null ],
     [ "GrowBuffer", "class_urho3_d_1_1_dynamic_vertex_buffer.html#ad30c9d188f81d6bdba0c2a187fd4c54c", null ],
     [ "Initialize", "class_urho3_d_1_1_dynamic_vertex_buffer.html#a62755ed04b55c7f24e28bdc548043c98", null ],
+    [ "SetDebugName", "class_urho3_d_1_1_dynamic_vertex_buffer.html#ad7b22d5173f2048b26f34a299d2d7d2c", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_dynamic_vertex_buffer.html#adde66ccf20f28175ffb60db620919e81", null ],
     [ "maxNumVertices_", "class_urho3_d_1_1_dynamic_vertex_buffer.html#a76c087d184325eeb97d2a341365fd12b", null ],
     [ "numVertices_", "class_urho3_d_1_1_dynamic_vertex_buffer.html#acf70080825740567e8a2bac6854a9b13", null ],

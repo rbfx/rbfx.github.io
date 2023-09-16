@@ -5,6 +5,8 @@ var class_urho3_d_1_1_default_render_pipeline_view =
     [ "~DefaultRenderPipelineView", "class_urho3_d_1_1_default_render_pipeline_view.html#a89051e8f0610b8f0fc5991cb5b4fedda", null ],
     [ "ApplySettings", "class_urho3_d_1_1_default_render_pipeline_view.html#a8f60390d741b15e886d9fc2fecd37063", null ],
     [ "Define", "class_urho3_d_1_1_default_render_pipeline_view.html#a9d87b6d9ae640ca0c23be99b215b8dc2", null ],
+    [ "DrawDebugGeometries", "class_urho3_d_1_1_default_render_pipeline_view.html#abbdee33a5f25728c01cdde806d42838c", null ],
+    [ "DrawDebugLights", "class_urho3_d_1_1_default_render_pipeline_view.html#a926f7def34c5a0736fef73514105de5f", null ],
     [ "GetDebugger", "class_urho3_d_1_1_default_render_pipeline_view.html#aea724d29feaec713e2ebbd98d372eb26", null ],
     [ "GetFrameInfo", "class_urho3_d_1_1_default_render_pipeline_view.html#a9b24b84219fa54170802ee58e6f81c0d", null ],
     [ "GetSettings", "class_urho3_d_1_1_default_render_pipeline_view.html#acc5f8ba68ee90757bbbbc124a0596df8", null ],
@@ -15,6 +17,7 @@ var class_urho3_d_1_1_default_render_pipeline_view =
     [ "SetSettings", "class_urho3_d_1_1_default_render_pipeline_view.html#add75e536819292fe271070debb6eb299", null ],
     [ "Update", "class_urho3_d_1_1_default_render_pipeline_view.html#a9dfe054825f802062584daa5e64fe7f7", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_default_render_pipeline_view.html#aeb1d765680db7835ec1046d4bcf98e89", null ],
+    [ "albedoFormat_", "class_urho3_d_1_1_default_render_pipeline_view.html#abd39f9c38ad4f07395cf461dff397ba7", null ],
     [ "alphaPass_", "class_urho3_d_1_1_default_render_pipeline_view.html#a1cd2d4ac17685d8c8ef65098fc48cd42", null ],
     [ "debugger_", "class_urho3_d_1_1_default_render_pipeline_view.html#a5219ba3d0a5875e28a379bc21c5117d0", null ],
     [ "deferred_", "class_urho3_d_1_1_default_render_pipeline_view.html#aa16b3a4f0d88b8461060f5c400ce3712", null ],
@@ -22,6 +25,7 @@ var class_urho3_d_1_1_default_render_pipeline_view =
     [ "depthPrePass_", "class_urho3_d_1_1_default_render_pipeline_view.html#af19d9a88ec59126a3ace956031918256", null ],
     [ "frameInfo_", "class_urho3_d_1_1_default_render_pipeline_view.html#aaf54d6cd240817addd2da7a4e25fe17f", null ],
     [ "instancingBuffer_", "class_urho3_d_1_1_default_render_pipeline_view.html#a754023408805e1fa484e72dce8773628", null ],
+    [ "normalFormat_", "class_urho3_d_1_1_default_render_pipeline_view.html#ad24abfb2d9d1f153f1c617012d76a517", null ],
     [ "oldPipelineStateHash_", "class_urho3_d_1_1_default_render_pipeline_view.html#a6c143f32ec9733b128b908779ce3ca0a", null ],
     [ "opaquePass_", "class_urho3_d_1_1_default_render_pipeline_view.html#a3c0dc726c60a8009bbd88f5df4054b21", null ],
     [ "outlinePostProcessPass_", "class_urho3_d_1_1_default_render_pipeline_view.html#adf04c3a5b2d1fb3039667960bf756652", null ],
@@ -36,6 +40,7 @@ var class_urho3_d_1_1_default_render_pipeline_view =
     [ "settingsDirty_", "class_urho3_d_1_1_default_render_pipeline_view.html#a369b6d457c96927442c567d1802414ea", null ],
     [ "settingsPipelineStateHash_", "class_urho3_d_1_1_default_render_pipeline_view.html#a1090c26f775f7d18cedb565264f2d870", null ],
     [ "shadowMapAllocator_", "class_urho3_d_1_1_default_render_pipeline_view.html#a8543dc1d73ac8b033954b77b04b84935", null ],
+    [ "specularFormat_", "class_urho3_d_1_1_default_render_pipeline_view.html#afc72c1f80aae11bb1a6b98290fc5de81", null ],
     [ "ssaoPass_", "class_urho3_d_1_1_default_render_pipeline_view.html#a636333677a8f782a1de5cd23460431ed", null ],
     [ "stats_", "class_urho3_d_1_1_default_render_pipeline_view.html#acf8db60dc18b5a016ecbd51e2d4207b4", null ]
 ];

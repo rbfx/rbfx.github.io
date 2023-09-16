@@ -42,7 +42,6 @@ var dir_4332035370c4a6be719a0163e1872ef4 =
       [ "ReflectionProbeReference", "struct_urho3_d_1_1_reflection_probe_reference.html", "struct_urho3_d_1_1_reflection_probe_reference" ]
     ] ],
     [ "Renderer.h", "_renderer_8h.html", "_renderer_8h" ],
-    [ "RenderPath.h", "_render_path_8h.html", "_render_path_8h" ],
     [ "RibbonTrail.h", "_ribbon_trail_8h.html", "_ribbon_trail_8h" ],
     [ "Skeleton.h", "_skeleton_8h.html", "_skeleton_8h" ],
     [ "Technique.h", "_technique_8h.html", "_technique_8h" ]

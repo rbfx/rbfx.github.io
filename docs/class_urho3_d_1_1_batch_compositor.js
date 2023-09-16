@@ -1,7 +1,7 @@
 var class_urho3_d_1_1_batch_compositor =
 [
-    [ "ShadowSubpass", "class_urho3_d_1_1_batch_compositor.html#a53834b6b00b0617aead8af13b22fa0a6a9cda7b7ca6f59b1797092ba200a31f42", null ],
-    [ "LitVolumeSubpass", "class_urho3_d_1_1_batch_compositor.html#a53834b6b00b0617aead8af13b22fa0a6a97a0bf9d608bc8aaaa4b12b863a3f88e", null ],
+    [ "ShadowSubpass", "class_urho3_d_1_1_batch_compositor.html#a4610ef4ce1c2108a38566fd15e1f933ba9cda7b7ca6f59b1797092ba200a31f42", null ],
+    [ "LitVolumeSubpass", "class_urho3_d_1_1_batch_compositor.html#a4610ef4ce1c2108a38566fd15e1f933ba97a0bf9d608bc8aaaa4b12b863a3f88e", null ],
     [ "BatchCompositor", "class_urho3_d_1_1_batch_compositor.html#a75488b063bc3869476e6a0d5b0cc4e23", null ],
     [ "~BatchCompositor", "class_urho3_d_1_1_batch_compositor.html#ab54b7c7ce3fa7a0211ae748babd7b3aa", null ],
     [ "BeginShadowBatchesComposition", "class_urho3_d_1_1_batch_compositor.html#a7384dc6eb5c1cee3e4ad4225c7e3f9d2", null ],
@@ -13,8 +13,10 @@ var class_urho3_d_1_1_batch_compositor =
     [ "GetLightVolumeBatches", "class_urho3_d_1_1_batch_compositor.html#a5874b5111dc2a600fdc955838f885534", null ],
     [ "OnPipelineStatesInvalidated", "class_urho3_d_1_1_batch_compositor.html#abbb1c91fe13dd4a99ebb5450603ad45e", null ],
     [ "OnUpdateBegin", "class_urho3_d_1_1_batch_compositor.html#a1ef29abb9517f790682eb4fd6b8e612f", null ],
+    [ "SetLightVolumesOutputDesc", "class_urho3_d_1_1_batch_compositor.html#a7ca58e40a492ed1d8ee8ec882363d6ba", null ],
     [ "SetPasses", "class_urho3_d_1_1_batch_compositor.html#a69d8573abec6379fb2198122b4223baf", null ],
     [ "SetShadowMaterialQuality", "class_urho3_d_1_1_batch_compositor.html#a9757348b8a2d7eb69d0a0d84b12d4d22", null ],
+    [ "SetShadowOutputDesc", "class_urho3_d_1_1_batch_compositor.html#af662b85c372330a41bc3a09514cd2954", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_batch_compositor.html#aec626db0daf2c30b6e5e0be3e9e16dae", null ],
     [ "allPasses_", "class_urho3_d_1_1_batch_compositor.html#a0e7311d905d5f8e0048f29a216c65b06", null ],
     [ "batchStateCacheCallback_", "class_urho3_d_1_1_batch_compositor.html#a14f900e76c238e23a3635bf6a820eafb", null ],

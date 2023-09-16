@@ -109,7 +109,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abdaef0d08c9e687f9229bc05c385a0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d2fc0f4bb6a88940a458e38d198d6ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_sprite2_d.html#a1d2fc0f4bb6a88940a458e38d198d6ad">SetTextureRect</a> (const <a class="el" href="class_urho3_d_1_1_rect.html">Rect</a> &amp;rect)</td></tr>
 <tr class="separator:a1d2fc0f4bb6a88940a458e38d198d6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4098251045ea2cd8cddaea76d37127f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_sprite2_d.html#a4098251045ea2cd8cddaea76d37127f2">SetBlendMode</a> (<a class="el" href="_graphics_defs_8h.html#a2697a2bc51d21a1bf33367cb01c93d2f">BlendMode</a> blendMode)</td></tr>
+<tr class="memitem:a4098251045ea2cd8cddaea76d37127f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_sprite2_d.html#a4098251045ea2cd8cddaea76d37127f2">SetBlendMode</a> (BlendMode blendMode)</td></tr>
 <tr class="separator:a4098251045ea2cd8cddaea76d37127f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c8faed55ed58292df8bb5b1e4fa37ee"><td class="memItemLeft" align="right" valign="top"><a id="a1c8faed55ed58292df8bb5b1e4fa37ee"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_sprite2_d.html#a1c8faed55ed58292df8bb5b1e4fa37ee">SetFlip</a> (bool flipX, bool flipY, bool swapXY=false)</td></tr>
@@ -141,7 +141,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a3070c14163016dc2a37a40a5dd4750da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd46254e191b88a39a759842665961fe"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_rect.html">Rect</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_sprite2_d.html#abd46254e191b88a39a759842665961fe">GetTextureRect</a> () const</td></tr>
 <tr class="separator:abd46254e191b88a39a759842665961fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b1767d6931ba1598b8073e9a777fd84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_graphics_defs_8h.html#a2697a2bc51d21a1bf33367cb01c93d2f">BlendMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_sprite2_d.html#a2b1767d6931ba1598b8073e9a777fd84">GetBlendMode</a> () const</td></tr>
+<tr class="memitem:a2b1767d6931ba1598b8073e9a777fd84"><td class="memItemLeft" align="right" valign="top">BlendMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_sprite2_d.html#a2b1767d6931ba1598b8073e9a777fd84">GetBlendMode</a> () const</td></tr>
 <tr class="separator:a2b1767d6931ba1598b8073e9a777fd84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4e7221b1771598ba6b65dace8c21552"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_sprite2_d.html#af4e7221b1771598ba6b65dace8c21552">GetFlipX</a> () const</td></tr>
 <tr class="separator:af4e7221b1771598ba6b65dace8c21552"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,7 +231,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:a4f1798df7e5a110d9c29ddd2e68df80b inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb069fd4c5a0e629d292129b2f420c09 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memItemLeft" align="right" valign="top"><a id="aeb069fd4c5a0e629d292129b2f420c09"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#aeb069fd4c5a0e629d292129b2f420c09">UpdateBatchesDelayed</a> (const <a class="el" href="struct_urho3_d_1_1_frame_info.html">FrameInfo</a> &amp;frame)</td></tr>
-<tr class="memdesc:aeb069fd4c5a0e629d292129b2f420c09 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_urho3_d_1_1_batch.html" title="Queued 3D geometry draw call.">Batch</a> update from main thread. Called on demand only if <a class="el" href="class_urho3_d_1_1_drawable.html#af81619f7bfa5bb7efccd93d5413105b5" title="Request UpdateBatchesDelayed call from main thread.">RequestUpdateBatchesDelayed()</a> is called from <a class="el" href="class_urho3_d_1_1_drawable.html#a4f1798df7e5a110d9c29ddd2e68df80b" title="Calculate distance and prepare batches for rendering. May be called from worker thread(s),...">UpdateBatches()</a>. <br /></td></tr>
+<tr class="memdesc:aeb069fd4c5a0e629d292129b2f420c09 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Batch update from main thread. Called on demand only if <a class="el" href="class_urho3_d_1_1_drawable.html#af81619f7bfa5bb7efccd93d5413105b5" title="Request UpdateBatchesDelayed call from main thread.">RequestUpdateBatchesDelayed()</a> is called from <a class="el" href="class_urho3_d_1_1_drawable.html#a4f1798df7e5a110d9c29ddd2e68df80b" title="Calculate distance and prepare batches for rendering. May be called from worker thread(s),...">UpdateBatches()</a>. <br /></td></tr>
 <tr class="separator:aeb069fd4c5a0e629d292129b2f420c09 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00fb66b3ce06e1e9c9bb9ecf402c78b4 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memItemLeft" align="right" valign="top"><a id="a00fb66b3ce06e1e9c9bb9ecf402c78b4"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#a00fb66b3ce06e1e9c9bb9ecf402c78b4">UpdateGeometry</a> (const <a class="el" href="struct_urho3_d_1_1_frame_info.html">FrameInfo</a> &amp;frame)</td></tr>
@@ -403,7 +403,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr class="separator:ad7e22e3881027d4bf3334e06cf64d016 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a868163988ad17c777699cd0226ffc68b inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memItemLeft" align="right" valign="top"><a id="a868163988ad17c777699cd0226ffc68b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#a868163988ad17c777699cd0226ffc68b">IsInView</a> (const <a class="el" href="struct_urho3_d_1_1_frame_info.html">FrameInfo</a> &amp;frame, bool anyCamera=false) const</td></tr>
-<tr class="memdesc:a868163988ad17c777699cd0226ffc68b inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is in view on the current frame. Called by <a class="el" href="class_urho3_d_1_1_view.html" title="Internal structure for 3D rendering work. Created for each backbuffer and texture viewport,...">View</a>. <br /></td></tr>
+<tr class="memdesc:a868163988ad17c777699cd0226ffc68b inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether is in view on the current frame. Called by View. <br /></td></tr>
 <tr class="separator:a868163988ad17c777699cd0226ffc68b inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2faff010ee37e381ace91f59ef7dc1e inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memItemLeft" align="right" valign="top"><a id="ad2faff010ee37e381ace91f59ef7dc1e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#ad2faff010ee37e381ace91f59ef7dc1e">HasBasePass</a> (unsigned batchIndex) const</td></tr>
@@ -966,7 +966,7 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:ad069dc103161c511486508b9ec8e649d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_sprite.html" title="UI element which allows sub-pixel positioning and size, as well as rotation. Only other Sprites shoul...">Sprite</a>. <br /></td></tr>
 <tr class="separator:ad069dc103161c511486508b9ec8e649d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ff7f003bf9e16cbcb6a554b95cd3efb"><td class="memItemLeft" align="right" valign="top"><a id="a8ff7f003bf9e16cbcb6a554b95cd3efb"></a>
-<a class="el" href="_graphics_defs_8h.html#a2697a2bc51d21a1bf33367cb01c93d2f">BlendMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_sprite2_d.html#a8ff7f003bf9e16cbcb6a554b95cd3efb">blendMode_</a></td></tr>
+BlendMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_sprite2_d.html#a8ff7f003bf9e16cbcb6a554b95cd3efb">blendMode_</a></td></tr>
 <tr class="memdesc:a8ff7f003bf9e16cbcb6a554b95cd3efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blend mode. <br /></td></tr>
 <tr class="separator:a8ff7f003bf9e16cbcb6a554b95cd3efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a278036dae97d6ca94a631db576b323e6"><td class="memItemLeft" align="right" valign="top"><a id="a278036dae97d6ca94a631db576b323e6"></a>
@@ -1101,7 +1101,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="separator:adfa68c33eb9249281cd34d3836982f5d inherit pro_attribs_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63e29f96811c72e08c15fd01789d6ef4 inherit pro_attribs_class_urho3_d_1_1_drawable"><td class="memItemLeft" align="right" valign="top"><a id="a63e29f96811c72e08c15fd01789d6ef4"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#a63e29f96811c72e08c15fd01789d6ef4">viewMask_</a></td></tr>
-<tr class="memdesc:a63e29f96811c72e08c15fd01789d6ef4 inherit pro_attribs_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_view.html" title="Internal structure for 3D rendering work. Created for each backbuffer and texture viewport,...">View</a> mask. <br /></td></tr>
+<tr class="memdesc:a63e29f96811c72e08c15fd01789d6ef4 inherit pro_attribs_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">View mask. <br /></td></tr>
 <tr class="separator:a63e29f96811c72e08c15fd01789d6ef4 inherit pro_attribs_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adafccc9b0b4f1cff9c9764b618cb60b4 inherit pro_attribs_class_urho3_d_1_1_drawable"><td class="memItemLeft" align="right" valign="top"><a id="adafccc9b0b4f1cff9c9764b618cb60b4"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#adafccc9b0b4f1cff9c9764b618cb60b4">lightMask_</a></td></tr>
@@ -1268,7 +1268,7 @@ static <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> *&#160;
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_graphics_defs_8h.html#a2697a2bc51d21a1bf33367cb01c93d2f">BlendMode</a> Urho3D::StaticSprite2D::GetBlendMode </td>
+          <td class="memname">BlendMode Urho3D::StaticSprite2D::GetBlendMode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1635,7 +1635,7 @@ static <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> *&#160;
         <tr>
           <td class="memname">void Urho3D::StaticSprite2D::SetBlendMode </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_graphics_defs_8h.html#a2697a2bc51d21a1bf33367cb01c93d2f">BlendMode</a>&#160;</td>
+          <td class="paramtype">BlendMode&#160;</td>
           <td class="paramname"><em>blendMode</em></td><td>)</td>
           <td></td>
         </tr>

@@ -1,12 +1,13 @@
 var class_urho3_d_1_1_cubemap_renderer =
 [
+    [ "CachedPipelineStates", "struct_urho3_d_1_1_cubemap_renderer_1_1_cached_pipeline_states.html", "struct_urho3_d_1_1_cubemap_renderer_1_1_cached_pipeline_states" ],
     [ "CubemapRenderer", "class_urho3_d_1_1_cubemap_renderer.html#a370be9444a798e176aedfd52459f5541", null ],
     [ "~CubemapRenderer", "class_urho3_d_1_1_cubemap_renderer.html#a1d70e794a4fde768ff533bb4952e19e5", null ],
     [ "ConnectViewportsToTexture", "class_urho3_d_1_1_cubemap_renderer.html#a1ee08cc346ee58061668b0a1eea0f831", null ],
-    [ "DefineTexture", "class_urho3_d_1_1_cubemap_renderer.html#a136d3f1ca2bcece96fce747cbd21d41f", null ],
+    [ "DefineTexture", "class_urho3_d_1_1_cubemap_renderer.html#acc33ea53cf3b52660441047aba82cd38", null ],
     [ "DisconnectViewportsFromTexture", "class_urho3_d_1_1_cubemap_renderer.html#afef681796cf9dc039450c6ac72bf86bb", null ],
+    [ "EnsurePipelineStates", "class_urho3_d_1_1_cubemap_renderer.html#a4babf8c23db076e4618a8bcdae4dc4b4", null ],
     [ "FilterCubemap", "class_urho3_d_1_1_cubemap_renderer.html#a58a51dce4b143f0dd104acfd77ebc4c2", null ],
-    [ "FilterCubemap", "class_urho3_d_1_1_cubemap_renderer.html#af1d440be01d0dfd59f5d454c0b8755c8", null ],
     [ "InitializeCameras", "class_urho3_d_1_1_cubemap_renderer.html#a6497cd71e6703cc4241119743c3d77a5", null ],
     [ "InitializeRenderPipeline", "class_urho3_d_1_1_cubemap_renderer.html#a5c4bb2a80bd2d59318712589374ea055", null ],
     [ "IsTextureMatching", "class_urho3_d_1_1_cubemap_renderer.html#a4906448b7ae29cc594f2e04383a02fb8", null ],
@@ -18,6 +19,7 @@ var class_urho3_d_1_1_cubemap_renderer =
     [ "UpdateFull", "class_urho3_d_1_1_cubemap_renderer.html#a415dba828455d6bd251cd0feed2fb1f5", null ],
     [ "UpdateSliced", "class_urho3_d_1_1_cubemap_renderer.html#a6577b63e1738d213abf9d9456a99e6be", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_cubemap_renderer.html#a779ec51e8b9717cc73fa1966fdb7266a", null ],
+    [ "cachedPipelineStates_", "class_urho3_d_1_1_cubemap_renderer.html#a432e182af02bf9ffc2eb4e4a19850811", null ],
     [ "currentFilteredTexture_", "class_urho3_d_1_1_cubemap_renderer.html#a9b34dfddcfa27e323f3842a78342bfb9", null ],
     [ "currentParams_", "class_urho3_d_1_1_cubemap_renderer.html#a1c16d8d16bbb9ef3c6d2bc32999cdb88", null ],
     [ "currentViewportTexture_", "class_urho3_d_1_1_cubemap_renderer.html#ac1e0480e2260f073f8bde4b5fc63e322", null ],

@@ -7,5 +7,5 @@ var class_urho3_d_1_1_tone_mapping_pass =
     [ "SetMode", "class_urho3_d_1_1_tone_mapping_pass.html#acabd2f879e4574b921c92be98bfa2bb1", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_tone_mapping_pass.html#a4e34dff08919719bf8e758d855711757", null ],
     [ "mode_", "class_urho3_d_1_1_tone_mapping_pass.html#a1f0433eb17787e9f9a795e09663e0321", null ],
-    [ "toneMappingState_", "class_urho3_d_1_1_tone_mapping_pass.html#aab4bb8efbc26fd28a6b61f7ff69d251b", null ]
+    [ "toneMappingState_", "class_urho3_d_1_1_tone_mapping_pass.html#aeff7ef1075601edccf35844e3bc09d72", null ]
 ];

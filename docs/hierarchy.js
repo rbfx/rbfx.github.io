@@ -90,6 +90,9 @@ var hierarchy =
       [ "Urho3D::XMLOutputArchiveBlock", "class_urho3_d_1_1_x_m_l_output_archive_block.html", null ]
     ] ],
     [ "Urho3D::AreaAllocator", "class_urho3_d_1_1_area_allocator.html", null ],
+    [ "array", null, [
+      [ "Urho3D::EnumArray< T, E, Size >", "class_urho3_d_1_1_enum_array.html", null ]
+    ] ],
     [ "Urho3D::ArrayDimensions2D", "class_urho3_d_1_1_array_dimensions2_d.html", [
       [ "Urho3D::Array2D< T, Container >", "class_urho3_d_1_1_array2_d.html", null ]
     ] ],
@@ -129,11 +132,6 @@ var hierarchy =
     [ "Urho3D::BakedSceneCollector", "class_urho3_d_1_1_baked_scene_collector.html", [
       [ "Urho3D::DefaultBakedSceneCollector", "class_urho3_d_1_1_default_baked_scene_collector.html", null ]
     ] ],
-    [ "Urho3D::Batch", "struct_urho3_d_1_1_batch.html", [
-      [ "Urho3D::BatchGroup", "struct_urho3_d_1_1_batch_group.html", null ]
-    ] ],
-    [ "Urho3D::BatchGroupKey", "struct_urho3_d_1_1_batch_group_key.html", null ],
-    [ "Urho3D::BatchQueue", "struct_urho3_d_1_1_batch_queue.html", null ],
     [ "Urho3D::BatchRendererSettings", "struct_urho3_d_1_1_batch_renderer_settings.html", [
       [ "Urho3D::SceneProcessorSettings", "struct_urho3_d_1_1_scene_processor_settings.html", null ]
     ] ],
@@ -168,6 +166,7 @@ var hierarchy =
     [ "Urho3D::CachedDrawableReflection", "struct_urho3_d_1_1_cached_drawable_reflection.html", null ],
     [ "Urho3D::CachedDrawableZone", "struct_urho3_d_1_1_cached_drawable_zone.html", null ],
     [ "Urho3D::LightProcessorCache::CachedLightProcessor", "struct_urho3_d_1_1_light_processor_cache_1_1_cached_light_processor.html", null ],
+    [ "Urho3D::CubemapRenderer::CachedPipelineStates", "struct_urho3_d_1_1_cubemap_renderer_1_1_cached_pipeline_states.html", null ],
     [ "Urho3D::Camera::CachedProjection", "struct_urho3_d_1_1_camera_1_1_cached_projection.html", null ],
     [ "Urho3D::AmbientOcclusionPass::CachedStates", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_cached_states.html", null ],
     [ "Urho3D::AutoExposurePass::CachedStates", "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html", null ],
@@ -220,11 +219,6 @@ var hierarchy =
     [ "Urho3D::ConfigFile::ConfigFlavor", "struct_urho3_d_1_1_config_file_1_1_config_flavor.html", null ],
     [ "Urho3D::ConfigVariableDefinition", "struct_urho3_d_1_1_config_variable_definition.html", null ],
     [ "Urho3D::BehaviorNetworkObject::ConnectedNetworkBehavior", "struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior.html", null ],
-    [ "Urho3D::ConstantBufferCollection", "class_urho3_d_1_1_constant_buffer_collection.html", null ],
-    [ "Urho3D::ConstantBufferCollectionRef", "struct_urho3_d_1_1_constant_buffer_collection_ref.html", null ],
-    [ "Urho3D::ConstantBufferElement", "struct_urho3_d_1_1_constant_buffer_element.html", null ],
-    [ "Urho3D::ConstantBufferRange", "struct_urho3_d_1_1_constant_buffer_range.html", null ],
-    [ "Urho3D::DrawCommandQueue::ConstantBuffersData", "struct_urho3_d_1_1_draw_command_queue_1_1_constant_buffers_data.html", null ],
     [ "Urho3D::PhysicsWorld2D::ContactInfo", "struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html", null ],
     [ "Context", null, [
       [ "Urho3D::Detail::RmlContext", "class_urho3_d_1_1_detail_1_1_rml_context.html", null ]
@@ -280,7 +274,6 @@ var hierarchy =
     [ "Urho3D::DrawableProcessorSettings", "struct_urho3_d_1_1_drawable_processor_settings.html", [
       [ "Urho3D::SceneProcessorSettings", "struct_urho3_d_1_1_scene_processor_settings.html", null ]
     ] ],
-    [ "Urho3D::DrawCommandDescription", "struct_urho3_d_1_1_draw_command_description.html", null ],
     [ "Urho3D::DrawQuadParams", "struct_urho3_d_1_1_draw_quad_params.html", null ],
     [ "Urho3D::DummyMutex", "class_urho3_d_1_1_dummy_mutex.html", null ],
     [ "Urho3D::PluginManager::DynamicLibraryInfo", "struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html", null ],
@@ -344,7 +337,6 @@ var hierarchy =
     [ "Urho3D::Frustum", "class_urho3_d_1_1_frustum.html", null ],
     [ "Urho3D::GCHandleRef", "class_urho3_d_1_1_g_c_handle_ref.html", null ],
     [ "Urho3D::GeometryBatch", "struct_urho3_d_1_1_geometry_batch.html", null ],
-    [ "Urho3D::GeometryBufferArray", "struct_urho3_d_1_1_geometry_buffer_array.html", null ],
     [ "Urho3D::GeometryBufferPreprocessSettings", "struct_urho3_d_1_1_geometry_buffer_preprocess_settings.html", null ],
     [ "Urho3D::GeometryDesc", "struct_urho3_d_1_1_geometry_desc.html", null ],
     [ "Urho3D::GeometryIDToObjectMapping", "struct_urho3_d_1_1_geometry_i_d_to_object_mapping.html", null ],
@@ -353,23 +345,9 @@ var hierarchy =
     [ "Urho3D::GeometryView", "struct_urho3_d_1_1_geometry_view.html", null ],
     [ "Urho3D::ParticleGraphNodes::GetPinType< T >", "struct_urho3_d_1_1_particle_graph_nodes_1_1_get_pin_type.html", null ],
     [ "Urho3D::ParticleGraphNodes::GetPinType< ParticleGraphTypedPin< T > >", "struct_urho3_d_1_1_particle_graph_nodes_1_1_get_pin_type_3_01_particle_graph_typed_pin_3_01_t_01_4_01_4.html", null ],
+    [ "Urho3D::GLTFImporterCallback", "class_urho3_d_1_1_g_l_t_f_importer_callback.html", null ],
     [ "Urho3D::GLTFImporterSettings", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html", null ],
     [ "Urho3D::GlyphLocation", "struct_urho3_d_1_1_glyph_location.html", null ],
-    [ "Urho3D::GPUObject", "class_urho3_d_1_1_g_p_u_object.html", [
-      [ "Urho3D::ConstantBuffer", "class_urho3_d_1_1_constant_buffer.html", null ],
-      [ "Urho3D::IndexBuffer", "class_urho3_d_1_1_index_buffer.html", null ],
-      [ "Urho3D::PipelineStateCache", "class_urho3_d_1_1_pipeline_state_cache.html", null ],
-      [ "Urho3D::ShaderVariation", "class_urho3_d_1_1_shader_variation.html", null ],
-      [ "Urho3D::Texture", "class_urho3_d_1_1_texture.html", [
-        [ "Urho3D::Texture2D", "class_urho3_d_1_1_texture2_d.html", null ],
-        [ "Urho3D::Texture2DArray", "class_urho3_d_1_1_texture2_d_array.html", null ],
-        [ "Urho3D::Texture3D", "class_urho3_d_1_1_texture3_d.html", null ],
-        [ "Urho3D::TextureCube", "class_urho3_d_1_1_texture_cube.html", null ]
-      ] ],
-      [ "Urho3D::VertexBuffer", "class_urho3_d_1_1_vertex_buffer.html", null ]
-    ] ],
-    [ "Urho3D::GPUObjectHandle", "union_urho3_d_1_1_g_p_u_object_handle.html", null ],
-    [ "Urho3D::GraphicsCaps", "struct_urho3_d_1_1_graphics_caps.html", null ],
     [ "Urho3D::GraphNodeProperty", "class_urho3_d_1_1_graph_node_property.html", null ],
     [ "Urho3D::GraphPin", "class_urho3_d_1_1_graph_pin.html", [
       [ "Urho3D::GraphDataPin", "class_urho3_d_1_1_graph_data_pin.html", [
@@ -382,7 +360,9 @@ var hierarchy =
     [ "Urho3D::GraphPinRef< PinType >", "class_urho3_d_1_1_graph_pin_ref.html", null ],
     [ "eastl::hash< T, Enabled >", "structeastl_1_1hash.html", null ],
     [ "eastl::hash< pair< T, U > >", "structeastl_1_1hash_3_01pair_3_01_t_00_01_u_01_4_01_4.html", null ],
+    [ "eastl::hash< span< T > >", "structeastl_1_1hash_3_01span_3_01_t_01_4_01_4.html", null ],
     [ "eastl::hash< T, typename enable_if< detail::is_hashable< T >::value >::type >", "structeastl_1_1hash_3_01_t_00_01typename_01enable__if_3_01detail_1_1is__hashable_3_01_t_01_4_1_1value_01_4_1_1type_01_4.html", null ],
+    [ "eastl::hash< tuple< T... > >", "structeastl_1_1hash_3_01tuple_3_01_t_8_8_8_01_4_01_4.html", null ],
     [ "eastl::hash< unordered_map< Key, Value, Hash, Predicate, Allocator, bCacheHashCode > >", "structeastl_1_1hash_3_01unordered__map_3_01_key_00_01_value_00_01_hash_00_01_predicate_00_01_all937d1afbf4610a3e75daa9643d61451a.html", null ],
     [ "eastl::hash< vector< T, Allocator > >", "structeastl_1_1hash_3_01vector_3_01_t_00_01_allocator_01_4_01_4.html", null ],
     [ "Urho3D::ActionManager::HashElement", "struct_urho3_d_1_1_action_manager_1_1_hash_element.html", null ],
@@ -401,19 +381,6 @@ var hierarchy =
     [ "Urho3D::IDFamily< Material >", "class_urho3_d_1_1_i_d_family.html", [
       [ "Urho3D::Material", "class_urho3_d_1_1_material.html", null ]
     ] ],
-    [ "Urho3D::IDFamily< PipelineState >", "class_urho3_d_1_1_i_d_family.html", [
-      [ "Urho3D::PipelineState", "class_urho3_d_1_1_pipeline_state.html", null ]
-    ] ],
-    [ "Urho3D::IDFamily< RenderBuffer >", "class_urho3_d_1_1_i_d_family.html", [
-      [ "Urho3D::RenderBuffer", "class_urho3_d_1_1_render_buffer.html", [
-        [ "Urho3D::TextureRenderBuffer", "class_urho3_d_1_1_texture_render_buffer.html", null ],
-        [ "Urho3D::ViewportColorRenderBuffer", "class_urho3_d_1_1_viewport_color_render_buffer.html", null ],
-        [ "Urho3D::ViewportDepthStencilRenderBuffer", "class_urho3_d_1_1_viewport_depth_stencil_render_buffer.html", null ]
-      ] ]
-    ] ],
-    [ "Urho3D::IDFamily< ShaderProgramLayout >", "class_urho3_d_1_1_i_d_family.html", [
-      [ "Urho3D::ShaderProgramLayout", "class_urho3_d_1_1_shader_program_layout.html", null ]
-    ] ],
     [ "Urho3D::IdScopeGuard", "class_urho3_d_1_1_id_scope_guard.html", null ],
     [ "Urho3D::IKChain", "class_urho3_d_1_1_i_k_chain.html", [
       [ "Urho3D::IKFabrikChain", "class_urho3_d_1_1_i_k_fabrik_chain.html", null ],
@@ -424,6 +391,9 @@ var hierarchy =
     [ "Urho3D::IKNodeSegment", "struct_urho3_d_1_1_i_k_node_segment.html", null ],
     [ "Urho3D::IKSettings", "struct_urho3_d_1_1_i_k_settings.html", null ],
     [ "Urho3D::IKTrigonometricChain", "class_urho3_d_1_1_i_k_trigonometric_chain.html", null ],
+    [ "ImGuiDiligentRenderer", null, [
+      [ "Urho3D::ImGuiDiligentRendererEx", "class_urho3_d_1_1_im_gui_diligent_renderer_ex.html", null ]
+    ] ],
     [ "Urho3D::IncrementalLightBaker", "class_urho3_d_1_1_incremental_light_baker.html", null ],
     [ "Urho3D::IncrementalLightBakerSettings", "struct_urho3_d_1_1_incremental_light_baker_settings.html", null ],
     [ "Urho3D::IncrementalLightBakerStatus", "struct_urho3_d_1_1_incremental_light_baker_status.html", null ],
@@ -436,49 +406,49 @@ var hierarchy =
     ] ],
     [ "Urho3D::IndirectLightTracingSettings", "struct_urho3_d_1_1_indirect_light_tracing_settings.html", null ],
     [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::EmitterPositionInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_position_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::CurlNoise3DInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_curl_noise3_d_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::SphereInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::TimeStepInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_time_step_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::HemisphereInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::LimitVelocityInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_limit_velocity_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::ApplyForceInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_apply_force_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::SlerpInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_slerp_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::Noise3DInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_noise3_d_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::LocalToWorldInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_local_to_world_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::BurstTimerInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::BoxInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_box_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::BounceInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_bounce_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::Noise3DInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_noise3_d_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::CircleInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_circle_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::NormalizedEffectTimeInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_normalized_effect_time_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::ConeInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::DestroyInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_destroy_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::EffectTimeInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_effect_time_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::EmitterPositionInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_position_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::SlerpInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_slerp_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::RenderBillboardInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::BounceInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_bounce_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::CurlNoise3DInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_curl_noise3_d_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::ConeInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::EmitInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_emit_instance.html", null ]
@@ -490,31 +460,29 @@ var hierarchy =
       [ "Urho3D::ParticleGraphNodes::ExpireInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_expire_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::LimitVelocityInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_limit_velocity_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::MoveInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_move_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::SphereInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::WorldToLocalInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_world_to_local_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::NormalizedEffectTimeInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_normalized_effect_time_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::RenderMeshInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_mesh_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::LocalToWorldInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_local_to_world_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::WorldToLocalInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_world_to_local_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::ApplyForceInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_apply_force_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::RenderBillboardInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::EmitterRotationInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_rotation_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::BurstTimerInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer_instance.html", null ]
+      [ "Urho3D::ParticleGraphNodes::HemisphereInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere_instance.html", null ]
     ] ],
-    [ "Urho3D::InstanceData", "struct_urho3_d_1_1_instance_data.html", null ],
-    [ "Urho3D::InstanceShaderParameters", "struct_urho3_d_1_1_instance_shader_parameters.html", null ],
     [ "Urho3D::InstancingBufferSettings", "struct_urho3_d_1_1_instancing_buffer_settings.html", null ],
     [ "integral_constant", null, [
       [ "Urho3D::IndexInTuple< T, ea::tuple< T, Types... > >", "struct_urho3_d_1_1_index_in_tuple_3_01_t_00_01ea_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html", null ],
@@ -552,7 +520,6 @@ var hierarchy =
     [ "Urho3D::LightAccumulator", "struct_urho3_d_1_1_light_accumulator.html", null ],
     [ "Urho3D::LightAccumulatorContext", "struct_urho3_d_1_1_light_accumulator_context.html", null ],
     [ "Urho3D::LightBakingSettings", "struct_urho3_d_1_1_light_baking_settings.html", null ],
-    [ "Urho3D::LightBatchQueue", "struct_urho3_d_1_1_light_batch_queue.html", null ],
     [ "Urho3D::LightCalculationProperties", "struct_urho3_d_1_1_light_calculation_properties.html", null ],
     [ "Urho3D::LightDataForAccumulator", "struct_urho3_d_1_1_light_data_for_accumulator.html", null ],
     [ "Urho3D::LightGeometryQueryResult", "struct_urho3_d_1_1_light_geometry_query_result.html", null ],
@@ -579,7 +546,6 @@ var hierarchy =
     [ "Urho3D::LightProcessorCallback", "class_urho3_d_1_1_light_processor_callback.html", [
       [ "Urho3D::SceneProcessor", "class_urho3_d_1_1_scene_processor.html", null ]
     ] ],
-    [ "Urho3D::LightQueryResult", "struct_urho3_d_1_1_light_query_result.html", null ],
     [ "Urho3D::IKLimbSolver::LocalCache", "struct_urho3_d_1_1_i_k_limb_solver_1_1_local_cache.html", null ],
     [ "Urho3D::IKLegSolver::LocalCache", "struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html", null ],
     [ "Urho3D::IKSpineSolver::LocalCache", "struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html", null ],
@@ -595,6 +561,7 @@ var hierarchy =
     [ "Urho3D::Spriter::MapInstruction", "struct_urho3_d_1_1_spriter_1_1_map_instruction.html", null ],
     [ "Urho3D::OutlineGroup::MaterialKey", "struct_urho3_d_1_1_outline_group_1_1_material_key.html", null ],
     [ "Urho3D::MaterialShaderParameter", "struct_urho3_d_1_1_material_shader_parameter.html", null ],
+    [ "Urho3D::MaterialTexture", "struct_urho3_d_1_1_material_texture.html", null ],
     [ "Urho3D::Matrix2", "class_urho3_d_1_1_matrix2.html", null ],
     [ "Urho3D::Matrix3", "class_urho3_d_1_1_matrix3.html", null ],
     [ "Urho3D::Matrix3x4", "class_urho3_d_1_1_matrix3x4.html", null ],
@@ -779,7 +746,7 @@ var hierarchy =
     [ "Urho3D::ClockSynchronizer::PendingPing", "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_ping.html", null ],
     [ "Urho3D::ClockSynchronizer::PendingPong", "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_pong.html", null ],
     [ "Urho3D::PerlinNoise", "class_urho3_d_1_1_perlin_noise.html", null ],
-    [ "Urho3D::PerThreadSceneResult", "struct_urho3_d_1_1_per_thread_scene_result.html", null ],
+    [ "Urho3D::StaticPipelineStateCache::PerOutputCache", "struct_urho3_d_1_1_static_pipeline_state_cache_1_1_per_output_cache.html", null ],
     [ "Urho3D::PhysicsRaycastResult", "struct_urho3_d_1_1_physics_raycast_result.html", null ],
     [ "Urho3D::PhysicsRaycastResult2D", "struct_urho3_d_1_1_physics_raycast_result2_d.html", null ],
     [ "Urho3D::PhysicsTickSynchronizer", "class_urho3_d_1_1_physics_tick_synchronizer.html", null ],
@@ -793,7 +760,6 @@ var hierarchy =
     [ "Urho3D::PipelineBatchGroup< PipelineBatchSorted >", "struct_urho3_d_1_1_pipeline_batch_group.html", null ],
     [ "Urho3D::PipelineBatchGroup< Urho3D::PipelineBatchBackToFront >", "struct_urho3_d_1_1_pipeline_batch_group.html", null ],
     [ "Urho3D::PipelineBatchGroup< Urho3D::PipelineBatchByState >", "struct_urho3_d_1_1_pipeline_batch_group.html", null ],
-    [ "Urho3D::PipelineStateDesc", "struct_urho3_d_1_1_pipeline_state_desc.html", null ],
     [ "Urho3D::PipelineStateSubscription", "class_urho3_d_1_1_pipeline_state_subscription.html", null ],
     [ "Urho3D::PipelineStateTracker", "class_urho3_d_1_1_pipeline_state_tracker.html", [
       [ "Urho3D::Drawable", "class_urho3_d_1_1_drawable.html", [
@@ -846,6 +812,21 @@ var hierarchy =
     [ "Urho3D::RandomEngine", "class_urho3_d_1_1_random_engine.html", null ],
     [ "Urho3D::SceneHierarchyWidget::RangeSelection", "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html", null ],
     [ "Urho3D::SceneHierarchyWidget::RangeSelectionRequest", "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection_request.html", null ],
+    [ "RawBuffer", null, [
+      [ "Urho3D::IndexBuffer", "class_urho3_d_1_1_index_buffer.html", null ],
+      [ "Urho3D::VertexBuffer", "class_urho3_d_1_1_vertex_buffer.html", null ]
+    ] ],
+    [ "RawShader", null, [
+      [ "Urho3D::ShaderVariation", "class_urho3_d_1_1_shader_variation.html", null ]
+    ] ],
+    [ "RawTexture", null, [
+      [ "Urho3D::Texture", "class_urho3_d_1_1_texture.html", [
+        [ "Urho3D::Texture2D", "class_urho3_d_1_1_texture2_d.html", null ],
+        [ "Urho3D::Texture2DArray", "class_urho3_d_1_1_texture2_d_array.html", null ],
+        [ "Urho3D::Texture3D", "class_urho3_d_1_1_texture3_d.html", null ],
+        [ "Urho3D::TextureCube", "class_urho3_d_1_1_texture_cube.html", null ]
+      ] ]
+    ] ],
     [ "Urho3D::Ray", "class_urho3_d_1_1_ray.html", null ],
     [ "Urho3D::RayQueryResult", "struct_urho3_d_1_1_ray_query_result.html", null ],
     [ "Urho3D::RaytracerGeometry", "struct_urho3_d_1_1_raytracer_geometry.html", null ],
@@ -886,7 +867,6 @@ var hierarchy =
         [ "Urho3D::NodeComponentDragDropPayload", "class_urho3_d_1_1_node_component_drag_drop_payload.html", null ],
         [ "Urho3D::ResourceDragDropPayload", "class_urho3_d_1_1_resource_drag_drop_payload.html", null ]
       ] ],
-      [ "Urho3D::DrawCommandQueue", "class_urho3_d_1_1_draw_command_queue.html", null ],
       [ "Urho3D::EventReceiverGroup", "class_urho3_d_1_1_event_receiver_group.html", null ],
       [ "Urho3D::FontFace", "class_urho3_d_1_1_font_face.html", [
         [ "Urho3D::FontFaceBitmap", "class_urho3_d_1_1_font_face_bitmap.html", null ],
@@ -920,7 +900,6 @@ var hierarchy =
         ] ],
         [ "Urho3D::ConfigFile", "class_urho3_d_1_1_config_file.html", null ],
         [ "Urho3D::Console", "class_urho3_d_1_1_console.html", null ],
-        [ "Urho3D::ConstantBuffer", "class_urho3_d_1_1_constant_buffer.html", null ],
         [ "Urho3D::CubemapRenderer", "class_urho3_d_1_1_cubemap_renderer.html", null ],
         [ "Urho3D::CustomBackbufferTexture", "class_urho3_d_1_1_custom_backbuffer_texture.html", [
           [ "Urho3D::SceneRendererToTexture", "class_urho3_d_1_1_scene_renderer_to_texture.html", null ]
@@ -954,7 +933,6 @@ var hierarchy =
         [ "Urho3D::Graph", "class_urho3_d_1_1_graph.html", null ],
         [ "Urho3D::Graphics", "class_urho3_d_1_1_graphics.html", null ],
         [ "Urho3D::GraphNode", "class_urho3_d_1_1_graph_node.html", null ],
-        [ "Urho3D::IndexBuffer", "class_urho3_d_1_1_index_buffer.html", null ],
         [ "Urho3D::Input", "class_urho3_d_1_1_input.html", null ],
         [ "Urho3D::InstancingBuffer", "class_urho3_d_1_1_instancing_buffer.html", null ],
         [ "Urho3D::LightmapRenderPipelineView", "class_urho3_d_1_1_lightmap_render_pipeline_view.html", null ],
@@ -981,7 +959,6 @@ var hierarchy =
         [ "Urho3D::ParticleGraph", "class_urho3_d_1_1_particle_graph.html", null ],
         [ "Urho3D::ParticleGraphSystem", "class_urho3_d_1_1_particle_graph_system.html", null ],
         [ "Urho3D::PipelineStateBuilder", "class_urho3_d_1_1_pipeline_state_builder.html", null ],
-        [ "Urho3D::PipelineStateCache", "class_urho3_d_1_1_pipeline_state_cache.html", null ],
         [ "Urho3D::Plugin", "class_urho3_d_1_1_plugin.html", [
           [ "Urho3D::ModulePlugin", "class_urho3_d_1_1_module_plugin.html", null ],
           [ "Urho3D::ScriptBundlePlugin", "class_urho3_d_1_1_script_bundle_plugin.html", null ]
@@ -1002,7 +979,11 @@ var hierarchy =
           [ "Urho3D::SimplePostProcessPass", "class_urho3_d_1_1_simple_post_process_pass.html", null ],
           [ "Urho3D::ToneMappingPass", "class_urho3_d_1_1_tone_mapping_pass.html", null ]
         ] ],
-        [ "Urho3D::RenderBuffer", "class_urho3_d_1_1_render_buffer.html", null ],
+        [ "Urho3D::RenderBuffer", "class_urho3_d_1_1_render_buffer.html", [
+          [ "Urho3D::TextureRenderBuffer", "class_urho3_d_1_1_texture_render_buffer.html", null ],
+          [ "Urho3D::ViewportColorRenderBuffer", "class_urho3_d_1_1_viewport_color_render_buffer.html", null ],
+          [ "Urho3D::ViewportDepthStencilRenderBuffer", "class_urho3_d_1_1_viewport_depth_stencil_render_buffer.html", null ]
+        ] ],
         [ "Urho3D::RenderBufferManager", "class_urho3_d_1_1_render_buffer_manager.html", null ],
         [ "Urho3D::Renderer", "class_urho3_d_1_1_renderer.html", null ],
         [ "Urho3D::RenderPipelineView", "class_urho3_d_1_1_render_pipeline_view.html", [
@@ -1354,30 +1335,24 @@ var hierarchy =
         ] ],
         [ "Urho3D::SerializableInspectorWidget", "class_urho3_d_1_1_serializable_inspector_widget.html", null ],
         [ "Urho3D::ServerReplicator", "class_urho3_d_1_1_server_replicator.html", null ],
-        [ "Urho3D::ShaderPrecache", "class_urho3_d_1_1_shader_precache.html", null ],
         [ "Urho3D::ShaderProgramCompositor", "class_urho3_d_1_1_shader_program_compositor.html", null ],
         [ "Urho3D::ShadowMapAllocator", "class_urho3_d_1_1_shadow_map_allocator.html", null ],
         [ "Urho3D::SoftwareModelAnimator", "class_urho3_d_1_1_software_model_animator.html", null ],
         [ "Urho3D::StateManager", "class_urho3_d_1_1_state_manager.html", null ],
+        [ "Urho3D::StaticPipelineStateCache", "class_urho3_d_1_1_static_pipeline_state_cache.html", null ],
         [ "Urho3D::SystemMessageBox", "class_urho3_d_1_1_system_message_box.html", null ],
         [ "Urho3D::SystemUI", "class_urho3_d_1_1_system_u_i.html", null ],
         [ "Urho3D::Time", "class_urho3_d_1_1_time.html", null ],
         [ "Urho3D::UI", "class_urho3_d_1_1_u_i.html", null ],
-        [ "Urho3D::VertexBuffer", "class_urho3_d_1_1_vertex_buffer.html", null ],
-        [ "Urho3D::View", "class_urho3_d_1_1_view.html", null ],
         [ "Urho3D::Viewport", "class_urho3_d_1_1_viewport.html", null ],
         [ "Urho3D::VirtualFileSystem", "class_urho3_d_1_1_virtual_file_system.html", null ],
         [ "Urho3D::WorkQueue", "class_urho3_d_1_1_work_queue.html", null ]
       ] ],
       [ "Urho3D::ObjectReflection", "class_urho3_d_1_1_object_reflection.html", null ],
       [ "Urho3D::Pass", "class_urho3_d_1_1_pass.html", null ],
-      [ "Urho3D::PipelineState", "class_urho3_d_1_1_pipeline_state.html", null ],
       [ "Urho3D::PropertySet2D", "class_urho3_d_1_1_property_set2_d.html", null ],
       [ "Urho3D::RaytracerScene", "class_urho3_d_1_1_raytracer_scene.html", null ],
-      [ "Urho3D::RenderPath", "class_urho3_d_1_1_render_path.html", null ],
       [ "Urho3D::RenderSurface", "class_urho3_d_1_1_render_surface.html", null ],
-      [ "Urho3D::ShaderProgramLayout", "class_urho3_d_1_1_shader_program_layout.html", null ],
-      [ "Urho3D::ShaderVariation", "class_urho3_d_1_1_shader_variation.html", null ],
       [ "Urho3D::SharedReplicationState", "class_urho3_d_1_1_shared_replication_state.html", null ],
       [ "Urho3D::SoundStream", "class_urho3_d_1_1_sound_stream.html", [
         [ "Urho3D::BufferedSoundStream", "class_urho3_d_1_1_buffered_sound_stream.html", null ],
@@ -1404,17 +1379,18 @@ var hierarchy =
     [ "Urho3D::RenderBufferManagerFrameSettings", "struct_urho3_d_1_1_render_buffer_manager_frame_settings.html", null ],
     [ "Urho3D::RenderBufferManagerSettings", "struct_urho3_d_1_1_render_buffer_manager_settings.html", null ],
     [ "Urho3D::RenderBufferParams", "struct_urho3_d_1_1_render_buffer_params.html", null ],
+    [ "RenderDeviceSettings", null, [
+      [ "Urho3D::GraphicsSettings", "struct_urho3_d_1_1_graphics_settings.html", null ]
+    ] ],
     [ "RenderInterface", null, [
       [ "Urho3D::Detail::RmlRenderer", "class_urho3_d_1_1_detail_1_1_rml_renderer.html", null ]
     ] ],
-    [ "Urho3D::RenderPathCommand", "struct_urho3_d_1_1_render_path_command.html", null ],
     [ "Urho3D::RenderPipelineDebugger", "class_urho3_d_1_1_render_pipeline_debugger.html", null ],
     [ "Urho3D::RenderPipelineInterface", "class_urho3_d_1_1_render_pipeline_interface.html", [
       [ "Urho3D::LightmapRenderPipelineView", "class_urho3_d_1_1_lightmap_render_pipeline_view.html", null ],
       [ "Urho3D::RenderPipelineView", "class_urho3_d_1_1_render_pipeline_view.html", null ]
     ] ],
     [ "Urho3D::RenderPipelineStats", "struct_urho3_d_1_1_render_pipeline_stats.html", null ],
-    [ "Urho3D::RenderTargetInfo", "struct_urho3_d_1_1_render_target_info.html", null ],
     [ "Urho3D::SceneHierarchyWidget::ReorderInfo", "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_reorder_info.html", null ],
     [ "Urho3D::SceneHierarchyWidget::ReparentInfo", "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_reparent_info.html", null ],
     [ "Urho3D::ResourceFileDescriptor", "struct_urho3_d_1_1_resource_file_descriptor.html", null ],
@@ -1425,12 +1401,9 @@ var hierarchy =
     [ "Urho3D::RmlDocumentReloadedArgs", "struct_urho3_d_1_1_rml_document_reloaded_args.html", null ],
     [ "Urho3D::RWOpsWrapper< T >", "class_urho3_d_1_1_r_w_ops_wrapper.html", null ],
     [ "Urho3D::SceneHierarchySettings", "struct_urho3_d_1_1_scene_hierarchy_settings.html", null ],
-    [ "Urho3D::ScenePassInfo", "struct_urho3_d_1_1_scene_pass_info.html", null ],
     [ "Urho3D::SceneResolver", "class_urho3_d_1_1_scene_resolver.html", null ],
     [ "Urho3D::SceneSelection", "class_urho3_d_1_1_scene_selection.html", null ],
-    [ "Urho3D::ScratchBuffer", "struct_urho3_d_1_1_scratch_buffer.html", null ],
     [ "Urho3D::Detail::ScreenButtonMapping", "struct_urho3_d_1_1_detail_1_1_screen_button_mapping.html", null ],
-    [ "Urho3D::ScreenModeParams", "struct_urho3_d_1_1_screen_mode_params.html", null ],
     [ "Urho3D::ScriptRuntimeApi", "class_urho3_d_1_1_script_runtime_api.html", null ],
     [ "Urho3D::SerializablePrefab", "class_urho3_d_1_1_serializable_prefab.html", null ],
     [ "Urho3D::Serializer", "class_urho3_d_1_1_serializer.html", [
@@ -1442,24 +1415,21 @@ var hierarchy =
       [ "Urho3D::NetworkCallback", "class_urho3_d_1_1_network_callback.html", null ]
     ] ],
     [ "Urho3D::ShaderDefineArray", "struct_urho3_d_1_1_shader_define_array.html", null ],
-    [ "Urho3D::ShaderParameter", "struct_urho3_d_1_1_shader_parameter.html", null ],
-    [ "Urho3D::ShaderParameterCollection", "class_urho3_d_1_1_shader_parameter_collection.html", null ],
     [ "Urho3D::ShaderParameterDesc", "struct_urho3_d_1_1_shader_parameter_desc.html", null ],
-    [ "Urho3D::ShaderParameterRange", "struct_urho3_d_1_1_shader_parameter_range.html", null ],
-    [ "Urho3D::DrawCommandQueue::ShaderParametersData", "struct_urho3_d_1_1_draw_command_queue_1_1_shader_parameters_data.html", null ],
     [ "Urho3D::ShaderProgramCompositorSettings", "struct_urho3_d_1_1_shader_program_compositor_settings.html", [
       [ "Urho3D::RenderPipelineSettings", "struct_urho3_d_1_1_render_pipeline_settings.html", null ]
     ] ],
     [ "Urho3D::ShaderProgramDesc", "struct_urho3_d_1_1_shader_program_desc.html", null ],
     [ "Urho3D::ShaderResourceDesc", "struct_urho3_d_1_1_shader_resource_desc.html", null ],
-    [ "Urho3D::ShadowBatchQueue", "struct_urho3_d_1_1_shadow_batch_queue.html", null ],
     [ "Urho3D::ShadowMapAllocatorSettings", "struct_urho3_d_1_1_shadow_map_allocator_settings.html", null ],
     [ "Urho3D::ShadowMapRegion", "struct_urho3_d_1_1_shadow_map_region.html", null ],
     [ "Urho3D::ShadowSplitProcessor", "class_urho3_d_1_1_shadow_split_processor.html", null ],
-    [ "Urho3D::SharedParameterSetter", "struct_urho3_d_1_1_shared_parameter_setter.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< InterfaceType, RefCountedType, Enabled >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< AbstractFile, RefCounted >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< AbstractFile, RefCounted >", "class_urho3_d_1_1_shared_ptr.html", null ]
+    ] ],
+    [ "Urho3D::Detail::SharedPtrBase< DrawCommandQueue, DrawCommandQueue >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
+      [ "Urho3D::SharedPtr< DrawCommandQueue >", "class_urho3_d_1_1_shared_ptr.html", null ]
     ] ],
     [ "Urho3D::Detail::SharedPtrBase< FreeTypeLibrary, FreeTypeLibrary >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< FreeTypeLibrary >", "class_urho3_d_1_1_shared_ptr.html", null ]
@@ -1477,6 +1447,12 @@ var hierarchy =
     ] ],
     [ "Urho3D::Detail::SharedPtrBase< Object, Object >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Object >", "class_urho3_d_1_1_shared_ptr.html", null ]
+    ] ],
+    [ "Urho3D::Detail::SharedPtrBase< PipelineState, PipelineState >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
+      [ "Urho3D::SharedPtr< PipelineState >", "class_urho3_d_1_1_shared_ptr.html", null ]
+    ] ],
+    [ "Urho3D::Detail::SharedPtrBase< RenderDevice, RenderDevice >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
+      [ "Urho3D::SharedPtr< RenderDevice >", "class_urho3_d_1_1_shared_ptr.html", null ]
     ] ],
     [ "Urho3D::Detail::SharedPtrBase< UIElement3D, UIElement3D >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< UIElement3D >", "class_urho3_d_1_1_shared_ptr.html", null ]
@@ -1576,9 +1552,6 @@ var hierarchy =
     ] ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::DrawableProcessor, Urho3D::DrawableProcessor >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::DrawableProcessor >", "class_urho3_d_1_1_shared_ptr.html", null ]
-    ] ],
-    [ "Urho3D::Detail::SharedPtrBase< Urho3D::DrawCommandQueue, Urho3D::DrawCommandQueue >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
-      [ "Urho3D::SharedPtr< Urho3D::DrawCommandQueue >", "class_urho3_d_1_1_shared_ptr.html", null ]
     ] ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::DropDownList, Urho3D::DropDownList >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::DropDownList >", "class_urho3_d_1_1_shared_ptr.html", null ]
@@ -1682,14 +1655,8 @@ var hierarchy =
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::Pass, Urho3D::Pass >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::Pass >", "class_urho3_d_1_1_shared_ptr.html", null ]
     ] ],
-    [ "Urho3D::Detail::SharedPtrBase< Urho3D::PipelineState, Urho3D::PipelineState >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
-      [ "Urho3D::SharedPtr< Urho3D::PipelineState >", "class_urho3_d_1_1_shared_ptr.html", null ]
-    ] ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::PipelineStateBuilder, Urho3D::PipelineStateBuilder >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::PipelineStateBuilder >", "class_urho3_d_1_1_shared_ptr.html", null ]
-    ] ],
-    [ "Urho3D::Detail::SharedPtrBase< Urho3D::PipelineStateCache, Urho3D::PipelineStateCache >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
-      [ "Urho3D::SharedPtr< Urho3D::PipelineStateCache >", "class_urho3_d_1_1_shared_ptr.html", null ]
     ] ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::PListFile, Urho3D::PListFile >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::PListFile >", "class_urho3_d_1_1_shared_ptr.html", null ]
@@ -1715,17 +1682,11 @@ var hierarchy =
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::RenderBufferManager, Urho3D::RenderBufferManager >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::RenderBufferManager >", "class_urho3_d_1_1_shared_ptr.html", null ]
     ] ],
-    [ "Urho3D::Detail::SharedPtrBase< Urho3D::RenderPath, Urho3D::RenderPath >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
-      [ "Urho3D::SharedPtr< Urho3D::RenderPath >", "class_urho3_d_1_1_shared_ptr.html", null ]
-    ] ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::RenderPipeline, Urho3D::RenderPipeline >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::RenderPipeline >", "class_urho3_d_1_1_shared_ptr.html", null ]
     ] ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::RenderPipelineView, Urho3D::RenderPipelineView >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::RenderPipelineView >", "class_urho3_d_1_1_shared_ptr.html", null ]
-    ] ],
-    [ "Urho3D::Detail::SharedPtrBase< Urho3D::RenderSurface, Urho3D::RenderSurface >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
-      [ "Urho3D::SharedPtr< Urho3D::RenderSurface >", "class_urho3_d_1_1_shared_ptr.html", null ]
     ] ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::Resource, Urho3D::Resource >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::Resource >", "class_urho3_d_1_1_shared_ptr.html", null ]
@@ -1756,9 +1717,6 @@ var hierarchy =
     ] ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::ServerReplicator, Urho3D::ServerReplicator >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::ServerReplicator >", "class_urho3_d_1_1_shared_ptr.html", null ]
-    ] ],
-    [ "Urho3D::Detail::SharedPtrBase< Urho3D::ShaderPrecache, Urho3D::ShaderPrecache >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
-      [ "Urho3D::SharedPtr< Urho3D::ShaderPrecache >", "class_urho3_d_1_1_shared_ptr.html", null ]
     ] ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::ShaderProgramCompositor, Urho3D::ShaderProgramCompositor >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::ShaderProgramCompositor >", "class_urho3_d_1_1_shared_ptr.html", null ]
@@ -1828,9 +1786,6 @@ var hierarchy =
     ] ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::VertexBuffer, Urho3D::VertexBuffer >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::VertexBuffer >", "class_urho3_d_1_1_shared_ptr.html", null ]
-    ] ],
-    [ "Urho3D::Detail::SharedPtrBase< Urho3D::View, Urho3D::View >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
-      [ "Urho3D::SharedPtr< Urho3D::View >", "class_urho3_d_1_1_shared_ptr.html", null ]
     ] ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::Viewport, Urho3D::Viewport >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::Viewport >", "class_urho3_d_1_1_shared_ptr.html", null ]
@@ -1968,10 +1923,10 @@ var hierarchy =
     [ "Urho3D::TransformNodesGizmo", "class_urho3_d_1_1_transform_nodes_gizmo.html", null ],
     [ "Urho3D::AssetTransformerHierarchy::TreeNode", "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html", null ],
     [ "true_type", null, [
-      [ "Urho3D::TupleHasType< T, ea::tuple< T, Types... > >", "struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01ea_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html", null ]
+      [ "eastl::detail::is_hashable< T, decltype(void(&T::ToHash))>", "structeastl_1_1detail_1_1is__hashable_3_01_t_00_01decltype_07void_07_6_t_1_1_to_hash_08_08_4.html", null ]
     ] ],
     [ "true_type", null, [
-      [ "eastl::detail::is_hashable< T, decltype(void(&T::ToHash))>", "structeastl_1_1detail_1_1is__hashable_3_01_t_00_01decltype_07void_07_6_t_1_1_to_hash_08_08_4.html", null ]
+      [ "Urho3D::TupleHasType< T, ea::tuple< T, Types... > >", "struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01ea_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html", null ]
     ] ],
     [ "Urho3D::TupleHasType< T, Tuple >", "struct_urho3_d_1_1_tuple_has_type.html", null ],
     [ "Urho3D::TupleHasType< T, ea::tuple< Types... > >", "struct_urho3_d_1_1_tuple_has_type.html", [
@@ -2035,7 +1990,6 @@ var hierarchy =
     [ "Urho3D::WeakPtr< Urho3D::Object >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::PhysicsWorld >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::PhysicsWorld2D >", "class_urho3_d_1_1_weak_ptr.html", null ],
-    [ "Urho3D::WeakPtr< Urho3D::PipelineStateCache >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::PluginApplication >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::RefCounted >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::ReflectionProbe >", "class_urho3_d_1_1_weak_ptr.html", null ],
@@ -2052,7 +2006,6 @@ var hierarchy =
     [ "Urho3D::WeakPtr< Urho3D::Scene >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::Serializable >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::Shader >", "class_urho3_d_1_1_weak_ptr.html", null ],
-    [ "Urho3D::WeakPtr< Urho3D::ShaderProgramLayout >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::SoundListener >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::SoundSource >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::SpriteSheet2D >", "class_urho3_d_1_1_weak_ptr.html", null ],
@@ -2065,11 +2018,9 @@ var hierarchy =
     [ "Urho3D::WeakPtr< Urho3D::TileMap2D >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::TmxFile2D >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::UIElement >", "class_urho3_d_1_1_weak_ptr.html", null ],
-    [ "Urho3D::WeakPtr< Urho3D::View >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::Viewport >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::XMLFile >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::Zone >", "class_urho3_d_1_1_weak_ptr.html", null ],
-    [ "Urho3D::WindowModeParams", "struct_urho3_d_1_1_window_mode_params.html", null ],
     [ "Urho3D::WrappedScalar< T >", "class_urho3_d_1_1_wrapped_scalar.html", null ],
     [ "Urho3D::WrappedScalar< float >", "class_urho3_d_1_1_wrapped_scalar.html", null ],
     [ "Urho3D::WrappedScalarRange< T >", "class_urho3_d_1_1_wrapped_scalar_range.html", null ],

@@ -88,17 +88,31 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_state_cache.html#aecfcd204e5eb67d81d888bd11d3030de">Invalidate</a> ()</td></tr>
 <tr class="memdesc:aecfcd204e5eb67d81d888bd11d3030de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate cache. <br /></td></tr>
 <tr class="separator:aecfcd204e5eb67d81d888bd11d3030de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec669b85e8d21c5de56afaf703908945"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_pipeline_state.html">PipelineState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_state_cache.html#aec669b85e8d21c5de56afaf703908945">GetPipelineState</a> (const <a class="el" href="struct_urho3_d_1_1_batch_state_lookup_key.html">BatchStateLookupKey</a> &amp;key) const</td></tr>
+<tr class="memitem:abc413723c50881f234d8230d6edabb67"><td class="memItemLeft" align="right" valign="top"><a id="abc413723c50881f234d8230d6edabb67"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_state_cache.html#abc413723c50881f234d8230d6edabb67">SetOutputDesc</a> (const PipelineStateOutputDesc &amp;outputDesc)</td></tr>
+<tr class="memdesc:abc413723c50881f234d8230d6edabb67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set currently used output description. Invalidates cache if it has changed. <br /></td></tr>
+<tr class="separator:abc413723c50881f234d8230d6edabb67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec669b85e8d21c5de56afaf703908945"><td class="memItemLeft" align="right" valign="top">PipelineState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_state_cache.html#aec669b85e8d21c5de56afaf703908945">GetPipelineState</a> (const <a class="el" href="struct_urho3_d_1_1_batch_state_lookup_key.html">BatchStateLookupKey</a> &amp;key) const</td></tr>
 <tr class="separator:aec669b85e8d21c5de56afaf703908945"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ff4d46d18414517ef1b09bfc4b6c254"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_pipeline_state.html">PipelineState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_state_cache.html#a6ff4d46d18414517ef1b09bfc4b6c254">GetOrCreatePipelineState</a> (const <a class="el" href="struct_urho3_d_1_1_batch_state_create_key.html">BatchStateCreateKey</a> &amp;key, const <a class="el" href="struct_urho3_d_1_1_batch_state_create_context.html">BatchStateCreateContext</a> &amp;ctx, <a class="el" href="class_urho3_d_1_1_batch_state_cache_callback.html">BatchStateCacheCallback</a> *callback)</td></tr>
+<tr class="memitem:a6ff4d46d18414517ef1b09bfc4b6c254"><td class="memItemLeft" align="right" valign="top">PipelineState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_state_cache.html#a6ff4d46d18414517ef1b09bfc4b6c254">GetOrCreatePipelineState</a> (const <a class="el" href="struct_urho3_d_1_1_batch_state_create_key.html">BatchStateCreateKey</a> &amp;key, const <a class="el" href="struct_urho3_d_1_1_batch_state_create_context.html">BatchStateCreateContext</a> &amp;ctx, <a class="el" href="class_urho3_d_1_1_batch_state_cache_callback.html">BatchStateCacheCallback</a> *callback)</td></tr>
 <tr class="separator:a6ff4d46d18414517ef1b09bfc4b6c254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad436e4bca1d116dc1082063ea38b8542"><td class="memItemLeft" align="right" valign="top">PipelineState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_state_cache.html#ad436e4bca1d116dc1082063ea38b8542">GetOrCreatePlaceholderPipelineState</a> (unsigned vertexStride, <a class="el" href="class_urho3_d_1_1_batch_state_cache_callback.html">BatchStateCacheCallback</a> *callback)</td></tr>
+<tr class="separator:ad436e4bca1d116dc1082063ea38b8542"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:ac034673a192b2562a5c56fb1ea79dc50"><td class="memItemLeft" align="right" valign="top"><a id="ac034673a192b2562a5c56fb1ea79dc50"></a>
+ea::optional&lt; PipelineStateOutputDesc &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_state_cache.html#ac034673a192b2562a5c56fb1ea79dc50">outputDesc_</a></td></tr>
+<tr class="memdesc:ac034673a192b2562a5c56fb1ea79dc50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current output description. Invalid on start. <br /></td></tr>
+<tr class="separator:ac034673a192b2562a5c56fb1ea79dc50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7735940a6ad5f7e0f1abd0fac4fdca06"><td class="memItemLeft" align="right" valign="top"><a id="a7735940a6ad5f7e0f1abd0fac4fdca06"></a>
 ea::unordered_map&lt; <a class="el" href="struct_urho3_d_1_1_batch_state_lookup_key.html">BatchStateLookupKey</a>, <a class="el" href="struct_urho3_d_1_1_cached_batch_state.html">CachedBatchState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_state_cache.html#a7735940a6ad5f7e0f1abd0fac4fdca06">cache_</a></td></tr>
 <tr class="memdesc:a7735940a6ad5f7e0f1abd0fac4fdca06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached states, possibly invalid. <br /></td></tr>
 <tr class="separator:a7735940a6ad5f7e0f1abd0fac4fdca06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0eba5299de60f09ece3b3501ef9d8a"><td class="memItemLeft" align="right" valign="top"><a id="a5f0eba5299de60f09ece3b3501ef9d8a"></a>
+ea::unordered_map&lt; unsigned, <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; PipelineState &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_batch_state_cache.html#a5f0eba5299de60f09ece3b3501ef9d8a">placeholderCache_</a></td></tr>
+<tr class="memdesc:a5f0eba5299de60f09ece3b3501ef9d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached placeholder states. <br /></td></tr>
+<tr class="separator:a5f0eba5299de60f09ece3b3501ef9d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -125,7 +139,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_urho3_d_1_1_pipeline_state.html">PipelineState</a> * Urho3D::BatchStateCache::GetOrCreatePipelineState </td>
+          <td class="memname">PipelineState * Urho3D::BatchStateCache::GetOrCreatePipelineState </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_batch_state_create_key.html">BatchStateCreateKey</a> &amp;&#160;</td>
           <td class="paramname"><em>key</em>, </td>
@@ -153,6 +167,35 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ad436e4bca1d116dc1082063ea38b8542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad436e4bca1d116dc1082063ea38b8542">&#9670;&nbsp;</a></span>GetOrCreatePlaceholderPipelineState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PipelineState * Urho3D::BatchStateCache::GetOrCreatePlaceholderPipelineState </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>vertexStride</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_batch_state_cache_callback.html">BatchStateCacheCallback</a> *&#160;</td>
+          <td class="paramname"><em>callback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return existing or create new placeholder pipeline state. Not thread safe. Resulting state may be invalid in case of emergencies. </p>
+
+</div>
+</div>
 <a id="aec669b85e8d21c5de56afaf703908945"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec669b85e8d21c5de56afaf703908945">&#9670;&nbsp;</a></span>GetPipelineState()</h2>
 
@@ -160,7 +203,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_urho3_d_1_1_pipeline_state.html">PipelineState</a> * Urho3D::BatchStateCache::GetPipelineState </td>
+          <td class="memname">PipelineState * Urho3D::BatchStateCache::GetPipelineState </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_batch_state_lookup_key.html">BatchStateLookupKey</a> &amp;&#160;</td>
           <td class="paramname"><em>key</em></td><td>)</td>

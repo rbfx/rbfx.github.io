@@ -94,10 +94,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_engine.html#a85b1627f6845fe0547f1ed567d08ef39">~Engine</a> () override</td></tr>
 <tr class="memdesc:a85b1627f6845fe0547f1ed567d08ef39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Free all subsystems. <br /></td></tr>
 <tr class="separator:a85b1627f6845fe0547f1ed567d08ef39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac469246431345f091e44ca05ae1d83ee"><td class="memItemLeft" align="right" valign="top"><a id="ac469246431345f091e44ca05ae1d83ee"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_engine.html#ac469246431345f091e44ca05ae1d83ee">Initialize</a> (const <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;parameters)</td></tr>
-<tr class="memdesc:ac469246431345f091e44ca05ae1d83ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize engine using parameters given and show the application window. Return true if successful. <br /></td></tr>
-<tr class="separator:ac469246431345f091e44ca05ae1d83ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbefeab613b55aa9e3a59c0ba4acbae9"><td class="memItemLeft" align="right" valign="top"><a id="afbefeab613b55aa9e3a59c0ba4acbae9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_engine.html#afbefeab613b55aa9e3a59c0ba4acbae9">Initialize</a> (const <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;applicationParameters, const <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;commandLineParameters)</td></tr>
+<tr class="memdesc:afbefeab613b55aa9e3a59c0ba4acbae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize engine using parameters given and show the application window. Return true if successful. <br /></td></tr>
+<tr class="separator:afbefeab613b55aa9e3a59c0ba4acbae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac43bb88508c1d1a0078b7a9899ff0d9"><td class="memItemLeft" align="right" valign="top"><a id="aac43bb88508c1d1a0078b7a9899ff0d9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_engine.html#aac43bb88508c1d1a0078b7a9899ff0d9">InitializeVirtualFileSystem</a> ()</td></tr>
 <tr class="memdesc:aac43bb88508c1d1a0078b7a9899ff0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize virtual filesystem. Implicitly called by Initialize. <br /></td></tr>
@@ -106,6 +106,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_engine.html#a7670e665e72f4efd8426ba7a9559d3b0">RunFrame</a> ()</td></tr>
 <tr class="memdesc:a7670e665e72f4efd8426ba7a9559d3b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run one frame. <br /></td></tr>
 <tr class="separator:a7670e665e72f4efd8426ba7a9559d3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc103e0979bbda40c9bec2395e16aa8c"><td class="memItemLeft" align="right" valign="top"><a id="acc103e0979bbda40c9bec2395e16aa8c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_engine.html#acc103e0979bbda40c9bec2395e16aa8c">OnCanvasResize</a> (int width, int height, bool isFullScreen, float dpiScale)</td></tr>
+<tr class="memdesc:acc103e0979bbda40c9bec2395e16aa8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Web only. Process canvas resize event. <br /></td></tr>
+<tr class="separator:acc103e0979bbda40c9bec2395e16aa8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ca9cc296606e286592bef3090b48462"><td class="memItemLeft" align="right" valign="top"><a id="a0ca9cc296606e286592bef3090b48462"></a>
 <a class="el" href="class_urho3_d_1_1_console.html">Console</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_engine.html#a0ca9cc296606e286592bef3090b48462">CreateConsole</a> ()</td></tr>
 <tr class="memdesc:a0ca9cc296606e286592bef3090b48462"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the console and return it. May return null if engine configuration does not allow creation (headless mode). <br /></td></tr>

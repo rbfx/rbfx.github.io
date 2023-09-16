@@ -50,6 +50,8 @@ var class_urho3_d_1_1_scene_processor =
     [ "occlusionBuffer_", "class_urho3_d_1_1_scene_processor.html#accb71fc42a54f4fa430c16cf0c3f30bf", null ],
     [ "passes_", "class_urho3_d_1_1_scene_processor.html#a76810e5301a865628f849efaf6e282dc", null ],
     [ "pipelineStateBuilder_", "class_urho3_d_1_1_scene_processor.html#a7b572ef6eca2f3eac4ecba1a9464caa5", null ],
+    [ "renderContext_", "class_urho3_d_1_1_scene_processor.html#aab7fd91002795b1313acd2d77bf260d3", null ],
+    [ "renderDevice_", "class_urho3_d_1_1_scene_processor.html#aa3ce1454fd6ff670e127e7b264c9f9f0", null ],
     [ "renderPipeline_", "class_urho3_d_1_1_scene_processor.html#a4693caf4f33a29134fdf3a3a5b0ee06d", null ],
     [ "settings_", "class_urho3_d_1_1_scene_processor.html#a4a96fe9ae4c1e88285da0830f738a884", null ],
     [ "shadowMapAllocator_", "class_urho3_d_1_1_scene_processor.html#a2794866929e4f0b4baea32112bb5a97f", null ]

@@ -2,6 +2,8 @@ var class_urho3_d_1_1_render_pipeline_view =
 [
     [ "RenderPipelineView", "class_urho3_d_1_1_render_pipeline_view.html#adcda6f30fd19b8f5cd8ee4e67387382a", null ],
     [ "Define", "class_urho3_d_1_1_render_pipeline_view.html#a09815afcec422389eda3578142b19beb", null ],
+    [ "DrawDebugGeometries", "class_urho3_d_1_1_render_pipeline_view.html#a6de5c0894bd88034cc55ef6a47ff058f", null ],
+    [ "DrawDebugLights", "class_urho3_d_1_1_render_pipeline_view.html#ab8e49d53f22e9171141cd389125471f7", null ],
     [ "GetContext", "class_urho3_d_1_1_render_pipeline_view.html#a01de02e1671a2fe750d49ae9676972a9", null ],
     [ "GetDebugger", "class_urho3_d_1_1_render_pipeline_view.html#ac7970411eb51f1b973872c533d2d179d", null ],
     [ "GetFrameInfo", "class_urho3_d_1_1_render_pipeline_view.html#a0eb71466e0acd7c623e6045d6e1e8dc1", null ],

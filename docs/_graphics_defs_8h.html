@@ -61,7 +61,6 @@ $(document).ready(function(){initNavTree('_graphics_defs_8h.html',''); initResiz
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
@@ -72,30 +71,16 @@ $(document).ready(function(){initNavTree('_graphics_defs_8h.html',''); initResiz
 <div class="textblock"><code>#include &quot;../Container/FlagSet.h&quot;</code><br />
 <code>#include &quot;../Container/Hash.h&quot;</code><br />
 <code>#include &quot;../Math/StringHash.h&quot;</code><br />
+<code>#include &quot;../RenderAPI/RenderAPIDefs.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_vertex_element.html">Urho3D::VertexElement</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex element description for arbitrary vertex declarations.  <a href="struct_urho3_d_1_1_vertex_element.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_constant_buffer_range.html">Urho3D::ConstantBufferRange</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Range of constant buffer to bind.  <a href="struct_urho3_d_1_1_constant_buffer_range.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a81232b006e10e8bdacec055d6d4f637d"><td class="memItemLeft" align="right" valign="top"><a id="a81232b006e10e8bdacec055d6d4f637d"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#a81232b006e10e8bdacec055d6d4f637d">Urho3D::PrimitiveType</a> { <br />
-&#160;&#160;<b>TRIANGLE_LIST</b> = 0, 
-<b>LINE_LIST</b>, 
-<b>POINT_LIST</b>, 
-<b>TRIANGLE_STRIP</b>, 
-<br />
-&#160;&#160;<b>LINE_STRIP</b>, 
-<b>TRIANGLE_FAN</b>
-<br />
- }</td></tr>
-<tr class="memdesc:a81232b006e10e8bdacec055d6d4f637d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primitive type. <br /></td></tr>
-<tr class="separator:a81232b006e10e8bdacec055d6d4f637d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a695dada2fcf6fd8e446adffc20acf522"><td class="memItemLeft" align="right" valign="top"><a id="a695dada2fcf6fd8e446adffc20acf522"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#a695dada2fcf6fd8e446adffc20acf522">Urho3D::GeometryType</a> { <br />
 &#160;&#160;<b>GEOM_STATIC</b> = 0, 
 <b>GEOM_SKINNED</b> = 1, 
@@ -112,63 +97,6 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a695dada2fcf6fd8e446adffc20acf522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometry type for vertex shader geometry variations. <br /></td></tr>
 <tr class="separator:a695dada2fcf6fd8e446adffc20acf522"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2697a2bc51d21a1bf33367cb01c93d2f"><td class="memItemLeft" align="right" valign="top"><a id="a2697a2bc51d21a1bf33367cb01c93d2f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#a2697a2bc51d21a1bf33367cb01c93d2f">Urho3D::BlendMode</a> { <br />
-&#160;&#160;<b>BLEND_REPLACE</b> = 0, 
-<b>BLEND_ADD</b>, 
-<b>BLEND_MULTIPLY</b>, 
-<b>BLEND_ALPHA</b>, 
-<br />
-&#160;&#160;<b>BLEND_ADDALPHA</b>, 
-<b>BLEND_PREMULALPHA</b>, 
-<b>BLEND_INVDESTALPHA</b>, 
-<b>BLEND_SUBTRACT</b>, 
-<br />
-&#160;&#160;<b>BLEND_SUBTRACTALPHA</b>, 
-<b>BLEND_DEFERRED_DECAL</b>, 
-<b>MAX_BLENDMODES</b>
-<br />
- }</td></tr>
-<tr class="memdesc:a2697a2bc51d21a1bf33367cb01c93d2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blending mode. <br /></td></tr>
-<tr class="separator:a2697a2bc51d21a1bf33367cb01c93d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ec56159937ce5ecf9d76c82d156623c"><td class="memItemLeft" align="right" valign="top"><a id="a0ec56159937ce5ecf9d76c82d156623c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#a0ec56159937ce5ecf9d76c82d156623c">Urho3D::CompareMode</a> { <br />
-&#160;&#160;<b>CMP_ALWAYS</b> = 0, 
-<b>CMP_EQUAL</b>, 
-<b>CMP_NOTEQUAL</b>, 
-<b>CMP_LESS</b>, 
-<br />
-&#160;&#160;<b>CMP_LESSEQUAL</b>, 
-<b>CMP_GREATER</b>, 
-<b>CMP_GREATEREQUAL</b>, 
-<b>MAX_COMPAREMODES</b>
-<br />
- }</td></tr>
-<tr class="memdesc:a0ec56159937ce5ecf9d76c82d156623c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth or stencil compare mode. <br /></td></tr>
-<tr class="separator:a0ec56159937ce5ecf9d76c82d156623c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13f034bf0ac8f9317994bb9e91225449"><td class="memItemLeft" align="right" valign="top"><a id="a13f034bf0ac8f9317994bb9e91225449"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#a13f034bf0ac8f9317994bb9e91225449">Urho3D::CullMode</a> { <b>CULL_NONE</b> = 0, 
-<b>CULL_CCW</b>, 
-<b>CULL_CW</b>, 
-<b>MAX_CULLMODES</b>
- }</td></tr>
-<tr class="memdesc:a13f034bf0ac8f9317994bb9e91225449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Culling mode. <br /></td></tr>
-<tr class="separator:a13f034bf0ac8f9317994bb9e91225449"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cc067d71ed1f457806c2104d8a9ec11"><td class="memItemLeft" align="right" valign="top"><a id="a4cc067d71ed1f457806c2104d8a9ec11"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#a4cc067d71ed1f457806c2104d8a9ec11">Urho3D::FillMode</a> { <b>FILL_SOLID</b> = 0, 
-<b>FILL_WIREFRAME</b>, 
-<b>FILL_POINT</b>, 
-<b>MAX_FILLMODES</b>
- }</td></tr>
-<tr class="memdesc:a4cc067d71ed1f457806c2104d8a9ec11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill mode. <br /></td></tr>
-<tr class="separator:a4cc067d71ed1f457806c2104d8a9ec11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ac6a4c4f8f854698947ad75f32dbc87"><td class="memItemLeft" align="right" valign="top"><a id="a1ac6a4c4f8f854698947ad75f32dbc87"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#a1ac6a4c4f8f854698947ad75f32dbc87">Urho3D::StencilOp</a> { <br />
-&#160;&#160;<b>OP_KEEP</b> = 0, 
-<b>OP_ZERO</b>, 
-<b>OP_REF</b>, 
-<b>OP_INCR</b>, 
-<br />
-&#160;&#160;<b>OP_DECR</b>
-<br />
- }</td></tr>
-<tr class="memdesc:a1ac6a4c4f8f854698947ad75f32dbc87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stencil operation. <br /></td></tr>
-<tr class="separator:a1ac6a4c4f8f854698947ad75f32dbc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38ac62f590877bb0035c3ccafa0dcc81"><td class="memItemLeft" align="right" valign="top"><a id="a38ac62f590877bb0035c3ccafa0dcc81"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#a38ac62f590877bb0035c3ccafa0dcc81">Urho3D::LockState</a> { <b>LOCK_NONE</b> = 0, 
 <b>LOCK_HARDWARE</b>, 
 <b>LOCK_SHADOW</b>, 
@@ -199,75 +127,6 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:af272cde6423623a726a8dda1ba06454a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hardcoded legacy vertex elements. <br /></td></tr>
 <tr class="separator:af272cde6423623a726a8dda1ba06454a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0adffb7eb262ca1f963e3c8459a11049"><td class="memItemLeft" align="right" valign="top"><a id="a0adffb7eb262ca1f963e3c8459a11049"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#a0adffb7eb262ca1f963e3c8459a11049">Urho3D::VertexElementType</a> : unsigned char { <br />
-&#160;&#160;<b>TYPE_INT</b> = 0, 
-<b>TYPE_FLOAT</b>, 
-<b>TYPE_VECTOR2</b>, 
-<b>TYPE_VECTOR3</b>, 
-<br />
-&#160;&#160;<b>TYPE_VECTOR4</b>, 
-<b>TYPE_UBYTE4</b>, 
-<b>TYPE_UBYTE4_NORM</b>, 
-<b>MAX_VERTEX_ELEMENT_TYPES</b>
-<br />
- }</td></tr>
-<tr class="memdesc:a0adffb7eb262ca1f963e3c8459a11049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arbitrary vertex declaration element datatypes. <br /></td></tr>
-<tr class="separator:a0adffb7eb262ca1f963e3c8459a11049"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1bb10d539758afd81ee08c8aa160858"><td class="memItemLeft" align="right" valign="top"><a id="ac1bb10d539758afd81ee08c8aa160858"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#ac1bb10d539758afd81ee08c8aa160858">Urho3D::VertexElementSemantic</a> : unsigned char { <br />
-&#160;&#160;<b>SEM_POSITION</b> = 0, 
-<b>SEM_NORMAL</b>, 
-<b>SEM_BINORMAL</b>, 
-<b>SEM_TANGENT</b>, 
-<br />
-&#160;&#160;<b>SEM_TEXCOORD</b>, 
-<b>SEM_COLOR</b>, 
-<b>SEM_BLENDWEIGHTS</b>, 
-<b>SEM_BLENDINDICES</b>, 
-<br />
-&#160;&#160;<b>SEM_OBJECTINDEX</b>, 
-<b>MAX_VERTEX_ELEMENT_SEMANTICS</b>
-<br />
- }</td></tr>
-<tr class="memdesc:ac1bb10d539758afd81ee08c8aa160858"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arbitrary vertex declaration element semantics. <br /></td></tr>
-<tr class="separator:ac1bb10d539758afd81ee08c8aa160858"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa76618ce244fbf4560ec541b4a45845d"><td class="memItemLeft" align="right" valign="top"><a id="aa76618ce244fbf4560ec541b4a45845d"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#aa76618ce244fbf4560ec541b4a45845d">Urho3D::TextureFilterMode</a> { <br />
-&#160;&#160;<b>FILTER_NEAREST</b> = 0, 
-<b>FILTER_BILINEAR</b>, 
-<b>FILTER_TRILINEAR</b>, 
-<b>FILTER_ANISOTROPIC</b>, 
-<br />
-&#160;&#160;<b>FILTER_NEAREST_ANISOTROPIC</b>, 
-<b>FILTER_DEFAULT</b>, 
-<b>MAX_FILTERMODES</b>
-<br />
- }</td></tr>
-<tr class="memdesc:aa76618ce244fbf4560ec541b4a45845d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture filtering mode. <br /></td></tr>
-<tr class="separator:aa76618ce244fbf4560ec541b4a45845d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecfe3379026c9ad8814e04ec7706cc28"><td class="memItemLeft" align="right" valign="top"><a id="aecfe3379026c9ad8814e04ec7706cc28"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#aecfe3379026c9ad8814e04ec7706cc28">Urho3D::TextureAddressMode</a> { <br />
-&#160;&#160;<b>ADDRESS_WRAP</b> = 0, 
-<b>ADDRESS_MIRROR</b>, 
-<b>ADDRESS_CLAMP</b>, 
-<b>ADDRESS_BORDER</b>, 
-<br />
-&#160;&#160;<b>MAX_ADDRESSMODES</b>
-<br />
- }</td></tr>
-<tr class="memdesc:aecfe3379026c9ad8814e04ec7706cc28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture addressing mode. <br /></td></tr>
-<tr class="separator:aecfe3379026c9ad8814e04ec7706cc28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa85e162b6026e40f9d42d5ea69e98f89"><td class="memItemLeft" align="right" valign="top"><a id="aa85e162b6026e40f9d42d5ea69e98f89"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#aa85e162b6026e40f9d42d5ea69e98f89">Urho3D::TextureCoordinate</a> { <b>COORD_U</b> = 0, 
-<b>COORD_V</b>, 
-<b>COORD_W</b>, 
-<b>MAX_COORDS</b>
- }</td></tr>
-<tr class="memdesc:aa85e162b6026e40f9d42d5ea69e98f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture coordinates. <br /></td></tr>
-<tr class="separator:aa85e162b6026e40f9d42d5ea69e98f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e77915b00b947259d8875587a08c9c4"><td class="memItemLeft" align="right" valign="top"><a id="a0e77915b00b947259d8875587a08c9c4"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#a0e77915b00b947259d8875587a08c9c4">Urho3D::TextureUsage</a> { <b>TEXTURE_STATIC</b> = 0, 
-<b>TEXTURE_DYNAMIC</b>, 
-<b>TEXTURE_RENDERTARGET</b>, 
-<b>TEXTURE_DEPTHSTENCIL</b>
- }</td></tr>
-<tr class="memdesc:a0e77915b00b947259d8875587a08c9c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture usage types. <br /></td></tr>
-<tr class="separator:a0e77915b00b947259d8875587a08c9c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ce449a91c063bbb178d2faee315ca0e"><td class="memItemLeft" align="right" valign="top"><a id="a7ce449a91c063bbb178d2faee315ca0e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#a7ce449a91c063bbb178d2faee315ca0e">Urho3D::CubeMapFace</a> { <br />
 &#160;&#160;<b>FACE_POSITIVE_X</b> = 0, 
 <b>FACE_NEGATIVE_X</b>, 
@@ -298,61 +157,6 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a7368cb47bde9e8bb1ce7b0020708b530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update mode for render surface viewports. <br /></td></tr>
 <tr class="separator:a7368cb47bde9e8bb1ce7b0020708b530"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63169a73c8df024b3ef76297da56862e"><td class="memItemLeft" align="right" valign="top"><a id="a63169a73c8df024b3ef76297da56862e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#a63169a73c8df024b3ef76297da56862e">Urho3D::ShaderType</a> { <br />
-&#160;&#160;<b>VS</b> = 0, 
-<b>PS</b>, 
-<b>GS</b>, 
-<b>HS</b>, 
-<br />
-&#160;&#160;<b>DS</b>, 
-<b>CS</b>, 
-<b>MAX_SHADER_TYPES</b>
-<br />
- }</td></tr>
-<tr class="memdesc:a63169a73c8df024b3ef76297da56862e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shader types. <br /></td></tr>
-<tr class="separator:a63169a73c8df024b3ef76297da56862e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66f0a7cd11164a570c965fe17b803c37"><td class="memItemLeft" align="right" valign="top"><a id="a66f0a7cd11164a570c965fe17b803c37"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#a66f0a7cd11164a570c965fe17b803c37">Urho3D::ShaderParameterGroup</a> { <br />
-&#160;&#160;<b>SP_FRAME</b> = 0, 
-<b>SP_CAMERA</b>, 
-<b>SP_ZONE</b>, 
-<b>SP_LIGHT</b>, 
-<br />
-&#160;&#160;<b>SP_MATERIAL</b>, 
-<b>SP_OBJECT</b>, 
-<b>SP_CUSTOM</b>, 
-<b>MAX_SHADER_PARAMETER_GROUPS</b>
-<br />
- }</td></tr>
-<tr class="memdesc:a66f0a7cd11164a570c965fe17b803c37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shader parameter groups for determining need to update. On APIs that support constant buffers, these correspond to different constant buffers. <br /></td></tr>
-<tr class="separator:a66f0a7cd11164a570c965fe17b803c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4042c84b872f2caaa29c6cb585b82f96"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#a4042c84b872f2caaa29c6cb585b82f96">Urho3D::TextureUnit</a> { <br />
-&#160;&#160;<b>TU_DIFFUSE</b> = 0, 
-<b>TU_ALBEDOBUFFER</b> = 0, 
-<b>TU_NORMAL</b> = 1, 
-<b>TU_NORMALBUFFER</b> = 1, 
-<br />
-&#160;&#160;<b>TU_SPECULAR</b> = 2, 
-<b>TU_EMISSIVE</b> = 3, 
-<b>TU_ENVIRONMENT</b> = 4, 
-<b>TU_VOLUMEMAP</b> = 5, 
-<br />
-&#160;&#160;<b>TU_CUSTOM1</b> = 6, 
-<b>TU_CUSTOM2</b> = 7, 
-<b>TU_LIGHTRAMP</b> = 8, 
-<b>TU_LIGHTSHAPE</b> = 9, 
-<br />
-&#160;&#160;<b>TU_SHADOWMAP</b> = 10, 
-<b>TU_FACESELECT</b> = 11, 
-<b>TU_INDIRECTION</b> = 12, 
-<b>TU_DEPTHBUFFER</b> = 13, 
-<br />
-&#160;&#160;<b>TU_LIGHTBUFFER</b> = 14, 
-<b>TU_ZONE</b> = 15, 
-<b>MAX_MATERIAL_TEXTURE_UNITS</b> = 8, 
-<b>MAX_TEXTURE_UNITS</b> = 16
-<br />
- }</td></tr>
-<tr class="separator:a4042c84b872f2caaa29c6cb585b82f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef443f97b15d5c7ff39d3199a9a0c5c1"><td class="memItemLeft" align="right" valign="top"><a id="aef443f97b15d5c7ff39d3199a9a0c5c1"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#aef443f97b15d5c7ff39d3199a9a0c5c1">Urho3D::FaceCameraMode</a> { <br />
 &#160;&#160;<b>FC_NONE</b> = 0, 
 <b>FC_ROTATE_XYZ</b>, 
@@ -385,12 +189,6 @@ Enumerations</h2></td></tr>
 <b>QUALITY_MAX</b> = 15
  }</td></tr>
 <tr class="separator:a49e41cc96254c1f10685f5a760fab7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b99b1b298f59c6d1689294e6a270a00"><td class="memItemLeft" align="right" valign="top"><a id="a1b99b1b298f59c6d1689294e6a270a00"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ClearTarget</b> : unsigned { <b>CLEAR_NONE</b> = 0x0, 
-<b>CLEAR_COLOR</b> = 0x1, 
-<b>CLEAR_DEPTH</b> = 0x2, 
-<b>CLEAR_STENCIL</b> = 0x4
- }</td></tr>
-<tr class="separator:a1b99b1b298f59c6d1689294e6a270a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad07184f77b02351c4a082177a567b9c8"><td class="memItemLeft" align="right" valign="top"><a id="ad07184f77b02351c4a082177a567b9c8"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>VertexMask</b> : unsigned { <br />
 &#160;&#160;<b>MASK_NONE</b> = 0x0, 
 <b>MASK_POSITION</b> = 0x1, 
@@ -413,18 +211,9 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:ad07184f77b02351c4a082177a567b9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae747d059c6c773d47a400caa47de6ce6"><td class="memItemLeft" align="right" valign="top"><a id="ae747d059c6c773d47a400caa47de6ce6"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_graphics_defs_8h.html#ae747d059c6c773d47a400caa47de6ce6">Urho3D::ShaderTranslationPolicy</a> { <b>Urho3D::ShaderTranslationPolicy::Verbatim</b>, 
-<b>Urho3D::ShaderTranslationPolicy::Translate</b>, 
-<b>Urho3D::ShaderTranslationPolicy::Optimize</b>
- }</td></tr>
-<tr class="memdesc:ae747d059c6c773d47a400caa47de6ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shader translation policy. <br /></td></tr>
-<tr class="separator:ae747d059c6c773d47a400caa47de6ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aecf1db5e1cb961f6a4c343b6874b85bd"><td class="memItemLeft" align="right" valign="top"><a id="aecf1db5e1cb961f6a4c343b6874b85bd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Urho3D::URHO3D_FLAGSET</b> (ClearTarget, ClearTargetFlags)</td></tr>
-<tr class="separator:aecf1db5e1cb961f6a4c343b6874b85bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a251115e6f6c649fb1fa82acfd1e5a250"><td class="memItemLeft" align="right" valign="top"><a id="a251115e6f6c649fb1fa82acfd1e5a250"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Urho3D::URHO3D_FLAGSET</b> (VertexMask, VertexMaskFlags)</td></tr>
 <tr class="separator:a251115e6f6c649fb1fa82acfd1e5a250"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -635,34 +424,12 @@ const URHO3D_API StringHash&#160;</td><td class="memItemRight" valign="bottom"><
 const URHO3D_API Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>Urho3D::DOT_SCALE</b></td></tr>
 <tr class="separator:aedac3d137c036d307028e03b2de3aee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73624da1360b3729ed0a1e952b163897"><td class="memItemLeft" align="right" valign="top"><a id="a73624da1360b3729ed0a1e952b163897"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Urho3D::MAX_RENDERTARGETS</b> = 8</td></tr>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Urho3D::MAX_RENDERTARGETS</b> = (int)MaxRenderTargets</td></tr>
 <tr class="separator:a73624da1360b3729ed0a1e952b163897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a220d62d5e74b5d00fd98051138cff413"><td class="memItemLeft" align="right" valign="top"><a id="a220d62d5e74b5d00fd98051138cff413"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Urho3D::MAX_VERTEX_STREAMS</b> = 4</td></tr>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Urho3D::MAX_VERTEX_STREAMS</b> = (int)MaxVertexStreams</td></tr>
 <tr class="separator:a220d62d5e74b5d00fd98051138cff413"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3972e187d0d6ee7ec27281ffe5468b11"><td class="memItemLeft" align="right" valign="top"><a id="a3972e187d0d6ee7ec27281ffe5468b11"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Urho3D::MAX_CONSTANT_REGISTERS</b> = 256</td></tr>
-<tr class="separator:a3972e187d0d6ee7ec27281ffe5468b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ee1020c022f408a83e38debdac3b342"><td class="memItemLeft" align="right" valign="top"><a id="a4ee1020c022f408a83e38debdac3b342"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><b>Urho3D::BITS_PER_COMPONENT</b> = 8</td></tr>
-<tr class="separator:a4ee1020c022f408a83e38debdac3b342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a4042c84b872f2caaa29c6cb585b82f96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4042c84b872f2caaa29c6cb585b82f96">&#9670;&nbsp;</a></span>TextureUnit</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="_graphics_defs_8h.html#a4042c84b872f2caaa29c6cb585b82f96">Urho3D::TextureUnit</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Texture units. </p>
-
-</div>
-</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="af878af02e667ea82d1a1a4b708040e89"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af878af02e667ea82d1a1a4b708040e89">&#9670;&nbsp;</a></span>textureFilterModeNames</h2>

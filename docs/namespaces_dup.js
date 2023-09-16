@@ -4,6 +4,7 @@ var namespaces_dup =
       [ "Actions", "namespace_urho3_d_1_1_actions.html", null ],
       [ "AttributeMetadata", "namespace_urho3_d_1_1_attribute_metadata.html", null ],
       [ "NetworkSettings", "namespace_urho3_d_1_1_network_settings.html", null ],
-      [ "ShaderConsts", "namespace_urho3_d_1_1_shader_consts.html", null ]
+      [ "ShaderConsts", "namespace_urho3_d_1_1_shader_consts.html", null ],
+      [ "ShaderResources", "namespace_urho3_d_1_1_shader_resources.html", null ]
     ] ]
 ];
