@@ -211,6 +211,7 @@ function preRun() {
 
 function initRuntime() {
  runtimeInitialized = true;
+ SOCKFS.root = FS.mount(SOCKFS, {}, null);
  if (!Module["noFSInit"] && !FS.init.initialized) FS.init();
  FS.ignorePermissions = false;
  TTY.init();
@@ -397,14 +398,14 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 1899812: () => {
+ 1926612: () => {
   FS.syncfs(function(err) {
    if (err) {
     console.error(err);
    }
   });
  },
- 1899876: $0 => {
+ 1926676: $0 => {
   var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
   var reply = window.prompt(str, "i");
   if (reply === null) {
@@ -412,10 +413,10 @@ var ASM_CONSTS = {
   }
   return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
  },
- 1900101: ($0, $1) => {
+ 1926901: ($0, $1) => {
   alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
  },
- 1900158: () => {
+ 1926958: () => {
   if (typeof (AudioContext) !== "undefined") {
    return true;
   } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -423,7 +424,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1900305: () => {
+ 1927105: () => {
   if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
    return true;
   } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -431,7 +432,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1900539: $0 => {
+ 1927339: $0 => {
   if (typeof (Module["SDL2"]) === "undefined") {
    Module["SDL2"] = {};
   }
@@ -453,11 +454,11 @@ var ASM_CONSTS = {
   }
   return SDL2.audioContext === undefined ? -1 : 0;
  },
- 1901032: () => {
+ 1927832: () => {
   var SDL2 = Module["SDL2"];
   return SDL2.audioContext.sampleRate;
  },
- 1901100: ($0, $1, $2, $3) => {
+ 1927900: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   var have_microphone = function(stream) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -498,7 +499,7 @@ var ASM_CONSTS = {
    }, have_microphone, no_microphone);
   }
  },
- 1902752: ($0, $1, $2, $3) => {
+ 1929552: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
   SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -510,7 +511,7 @@ var ASM_CONSTS = {
   };
   SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
  },
- 1903162: ($0, $1) => {
+ 1929962: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
   for (var c = 0; c < numChannels; ++c) {
@@ -529,7 +530,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1903767: ($0, $1) => {
+ 1930567: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
   for (var c = 0; c < numChannels; ++c) {
@@ -542,7 +543,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1904247: $0 => {
+ 1931047: $0 => {
   var SDL2 = Module["SDL2"];
   if ($0) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -580,7 +581,7 @@ var ASM_CONSTS = {
    SDL2.audioContext = undefined;
   }
  },
- 1905419: ($0, $1, $2) => {
+ 1932219: ($0, $1, $2) => {
   var w = $0;
   var h = $1;
   var pixels = $2;
@@ -651,7 +652,7 @@ var ASM_CONSTS = {
   }
   SDL2.ctx.putImageData(SDL2.image, 0, 0);
  },
- 1906888: ($0, $1, $2, $3, $4) => {
+ 1933688: ($0, $1, $2, $3, $4) => {
   var w = $0;
   var h = $1;
   var hot_x = $2;
@@ -688,18 +689,18 @@ var ASM_CONSTS = {
   stringToUTF8(url, urlBuf, url.length + 1);
   return urlBuf;
  },
- 1907877: $0 => {
+ 1934677: $0 => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = UTF8ToString($0);
   }
  },
- 1907960: () => {
+ 1934760: () => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = "none";
   }
  },
- 1908029: () => window.innerWidth,
- 1908059: () => window.innerHeight
+ 1934829: () => window.innerWidth,
+ 1934859: () => window.innerHeight
 };
 
 /** @constructor */ function ExitStatus(status) {
@@ -820,10 +821,24 @@ var ___cxa_throw = (ptr, type, destructor) => {
  throw exceptionLast;
 };
 
-var setErrNo = value => {
- HEAP32[((___errno_location()) >> 2)] = value;
- return value;
+var initRandomFill = () => {
+ if (typeof crypto == "object" && typeof crypto["getRandomValues"] == "function") {
+  return view => crypto.getRandomValues(view);
+ } else if (ENVIRONMENT_IS_NODE) {
+  try {
+   var crypto_module = require("crypto");
+   var randomFillSync = crypto_module["randomFillSync"];
+   if (randomFillSync) {
+    return view => crypto_module["randomFillSync"](view);
+   }
+   var randomBytes = crypto_module["randomBytes"];
+   return view => (view.set(randomBytes(view.byteLength)),  view);
+  } catch (e) {}
+ }
+ abort("initRandomDevice");
 };
+
+var randomFill = view => (randomFill = initRandomFill())(view);
 
 var PATH = {
  isAbs: path => path.charAt(0) === "/",
@@ -887,25 +902,6 @@ var PATH = {
  },
  join2: (l, r) => PATH.normalize(l + "/" + r)
 };
-
-var initRandomFill = () => {
- if (typeof crypto == "object" && typeof crypto["getRandomValues"] == "function") {
-  return view => crypto.getRandomValues(view);
- } else if (ENVIRONMENT_IS_NODE) {
-  try {
-   var crypto_module = require("crypto");
-   var randomFillSync = crypto_module["randomFillSync"];
-   if (randomFillSync) {
-    return view => crypto_module["randomFillSync"](view);
-   }
-   var randomBytes = crypto_module["randomBytes"];
-   return view => (view.set(randomBytes(view.byteLength)),  view);
-  } catch (e) {}
- }
- abort("initRandomDevice");
-};
-
-var randomFill = view => (randomFill = initRandomFill())(view);
 
 var PATH_FS = {
  resolve: function() {
@@ -1219,6 +1215,11 @@ var TTY = {
    }
   }
  }
+};
+
+var zeroMemory = (address, size) => {
+ HEAPU8.fill(0, address, address + size);
+ return address;
 };
 
 var mmapAlloc = size => {
@@ -3322,6 +3323,682 @@ var FS = {
  }
 };
 
+var SOCKFS = {
+ mount(mount) {
+  Module["websocket"] = (Module["websocket"] && ("object" === typeof Module["websocket"])) ? Module["websocket"] : {};
+  Module["websocket"]._callbacks = {};
+  Module["websocket"]["on"] = /** @this{Object} */ function(event, callback) {
+   if ("function" === typeof callback) {
+    this._callbacks[event] = callback;
+   }
+   return this;
+  };
+  Module["websocket"].emit = /** @this{Object} */ function(event, param) {
+   if ("function" === typeof this._callbacks[event]) {
+    this._callbacks[event].call(this, param);
+   }
+  };
+  return FS.createNode(null, "/", 16384 | 511, /* 0777 */ 0);
+ },
+ createSocket(family, type, protocol) {
+  type &= ~526336;
+  var streaming = type == 1;
+  if (streaming && protocol && protocol != 6) {
+   throw new FS.ErrnoError(66);
+  }
+  var sock = {
+   family: family,
+   type: type,
+   protocol: protocol,
+   server: null,
+   error: null,
+   peers: {},
+   pending: [],
+   recv_queue: [],
+   sock_ops: SOCKFS.websocket_sock_ops
+  };
+  var name = SOCKFS.nextname();
+  var node = FS.createNode(SOCKFS.root, name, 49152, 0);
+  node.sock = sock;
+  var stream = FS.createStream({
+   path: name,
+   node: node,
+   flags: 2,
+   seekable: false,
+   stream_ops: SOCKFS.stream_ops
+  });
+  sock.stream = stream;
+  return sock;
+ },
+ getSocket(fd) {
+  var stream = FS.getStream(fd);
+  if (!stream || !FS.isSocket(stream.node.mode)) {
+   return null;
+  }
+  return stream.node.sock;
+ },
+ stream_ops: {
+  poll(stream) {
+   var sock = stream.node.sock;
+   return sock.sock_ops.poll(sock);
+  },
+  ioctl(stream, request, varargs) {
+   var sock = stream.node.sock;
+   return sock.sock_ops.ioctl(sock, request, varargs);
+  },
+  read(stream, buffer, offset, length, position) {
+   /* ignored */ var sock = stream.node.sock;
+   var msg = sock.sock_ops.recvmsg(sock, length);
+   if (!msg) {
+    return 0;
+   }
+   buffer.set(msg.buffer, offset);
+   return msg.buffer.length;
+  },
+  write(stream, buffer, offset, length, position) {
+   /* ignored */ var sock = stream.node.sock;
+   return sock.sock_ops.sendmsg(sock, buffer, offset, length);
+  },
+  close(stream) {
+   var sock = stream.node.sock;
+   sock.sock_ops.close(sock);
+  }
+ },
+ nextname() {
+  if (!SOCKFS.nextname.current) {
+   SOCKFS.nextname.current = 0;
+  }
+  return "socket[" + (SOCKFS.nextname.current++) + "]";
+ },
+ websocket_sock_ops: {
+  createPeer(sock, addr, port) {
+   var ws;
+   if (typeof addr == "object") {
+    ws = addr;
+    addr = null;
+    port = null;
+   }
+   if (ws) {
+    if (ws._socket) {
+     addr = ws._socket.remoteAddress;
+     port = ws._socket.remotePort;
+    } else  {
+     var result = /ws[s]?:\/\/([^:]+):(\d+)/.exec(ws.url);
+     if (!result) {
+      throw new Error("WebSocket URL must be in the format ws(s)://address:port");
+     }
+     addr = result[1];
+     port = parseInt(result[2], 10);
+    }
+   } else {
+    try {
+     var runtimeConfig = (Module["websocket"] && ("object" === typeof Module["websocket"]));
+     var url = "ws:#".replace("#", "//");
+     if (runtimeConfig) {
+      if ("string" === typeof Module["websocket"]["url"]) {
+       url = Module["websocket"]["url"];
+      }
+     }
+     if (url === "ws://" || url === "wss://") {
+      var parts = addr.split("/");
+      url = url + parts[0] + ":" + port + "/" + parts.slice(1).join("/");
+     }
+     var subProtocols = "binary";
+     if (runtimeConfig) {
+      if ("string" === typeof Module["websocket"]["subprotocol"]) {
+       subProtocols = Module["websocket"]["subprotocol"];
+      }
+     }
+     var opts = undefined;
+     if (subProtocols !== "null") {
+      subProtocols = subProtocols.replace(/^ +| +$/g, "").split(/ *, */);
+      opts = subProtocols;
+     }
+     if (runtimeConfig && null === Module["websocket"]["subprotocol"]) {
+      subProtocols = "null";
+      opts = undefined;
+     }
+     var WebSocketConstructor;
+     if (ENVIRONMENT_IS_NODE) {
+      WebSocketConstructor = /** @type{(typeof WebSocket)} */ (require("ws"));
+     } else {
+      WebSocketConstructor = WebSocket;
+     }
+     ws = new WebSocketConstructor(url, opts);
+     ws.binaryType = "arraybuffer";
+    } catch (e) {
+     throw new FS.ErrnoError(23);
+    }
+   }
+   var peer = {
+    addr: addr,
+    port: port,
+    socket: ws,
+    dgram_send_queue: []
+   };
+   SOCKFS.websocket_sock_ops.addPeer(sock, peer);
+   SOCKFS.websocket_sock_ops.handlePeerEvents(sock, peer);
+   if (sock.type === 2 && typeof sock.sport != "undefined") {
+    peer.dgram_send_queue.push(new Uint8Array([ 255, 255, 255, 255, "p".charCodeAt(0), "o".charCodeAt(0), "r".charCodeAt(0), "t".charCodeAt(0), ((sock.sport & 65280) >> 8), (sock.sport & 255) ]));
+   }
+   return peer;
+  },
+  getPeer(sock, addr, port) {
+   return sock.peers[addr + ":" + port];
+  },
+  addPeer(sock, peer) {
+   sock.peers[peer.addr + ":" + peer.port] = peer;
+  },
+  removePeer(sock, peer) {
+   delete sock.peers[peer.addr + ":" + peer.port];
+  },
+  handlePeerEvents(sock, peer) {
+   var first = true;
+   var handleOpen = function() {
+    Module["websocket"].emit("open", sock.stream.fd);
+    try {
+     var queued = peer.dgram_send_queue.shift();
+     while (queued) {
+      peer.socket.send(queued);
+      queued = peer.dgram_send_queue.shift();
+     }
+    } catch (e) {
+     peer.socket.close();
+    }
+   };
+   function handleMessage(data) {
+    if (typeof data == "string") {
+     var encoder = new TextEncoder;
+     data = encoder.encode(data);
+    } else  {
+     assert(data.byteLength !== undefined);
+     if (data.byteLength == 0) {
+      return;
+     }
+     data = new Uint8Array(data);
+    }
+    var wasfirst = first;
+    first = false;
+    if (wasfirst && data.length === 10 && data[0] === 255 && data[1] === 255 && data[2] === 255 && data[3] === 255 && data[4] === "p".charCodeAt(0) && data[5] === "o".charCodeAt(0) && data[6] === "r".charCodeAt(0) && data[7] === "t".charCodeAt(0)) {
+     var newport = ((data[8] << 8) | data[9]);
+     SOCKFS.websocket_sock_ops.removePeer(sock, peer);
+     peer.port = newport;
+     SOCKFS.websocket_sock_ops.addPeer(sock, peer);
+     return;
+    }
+    sock.recv_queue.push({
+     addr: peer.addr,
+     port: peer.port,
+     data: data
+    });
+    Module["websocket"].emit("message", sock.stream.fd);
+   }
+   if (ENVIRONMENT_IS_NODE) {
+    peer.socket.on("open", handleOpen);
+    peer.socket.on("message", function(data, isBinary) {
+     if (!isBinary) {
+      return;
+     }
+     handleMessage((new Uint8Array(data)).buffer);
+    });
+    peer.socket.on("close", function() {
+     Module["websocket"].emit("close", sock.stream.fd);
+    });
+    peer.socket.on("error", function(error) {
+     sock.error = 14;
+     Module["websocket"].emit("error", [ sock.stream.fd, sock.error, "ECONNREFUSED: Connection refused" ]);
+    });
+   } else {
+    peer.socket.onopen = handleOpen;
+    peer.socket.onclose = function() {
+     Module["websocket"].emit("close", sock.stream.fd);
+    };
+    peer.socket.onmessage = function peer_socket_onmessage(event) {
+     handleMessage(event.data);
+    };
+    peer.socket.onerror = function(error) {
+     sock.error = 14;
+     Module["websocket"].emit("error", [ sock.stream.fd, sock.error, "ECONNREFUSED: Connection refused" ]);
+    };
+   }
+  },
+  poll(sock) {
+   if (sock.type === 1 && sock.server) {
+    return sock.pending.length ? (64 | 1) : 0;
+   }
+   var mask = 0;
+   var dest = sock.type === 1 ?  SOCKFS.websocket_sock_ops.getPeer(sock, sock.daddr, sock.dport) : null;
+   if (sock.recv_queue.length || !dest ||  (dest && dest.socket.readyState === dest.socket.CLOSING) || (dest && dest.socket.readyState === dest.socket.CLOSED)) {
+    mask |= (64 | 1);
+   }
+   if (!dest ||  (dest && dest.socket.readyState === dest.socket.OPEN)) {
+    mask |= 4;
+   }
+   if ((dest && dest.socket.readyState === dest.socket.CLOSING) || (dest && dest.socket.readyState === dest.socket.CLOSED)) {
+    mask |= 16;
+   }
+   return mask;
+  },
+  ioctl(sock, request, arg) {
+   switch (request) {
+   case 21531:
+    var bytes = 0;
+    if (sock.recv_queue.length) {
+     bytes = sock.recv_queue[0].data.length;
+    }
+    HEAP32[((arg) >> 2)] = bytes;
+    return 0;
+
+   default:
+    return 28;
+   }
+  },
+  close(sock) {
+   if (sock.server) {
+    try {
+     sock.server.close();
+    } catch (e) {}
+    sock.server = null;
+   }
+   var peers = Object.keys(sock.peers);
+   for (var i = 0; i < peers.length; i++) {
+    var peer = sock.peers[peers[i]];
+    try {
+     peer.socket.close();
+    } catch (e) {}
+    SOCKFS.websocket_sock_ops.removePeer(sock, peer);
+   }
+   return 0;
+  },
+  bind(sock, addr, port) {
+   if (typeof sock.saddr != "undefined" || typeof sock.sport != "undefined") {
+    throw new FS.ErrnoError(28);
+   }
+   sock.saddr = addr;
+   sock.sport = port;
+   if (sock.type === 2) {
+    if (sock.server) {
+     sock.server.close();
+     sock.server = null;
+    }
+    try {
+     sock.sock_ops.listen(sock, 0);
+    } catch (e) {
+     if (!(e.name === "ErrnoError")) throw e;
+     if (e.errno !== 138) throw e;
+    }
+   }
+  },
+  connect(sock, addr, port) {
+   if (sock.server) {
+    throw new FS.ErrnoError(138);
+   }
+   if (typeof sock.daddr != "undefined" && typeof sock.dport != "undefined") {
+    var dest = SOCKFS.websocket_sock_ops.getPeer(sock, sock.daddr, sock.dport);
+    if (dest) {
+     if (dest.socket.readyState === dest.socket.CONNECTING) {
+      throw new FS.ErrnoError(7);
+     } else {
+      throw new FS.ErrnoError(30);
+     }
+    }
+   }
+   var peer = SOCKFS.websocket_sock_ops.createPeer(sock, addr, port);
+   sock.daddr = peer.addr;
+   sock.dport = peer.port;
+   throw new FS.ErrnoError(26);
+  },
+  listen(sock, backlog) {
+   if (!ENVIRONMENT_IS_NODE) {
+    throw new FS.ErrnoError(138);
+   }
+   if (sock.server) {
+    throw new FS.ErrnoError(28);
+   }
+   var WebSocketServer = require("ws").Server;
+   var host = sock.saddr;
+   sock.server = new WebSocketServer({
+    host: host,
+    port: sock.sport
+   });
+   Module["websocket"].emit("listen", sock.stream.fd);
+   sock.server.on("connection", function(ws) {
+    if (sock.type === 1) {
+     var newsock = SOCKFS.createSocket(sock.family, sock.type, sock.protocol);
+     var peer = SOCKFS.websocket_sock_ops.createPeer(newsock, ws);
+     newsock.daddr = peer.addr;
+     newsock.dport = peer.port;
+     sock.pending.push(newsock);
+     Module["websocket"].emit("connection", newsock.stream.fd);
+    } else {
+     SOCKFS.websocket_sock_ops.createPeer(sock, ws);
+     Module["websocket"].emit("connection", sock.stream.fd);
+    }
+   });
+   sock.server.on("close", function() {
+    Module["websocket"].emit("close", sock.stream.fd);
+    sock.server = null;
+   });
+   sock.server.on("error", function(error) {
+    sock.error = 23;
+    Module["websocket"].emit("error", [ sock.stream.fd, sock.error, "EHOSTUNREACH: Host is unreachable" ]);
+   });
+  },
+  accept(listensock) {
+   if (!listensock.server || !listensock.pending.length) {
+    throw new FS.ErrnoError(28);
+   }
+   var newsock = listensock.pending.shift();
+   newsock.stream.flags = listensock.stream.flags;
+   return newsock;
+  },
+  getname(sock, peer) {
+   var addr, port;
+   if (peer) {
+    if (sock.daddr === undefined || sock.dport === undefined) {
+     throw new FS.ErrnoError(53);
+    }
+    addr = sock.daddr;
+    port = sock.dport;
+   } else {
+    addr = sock.saddr || 0;
+    port = sock.sport || 0;
+   }
+   return {
+    addr: addr,
+    port: port
+   };
+  },
+  sendmsg(sock, buffer, offset, length, addr, port) {
+   if (sock.type === 2) {
+    if (addr === undefined || port === undefined) {
+     addr = sock.daddr;
+     port = sock.dport;
+    }
+    if (addr === undefined || port === undefined) {
+     throw new FS.ErrnoError(17);
+    }
+   } else {
+    addr = sock.daddr;
+    port = sock.dport;
+   }
+   var dest = SOCKFS.websocket_sock_ops.getPeer(sock, addr, port);
+   if (sock.type === 1) {
+    if (!dest || dest.socket.readyState === dest.socket.CLOSING || dest.socket.readyState === dest.socket.CLOSED) {
+     throw new FS.ErrnoError(53);
+    } else if (dest.socket.readyState === dest.socket.CONNECTING) {
+     throw new FS.ErrnoError(6);
+    }
+   }
+   if (ArrayBuffer.isView(buffer)) {
+    offset += buffer.byteOffset;
+    buffer = buffer.buffer;
+   }
+   var data;
+   data = buffer.slice(offset, offset + length);
+   if (sock.type === 2) {
+    if (!dest || dest.socket.readyState !== dest.socket.OPEN) {
+     if (!dest || dest.socket.readyState === dest.socket.CLOSING || dest.socket.readyState === dest.socket.CLOSED) {
+      dest = SOCKFS.websocket_sock_ops.createPeer(sock, addr, port);
+     }
+     dest.dgram_send_queue.push(data);
+     return length;
+    }
+   }
+   try {
+    dest.socket.send(data);
+    return length;
+   } catch (e) {
+    throw new FS.ErrnoError(28);
+   }
+  },
+  recvmsg(sock, length) {
+   if (sock.type === 1 && sock.server) {
+    throw new FS.ErrnoError(53);
+   }
+   var queued = sock.recv_queue.shift();
+   if (!queued) {
+    if (sock.type === 1) {
+     var dest = SOCKFS.websocket_sock_ops.getPeer(sock, sock.daddr, sock.dport);
+     if (!dest) {
+      throw new FS.ErrnoError(53);
+     }
+     if (dest.socket.readyState === dest.socket.CLOSING || dest.socket.readyState === dest.socket.CLOSED) {
+      return null;
+     }
+     throw new FS.ErrnoError(6);
+    }
+    throw new FS.ErrnoError(6);
+   }
+   var queuedLength = queued.data.byteLength || queued.data.length;
+   var queuedOffset = queued.data.byteOffset || 0;
+   var queuedBuffer = queued.data.buffer || queued.data;
+   var bytesRead = Math.min(length, queuedLength);
+   var res = {
+    buffer: new Uint8Array(queuedBuffer, queuedOffset, bytesRead),
+    addr: queued.addr,
+    port: queued.port
+   };
+   if (sock.type === 1 && bytesRead < queuedLength) {
+    var bytesRemaining = queuedLength - bytesRead;
+    queued.data = new Uint8Array(queuedBuffer, queuedOffset + bytesRead, bytesRemaining);
+    sock.recv_queue.unshift(queued);
+   }
+   return res;
+  }
+ }
+};
+
+var getSocketFromFD = fd => {
+ var socket = SOCKFS.getSocket(fd);
+ if (!socket) throw new FS.ErrnoError(8);
+ return socket;
+};
+
+var setErrNo = value => {
+ HEAP32[((___errno_location()) >> 2)] = value;
+ return value;
+};
+
+var inetNtop4 = addr => (addr & 255) + "." + ((addr >> 8) & 255) + "." + ((addr >> 16) & 255) + "." + ((addr >> 24) & 255);
+
+var inetNtop6 = ints => {
+ var str = "";
+ var word = 0;
+ var longest = 0;
+ var lastzero = 0;
+ var zstart = 0;
+ var len = 0;
+ var i = 0;
+ var parts = [ ints[0] & 65535, (ints[0] >> 16), ints[1] & 65535, (ints[1] >> 16), ints[2] & 65535, (ints[2] >> 16), ints[3] & 65535, (ints[3] >> 16) ];
+ var hasipv4 = true;
+ var v4part = "";
+ for (i = 0; i < 5; i++) {
+  if (parts[i] !== 0) {
+   hasipv4 = false;
+   break;
+  }
+ }
+ if (hasipv4) {
+  v4part = inetNtop4(parts[6] | (parts[7] << 16));
+  if (parts[5] === -1) {
+   str = "::ffff:";
+   str += v4part;
+   return str;
+  }
+  if (parts[5] === 0) {
+   str = "::";
+   if (v4part === "0.0.0.0") v4part = "";
+   if (v4part === "0.0.0.1") v4part = "1";
+   str += v4part;
+   return str;
+  }
+ }
+ for (word = 0; word < 8; word++) {
+  if (parts[word] === 0) {
+   if (word - lastzero > 1) {
+    len = 0;
+   }
+   lastzero = word;
+   len++;
+  }
+  if (len > longest) {
+   longest = len;
+   zstart = word - longest + 1;
+  }
+ }
+ for (word = 0; word < 8; word++) {
+  if (longest > 1) {
+   if (parts[word] === 0 && word >= zstart && word < (zstart + longest)) {
+    if (word === zstart) {
+     str += ":";
+     if (zstart === 0) str += ":";
+    }
+    continue;
+   }
+  }
+  str += Number(_ntohs(parts[word] & 65535)).toString(16);
+  str += word < 7 ? ":" : "";
+ }
+ return str;
+};
+
+var readSockaddr = (sa, salen) => {
+ var family = HEAP16[((sa) >> 1)];
+ var port = _ntohs(HEAPU16[(((sa) + (2)) >> 1)]);
+ var addr;
+ switch (family) {
+ case 2:
+  if (salen !== 16) {
+   return {
+    errno: 28
+   };
+  }
+  addr = HEAP32[(((sa) + (4)) >> 2)];
+  addr = inetNtop4(addr);
+  break;
+
+ case 10:
+  if (salen !== 28) {
+   return {
+    errno: 28
+   };
+  }
+  addr = [ HEAP32[(((sa) + (8)) >> 2)], HEAP32[(((sa) + (12)) >> 2)], HEAP32[(((sa) + (16)) >> 2)], HEAP32[(((sa) + (20)) >> 2)] ];
+  addr = inetNtop6(addr);
+  break;
+
+ default:
+  return {
+   errno: 5
+  };
+ }
+ return {
+  family: family,
+  addr: addr,
+  port: port
+ };
+};
+
+var inetPton4 = str => {
+ var b = str.split(".");
+ for (var i = 0; i < 4; i++) {
+  var tmp = Number(b[i]);
+  if (isNaN(tmp)) return null;
+  b[i] = tmp;
+ }
+ return (b[0] | (b[1] << 8) | (b[2] << 16) | (b[3] << 24)) >>> 0;
+};
+
+/** @suppress {checkTypes} */ var jstoi_q = str => parseInt(str);
+
+var inetPton6 = str => {
+ var words;
+ var w, offset, z;
+ /* http://home.deds.nl/~aeron/regex/ */ var valid6regx = /^((?=.*::)(?!.*::.+::)(::)?([\dA-F]{1,4}:(:|\b)|){5}|([\dA-F]{1,4}:){6})((([\dA-F]{1,4}((?!\3)::|:\b|$))|(?!\2\3)){2}|(((2[0-4]|1\d|[1-9])?\d|25[0-5])\.?\b){4})$/i;
+ var parts = [];
+ if (!valid6regx.test(str)) {
+  return null;
+ }
+ if (str === "::") {
+  return [ 0, 0, 0, 0, 0, 0, 0, 0 ];
+ }
+ if (str.startsWith("::")) {
+  str = str.replace("::", "Z:");
+ } else  {
+  str = str.replace("::", ":Z:");
+ }
+ if (str.indexOf(".") > 0) {
+  str = str.replace(new RegExp("[.]", "g"), ":");
+  words = str.split(":");
+  words[words.length - 4] = jstoi_q(words[words.length - 4]) + jstoi_q(words[words.length - 3]) * 256;
+  words[words.length - 3] = jstoi_q(words[words.length - 2]) + jstoi_q(words[words.length - 1]) * 256;
+  words = words.slice(0, words.length - 2);
+ } else {
+  words = str.split(":");
+ }
+ offset = 0;
+ z = 0;
+ for (w = 0; w < words.length; w++) {
+  if (typeof words[w] == "string") {
+   if (words[w] === "Z") {
+    for (z = 0; z < (8 - words.length + 1); z++) {
+     parts[w + z] = 0;
+    }
+    offset = z - 1;
+   } else {
+    parts[w + offset] = _htons(parseInt(words[w], 16));
+   }
+  } else {
+   parts[w + offset] = words[w];
+  }
+ }
+ return [ (parts[1] << 16) | parts[0], (parts[3] << 16) | parts[2], (parts[5] << 16) | parts[4], (parts[7] << 16) | parts[6] ];
+};
+
+var DNS = {
+ address_map: {
+  id: 1,
+  addrs: {},
+  names: {}
+ },
+ lookup_name(name) {
+  var res = inetPton4(name);
+  if (res !== null) {
+   return name;
+  }
+  res = inetPton6(name);
+  if (res !== null) {
+   return name;
+  }
+  var addr;
+  if (DNS.address_map.addrs[name]) {
+   addr = DNS.address_map.addrs[name];
+  } else {
+   var id = DNS.address_map.id++;
+   assert(id < 65535, "exceeded max address mappings of 65535");
+   addr = "172.29." + (id & 255) + "." + (id & 65280);
+   DNS.address_map.names[addr] = name;
+   DNS.address_map.addrs[name] = addr;
+  }
+  return addr;
+ },
+ lookup_addr(addr) {
+  if (DNS.address_map.names[addr]) {
+   return DNS.address_map.names[addr];
+  }
+  return null;
+ }
+};
+
+/** @param {boolean=} allowNull */ var getSocketAddress = (addrp, addrlen, allowNull) => {
+ if (allowNull && addrp === 0) return null;
+ var info = readSockaddr(addrp, addrlen);
+ if (info.errno) throw new FS.ErrnoError(info.errno);
+ info.addr = DNS.lookup_addr(info.addr) || info.addr;
+ return info;
+};
+
 /**
      * Given a pointer 'ptr' to a null-terminated UTF8-encoded string in the
      * emscripten HEAP, returns a copy of that string as a Javascript String object.
@@ -3425,6 +4102,18 @@ var SYSCALLS = {
   return stream;
  }
 };
+
+function ___syscall_bind(fd, addr, addrlen, d1, d2, d3) {
+ try {
+  var sock = getSocketFromFD(fd);
+  var info = getSocketAddress(addr, addrlen);
+  sock.sock_ops.bind(sock, info.addr, info.port);
+  return 0;
+ } catch (e) {
+  if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+  return -e.errno;
+ }
+}
 
 function ___syscall_fcntl64(fd, cmd, varargs) {
  SYSCALLS.varargs = varargs;
@@ -3730,11 +4419,84 @@ function ___syscall_openat(dirfd, path, flags, varargs) {
  }
 }
 
+/** @param {number=} addrlen */ var writeSockaddr = (sa, family, addr, port, addrlen) => {
+ switch (family) {
+ case 2:
+  addr = inetPton4(addr);
+  zeroMemory(sa, 16);
+  if (addrlen) {
+   HEAP32[((addrlen) >> 2)] = 16;
+  }
+  HEAP16[((sa) >> 1)] = family;
+  HEAP32[(((sa) + (4)) >> 2)] = addr;
+  HEAP16[(((sa) + (2)) >> 1)] = _htons(port);
+  break;
+
+ case 10:
+  addr = inetPton6(addr);
+  zeroMemory(sa, 28);
+  if (addrlen) {
+   HEAP32[((addrlen) >> 2)] = 28;
+  }
+  HEAP32[((sa) >> 2)] = family;
+  HEAP32[(((sa) + (8)) >> 2)] = addr[0];
+  HEAP32[(((sa) + (12)) >> 2)] = addr[1];
+  HEAP32[(((sa) + (16)) >> 2)] = addr[2];
+  HEAP32[(((sa) + (20)) >> 2)] = addr[3];
+  HEAP16[(((sa) + (2)) >> 1)] = _htons(port);
+  break;
+
+ default:
+  return 5;
+ }
+ return 0;
+};
+
+function ___syscall_recvfrom(fd, buf, len, flags, addr, addrlen) {
+ try {
+  var sock = getSocketFromFD(fd);
+  var msg = sock.sock_ops.recvmsg(sock, len);
+  if (!msg) return 0;
+  if (addr) {
+   var errno = writeSockaddr(addr, sock.family, DNS.lookup_name(msg.addr), msg.port, addrlen);
+  }
+  HEAPU8.set(msg.buffer, buf);
+  return msg.buffer.byteLength;
+ } catch (e) {
+  if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+  return -e.errno;
+ }
+}
+
 function ___syscall_rmdir(path) {
  try {
   path = SYSCALLS.getStr(path);
   FS.rmdir(path);
   return 0;
+ } catch (e) {
+  if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+  return -e.errno;
+ }
+}
+
+function ___syscall_sendto(fd, message, length, flags, addr, addr_len) {
+ try {
+  var sock = getSocketFromFD(fd);
+  var dest = getSocketAddress(addr, addr_len, true);
+  if (!dest) {
+   return FS.write(sock.stream, HEAP8, message, length);
+  }
+  return sock.sock_ops.sendmsg(sock, HEAP8, message, length, dest.addr, dest.port);
+ } catch (e) {
+  if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+  return -e.errno;
+ }
+}
+
+function ___syscall_socket(domain, type, protocol) {
+ try {
+  var sock = SOCKFS.createSocket(domain, type, protocol);
+  return sock.stream.fd;
  } catch (e) {
   if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
   return -e.errno;
@@ -6084,6 +6846,74 @@ var runMainThreadEmAsm = (code, sigPtr, argbuf, sync) => {
 
 var _emscripten_asm_const_int_sync_on_main_thread = (code, sigPtr, argbuf) => runMainThreadEmAsm(code, sigPtr, argbuf, 1);
 
+var wget = {
+ wgetRequests: {},
+ nextWgetRequestHandle: 0,
+ getNextWgetRequestHandle() {
+  var handle = wget.nextWgetRequestHandle;
+  wget.nextWgetRequestHandle++;
+  return handle;
+ }
+};
+
+var _emscripten_async_wget2_abort = handle => {
+ var http = wget.wgetRequests[handle];
+ if (http) {
+  http.abort();
+ }
+};
+
+var _emscripten_async_wget2_data = (url, request, param, arg, free, onload, onerror, onprogress) => {
+ var _url = UTF8ToString(url);
+ var _request = UTF8ToString(request);
+ var _param = UTF8ToString(param);
+ var http = new XMLHttpRequest;
+ http.open(_request, _url, true);
+ http.responseType = "arraybuffer";
+ var handle = wget.getNextWgetRequestHandle();
+ function onerrorjs() {
+  if (onerror) {
+   withStackSave(() => {
+    var statusText = 0;
+    if (http.statusText) {
+     statusText = stringToUTF8OnStack(http.statusText);
+    }
+    getWasmTableEntry(onerror)(handle, arg, http.status, statusText);
+   });
+  }
+ }
+ http.onload = function http_onload(e) {
+  if (http.status >= 200 && http.status < 300 || (http.status === 0 && _url.substr(0, 4).toLowerCase() != "http")) {
+   var byteArray = new Uint8Array(/** @type{ArrayBuffer} */ (http.response));
+   var buffer = _malloc(byteArray.length);
+   HEAPU8.set(byteArray, buffer);
+   if (onload) getWasmTableEntry(onload)(handle, arg, buffer, byteArray.length);
+   if (free) _free(buffer);
+  } else {
+   onerrorjs();
+  }
+  delete wget.wgetRequests[handle];
+ };
+ http.onerror = function http_onerror(e) {
+  onerrorjs();
+  delete wget.wgetRequests[handle];
+ };
+ http.onprogress = function http_onprogress(e) {
+  if (onprogress) getWasmTableEntry(onprogress)(handle, arg, e.loaded, e.lengthComputable || e.lengthComputable === undefined ? e.total : 0);
+ };
+ http.onabort = function http_onabort(e) {
+  delete wget.wgetRequests[handle];
+ };
+ if (_request == "POST") {
+  http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  http.send(_param);
+ } else {
+  http.send(null);
+ }
+ wget.wgetRequests[handle] = http;
+ return handle;
+};
+
 var _emscripten_date_now = () => Date.now();
 
 var withStackSave = f => {
@@ -8196,8 +9026,6 @@ var _emscripten_glGetUniformBlockIndex = _glGetUniformBlockIndex;
 
 var _emscripten_glGetUniformIndices = _glGetUniformIndices;
 
-/** @suppress {checkTypes} */ var jstoi_q = str => parseInt(str);
-
 /** @noinline */ var webglGetLeftBracePos = name => name.slice(-1) == "]" && name.lastIndexOf("[");
 
 var webglPrepareUniformLocationsBeforeFirstUse = program => {
@@ -9989,6 +10817,367 @@ function _fd_write(fd, iov, iovcnt, pnum) {
  }
 }
 
+var WEBRTC = {
+ peerConnectionsMap: {},
+ dataChannelsMap: {},
+ nextId: 1,
+ allocUTF8FromString: function(str) {
+  var strLen = lengthBytesUTF8(str);
+  var strOnHeap = _malloc(strLen + 1);
+  stringToUTF8(str, strOnHeap, strLen + 1);
+  return strOnHeap;
+ },
+ registerPeerConnection: function(peerConnection) {
+  var pc = WEBRTC.nextId++;
+  WEBRTC.peerConnectionsMap[pc] = peerConnection;
+  peerConnection.onnegotiationneeded = function() {
+   peerConnection.createOffer().then(function(offer) {
+    return WEBRTC.handleDescription(peerConnection, offer);
+   }).catch(function(err) {
+    console.error(err);
+   });
+  };
+  peerConnection.onicecandidate = function(evt) {
+   if (evt.candidate && evt.candidate.candidate) WEBRTC.handleCandidate(peerConnection, evt.candidate);
+  };
+  peerConnection.onconnectionstatechange = function() {
+   WEBRTC.handleConnectionStateChange(peerConnection, peerConnection.connectionState);
+  };
+  peerConnection.onicegatheringstatechange = function() {
+   WEBRTC.handleGatheringStateChange(peerConnection, peerConnection.iceGatheringState);
+  };
+  peerConnection.onsignalingstatechange = function() {
+   WEBRTC.handleSignalingStateChange(peerConnection, peerConnection.signalingState);
+  };
+  return pc;
+ },
+ registerDataChannel: function(dataChannel) {
+  var dc = WEBRTC.nextId++;
+  WEBRTC.dataChannelsMap[dc] = dataChannel;
+  dataChannel.binaryType = "arraybuffer";
+  return dc;
+ },
+ handleDescription: function(peerConnection, description) {
+  return peerConnection.setLocalDescription(description).then(function() {
+   if (peerConnection.rtcUserDeleted) return;
+   if (!peerConnection.rtcDescriptionCallback) return;
+   var desc = peerConnection.localDescription;
+   var pSdp = WEBRTC.allocUTF8FromString(desc.sdp);
+   var pType = WEBRTC.allocUTF8FromString(desc.type);
+   var callback = peerConnection.rtcDescriptionCallback;
+   var userPointer = peerConnection.rtcUserPointer || 0;
+   getWasmTableEntry(callback)(pSdp, pType, userPointer);
+   _free(pSdp);
+   _free(pType);
+  });
+ },
+ handleCandidate: function(peerConnection, candidate) {
+  if (peerConnection.rtcUserDeleted) return;
+  if (!peerConnection.rtcCandidateCallback) return;
+  var pCandidate = WEBRTC.allocUTF8FromString(candidate.candidate);
+  var pSdpMid = WEBRTC.allocUTF8FromString(candidate.sdpMid);
+  var candidateCallback = peerConnection.rtcCandidateCallback;
+  var userPointer = peerConnection.rtcUserPointer || 0;
+  getWasmTableEntry(candidateCallback)(pCandidate, pSdpMid, userPointer);
+  _free(pCandidate);
+  _free(pSdpMid);
+ },
+ handleConnectionStateChange: function(peerConnection, connectionState) {
+  if (peerConnection.rtcUserDeleted) return;
+  if (!peerConnection.rtcStateChangeCallback) return;
+  var map = {
+   "new": 0,
+   "connecting": 1,
+   "connected": 2,
+   "disconnected": 3,
+   "failed": 4,
+   "closed": 5
+  };
+  if (connectionState in map) {
+   var stateChangeCallback = peerConnection.rtcStateChangeCallback;
+   var userPointer = peerConnection.rtcUserPointer || 0;
+   getWasmTableEntry(stateChangeCallback)(map[connectionState], userPointer);
+  }
+ },
+ handleGatheringStateChange: function(peerConnection, iceGatheringState) {
+  if (peerConnection.rtcUserDeleted) return;
+  if (!peerConnection.rtcGatheringStateChangeCallback) return;
+  var map = {
+   "new": 0,
+   "gathering": 1,
+   "complete": 2
+  };
+  if (iceGatheringState in map) {
+   var gatheringStateChangeCallback = peerConnection.rtcGatheringStateChangeCallback;
+   var userPointer = peerConnection.rtcUserPointer || 0;
+   getWasmTableEntry(gatheringStateChangeCallback)(map[iceGatheringState], userPointer);
+  }
+ },
+ handleSignalingStateChange: function(peerConnection, signalingState) {
+  if (peerConnection.rtcUserDeleted) return;
+  if (!peerConnection.rtcSignalingStateChangeCallback) return;
+  var map = {
+   "stable": 0,
+   "have-local-offer": 1,
+   "have-remote-offer": 2,
+   "have-local-pranswer": 3,
+   "have-remote-pranswer": 4
+  };
+  if (signalingState in map) {
+   var signalingStateChangeCallback = peerConnection.rtcSignalingStateChangeCallback;
+   var userPointer = peerConnection.rtcUserPointer || 0;
+   getWasmTableEntry(signalingStateChangeCallback)(map[signalingState], userPointer);
+  }
+ }
+};
+
+function _getDataChannelMaxPacketLifeTime(dc) {
+ if (!dc) return;
+ var dataChannel = WEBRTC.dataChannelsMap[dc];
+ if (dataChannel) {
+  return dataChannel.maxPacketLifeTime == null ? -1 : dataChannel.maxPacketLifeTime;
+ }
+}
+
+function _getDataChannelMaxRetransmits(dc) {
+ if (!dc) return;
+ var dataChannel = WEBRTC.dataChannelsMap[dc];
+ if (dataChannel) {
+  return dataChannel.maxRetransmits == null ? -1 : dataChannel.maxRetransmits;
+ }
+}
+
+function _getDataChannelOrdered(dc) {
+ if (!dc) return;
+ var dataChannel = WEBRTC.dataChannelsMap[dc];
+ if (dataChannel) {
+  return dataChannel.ordered;
+ }
+}
+
+function _rtcAddRemoteCandidate(pc, pCandidate, pSdpMid) {
+ var iceCandidate = new RTCIceCandidate({
+  candidate: UTF8ToString(pCandidate),
+  sdpMid: UTF8ToString(pSdpMid)
+ });
+ var peerConnection = WEBRTC.peerConnectionsMap[pc];
+ peerConnection.addIceCandidate(iceCandidate).catch(function(err) {
+  console.error(err);
+ });
+}
+
+function _rtcCreateDataChannel(pc, pLabel, unordered, maxRetransmits, maxPacketLifeTime) {
+ if (!pc) return 0;
+ var label = UTF8ToString(pLabel);
+ var peerConnection = WEBRTC.peerConnectionsMap[pc];
+ var datachannelInit = {
+  ordered: !unordered
+ };
+ if (maxRetransmits >= 0) datachannelInit.maxRetransmits = maxRetransmits; else if (maxPacketLifeTime >= 0) datachannelInit.maxPacketLifeTime = maxPacketLifeTime;
+ var channel = peerConnection.createDataChannel(label, datachannelInit);
+ return WEBRTC.registerDataChannel(channel);
+}
+
+function _rtcCreatePeerConnection(pUrls, pUsernames, pPasswords, nIceServers) {
+ if (!window.RTCPeerConnection) return 0;
+ var iceServers = [];
+ for (var i = 0; i < nIceServers; ++i) {
+  var heap = Module["HEAPU32"];
+  var pUrl = heap[pUrls / heap.BYTES_PER_ELEMENT + i];
+  var url = UTF8ToString(pUrl);
+  var pUsername = heap[pUsernames / heap.BYTES_PER_ELEMENT + i];
+  var username = UTF8ToString(pUsername);
+  var pPassword = heap[pPasswords / heap.BYTES_PER_ELEMENT + i];
+  var password = UTF8ToString(pPassword);
+  if (username == "") {
+   iceServers.push({
+    urls: [ url ]
+   });
+  } else {
+   iceServers.push({
+    urls: [ url ],
+    username: username,
+    credential: password
+   });
+  }
+ }
+ var config = {
+  iceServers: iceServers
+ };
+ return WEBRTC.registerPeerConnection(new RTCPeerConnection(config));
+}
+
+function _rtcDeleteDataChannel(dc) {
+ var dataChannel = WEBRTC.dataChannelsMap[dc];
+ if (dataChannel) {
+  dataChannel.rtcUserDeleted = true;
+  delete WEBRTC.dataChannelsMap[dc];
+ }
+}
+
+function _rtcDeletePeerConnection(pc) {
+ var peerConnection = WEBRTC.peerConnectionsMap[pc];
+ if (peerConnection) {
+  peerConnection.rtcUserDeleted = true;
+  delete WEBRTC.peerConnectionsMap[pc];
+ }
+}
+
+function _rtcGetBufferedAmount(dc) {
+ var dataChannel = WEBRTC.dataChannelsMap[dc];
+ return dataChannel.bufferedAmount;
+}
+
+function _rtcGetDataChannelLabel(dc, pBuffer, size) {
+ var label = WEBRTC.dataChannelsMap[dc].label;
+ stringToUTF8(label, pBuffer, size);
+ return lengthBytesUTF8(label);
+}
+
+function _rtcSendMessage(dc, pBuffer, size) {
+ var dataChannel = WEBRTC.dataChannelsMap[dc];
+ if (dataChannel.readyState != "open") return -1;
+ if (size >= 0) {
+  var heapBytes = new Uint8Array(Module["HEAPU8"].buffer, pBuffer, size);
+  dataChannel.send(heapBytes);
+  return size;
+ } else {
+  var str = UTF8ToString(pBuffer);
+  dataChannel.send(str);
+  return lengthBytesUTF8(str);
+ }
+}
+
+function _rtcSetBufferedAmountLowCallback(dc, bufferedAmountLowCallback) {
+ var dataChannel = WEBRTC.dataChannelsMap[dc];
+ var cb = function(evt) {
+  if (dataChannel.rtcUserDeleted) return;
+  var userPointer = dataChannel.rtcUserPointer || 0;
+  getWasmTableEntry(bufferedAmountLowCallback)(userPointer);
+ };
+ dataChannel.onbufferedamountlow = cb;
+}
+
+function _rtcSetBufferedAmountLowThreshold(dc, threshold) {
+ var dataChannel = WEBRTC.dataChannelsMap[dc];
+ dataChannel.bufferedAmountLowThreshold = threshold;
+}
+
+function _rtcSetDataChannelCallback(pc, dataChannelCallback) {
+ if (!pc) return;
+ var peerConnection = WEBRTC.peerConnectionsMap[pc];
+ peerConnection.ondatachannel = function(evt) {
+  if (peerConnection.rtcUserDeleted) return;
+  var dc = WEBRTC.registerDataChannel(evt.channel);
+  var userPointer = peerConnection.rtcUserPointer || 0;
+  getWasmTableEntry(dataChannelCallback)(dc, userPointer);
+ };
+}
+
+function _rtcSetErrorCallback(dc, errorCallback) {
+ var dataChannel = WEBRTC.dataChannelsMap[dc];
+ var cb = function(evt) {
+  if (dataChannel.rtcUserDeleted) return;
+  var userPointer = dataChannel.rtcUserPointer || 0;
+  var pError = evt.message ? WEBRTC.allocUTF8FromString(evt.message) : 0;
+  getWasmTableEntry(errorCallback)(pError, userPointer);
+  _free(pError);
+ };
+ dataChannel.onerror = cb;
+}
+
+function _rtcSetGatheringStateChangeCallback(pc, gatheringStateChangeCallback) {
+ if (!pc) return;
+ var peerConnection = WEBRTC.peerConnectionsMap[pc];
+ peerConnection.rtcGatheringStateChangeCallback = gatheringStateChangeCallback;
+}
+
+function _rtcSetLocalCandidateCallback(pc, candidateCallback) {
+ if (!pc) return;
+ var peerConnection = WEBRTC.peerConnectionsMap[pc];
+ peerConnection.rtcCandidateCallback = candidateCallback;
+}
+
+function _rtcSetLocalDescriptionCallback(pc, descriptionCallback) {
+ if (!pc) return;
+ var peerConnection = WEBRTC.peerConnectionsMap[pc];
+ peerConnection.rtcDescriptionCallback = descriptionCallback;
+}
+
+function _rtcSetMessageCallback(dc, messageCallback) {
+ var dataChannel = WEBRTC.dataChannelsMap[dc];
+ dataChannel.onmessage = function(evt) {
+  if (dataChannel.rtcUserDeleted) return;
+  var userPointer = dataChannel.rtcUserPointer || 0;
+  if (typeof evt.data == "string") {
+   var pStr = WEBRTC.allocUTF8FromString(evt.data);
+   getWasmTableEntry(messageCallback)(pStr, -1, userPointer);
+   _free(pStr);
+  } else {
+   var byteArray = new Uint8Array(evt.data);
+   var size = byteArray.length;
+   var pBuffer = _malloc(size);
+   var heapBytes = new Uint8Array(Module["HEAPU8"].buffer, pBuffer, size);
+   heapBytes.set(byteArray);
+   getWasmTableEntry(messageCallback)(pBuffer, size, userPointer);
+   _free(pBuffer);
+  }
+ };
+ dataChannel.onclose = function() {
+  if (dataChannel.rtcUserDeleted) return;
+  var userPointer = dataChannel.rtcUserPointer || 0;
+  getWasmTableEntry(messageCallback)(0, 0, userPointer);
+ };
+}
+
+function _rtcSetOpenCallback(dc, openCallback) {
+ var dataChannel = WEBRTC.dataChannelsMap[dc];
+ var cb = function() {
+  if (dataChannel.rtcUserDeleted) return;
+  var userPointer = dataChannel.rtcUserPointer || 0;
+  getWasmTableEntry(openCallback)(userPointer);
+ };
+ dataChannel.onopen = cb;
+ if (dataChannel.readyState == "open") setTimeout(cb, 0);
+}
+
+function _rtcSetRemoteDescription(pc, pSdp, pType) {
+ var description = new RTCSessionDescription({
+  sdp: UTF8ToString(pSdp),
+  type: UTF8ToString(pType)
+ });
+ var peerConnection = WEBRTC.peerConnectionsMap[pc];
+ peerConnection.setRemoteDescription(description).then(function() {
+  if (peerConnection.rtcUserDeleted) return;
+  if (description.type == "offer") {
+   peerConnection.createAnswer().then(function(answer) {
+    return WEBRTC.handleDescription(peerConnection, answer);
+   }).catch(function(err) {
+    console.error(err);
+   });
+  }
+ }).catch(function(err) {
+  console.error(err);
+ });
+}
+
+function _rtcSetSignalingStateChangeCallback(pc, signalingStateChangeCallback) {
+ if (!pc) return;
+ var peerConnection = WEBRTC.peerConnectionsMap[pc];
+ peerConnection.rtcSignalingStateChangeCallback = signalingStateChangeCallback;
+}
+
+function _rtcSetStateChangeCallback(pc, stateChangeCallback) {
+ if (!pc) return;
+ var peerConnection = WEBRTC.peerConnectionsMap[pc];
+ peerConnection.rtcStateChangeCallback = stateChangeCallback;
+}
+
+function _rtcSetUserPointer(i, ptr) {
+ if (WEBRTC.peerConnectionsMap[i]) WEBRTC.peerConnectionsMap[i].rtcUserPointer = ptr;
+ if (WEBRTC.dataChannelsMap[i]) WEBRTC.dataChannelsMap[i].rtcUserPointer = ptr;
+}
+
 var arraySum = (array, index) => {
  var sum = 0;
  for (var i = 0; i <= index; sum += array[i++]) {}
@@ -10270,6 +11459,105 @@ var _system = command => {
  return -1;
 };
 
+var WEBSOCKET = {
+ map: {},
+ nextId: 1,
+ allocUTF8FromString: function(str) {
+  var strLen = lengthBytesUTF8(str);
+  var strOnHeap = _malloc(strLen + 1);
+  stringToUTF8(str, strOnHeap, strLen + 1);
+  return strOnHeap;
+ },
+ registerWebSocket: function(webSocket) {
+  var ws = WEBSOCKET.nextId++;
+  WEBSOCKET.map[ws] = webSocket;
+  webSocket.binaryType = "arraybuffer";
+  return ws;
+ }
+};
+
+function _wsCreateWebSocket(pUrl) {
+ var url = UTF8ToString(pUrl);
+ if (!window.WebSocket) return 0;
+ return WEBSOCKET.registerWebSocket(new WebSocket(url));
+}
+
+function _wsDeleteWebSocket(ws) {
+ var webSocket = WEBSOCKET.map[ws];
+ if (webSocket) {
+  webSocket.close();
+  webSocket.wsUserDeleted = true;
+  delete WEBSOCKET.map[ws];
+ }
+}
+
+function _wsSendMessage(ws, pBuffer, size) {
+ var webSocket = WEBSOCKET.map[ws];
+ if (webSocket.readyState != 1) return -1;
+ if (size >= 0) {
+  var heapBytes = new Uint8Array(Module["HEAPU8"].buffer, pBuffer, size);
+  webSocket.send(heapBytes);
+  return size;
+ } else {
+  var str = UTF8ToString(pBuffer);
+  webSocket.send(str);
+  return lengthBytesUTF8(str);
+ }
+}
+
+function _wsSetErrorCallback(ws, errorCallback) {
+ var webSocket = WEBSOCKET.map[ws];
+ var cb = function() {
+  if (webSocket.rtcUserDeleted) return;
+  var userPointer = webSocket.rtcUserPointer || 0;
+  getWasmTableEntry(errorCallback)(0, userPointer);
+ };
+ webSocket.onerror = cb;
+}
+
+function _wsSetMessageCallback(ws, messageCallback) {
+ var webSocket = WEBSOCKET.map[ws];
+ webSocket.onmessage = function(evt) {
+  if (webSocket.rtcUserDeleted) return;
+  if (typeof evt.data == "string") {
+   var pStr = WEBSOCKET.allocUTF8FromString(evt.data);
+   var userPointer = webSocket.rtcUserPointer || 0;
+   getWasmTableEntry(messageCallback)(pStr, -1, userPointer);
+   _free(pStr);
+  } else {
+   var byteArray = new Uint8Array(evt.data);
+   var size = byteArray.byteLength;
+   var pBuffer = _malloc(size);
+   var heapBytes = new Uint8Array(Module["HEAPU8"].buffer, pBuffer, size);
+   heapBytes.set(byteArray);
+   var userPointer = webSocket.rtcUserPointer || 0;
+   getWasmTableEntry(messageCallback)(pBuffer, size, userPointer);
+   _free(pBuffer);
+  }
+ };
+ webSocket.onclose = function() {
+  if (webSocket.rtcUserDeleted) return;
+  var userPointer = webSocket.rtcUserPointer || 0;
+  getWasmTableEntry(messageCallback)(0, 0, userPointer);
+ };
+}
+
+function _wsSetOpenCallback(ws, openCallback) {
+ var webSocket = WEBSOCKET.map[ws];
+ var cb = function() {
+  if (webSocket.rtcUserDeleted) return;
+  var userPointer = webSocket.rtcUserPointer || 0;
+  getWasmTableEntry(openCallback)(userPointer);
+ };
+ webSocket.onopen = cb;
+ if (webSocket.readyState == 1) setTimeout(cb, 0);
+}
+
+function _wsSetUserPointer(ws, ptr) {
+ var webSocket = WEBSOCKET.map[ws];
+ if (webSocket) webSocket.rtcUserPointer = ptr;
+}
+
 var listenOnce = (object, event, func) => {
  object.addEventListener(event, func, {
   "once": true
@@ -10403,6 +11691,7 @@ for (var i = 0; i < 32; ++i) tempFixedLengthArray.push(new Array(i));
 
 var wasmImports = {
  /** @export */ __cxa_throw: ___cxa_throw,
+ /** @export */ __syscall_bind: ___syscall_bind,
  /** @export */ __syscall_fcntl64: ___syscall_fcntl64,
  /** @export */ __syscall_fstat64: ___syscall_fstat64,
  /** @export */ __syscall_getcwd: ___syscall_getcwd,
@@ -10412,7 +11701,10 @@ var wasmImports = {
  /** @export */ __syscall_mkdirat: ___syscall_mkdirat,
  /** @export */ __syscall_newfstatat: ___syscall_newfstatat,
  /** @export */ __syscall_openat: ___syscall_openat,
+ /** @export */ __syscall_recvfrom: ___syscall_recvfrom,
  /** @export */ __syscall_rmdir: ___syscall_rmdir,
+ /** @export */ __syscall_sendto: ___syscall_sendto,
+ /** @export */ __syscall_socket: ___syscall_socket,
  /** @export */ __syscall_stat64: ___syscall_stat64,
  /** @export */ __syscall_unlinkat: ___syscall_unlinkat,
  /** @export */ _embind_register_bigint: __embind_register_bigint,
@@ -10450,6 +11742,8 @@ var wasmImports = {
  /** @export */ eglWaitNative: _eglWaitNative,
  /** @export */ emscripten_asm_const_int: _emscripten_asm_const_int,
  /** @export */ emscripten_asm_const_int_sync_on_main_thread: _emscripten_asm_const_int_sync_on_main_thread,
+ /** @export */ emscripten_async_wget2_abort: _emscripten_async_wget2_abort,
+ /** @export */ emscripten_async_wget2_data: _emscripten_async_wget2_data,
  /** @export */ emscripten_date_now: _emscripten_date_now,
  /** @export */ emscripten_exit_fullscreen: _emscripten_exit_fullscreen,
  /** @export */ emscripten_exit_pointerlock: _emscripten_exit_pointerlock,
@@ -10778,6 +12072,9 @@ var wasmImports = {
  /** @export */ fd_read: _fd_read,
  /** @export */ fd_seek: _fd_seek,
  /** @export */ fd_write: _fd_write,
+ /** @export */ getDataChannelMaxPacketLifeTime: _getDataChannelMaxPacketLifeTime,
+ /** @export */ getDataChannelMaxRetransmits: _getDataChannelMaxRetransmits,
+ /** @export */ getDataChannelOrdered: _getDataChannelOrdered,
  /** @export */ glActiveTexture: _glActiveTexture,
  /** @export */ glAttachShader: _glAttachShader,
  /** @export */ glBeginQuery: _glBeginQuery,
@@ -10896,9 +12193,37 @@ var wasmImports = {
  /** @export */ invoke_iiiii: invoke_iiiii,
  /** @export */ invoke_vii: invoke_vii,
  /** @export */ invoke_viiii: invoke_viiii,
+ /** @export */ rtcAddRemoteCandidate: _rtcAddRemoteCandidate,
+ /** @export */ rtcCreateDataChannel: _rtcCreateDataChannel,
+ /** @export */ rtcCreatePeerConnection: _rtcCreatePeerConnection,
+ /** @export */ rtcDeleteDataChannel: _rtcDeleteDataChannel,
+ /** @export */ rtcDeletePeerConnection: _rtcDeletePeerConnection,
+ /** @export */ rtcGetBufferedAmount: _rtcGetBufferedAmount,
+ /** @export */ rtcGetDataChannelLabel: _rtcGetDataChannelLabel,
+ /** @export */ rtcSendMessage: _rtcSendMessage,
+ /** @export */ rtcSetBufferedAmountLowCallback: _rtcSetBufferedAmountLowCallback,
+ /** @export */ rtcSetBufferedAmountLowThreshold: _rtcSetBufferedAmountLowThreshold,
+ /** @export */ rtcSetDataChannelCallback: _rtcSetDataChannelCallback,
+ /** @export */ rtcSetErrorCallback: _rtcSetErrorCallback,
+ /** @export */ rtcSetGatheringStateChangeCallback: _rtcSetGatheringStateChangeCallback,
+ /** @export */ rtcSetLocalCandidateCallback: _rtcSetLocalCandidateCallback,
+ /** @export */ rtcSetLocalDescriptionCallback: _rtcSetLocalDescriptionCallback,
+ /** @export */ rtcSetMessageCallback: _rtcSetMessageCallback,
+ /** @export */ rtcSetOpenCallback: _rtcSetOpenCallback,
+ /** @export */ rtcSetRemoteDescription: _rtcSetRemoteDescription,
+ /** @export */ rtcSetSignalingStateChangeCallback: _rtcSetSignalingStateChangeCallback,
+ /** @export */ rtcSetStateChangeCallback: _rtcSetStateChangeCallback,
+ /** @export */ rtcSetUserPointer: _rtcSetUserPointer,
  /** @export */ strftime: _strftime,
  /** @export */ strftime_l: _strftime_l,
- /** @export */ system: _system
+ /** @export */ system: _system,
+ /** @export */ wsCreateWebSocket: _wsCreateWebSocket,
+ /** @export */ wsDeleteWebSocket: _wsDeleteWebSocket,
+ /** @export */ wsSendMessage: _wsSendMessage,
+ /** @export */ wsSetErrorCallback: _wsSetErrorCallback,
+ /** @export */ wsSetMessageCallback: _wsSetMessageCallback,
+ /** @export */ wsSetOpenCallback: _wsSetOpenCallback,
+ /** @export */ wsSetUserPointer: _wsSetUserPointer
 };
 
 var wasmExports = createWasm();
@@ -10912,6 +12237,10 @@ var ___errno_location = () => (___errno_location = wasmExports["__errno_location
 var _free = a0 => (_free = wasmExports["free"])(a0);
 
 var _malloc = a0 => (_malloc = wasmExports["malloc"])(a0);
+
+var _htons = a0 => (_htons = wasmExports["htons"])(a0);
+
+var _ntohs = a0 => (_ntohs = wasmExports["ntohs"])(a0);
 
 var setTempRet0 = a0 => (setTempRet0 = wasmExports["setTempRet0"])(a0);
 
@@ -10928,6 +12257,12 @@ var stackRestore = a0 => (stackRestore = wasmExports["stackRestore"])(a0);
 var stackAlloc = a0 => (stackAlloc = wasmExports["stackAlloc"])(a0);
 
 var ___cxa_is_pointer_type = a0 => (___cxa_is_pointer_type = wasmExports["__cxa_is_pointer_type"])(a0);
+
+var dynCall_vijii = Module["dynCall_vijii"] = (a0, a1, a2, a3, a4, a5) => (dynCall_vijii = Module["dynCall_vijii"] = wasmExports["dynCall_vijii"])(a0, a1, a2, a3, a4, a5);
+
+var dynCall_viji = Module["dynCall_viji"] = (a0, a1, a2, a3, a4) => (dynCall_viji = Module["dynCall_viji"] = wasmExports["dynCall_viji"])(a0, a1, a2, a3, a4);
+
+var dynCall_iij = Module["dynCall_iij"] = (a0, a1, a2, a3) => (dynCall_iij = Module["dynCall_iij"] = wasmExports["dynCall_iij"])(a0, a1, a2, a3);
 
 var dynCall_jiiii = Module["dynCall_jiiii"] = (a0, a1, a2, a3, a4) => (dynCall_jiiii = Module["dynCall_jiiii"] = wasmExports["dynCall_jiiii"])(a0, a1, a2, a3, a4);
 
