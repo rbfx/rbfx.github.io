@@ -1,5 +1,6 @@
 var struct_urho3_d_1_1_frame_info =
 [
+    [ "additionalCameras_", "struct_urho3_d_1_1_frame_info.html#adffe13acf2742fcd8758c96e5df23f75", null ],
     [ "camera_", "struct_urho3_d_1_1_frame_info.html#a43162edfd843638976fb85fef034d021", null ],
     [ "frameNumber_", "struct_urho3_d_1_1_frame_info.html#afcd8002822f1cb69e41a72eb59dae5c5", null ],
     [ "octree_", "struct_urho3_d_1_1_frame_info.html#a1d4b93d62c71fa6ed3542bce55bba460", null ],
@@ -9,5 +10,6 @@ var struct_urho3_d_1_1_frame_info =
     [ "timeStep_", "struct_urho3_d_1_1_frame_info.html#a9212e7671479eb7f97e69358bb7a3db0", null ],
     [ "viewport_", "struct_urho3_d_1_1_frame_info.html#acd816cfb71c5728d07f3155ca4bded90", null ],
     [ "viewRect_", "struct_urho3_d_1_1_frame_info.html#a52d8357ec2dcce4a6fbdd0d52622a0b8", null ],
+    [ "viewReferenceNode_", "struct_urho3_d_1_1_frame_info.html#af040a82406f86d10bd85b8f541f61f47", null ],
     [ "viewSize_", "struct_urho3_d_1_1_frame_info.html#a66e844e35fa048ab078722a35a0166f6", null ]
 ];

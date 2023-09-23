@@ -7,6 +7,7 @@ var class_urho3_d_1_1_binary_file =
     [ "BeginLoad", "class_urho3_d_1_1_binary_file.html#a4f305414e1ce72ae2373e8ae0acd4af9", null ],
     [ "Clear", "class_urho3_d_1_1_binary_file.html#a01c7ce2a6fad3689e77c9db8eb40bafc", null ],
     [ "GetData", "class_urho3_d_1_1_binary_file.html#ae51a581007b0f5d17d6cc364f2998171", null ],
+    [ "GetMutableBuffer", "class_urho3_d_1_1_binary_file.html#aa304b3740d5b4229e6a8291413911bee", null ],
     [ "GetText", "class_urho3_d_1_1_binary_file.html#af9244c8efebe1f349ef304dcf722782b", null ],
     [ "LoadObject", "class_urho3_d_1_1_binary_file.html#a90a1a731b90569403e734133df14d807", null ],
     [ "LoadObject", "class_urho3_d_1_1_binary_file.html#ae78d5a803ee6ee096ed5bfb81e0b1be3", null ],

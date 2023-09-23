@@ -79,7 +79,8 @@ Inheritance diagram for Urho3D::RenderPipelineInterface:</div>
   <map id="Urho3D::RenderPipelineInterface_map" name="Urho3D::RenderPipelineInterface_map">
 <area href="class_urho3_d_1_1_lightmap_render_pipeline_view.html" title="RenderPipeline used to render geometry buffer for lightmap baking." alt="Urho3D::LightmapRenderPipelineView" shape="rect" coords="0,56,225,80"/>
 <area href="class_urho3_d_1_1_render_pipeline_view.html" title="Base interface of render pipeline viewport instance." alt="Urho3D::RenderPipelineView" shape="rect" coords="235,56,460,80"/>
-<area href="class_urho3_d_1_1_default_render_pipeline_view.html" title="Default implementation of render pipeline instance." alt="Urho3D::DefaultRenderPipelineView" shape="rect" coords="235,112,460,136"/>
+<area href="class_urho3_d_1_1_default_render_pipeline_view.html" title="Default implementation of render pipeline instance." alt="Urho3D::DefaultRenderPipelineView" shape="rect" coords="117,112,342,136"/>
+<area href="class_urho3_d_1_1_stereo_render_pipeline_view.html" alt="Urho3D::StereoRenderPipelineView" shape="rect" coords="352,112,577,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -91,6 +92,9 @@ virtual <a class="el" href="class_urho3_d_1_1_context.html">Context</a> *&#160;<
 <tr class="memitem:ab728e1d97b4d5a7bd9847f70a2749855"><td class="memItemLeft" align="right" valign="top"><a id="ab728e1d97b4d5a7bd9847f70a2749855"></a>
 virtual <a class="el" href="class_urho3_d_1_1_render_pipeline_debugger.html">RenderPipelineDebugger</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetDebugger</b> ()=0</td></tr>
 <tr class="separator:ab728e1d97b4d5a7bd9847f70a2749855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4608cc6179469b83c92c206c8590b313"><td class="memItemLeft" align="right" valign="top"><a id="a4608cc6179469b83c92c206c8590b313"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsLinearColorSpace</b> () const =0</td></tr>
+<tr class="separator:a4608cc6179469b83c92c206c8590b313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>

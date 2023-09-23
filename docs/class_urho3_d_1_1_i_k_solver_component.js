@@ -1,9 +1,11 @@
 var class_urho3_d_1_1_i_k_solver_component =
 [
+    [ "BendCalculationParams", "struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html", "struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params" ],
     [ "IKSolverComponent", "class_urho3_d_1_1_i_k_solver_component.html#a4a4f0d8e304bf9a33de3d77b15c36c38", null ],
     [ "~IKSolverComponent", "class_urho3_d_1_1_i_k_solver_component.html#a1fd6172dc4d9fbe57b0a27df524643bf", null ],
     [ "AddCheckedNode", "class_urho3_d_1_1_i_k_solver_component.html#a994dcaf268868de9a58b40bc85a089af", null ],
     [ "AddSolverNode", "class_urho3_d_1_1_i_k_solver_component.html#a9d765e114c931541925dec37cfde2984", null ],
+    [ "CalculateBendDirectionsInternal", "class_urho3_d_1_1_i_k_solver_component.html#a559b1e6dcae979b203564ba576245440", null ],
     [ "DrawDirection", "class_urho3_d_1_1_i_k_solver_component.html#afc00f877d04f9cafa63860a6fe3f7c11", null ],
     [ "DrawIKNode", "class_urho3_d_1_1_i_k_solver_component.html#a8882adb3048c67e6c89fcdc534aa737f", null ],
     [ "DrawIKSegment", "class_urho3_d_1_1_i_k_solver_component.html#a7d2e7db6d5dfea4981a49c22031cccde", null ],
@@ -11,6 +13,7 @@ var class_urho3_d_1_1_i_k_solver_component =
     [ "DrawIKTarget", "class_urho3_d_1_1_i_k_solver_component.html#af25ffc81a8f36005c6c50a290dd810d9", null ],
     [ "FindNode", "class_urho3_d_1_1_i_k_solver_component.html#a8eed8cbed3273c292f9e727a281f04df", null ],
     [ "GetFrameOfReferenceTransform", "class_urho3_d_1_1_i_k_solver_component.html#a0a16620afb25b6ed8a639b49bf0313e3", null ],
+    [ "GetMaxDistance", "class_urho3_d_1_1_i_k_solver_component.html#a3df6041164c2c7e32b529318aeb743c3", null ],
     [ "Initialize", "class_urho3_d_1_1_i_k_solver_component.html#a570bf9a32460a15f8a7f17b7421ed9ba", null ],
     [ "InitializeNodes", "class_urho3_d_1_1_i_k_solver_component.html#a2c5ea755f9f353cc8bef98770b053705", null ],
     [ "NotifyPositionsReady", "class_urho3_d_1_1_i_k_solver_component.html#a7f6225bf2047e006576e5d614c8e9382", null ],

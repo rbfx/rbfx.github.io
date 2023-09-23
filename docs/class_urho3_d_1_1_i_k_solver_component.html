@@ -60,9 +60,11 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_i_k_solver_component
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_urho3_d_1_1_i_k_solver_component-members.html">List of all members</a>  </div>
@@ -96,6 +98,11 @@ Inheritance diagram for Urho3D::IKSolverComponent:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html">BendCalculationParams</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4a4f0d8e304bf9a33de3d77b15c36c38"><td class="memItemLeft" align="right" valign="top"><a id="a4a4f0d8e304bf9a33de3d77b15c36c38"></a>
@@ -589,6 +596,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#af908546af61d16a0ac497fdad2ed42f2">DoAutoRemove</a> (<a class="el" href="_component_8h.html#a01a03fff19daa9f54c2519fcdd737ce4">AutoRemoveMode</a> mode)</td></tr>
 <tr class="memdesc:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform autoremove. Called by subclasses. Caller should keep a weak pointer to itself to check whether was actually removed, and return immediately without further member operations in that case. <br /></td></tr>
 <tr class="separator:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a559b1e6dcae979b203564ba576245440"><td class="memItemLeft" align="right" valign="top"><a id="a559b1e6dcae979b203564ba576245440"></a>
+static ea::pair&lt; <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>, <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateBendDirectionsInternal</b> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;frameOfReference, const <a class="el" href="struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html">BendCalculationParams</a> &amp;params)</td></tr>
+<tr class="separator:a559b1e6dcae979b203564ba576245440"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df6041164c2c7e32b529318aeb743c3"><td class="memItemLeft" align="right" valign="top"><a id="a3df6041164c2c7e32b529318aeb743c3"></a>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>GetMaxDistance</b> (const <a class="el" href="class_urho3_d_1_1_i_k_trigonometric_chain.html">IKTrigonometricChain</a> &amp;chain, float maxAngle)</td></tr>
+<tr class="separator:a3df6041164c2c7e32b529318aeb743c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>

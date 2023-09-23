@@ -10,6 +10,7 @@ var class_urho3_d_1_1_lightmap_render_pipeline_view =
     [ "GetPositionBuffer", "class_urho3_d_1_1_lightmap_render_pipeline_view.html#af61b5a37ba8e2bd5a9061a4f0b8d9dcc", null ],
     [ "GetSmoothNormalBuffer", "class_urho3_d_1_1_lightmap_render_pipeline_view.html#ad3af9964b40f7c879b20ccdec399c38f", null ],
     [ "GetSmoothPositionBuffer", "class_urho3_d_1_1_lightmap_render_pipeline_view.html#ad60c2688295ad0fed388829a517c0b31", null ],
+    [ "IsLinearColorSpace", "class_urho3_d_1_1_lightmap_render_pipeline_view.html#a7243b7fdc3fe13a6bd93477dda94d755", null ],
     [ "RenderGeometryBuffer", "class_urho3_d_1_1_lightmap_render_pipeline_view.html#a2fb3ac4e36a55dcbdcdc8d75b2c32476", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_lightmap_render_pipeline_view.html#af86f02f852295084fac0c02deaa81891", null ],
     [ "albedoBuffer_", "class_urho3_d_1_1_lightmap_render_pipeline_view.html#aa5cc7e780c26c538c1ab8a766b7b5294", null ],

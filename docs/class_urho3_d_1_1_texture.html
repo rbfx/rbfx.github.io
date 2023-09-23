@@ -589,11 +589,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:acc31271717f060a1d56aa0135cd92d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle render surface update event. <br /></td></tr>
 <tr class="separator:acc31271717f060a1d56aa0135cd92d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a4cbf6ca5a4682619be0eb47f1cbc0667"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_texture.html#a4cbf6ca5a4682619be0eb47f1cbc0667">CreateGPU</a> () override</td></tr>
-<tr class="separator:a4cbf6ca5a4682619be0eb47f1cbc0667"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af34418cd0ebb28dc4dc017dc14fce50c"><td class="memItemLeft" align="right" valign="top"><a id="af34418cd0ebb28dc4dc017dc14fce50c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DestroyGPU</b> () override</td></tr>
-<tr class="separator:af34418cd0ebb28dc4dc017dc14fce50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c408c795e638955f5b01de01fbe897"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_texture.html#a02c408c795e638955f5b01de01fbe897">OnCreateGPU</a> () override</td></tr>
+<tr class="separator:a02c408c795e638955f5b01de01fbe897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a1a48328de5775e5c87593208d75c2e"><td class="memItemLeft" align="right" valign="top"><a id="a6a1a48328de5775e5c87593208d75c2e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroyGPU</b> () override</td></tr>
+<tr class="separator:a6a1a48328de5775e5c87593208d75c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3fbd11390353afc0dbf5d4f067dd855"><td class="memItemLeft" align="right" valign="top"><a id="ae3fbd11390353afc0dbf5d4f067dd855"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>TryRestore</b> () override</td></tr>
 <tr class="separator:ae3fbd11390353afc0dbf5d4f067dd855"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -648,32 +648,6 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </table>
 </div><div class="memdoc">
 <p>Create texture so it can fit the image. Size and format are deduced from the image. Number of mips is adjusted according to the image. </p>
-
-</div>
-</div>
-<a id="a4cbf6ca5a4682619be0eb47f1cbc0667"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cbf6ca5a4682619be0eb47f1cbc0667">&#9670;&nbsp;</a></span>CreateGPU()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::Texture::CreateGPU </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Implement RawTexture. </p>
 
 </div>
 </div>
@@ -1072,6 +1046,32 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </table>
 </div><div class="memdoc">
 <p>Getters. </p>
+
+</div>
+</div>
+<a id="a02c408c795e638955f5b01de01fbe897"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c408c795e638955f5b01de01fbe897">&#9670;&nbsp;</a></span>OnCreateGPU()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::Texture::OnCreateGPU </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Implement RawTexture. </p>
 
 </div>
 </div>

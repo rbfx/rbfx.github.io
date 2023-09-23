@@ -22,7 +22,7 @@ var class_urho3_d_1_1_context =
     [ "GetSubsystems", "class_urho3_d_1_1_context.html#ab8eec78159c4c42e7d1940a325f309fd", null ],
     [ "GetTypeName", "class_urho3_d_1_1_context.html#aee00ee2578b43ef77e11895f811ee1d6", null ],
     [ "RegisterFactory", "class_urho3_d_1_1_context.html#a8c7135885f554ca95bccc407e8725b5f", null ],
-    [ "RegisterSubsystem", "class_urho3_d_1_1_context.html#ab98fddcc2df740ca52f51a581aac82fe", null ],
+    [ "RegisterSubsystem", "class_urho3_d_1_1_context.html#a92bb66e4a42326bf6fa4ee68eb000c5f", null ],
     [ "RegisterSubsystem", "class_urho3_d_1_1_context.html#a1d6f7fd248f44896e0c5f8609485e7e6", null ],
     [ "RegisterSubsystem", "class_urho3_d_1_1_context.html#a43ff2c0c50cb9c2e4c639c8c03720b36", null ],
     [ "ReleaseSDL", "class_urho3_d_1_1_context.html#aead48ab5594165f2a6b6b619e0907aff", null ],

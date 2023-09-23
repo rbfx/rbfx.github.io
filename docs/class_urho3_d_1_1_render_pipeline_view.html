@@ -82,7 +82,8 @@ Inheritance diagram for Urho3D::RenderPipelineView:</div>
 <area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="0,56,215,80"/>
 <area href="class_urho3_d_1_1_render_pipeline_interface.html" title="Base interface of render pipeline required by Render Pipeline classes." alt="Urho3D::RenderPipelineInterface" shape="rect" coords="225,56,440,80"/>
 <area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="0,0,215,24"/>
-<area href="class_urho3_d_1_1_default_render_pipeline_view.html" title="Default implementation of render pipeline instance." alt="Urho3D::DefaultRenderPipelineView" shape="rect" coords="112,168,327,192"/>
+<area href="class_urho3_d_1_1_default_render_pipeline_view.html" title="Default implementation of render pipeline instance." alt="Urho3D::DefaultRenderPipelineView" shape="rect" coords="0,168,215,192"/>
+<area href="class_urho3_d_1_1_stereo_render_pipeline_view.html" alt="Urho3D::StereoRenderPipelineView" shape="rect" coords="225,168,440,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -128,6 +129,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:ac7970411eb51f1b973872c533d2d179d"><td class="memItemLeft" align="right" valign="top"><a id="ac7970411eb51f1b973872c533d2d179d"></a>
 <a class="el" href="class_urho3_d_1_1_render_pipeline_debugger.html">RenderPipelineDebugger</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetDebugger</b> () override</td></tr>
 <tr class="separator:ac7970411eb51f1b973872c533d2d179d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed3abe556bc473aed7adc177a274624"><td class="memItemLeft" align="right" valign="top"><a id="abed3abe556bc473aed7adc177a274624"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsLinearColorSpace</b> () const override</td></tr>
+<tr class="separator:abed3abe556bc473aed7adc177a274624"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -337,6 +341,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aaf107db2eb3c4239ea834d58e0fbe64c"><td class="memItemLeft" align="right" valign="top"><a id="aaf107db2eb3c4239ea834d58e0fbe64c"></a>
 <a class="el" href="class_urho3_d_1_1_renderer.html">Renderer</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>renderer_</b> {}</td></tr>
 <tr class="separator:aaf107db2eb3c4239ea834d58e0fbe64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4abb255311c3fd51e0658bb2bd1dd538"><td class="memItemLeft" align="right" valign="top"><a id="a4abb255311c3fd51e0658bb2bd1dd538"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>linearColorSpace_</b> {}</td></tr>
+<tr class="separator:a4abb255311c3fd51e0658bb2bd1dd538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="aecf686841d86be7e4a2c0092b60d31ad"></a>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aecf686841d86be7e4a2c0092b60d31ad">context_</a></td></tr>
@@ -403,6 +410,8 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <p>Implement <a class="el" href="class_urho3_d_1_1_render_pipeline_interface.html" title="Base interface of render pipeline required by Render Pipeline classes.">RenderPipelineInterface</a> </p>
 
 <p>Implements <a class="el" href="class_urho3_d_1_1_render_pipeline_interface.html">Urho3D::RenderPipelineInterface</a>.</p>
+
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_stereo_render_pipeline_view.html#ac379606af07358abd02a0cbeff792efa">Urho3D::StereoRenderPipelineView</a>.</p>
 
 </div>
 </div>

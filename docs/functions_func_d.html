@@ -136,6 +136,7 @@ $(document).ready(function(){initNavTree('functions_func_d.html',''); initResiza
 , <a class="el" href="class_urho3_d_1_1_scene_processor.html#a81a52bc94d91e5d944b547c59c6fd170">Urho3D::SceneProcessor</a>
 , <a class="el" href="class_urho3_d_1_1_skeleton.html#a11b65ed7788a08627f4ac932d61db2d1">Urho3D::Skeleton</a>
 , <a class="el" href="class_urho3_d_1_1_sphere.html#a605a559ba1b2eec5e65d17a39b849b60">Urho3D::Sphere</a>
+, <a class="el" href="class_urho3_d_1_1_stereo_render_pipeline_view.html#ab82bafdc7f1d3c13d19d98501ca9c7a3">Urho3D::StereoRenderPipelineView</a>
 , <a class="el" href="class_urho3_d_1_1_tetrahedral_mesh.html#a64d4f09ecb361c2f560166a028b94418">Urho3D::TetrahedralMesh</a>
 </li>
 <li>DefineColor()
@@ -249,10 +250,12 @@ $(document).ready(function(){initNavTree('functions_func_d.html',''); initResiza
 , <a class="el" href="class_urho3_d_1_1_dynamic_vertex_buffer.html#a8c07f19db4a2352dc00ec4f864c87c79">Urho3D::DynamicVertexBuffer</a>
 </li>
 <li>Disconnect()
-: <a class="el" href="class_urho3_d_1_1_connection.html#ac83184de57f2f41a126988d9c541eb8b">Urho3D::Connection</a>
+: <a class="el" href="class_urho3_d_1_1_connection.html#abfcd1004ab7b4a7a019ff38700a2c906">Urho3D::Connection</a>
+, <a class="el" href="class_urho3_d_1_1_data_channel_connection.html#ad58a270b3768afab3e7804006ac52cbf">Urho3D::DataChannelConnection</a>
 , <a class="el" href="class_urho3_d_1_1_graph_exit_pin.html#a6be4349d8fb171292d8ed38fc9ff41dc">Urho3D::GraphExitPin</a>
 , <a class="el" href="class_urho3_d_1_1_graph_in_pin.html#a9b8c466d99c230323fe4986ffdf49503">Urho3D::GraphInPin</a>
 , <a class="el" href="class_urho3_d_1_1_network.html#a93b88d73527db6a51450891ce5aa12e6">Urho3D::Network</a>
+, <a class="el" href="class_urho3_d_1_1_network_connection.html#a4fe60485d70feb42ec228959fe7fb5f3">Urho3D::NetworkConnection</a>
 </li>
 <li>DisconnectRemovedTetrahedrons()
 : <a class="el" href="class_urho3_d_1_1_tetrahedral_mesh.html#af43f09b3177ec11231cdc5a6fde87b68">Urho3D::TetrahedralMesh</a>
@@ -262,9 +265,6 @@ $(document).ready(function(){initNavTree('functions_func_d.html',''); initResiza
 </li>
 <li>DisconnectTetrahedron()
 : <a class="el" href="class_urho3_d_1_1_tetrahedral_mesh.html#a368bf35cb9992e17588385e2f4f76c63">Urho3D::TetrahedralMesh</a>
-</li>
-<li>DiscoverHosts()
-: <a class="el" href="class_urho3_d_1_1_network.html#a2a0ded8065a0d15d8a28463168a58206">Urho3D::Network</a>
 </li>
 <li>Dispose()
 : <a class="el" href="class_urho3_d_1_1_animated_sprite2_d.html#a3851b4809df49315390b7a970e6448b0">Urho3D::AnimatedSprite2D</a>
@@ -329,15 +329,16 @@ $(document).ready(function(){initNavTree('functions_func_d.html',''); initResiza
 <li>DrawDebugGeometries()
 : <a class="el" href="class_urho3_d_1_1_default_render_pipeline_view.html#abbdee33a5f25728c01cdde806d42838c">Urho3D::DefaultRenderPipelineView</a>
 , <a class="el" href="class_urho3_d_1_1_render_pipeline_view.html#a6de5c0894bd88034cc55ef6a47ff058f">Urho3D::RenderPipelineView</a>
+, <a class="el" href="class_urho3_d_1_1_stereo_render_pipeline_view.html#a89534d6523a80706aba64e94847191b4">Urho3D::StereoRenderPipelineView</a>
 </li>
 <li>DrawDebugGeometry()
 : <a class="el" href="class_urho3_d_1_1_animated_model.html#a74dd843c8bb432dd21f96e0765b6350c">Urho3D::AnimatedModel</a>
 , <a class="el" href="class_urho3_d_1_1_camera.html#a35b2f97c4a3370a26b10ff133f86d2fa">Urho3D::Camera</a>
-, <a class="el" href="class_urho3_d_1_1_collision_shape.html#a603207bf68d4a4ed1bdecd8430fa1568">Urho3D::CollisionShape</a>
+, <a class="el" href="class_urho3_d_1_1_collision_shape.html#ae7544e0d4886a138b117173df5f5ee56">Urho3D::CollisionShape</a>
 , <a class="el" href="class_urho3_d_1_1_component.html#a219e412aa90aa36b9c05872abf0608dc">Urho3D::Component</a>
 , <a class="el" href="class_urho3_d_1_1_constraint.html#a98246ca89029ad3ec05194b7303429e2">Urho3D::Constraint</a>
-, <a class="el" href="class_urho3_d_1_1_crowd_agent.html#a2f73a57dd1f4a5adccdf80a87ed0dab0">Urho3D::CrowdAgent</a>
-, <a class="el" href="class_urho3_d_1_1_crowd_manager.html#af43cdf31e01b954a654780155d5ba08d">Urho3D::CrowdManager</a>
+, <a class="el" href="class_urho3_d_1_1_crowd_agent.html#a29b649a27aa3a906b2abcd67152b157f">Urho3D::CrowdAgent</a>
+, <a class="el" href="class_urho3_d_1_1_crowd_manager.html#abc1f97cd1e600b5cf2208b97db98c725">Urho3D::CrowdManager</a>
 , <a class="el" href="class_urho3_d_1_1_drawable.html#a7a55d25cfff63c42a8cadae6e37b8f8b">Urho3D::Drawable</a>
 , <a class="el" href="class_urho3_d_1_1_dynamic_navigation_mesh.html#a9cab2b73806cb46dd3e9c0449961cb0c">Urho3D::DynamicNavigationMesh</a>
 , <a class="el" href="class_urho3_d_1_1_global_illumination.html#a20e4b04f126d8b3a09cec2eb60e26222">Urho3D::GlobalIllumination</a>
@@ -359,7 +360,7 @@ $(document).ready(function(){initNavTree('functions_func_d.html',''); initResiza
 , <a class="el" href="class_urho3_d_1_1_octree.html#a5aef089ce9cb4a15ed1a9cbbcefff7b7">Urho3D::Octree</a>
 , <a class="el" href="class_urho3_d_1_1_off_mesh_connection.html#a0a048b8f3d0cd96a21c5524c69462549">Urho3D::OffMeshConnection</a>
 , <a class="el" href="class_urho3_d_1_1_physics_world2_d.html#accc7288fda438c631913a4952c3af4ba">Urho3D::PhysicsWorld2D</a>
-, <a class="el" href="class_urho3_d_1_1_physics_world.html#a3a04f7c20be03020dcd9616ac0d3f12d">Urho3D::PhysicsWorld</a>
+, <a class="el" href="class_urho3_d_1_1_physics_world.html#a8ffb0447f9c9e6e3e79ead269a280fd4">Urho3D::PhysicsWorld</a>
 , <a class="el" href="class_urho3_d_1_1_reflection_probe.html#a3c0c9763f01ba8ce9296de4a5937d809">Urho3D::ReflectionProbe</a>
 , <a class="el" href="class_urho3_d_1_1_reflection_probe_manager.html#a0875a3b50cca3d966069996dfa744aaf">Urho3D::ReflectionProbeManager</a>
 , <a class="el" href="class_urho3_d_1_1_renderer.html#a2edda10af9679e17b00db07891945c73">Urho3D::Renderer</a>
@@ -368,13 +369,14 @@ $(document).ready(function(){initNavTree('functions_func_d.html',''); initResiza
 , <a class="el" href="class_urho3_d_1_1_spline_path.html#ae6a554f14b5e726a7525d2b7f7158262">Urho3D::SplinePath</a>
 , <a class="el" href="class_urho3_d_1_1_terrain.html#aaf27cf34689cb85ce33f1adf363269a8">Urho3D::Terrain</a>
 , <a class="el" href="class_urho3_d_1_1_terrain_patch.html#aa8e4b46ed37c8a1911058cc7cad054a3">Urho3D::TerrainPatch</a>
-, <a class="el" href="class_urho3_d_1_1_tile_map2_d.html#a4ed5cbef75e154a2cd2b7bdf3b1742f2">Urho3D::TileMap2D</a>
+, <a class="el" href="class_urho3_d_1_1_tile_map2_d.html#a721cfd249053a9dec72f879988f47472">Urho3D::TileMap2D</a>
 , <a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html#aef0b04647bec35d267d982bf2439f81a">Urho3D::TileMapLayer2D</a>
 , <a class="el" href="class_urho3_d_1_1_zone.html#a2e121e27dbd584f85c633bc995ee5ab2">Urho3D::Zone</a>
 </li>
 <li>DrawDebugLights()
 : <a class="el" href="class_urho3_d_1_1_default_render_pipeline_view.html#a926f7def34c5a0736fef73514105de5f">Urho3D::DefaultRenderPipelineView</a>
 , <a class="el" href="class_urho3_d_1_1_render_pipeline_view.html#ab8e49d53f22e9171141cd389125471f7">Urho3D::RenderPipelineView</a>
+, <a class="el" href="class_urho3_d_1_1_stereo_render_pipeline_view.html#afd4a4d8177590e3add77686f785c8036">Urho3D::StereoRenderPipelineView</a>
 </li>
 <li>DrawDirection()
 : <a class="el" href="class_urho3_d_1_1_i_k_solver_component.html#afc00f877d04f9cafa63860a6fe3f7c11">Urho3D::IKSolverComponent</a>

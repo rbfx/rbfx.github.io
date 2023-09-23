@@ -61,8 +61,9 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_scene_processor.html
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_urho3_d_1_1_scene_processor-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Urho3D::SceneProcessor Class Reference</div>  </div>
@@ -110,7 +111,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetRenderCamera</b> (
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetRenderCameras</b> (ea::span&lt; <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *const &gt; cameras)</td></tr>
 <tr class="separator:a4b6d9d1fec970850ee07d01b6f437aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a126460c84262ff1efc69f87c64779634"><td class="memItemLeft" align="right" valign="top"><a id="a126460c84262ff1efc69f87c64779634"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
 <tr class="separator:a126460c84262ff1efc69f87c64779634"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31fa8e81929be4e5ea3e7c013857391e"><td class="memItemLeft" align="right" valign="top"><a id="a31fa8e81929be4e5ea3e7c013857391e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>PrepareInstancingBuffer</b> ()</td></tr>
@@ -121,15 +122,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>PrepareDrawablesBefor
 <tr class="memitem:a6d784cc30bea1ee5a6463e4b703ec825"><td class="memItemLeft" align="right" valign="top"><a id="a6d784cc30bea1ee5a6463e4b703ec825"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderShadowMaps</b> ()</td></tr>
 <tr class="separator:a6d784cc30bea1ee5a6463e4b703ec825"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4b8be28dd41bea93bd294f5abcb9a17"><td class="memItemLeft" align="right" valign="top"><a id="aa4b8be28dd41bea93bd294f5abcb9a17"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderSceneBatches</b> (ea::string_view debugName, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera, const <a class="el" href="struct_urho3_d_1_1_pipeline_batch_group.html">PipelineBatchGroup</a>&lt; <a class="el" href="struct_urho3_d_1_1_pipeline_batch_by_state.html">PipelineBatchByState</a> &gt; &amp;batchGroup, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_resource_desc.html">ShaderResourceDesc</a> &gt; globalResources={}, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_parameter_desc.html">ShaderParameterDesc</a> &gt; cameraParameters={})</td></tr>
-<tr class="separator:aa4b8be28dd41bea93bd294f5abcb9a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fe18e0e64b68464b7d12a764d2ce452"><td class="memItemLeft" align="right" valign="top"><a id="a5fe18e0e64b68464b7d12a764d2ce452"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderSceneBatches</b> (ea::string_view debugName, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera, const <a class="el" href="struct_urho3_d_1_1_pipeline_batch_group.html">PipelineBatchGroup</a>&lt; <a class="el" href="struct_urho3_d_1_1_pipeline_batch_back_to_front.html">PipelineBatchBackToFront</a> &gt; &amp;batchGroup, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_resource_desc.html">ShaderResourceDesc</a> &gt; globalResources={}, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_parameter_desc.html">ShaderParameterDesc</a> &gt; cameraParameters={})</td></tr>
-<tr class="separator:a5fe18e0e64b68464b7d12a764d2ce452"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7aab78b3d7179d4eae5f8cb75d41555"><td class="memItemLeft" align="right" valign="top"><a id="aa7aab78b3d7179d4eae5f8cb75d41555"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderLightVolumeBatches</b> (ea::string_view debugName, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_resource_desc.html">ShaderResourceDesc</a> &gt; globalResources, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_parameter_desc.html">ShaderParameterDesc</a> &gt; cameraParameters)</td></tr>
-<tr class="separator:aa7aab78b3d7179d4eae5f8cb75d41555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57531b7ffbf3c6db8474ad851a637d09"><td class="memItemLeft" align="right" valign="top"><a id="a57531b7ffbf3c6db8474ad851a637d09"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderSceneBatches</b> (ea::string_view debugName, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera, const <a class="el" href="struct_urho3_d_1_1_pipeline_batch_group.html">PipelineBatchGroup</a>&lt; <a class="el" href="struct_urho3_d_1_1_pipeline_batch_by_state.html">PipelineBatchByState</a> &gt; &amp;batchGroup, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_resource_desc.html">ShaderResourceDesc</a> &gt; globalResources={}, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_parameter_desc.html">ShaderParameterDesc</a> &gt; cameraParameters={}, unsigned instanceMultiplier=1u)</td></tr>
+<tr class="separator:a57531b7ffbf3c6db8474ad851a637d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af89301ce5907e3ce70da25cc482be3dc"><td class="memItemLeft" align="right" valign="top"><a id="af89301ce5907e3ce70da25cc482be3dc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderSceneBatches</b> (ea::string_view debugName, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera, const <a class="el" href="struct_urho3_d_1_1_pipeline_batch_group.html">PipelineBatchGroup</a>&lt; <a class="el" href="struct_urho3_d_1_1_pipeline_batch_back_to_front.html">PipelineBatchBackToFront</a> &gt; &amp;batchGroup, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_resource_desc.html">ShaderResourceDesc</a> &gt; globalResources={}, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_parameter_desc.html">ShaderParameterDesc</a> &gt; cameraParameters={}, unsigned instanceMultipler=1u)</td></tr>
+<tr class="separator:af89301ce5907e3ce70da25cc482be3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af716fcde6e25bcc70010e55a0bdd84f0"><td class="memItemLeft" align="right" valign="top"><a id="af716fcde6e25bcc70010e55a0bdd84f0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderLightVolumeBatches</b> (ea::string_view debugName, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_resource_desc.html">ShaderResourceDesc</a> &gt; globalResources, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_parameter_desc.html">ShaderParameterDesc</a> &gt; cameraParameters, unsigned instanceMultiplier=1u)</td></tr>
+<tr class="separator:af716fcde6e25bcc70010e55a0bdd84f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:acb81547431196527680edf9fd5d4e200"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_urho3_d_1_1_scene_processor_settings.html">SceneProcessorSettings</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene_processor.html#acb81547431196527680edf9fd5d4e200">GetSettings</a> () const</td></tr>
 <tr class="separator:acb81547431196527680edf9fd5d4e200"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -359,41 +360,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memdesc:a0c5fc9be5d0bf652cc5d9678dfadc89c inherit pub_methods_class_urho3_d_1_1_light_processor_callback"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
 <tr class="separator:a0c5fc9be5d0bf652cc5d9678dfadc89c inherit pub_methods_class_urho3_d_1_1_light_processor_callback"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a90aa2b93f1233fe5e0a9075d19e21e65"><td class="memItemLeft" align="right" valign="top"><a id="a90aa2b93f1233fe5e0a9075d19e21e65"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_scene_processor.html">SceneProcessor</a>, <a class="el" href="class_urho3_d_1_1_object.html">Object</a>)</td></tr>
-<tr class="separator:a90aa2b93f1233fe5e0a9075d19e21e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
 <tr class="memitem:a05e940d2d00fdfb4c832e4a80a1717a1"><td class="memItemLeft" align="right" valign="top"><a id="a05e940d2d00fdfb4c832e4a80a1717a1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawOccluders</b> ()</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawOccluders</b> ()</td></tr>
 <tr class="separator:a05e940d2d00fdfb4c832e4a80a1717a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0680c4e533b3c0419d275aae83efd7e"><td class="memTemplParams" colspan="2"><a id="ab0680c4e533b3c0419d275aae83efd7e"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:ab0680c4e533b3c0419d275aae83efd7e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RenderBatchesInternal</b> (ea::string_view debugName, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera, const <a class="el" href="struct_urho3_d_1_1_pipeline_batch_group.html">PipelineBatchGroup</a>&lt; T &gt; &amp;batchGroup, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_resource_desc.html">ShaderResourceDesc</a> &gt; globalResources, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_parameter_desc.html">ShaderParameterDesc</a> &gt; cameraParameters)</td></tr>
-<tr class="separator:ab0680c4e533b3c0419d275aae83efd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:aea7457a597d3945db7d5721a3fea7fac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene_processor.html#aea7457a597d3945db7d5721a3fea7fac">OnUpdateBegin</a> (const <a class="el" href="struct_urho3_d_1_1_common_frame_info.html">CommonFrameInfo</a> &amp;frameInfo)</td></tr>
-<tr class="separator:aea7457a597d3945db7d5721a3fea7fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6428d9678cab8fd4cdbd616d5a3066a"><td class="memItemLeft" align="right" valign="top"><a id="ab6428d9678cab8fd4cdbd616d5a3066a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnRenderBegin</b> (const <a class="el" href="struct_urho3_d_1_1_common_frame_info.html">CommonFrameInfo</a> &amp;frameInfo)</td></tr>
-<tr class="separator:ab6428d9678cab8fd4cdbd616d5a3066a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5301bb2dc00929be181953f6ff9904ac"><td class="memItemLeft" align="right" valign="top"><a id="a5301bb2dc00929be181953f6ff9904ac"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnRenderEnd</b> (const <a class="el" href="struct_urho3_d_1_1_common_frame_info.html">CommonFrameInfo</a> &amp;frameInfo)</td></tr>
-<tr class="separator:a5301bb2dc00929be181953f6ff9904ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a2b207c441a8487412f6b0904e070d824"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene_processor.html#a2b207c441a8487412f6b0904e070d824">IsLightShadowed</a> (<a class="el" href="class_urho3_d_1_1_light.html">Light</a> *light) override</td></tr>
-<tr class="separator:a2b207c441a8487412f6b0904e070d824"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac982c8e3dd0635972767a28705e9328"><td class="memItemLeft" align="right" valign="top"><a id="aac982c8e3dd0635972767a28705e9328"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene_processor.html#aac982c8e3dd0635972767a28705e9328">GetShadowMapSize</a> (<a class="el" href="class_urho3_d_1_1_light.html">Light</a> *light, unsigned numActiveSplits) const override</td></tr>
-<tr class="memdesc:aac982c8e3dd0635972767a28705e9328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return best shadow map size for given light. Should be safe to call from multiple threads. <br /></td></tr>
-<tr class="separator:aac982c8e3dd0635972767a28705e9328"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9953eb9f034e1c275fc013b4e9d54aee"><td class="memItemLeft" align="right" valign="top"><a id="a9953eb9f034e1c275fc013b4e9d54aee"></a>
-<a class="el" href="struct_urho3_d_1_1_shadow_map_region.html">ShadowMapRegion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene_processor.html#a9953eb9f034e1c275fc013b4e9d54aee">AllocateTransientShadowMap</a> (const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;size) override</td></tr>
-<tr class="memdesc:a9953eb9f034e1c275fc013b4e9d54aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate shadow map for one frame. <br /></td></tr>
-<tr class="separator:a9953eb9f034e1c275fc013b4e9d54aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:a33e2b8a4ff6b67cb17c979b02d319ae4"><td class="memItemLeft" align="right" valign="top"><a id="a33e2b8a4ff6b67cb17c979b02d319ae4"></a>
 <a class="el" href="class_urho3_d_1_1_graphics.html">Graphics</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>graphics_</b> {}</td></tr>
 <tr class="separator:a33e2b8a4ff6b67cb17c979b02d319ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -460,6 +434,41 @@ ea::vector&lt; <a class="el" href="class_urho3_d_1_1_drawable.html">Drawable</a>
 <tr class="memitem:aa9adc43daca6733be02a669a1dad821a"><td class="memItemLeft" align="right" valign="top"><a id="aa9adc43daca6733be02a669a1dad821a"></a>
 <a class="el" href="class_urho3_d_1_1_batch_state_cache_callback.html">BatchStateCacheCallback</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>batchStateCacheCallback_</b> {}</td></tr>
 <tr class="separator:aa9adc43daca6733be02a669a1dad821a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
+<tr class="memitem:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="aecf686841d86be7e4a2c0092b60d31ad"></a>
+<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aecf686841d86be7e4a2c0092b60d31ad">context_</a></td></tr>
+<tr class="memdesc:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution context. <br /></td></tr>
+<tr class="separator:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a90aa2b93f1233fe5e0a9075d19e21e65"><td class="memItemLeft" align="right" valign="top"><a id="a90aa2b93f1233fe5e0a9075d19e21e65"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_scene_processor.html">SceneProcessor</a>, <a class="el" href="class_urho3_d_1_1_object.html">Object</a>)</td></tr>
+<tr class="separator:a90aa2b93f1233fe5e0a9075d19e21e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac203ba6caf24d084b7ba4bbcb9b4c9e1"><td class="memTemplParams" colspan="2"><a id="ac203ba6caf24d084b7ba4bbcb9b4c9e1"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ac203ba6caf24d084b7ba4bbcb9b4c9e1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RenderBatchesInternal</b> (ea::string_view debugName, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera, const <a class="el" href="struct_urho3_d_1_1_pipeline_batch_group.html">PipelineBatchGroup</a>&lt; T &gt; &amp;batchGroup, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_resource_desc.html">ShaderResourceDesc</a> &gt; globalResources, ea::span&lt; const <a class="el" href="struct_urho3_d_1_1_shader_parameter_desc.html">ShaderParameterDesc</a> &gt; cameraParameters, unsigned instanceMultiplier=1u)</td></tr>
+<tr class="separator:ac203ba6caf24d084b7ba4bbcb9b4c9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:aea7457a597d3945db7d5721a3fea7fac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene_processor.html#aea7457a597d3945db7d5721a3fea7fac">OnUpdateBegin</a> (const <a class="el" href="struct_urho3_d_1_1_common_frame_info.html">CommonFrameInfo</a> &amp;frameInfo)</td></tr>
+<tr class="separator:aea7457a597d3945db7d5721a3fea7fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6428d9678cab8fd4cdbd616d5a3066a"><td class="memItemLeft" align="right" valign="top"><a id="ab6428d9678cab8fd4cdbd616d5a3066a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnRenderBegin</b> (const <a class="el" href="struct_urho3_d_1_1_common_frame_info.html">CommonFrameInfo</a> &amp;frameInfo)</td></tr>
+<tr class="separator:ab6428d9678cab8fd4cdbd616d5a3066a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5301bb2dc00929be181953f6ff9904ac"><td class="memItemLeft" align="right" valign="top"><a id="a5301bb2dc00929be181953f6ff9904ac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnRenderEnd</b> (const <a class="el" href="struct_urho3_d_1_1_common_frame_info.html">CommonFrameInfo</a> &amp;frameInfo)</td></tr>
+<tr class="separator:a5301bb2dc00929be181953f6ff9904ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a2b207c441a8487412f6b0904e070d824"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene_processor.html#a2b207c441a8487412f6b0904e070d824">IsLightShadowed</a> (<a class="el" href="class_urho3_d_1_1_light.html">Light</a> *light) override</td></tr>
+<tr class="separator:a2b207c441a8487412f6b0904e070d824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac982c8e3dd0635972767a28705e9328"><td class="memItemLeft" align="right" valign="top"><a id="aac982c8e3dd0635972767a28705e9328"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene_processor.html#aac982c8e3dd0635972767a28705e9328">GetShadowMapSize</a> (<a class="el" href="class_urho3_d_1_1_light.html">Light</a> *light, unsigned numActiveSplits) const override</td></tr>
+<tr class="memdesc:aac982c8e3dd0635972767a28705e9328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return best shadow map size for given light. Should be safe to call from multiple threads. <br /></td></tr>
+<tr class="separator:aac982c8e3dd0635972767a28705e9328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9953eb9f034e1c275fc013b4e9d54aee"><td class="memItemLeft" align="right" valign="top"><a id="a9953eb9f034e1c275fc013b4e9d54aee"></a>
+<a class="el" href="struct_urho3_d_1_1_shadow_map_region.html">ShadowMapRegion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene_processor.html#a9953eb9f034e1c275fc013b4e9d54aee">AllocateTransientShadowMap</a> (const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;size) override</td></tr>
+<tr class="memdesc:a9953eb9f034e1c275fc013b4e9d54aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate shadow map for one frame. <br /></td></tr>
+<tr class="separator:a9953eb9f034e1c275fc013b4e9d54aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -468,11 +477,6 @@ Additional Inherited Members</h2></td></tr>
 static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aaf5a648d6c449dd14b273c10fdd498a9">GetTypeInfoStatic</a> ()</td></tr>
 <tr class="memdesc:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type info static. <br /></td></tr>
 <tr class="separator:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
-<tr class="memitem:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="aecf686841d86be7e4a2c0092b60d31ad"></a>
-<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aecf686841d86be7e4a2c0092b60d31ad">context_</a></td></tr>
-<tr class="memdesc:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution context. <br /></td></tr>
-<tr class="separator:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a> processor for <a class="el" href="class_urho3_d_1_1_render_pipeline.html" title="Scene component that spawns render pipeline instances.">RenderPipeline</a>. </p>
@@ -662,7 +666,7 @@ template&lt;class T , class ... Args&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -685,7 +689,7 @@ template&lt;class T , class ... Args&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

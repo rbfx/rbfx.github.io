@@ -6,5 +6,6 @@ var struct_urho3_d_1_1_instancing_buffer_settings =
     [ "Validate", "struct_urho3_d_1_1_instancing_buffer_settings.html#ae643a44fe30d3a89712e301947481b39", null ],
     [ "enableInstancing_", "struct_urho3_d_1_1_instancing_buffer_settings.html#aed753505d58cd3f29e77fd54434fbe4c", null ],
     [ "firstInstancingTexCoord_", "struct_urho3_d_1_1_instancing_buffer_settings.html#a38313e462a4967e144364e678a049b9a", null ],
-    [ "numInstancingTexCoords_", "struct_urho3_d_1_1_instancing_buffer_settings.html#a88d82f2a0d9799abc85fab2687df4fa3", null ]
+    [ "numInstancingTexCoords_", "struct_urho3_d_1_1_instancing_buffer_settings.html#a88d82f2a0d9799abc85fab2687df4fa3", null ],
+    [ "stepRate_", "struct_urho3_d_1_1_instancing_buffer_settings.html#a58967243da703e641de2da372219c76c", null ]
 ];

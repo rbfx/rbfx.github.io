@@ -30,7 +30,7 @@ var class_urho3_d_1_1_drawable_processor =
     [ "ProcessQueuedDrawable", "class_urho3_d_1_1_drawable_processor.html#a469ab5dfcb2bfeca465a13d7a4c9dfa0", null ],
     [ "ProcessShadowCasters", "class_urho3_d_1_1_drawable_processor.html#a2afcbc7aa6e62d0b3d6602f60ef5701f", null ],
     [ "ProcessVisibleDrawable", "class_urho3_d_1_1_drawable_processor.html#a4fa44fa9a95212d8a859a637f94c3e25", null ],
-    [ "ProcessVisibleDrawables", "class_urho3_d_1_1_drawable_processor.html#a41aaf61ecb215aae6afdb50c73ea6045", null ],
+    [ "ProcessVisibleDrawables", "class_urho3_d_1_1_drawable_processor.html#aad373c2ce2d27a5734ff3630483fa1be", null ],
     [ "QueueDrawableGeometryUpdate", "class_urho3_d_1_1_drawable_processor.html#a580d204da5af9b019fe6a4a12c64cf0e", null ],
     [ "QueueDrawableUpdate", "class_urho3_d_1_1_drawable_processor.html#a7a2909d6883e16f83f56b5f6a82745fe", null ],
     [ "SetPasses", "class_urho3_d_1_1_drawable_processor.html#acd274ca425936aef829ee5b5182ecc16", null ],

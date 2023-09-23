@@ -11,11 +11,6 @@ var NAVTREEINDEX0 =
 ".html":[6,0,2,4],
 "_a_p_i_differences.html":[0,1,16,18],
 "_abstract_connection_8h.html":[7,0,0,8,0],
-"_abstract_connection_8h.html#af6041e29918f494177695fa0280a96ea":[7,0,0,8,0,1],
-"_abstract_connection_8h.html#af6041e29918f494177695fa0280a96eaa1861543022589fdf8cb002ffe7a08e7a":[7,0,0,8,0,1,2],
-"_abstract_connection_8h.html#af6041e29918f494177695fa0280a96eaa50020634fc721fd43b230e2ad930aefc":[7,0,0,8,0,1,1],
-"_abstract_connection_8h.html#af6041e29918f494177695fa0280a96eaab36ac35eea97c45a34060bc9d13fc678":[7,0,0,8,0,1,0],
-"_abstract_connection_8h.html#af6041e29918f494177695fa0280a96eaabcf101e5a2cd222411aa29c82c4b3905":[7,0,0,8,0,1,3],
 "_animated_sprite2_d_8h.html":[7,0,0,17,0],
 "_animated_sprite2_d_8h.html#af4c788d6e7b908f7b1ac98123f7f6ee2":[7,0,0,17,0,1],
 "_animated_sprite2_d_8h.html#af4c788d6e7b908f7b1ac98123f7f6ee2a106595eb3f03d48a51f44aa15221056e":[7,0,0,17,0,1,0],
@@ -249,5 +244,10 @@ var NAVTREEINDEX0 =
 "_events.html":[0,1,11],
 "_events.html#Events_AnotherObject":[0,1,11,0],
 "_events.html#Events_cxx11":[0,1,11,1],
-"_examples.html":[0,1,3]
+"_examples.html":[0,1,3],
+"_examples.html#Examples_NinjaSnowWar":[0,1,3,0],
+"_examples.html#Examples_Samples":[0,1,3,1],
+"_external_links.html":[0,1,36],
+"_file_8h.html":[7,0,0,5,0],
+"_file_8h.html#a1435f640337dc4d142e4677acf3a1b1f":[7,0,0,5,0,1]
 };

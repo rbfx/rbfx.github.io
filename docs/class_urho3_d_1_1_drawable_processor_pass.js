@@ -16,7 +16,9 @@ var class_urho3_d_1_1_drawable_processor_pass =
     [ "flags_", "class_urho3_d_1_1_drawable_processor_pass.html#ac2d230b13af4dddf204a8c7a42d64d92", null ],
     [ "geometryBatches_", "class_urho3_d_1_1_drawable_processor_pass.html#a7cc3e98020192888e321e6beaa41099e", null ],
     [ "lightPassIndex_", "class_urho3_d_1_1_drawable_processor_pass.html#a72be0d8e5bdf9109eadbdc84aa1fb824", null ],
+    [ "linearColorSpace_", "class_urho3_d_1_1_drawable_processor_pass.html#a9de5d9b53b161f3fcf45e8cc63b7dbe8", null ],
     [ "litBasePassIndex_", "class_urho3_d_1_1_drawable_processor_pass.html#abc190de72b8f17b7c174bc38152ae80b", null ],
+    [ "renderPipeline_", "class_urho3_d_1_1_drawable_processor_pass.html#abe38e6e0c8abaedaf5f1bf47a323ce68", null ],
     [ "unlitBasePassIndex_", "class_urho3_d_1_1_drawable_processor_pass.html#acc50450709acf2a3ba8a860b1914f5fa", null ],
     [ "useBatchCallback_", "class_urho3_d_1_1_drawable_processor_pass.html#a7b2408ff4bfeef80eccf58f9f378ffc9", null ]
 ];

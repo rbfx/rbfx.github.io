@@ -93,9 +93,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a15b05214e0c38c51b3a3bc7692e47790"><td class="memItemLeft" align="right" valign="top"><a id="a15b05214e0c38c51b3a3bc7692e47790"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSettings</b> (const <a class="el" href="struct_urho3_d_1_1_shader_program_compositor_settings.html">ShaderProgramCompositorSettings</a> &amp;settings)</td></tr>
 <tr class="separator:a15b05214e0c38c51b3a3bc7692e47790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed6533f300d995433893fa1a2b3801f2"><td class="memItemLeft" align="right" valign="top"><a id="aed6533f300d995433893fa1a2b3801f2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateFrameSettings</b> ()</td></tr>
-<tr class="separator:aed6533f300d995433893fa1a2b3801f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1456477de480bc8e126838e85752bfb"><td class="memItemLeft" align="right" valign="top"><a id="ad1456477de480bc8e126838e85752bfb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateFrameSettings</b> (bool linearColorSpace)</td></tr>
+<tr class="separator:ad1456477de480bc8e126838e85752bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b5bffea2161261b27f9b47edc20fb23"><td class="memItemLeft" align="right" valign="top"><a id="a1b5bffea2161261b27f9b47edc20fb23"></a>
 <a class="el" href="class_urho3_d_1_1_shader_program_compositor.html">ShaderProgramCompositor</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetShaderProgramCompositor</b> () const</td></tr>
 <tr class="separator:a1b5bffea2161261b27f9b47edc20fb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,8 +107,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateFrameSettings</
 <tr class="memdesc:a55f8606082e38bc5e4739c332bef2bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create placeholder pipeline state when actual pipeline state creation fails. <br /></td></tr>
 <tr class="separator:a55f8606082e38bc5e4739c332bef2bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a24a3d542df07847cfd4f4c2c433ede8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_pipeline_state_builder.html#a24a3d542df07847cfd4f4c2c433ede8f">SetupInputLayoutAndPrimitiveType</a> (GraphicsPipelineStateDesc &amp;pipelineStateDesc, const <a class="el" href="struct_urho3_d_1_1_shader_program_desc.html">ShaderProgramDesc</a> &amp;shaderProgramDesc, const <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> *geometry) const</td></tr>
-<tr class="separator:a24a3d542df07847cfd4f4c2c433ede8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17022064ea799bc58cea965352b674db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_pipeline_state_builder.html#a17022064ea799bc58cea965352b674db">SetupInputLayoutAndPrimitiveType</a> (GraphicsPipelineStateDesc &amp;pipelineStateDesc, const <a class="el" href="struct_urho3_d_1_1_shader_program_desc.html">ShaderProgramDesc</a> &amp;shaderProgramDesc, const <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> *geometry, bool isStereoPass) const</td></tr>
+<tr class="separator:a17022064ea799bc58cea965352b674db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a9fd0381d3eb2b7bba7c46e8343ff7f"><td class="memItemLeft" align="right" valign="top"><a id="a3a9fd0381d3eb2b7bba7c46e8343ff7f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetupShaders</b> (GraphicsPipelineStateDesc &amp;pipelineStateDesc, <a class="el" href="struct_urho3_d_1_1_shader_program_desc.html">ShaderProgramDesc</a> &amp;shaderProgramDesc) const</td></tr>
 <tr class="separator:a3a9fd0381d3eb2b7bba7c46e8343ff7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -462,8 +462,8 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 
 </div>
 </div>
-<a id="a24a3d542df07847cfd4f4c2c433ede8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24a3d542df07847cfd4f4c2c433ede8f">&#9670;&nbsp;</a></span>SetupInputLayoutAndPrimitiveType()</h2>
+<a id="a17022064ea799bc58cea965352b674db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17022064ea799bc58cea965352b674db">&#9670;&nbsp;</a></span>SetupInputLayoutAndPrimitiveType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -484,7 +484,13 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> *&#160;</td>
-          <td class="paramname"><em>geometry</em>&#160;</td>
+          <td class="paramname"><em>geometry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isStereoPass</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

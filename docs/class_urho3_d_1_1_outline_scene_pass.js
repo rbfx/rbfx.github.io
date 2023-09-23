@@ -1,6 +1,6 @@
 var class_urho3_d_1_1_outline_scene_pass =
 [
-    [ "OutlineScenePass", "class_urho3_d_1_1_outline_scene_pass.html#a21b3c2e2a0d4ad6ea0e80d090cab5c5e", null ],
+    [ "OutlineScenePass", "class_urho3_d_1_1_outline_scene_pass.html#ad1fa9428fc00fdaaa7bf97f29e8f5082", null ],
     [ "AddCustomBatch", "class_urho3_d_1_1_outline_scene_pass.html#a2631a98489fcd4b61483fd3d4909c158", null ],
     [ "CreatePipelineState", "class_urho3_d_1_1_outline_scene_pass.html#aaca6ac773a98ed7b43943575d14bcaa3", null ],
     [ "GetBatches", "class_urho3_d_1_1_outline_scene_pass.html#a55417f88ce06ef1a00432ae030ee93e6", null ],

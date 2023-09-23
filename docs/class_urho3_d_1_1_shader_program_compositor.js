@@ -15,12 +15,13 @@ var class_urho3_d_1_1_shader_program_compositor =
     [ "ProcessLightVolumeBatch", "class_urho3_d_1_1_shader_program_compositor.html#aa93a95fc440b913e695a9a9d1fa98510", null ],
     [ "ProcessShadowBatch", "class_urho3_d_1_1_shader_program_compositor.html#a1ca1f6552ce8893b311ad52e08660c86", null ],
     [ "ProcessUserBatch", "class_urho3_d_1_1_shader_program_compositor.html#a033b288f0696146d6e6b3a01b9f028c1", null ],
-    [ "SetFrameSettings", "class_urho3_d_1_1_shader_program_compositor.html#a2abeb8778afa2fbfc42bda0979fb8647", null ],
+    [ "SetFrameSettings", "class_urho3_d_1_1_shader_program_compositor.html#a5a2b3072275420e56a9022cf04bb8599", null ],
     [ "SetSettings", "class_urho3_d_1_1_shader_program_compositor.html#a034f98e2e42823193f7957f50f25fac8", null ],
     [ "SetupShaders", "class_urho3_d_1_1_shader_program_compositor.html#a69645135e95a1c6ba081652d8376c5bf", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_shader_program_compositor.html#afc32ba8747fa21baa1c38880f2e492e4", null ],
     [ "isCameraClipped_", "class_urho3_d_1_1_shader_program_compositor.html#a03ec0575db5d9641b4821089988da18c", null ],
     [ "isCameraOrthographic_", "class_urho3_d_1_1_shader_program_compositor.html#a142215da49bbca04446e03a4456b1272", null ],
     [ "isCameraReversed_", "class_urho3_d_1_1_shader_program_compositor.html#afb73581656c1bf3ff6bf28f143c28b6e", null ],
+    [ "linearColorSpace_", "class_urho3_d_1_1_shader_program_compositor.html#ae53b652e63a6e0c355cab2bb313a9308", null ],
     [ "settings_", "class_urho3_d_1_1_shader_program_compositor.html#a87d5083853279f09b542727bb5842077", null ]
 ];

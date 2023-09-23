@@ -61,7 +61,6 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_http_request.html','
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_urho3_d_1_1_http_request-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -99,9 +98,7 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a4db849ffc1a4031e2f2da62704d0c566">ThreadFunction</a> () override</td></tr>
 <tr class="memdesc:a4db849ffc1a4031e2f2da62704d0c566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the connection in the worker thread until closed. <br /></td></tr>
 <tr class="separator:a4db849ffc1a4031e2f2da62704d0c566"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9ed1dd50303836c3f3e1839dfe7efc7"><td class="memItemLeft" align="right" valign="top"><a id="ab9ed1dd50303836c3f3e1839dfe7efc7"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#ab9ed1dd50303836c3f3e1839dfe7efc7">Read</a> (void *dest, unsigned size) override</td></tr>
-<tr class="memdesc:ab9ed1dd50303836c3f3e1839dfe7efc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read response data from the HTTP connection and return number of bytes actually read. While the connection is open, will block while trying to read the specified size. To avoid blocking, only read up to as many bytes as <a class="el" href="class_urho3_d_1_1_http_request.html#a8cb68df22c51ceeed001ccce31b103d6">GetAvailableSize()</a> returns. <br /></td></tr>
+<tr class="memitem:ab9ed1dd50303836c3f3e1839dfe7efc7"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#ab9ed1dd50303836c3f3e1839dfe7efc7">Read</a> (void *dest, unsigned size) override</td></tr>
 <tr class="separator:ab9ed1dd50303836c3f3e1839dfe7efc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11a33d5f1eb1b32bcbf7798336a8af3f"><td class="memItemLeft" align="right" valign="top"><a id="a11a33d5f1eb1b32bcbf7798336a8af3f"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a11a33d5f1eb1b32bcbf7798336a8af3f">Seek</a> (unsigned position) override</td></tr>
@@ -111,8 +108,8 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a5b83ae3fd9b78b1de195bd9cd9103173">IsEof</a> () const override</td></tr>
 <tr class="memdesc:a5b83ae3fd9b78b1de195bd9cd9103173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether all response data has been read. <br /></td></tr>
 <tr class="separator:a5b83ae3fd9b78b1de195bd9cd9103173"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb3bd02a8ea8b6938c5d21e3bed3fd0e"><td class="memItemLeft" align="right" valign="top">const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#aeb3bd02a8ea8b6938c5d21e3bed3fd0e">GetURL</a> () const</td></tr>
-<tr class="separator:aeb3bd02a8ea8b6938c5d21e3bed3fd0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255360928dcd6a6e24e6a3424e0ea278"><td class="memItemLeft" align="right" valign="top">ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a255360928dcd6a6e24e6a3424e0ea278">GetURL</a> () const</td></tr>
+<tr class="separator:a255360928dcd6a6e24e6a3424e0ea278"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e95441c88e7d054c12005e4ee780fa9"><td class="memItemLeft" align="right" valign="top">const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a0e95441c88e7d054c12005e4ee780fa9">GetVerb</a> () const</td></tr>
 <tr class="separator:a0e95441c88e7d054c12005e4ee780fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeda509407e3bbe00059aaf99731909d6"><td class="memItemLeft" align="right" valign="top">ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#aeda509407e3bbe00059aaf99731909d6">GetError</a> () const</td></tr>
@@ -383,19 +380,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a41ac6e9b3b00aa8e3fdbfac8d2fd037d inherit pub_methods_class_urho3_d_1_1_thread"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set name of the platform thread on supported platforms. Must be called before <a class="el" href="class_urho3_d_1_1_thread.html#a7fc81f2afdcb233e00f0f6405a95225f" title="Start running the thread. Return true if successful, or false if already running or if can not create...">Run()</a>. <br /></td></tr>
 <tr class="separator:a41ac6e9b3b00aa8e3fdbfac8d2fd037d inherit pub_methods_class_urho3_d_1_1_thread"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a1d45dcb43710f4951b9ddd3b1ea38b6e"><td class="memItemLeft" align="right" valign="top"><a id="a1d45dcb43710f4951b9ddd3b1ea38b6e"></a>
-ea::pair&lt; unsigned, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a1d45dcb43710f4951b9ddd3b1ea38b6e">CheckAvailableSizeAndEof</a> () const</td></tr>
-<tr class="memdesc:a1d45dcb43710f4951b9ddd3b1ea38b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for available read data in buffer and whether end has been reached. Must only be called when the mutex is held by the main thread. <br /></td></tr>
-<tr class="separator:a1d45dcb43710f4951b9ddd3b1ea38b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a4b2c84d86938ccaeecb7e72ce78b3204"><td class="memItemLeft" align="right" valign="top"><a id="a4b2c84d86938ccaeecb7e72ce78b3204"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a4b2c84d86938ccaeecb7e72ce78b3204">url_</a></td></tr>
-<tr class="memdesc:a4b2c84d86938ccaeecb7e72ce78b3204"><td class="mdescLeft">&#160;</td><td class="mdescRight">URL. <br /></td></tr>
-<tr class="separator:a4b2c84d86938ccaeecb7e72ce78b3204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356ee84c844bbff6cc5a5deea8399591"><td class="memItemLeft" align="right" valign="top"><a id="a356ee84c844bbff6cc5a5deea8399591"></a>
+<a class="el" href="class_urho3_d_1_1_u_r_l.html">URL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a356ee84c844bbff6cc5a5deea8399591">url_</a></td></tr>
+<tr class="memdesc:a356ee84c844bbff6cc5a5deea8399591"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_u_r_l.html">URL</a>. <br /></td></tr>
+<tr class="separator:a356ee84c844bbff6cc5a5deea8399591"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88a135ddc7dbedfb302efedf45e86585"><td class="memItemLeft" align="right" valign="top"><a id="a88a135ddc7dbedfb302efedf45e86585"></a>
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a88a135ddc7dbedfb302efedf45e86585">verb_</a></td></tr>
 <tr class="memdesc:a88a135ddc7dbedfb302efedf45e86585"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verb. <br /></td></tr>
@@ -413,29 +403,21 @@ ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <tr class="memdesc:a0f852dea9a58fae241ca4cb6bc727881"><td class="mdescLeft">&#160;</td><td class="mdescRight">POST data. <br /></td></tr>
 <tr class="separator:a0f852dea9a58fae241ca4cb6bc727881"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac857b1da935941418ee65ce8e408f463"><td class="memItemLeft" align="right" valign="top"><a id="ac857b1da935941418ee65ce8e408f463"></a>
-<a class="el" href="_http_request_8h.html#ac0226ea12106b96d99f1ff9b9ed1a34e">HttpRequestState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#ac857b1da935941418ee65ce8e408f463">state_</a></td></tr>
+<a class="el" href="_http_request_8h.html#ac0226ea12106b96d99f1ff9b9ed1a34e">HttpRequestState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#ac857b1da935941418ee65ce8e408f463">state_</a> = HTTP_INITIALIZING</td></tr>
 <tr class="memdesc:ac857b1da935941418ee65ce8e408f463"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_connection.html" title="Connection to a remote network host.">Connection</a> state. <br /></td></tr>
 <tr class="separator:ac857b1da935941418ee65ce8e408f463"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc88b3b718a4e58da74ad92a7b2ac2da"><td class="memItemLeft" align="right" valign="top"><a id="acc88b3b718a4e58da74ad92a7b2ac2da"></a>
 <a class="el" href="class_urho3_d_1_1_mutex.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#acc88b3b718a4e58da74ad92a7b2ac2da">mutex_</a></td></tr>
 <tr class="memdesc:acc88b3b718a4e58da74ad92a7b2ac2da"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_mutex.html" title="Operating system mutual exclusion primitive.">Mutex</a> for synchronizing the worker and the main thread. <br /></td></tr>
 <tr class="separator:acc88b3b718a4e58da74ad92a7b2ac2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a191d0bc89b5dcd248efd1c27e7945867"><td class="memItemLeft" align="right" valign="top"><a id="a191d0bc89b5dcd248efd1c27e7945867"></a>
-ea::shared_array&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a191d0bc89b5dcd248efd1c27e7945867">httpReadBuffer_</a></td></tr>
-<tr class="memdesc:a191d0bc89b5dcd248efd1c27e7945867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read buffer for the worker thread. <br /></td></tr>
-<tr class="separator:a191d0bc89b5dcd248efd1c27e7945867"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a166b77d213c16019574c4ea4069cc25d"><td class="memItemLeft" align="right" valign="top"><a id="a166b77d213c16019574c4ea4069cc25d"></a>
-ea::shared_array&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a166b77d213c16019574c4ea4069cc25d">readBuffer_</a></td></tr>
-<tr class="memdesc:a166b77d213c16019574c4ea4069cc25d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read buffer for the main thread. <br /></td></tr>
-<tr class="separator:a166b77d213c16019574c4ea4069cc25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c3968fa085933cf76d671f4a9563ea6"><td class="memItemLeft" align="right" valign="top"><a id="a9c3968fa085933cf76d671f4a9563ea6"></a>
+<a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a9c3968fa085933cf76d671f4a9563ea6">readBuffer_</a></td></tr>
+<tr class="memdesc:a9c3968fa085933cf76d671f4a9563ea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read buffer for the main thread. <br /></td></tr>
+<tr class="separator:a9c3968fa085933cf76d671f4a9563ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaee1e81a37e6dbee7b7bdd36473862ce"><td class="memItemLeft" align="right" valign="top"><a id="aaee1e81a37e6dbee7b7bdd36473862ce"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#aaee1e81a37e6dbee7b7bdd36473862ce">readPosition_</a></td></tr>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#aaee1e81a37e6dbee7b7bdd36473862ce">readPosition_</a> = 0</td></tr>
 <tr class="memdesc:aaee1e81a37e6dbee7b7bdd36473862ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read buffer read cursor. <br /></td></tr>
 <tr class="separator:aaee1e81a37e6dbee7b7bdd36473862ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a898c35b4f4e775dc030b376850cf072f"><td class="memItemLeft" align="right" valign="top"><a id="a898c35b4f4e775dc030b376850cf072f"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a898c35b4f4e775dc030b376850cf072f">writePosition_</a></td></tr>
-<tr class="memdesc:a898c35b4f4e775dc030b376850cf072f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read buffer write cursor. <br /></td></tr>
-<tr class="separator:a898c35b4f4e775dc030b376850cf072f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -540,8 +522,8 @@ static ThreadID&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 
 </div>
 </div>
-<a id="aeb3bd02a8ea8b6938c5d21e3bed3fd0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb3bd02a8ea8b6938c5d21e3bed3fd0e">&#9670;&nbsp;</a></span>GetURL()</h2>
+<a id="a255360928dcd6a6e24e6a3424e0ea278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255360928dcd6a6e24e6a3424e0ea278">&#9670;&nbsp;</a></span>GetURL()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -550,7 +532,7 @@ static ThreadID&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const ea::string&amp; Urho3D::HttpRequest::GetURL </td>
+          <td class="memname">ea::string Urho3D::HttpRequest::GetURL </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -562,7 +544,7 @@ static ThreadID&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return URL used in the request. </p>
+<p>Return <a class="el" href="class_urho3_d_1_1_u_r_l.html">URL</a> used in the request. </p>
 
 </div>
 </div>
@@ -615,6 +597,45 @@ static ThreadID&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 </table>
 </div><div class="memdoc">
 <p>Return whether connection is in the open state. </p>
+
+</div>
+</div>
+<a id="ab9ed1dd50303836c3f3e1839dfe7efc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ed1dd50303836c3f3e1839dfe7efc7">&#9670;&nbsp;</a></span>Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Urho3D::HttpRequest::Read </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read response data from the HTTP connection and return number of bytes actually read. Does not block, may return a partial response. Read data only when <a class="el" href="class_urho3_d_1_1_http_request.html#a687c17d7c33831e6f68ceddd643d7383">GetState()</a> returns HTTP_CLOSED to receive a well-formed response. </p>
+
+<p>Implements <a class="el" href="class_urho3_d_1_1_deserializer.html#ae82036f72896194adc1cd02f3b03509b">Urho3D::Deserializer</a>.</p>
 
 </div>
 </div>

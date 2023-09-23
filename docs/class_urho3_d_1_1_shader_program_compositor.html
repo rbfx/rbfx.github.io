@@ -91,9 +91,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a034f98e2e42823193f7957f50f25fac8"><td class="memItemLeft" align="right" valign="top"><a id="a034f98e2e42823193f7957f50f25fac8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSettings</b> (const <a class="el" href="struct_urho3_d_1_1_shader_program_compositor_settings.html">ShaderProgramCompositorSettings</a> &amp;settings)</td></tr>
 <tr class="separator:a034f98e2e42823193f7957f50f25fac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2abeb8778afa2fbfc42bda0979fb8647"><td class="memItemLeft" align="right" valign="top"><a id="a2abeb8778afa2fbfc42bda0979fb8647"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetFrameSettings</b> (const <a class="el" href="class_urho3_d_1_1_camera_processor.html">CameraProcessor</a> *cameraProcessor)</td></tr>
-<tr class="separator:a2abeb8778afa2fbfc42bda0979fb8647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a2b3072275420e56a9022cf04bb8599"><td class="memItemLeft" align="right" valign="top"><a id="a5a2b3072275420e56a9022cf04bb8599"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetFrameSettings</b> (const <a class="el" href="class_urho3_d_1_1_camera_processor.html">CameraProcessor</a> *cameraProcessor, bool linearColorSpace)</td></tr>
+<tr class="separator:a5a2b3072275420e56a9022cf04bb8599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a033b288f0696146d6e6b3a01b9f028c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shader_program_compositor.html#a033b288f0696146d6e6b3a01b9f028c1">ProcessUserBatch</a> (<a class="el" href="struct_urho3_d_1_1_shader_program_desc.html">ShaderProgramDesc</a> &amp;result, const DrawableProcessorPassFlags flags, <a class="el" href="class_urho3_d_1_1_drawable.html">Drawable</a> *drawable, <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> *geometry, <a class="el" href="_graphics_defs_8h.html#a695dada2fcf6fd8e446adffc20acf522">GeometryType</a> geometryType, <a class="el" href="class_urho3_d_1_1_material.html">Material</a> *material, <a class="el" href="class_urho3_d_1_1_pass.html">Pass</a> *pass, <a class="el" href="class_urho3_d_1_1_light.html">Light</a> *light, bool hasShadow, BatchCompositorSubpass subpass)</td></tr>
 <tr class="separator:a033b288f0696146d6e6b3a01b9f028c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -357,6 +357,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isCameraClipped_</b> 
 <tr class="memitem:afb73581656c1bf3ff6bf28f143c28b6e"><td class="memItemLeft" align="right" valign="top"><a id="afb73581656c1bf3ff6bf28f143c28b6e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isCameraReversed_</b> {}</td></tr>
 <tr class="separator:afb73581656c1bf3ff6bf28f143c28b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae53b652e63a6e0c355cab2bb313a9308"><td class="memItemLeft" align="right" valign="top"><a id="ae53b652e63a6e0c355cab2bb313a9308"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>linearColorSpace_</b> {}</td></tr>
+<tr class="separator:ae53b652e63a6e0c355cab2bb313a9308"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

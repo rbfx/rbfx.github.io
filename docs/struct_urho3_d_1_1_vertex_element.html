@@ -79,10 +79,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_vertex_element.html#a3dd05f543e8309269479297d00f87e75">VertexElement</a> () noexcept</td></tr>
 <tr class="memdesc:a3dd05f543e8309269479297d00f87e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default-construct. <br /></td></tr>
 <tr class="separator:a3dd05f543e8309269479297d00f87e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d056f7b878fb9f3a23f9a94738f22bf"><td class="memItemLeft" align="right" valign="top"><a id="a7d056f7b878fb9f3a23f9a94738f22bf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_vertex_element.html#a7d056f7b878fb9f3a23f9a94738f22bf">VertexElement</a> (VertexElementType type, VertexElementSemantic semantic, unsigned char index=0, bool perInstance=false) noexcept</td></tr>
-<tr class="memdesc:a7d056f7b878fb9f3a23f9a94738f22bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with type, semantic, index and whether is per-instance data. <br /></td></tr>
-<tr class="separator:a7d056f7b878fb9f3a23f9a94738f22bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7471b1e9b593d899b8972582be472345"><td class="memItemLeft" align="right" valign="top"><a id="a7471b1e9b593d899b8972582be472345"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_vertex_element.html#a7471b1e9b593d899b8972582be472345">VertexElement</a> (VertexElementType type, VertexElementSemantic semantic, unsigned char index=0, unsigned stepRate=0) noexcept</td></tr>
+<tr class="memdesc:a7471b1e9b593d899b8972582be472345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with type, semantic, index and whether is per-instance data. <br /></td></tr>
+<tr class="separator:a7471b1e9b593d899b8972582be472345"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ef2367495a06a1973309beba0da2b51"><td class="memItemLeft" align="right" valign="top"><a id="a0ef2367495a06a1973309beba0da2b51"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_vertex_element.html#a0ef2367495a06a1973309beba0da2b51">operator==</a> (const <a class="el" href="struct_urho3_d_1_1_vertex_element.html">VertexElement</a> &amp;rhs) const</td></tr>
 <tr class="memdesc:a0ef2367495a06a1973309beba0da2b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another vertex element. Offset is intentionally not compared, as it's relevant only when an element exists within a vertex buffer. <br /></td></tr>
@@ -110,10 +110,10 @@ VertexElementSemantic&#160;</td><td class="memItemRight" valign="bottom"><a clas
 unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_vertex_element.html#a22ccfd76bdcec0423b8b6957f0523c1f">index_</a></td></tr>
 <tr class="memdesc:a22ccfd76bdcec0423b8b6957f0523c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Semantic index of element, for example multi-texcoords. <br /></td></tr>
 <tr class="separator:a22ccfd76bdcec0423b8b6957f0523c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1406df6f9357cb7874737dedc197d985"><td class="memItemLeft" align="right" valign="top"><a id="a1406df6f9357cb7874737dedc197d985"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_vertex_element.html#a1406df6f9357cb7874737dedc197d985">perInstance_</a></td></tr>
-<tr class="memdesc:a1406df6f9357cb7874737dedc197d985"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-instance flag. <br /></td></tr>
-<tr class="separator:a1406df6f9357cb7874737dedc197d985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a589a2f1ace337dd56b39ba5deb96e9f3"><td class="memItemLeft" align="right" valign="top"><a id="a589a2f1ace337dd56b39ba5deb96e9f3"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_vertex_element.html#a589a2f1ace337dd56b39ba5deb96e9f3">stepRate_</a></td></tr>
+<tr class="memdesc:a589a2f1ace337dd56b39ba5deb96e9f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instancing data steprate. <br /></td></tr>
+<tr class="separator:a589a2f1ace337dd56b39ba5deb96e9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92c570ed7aa36ae0a0d8ee96cc456255"><td class="memItemLeft" align="right" valign="top"><a id="a92c570ed7aa36ae0a0d8ee96cc456255"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_vertex_element.html#a92c570ed7aa36ae0a0d8ee96cc456255">offset_</a></td></tr>
 <tr class="memdesc:a92c570ed7aa36ae0a0d8ee96cc456255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset of element from vertex start. Filled by <a class="el" href="class_urho3_d_1_1_vertex_buffer.html" title="Hardware vertex buffer.">VertexBuffer</a> once the vertex declaration is built. <br /></td></tr>

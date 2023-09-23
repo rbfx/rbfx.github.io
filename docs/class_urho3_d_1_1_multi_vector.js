@@ -19,6 +19,7 @@ var class_urho3_d_1_1_multi_vector =
     [ "operator[]", "class_urho3_d_1_1_multi_vector.html#a917ce69336ca06e2e12deab7aeba0933", null ],
     [ "PopBack", "class_urho3_d_1_1_multi_vector.html#aa4795b71ea38c5e33b10feb5af012a9f", null ],
     [ "PushBack", "class_urho3_d_1_1_multi_vector.html#af0b28a5e8b33732b2e18ebf842494046", null ],
+    [ "Resize", "class_urho3_d_1_1_multi_vector.html#a253f7c7646bf2db7a3faf92f7c98582d", null ],
     [ "Size", "class_urho3_d_1_1_multi_vector.html#a48fac6c8e1b91a324e973a12c13f3cbf", null ],
     [ "outer_", "class_urho3_d_1_1_multi_vector.html#a636f06b0fe08f06ed2d295423adb8f4a", null ]
 ];

@@ -6,6 +6,5 @@ var struct_urho3_d_1_1_batch_renderer_settings =
     [ "Validate", "struct_urho3_d_1_1_batch_renderer_settings.html#a76acb1f615da0725ea8f5949754f9206", null ],
     [ "ambientMode_", "struct_urho3_d_1_1_batch_renderer_settings.html#a69a6ab4227092f0053d2c20afa2bd2ce", null ],
     [ "cubemapBoxProjection_", "struct_urho3_d_1_1_batch_renderer_settings.html#a118d4c24e23c7c459aa5bb9d5577e41c", null ],
-    [ "linearSpaceLighting_", "struct_urho3_d_1_1_batch_renderer_settings.html#aab6b38865cdde1a5d85916313fc9f3de", null ],
     [ "varianceShadowMapParams_", "struct_urho3_d_1_1_batch_renderer_settings.html#a8e15b5534e5cf5e535f913b0f2166bc8", null ]
 ];

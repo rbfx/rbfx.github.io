@@ -80,6 +80,7 @@ var _variant_8h =
     [ "GetVariantTypeSize", "_variant_8h.html#ad7734e2b7d9961d6021b08de04880b24", null ],
     [ "IsCustomTypeOnStack", "_variant_8h.html#ac73efb6536ead6f6837d735be7f43c2b", null ],
     [ "MakeCustomValue", "_variant_8h.html#ab9f9379cbc14eb7ec30d6dc143ab4d05", null ],
+    [ "ToCStringVector", "_variant_8h.html#a2c80496a6af328d5a2dcfb89e01698b3", null ],
     [ "URHO3D_TYPE_TRAIT", "_variant_8h.html#a6334b1405d7b428e26745d5cbdf1314b", null ],
     [ "URHO3D_TYPE_TRAIT", "_variant_8h.html#a095223e4fb171a34b62d48e9a7671b27", null ],
     [ "URHO3D_TYPE_TRAIT", "_variant_8h.html#a3846b6dd3366c9f2f658363b5c8e4a16", null ],

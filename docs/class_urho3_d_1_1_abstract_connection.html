@@ -88,10 +88,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae88595578997390056147f29f9b784bd"><td class="memItemLeft" align="right" valign="top"><a id="ae88595578997390056147f29f9b784bd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AbstractConnection</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
 <tr class="separator:ae88595578997390056147f29f9b784bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7acee0e1be1c3fcb2276faa8995f5b73"><td class="memItemLeft" align="right" valign="top"><a id="a7acee0e1be1c3fcb2276faa8995f5b73"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#a7acee0e1be1c3fcb2276faa8995f5b73">SendMessageInternal</a> (NetworkMessageId messageId, bool reliable, bool inOrder, const unsigned char *data, unsigned numBytes)=0</td></tr>
-<tr class="memdesc:a7acee0e1be1c3fcb2276faa8995f5b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send message to the other end of the connection. <br /></td></tr>
-<tr class="separator:a7acee0e1be1c3fcb2276faa8995f5b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a988b4bb1ac2c78840ce5ab50fa989e06"><td class="memItemLeft" align="right" valign="top"><a id="a988b4bb1ac2c78840ce5ab50fa989e06"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#a988b4bb1ac2c78840ce5ab50fa989e06">SendMessageInternal</a> (NetworkMessageId messageId, const unsigned char *data, unsigned numBytes, PacketTypeFlags packetType=PacketType::ReliableOrdered)=0</td></tr>
+<tr class="memdesc:a988b4bb1ac2c78840ce5ab50fa989e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send message to the other end of the connection. <br /></td></tr>
+<tr class="separator:a988b4bb1ac2c78840ce5ab50fa989e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc9b26e421b9932293a7f73a9114162e"><td class="memItemLeft" align="right" valign="top"><a id="afc9b26e421b9932293a7f73a9114162e"></a>
 virtual ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#afc9b26e421b9932293a7f73a9114162e">ToString</a> () const =0</td></tr>
 <tr class="memdesc:afc9b26e421b9932293a7f73a9114162e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return debug connection string for logging. <br /></td></tr>
@@ -121,22 +121,22 @@ virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <tr class="memdesc:a142e84be5d439d495491214fb2a00983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return ping of the connection. <br /></td></tr>
 <tr class="separator:a142e84be5d439d495491214fb2a00983"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a284b68b2b7430f8aad6aefeed97a0a33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#a284b68b2b7430f8aad6aefeed97a0a33">SendLoggedMessage</a> (NetworkMessageId messageId, bool reliable, bool inOrder, const unsigned char *data, unsigned numBytes, ea::string_view debugInfo={})</td></tr>
-<tr class="separator:a284b68b2b7430f8aad6aefeed97a0a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dde789c95177b5db9c072f0e21d05ca"><td class="memItemLeft" align="right" valign="top"><a id="a3dde789c95177b5db9c072f0e21d05ca"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessage</b> (NetworkMessageId messageId, bool reliable, bool inOrder, const unsigned char *data, unsigned numBytes, ea::string_view debugInfo={})</td></tr>
-<tr class="separator:a3dde789c95177b5db9c072f0e21d05ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a8a7f9f2acfeea5ad98f7d50fcb4389"><td class="memItemLeft" align="right" valign="top"><a id="a6a8a7f9f2acfeea5ad98f7d50fcb4389"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessage</b> (NetworkMessageId messageId, bool reliable, bool inOrder, const <a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorBuffer</a> &amp;msg, ea::string_view debugInfo={})</td></tr>
-<tr class="separator:a6a8a7f9f2acfeea5ad98f7d50fcb4389"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75f892b639b7e21b99db8726943a9793"><td class="memTemplParams" colspan="2"><a id="a75f892b639b7e21b99db8726943a9793"></a>
+<tr class="memitem:a68ab444d3dee753f34016ff2ec7463ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#a68ab444d3dee753f34016ff2ec7463ca">SendLoggedMessage</a> (NetworkMessageId messageId, const unsigned char *data, unsigned numBytes, PacketTypeFlags packetType=PacketType::ReliableOrdered, ea::string_view debugInfo={})</td></tr>
+<tr class="separator:a68ab444d3dee753f34016ff2ec7463ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbac4b520ffd5e06b028a8a05cc58499"><td class="memItemLeft" align="right" valign="top"><a id="abbac4b520ffd5e06b028a8a05cc58499"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessage</b> (NetworkMessageId messageId, const unsigned char *data=nullptr, unsigned numBytes=0, PacketTypeFlags packetType=PacketType::ReliableOrdered, ea::string_view debugInfo={})</td></tr>
+<tr class="separator:abbac4b520ffd5e06b028a8a05cc58499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77d6e3d83b7038f6d4ce5f16ca1e5557"><td class="memItemLeft" align="right" valign="top"><a id="a77d6e3d83b7038f6d4ce5f16ca1e5557"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessage</b> (NetworkMessageId messageId, const <a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorBuffer</a> &amp;msg, PacketTypeFlags packetType=PacketType::ReliableOrdered, ea::string_view debugInfo={})</td></tr>
+<tr class="separator:a77d6e3d83b7038f6d4ce5f16ca1e5557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8b26f2e5c7b44ce724ec9de6a96508b"><td class="memTemplParams" colspan="2"><a id="aa8b26f2e5c7b44ce724ec9de6a96508b"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:a75f892b639b7e21b99db8726943a9793"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SendSerializedMessage</b> (NetworkMessageId messageId, const T &amp;message, <a class="el" href="_abstract_connection_8h.html#af6041e29918f494177695fa0280a96ea">PacketType</a> messageType)</td></tr>
-<tr class="separator:a75f892b639b7e21b99db8726943a9793"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb40a84a93356774e29926c28e94a1d1"><td class="memTemplParams" colspan="2"><a id="acb40a84a93356774e29926c28e94a1d1"></a>
+<tr class="memitem:aa8b26f2e5c7b44ce724ec9de6a96508b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SendSerializedMessage</b> (NetworkMessageId messageId, const T &amp;message, PacketTypeFlags messageType=PacketType::ReliableOrdered)</td></tr>
+<tr class="separator:aa8b26f2e5c7b44ce724ec9de6a96508b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c68db722ff4734d3d058b00b44b3b73"><td class="memTemplParams" colspan="2"><a id="a1c68db722ff4734d3d058b00b44b3b73"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:acb40a84a93356774e29926c28e94a1d1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SendGeneratedMessage</b> (NetworkMessageId messageId, <a class="el" href="_abstract_connection_8h.html#af6041e29918f494177695fa0280a96ea">PacketType</a> messageType, T generator)</td></tr>
-<tr class="separator:acb40a84a93356774e29926c28e94a1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c68db722ff4734d3d058b00b44b3b73"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SendGeneratedMessage</b> (NetworkMessageId messageId, PacketTypeFlags messageType, T generator)</td></tr>
+<tr class="separator:a1c68db722ff4734d3d058b00b44b3b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7deb1b1dc367e17465b655b9fba719f"><td class="memItemLeft" align="right" valign="top"><a id="ad7deb1b1dc367e17465b655b9fba719f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnMessageReceived</b> (NetworkMessageId messageId, <a class="el" href="class_urho3_d_1_1_memory_buffer.html">MemoryBuffer</a> &amp;messageData) const</td></tr>
 <tr class="separator:ad7deb1b1dc367e17465b655b9fba719f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -400,8 +400,8 @@ static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a clas
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface of connection to another host. Virtual for easier unit testing. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a284b68b2b7430f8aad6aefeed97a0a33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a284b68b2b7430f8aad6aefeed97a0a33">&#9670;&nbsp;</a></span>SendLoggedMessage()</h2>
+<a id="a68ab444d3dee753f34016ff2ec7463ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ab444d3dee753f34016ff2ec7463ca">&#9670;&nbsp;</a></span>SendLoggedMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -418,18 +418,6 @@ static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a clas
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>reliable</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>inOrder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const unsigned char *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -438,6 +426,12 @@ static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a clas
           <td></td>
           <td class="paramtype">unsigned&#160;</td>
           <td class="paramname"><em>numBytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PacketTypeFlags&#160;</td>
+          <td class="paramname"><em>packetType</em> = <code>PacketType::ReliableOrdered</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -457,7 +451,7 @@ static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a clas
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Syntax sugar for SendMessage </p>
+<p>Syntax sugar for SendBuffer </p>
 
 </div>
 </div>

@@ -103,6 +103,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#a1d291b6ad8f3b13caea8bbde7b9e07ec">Viewport</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context, <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera, const <a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a> &amp;rect, <a class="el" href="class_urho3_d_1_1_render_pipeline.html">RenderPipeline</a> *renderPipeline)</td></tr>
 <tr class="memdesc:a1d291b6ad8f3b13caea8bbde7b9e07ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a specified rectangle and render pipeline. <br /></td></tr>
 <tr class="separator:a1d291b6ad8f3b13caea8bbde7b9e07ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d4250110adc9152bccc284eb00fc869"><td class="memItemLeft" align="right" valign="top"><a id="a8d4250110adc9152bccc284eb00fc869"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#a8d4250110adc9152bccc284eb00fc869">Viewport</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context, <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *leftEye, <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *rightEye, <a class="el" href="class_urho3_d_1_1_render_pipeline.html">RenderPipeline</a> *renderPipeline)</td></tr>
+<tr class="memdesc:a8d4250110adc9152bccc284eb00fc869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct for stereo with a render pipeline. <br /></td></tr>
+<tr class="separator:a8d4250110adc9152bccc284eb00fc869"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac27ebd9e15afeae5a4d86bc209a03524"><td class="memItemLeft" align="right" valign="top"><a id="ac27ebd9e15afeae5a4d86bc209a03524"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#ac27ebd9e15afeae5a4d86bc209a03524">~Viewport</a> () override</td></tr>
 <tr class="memdesc:ac27ebd9e15afeae5a4d86bc209a03524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
@@ -147,6 +151,18 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#a90420e62386ac8b50fd35d33a07784b0">AllocateView</a> ()</td></tr>
 <tr class="memdesc:a90420e62386ac8b50fd35d33a07784b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate the view structure. Called by <a class="el" href="class_urho3_d_1_1_renderer.html" title="High-level rendering subsystem. Manages drawing of 3D views.">Renderer</a>. <br /></td></tr>
 <tr class="separator:a90420e62386ac8b50fd35d33a07784b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac256f2d3a69993fa887cae1f54701abe"><td class="memItemLeft" align="right" valign="top"><a id="ac256f2d3a69993fa887cae1f54701abe"></a>
+<a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#ac256f2d3a69993fa887cae1f54701abe">GetEye</a> (int) const</td></tr>
+<tr class="memdesc:ac256f2d3a69993fa887cae1f54701abe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the given eye by index, starting from the left. <br /></td></tr>
+<tr class="separator:ac256f2d3a69993fa887cae1f54701abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef18193be5ea224716927d571b6ad781"><td class="memItemLeft" align="right" valign="top"><a id="aef18193be5ea224716927d571b6ad781"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#aef18193be5ea224716927d571b6ad781">SetEye</a> (<a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera, int eyeIdx)</td></tr>
+<tr class="memdesc:aef18193be5ea224716927d571b6ad781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a camera based on eye-index, starting from the left. <br /></td></tr>
+<tr class="separator:aef18193be5ea224716927d571b6ad781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c055639dca2ebd4ce3bbf1400b76c21"><td class="memItemLeft" align="right" valign="top"><a id="a5c055639dca2ebd4ce3bbf1400b76c21"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#a5c055639dca2ebd4ce3bbf1400b76c21">IsStereo</a> () const</td></tr>
+<tr class="memdesc:a5c055639dca2ebd4ce3bbf1400b76c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this viewport has "eyes" for stereo. <br /></td></tr>
+<tr class="separator:a5c055639dca2ebd4ce3bbf1400b76c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -373,6 +389,10 @@ Private Attributes</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#aed41f4ce276f84ae9c863d621dbfccaf">camera_</a></td></tr>
 <tr class="memdesc:aed41f4ce276f84ae9c863d621dbfccaf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_camera.html" title="Camera component.">Camera</a> pointer. <br /></td></tr>
 <tr class="separator:aed41f4ce276f84ae9c863d621dbfccaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf667d53ff92acb07f285b8a2b4cd5a"><td class="memItemLeft" align="right" valign="top"><a id="a4bf667d53ff92acb07f285b8a2b4cd5a"></a>
+<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#a4bf667d53ff92acb07f285b8a2b4cd5a">rightEye_</a></td></tr>
+<tr class="memdesc:a4bf667d53ff92acb07f285b8a2b4cd5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right eye camera pointer. <br /></td></tr>
+<tr class="separator:a4bf667d53ff92acb07f285b8a2b4cd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cc7fa89a3bf96206901c1219084753f"><td class="memItemLeft" align="right" valign="top"><a id="a7cc7fa89a3bf96206901c1219084753f"></a>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport.html#a7cc7fa89a3bf96206901c1219084753f">cullCamera_</a></td></tr>
 <tr class="memdesc:a7cc7fa89a3bf96206901c1219084753f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Culling camera pointer. <br /></td></tr>
