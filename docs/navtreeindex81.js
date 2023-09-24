@@ -1,5 +1,11 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a77685987a4a6fa224eaba816ce9f7560":[6,0,2,287,0,1],
+"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a87f13ddd118b026bd1e68f28972f7582":[6,0,2,287,0,8],
+"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#aa3b0c412c4a0bdf0d1a407a9448941ad":[6,0,2,287,0,0],
+"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#ab3a93fcc7b0941fdb4aad33196b8ea12":[6,0,2,287,0,5],
+"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#ad45ac8c58442b0c1dca04f6728140e4c":[6,0,2,287,0,6],
+"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#ad77a1b98bbba95cc4b5c89164da33795":[6,0,2,287,0,4],
 "struct_urho3_d_1_1_i_k_limb_solver_1_1_local_cache.html":[6,0,2,288,0],
 "struct_urho3_d_1_1_i_k_limb_solver_1_1_local_cache.html#a4f47520c896ef386c24b24cd277e36b5":[6,0,2,288,0,1],
 "struct_urho3_d_1_1_i_k_limb_solver_1_1_local_cache.html#aa3eaa927e15bd019785a25ee5fec82c8":[6,0,2,288,0,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a016609c2496488f2636fbfaa4a94b0d1":[6,0,2,343,1],
 "struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a1b74a0be08e70153933df19e926633a0":[6,0,2,343,3],
 "struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a1f74021c44a617f1f92fa22c9d66e31f":[6,0,2,343,4],
-"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a320f7c435e1d0380d1269acf7dce6d70":[6,0,2,343,0],
-"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a3b4da1f6e90cd38ff9e895de81ee8833":[6,0,2,343,8],
-"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a4815a20a9e2c141bf6fde3e817437cf6":[6,0,2,343,7],
-"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a66fa6fc82336ef4e536dd71726edffdf":[6,0,2,343,6],
-"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a8bec48bebee9a0537da8ac7e1bc35196":[6,0,2,343,9],
-"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a9ed5420c330d76a606329be5ff08cb57":[6,0,2,343,5],
-"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#aeb0207fb17cf4082949deb4307909d1f":[6,0,2,343,2]
+"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a320f7c435e1d0380d1269acf7dce6d70":[6,0,2,343,0]
 };

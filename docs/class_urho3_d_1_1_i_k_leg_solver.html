@@ -161,6 +161,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBendWeight</b> (fl
 <tr class="memitem:aae129e96c92084fb0969fbadbed03b45"><td class="memItemLeft" align="right" valign="top"><a id="aae129e96c92084fb0969fbadbed03b45"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>GetBendWeight</b> () const</td></tr>
 <tr class="separator:aae129e96c92084fb0969fbadbed03b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8395cc06d5104219b3094bb8ab684939"><td class="memItemLeft" align="right" valign="top"><a id="a8395cc06d5104219b3094bb8ab684939"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetFootRotationWeight</b> (float weight)</td></tr>
+<tr class="separator:a8395cc06d5104219b3094bb8ab684939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ac8549bf2fe6a95233c765d64c2315"><td class="memItemLeft" align="right" valign="top"><a id="a07ac8549bf2fe6a95233c765d64c2315"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>GetFootRotationWeight</b> () const</td></tr>
+<tr class="separator:a07ac8549bf2fe6a95233c765d64c2315"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d83fda31b148b6a4bcd15be2b00f7d4"><td class="memItemLeft" align="right" valign="top"><a id="a4d83fda31b148b6a4bcd15be2b00f7d4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMinAngle</b> (float angle)</td></tr>
 <tr class="separator:a4d83fda31b148b6a4bcd15be2b00f7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -616,9 +622,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>EnsureInitialized</b>
 <tr class="memitem:a819585d6475b418139eb9bbc4eb5785f"><td class="memItemLeft" align="right" valign="top"><a id="a819585d6475b418139eb9bbc4eb5785f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateHeelGroundOffset</b> ()</td></tr>
 <tr class="separator:a819585d6475b418139eb9bbc4eb5785f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d50c2864b8201a89e21ce30aa51309d"><td class="memItemLeft" align="right" valign="top"><a id="a3d50c2864b8201a89e21ce30aa51309d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RotateFoot</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;toeToHeel)</td></tr>
-<tr class="separator:a3d50c2864b8201a89e21ce30aa51309d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ebb51143abe507b44354cfea9d0127b"><td class="memItemLeft" align="right" valign="top"><a id="a5ebb51143abe507b44354cfea9d0127b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RotateFoot</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;toeToHeel, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;footRotation)</td></tr>
+<tr class="separator:a5ebb51143abe507b44354cfea9d0127b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed9c7a6e4086b336525e30448e61f6a1"><td class="memItemLeft" align="right" valign="top"><a id="aed9c7a6e4086b336525e30448e61f6a1"></a>
 <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetTargetPosition</b> () const</td></tr>
 <tr class="separator:aed9c7a6e4086b336525e30448e61f6a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -652,9 +658,12 @@ ea::pair&lt; <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>, <a
 <tr class="memitem:ac24f8f6562538f79e0595841bf80fe45"><td class="memItemLeft" align="right" valign="top"><a id="ac24f8f6562538f79e0595841bf80fe45"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateTiptoeFactor</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;toeTargetPosition) const</td></tr>
 <tr class="separator:ac24f8f6562538f79e0595841bf80fe45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a745e95904bff0fdea40cdfca5c2ab9f9"><td class="memItemLeft" align="right" valign="top"><a id="a745e95904bff0fdea40cdfca5c2ab9f9"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateToeToHeel</b> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;frameOfReference, float tiptoeFactor, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;toeTargetPosition, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;originalDirection, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;currentDirection) const</td></tr>
-<tr class="separator:a745e95904bff0fdea40cdfca5c2ab9f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bfef70948d12c9ba13b43119b1f867d"><td class="memItemLeft" align="right" valign="top"><a id="a8bfef70948d12c9ba13b43119b1f867d"></a>
+<a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateFootRotation</b> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;frameOfReference, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;toeTargetPosition) const</td></tr>
+<tr class="separator:a8bfef70948d12c9ba13b43119b1f867d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3588daed1bd4902b6022426f9f2807c2"><td class="memItemLeft" align="right" valign="top"><a id="a3588daed1bd4902b6022426f9f2807c2"></a>
+<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateToeToHeel</b> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;frameOfReference, float tiptoeFactor, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;toeTargetPosition, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;originalDirection, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;currentDirection, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;footRotation) const</td></tr>
+<tr class="separator:a3588daed1bd4902b6022426f9f2807c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad446953210fc48f583764d77f6eff911"><td class="memItemLeft" align="right" valign="top"><a id="ad446953210fc48f583764d77f6eff911"></a>
 <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateToeToHeelBent</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;toeTargetPosition, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;approximateBendDirection) const</td></tr>
 <tr class="separator:ad446953210fc48f583764d77f6eff911"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -709,6 +718,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>rotationWeight_</b> 
 <tr class="memitem:a360329eceb26bc5d4094e26e16246104"><td class="memItemLeft" align="right" valign="top"><a id="a360329eceb26bc5d4094e26e16246104"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>bendWeight_</b> {1.0f}</td></tr>
 <tr class="separator:a360329eceb26bc5d4094e26e16246104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30d71a5c109e516f2b55c53af2e9b130"><td class="memItemLeft" align="right" valign="top"><a id="a30d71a5c109e516f2b55c53af2e9b130"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>footRotationWeight_</b> {0.0f}</td></tr>
+<tr class="separator:a30d71a5c109e516f2b55c53af2e9b130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88f521226dd02fcc73c9a0c7526f5664"><td class="memItemLeft" align="right" valign="top"><a id="a88f521226dd02fcc73c9a0c7526f5664"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>minKneeAngle_</b> {0.0f}</td></tr>
 <tr class="separator:a88f521226dd02fcc73c9a0c7526f5664"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -10,6 +10,7 @@ var class_urho3_d_1_1_i_k_target_extractor =
     [ "IsExecutedOnOutput", "class_urho3_d_1_1_i_k_target_extractor.html#acab5a21eb2150f4f4980142dcaf5eea2", null ],
     [ "RegisterObject", "class_urho3_d_1_1_i_k_target_extractor.html#a373d20c6698303e62a9cba752fbde4b8", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_i_k_target_extractor.html#a4ae35c0534b957bd3de939ae6a479eb8", null ],
+    [ "bendTargets_", "class_urho3_d_1_1_i_k_target_extractor.html#a67a4ad26039f05eeed4b331b6f2d98f6", null ],
     [ "DefaultNewFileName", "class_urho3_d_1_1_i_k_target_extractor.html#a756907629f5e40f5c688c4e98121d3a5", null ],
     [ "extractRotations_", "class_urho3_d_1_1_i_k_target_extractor.html#a5aa33a385df9034894f6d2c03d7910e3", null ],
     [ "extractToExistingFile_", "class_urho3_d_1_1_i_k_target_extractor.html#ab436328a1119c7e980af496215983caf", null ],

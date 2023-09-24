@@ -1,5 +1,10 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_drawable_processor_settings.html":[6,0,2,206],
+"struct_urho3_d_1_1_drawable_processor_settings.html#a0d470815510072feb7794f33f8f9d1d2":[6,0,2,206,3],
+"struct_urho3_d_1_1_drawable_processor_settings.html#a1a959521131cdd2be3f024cb1bdc5a75":[6,0,2,206,9],
+"struct_urho3_d_1_1_drawable_processor_settings.html#a4708a7c97b5d4a486182e3ba0b60e030":[6,0,2,206,2],
+"struct_urho3_d_1_1_drawable_processor_settings.html#a57a7aeccd09f45517abc2d2b703a8080":[6,0,2,206,5],
 "struct_urho3_d_1_1_drawable_processor_settings.html#a5dfb5222daea8dca77e4dccaaffd3e6b":[6,0,2,206,8],
 "struct_urho3_d_1_1_drawable_processor_settings.html#a76819c76c6c8660854612307ebd2dd54":[6,0,2,206,7],
 "struct_urho3_d_1_1_drawable_processor_settings.html#a990fdd0eb384d124fa9981cc0e3ac10d":[6,0,2,206,4],
@@ -243,11 +248,6 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_i_k_head_solver_1_1_local_cache.html#a165aa0f4906e00fb20d91e016ee09266":[6,0,2,285,0,1],
 "struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html":[6,0,2,287,0],
 "struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a0e1e8f5b2d90903b7b3a4a08fdf4e55d":[6,0,2,287,0,2],
-"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a1c3e9f2f37b72edc69a276cc20c60f54":[6,0,2,287,0,3],
-"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a77685987a4a6fa224eaba816ce9f7560":[6,0,2,287,0,1],
-"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a87f13ddd118b026bd1e68f28972f7582":[6,0,2,287,0,7],
-"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#aa3b0c412c4a0bdf0d1a407a9448941ad":[6,0,2,287,0,0],
-"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#ab3a93fcc7b0941fdb4aad33196b8ea12":[6,0,2,287,0,5],
-"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#ad45ac8c58442b0c1dca04f6728140e4c":[6,0,2,287,0,6],
-"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#ad77a1b98bbba95cc4b5c89164da33795":[6,0,2,287,0,4]
+"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a0efb4cca6b16bdae3ddd203d5550d918":[6,0,2,287,0,7],
+"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a1c3e9f2f37b72edc69a276cc20c60f54":[6,0,2,287,0,3]
 };

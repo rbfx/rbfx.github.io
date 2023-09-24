@@ -1,5 +1,11 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a3b4da1f6e90cd38ff9e895de81ee8833":[6,0,2,343,8],
+"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a4815a20a9e2c141bf6fde3e817437cf6":[6,0,2,343,7],
+"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a66fa6fc82336ef4e536dd71726edffdf":[6,0,2,343,6],
+"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a8bec48bebee9a0537da8ac7e1bc35196":[6,0,2,343,9],
+"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a9ed5420c330d76a606329be5ff08cb57":[6,0,2,343,5],
+"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#aeb0207fb17cf4082949deb4307909d1f":[6,0,2,343,2],
 "struct_urho3_d_1_1_lightmap_chart_baked_indirect.html":[6,0,2,344],
 "struct_urho3_d_1_1_lightmap_chart_baked_indirect.html#a0fbfc09a44bad3c3cd48ec947ba4eeb4":[6,0,2,344,3],
 "struct_urho3_d_1_1_lightmap_chart_baked_indirect.html#a62c87a07e2aff77563854e3f7dbafd7a":[6,0,2,344,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_network_value_traits.html#a3b7ee5c6761ed5e502c2c098ff37f9bd":[6,0,2,432,3],
 "struct_urho3_d_1_1_network_value_traits.html#a3e970d879abd33f947f904ea2452354b":[6,0,2,432,0],
 "struct_urho3_d_1_1_network_value_traits.html#a46f69eeb06fbc7463b0ae661e148cacd":[6,0,2,432,6],
-"struct_urho3_d_1_1_network_value_traits.html#a5be05e589749b2a9713f997cf8b1f097":[6,0,2,432,2],
-"struct_urho3_d_1_1_network_value_traits.html#a816ea1b63a3779c52a96c60f3684b31f":[6,0,2,432,7],
-"struct_urho3_d_1_1_network_value_traits.html#a9b91e6a71ce36d1d0fb07e465c33270e":[6,0,2,432,1],
-"struct_urho3_d_1_1_network_value_traits.html#ad35456ce93c3133f64588f4cc714c91a":[6,0,2,432,5],
-"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html":[6,0,2,433],
-"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#a096ce6799d95474aef8ac3da3b7e1930":[6,0,2,433,3],
-"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#a2700a9e2bf61a68bb61d001b1e501d58":[6,0,2,433,0]
+"struct_urho3_d_1_1_network_value_traits.html#a5be05e589749b2a9713f997cf8b1f097":[6,0,2,432,2]
 };

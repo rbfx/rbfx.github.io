@@ -1,5 +1,10 @@
 var NAVTREEINDEX75 =
 {
+"class_urho3_d_1_1_xr_object_shared_ptr.html#aa36a1d810d45e0720edd2d8ade5f9288":[6,0,2,828,4],
+"class_urho3_d_1_1_xr_object_shared_ptr.html#abdb9bad2f715f05dc704d478d10fbe13":[6,0,2,828,2],
+"class_urho3_d_1_1_xr_object_shared_ptr.html#ac0ab9ec9bab6e81cb8bd89b3a49d141e":[6,0,2,828,1],
+"class_urho3_d_1_1_xr_object_shared_ptr.html#ad584a39a987a63684d241ce9b5379b77":[6,0,2,828,5],
+"class_urho3_d_1_1_zone.html":[6,0,2,829],
 "class_urho3_d_1_1_zone.html#a028994b9a937e519af0ec74506dfe56f":[6,0,2,829,72],
 "class_urho3_d_1_1_zone.html#a02e17ca37e92e6de16cfd32319ec1282":[6,0,2,829,15],
 "class_urho3_d_1_1_zone.html#a039b4b2ad9eeae2bda635a088239d5ce":[6,0,2,829,68],
@@ -115,8 +120,8 @@ var NAVTREEINDEX75 =
 "files.html":[7,0],
 "folder-structure.html":[0,0,1],
 "framework-overview.html":[0,0,2],
-"functions.html":[6,3,0,0],
 "functions.html":[6,3,0],
+"functions.html":[6,3,0,0],
 "functions_a.html":[6,3,0,1],
 "functions_b.html":[6,3,0,2],
 "functions_c.html":[6,3,0,3],
@@ -170,8 +175,8 @@ var NAVTREEINDEX75 =
 "functions_type.html":[6,3,3],
 "functions_u.html":[6,3,0,21],
 "functions_v.html":[6,3,0,22],
-"functions_vars.html":[6,3,2],
 "functions_vars.html":[6,3,2,0],
+"functions_vars.html":[6,3,2],
 "functions_vars_a.html":[6,3,2,1],
 "functions_vars_b.html":[6,3,2,2],
 "functions_vars_c.html":[6,3,2,3],
@@ -205,8 +210,8 @@ var NAVTREEINDEX75 =
 "functions_~.html":[6,3,0,27],
 "graphics-and-rendering.html":[0,0,2,1],
 "hierarchy.html":[6,2],
-"index.html":[],
 "index.html":[0],
+"index.html":[],
 "low-level-transport.html":[0,0,2,2,0],
 "md__home_runner_work_rbfx-docs_rbfx-docs__r_e_a_d_m_e.html":[4],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_cpp-quick-start.html":[1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX75 =
 "rendering-subsystems.html":[0,0,2,1,2,0],
 "rendering-techniques.html":[0,0,2,1,3,3],
 "rendering-textures.html":[0,0,2,1,3,2],
-"rendering-zones.html":[0,0,2,1,2,3],
-"replication-manager.html":[0,0,2,2,1],
-"scene-and-animation.html":[0,0,2,3],
-"scene-animation.html":[0,0,2,3,0],
-"standard-network-behaviors.html":[0,0,2,2,4],
-"standard-network-objects.html":[0,0,2,2,3]
+"rendering-zones.html":[0,0,2,1,2,3]
 };

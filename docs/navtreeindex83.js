@@ -1,5 +1,11 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_network_value_traits.html#a816ea1b63a3779c52a96c60f3684b31f":[6,0,2,432,7],
+"struct_urho3_d_1_1_network_value_traits.html#a9b91e6a71ce36d1d0fb07e465c33270e":[6,0,2,432,1],
+"struct_urho3_d_1_1_network_value_traits.html#ad35456ce93c3133f64588f4cc714c91a":[6,0,2,432,5],
+"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html":[6,0,2,433],
+"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#a096ce6799d95474aef8ac3da3b7e1930":[6,0,2,433,3],
+"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#a2700a9e2bf61a68bb61d001b1e501d58":[6,0,2,433,0],
 "struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#a869aa2d198f0a0eba356ff21327d01ec":[6,0,2,433,5],
 "struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#aafb023ac19730a9db7a0f4f032e7e5f3":[6,0,2,433,2],
 "struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#abb3e9877e9694b982eb9b94170c55949":[6,0,2,433,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_physics_raycast_result.html#ab4d67be66ed31f1607a7c118a3547d7d":[6,0,2,503,1],
 "struct_urho3_d_1_1_physics_raycast_result.html#abcc01ca7bf8007086c033b4f25884a80":[6,0,2,503,2],
 "struct_urho3_d_1_1_physics_raycast_result.html#ac546be78168a69e04a3cb4328c893108":[6,0,2,503,5],
-"struct_urho3_d_1_1_physics_raycast_result.html#ac903d2e2f945dd50ff02e387e5799f28":[6,0,2,503,0],
-"struct_urho3_d_1_1_physics_raycast_result2_d.html":[6,0,2,504],
-"struct_urho3_d_1_1_physics_raycast_result2_d.html#a2e80874911363017d6d834cf83caff6f":[6,0,2,504,4],
-"struct_urho3_d_1_1_physics_raycast_result2_d.html#a39e6fa5e506f844a1e0951a8a42fd246":[6,0,2,504,3],
-"struct_urho3_d_1_1_physics_raycast_result2_d.html#a52bbe96638faf6448aa7fe33ff2b16a7":[6,0,2,504,0],
-"struct_urho3_d_1_1_physics_raycast_result2_d.html#a71a7b114170c03ffe8a87291e5b90c06":[6,0,2,504,2],
-"struct_urho3_d_1_1_physics_raycast_result2_d.html#a84e55a4423131b39b9fea5048324e14c":[6,0,2,504,1]
+"struct_urho3_d_1_1_physics_raycast_result.html#ac903d2e2f945dd50ff02e387e5799f28":[6,0,2,503,0]
 };

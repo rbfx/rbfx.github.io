@@ -1,5 +1,11 @@
 var NAVTREEINDEX85 =
 {
+"struct_urho3_d_1_1_resource_file_descriptor.html":[6,0,2,582],
+"struct_urho3_d_1_1_resource_file_descriptor.html#a016afee8d1124de16cb94daf7d5bf60a":[6,0,2,582,0],
+"struct_urho3_d_1_1_resource_file_descriptor.html#a3a1f357677d7b4c89e2c61e30d551160":[6,0,2,582,1],
+"struct_urho3_d_1_1_resource_file_descriptor.html#a4fb93e84a268d38c0bf1700b0a7d9251":[6,0,2,582,6],
+"struct_urho3_d_1_1_resource_file_descriptor.html#a528253f1956b1e5bb57510732489a098":[6,0,2,582,5],
+"struct_urho3_d_1_1_resource_file_descriptor.html#a545fab660ca05f4bdcbcc074bb29ca98":[6,0,2,582,3],
 "struct_urho3_d_1_1_resource_file_descriptor.html#a5aaaec420e2bd7c3692d165cfa9a07e8":[6,0,2,582,10],
 "struct_urho3_d_1_1_resource_file_descriptor.html#a5ce66acf2f161219cab49134d33703f6":[6,0,2,582,4],
 "struct_urho3_d_1_1_resource_file_descriptor.html#a6e41a0c199bc4bd745e063a62c071ab4":[6,0,2,582,9],
@@ -243,11 +249,5 @@ var NAVTREEINDEX85 =
 "struct_urho3_d_1_1_spherical_harmonics_dot9.html#a6e5895236f5128e12dc15d77534bebc4":[6,0,2,672,15],
 "struct_urho3_d_1_1_spherical_harmonics_dot9.html#a7060b8b22c1926003716389d0e704ee3":[6,0,2,672,3],
 "struct_urho3_d_1_1_spherical_harmonics_dot9.html#a72326ccef5e78ffe8d810c24dfdb70eb":[6,0,2,672,14],
-"struct_urho3_d_1_1_spherical_harmonics_dot9.html#a82e46ba480998640192460411a200051":[6,0,2,672,2],
-"struct_urho3_d_1_1_spherical_harmonics_dot9.html#a8b325b7a5124f10131c20fd1bf06cc71":[6,0,2,672,16],
-"struct_urho3_d_1_1_spherical_harmonics_dot9.html#a9dd4b9556f66bce0e6533be2c4d16dec":[6,0,2,672,9],
-"struct_urho3_d_1_1_spherical_harmonics_dot9.html#aa62aa45a5041568da956f1ac92ddf43a":[6,0,2,672,17],
-"struct_urho3_d_1_1_spherical_harmonics_dot9.html#aa9929c492ba4c47bbeac2ba8933bd46d":[6,0,2,672,0],
-"struct_urho3_d_1_1_spherical_harmonics_dot9.html#aaef2b4098b3e31d72323a968d969e1be":[6,0,2,672,10],
-"struct_urho3_d_1_1_spherical_harmonics_dot9.html#ab774fcf7c126c06c3284d34cea09acd5":[6,0,2,672,4]
+"struct_urho3_d_1_1_spherical_harmonics_dot9.html#a82e46ba480998640192460411a200051":[6,0,2,672,2]
 };

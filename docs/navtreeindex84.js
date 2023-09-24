@@ -1,5 +1,11 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_physics_raycast_result2_d.html":[6,0,2,504],
+"struct_urho3_d_1_1_physics_raycast_result2_d.html#a2e80874911363017d6d834cf83caff6f":[6,0,2,504,4],
+"struct_urho3_d_1_1_physics_raycast_result2_d.html#a39e6fa5e506f844a1e0951a8a42fd246":[6,0,2,504,3],
+"struct_urho3_d_1_1_physics_raycast_result2_d.html#a52bbe96638faf6448aa7fe33ff2b16a7":[6,0,2,504,0],
+"struct_urho3_d_1_1_physics_raycast_result2_d.html#a71a7b114170c03ffe8a87291e5b90c06":[6,0,2,504,2],
+"struct_urho3_d_1_1_physics_raycast_result2_d.html#a84e55a4423131b39b9fea5048324e14c":[6,0,2,504,1],
 "struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html":[6,0,2,507,0],
 "struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#a453d317858155c28005af552073be122":[6,0,2,507,0,5],
 "struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#a539e8e19de18ff7474564da4abe3e22d":[6,0,2,507,0,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_replication_manager_1_1_client_data.html#a9d7aca58848399aa3007142fe2ff2c3c":[6,0,2,578,0,0],
 "struct_urho3_d_1_1_replication_manager_1_1_client_data.html#aa924e5ba82f25dac26fd5b0f91adb3d5":[6,0,2,578,0,5],
 "struct_urho3_d_1_1_replication_manager_1_1_client_data.html#aaac1aa95954af4965dfe21284ea6e0df":[6,0,2,578,0,3],
-"struct_urho3_d_1_1_replication_manager_1_1_client_data.html#ace407be41a22b940dc7f4d4d56c03224":[6,0,2,578,0,4],
-"struct_urho3_d_1_1_resource_file_descriptor.html":[6,0,2,582],
-"struct_urho3_d_1_1_resource_file_descriptor.html#a016afee8d1124de16cb94daf7d5bf60a":[6,0,2,582,0],
-"struct_urho3_d_1_1_resource_file_descriptor.html#a3a1f357677d7b4c89e2c61e30d551160":[6,0,2,582,1],
-"struct_urho3_d_1_1_resource_file_descriptor.html#a4fb93e84a268d38c0bf1700b0a7d9251":[6,0,2,582,6],
-"struct_urho3_d_1_1_resource_file_descriptor.html#a528253f1956b1e5bb57510732489a098":[6,0,2,582,5],
-"struct_urho3_d_1_1_resource_file_descriptor.html#a545fab660ca05f4bdcbcc074bb29ca98":[6,0,2,582,3]
+"struct_urho3_d_1_1_replication_manager_1_1_client_data.html#ace407be41a22b940dc7f4d4d56c03224":[6,0,2,578,0,4]
 };
