@@ -45,6 +45,7 @@ var class_urho3_d_1_1_animation =
     [ "legacyVersion", "class_urho3_d_1_1_animation.html#aca649061e3ec0ea912b3e0895339cdbb", null ],
     [ "length_", "class_urho3_d_1_1_animation.html#a3dd3e3d663c28f211ef1f2056e851945", null ],
     [ "tracks_", "class_urho3_d_1_1_animation.html#a1a24cca96c928e6ff7c967a8218a9a67", null ],
+    [ "trackWeightVersion", "class_urho3_d_1_1_animation.html#a20cb16dd1e27e24669c39d160e192bdd", null ],
     [ "triggers_", "class_urho3_d_1_1_animation.html#aa9340f5cfe39db7128ba7baab93dfaf2", null ],
     [ "variantTracks_", "class_urho3_d_1_1_animation.html#aa902c2b3a11125208c7f1a29afd461cd", null ],
     [ "variantTrackVersion", "class_urho3_d_1_1_animation.html#ae73a58ddf1b9a7a802bfaf3b872df09e", null ]

@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"class_urho3_d_1_1_physics_world2_d.html#a623b6b47d7a50aff2103210e92d3da81":[6,0,2,507,17],
 "class_urho3_d_1_1_physics_world2_d.html#a629b7051ab35f98508c7f06d7c7a8c6c":[6,0,2,507,62],
 "class_urho3_d_1_1_physics_world2_d.html#a62dd3b57b471bdc68fc598886a923ec5":[6,0,2,507,28],
 "class_urho3_d_1_1_physics_world2_d.html#a63e8173fbeb4bba8e962483f35958b54":[6,0,2,507,63],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "class_urho3_d_1_1_point_light_geometry_query.html#a4146b6f2608fbff79c3cf88adea94e50":[6,0,2,525,1],
 "class_urho3_d_1_1_point_light_geometry_query.html#a4e291d98b23d4d1d1408d40cec457a82":[6,0,2,525,4],
 "class_urho3_d_1_1_point_light_geometry_query.html#a8d6a4f7455431a4f2cabafd28a36caa8":[6,0,2,525,3],
-"class_urho3_d_1_1_point_light_geometry_query.html#a8ebe3ea86ad69595d0e8bf487bfc378c":[6,0,2,525,2],
-"class_urho3_d_1_1_point_light_geometry_query.html#a967db625aa358ca021979aff642076a8":[6,0,2,525,6]
+"class_urho3_d_1_1_point_light_geometry_query.html#a8ebe3ea86ad69595d0e8bf487bfc378c":[6,0,2,525,2]
 };

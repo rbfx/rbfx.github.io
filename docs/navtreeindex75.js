@@ -1,5 +1,6 @@
 var NAVTREEINDEX75 =
 {
+"class_urho3_d_1_1_xr_object_shared_ptr.html#a56c940e2208e7e9eaab5b935c0a06889":[6,0,2,828,3],
 "class_urho3_d_1_1_xr_object_shared_ptr.html#aa36a1d810d45e0720edd2d8ade5f9288":[6,0,2,828,4],
 "class_urho3_d_1_1_xr_object_shared_ptr.html#abdb9bad2f715f05dc704d478d10fbe13":[6,0,2,828,2],
 "class_urho3_d_1_1_xr_object_shared_ptr.html#ac0ab9ec9bab6e81cb8bd89b3a49d141e":[6,0,2,828,1],
@@ -120,8 +121,8 @@ var NAVTREEINDEX75 =
 "files.html":[7,0],
 "folder-structure.html":[0,0,1],
 "framework-overview.html":[0,0,2],
-"functions.html":[6,3,0],
 "functions.html":[6,3,0,0],
+"functions.html":[6,3,0],
 "functions_a.html":[6,3,0,1],
 "functions_b.html":[6,3,0,2],
 "functions_c.html":[6,3,0,3],
@@ -175,8 +176,8 @@ var NAVTREEINDEX75 =
 "functions_type.html":[6,3,3],
 "functions_u.html":[6,3,0,21],
 "functions_v.html":[6,3,0,22],
-"functions_vars.html":[6,3,2,0],
 "functions_vars.html":[6,3,2],
+"functions_vars.html":[6,3,2,0],
 "functions_vars_a.html":[6,3,2,1],
 "functions_vars_b.html":[6,3,2,2],
 "functions_vars_c.html":[6,3,2,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX75 =
 "rendering-shaders.html":[0,0,2,1,3,4],
 "rendering-subsystems.html":[0,0,2,1,2,0],
 "rendering-techniques.html":[0,0,2,1,3,3],
-"rendering-textures.html":[0,0,2,1,3,2],
-"rendering-zones.html":[0,0,2,1,2,3]
+"rendering-textures.html":[0,0,2,1,3,2]
 };
