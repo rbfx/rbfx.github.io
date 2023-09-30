@@ -1,5 +1,6 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a0e1e8f5b2d90903b7b3a4a08fdf4e55d":[6,0,2,287,0,2],
 "struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a0efb4cca6b16bdae3ddd203d5550d918":[6,0,2,287,0,7],
 "struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a1c3e9f2f37b72edc69a276cc20c60f54":[6,0,2,287,0,3],
 "struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.html#a77685987a4a6fa224eaba816ce9f7560":[6,0,2,287,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_lightmap_chart.html#a88007e64e4d25271581c1cc7b9010a8a":[6,0,2,342,2],
 "struct_urho3_d_1_1_lightmap_chart.html#ac8a9f3415ab6f4b052c4ed9c0762bc8d":[6,0,2,342,4],
 "struct_urho3_d_1_1_lightmap_chart_baked_direct.html":[6,0,2,343],
-"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a016609c2496488f2636fbfaa4a94b0d1":[6,0,2,343,1],
-"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a1b74a0be08e70153933df19e926633a0":[6,0,2,343,3]
+"struct_urho3_d_1_1_lightmap_chart_baked_direct.html#a016609c2496488f2636fbfaa4a94b0d1":[6,0,2,343,1]
 };
