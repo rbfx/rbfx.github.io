@@ -133,7 +133,162 @@ $(document).ready(function(){initNavTree('input.html',''); initResizable(); });
 </ul>
 <p>The Evaluate method return value of the joystick axis is mapped to a range between neutral and pressed, where neutral represents the neutral position of the joystick and pressed represents the position of the joystick when it is fully pressed.</p>
 <p>For example, if you want to map the Y-axis of a gamepad to control the movement of a character in your game, you can use the following code: </p><div class="fragment"><div class="line">map-&gt;MapControllerAxis(<span class="stringliteral">&quot;Forward&quot;</span>, CONTROLLER_AXIS_LEFTY, 0.0f, -1.0f);</div>
-</div><!-- fragment --><p>This code maps the negative Y-axis portion of the gamepad analog stick to affect the "Forward" action in your game. The neutral position of the Y-axis is set to 0.0f, which means that when the joystick is in its neutral position, the value of "Forward" will be 0.0f. The fully pressed position of the Y-axis is set to -1.0f, which means that when the axis is fully pressed forward, the value of "Forward" will be 1.0f. </p>
+</div><!-- fragment --><p>This code maps the negative Y-axis portion of the gamepad analog stick to affect the "Forward" action in your game. The neutral position of the Y-axis is set to 0.0f, which means that when the joystick is in its neutral position, the value of "Forward" will be 0.0f. The fully pressed position of the Y-axis is set to -1.0f, which means that when the axis is fully pressed forward, the value of "Forward" will be 1.0f.</p>
+<h2>Using InputMap to control character</h2>
+<p>Because the InputMap is a SimpleResource the easiest way to use it in a component is to have an attribute of the InputMap resource type:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> KinematicCharacter::RegisterObject(Context* context)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// ....</span></div>
+<div class="line">    URHO3D_MIXED_ACCESSOR_ATTRIBUTE(</div>
+<div class="line">        <span class="stringliteral">&quot;Input Map&quot;</span>, GetInputMapAttr, SetInputMapAttr, ResourceRef, ResourceRef(InputMap::GetTypeStatic()), AM_DEFAULT);</div>
+<div class="line">    <span class="comment">// ....</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> KinematicCharacter::SetInputMapAttr(<span class="keyword">const</span> ResourceRef&amp; value)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">auto</span>* cache = GetSubsystem&lt;ResourceCache&gt;();</div>
+<div class="line">    SetInputMap(cache-&gt;GetResource&lt;InputMap&gt;(value.name_));</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">ResourceRef KinematicCharacter::GetInputMapAttr()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword"></span>{</div>
+<div class="line">    <span class="keywordflow">return</span> GetResourceRef(inputMap_, InputMap::GetTypeStatic());</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> KinematicCharacter::SetInputMap(InputMap* inputMap)</div>
+<div class="line">{</div>
+<div class="line">    inputMap_ = inputMap;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The InputMap is stateless and because of that it doesn't require any special handling.</p>
+<p>When you need to get a value for an action just call Evaluate method. In the following example if Crouch action value is not equal to 0 then the character height is halved: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (inputMap_-&gt;Evaluate(<span class="stringliteral">&quot;Crouch&quot;</span>))</div>
+<div class="line">{</div>
+<div class="line">    kinematicController_-&gt;SetHeight(0.9f);</div>
+<div class="line">    kinematicController_-&gt;SetOffset(Vector3(0.0f, 0.45f, 0.0f));</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">{</div>
+<div class="line">    kinematicController_-&gt;SetHeight(1.8f);</div>
+<div class="line">    kinematicController_-&gt;SetOffset(Vector3(0.0f, 0.9f, 0.0f));</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2>InputMap file format</h2>
+<p>InputMap is a SimpleResource and by default is serialized in a JSON format:</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    &quot;actions&quot;: [</div>
+<div class="line">        {</div>
+<div class="line">            &quot;key&quot;: &quot;Left&quot;,</div>
+<div class="line">            &quot;value&quot;: {</div>
+<div class="line">                &quot;axes&quot;: [</div>
+<div class="line">                    {</div>
+<div class="line">                        &quot;controller&quot;: true,</div>
+<div class="line">                        &quot;pressed&quot;: -1.0</div>
+<div class="line">                    }</div>
+<div class="line">                ],</div>
+<div class="line">                &quot;keys&quot;: [</div>
+<div class="line">                    {</div>
+<div class="line">                        &quot;scancode&quot;: &quot;A&quot;</div>
+<div class="line">                    },</div>
+<div class="line">                    {</div>
+<div class="line">                        &quot;scancode&quot;: &quot;Left&quot;</div>
+<div class="line">                    }</div>
+<div class="line">                ]</div>
+<div class="line">            }</div>
+<div class="line">        },</div>
+<div class="line">        {</div>
+<div class="line">            &quot;key&quot;: &quot;Right&quot;,</div>
+<div class="line">            &quot;value&quot;: {</div>
+<div class="line">                &quot;axes&quot;: [</div>
+<div class="line">                    {</div>
+<div class="line">                        &quot;controller&quot;: true</div>
+<div class="line">                    }</div>
+<div class="line">                ],</div>
+<div class="line">                &quot;keys&quot;: [</div>
+<div class="line">                    {</div>
+<div class="line">                        &quot;scancode&quot;: &quot;D&quot;</div>
+<div class="line">                    },</div>
+<div class="line">                    {</div>
+<div class="line">                        &quot;scancode&quot;: &quot;Right&quot;</div>
+<div class="line">                    }</div>
+<div class="line">                ]</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">    ]</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The InputMap JSON file contains an array, each of which has a key and a value field. The key field is a string that represents the name of the action, while the value field is an object that contains several fields:</p>
+<div class="fragment"><div class="line">&quot;axes&quot;: [</div>
+<div class="line">    {</div>
+<div class="line">        &quot;axis&quot;: 3,</div>
+<div class="line">        &quot;controller&quot;: true,</div>
+<div class="line">        &quot;neutral&quot;: 0.0,</div>
+<div class="line">        &quot;pressed&quot;: 1.0,</div>
+<div class="line">    }</div>
+<div class="line">]</div>
+</div><!-- fragment --><ul>
+<li><b>axes</b>: The axes field is an array of objects that represent the controller’s axes mapping. Each object in the array has few fields<ul>
+<li><b>controller</b> which is a boolean value indicating whether the axis is controlled by a controller. False indicates that the mapping is for generic joystick and true indicates mapping for a gamepad detected by SDL. Default value of the field is false.</li>
+<li><b>axis</b> which is an integer value indicating which axis is controlled by a controller. Default value of the field is 0.</li>
+<li><b>neutral</b>, which is a floating-point value between -1.0 and 1.0 representing the neutral position of the axis. Default value of the field is 0.0.</li>
+<li><b>pressed</b>, which is a floating-point value between -1.0 and 1.0 representing the fully pressed position of the axis. Default value of the field is 1.0.</li>
+</ul>
+</li>
+</ul>
+<div class="fragment"><div class="line">&quot;keys&quot;: [</div>
+<div class="line">    {</div>
+<div class="line">        &quot;scancode&quot;: &quot;A&quot;</div>
+<div class="line">    },</div>
+<div class="line">    {</div>
+<div class="line">        &quot;scancode&quot;: &quot;Left&quot;</div>
+<div class="line">    }</div>
+<div class="line">]</div>
+</div><!-- fragment --><ul>
+<li><b>keys</b>: The keys field is an array of objects that represent the keyboard keys mapping. Each object in the array has few fields<ul>
+<li><b>scancode</b>, which is a string representing the scancode of the key. The full list of valid values would be too long and you can find it in the InputMap.cpp source file. Here are few notable mentions: "W", "A", "S", "D", "Left", "Right", "Down", "Up", "Escape", "Space".</li>
+</ul>
+</li>
+</ul>
+<div class="fragment"><div class="line">&quot;buttons&quot;: [</div>
+<div class="line">    {</div>
+<div class="line">        &quot;controller&quot;: true,</div>
+<div class="line">        &quot;button&quot;: &quot;X&quot;</div>
+<div class="line">    }</div>
+<div class="line">]</div>
+</div><!-- fragment --><ul>
+<li><b>buttons</b>: The buttons field is an array of objects that represent the controller button mappings. Each object in the array has few fields<ul>
+<li><b>controller</b> which is a boolean value indicating whether the axis is controlled by a controller. False indicates that the mapping is for generic joystick and true indicates mapping for a gamepad detected by SDL. Default value of the field is false.</li>
+<li><b>button</b>, for a controller the field contains button name and for generic joystick the field contains integer index of the button. Valid controller button names are "A", "B", "X", "Y", "Back", "Guide", "Start", "LeftStick", "RightStick", "LeftShoulder", "RightShoulder", "Up", "Down", "Left", "Right", "Misc1", "Paddle1", "Paddle2", "Paddle3", "Paddle4", "Touchpad". Default value of the field is "A" or 0.</li>
+</ul>
+</li>
+</ul>
+<div class="fragment"><div class="line">&quot;hats&quot;: [</div>
+<div class="line">    {</div>
+<div class="line">        &quot;hat&quot;: &quot;Down&quot;</div>
+<div class="line">    }</div>
+<div class="line">]</div>
+</div><!-- fragment --><ul>
+<li><b>hats</b>: The field is an array of objects that represent DPad mappings.<ul>
+<li><b>hat</b>, which is a string representing DPad direction. Valid values are "Up", "Right", "Down", "Left". Default value of the field is "Up".</li>
+</ul>
+</li>
+</ul>
+<div class="fragment"><div class="line">&quot;mouseButtons&quot;: [</div>
+<div class="line">    {</div>
+<div class="line">        &quot;button&quot;: &quot;Right&quot;</div>
+<div class="line">    }</div>
+<div class="line">]</div>
+</div><!-- fragment --><ul>
+<li><b>mouseButtons</b>: The field is an array of objects that represent mouse button mappings.<ul>
+<li><b>button</b>, which is a string representing mouse button. Valid values are "Left", "Middle", "Right", "X1", "X2". Default value of the field is "Left". <div class="fragment"><div class="line">&quot;screenButtons&quot;: [</div>
+<div class="line">    {</div>
+<div class="line">        &quot;elementName&quot;: &quot;Button1&quot;</div>
+<div class="line">    }</div>
+<div class="line">]</div>
+</div><!-- fragment --></li>
+</ul>
+</li>
+<li><b>screenButtons</b>: The field is an array of objects that represent screen button mappings.<ul>
+<li><b>elementName</b>, which is a string representing UI UIElement id. </li>
+</ul>
+</li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
