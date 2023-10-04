@@ -5,6 +5,7 @@ var class_urho3_d_1_1_x_r_binding =
     [ "GetBool", "class_urho3_d_1_1_x_r_binding.html#a42d07cc791b2921a824bc59b68e6a1a7", null ],
     [ "GetBool", "class_urho3_d_1_1_x_r_binding.html#ae8bf7523703fc793efaa6fb05c80224f", null ],
     [ "GetData", "class_urho3_d_1_1_x_r_binding.html#aa33a6fc3a783ce18252dcfc1835cf705", null ],
+    [ "GetExpectedType", "class_urho3_d_1_1_x_r_binding.html#ac04fdd66b7c3081ef05a5f320477df26", null ],
     [ "GetFloat", "class_urho3_d_1_1_x_r_binding.html#adb1f0fd045873486d076ff9404dbf012", null ],
     [ "GetHand", "class_urho3_d_1_1_x_r_binding.html#acd1b30d3c22481f4f00cbcb64ebeec3c", null ],
     [ "GetLinearVelocity", "class_urho3_d_1_1_x_r_binding.html#a6e62c4d41e0f46ae24ce99496cb5d56f", null ],

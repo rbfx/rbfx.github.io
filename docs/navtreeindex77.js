@@ -1,5 +1,6 @@
 var NAVTREEINDEX77 =
 {
+"struct_urho3_d_1_1_animation_track.html":[6,0,2,29],
 "struct_urho3_d_1_1_animation_track.html#a602c2d20309dcd737bfbf6522dec7e2d":[6,0,2,29,0],
 "struct_urho3_d_1_1_animation_track.html#a771c16ffe93a555c70b2d3cad7e19e3e":[6,0,2,29,1],
 "struct_urho3_d_1_1_animation_track.html#a8908add3b8fef1c89e52e58af79e0a45":[6,0,2,29,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html#abd93e591a3cf03bc3e569806a0660d0a":[6,0,2,96,0,1],
 "struct_urho3_d_1_1_bloom_pass_1_1_cached_textures.html":[6,0,2,96,1],
 "struct_urho3_d_1_1_bloom_pass_1_1_cached_textures.html#a01e284c506dff811142b6adbba5f85ac":[6,0,2,96,1,1],
-"struct_urho3_d_1_1_bloom_pass_1_1_cached_textures.html#ae6de14270736219b5f7b2987b878f884":[6,0,2,96,1,0],
-"struct_urho3_d_1_1_bloom_pass_settings.html":[6,0,2,97]
+"struct_urho3_d_1_1_bloom_pass_1_1_cached_textures.html#ae6de14270736219b5f7b2987b878f884":[6,0,2,96,1,0]
 };
