@@ -149,8 +149,6 @@ var wasmBinary;
 
 if (Module["wasmBinary"]) wasmBinary = Module["wasmBinary"];
 
-var noExitRuntime = Module["noExitRuntime"] || true;
-
 if (typeof WebAssembly != "object") {
  abort("no native wasm support detected");
 }
@@ -192,12 +190,6 @@ var __ATEXIT__ = [];
 var __ATPOSTRUN__ = [];
 
 var runtimeInitialized = false;
-
-var runtimeKeepaliveCounter = 0;
-
-function keepRuntimeAlive() {
- return noExitRuntime || runtimeKeepaliveCounter > 0;
-}
 
 function preRun() {
  if (Module["preRun"]) {
@@ -294,13 +286,15 @@ function removeRunDependency(id) {
 
 var dataURIPrefix = "data:application/octet-stream;base64,";
 
-function isDataURI(filename) {
- return filename.startsWith(dataURIPrefix);
-}
+/**
+ * Indicates whether filename is a base64 data URI.
+ * @noinline
+ */ var isDataURI = filename => filename.startsWith(dataURIPrefix);
 
-function isFileURI(filename) {
- return filename.startsWith("file://");
-}
+/**
+ * Indicates whether filename is delivered via file protocol (as opposed to http/https)
+ * @noinline
+ */ var isFileURI = filename => filename.startsWith("file://");
 
 var wasmBinaryFile;
 
@@ -714,6 +708,8 @@ var callRuntimeCallbacks = callbacks => {
   callbacks.shift()(Module);
  }
 };
+
+var noExitRuntime = Module["noExitRuntime"] || true;
 
 /**
      * @param {number} ptr
@@ -5059,9 +5055,21 @@ var throwUnboundTypeError = (message, types) => {
  throw new UnboundTypeError(`${message}: ` + unboundTypes.map(getTypeName).join([ ", " ]));
 };
 
+var getFunctionName = signature => {
+ signature = signature.trim();
+ const argsIndex = signature.indexOf("(");
+ if (argsIndex !== -1) {
+  assert(signature[signature.length - 1] == ")", "Parentheses for argument names should match.");
+  return signature.substr(0, argsIndex);
+ } else {
+  return signature;
+ }
+};
+
 var __embind_register_function = (name, argCount, rawArgTypesAddr, signature, rawInvoker, fn, isAsync) => {
  var argTypes = heap32VectorToArray(argCount, rawArgTypesAddr);
  name = readLatin1String(name);
+ name = getFunctionName(name);
  rawInvoker = embind__requireFunction(signature, rawInvoker);
  exposePublicSymbol(name, function() {
   throwUnboundTypeError(`Cannot call ${name} due to unbound types`, argTypes);
@@ -5604,6 +5612,10 @@ var handleException = e => {
  }
  quit_(1, e);
 };
+
+var runtimeKeepaliveCounter = 0;
+
+var keepRuntimeAlive = () => noExitRuntime || runtimeKeepaliveCounter > 0;
 
 var _proc_exit = code => {
  EXITSTATUS = code;
@@ -6200,7 +6212,7 @@ var EGL = {
    HEAP32[((numConfigs) >> 2)] = 1;
   }
   if (config && config_size > 0) {
-   HEAP32[((config) >> 2)] = 62002;
+   HEAPU32[((config) >> 2)] = 62002;
   }
   EGL.setErrorCode(12288);
   /* EGL_SUCCESS */ return 1;
@@ -10310,7 +10322,7 @@ var registerKeyEventCallback = (target, userData, useCapture, callbackfunc, even
  var keyEventHandlerFunc = e => {
   var keyEventData = JSEvents.keyEvent;
   HEAPF64[((keyEventData) >> 3)] = e.timeStamp;
-  var idx = keyEventData >> 2;
+  var idx = ((keyEventData) >> 2);
   HEAP32[idx + 2] = e.location;
   HEAP32[idx + 3] = e.ctrlKey;
   HEAP32[idx + 4] = e.shiftKey;
@@ -10350,7 +10362,7 @@ var _emscripten_set_main_loop_arg = (func, arg, fps, simulateInfiniteLoop) => {
 
 var fillMouseEventData = (eventStruct, e, target) => {
  HEAPF64[((eventStruct) >> 3)] = e.timeStamp;
- var idx = eventStruct >> 2;
+ var idx = ((eventStruct) >> 2);
  HEAP32[idx + 2] = e.screenX;
  HEAP32[idx + 3] = e.screenY;
  HEAP32[idx + 4] = e.clientX;
@@ -10502,7 +10514,7 @@ var registerTouchEventCallback = (target, userData, useCapture, callbackfunc, ev
   }
   var touchEvent = JSEvents.touchEvent;
   HEAPF64[((touchEvent) >> 3)] = e.timeStamp;
-  var idx = touchEvent >> 2;
+  var idx = ((touchEvent) >> 2);
   HEAP32[idx + 3] = e.ctrlKey;
   HEAP32[idx + 4] = e.shiftKey;
   HEAP32[idx + 5] = e.altKey;
@@ -12352,16 +12364,12 @@ function intArrayFromBase64(s) {
   var buf = Buffer.from(s, "base64");
   return new Uint8Array(buf.buffer, buf.byteOffset, buf.length);
  }
- try {
-  var decoded = atob(s);
-  var bytes = new Uint8Array(decoded.length);
-  for (var i = 0; i < decoded.length; ++i) {
-   bytes[i] = decoded.charCodeAt(i);
-  }
-  return bytes;
- } catch (_) {
-  throw new Error("Converting base64 string to bytes failed.");
+ var decoded = atob(s);
+ var bytes = new Uint8Array(decoded.length);
+ for (var i = 0; i < decoded.length; ++i) {
+  bytes[i] = decoded.charCodeAt(i);
  }
+ return bytes;
 }
 
 Module["addRunDependency"] = addRunDependency;
