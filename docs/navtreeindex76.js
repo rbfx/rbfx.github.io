@@ -1,5 +1,9 @@
 var NAVTREEINDEX76 =
 {
+"rendering-reflection-probes.html":[0,0,2,1,2,5],
+"rendering-resources.html":[0,0,2,1,3],
+"rendering-shaders.html":[0,0,2,1,3,4],
+"rendering-subsystems.html":[0,0,2,1,2,0],
 "rendering-techniques.html":[0,0,2,1,3,3],
 "rendering-textures.html":[0,0,2,1,3,2],
 "rendering-zones.html":[0,0,2,1,2,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX76 =
 "struct_urho3_d_1_1_animated_attribute_reference.html#ad8fa8017b02e12b6c26cf946208865d6":[6,0,2,18,7],
 "struct_urho3_d_1_1_animation_controller_1_1_animation_instance.html":[6,0,2,22,0],
 "struct_urho3_d_1_1_animation_controller_1_1_animation_instance.html#a371bb2e67698aa8be469354cafb1b5bd":[6,0,2,22,0,1],
-"struct_urho3_d_1_1_animation_controller_1_1_animation_instance.html#a8782767d30a830a38731ffc3b725e3d2":[6,0,2,22,0,0],
-"struct_urho3_d_1_1_animation_key_frame.html":[6,0,2,24],
-"struct_urho3_d_1_1_animation_key_frame.html#a420725c50447c000d9adcea97cfd83f5":[6,0,2,24,1],
-"struct_urho3_d_1_1_animation_key_frame.html#ae09a36e5739e0ca73934843edf9999c0":[6,0,2,24,2],
-"struct_urho3_d_1_1_animation_key_frame.html#af7afd1d81392c686f7e1403fa6b1397e":[6,0,2,24,0]
+"struct_urho3_d_1_1_animation_controller_1_1_animation_instance.html#a8782767d30a830a38731ffc3b725e3d2":[6,0,2,22,0,0]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX75 =
 {
+"class_urho3_d_1_1_x_r_binding.html#ae3ac1f2ab89cfd8a91f9967d12b39967":[6,0,2,827,33],
+"class_urho3_d_1_1_x_r_binding.html#ae8bf7523703fc793efaa6fb05c80224f":[6,0,2,827,3],
+"class_urho3_d_1_1_x_r_binding.html#af382501d784c390ec693e192bf35af08":[6,0,2,827,20],
+"class_urho3_d_1_1_xr_object_shared_ptr.html":[6,0,2,828],
 "class_urho3_d_1_1_xr_object_shared_ptr.html#a1f7c9efff432f37367ab6b6d8e493053":[6,0,2,828,0],
 "class_urho3_d_1_1_xr_object_shared_ptr.html#a56c940e2208e7e9eaab5b935c0a06889":[6,0,2,828,3],
 "class_urho3_d_1_1_xr_object_shared_ptr.html#aa36a1d810d45e0720edd2d8ade5f9288":[6,0,2,828,4],
@@ -212,8 +216,8 @@ var NAVTREEINDEX75 =
 "functions_~.html":[6,3,0,27],
 "graphics-and-rendering.html":[0,0,2,1],
 "hierarchy.html":[6,2],
-"index.html":[],
 "index.html":[0],
+"index.html":[],
 "input.html":[0,0,2,4],
 "low-level-transport.html":[0,0,2,2,0],
 "md__home_runner_work_rbfx-docs_rbfx-docs__r_e_a_d_m_e.html":[4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX75 =
 "rendering-low-level-api.html":[0,0,2,1,0],
 "rendering-materials.html":[0,0,2,1,3,1],
 "rendering-models.html":[0,0,2,1,3,0],
-"rendering-pipeline.html":[0,0,2,1,1],
-"rendering-reflection-probes.html":[0,0,2,1,2,5],
-"rendering-resources.html":[0,0,2,1,3],
-"rendering-shaders.html":[0,0,2,1,3,4],
-"rendering-subsystems.html":[0,0,2,1,2,0]
+"rendering-pipeline.html":[0,0,2,1,1]
 };
