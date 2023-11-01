@@ -1,5 +1,9 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_tetrahedron.html#ad5ea75d1422e5cbc14f8ac9ef38c7ec2":[6,0,2,712,3],
+"struct_urho3_d_1_1_tetrahedron.html#ae459df021947a99bf01091c49e9bd480":[6,0,2,712,4],
+"struct_urho3_d_1_1_tetrahedron.html#ae8dd0f76f08c378ddba10dd0220bb6fd":[6,0,2,712,5],
+"struct_urho3_d_1_1_text_params3_d.html":[6,0,2,715],
 "struct_urho3_d_1_1_text_params3_d.html#a1eb803e9f0798f2c9b84b92416228f5d":[6,0,2,715,8],
 "struct_urho3_d_1_1_text_params3_d.html#a1fdb4004542f0e3853c8275be23c710c":[6,0,2,715,7],
 "struct_urho3_d_1_1_text_params3_d.html#a28cc42ea8d828467b0defe8db0602568":[6,0,2,715,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX87 =
 "structfmt_1_1formatter_3_01_t_00_01char_00_01ea_1_1enable__if__t_3_01ea_1_1is__enum__v_3_01_t_01_4_01_4_01_4.html#a67c8330319fdb21daa1ff71fd24e3c75":[6,0,1,2,0],
 "structfmt_1_1formatter_3_01ea_1_1string_01_4.html":[6,0,1,0],
 "structfmt_1_1formatter_3_01ea_1_1string_01_4.html#a9d00cc0db451d47d33734e3b06565cdc":[6,0,1,0,0],
-"structfmt_1_1formatter_3_01ea_1_1string__view_01_4.html":[6,0,1,1],
-"structfmt_1_1formatter_3_01ea_1_1string__view_01_4.html#a2dc5ce68a6ea11d1d036ef99325f65e1":[6,0,1,1,0],
-"ui-overview.html":[0,0,2,5],
-"union_urho3_d_1_1_variant_value.html":[6,0,2,787],
-"union_urho3_d_1_1_variant_value.html#a07ae7940b142952c072ec3a8e04bca90":[6,0,2,787,8]
+"structfmt_1_1formatter_3_01ea_1_1string__view_01_4.html":[6,0,1,1]
 };

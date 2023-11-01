@@ -1,5 +1,9 @@
 var NAVTREEINDEX75 =
 {
+"class_urho3_d_1_1_x_r_binding.html#acdc801973ed84b7864eb88c126da1ae6":[6,0,2,827,18],
+"class_urho3_d_1_1_x_r_binding.html#ad48f4fec3b5c620a25e4a9612fa38d0b":[6,0,2,827,15],
+"class_urho3_d_1_1_x_r_binding.html#adb1f0fd045873486d076ff9404dbf012":[6,0,2,827,6],
+"class_urho3_d_1_1_x_r_binding.html#addf28b59c1d89b33f40c8c6a5774318c":[6,0,2,827,28],
 "class_urho3_d_1_1_x_r_binding.html#ae3ac1f2ab89cfd8a91f9967d12b39967":[6,0,2,827,33],
 "class_urho3_d_1_1_x_r_binding.html#ae8bf7523703fc793efaa6fb05c80224f":[6,0,2,827,3],
 "class_urho3_d_1_1_x_r_binding.html#af382501d784c390ec693e192bf35af08":[6,0,2,827,20],
@@ -126,8 +130,8 @@ var NAVTREEINDEX75 =
 "files.html":[7,0],
 "folder-structure.html":[0,0,1],
 "framework-overview.html":[0,0,2],
-"functions.html":[6,3,0],
 "functions.html":[6,3,0,0],
+"functions.html":[6,3,0],
 "functions_a.html":[6,3,0,1],
 "functions_b.html":[6,3,0,2],
 "functions_c.html":[6,3,0,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX75 =
 "rendering-components.html":[0,0,2,1,2],
 "rendering-geometries.html":[0,0,2,1,2,1],
 "rendering-light-probes.html":[0,0,2,1,2,4],
-"rendering-lights.html":[0,0,2,1,2,2],
-"rendering-low-level-api.html":[0,0,2,1,0],
-"rendering-materials.html":[0,0,2,1,3,1],
-"rendering-models.html":[0,0,2,1,3,0],
-"rendering-pipeline.html":[0,0,2,1,1]
+"rendering-lights.html":[0,0,2,1,2,2]
 };

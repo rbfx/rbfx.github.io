@@ -311,6 +311,9 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>UnregisterAttr
 <tr class="memitem:ab18d0b134fe9d04d95568871a928d7a2"><td class="memItemLeft" align="right" valign="top"><a id="ab18d0b134fe9d04d95568871a928d7a2"></a>
 static const AttributeHookFunction &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetAttributeHook</b> (const AttributeHookKey &amp;key)</td></tr>
 <tr class="separator:ab18d0b134fe9d04d95568871a928d7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab84b2ccf6240f244a4a0a6aae03c191c"><td class="memItemLeft" align="right" valign="top"><a id="ab84b2ccf6240f244a4a0a6aae03c191c"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>CopyAttributeHook</b> (const AttributeHookKey &amp;from, const AttributeHookKey &amp;to)</td></tr>
+<tr class="separator:ab84b2ccf6240f244a4a0a6aae03c191c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a23be231df9fcce192b781cd3c6365dc6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable_inspector_widget.html#a23be231df9fcce192b781cd3c6365dc6">RegisterObjectHook</a> (const ObjectHookKey &amp;key, const ObjectHookFunction &amp;function)</td></tr>
 <tr class="separator:a23be231df9fcce192b781cd3c6365dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -324,8 +327,20 @@ static const ObjectHookFunction &amp;&#160;</td><td class="memItemRight" valign=
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>CopyObjectHook</b> (const ObjectHookKey &amp;from, const ObjectHookKey &amp;to)</td></tr>
 <tr class="separator:a06b641646b784df8f65ae7df764dcd5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a7969592fb6a5bdba8391e15f58d01b22"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a7969592fb6a5bdba8391e15f58d01b22"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable_inspector_widget.html#a7969592fb6a5bdba8391e15f58d01b22">RegisterObjectHook</a> (ObjectHookType type, const ObjectHookFunction &amp;function)</td></tr>
+<tr class="memitem:a68e67cfe88915f4224f3df58cf8712aa"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a68e67cfe88915f4224f3df58cf8712aa"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable_inspector_widget.html#a68e67cfe88915f4224f3df58cf8712aa">RegisterAttributeHook</a> (const ea::string &amp;name, const AttributeHookFunction &amp;function)</td></tr>
+<tr class="separator:a68e67cfe88915f4224f3df58cf8712aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52a3cb13947142465384554e7c9b5b26"><td class="memTemplParams" colspan="2"><a id="a52a3cb13947142465384554e7c9b5b26"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a52a3cb13947142465384554e7c9b5b26"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>UnregisterAttributeHook</b> (const ea::string &amp;name)</td></tr>
+<tr class="separator:a52a3cb13947142465384554e7c9b5b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46fab5411caebe1a6e66fd443a1c6cfa"><td class="memTemplParams" colspan="2"><a id="a46fab5411caebe1a6e66fd443a1c6cfa"></a>
+template&lt;class T , class U &gt; </td></tr>
+<tr class="memitem:a46fab5411caebe1a6e66fd443a1c6cfa"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>CopyAttributeHook</b> (const ea::string &amp;name)</td></tr>
+<tr class="separator:a46fab5411caebe1a6e66fd443a1c6cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7969592fb6a5bdba8391e15f58d01b22"><td class="memTemplParams" colspan="2"><a id="a7969592fb6a5bdba8391e15f58d01b22"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a7969592fb6a5bdba8391e15f58d01b22"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RegisterObjectHook</b> (ObjectHookType type, const ObjectHookFunction &amp;function)</td></tr>
 <tr class="separator:a7969592fb6a5bdba8391e15f58d01b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67e9d37ea224fb4d2d5703b01c279b2b"><td class="memTemplParams" colspan="2"><a id="a67e9d37ea224fb4d2d5703b01c279b2b"></a>
 template&lt;class T &gt; </td></tr>
@@ -398,7 +413,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p><a class="el" href="class_urho3_d_1_1_system_u_i.html">SystemUI</a> widget used to edit materials. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6728f4582d1b3a46a88423cb7e4433ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6728f4582d1b3a46a88423cb7e4433ab">&#9670;&nbsp;</a></span>RegisterAttributeHook()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6728f4582d1b3a46a88423cb7e4433ab">&#9670;&nbsp;</a></span>RegisterAttributeHook() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -434,8 +449,47 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a68e67cfe88915f4224f3df58cf8712aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68e67cfe88915f4224f3df58cf8712aa">&#9670;&nbsp;</a></span>RegisterAttributeHook() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::SerializableInspectorWidget::RegisterAttributeHook </td>
+          <td>(</td>
+          <td class="paramtype">const ea::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AttributeHookFunction &amp;&#160;</td>
+          <td class="paramname"><em>function</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Template syntax sugar for hooks. </p>
+
+</div>
+</div>
 <a id="a23be231df9fcce192b781cd3c6365dc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23be231df9fcce192b781cd3c6365dc6">&#9670;&nbsp;</a></span>RegisterObjectHook() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a23be231df9fcce192b781cd3c6365dc6">&#9670;&nbsp;</a></span>RegisterObjectHook()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -468,45 +522,6 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Hooks used to customize object rendering. TODO: <a class="el" href="class_urho3_d_1_1_object.html">Object</a> hooks cannot change object's attributes (yet) </p>
-
-</div>
-</div>
-<a id="a7969592fb6a5bdba8391e15f58d01b22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7969592fb6a5bdba8391e15f58d01b22">&#9670;&nbsp;</a></span>RegisterObjectHook() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::SerializableInspectorWidget::RegisterObjectHook </td>
-          <td>(</td>
-          <td class="paramtype">ObjectHookType&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const ObjectHookFunction &amp;&#160;</td>
-          <td class="paramname"><em>function</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Template syntax sugar for hooks. </p>
 
 </div>
 </div>
