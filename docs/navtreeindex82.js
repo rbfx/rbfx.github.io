@@ -1,5 +1,6 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_light_processor_cache_settings.html#aeb539647fb73c6951e928ee43da3c83a":[6,0,2,364,4],
 "struct_urho3_d_1_1_lightmap_chart.html":[6,0,2,342],
 "struct_urho3_d_1_1_lightmap_chart.html#a035e5c387b4e7c738324d1a061dc70bd":[6,0,2,342,1],
 "struct_urho3_d_1_1_lightmap_chart.html#a20aa46340a1a306588cc18c102118113":[6,0,2,342,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_navigation_path_point.html#a401162867056b637ab62219d0b8f319d":[6,0,2,420,0],
 "struct_urho3_d_1_1_network_setting.html":[6,0,2,428],
 "struct_urho3_d_1_1_network_setting.html#a5064abdd17c6ade97718f45e6381ab23":[6,0,2,428,0],
-"struct_urho3_d_1_1_network_setting.html#ac0ea8aa8809660acf89c0c5d9fd4ea59":[6,0,2,428,1],
-"struct_urho3_d_1_1_network_value_sampler_1_1_interpolation_cache.html":[6,0,2,431,0]
+"struct_urho3_d_1_1_network_setting.html#ac0ea8aa8809660acf89c0c5d9fd4ea59":[6,0,2,428,1]
 };

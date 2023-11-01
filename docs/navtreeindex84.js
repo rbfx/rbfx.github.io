@@ -1,5 +1,6 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_particle_graph_span.html#a5586f7c8c933e849807210896083683c":[6,0,2,497,0],
 "struct_urho3_d_1_1_particle_graph_span.html#a5adf8ccae927b05999c3ce8734e2626e":[6,0,2,497,4],
 "struct_urho3_d_1_1_particle_graph_typed_pin.html":[6,0,2,499],
 "struct_urho3_d_1_1_particle_graph_typed_pin.html#a76fe33e12a00398e2bfa06a6b9030aaa":[6,0,2,499,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_replicated_transform_1_1_server_data.html#a0cc3dcadb2e0ed7dae258ee69fd9e8dd":[6,0,2,577,1,4],
 "struct_urho3_d_1_1_replicated_transform_1_1_server_data.html#a4fc97f4ab14ffb4d2c932f9af3672c90":[6,0,2,577,1,8],
 "struct_urho3_d_1_1_replicated_transform_1_1_server_data.html#a5e8667f2106228d211e5ac96dbeceed1":[6,0,2,577,1,7],
-"struct_urho3_d_1_1_replicated_transform_1_1_server_data.html#a60378f907a6e88b119356b74a23bc5b2":[6,0,2,577,1,0],
-"struct_urho3_d_1_1_replicated_transform_1_1_server_data.html#a8f5bf412921dce26a30715b28fcd535d":[6,0,2,577,1,6]
+"struct_urho3_d_1_1_replicated_transform_1_1_server_data.html#a60378f907a6e88b119356b74a23bc5b2":[6,0,2,577,1,0]
 };

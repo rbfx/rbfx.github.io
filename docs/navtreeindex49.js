@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"class_urho3_d_1_1_point_light_geometry_query.html#a8ebe3ea86ad69595d0e8bf487bfc378c":[6,0,2,525,2],
 "class_urho3_d_1_1_point_light_geometry_query.html#a967db625aa358ca021979aff642076a8":[6,0,2,525,6],
 "class_urho3_d_1_1_point_octree_query.html":[6,0,2,526],
 "class_urho3_d_1_1_point_octree_query.html#a6fcf3680c6a0c843ec369516e6eadd37":[6,0,2,526,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "class_urho3_d_1_1_progress_bar.html#a47347e9bdbb72e9b0b4b9a9318d9b5ae":[6,0,2,540,25],
 "class_urho3_d_1_1_progress_bar.html#a4d654864e847e0fe13c05e56c6a46708":[6,0,2,540,4],
 "class_urho3_d_1_1_progress_bar.html#a5aed48d511ef1e9e7a4df09e2bc3f8fe":[6,0,2,540,20],
-"class_urho3_d_1_1_progress_bar.html#a5ec52f598a6333cc4553e4bcfc00f8d9":[6,0,2,540,10],
-"class_urho3_d_1_1_progress_bar.html#a62fc5ec6cf37ebfaf730c2bdcf1a4fa9":[6,0,2,540,3]
+"class_urho3_d_1_1_progress_bar.html#a5ec52f598a6333cc4553e4bcfc00f8d9":[6,0,2,540,10]
 };

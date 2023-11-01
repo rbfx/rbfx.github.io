@@ -1,5 +1,6 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_i_k_arm_solver_1_1_local_cache.html#a08615f972c31807296870ecef4d888cd":[6,0,2,280,0,2],
 "struct_urho3_d_1_1_i_k_arm_solver_1_1_local_cache.html#a69c3b7ea0060bcaac831471946d867ea":[6,0,2,280,0,0],
 "struct_urho3_d_1_1_i_k_arm_solver_1_1_local_cache.html#a733df92f6e9451f7aad2cd80caf270ee":[6,0,2,280,0,1],
 "struct_urho3_d_1_1_i_k_arm_solver_1_1_local_cache.html#a93b388e5e73eccf4906f002dc4bb5b36":[6,0,2,280,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_light_processor_cache_settings.html#a3cf9991fa5b48b1af8615d123ae1be46":[6,0,2,364,2],
 "struct_urho3_d_1_1_light_processor_cache_settings.html#a60528f0a9c2825ccdba3bd36599d2152":[6,0,2,364,0],
 "struct_urho3_d_1_1_light_processor_cache_settings.html#a856fa6a515fbae4b1471ca4782a40588":[6,0,2,364,3],
-"struct_urho3_d_1_1_light_processor_cache_settings.html#a9ad4dfa770a49806b4afa4d71267a3ba":[6,0,2,364,1],
-"struct_urho3_d_1_1_light_processor_cache_settings.html#aeb539647fb73c6951e928ee43da3c83a":[6,0,2,364,4]
+"struct_urho3_d_1_1_light_processor_cache_settings.html#a9ad4dfa770a49806b4afa4d71267a3ba":[6,0,2,364,1]
 };

@@ -6,6 +6,7 @@ var class_urho3_d_1_1_packed_component_data =
     [ "GetType", "class_urho3_d_1_1_packed_component_data.html#a55274ea50cd8ca242e2036d18ba47b73", null ],
     [ "SpawnCopy", "class_urho3_d_1_1_packed_component_data.html#a9d11a6b384227e216f1f48d2919642ed", null ],
     [ "SpawnExact", "class_urho3_d_1_1_packed_component_data.html#a2efb2f14937704fef1f3e0f90b6e75bf", null ],
+    [ "Update", "class_urho3_d_1_1_packed_component_data.html#af76af4a3c3be2fea9461383f3ceb21aa", null ],
     [ "data_", "class_urho3_d_1_1_packed_component_data.html#af129c15aca854c260a978d31903bcc31", null ],
     [ "id_", "class_urho3_d_1_1_packed_component_data.html#a0db6f21a5f87aea91af48bc15bff18f3", null ],
     [ "indexInParent_", "class_urho3_d_1_1_packed_component_data.html#a8de4e79ee24487d89f0c47996e54d785", null ],
