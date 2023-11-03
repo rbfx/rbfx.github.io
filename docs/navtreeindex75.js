@@ -1,5 +1,6 @@
 var NAVTREEINDEX75 =
 {
+"class_urho3_d_1_1_x_r_binding.html#ac9bf52321900ca560941ab21d42b724e":[6,0,2,827,23],
 "class_urho3_d_1_1_x_r_binding.html#acd1b30d3c22481f4f00cbcb64ebeec3c":[6,0,2,827,7],
 "class_urho3_d_1_1_x_r_binding.html#acdc801973ed84b7864eb88c126da1ae6":[6,0,2,827,18],
 "class_urho3_d_1_1_x_r_binding.html#ad48f4fec3b5c620a25e4a9612fa38d0b":[6,0,2,827,15],
@@ -221,8 +222,8 @@ var NAVTREEINDEX75 =
 "functions_~.html":[6,3,0,27],
 "graphics-and-rendering.html":[0,0,2,1],
 "hierarchy.html":[6,2],
-"index.html":[],
 "index.html":[0],
+"index.html":[],
 "input.html":[0,0,2,4],
 "low-level-transport.html":[0,0,2,2,0],
 "md__home_runner_work_rbfx-docs_rbfx-docs__r_e_a_d_m_e.html":[4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX75 =
 "pages.html":[],
 "project-goals.html":[0,0,3],
 "rendering-components.html":[0,0,2,1,2],
-"rendering-geometries.html":[0,0,2,1,2,1],
-"rendering-light-probes.html":[0,0,2,1,2,4]
+"rendering-geometries.html":[0,0,2,1,2,1]
 };

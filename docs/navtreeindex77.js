@@ -1,5 +1,6 @@
 var NAVTREEINDEX77 =
 {
+"struct_urho3_d_1_1_animated_attribute_reference.html#a98bee5f116eeb5f3945a935aba37edf0":[6,0,2,18,4],
 "struct_urho3_d_1_1_animated_attribute_reference.html#a9a35831e68c0f2169b6c61cfca2bb71d":[6,0,2,18,0],
 "struct_urho3_d_1_1_animated_attribute_reference.html#ad8fa8017b02e12b6c26cf946208865d6":[6,0,2,18,7],
 "struct_urho3_d_1_1_animation_controller_1_1_animation_instance.html":[6,0,2,22,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_billboard.html#a5a7d3440eaccc295f0a8de5161363691":[6,0,2,88,7],
 "struct_urho3_d_1_1_billboard.html#a67ab68e30781f391c495589a47f2cc10":[6,0,2,88,4],
 "struct_urho3_d_1_1_billboard.html#a7149155e52988df7fc2ae9955f213a38":[6,0,2,88,0],
-"struct_urho3_d_1_1_billboard.html#ab1bc4b5b70c58bc55b04ec8a5e0e5b38":[6,0,2,88,1],
-"struct_urho3_d_1_1_billboard.html#ab6349a8e25ec5026637595b07bea97d3":[6,0,2,88,3]
+"struct_urho3_d_1_1_billboard.html#ab1bc4b5b70c58bc55b04ec8a5e0e5b38":[6,0,2,88,1]
 };

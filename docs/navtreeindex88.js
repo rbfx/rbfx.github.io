@@ -1,5 +1,6 @@
 var NAVTREEINDEX88 =
 {
+"structfmt_1_1formatter_3_01ea_1_1string_01_4.html#a9d00cc0db451d47d33734e3b06565cdc":[6,0,1,0,0],
 "structfmt_1_1formatter_3_01ea_1_1string__view_01_4.html":[6,0,1,1],
 "structfmt_1_1formatter_3_01ea_1_1string__view_01_4.html#a2dc5ce68a6ea11d1d036ef99325f65e1":[6,0,1,1,0],
 "ui-overview.html":[0,0,2,5],

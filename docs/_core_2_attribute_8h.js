@@ -12,6 +12,7 @@ var _core_2_attribute_8h =
       [ "AM_NODEIDVECTOR", "_core_2_attribute_8h.html#a6f24824b813f367db7cc1cc8dc1ee443a4d0c4e47a1b641d5ab543d57c11bec69", null ],
       [ "AM_READONLY", "_core_2_attribute_8h.html#a6f24824b813f367db7cc1cc8dc1ee443a14399d07c0fb96298bdbf77fa4edf3f6", null ],
       [ "AM_PREFAB", "_core_2_attribute_8h.html#a6f24824b813f367db7cc1cc8dc1ee443aefc612874016588e9ade6b5e75b4513d", null ],
+      [ "AM_TEMPORARY", "_core_2_attribute_8h.html#a6f24824b813f367db7cc1cc8dc1ee443a5882bd6dd3e2f7b0e726093a9e6ef154", null ],
       [ "AM_DEFAULT", "_core_2_attribute_8h.html#a6f24824b813f367db7cc1cc8dc1ee443a9c338908f14945849d56983fd0e6f649", null ]
     ] ],
     [ "AttributeScopeHint", "_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58", [
