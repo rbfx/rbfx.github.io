@@ -89,10 +89,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6bc0ecaf656d2452616e6cc41436bc83"><td class="memItemLeft" align="right" valign="top"><a id="a6bc0ecaf656d2452616e6cc41436bc83"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>PrefabResource</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
 <tr class="separator:a6bc0ecaf656d2452616e6cc41436bc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa70bf2c2fd08b410868ceb8f7f442e0c"><td class="memItemLeft" align="right" valign="top"><a id="aa70bf2c2fd08b410868ceb8f7f442e0c"></a>
-Node *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_prefab_resource.html#aa70bf2c2fd08b410868ceb8f7f442e0c">InstantiateReference</a> (Node *parentNode)</td></tr>
-<tr class="memdesc:aa70bf2c2fd08b410868ceb8f7f442e0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate prefab into a scene or node as <a class="el" href="class_urho3_d_1_1_prefab_reference.html" title="Component that instantiates prefab resource into the parent Node.">PrefabReference</a>. <br /></td></tr>
-<tr class="separator:aa70bf2c2fd08b410868ceb8f7f442e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a770d228252c5d9d33aa5c65e909ac1a2"><td class="memItemLeft" align="right" valign="top">Node *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_prefab_resource.html#a770d228252c5d9d33aa5c65e909ac1a2">InstantiateReference</a> (Node *parentNode, bool inplace=false)</td></tr>
+<tr class="separator:a770d228252c5d9d33aa5c65e909ac1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8a92a6ac022ba63e863a70f1f70a522"><td class="memItemLeft" align="right" valign="top"><a id="ab8a92a6ac022ba63e863a70f1f70a522"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>NormalizeIds</b> ()</td></tr>
 <tr class="separator:ab8a92a6ac022ba63e863a70f1f70a522"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -437,7 +435,37 @@ virtual <a class="el" href="_resource_8h.html#a0b9b6a0f7452bbd72abe7ae63fd772e3"
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Prefab resource. Constains representation of nodes and components with attributes, ready to be instantiated. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a770d228252c5d9d33aa5c65e909ac1a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a770d228252c5d9d33aa5c65e909ac1a2">&#9670;&nbsp;</a></span>InstantiateReference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Node * Urho3D::PrefabResource::InstantiateReference </td>
+          <td>(</td>
+          <td class="paramtype">Node *&#160;</td>
+          <td class="paramname"><em>parentNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>inplace</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Instantiate prefab into a scene or node as <a class="el" href="class_urho3_d_1_1_prefab_reference.html" title="Component that instantiates prefab resource into the parent Node.">PrefabReference</a>. If inplace, the prefab will be instantiated into the parent node directly, otherwise a new node will be created. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>Urho3D/Scene/PrefabResource.h</li>
 <li>Urho3D/Scene/PrefabResource.cpp</li>
 </ul>

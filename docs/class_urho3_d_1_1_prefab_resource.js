@@ -7,7 +7,7 @@ var class_urho3_d_1_1_prefab_resource =
     [ "GetNodePrefab", "class_urho3_d_1_1_prefab_resource.html#a3b4ba9b9401deb17bafc34033b4328a8", null ],
     [ "GetNodePrefabSlice", "class_urho3_d_1_1_prefab_resource.html#a3bd7b6d1c5f75df625f5ee4c9691993a", null ],
     [ "GetScenePrefab", "class_urho3_d_1_1_prefab_resource.html#ac8b030a86e76fd4911e9f7b285c93905", null ],
-    [ "InstantiateReference", "class_urho3_d_1_1_prefab_resource.html#aa70bf2c2fd08b410868ceb8f7f442e0c", null ],
+    [ "InstantiateReference", "class_urho3_d_1_1_prefab_resource.html#a770d228252c5d9d33aa5c65e909ac1a2", null ],
     [ "LoadLegacyXML", "class_urho3_d_1_1_prefab_resource.html#acb0980418d500532b4bb49b8e82c4cec", null ],
     [ "NormalizeIds", "class_urho3_d_1_1_prefab_resource.html#ab8a92a6ac022ba63e863a70f1f70a522", null ],
     [ "RegisterObject", "class_urho3_d_1_1_prefab_resource.html#aca89a3f0c671f3ca2e069fd564bf2c7d", null ],
