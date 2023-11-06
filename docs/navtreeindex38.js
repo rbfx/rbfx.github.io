@@ -1,5 +1,6 @@
 var NAVTREEINDEX38 =
 {
+"class_urho3_d_1_1_multitouch_adapter.html#a04673d757eebd40ce358a67380d3484f":[6,0,2,409,13],
 "class_urho3_d_1_1_multitouch_adapter.html#a331715badfe99a5ea061db5803848eaf":[6,0,2,409,2],
 "class_urho3_d_1_1_multitouch_adapter.html#a33ab6dd883888fdfd5b1086fd3e93b3d":[6,0,2,409,6],
 "class_urho3_d_1_1_multitouch_adapter.html#a3679746d0fe441310a688b2bf88c7530":[6,0,2,409,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX38 =
 "class_urho3_d_1_1_network_connection.html#a1ea3e000b0d786ae9b1d0117d4628522":[6,0,2,424,7],
 "class_urho3_d_1_1_network_connection.html#a250775e4a6ecf5938ada084b8537c798":[6,0,2,424,4],
 "class_urho3_d_1_1_network_connection.html#a30dfc14492652baf490cffcc0b923478":[6,0,2,424,13],
-"class_urho3_d_1_1_network_connection.html#a3cb488caf87c4af45316dfed096c92ae":[6,0,2,424,10],
-"class_urho3_d_1_1_network_connection.html#a4fe60485d70feb42ec228959fe7fb5f3":[6,0,2,424,3]
+"class_urho3_d_1_1_network_connection.html#a3cb488caf87c4af45316dfed096c92ae":[6,0,2,424,10]
 };

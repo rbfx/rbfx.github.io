@@ -1,5 +1,6 @@
 var NAVTREEINDEX75 =
 {
+"class_urho3_d_1_1_x_r_binding.html#ac8529142d06b5f14e533a91e51caa70f":[6,0,2,827,35],
 "class_urho3_d_1_1_x_r_binding.html#ac9bf52321900ca560941ab21d42b724e":[6,0,2,827,23],
 "class_urho3_d_1_1_x_r_binding.html#acd1b30d3c22481f4f00cbcb64ebeec3c":[6,0,2,827,7],
 "class_urho3_d_1_1_x_r_binding.html#acdc801973ed84b7864eb88c126da1ae6":[6,0,2,827,18],
@@ -132,8 +133,8 @@ var NAVTREEINDEX75 =
 "files.html":[7,0],
 "folder-structure.html":[0,0,1],
 "framework-overview.html":[0,0,2],
-"functions.html":[6,3,0],
 "functions.html":[6,3,0,0],
+"functions.html":[6,3,0],
 "functions_a.html":[6,3,0,1],
 "functions_b.html":[6,3,0,2],
 "functions_c.html":[6,3,0,3],
@@ -231,8 +232,8 @@ var NAVTREEINDEX75 =
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html":[2],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html":[3],
 "multiplayer-and-networking.html":[0,0,2,2],
-"namespace_urho3_d_1_1_actions.html":[5,0,0,0],
 "namespace_urho3_d_1_1_actions.html":[6,0,2,0],
+"namespace_urho3_d_1_1_actions.html":[5,0,0,0],
 "namespace_urho3_d_1_1_attribute_metadata.html":[5,0,0,1],
 "namespace_urho3_d_1_1_network_settings.html":[5,0,0,2],
 "namespace_urho3_d_1_1_shader_consts.html":[5,0,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX75 =
 "outdated-using-as-sdk.html":[0,0,6],
 "pages.html":[],
 "project-goals.html":[0,0,3],
-"rendering-components.html":[0,0,2,1,2],
-"rendering-geometries.html":[0,0,2,1,2,1]
+"rendering-components.html":[0,0,2,1,2]
 };

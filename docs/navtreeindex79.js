@@ -1,5 +1,6 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_cubemap_rendering_settings.html#a98d5ebf428d47c274e0a4054879b46c1":[6,0,2,164,4],
 "struct_urho3_d_1_1_cubemap_rendering_settings.html#ab1e2ae67d4db14aa299a239fcbc0591f":[6,0,2,164,3],
 "struct_urho3_d_1_1_cubemap_update_parameters.html":[6,0,2,165],
 "struct_urho3_d_1_1_cubemap_update_parameters.html#a05b56a66d716d60b67933e9cf11ecac3":[6,0,2,165,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#ac5ef8a80a1f02d0e0bf5316cd683c46f":[6,0,2,198,0,4],
 "struct_urho3_d_1_1_distance_and_normal.html":[6,0,2,200],
 "struct_urho3_d_1_1_distance_and_normal.html#a69d389aa00d892ae18800e1788839b26":[6,0,2,200,0],
-"struct_urho3_d_1_1_distance_and_normal.html#ad2f5c72e9e1997949322f5a6cd8f7653":[6,0,2,200,1],
-"struct_urho3_d_1_1_draw_quad_params.html":[6,0,2,207]
+"struct_urho3_d_1_1_distance_and_normal.html#ad2f5c72e9e1997949322f5a6cd8f7653":[6,0,2,200,1]
 };

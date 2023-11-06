@@ -22,6 +22,7 @@ var _math_defs_8h =
     [ "EncodeVariableLength", "_math_defs_8h.html#a28c58be05f222e3cfffa01d2823c2fa5", null ],
     [ "Equals", "_math_defs_8h.html#a74b20e5bc851ce0e9ff126beccec89a0", null ],
     [ "ExpSmoothing", "_math_defs_8h.html#ae1fc7447e55e645f9b93c378ef07c076", null ],
+    [ "ExpSmoothingInv", "_math_defs_8h.html#a07321a3d94dbf42d6d0766835f50f533", null ],
     [ "FloatToHalf", "_math_defs_8h.html#adfe2cdde6cde6bda23d54e727723c5c0", null ],
     [ "FloatToRawIntBits", "_math_defs_8h.html#aa1511b3d2184e720bf4d44fe6c082d64", null ],
     [ "Floor", "_math_defs_8h.html#ac9a0e9ed86b254401546e52cffff12f6", null ],

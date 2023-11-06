@@ -178,7 +178,8 @@ var annotated_dup =
         [ "TimelineKey", "struct_urho3_d_1_1_spriter_1_1_timeline_key.html", "struct_urho3_d_1_1_spriter_1_1_timeline_key" ]
       ] ],
       [ "Widgets", null, [
-        [ "EditVariantOptions", "struct_urho3_d_1_1_widgets_1_1_edit_variant_options.html", "struct_urho3_d_1_1_widgets_1_1_edit_variant_options" ]
+        [ "EditVariantOptions", "struct_urho3_d_1_1_widgets_1_1_edit_variant_options.html", "struct_urho3_d_1_1_widgets_1_1_edit_variant_options" ],
+        [ "ItemLabelScopeGuard", "struct_urho3_d_1_1_widgets_1_1_item_label_scope_guard.html", "struct_urho3_d_1_1_widgets_1_1_item_label_scope_guard" ]
       ] ],
       [ "AbstractConnection", "class_urho3_d_1_1_abstract_connection.html", "class_urho3_d_1_1_abstract_connection" ],
       [ "AbstractFile", "class_urho3_d_1_1_abstract_file.html", "class_urho3_d_1_1_abstract_file" ],

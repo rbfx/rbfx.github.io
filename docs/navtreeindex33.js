@@ -1,5 +1,6 @@
 var NAVTREEINDEX33 =
 {
+"class_urho3_d_1_1_kinematic_character_controller.html#ab1edf7ab335d28e56cb363553ae4a391":[6,0,2,332,46],
 "class_urho3_d_1_1_kinematic_character_controller.html#ab2310b6fd1e2fa9c2afc3041af9089ba":[6,0,2,332,89],
 "class_urho3_d_1_1_kinematic_character_controller.html#ab3bb781822a001a42ad42936742ea3cb":[6,0,2,332,11],
 "class_urho3_d_1_1_kinematic_character_controller.html#ab6a96fa7d9cb4b84ab7ed906add75a93":[6,0,2,332,88],
@@ -248,6 +249,5 @@ var NAVTREEINDEX33 =
 "class_urho3_d_1_1_light_processor.html#a9d3cc1cdb2dc651ecc77d4d6d96fc478":[6,0,2,362,17],
 "class_urho3_d_1_1_light_processor.html#abb3f434fc1fd2abfc31727ad7810631d":[6,0,2,362,41],
 "class_urho3_d_1_1_light_processor.html#ac121acc3083fffb23c4eedf735e5560c":[6,0,2,362,2],
-"class_urho3_d_1_1_light_processor.html#ac38a280652a1844c81771333ceb4d1ad":[6,0,2,362,12],
-"class_urho3_d_1_1_light_processor.html#ac489e875a6b4484a69cc6e0ffb52d34e":[6,0,2,362,20]
+"class_urho3_d_1_1_light_processor.html#ac38a280652a1844c81771333ceb4d1ad":[6,0,2,362,12]
 };

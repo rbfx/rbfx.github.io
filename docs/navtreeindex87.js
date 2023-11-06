@@ -1,5 +1,6 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_tetrahedron.html#aaeed13750eaef474cd76234c2997d23c":[6,0,2,712,6],
 "struct_urho3_d_1_1_tetrahedron.html#ab6e8f0f5e171786db8d19b5cf530c354":[6,0,2,712,2],
 "struct_urho3_d_1_1_tetrahedron.html#ac244cdd37cf5aeffc181b26b11963170":[6,0,2,712,7],
 "struct_urho3_d_1_1_tetrahedron.html#ad5ea75d1422e5cbc14f8ac9ef38c7ec2":[6,0,2,712,3],
@@ -220,6 +221,8 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_widgets_1_1_edit_variant_options.html#aabc8769f10f55d37bf924fc3dfb32a1f":[6,0,2,4,0,8],
 "struct_urho3_d_1_1_widgets_1_1_edit_variant_options.html#abd5f190a70302d48f10f43570bf68f26":[6,0,2,4,0,13],
 "struct_urho3_d_1_1_widgets_1_1_edit_variant_options.html#ad9dc10d6d435ef8eae2c26a80adf2b97":[6,0,2,4,0,16],
+"struct_urho3_d_1_1_widgets_1_1_item_label_scope_guard.html":[6,0,2,4,1],
+"struct_urho3_d_1_1_widgets_1_1_item_label_scope_guard.html#a6d6cf1dcd084def1a92c6d3555dd811f":[6,0,2,4,1,0],
 "struct_urho3_d_1_1_work_item.html":[6,0,2,811],
 "struct_urho3_d_1_1_work_item.html#a52c23aafbf38cf28ff0a7e4fd24d169d":[6,0,2,811,6],
 "struct_urho3_d_1_1_work_item.html#a6d19b2a36906d48e037326b0ffb7e660":[6,0,2,811,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX87 =
 "structeastl_1_1hash_3_01unordered__map_3_01_key_00_01_value_00_01_hash_00_01_predicate_00_01_all937d1afbf4610a3e75daa9643d61451a.html":[6,0,0,6],
 "structeastl_1_1hash_3_01unordered__map_3_01_key_00_01_value_00_01_hash_00_01_predicate_00_01_all937d1afbf4610a3e75daa9643d61451a.html#a0afff040c43312fc9babdf127094757a":[6,0,0,6,0],
 "structeastl_1_1hash_3_01vector_3_01_t_00_01_allocator_01_4_01_4.html":[6,0,0,7],
-"structeastl_1_1hash_3_01vector_3_01_t_00_01_allocator_01_4_01_4.html#ab1ca9f12ab45e276bfc60c52451193cb":[6,0,0,7,0],
-"structfmt_1_1formatter_3_01_t_00_01char_00_01ea_1_1enable__if__t_3_01ea_1_1is__enum__v_3_01_t_01_4_01_4_01_4.html":[6,0,1,2],
-"structfmt_1_1formatter_3_01_t_00_01char_00_01ea_1_1enable__if__t_3_01ea_1_1is__enum__v_3_01_t_01_4_01_4_01_4.html#a67c8330319fdb21daa1ff71fd24e3c75":[6,0,1,2,0],
-"structfmt_1_1formatter_3_01ea_1_1string_01_4.html":[6,0,1,0]
+"structeastl_1_1hash_3_01vector_3_01_t_00_01_allocator_01_4_01_4.html#ab1ca9f12ab45e276bfc60c52451193cb":[6,0,0,7,0]
 };

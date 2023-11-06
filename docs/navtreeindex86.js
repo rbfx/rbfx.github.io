@@ -1,5 +1,6 @@
 var NAVTREEINDEX86 =
 {
+"struct_urho3_d_1_1_spherical_harmonics_color9.html#a85cd7eb6fbc84d37da94770097dbf57c":[6,0,2,671,0],
 "struct_urho3_d_1_1_spherical_harmonics_color9.html#a8aea11d9a32d85ca9237e06a3b8d0cf6":[6,0,2,671,2],
 "struct_urho3_d_1_1_spherical_harmonics_color9.html#ab2ce1864da71b425defb16a61dd129dd":[6,0,2,671,4],
 "struct_urho3_d_1_1_spherical_harmonics_color9.html#acaab3580965c16a9d9fdaf9f66f11d5f":[6,0,2,671,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_tetrahedron.html#a1da98e81df03d9bfb783f9636e0d4c11":[6,0,2,712,8],
 "struct_urho3_d_1_1_tetrahedron.html#a40c3505d98ce617cdfee3eb12dcd8c4a":[6,0,2,712,0],
 "struct_urho3_d_1_1_tetrahedron.html#a445df9841d7c6e84656c205d6ed7f61a":[6,0,2,712,9],
-"struct_urho3_d_1_1_tetrahedron.html#a479cd05dff58a106eefd4a00f8c1fb5f":[6,0,2,712,1],
-"struct_urho3_d_1_1_tetrahedron.html#aaeed13750eaef474cd76234c2997d23c":[6,0,2,712,6]
+"struct_urho3_d_1_1_tetrahedron.html#a479cd05dff58a106eefd4a00f8c1fb5f":[6,0,2,712,1]
 };
