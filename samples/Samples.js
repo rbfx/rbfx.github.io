@@ -153,6 +153,19 @@ if (typeof WebAssembly != "object") {
  abort("no native wasm support detected");
 }
 
+function intArrayFromBase64(s) {
+ if (typeof ENVIRONMENT_IS_NODE != "undefined" && ENVIRONMENT_IS_NODE) {
+  var buf = Buffer.from(s, "base64");
+  return new Uint8Array(buf.buffer, buf.byteOffset, buf.length);
+ }
+ var decoded = atob(s);
+ var bytes = new Uint8Array(decoded.length);
+ for (var i = 0; i < decoded.length; ++i) {
+  bytes[i] = decoded.charCodeAt(i);
+ }
+ return bytes;
+}
+
 var wasmMemory;
 
 var ABORT = false;
@@ -392,14 +405,14 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 1927380: () => {
+ 1927460: () => {
   FS.syncfs(function(err) {
    if (err) {
     console.error(err);
    }
   });
  },
- 1927444: $0 => {
+ 1927524: $0 => {
   var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
   var reply = window.prompt(str, "i");
   if (reply === null) {
@@ -407,10 +420,10 @@ var ASM_CONSTS = {
   }
   return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
  },
- 1927669: ($0, $1) => {
+ 1927749: ($0, $1) => {
   alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
  },
- 1927726: () => {
+ 1927806: () => {
   if (typeof (AudioContext) !== "undefined") {
    return true;
   } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -418,7 +431,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1927873: () => {
+ 1927953: () => {
   if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
    return true;
   } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -426,7 +439,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1928107: $0 => {
+ 1928187: $0 => {
   if (typeof (Module["SDL2"]) === "undefined") {
    Module["SDL2"] = {};
   }
@@ -448,11 +461,11 @@ var ASM_CONSTS = {
   }
   return SDL2.audioContext === undefined ? -1 : 0;
  },
- 1928600: () => {
+ 1928680: () => {
   var SDL2 = Module["SDL2"];
   return SDL2.audioContext.sampleRate;
  },
- 1928668: ($0, $1, $2, $3) => {
+ 1928748: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   var have_microphone = function(stream) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -493,7 +506,7 @@ var ASM_CONSTS = {
    }, have_microphone, no_microphone);
   }
  },
- 1930320: ($0, $1, $2, $3) => {
+ 1930400: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
   SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -505,7 +518,7 @@ var ASM_CONSTS = {
   };
   SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
  },
- 1930730: ($0, $1) => {
+ 1930810: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
   for (var c = 0; c < numChannels; ++c) {
@@ -524,7 +537,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1931335: ($0, $1) => {
+ 1931415: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
   for (var c = 0; c < numChannels; ++c) {
@@ -537,7 +550,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1931815: $0 => {
+ 1931895: $0 => {
   var SDL2 = Module["SDL2"];
   if ($0) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -575,7 +588,7 @@ var ASM_CONSTS = {
    SDL2.audioContext = undefined;
   }
  },
- 1932987: ($0, $1, $2) => {
+ 1933067: ($0, $1, $2) => {
   var w = $0;
   var h = $1;
   var pixels = $2;
@@ -646,7 +659,7 @@ var ASM_CONSTS = {
   }
   SDL2.ctx.putImageData(SDL2.image, 0, 0);
  },
- 1934456: ($0, $1, $2, $3, $4) => {
+ 1934536: ($0, $1, $2, $3, $4) => {
   var w = $0;
   var h = $1;
   var hot_x = $2;
@@ -683,18 +696,18 @@ var ASM_CONSTS = {
   stringToUTF8(url, urlBuf, url.length + 1);
   return urlBuf;
  },
- 1935445: $0 => {
+ 1935525: $0 => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = UTF8ToString($0);
   }
  },
- 1935528: () => {
+ 1935608: () => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = "none";
   }
  },
- 1935597: () => window.innerWidth,
- 1935627: () => window.innerHeight
+ 1935677: () => window.innerWidth,
+ 1935707: () => window.innerHeight
 };
 
 /** @constructor */ function ExitStatus(status) {
@@ -1541,7 +1554,9 @@ var MEMFS = {
  if (dep) addRunDependency(dep);
 };
 
-var FS_createDataFile = (parent, name, fileData, canRead, canWrite, canOwn) => FS.createDataFile(parent, name, fileData, canRead, canWrite, canOwn);
+var FS_createDataFile = (parent, name, fileData, canRead, canWrite, canOwn) => {
+ FS.createDataFile(parent, name, fileData, canRead, canWrite, canOwn);
+};
 
 var preloadPlugins = Module["preloadPlugins"] || [];
 
@@ -3096,7 +3111,6 @@ var FS = {
    FS.close(stream);
    FS.chmod(node, mode);
   }
-  return node;
  },
  createDevice(parent, name, input, output) {
   var path = PATH.join2(typeof parent == "string" ? parent : FS.getPath(parent), name);
@@ -4790,21 +4804,9 @@ var __embind_register_float = (rawType, name, size) => {
  });
 };
 
-var char_0 = 48;
-
-var char_9 = 57;
-
-var makeLegalFunctionName = name => {
- if (undefined === name) {
-  return "_unknown";
- }
- name = name.replace(/[^a-zA-Z0-9_]/g, "$");
- var f = name.charCodeAt(0);
- if (f >= char_0 && f <= char_9) {
-  return `_${name}`;
- }
- return name;
-};
+var createNamedFunction = (name, body) => Object.defineProperty(body, "name", {
+ value: name
+});
 
 var runDestructors = destructors => {
  while (destructors.length) {
@@ -4813,15 +4815,6 @@ var runDestructors = destructors => {
   del(ptr);
  }
 };
-
-function createNamedFunction(name, body) {
- name = makeLegalFunctionName(name);
- return {
-  [name]: function() {
-   return body.apply(this, arguments);
-  }
- }[name];
-}
 
 function newFunc(constructor, argumentList) {
  if (!(constructor instanceof Function)) {
@@ -4863,7 +4856,7 @@ function craftInvokerFunction(humanName, argTypes, classType, cppInvokerFunc, cp
   argsList += (i !== 0 ? ", " : "") + "arg" + i;
   argsListWired += (i !== 0 ? ", " : "") + "arg" + i + "Wired";
  }
- var invokerFnBody = `\n        return function ${makeLegalFunctionName(humanName)}(${argsList}) {\n        if (arguments.length !== ${argCount - 2}) {\n          throwBindingError('function ${humanName} called with ' + arguments.length + ' arguments, expected ${argCount - 2}');\n        }`;
+ var invokerFnBody = `\n        return function (${argsList}) {\n        if (arguments.length !== ${argCount - 2}) {\n          throwBindingError('function ${humanName} called with ' + arguments.length + ' arguments, expected ${argCount - 2}');\n        }`;
  if (needsDestructorStack) {
   invokerFnBody += "var destructors = [];\n";
  }
@@ -4899,7 +4892,8 @@ function craftInvokerFunction(humanName, argTypes, classType, cppInvokerFunc, cp
  } else {}
  invokerFnBody += "}\n";
  args1.push(invokerFnBody);
- return newFunc(Function, args1).apply(null, args2);
+ var invokerFn = newFunc(Function, args1).apply(null, args2);
+ return createNamedFunction(humanName, invokerFn);
 }
 
 var ensureOverloadTable = (proto, methodName, humanName) => {
@@ -5059,7 +5053,6 @@ var getFunctionName = signature => {
  signature = signature.trim();
  const argsIndex = signature.indexOf("(");
  if (argsIndex !== -1) {
-  assert(signature[signature.length - 1] == ")", "Parentheses for argument names should match.");
   return signature.substr(0, argsIndex);
  } else {
   return signature;
@@ -5510,29 +5503,33 @@ var _emscripten_set_main_loop_timing = (mode, value) => {
   };
   Browser.mainLoop.method = "rAF";
  } else if (mode == 2) {
-  if (typeof setImmediate == "undefined") {
-   var setImmediates = [];
-   var emscriptenMainLoopMessageId = "setimmediate";
-   /** @param {Event} event */ var Browser_setImmediate_messageHandler = event => {
-    if (event.data === emscriptenMainLoopMessageId || event.data.target === emscriptenMainLoopMessageId) {
-     event.stopPropagation();
-     setImmediates.shift()();
-    }
-   };
-   addEventListener("message", Browser_setImmediate_messageHandler, true);
-   setImmediate = /** @type{function(function(): ?, ...?): number} */ (function Browser_emulated_setImmediate(func) {
-    setImmediates.push(func);
-    if (ENVIRONMENT_IS_WORKER) {
-     if (Module["setImmediates"] === undefined) Module["setImmediates"] = [];
-     Module["setImmediates"].push(func);
-     postMessage({
-      target: emscriptenMainLoopMessageId
-     });
-    } else  postMessage(emscriptenMainLoopMessageId, "*");
-   });
+  if (typeof Browser.setImmediate == "undefined") {
+   if (typeof setImmediate == "undefined") {
+    var setImmediates = [];
+    var emscriptenMainLoopMessageId = "setimmediate";
+    /** @param {Event} event */ var Browser_setImmediate_messageHandler = event => {
+     if (event.data === emscriptenMainLoopMessageId || event.data.target === emscriptenMainLoopMessageId) {
+      event.stopPropagation();
+      setImmediates.shift()();
+     }
+    };
+    addEventListener("message", Browser_setImmediate_messageHandler, true);
+    Browser.setImmediate = /** @type{function(function(): ?, ...?): number} */ (function Browser_emulated_setImmediate(func) {
+     setImmediates.push(func);
+     if (ENVIRONMENT_IS_WORKER) {
+      if (Module["setImmediates"] === undefined) Module["setImmediates"] = [];
+      Module["setImmediates"].push(func);
+      postMessage({
+       target: emscriptenMainLoopMessageId
+      });
+     } else postMessage(emscriptenMainLoopMessageId, "*");
+    });
+   } else {
+    Browser.setImmediate = setImmediate;
+   }
   }
   Browser.mainLoop.scheduler = function Browser_mainLoop_scheduler_setImmediate() {
-   setImmediate(Browser.mainLoop.runner);
+   Browser.setImmediate(Browser.mainLoop.runner);
   };
   Browser.mainLoop.method = "immediate";
  }
@@ -6474,6 +6471,11 @@ var GL = {
     GLctx.getExtension(ext);
    }
   });
+ },
+ getExtensions() {
+  var exts = GLctx.getSupportedExtensions() || [];
+  exts = exts.concat(exts.map(e => "GL_" + e));
+  return exts;
  }
 };
 
@@ -6875,7 +6877,7 @@ var _emscripten_async_wget2_abort = handle => {
  }
 };
 
-var _emscripten_async_wget2_data = (url, request, param, arg, free, onload, onerror, onprogress) => {
+var _emscripten_async_wget2_data = (url, request, param, userdata, free, onload, onerror, onprogress) => {
  var _url = UTF8ToString(url);
  var _request = UTF8ToString(request);
  var _param = UTF8ToString(param);
@@ -6890,30 +6892,30 @@ var _emscripten_async_wget2_data = (url, request, param, arg, free, onload, oner
     if (http.statusText) {
      statusText = stringToUTF8OnStack(http.statusText);
     }
-    getWasmTableEntry(onerror)(handle, arg, http.status, statusText);
+    getWasmTableEntry(onerror)(handle, userdata, http.status, statusText);
    });
   }
  }
- http.onload = function http_onload(e) {
+ http.onload = e => {
   if (http.status >= 200 && http.status < 300 || (http.status === 0 && _url.substr(0, 4).toLowerCase() != "http")) {
    var byteArray = new Uint8Array(/** @type{ArrayBuffer} */ (http.response));
    var buffer = _malloc(byteArray.length);
    HEAPU8.set(byteArray, buffer);
-   if (onload) getWasmTableEntry(onload)(handle, arg, buffer, byteArray.length);
+   if (onload) getWasmTableEntry(onload)(handle, userdata, buffer, byteArray.length);
    if (free) _free(buffer);
   } else {
    onerrorjs();
   }
   delete wget.wgetRequests[handle];
  };
- http.onerror = function http_onerror(e) {
+ http.onerror = e => {
   onerrorjs();
   delete wget.wgetRequests[handle];
  };
- http.onprogress = function http_onprogress(e) {
-  if (onprogress) getWasmTableEntry(onprogress)(handle, arg, e.loaded, e.lengthComputable || e.lengthComputable === undefined ? e.total : 0);
+ http.onprogress = e => {
+  if (onprogress) getWasmTableEntry(onprogress)(handle, userdata, e.loaded, e.lengthComputable || e.lengthComputable === undefined ? e.total : 0);
  };
- http.onabort = function http_onabort(e) {
+ http.onabort = e => {
   delete wget.wgetRequests[handle];
  };
  if (_request == "POST") {
@@ -8876,9 +8878,7 @@ var _emscripten_glGetShaderiv = _glGetShaderiv;
  if (!ret) {
   switch (name_) {
   case 7939:
-   /* GL_EXTENSIONS */ var exts = GLctx.getSupportedExtensions() || [];
-   exts = exts.concat(exts.map(e => "GL_" + e));
-   ret = stringToNewUTF8(exts.join(" "));
+   /* GL_EXTENSIONS */ ret = stringToNewUTF8(GL.getExtensions().join(" "));
    break;
 
   case 7936:
@@ -8889,7 +8889,7 @@ var _emscripten_glGetShaderiv = _glGetShaderiv;
    if (!s) {
     GL.recordError(1280);
    }
-   ret = s && stringToNewUTF8(s);
+   ret = s ? stringToNewUTF8(s) : 0;
    break;
 
   case 7938:
@@ -8936,13 +8936,7 @@ var _emscripten_glGetString = _glGetString;
  }
  switch (name) {
  case 7939:
-  /* GL_EXTENSIONS */ var exts = GLctx.getSupportedExtensions() || [];
-  exts = exts.concat(exts.map(function(e) {
-   return "GL_" + e;
-  }));
-  exts = exts.map(function(e) {
-   return stringToNewUTF8(e);
-  });
+  /* GL_EXTENSIONS */ var exts = GL.getExtensions().map(e => stringToNewUTF8(e));
   stringiCache = GL.stringiCache[name] = exts;
   if (index < 0 || index >= stringiCache.length) {
    GL.recordError(1281);
@@ -12258,8 +12252,6 @@ var setTempRet0 = a0 => (setTempRet0 = wasmExports["setTempRet0"])(a0);
 
 var ___getTypeName = a0 => (___getTypeName = wasmExports["__getTypeName"])(a0);
 
-var __embind_initialize_bindings = Module["__embind_initialize_bindings"] = () => (__embind_initialize_bindings = Module["__embind_initialize_bindings"] = wasmExports["_embind_initialize_bindings"])();
-
 var _setThrew = (a0, a1) => (_setThrew = wasmExports["setThrew"])(a0, a1);
 
 var stackSave = () => (stackSave = wasmExports["stackSave"])();
@@ -12357,19 +12349,6 @@ function invoke_vii(index, a1, a2) {
   if (e !== e + 0) throw e;
   _setThrew(1, 0);
  }
-}
-
-function intArrayFromBase64(s) {
- if (typeof ENVIRONMENT_IS_NODE != "undefined" && ENVIRONMENT_IS_NODE) {
-  var buf = Buffer.from(s, "base64");
-  return new Uint8Array(buf.buffer, buf.byteOffset, buf.length);
- }
- var decoded = atob(s);
- var bytes = new Uint8Array(decoded.length);
- for (var i = 0; i < decoded.length; ++i) {
-  bytes[i] = decoded.charCodeAt(i);
- }
- return bytes;
 }
 
 Module["addRunDependency"] = addRunDependency;
