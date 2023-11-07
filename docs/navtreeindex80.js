@@ -1,5 +1,6 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_distance_and_normal.html#ad2f5c72e9e1997949322f5a6cd8f7653":[6,0,2,200,1],
 "struct_urho3_d_1_1_draw_quad_params.html":[6,0,2,207],
 "struct_urho3_d_1_1_draw_quad_params.html#a3df25849ada0277c8b790aaf898ba834":[6,0,2,207,2],
 "struct_urho3_d_1_1_draw_quad_params.html#a46aab2688723a67b99b956a2207c3067":[6,0,2,207,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_high_precision_vector3.html#a5187edf0810ff25d934cd3d31f97b486":[6,0,2,275,2],
 "struct_urho3_d_1_1_high_precision_vector3.html#a6c3477035519f36b27c084ab1856e70c":[6,0,2,275,9],
 "struct_urho3_d_1_1_high_precision_vector3.html#a78774cf1e61f00ee6973abbcfd545dd8":[6,0,2,275,0],
-"struct_urho3_d_1_1_high_precision_vector3.html#a960fb0eb796f58fcbd4b0d262b98c9cb":[6,0,2,275,6],
-"struct_urho3_d_1_1_high_precision_vector3.html#af6c79e67164f25367c422a64117fa1cd":[6,0,2,275,7]
+"struct_urho3_d_1_1_high_precision_vector3.html#a960fb0eb796f58fcbd4b0d262b98c9cb":[6,0,2,275,6]
 };

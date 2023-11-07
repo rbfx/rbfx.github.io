@@ -33,6 +33,7 @@ var class_urho3_d_1_1_resource_cache =
     [ "GetTotalMemoryUse", "class_urho3_d_1_1_resource_cache.html#a305bfbd0e4115c4fc632b1b5ba3f3af7", null ],
     [ "HandleBeginFrame", "class_urho3_d_1_1_resource_cache.html#a8cc5a76256fc43875016a8ae85c15ab3", null ],
     [ "HandleFileChanged", "class_urho3_d_1_1_resource_cache.html#a05bb8c57c2a772bd5a18c35e48236ce9", null ],
+    [ "HandleReflectionRemoved", "class_urho3_d_1_1_resource_cache.html#aa94b613c465e0683f8feab752c07e1d1", null ],
     [ "IgnoreResourceReload", "class_urho3_d_1_1_resource_cache.html#a14c1de4a42077aef21add1a433bc5a55", null ],
     [ "IgnoreResourceReload", "class_urho3_d_1_1_resource_cache.html#ae56936c93a393c9ec5e496602b3d9f19", null ],
     [ "PrintMemoryUsage", "class_urho3_d_1_1_resource_cache.html#ab6998fa1b17b9bcac0636abcc1c6a65b", null ],
