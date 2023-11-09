@@ -1,5 +1,7 @@
 var NAVTREEINDEX76 =
 {
+"pages.html":[],
+"project-goals.html":[0,0,3],
 "rendering-components.html":[0,0,2,1,2],
 "rendering-geometries.html":[0,0,2,1,2,1],
 "rendering-light-probes.html":[0,0,2,1,2,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX76 =
 "struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#aeaec51b91e7d7897cf2e83b7dcabdfd9":[6,0,2,16,14],
 "struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#aed96bf114e27a7c4c4fd3a32465914a4":[6,0,2,16,4],
 "struct_urho3_d_1_1_animated_attribute_reference.html":[6,0,2,18],
-"struct_urho3_d_1_1_animated_attribute_reference.html#a0b1a5ef5af297479d31a24cc25605ce5":[6,0,2,18,6],
-"struct_urho3_d_1_1_animated_attribute_reference.html#a1a235db558950e3ee4d2260e22824032":[6,0,2,18,1],
-"struct_urho3_d_1_1_animated_attribute_reference.html#a6302d5089d876d951329909ac6717eaf":[6,0,2,18,5]
+"struct_urho3_d_1_1_animated_attribute_reference.html#a0b1a5ef5af297479d31a24cc25605ce5":[6,0,2,18,6]
 };

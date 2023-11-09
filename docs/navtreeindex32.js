@@ -1,5 +1,7 @@
 var NAVTREEINDEX32 =
 {
+"class_urho3_d_1_1_int_vector3.html#afff28df72b885d642a6f731710aee76e":[6,0,2,321,20],
+"class_urho3_d_1_1_internal_reflection_probe_data.html":[6,0,2,317],
 "class_urho3_d_1_1_internal_reflection_probe_data.html#a43e11e91efb9eac1040afbc33a6e1bbc":[6,0,2,317,6],
 "class_urho3_d_1_1_internal_reflection_probe_data.html#a9b102913cb50f36e93c29fb9a72473e5":[6,0,2,317,0],
 "class_urho3_d_1_1_internal_reflection_probe_data.html#ab53fcf659ae3de2b71e1a3e6e63e2bcd":[6,0,2,317,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX32 =
 "class_urho3_d_1_1_kinematic_character_controller.html#aa1a68c47e42e8e458444f7995f58f94c":[6,0,2,332,8],
 "class_urho3_d_1_1_kinematic_character_controller.html#aa31f4641dd38205e7326969c15b08aec":[6,0,2,332,86],
 "class_urho3_d_1_1_kinematic_character_controller.html#aa47a277548216e2d9f2c67812f9796dc":[6,0,2,332,76],
-"class_urho3_d_1_1_kinematic_character_controller.html#aa7e62f2d220942097086d40b9d654034":[6,0,2,332,49],
-"class_urho3_d_1_1_kinematic_character_controller.html#aaae69a13ad1bd91a5eaba7262fb7b623":[6,0,2,332,4],
-"class_urho3_d_1_1_kinematic_character_controller.html#ab1ac06e1028258eba0ed9dea6f1a6783":[6,0,2,332,22]
+"class_urho3_d_1_1_kinematic_character_controller.html#aa7e62f2d220942097086d40b9d654034":[6,0,2,332,49]
 };

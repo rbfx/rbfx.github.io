@@ -106,6 +106,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:aeef6c4ad3d3d3651df5d95b595838585"><td class="memItemLeft" align="right" valign="top"><a id="aeef6c4ad3d3d3651df5d95b595838585"></a>
 const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetTargetNames</b> () const</td></tr>
 <tr class="separator:aeef6c4ad3d3d3651df5d95b595838585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92896bd04b09e4d9a35ad9ac906e331f"><td class="memItemLeft" align="right" valign="top"><a id="a92896bd04b09e4d9a35ad9ac906e331f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetActive</b> (bool value)</td></tr>
+<tr class="separator:a92896bd04b09e4d9a35ad9ac906e331f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ac34dbf4dc40f2654a348c2cfccc4a7"><td class="memItemLeft" align="right" valign="top"><a id="a4ac34dbf4dc40f2654a348c2cfccc4a7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsActive</b> () const</td></tr>
+<tr class="separator:a4ac34dbf4dc40f2654a348c2cfccc4a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad35b707662417c4aa1bc1c514b2e1b6d"><td class="memItemLeft" align="right" valign="top"><a id="ad35b707662417c4aa1bc1c514b2e1b6d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPositionSticky</b> (bool value)</td></tr>
 <tr class="separator:ad35b707662417c4aa1bc1c514b2e1b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -706,9 +712,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateRecovery</b> ()
 <tr class="memitem:ad894b1ccce3d32a294bb7363d17ea0e5"><td class="memItemLeft" align="right" valign="top"><a id="ad894b1ccce3d32a294bb7363d17ea0e5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>CommitWorldTransforms</b> ()</td></tr>
 <tr class="separator:ad894b1ccce3d32a294bb7363d17ea0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ac34dbf4dc40f2654a348c2cfccc4a7"><td class="memItemLeft" align="right" valign="top"><a id="a4ac34dbf4dc40f2654a348c2cfccc4a7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsActive</b> () const</td></tr>
-<tr class="separator:a4ac34dbf4dc40f2654a348c2cfccc4a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3139c3f8d13c1689cb100b36d0c306a"><td class="memItemLeft" align="right" valign="top"><a id="af3139c3f8d13c1689cb100b36d0c306a"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>GetDistanceToNearestStuckTarget</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;worldPosition) const</td></tr>
 <tr class="separator:af3139c3f8d13c1689cb100b36d0c306a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -718,6 +721,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:afbc7f9b4ddfeff22d8db3eb5146c3187"><td class="memItemLeft" align="right" valign="top"><a id="afbc7f9b4ddfeff22d8db3eb5146c3187"></a>
 <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>targetNames_</b></td></tr>
 <tr class="separator:afbc7f9b4ddfeff22d8db3eb5146c3187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be6d455c4c0148c7e063a5707b5e7c8"><td class="memItemLeft" align="right" valign="top"><a id="a4be6d455c4c0148c7e063a5707b5e7c8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isActive_</b> {true}</td></tr>
+<tr class="separator:a4be6d455c4c0148c7e063a5707b5e7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a696e9bff2831e283f00d99c0e6a34fa7"><td class="memItemLeft" align="right" valign="top"><a id="a696e9bff2831e283f00d99c0e6a34fa7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isPositionSticky_</b> {true}</td></tr>
 <tr class="separator:a696e9bff2831e283f00d99c0e6a34fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
