@@ -164,6 +164,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a219e412aa90aa36b9c05872abf0608dc">DrawDebugGeometry</a> (<a class="el" href="class_urho3_d_1_1_debug_renderer.html">DebugRenderer</a> *debug, bool depthTest)</td></tr>
 <tr class="memdesc:a219e412aa90aa36b9c05872abf0608dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visualize the component as debug geometry. <br /></td></tr>
 <tr class="separator:a219e412aa90aa36b9c05872abf0608dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a3f68dca418f3a4687f771e899343d5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a3a3f68dca418f3a4687f771e899343d5">HasAuxiliaryData</a> () const</td></tr>
+<tr class="separator:a3a3f68dca418f3a4687f771e899343d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac326e479806e00aba61cdb393e89c8c5"><td class="memItemLeft" align="right" valign="top"><a id="ac326e479806e00aba61cdb393e89c8c5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#ac326e479806e00aba61cdb393e89c8c5">SerializeAuxiliaryData</a> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;archive)</td></tr>
+<tr class="memdesc:ac326e479806e00aba61cdb393e89c8c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize auxiliary data from/to the current block of the archive. May throw <a class="el" href="class_urho3_d_1_1_archive_exception.html">ArchiveException</a>. <br /></td></tr>
+<tr class="separator:ac326e479806e00aba61cdb393e89c8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84cc0be4504cc2234be4056ef7ffe976"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a84cc0be4504cc2234be4056ef7ffe976">SetEnabled</a> (bool enable)</td></tr>
 <tr class="separator:a84cc0be4504cc2234be4056ef7ffe976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cb217364df06d4886bfba9d3aec3bed"><td class="memItemLeft" align="right" valign="top"><a id="a9cb217364df06d4886bfba9d3aec3bed"></a>
@@ -672,6 +678,32 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </table>
 </div><div class="memdoc">
 <p>Return scene node. </p>
+
+</div>
+</div>
+<a id="a3a3f68dca418f3a4687f771e899343d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a3f68dca418f3a4687f771e899343d5">&#9670;&nbsp;</a></span>HasAuxiliaryData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Urho3D::Component::HasAuxiliaryData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return whether the component provides auxiliary data. Only components directly attached to the <a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a> can have auxiliary data. Auxiliary data is not supported in prefabs. </p>
 
 </div>
 </div>

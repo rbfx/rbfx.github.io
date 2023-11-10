@@ -1,5 +1,7 @@
 var NAVTREEINDEX76 =
 {
+"outdated-third-party.html":[0,0,5],
+"outdated-using-as-sdk.html":[0,0,6],
 "pages.html":[],
 "project-goals.html":[0,0,3],
 "rendering-components.html":[0,0,2,1,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX76 =
 "struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#aa7bd933861928281bfcbdb15393a0673":[6,0,2,16,2],
 "struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#ae53252783f91df305d74e119e5c76fe4":[6,0,2,16,13],
 "struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#aeaec51b91e7d7897cf2e83b7dcabdfd9":[6,0,2,16,14],
-"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#aed96bf114e27a7c4c4fd3a32465914a4":[6,0,2,16,4],
-"struct_urho3_d_1_1_animated_attribute_reference.html":[6,0,2,18],
-"struct_urho3_d_1_1_animated_attribute_reference.html#a0b1a5ef5af297479d31a24cc25605ce5":[6,0,2,18,6]
+"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#aed96bf114e27a7c4c4fd3a32465914a4":[6,0,2,16,4]
 };

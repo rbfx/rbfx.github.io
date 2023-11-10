@@ -1,5 +1,7 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_high_precision_vector3.html#a5187edf0810ff25d934cd3d31f97b486":[6,0,2,275,2],
+"struct_urho3_d_1_1_high_precision_vector3.html#a6c3477035519f36b27c084ab1856e70c":[6,0,2,275,9],
 "struct_urho3_d_1_1_high_precision_vector3.html#a78774cf1e61f00ee6973abbcfd545dd8":[6,0,2,275,0],
 "struct_urho3_d_1_1_high_precision_vector3.html#a960fb0eb796f58fcbd4b0d262b98c9cb":[6,0,2,275,6],
 "struct_urho3_d_1_1_high_precision_vector3.html#af6c79e67164f25367c422a64117fa1cd":[6,0,2,275,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_light_probe_collection_for_baking.html":[6,0,2,360],
 "struct_urho3_d_1_1_light_probe_collection_for_baking.html#a8987a965667ca2556958a9238e82f4fc":[6,0,2,360,1],
 "struct_urho3_d_1_1_light_probe_collection_for_baking.html#a89f6b15ca41b4e5a17487eee0c5d1d6f":[6,0,2,360,0],
-"struct_urho3_d_1_1_light_processor_cache_1_1_cached_light_processor.html":[6,0,2,363,0],
-"struct_urho3_d_1_1_light_processor_cache_1_1_cached_light_processor.html#ac8ff9dea204dbfcb605c99f30dae8732":[6,0,2,363,0,0],
-"struct_urho3_d_1_1_light_processor_cache_1_1_cached_light_processor.html#af6242d17bdd64b7a6fa4d302c7b9c96c":[6,0,2,363,0,1]
+"struct_urho3_d_1_1_light_processor_cache_1_1_cached_light_processor.html":[6,0,2,363,0]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"class_urho3_d_1_1_raytracer_scene.html#a28e1da7349798586a5767d6acd7cdde3":[6,0,2,549,8],
+"class_urho3_d_1_1_raytracer_scene.html#a2e8c94ebf5037136911ee7059538a20b":[6,0,2,549,14],
 "class_urho3_d_1_1_raytracer_scene.html#a3aebd1b1db7f5a81ff7b7b90ff35b2d7":[6,0,2,549,2],
 "class_urho3_d_1_1_raytracer_scene.html#a407ddbb8199a1dd76e7933db62831297":[6,0,2,549,9],
 "class_urho3_d_1_1_raytracer_scene.html#a4b74ed690f040e88ae9589a8212bb9fb":[6,0,2,549,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "class_urho3_d_1_1_render_buffer_manager.html#a5903ab498a016d5c312db73a400f3eb5":[6,0,2,563,66],
 "class_urho3_d_1_1_render_buffer_manager.html#a5e868780e6d3ca09a27e6a7e6af60cda":[6,0,2,563,3],
 "class_urho3_d_1_1_render_buffer_manager.html#a612a36bed3f7765da055830cc77f5a2e":[6,0,2,563,62],
-"class_urho3_d_1_1_render_buffer_manager.html#a66bd86450031fd38e4d8b2b29e00904d":[6,0,2,563,51],
-"class_urho3_d_1_1_render_buffer_manager.html#a6b2754456c998da3e1b99b3908620fcc":[6,0,2,563,63],
-"class_urho3_d_1_1_render_buffer_manager.html#a6beb388796a4229aaff079a24c36baf6":[6,0,2,563,49]
+"class_urho3_d_1_1_render_buffer_manager.html#a66bd86450031fd38e4d8b2b29e00904d":[6,0,2,563,51]
 };
