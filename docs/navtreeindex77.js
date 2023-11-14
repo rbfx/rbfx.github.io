@@ -1,5 +1,6 @@
 var NAVTREEINDEX77 =
 {
+"struct_urho3_d_1_1_ambient_occlusion_pass_settings.html#aed96bf114e27a7c4c4fd3a32465914a4":[6,0,2,16,4],
 "struct_urho3_d_1_1_animated_attribute_reference.html":[6,0,2,18],
 "struct_urho3_d_1_1_animated_attribute_reference.html#a0b1a5ef5af297479d31a24cc25605ce5":[6,0,2,18,6],
 "struct_urho3_d_1_1_animated_attribute_reference.html#a1a235db558950e3ee4d2260e22824032":[6,0,2,18,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_bias_parameters.html#a9c38767856c7fcc2d6db91f24d87f9f3":[6,0,2,87,0],
 "struct_urho3_d_1_1_bias_parameters.html#af20c7211a2598a75aa9cf2ebcdf58897":[6,0,2,87,3],
 "struct_urho3_d_1_1_bias_parameters.html#afaebb5818bfbfe65301d0d5369cbe9ad":[6,0,2,87,5],
-"struct_urho3_d_1_1_billboard.html":[6,0,2,88],
-"struct_urho3_d_1_1_billboard.html#a1df6e784e7e9f6e8c4858d311c43362f":[6,0,2,88,2]
+"struct_urho3_d_1_1_billboard.html":[6,0,2,88]
 };

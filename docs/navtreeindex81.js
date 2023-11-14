@@ -1,5 +1,6 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_high_precision_vector3.html#a3d23b766d6359c543893b74f560478f6":[6,0,2,275,8],
 "struct_urho3_d_1_1_high_precision_vector3.html#a5187edf0810ff25d934cd3d31f97b486":[6,0,2,275,2],
 "struct_urho3_d_1_1_high_precision_vector3.html#a6c3477035519f36b27c084ab1856e70c":[6,0,2,275,9],
 "struct_urho3_d_1_1_high_precision_vector3.html#a78774cf1e61f00ee6973abbcfd545dd8":[6,0,2,275,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_light_probe_collection_baked_data.html#afc33f3c9fdbcd4f774551b51c80a549b":[6,0,2,359,2],
 "struct_urho3_d_1_1_light_probe_collection_for_baking.html":[6,0,2,360],
 "struct_urho3_d_1_1_light_probe_collection_for_baking.html#a8987a965667ca2556958a9238e82f4fc":[6,0,2,360,1],
-"struct_urho3_d_1_1_light_probe_collection_for_baking.html#a89f6b15ca41b4e5a17487eee0c5d1d6f":[6,0,2,360,0],
-"struct_urho3_d_1_1_light_processor_cache_1_1_cached_light_processor.html":[6,0,2,363,0]
+"struct_urho3_d_1_1_light_probe_collection_for_baking.html#a89f6b15ca41b4e5a17487eee0c5d1d6f":[6,0,2,360,0]
 };

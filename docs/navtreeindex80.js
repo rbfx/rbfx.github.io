@@ -1,5 +1,6 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a8e53526a97593e28fbc9096bb1b5a2bd":[6,0,2,198,0,5],
 "struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a910b135e5c7a7b5d75f838ea3fda8c9e":[6,0,2,198,0,0],
 "struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#ac5ef8a80a1f02d0e0bf5316cd683c46f":[6,0,2,198,0,4],
 "struct_urho3_d_1_1_distance_and_normal.html":[6,0,2,200],
@@ -248,6 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_high_precision_vector3.html":[6,0,2,275],
 "struct_urho3_d_1_1_high_precision_vector3.html#a090c15225c7fe82a7b590fff1ed422f8":[6,0,2,275,1],
 "struct_urho3_d_1_1_high_precision_vector3.html#a298a50aa98673e39ce5598c2964f79a2":[6,0,2,275,4],
-"struct_urho3_d_1_1_high_precision_vector3.html#a2ea0e3d43e2cd0ee0b838739b9bc966b":[6,0,2,275,3],
-"struct_urho3_d_1_1_high_precision_vector3.html#a3d23b766d6359c543893b74f560478f6":[6,0,2,275,8]
+"struct_urho3_d_1_1_high_precision_vector3.html#a2ea0e3d43e2cd0ee0b838739b9bc966b":[6,0,2,275,3]
 };
