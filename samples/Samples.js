@@ -405,14 +405,14 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 1928596: () => {
+ 1928756: () => {
   FS.syncfs(function(err) {
    if (err) {
     console.error(err);
    }
   });
  },
- 1928660: $0 => {
+ 1928820: $0 => {
   var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
   var reply = window.prompt(str, "i");
   if (reply === null) {
@@ -420,10 +420,10 @@ var ASM_CONSTS = {
   }
   return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
  },
- 1928885: ($0, $1) => {
+ 1929045: ($0, $1) => {
   alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
  },
- 1928942: () => {
+ 1929102: () => {
   if (typeof (AudioContext) !== "undefined") {
    return true;
   } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -431,7 +431,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1929089: () => {
+ 1929249: () => {
   if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
    return true;
   } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -439,7 +439,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1929323: $0 => {
+ 1929483: $0 => {
   if (typeof (Module["SDL2"]) === "undefined") {
    Module["SDL2"] = {};
   }
@@ -461,11 +461,11 @@ var ASM_CONSTS = {
   }
   return SDL2.audioContext === undefined ? -1 : 0;
  },
- 1929816: () => {
+ 1929976: () => {
   var SDL2 = Module["SDL2"];
   return SDL2.audioContext.sampleRate;
  },
- 1929884: ($0, $1, $2, $3) => {
+ 1930044: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   var have_microphone = function(stream) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -506,7 +506,7 @@ var ASM_CONSTS = {
    }, have_microphone, no_microphone);
   }
  },
- 1931536: ($0, $1, $2, $3) => {
+ 1931696: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
   SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -518,7 +518,7 @@ var ASM_CONSTS = {
   };
   SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
  },
- 1931946: ($0, $1) => {
+ 1932106: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
   for (var c = 0; c < numChannels; ++c) {
@@ -537,7 +537,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1932551: ($0, $1) => {
+ 1932711: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
   for (var c = 0; c < numChannels; ++c) {
@@ -550,7 +550,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1933031: $0 => {
+ 1933191: $0 => {
   var SDL2 = Module["SDL2"];
   if ($0) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -588,7 +588,7 @@ var ASM_CONSTS = {
    SDL2.audioContext = undefined;
   }
  },
- 1934203: ($0, $1, $2) => {
+ 1934363: ($0, $1, $2) => {
   var w = $0;
   var h = $1;
   var pixels = $2;
@@ -659,7 +659,7 @@ var ASM_CONSTS = {
   }
   SDL2.ctx.putImageData(SDL2.image, 0, 0);
  },
- 1935672: ($0, $1, $2, $3, $4) => {
+ 1935832: ($0, $1, $2, $3, $4) => {
   var w = $0;
   var h = $1;
   var hot_x = $2;
@@ -696,18 +696,18 @@ var ASM_CONSTS = {
   stringToUTF8(url, urlBuf, url.length + 1);
   return urlBuf;
  },
- 1936661: $0 => {
+ 1936821: $0 => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = UTF8ToString($0);
   }
  },
- 1936744: () => {
+ 1936904: () => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = "none";
   }
  },
- 1936813: () => window.innerWidth,
- 1936843: () => window.innerHeight
+ 1936973: () => window.innerWidth,
+ 1937003: () => window.innerHeight
 };
 
 /** @constructor */ function ExitStatus(status) {
@@ -1810,9 +1810,7 @@ var IDBFS = {
  },
  loadRemoteEntry: (store, path, callback) => {
   var req = store.get(path);
-  req.onsuccess = event => {
-   callback(null, event.target.result);
-  };
+  req.onsuccess = event => callback(null, event.target.result);
   req.onerror = e => {
    callback(e.target.error);
    e.preventDefault();
@@ -1825,9 +1823,7 @@ var IDBFS = {
    callback(e);
    return;
   }
-  req.onsuccess = () => {
-   callback(null);
-  };
+  req.onsuccess = event => callback();
   req.onerror = e => {
    callback(e.target.error);
    e.preventDefault();
@@ -1835,9 +1831,7 @@ var IDBFS = {
  },
  removeRemoteEntry: (store, path, callback) => {
   var req = store.delete(path);
-  req.onsuccess = () => {
-   callback(null);
-  };
+  req.onsuccess = event => callback();
   req.onerror = e => {
    callback(e.target.error);
    e.preventDefault();
@@ -5387,7 +5381,7 @@ var __embind_register_void = (rawType, name) => {
  });
 };
 
-var nowIsMonotonic = true;
+var nowIsMonotonic = 1;
 
 var __emscripten_get_now_is_monotonic = () => nowIsMonotonic;
 
@@ -6170,7 +6164,7 @@ var EGL = {
   EGL.errorCode = code;
  },
  chooseConfig(display, attribList, config, config_size, numConfigs) {
-  if (display != 62e3) /* Magic ID for Emscripten 'default display' */ {
+  if (display != 62e3) {
    EGL.setErrorCode(12296);
    /* EGL_BAD_DISPLAY */ return 0;
   }
@@ -6446,9 +6440,15 @@ var GL = {
  },
  getContext: contextHandle => GL.contexts[contextHandle],
  deleteContext: contextHandle => {
-  if (GL.currentContext === GL.contexts[contextHandle]) GL.currentContext = null;
-  if (typeof JSEvents == "object") JSEvents.removeAllHandlersOnTarget(GL.contexts[contextHandle].GLctx.canvas);
-  if (GL.contexts[contextHandle] && GL.contexts[contextHandle].GLctx.canvas) GL.contexts[contextHandle].GLctx.canvas.GLctxObject = undefined;
+  if (GL.currentContext === GL.contexts[contextHandle]) {
+   GL.currentContext = null;
+  }
+  if (typeof JSEvents == "object") {
+   JSEvents.removeAllHandlersOnTarget(GL.contexts[contextHandle].GLctx.canvas);
+  }
+  if (GL.contexts[contextHandle] && GL.contexts[contextHandle].GLctx.canvas) {
+   GL.contexts[contextHandle].GLctx.canvas.GLctxObject = undefined;
+  }
   GL.contexts[contextHandle] = null;
  },
  initExtensions: context => {
@@ -6480,7 +6480,7 @@ var GL = {
 };
 
 var _eglCreateContext = (display, config, hmm, contextAttribs) => {
- if (display != 62e3) /* Magic ID for Emscripten 'default display' */ {
+ if (display != 62e3) {
   EGL.setErrorCode(12296);
   /* EGL_BAD_DISPLAY */ return 0;
  }
@@ -6513,18 +6513,18 @@ var _eglCreateContext = (display, config, hmm, contextAttribs) => {
   });
   GL.makeContextCurrent(null);
   return 62004;
- } else  {
+ } else {
   EGL.setErrorCode(12297);
   return 0;
  }
 };
 
 /* EGL_NO_CONTEXT */ var _eglCreateWindowSurface = (display, config, win, attrib_list) => {
- if (display != 62e3) /* Magic ID for Emscripten 'default display' */ {
+ if (display != 62e3) {
   EGL.setErrorCode(12296);
   /* EGL_BAD_DISPLAY */ return 0;
  }
- if (config != 62002) /* Magic ID for the only EGLConfig supported by Emscripten */ {
+ if (config != 62002) {
   EGL.setErrorCode(12293);
   /* EGL_BAD_CONFIG */ return 0;
  }
@@ -6533,11 +6533,11 @@ var _eglCreateContext = (display, config, hmm, contextAttribs) => {
 };
 
 /* Magic ID for Emscripten 'default surface' */ var _eglDestroyContext = (display, context) => {
- if (display != 62e3) /* Magic ID for Emscripten 'default display' */ {
+ if (display != 62e3) {
   EGL.setErrorCode(12296);
   /* EGL_BAD_DISPLAY */ return 0;
  }
- if (context != 62004) /* Magic ID for Emscripten EGLContext */ {
+ if (context != 62004) {
   EGL.setErrorCode(12294);
   /* EGL_BAD_CONTEXT */ return 0;
  }
@@ -6550,7 +6550,7 @@ var _eglCreateContext = (display, config, hmm, contextAttribs) => {
 };
 
 /* EGL_TRUE */ var _eglDestroySurface = (display, surface) => {
- if (display != 62e3) /* Magic ID for Emscripten 'default display' */ {
+ if (display != 62e3) {
   EGL.setErrorCode(12296);
   /* EGL_BAD_DISPLAY */ return 0;
  }
@@ -6569,11 +6569,11 @@ var _eglCreateContext = (display, config, hmm, contextAttribs) => {
 };
 
 /* Magic ID for Emscripten 'default surface' */ var _eglGetConfigAttrib = (display, config, attribute, value) => {
- if (display != 62e3) /* Magic ID for Emscripten 'default display' */ {
+ if (display != 62e3) {
   EGL.setErrorCode(12296);
   /* EGL_BAD_DISPLAY */ return 0;
  }
- if (config != 62002) /* Magic ID for the only EGLConfig supported by Emscripten */ {
+ if (config != 62002) {
   EGL.setErrorCode(12293);
   /* EGL_BAD_CONFIG */ return 0;
  }
@@ -6707,13 +6707,16 @@ var _eglCreateContext = (display, config, hmm, contextAttribs) => {
 
 var _eglGetDisplay = nativeDisplayType => {
  EGL.setErrorCode(12288);
+ if (nativeDisplayType != 0 && /* EGL_DEFAULT_DISPLAY */ nativeDisplayType != 1) /* see library_xlib.js */ {
+  return 0;
+ }
  return 62e3;
 };
 
 var _eglGetError = () => EGL.errorCode;
 
 var _eglInitialize = (display, majorVersion, minorVersion) => {
- if (display != 62e3) /* Magic ID for Emscripten 'default display' */ {
+ if (display != 62e3) {
   EGL.setErrorCode(12296);
   /* EGL_BAD_DISPLAY */ return 0;
  }
@@ -6729,11 +6732,11 @@ var _eglInitialize = (display, majorVersion, minorVersion) => {
 };
 
 var _eglMakeCurrent = (display, draw, read, context) => {
- if (display != 62e3) /* Magic ID for Emscripten 'default display' */ {
+ if (display != 62e3) {
   EGL.setErrorCode(12296);
   /* EGL_BAD_DISPLAY */ return 0;
  }
- if (context != 0 && context != 62004) /* Magic ID for Emscripten EGLContext */ {
+ if (context != 0 && context != 62004) {
   EGL.setErrorCode(12294);
   /* EGL_BAD_CONTEXT */ return 0;
  }
@@ -6750,7 +6753,7 @@ var _eglMakeCurrent = (display, draw, read, context) => {
 };
 
 /* EGL_TRUE */ var _eglQueryString = (display, name) => {
- if (display != 62e3) /* Magic ID for Emscripten 'default display' */ {
+ if (display != 62e3) {
   EGL.setErrorCode(12296);
   /* EGL_BAD_DISPLAY */ return 0;
  }
@@ -6797,7 +6800,7 @@ var _eglSwapBuffers = (dpy, surface) => {
 };
 
 /* EGL_FALSE */ var _eglSwapInterval = (display, interval) => {
- if (display != 62e3) /* Magic ID for Emscripten 'default display' */ {
+ if (display != 62e3) {
   EGL.setErrorCode(12296);
   /* EGL_BAD_DISPLAY */ return 0;
  }
@@ -6807,7 +6810,7 @@ var _eglSwapBuffers = (dpy, surface) => {
 };
 
 var _eglTerminate = display => {
- if (display != 62e3) /* Magic ID for Emscripten 'default display' */ {
+ if (display != 62e3) {
   EGL.setErrorCode(12296);
   /* EGL_BAD_DISPLAY */ return 0;
  }
@@ -8363,7 +8366,7 @@ var emscriptenWebGLGet = (name_, p, type) => {
  case 33309:
   if (GL.currentContext.version < 2) {
    GL.recordError(1282);
-   return;
+   /* GL_INVALID_OPERATION */ return;
   }
   var exts = GLctx.getSupportedExtensions() || [];
   ret = 2 * exts.length;
@@ -8448,7 +8451,7 @@ var emscriptenWebGLGet = (name_, p, type) => {
      ret = result.name | 0;
     } catch (e) {
      GL.recordError(1280);
-     err("GL_INVALID_ENUM in glGet" + type + "v: Unknown object returned from WebGL getParameter(" + name_ + ")! (error: " + e + ")");
+     err(`GL_INVALID_ENUM in glGet${type}v: Unknown object returned from WebGL getParameter(${name_})! (error: ${e})`);
      return;
     }
    }
@@ -8456,7 +8459,7 @@ var emscriptenWebGLGet = (name_, p, type) => {
 
   default:
    GL.recordError(1280);
-   err("GL_INVALID_ENUM in glGet" + type + "v: Native code calling glGet" + type + "v(" + name_ + ") and it returns " + result + " of type " + typeof (result) + "!");
+   err(`GL_INVALID_ENUM in glGet${type}v: Native code calling glGet${type}v(${name_}) and it returns ${result} of type ${typeof (result)}!`);
    return;
   }
  }
@@ -8479,9 +8482,7 @@ var emscriptenWebGLGet = (name_, p, type) => {
  }
 };
 
-/** @suppress {duplicate } */ var _glGetBooleanv = (name_, p) => {
- emscriptenWebGLGet(name_, p, 4);
-};
+/** @suppress {duplicate } */ var _glGetBooleanv = (name_, p) => emscriptenWebGLGet(name_, p, 4);
 
 var _emscripten_glGetBooleanv = _glGetBooleanv;
 
@@ -8529,9 +8530,7 @@ var _emscripten_glGetBufferPointerv = _glGetBufferPointerv;
 
 var _emscripten_glGetError = _glGetError;
 
-/** @suppress {duplicate } */ var _glGetFloatv = (name_, p) => {
- emscriptenWebGLGet(name_, p, 2);
-};
+/** @suppress {duplicate } */ var _glGetFloatv = (name_, p) => emscriptenWebGLGet(name_, p, 2);
 
 var _emscripten_glGetFloatv = _glGetFloatv;
 
@@ -8627,9 +8626,7 @@ var _emscripten_glGetInteger64v = _glGetInteger64v;
 
 var _emscripten_glGetIntegeri_v = _glGetIntegeri_v;
 
-/** @suppress {duplicate } */ var _glGetIntegerv = (name_, p) => {
- emscriptenWebGLGet(name_, p, 0);
-};
+/** @suppress {duplicate } */ var _glGetIntegerv = (name_, p) => emscriptenWebGLGet(name_, p, 0);
 
 var _emscripten_glGetIntegerv = _glGetIntegerv;
 
@@ -8894,8 +8891,8 @@ var _emscripten_glGetShaderiv = _glGetShaderiv;
 
   case 7938:
    /* GL_VERSION */ var glVersion = GLctx.getParameter(7938);
-   if (true) glVersion = "OpenGL ES 3.0 (" + glVersion + ")"; else {
-    glVersion = "OpenGL ES 2.0 (" + glVersion + ")";
+   if (true) glVersion = `OpenGL ES 3.0 (${glVersion})`; else {
+    glVersion = `OpenGL ES 2.0 (${glVersion})`;
    }
    ret = stringToNewUTF8(glVersion);
    break;
@@ -8906,7 +8903,7 @@ var _emscripten_glGetShaderiv = _glGetShaderiv;
    var ver_num = glslVersion.match(ver_re);
    if (ver_num !== null) {
     if (ver_num[1].length == 3) ver_num[1] = ver_num[1] + "0";
-    glslVersion = "OpenGL ES GLSL ES " + ver_num[1] + " (" + glslVersion + ")";
+    glslVersion = `OpenGL ES GLSL ES ${ver_num[1]} (${glslVersion})`;
    }
    ret = stringToNewUTF8(glslVersion);
    break;
@@ -9088,7 +9085,7 @@ var webglGetUniformLocation = location => {
  if (p) {
   var webglLoc = p.uniformLocsById[location];
   if (typeof webglLoc == "number") {
-   p.uniformLocsById[location] = webglLoc = GLctx.getUniformLocation(p, p.uniformArrayNamesById[location] + (webglLoc > 0 ? "[" + webglLoc + "]" : ""));
+   p.uniformLocsById[location] = webglLoc = GLctx.getUniformLocation(p, p.uniformArrayNamesById[location] + (webglLoc > 0 ? `[${webglLoc}]` : ""));
   }
   return webglLoc;
  } else {
@@ -11673,19 +11670,19 @@ init_emval();
 
 UnboundTypeError = Module["UnboundTypeError"] = extendError(Error, "UnboundTypeError");
 
-Module["requestFullscreen"] = (lockPointer, resizeCanvas) => Browser.requestFullscreen(lockPointer, resizeCanvas);
+Module["requestFullscreen"] = Browser.requestFullscreen;
 
-Module["requestAnimationFrame"] = func => Browser.requestAnimationFrame(func);
+Module["requestAnimationFrame"] = Browser.requestAnimationFrame;
 
-Module["setCanvasSize"] = (width, height, noUpdates) => Browser.setCanvasSize(width, height, noUpdates);
+Module["setCanvasSize"] = Browser.setCanvasSize;
 
-Module["pauseMainLoop"] = () => Browser.mainLoop.pause();
+Module["pauseMainLoop"] = Browser.mainLoop.pause;
 
-Module["resumeMainLoop"] = () => Browser.mainLoop.resume();
+Module["resumeMainLoop"] = Browser.mainLoop.resume;
 
-Module["getUserMedia"] = () => Browser.getUserMedia();
+Module["getUserMedia"] = Browser.getUserMedia;
 
-Module["createContext"] = (canvas, useWebGL, setInModule, webGLContextAttributes) => Browser.createContext(canvas, useWebGL, setInModule, webGLContextAttributes);
+Module["createContext"] = Browser.createContext;
 
 var preloadedImages = {};
 
