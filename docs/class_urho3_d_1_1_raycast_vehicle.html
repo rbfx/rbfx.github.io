@@ -63,6 +63,7 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_raycast_vehicle.html
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_urho3_d_1_1_raycast_vehicle-members.html">List of all members</a>  </div>
@@ -94,6 +95,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#aa7ed84f43568dfb73503e8785134351d">~RaycastVehicle</a> () override</td></tr>
 <tr class="memdesc:aa7ed84f43568dfb73503e8785134351d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
 <tr class="separator:aa7ed84f43568dfb73503e8785134351d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6a58eed8b68a4432e55f4e1567f57ee"><td class="memItemLeft" align="right" valign="top"><a id="ae6a58eed8b68a4432e55f4e1567f57ee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ae6a58eed8b68a4432e55f4e1567f57ee">DrawWheelDebugGeometry</a> (unsigned index, <a class="el" href="class_urho3_d_1_1_debug_renderer.html">DebugRenderer</a> *debug, bool depthTest) const</td></tr>
+<tr class="memdesc:ae6a58eed8b68a4432e55f4e1567f57ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visualize wheel as debug geometry. <br /></td></tr>
+<tr class="separator:ae6a58eed8b68a4432e55f4e1567f57ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e88fbea39f52e869b11d3e810a2a412"><td class="memItemLeft" align="right" valign="top"><a id="a1e88fbea39f52e869b11d3e810a2a412"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a1e88fbea39f52e869b11d3e810a2a412">OnSetEnabled</a> () override</td></tr>
 <tr class="memdesc:a1e88fbea39f52e869b11d3e810a2a412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle enabled/disabled state change. <br /></td></tr>
@@ -102,88 +107,64 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#adc47ce3c6093158230b3c09e36c35afc">ApplyAttributes</a> () override</td></tr>
 <tr class="memdesc:adc47ce3c6093158230b3c09e36c35afc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform post-load after deserialization. Acquire the components from the scene nodes. <br /></td></tr>
 <tr class="separator:adc47ce3c6093158230b3c09e36c35afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af981f15be395db66a1ae5cbdee4bbcc4"><td class="memItemLeft" align="right" valign="top"><a id="af981f15be395db66a1ae5cbdee4bbcc4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#af981f15be395db66a1ae5cbdee4bbcc4">AddWheel</a> (Node *wheelNode, <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> wheelDirection, <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> wheelAxle, float restLength, float wheelRadius, bool frontWheel)</td></tr>
-<tr class="memdesc:af981f15be395db66a1ae5cbdee4bbcc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a wheel. All parameters are relative to <a class="el" href="class_urho3_d_1_1_rigid_body.html" title="Physics rigid body component.">RigidBody</a> / node. <br /></td></tr>
-<tr class="separator:af981f15be395db66a1ae5cbdee4bbcc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac62e9dd5d47d1a59af5ef9591893b565"><td class="memItemLeft" align="right" valign="top"><a id="ac62e9dd5d47d1a59af5ef9591893b565"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ac62e9dd5d47d1a59af5ef9591893b565">ApplyWheelAttributes</a> (unsigned index)</td></tr>
+<tr class="memdesc:ac62e9dd5d47d1a59af5ef9591893b565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Immediately apply wheel attributes to physics. <br /></td></tr>
+<tr class="separator:ac62e9dd5d47d1a59af5ef9591893b565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32abf232b06af75374c6ebb594e740de"><td class="memItemLeft" align="right" valign="top"><a id="a32abf232b06af75374c6ebb594e740de"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a32abf232b06af75374c6ebb594e740de">AddWheel</a> (<a class="el" href="class_urho3_d_1_1_raycast_vehicle_wheel.html">RaycastVehicleWheel</a> *wheel)</td></tr>
+<tr class="memdesc:a32abf232b06af75374c6ebb594e740de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a wheel. <br /></td></tr>
+<tr class="separator:a32abf232b06af75374c6ebb594e740de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace70869a3e79f1a95e81921a49ba0ec0"><td class="memItemLeft" align="right" valign="top"><a id="ace70869a3e79f1a95e81921a49ba0ec0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ace70869a3e79f1a95e81921a49ba0ec0">RemoveWheel</a> (<a class="el" href="class_urho3_d_1_1_raycast_vehicle_wheel.html">RaycastVehicleWheel</a> *wheel)</td></tr>
+<tr class="memdesc:ace70869a3e79f1a95e81921a49ba0ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a wheel. <br /></td></tr>
+<tr class="separator:ace70869a3e79f1a95e81921a49ba0ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa150b8fec7c85da8d5589ca973d67cf"><td class="memItemLeft" align="right" valign="top"><a id="aaa150b8fec7c85da8d5589ca973d67cf"></a>
+<a class="el" href="class_urho3_d_1_1_raycast_vehicle_wheel.html">RaycastVehicleWheel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#aaa150b8fec7c85da8d5589ca973d67cf">GetWheel</a> (unsigned index) const</td></tr>
+<tr class="memdesc:aaa150b8fec7c85da8d5589ca973d67cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel. <br /></td></tr>
+<tr class="separator:aaa150b8fec7c85da8d5589ca973d67cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a790a9b5f3282c066ea6ede7fe2fe9fb1"><td class="memItemLeft" align="right" valign="top"><a id="a790a9b5f3282c066ea6ede7fe2fe9fb1"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a790a9b5f3282c066ea6ede7fe2fe9fb1">GetEngineForce</a> () const</td></tr>
+<tr class="memdesc:a790a9b5f3282c066ea6ede7fe2fe9fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum linear momentum supplied by engine to <a class="el" href="class_urho3_d_1_1_rigid_body.html" title="Physics rigid body component.">RigidBody</a>. <br /></td></tr>
+<tr class="separator:a790a9b5f3282c066ea6ede7fe2fe9fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af053b183a7e77d675805de3299197adc"><td class="memItemLeft" align="right" valign="top"><a id="af053b183a7e77d675805de3299197adc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#af053b183a7e77d675805de3299197adc">SetEngineForce</a> (float engineForce)</td></tr>
+<tr class="memdesc:af053b183a7e77d675805de3299197adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximum linear momentum supplied by engine to <a class="el" href="class_urho3_d_1_1_rigid_body.html" title="Physics rigid body component.">RigidBody</a>. <br /></td></tr>
+<tr class="separator:af053b183a7e77d675805de3299197adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded9708c4d071ff8d3ae3496be64c2ef"><td class="memItemLeft" align="right" valign="top"><a id="aded9708c4d071ff8d3ae3496be64c2ef"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#aded9708c4d071ff8d3ae3496be64c2ef">GetBrakingForce</a> () const</td></tr>
+<tr class="memdesc:aded9708c4d071ff8d3ae3496be64c2ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get rotational momentum preventing (dampening) wheels rotation. <br /></td></tr>
+<tr class="separator:aded9708c4d071ff8d3ae3496be64c2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5863144de998650b4465a920af75022"><td class="memItemLeft" align="right" valign="top"><a id="ac5863144de998650b4465a920af75022"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ac5863144de998650b4465a920af75022">SetBrakingForce</a> (float brakingForce)</td></tr>
+<tr class="memdesc:ac5863144de998650b4465a920af75022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rotational momentum preventing (dampening) wheels rotation. <br /></td></tr>
+<tr class="separator:ac5863144de998650b4465a920af75022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e090567c241fb2034e762988c9b563"><td class="memItemLeft" align="right" valign="top"><a id="a03e090567c241fb2034e762988c9b563"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a03e090567c241fb2034e762988c9b563">UpdateInput</a> (float steering, float engineForceFactor, float brakingForceFactor)</td></tr>
+<tr class="memdesc:a03e090567c241fb2034e762988c9b563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update input values for wheels. <br /></td></tr>
+<tr class="separator:a03e090567c241fb2034e762988c9b563"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e2e3792ddb12f51df7f785804084c1e"><td class="memItemLeft" align="right" valign="top"><a id="a8e2e3792ddb12f51df7f785804084c1e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a8e2e3792ddb12f51df7f785804084c1e">ResetSuspension</a> ()</td></tr>
 <tr class="memdesc:a8e2e3792ddb12f51df7f785804084c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset all suspension. <br /></td></tr>
 <tr class="separator:a8e2e3792ddb12f51df7f785804084c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68cb82935b12834bec8fa54b350c31b2"><td class="memItemLeft" align="right" valign="top"><a id="a68cb82935b12834bec8fa54b350c31b2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a68cb82935b12834bec8fa54b350c31b2">UpdateWheelTransform</a> (int wheel, bool interpolated)</td></tr>
-<tr class="memdesc:a68cb82935b12834bec8fa54b350c31b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update transform for particular wheel. <br /></td></tr>
-<tr class="separator:a68cb82935b12834bec8fa54b350c31b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92d99b123a3f09358a79e3f5041f6f35"><td class="memItemLeft" align="right" valign="top"><a id="a92d99b123a3f09358a79e3f5041f6f35"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a92d99b123a3f09358a79e3f5041f6f35">SetSteeringValue</a> (int wheel, float steeringValue)</td></tr>
-<tr class="memdesc:a92d99b123a3f09358a79e3f5041f6f35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set steering value of particular wheel. <br /></td></tr>
-<tr class="separator:a92d99b123a3f09358a79e3f5041f6f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80d64515e7b94ddb787101a8e8e3b5a9"><td class="memItemLeft" align="right" valign="top"><a id="a80d64515e7b94ddb787101a8e8e3b5a9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a80d64515e7b94ddb787101a8e8e3b5a9">SetWheelSuspensionStiffness</a> (int wheel, float stiffness)</td></tr>
-<tr class="memdesc:a80d64515e7b94ddb787101a8e8e3b5a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set suspension stiffness for particular wheel. <br /></td></tr>
-<tr class="separator:a80d64515e7b94ddb787101a8e8e3b5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9a8c64e842699441b958eb3640bed86"><td class="memItemLeft" align="right" valign="top"><a id="ad9a8c64e842699441b958eb3640bed86"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ad9a8c64e842699441b958eb3640bed86">SetWheelMaxSuspensionForce</a> (int wheel, float force)</td></tr>
-<tr class="memdesc:ad9a8c64e842699441b958eb3640bed86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set wheel max suspension force. Good results are often obtained by a value that is about 3x to 4x the vehicle weight. <br /></td></tr>
-<tr class="separator:ad9a8c64e842699441b958eb3640bed86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea57405a08cd4bedead8eb9ef3c1ab43"><td class="memItemLeft" align="right" valign="top"><a id="aea57405a08cd4bedead8eb9ef3c1ab43"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#aea57405a08cd4bedead8eb9ef3c1ab43">SetWheelDampingRelaxation</a> (int wheel, float damping)</td></tr>
-<tr class="memdesc:aea57405a08cd4bedead8eb9ef3c1ab43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set wheel damping relaxation. <br /></td></tr>
-<tr class="separator:aea57405a08cd4bedead8eb9ef3c1ab43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd4d7ab5516f8b2447ba2b4b65a75838"><td class="memItemLeft" align="right" valign="top"><a id="afd4d7ab5516f8b2447ba2b4b65a75838"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#afd4d7ab5516f8b2447ba2b4b65a75838">SetWheelDampingCompression</a> (int wheel, float compression)</td></tr>
-<tr class="memdesc:afd4d7ab5516f8b2447ba2b4b65a75838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set wheel damping compression. <br /></td></tr>
-<tr class="separator:afd4d7ab5516f8b2447ba2b4b65a75838"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabf29507a385b8ab58be843fec3c6f94"><td class="memItemLeft" align="right" valign="top"><a id="aabf29507a385b8ab58be843fec3c6f94"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#aabf29507a385b8ab58be843fec3c6f94">SetWheelFrictionSlip</a> (int wheel, float slip)</td></tr>
-<tr class="memdesc:aabf29507a385b8ab58be843fec3c6f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set wheel friction slip. <br /></td></tr>
-<tr class="separator:aabf29507a385b8ab58be843fec3c6f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f04499f21b162be602817d9cdb15e94"><td class="memItemLeft" align="right" valign="top"><a id="a3f04499f21b162be602817d9cdb15e94"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a3f04499f21b162be602817d9cdb15e94">SetWheelRollInfluence</a> (int wheel, float rollInfluence)</td></tr>
-<tr class="memdesc:a3f04499f21b162be602817d9cdb15e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set wheel roll influence. <br /></td></tr>
-<tr class="separator:a3f04499f21b162be602817d9cdb15e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7df6aad1fecb0586f1475dc5395e57af"><td class="memItemLeft" align="right" valign="top"><a id="a7df6aad1fecb0586f1475dc5395e57af"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a7df6aad1fecb0586f1475dc5395e57af">SetEngineForce</a> (int wheel, float force)</td></tr>
-<tr class="memdesc:a7df6aad1fecb0586f1475dc5395e57af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set engine force for the wheel. <br /></td></tr>
-<tr class="separator:a7df6aad1fecb0586f1475dc5395e57af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f6465373f503a666f60f5213a75c166"><td class="memItemLeft" align="right" valign="top"><a id="a5f6465373f503a666f60f5213a75c166"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a5f6465373f503a666f60f5213a75c166">SetBrake</a> (int wheel, float force)</td></tr>
-<tr class="memdesc:a5f6465373f503a666f60f5213a75c166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set hand brake (wheel rotation blocking force). <br /></td></tr>
-<tr class="separator:a5f6465373f503a666f60f5213a75c166"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1746bf455027a2eddc459d10d32138c"><td class="memItemLeft" align="right" valign="top"><a id="ab1746bf455027a2eddc459d10d32138c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ab1746bf455027a2eddc459d10d32138c">SetWheelRadius</a> (int wheel, float wheelRadius)</td></tr>
-<tr class="memdesc:ab1746bf455027a2eddc459d10d32138c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set wheel radius. <br /></td></tr>
-<tr class="separator:ab1746bf455027a2eddc459d10d32138c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e0099927ccacd0750812984c203a96c"><td class="memItemLeft" align="right" valign="top"><a id="a9e0099927ccacd0750812984c203a96c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a9e0099927ccacd0750812984c203a96c">ResetWheels</a> ()</td></tr>
 <tr class="memdesc:a9e0099927ccacd0750812984c203a96c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets node initial positions. <br /></td></tr>
 <tr class="separator:a9e0099927ccacd0750812984c203a96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46b0766c61d51f5f656d4e9317f530c8"><td class="memItemLeft" align="right" valign="top"><a id="a46b0766c61d51f5f656d4e9317f530c8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a46b0766c61d51f5f656d4e9317f530c8">SetWheelSkidInfo</a> (int wheel, float factor)</td></tr>
-<tr class="memdesc:a46b0766c61d51f5f656d4e9317f530c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set sliding factor 0 &lt;= x &lt;= 1. The less the value, more sliding. <br /></td></tr>
-<tr class="separator:a46b0766c61d51f5f656d4e9317f530c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7051418fae1cb117bc1d2c8a1b6a77e"><td class="memItemLeft" align="right" valign="top"><a id="aa7051418fae1cb117bc1d2c8a1b6a77e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#aa7051418fae1cb117bc1d2c8a1b6a77e">WheelIsGrounded</a> (int wheel) const</td></tr>
-<tr class="memdesc:aa7051418fae1cb117bc1d2c8a1b6a77e"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if wheel touches ground (raycast hits something). <br /></td></tr>
-<tr class="separator:aa7051418fae1cb117bc1d2c8a1b6a77e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a711463e9d89235185a93cfffd1d70e3d"><td class="memItemLeft" align="right" valign="top"><a id="a711463e9d89235185a93cfffd1d70e3d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a711463e9d89235185a93cfffd1d70e3d">SetMaxSuspensionTravel</a> (int wheel, float maxSuspensionTravel)</td></tr>
-<tr class="memdesc:a711463e9d89235185a93cfffd1d70e3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximum suspension travel value. <br /></td></tr>
-<tr class="separator:a711463e9d89235185a93cfffd1d70e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16249e49cb3f66f908e4766817a47b93"><td class="memItemLeft" align="right" valign="top"><a id="a16249e49cb3f66f908e4766817a47b93"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a16249e49cb3f66f908e4766817a47b93">SetWheelDirection</a> (int wheel, <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> direction)</td></tr>
-<tr class="memdesc:a16249e49cb3f66f908e4766817a47b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set wheel direction vector. <br /></td></tr>
-<tr class="separator:a16249e49cb3f66f908e4766817a47b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a915fa41ae3ecb2367b9632f94b12731f"><td class="memItemLeft" align="right" valign="top"><a id="a915fa41ae3ecb2367b9632f94b12731f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a915fa41ae3ecb2367b9632f94b12731f">SetWheelAxle</a> (int wheel, <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> axle)</td></tr>
-<tr class="memdesc:a915fa41ae3ecb2367b9632f94b12731f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set wheel axle vector. <br /></td></tr>
-<tr class="separator:a915fa41ae3ecb2367b9632f94b12731f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cf11a007a1f284a36841e5105d70135"><td class="memItemLeft" align="right" valign="top"><a id="a3cf11a007a1f284a36841e5105d70135"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a3cf11a007a1f284a36841e5105d70135">InvalidateStaticWheelParameters</a> (unsigned wheelIndex)</td></tr>
+<tr class="memdesc:a3cf11a007a1f284a36841e5105d70135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark wheel static data as dirty and update it before simulation. <br /></td></tr>
+<tr class="separator:a3cf11a007a1f284a36841e5105d70135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac99d78b922f46fcb5292e6a1e7eebee8"><td class="memItemLeft" align="right" valign="top"><a id="ac99d78b922f46fcb5292e6a1e7eebee8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ac99d78b922f46fcb5292e6a1e7eebee8">InvalidateDynamicWheelParameters</a> (unsigned wheelIndex)</td></tr>
+<tr class="memdesc:ac99d78b922f46fcb5292e6a1e7eebee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark wheel dynamic data as dirty and update it before simulation. <br /></td></tr>
+<tr class="separator:ac99d78b922f46fcb5292e6a1e7eebee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68cb82935b12834bec8fa54b350c31b2"><td class="memItemLeft" align="right" valign="top"><a id="a68cb82935b12834bec8fa54b350c31b2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a68cb82935b12834bec8fa54b350c31b2">UpdateWheelTransform</a> (int wheel, bool interpolated)</td></tr>
+<tr class="memdesc:a68cb82935b12834bec8fa54b350c31b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update transform for particular wheel. <br /></td></tr>
+<tr class="separator:a68cb82935b12834bec8fa54b350c31b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab41908b6af2105b743096a64551bbb7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ab41908b6af2105b743096a64551bbb7d">SetMaxSideSlipSpeed</a> (float speed)</td></tr>
 <tr class="separator:ab41908b6af2105b743096a64551bbb7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3345e1ff51fcd8c5f399eb321e1e90aa"><td class="memItemLeft" align="right" valign="top"><a id="a3345e1ff51fcd8c5f399eb321e1e90aa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a3345e1ff51fcd8c5f399eb321e1e90aa">SetWheelSkidInfoCumulative</a> (int wheel, float skid)</td></tr>
-<tr class="memdesc:a3345e1ff51fcd8c5f399eb321e1e90aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set cumulative skid info. <br /></td></tr>
-<tr class="separator:a3345e1ff51fcd8c5f399eb321e1e90aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a311759e072f5eb4bed939081c433d34f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a311759e072f5eb4bed939081c433d34f">SetInAirRPM</a> (float rpm)</td></tr>
 <tr class="separator:a311759e072f5eb4bed939081c433d34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d3498dae909b1e329365213bc9bf21e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a3d3498dae909b1e329365213bc9bf21e">SetCoordinateSystem</a> (const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;coordinateSystem=<a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a3d2336c76dc89cb18a63ba1ae4098105">RIGHT_FORWARD_UP</a>)</td></tr>
@@ -204,122 +185,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#af8fbffa173151c09fa798fac6eaf1b8d">PostUpdate</a> (float timeStep) override</td></tr>
 <tr class="memdesc:af8fbffa173151c09fa798fac6eaf1b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform variable step post-update. <br /></td></tr>
 <tr class="separator:af8fbffa173151c09fa798fac6eaf1b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a501393d2add01285dd6a3db72de87ebc"><td class="memItemLeft" align="right" valign="top"><a id="a501393d2add01285dd6a3db72de87ebc"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a501393d2add01285dd6a3db72de87ebc">GetWheelPosition</a> (int wheel)</td></tr>
-<tr class="memdesc:a501393d2add01285dd6a3db72de87ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel position relative to <a class="el" href="class_urho3_d_1_1_rigid_body.html" title="Physics rigid body component.">RigidBody</a>. <br /></td></tr>
-<tr class="separator:a501393d2add01285dd6a3db72de87ebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23d3ca7446bf71b76f36a0f178e6020f"><td class="memItemLeft" align="right" valign="top"><a id="a23d3ca7446bf71b76f36a0f178e6020f"></a>
-<a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a23d3ca7446bf71b76f36a0f178e6020f">GetWheelRotation</a> (int wheel)</td></tr>
-<tr class="memdesc:a23d3ca7446bf71b76f36a0f178e6020f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel rotation relative to <a class="el" href="class_urho3_d_1_1_rigid_body.html" title="Physics rigid body component.">RigidBody</a>. <br /></td></tr>
-<tr class="separator:a23d3ca7446bf71b76f36a0f178e6020f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc6cc926c4e77b4a3534dbb22d61619"><td class="memItemLeft" align="right" valign="top"><a id="aacc6cc926c4e77b4a3534dbb22d61619"></a>
+<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#aacc6cc926c4e77b4a3534dbb22d61619">GetWheelPosition</a> (int wheel) const</td></tr>
+<tr class="memdesc:aacc6cc926c4e77b4a3534dbb22d61619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel position relative to <a class="el" href="class_urho3_d_1_1_rigid_body.html" title="Physics rigid body component.">RigidBody</a>. <br /></td></tr>
+<tr class="separator:aacc6cc926c4e77b4a3534dbb22d61619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a487ba376f0adc77758b86b9d40a39e71"><td class="memItemLeft" align="right" valign="top"><a id="a487ba376f0adc77758b86b9d40a39e71"></a>
+<a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a487ba376f0adc77758b86b9d40a39e71">GetWheelRotation</a> (int wheel) const</td></tr>
+<tr class="memdesc:a487ba376f0adc77758b86b9d40a39e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel rotation relative to <a class="el" href="class_urho3_d_1_1_rigid_body.html" title="Physics rigid body component.">RigidBody</a>. <br /></td></tr>
+<tr class="separator:a487ba376f0adc77758b86b9d40a39e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe640b43d0bd8b5f17bfc5023e1527ee"><td class="memItemLeft" align="right" valign="top"><a id="abe640b43d0bd8b5f17bfc5023e1527ee"></a>
 <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#abe640b43d0bd8b5f17bfc5023e1527ee">GetWheelConnectionPoint</a> (int wheel) const</td></tr>
 <tr class="memdesc:abe640b43d0bd8b5f17bfc5023e1527ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel connection point relative to <a class="el" href="class_urho3_d_1_1_rigid_body.html" title="Physics rigid body component.">RigidBody</a>. <br /></td></tr>
 <tr class="separator:abe640b43d0bd8b5f17bfc5023e1527ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65a0ae7d5201ae6ebde6d6325ddb814d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a65a0ae7d5201ae6ebde6d6325ddb814d">GetNumWheels</a> () const</td></tr>
 <tr class="separator:a65a0ae7d5201ae6ebde6d6325ddb814d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abaed0ce987137448f728f74a21b25668"><td class="memItemLeft" align="right" valign="top"><a id="abaed0ce987137448f728f74a21b25668"></a>
-Node *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#abaed0ce987137448f728f74a21b25668">GetWheelNode</a> (int wheel) const</td></tr>
-<tr class="memdesc:abaed0ce987137448f728f74a21b25668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get node of the wheel. <br /></td></tr>
-<tr class="separator:abaed0ce987137448f728f74a21b25668"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f5040ade15d86b4711f1fc92be2c41d"><td class="memItemLeft" align="right" valign="top"><a id="a1f5040ade15d86b4711f1fc92be2c41d"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a1f5040ade15d86b4711f1fc92be2c41d">GetSteeringValue</a> (int wheel) const</td></tr>
-<tr class="memdesc:a1f5040ade15d86b4711f1fc92be2c41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get steering value of particular wheel. <br /></td></tr>
-<tr class="separator:a1f5040ade15d86b4711f1fc92be2c41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd792a0b5d85d809a3611f546f5b78f8"><td class="memItemLeft" align="right" valign="top"><a id="acd792a0b5d85d809a3611f546f5b78f8"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#acd792a0b5d85d809a3611f546f5b78f8">GetWheelSuspensionStiffness</a> (int wheel) const</td></tr>
-<tr class="memdesc:acd792a0b5d85d809a3611f546f5b78f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get suspension stiffness for particular wheel. <br /></td></tr>
-<tr class="separator:acd792a0b5d85d809a3611f546f5b78f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af502dc8b8aad32eda15a6450566e9711"><td class="memItemLeft" align="right" valign="top"><a id="af502dc8b8aad32eda15a6450566e9711"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#af502dc8b8aad32eda15a6450566e9711">GetWheelMaxSuspensionForce</a> (int wheel) const</td></tr>
-<tr class="memdesc:af502dc8b8aad32eda15a6450566e9711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel max suspension force. <br /></td></tr>
-<tr class="separator:af502dc8b8aad32eda15a6450566e9711"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8ddcaafd9ed33b178180c8291bd3b7d"><td class="memItemLeft" align="right" valign="top"><a id="ae8ddcaafd9ed33b178180c8291bd3b7d"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ae8ddcaafd9ed33b178180c8291bd3b7d">GetWheelDampingRelaxation</a> (int wheel) const</td></tr>
-<tr class="memdesc:ae8ddcaafd9ed33b178180c8291bd3b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel damping relaxation. <br /></td></tr>
-<tr class="separator:ae8ddcaafd9ed33b178180c8291bd3b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a369f3d6f9179838142820e1e315b3cde"><td class="memItemLeft" align="right" valign="top"><a id="a369f3d6f9179838142820e1e315b3cde"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a369f3d6f9179838142820e1e315b3cde">GetWheelDampingCompression</a> (int wheel) const</td></tr>
-<tr class="memdesc:a369f3d6f9179838142820e1e315b3cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel damping compression. <br /></td></tr>
-<tr class="separator:a369f3d6f9179838142820e1e315b3cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04e4c3c6f24526e3a78a76af8efa1c19"><td class="memItemLeft" align="right" valign="top"><a id="a04e4c3c6f24526e3a78a76af8efa1c19"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a04e4c3c6f24526e3a78a76af8efa1c19">GetWheelFrictionSlip</a> (int wheel) const</td></tr>
-<tr class="memdesc:a04e4c3c6f24526e3a78a76af8efa1c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel friction slip. <br /></td></tr>
-<tr class="separator:a04e4c3c6f24526e3a78a76af8efa1c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff389b9021e558a2c80a86b57f8b0ded"><td class="memItemLeft" align="right" valign="top"><a id="aff389b9021e558a2c80a86b57f8b0ded"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#aff389b9021e558a2c80a86b57f8b0ded">GetWheelRollInfluence</a> (int wheel) const</td></tr>
-<tr class="memdesc:aff389b9021e558a2c80a86b57f8b0ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel roll influence. <br /></td></tr>
-<tr class="separator:aff389b9021e558a2c80a86b57f8b0ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cd7c98ef98522369a099c8872102076"><td class="memItemLeft" align="right" valign="top"><a id="a6cd7c98ef98522369a099c8872102076"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a6cd7c98ef98522369a099c8872102076">GetEngineForce</a> (int wheel) const</td></tr>
-<tr class="memdesc:a6cd7c98ef98522369a099c8872102076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get engine force for the wheel. <br /></td></tr>
-<tr class="separator:a6cd7c98ef98522369a099c8872102076"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada7ad359e613452330dcfb3673ae88e1"><td class="memItemLeft" align="right" valign="top"><a id="ada7ad359e613452330dcfb3673ae88e1"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ada7ad359e613452330dcfb3673ae88e1">GetBrake</a> (int wheel) const</td></tr>
-<tr class="memdesc:ada7ad359e613452330dcfb3673ae88e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get hand brake value. <br /></td></tr>
-<tr class="separator:ada7ad359e613452330dcfb3673ae88e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0650eb5695ded0fa4003fd45419b886"><td class="memItemLeft" align="right" valign="top"><a id="aa0650eb5695ded0fa4003fd45419b886"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#aa0650eb5695ded0fa4003fd45419b886">GetWheelRadius</a> (int wheel) const</td></tr>
-<tr class="memdesc:aa0650eb5695ded0fa4003fd45419b886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel radius. <br /></td></tr>
-<tr class="separator:aa0650eb5695ded0fa4003fd45419b886"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a796b7aa3a3fea4bf4c0e5667890fe02a"><td class="memItemLeft" align="right" valign="top"><a id="a796b7aa3a3fea4bf4c0e5667890fe02a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a796b7aa3a3fea4bf4c0e5667890fe02a">SetWheelRestLength</a> (int wheel, float length)</td></tr>
-<tr class="memdesc:a796b7aa3a3fea4bf4c0e5667890fe02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel rest length. <br /></td></tr>
-<tr class="separator:a796b7aa3a3fea4bf4c0e5667890fe02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f7947587bdcb7e31d74a638948ede05"><td class="memItemLeft" align="right" valign="top"><a id="a1f7947587bdcb7e31d74a638948ede05"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a1f7947587bdcb7e31d74a638948ede05">GetWheelRestLength</a> (int wheel) const</td></tr>
-<tr class="memdesc:a1f7947587bdcb7e31d74a638948ede05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel rest length. <br /></td></tr>
-<tr class="separator:a1f7947587bdcb7e31d74a638948ede05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab66105cbc7c20d6a02b7d8e790817669"><td class="memItemLeft" align="right" valign="top"><a id="ab66105cbc7c20d6a02b7d8e790817669"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ab66105cbc7c20d6a02b7d8e790817669">GetMaxSuspensionTravel</a> (int wheel)</td></tr>
-<tr class="memdesc:ab66105cbc7c20d6a02b7d8e790817669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum suspension travel value. <br /></td></tr>
-<tr class="separator:ab66105cbc7c20d6a02b7d8e790817669"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe67b91f84e5ea31a948eab7eb04d83d"><td class="memItemLeft" align="right" valign="top"><a id="afe67b91f84e5ea31a948eab7eb04d83d"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#afe67b91f84e5ea31a948eab7eb04d83d">GetWheelAxle</a> (int wheel) const</td></tr>
-<tr class="memdesc:afe67b91f84e5ea31a948eab7eb04d83d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel axle vector. <br /></td></tr>
-<tr class="separator:afe67b91f84e5ea31a948eab7eb04d83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade1777d095d210ee858cb492dfb4ecec"><td class="memItemLeft" align="right" valign="top"><a id="ade1777d095d210ee858cb492dfb4ecec"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ade1777d095d210ee858cb492dfb4ecec">GetWheelSideSlipSpeed</a> (int wheel) const</td></tr>
-<tr class="memdesc:ade1777d095d210ee858cb492dfb4ecec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel slide speed. <br /></td></tr>
-<tr class="separator:ade1777d095d210ee858cb492dfb4ecec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae96fe5a5776238eea68fc845be4d363"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#aae96fe5a5776238eea68fc845be4d363">GetMaxSideSlipSpeed</a> () const</td></tr>
 <tr class="separator:aae96fe5a5776238eea68fc845be4d363"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5525534a76f60ce7909b7f022625c200"><td class="memItemLeft" align="right" valign="top"><a id="a5525534a76f60ce7909b7f022625c200"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a5525534a76f60ce7909b7f022625c200">GetWheelSkidInfo</a> (int wheel) const</td></tr>
-<tr class="memdesc:a5525534a76f60ce7909b7f022625c200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sliding factor 0 &lt;= x &lt;= 1. <br /></td></tr>
-<tr class="separator:a5525534a76f60ce7909b7f022625c200"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed2230aa074f7260e297b4231ec8fcf6"><td class="memItemLeft" align="right" valign="top"><a id="aed2230aa074f7260e297b4231ec8fcf6"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#aed2230aa074f7260e297b4231ec8fcf6">GetWheelDirection</a> (int wheel) const</td></tr>
-<tr class="memdesc:aed2230aa074f7260e297b4231ec8fcf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel direction vector. <br /></td></tr>
-<tr class="separator:aed2230aa074f7260e297b4231ec8fcf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaccb319c87a15d7b6c3c6eb1db476e6c"><td class="memItemLeft" align="right" valign="top"><a id="aaccb319c87a15d7b6c3c6eb1db476e6c"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#aaccb319c87a15d7b6c3c6eb1db476e6c">GetWheelSkidInfoCumulative</a> (int wheel) const</td></tr>
-<tr class="memdesc:aaccb319c87a15d7b6c3c6eb1db476e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get cumulative skid info. <br /></td></tr>
-<tr class="separator:aaccb319c87a15d7b6c3c6eb1db476e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ddc41fdb9c3743321d14edc6ce07109"><td class="memItemLeft" align="right" valign="top"><a id="a6ddc41fdb9c3743321d14edc6ce07109"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a6ddc41fdb9c3743321d14edc6ce07109">IsFrontWheel</a> (int wheel) const</td></tr>
-<tr class="memdesc:a6ddc41fdb9c3743321d14edc6ce07109"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if front wheel, otherwise false. <br /></td></tr>
-<tr class="separator:a6ddc41fdb9c3743321d14edc6ce07109"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed3776b4edbc1d41d16fb44b8b6d7000"><td class="memItemLeft" align="right" valign="top"><a id="aed3776b4edbc1d41d16fb44b8b6d7000"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#aed3776b4edbc1d41d16fb44b8b6d7000">GetContactPosition</a> (int wheel) const</td></tr>
-<tr class="memdesc:aed3776b4edbc1d41d16fb44b8b6d7000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel contact position. <br /></td></tr>
-<tr class="separator:aed3776b4edbc1d41d16fb44b8b6d7000"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d8f37727db2ca3f58aea19f3425a4ed"><td class="memItemLeft" align="right" valign="top"><a id="a7d8f37727db2ca3f58aea19f3425a4ed"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a7d8f37727db2ca3f58aea19f3425a4ed">GetContactNormal</a> (int wheel) const</td></tr>
-<tr class="memdesc:a7d8f37727db2ca3f58aea19f3425a4ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get contact normal. <br /></td></tr>
-<tr class="separator:a7d8f37727db2ca3f58aea19f3425a4ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae141037b1f900a0189ebbae4fef1ffd5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ae141037b1f900a0189ebbae4fef1ffd5">GetInAirRPM</a> () const</td></tr>
 <tr class="separator:ae141037b1f900a0189ebbae4fef1ffd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abacf3fbec0f81d7010e957ed2f25ddc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#abacf3fbec0f81d7010e957ed2f25ddc9">GetCoordinateSystem</a> () const</td></tr>
 <tr class="separator:abacf3fbec0f81d7010e957ed2f25ddc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb2e747a991eaef885084e2ee68918d2"><td class="memItemLeft" align="right" valign="top"><a id="afb2e747a991eaef885084e2ee68918d2"></a>
-<a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#afb2e747a991eaef885084e2ee68918d2">GetWheelDataAttr</a> () const</td></tr>
-<tr class="memdesc:afb2e747a991eaef885084e2ee68918d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get wheel data attribute for serialization. <br /></td></tr>
-<tr class="separator:afb2e747a991eaef885084e2ee68918d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb8e7db4c2151caed76274d2d81e2446"><td class="memItemLeft" align="right" valign="top"><a id="adb8e7db4c2151caed76274d2d81e2446"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#adb8e7db4c2151caed76274d2d81e2446">SetWheelDataAttr</a> (const <a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a> &amp;value)</td></tr>
-<tr class="memdesc:adb8e7db4c2151caed76274d2d81e2446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set wheel data attribute during loading. <br /></td></tr>
-<tr class="separator:adb8e7db4c2151caed76274d2d81e2446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_component.html">Urho3D::Component</a></td></tr>
 <tr class="memitem:a8fcb1334e846b73e7825777e0ffbd2d5 inherit pub_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a8fcb1334e846b73e7825777e0ffbd2d5"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a8fcb1334e846b73e7825777e0ffbd2d5">Component</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -710,6 +595,12 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
+<tr class="memitem:af7302230755e8411c802520dc07a0932"><td class="memItemLeft" align="right" valign="top"><a id="af7302230755e8411c802520dc07a0932"></a>
+constexpr static float&#160;</td><td class="memItemRight" valign="bottom"><b>DefaultBrakingForce</b> = 50.0f</td></tr>
+<tr class="separator:af7302230755e8411c802520dc07a0932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a534f3c412f5ea715e0d81da58c2e7e59"><td class="memItemLeft" align="right" valign="top"><a id="a534f3c412f5ea715e0d81da58c2e7e59"></a>
+constexpr static float&#160;</td><td class="memItemRight" valign="bottom"><b>DefaultEngineForce</b> = 2500.0f</td></tr>
+<tr class="separator:a534f3c412f5ea715e0d81da58c2e7e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8796870f0da70b0d9226c26a4affeae8"><td class="memItemLeft" align="right" valign="top"><a id="a8796870f0da70b0d9226c26a4affeae8"></a>
 static const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a8796870f0da70b0d9226c26a4affeae8">RIGHT_UP_FORWARD</a></td></tr>
 <tr class="memdesc:a8796870f0da70b0d9226c26a4affeae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(0, 1, 2) coordinate system (default). <br /></td></tr>
@@ -735,6 +626,45 @@ static const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3<
 <tr class="memdesc:ac9a3851f27fcefa40d23b350d55ae9e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(2, 1, 0) coordinate system. <br /></td></tr>
 <tr class="separator:ac9a3851f27fcefa40d23b350d55ae9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a375a6c692b901a9c2a6b9ea5e7afaaab"><td class="memItemLeft" align="right" valign="top"><a id="a375a6c692b901a9c2a6b9ea5e7afaaab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a375a6c692b901a9c2a6b9ea5e7afaaab">OnNodeSet</a> (Node *previousNode, Node *currentNode) override</td></tr>
+<tr class="memdesc:a375a6c692b901a9c2a6b9ea5e7afaaab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle node being assigned. <br /></td></tr>
+<tr class="separator:a375a6c692b901a9c2a6b9ea5e7afaaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c0c0d1e11625d7da8c26e0a6c6fc1b"><td class="memItemLeft" align="right" valign="top"><a id="a22c0c0d1e11625d7da8c26e0a6c6fc1b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a22c0c0d1e11625d7da8c26e0a6c6fc1b">OnMarkedDirty</a> (Node *node) override</td></tr>
+<tr class="memdesc:a22c0c0d1e11625d7da8c26e0a6c6fc1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle node transform being dirtied. <br /></td></tr>
+<tr class="separator:a22c0c0d1e11625d7da8c26e0a6c6fc1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_urho3_d_1_1_logic_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_logic_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_logic_component.html">Urho3D::LogicComponent</a></td></tr>
+<tr class="memitem:aaeead90990d9c3a8837f9b359300f681 inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="memItemLeft" align="right" valign="top"><a id="aaeead90990d9c3a8837f9b359300f681"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#aaeead90990d9c3a8837f9b359300f681">OnNodeSet</a> (Node *previousNode, Node *currentNode) override</td></tr>
+<tr class="memdesc:aaeead90990d9c3a8837f9b359300f681 inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node being assigned at creation. <br /></td></tr>
+<tr class="separator:aaeead90990d9c3a8837f9b359300f681 inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a394e35fead581b844c588c5f6bdd0f3b inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="memItemLeft" align="right" valign="top"><a id="a394e35fead581b844c588c5f6bdd0f3b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#a394e35fead581b844c588c5f6bdd0f3b">OnSceneSet</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene) override</td></tr>
+<tr class="memdesc:a394e35fead581b844c588c5f6bdd0f3b inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene being assigned. <br /></td></tr>
+<tr class="separator:a394e35fead581b844c588c5f6bdd0f3b inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_urho3_d_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_component.html">Urho3D::Component</a></td></tr>
+<tr class="memitem:a694661584adfa38834d4b7ee960fb29a inherit pro_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a694661584adfa38834d4b7ee960fb29a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a694661584adfa38834d4b7ee960fb29a">OnNodeSetEnabled</a> (Node *node)</td></tr>
+<tr class="memdesc:a694661584adfa38834d4b7ee960fb29a inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node enabled status changing. <br /></td></tr>
+<tr class="separator:a694661584adfa38834d4b7ee960fb29a inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a871e9a8397df466d804a02786970788c inherit pro_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a871e9a8397df466d804a02786970788c">SetID</a> (unsigned id)</td></tr>
+<tr class="separator:a871e9a8397df466d804a02786970788c inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="abbd5b600c3a004defcb4eb393f855de6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#abbd5b600c3a004defcb4eb393f855de6">SetNode</a> (Node *node)</td></tr>
+<tr class="memdesc:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scene node. Called by Node when creating the component. <br /></td></tr>
+<tr class="separator:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75922f91ae1ee7376aaf1b2e0c0cc84c inherit pro_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a75922f91ae1ee7376aaf1b2e0c0cc84c"></a>
+<a class="el" href="class_urho3_d_1_1_component.html">Component</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a75922f91ae1ee7376aaf1b2e0c0cc84c">GetFixedUpdateSource</a> ()</td></tr>
+<tr class="memdesc:a75922f91ae1ee7376aaf1b2e0c0cc84c inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a component from the scene root that sends out fixed update events (either <a class="el" href="class_urho3_d_1_1_physics_world.html" title="Physics simulation world component. Should be added only to the root scene node.">PhysicsWorld</a> or <a class="el" href="class_urho3_d_1_1_physics_world2_d.html" title="2D physics simulation world component. Should be added only to the root scene node.">PhysicsWorld2D</a>). Return null if neither exists. <br /></td></tr>
+<tr class="separator:a75922f91ae1ee7376aaf1b2e0c0cc84c inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="af908546af61d16a0ac497fdad2ed42f2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#af908546af61d16a0ac497fdad2ed42f2">DoAutoRemove</a> (<a class="el" href="_component_8h.html#a01a03fff19daa9f54c2519fcdd737ce4">AutoRemoveMode</a> mode)</td></tr>
+<tr class="memdesc:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform autoremove. Called by subclasses. Caller should keep a weak pointer to itself to check whether was actually removed, and return immediately without further member operations in that case. <br /></td></tr>
+<tr class="separator:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:adfbde1d8ccefcb7bebe8c21b446d7b63"><td class="memItemLeft" align="right" valign="top"><a id="adfbde1d8ccefcb7bebe8c21b446d7b63"></a>
@@ -759,69 +689,33 @@ RaycastVehicleData *&#160;</td><td class="memItemRight" valign="bottom"><a class
 <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ad77650d5fac55637af96c413c81c4ce8">coordinateSystem_</a></td></tr>
 <tr class="memdesc:ad77650d5fac55637af96c413c81c4ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordinate system. <br /></td></tr>
 <tr class="separator:ad77650d5fac55637af96c413c81c4ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93296fc3cd8d0bae3a2de42c41969785"><td class="memItemLeft" align="right" valign="top"><a id="a93296fc3cd8d0bae3a2de42c41969785"></a>
-ea::vector&lt; Node * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a93296fc3cd8d0bae3a2de42c41969785">wheelNodes_</a></td></tr>
-<tr class="memdesc:a93296fc3cd8d0bae3a2de42c41969785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nodes of all wheels. <br /></td></tr>
-<tr class="separator:a93296fc3cd8d0bae3a2de42c41969785"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dc65b90d005aa9c5d5a626d287f1acf"><td class="memItemLeft" align="right" valign="top"><a id="a8dc65b90d005aa9c5d5a626d287f1acf"></a>
-ea::vector&lt; <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a8dc65b90d005aa9c5d5a626d287f1acf">origRotation_</a></td></tr>
-<tr class="memdesc:a8dc65b90d005aa9c5d5a626d287f1acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">All wheels original rotations. These are applied in addition to wheel rotations by btRaycastVehicle. <br /></td></tr>
-<tr class="separator:a8dc65b90d005aa9c5d5a626d287f1acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbe8e81c8aad13782f232332a8426d61"><td class="memItemLeft" align="right" valign="top"><a id="adbe8e81c8aad13782f232332a8426d61"></a>
+ea::vector&lt; <a class="el" href="class_urho3_d_1_1_raycast_vehicle_wheel.html">RaycastVehicleWheel</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#adbe8e81c8aad13782f232332a8426d61">wheelComponents_</a></td></tr>
+<tr class="memdesc:adbe8e81c8aad13782f232332a8426d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nodes of all wheels. <br /></td></tr>
+<tr class="separator:adbe8e81c8aad13782f232332a8426d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c6b0f01d21e8471c7778201e09e2ba6"><td class="memItemLeft" align="right" valign="top"><a id="a8c6b0f01d21e8471c7778201e09e2ba6"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a8c6b0f01d21e8471c7778201e09e2ba6">inAirRPM_</a></td></tr>
 <tr class="memdesc:a8c6b0f01d21e8471c7778201e09e2ba6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revolutions per minute value for in-air motor wheels. FIXME: set this one per wheel. <br /></td></tr>
 <tr class="separator:a8c6b0f01d21e8471c7778201e09e2ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0839bd5a68e3bae1aa5ab87f9ad0927"><td class="memItemLeft" align="right" valign="top"><a id="ad0839bd5a68e3bae1aa5ab87f9ad0927"></a>
-ea::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ad0839bd5a68e3bae1aa5ab87f9ad0927">skidInfoCumulative_</a></td></tr>
-<tr class="memdesc:ad0839bd5a68e3bae1aa5ab87f9ad0927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-wheel extra settings. <br /></td></tr>
-<tr class="separator:ad0839bd5a68e3bae1aa5ab87f9ad0927"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac26c6376792cc1730b565cc2f62d133b"><td class="memItemLeft" align="right" valign="top"><a id="ac26c6376792cc1730b565cc2f62d133b"></a>
-ea::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ac26c6376792cc1730b565cc2f62d133b">wheelSideSlipSpeed_</a></td></tr>
-<tr class="memdesc:ac26c6376792cc1730b565cc2f62d133b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wheel side movement speed. <br /></td></tr>
-<tr class="separator:ac26c6376792cc1730b565cc2f62d133b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ec2533337fa2d04343a0006f8472bdd"><td class="memItemLeft" align="right" valign="top"><a id="a1ec2533337fa2d04343a0006f8472bdd"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a1ec2533337fa2d04343a0006f8472bdd">maxSideSlipSpeed_</a></td></tr>
 <tr class="memdesc:a1ec2533337fa2d04343a0006f8472bdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Side slip speed threshold. <br /></td></tr>
 <tr class="separator:a1ec2533337fa2d04343a0006f8472bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa08066b4b1cbb779c3d0574d8d3c606f"><td class="memItemLeft" align="right" valign="top"><a id="aa08066b4b1cbb779c3d0574d8d3c606f"></a>
-<a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#aa08066b4b1cbb779c3d0574d8d3c606f">loadedWheelData_</a></td></tr>
-<tr class="memdesc:aa08066b4b1cbb779c3d0574d8d3c606f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loaded data temporarily wait here for ApplyAttributes to come pick them up. <br /></td></tr>
-<tr class="separator:aa08066b4b1cbb779c3d0574d8d3c606f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfebbdba67b64edb01dfed64871e82c7"><td class="memItemLeft" align="right" valign="top"><a id="abfebbdba67b64edb01dfed64871e82c7"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#abfebbdba67b64edb01dfed64871e82c7">brakingForce_</a> {DefaultBrakingForce}</td></tr>
+<tr class="memdesc:abfebbdba67b64edb01dfed64871e82c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotational momentum preventing (dampening) wheels rotation. <br /></td></tr>
+<tr class="separator:abfebbdba67b64edb01dfed64871e82c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a824195568c90e005399dd9e95b6869ad"><td class="memItemLeft" align="right" valign="top"><a id="a824195568c90e005399dd9e95b6869ad"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a824195568c90e005399dd9e95b6869ad">engineForce_</a> {DefaultEngineForce}</td></tr>
+<tr class="memdesc:a824195568c90e005399dd9e95b6869ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum linear momentum supplied by engine to <a class="el" href="class_urho3_d_1_1_rigid_body.html" title="Physics rigid body component.">RigidBody</a>. <br /></td></tr>
+<tr class="separator:a824195568c90e005399dd9e95b6869ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71f520b50cebceec4b87d0732f955889"><td class="memItemLeft" align="right" valign="top"><a id="a71f520b50cebceec4b87d0732f955889"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#a71f520b50cebceec4b87d0732f955889">hasSimulated_</a> {}</td></tr>
+<tr class="memdesc:a71f520b50cebceec4b87d0732f955889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal flag whether has simulated at least once. <br /></td></tr>
+<tr class="separator:a71f520b50cebceec4b87d0732f955889"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_class_urho3_d_1_1_logic_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_logic_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_logic_component.html">Urho3D::LogicComponent</a></td></tr>
-<tr class="memitem:aaeead90990d9c3a8837f9b359300f681 inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="memItemLeft" align="right" valign="top"><a id="aaeead90990d9c3a8837f9b359300f681"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#aaeead90990d9c3a8837f9b359300f681">OnNodeSet</a> (Node *previousNode, Node *currentNode) override</td></tr>
-<tr class="memdesc:aaeead90990d9c3a8837f9b359300f681 inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node being assigned at creation. <br /></td></tr>
-<tr class="separator:aaeead90990d9c3a8837f9b359300f681 inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a394e35fead581b844c588c5f6bdd0f3b inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="memItemLeft" align="right" valign="top"><a id="a394e35fead581b844c588c5f6bdd0f3b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#a394e35fead581b844c588c5f6bdd0f3b">OnSceneSet</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene) override</td></tr>
-<tr class="memdesc:a394e35fead581b844c588c5f6bdd0f3b inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene being assigned. <br /></td></tr>
-<tr class="separator:a394e35fead581b844c588c5f6bdd0f3b inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_class_urho3_d_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_component.html">Urho3D::Component</a></td></tr>
-<tr class="memitem:ab49b4b66b2eb1601cf166972fe42e5ce inherit pro_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="ab49b4b66b2eb1601cf166972fe42e5ce"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#ab49b4b66b2eb1601cf166972fe42e5ce">OnMarkedDirty</a> (Node *node)</td></tr>
-<tr class="memdesc:ab49b4b66b2eb1601cf166972fe42e5ce inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node transform dirtied. <br /></td></tr>
-<tr class="separator:ab49b4b66b2eb1601cf166972fe42e5ce inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a694661584adfa38834d4b7ee960fb29a inherit pro_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a694661584adfa38834d4b7ee960fb29a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a694661584adfa38834d4b7ee960fb29a">OnNodeSetEnabled</a> (Node *node)</td></tr>
-<tr class="memdesc:a694661584adfa38834d4b7ee960fb29a inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node enabled status changing. <br /></td></tr>
-<tr class="separator:a694661584adfa38834d4b7ee960fb29a inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a871e9a8397df466d804a02786970788c inherit pro_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a871e9a8397df466d804a02786970788c">SetID</a> (unsigned id)</td></tr>
-<tr class="separator:a871e9a8397df466d804a02786970788c inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="abbd5b600c3a004defcb4eb393f855de6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#abbd5b600c3a004defcb4eb393f855de6">SetNode</a> (Node *node)</td></tr>
-<tr class="memdesc:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scene node. Called by Node when creating the component. <br /></td></tr>
-<tr class="separator:abbd5b600c3a004defcb4eb393f855de6 inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75922f91ae1ee7376aaf1b2e0c0cc84c inherit pro_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a75922f91ae1ee7376aaf1b2e0c0cc84c"></a>
-<a class="el" href="class_urho3_d_1_1_component.html">Component</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a75922f91ae1ee7376aaf1b2e0c0cc84c">GetFixedUpdateSource</a> ()</td></tr>
-<tr class="memdesc:a75922f91ae1ee7376aaf1b2e0c0cc84c inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a component from the scene root that sends out fixed update events (either <a class="el" href="class_urho3_d_1_1_physics_world.html" title="Physics simulation world component. Should be added only to the root scene node.">PhysicsWorld</a> or <a class="el" href="class_urho3_d_1_1_physics_world2_d.html" title="2D physics simulation world component. Should be added only to the root scene node.">PhysicsWorld2D</a>). Return null if neither exists. <br /></td></tr>
-<tr class="separator:a75922f91ae1ee7376aaf1b2e0c0cc84c inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="af908546af61d16a0ac497fdad2ed42f2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#af908546af61d16a0ac497fdad2ed42f2">DoAutoRemove</a> (<a class="el" href="_component_8h.html#a01a03fff19daa9f54c2519fcdd737ce4">AutoRemoveMode</a> mode)</td></tr>
-<tr class="memdesc:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform autoremove. Called by subclasses. Caller should keep a weak pointer to itself to check whether was actually removed, and return immediately without further member operations in that case. <br /></td></tr>
-<tr class="separator:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_component')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_component.html">Urho3D::Component</a></td></tr>
 <tr class="memitem:a1e35dfd6ec760ebafd81fabcec2ad86b inherit pro_attribs_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a1e35dfd6ec760ebafd81fabcec2ad86b"></a>
 Node *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a1e35dfd6ec760ebafd81fabcec2ad86b">node_</a></td></tr>

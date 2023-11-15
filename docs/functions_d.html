@@ -482,6 +482,7 @@ $(document).ready(function(){initNavTree('functions_d.html',''); initResizable()
 , <a class="el" href="struct_urho3_d_1_1_billboard.html#ab1bc4b5b70c58bc55b04ec8a5e0e5b38">Urho3D::Billboard</a>
 , <a class="el" href="struct_urho3_d_1_1_cooked_light_params.html#a2d6ccec3d895a5629b5e849adb7afac9">Urho3D::CookedLightParams</a>
 , <a class="el" href="class_urho3_d_1_1_ray.html#a1d85bded5863ada8e089037714a21a78">Urho3D::Ray</a>
+, <a class="el" href="class_urho3_d_1_1_raycast_vehicle_wheel.html#a3b23aff4cf4f2ffc8e0b1146c1757f7f">Urho3D::RaycastVehicleWheel</a>
 </li>
 <li>DirectionAggregator()
 : <a class="el" href="class_urho3_d_1_1_direction_aggregator.html#a77cb78fbea5f0b904d095302fad50998">Urho3D::DirectionAggregator</a>
@@ -803,10 +804,11 @@ $(document).ready(function(){initNavTree('functions_d.html',''); initResizable()
 , <a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a250c94d8ee843a6219679daccf951a1f">Urho3D::NavigationMesh</a>
 , <a class="el" href="class_urho3_d_1_1_obstacle.html#af80a0a0086a6a54717a9c5f8c3328ceb">Urho3D::Obstacle</a>
 , <a class="el" href="class_urho3_d_1_1_octant.html#a0cc41080dea82194594c51583b1a2d62">Urho3D::Octant</a>
-, <a class="el" href="class_urho3_d_1_1_octree.html#a5aef089ce9cb4a15ed1a9cbbcefff7b7">Urho3D::Octree</a>
+, <a class="el" href="class_urho3_d_1_1_octree.html#abeec3d5df2bc2b32712fa416c7b6faa1">Urho3D::Octree</a>
 , <a class="el" href="class_urho3_d_1_1_off_mesh_connection.html#a0a048b8f3d0cd96a21c5524c69462549">Urho3D::OffMeshConnection</a>
-, <a class="el" href="class_urho3_d_1_1_physics_world2_d.html#ac6f5c9be53b0abef22546dd83421c27a">Urho3D::PhysicsWorld2D</a>
-, <a class="el" href="class_urho3_d_1_1_physics_world.html#a8ffb0447f9c9e6e3e79ead269a280fd4">Urho3D::PhysicsWorld</a>
+, <a class="el" href="class_urho3_d_1_1_physics_world2_d.html#accc7288fda438c631913a4952c3af4ba">Urho3D::PhysicsWorld2D</a>
+, <a class="el" href="class_urho3_d_1_1_physics_world.html#a3a04f7c20be03020dcd9616ac0d3f12d">Urho3D::PhysicsWorld</a>
+, <a class="el" href="class_urho3_d_1_1_raycast_vehicle_wheel.html#a60347125d1df4cf59ce29e98f53cd850">Urho3D::RaycastVehicleWheel</a>
 , <a class="el" href="class_urho3_d_1_1_reflection_probe.html#a3c0c9763f01ba8ce9296de4a5937d809">Urho3D::ReflectionProbe</a>
 , <a class="el" href="class_urho3_d_1_1_reflection_probe_manager.html#a0875a3b50cca3d966069996dfa744aaf">Urho3D::ReflectionProbeManager</a>
 , <a class="el" href="class_urho3_d_1_1_renderer.html#a2edda10af9679e17b00db07891945c73">Urho3D::Renderer</a>
@@ -815,7 +817,7 @@ $(document).ready(function(){initNavTree('functions_d.html',''); initResizable()
 , <a class="el" href="class_urho3_d_1_1_spline_path.html#ae6a554f14b5e726a7525d2b7f7158262">Urho3D::SplinePath</a>
 , <a class="el" href="class_urho3_d_1_1_terrain.html#aaf27cf34689cb85ce33f1adf363269a8">Urho3D::Terrain</a>
 , <a class="el" href="class_urho3_d_1_1_terrain_patch.html#aa8e4b46ed37c8a1911058cc7cad054a3">Urho3D::TerrainPatch</a>
-, <a class="el" href="class_urho3_d_1_1_tile_map2_d.html#a4ed5cbef75e154a2cd2b7bdf3b1742f2">Urho3D::TileMap2D</a>
+, <a class="el" href="class_urho3_d_1_1_tile_map2_d.html#a721cfd249053a9dec72f879988f47472">Urho3D::TileMap2D</a>
 , <a class="el" href="class_urho3_d_1_1_tile_map_layer2_d.html#aef0b04647bec35d267d982bf2439f81a">Urho3D::TileMapLayer2D</a>
 , <a class="el" href="class_urho3_d_1_1_zone.html#a2e121e27dbd584f85c633bc995ee5ab2">Urho3D::Zone</a>
 </li>
@@ -917,6 +919,9 @@ $(document).ready(function(){initNavTree('functions_d.html',''); initResizable()
 </li>
 <li>DrawViewportQuad()
 : <a class="el" href="class_urho3_d_1_1_render_buffer_manager.html#a0ce30b259ca6bf3c9f76c686e35716a1">Urho3D::RenderBufferManager</a>
+</li>
+<li>DrawWheelDebugGeometry()
+: <a class="el" href="class_urho3_d_1_1_raycast_vehicle.html#ae6a58eed8b68a4432e55f4e1567f57ee">Urho3D::RaycastVehicle</a>
 </li>
 <li>DropConnection()
 : <a class="el" href="class_urho3_d_1_1_replication_manager.html#a78ac48472049d7153f545a9b3b44dd1b">Urho3D::ReplicationManager</a>

@@ -722,6 +722,7 @@ var annotated_dup =
       [ "RandomEngine", "class_urho3_d_1_1_random_engine.html", "class_urho3_d_1_1_random_engine" ],
       [ "Ray", "class_urho3_d_1_1_ray.html", "class_urho3_d_1_1_ray" ],
       [ "RaycastVehicle", "class_urho3_d_1_1_raycast_vehicle.html", "class_urho3_d_1_1_raycast_vehicle" ],
+      [ "RaycastVehicleWheel", "class_urho3_d_1_1_raycast_vehicle_wheel.html", "class_urho3_d_1_1_raycast_vehicle_wheel" ],
       [ "RayOctreeQuery", "class_urho3_d_1_1_ray_octree_query.html", "class_urho3_d_1_1_ray_octree_query" ],
       [ "RayQueryResult", "struct_urho3_d_1_1_ray_query_result.html", "struct_urho3_d_1_1_ray_query_result" ],
       [ "RaytracerGeometry", "struct_urho3_d_1_1_raytracer_geometry.html", "struct_urho3_d_1_1_raytracer_geometry" ],

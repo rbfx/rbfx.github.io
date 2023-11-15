@@ -101,6 +101,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_kinematic_character_controller.html#a5d08455e5802d1f73066102c02f9b959">ApplyAttributes</a> () override</td></tr>
 <tr class="memdesc:a5d08455e5802d1f73066102c02f9b959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform post-load after deserialization. Acquire the components from the scene nodes. <br /></td></tr>
 <tr class="separator:a5d08455e5802d1f73066102c02f9b959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2727b4a00725a8952890c6b0d42b817f"><td class="memItemLeft" align="right" valign="top"><a id="a2727b4a00725a8952890c6b0d42b817f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_kinematic_character_controller.html#a2727b4a00725a8952890c6b0d42b817f">OnSetEnabled</a> () override</td></tr>
+<tr class="memdesc:a2727b4a00725a8952890c6b0d42b817f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle enabled/disabled state change. <br /></td></tr>
+<tr class="separator:a2727b4a00725a8952890c6b0d42b817f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3dc3632aa257d28e95532a5919bd888"><td class="memItemLeft" align="right" valign="top"><a id="af3dc3632aa257d28e95532a5919bd888"></a>
 <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_kinematic_character_controller.html#af3dc3632aa257d28e95532a5919bd888">GetRawPosition</a> () const</td></tr>
 <tr class="memdesc:af3dc3632aa257d28e95532a5919bd888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return character position in world space without interpolation. <br /></td></tr>
@@ -282,10 +286,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#addaa40ac5aaa94e2e60e1d8043706aca">~Component</a> () override</td></tr>
 <tr class="memdesc:addaa40ac5aaa94e2e60e1d8043706aca inherit pub_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
 <tr class="separator:addaa40ac5aaa94e2e60e1d8043706aca inherit pub_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97c506dfb55216668b1fdf4d4425f7d7 inherit pub_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a97c506dfb55216668b1fdf4d4425f7d7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a97c506dfb55216668b1fdf4d4425f7d7">OnSetEnabled</a> ()</td></tr>
-<tr class="memdesc:a97c506dfb55216668b1fdf4d4425f7d7 inherit pub_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle enabled/disabled state change. <br /></td></tr>
-<tr class="separator:a97c506dfb55216668b1fdf4d4425f7d7 inherit pub_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ea2cf1795fa0b638ea704a9017fb0d0 inherit pub_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58">AttributeScopeHint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a5ea2cf1795fa0b638ea704a9017fb0d0">GetEffectiveScopeHint</a> () const</td></tr>
 <tr class="separator:a5ea2cf1795fa0b638ea704a9017fb0d0 inherit pub_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753c0051bc1080efc07b5ba1e12ee74b inherit pub_methods_class_urho3_d_1_1_component"><td class="memItemLeft" align="right" valign="top"><a id="a753c0051bc1080efc07b5ba1e12ee74b"></a>
@@ -685,12 +685,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_kinematic_character_controller.html#a84f165d4affbe2810470cf66b990a913">OnSceneSet</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene) override</td></tr>
 <tr class="memdesc:a84f165d4affbe2810470cf66b990a913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene being assigned. This may happen several times during the component's lifetime. Scene-wide subsystems and events are subscribed to here. <br /></td></tr>
 <tr class="separator:a84f165d4affbe2810470cf66b990a913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af078c7cc5e497354dcadab852541d121"><td class="memItemLeft" align="right" valign="top"><a id="af078c7cc5e497354dcadab852541d121"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ActivateIfEnabled</b> ()</td></tr>
+<tr class="separator:af078c7cc5e497354dcadab852541d121"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2eccf3c827d7442610f23e089669f9c"><td class="memItemLeft" align="right" valign="top"><a id="ae2eccf3c827d7442610f23e089669f9c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>AddKinematicToWorld</b> ()</td></tr>
 <tr class="separator:ae2eccf3c827d7442610f23e089669f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f50ddad819f3a34671cf0c113f3c089"><td class="memItemLeft" align="right" valign="top"><a id="a4f50ddad819f3a34671cf0c113f3c089"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveKinematicFromWorld</b> ()</td></tr>
 <tr class="separator:a4f50ddad819f3a34671cf0c113f3c089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9925320d8f82ba9dd9052a1c0aaa914b"><td class="memItemLeft" align="right" valign="top"><a id="a9925320d8f82ba9dd9052a1c0aaa914b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsAddedToWorld</b> () const</td></tr>
+<tr class="separator:a9925320d8f82ba9dd9052a1c0aaa914b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b085576ad7cea4cc180de68adf7d855"><td class="memItemLeft" align="right" valign="top"><a id="a5b085576ad7cea4cc180de68adf7d855"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_kinematic_character_controller.html#a5b085576ad7cea4cc180de68adf7d855">WarpKinematic</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;position)</td></tr>
 <tr class="memdesc:a5b085576ad7cea4cc180de68adf7d855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantly reset character position to new value. <br /></td></tr>

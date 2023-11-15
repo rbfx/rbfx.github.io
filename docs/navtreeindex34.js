@@ -1,5 +1,8 @@
 var NAVTREEINDEX34 =
 {
+"class_urho3_d_1_1_light_processor.html#a913144f94d2240165cb612dfc02c75d6":[6,0,2,362,27],
+"class_urho3_d_1_1_light_processor.html#a91c9142d281a2abc93c61a1657af2f48":[6,0,2,362,19],
+"class_urho3_d_1_1_light_processor.html#a9a9b5fda4bbed50a6b62334f255b9774":[6,0,2,362,13],
 "class_urho3_d_1_1_light_processor.html#a9d3cc1cdb2dc651ecc77d4d6d96fc478":[6,0,2,362,17],
 "class_urho3_d_1_1_light_processor.html#abb3f434fc1fd2abfc31727ad7810631d":[6,0,2,362,41],
 "class_urho3_d_1_1_light_processor.html#ac121acc3083fffb23c4eedf735e5560c":[6,0,2,362,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX34 =
 "class_urho3_d_1_1_logic_component.html#a917286aa2813c0787a347622ebdf06d1":[6,0,2,371,7],
 "class_urho3_d_1_1_logic_component.html#a9a318417ce77addd2c7a161f196e4b00":[6,0,2,371,8],
 "class_urho3_d_1_1_logic_component.html#aa740607df08b5b43904e6c29993844a8":[6,0,2,371,3],
-"class_urho3_d_1_1_logic_component.html#aaeead90990d9c3a8837f9b359300f681":[6,0,2,371,10],
-"class_urho3_d_1_1_logic_component.html#ab87accfdac685351fde43278dca1fa1f":[6,0,2,371,2],
-"class_urho3_d_1_1_logic_component.html#abbd2d6906f67536f6d5366dd4df329c2":[6,0,2,371,19],
-"class_urho3_d_1_1_logic_component.html#abcf1b341a1f3d950a76f689ee4286dcc":[6,0,2,371,16]
+"class_urho3_d_1_1_logic_component.html#aaeead90990d9c3a8837f9b359300f681":[6,0,2,371,10]
 };

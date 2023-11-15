@@ -1,5 +1,8 @@
 var NAVTREEINDEX49 =
 {
+"class_urho3_d_1_1_plugin_stack.html#ad87980c90a9984af0acfdc1f933e4162":[6,0,2,523,12],
+"class_urho3_d_1_1_plugin_stack.html#ae4bc45ff5dd526415d738efe4772c899":[6,0,2,523,10],
+"class_urho3_d_1_1_plugin_stack.html#ae7eefcf1c76a0430b6ffbde107005ef6":[6,0,2,523,5],
 "class_urho3_d_1_1_point_light_geometry_query.html":[6,0,2,525],
 "class_urho3_d_1_1_point_light_geometry_query.html#a30b10a9b81222615ce1b9a939d6ecf3d":[6,0,2,525,5],
 "class_urho3_d_1_1_point_light_geometry_query.html#a3e6b3f7f898eeded5926b7f192cb545f":[6,0,2,525,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX49 =
 "class_urho3_d_1_1_priority_signal_3_01void_07_args_8_8_8_08_00_01_priority_00_01_sender_01_4.html":[6,0,2,539],
 "class_urho3_d_1_1_priority_signal_3_01void_07_args_8_8_8_08_00_01_priority_00_01_sender_01_4.html#ac2f40f915e90ac06679faa0e50af7d77":[6,0,2,539,1],
 "class_urho3_d_1_1_priority_signal_3_01void_07_args_8_8_8_08_00_01_priority_00_01_sender_01_4.html#ae393f1a4d5c01dcf7b911e1f6918a57a":[6,0,2,539,0],
-"class_urho3_d_1_1_progress_bar.html":[6,0,2,540],
-"class_urho3_d_1_1_progress_bar.html#a017a2c95f9be162edae863fd34089957":[6,0,2,540,17],
-"class_urho3_d_1_1_progress_bar.html#a026c51c543f2f64d883f0fc14643be95":[6,0,2,540,16],
-"class_urho3_d_1_1_progress_bar.html#a112facd65ffe2377a41ff1dec55079d8":[6,0,2,540,0]
+"class_urho3_d_1_1_progress_bar.html":[6,0,2,540]
 };
