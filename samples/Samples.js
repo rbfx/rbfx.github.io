@@ -405,14 +405,14 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 1928740: () => {
+ 1933508: () => {
   FS.syncfs(function(err) {
    if (err) {
     console.error(err);
    }
   });
  },
- 1928804: $0 => {
+ 1933572: $0 => {
   var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
   var reply = window.prompt(str, "i");
   if (reply === null) {
@@ -420,10 +420,10 @@ var ASM_CONSTS = {
   }
   return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
  },
- 1929029: ($0, $1) => {
+ 1933797: ($0, $1) => {
   alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
  },
- 1929086: () => {
+ 1933854: () => {
   if (typeof (AudioContext) !== "undefined") {
    return true;
   } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -431,7 +431,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1929233: () => {
+ 1934001: () => {
   if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
    return true;
   } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -439,7 +439,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1929467: $0 => {
+ 1934235: $0 => {
   if (typeof (Module["SDL2"]) === "undefined") {
    Module["SDL2"] = {};
   }
@@ -461,11 +461,11 @@ var ASM_CONSTS = {
   }
   return SDL2.audioContext === undefined ? -1 : 0;
  },
- 1929960: () => {
+ 1934728: () => {
   var SDL2 = Module["SDL2"];
   return SDL2.audioContext.sampleRate;
  },
- 1930028: ($0, $1, $2, $3) => {
+ 1934796: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   var have_microphone = function(stream) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -506,7 +506,7 @@ var ASM_CONSTS = {
    }, have_microphone, no_microphone);
   }
  },
- 1931680: ($0, $1, $2, $3) => {
+ 1936448: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
   SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -518,7 +518,7 @@ var ASM_CONSTS = {
   };
   SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
  },
- 1932090: ($0, $1) => {
+ 1936858: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
   for (var c = 0; c < numChannels; ++c) {
@@ -537,7 +537,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1932695: ($0, $1) => {
+ 1937463: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
   for (var c = 0; c < numChannels; ++c) {
@@ -550,7 +550,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1933175: $0 => {
+ 1937943: $0 => {
   var SDL2 = Module["SDL2"];
   if ($0) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -588,7 +588,7 @@ var ASM_CONSTS = {
    SDL2.audioContext = undefined;
   }
  },
- 1934347: ($0, $1, $2) => {
+ 1939115: ($0, $1, $2) => {
   var w = $0;
   var h = $1;
   var pixels = $2;
@@ -659,7 +659,7 @@ var ASM_CONSTS = {
   }
   SDL2.ctx.putImageData(SDL2.image, 0, 0);
  },
- 1935816: ($0, $1, $2, $3, $4) => {
+ 1940584: ($0, $1, $2, $3, $4) => {
   var w = $0;
   var h = $1;
   var hot_x = $2;
@@ -696,18 +696,18 @@ var ASM_CONSTS = {
   stringToUTF8(url, urlBuf, url.length + 1);
   return urlBuf;
  },
- 1936805: $0 => {
+ 1941573: $0 => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = UTF8ToString($0);
   }
  },
- 1936888: () => {
+ 1941656: () => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = "none";
   }
  },
- 1936957: () => window.innerWidth,
- 1936987: () => window.innerHeight
+ 1941725: () => window.innerWidth,
+ 1941755: () => window.innerHeight
 };
 
 /** @constructor */ function ExitStatus(status) {
