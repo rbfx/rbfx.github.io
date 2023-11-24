@@ -25,6 +25,7 @@ var class_urho3_d_1_1_crowd_agent =
     [ "GetTargetState", "class_urho3_d_1_1_crowd_agent.html#a077caac909aa421b1e39c375c3021e07", null ],
     [ "GetTargetVelocity", "class_urho3_d_1_1_crowd_agent.html#a5bef464b3f9321ed50a1815e30238f65", null ],
     [ "GetUpdateNodePosition", "class_urho3_d_1_1_crowd_agent.html#ac2100355dbc13bb84157104e24950f17", null ],
+    [ "GetVelocityCallback", "class_urho3_d_1_1_crowd_agent.html#ad9ee24933a672fcabd706c1f22efe2b3", null ],
     [ "HandleNavigationTileAdded", "class_urho3_d_1_1_crowd_agent.html#a82ba0aab8a4077dc76f61a59f9944609", null ],
     [ "HasArrived", "class_urho3_d_1_1_crowd_agent.html#afd2b18da05e1a2e3b258de9ca0f80c7c", null ],
     [ "HasRequestedTarget", "class_urho3_d_1_1_crowd_agent.html#a8c7a07f80f30c046e91b6d5ff56f4837", null ],
@@ -49,6 +50,7 @@ var class_urho3_d_1_1_crowd_agent =
     [ "SetTargetPosition", "class_urho3_d_1_1_crowd_agent.html#a54ada3350dd622792e0447102c993819", null ],
     [ "SetTargetVelocity", "class_urho3_d_1_1_crowd_agent.html#afe2055fa49b9a4d10d6668ecafedf24d", null ],
     [ "SetUpdateNodePosition", "class_urho3_d_1_1_crowd_agent.html#a5975f317bdc1d689a945408e3e049083", null ],
+    [ "SetVelocityCallback", "class_urho3_d_1_1_crowd_agent.html#a2d60375f98034be930c084677d87eb8c", null ],
     [ "UpdateParameters", "class_urho3_d_1_1_crowd_agent.html#af7bd90820dbf00df2aa763f606663f38", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_crowd_agent.html#a068e4151b092a2aea1a7601a89c8f27f", null ],
     [ "CrowdAgentUpdateCallback", "class_urho3_d_1_1_crowd_agent.html#aff1b58692cd5a0ff6e6ed6ecdd0f1f23", null ],
@@ -70,5 +72,6 @@ var class_urho3_d_1_1_crowd_agent =
     [ "requestedTargetType_", "class_urho3_d_1_1_crowd_agent.html#ae4075d8da7d84a8737675e32e07f8a18", null ],
     [ "targetPosition_", "class_urho3_d_1_1_crowd_agent.html#aaeaa0cdfa17bd6dc71ea7d33fec6d10f", null ],
     [ "targetVelocity_", "class_urho3_d_1_1_crowd_agent.html#aacfb4d8a52ce6ba979e23cae40520684", null ],
-    [ "updateNodePosition_", "class_urho3_d_1_1_crowd_agent.html#a2243e61a859f16b7b1901916b9216416", null ]
+    [ "updateNodePosition_", "class_urho3_d_1_1_crowd_agent.html#a2243e61a859f16b7b1901916b9216416", null ],
+    [ "velocityCallback_", "class_urho3_d_1_1_crowd_agent.html#aad94c48743a1488788bd355eed571777", null ]
 ];

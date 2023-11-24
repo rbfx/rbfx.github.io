@@ -1,5 +1,8 @@
 var NAVTREEINDEX88 =
 {
+"struct_urho3_d_1_1_variant_curve_point.html#a3e05d460d73eb368e453aa15f449dc0f":[6,0,2,787,3],
+"struct_urho3_d_1_1_variant_curve_point.html#a4c7df61ed43734f195c4988b80f927a9":[6,0,2,787,1],
+"struct_urho3_d_1_1_variant_curve_point.html#a975f3590789f26f20db4518315fa6b13":[6,0,2,787,2],
 "struct_urho3_d_1_1_vertex2_d.html":[6,0,2,793],
 "struct_urho3_d_1_1_vertex2_d.html#a0ae4f820f114f8d0841981b2a66dde89":[6,0,2,793,0],
 "struct_urho3_d_1_1_vertex2_d.html#a55000b437b21c4fe113fb2f2ea49d7ff":[6,0,2,793,2],

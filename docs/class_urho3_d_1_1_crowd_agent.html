@@ -115,6 +115,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a2f73a57dd1f4a5adccdf80a87ed0dab0">DrawDebugGeometry</a> (<a class="el" href="class_urho3_d_1_1_debug_renderer.html">DebugRenderer</a> *debug, bool depthTest) override</td></tr>
 <tr class="memdesc:a2f73a57dd1f4a5adccdf80a87ed0dab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw debug feelers. <br /></td></tr>
 <tr class="separator:a2f73a57dd1f4a5adccdf80a87ed0dab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d60375f98034be930c084677d87eb8c"><td class="memItemLeft" align="right" valign="top"><a id="a2d60375f98034be930c084677d87eb8c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a2d60375f98034be930c084677d87eb8c">SetVelocityCallback</a> (const CrowdAgentVelocityCallback &amp;callback)</td></tr>
+<tr class="memdesc:a2d60375f98034be930c084677d87eb8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set velocity callback. <br /></td></tr>
+<tr class="separator:a2d60375f98034be930c084677d87eb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9ee24933a672fcabd706c1f22efe2b3"><td class="memItemLeft" align="right" valign="top"><a id="ad9ee24933a672fcabd706c1f22efe2b3"></a>
+const CrowdAgentVelocityCallback &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#ad9ee24933a672fcabd706c1f22efe2b3">GetVelocityCallback</a> () const</td></tr>
+<tr class="memdesc:ad9ee24933a672fcabd706c1f22efe2b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current velocity callback. <br /></td></tr>
+<tr class="separator:ad9ee24933a672fcabd706c1f22efe2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54ada3350dd622792e0447102c993819"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a54ada3350dd622792e0447102c993819">SetTargetPosition</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;position)</td></tr>
 <tr class="separator:a54ada3350dd622792e0447102c993819"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe2055fa49b9a4d10d6668ecafedf24d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#afe2055fa49b9a4d10d6668ecafedf24d">SetTargetVelocity</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;velocity)</td></tr>
@@ -641,6 +649,10 @@ Private Attributes</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_crowd_manager.html">CrowdManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a28fc6870bae1d8863067b68bda1c5783">crowdManager_</a></td></tr>
 <tr class="memdesc:a28fc6870bae1d8863067b68bda1c5783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crowd manager. <br /></td></tr>
 <tr class="separator:a28fc6870bae1d8863067b68bda1c5783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad94c48743a1488788bd355eed571777"><td class="memItemLeft" align="right" valign="top"><a id="aad94c48743a1488788bd355eed571777"></a>
+CrowdAgentVelocityCallback&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#aad94c48743a1488788bd355eed571777">velocityCallback_</a></td></tr>
+<tr class="memdesc:aad94c48743a1488788bd355eed571777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity callback. <br /></td></tr>
+<tr class="separator:aad94c48743a1488788bd355eed571777"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89016d267e63ac135a17cabf3ba81390"><td class="memItemLeft" align="right" valign="top"><a id="a89016d267e63ac135a17cabf3ba81390"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a89016d267e63ac135a17cabf3ba81390">agentCrowdId_</a></td></tr>
 <tr class="memdesc:a89016d267e63ac135a17cabf3ba81390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crowd manager reference to this agent. <br /></td></tr>

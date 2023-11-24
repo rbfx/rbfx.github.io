@@ -111,13 +111,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_manager.html#af43cdf31e01b954a654780155d5ba08d">DrawDebugGeometry</a> (bool depthTest)</td></tr>
 <tr class="memdesc:af43cdf31e01b954a654780155d5ba08d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add debug geometry to the debug renderer. <br /></td></tr>
 <tr class="separator:af43cdf31e01b954a654780155d5ba08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad20f59a3a5c425592e388500c1a8570b"><td class="memItemLeft" align="right" valign="top"><a id="ad20f59a3a5c425592e388500c1a8570b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_manager.html#ad20f59a3a5c425592e388500c1a8570b">SetVelocityShader</a> (const CrowdAgentVelocityShader &amp;shader)</td></tr>
-<tr class="memdesc:ad20f59a3a5c425592e388500c1a8570b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set velocity shader. <br /></td></tr>
-<tr class="separator:ad20f59a3a5c425592e388500c1a8570b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d3e8819ad293b52235d2d0fb8f9fee9"><td class="memItemLeft" align="right" valign="top"><a id="a0d3e8819ad293b52235d2d0fb8f9fee9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_manager.html#a0d3e8819ad293b52235d2d0fb8f9fee9">SetVelocityCallback</a> (const CrowdAgentVelocityCallback &amp;callback)</td></tr>
+<tr class="memdesc:a0d3e8819ad293b52235d2d0fb8f9fee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set velocity callback. <br /></td></tr>
+<tr class="separator:a0d3e8819ad293b52235d2d0fb8f9fee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54e4edb6cd90677f2680bd094dd9e82e"><td class="memItemLeft" align="right" valign="top"><a id="a54e4edb6cd90677f2680bd094dd9e82e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_manager.html#a54e4edb6cd90677f2680bd094dd9e82e">UpdateAgentVelocity</a> (<a class="el" href="class_urho3_d_1_1_crowd_agent.html">CrowdAgent</a> *agent, float timeStep, <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;desiredVelocity, float &amp;desiredSpeed) const</td></tr>
-<tr class="memdesc:a54e4edb6cd90677f2680bd094dd9e82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update agent velocity using velocity shader. <br /></td></tr>
+<tr class="memdesc:a54e4edb6cd90677f2680bd094dd9e82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update agent velocity using velocity callback. <br /></td></tr>
 <tr class="separator:a54e4edb6cd90677f2680bd094dd9e82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a581d3a835383a7a3ff3e75cc5cd3a8d4"><td class="memItemLeft" align="right" valign="top"><a id="a581d3a835383a7a3ff3e75cc5cd3a8d4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_manager.html#a581d3a835383a7a3ff3e75cc5cd3a8d4">SetCrowdTarget</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;position, Node *node=nullptr)</td></tr>
@@ -703,10 +703,10 @@ Private Attributes</h2></td></tr>
 dtCrowd *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_manager.html#aa4a0f833a9709f2f415c0dcd2d004401">crowd_</a> {}</td></tr>
 <tr class="memdesc:aa4a0f833a9709f2f415c0dcd2d004401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal Detour crowd object. <br /></td></tr>
 <tr class="separator:aa4a0f833a9709f2f415c0dcd2d004401"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af86eca8b6b84df551553a9277a25f764"><td class="memItemLeft" align="right" valign="top"><a id="af86eca8b6b84df551553a9277a25f764"></a>
-CrowdAgentVelocityShader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_manager.html#af86eca8b6b84df551553a9277a25f764">velocityShader_</a></td></tr>
-<tr class="memdesc:af86eca8b6b84df551553a9277a25f764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity shader. <br /></td></tr>
-<tr class="separator:af86eca8b6b84df551553a9277a25f764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab58a4bacadfe79513d80a3ec68cf762a"><td class="memItemLeft" align="right" valign="top"><a id="ab58a4bacadfe79513d80a3ec68cf762a"></a>
+CrowdAgentVelocityCallback&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_manager.html#ab58a4bacadfe79513d80a3ec68cf762a">velocityCallback_</a></td></tr>
+<tr class="memdesc:ab58a4bacadfe79513d80a3ec68cf762a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity callback. <br /></td></tr>
+<tr class="separator:ab58a4bacadfe79513d80a3ec68cf762a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a890ab49ce3886405ec0506944bb3dba0"><td class="memItemLeft" align="right" valign="top"><a id="a890ab49ce3886405ec0506944bb3dba0"></a>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_navigation_mesh.html">NavigationMesh</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_manager.html#a890ab49ce3886405ec0506944bb3dba0">navigationMesh_</a></td></tr>
 <tr class="memdesc:a890ab49ce3886405ec0506944bb3dba0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html" title="Navigation mesh component. Collects the navigation geometry from child nodes with the Navigable compo...">NavigationMesh</a> for which the crowd was created. <br /></td></tr>

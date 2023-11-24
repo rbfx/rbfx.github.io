@@ -48,7 +48,7 @@ var class_urho3_d_1_1_crowd_manager =
     [ "SetObstacleAvoidanceParams", "class_urho3_d_1_1_crowd_manager.html#a8e8f63fda31fdb11c3542c42445a2c5a", null ],
     [ "SetObstacleAvoidanceTypesAttr", "class_urho3_d_1_1_crowd_manager.html#a9fdc347fc186fdca44005be49b20a2d9", null ],
     [ "SetQueryFilterTypesAttr", "class_urho3_d_1_1_crowd_manager.html#aade58f13dc5072c99436bf791953bdad", null ],
-    [ "SetVelocityShader", "class_urho3_d_1_1_crowd_manager.html#ad20f59a3a5c425592e388500c1a8570b", null ],
+    [ "SetVelocityCallback", "class_urho3_d_1_1_crowd_manager.html#a0d3e8819ad293b52235d2d0fb8f9fee9", null ],
     [ "Update", "class_urho3_d_1_1_crowd_manager.html#aebb15dfdba49db0d5ae19fa101491318", null ],
     [ "UpdateAgentVelocity", "class_urho3_d_1_1_crowd_manager.html#a54e4edb6cd90677f2680bd094dd9e82e", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_crowd_manager.html#ac97458812a4466feab622460ab485cf2", null ],
@@ -61,5 +61,5 @@ var class_urho3_d_1_1_crowd_manager =
     [ "numAreas_", "class_urho3_d_1_1_crowd_manager.html#ad2ae8958c1535aa061d5ce2682141c49", null ],
     [ "numObstacleAvoidanceTypes_", "class_urho3_d_1_1_crowd_manager.html#a6d14fcc7ea8c970238eeae2eabc1d1db", null ],
     [ "numQueryFilterTypes_", "class_urho3_d_1_1_crowd_manager.html#a4f16fd1a7653d19670cb257f0754f822", null ],
-    [ "velocityShader_", "class_urho3_d_1_1_crowd_manager.html#af86eca8b6b84df551553a9277a25f764", null ]
+    [ "velocityCallback_", "class_urho3_d_1_1_crowd_manager.html#ab58a4bacadfe79513d80a3ec68cf762a", null ]
 ];
