@@ -61,6 +61,7 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_virtual_file_system.
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_urho3_d_1_1_virtual_file_system-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -93,18 +94,22 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a4dfcc062c233917a47791cc460e8df4f">~VirtualFileSystem</a> () override</td></tr>
 <tr class="memdesc:a4dfcc062c233917a47791cc460e8df4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
 <tr class="separator:a4dfcc062c233917a47791cc460e8df4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ff1e661e3004fac931cf4ce1f06bae9"><td class="memItemLeft" align="right" valign="top"><a id="a7ff1e661e3004fac931cf4ce1f06bae9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a7ff1e661e3004fac931cf4ce1f06bae9">MountRoot</a> ()</td></tr>
-<tr class="memdesc:a7ff1e661e3004fac931cf4ce1f06bae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount file system root as <a href="file://">file://</a> scheme. <br /></td></tr>
-<tr class="separator:a7ff1e661e3004fac931cf4ce1f06bae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0945396bb9b1cc6c2089a02ee2ef5330"><td class="memItemLeft" align="right" valign="top"><a id="a0945396bb9b1cc6c2089a02ee2ef5330"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a0945396bb9b1cc6c2089a02ee2ef5330">MountDir</a> (const ea::string &amp;path)</td></tr>
-<tr class="memdesc:a0945396bb9b1cc6c2089a02ee2ef5330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount real folder into virtual file system. <br /></td></tr>
-<tr class="separator:a0945396bb9b1cc6c2089a02ee2ef5330"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9506ab432dc8ffc8ff6e333f0e2996a"><td class="memItemLeft" align="right" valign="top"><a id="ab9506ab432dc8ffc8ff6e333f0e2996a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#ab9506ab432dc8ffc8ff6e333f0e2996a">MountDir</a> (const ea::string &amp;scheme, const ea::string &amp;path)</td></tr>
-<tr class="memdesc:ab9506ab432dc8ffc8ff6e333f0e2996a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount real folder into virtual file system under the scheme. <br /></td></tr>
-<tr class="separator:ab9506ab432dc8ffc8ff6e333f0e2996a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac04d2241fe9b4bca9b8255ed0345c8db"><td class="memItemLeft" align="right" valign="top"><a id="ac04d2241fe9b4bca9b8255ed0345c8db"></a>
+<a class="el" href="class_urho3_d_1_1_mount_point.html">MountPoint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#ac04d2241fe9b4bca9b8255ed0345c8db">MountAliasRoot</a> ()</td></tr>
+<tr class="memdesc:ac04d2241fe9b4bca9b8255ed0345c8db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount alias root as alias:// scheme. Alias root will be mounted automatically if alias is created. <br /></td></tr>
+<tr class="separator:ac04d2241fe9b4bca9b8255ed0345c8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97dbcb8079dcf4f40aa97a22c96f183e"><td class="memItemLeft" align="right" valign="top"><a id="a97dbcb8079dcf4f40aa97a22c96f183e"></a>
+<a class="el" href="class_urho3_d_1_1_mount_point.html">MountPoint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a97dbcb8079dcf4f40aa97a22c96f183e">MountRoot</a> ()</td></tr>
+<tr class="memdesc:a97dbcb8079dcf4f40aa97a22c96f183e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount file system root as <a href="file://">file://</a> scheme. <br /></td></tr>
+<tr class="separator:a97dbcb8079dcf4f40aa97a22c96f183e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa5aa5334c04701a88127e90e2f290b9"><td class="memItemLeft" align="right" valign="top"><a id="afa5aa5334c04701a88127e90e2f290b9"></a>
+<a class="el" href="class_urho3_d_1_1_mount_point.html">MountPoint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#afa5aa5334c04701a88127e90e2f290b9">MountDir</a> (const ea::string &amp;path)</td></tr>
+<tr class="memdesc:afa5aa5334c04701a88127e90e2f290b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount real folder into virtual file system. <br /></td></tr>
+<tr class="separator:afa5aa5334c04701a88127e90e2f290b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4167c45098d18668e2dafea638e29df7"><td class="memItemLeft" align="right" valign="top"><a id="a4167c45098d18668e2dafea638e29df7"></a>
+<a class="el" href="class_urho3_d_1_1_mount_point.html">MountPoint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a4167c45098d18668e2dafea638e29df7">MountDir</a> (const ea::string &amp;scheme, const ea::string &amp;path)</td></tr>
+<tr class="memdesc:a4167c45098d18668e2dafea638e29df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount real folder into virtual file system under the scheme. <br /></td></tr>
+<tr class="separator:a4167c45098d18668e2dafea638e29df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a474f8f2f927acf66b8c39182409b3fc4"><td class="memItemLeft" align="right" valign="top"><a id="a474f8f2f927acf66b8c39182409b3fc4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a474f8f2f927acf66b8c39182409b3fc4">AutomountDir</a> (const ea::string &amp;path)</td></tr>
 <tr class="memdesc:a474f8f2f927acf66b8c39182409b3fc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount subfolders and pak files from real folder into virtual file system. <br /></td></tr>
@@ -113,14 +118,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a02741cd543661054b5947d2e8cf483ca">AutomountDir</a> (const ea::string &amp;scheme, const ea::string &amp;path)</td></tr>
 <tr class="memdesc:a02741cd543661054b5947d2e8cf483ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount subfolders and pak files from real folder into virtual file system under the scheme. <br /></td></tr>
 <tr class="separator:a02741cd543661054b5947d2e8cf483ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0d9c9de4affb9442ee3bdb23b07ef0b"><td class="memItemLeft" align="right" valign="top"><a id="ad0d9c9de4affb9442ee3bdb23b07ef0b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#ad0d9c9de4affb9442ee3bdb23b07ef0b">MountPackageFile</a> (const ea::string &amp;path)</td></tr>
-<tr class="memdesc:ad0d9c9de4affb9442ee3bdb23b07ef0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount package file into virtual file system. <br /></td></tr>
-<tr class="separator:ad0d9c9de4affb9442ee3bdb23b07ef0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4420244304f0f3a9dc3e765346a63ce1"><td class="memItemLeft" align="right" valign="top"><a id="a4420244304f0f3a9dc3e765346a63ce1"></a>
+<a class="el" href="class_urho3_d_1_1_mount_point.html">MountPoint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a4420244304f0f3a9dc3e765346a63ce1">MountPackageFile</a> (const ea::string &amp;path)</td></tr>
+<tr class="memdesc:a4420244304f0f3a9dc3e765346a63ce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount package file into virtual file system. <br /></td></tr>
+<tr class="separator:a4420244304f0f3a9dc3e765346a63ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1c17fb3cb05a2e7a7a40c7b73d372e8"><td class="memItemLeft" align="right" valign="top"><a id="ae1c17fb3cb05a2e7a7a40c7b73d372e8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#ae1c17fb3cb05a2e7a7a40c7b73d372e8">Mount</a> (<a class="el" href="class_urho3_d_1_1_mount_point.html">MountPoint</a> *mountPoint)</td></tr>
 <tr class="memdesc:ae1c17fb3cb05a2e7a7a40c7b73d372e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount virtual or real folder into virtual file system. <br /></td></tr>
 <tr class="separator:ae1c17fb3cb05a2e7a7a40c7b73d372e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8efa03f8543d85e351e78214547343bf"><td class="memItemLeft" align="right" valign="top"><a id="a8efa03f8543d85e351e78214547343bf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a8efa03f8543d85e351e78214547343bf">MountAlias</a> (const ea::string &amp;alias, <a class="el" href="class_urho3_d_1_1_mount_point.html">MountPoint</a> *mountPoint, const ea::string &amp;scheme=EMPTY_STRING)</td></tr>
+<tr class="memdesc:a8efa03f8543d85e351e78214547343bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount alias to another mount point. <br /></td></tr>
+<tr class="separator:a8efa03f8543d85e351e78214547343bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a004260a8bb3347edefa90089697471c4"><td class="memItemLeft" align="right" valign="top"><a id="a004260a8bb3347edefa90089697471c4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a004260a8bb3347edefa90089697471c4">Unmount</a> (<a class="el" href="class_urho3_d_1_1_mount_point.html">MountPoint</a> *mountPoint)</td></tr>
 <tr class="memdesc:a004260a8bb3347edefa90089697471c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove mount point from the virtual file system. <br /></td></tr>
@@ -392,6 +401,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if script reference is strong. <br /></td></tr>
 <tr class="separator:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a3a58d38579ee0c79b8685625108750f6"><td class="memItemLeft" align="right" valign="top"><a id="a3a58d38579ee0c79b8685625108750f6"></a>
+<a class="el" href="class_urho3_d_1_1_mounted_alias_root.html">MountedAliasRoot</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a3a58d38579ee0c79b8685625108750f6">GetOrCreateAliasRoot</a> ()</td></tr>
+<tr class="memdesc:a3a58d38579ee0c79b8685625108750f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return or create internal alias:// mount point. <br /></td></tr>
+<tr class="separator:a3a58d38579ee0c79b8685625108750f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a02667ab1ca16dd06c61ec0d22d37e90b"><td class="memItemLeft" align="right" valign="top"><a id="a02667ab1ca16dd06c61ec0d22d37e90b"></a>
@@ -402,6 +418,10 @@ Private Attributes</h2></td></tr>
 ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_mount_point.html">MountPoint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a2de8a545b9cba5f26c6d003a4f50129b">mountPoints_</a></td></tr>
 <tr class="memdesc:a2de8a545b9cba5f26c6d003a4f50129b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_file.html" title="File opened either through the filesystem or from within a package file.">File</a> system mount points. It is expected to have small number of mount points. <br /></td></tr>
 <tr class="separator:a2de8a545b9cba5f26c6d003a4f50129b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af12fad7484da05999a1f5c37a60022c3"><td class="memItemLeft" align="right" valign="top"><a id="af12fad7484da05999a1f5c37a60022c3"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_mounted_alias_root.html">MountedAliasRoot</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#af12fad7484da05999a1f5c37a60022c3">aliasMountPoint_</a></td></tr>
+<tr class="memdesc:af12fad7484da05999a1f5c37a60022c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias mount point. <br /></td></tr>
+<tr class="separator:af12fad7484da05999a1f5c37a60022c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a2d798c421124dd5dca5708977acd4c"><td class="memItemLeft" align="right" valign="top"><a id="a7a2d798c421124dd5dca5708977acd4c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_file_system.html#a7a2d798c421124dd5dca5708977acd4c">isWatching_</a> {}</td></tr>
 <tr class="memdesc:a7a2d798c421124dd5dca5708977acd4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are file watchers enabled. <br /></td></tr>

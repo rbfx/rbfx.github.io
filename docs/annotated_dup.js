@@ -573,6 +573,7 @@ var annotated_dup =
       [ "ModelVertexMorph", "struct_urho3_d_1_1_model_vertex_morph.html", "struct_urho3_d_1_1_model_vertex_morph" ],
       [ "ModelView", "class_urho3_d_1_1_model_view.html", "class_urho3_d_1_1_model_view" ],
       [ "ModulePlugin", "class_urho3_d_1_1_module_plugin.html", "class_urho3_d_1_1_module_plugin" ],
+      [ "MountedAliasRoot", "class_urho3_d_1_1_mounted_alias_root.html", "class_urho3_d_1_1_mounted_alias_root" ],
       [ "MountedDirectory", "class_urho3_d_1_1_mounted_directory.html", "class_urho3_d_1_1_mounted_directory" ],
       [ "MountedExternalMemory", "class_urho3_d_1_1_mounted_external_memory.html", "class_urho3_d_1_1_mounted_external_memory" ],
       [ "MountedRoot", "class_urho3_d_1_1_mounted_root.html", "class_urho3_d_1_1_mounted_root" ],

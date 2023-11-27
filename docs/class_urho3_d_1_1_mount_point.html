@@ -78,13 +78,14 @@ Inheritance diagram for Urho3D::MountPoint:</div>
  <div class="center">
   <img src="class_urho3_d_1_1_mount_point.png" usemap="#Urho3D::MountPoint_map" alt=""/>
   <map id="Urho3D::MountPoint_map" name="Urho3D::MountPoint_map">
-<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="318,56,520,80"/>
-<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="318,0,520,24"/>
-<area href="class_urho3_d_1_1_mounted_external_memory.html" title="Lightweight mount point that provides read-only access to the externally managed memory." alt="Urho3D::MountedExternalMemory" shape="rect" coords="0,168,202,192"/>
-<area href="class_urho3_d_1_1_mounted_root.html" title="Lightweight mount point that provides read-only access to the externally managed memory." alt="Urho3D::MountedRoot" shape="rect" coords="212,168,414,192"/>
-<area href="class_urho3_d_1_1_package_file.html" title="Stores files of a directory tree sequentially for convenient access." alt="Urho3D::PackageFile" shape="rect" coords="424,168,626,192"/>
-<area href="class_urho3_d_1_1_watchable_mount_point.html" title="Base implementation of watchable mount point." alt="Urho3D::WatchableMountPoint" shape="rect" coords="636,168,838,192"/>
-<area href="class_urho3_d_1_1_mounted_directory.html" title="Stores files of a directory tree sequentially for convenient access." alt="Urho3D::MountedDirectory" shape="rect" coords="636,224,838,248"/>
+<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="424,56,626,80"/>
+<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="424,0,626,24"/>
+<area href="class_urho3_d_1_1_mounted_alias_root.html" title="Mount point that provides named aliases to other mount points." alt="Urho3D::MountedAliasRoot" shape="rect" coords="0,168,202,192"/>
+<area href="class_urho3_d_1_1_mounted_external_memory.html" title="Lightweight mount point that provides read-only access to the externally managed memory." alt="Urho3D::MountedExternalMemory" shape="rect" coords="212,168,414,192"/>
+<area href="class_urho3_d_1_1_mounted_root.html" title="Lightweight mount point that provides read-only access to the externally managed memory." alt="Urho3D::MountedRoot" shape="rect" coords="424,168,626,192"/>
+<area href="class_urho3_d_1_1_package_file.html" title="Stores files of a directory tree sequentially for convenient access." alt="Urho3D::PackageFile" shape="rect" coords="636,168,838,192"/>
+<area href="class_urho3_d_1_1_watchable_mount_point.html" title="Base implementation of watchable mount point." alt="Urho3D::WatchableMountPoint" shape="rect" coords="848,168,1050,192"/>
+<area href="class_urho3_d_1_1_mounted_directory.html" title="Stores files of a directory tree sequentially for convenient access." alt="Urho3D::MountedDirectory" shape="rect" coords="848,224,1050,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -375,7 +376,7 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </div><div class="memdoc">
 <p>Check if a file exists within the mount point. The file name may be be case-insensitive on Windows and case-sensitive on other platforms. </p>
 
-<p>Implemented in <a class="el" href="class_urho3_d_1_1_package_file.html#a5a03e268dfdb4ebec22238cd405d566e">Urho3D::PackageFile</a>, <a class="el" href="class_urho3_d_1_1_mounted_external_memory.html#a458f5e1d1ab01fb6c78efe3981c7ac14">Urho3D::MountedExternalMemory</a>, <a class="el" href="class_urho3_d_1_1_mounted_directory.html#a6a2939ee21bc44b754d6854fa6e78c1d">Urho3D::MountedDirectory</a>, and <a class="el" href="class_urho3_d_1_1_mounted_root.html#af6e388017ad457670fdda77376237613">Urho3D::MountedRoot</a>.</p>
+<p>Implemented in <a class="el" href="class_urho3_d_1_1_package_file.html#a5a03e268dfdb4ebec22238cd405d566e">Urho3D::PackageFile</a>, <a class="el" href="class_urho3_d_1_1_mounted_external_memory.html#a458f5e1d1ab01fb6c78efe3981c7ac14">Urho3D::MountedExternalMemory</a>, <a class="el" href="class_urho3_d_1_1_mounted_directory.html#a6a2939ee21bc44b754d6854fa6e78c1d">Urho3D::MountedDirectory</a>, <a class="el" href="class_urho3_d_1_1_mounted_root.html#af6e388017ad457670fdda77376237613">Urho3D::MountedRoot</a>, and <a class="el" href="class_urho3_d_1_1_mounted_alias_root.html#a6cfb7051a96f3127217675d0809deee2">Urho3D::MountedAliasRoot</a>.</p>
 
 </div>
 </div>
@@ -404,7 +405,7 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </div><div class="memdoc">
 <p>Return identifier in this mount point for absolute file name, if supported. Works even if the file does not exist. </p>
 
-<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_mounted_directory.html#a3422de7bb378fed1e50fd2ab68705ff6">Urho3D::MountedDirectory</a>, and <a class="el" href="class_urho3_d_1_1_mounted_root.html#a1a48b1b9760b81d74586e3211a90d7ee">Urho3D::MountedRoot</a>.</p>
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_mounted_directory.html#a3422de7bb378fed1e50fd2ab68705ff6">Urho3D::MountedDirectory</a>, <a class="el" href="class_urho3_d_1_1_mounted_root.html#a1a48b1b9760b81d74586e3211a90d7ee">Urho3D::MountedRoot</a>, and <a class="el" href="class_urho3_d_1_1_mounted_alias_root.html#a4b26afc689e3a7f3cc132690650ba15e">Urho3D::MountedAliasRoot</a>.</p>
 
 </div>
 </div>
@@ -443,7 +444,7 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </div><div class="memdoc">
 <p>Return modification time, or 0 if not supported. Return nullopt if file does not exist. </p>
 
-<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_package_file.html#a1cb5a040f95efc43017400c412de256c">Urho3D::PackageFile</a>, and <a class="el" href="class_urho3_d_1_1_mounted_directory.html#a22a7919c0d59b8273bfb5910f9e23295">Urho3D::MountedDirectory</a>.</p>
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_package_file.html#a1cb5a040f95efc43017400c412de256c">Urho3D::PackageFile</a>, <a class="el" href="class_urho3_d_1_1_mounted_directory.html#a22a7919c0d59b8273bfb5910f9e23295">Urho3D::MountedDirectory</a>, and <a class="el" href="class_urho3_d_1_1_mounted_alias_root.html#a84842d2bfc5a78f95f7f9f102732d234">Urho3D::MountedAliasRoot</a>.</p>
 
 </div>
 </div>
@@ -482,7 +483,7 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </div><div class="memdoc">
 <p>Open file in a virtual file system. Returns null if file not found. The file name may be be case-insensitive on Windows and case-sensitive on other platforms. </p>
 
-<p>Implemented in <a class="el" href="class_urho3_d_1_1_package_file.html#ad25d482271772ea63f51d931d66760ff">Urho3D::PackageFile</a>, <a class="el" href="class_urho3_d_1_1_mounted_external_memory.html#af8af18f0f52d15630bb3ba17d3a27457">Urho3D::MountedExternalMemory</a>, <a class="el" href="class_urho3_d_1_1_mounted_root.html#af66e8da8bc2c855b3ae0ddf40a89055d">Urho3D::MountedRoot</a>, and <a class="el" href="class_urho3_d_1_1_mounted_directory.html#a3c43170af4dcf4b448d9f54628074c6b">Urho3D::MountedDirectory</a>.</p>
+<p>Implemented in <a class="el" href="class_urho3_d_1_1_package_file.html#ad25d482271772ea63f51d931d66760ff">Urho3D::PackageFile</a>, <a class="el" href="class_urho3_d_1_1_mounted_external_memory.html#af8af18f0f52d15630bb3ba17d3a27457">Urho3D::MountedExternalMemory</a>, <a class="el" href="class_urho3_d_1_1_mounted_root.html#af66e8da8bc2c855b3ae0ddf40a89055d">Urho3D::MountedRoot</a>, <a class="el" href="class_urho3_d_1_1_mounted_directory.html#a3c43170af4dcf4b448d9f54628074c6b">Urho3D::MountedDirectory</a>, and <a class="el" href="class_urho3_d_1_1_mounted_alias_root.html#aef3361fc3ede0f5965b69993cb42f6a8">Urho3D::MountedAliasRoot</a>.</p>
 
 </div>
 </div>

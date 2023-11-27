@@ -43,6 +43,7 @@ var class_urho3_d_1_1_variant =
     [ "Variant", "class_urho3_d_1_1_variant.html#a2b66a49459a40561123320b1ec83e51b", null ],
     [ "~Variant", "class_urho3_d_1_1_variant.html#aa95c6d860c6ec8034e163a0e8bcc5364", null ],
     [ "Clear", "class_urho3_d_1_1_variant.html#af9ee6b041a4b7ace8113398ec70d8633", null ],
+    [ "Convert", "class_urho3_d_1_1_variant.html#aecfc71bed85fd4c5b3a56f7098e22f51", null ],
     [ "FromString", "class_urho3_d_1_1_variant.html#aa19caf9f138bd4bb992703e5c99f1f5a", null ],
     [ "FromString", "class_urho3_d_1_1_variant.html#a6465c0afa809c3fa2a20cfaa7c612bc2", null ],
     [ "FromString", "class_urho3_d_1_1_variant.html#a13d8f970958185004842399562150ef1", null ],
