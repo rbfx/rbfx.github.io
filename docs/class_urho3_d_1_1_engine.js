@@ -24,7 +24,7 @@ var class_urho3_d_1_1_engine =
     [ "HandleExitRequested", "class_urho3_d_1_1_engine.html#a9c49623157d56d15d8ff1bcc337e177f", null ],
     [ "HasParameter", "class_urho3_d_1_1_engine.html#a37c373eb61790b35dceff4b4a84e7a72", null ],
     [ "Initialize", "class_urho3_d_1_1_engine.html#afbefeab613b55aa9e3a59c0ba4acbae9", null ],
-    [ "InitializeVirtualFileSystem", "class_urho3_d_1_1_engine.html#aac43bb88508c1d1a0078b7a9899ff0d9", null ],
+    [ "InitializeVirtualFileSystem", "class_urho3_d_1_1_engine.html#a3bbbc98cc1f75dc2cb7095243c238f7f", null ],
     [ "IsExiting", "class_urho3_d_1_1_engine.html#a9956f6e6ee3c8c23de85c7053bc00630", null ],
     [ "IsHeadless", "class_urho3_d_1_1_engine.html#a4cde7c038429bc1d55e9f4ad159c59d2", null ],
     [ "IsInitialized", "class_urho3_d_1_1_engine.html#a3a9f116bc86ba45c8f9cffede7aa3c66", null ],
