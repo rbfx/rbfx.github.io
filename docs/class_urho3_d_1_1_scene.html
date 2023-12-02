@@ -113,9 +113,9 @@ template&lt;class T &gt; </td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a3fb3fc0dab4e09054d22a6aa5bce52e3">SerializeInBlock</a> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;archive) override</td></tr>
 <tr class="memdesc:a3fb3fc0dab4e09054d22a6aa5bce52e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize object. May throw <a class="el" href="class_urho3_d_1_1_archive_exception.html">ArchiveException</a>. <br /></td></tr>
 <tr class="separator:a3fb3fc0dab4e09054d22a6aa5bce52e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c14a36c7148f2e2530e631133023da7"><td class="memItemLeft" align="right" valign="top"><a id="a5c14a36c7148f2e2530e631133023da7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SerializeInBlock</b> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;archive, bool serializeTemporary, PrefabSaveFlags saveFlags)</td></tr>
-<tr class="separator:a5c14a36c7148f2e2530e631133023da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e830b4404a89d1fe9101444a3985228"><td class="memItemLeft" align="right" valign="top"><a id="a2e830b4404a89d1fe9101444a3985228"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SerializeInBlock</b> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;archive, bool serializeTemporary, PrefabSaveFlags saveFlags, PrefabLoadFlags loadFlags)</td></tr>
+<tr class="separator:a2e830b4404a89d1fe9101444a3985228"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b1c5f7476658c0e7e236d20765bf670"><td class="memItemLeft" align="right" valign="top"><a id="a3b1c5f7476658c0e7e236d20765bf670"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a3b1c5f7476658c0e7e236d20765bf670">Load</a> (<a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;source) override</td></tr>
 <tr class="memdesc:a3b1c5f7476658c0e7e236d20765bf670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from binary data. Removes all existing child nodes and components first. Return true if successful. <br /></td></tr>
@@ -272,6 +272,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a2c8dd9d17bea315cfd11676df7d3d8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1b562185172ca3979b0209bd4e5716e"><td class="memItemLeft" align="right" valign="top">const ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_package_file.html">PackageFile</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#aa1b562185172ca3979b0209bd4e5716e">GetRequiredPackageFiles</a> () const</td></tr>
 <tr class="separator:aa1b562185172ca3979b0209bd4e5716e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac96e9c50d49ae6a99b82f3382a676c93"><td class="memItemLeft" align="right" valign="top"><a id="ac96e9c50d49ae6a99b82f3382a676c93"></a>
+const ea::unordered_map&lt; unsigned, Node * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#ac96e9c50d49ae6a99b82f3382a676c93">GetAllNodes</a> () const</td></tr>
+<tr class="memdesc:ac96e9c50d49ae6a99b82f3382a676c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all nodes parented by this <a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a>. <br /></td></tr>
+<tr class="separator:ac96e9c50d49ae6a99b82f3382a676c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bb2bee0b8418eaf31fb6f22dfcbf062"><td class="memItemLeft" align="right" valign="top"><a id="a3bb2bee0b8418eaf31fb6f22dfcbf062"></a>
+const ea::unordered_map&lt; unsigned, <a class="el" href="class_urho3_d_1_1_component.html">Component</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a3bb2bee0b8418eaf31fb6f22dfcbf062">GetAllComponents</a> () const</td></tr>
+<tr class="memdesc:a3bb2bee0b8418eaf31fb6f22dfcbf062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all components parented by this <a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a>. <br /></td></tr>
+<tr class="separator:a3bb2bee0b8418eaf31fb6f22dfcbf062"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adab31e6c85f2405dd588b36e3cea58a8"><td class="memItemLeft" align="right" valign="top"><a id="adab31e6c85f2405dd588b36e3cea58a8"></a>
 const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#adab31e6c85f2405dd588b36e3cea58a8">GetVarName</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> hash) const</td></tr>
 <tr class="memdesc:adab31e6c85f2405dd588b36e3cea58a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a node user variable name, or empty if not registered. <br /></td></tr>

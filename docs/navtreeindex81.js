@@ -1,5 +1,7 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_g_impact_mesh_data.html":[6,0,2,255],
+"struct_urho3_d_1_1_g_impact_mesh_data.html#a549ba2bc20724244400b3a1215d1c73d":[6,0,2,255,1],
 "struct_urho3_d_1_1_g_impact_mesh_data.html#aead97a47f45b89b87fcb1c6f42916bf9":[6,0,2,255,3],
 "struct_urho3_d_1_1_g_impact_mesh_data.html#aece05191a0bad3143aeaa9b54676000e":[6,0,2,255,2],
 "struct_urho3_d_1_1_g_impact_mesh_data.html#af7b7d8cf82b53ecb6f3dc2b16b962d01":[6,0,2,255,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_iterator_range.html#a2b1465fd52cf3b64f3f34189898f62c5":[6,0,2,322,0],
 "struct_urho3_d_1_1_iterator_range.html#a4cc6b8f0ea8059c2d142a48cd0084aa7":[6,0,2,322,1],
 "struct_urho3_d_1_1_joystick_state.html":[6,0,2,323],
-"struct_urho3_d_1_1_joystick_state.html#a001c942d882f529ca1804fd7c74dc84a":[6,0,2,323,9],
-"struct_urho3_d_1_1_joystick_state.html#a09341476a80be9da2a45e36f844505c9":[6,0,2,323,2],
-"struct_urho3_d_1_1_joystick_state.html#a1d3ef7dcbe048df91e8e243c9a14640a":[6,0,2,323,5]
+"struct_urho3_d_1_1_joystick_state.html#a001c942d882f529ca1804fd7c74dc84a":[6,0,2,323,9]
 };

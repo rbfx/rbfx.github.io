@@ -1,5 +1,7 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_detail_1_1_action_mapping.html#a7d741cbb3b6b5ed707aca9e5c709bfb3":[6,0,2,1,0,2],
+"struct_urho3_d_1_1_detail_1_1_action_mapping.html#a8db6d32575e425932fcff1ecd684d1de":[6,0,2,1,0,3],
 "struct_urho3_d_1_1_detail_1_1_action_mapping.html#ab9a8e354b460a4322cab93503f29bb8a":[6,0,2,1,0,4],
 "struct_urho3_d_1_1_detail_1_1_action_mapping.html#af93fc3b37a7d44211b48b5ce514de3dd":[6,0,2,1,0,1],
 "struct_urho3_d_1_1_detail_1_1_controller_axis_mapping.html":[6,0,2,1,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_free_fly_controller_1_1_movement.html":[6,0,2,243,0],
 "struct_urho3_d_1_1_free_fly_controller_1_1_movement.html#a3b727d9782d9ac0c18c1df2157c0fde1":[6,0,2,243,0,0],
 "struct_urho3_d_1_1_free_fly_controller_1_1_movement.html#a64dcb3b655eb51b2c6c35bab7f461198":[6,0,2,243,0,2],
-"struct_urho3_d_1_1_free_fly_controller_1_1_movement.html#ac651af17e9c5e8f37f635234dc4b80a3":[6,0,2,243,0,1],
-"struct_urho3_d_1_1_g_impact_mesh_data.html":[6,0,2,255],
-"struct_urho3_d_1_1_g_impact_mesh_data.html#a549ba2bc20724244400b3a1215d1c73d":[6,0,2,255,1]
+"struct_urho3_d_1_1_free_fly_controller_1_1_movement.html#ac651af17e9c5e8f37f635234dc4b80a3":[6,0,2,243,0,1]
 };

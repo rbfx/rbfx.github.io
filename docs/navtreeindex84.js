@@ -1,5 +1,7 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_packed_scene_selection.html#a491c3e82506fbc8dab9e98c68a2e5de4":[6,0,2,478,8],
+"struct_urho3_d_1_1_packed_scene_selection.html#a5ef64bddb80bfff0707e8b0552078ae8":[6,0,2,478,1],
 "struct_urho3_d_1_1_packed_scene_selection.html#a8d5710e5eac2a59379bb1f805edede5a":[6,0,2,478,5],
 "struct_urho3_d_1_1_packed_scene_selection.html#a962503636230cbd38691c89ec8930c03":[6,0,2,478,7],
 "struct_urho3_d_1_1_packed_scene_selection.html#ade0bb54425b116403109a0b5b1a3fca3":[6,0,2,478,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_raytracer_geometry.html#a2ada42110df7835161025d1f445522e2":[6,0,2,550,7],
 "struct_urho3_d_1_1_raytracer_geometry.html#a59c7f74309ef3070cc0c6512377dccbd":[6,0,2,550,2],
 "struct_urho3_d_1_1_raytracer_geometry.html#a5ee20b826b40a93703a2fdf87886f0c4":[6,0,2,550,4],
-"struct_urho3_d_1_1_raytracer_geometry.html#a805e7a31bec40a3d98350ba778d2ddf9":[6,0,2,550,6],
-"struct_urho3_d_1_1_raytracer_geometry.html#a8ec32110421ec18aa93e97cf62ca14d6":[6,0,2,550,1],
-"struct_urho3_d_1_1_raytracer_geometry.html#aa81f4158201531ba1eb869ad27e3d4d9":[6,0,2,550,3]
+"struct_urho3_d_1_1_raytracer_geometry.html#a805e7a31bec40a3d98350ba778d2ddf9":[6,0,2,550,6]
 };
