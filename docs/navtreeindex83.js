@@ -1,5 +1,6 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_model_animation_output.html#a51e6a09fb1f74080b2a026f929e4fcb8":[6,0,2,387,0],
 "struct_urho3_d_1_1_model_animation_state_track.html":[6,0,2,388],
 "struct_urho3_d_1_1_model_animation_state_track.html#a2edd049324d1e64ff711be8e643cd8a5":[6,0,2,388,1],
 "struct_urho3_d_1_1_model_animation_state_track.html#a43f4f85c058fdffed432c1421b82eef3":[6,0,2,388,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_package_upload.html#aeb3bc7caa434b94c075c83427dd4a550":[6,0,2,473,3],
 "struct_urho3_d_1_1_packed_scene_selection.html":[6,0,2,478],
 "struct_urho3_d_1_1_packed_scene_selection.html#a1b175923897a14c62d778eb0ae13508e":[6,0,2,478,6],
-"struct_urho3_d_1_1_packed_scene_selection.html#a301b2621154c4f227537821101264515":[6,0,2,478,2],
-"struct_urho3_d_1_1_packed_scene_selection.html#a326e8f86fa4c777bef5706b5e8cab240":[6,0,2,478,0]
+"struct_urho3_d_1_1_packed_scene_selection.html#a301b2621154c4f227537821101264515":[6,0,2,478,2]
 };

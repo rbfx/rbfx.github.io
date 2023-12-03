@@ -102,10 +102,12 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i.html#a6ab1becdb6a6f31e6847bb5e15f3ecd7">SetDebuggerVisible</a> (bool visible)</td></tr>
 <tr class="memdesc:a6ab1becdb6a6f31e6847bb5e15f3ecd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show or hide RmlUi debugger. <br /></td></tr>
 <tr class="separator:a6ab1becdb6a6f31e6847bb5e15f3ecd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e01ec72c5ed98589426016a0b12a09e"><td class="memItemLeft" align="right" valign="top"><a id="a3e01ec72c5ed98589426016a0b12a09e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i.html#a3e01ec72c5ed98589426016a0b12a09e">LoadFont</a> (const ea::string &amp;resourceName, bool fallback=false)</td></tr>
-<tr class="memdesc:a3e01ec72c5ed98589426016a0b12a09e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a font resource for RmlUi to use. Set fallback parameter to true if font should be used as a fallback font for unsupported characters. <br /></td></tr>
+<tr class="memitem:a3e01ec72c5ed98589426016a0b12a09e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i.html#a3e01ec72c5ed98589426016a0b12a09e">LoadFont</a> (const ea::string &amp;resourceName, bool fallback=false)</td></tr>
 <tr class="separator:a3e01ec72c5ed98589426016a0b12a09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab442aa2fec423e68db99dd5f8db51076"><td class="memItemLeft" align="right" valign="top"><a id="ab442aa2fec423e68db99dd5f8db51076"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i.html#ab442aa2fec423e68db99dd5f8db51076">ReloadFonts</a> ()</td></tr>
+<tr class="memdesc:ab442aa2fec423e68db99dd5f8db51076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload fonts from resource cache. <br /></td></tr>
+<tr class="separator:ab442aa2fec423e68db99dd5f8db51076"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f762d68401b78521c3f89dcdc8cf6b3"><td class="memItemLeft" align="right" valign="top"><a id="a2f762d68401b78521c3f89dcdc8cf6b3"></a>
 Rml::Context *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i.html#a2f762d68401b78521c3f89dcdc8cf6b3">GetRmlContext</a> () const</td></tr>
 <tr class="memdesc:a2f762d68401b78521c3f89dcdc8cf6b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns RmlUi context object. <br /></td></tr>
@@ -518,6 +520,35 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
       </table>
 </div><div class="memdoc">
 <p>Load a specified rml document. When resource reloader is active, returned pointer will be invalidated when associated resource change triggers reloading a document. In such cases it is important to subscribe to documentReloaded_ signal and update handle change of document pointer. </p>
+
+</div>
+</div>
+<a id="a3e01ec72c5ed98589426016a0b12a09e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e01ec72c5ed98589426016a0b12a09e">&#9670;&nbsp;</a></span>LoadFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Urho3D::RmlUI::LoadFont </td>
+          <td>(</td>
+          <td class="paramtype">const ea::string &amp;&#160;</td>
+          <td class="paramname"><em>resourceName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fallback</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Load a font resource for RmlUi to use. Set fallback parameter to true if font should be used as a fallback font for unsupported characters. </p>
 
 </div>
 </div>

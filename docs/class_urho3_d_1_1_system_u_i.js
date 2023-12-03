@@ -29,7 +29,7 @@ var class_urho3_d_1_1_system_u_i =
     [ "imContext_", "class_urho3_d_1_1_system_u_i.html#a65c6d1261e3292741730d60fdbaf4ff6", null ],
     [ "impl_", "class_urho3_d_1_1_system_u_i.html#a1c1751cbcb4ddad91f3bf4056d20f43e", null ],
     [ "passThroughEvents_", "class_urho3_d_1_1_system_u_i.html#ad1f17ed72ee3f6d45c37b8596adee1f2", null ],
-    [ "referencedTextures_", "class_urho3_d_1_1_system_u_i.html#a4aa28c686bd0fa66a435bbdf92773041", null ],
+    [ "referencedTextures_", "class_urho3_d_1_1_system_u_i.html#accdccc4093abd5bfa2bf5c2cac7f6396", null ],
     [ "relativeMouseMove_", "class_urho3_d_1_1_system_u_i.html#ade27df400dd8251d03d69d6fb3b44cf1", null ],
     [ "revertMousePosition_", "class_urho3_d_1_1_system_u_i.html#a06df5d13c5af3681b225ec4154972e28", null ],
     [ "revertMousePositionOnDisable_", "class_urho3_d_1_1_system_u_i.html#aa605d40efc88ad95ab61ef3a104cf88e", null ]

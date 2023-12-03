@@ -27,6 +27,7 @@ var class_urho3_d_1_1_rml_u_i =
     [ "LoadFont", "class_urho3_d_1_1_rml_u_i.html#a3e01ec72c5ed98589426016a0b12a09e", null ],
     [ "OnDocumentUnload", "class_urho3_d_1_1_rml_u_i.html#aa9166063c9776110f5037d2db512602c", null ],
     [ "ReloadDocument", "class_urho3_d_1_1_rml_u_i.html#a52e0a068be085f6f21d36e22b9790e53", null ],
+    [ "ReloadFonts", "class_urho3_d_1_1_rml_u_i.html#ab442aa2fec423e68db99dd5f8db51076", null ],
     [ "Render", "class_urho3_d_1_1_rml_u_i.html#a2dee283b2aedb4ffaa4691c00a991465", null ],
     [ "SetDebuggerVisible", "class_urho3_d_1_1_rml_u_i.html#a6ab1becdb6a6f31e6847bb5e15f3ecd7", null ],
     [ "SetRendering", "class_urho3_d_1_1_rml_u_i.html#a321632dd3f89e86169f380c8e8b6c671", null ],

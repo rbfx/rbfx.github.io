@@ -1,5 +1,6 @@
 var NAVTREEINDEX85 =
 {
+"struct_urho3_d_1_1_raytracer_geometry.html#a805e7a31bec40a3d98350ba778d2ddf9":[6,0,2,550,6],
 "struct_urho3_d_1_1_raytracer_geometry.html#a8ec32110421ec18aa93e97cf62ca14d6":[6,0,2,550,1],
 "struct_urho3_d_1_1_raytracer_geometry.html#aa81f4158201531ba1eb869ad27e3d4d9":[6,0,2,550,3],
 "struct_urho3_d_1_1_raytracer_geometry.html#ac5a344068a498999a741985104e145ff":[6,0,2,550,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX85 =
 "struct_urho3_d_1_1_shader_parameter_desc.html#a8548e8e3f6a3fd4cbd8612e70b918559":[6,0,2,630,0],
 "struct_urho3_d_1_1_shader_parameter_desc.html#af1f3a23911f7909c254964b3f7a742f7":[6,0,2,630,1],
 "struct_urho3_d_1_1_shader_program_compositor_settings.html":[6,0,2,632],
-"struct_urho3_d_1_1_shader_program_compositor_settings.html#a0bbfe95b1c5e540fc069d99699116193":[6,0,2,632,0],
-"struct_urho3_d_1_1_shader_program_compositor_settings.html#a2ab07309d2027755dc5cb2d747ced96c":[6,0,2,632,3]
+"struct_urho3_d_1_1_shader_program_compositor_settings.html#a0bbfe95b1c5e540fc069d99699116193":[6,0,2,632,0]
 };

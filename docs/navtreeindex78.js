@@ -1,5 +1,6 @@
 var NAVTREEINDEX78 =
 {
+"struct_urho3_d_1_1_attribute_info.html#af5f4955fda5ed5c43736948077a504e4":[6,0,2,57,9],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html":[6,0,2,60,0],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#a1970a8b8612e5f3e3a720cad4a1d3b99":[6,0,2,60,0,2],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#a227db2678b3c04f7c487e21b07b938bf":[6,0,2,60,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_ping.html":[6,0,2,122,0],
 "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_ping.html#a86a095b301f56e6a757823e9c1994ad6":[6,0,2,122,0,1],
 "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_ping.html#ab49fd102d46513bf39e8840a4f79e0ae":[6,0,2,122,0,0],
-"struct_urho3_d_1_1_clock_synchronizer_1_1_pending_pong.html":[6,0,2,122,1],
-"struct_urho3_d_1_1_clock_synchronizer_1_1_pending_pong.html#a26f7cf7c48e3643654e730d88b574207":[6,0,2,122,1,1]
+"struct_urho3_d_1_1_clock_synchronizer_1_1_pending_pong.html":[6,0,2,122,1]
 };

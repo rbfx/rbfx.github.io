@@ -1,5 +1,6 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_joystick_state.html#a001c942d882f529ca1804fd7c74dc84a":[6,0,2,323,9],
 "struct_urho3_d_1_1_joystick_state.html#a09341476a80be9da2a45e36f844505c9":[6,0,2,323,2],
 "struct_urho3_d_1_1_joystick_state.html#a1d3ef7dcbe048df91e8e243c9a14640a":[6,0,2,323,5],
 "struct_urho3_d_1_1_joystick_state.html#a1e48e67e4e99724e465c450d68dd9d97":[6,0,2,323,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_material_texture.html":[6,0,2,377],
 "struct_urho3_d_1_1_material_texture.html#a3ffcf35480ecbbd43fbc44cf2bcffdea":[6,0,2,377,1],
 "struct_urho3_d_1_1_material_texture.html#ae1740f4fe98a829d29cca692b4180bf2":[6,0,2,377,0],
-"struct_urho3_d_1_1_model_animation_output.html":[6,0,2,387],
-"struct_urho3_d_1_1_model_animation_output.html#a51e6a09fb1f74080b2a026f929e4fcb8":[6,0,2,387,0]
+"struct_urho3_d_1_1_model_animation_output.html":[6,0,2,387]
 };
