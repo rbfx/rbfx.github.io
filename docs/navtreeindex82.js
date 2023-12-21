@@ -1,5 +1,11 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_instancing_buffer_settings.html#aed753505d58cd3f29e77fd54434fbe4c":[6,0,2,316,4],
+"struct_urho3_d_1_1_instancing_buffer_settings.html#af392f6b80a5ddc572a74c40ba011ca8a":[6,0,2,316,2],
+"struct_urho3_d_1_1_iterator_range.html":[6,0,2,322],
+"struct_urho3_d_1_1_iterator_range.html#a2b1465fd52cf3b64f3f34189898f62c5":[6,0,2,322,0],
+"struct_urho3_d_1_1_iterator_range.html#a4cc6b8f0ea8059c2d142a48cd0084aa7":[6,0,2,322,1],
+"struct_urho3_d_1_1_joystick_state.html":[6,0,2,323],
 "struct_urho3_d_1_1_joystick_state.html#a001c942d882f529ca1804fd7c74dc84a":[6,0,2,323,9],
 "struct_urho3_d_1_1_joystick_state.html#a09341476a80be9da2a45e36f844505c9":[6,0,2,323,2],
 "struct_urho3_d_1_1_joystick_state.html#a1d3ef7dcbe048df91e8e243c9a14640a":[6,0,2,323,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html#a30b47c62dba1c5a3597cd4c30e6db4a3":[6,0,2,375,2,0],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html#a8d17dee71dd746bf1ee7c1213446e399":[6,0,2,375,2,1],
 "struct_urho3_d_1_1_material_shader_parameter.html":[6,0,2,376],
-"struct_urho3_d_1_1_material_shader_parameter.html#a2dc8840ac74e8d51601ac6bdd6b31924":[6,0,2,376,2],
-"struct_urho3_d_1_1_material_shader_parameter.html#a458d8be40b614a8f948217f5141c05d0":[6,0,2,376,1],
-"struct_urho3_d_1_1_material_shader_parameter.html#a552dacc075382b0723f7def088f0aa61":[6,0,2,376,0],
-"struct_urho3_d_1_1_material_texture.html":[6,0,2,377],
-"struct_urho3_d_1_1_material_texture.html#a3ffcf35480ecbbd43fbc44cf2bcffdea":[6,0,2,377,1],
-"struct_urho3_d_1_1_material_texture.html#ae1740f4fe98a829d29cca692b4180bf2":[6,0,2,377,0],
-"struct_urho3_d_1_1_model_animation_output.html":[6,0,2,387]
+"struct_urho3_d_1_1_material_shader_parameter.html#a2dc8840ac74e8d51601ac6bdd6b31924":[6,0,2,376,2]
 };

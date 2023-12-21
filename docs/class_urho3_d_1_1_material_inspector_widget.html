@@ -342,9 +342,18 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a0af1e307deff19e343b546799b197cf0"><td class="memItemLeft" align="right" valign="top"><a id="a0af1e307deff19e343b546799b197cf0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_material_inspector_widget.html">MaterialInspectorWidget</a>, <a class="el" href="class_urho3_d_1_1_object.html">Object</a>)</td></tr>
 <tr class="separator:a0af1e307deff19e343b546799b197cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea857126b0e9ab6f33eacd8ad96a8e1"><td class="memItemLeft" align="right" valign="top"><a id="afea857126b0e9ab6f33eacd8ad96a8e1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializePreviewScene</b> ()</td></tr>
+<tr class="separator:afea857126b0e9ab6f33eacd8ad96a8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7099bb87a6940c6077161f4b6fd1357b"><td class="memItemLeft" align="right" valign="top"><a id="a7099bb87a6940c6077161f4b6fd1357b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApplyPreviewSettings</b> ()</td></tr>
+<tr class="separator:a7099bb87a6940c6077161f4b6fd1357b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46dcc092fd61869cd3aef36ee61e9ee5"><td class="memItemLeft" align="right" valign="top"><a id="a46dcc092fd61869cd3aef36ee61e9ee5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateCachedTechniques</b> ()</td></tr>
 <tr class="separator:a46dcc092fd61869cd3aef36ee61e9ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01c450c41563845c669afb77957a6162"><td class="memItemLeft" align="right" valign="top"><a id="a01c450c41563845c669afb77957a6162"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderPreview</b> ()</td></tr>
+<tr class="separator:a01c450c41563845c669afb77957a6162"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79be13120892878929f1d323863e1751"><td class="memItemLeft" align="right" valign="top"><a id="a79be13120892878929f1d323863e1751"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderTechniques</b> ()</td></tr>
 <tr class="separator:a79be13120892878929f1d323863e1751"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -411,6 +420,12 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:aa318cf203386995ed69b50fb1b7043b3"><td class="memItemLeft" align="right" valign="top"><a id="aa318cf203386995ed69b50fb1b7043b3"></a>
 const ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>defaultTechniqueName_</b> {&quot;Techniques/LitOpaque.xml&quot;}</td></tr>
 <tr class="separator:aa318cf203386995ed69b50fb1b7043b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b7c51a8d0a920bd1c435b3b2d87901"><td class="memItemLeft" align="right" valign="top"><a id="ae9b7c51a8d0a920bd1c435b3b2d87901"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>previewScene_</b></td></tr>
+<tr class="separator:ae9b7c51a8d0a920bd1c435b3b2d87901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bfebad3cf6ddd1542c4d73342e2dd70"><td class="memItemLeft" align="right" valign="top"><a id="a0bfebad3cf6ddd1542c4d73342e2dd70"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_scene_renderer_to_texture.html">SceneRendererToTexture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>previewWidget_</b></td></tr>
+<tr class="separator:a0bfebad3cf6ddd1542c4d73342e2dd70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4398d92e0c6c7533074a4bcf695d8da6"><td class="memItemLeft" align="right" valign="top"><a id="a4398d92e0c6c7533074a4bcf695d8da6"></a>
 ea::unordered_map&lt; ea::string, TechniqueDescPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>techniques_</b></td></tr>
 <tr class="separator:a4398d92e0c6c7533074a4bcf695d8da6"><td class="memSeparator" colspan="2">&#160;</td></tr>

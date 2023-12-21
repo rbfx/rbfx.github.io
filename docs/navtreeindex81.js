@@ -1,5 +1,11 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_frame_statistics.html":[6,0,2,242],
+"struct_urho3_d_1_1_frame_statistics.html#a171380c20eae82c4f5610a47b71bb77c":[6,0,2,242,0],
+"struct_urho3_d_1_1_frame_statistics.html#a71bf26439af1ce0ebc6fe951d68f38bc":[6,0,2,242,1],
+"struct_urho3_d_1_1_free_fly_controller_1_1_movement.html":[6,0,2,243,0],
+"struct_urho3_d_1_1_free_fly_controller_1_1_movement.html#a3b727d9782d9ac0c18c1df2157c0fde1":[6,0,2,243,0,0],
+"struct_urho3_d_1_1_free_fly_controller_1_1_movement.html#a64dcb3b655eb51b2c6c35bab7f461198":[6,0,2,243,0,2],
 "struct_urho3_d_1_1_free_fly_controller_1_1_movement.html#ac651af17e9c5e8f37f635234dc4b80a3":[6,0,2,243,0,1],
 "struct_urho3_d_1_1_g_impact_mesh_data.html":[6,0,2,255],
 "struct_urho3_d_1_1_g_impact_mesh_data.html#a549ba2bc20724244400b3a1215d1c73d":[6,0,2,255,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_instancing_buffer_settings.html#a58967243da703e641de2da372219c76c":[6,0,2,316,7],
 "struct_urho3_d_1_1_instancing_buffer_settings.html#a88d82f2a0d9799abc85fab2687df4fa3":[6,0,2,316,6],
 "struct_urho3_d_1_1_instancing_buffer_settings.html#ada2cf8423d9e0767b0673273566a00de":[6,0,2,316,0],
-"struct_urho3_d_1_1_instancing_buffer_settings.html#ae643a44fe30d3a89712e301947481b39":[6,0,2,316,3],
-"struct_urho3_d_1_1_instancing_buffer_settings.html#aed753505d58cd3f29e77fd54434fbe4c":[6,0,2,316,4],
-"struct_urho3_d_1_1_instancing_buffer_settings.html#af392f6b80a5ddc572a74c40ba011ca8a":[6,0,2,316,2],
-"struct_urho3_d_1_1_iterator_range.html":[6,0,2,322],
-"struct_urho3_d_1_1_iterator_range.html#a2b1465fd52cf3b64f3f34189898f62c5":[6,0,2,322,0],
-"struct_urho3_d_1_1_iterator_range.html#a4cc6b8f0ea8059c2d142a48cd0084aa7":[6,0,2,322,1],
-"struct_urho3_d_1_1_joystick_state.html":[6,0,2,323]
+"struct_urho3_d_1_1_instancing_buffer_settings.html#ae643a44fe30d3a89712e301947481b39":[6,0,2,316,3]
 };

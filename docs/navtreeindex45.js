@@ -1,5 +1,11 @@
 var NAVTREEINDEX45 =
 {
+"class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer.html#af3b744b7e2524654ab1b2560dfe2657e":[6,0,2,2,15,12],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer.html#afcec2301141d06368dfe367db4433575":[6,0,2,2,15,11],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer_instance.html":[6,0,2,2,16],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer_instance.html#a3728901bda38bd25f546de782ee1b9f8":[6,0,2,2,16,2],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer_instance.html#a8ba88605d73afb8b0855736c5b2f1bc0":[6,0,2,2,16,1],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer_instance.html#a96ae519d6bf7ac0db395f2c2312bfa88":[6,0,2,2,16,0],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer_instance.html#a9bf07bb0968fd4cfa497663cc3b3e1b2":[6,0,2,2,16,3],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_cast.html":[6,0,2,2,17],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_cast.html#a76d80278b368597b0daa42b648b5b439":[6,0,2,2,17,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX45 =
 "class_urho3_d_1_1_particle_graph_nodes_1_1_local_to_world_instance.html#a84ab302208bfce1083403ec6c944a9e7":[6,0,2,2,59,0],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_make.html":[6,0,2,2,60],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_make.html#a8bdfb651bfb1a5883da5ac2f4ce6b1c9":[6,0,2,2,60,1],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_make.html#ae11bc49e94884a1784e608933eee6593":[6,0,2,2,60,0],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_move.html":[6,0,2,2,64],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_move.html#a193ea58885716eaa0d3b23a7b853779b":[6,0,2,2,64,1],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_move.html#a5b367953e047f67bbbcada2a61e63c64":[6,0,2,2,64,0],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_move.html#ace19a42a6f239783b2e33e72058634cd":[6,0,2,2,64,3],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_move.html#ad504a453cecadc175c72f7c17a2aedf5":[6,0,2,2,64,2],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_move_instance.html":[6,0,2,2,65]
+"class_urho3_d_1_1_particle_graph_nodes_1_1_make.html#ae11bc49e94884a1784e608933eee6593":[6,0,2,2,60,0]
 };

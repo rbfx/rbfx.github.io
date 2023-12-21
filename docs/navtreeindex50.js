@@ -1,5 +1,11 @@
 var NAVTREEINDEX50 =
 {
+"class_urho3_d_1_1_prefab_writer_to_archive.html#aef299a9d6de8474dc6b28cdcfbcf098c":[6,0,2,537,4],
+"class_urho3_d_1_1_prefab_writer_to_archive.html#affe7fe05f15c0c5b48f9ed4a2e37a5a5":[6,0,2,537,1],
+"class_urho3_d_1_1_prefab_writer_to_memory.html":[6,0,2,538],
+"class_urho3_d_1_1_prefab_writer_to_memory.html#a073b7b18b6dd8829dbc649fe79c837b2":[6,0,2,538,16],
+"class_urho3_d_1_1_prefab_writer_to_memory.html#a1ac6cbd94d77ec8b0e2a60c6b13ad8e0":[6,0,2,538,12],
+"class_urho3_d_1_1_prefab_writer_to_memory.html#a23e58083dc44a403236f2bcba478b745":[6,0,2,538,9],
 "class_urho3_d_1_1_prefab_writer_to_memory.html#a319ba9458778025303f6f1ba9e3f8998":[6,0,2,538,1],
 "class_urho3_d_1_1_prefab_writer_to_memory.html#a66033887169bcfc4793f413e0f919bb7":[6,0,2,538,6],
 "class_urho3_d_1_1_prefab_writer_to_memory.html#a660abb0aadbea1d5e45eb9dbaa8a7d69":[6,0,2,538,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX50 =
 "class_urho3_d_1_1_raycast_vehicle.html#af7302230755e8411c802520dc07a0932":[6,0,2,546,40],
 "class_urho3_d_1_1_raycast_vehicle.html#af8fbffa173151c09fa798fac6eaf1b8d":[6,0,2,546,24],
 "class_urho3_d_1_1_raycast_vehicle.html#af908be4985cdec0ce832f5f6e6fea579":[6,0,2,546,51],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html":[6,0,2,547],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a00e0d3d4bcaff5ed5b4a6f9311aad8a9":[6,0,2,547,28],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a03b600e6cd30ed7157e9b2195e56dcf2":[6,0,2,547,2],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a03c175fee6fe65737bd6caf3d412ba39":[6,0,2,547,17],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a045e24ba9627f434e60f971bc6ad82a1":[6,0,2,547,102],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a080fb4aeddbed422b15857d4156a42e6":[6,0,2,547,1],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a09d6eb0a4e7bc7c2b776ef8e6a3fab90":[6,0,2,547,15]
+"class_urho3_d_1_1_raycast_vehicle_wheel.html":[6,0,2,547]
 };
