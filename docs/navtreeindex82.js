@@ -1,5 +1,6 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_instancing_buffer_settings.html#ae643a44fe30d3a89712e301947481b39":[6,0,2,316,3],
 "struct_urho3_d_1_1_instancing_buffer_settings.html#aed753505d58cd3f29e77fd54434fbe4c":[6,0,2,316,4],
 "struct_urho3_d_1_1_instancing_buffer_settings.html#af392f6b80a5ddc572a74c40ba011ca8a":[6,0,2,316,2],
 "struct_urho3_d_1_1_iterator_range.html":[6,0,2,322],
@@ -248,6 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html":[6,0,2,375,2],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html#a30b47c62dba1c5a3597cd4c30e6db4a3":[6,0,2,375,2,0],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html#a8d17dee71dd746bf1ee7c1213446e399":[6,0,2,375,2,1],
-"struct_urho3_d_1_1_material_shader_parameter.html":[6,0,2,376],
-"struct_urho3_d_1_1_material_shader_parameter.html#a2dc8840ac74e8d51601ac6bdd6b31924":[6,0,2,376,2]
+"struct_urho3_d_1_1_material_shader_parameter.html":[6,0,2,376]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX88 =
 {
+"struct_urho3_d_1_1_v_r_rig_desc.html#a14c85c50ae77564b4bf3557df3eae3da":[6,0,2,808,6],
 "struct_urho3_d_1_1_v_r_rig_desc.html#a33f8ac24f875293d862e8dc1e0f69e8f":[6,0,2,808,1],
 "struct_urho3_d_1_1_v_r_rig_desc.html#a3ecf9c9c982ebc88b9381b0532cb73ab":[6,0,2,808,2],
 "struct_urho3_d_1_1_v_r_rig_desc.html#a436e949499835da75b818a8b937eda74":[6,0,2,808,0],

@@ -52,6 +52,7 @@ var class_urho3_d_1_1_quaternion =
     [ "ToHash", "class_urho3_d_1_1_quaternion.html#ac9e5e5face02e5f086759b6994dc5ddf", null ],
     [ "ToString", "class_urho3_d_1_1_quaternion.html#a6ead60225ed0d7dd7c58439a00686c15", null ],
     [ "ToSwingTwist", "class_urho3_d_1_1_quaternion.html#a7583d2dc61497e610c265d6812fa4749", null ],
+    [ "TwistAngle", "class_urho3_d_1_1_quaternion.html#ae0b713ee6df57d0b64738f0570dd390e", null ],
     [ "YawAngle", "class_urho3_d_1_1_quaternion.html#ae5d50150c9fba0b05885339001685495", null ],
     [ "IDENTITY", "class_urho3_d_1_1_quaternion.html#af53dbc2f29f41c9a4e7c432ccca289c5", null ],
     [ "w_", "class_urho3_d_1_1_quaternion.html#a2f0e08e51d101b8ad0bf267664d1a1d3", null ],

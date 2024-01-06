@@ -1,5 +1,6 @@
 var NAVTREEINDEX78 =
 {
+"struct_urho3_d_1_1_attribute_info.html#a96bd2573780bcabc0e46c282ae0089dc":[6,0,2,57,6],
 "struct_urho3_d_1_1_attribute_info.html#a9a88f6396b1b43e171610898cf85e962":[6,0,2,57,13],
 "struct_urho3_d_1_1_attribute_info.html#aa5b6f403980cad6b0909cb5eaa38ce9f":[6,0,2,57,5],
 "struct_urho3_d_1_1_attribute_info.html#aaa8c452f402eeaaf83dc2073aff4d882":[6,0,2,57,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_client_replication_state.html#ab88e77a2d086a6f30b38a16f26019a87":[6,0,2,120,6],
 "struct_urho3_d_1_1_client_replication_state.html#abe5590de2ace2e7108ce6daef671c2e9":[6,0,2,120,0],
 "struct_urho3_d_1_1_client_replication_state.html#acab675f2e7f3d3229857bb4dcaad28a5":[6,0,2,120,9],
-"struct_urho3_d_1_1_client_replication_state.html#ad6c9aa0acbc0bddb057ea31e703fd3d5":[6,0,2,120,7],
-"struct_urho3_d_1_1_client_replication_state.html#adb8c79c5ba299ab9bf2cdf8553b21631":[6,0,2,120,8]
+"struct_urho3_d_1_1_client_replication_state.html#ad6c9aa0acbc0bddb057ea31e703fd3d5":[6,0,2,120,7]
 };
