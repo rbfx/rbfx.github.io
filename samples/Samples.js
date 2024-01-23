@@ -86,7 +86,6 @@ if (ENVIRONMENT_IS_NODE) {
   process.exitCode = status;
   throw toThrow;
  };
- Module["inspect"] = () => "[Emscripten Module object]";
 } else  if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
  if (ENVIRONMENT_IS_WORKER) {
   scriptDirectory = self.location.href;
@@ -197,8 +196,6 @@ var __ATPRERUN__ = [];
 var __ATINIT__ = [];
 
 var __ATMAIN__ = [];
-
-var __ATEXIT__ = [];
 
 var __ATPOSTRUN__ = [];
 
@@ -399,14 +396,14 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 1932324: () => {
+ 1932212: () => {
   FS.syncfs(function(err) {
    if (err) {
     console.error(err);
    }
   });
  },
- 1932388: $0 => {
+ 1932276: $0 => {
   var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
   var reply = window.prompt(str, "i");
   if (reply === null) {
@@ -414,10 +411,10 @@ var ASM_CONSTS = {
   }
   return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
  },
- 1932613: ($0, $1) => {
+ 1932501: ($0, $1) => {
   alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
  },
- 1932670: () => {
+ 1932558: () => {
   if (typeof (AudioContext) !== "undefined") {
    return true;
   } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -425,7 +422,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1932817: () => {
+ 1932705: () => {
   if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
    return true;
   } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -433,7 +430,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1933051: $0 => {
+ 1932939: $0 => {
   if (typeof (Module["SDL2"]) === "undefined") {
    Module["SDL2"] = {};
   }
@@ -455,11 +452,11 @@ var ASM_CONSTS = {
   }
   return SDL2.audioContext === undefined ? -1 : 0;
  },
- 1933544: () => {
+ 1933432: () => {
   var SDL2 = Module["SDL2"];
   return SDL2.audioContext.sampleRate;
  },
- 1933612: ($0, $1, $2, $3) => {
+ 1933500: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   var have_microphone = function(stream) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -500,7 +497,7 @@ var ASM_CONSTS = {
    }, have_microphone, no_microphone);
   }
  },
- 1935264: ($0, $1, $2, $3) => {
+ 1935152: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
   SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -512,7 +509,7 @@ var ASM_CONSTS = {
   };
   SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
  },
- 1935674: ($0, $1) => {
+ 1935562: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
   for (var c = 0; c < numChannels; ++c) {
@@ -531,7 +528,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1936279: ($0, $1) => {
+ 1936167: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
   for (var c = 0; c < numChannels; ++c) {
@@ -544,7 +541,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1936759: $0 => {
+ 1936647: $0 => {
   var SDL2 = Module["SDL2"];
   if ($0) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -582,7 +579,7 @@ var ASM_CONSTS = {
    SDL2.audioContext = undefined;
   }
  },
- 1937931: ($0, $1, $2) => {
+ 1937819: ($0, $1, $2) => {
   var w = $0;
   var h = $1;
   var pixels = $2;
@@ -653,7 +650,7 @@ var ASM_CONSTS = {
   }
   SDL2.ctx.putImageData(SDL2.image, 0, 0);
  },
- 1939400: ($0, $1, $2, $3, $4) => {
+ 1939288: ($0, $1, $2, $3, $4) => {
   var w = $0;
   var h = $1;
   var hot_x = $2;
@@ -690,18 +687,18 @@ var ASM_CONSTS = {
   stringToUTF8(url, urlBuf, url.length + 1);
   return urlBuf;
  },
- 1940389: $0 => {
+ 1940277: $0 => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = UTF8ToString($0);
   }
  },
- 1940472: () => {
+ 1940360: () => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = "none";
   }
  },
- 1940541: () => window.innerWidth,
- 1940571: () => window.innerHeight
+ 1940429: () => window.innerWidth,
+ 1940459: () => window.innerHeight
 };
 
 /** @constructor */ function ExitStatus(status) {
@@ -761,47 +758,49 @@ var noExitRuntime = Module["noExitRuntime"] || true;
  }
 }
 
-/** @constructor */ function ExceptionInfo(excPtr) {
- this.excPtr = excPtr;
- this.ptr = excPtr - 24;
- this.set_type = function(type) {
+class ExceptionInfo {
+ constructor(excPtr) {
+  this.excPtr = excPtr;
+  this.ptr = excPtr - 24;
+ }
+ set_type(type) {
   HEAPU32[(((this.ptr) + (4)) >> 2)] = type;
- };
- this.get_type = function() {
+ }
+ get_type() {
   return HEAPU32[(((this.ptr) + (4)) >> 2)];
- };
- this.set_destructor = function(destructor) {
+ }
+ set_destructor(destructor) {
   HEAPU32[(((this.ptr) + (8)) >> 2)] = destructor;
- };
- this.get_destructor = function() {
+ }
+ get_destructor() {
   return HEAPU32[(((this.ptr) + (8)) >> 2)];
- };
- this.set_caught = function(caught) {
+ }
+ set_caught(caught) {
   caught = caught ? 1 : 0;
   HEAP8[(((this.ptr) + (12)) >> 0)] = caught;
- };
- this.get_caught = function() {
+ }
+ get_caught() {
   return HEAP8[(((this.ptr) + (12)) >> 0)] != 0;
- };
- this.set_rethrown = function(rethrown) {
+ }
+ set_rethrown(rethrown) {
   rethrown = rethrown ? 1 : 0;
   HEAP8[(((this.ptr) + (13)) >> 0)] = rethrown;
- };
- this.get_rethrown = function() {
+ }
+ get_rethrown() {
   return HEAP8[(((this.ptr) + (13)) >> 0)] != 0;
- };
- this.init = function(type, destructor) {
+ }
+ init(type, destructor) {
   this.set_adjusted_ptr(0);
   this.set_type(type);
   this.set_destructor(destructor);
- };
- this.set_adjusted_ptr = function(adjustedPtr) {
+ }
+ set_adjusted_ptr(adjustedPtr) {
   HEAPU32[(((this.ptr) + (16)) >> 2)] = adjustedPtr;
- };
- this.get_adjusted_ptr = function() {
+ }
+ get_adjusted_ptr() {
   return HEAPU32[(((this.ptr) + (16)) >> 2)];
- };
- this.get_exception_ptr = function() {
+ }
+ get_exception_ptr() {
   var isPointer = ___cxa_is_pointer_type(this.get_type());
   if (isPointer) {
    return HEAPU32[((this.excPtr) >> 2)];
@@ -809,7 +808,7 @@ var noExitRuntime = Module["noExitRuntime"] || true;
   var adjusted = this.get_adjusted_ptr();
   if (adjusted !== 0) return adjusted;
   return this.excPtr;
- };
+ }
 }
 
 var exceptionLast = 0;
@@ -1530,7 +1529,6 @@ var MEMFS = {
 /** @param {boolean=} noRunDep */ var asyncLoad = (url, onload, onerror, noRunDep) => {
  var dep = !noRunDep ? getUniqueRunDependency(`al ${url}`) : "";
  readAsync(url, arrayBuffer => {
-  assert(arrayBuffer, `Loading data file "${url}" failed (no arrayBuffer).`);
   onload(new Uint8Array(arrayBuffer));
   if (dep) removeRunDependency(dep);
  }, event => {
@@ -1584,7 +1582,7 @@ var FS_createPreloadedFile = (parent, name, url, canRead, canWrite, onload, oner
  }
  addRunDependency(dep);
  if (typeof url == "string") {
-  asyncLoad(url, byteArray => processData(byteArray), onerror);
+  asyncLoad(url, processData, onerror);
  } else {
   processData(url);
  }
@@ -3786,11 +3784,6 @@ var getSocketFromFD = fd => {
  return socket;
 };
 
-var setErrNo = value => {
- HEAP32[((___errno_location()) >> 2)] = value;
- return value;
-};
-
 var inetNtop4 = addr => (addr & 255) + "." + ((addr >> 8) & 255) + "." + ((addr >> 16) & 255) + "." + ((addr >> 24) & 255);
 
 var inetNtop6 = ints => {
@@ -4139,7 +4132,7 @@ function ___syscall_fcntl64(fd, cmd, varargs) {
     return 0;
    }
 
-  case 5:
+  case 12:
    {
     var arg = SYSCALLS.getp();
     var offset = 0;
@@ -4147,23 +4140,11 @@ function ___syscall_fcntl64(fd, cmd, varargs) {
     return 0;
    }
 
-  case 6:
-  case 7:
+  case 13:
+  case 14:
    return 0;
-
-  case 16:
-  case 8:
-   return -28;
-
-  case 9:
-   setErrNo(28);
-   return -1;
-
-  default:
-   {
-    return -28;
-   }
   }
+  return -28;
  } catch (e) {
   if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
   return -e.errno;
@@ -4645,29 +4626,26 @@ var GenericWireTypeSize = 8;
  });
 };
 
-function handleAllocatorInit() {
- Object.assign(HandleAllocator.prototype, /** @lends {HandleAllocator.prototype} */ {
-  get(id) {
-   return this.allocated[id];
-  },
-  has(id) {
-   return this.allocated[id] !== undefined;
-  },
-  allocate(handle) {
-   var id = this.freelist.pop() || this.allocated.length;
-   this.allocated[id] = handle;
-   return id;
-  },
-  free(id) {
-   this.allocated[id] = undefined;
-   this.freelist.push(id);
-  }
- });
-}
-
-/** @constructor */ function HandleAllocator() {
- this.allocated = [ undefined ];
- this.freelist = [];
+class HandleAllocator {
+ constructor() {
+  this.allocated = [ undefined ];
+  this.freelist = [];
+ }
+ get(id) {
+  return this.allocated[id];
+ }
+ has(id) {
+  return this.allocated[id] !== undefined;
+ }
+ allocate(handle) {
+  var id = this.freelist.pop() || this.allocated.length;
+  this.allocated[id] = handle;
+  return id;
+ }
+ free(id) {
+  this.allocated[id] = undefined;
+  this.freelist.push(id);
+ }
 }
 
 var emval_handles = new HandleAllocator;
@@ -4698,8 +4676,9 @@ var init_emval = () => {
  }, {
   value: false
  });
- emval_handles.reserved = emval_handles.allocated.length;
- Module["count_emval_handles"] = count_emval_handles;
+ Object.assign(emval_handles, /** @lends {emval_handles} */ {
+  reserved: emval_handles.allocated.length
+ }), Module["count_emval_handles"] = count_emval_handles;
 };
 
 var Emval = {
@@ -4738,21 +4717,20 @@ var Emval = {
  return this["fromWireType"](HEAP32[((pointer) >> 2)]);
 }
 
-var __embind_register_emval = (rawType, name) => {
- name = readLatin1String(name);
- registerType(rawType, {
-  name: name,
-  "fromWireType": handle => {
-   var rv = Emval.toValue(handle);
-   __emval_decref(handle);
-   return rv;
-  },
-  "toWireType": (destructors, value) => Emval.toHandle(value),
-  "argPackAdvance": GenericWireTypeSize,
-  "readValueFromPointer": simpleReadValueFromPointer,
-  destructorFunction: null
- });
+var EmValType = {
+ name: "emscripten::val",
+ "fromWireType": handle => {
+  var rv = Emval.toValue(handle);
+  __emval_decref(handle);
+  return rv;
+ },
+ "toWireType": (destructors, value) => Emval.toHandle(value),
+ "argPackAdvance": GenericWireTypeSize,
+ "readValueFromPointer": simpleReadValueFromPointer,
+ destructorFunction: null
 };
+
+var __embind_register_emval = rawType => registerType(rawType, EmValType);
 
 var floatReadValueFromPointer = (name, width) => {
  switch (width) {
@@ -5354,7 +5332,7 @@ var __embind_register_std_wstring = (rawType, charSize, name) => {
    }
    var length = lengthBytesUTF(value);
    var ptr = _malloc(4 + length + charSize);
-   HEAPU32[ptr >> 2] = length >> shift;
+   HEAPU32[((ptr) >> 2)] = length >> shift;
    encodeString(value, ptr + 4, length + charSize);
    if (destructors !== null) {
     destructors.push(_free, ptr);
@@ -5383,6 +5361,51 @@ var __embind_register_void = (rawType, name) => {
 var nowIsMonotonic = 1;
 
 var __emscripten_get_now_is_monotonic = () => nowIsMonotonic;
+
+var __emscripten_system = command => {
+ if (ENVIRONMENT_IS_NODE) {
+  if (!command) return 1;
+  var cmdstr = UTF8ToString(command);
+  if (!cmdstr.length) return 0;
+  var cp = require("child_process");
+  var ret = cp.spawnSync(cmdstr, [], {
+   shell: true,
+   stdio: "inherit"
+  });
+  var _W_EXITCODE = (ret, sig) => ((ret) << 8 | (sig));
+  if (ret.status === null) {
+   var signalToNumber = sig => {
+    switch (sig) {
+    case "SIGHUP":
+     return 1;
+
+    case "SIGINT":
+     return 2;
+
+    case "SIGQUIT":
+     return 3;
+
+    case "SIGFPE":
+     return 8;
+
+    case "SIGKILL":
+     return 9;
+
+    case "SIGALRM":
+     return 14;
+
+    case "SIGTERM":
+     return 15;
+    }
+    return 2;
+   };
+   return _W_EXITCODE(0, signalToNumber(ret.signal));
+  }
+  return _W_EXITCODE(ret.status, 0);
+ }
+ if (!command) return 0;
+ return -52;
+};
 
 var __emscripten_throw_longjmp = () => {
  throw Infinity;
@@ -6227,6 +6250,11 @@ var webgl_enable_WEBGL_multi_draw_instanced_base_vertex_base_instance = ctx => !
 
 var webgl_enable_WEBGL_multi_draw = ctx => !!(ctx.multiDrawWebgl = ctx.getExtension("WEBGL_multi_draw"));
 
+var getEmscriptenSupportedExtensions = function(ctx) {
+ var supportedExtensions = [  "EXT_color_buffer_float", "EXT_disjoint_timer_query_webgl2", "EXT_texture_norm16", "WEBGL_clip_cull_distance",  "EXT_color_buffer_half_float", "EXT_float_blend", "EXT_texture_compression_bptc", "EXT_texture_compression_rgtc", "EXT_texture_filter_anisotropic", "KHR_parallel_shader_compile", "OES_texture_float_linear", "WEBGL_compressed_texture_s3tc", "WEBGL_compressed_texture_s3tc_srgb", "WEBGL_debug_renderer_info", "WEBGL_debug_shaders", "WEBGL_lose_context", "WEBGL_multi_draw" ];
+ return (ctx.getSupportedExtensions() || []).filter(ext => supportedExtensions.includes(ext));
+};
+
 var GL = {
  counter: 1,
  buffers: [],
@@ -6401,11 +6429,6 @@ var GL = {
   var ctx = canvas.getContext("webgl2", webGLContextAttributes);
   if (!ctx) return 0;
   var handle = GL.registerContext(ctx, webGLContextAttributes);
-  var _allSupportedExtensions = ctx.getSupportedExtensions;
-  var supportedExtensionsForGetProcAddress = [  "EXT_color_buffer_float", "EXT_disjoint_timer_query_webgl2", "EXT_texture_norm16", "WEBGL_clip_cull_distance",  "EXT_color_buffer_half_float", "EXT_float_blend", "EXT_texture_compression_bptc", "EXT_texture_compression_rgtc", "EXT_texture_filter_anisotropic", "KHR_parallel_shader_compile", "OES_texture_float_linear", "WEBGL_compressed_texture_s3tc", "WEBGL_compressed_texture_s3tc_srgb", "WEBGL_debug_renderer_info", "WEBGL_debug_shaders", "WEBGL_lose_context", "WEBGL_multi_draw" ];
-  ctx.getSupportedExtensions = function() {
-   return (_allSupportedExtensions.apply(this) || []).filter(ext => supportedExtensionsForGetProcAddress.includes(ext));
-  };
   return handle;
  },
  registerContext: (ctx, webGLContextAttributes) => {
@@ -6470,17 +6493,11 @@ var GL = {
    GLctx.disjointTimerQueryExt = GLctx.getExtension("EXT_disjoint_timer_query");
   }
   webgl_enable_WEBGL_multi_draw(GLctx);
-  var exts = GLctx.getSupportedExtensions() || [];
-  exts.forEach(ext => {
+  getEmscriptenSupportedExtensions(GLctx).forEach(ext => {
    if (!ext.includes("lose_context") && !ext.includes("debug")) {
     GLctx.getExtension(ext);
    }
   });
- },
- getExtensions() {
-  var exts = GLctx.getSupportedExtensions() || [];
-  exts = exts.concat(exts.map(e => "GL_" + e));
-  return exts;
  }
 };
 
@@ -6944,20 +6961,13 @@ var withStackSave = f => {
 };
 
 var JSEvents = {
- inEventHandler: 0,
  removeAllEventListeners() {
-  for (var i = JSEvents.eventHandlers.length - 1; i >= 0; --i) {
-   JSEvents._removeHandler(i);
+  while (JSEvents.eventHandlers.length) {
+   JSEvents._removeHandler(JSEvents.eventHandlers.length - 1);
   }
-  JSEvents.eventHandlers = [];
   JSEvents.deferredCalls = [];
  },
- registerRemoveEventListeners() {
-  if (!JSEvents.removeEventListenersRegistered) {
-   __ATEXIT__.push(JSEvents.removeAllEventListeners);
-   JSEvents.removeEventListenersRegistered = true;
-  }
- },
+ inEventHandler: 0,
  deferredCalls: [],
  deferCall(targetFunction, precedence, argsList) {
   function arraysHaveEqualContent(arrA, arrB) {
@@ -7022,19 +7032,17 @@ var JSEvents = {
   if (!eventHandler.target) {
    return -4;
   }
-  var jsEventHandler = function jsEventHandler(event) {
-   ++JSEvents.inEventHandler;
-   JSEvents.currentEventHandler = eventHandler;
-   JSEvents.runDeferredCalls();
-   eventHandler.handlerFunc(event);
-   JSEvents.runDeferredCalls();
-   --JSEvents.inEventHandler;
-  };
   if (eventHandler.callbackfunc) {
-   eventHandler.eventListenerFunc = jsEventHandler;
-   eventHandler.target.addEventListener(eventHandler.eventTypeString, jsEventHandler, eventHandler.useCapture);
+   eventHandler.eventListenerFunc = function(event) {
+    ++JSEvents.inEventHandler;
+    JSEvents.currentEventHandler = eventHandler;
+    JSEvents.runDeferredCalls();
+    eventHandler.handlerFunc(event);
+    JSEvents.runDeferredCalls();
+    --JSEvents.inEventHandler;
+   };
+   eventHandler.target.addEventListener(eventHandler.eventTypeString, eventHandler.eventListenerFunc, eventHandler.useCapture);
    JSEvents.eventHandlers.push(eventHandler);
-   JSEvents.registerRemoveEventListeners();
   } else {
    for (var i = 0; i < JSEvents.eventHandlers.length; ++i) {
     if (JSEvents.eventHandlers[i].target == eventHandler.target && JSEvents.eventHandlers[i].eventTypeString == eventHandler.eventTypeString) {
@@ -8339,6 +8347,12 @@ var writeI53ToI64 = (ptr, num) => {
  HEAPU32[(((ptr) + (4)) >> 2)] = (num - lower) / 4294967296;
 };
 
+var webglGetExtensions = function $webglGetExtensions() {
+ var exts = getEmscriptenSupportedExtensions(GLctx);
+ exts = exts.concat(exts.map(e => "GL_" + e));
+ return exts;
+};
+
 var emscriptenWebGLGet = (name_, p, type) => {
  if (!p) {
   GL.recordError(1281);
@@ -8371,8 +8385,7 @@ var emscriptenWebGLGet = (name_, p, type) => {
    GL.recordError(1282);
    /* GL_INVALID_OPERATION */ return;
   }
-  var exts = GLctx.getSupportedExtensions() || [];
-  ret = 2 * exts.length;
+  ret = webglGetExtensions().length;
   break;
 
  case 33307:
@@ -8878,7 +8891,7 @@ var _emscripten_glGetShaderiv = _glGetShaderiv;
  if (!ret) {
   switch (name_) {
   case 7939:
-   /* GL_EXTENSIONS */ ret = stringToNewUTF8(GL.getExtensions().join(" "));
+   /* GL_EXTENSIONS */ ret = stringToNewUTF8(webglGetExtensions().join(" "));
    break;
 
   case 7936:
@@ -8936,7 +8949,7 @@ var _emscripten_glGetString = _glGetString;
  }
  switch (name) {
  case 7939:
-  /* GL_EXTENSIONS */ var exts = GL.getExtensions().map(e => stringToNewUTF8(e));
+  /* GL_EXTENSIONS */ var exts = webglGetExtensions().map(stringToNewUTF8);
   stringiCache = GL.stringiCache[name] = exts;
   if (index < 0 || index >= stringiCache.length) {
    GL.recordError(1281);
@@ -10177,18 +10190,13 @@ var _emscripten_resize_heap = requestedSize => {
  abortOnCannotGrowMemory(requestedSize);
 };
 
-/** @suppress {checkTypes} */ var disableGamepadApiIfItThrows = () => {
+/** @suppress {checkTypes} */ var _emscripten_sample_gamepad_data = () => {
  try {
-  navigator.getGamepads();
+  if (navigator.getGamepads) return (JSEvents.lastGamepadState = navigator.getGamepads()) ? 0 : -1;
  } catch (e) {
   navigator.getGamepads = null;
-  return 1;
  }
-};
-
-var _emscripten_sample_gamepad_data = () => {
- if (!navigator.getGamepads || disableGamepadApiIfItThrows()) return -1;
- return (JSEvents.lastGamepadState = navigator.getGamepads()) ? 0 : -1;
+ return -1;
 };
 
 var registerBeforeUnloadEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) => {
@@ -10314,12 +10322,12 @@ var registerGamepadEventCallback = (target, userData, useCapture, callbackfunc, 
 };
 
 var _emscripten_set_gamepadconnected_callback_on_thread = (userData, useCapture, callbackfunc, targetThread) => {
- if (!navigator.getGamepads || disableGamepadApiIfItThrows()) return -1;
+ if (_emscripten_sample_gamepad_data()) return -1;
  return registerGamepadEventCallback(2, userData, useCapture, callbackfunc, 26, "gamepadconnected", targetThread);
 };
 
 var _emscripten_set_gamepaddisconnected_callback_on_thread = (userData, useCapture, callbackfunc, targetThread) => {
- if (!navigator.getGamepads || disableGamepadApiIfItThrows()) return -1;
+ if (_emscripten_sample_gamepad_data()) return -1;
  return registerGamepadEventCallback(2, userData, useCapture, callbackfunc, 27, "gamepaddisconnected", targetThread);
 };
 
@@ -10462,7 +10470,7 @@ var registerPointerlockChangeEventCallback = (target, userData, useCapture, call
 
 var registerUiEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
  if (!JSEvents.uiEvent) JSEvents.uiEvent = _malloc(36);
- if (eventTypeString == "scroll" && !target) {
+ if (eventTypeId == 11 && !target) {
   target = document;
  } else  {
   target = findEventTarget(target);
@@ -11355,7 +11363,7 @@ var _strftime = (s, maxsize, format, tm) => {
   "%d": date => leadingNulls(date.tm_mday, 2),
   "%e": date => leadingSomething(date.tm_mday, 2, " "),
   "%g": date => getWeekBasedYear(date).toString().substring(2),
-  "%G": date => getWeekBasedYear(date),
+  "%G": getWeekBasedYear,
   "%H": date => leadingNulls(date.tm_hour, 2),
   "%I": date => {
    var twelveHour = date.tm_hour;
@@ -11429,52 +11437,6 @@ var _strftime = (s, maxsize, format, tm) => {
 };
 
 var _strftime_l = (s, maxsize, format, tm, loc) => _strftime(s, maxsize, format, tm);
-
-var _system = command => {
- if (ENVIRONMENT_IS_NODE) {
-  if (!command) return 1;
-  var cmdstr = UTF8ToString(command);
-  if (!cmdstr.length) return 0;
-  var cp = require("child_process");
-  var ret = cp.spawnSync(cmdstr, [], {
-   shell: true,
-   stdio: "inherit"
-  });
-  var _W_EXITCODE = (ret, sig) => ((ret) << 8 | (sig));
-  if (ret.status === null) {
-   var signalToNumber = sig => {
-    switch (sig) {
-    case "SIGHUP":
-     return 1;
-
-    case "SIGINT":
-     return 2;
-
-    case "SIGQUIT":
-     return 3;
-
-    case "SIGFPE":
-     return 8;
-
-    case "SIGKILL":
-     return 9;
-
-    case "SIGALRM":
-     return 14;
-
-    case "SIGTERM":
-     return 15;
-    }
-    return 2;
-   };
-   return _W_EXITCODE(0, signalToNumber(ret.signal));
-  }
-  return _W_EXITCODE(ret.status, 0);
- }
- if (!command) return 0;
- setErrNo(52);
- return -1;
-};
 
 var WEBSOCKET = {
  map: {},
@@ -11678,8 +11640,6 @@ InternalError = Module["InternalError"] = class InternalError extends Error {
  }
 };
 
-handleAllocatorInit();
-
 init_emval();
 
 UnboundTypeError = Module["UnboundTypeError"] = extendError(Error, "UnboundTypeError");
@@ -11735,6 +11695,7 @@ var wasmImports = {
  /** @export */ _embind_register_std_wstring: __embind_register_std_wstring,
  /** @export */ _embind_register_void: __embind_register_void,
  /** @export */ _emscripten_get_now_is_monotonic: __emscripten_get_now_is_monotonic,
+ /** @export */ _emscripten_system: __emscripten_system,
  /** @export */ _emscripten_throw_longjmp: __emscripten_throw_longjmp,
  /** @export */ _gmtime_js: __gmtime_js,
  /** @export */ _localtime_js: __localtime_js,
@@ -12233,7 +12194,6 @@ var wasmImports = {
  /** @export */ rtcSetUserPointer: _rtcSetUserPointer,
  /** @export */ strftime: _strftime,
  /** @export */ strftime_l: _strftime_l,
- /** @export */ system: _system,
  /** @export */ wsCreateWebSocket: _wsCreateWebSocket,
  /** @export */ wsDeleteWebSocket: _wsDeleteWebSocket,
  /** @export */ wsSendMessage: _wsSendMessage,
@@ -12248,8 +12208,6 @@ var wasmExports = createWasm();
 var ___wasm_call_ctors = () => (___wasm_call_ctors = wasmExports["__wasm_call_ctors"])();
 
 var _main = Module["_main"] = (a0, a1) => (_main = Module["_main"] = wasmExports["__main_argc_argv"])(a0, a1);
-
-var ___errno_location = () => (___errno_location = wasmExports["__errno_location"])();
 
 var _free = a0 => (_free = wasmExports["free"])(a0);
 
