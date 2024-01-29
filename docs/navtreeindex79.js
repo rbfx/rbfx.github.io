@@ -1,5 +1,17 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_client_replication_state.html#a219c8a91d7d88a949a16df8df849fccc":[6,0,2,120,13],
+"struct_urho3_d_1_1_client_replication_state.html#a2f5949b19d860afe3a29f40eb2885198":[6,0,2,120,16],
+"struct_urho3_d_1_1_client_replication_state.html#a3efb6b978fad7816b4bf813bd7f4a510":[6,0,2,120,5],
+"struct_urho3_d_1_1_client_replication_state.html#a47b72169c9a93db8c47d787aeac7dd2f":[6,0,2,120,14],
+"struct_urho3_d_1_1_client_replication_state.html#a47d13ffab55ded59ceef96451faaadf4":[6,0,2,120,2],
+"struct_urho3_d_1_1_client_replication_state.html#a5a9e89e63a25e3567ed3974b739a7af6":[6,0,2,120,15],
+"struct_urho3_d_1_1_client_replication_state.html#a6a2087f557fa40ca26409d872a5963e2":[6,0,2,120,11],
+"struct_urho3_d_1_1_client_replication_state.html#ab1bf538390429960c67f8bae42a5fdce":[6,0,2,120,4],
+"struct_urho3_d_1_1_client_replication_state.html#ab88e77a2d086a6f30b38a16f26019a87":[6,0,2,120,6],
+"struct_urho3_d_1_1_client_replication_state.html#abe5590de2ace2e7108ce6daef671c2e9":[6,0,2,120,0],
+"struct_urho3_d_1_1_client_replication_state.html#acab675f2e7f3d3229857bb4dcaad28a5":[6,0,2,120,9],
+"struct_urho3_d_1_1_client_replication_state.html#ad6c9aa0acbc0bddb057ea31e703fd3d5":[6,0,2,120,7],
 "struct_urho3_d_1_1_client_replication_state.html#adb8c79c5ba299ab9bf2cdf8553b21631":[6,0,2,120,8],
 "struct_urho3_d_1_1_client_replication_state.html#aec3320956ae3f252453f0d9cdaa97740":[6,0,2,120,10],
 "struct_urho3_d_1_1_client_replication_state.html#af22f597669a4a740a46cbbe6b5b4966c":[6,0,2,120,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data.html#a652fa1b6b435fc07b0b6d79c6b6ac1c6":[6,0,2,189,0,0],
 "struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data.html#a69825e8c4f53875bf029255c997e430e":[6,0,2,189,0,1],
 "struct_urho3_d_1_1_default_render_pipeline_view_1_1_deferred_lighting_data.html":[6,0,2,190,0],
-"struct_urho3_d_1_1_default_render_pipeline_view_1_1_deferred_lighting_data.html#a1fac86e0cb97c7c9757506fe86fc32ac":[6,0,2,190,0,1],
-"struct_urho3_d_1_1_default_render_pipeline_view_1_1_deferred_lighting_data.html#a53ef978ee55ffaf6c457b9a977ca2da2":[6,0,2,190,0,2],
-"struct_urho3_d_1_1_default_render_pipeline_view_1_1_deferred_lighting_data.html#ad15fb9c68def921b4b2ff53c75c72891":[6,0,2,190,0,0],
-"struct_urho3_d_1_1_delayed_world_transform.html":[6,0,2,192],
-"struct_urho3_d_1_1_delayed_world_transform.html#a0131b2d35075c061ff2062eada5f804b":[6,0,2,192,0],
-"struct_urho3_d_1_1_delayed_world_transform.html#a812ef515b451f8a029e086aeed2b9580":[6,0,2,192,2],
-"struct_urho3_d_1_1_delayed_world_transform.html#ab09836c962c84f1894292afe55602af1":[6,0,2,192,1],
-"struct_urho3_d_1_1_delayed_world_transform.html#ad49b084e556469f0b2e3ac52cd37c8ca":[6,0,2,192,3],
-"struct_urho3_d_1_1_delayed_world_transform2_d.html":[6,0,2,193],
-"struct_urho3_d_1_1_delayed_world_transform2_d.html#a94a9bcfc4970de4a3e965c89de51e24f":[6,0,2,193,0],
-"struct_urho3_d_1_1_delayed_world_transform2_d.html#aaf1cedae520e77b284b0ce901815463f":[6,0,2,193,1],
-"struct_urho3_d_1_1_delayed_world_transform2_d.html#ac34dd3adb53d2a3feb8c4b16896d3720":[6,0,2,193,3],
-"struct_urho3_d_1_1_delayed_world_transform2_d.html#af906036df9c8aabfe01b7fbd1f90b8df":[6,0,2,193,2]
+"struct_urho3_d_1_1_default_render_pipeline_view_1_1_deferred_lighting_data.html#a1fac86e0cb97c7c9757506fe86fc32ac":[6,0,2,190,0,1]
 };

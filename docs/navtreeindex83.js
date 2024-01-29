@@ -1,5 +1,17 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#aced15b63d64b36a4a04f951e992c9481":[6,0,2,375,0,0],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#ad4008b4af5b7d4ab954dbe45e78cecad":[6,0,2,375,0,3],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html":[6,0,2,375,1],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html#a10b158c6d77803c820f0db5c32f0f1e5":[6,0,2,375,1,4],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html#a132b5b51e3943c1af28c98dde3a667f4":[6,0,2,375,1,3],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html#acf5eb3403559d2972855b3f37150bbbf":[6,0,2,375,1,1],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html#acfd89153999ccc3ce529b839124ed9ab":[6,0,2,375,1,0],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html#af671242697189ffca68fb63ef5a90bc0":[6,0,2,375,1,2],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html":[6,0,2,375,2],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html#a30b47c62dba1c5a3597cd4c30e6db4a3":[6,0,2,375,2,0],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html#a8d17dee71dd746bf1ee7c1213446e399":[6,0,2,375,2,1],
+"struct_urho3_d_1_1_material_shader_parameter.html":[6,0,2,376],
 "struct_urho3_d_1_1_material_shader_parameter.html#a2dc8840ac74e8d51601ac6bdd6b31924":[6,0,2,376,2],
 "struct_urho3_d_1_1_material_shader_parameter.html#a458d8be40b614a8f948217f5141c05d0":[6,0,2,376,1],
 "struct_urho3_d_1_1_material_shader_parameter.html#a552dacc075382b0723f7def088f0aa61":[6,0,2,376,0],
@@ -237,17 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_outline_group_1_1_material_key.html#a742e34e8a072c32a821b09fe68414d68":[6,0,2,467,0,2],
 "struct_urho3_d_1_1_outline_group_1_1_material_key.html#a8a06183dc1f2e69072baab49e1739e4b":[6,0,2,467,0,4],
 "struct_urho3_d_1_1_outline_group_1_1_material_key.html#aeac444530b984ce31ff8bec28ffa9aff":[6,0,2,467,0,5],
-"struct_urho3_d_1_1_package_download.html":[6,0,2,470],
-"struct_urho3_d_1_1_package_download.html#a1d248dbabcd081a6a417a483581b78d6":[6,0,2,470,0],
-"struct_urho3_d_1_1_package_download.html#a2818e5e0caaff75074fd16fea90ace88":[6,0,2,470,2],
-"struct_urho3_d_1_1_package_download.html#a3b0ef24bdead99bb8dd16209b092edfb":[6,0,2,470,1],
-"struct_urho3_d_1_1_package_download.html#a6d7782a9e49a72075bebfab0a9c4d926":[6,0,2,470,6],
-"struct_urho3_d_1_1_package_download.html#a9f06d96122b78a06ca53d4aaa0d83c67":[6,0,2,470,5],
-"struct_urho3_d_1_1_package_download.html#ad068fc1d198436e967a6751096b824e6":[6,0,2,470,4],
-"struct_urho3_d_1_1_package_download.html#afd441a2c5cc359ef3d5ce7d029350cab":[6,0,2,470,3],
-"struct_urho3_d_1_1_package_entry.html":[6,0,2,471],
-"struct_urho3_d_1_1_package_entry.html#ae7f7f1f2fe2d8a32c40e7fea095edf1a":[6,0,2,471,2],
-"struct_urho3_d_1_1_package_entry.html#aebdc01ffe647e9ff7e0b246d60ff3ce5":[6,0,2,471,1],
-"struct_urho3_d_1_1_package_entry.html#afc3fe731c4eae884defb611e67b49ca2":[6,0,2,471,0],
-"struct_urho3_d_1_1_package_upload.html":[6,0,2,473]
+"struct_urho3_d_1_1_package_download.html":[6,0,2,470]
 };

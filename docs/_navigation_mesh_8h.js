@@ -1,9 +1,7 @@
 var _navigation_mesh_8h =
 [
-    [ "NavigationGeometryInfo", "struct_urho3_d_1_1_navigation_geometry_info.html", "struct_urho3_d_1_1_navigation_geometry_info" ],
     [ "NavigationPathPoint", "struct_urho3_d_1_1_navigation_path_point.html", "struct_urho3_d_1_1_navigation_path_point" ],
     [ "NavigationMesh", "class_urho3_d_1_1_navigation_mesh.html", "class_urho3_d_1_1_navigation_mesh" ],
-    [ "dtPolyRef", "_navigation_mesh_8h.html#ad7578040efb2800840e3d87a5a95e227", null ],
     [ "NavigationPathPointFlag", "_navigation_mesh_8h.html#aa9206e5c73d857f13e70b02fff9eaedb", [
       [ "NAVPATHFLAG_NONE", "_navigation_mesh_8h.html#aa9206e5c73d857f13e70b02fff9eaedbad274a58ccaebc6a6f046e88bd903c6fc", null ],
       [ "NAVPATHFLAG_START", "_navigation_mesh_8h.html#aa9206e5c73d857f13e70b02fff9eaedbab1c83b1139cc8dc220b68d07c620400e", null ],
