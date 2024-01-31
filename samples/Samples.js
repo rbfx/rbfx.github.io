@@ -92,10 +92,10 @@ if (ENVIRONMENT_IS_NODE) {
  } else if (typeof document != "undefined" && document.currentScript) {
   scriptDirectory = document.currentScript.src;
  }
- if (scriptDirectory.indexOf("blob:") !== 0) {
-  scriptDirectory = scriptDirectory.substr(0, scriptDirectory.replace(/[?#].*/, "").lastIndexOf("/") + 1);
- } else {
+ if (scriptDirectory.startsWith("blob:")) {
   scriptDirectory = "";
+ } else {
+  scriptDirectory = scriptDirectory.substr(0, scriptDirectory.replace(/[?#].*/, "").lastIndexOf("/") + 1);
  }
  {
   read_ = url => {
@@ -325,7 +325,7 @@ function getBinaryPromise(binaryFile) {
     credentials: "same-origin"
    }).then(response => {
     if (!response["ok"]) {
-     throw "failed to load wasm binary file at '" + binaryFile + "'";
+     throw `failed to load wasm binary file at '${binaryFile}'`;
     }
     return response["arrayBuffer"]();
    }).catch(() => getBinarySync(binaryFile));
@@ -396,14 +396,14 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 1932788: () => {
+ 1932820: () => {
   FS.syncfs(function(err) {
    if (err) {
     console.error(err);
    }
   });
  },
- 1932852: $0 => {
+ 1932884: $0 => {
   var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
   var reply = window.prompt(str, "i");
   if (reply === null) {
@@ -411,10 +411,10 @@ var ASM_CONSTS = {
   }
   return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
  },
- 1933077: ($0, $1) => {
+ 1933109: ($0, $1) => {
   alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
  },
- 1933134: () => {
+ 1933166: () => {
   if (typeof (AudioContext) !== "undefined") {
    return true;
   } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -422,7 +422,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1933281: () => {
+ 1933313: () => {
   if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
    return true;
   } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -430,7 +430,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1933515: $0 => {
+ 1933547: $0 => {
   if (typeof (Module["SDL2"]) === "undefined") {
    Module["SDL2"] = {};
   }
@@ -452,11 +452,11 @@ var ASM_CONSTS = {
   }
   return SDL2.audioContext === undefined ? -1 : 0;
  },
- 1934008: () => {
+ 1934040: () => {
   var SDL2 = Module["SDL2"];
   return SDL2.audioContext.sampleRate;
  },
- 1934076: ($0, $1, $2, $3) => {
+ 1934108: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   var have_microphone = function(stream) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -497,7 +497,7 @@ var ASM_CONSTS = {
    }, have_microphone, no_microphone);
   }
  },
- 1935728: ($0, $1, $2, $3) => {
+ 1935760: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
   SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -509,7 +509,7 @@ var ASM_CONSTS = {
   };
   SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
  },
- 1936138: ($0, $1) => {
+ 1936170: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
   for (var c = 0; c < numChannels; ++c) {
@@ -528,7 +528,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1936743: ($0, $1) => {
+ 1936775: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
   for (var c = 0; c < numChannels; ++c) {
@@ -541,7 +541,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1937223: $0 => {
+ 1937255: $0 => {
   var SDL2 = Module["SDL2"];
   if ($0) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -579,7 +579,7 @@ var ASM_CONSTS = {
    SDL2.audioContext = undefined;
   }
  },
- 1938395: ($0, $1, $2) => {
+ 1938427: ($0, $1, $2) => {
   var w = $0;
   var h = $1;
   var pixels = $2;
@@ -650,7 +650,7 @@ var ASM_CONSTS = {
   }
   SDL2.ctx.putImageData(SDL2.image, 0, 0);
  },
- 1939864: ($0, $1, $2, $3, $4) => {
+ 1939896: ($0, $1, $2, $3, $4) => {
   var w = $0;
   var h = $1;
   var hot_x = $2;
@@ -687,18 +687,18 @@ var ASM_CONSTS = {
   stringToUTF8(url, urlBuf, url.length + 1);
   return urlBuf;
  },
- 1940853: $0 => {
+ 1940885: $0 => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = UTF8ToString($0);
   }
  },
- 1940936: () => {
+ 1940968: () => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = "none";
   }
  },
- 1941005: () => window.innerWidth,
- 1941035: () => window.innerHeight
+ 1941037: () => window.innerWidth,
+ 1941067: () => window.innerHeight
 };
 
 /** @constructor */ function ExitStatus(status) {
@@ -1897,7 +1897,12 @@ var FS = {
  currentPath: "/",
  initialized: false,
  ignorePermissions: true,
- ErrnoError: null,
+ ErrnoError: class {
+  constructor(errno) {
+   this.name = "ErrnoError";
+   this.errno = errno;
+  }
+ },
  genericErrors: {},
  filesystems: null,
  syncFSRequests: 0,
@@ -1992,7 +1997,7 @@ var FS = {
  lookupNode(parent, name) {
   var errCode = FS.mayLookup(parent);
   if (errCode) {
-   throw new FS.ErrnoError(errCode, parent);
+   throw new FS.ErrnoError(errCode);
   }
   var hash = FS.hashName(parent.id, name);
   for (var node = FS.nameTable[hash]; node; node = node.name_next) {
@@ -2059,6 +2064,7 @@ var FS = {
   return 0;
  },
  mayLookup(dir) {
+  if (!FS.isDir(dir.mode)) return 54;
   var errCode = FS.nodePermissions(dir, "x");
   if (errCode) return errCode;
   if (!dir.node_ops.lookup) return 2;
@@ -2957,26 +2963,11 @@ var FS = {
   var stdout = FS.open("/dev/stdout", 1);
   var stderr = FS.open("/dev/stderr", 1);
  },
- ensureErrnoError() {
-  if (FS.ErrnoError) return;
-  FS.ErrnoError = /** @this{Object} */ function ErrnoError(errno, node) {
-   this.name = "ErrnoError";
-   this.node = node;
-   this.setErrno = /** @this{Object} */ function(errno) {
-    this.errno = errno;
-   };
-   this.setErrno(errno);
-   this.message = "FS error";
-  };
-  FS.ErrnoError.prototype = new Error;
-  FS.ErrnoError.prototype.constructor = FS.ErrnoError;
+ staticInit() {
   [ 44 ].forEach(code => {
    FS.genericErrors[code] = new FS.ErrnoError(code);
    FS.genericErrors[code].stack = "<generic error, no stack>";
   });
- },
- staticInit() {
-  FS.ensureErrnoError();
   FS.nameTable = new Array(4096);
   FS.mount(MEMFS, {}, "/");
   FS.createDefaultDirectories();
@@ -2989,7 +2980,6 @@ var FS = {
  },
  init(input, output, error) {
   FS.init.initialized = true;
-  FS.ensureErrnoError();
   Module["stdin"] = input || Module["stdin"];
   Module["stdout"] = output || Module["stdout"];
   Module["stderr"] = error || Module["stderr"];
@@ -3983,6 +3973,18 @@ var DNS = {
  return info;
 };
 
+function ___syscall_bind(fd, addr, addrlen, d1, d2, d3) {
+ try {
+  var sock = getSocketFromFD(fd);
+  var info = getSocketAddress(addr, addrlen);
+  sock.sock_ops.bind(sock, info.addr, info.port);
+  return 0;
+ } catch (e) {
+  if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+  return -e.errno;
+ }
+}
+
 /**
      * Given a pointer 'ptr' to a null-terminated UTF8-encoded string in the
      * emscripten HEAP, returns a copy of that string as a Javascript String object.
@@ -4021,14 +4023,7 @@ var SYSCALLS = {
   return PATH.join2(dir, path);
  },
  doStat(func, path, buf) {
-  try {
-   var stat = func(path);
-  } catch (e) {
-   if (e && e.node && PATH.normalize(path) !== PATH.normalize(FS.getPath(e.node))) {
-    return -54;
-   }
-   throw e;
-  }
+  var stat = func(path);
   HEAP32[((buf) >> 2)] = stat.dev;
   HEAP32[(((buf) + (4)) >> 2)] = stat.mode;
   HEAPU32[(((buf) + (8)) >> 2)] = stat.nlink;
@@ -4086,18 +4081,6 @@ var SYSCALLS = {
   return stream;
  }
 };
-
-function ___syscall_bind(fd, addr, addrlen, d1, d2, d3) {
- try {
-  var sock = getSocketFromFD(fd);
-  var info = getSocketAddress(addr, addrlen);
-  sock.sock_ops.bind(sock, info.addr, info.port);
-  return 0;
- } catch (e) {
-  if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
-  return -e.errno;
- }
-}
 
 function ___syscall_fcntl64(fd, cmd, varargs) {
  SYSCALLS.varargs = varargs;
@@ -4802,7 +4785,7 @@ function newFunc(constructor, argumentList) {
  return (r instanceof Object) ? r : obj;
 }
 
-function createJsInvoker(humanName, argTypes, isClassMethodFunc, returns, isAsync) {
+function createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync) {
  var needsDestructorStack = usesDestructorStack(argTypes);
  var argCount = argTypes.length;
  var argsList = "";
@@ -4811,17 +4794,17 @@ function createJsInvoker(humanName, argTypes, isClassMethodFunc, returns, isAsyn
   argsList += (i !== 0 ? ", " : "") + "arg" + i;
   argsListWired += (i !== 0 ? ", " : "") + "arg" + i + "Wired";
  }
- var invokerFnBody = `\n        return function (${argsList}) {\n        if (arguments.length !== ${argCount - 2}) {\n          throwBindingError('function ${humanName} called with ' + arguments.length + ' arguments, expected ${argCount - 2}');\n        }`;
+ var invokerFnBody = `\n        return function (${argsList}) {\n        if (arguments.length !== ${argCount - 2}) {\n          throwBindingError('function ' + humanName + ' called with ' + arguments.length + ' arguments, expected ${argCount - 2}');\n        }`;
  if (needsDestructorStack) {
   invokerFnBody += "var destructors = [];\n";
  }
  var dtorStack = needsDestructorStack ? "destructors" : "null";
- var args1 = [ "throwBindingError", "invoker", "fn", "runDestructors", "retType", "classParam" ];
+ var args1 = [ "humanName", "throwBindingError", "invoker", "fn", "runDestructors", "retType", "classParam" ];
  if (isClassMethodFunc) {
   invokerFnBody += "var thisWired = classParam['toWireType'](" + dtorStack + ", this);\n";
  }
  for (var i = 0; i < argCount - 2; ++i) {
-  invokerFnBody += "var arg" + i + "Wired = argType" + i + "['toWireType'](" + dtorStack + ", arg" + i + "); // " + argTypes[i + 2].name + "\n";
+  invokerFnBody += "var arg" + i + "Wired = argType" + i + "['toWireType'](" + dtorStack + ", arg" + i + ");\n";
   args1.push("argType" + i);
  }
  if (isClassMethodFunc) {
@@ -4834,7 +4817,7 @@ function createJsInvoker(humanName, argTypes, isClassMethodFunc, returns, isAsyn
   for (var i = isClassMethodFunc ? 1 : 2; i < argTypes.length; ++i) {
    var paramName = (i === 1 ? "thisWired" : ("arg" + (i - 2) + "Wired"));
    if (argTypes[i].destructorFunction !== null) {
-    invokerFnBody += paramName + "_dtor(" + paramName + "); // " + argTypes[i].name + "\n";
+    invokerFnBody += paramName + "_dtor(" + paramName + ");\n";
     args1.push(paramName + "_dtor");
    }
   }
@@ -4854,7 +4837,7 @@ function craftInvokerFunction(humanName, argTypes, classType, cppInvokerFunc, cp
  var isClassMethodFunc = (argTypes[1] !== null && classType !== null);
  var needsDestructorStack = usesDestructorStack(argTypes);
  var returns = (argTypes[0].name !== "void");
- var closureArgs = [ throwBindingError, cppInvokerFunc, cppTargetFunc, runDestructors, argTypes[0], argTypes[1] ];
+ var closureArgs = [ humanName, throwBindingError, cppInvokerFunc, cppTargetFunc, runDestructors, argTypes[0], argTypes[1] ];
  for (var i = 0; i < argCount - 2; ++i) {
   closureArgs.push(argTypes[i + 2]);
  }
@@ -4865,7 +4848,7 @@ function craftInvokerFunction(humanName, argTypes, classType, cppInvokerFunc, cp
    }
   }
  }
- let [args, invokerFnBody] = createJsInvoker(humanName, argTypes, isClassMethodFunc, returns, isAsync);
+ let [args, invokerFnBody] = createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync);
  args.push(invokerFnBody);
  var invokerFn = newFunc(Function, args).apply(null, closureArgs);
  return createNamedFunction(humanName, invokerFn);
@@ -6386,8 +6369,8 @@ var GL = {
  getSource: (shader, count, string, length) => {
   var source = "";
   for (var i = 0; i < count; ++i) {
-   var len = length ? HEAP32[(((length) + (i * 4)) >> 2)] : -1;
-   source += UTF8ToString(HEAP32[(((string) + (i * 4)) >> 2)], len < 0 ? undefined : len);
+   var len = length ? HEAPU32[(((length) + (i * 4)) >> 2)] : undefined;
+   source += UTF8ToString(HEAPU32[(((string) + (i * 4)) >> 2)], len);
   }
   return source;
  },
@@ -10690,14 +10673,6 @@ var _emscripten_webgl_destroy_context = contextHandle => {
 
 var _emscripten_webgl_get_current_context = _emscripten_webgl_do_get_current_context;
 
-var _emscripten_webgl_init_context_attributes = attributes => {
- var a = attributes >> 2;
- for (var i = 0; i < (56 >> 2); ++i) {
-  HEAP32[a + i] = 0;
- }
- HEAP32[a + (0 >> 2)] = HEAP32[a + (4 >> 2)] = HEAP32[a + (12 >> 2)] = HEAP32[a + (16 >> 2)] = HEAP32[a + (32 >> 2)] = HEAP32[a + (40 >> 2)] = 1;
-};
-
 var _emscripten_webgl_make_context_current = contextHandle => {
  var success = GL.makeContextCurrent(contextHandle);
  return success ? 0 : -5;
@@ -12042,7 +12017,6 @@ var wasmImports = {
  /** @export */ emscripten_webgl_create_context: _emscripten_webgl_create_context,
  /** @export */ emscripten_webgl_destroy_context: _emscripten_webgl_destroy_context,
  /** @export */ emscripten_webgl_get_current_context: _emscripten_webgl_get_current_context,
- /** @export */ emscripten_webgl_init_context_attributes: _emscripten_webgl_init_context_attributes,
  /** @export */ emscripten_webgl_make_context_current: _emscripten_webgl_make_context_current,
  /** @export */ environ_get: _environ_get,
  /** @export */ environ_sizes_get: _environ_sizes_get,
