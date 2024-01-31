@@ -1,5 +1,6 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_indirect_light_tracing_settings.html#a94838ac7c1d11e194a81695521983bc6":[6,0,2,312,6],
 "struct_urho3_d_1_1_indirect_light_tracing_settings.html#a9f2e2c9991d5b6377dde4a86dbcc18f6":[6,0,2,312,4],
 "struct_urho3_d_1_1_indirect_light_tracing_settings.html#abcf9e56d33e49fc8f6f9eea93e012156":[6,0,2,312,3],
 "struct_urho3_d_1_1_indirect_light_tracing_settings.html#ac8b5805cb7403bc14eca39d9cf446813":[6,0,2,312,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html":[6,0,2,375,0],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#a4ae1ceb802d966951e57e348b8edbe4b":[6,0,2,375,0,5],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#a58c0a4e394d7e9488265b5ad033393b7":[6,0,2,375,0,2],
-"struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#aa6f1b99831dac4388f6bd9d256a88d1d":[6,0,2,375,0,1],
-"struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#acb062a130fc6157f4b67e8cb4f8d17f1":[6,0,2,375,0,4]
+"struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#aa6f1b99831dac4388f6bd9d256a88d1d":[6,0,2,375,0,1]
 };

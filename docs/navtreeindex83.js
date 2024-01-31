@@ -1,5 +1,6 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#acb062a130fc6157f4b67e8cb4f8d17f1":[6,0,2,375,0,4],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#aced15b63d64b36a4a04f951e992c9481":[6,0,2,375,0,0],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#ad4008b4af5b7d4ab954dbe45e78cecad":[6,0,2,375,0,3],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html":[6,0,2,375,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_outline_group_1_1_material_key.html#a40f677709464efcbd9e606d33394d963":[6,0,2,467,0,3],
 "struct_urho3_d_1_1_outline_group_1_1_material_key.html#a742e34e8a072c32a821b09fe68414d68":[6,0,2,467,0,2],
 "struct_urho3_d_1_1_outline_group_1_1_material_key.html#a8a06183dc1f2e69072baab49e1739e4b":[6,0,2,467,0,4],
-"struct_urho3_d_1_1_outline_group_1_1_material_key.html#aeac444530b984ce31ff8bec28ffa9aff":[6,0,2,467,0,5],
-"struct_urho3_d_1_1_package_download.html":[6,0,2,470]
+"struct_urho3_d_1_1_outline_group_1_1_material_key.html#aeac444530b984ce31ff8bec28ffa9aff":[6,0,2,467,0,5]
 };

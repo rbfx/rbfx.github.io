@@ -1,5 +1,6 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_font_glyph.html#ad7f094df2c37d914ec1ad8fa2c9f2275":[6,0,2,240,2],
 "struct_urho3_d_1_1_frame_info.html":[6,0,2,241],
 "struct_urho3_d_1_1_frame_info.html#a1d4b93d62c71fa6ed3542bce55bba460":[6,0,2,241,3],
 "struct_urho3_d_1_1_frame_info.html#a31eb4a2f65d4db972a6095060d4507b0":[6,0,2,241,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_index_in_tuple_3_01_t_00_01ea_1_1tuple_3_01_u_00_01_types_8_8_8_01_4_01_4.html":[6,0,2,310],
 "struct_urho3_d_1_1_index_in_tuple_3_01_t_00_01std_1_1tuple_3_01_types_8_8_8_01_4_01_4.html":[6,0,2,311],
 "struct_urho3_d_1_1_indirect_light_tracing_settings.html":[6,0,2,312],
-"struct_urho3_d_1_1_indirect_light_tracing_settings.html#a275b06375b72d09c673e181f34aeb794":[6,0,2,312,1],
-"struct_urho3_d_1_1_indirect_light_tracing_settings.html#a94838ac7c1d11e194a81695521983bc6":[6,0,2,312,6]
+"struct_urho3_d_1_1_indirect_light_tracing_settings.html#a275b06375b72d09c673e181f34aeb794":[6,0,2,312,1]
 };

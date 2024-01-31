@@ -1,5 +1,6 @@
 var NAVTREEINDEX85 =
 {
+"struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html#ae98abb63c4855a67410c282231e3bb21":[6,0,2,523,0,1],
 "struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html":[6,0,2,524,0],
 "struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html#a9a5e22ce6f825962ac427976f0c3fb51":[6,0,2,524,0,2],
 "struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html#abaf9b8fafc7da6c200f96288129b687b":[6,0,2,524,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX85 =
 "struct_urho3_d_1_1_scene_processor_settings.html#a2e7dd16607cc14e3b79e1abbd2801bae":[6,0,2,609,9],
 "struct_urho3_d_1_1_scene_processor_settings.html#a37d20a057982dcce1a6cf074c73f6b26":[6,0,2,609,3],
 "struct_urho3_d_1_1_scene_processor_settings.html#a48dbd0625b62c1c8eef305866b6b5de2":[6,0,2,609,2],
-"struct_urho3_d_1_1_scene_processor_settings.html#a499dad497f7366ec53752155253d0ecd":[6,0,2,609,5],
-"struct_urho3_d_1_1_scene_processor_settings.html#a7b4427214caf783fea5792744dad8024":[6,0,2,609,10]
+"struct_urho3_d_1_1_scene_processor_settings.html#a499dad497f7366ec53752155253d0ecd":[6,0,2,609,5]
 };

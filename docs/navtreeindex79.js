@@ -1,5 +1,6 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_client_replication_state.html#a1715d89c9256e4b9a4d1f025c3444479":[6,0,2,120,1],
 "struct_urho3_d_1_1_client_replication_state.html#a219c8a91d7d88a949a16df8df849fccc":[6,0,2,120,13],
 "struct_urho3_d_1_1_client_replication_state.html#a2f5949b19d860afe3a29f40eb2885198":[6,0,2,120,16],
 "struct_urho3_d_1_1_client_replication_state.html#a3efb6b978fad7816b4bf813bd7f4a510":[6,0,2,120,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data.html#a251c0a9052230cfcfbe96ccd38d58f73":[6,0,2,189,0,2],
 "struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data.html#a652fa1b6b435fc07b0b6d79c6b6ac1c6":[6,0,2,189,0,0],
 "struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data.html#a69825e8c4f53875bf029255c997e430e":[6,0,2,189,0,1],
-"struct_urho3_d_1_1_default_render_pipeline_view_1_1_deferred_lighting_data.html":[6,0,2,190,0],
-"struct_urho3_d_1_1_default_render_pipeline_view_1_1_deferred_lighting_data.html#a1fac86e0cb97c7c9757506fe86fc32ac":[6,0,2,190,0,1]
+"struct_urho3_d_1_1_default_render_pipeline_view_1_1_deferred_lighting_data.html":[6,0,2,190,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_package_download.html":[6,0,2,470],
 "struct_urho3_d_1_1_package_download.html#a1d248dbabcd081a6a417a483581b78d6":[6,0,2,470,0],
 "struct_urho3_d_1_1_package_download.html#a2818e5e0caaff75074fd16fea90ace88":[6,0,2,470,2],
 "struct_urho3_d_1_1_package_download.html#a3b0ef24bdead99bb8dd16209b092edfb":[6,0,2,470,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_pipeline_batch_group.html#ac39b62c425b4f95977da5d61a41798b1":[6,0,2,514,4],
 "struct_urho3_d_1_1_pipeline_batch_group.html#ae5b6d961b686742676c0c70bf3f9fa56":[6,0,2,514,1],
 "struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html":[6,0,2,523,0],
-"struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html#aa0c0b8636d680d2f1ede30b977de5d7b":[6,0,2,523,0,0],
-"struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html#ae98abb63c4855a67410c282231e3bb21":[6,0,2,523,0,1]
+"struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html#aa0c0b8636d680d2f1ede30b977de5d7b":[6,0,2,523,0,0]
 };

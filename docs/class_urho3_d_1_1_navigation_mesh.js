@@ -102,6 +102,7 @@ var class_urho3_d_1_1_navigation_mesh =
     [ "edgeMaxLength_", "class_urho3_d_1_1_navigation_mesh.html#a07a377420659a40ddb1c31a8184b4137", null ],
     [ "heightRange_", "class_urho3_d_1_1_navigation_mesh.html#ac457307bb235549fc6b09bd877aac96a", null ],
     [ "keepInterResults_", "class_urho3_d_1_1_navigation_mesh.html#a7fdb6df7cd6e7d095af2644ff0cc4322", null ],
+    [ "MaxLayers", "class_urho3_d_1_1_navigation_mesh.html#aa05e4d3fa0ea449c822f2c8acf2fbd81", null ],
     [ "maxTiles_", "class_urho3_d_1_1_navigation_mesh.html#a3b4d4c4ced29a5429b962de05c25e389", null ],
     [ "meshName_", "class_urho3_d_1_1_navigation_mesh.html#ae1701bd637d26e311d8fda1bd196c11f", null ],
     [ "NavigationDataVersion", "class_urho3_d_1_1_navigation_mesh.html#ab43780c36911e48b7d56fb3e540d0ea9", null ],
