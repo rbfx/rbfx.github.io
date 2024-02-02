@@ -1,5 +1,12 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_spriter_1_1_ref.html#a02557c2f70f954d70fd6dfdae1907173":[6,0,2,3,8,2],
+"struct_urho3_d_1_1_spriter_1_1_ref.html#a613a6db3db5e3e18094d502dacea8048":[6,0,2,3,8,6],
+"struct_urho3_d_1_1_spriter_1_1_ref.html#a9e36fda0bb9caf38563557627b140188":[6,0,2,3,8,4],
+"struct_urho3_d_1_1_spriter_1_1_ref.html#aaabf7a93b715a4eaa9f010f9c2f4f4e9":[6,0,2,3,8,3],
+"struct_urho3_d_1_1_spriter_1_1_ref.html#ac7b6487a9203d6d3f998396a4032046f":[6,0,2,3,8,1],
+"struct_urho3_d_1_1_spriter_1_1_ref.html#ad8760b4ca53b19e65b8239ab139fbdbb":[6,0,2,3,8,7],
+"struct_urho3_d_1_1_spriter_1_1_ref.html#ae50b225e63c62ba4a8965c15f5ad665f":[6,0,2,3,8,5],
 "struct_urho3_d_1_1_spriter_1_1_ref.html#ae6c84ef6590ffcedcdb8ef46cc51357e":[6,0,2,3,8,0],
 "struct_urho3_d_1_1_spriter_1_1_spatial_info.html":[6,0,2,3,9],
 "struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a0563f1076ffe63f429e67e1aa7da1656":[6,0,2,3,9,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_u_i_batch_state_key.html#a1e7b6fe95b7e1bdf1ef13d7da7f7652d":[6,0,2,770,7],
 "struct_urho3_d_1_1_u_i_batch_state_key.html#a3c6e44f05b5cb718514678c0d350d781":[6,0,2,770,8],
 "struct_urho3_d_1_1_u_i_batch_state_key.html#a4ddd56aaf91c6e1538bbb6fdeca2f82d":[6,0,2,770,4],
-"struct_urho3_d_1_1_u_i_batch_state_key.html#a5716ac637233493c62898d1222ce3821":[6,0,2,770,3],
-"struct_urho3_d_1_1_u_i_batch_state_key.html#a5ed6141d6eab0fef15cb0b3e531167e3":[6,0,2,770,0],
-"struct_urho3_d_1_1_u_i_batch_state_key.html#a7ed0f6ac283e8f3323f82156182889b6":[6,0,2,770,5],
-"struct_urho3_d_1_1_u_i_batch_state_key.html#a81c0fb0c2ed3a8b007ae1b2396d02eee":[6,0,2,770,1],
-"struct_urho3_d_1_1_u_i_batch_state_key.html#a99e0b42d3b72570c4dfe5f7edea7440b":[6,0,2,770,2],
-"struct_urho3_d_1_1_update_context.html":[6,0,2,776],
-"struct_urho3_d_1_1_update_context.html#a03c0253799b19b16f3aea7d76f3f0af5":[6,0,2,776,3],
-"struct_urho3_d_1_1_update_context.html#a52d6f54bc28c26a481e39d4ccf77e877":[6,0,2,776,6]
+"struct_urho3_d_1_1_u_i_batch_state_key.html#a5716ac637233493c62898d1222ce3821":[6,0,2,770,3]
 };

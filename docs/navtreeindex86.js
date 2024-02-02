@@ -1,5 +1,12 @@
 var NAVTREEINDEX86 =
 {
+"struct_urho3_d_1_1_scene_processor_settings.html":[6,0,2,609],
+"struct_urho3_d_1_1_scene_processor_settings.html#a11d40599591465958f060a0fc6c4408a":[6,0,2,609,6],
+"struct_urho3_d_1_1_scene_processor_settings.html#a2ca9ea2f208557babc2299c928379b2f":[6,0,2,609,12],
+"struct_urho3_d_1_1_scene_processor_settings.html#a2e7dd16607cc14e3b79e1abbd2801bae":[6,0,2,609,9],
+"struct_urho3_d_1_1_scene_processor_settings.html#a37d20a057982dcce1a6cf074c73f6b26":[6,0,2,609,3],
+"struct_urho3_d_1_1_scene_processor_settings.html#a48dbd0625b62c1c8eef305866b6b5de2":[6,0,2,609,2],
+"struct_urho3_d_1_1_scene_processor_settings.html#a499dad497f7366ec53752155253d0ecd":[6,0,2,609,5],
 "struct_urho3_d_1_1_scene_processor_settings.html#a7b4427214caf783fea5792744dad8024":[6,0,2,609,10],
 "struct_urho3_d_1_1_scene_processor_settings.html#a7fc8153a42a855ab07b7b4631f998728":[6,0,2,609,4],
 "struct_urho3_d_1_1_scene_processor_settings.html#a8593d0bd77c84a839fd1d476e35522e8":[6,0,2,609,8],
@@ -242,12 +249,5 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_spriter_1_1_map_instruction.html#abe7fe8c36d2d093c350dbc5f46be1fac":[6,0,2,3,7,6],
 "struct_urho3_d_1_1_spriter_1_1_map_instruction.html#add8afce67b0c8e3117a8367969eb3316":[6,0,2,3,7,3],
 "struct_urho3_d_1_1_spriter_1_1_map_instruction.html#aea64f434ef80fb5108f69a2b61c4a567":[6,0,2,3,7,5],
-"struct_urho3_d_1_1_spriter_1_1_ref.html":[6,0,2,3,8],
-"struct_urho3_d_1_1_spriter_1_1_ref.html#a02557c2f70f954d70fd6dfdae1907173":[6,0,2,3,8,2],
-"struct_urho3_d_1_1_spriter_1_1_ref.html#a613a6db3db5e3e18094d502dacea8048":[6,0,2,3,8,6],
-"struct_urho3_d_1_1_spriter_1_1_ref.html#a9e36fda0bb9caf38563557627b140188":[6,0,2,3,8,4],
-"struct_urho3_d_1_1_spriter_1_1_ref.html#aaabf7a93b715a4eaa9f010f9c2f4f4e9":[6,0,2,3,8,3],
-"struct_urho3_d_1_1_spriter_1_1_ref.html#ac7b6487a9203d6d3f998396a4032046f":[6,0,2,3,8,1],
-"struct_urho3_d_1_1_spriter_1_1_ref.html#ad8760b4ca53b19e65b8239ab139fbdbb":[6,0,2,3,8,7],
-"struct_urho3_d_1_1_spriter_1_1_ref.html#ae50b225e63c62ba4a8965c15f5ad665f":[6,0,2,3,8,5]
+"struct_urho3_d_1_1_spriter_1_1_ref.html":[6,0,2,3,8]
 };

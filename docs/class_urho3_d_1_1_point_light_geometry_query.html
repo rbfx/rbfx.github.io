@@ -87,9 +87,9 @@ Inheritance diagram for Urho3D::PointLightGeometryQuery:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3e6b3f7f898eeded5926b7f192cb545f"><td class="memItemLeft" align="right" valign="top"><a id="a3e6b3f7f898eeded5926b7f192cb545f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PointLightGeometryQuery</b> (ea::vector&lt; <a class="el" href="class_urho3_d_1_1_drawable.html">Drawable</a> * &gt; &amp;result, bool &amp;hasLitGeometries, ea::vector&lt; <a class="el" href="class_urho3_d_1_1_drawable.html">Drawable</a> * &gt; *shadowCasters, const <a class="el" href="class_urho3_d_1_1_drawable_processor.html">DrawableProcessor</a> *drawableProcessor, <a class="el" href="class_urho3_d_1_1_light.html">Light</a> *light, unsigned viewMask)</td></tr>
-<tr class="separator:a3e6b3f7f898eeded5926b7f192cb545f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab337e41a19eb6c4d313430f9dfb48ff0"><td class="memItemLeft" align="right" valign="top"><a id="ab337e41a19eb6c4d313430f9dfb48ff0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>PointLightGeometryQuery</b> (ea::vector&lt; <a class="el" href="class_urho3_d_1_1_drawable.html">Drawable</a> * &gt; &amp;result, bool &amp;hasLitGeometries, ea::vector&lt; <a class="el" href="class_urho3_d_1_1_drawable.html">Drawable</a> * &gt; *shadowCasters, const <a class="el" href="class_urho3_d_1_1_drawable_processor.html">DrawableProcessor</a> *drawableProcessor, <a class="el" href="class_urho3_d_1_1_light.html">Light</a> *light, unsigned primaryViewMask, unsigned shadowViewMask)</td></tr>
+<tr class="separator:ab337e41a19eb6c4d313430f9dfb48ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ebe3ea86ad69595d0e8bf487bfc378c"><td class="memItemLeft" align="right" valign="top"><a id="a8ebe3ea86ad69595d0e8bf487bfc378c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_point_light_geometry_query.html#a8ebe3ea86ad69595d0e8bf487bfc378c">TestDrawables</a> (<a class="el" href="class_urho3_d_1_1_drawable.html">Drawable</a> **start, <a class="el" href="class_urho3_d_1_1_drawable.html">Drawable</a> **end, bool inside) override</td></tr>
 <tr class="memdesc:a8ebe3ea86ad69595d0e8bf487bfc378c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intersection test for drawables. <br /></td></tr>
@@ -134,6 +134,9 @@ ea::vector&lt; <a class="el" href="class_urho3_d_1_1_drawable.html">Drawable</a>
 <tr class="memitem:a30b10a9b81222615ce1b9a939d6ecf3d"><td class="memItemLeft" align="right" valign="top"><a id="a30b10a9b81222615ce1b9a939d6ecf3d"></a>
 const unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>lightMask_</b> {}</td></tr>
 <tr class="separator:a30b10a9b81222615ce1b9a939d6ecf3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedcbb36643b3e6bf27d489b33e1a2364"><td class="memItemLeft" align="right" valign="top"><a id="aedcbb36643b3e6bf27d489b33e1a2364"></a>
+const unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>shadowViewMask_</b> {}</td></tr>
+<tr class="separator:aedcbb36643b3e6bf27d489b33e1a2364"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

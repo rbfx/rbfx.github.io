@@ -1,5 +1,12 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_cascade_parameters.html#aa5adade0afa9fb2070592767d27c4f55":[6,0,2,112,2],
+"struct_urho3_d_1_1_cascade_parameters.html#aabf246425eda85b91a293604c34b6346":[6,0,2,112,1],
+"struct_urho3_d_1_1_char_location.html":[6,0,2,113],
+"struct_urho3_d_1_1_char_location.html#aab580723124da992c9c5cc559487949c":[6,0,2,113,0],
+"struct_urho3_d_1_1_char_location.html#ab3b36b9b14878c2fcab07b509a52a5fc":[6,0,2,113,1],
+"struct_urho3_d_1_1_client_replication_state.html":[6,0,2,120],
+"struct_urho3_d_1_1_client_replication_state.html#a168585e00bc980920e39ae9168feb3d4":[6,0,2,120,12],
 "struct_urho3_d_1_1_client_replication_state.html#a1715d89c9256e4b9a4d1f025c3444479":[6,0,2,120,1],
 "struct_urho3_d_1_1_client_replication_state.html#a219c8a91d7d88a949a16df8df849fccc":[6,0,2,120,13],
 "struct_urho3_d_1_1_client_replication_state.html#a2f5949b19d860afe3a29f40eb2885198":[6,0,2,120,16],
@@ -242,12 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_decal_vertex.html#a3b8e9730d950c0ef6d5a459b6c5ffe80":[6,0,2,188,2],
 "struct_urho3_d_1_1_decal_vertex.html#a6d1778c08524a3b372578f43b0ee888c":[6,0,2,188,6],
 "struct_urho3_d_1_1_decal_vertex.html#a8f141477e4ac46b9525030c74e02805b":[6,0,2,188,4],
-"struct_urho3_d_1_1_decal_vertex.html#ad6bcbb759e982b5bbcd6e46b03216240":[6,0,2,188,8],
-"struct_urho3_d_1_1_decal_vertex.html#ae0d33f8c2f9cca0054c52c28a6119ffb":[6,0,2,188,7],
-"struct_urho3_d_1_1_decal_vertex.html#aea7223797d2b166173d687f1a40470c7":[6,0,2,188,5],
-"struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data.html":[6,0,2,189,0],
-"struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data.html#a251c0a9052230cfcfbe96ccd38d58f73":[6,0,2,189,0,2],
-"struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data.html#a652fa1b6b435fc07b0b6d79c6b6ac1c6":[6,0,2,189,0,0],
-"struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data.html#a69825e8c4f53875bf029255c997e430e":[6,0,2,189,0,1],
-"struct_urho3_d_1_1_default_render_pipeline_view_1_1_deferred_lighting_data.html":[6,0,2,190,0]
+"struct_urho3_d_1_1_decal_vertex.html#ad6bcbb759e982b5bbcd6e46b03216240":[6,0,2,188,8]
 };

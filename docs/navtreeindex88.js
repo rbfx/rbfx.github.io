@@ -1,5 +1,12 @@
 var NAVTREEINDEX88 =
 {
+"struct_urho3_d_1_1_u_i_batch_state_key.html#a5ed6141d6eab0fef15cb0b3e531167e3":[6,0,2,770,0],
+"struct_urho3_d_1_1_u_i_batch_state_key.html#a7ed0f6ac283e8f3323f82156182889b6":[6,0,2,770,5],
+"struct_urho3_d_1_1_u_i_batch_state_key.html#a81c0fb0c2ed3a8b007ae1b2396d02eee":[6,0,2,770,1],
+"struct_urho3_d_1_1_u_i_batch_state_key.html#a99e0b42d3b72570c4dfe5f7edea7440b":[6,0,2,770,2],
+"struct_urho3_d_1_1_update_context.html":[6,0,2,776],
+"struct_urho3_d_1_1_update_context.html#a03c0253799b19b16f3aea7d76f3f0af5":[6,0,2,776,3],
+"struct_urho3_d_1_1_update_context.html#a52d6f54bc28c26a481e39d4ccf77e877":[6,0,2,776,6],
 "struct_urho3_d_1_1_update_context.html#a78e989274c24ede9fc4c77c884a4e007":[6,0,2,776,5],
 "struct_urho3_d_1_1_update_context.html#a7edabf33d77e88c03a61a8dc5043c592":[6,0,2,776,4],
 "struct_urho3_d_1_1_update_context.html#a9ff1202e1729b378f01c7af84e3c4638":[6,0,2,776,2],

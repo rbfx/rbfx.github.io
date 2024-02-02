@@ -1,5 +1,12 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_index_buffer_desc.html#af7d7fba8e1c133f1105755be0136305d":[6,0,2,307,2],
+"struct_urho3_d_1_1_index_in_tuple.html":[6,0,2,308],
+"struct_urho3_d_1_1_index_in_tuple_3_01_t_00_01ea_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html":[6,0,2,309],
+"struct_urho3_d_1_1_index_in_tuple_3_01_t_00_01ea_1_1tuple_3_01_u_00_01_types_8_8_8_01_4_01_4.html":[6,0,2,310],
+"struct_urho3_d_1_1_index_in_tuple_3_01_t_00_01std_1_1tuple_3_01_types_8_8_8_01_4_01_4.html":[6,0,2,311],
+"struct_urho3_d_1_1_indirect_light_tracing_settings.html":[6,0,2,312],
+"struct_urho3_d_1_1_indirect_light_tracing_settings.html#a275b06375b72d09c673e181f34aeb794":[6,0,2,312,1],
 "struct_urho3_d_1_1_indirect_light_tracing_settings.html#a94838ac7c1d11e194a81695521983bc6":[6,0,2,312,6],
 "struct_urho3_d_1_1_indirect_light_tracing_settings.html#a9f2e2c9991d5b6377dde4a86dbcc18f6":[6,0,2,312,4],
 "struct_urho3_d_1_1_indirect_light_tracing_settings.html#abcf9e56d33e49fc8f6f9eea93e012156":[6,0,2,312,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a769e62d8583eb1c42129683f9597908c":[6,0,2,356,1],
 "struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a871a2891d45259ebd63d72e2bb06d132":[6,0,2,356,3],
 "struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a9d023cd3b7907392264585fc32bf2f33":[6,0,2,356,2],
-"struct_urho3_d_1_1_manifold_pair.html":[6,0,2,373],
-"struct_urho3_d_1_1_manifold_pair.html#a0595504fa42073c132fad93d2b4f9524":[6,0,2,373,2],
-"struct_urho3_d_1_1_manifold_pair.html#a1040c2e3c778fe55c0f00d4ef0803a15":[6,0,2,373,0],
-"struct_urho3_d_1_1_manifold_pair.html#a828094a8533542b74adf2ed297a7f0f5":[6,0,2,373,1],
-"struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html":[6,0,2,375,0],
-"struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#a4ae1ceb802d966951e57e348b8edbe4b":[6,0,2,375,0,5],
-"struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#a58c0a4e394d7e9488265b5ad033393b7":[6,0,2,375,0,2],
-"struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#aa6f1b99831dac4388f6bd9d256a88d1d":[6,0,2,375,0,1]
+"struct_urho3_d_1_1_manifold_pair.html":[6,0,2,373]
 };

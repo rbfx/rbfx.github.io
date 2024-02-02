@@ -1,5 +1,12 @@
 var NAVTREEINDEX77 =
 {
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a2e6cd5ba8d80e0b945e05ab7728f2200":[6,0,14,22],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a4d18f7a7d258c8aee52e754dd4baf440":[6,0,14,21],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a4da52507d3157d5236c1d9ebb844b165":[6,0,14,2],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a52687879784f2e82a39bf095fcab60bf":[6,0,14,11],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a5fd182ae5f73a673cf4269a780904862":[6,0,14,7],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a6037d120e40a891e9be7f44eb0688375":[6,0,14,4],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a61fa5f39d10600e4f4e665c977ee8924":[6,0,14,13],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a65eb5dd050add94e308612286f5e9033":[6,0,14,8],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a6b9600e42eecab088ae45f3dada88231":[6,0,14,6],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a7bb1e6e3a9954d7eba1efe0782ce63c6":[6,0,14,17],
@@ -242,12 +249,5 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_attribute_animation_state_track.html#a841bd6b35d56b9ea21f72d13d0cecf87":[6,0,2,54,1],
 "struct_urho3_d_1_1_attribute_handle.html":[6,0,2,55],
 "struct_urho3_d_1_1_attribute_handle.html#a32a4699a2ea4e4c6484f6d7f1c4049eb":[6,0,2,55,3],
-"struct_urho3_d_1_1_attribute_handle.html#a434401c78d26611865c7e62c043e081e":[6,0,2,55,0],
-"struct_urho3_d_1_1_attribute_handle.html#a957e75589831ef1c238851672ffc527c":[6,0,2,55,1],
-"struct_urho3_d_1_1_attribute_handle.html#af4a46a168d89682e53df14fff44394f0":[6,0,2,55,2],
-"struct_urho3_d_1_1_attribute_hook_context.html":[6,0,2,56],
-"struct_urho3_d_1_1_attribute_hook_context.html#a333b273366bfe155233c8b2873c27ac8":[6,0,2,56,3],
-"struct_urho3_d_1_1_attribute_hook_context.html#a6c0e7e496c55637b9a4c5221a8deaedb":[6,0,2,56,2],
-"struct_urho3_d_1_1_attribute_hook_context.html#aaf2261c1c0156bae1716a5c69b9b4ede":[6,0,2,56,1],
-"struct_urho3_d_1_1_attribute_hook_context.html#aff9e20f4984fef9281d6a49df60a1eb8":[6,0,2,56,0]
+"struct_urho3_d_1_1_attribute_handle.html#a434401c78d26611865c7e62c043e081e":[6,0,2,55,0]
 };

@@ -1,5 +1,12 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_outline_group_1_1_material_key.html":[6,0,2,467,0],
+"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a001ae716476017dd0cb8aa8e5c478a2f":[6,0,2,467,0,0],
+"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a04e64a0a120041fae85de80e9b6f6782":[6,0,2,467,0,1],
+"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a40f677709464efcbd9e606d33394d963":[6,0,2,467,0,3],
+"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a742e34e8a072c32a821b09fe68414d68":[6,0,2,467,0,2],
+"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a8a06183dc1f2e69072baab49e1739e4b":[6,0,2,467,0,4],
+"struct_urho3_d_1_1_outline_group_1_1_material_key.html#aeac444530b984ce31ff8bec28ffa9aff":[6,0,2,467,0,5],
 "struct_urho3_d_1_1_package_download.html":[6,0,2,470],
 "struct_urho3_d_1_1_package_download.html#a1d248dbabcd081a6a417a483581b78d6":[6,0,2,470,0],
 "struct_urho3_d_1_1_package_download.html#a2818e5e0caaff75074fd16fea90ace88":[6,0,2,470,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_pipeline_batch_desc.html#ade610a901ca2e9e2d3b0bd8c5ffa2a3b":[6,0,2,513,7],
 "struct_urho3_d_1_1_pipeline_batch_desc.html#ae508a2f2e90e9648ec293ba7d80e1623":[6,0,2,513,4],
 "struct_urho3_d_1_1_pipeline_batch_desc.html#af5e20657f92306ca50a2f369e863af73":[6,0,2,513,2],
-"struct_urho3_d_1_1_pipeline_batch_group.html":[6,0,2,514],
-"struct_urho3_d_1_1_pipeline_batch_group.html#a555905a36f6e1484ec50abe17a1ab300":[6,0,2,514,2],
-"struct_urho3_d_1_1_pipeline_batch_group.html#a5d7dceed8ef5d57822ea4b70c2f5fcb0":[6,0,2,514,3],
-"struct_urho3_d_1_1_pipeline_batch_group.html#a7006b6c92dce7bacd6fd2eca48301c23":[6,0,2,514,0],
-"struct_urho3_d_1_1_pipeline_batch_group.html#ac39b62c425b4f95977da5d61a41798b1":[6,0,2,514,4],
-"struct_urho3_d_1_1_pipeline_batch_group.html#ae5b6d961b686742676c0c70bf3f9fa56":[6,0,2,514,1],
-"struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html":[6,0,2,523,0],
-"struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html#aa0c0b8636d680d2f1ede30b977de5d7b":[6,0,2,523,0,0]
+"struct_urho3_d_1_1_pipeline_batch_group.html":[6,0,2,514]
 };

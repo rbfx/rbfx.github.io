@@ -1,5 +1,12 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_font_glyph.html#a8b93092b27ef4f1aa27620692208ab3a":[6,0,2,240,3],
+"struct_urho3_d_1_1_font_glyph.html#a9fef4770f7ebe676d27ff83b996a3e6c":[6,0,2,240,6],
+"struct_urho3_d_1_1_font_glyph.html#aad29d591c4fda301cd4cae3b2aba196a":[6,0,2,240,1],
+"struct_urho3_d_1_1_font_glyph.html#ab2f1932d312c54d199d0ccf8acbe6152":[6,0,2,240,10],
+"struct_urho3_d_1_1_font_glyph.html#abaa1d3fb928effb534dc5b60773db068":[6,0,2,240,4],
+"struct_urho3_d_1_1_font_glyph.html#ac1d7c8a9301c119ba190a004294b156f":[6,0,2,240,5],
+"struct_urho3_d_1_1_font_glyph.html#ad07be324501ae922bd13b3338c92a87f":[6,0,2,240,0],
 "struct_urho3_d_1_1_font_glyph.html#ad7f094df2c37d914ec1ad8fa2c9f2275":[6,0,2,240,2],
 "struct_urho3_d_1_1_frame_info.html":[6,0,2,241],
 "struct_urho3_d_1_1_frame_info.html#a1d4b93d62c71fa6ed3542bce55bba460":[6,0,2,241,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_index_buffer_desc.html":[6,0,2,307],
 "struct_urho3_d_1_1_index_buffer_desc.html#a4ee0a339e9c9ad52f04afd5ac7d5fcda":[6,0,2,307,1],
 "struct_urho3_d_1_1_index_buffer_desc.html#a7598653767f4440858f90679661efc79":[6,0,2,307,3],
-"struct_urho3_d_1_1_index_buffer_desc.html#adca8c7d71c7663c63f3d4267152ab96a":[6,0,2,307,0],
-"struct_urho3_d_1_1_index_buffer_desc.html#af7d7fba8e1c133f1105755be0136305d":[6,0,2,307,2],
-"struct_urho3_d_1_1_index_in_tuple.html":[6,0,2,308],
-"struct_urho3_d_1_1_index_in_tuple_3_01_t_00_01ea_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html":[6,0,2,309],
-"struct_urho3_d_1_1_index_in_tuple_3_01_t_00_01ea_1_1tuple_3_01_u_00_01_types_8_8_8_01_4_01_4.html":[6,0,2,310],
-"struct_urho3_d_1_1_index_in_tuple_3_01_t_00_01std_1_1tuple_3_01_types_8_8_8_01_4_01_4.html":[6,0,2,311],
-"struct_urho3_d_1_1_indirect_light_tracing_settings.html":[6,0,2,312],
-"struct_urho3_d_1_1_indirect_light_tracing_settings.html#a275b06375b72d09c673e181f34aeb794":[6,0,2,312,1]
+"struct_urho3_d_1_1_index_buffer_desc.html#adca8c7d71c7663c63f3d4267152ab96a":[6,0,2,307,0]
 };

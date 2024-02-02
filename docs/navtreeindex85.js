@@ -1,5 +1,12 @@
 var NAVTREEINDEX85 =
 {
+"struct_urho3_d_1_1_pipeline_batch_group.html#a555905a36f6e1484ec50abe17a1ab300":[6,0,2,514,2],
+"struct_urho3_d_1_1_pipeline_batch_group.html#a5d7dceed8ef5d57822ea4b70c2f5fcb0":[6,0,2,514,3],
+"struct_urho3_d_1_1_pipeline_batch_group.html#a7006b6c92dce7bacd6fd2eca48301c23":[6,0,2,514,0],
+"struct_urho3_d_1_1_pipeline_batch_group.html#ac39b62c425b4f95977da5d61a41798b1":[6,0,2,514,4],
+"struct_urho3_d_1_1_pipeline_batch_group.html#ae5b6d961b686742676c0c70bf3f9fa56":[6,0,2,514,1],
+"struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html":[6,0,2,523,0],
+"struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html#aa0c0b8636d680d2f1ede30b977de5d7b":[6,0,2,523,0,0],
 "struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html#ae98abb63c4855a67410c282231e3bb21":[6,0,2,523,0,1],
 "struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html":[6,0,2,524,0],
 "struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html#a9a5e22ce6f825962ac427976f0c3fb51":[6,0,2,524,0,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX85 =
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_reorder_info.html#aa0648b7f14c8f2deb9989fc8177fa0b1":[6,0,2,606,3,0],
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_reparent_info.html":[6,0,2,606,4],
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_reparent_info.html#a411ca63eaf8b4a62b289632d6cffc6b1":[6,0,2,606,4,1],
-"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_reparent_info.html#abb70aa3e8ee082b91f71c6f546d08ffb":[6,0,2,606,4,0],
-"struct_urho3_d_1_1_scene_processor_settings.html":[6,0,2,609],
-"struct_urho3_d_1_1_scene_processor_settings.html#a11d40599591465958f060a0fc6c4408a":[6,0,2,609,6],
-"struct_urho3_d_1_1_scene_processor_settings.html#a2ca9ea2f208557babc2299c928379b2f":[6,0,2,609,12],
-"struct_urho3_d_1_1_scene_processor_settings.html#a2e7dd16607cc14e3b79e1abbd2801bae":[6,0,2,609,9],
-"struct_urho3_d_1_1_scene_processor_settings.html#a37d20a057982dcce1a6cf074c73f6b26":[6,0,2,609,3],
-"struct_urho3_d_1_1_scene_processor_settings.html#a48dbd0625b62c1c8eef305866b6b5de2":[6,0,2,609,2],
-"struct_urho3_d_1_1_scene_processor_settings.html#a499dad497f7366ec53752155253d0ecd":[6,0,2,609,5]
+"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_reparent_info.html#abb70aa3e8ee082b91f71c6f546d08ffb":[6,0,2,606,4,0]
 };

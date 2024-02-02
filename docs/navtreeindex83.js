@@ -1,5 +1,12 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_manifold_pair.html#a0595504fa42073c132fad93d2b4f9524":[6,0,2,373,2],
+"struct_urho3_d_1_1_manifold_pair.html#a1040c2e3c778fe55c0f00d4ef0803a15":[6,0,2,373,0],
+"struct_urho3_d_1_1_manifold_pair.html#a828094a8533542b74adf2ed297a7f0f5":[6,0,2,373,1],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html":[6,0,2,375,0],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#a4ae1ceb802d966951e57e348b8edbe4b":[6,0,2,375,0,5],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#a58c0a4e394d7e9488265b5ad033393b7":[6,0,2,375,0,2],
+"struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#aa6f1b99831dac4388f6bd9d256a88d1d":[6,0,2,375,0,1],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#acb062a130fc6157f4b67e8cb4f8d17f1":[6,0,2,375,0,4],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#aced15b63d64b36a4a04f951e992c9481":[6,0,2,375,0,0],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#ad4008b4af5b7d4ab954dbe45e78cecad":[6,0,2,375,0,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_open_x_r_tweaks.html#a328cb31f042295a3c9ac6c8212c3a48f":[6,0,2,466,0],
 "struct_urho3_d_1_1_open_x_r_tweaks.html#a381b76bdeed9b5c4a088e240e6297234":[6,0,2,466,2],
 "struct_urho3_d_1_1_open_x_r_tweaks.html#a972313222b024048ae218039c69abc61":[6,0,2,466,1],
-"struct_urho3_d_1_1_open_x_r_tweaks.html#aa0384194e50021ed798b0b8ee2245cf3":[6,0,2,466,3],
-"struct_urho3_d_1_1_outline_group_1_1_material_key.html":[6,0,2,467,0],
-"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a001ae716476017dd0cb8aa8e5c478a2f":[6,0,2,467,0,0],
-"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a04e64a0a120041fae85de80e9b6f6782":[6,0,2,467,0,1],
-"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a40f677709464efcbd9e606d33394d963":[6,0,2,467,0,3],
-"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a742e34e8a072c32a821b09fe68414d68":[6,0,2,467,0,2],
-"struct_urho3_d_1_1_outline_group_1_1_material_key.html#a8a06183dc1f2e69072baab49e1739e4b":[6,0,2,467,0,4],
-"struct_urho3_d_1_1_outline_group_1_1_material_key.html#aeac444530b984ce31ff8bec28ffa9aff":[6,0,2,467,0,5]
+"struct_urho3_d_1_1_open_x_r_tweaks.html#aa0384194e50021ed798b0b8ee2245cf3":[6,0,2,466,3]
 };

@@ -1,5 +1,12 @@
 var NAVTREEINDEX78 =
 {
+"struct_urho3_d_1_1_attribute_handle.html#a957e75589831ef1c238851672ffc527c":[6,0,2,55,1],
+"struct_urho3_d_1_1_attribute_handle.html#af4a46a168d89682e53df14fff44394f0":[6,0,2,55,2],
+"struct_urho3_d_1_1_attribute_hook_context.html":[6,0,2,56],
+"struct_urho3_d_1_1_attribute_hook_context.html#a333b273366bfe155233c8b2873c27ac8":[6,0,2,56,3],
+"struct_urho3_d_1_1_attribute_hook_context.html#a6c0e7e496c55637b9a4c5221a8deaedb":[6,0,2,56,2],
+"struct_urho3_d_1_1_attribute_hook_context.html#aaf2261c1c0156bae1716a5c69b9b4ede":[6,0,2,56,1],
+"struct_urho3_d_1_1_attribute_hook_context.html#aff9e20f4984fef9281d6a49df60a1eb8":[6,0,2,56,0],
 "struct_urho3_d_1_1_attribute_info.html":[6,0,2,57],
 "struct_urho3_d_1_1_attribute_info.html#a04cf4412d6b72477d58fe12b514c86d9":[6,0,2,57,19],
 "struct_urho3_d_1_1_attribute_info.html#a0aed1b995fec36f15d8f60e513295e81":[6,0,2,57,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_cascade_parameters.html#a16f5cbad809217cbe07d366c89819aff":[6,0,2,112,5],
 "struct_urho3_d_1_1_cascade_parameters.html#a30a464d2d10ef9acf6825c3951049c23":[6,0,2,112,6],
 "struct_urho3_d_1_1_cascade_parameters.html#a5404f8e46903359cea2a5f40e27a3ecc":[6,0,2,112,3],
-"struct_urho3_d_1_1_cascade_parameters.html#a5eb59551f090349a49cbd9b8ed7cc729":[6,0,2,112,0],
-"struct_urho3_d_1_1_cascade_parameters.html#aa5adade0afa9fb2070592767d27c4f55":[6,0,2,112,2],
-"struct_urho3_d_1_1_cascade_parameters.html#aabf246425eda85b91a293604c34b6346":[6,0,2,112,1],
-"struct_urho3_d_1_1_char_location.html":[6,0,2,113],
-"struct_urho3_d_1_1_char_location.html#aab580723124da992c9c5cc559487949c":[6,0,2,113,0],
-"struct_urho3_d_1_1_char_location.html#ab3b36b9b14878c2fcab07b509a52a5fc":[6,0,2,113,1],
-"struct_urho3_d_1_1_client_replication_state.html":[6,0,2,120],
-"struct_urho3_d_1_1_client_replication_state.html#a168585e00bc980920e39ae9168feb3d4":[6,0,2,120,12]
+"struct_urho3_d_1_1_cascade_parameters.html#a5eb59551f090349a49cbd9b8ed7cc729":[6,0,2,112,0]
 };

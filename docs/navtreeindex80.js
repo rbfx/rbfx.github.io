@@ -1,5 +1,12 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_decal_vertex.html#ae0d33f8c2f9cca0054c52c28a6119ffb":[6,0,2,188,7],
+"struct_urho3_d_1_1_decal_vertex.html#aea7223797d2b166173d687f1a40470c7":[6,0,2,188,5],
+"struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data.html":[6,0,2,189,0],
+"struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data.html#a251c0a9052230cfcfbe96ccd38d58f73":[6,0,2,189,0,2],
+"struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data.html#a652fa1b6b435fc07b0b6d79c6b6ac1c6":[6,0,2,189,0,0],
+"struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data.html#a69825e8c4f53875bf029255c997e430e":[6,0,2,189,0,1],
+"struct_urho3_d_1_1_default_render_pipeline_view_1_1_deferred_lighting_data.html":[6,0,2,190,0],
 "struct_urho3_d_1_1_default_render_pipeline_view_1_1_deferred_lighting_data.html#a1fac86e0cb97c7c9757506fe86fc32ac":[6,0,2,190,0,1],
 "struct_urho3_d_1_1_default_render_pipeline_view_1_1_deferred_lighting_data.html#a53ef978ee55ffaf6c457b9a977ca2da2":[6,0,2,190,0,2],
 "struct_urho3_d_1_1_default_render_pipeline_view_1_1_deferred_lighting_data.html#ad15fb9c68def921b4b2ff53c75c72891":[6,0,2,190,0,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_font_glyph.html":[6,0,2,240],
 "struct_urho3_d_1_1_font_glyph.html#a0d23eef6db5287fcd800f0726588d58b":[6,0,2,240,9],
 "struct_urho3_d_1_1_font_glyph.html#a4454d1b67556156271cc913a05896be9":[6,0,2,240,7],
-"struct_urho3_d_1_1_font_glyph.html#a691d907c5d27fdcce9513f5391595bb5":[6,0,2,240,8],
-"struct_urho3_d_1_1_font_glyph.html#a8b93092b27ef4f1aa27620692208ab3a":[6,0,2,240,3],
-"struct_urho3_d_1_1_font_glyph.html#a9fef4770f7ebe676d27ff83b996a3e6c":[6,0,2,240,6],
-"struct_urho3_d_1_1_font_glyph.html#aad29d591c4fda301cd4cae3b2aba196a":[6,0,2,240,1],
-"struct_urho3_d_1_1_font_glyph.html#ab2f1932d312c54d199d0ccf8acbe6152":[6,0,2,240,10],
-"struct_urho3_d_1_1_font_glyph.html#abaa1d3fb928effb534dc5b60773db068":[6,0,2,240,4],
-"struct_urho3_d_1_1_font_glyph.html#ac1d7c8a9301c119ba190a004294b156f":[6,0,2,240,5],
-"struct_urho3_d_1_1_font_glyph.html#ad07be324501ae922bd13b3338c92a87f":[6,0,2,240,0]
+"struct_urho3_d_1_1_font_glyph.html#a691d907c5d27fdcce9513f5391595bb5":[6,0,2,240,8]
 };
