@@ -1,5 +1,6 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_manifold_pair.html":[6,0,2,373],
 "struct_urho3_d_1_1_manifold_pair.html#a0595504fa42073c132fad93d2b4f9524":[6,0,2,373,2],
 "struct_urho3_d_1_1_manifold_pair.html#a1040c2e3c778fe55c0f00d4ef0803a15":[6,0,2,373,0],
 "struct_urho3_d_1_1_manifold_pair.html#a828094a8533542b74adf2ed297a7f0f5":[6,0,2,373,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_open_x_r_tweaks.html":[6,0,2,466],
 "struct_urho3_d_1_1_open_x_r_tweaks.html#a328cb31f042295a3c9ac6c8212c3a48f":[6,0,2,466,0],
 "struct_urho3_d_1_1_open_x_r_tweaks.html#a381b76bdeed9b5c4a088e240e6297234":[6,0,2,466,2],
-"struct_urho3_d_1_1_open_x_r_tweaks.html#a972313222b024048ae218039c69abc61":[6,0,2,466,1],
-"struct_urho3_d_1_1_open_x_r_tweaks.html#aa0384194e50021ed798b0b8ee2245cf3":[6,0,2,466,3]
+"struct_urho3_d_1_1_open_x_r_tweaks.html#a972313222b024048ae218039c69abc61":[6,0,2,466,1]
 };

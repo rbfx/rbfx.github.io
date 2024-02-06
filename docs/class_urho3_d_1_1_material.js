@@ -6,6 +6,7 @@ var class_urho3_d_1_1_material =
     [ "BeginLoad", "class_urho3_d_1_1_material.html#a112d8e95b1deb1fee8524f7cc69eb921", null ],
     [ "BeginLoadXML", "class_urho3_d_1_1_material.html#a34c505680ced124298f079470392a3bb", null ],
     [ "Clone", "class_urho3_d_1_1_material.html#a638366ad3672489ad399964fc63b17d4", null ],
+    [ "CopyFrom", "class_urho3_d_1_1_material.html#aec1f097ecce9a167f2a3f2c5cb5b5695", null ],
     [ "CreateBaseMaterial", "class_urho3_d_1_1_material.html#acfbeb195887050ee32f44659aa2df8b7", null ],
     [ "EndLoad", "class_urho3_d_1_1_material.html#a2ed97bf462e83b2587c88fbabd794229", null ],
     [ "FindTechnique", "class_urho3_d_1_1_material.html#aea646fd07773410d85cb4f643ba68538", null ],
