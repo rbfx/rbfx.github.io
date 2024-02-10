@@ -2,6 +2,8 @@ var struct_urho3_d_1_1_file_system_entry =
 [
     [ "CompareDirectoriesFirst", "struct_urho3_d_1_1_file_system_entry.html#a565a65d31fe7c6f3fa23434eaad480c9", null ],
     [ "CompareFilesFirst", "struct_urho3_d_1_1_file_system_entry.html#aec49121a51f69f5598d95695e79bbb44", null ],
+    [ "ComparePathDirectoriesFirst", "struct_urho3_d_1_1_file_system_entry.html#af3772b4cf2cac06a9aca73aa88332aa0", null ],
+    [ "ComparePathFilesFirst", "struct_urho3_d_1_1_file_system_entry.html#a487bd9c1dada145ee5c1c1787395b8cb", null ],
     [ "FillParents", "struct_urho3_d_1_1_file_system_entry.html#af48f58f15f9466b39d90c62c3e40dac7", null ],
     [ "FindChild", "struct_urho3_d_1_1_file_system_entry.html#a3613761e1077210f3aec0f39b2ef1611", null ],
     [ "ForEach", "struct_urho3_d_1_1_file_system_entry.html#a5c679f111c39d975b9247834acb27dac", null ],

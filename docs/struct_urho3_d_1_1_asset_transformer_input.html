@@ -79,9 +79,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a81aa22f626cca4a5f1742e0def0878ac"><td class="memItemLeft" align="right" valign="top"><a id="a81aa22f626cca4a5f1742e0def0878ac"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AssetTransformerInput</b> (const <a class="el" href="struct_urho3_d_1_1_application_flavor.html">ApplicationFlavor</a> &amp;flavor, const ea::string &amp;resourceName, const ea::string &amp;inputFileName, FileTime inputFileTime)</td></tr>
 <tr class="separator:a81aa22f626cca4a5f1742e0def0878ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a052d87a449eba2f417aeb5a42679244f"><td class="memItemLeft" align="right" valign="top"><a id="a052d87a449eba2f417aeb5a42679244f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AssetTransformerInput</b> (const <a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html">AssetTransformerInput</a> &amp;other, const ea::string &amp;tempPath, const ea::string &amp;outputFileName)</td></tr>
-<tr class="separator:a052d87a449eba2f417aeb5a42679244f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00642df61595df8a9fbcd0132222ef44"><td class="memItemLeft" align="right" valign="top"><a id="a00642df61595df8a9fbcd0132222ef44"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AssetTransformerInput</b> (const <a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html">AssetTransformerInput</a> &amp;other, const ea::string &amp;tempPath, const ea::string &amp;outputFileName, const ea::string &amp;outputResourceName)</td></tr>
+<tr class="separator:a00642df61595df8a9fbcd0132222ef44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab25f3f4400cc82883cf53d8225d2495b"><td class="memItemLeft" align="right" valign="top"><a id="ab25f3f4400cc82883cf53d8225d2495b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SerializeInBlock</b> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;archive)</td></tr>
 <tr class="separator:ab25f3f4400cc82883cf53d8225d2495b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,6 +129,10 @@ ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html#ac314e669fde9d444eaf1bbf8590a4f22">outputFileName_</a></td></tr>
 <tr class="memdesc:ac314e669fde9d444eaf1bbf8590a4f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute file name to the file counterpart in writeable directory. <br /></td></tr>
 <tr class="separator:ac314e669fde9d444eaf1bbf8590a4f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b200448a6f196ef3de7f637da03dcc6"><td class="memItemLeft" align="right" valign="top"><a id="a4b200448a6f196ef3de7f637da03dcc6"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html#a4b200448a6f196ef3de7f637da03dcc6">outputResourceName_</a></td></tr>
+<tr class="memdesc:a4b200448a6f196ef3de7f637da03dcc6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_resource.html">Resource</a> name to the file counterpart in writeable directory. <br /></td></tr>
+<tr class="separator:a4b200448a6f196ef3de7f637da03dcc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Transformer execution inputs (should be serializable on its own). </p>

@@ -134,17 +134,17 @@ var NAVTREEINDEX =
 "class_urho3_d_1_1_x_m_l_file.html#a957eb2e5582b44955d89639efd0a9ef6",
 "class_urho3_d_1_1_zone_lookup_index.html#a6e7f4c606040ba7298d57bd1a226ed6c",
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a246f834c7d4a11138a717646a0446277",
-"struct_urho3_d_1_1_attribute_handle.html#a434401c78d26611865c7e62c043e081e",
-"struct_urho3_d_1_1_cascade_parameters.html#a5eb59551f090349a49cbd9b8ed7cc729",
-"struct_urho3_d_1_1_decal_vertex.html#ad6bcbb759e982b5bbcd6e46b03216240",
-"struct_urho3_d_1_1_font_glyph.html#a691d907c5d27fdcce9513f5391595bb5",
-"struct_urho3_d_1_1_index_buffer_desc.html#adca8c7d71c7663c63f3d4267152ab96a",
-"struct_urho3_d_1_1_manifold_pair.html",
-"struct_urho3_d_1_1_open_x_r_tweaks.html#aa0384194e50021ed798b0b8ee2245cf3",
-"struct_urho3_d_1_1_pipeline_batch_group.html",
-"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_reparent_info.html#abb70aa3e8ee082b91f71c6f546d08ffb",
-"struct_urho3_d_1_1_spriter_1_1_ref.html",
-"struct_urho3_d_1_1_u_i_batch_state_key.html#a5716ac637233493c62898d1222ce3821"
+"struct_urho3_d_1_1_attribute_handle.html#a32a4699a2ea4e4c6484f6d7f1c4049eb",
+"struct_urho3_d_1_1_cascade_parameters.html#a5404f8e46903359cea2a5f40e27a3ecc",
+"struct_urho3_d_1_1_decal_vertex.html#a8f141477e4ac46b9525030c74e02805b",
+"struct_urho3_d_1_1_font_glyph.html",
+"struct_urho3_d_1_1_index_buffer_desc.html",
+"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a769e62d8583eb1c42129683f9597908c",
+"struct_urho3_d_1_1_open_x_r_tweaks.html#a328cb31f042295a3c9ac6c8212c3a48f",
+"struct_urho3_d_1_1_pipeline_batch_desc.html#ade610a901ca2e9e2d3b0bd8c5ffa2a3b",
+"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_reorder_info.html#aa0648b7f14c8f2deb9989fc8177fa0b1",
+"struct_urho3_d_1_1_spriter_1_1_map_instruction.html#abe7fe8c36d2d093c350dbc5f46be1fac",
+"struct_urho3_d_1_1_u_i_batch_state_key.html#a1e7b6fe95b7e1bdf1ef13d7da7f7652d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
