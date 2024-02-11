@@ -93,7 +93,7 @@ ea::shared_ptr&lt; std::atomic&lt; bool &gt; &gt;&#160;</td><td class="memItemRi
 <tr class="separator:ab443043df2bdb7a6c73fc09c5e6e7ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Stop token used to thread-safely stop asynchronous task. TODO: For better memory management split this class into StopSource with shared_ptr and <a class="el" href="class_urho3_d_1_1_stop_token.html">StopToken</a> with weak_ptr, or reuse corresponding classes from C++20 standard library. </p>
+<div class="textblock"><p>Stop token used to thread-safely stop asynchronous task. This object can be passed by value and all copies will share same internal state.. TODO: For better memory management split this class into StopSource with shared_ptr and <a class="el" href="class_urho3_d_1_1_stop_token.html">StopToken</a> with weak_ptr, or reuse corresponding classes from C++20 standard library. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>Urho3D/Core/StopToken.h</li>
 </ul>
