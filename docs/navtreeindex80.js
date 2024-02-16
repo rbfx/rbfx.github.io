@@ -1,6 +1,5 @@
 var NAVTREEINDEX80 =
 {
-"struct_urho3_d_1_1_decal_vertex.html#a8f141477e4ac46b9525030c74e02805b":[6,0,2,188,4],
 "struct_urho3_d_1_1_decal_vertex.html#ad6bcbb759e982b5bbcd6e46b03216240":[6,0,2,188,8],
 "struct_urho3_d_1_1_decal_vertex.html#ae0d33f8c2f9cca0054c52c28a6119ffb":[6,0,2,188,7],
 "struct_urho3_d_1_1_decal_vertex.html#aea7223797d2b166173d687f1a40470c7":[6,0,2,188,5],
@@ -249,5 +248,6 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_focus_parameters.html#a791c15072f3ec1ee1f7de496e7aff8a2":[6,0,2,235,5],
 "struct_urho3_d_1_1_focus_parameters.html#acef47ca405923a7671ec94eee4c153c3":[6,0,2,235,6],
 "struct_urho3_d_1_1_focus_parameters.html#ae026381a2e45b3ece810dd1e9a364623":[6,0,2,235,7],
-"struct_urho3_d_1_1_focus_parameters.html#aed7bfa42d9787271e1f92c5a2ac3d9ef":[6,0,2,235,0]
+"struct_urho3_d_1_1_focus_parameters.html#aed7bfa42d9787271e1f92c5a2ac3d9ef":[6,0,2,235,0],
+"struct_urho3_d_1_1_font_glyph.html":[6,0,2,240]
 };

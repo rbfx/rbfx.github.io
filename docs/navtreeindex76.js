@@ -1,7 +1,5 @@
 var NAVTREEINDEX76 =
 {
-"class_urho3_d_1_1_zone_lookup_index.html#a6e7f4c606040ba7298d57bd1a226ed6c":[6,0,2,832,9],
-"class_urho3_d_1_1_zone_lookup_index.html#aca6c554084894adcba1d340f4b541285":[6,0,2,832,10],
 "class_urho3_d_1_1_zone_lookup_index.html#adccb07fdb870e3ee768c338d0dc7d264":[6,0,2,832,8],
 "class_urho3_d_1_1_zone_lookup_index.html#ae9ea494a9862e31116867e93fdbf68fb":[6,0,2,832,4],
 "classes.html":[6,1],
@@ -85,8 +83,8 @@ var NAVTREEINDEX76 =
 "functions_type.html":[6,3,3],
 "functions_u.html":[6,3,0,21],
 "functions_v.html":[6,3,0,22],
-"functions_vars.html":[6,3,2],
 "functions_vars.html":[6,3,2,0],
+"functions_vars.html":[6,3,2],
 "functions_vars_a.html":[6,3,2,1],
 "functions_vars_b.html":[6,3,2,2],
 "functions_vars_c.html":[6,3,2,3],
@@ -129,12 +127,13 @@ var NAVTREEINDEX76 =
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html":[2],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html":[3],
 "multiplayer-and-networking.html":[0,0,2,2],
-"namespace_urho3_d_1_1_actions.html":[5,0,0,0],
 "namespace_urho3_d_1_1_actions.html":[6,0,2,0],
+"namespace_urho3_d_1_1_actions.html":[5,0,0,0],
 "namespace_urho3_d_1_1_attribute_metadata.html":[5,0,0,1],
-"namespace_urho3_d_1_1_network_settings.html":[5,0,0,2],
-"namespace_urho3_d_1_1_shader_consts.html":[5,0,0,3],
-"namespace_urho3_d_1_1_shader_resources.html":[5,0,0,4],
+"namespace_urho3_d_1_1_linked_plugins.html":[5,0,0,2],
+"namespace_urho3_d_1_1_network_settings.html":[5,0,0,3],
+"namespace_urho3_d_1_1_shader_consts.html":[5,0,0,4],
+"namespace_urho3_d_1_1_shader_resources.html":[5,0,0,5],
 "namespacemembers.html":[5,1,0],
 "namespacemembers_func.html":[5,1,1],
 "namespaces.html":[5,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX76 =
 "struct___i_m_a_g_e___n_t___h_e_a_d_e_r_s.html#aefe27165bea8e56d7e44f114891f3ce8":[6,0,13,1],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html":[6,0,14],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a0e0720fe98c91d13c7d012a5f2f43237":[6,0,14,9],
-"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a13806f8ead77941e6fadc0c0e1a38b2b":[6,0,14,3]
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a13806f8ead77941e6fadc0c0e1a38b2b":[6,0,14,3],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a246f834c7d4a11138a717646a0446277":[6,0,14,12]
 };
