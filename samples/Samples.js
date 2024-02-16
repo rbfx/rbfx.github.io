@@ -339,7 +339,7 @@ function getBinaryPromise(binaryFile) {
 }
 
 function instantiateArrayBuffer(binaryFile, imports, receiver) {
- return getBinaryPromise(binaryFile).then(binary => WebAssembly.instantiate(binary, imports)).then(instance => instance).then(receiver, reason => {
+ return getBinaryPromise(binaryFile).then(binary => WebAssembly.instantiate(binary, imports)).then(receiver, reason => {
   err(`failed to asynchronously prepare wasm: ${reason}`);
   abort(reason);
  });
@@ -396,14 +396,14 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 1932020: () => {
+ 1931988: () => {
   FS.syncfs(function(err) {
    if (err) {
     console.error(err);
    }
   });
  },
- 1932084: $0 => {
+ 1932052: $0 => {
   var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
   var reply = window.prompt(str, "i");
   if (reply === null) {
@@ -411,10 +411,10 @@ var ASM_CONSTS = {
   }
   return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
  },
- 1932309: ($0, $1) => {
+ 1932277: ($0, $1) => {
   alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
  },
- 1932366: () => {
+ 1932334: () => {
   if (typeof (AudioContext) !== "undefined") {
    return true;
   } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -422,7 +422,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1932513: () => {
+ 1932481: () => {
   if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
    return true;
   } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -430,7 +430,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1932747: $0 => {
+ 1932715: $0 => {
   if (typeof (Module["SDL2"]) === "undefined") {
    Module["SDL2"] = {};
   }
@@ -452,11 +452,11 @@ var ASM_CONSTS = {
   }
   return SDL2.audioContext === undefined ? -1 : 0;
  },
- 1933240: () => {
+ 1933208: () => {
   var SDL2 = Module["SDL2"];
   return SDL2.audioContext.sampleRate;
  },
- 1933308: ($0, $1, $2, $3) => {
+ 1933276: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   var have_microphone = function(stream) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -497,7 +497,7 @@ var ASM_CONSTS = {
    }, have_microphone, no_microphone);
   }
  },
- 1934960: ($0, $1, $2, $3) => {
+ 1934928: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
   SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -509,7 +509,7 @@ var ASM_CONSTS = {
   };
   SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
  },
- 1935370: ($0, $1) => {
+ 1935338: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
   for (var c = 0; c < numChannels; ++c) {
@@ -528,7 +528,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1935975: ($0, $1) => {
+ 1935943: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
   for (var c = 0; c < numChannels; ++c) {
@@ -541,7 +541,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1936455: $0 => {
+ 1936423: $0 => {
   var SDL2 = Module["SDL2"];
   if ($0) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -579,7 +579,7 @@ var ASM_CONSTS = {
    SDL2.audioContext = undefined;
   }
  },
- 1937627: ($0, $1, $2) => {
+ 1937595: ($0, $1, $2) => {
   var w = $0;
   var h = $1;
   var pixels = $2;
@@ -650,7 +650,7 @@ var ASM_CONSTS = {
   }
   SDL2.ctx.putImageData(SDL2.image, 0, 0);
  },
- 1939096: ($0, $1, $2, $3, $4) => {
+ 1939064: ($0, $1, $2, $3, $4) => {
   var w = $0;
   var h = $1;
   var hot_x = $2;
@@ -687,18 +687,18 @@ var ASM_CONSTS = {
   stringToUTF8(url, urlBuf, url.length + 1);
   return urlBuf;
  },
- 1940085: $0 => {
+ 1940053: $0 => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = UTF8ToString($0);
   }
  },
- 1940168: () => {
+ 1940136: () => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = "none";
   }
  },
- 1940237: () => window.innerWidth,
- 1940267: () => window.innerHeight
+ 1940205: () => window.innerWidth,
+ 1940235: () => window.innerHeight
 };
 
 /** @constructor */ function ExitStatus(status) {
@@ -723,11 +723,11 @@ var noExitRuntime = Module["noExitRuntime"] || true;
  if (type.endsWith("*")) type = "*";
  switch (type) {
  case "i1":
-  HEAP8[((ptr) >> 0)] = value;
+  HEAP8[ptr] = value;
   break;
 
  case "i8":
-  HEAP8[((ptr) >> 0)] = value;
+  HEAP8[ptr] = value;
   break;
 
  case "i16":
@@ -777,17 +777,17 @@ class ExceptionInfo {
  }
  set_caught(caught) {
   caught = caught ? 1 : 0;
-  HEAP8[(((this.ptr) + (12)) >> 0)] = caught;
+  HEAP8[(this.ptr) + (12)] = caught;
  }
  get_caught() {
-  return HEAP8[(((this.ptr) + (12)) >> 0)] != 0;
+  return HEAP8[(this.ptr) + (12)] != 0;
  }
  set_rethrown(rethrown) {
   rethrown = rethrown ? 1 : 0;
-  HEAP8[(((this.ptr) + (13)) >> 0)] = rethrown;
+  HEAP8[(this.ptr) + (13)] = rethrown;
  }
  get_rethrown() {
-  return HEAP8[(((this.ptr) + (13)) >> 0)] != 0;
+  return HEAP8[(this.ptr) + (13)] != 0;
  }
  init(type, destructor) {
   this.set_adjusted_ptr(0);
@@ -898,18 +898,15 @@ var PATH = {
   if (lastSlash === -1) return path;
   return path.substr(lastSlash + 1);
  },
- join: function() {
-  var paths = Array.prototype.slice.call(arguments);
-  return PATH.normalize(paths.join("/"));
- },
+ join: (...paths) => PATH.normalize(paths.join("/")),
  join2: (l, r) => PATH.normalize(l + "/" + r)
 };
 
 var PATH_FS = {
- resolve: function() {
+ resolve: (...args) => {
   var resolvedPath = "", resolvedAbsolute = false;
-  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
-   var path = (i >= 0) ? arguments[i] : FS.cwd();
+  for (var i = args.length - 1; i >= -1 && !resolvedAbsolute; i--) {
+   var path = (i >= 0) ? args[i] : FS.cwd();
    if (typeof path != "string") {
     throw new TypeError("Arguments to path.resolve must be strings");
    } else if (!path) {
@@ -1622,9 +1619,7 @@ var IDBFS = {
  },
  DB_VERSION: 21,
  DB_STORE_NAME: "FILE_DATA",
- mount: function(mount) {
-  return MEMFS.mount.apply(null, arguments);
- },
+ mount: (...args) => MEMFS.mount(...args),
  syncfs: (mount, populate, callback) => {
   IDBFS.getLocalSet(mount, (err, local) => {
    if (err) return callback(err);
@@ -1697,7 +1692,7 @@ var IDBFS = {
     return callback(e);
    }
    if (FS.isDir(stat.mode)) {
-    check.push.apply(check, FS.readdir(path).filter(isRealDir).map(toAbsolute(path)));
+    check.push(...FS.readdir(path).filter(isRealDir).map(toAbsolute(path)));
    }
    entries[path] = {
     "timestamp": stat.mtime
@@ -1855,8 +1850,8 @@ var IDBFS = {
     return callback(err);
    }
   }
-  transaction.onerror = e => {
-   done(this.error);
+  transaction.onerror = transaction.onabort = e => {
+   done(e.target.error);
    e.preventDefault();
   };
   transaction.oncomplete = e => {
@@ -2216,7 +2211,7 @@ var FS = {
   while (check.length) {
    var m = check.pop();
    mounts.push(m);
-   check.push.apply(check, m.mounts);
+   check.push(...m.mounts);
   }
   return mounts;
  },
@@ -3261,9 +3256,9 @@ var FS = {
   var keys = Object.keys(node.stream_ops);
   keys.forEach(key => {
    var fn = node.stream_ops[key];
-   stream_ops[key] = function forceLoadLazyFile() {
+   stream_ops[key] = (...args) => {
     FS.forceLoadFile(node);
-    return fn.apply(null, arguments);
+    return fn(...args);
    };
   });
   function writeChunks(stream, buffer, offset, length, position) {
@@ -4192,7 +4187,7 @@ function ___syscall_getdents64(fd, dirp, count) {
    (+(Math.abs(tempDouble))) >= 1 ? (tempDouble > 0 ? (+(Math.floor((tempDouble) / 4294967296))) >>> 0 : (~~((+(Math.ceil((tempDouble - +(((~~(tempDouble))) >>> 0)) / 4294967296))))) >>> 0) : 0) ], 
    HEAP32[(((dirp + pos) + (8)) >> 2)] = tempI64[0], HEAP32[(((dirp + pos) + (12)) >> 2)] = tempI64[1]);
    HEAP16[(((dirp + pos) + (16)) >> 1)] = 280;
-   HEAP8[(((dirp + pos) + (18)) >> 0)] = type;
+   HEAP8[(dirp + pos) + (18)] = type;
    stringToUTF8(name, dirp + pos + 19, 256);
    pos += struct_size;
    idx += 1;
@@ -4227,7 +4222,7 @@ function ___syscall_ioctl(fd, op, varargs) {
      HEAP32[(((argp) + (8)) >> 2)] = termios.c_cflag || 0;
      HEAP32[(((argp) + (12)) >> 2)] = termios.c_lflag || 0;
      for (var i = 0; i < 32; i++) {
-      HEAP8[(((argp + i) + (17)) >> 0)] = termios.c_cc[i] || 0;
+      HEAP8[(argp + i) + (17)] = termios.c_cc[i] || 0;
      }
      return 0;
     }
@@ -4255,7 +4250,7 @@ function ___syscall_ioctl(fd, op, varargs) {
      var c_lflag = HEAP32[(((argp) + (12)) >> 2)];
      var c_cc = [];
      for (var i = 0; i < 32; i++) {
-      c_cc.push(HEAP8[(((argp + i) + (17)) >> 0)]);
+      c_cc.push(HEAP8[(argp + i) + (17)]);
      }
      return stream.tty.ops.ioctl_tcsets(stream.tty, op, {
       c_iflag: c_iflag,
@@ -4609,59 +4604,22 @@ var GenericWireTypeSize = 8;
  });
 };
 
-class HandleAllocator {
- constructor() {
-  this.allocated = [ undefined ];
-  this.freelist = [];
- }
- get(id) {
-  return this.allocated[id];
- }
- has(id) {
-  return this.allocated[id] !== undefined;
- }
- allocate(handle) {
-  var id = this.freelist.pop() || this.allocated.length;
-  this.allocated[id] = handle;
-  return id;
- }
- free(id) {
-  this.allocated[id] = undefined;
-  this.freelist.push(id);
- }
-}
+var emval_freelist = [];
 
-var emval_handles = new HandleAllocator;
+var emval_handles = [];
 
 var __emval_decref = handle => {
- if (handle >= emval_handles.reserved && 0 === --emval_handles.get(handle).refcount) {
-  emval_handles.free(handle);
+ if (handle > 9 && 0 === --emval_handles[handle + 1]) {
+  emval_handles[handle] = undefined;
+  emval_freelist.push(handle);
  }
 };
 
-var count_emval_handles = () => {
- var count = 0;
- for (var i = emval_handles.reserved; i < emval_handles.allocated.length; ++i) {
-  if (emval_handles.allocated[i] !== undefined) {
-   ++count;
-  }
- }
- return count;
-};
+var count_emval_handles = () => emval_handles.length / 2 - 5 - emval_freelist.length;
 
 var init_emval = () => {
- emval_handles.allocated.push({
-  value: undefined
- }, {
-  value: null
- }, {
-  value: true
- }, {
-  value: false
- });
- Object.assign(emval_handles, /** @lends {emval_handles} */ {
-  reserved: emval_handles.allocated.length
- }), Module["count_emval_handles"] = count_emval_handles;
+ emval_handles.push(0, 1, undefined, 1, null, 1, true, 1, false, 1);
+ Module["count_emval_handles"] = count_emval_handles;
 };
 
 var Emval = {
@@ -4669,35 +4627,35 @@ var Emval = {
   if (!handle) {
    throwBindingError("Cannot use deleted val. handle = " + handle);
   }
-  return emval_handles.get(handle).value;
+  return emval_handles[handle];
  },
  toHandle: value => {
   switch (value) {
   case undefined:
-   return 1;
-
-  case null:
    return 2;
 
+  case null:
+   return 4;
+
   case true:
-   return 3;
+   return 6;
 
   case false:
-   return 4;
+   return 8;
 
   default:
    {
-    return emval_handles.allocate({
-     refcount: 1,
-     value: value
-    });
+    const handle = emval_freelist.pop() || emval_handles.length;
+    emval_handles[handle] = value;
+    emval_handles[handle + 1] = 1;
+    return handle;
    }
   }
  }
 };
 
-/** @suppress {globalThis} */ function simpleReadValueFromPointer(pointer) {
- return this["fromWireType"](HEAP32[((pointer) >> 2)]);
+/** @suppress {globalThis} */ function readPointer(pointer) {
+ return this["fromWireType"](HEAPU32[((pointer) >> 2)]);
 }
 
 var EmValType = {
@@ -4709,7 +4667,7 @@ var EmValType = {
  },
  "toWireType": (destructors, value) => Emval.toHandle(value),
  "argPackAdvance": GenericWireTypeSize,
- "readValueFromPointer": simpleReadValueFromPointer,
+ "readValueFromPointer": readPointer,
  destructorFunction: null
 };
 
@@ -4817,8 +4775,8 @@ function createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync) {
   for (var i = isClassMethodFunc ? 1 : 2; i < argTypes.length; ++i) {
    var paramName = (i === 1 ? "thisWired" : ("arg" + (i - 2) + "Wired"));
    if (argTypes[i].destructorFunction !== null) {
-    invokerFnBody += paramName + "_dtor(" + paramName + ");\n";
-    args1.push(paramName + "_dtor");
+    invokerFnBody += `${paramName}_dtor(${paramName});\n`;
+    args1.push(`${paramName}_dtor`);
    }
   }
  }
@@ -4850,18 +4808,18 @@ function craftInvokerFunction(humanName, argTypes, classType, cppInvokerFunc, cp
  }
  let [args, invokerFnBody] = createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync);
  args.push(invokerFnBody);
- var invokerFn = newFunc(Function, args).apply(null, closureArgs);
+ var invokerFn = newFunc(Function, args)(...closureArgs);
  return createNamedFunction(humanName, invokerFn);
 }
 
 var ensureOverloadTable = (proto, methodName, humanName) => {
  if (undefined === proto[methodName].overloadTable) {
   var prevFunc = proto[methodName];
-  proto[methodName] = function() {
-   if (!proto[methodName].overloadTable.hasOwnProperty(arguments.length)) {
-    throwBindingError(`Function '${humanName}' called with an invalid number of arguments (${arguments.length}) - expects one of (${proto[methodName].overloadTable})!`);
+  proto[methodName] = function(...args) {
+   if (!proto[methodName].overloadTable.hasOwnProperty(args.length)) {
+    throwBindingError(`Function '${humanName}' called with an invalid number of arguments (${args.length}) - expects one of (${proto[methodName].overloadTable})!`);
    }
-   return proto[methodName].overloadTable[arguments.length].apply(this, arguments);
+   return proto[methodName].overloadTable[args.length].apply(this, args);
   };
   proto[methodName].overloadTable = [];
   proto[methodName].overloadTable[prevFunc.argCount] = prevFunc;
@@ -4908,7 +4866,7 @@ var heap32VectorToArray = (count, firstElement) => {
 
 var dynCallLegacy = (sig, ptr, args) => {
  var f = Module["dynCall_" + sig];
- return args && args.length ? f.apply(null, [ ptr ].concat(args)) : f.call(null, ptr);
+ return f(ptr, ...args);
 };
 
 var wasmTableMirror = [];
@@ -4924,22 +4882,15 @@ var getWasmTableEntry = funcPtr => {
  return func;
 };
 
-/** @param {Object=} args */ var dynCall = (sig, ptr, args) => {
+var dynCall = (sig, ptr, args = []) => {
  if (sig.includes("j")) {
   return dynCallLegacy(sig, ptr, args);
  }
- var rtn = getWasmTableEntry(ptr).apply(null, args);
+ var rtn = getWasmTableEntry(ptr)(...args);
  return rtn;
 };
 
-var getDynCaller = (sig, ptr) => {
- var argCache = [];
- return function() {
-  argCache.length = 0;
-  Object.assign(argCache, arguments);
-  return dynCall(sig, ptr, argCache);
- };
-};
+var getDynCaller = (sig, ptr) => (...args) => dynCall(sig, ptr, args);
 
 var embind__requireFunction = (signature, rawFunction) => {
  signature = readLatin1String(signature);
@@ -5025,7 +4976,7 @@ var __embind_register_function = (name, argCount, rawArgTypesAddr, signature, ra
  exposePublicSymbol(name, function() {
   throwUnboundTypeError(`Cannot call ${name} due to unbound types`, argTypes);
  }, argCount - 1);
- whenDependentTypesAreResolved([], argTypes, function(argTypes) {
+ whenDependentTypesAreResolved([], argTypes, argTypes => {
   var invokerArgsArray = [ argTypes[0], /* return value */ null ].concat(/* no class 'this'*/ argTypes.slice(1));
   /* actual params */ replacePublicSymbol(name, craftInvokerFunction(name, invokerArgsArray, null, /* no class 'this'*/ rawInvoker, fn, isAsync), argCount - 1);
   return [];
@@ -5035,7 +4986,7 @@ var __embind_register_function = (name, argCount, rawArgTypesAddr, signature, ra
 var integerReadValueFromPointer = (name, width, signed) => {
  switch (width) {
  case 1:
-  return signed ? pointer => HEAP8[((pointer) >> 0)] : pointer => HEAPU8[((pointer) >> 0)];
+  return signed ? pointer => HEAP8[pointer] : pointer => HEAPU8[pointer];
 
  case 2:
   return signed ? pointer => HEAP16[((pointer) >> 1)] : pointer => HEAPU16[((pointer) >> 1)];
@@ -5100,10 +5051,6 @@ var __embind_register_memory_view = (rawType, dataTypeIndex, name) => {
   ignoreDuplicateRegistrations: true
  });
 };
-
-/** @suppress {globalThis} */ function readPointer(pointer) {
- return this["fromWireType"](HEAPU32[((pointer) >> 2)]);
-}
 
 var __embind_register_std_string = (rawType, name) => {
  name = readLatin1String(name);
@@ -5271,30 +5218,27 @@ var lengthBytesUTF32 = str => {
 
 var __embind_register_std_wstring = (rawType, charSize, name) => {
  name = readLatin1String(name);
- var decodeString, encodeString, getHeap, lengthBytesUTF, shift;
+ var decodeString, encodeString, readCharAt, lengthBytesUTF;
  if (charSize === 2) {
   decodeString = UTF16ToString;
   encodeString = stringToUTF16;
   lengthBytesUTF = lengthBytesUTF16;
-  getHeap = () => HEAPU16;
-  shift = 1;
+  readCharAt = pointer => HEAPU16[((pointer) >> 1)];
  } else if (charSize === 4) {
   decodeString = UTF32ToString;
   encodeString = stringToUTF32;
   lengthBytesUTF = lengthBytesUTF32;
-  getHeap = () => HEAPU32;
-  shift = 2;
+  readCharAt = pointer => HEAPU32[((pointer) >> 2)];
  }
  registerType(rawType, {
   name: name,
   "fromWireType": value => {
    var length = HEAPU32[((value) >> 2)];
-   var HEAP = getHeap();
    var str;
    var decodeStartPtr = value + 4;
    for (var i = 0; i <= length; ++i) {
     var currentBytePtr = value + 4 + i * charSize;
-    if (i == length || HEAP[currentBytePtr >> shift] == 0) {
+    if (i == length || readCharAt(currentBytePtr) == 0) {
      var maxReadBytes = currentBytePtr - decodeStartPtr;
      var stringSegment = decodeString(decodeStartPtr, maxReadBytes);
      if (str === undefined) {
@@ -5315,7 +5259,7 @@ var __embind_register_std_wstring = (rawType, charSize, name) => {
    }
    var length = lengthBytesUTF(value);
    var ptr = _malloc(4 + length + charSize);
-   HEAPU32[((ptr) >> 2)] = length >> shift;
+   HEAPU32[((ptr) >> 2)] = length / charSize;
    encodeString(value, ptr + 4, length + charSize);
    if (destructors !== null) {
     destructors.push(_free, ptr);
@@ -5323,7 +5267,7 @@ var __embind_register_std_wstring = (rawType, charSize, name) => {
    return ptr;
   },
   "argPackAdvance": GenericWireTypeSize,
-  "readValueFromPointer": simpleReadValueFromPointer,
+  "readValueFromPointer": readPointer,
   destructorFunction(ptr) {
    _free(ptr);
   }
@@ -5697,7 +5641,7 @@ var Browser = {
     var expected = Browser.mainLoop.expectedBlockers;
     if (remaining) {
      if (remaining < expected) {
-      Module["setStatus"](message + " (" + (expected - remaining) + "/" + expected + ")");
+      Module["setStatus"](`{message} ({expected - remaining}/{expected})`);
      } else {
       Module["setStatus"](message);
      }
@@ -6233,8 +6177,8 @@ var webgl_enable_WEBGL_multi_draw_instanced_base_vertex_base_instance = ctx => !
 
 var webgl_enable_WEBGL_multi_draw = ctx => !!(ctx.multiDrawWebgl = ctx.getExtension("WEBGL_multi_draw"));
 
-var getEmscriptenSupportedExtensions = function(ctx) {
- var supportedExtensions = [  "EXT_color_buffer_float", "EXT_disjoint_timer_query_webgl2", "EXT_texture_norm16", "WEBGL_clip_cull_distance",  "EXT_color_buffer_half_float", "EXT_float_blend", "EXT_texture_compression_bptc", "EXT_texture_compression_rgtc", "EXT_texture_filter_anisotropic", "KHR_parallel_shader_compile", "OES_texture_float_linear", "WEBGL_compressed_texture_s3tc", "WEBGL_compressed_texture_s3tc_srgb", "WEBGL_debug_renderer_info", "WEBGL_debug_shaders", "WEBGL_lose_context", "WEBGL_multi_draw" ];
+var getEmscriptenSupportedExtensions = ctx => {
+ var supportedExtensions = [  "EXT_color_buffer_float", "EXT_conservative_depth", "EXT_disjoint_timer_query_webgl2", "EXT_texture_norm16", "NV_shader_noperspective_interpolation", "WEBGL_clip_cull_distance",  "EXT_color_buffer_half_float", "EXT_depth_clamp", "EXT_float_blend", "EXT_texture_compression_bptc", "EXT_texture_compression_rgtc", "EXT_texture_filter_anisotropic", "KHR_parallel_shader_compile", "OES_texture_float_linear", "WEBGL_blend_func_extended", "WEBGL_compressed_texture_astc", "WEBGL_compressed_texture_etc", "WEBGL_compressed_texture_etc1", "WEBGL_compressed_texture_s3tc", "WEBGL_compressed_texture_s3tc_srgb", "WEBGL_debug_renderer_info", "WEBGL_debug_shaders", "WEBGL_lose_context", "WEBGL_multi_draw" ];
  return (ctx.getSupportedExtensions() || []).filter(ext => supportedExtensions.includes(ext));
 };
 
@@ -6259,7 +6203,7 @@ var GL = {
  stringCache: {},
  stringiCache: {},
  unpackAlignment: 4,
- recordError: function recordError(errorCode) {
+ recordError: errorCode => {
   if (!GL.lastError) {
    GL.lastError = errorCode;
   }
@@ -6270,6 +6214,19 @@ var GL = {
    table[i] = null;
   }
   return ret;
+ },
+ genObject: (n, buffers, createFunction, objectTable) => {
+  for (var i = 0; i < n; i++) {
+   var buffer = GLctx[createFunction]();
+   var id = buffer && GL.getNewId(objectTable);
+   if (buffer) {
+    buffer.name = id;
+    objectTable[id] = buffer;
+   } else {
+    GL.recordError(1282);
+   }
+   HEAP32[(((buffers) + (i * 4)) >> 2)] = id;
+  }
  },
  MAX_TEMP_BUFFER_SIZE: 2097152,
  numTempVertexBuffersPerSize: 64,
@@ -6322,7 +6279,7 @@ var GL = {
    /*GL_STATIC_DRAW*/ context.GLctx.bindBuffer(34963, /*GL_ELEMENT_ARRAY_BUFFER*/ null);
   }
  },
- getTempVertexBuffer: function getTempVertexBuffer(sizeBytes) {
+ getTempVertexBuffer: sizeBytes => {
   var idx = GL.log2ceilLookup(sizeBytes);
   var ringbuffer = GL.currentContext.tempVertexBuffers1[idx];
   var nextFreeBufferIndex = GL.currentContext.tempVertexBufferCounters1[idx];
@@ -6338,7 +6295,7 @@ var GL = {
   /*GL_DYNAMIC_DRAW*/ GLctx.bindBuffer(34962, /*GL_ARRAY_BUFFER*/ prevVBO);
   return ringbuffer[nextFreeBufferIndex];
  },
- getTempIndexBuffer: function getTempIndexBuffer(sizeBytes) {
+ getTempIndexBuffer: sizeBytes => {
   var idx = GL.log2ceilLookup(sizeBytes);
   var ibo = GL.currentContext.tempIndexBuffers[idx];
   if (ibo) {
@@ -6351,7 +6308,7 @@ var GL = {
   /*GL_DYNAMIC_DRAW*/ GLctx.bindBuffer(34963, /*GL_ELEMENT_ARRAY_BUFFER*/ prevIBO);
   return GL.currentContext.tempIndexBuffers[idx];
  },
- newRenderingFrameStarted: function newRenderingFrameStarted() {
+ newRenderingFrameStarted: () => {
   if (!GL.currentContext) {
    return;
   }
@@ -6374,7 +6331,7 @@ var GL = {
   }
   return source;
  },
- calcBufLength: function calcBufLength(size, type, stride, count) {
+ calcBufLength: (size, type, stride, count) => {
   if (stride > 0) {
    return count * stride;
   }
@@ -6382,7 +6339,7 @@ var GL = {
   return size * typeSize * count;
  },
  usedTempBuffers: [],
- preDrawHandleClientVertexAttribBindings: function preDrawHandleClientVertexAttribBindings(count) {
+ preDrawHandleClientVertexAttribBindings: count => {
   GL.resetBufferBinding = false;
   for (var i = 0; i < GL.currentContext.maxVertexAttribs; ++i) {
    var cb = GL.currentContext.clientBuffers[i];
@@ -6395,7 +6352,7 @@ var GL = {
    cb.vertexAttribPointerAdaptor.call(GLctx, i, cb.size, cb.type, cb.normalized, cb.stride, 0);
   }
  },
- postDrawHandleClientVertexAttribBindings: function postDrawHandleClientVertexAttribBindings() {
+ postDrawHandleClientVertexAttribBindings: () => {
   if (GL.resetBufferBinding) {
    GLctx.bindBuffer(34962, /*GL_ARRAY_BUFFER*/ GL.buffers[GLctx.currentArrayBufferBinding]);
   }
@@ -6856,17 +6813,17 @@ var readEmAsmArgs = (sigPtr, buf) => {
 
 var runEmAsmFunction = (code, sigPtr, argbuf) => {
  var args = readEmAsmArgs(sigPtr, argbuf);
- return ASM_CONSTS[code].apply(null, args);
+ return ASM_CONSTS[code](...args);
 };
 
 var _emscripten_asm_const_int = (code, sigPtr, argbuf) => runEmAsmFunction(code, sigPtr, argbuf);
 
-var runMainThreadEmAsm = (code, sigPtr, argbuf, sync) => {
+var runMainThreadEmAsm = (emAsmAddr, sigPtr, argbuf, sync) => {
  var args = readEmAsmArgs(sigPtr, argbuf);
- return ASM_CONSTS[code].apply(null, args);
+ return ASM_CONSTS[emAsmAddr](...args);
 };
 
-var _emscripten_asm_const_int_sync_on_main_thread = (code, sigPtr, argbuf) => runMainThreadEmAsm(code, sigPtr, argbuf, 1);
+var _emscripten_asm_const_int_sync_on_main_thread = (emAsmAddr, sigPtr, argbuf) => runMainThreadEmAsm(emAsmAddr, sigPtr, argbuf, 1);
 
 var wget = {
  wgetRequests: {},
@@ -6995,7 +6952,7 @@ var JSEvents = {
    var call = JSEvents.deferredCalls[i];
    JSEvents.deferredCalls.splice(i, 1);
    --i;
-   call.targetFunction.apply(null, call.argsList);
+   call.targetFunction(...call.argsList);
   }
  },
  eventHandlers: [],
@@ -7332,9 +7289,7 @@ var _emscripten_get_screen_size = (width, height) => {
  HEAP32[((height) >> 2)] = screen.height;
 };
 
-/** @suppress {duplicate } */ function _glActiveTexture(x0) {
- GLctx.activeTexture(x0);
-}
+/** @suppress {duplicate } */ var _glActiveTexture = x0 => GLctx.activeTexture(x0);
 
 var _emscripten_glActiveTexture = _glActiveTexture;
 
@@ -7356,9 +7311,7 @@ var _emscripten_glBeginQuery = _glBeginQuery;
 
 var _emscripten_glBeginQueryEXT = _glBeginQueryEXT;
 
-/** @suppress {duplicate } */ function _glBeginTransformFeedback(x0) {
- GLctx.beginTransformFeedback(x0);
-}
+/** @suppress {duplicate } */ var _glBeginTransformFeedback = x0 => GLctx.beginTransformFeedback(x0);
 
 var _emscripten_glBeginTransformFeedback = _glBeginTransformFeedback;
 
@@ -7438,39 +7391,27 @@ var _emscripten_glBindVertexArray = _glBindVertexArray;
 
 var _emscripten_glBindVertexArrayOES = _glBindVertexArrayOES;
 
-/** @suppress {duplicate } */ function _glBlendColor(x0, x1, x2, x3) {
- GLctx.blendColor(x0, x1, x2, x3);
-}
+/** @suppress {duplicate } */ var _glBlendColor = (x0, x1, x2, x3) => GLctx.blendColor(x0, x1, x2, x3);
 
 var _emscripten_glBlendColor = _glBlendColor;
 
-/** @suppress {duplicate } */ function _glBlendEquation(x0) {
- GLctx.blendEquation(x0);
-}
+/** @suppress {duplicate } */ var _glBlendEquation = x0 => GLctx.blendEquation(x0);
 
 var _emscripten_glBlendEquation = _glBlendEquation;
 
-/** @suppress {duplicate } */ function _glBlendEquationSeparate(x0, x1) {
- GLctx.blendEquationSeparate(x0, x1);
-}
+/** @suppress {duplicate } */ var _glBlendEquationSeparate = (x0, x1) => GLctx.blendEquationSeparate(x0, x1);
 
 var _emscripten_glBlendEquationSeparate = _glBlendEquationSeparate;
 
-/** @suppress {duplicate } */ function _glBlendFunc(x0, x1) {
- GLctx.blendFunc(x0, x1);
-}
+/** @suppress {duplicate } */ var _glBlendFunc = (x0, x1) => GLctx.blendFunc(x0, x1);
 
 var _emscripten_glBlendFunc = _glBlendFunc;
 
-/** @suppress {duplicate } */ function _glBlendFuncSeparate(x0, x1, x2, x3) {
- GLctx.blendFuncSeparate(x0, x1, x2, x3);
-}
+/** @suppress {duplicate } */ var _glBlendFuncSeparate = (x0, x1, x2, x3) => GLctx.blendFuncSeparate(x0, x1, x2, x3);
 
 var _emscripten_glBlendFuncSeparate = _glBlendFuncSeparate;
 
-/** @suppress {duplicate } */ function _glBlitFramebuffer(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9) {
- GLctx.blitFramebuffer(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
-}
+/** @suppress {duplicate } */ var _glBlitFramebuffer = (x0, x1, x2, x3, x4, x5, x6, x7, x8, x9) => GLctx.blitFramebuffer(x0, x1, x2, x3, x4, x5, x6, x7, x8, x9);
 
 var _emscripten_glBlitFramebuffer = _glBlitFramebuffer;
 
@@ -7498,57 +7439,45 @@ var _emscripten_glBufferData = _glBufferData;
 
 var _emscripten_glBufferSubData = _glBufferSubData;
 
-/** @suppress {duplicate } */ function _glCheckFramebufferStatus(x0) {
- return GLctx.checkFramebufferStatus(x0);
-}
+/** @suppress {duplicate } */ var _glCheckFramebufferStatus = x0 => GLctx.checkFramebufferStatus(x0);
 
 var _emscripten_glCheckFramebufferStatus = _glCheckFramebufferStatus;
 
-/** @suppress {duplicate } */ function _glClear(x0) {
- GLctx.clear(x0);
-}
+/** @suppress {duplicate } */ var _glClear = x0 => GLctx.clear(x0);
 
 var _emscripten_glClear = _glClear;
 
-/** @suppress {duplicate } */ function _glClearBufferfi(x0, x1, x2, x3) {
- GLctx.clearBufferfi(x0, x1, x2, x3);
-}
+/** @suppress {duplicate } */ var _glClearBufferfi = (x0, x1, x2, x3) => GLctx.clearBufferfi(x0, x1, x2, x3);
 
 var _emscripten_glClearBufferfi = _glClearBufferfi;
 
 /** @suppress {duplicate } */ var _glClearBufferfv = (buffer, drawbuffer, value) => {
- GLctx.clearBufferfv(buffer, drawbuffer, HEAPF32, value >> 2);
+ GLctx.clearBufferfv(buffer, drawbuffer, HEAPF32, ((value) >> 2));
 };
 
 var _emscripten_glClearBufferfv = _glClearBufferfv;
 
 /** @suppress {duplicate } */ var _glClearBufferiv = (buffer, drawbuffer, value) => {
- GLctx.clearBufferiv(buffer, drawbuffer, HEAP32, value >> 2);
+ GLctx.clearBufferiv(buffer, drawbuffer, HEAP32, ((value) >> 2));
 };
 
 var _emscripten_glClearBufferiv = _glClearBufferiv;
 
 /** @suppress {duplicate } */ var _glClearBufferuiv = (buffer, drawbuffer, value) => {
- GLctx.clearBufferuiv(buffer, drawbuffer, HEAPU32, value >> 2);
+ GLctx.clearBufferuiv(buffer, drawbuffer, HEAPU32, ((value) >> 2));
 };
 
 var _emscripten_glClearBufferuiv = _glClearBufferuiv;
 
-/** @suppress {duplicate } */ function _glClearColor(x0, x1, x2, x3) {
- GLctx.clearColor(x0, x1, x2, x3);
-}
+/** @suppress {duplicate } */ var _glClearColor = (x0, x1, x2, x3) => GLctx.clearColor(x0, x1, x2, x3);
 
 var _emscripten_glClearColor = _glClearColor;
 
-/** @suppress {duplicate } */ function _glClearDepthf(x0) {
- GLctx.clearDepth(x0);
-}
+/** @suppress {duplicate } */ var _glClearDepthf = x0 => GLctx.clearDepth(x0);
 
 var _emscripten_glClearDepthf = _glClearDepthf;
 
-/** @suppress {duplicate } */ function _glClearStencil(x0) {
- GLctx.clearStencil(x0);
-}
+/** @suppress {duplicate } */ var _glClearStencil = x0 => GLctx.clearStencil(x0);
 
 var _emscripten_glClearStencil = _glClearStencil;
 
@@ -7582,7 +7511,7 @@ var _emscripten_glCompileShader = _glCompileShader;
   }
   return;
  }
- GLctx.compressedTexImage2D(target, level, internalFormat, width, height, border, data ? HEAPU8.subarray((data), (data + imageSize)) : null);
+ GLctx.compressedTexImage2D(target, level, internalFormat, width, height, border, data ? HEAPU8.subarray((data), data + imageSize) : null);
 };
 
 var _emscripten_glCompressedTexImage2D = _glCompressedTexImage2D;
@@ -7606,7 +7535,7 @@ var _emscripten_glCompressedTexImage3D = _glCompressedTexImage3D;
   }
   return;
  }
- GLctx.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, data ? HEAPU8.subarray((data), (data + imageSize)) : null);
+ GLctx.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, data ? HEAPU8.subarray((data), data + imageSize) : null);
 };
 
 var _emscripten_glCompressedTexSubImage2D = _glCompressedTexSubImage2D;
@@ -7621,27 +7550,19 @@ var _emscripten_glCompressedTexSubImage2D = _glCompressedTexSubImage2D;
 
 var _emscripten_glCompressedTexSubImage3D = _glCompressedTexSubImage3D;
 
-/** @suppress {duplicate } */ function _glCopyBufferSubData(x0, x1, x2, x3, x4) {
- GLctx.copyBufferSubData(x0, x1, x2, x3, x4);
-}
+/** @suppress {duplicate } */ var _glCopyBufferSubData = (x0, x1, x2, x3, x4) => GLctx.copyBufferSubData(x0, x1, x2, x3, x4);
 
 var _emscripten_glCopyBufferSubData = _glCopyBufferSubData;
 
-/** @suppress {duplicate } */ function _glCopyTexImage2D(x0, x1, x2, x3, x4, x5, x6, x7) {
- GLctx.copyTexImage2D(x0, x1, x2, x3, x4, x5, x6, x7);
-}
+/** @suppress {duplicate } */ var _glCopyTexImage2D = (x0, x1, x2, x3, x4, x5, x6, x7) => GLctx.copyTexImage2D(x0, x1, x2, x3, x4, x5, x6, x7);
 
 var _emscripten_glCopyTexImage2D = _glCopyTexImage2D;
 
-/** @suppress {duplicate } */ function _glCopyTexSubImage2D(x0, x1, x2, x3, x4, x5, x6, x7) {
- GLctx.copyTexSubImage2D(x0, x1, x2, x3, x4, x5, x6, x7);
-}
+/** @suppress {duplicate } */ var _glCopyTexSubImage2D = (x0, x1, x2, x3, x4, x5, x6, x7) => GLctx.copyTexSubImage2D(x0, x1, x2, x3, x4, x5, x6, x7);
 
 var _emscripten_glCopyTexSubImage2D = _glCopyTexSubImage2D;
 
-/** @suppress {duplicate } */ function _glCopyTexSubImage3D(x0, x1, x2, x3, x4, x5, x6, x7, x8) {
- GLctx.copyTexSubImage3D(x0, x1, x2, x3, x4, x5, x6, x7, x8);
-}
+/** @suppress {duplicate } */ var _glCopyTexSubImage3D = (x0, x1, x2, x3, x4, x5, x6, x7, x8) => GLctx.copyTexSubImage3D(x0, x1, x2, x3, x4, x5, x6, x7, x8);
 
 var _emscripten_glCopyTexSubImage3D = _glCopyTexSubImage3D;
 
@@ -7665,9 +7586,7 @@ var _emscripten_glCreateProgram = _glCreateProgram;
 
 var _emscripten_glCreateShader = _glCreateShader;
 
-/** @suppress {duplicate } */ function _glCullFace(x0) {
- GLctx.cullFace(x0);
-}
+/** @suppress {duplicate } */ var _glCullFace = x0 => GLctx.cullFace(x0);
 
 var _emscripten_glCullFace = _glCullFace;
 
@@ -7832,9 +7751,7 @@ var _emscripten_glDeleteVertexArrays = _glDeleteVertexArrays;
 
 var _emscripten_glDeleteVertexArraysOES = _glDeleteVertexArraysOES;
 
-/** @suppress {duplicate } */ function _glDepthFunc(x0) {
- GLctx.depthFunc(x0);
-}
+/** @suppress {duplicate } */ var _glDepthFunc = x0 => GLctx.depthFunc(x0);
 
 var _emscripten_glDepthFunc = _glDepthFunc;
 
@@ -7844,9 +7761,7 @@ var _emscripten_glDepthFunc = _glDepthFunc;
 
 var _emscripten_glDepthMask = _glDepthMask;
 
-/** @suppress {duplicate } */ function _glDepthRangef(x0, x1) {
- GLctx.depthRange(x0, x1);
-}
+/** @suppress {duplicate } */ var _glDepthRangef = (x0, x1) => GLctx.depthRange(x0, x1);
 
 var _emscripten_glDepthRangef = _glDepthRangef;
 
@@ -7856,9 +7771,7 @@ var _emscripten_glDepthRangef = _glDepthRangef;
 
 var _emscripten_glDetachShader = _glDetachShader;
 
-/** @suppress {duplicate } */ function _glDisable(x0) {
- GLctx.disable(x0);
-}
+/** @suppress {duplicate } */ var _glDisable = x0 => GLctx.disable(x0);
 
 var _emscripten_glDisable = _glDisable;
 
@@ -7967,9 +7880,7 @@ var _emscripten_glDrawElementsInstancedNV = _glDrawElementsInstancedNV;
 
 var _emscripten_glDrawRangeElements = _glDrawRangeElements;
 
-/** @suppress {duplicate } */ function _glEnable(x0) {
- GLctx.enable(x0);
-}
+/** @suppress {duplicate } */ var _glEnable = x0 => GLctx.enable(x0);
 
 var _emscripten_glEnable = _glEnable;
 
@@ -7981,9 +7892,7 @@ var _emscripten_glEnable = _glEnable;
 
 var _emscripten_glEnableVertexAttribArray = _glEnableVertexAttribArray;
 
-/** @suppress {duplicate } */ function _glEndQuery(x0) {
- GLctx.endQuery(x0);
-}
+/** @suppress {duplicate } */ var _glEndQuery = x0 => GLctx.endQuery(x0);
 
 var _emscripten_glEndQuery = _glEndQuery;
 
@@ -7993,9 +7902,7 @@ var _emscripten_glEndQuery = _glEndQuery;
 
 var _emscripten_glEndQueryEXT = _glEndQueryEXT;
 
-/** @suppress {duplicate } */ function _glEndTransformFeedback() {
- GLctx.endTransformFeedback();
-}
+/** @suppress {duplicate } */ var _glEndTransformFeedback = () => GLctx.endTransformFeedback();
 
 var _emscripten_glEndTransformFeedback = _glEndTransformFeedback;
 
@@ -8012,15 +7919,11 @@ var _emscripten_glEndTransformFeedback = _glEndTransformFeedback;
 
 var _emscripten_glFenceSync = _glFenceSync;
 
-/** @suppress {duplicate } */ function _glFinish() {
- GLctx.finish();
-}
+/** @suppress {duplicate } */ var _glFinish = () => GLctx.finish();
 
 var _emscripten_glFinish = _glFinish;
 
-/** @suppress {duplicate } */ function _glFlush() {
- GLctx.flush();
-}
+/** @suppress {duplicate } */ var _glFlush = () => GLctx.flush();
 
 var _emscripten_glFlush = _glFlush;
 
@@ -8125,40 +8028,24 @@ var _emscripten_glFramebufferTexture2D = _glFramebufferTexture2D;
 
 var _emscripten_glFramebufferTextureLayer = _glFramebufferTextureLayer;
 
-/** @suppress {duplicate } */ function _glFrontFace(x0) {
- GLctx.frontFace(x0);
-}
+/** @suppress {duplicate } */ var _glFrontFace = x0 => GLctx.frontFace(x0);
 
 var _emscripten_glFrontFace = _glFrontFace;
 
-var __glGenObject = (n, buffers, createFunction, objectTable) => {
- for (var i = 0; i < n; i++) {
-  var buffer = GLctx[createFunction]();
-  var id = buffer && GL.getNewId(objectTable);
-  if (buffer) {
-   buffer.name = id;
-   objectTable[id] = buffer;
-  } else {
-   GL.recordError(1282);
-  }
-  HEAP32[(((buffers) + (i * 4)) >> 2)] = id;
- }
-};
-
 /** @suppress {duplicate } */ var _glGenBuffers = (n, buffers) => {
- __glGenObject(n, buffers, "createBuffer", GL.buffers);
+ GL.genObject(n, buffers, "createBuffer", GL.buffers);
 };
 
 var _emscripten_glGenBuffers = _glGenBuffers;
 
 /** @suppress {duplicate } */ var _glGenFramebuffers = (n, ids) => {
- __glGenObject(n, ids, "createFramebuffer", GL.framebuffers);
+ GL.genObject(n, ids, "createFramebuffer", GL.framebuffers);
 };
 
 var _emscripten_glGenFramebuffers = _glGenFramebuffers;
 
 /** @suppress {duplicate } */ var _glGenQueries = (n, ids) => {
- __glGenObject(n, ids, "createQuery", GL.queries);
+ GL.genObject(n, ids, "createQuery", GL.queries);
 };
 
 var _emscripten_glGenQueries = _glGenQueries;
@@ -8181,32 +8068,32 @@ var _emscripten_glGenQueries = _glGenQueries;
 var _emscripten_glGenQueriesEXT = _glGenQueriesEXT;
 
 /** @suppress {duplicate } */ var _glGenRenderbuffers = (n, renderbuffers) => {
- __glGenObject(n, renderbuffers, "createRenderbuffer", GL.renderbuffers);
+ GL.genObject(n, renderbuffers, "createRenderbuffer", GL.renderbuffers);
 };
 
 var _emscripten_glGenRenderbuffers = _glGenRenderbuffers;
 
 /** @suppress {duplicate } */ var _glGenSamplers = (n, samplers) => {
- __glGenObject(n, samplers, "createSampler", GL.samplers);
+ GL.genObject(n, samplers, "createSampler", GL.samplers);
 };
 
 var _emscripten_glGenSamplers = _glGenSamplers;
 
 /** @suppress {duplicate } */ var _glGenTextures = (n, textures) => {
- __glGenObject(n, textures, "createTexture", GL.textures);
+ GL.genObject(n, textures, "createTexture", GL.textures);
 };
 
 var _emscripten_glGenTextures = _glGenTextures;
 
 /** @suppress {duplicate } */ var _glGenTransformFeedbacks = (n, ids) => {
- __glGenObject(n, ids, "createTransformFeedback", GL.transformFeedbacks);
+ GL.genObject(n, ids, "createTransformFeedback", GL.transformFeedbacks);
 };
 
 var _emscripten_glGenTransformFeedbacks = _glGenTransformFeedbacks;
 
-/** @suppress {duplicate } */ function _glGenVertexArrays(n, arrays) {
- __glGenObject(n, arrays, "createVertexArray", GL.vaos);
-}
+/** @suppress {duplicate } */ var _glGenVertexArrays = (n, arrays) => {
+ GL.genObject(n, arrays, "createVertexArray", GL.vaos);
+};
 
 var _emscripten_glGenVertexArrays = _glGenVertexArrays;
 
@@ -8214,9 +8101,7 @@ var _emscripten_glGenVertexArrays = _glGenVertexArrays;
 
 var _emscripten_glGenVertexArraysOES = _glGenVertexArraysOES;
 
-/** @suppress {duplicate } */ function _glGenerateMipmap(x0) {
- GLctx.generateMipmap(x0);
-}
+/** @suppress {duplicate } */ var _glGenerateMipmap = x0 => GLctx.generateMipmap(x0);
 
 var _emscripten_glGenerateMipmap = _glGenerateMipmap;
 
@@ -8440,7 +8325,7 @@ var emscriptenWebGLGet = (name_, p, type) => {
       break;
 
      case 4:
-      HEAP8[(((p) + (i)) >> 0)] = result[i] ? 1 : 0;
+      HEAP8[(p) + (i)] = result[i] ? 1 : 0;
       break;
      }
     }
@@ -8476,7 +8361,7 @@ var emscriptenWebGLGet = (name_, p, type) => {
   break;
 
  case 4:
-  HEAP8[((p) >> 0)] = ret ? 1 : 0;
+  HEAP8[p] = ret ? 1 : 0;
   break;
  }
 };
@@ -8603,7 +8488,7 @@ var emscriptenWebGLGetIndexed = (target, index, data, type) => {
   break;
 
  case 4:
-  HEAP8[((data) >> 0)] = ret ? 1 : 0;
+  HEAP8[data] = ret ? 1 : 0;
   break;
 
  default:
@@ -9220,9 +9105,7 @@ var _emscripten_glGetVertexAttribfv = _glGetVertexAttribfv;
 
 var _emscripten_glGetVertexAttribiv = _glGetVertexAttribiv;
 
-/** @suppress {duplicate } */ function _glHint(x0, x1) {
- GLctx.hint(x0, x1);
-}
+/** @suppress {duplicate } */ var _glHint = (x0, x1) => GLctx.hint(x0, x1);
 
 var _emscripten_glHint = _glHint;
 
@@ -9254,9 +9137,7 @@ var _emscripten_glInvalidateSubFramebuffer = _glInvalidateSubFramebuffer;
 
 var _emscripten_glIsBuffer = _glIsBuffer;
 
-/** @suppress {duplicate } */ function _glIsEnabled(x0) {
- return GLctx.isEnabled(x0);
-}
+/** @suppress {duplicate } */ var _glIsEnabled = x0 => GLctx.isEnabled(x0);
 
 var _emscripten_glIsEnabled = _glIsEnabled;
 
@@ -9344,9 +9225,7 @@ var _emscripten_glIsVertexArray = _glIsVertexArray;
 
 var _emscripten_glIsVertexArrayOES = _glIsVertexArrayOES;
 
-/** @suppress {duplicate } */ function _glLineWidth(x0) {
- GLctx.lineWidth(x0);
-}
+/** @suppress {duplicate } */ var _glLineWidth = x0 => GLctx.lineWidth(x0);
 
 var _emscripten_glLineWidth = _glLineWidth;
 
@@ -9390,9 +9269,7 @@ var _emscripten_glLinkProgram = _glLinkProgram;
 
 var _emscripten_glMapBufferRange = _glMapBufferRange;
 
-/** @suppress {duplicate } */ function _glPauseTransformFeedback() {
- GLctx.pauseTransformFeedback();
-}
+/** @suppress {duplicate } */ var _glPauseTransformFeedback = () => GLctx.pauseTransformFeedback();
 
 var _emscripten_glPauseTransformFeedback = _glPauseTransformFeedback;
 
@@ -9405,9 +9282,7 @@ var _emscripten_glPauseTransformFeedback = _glPauseTransformFeedback;
 
 var _emscripten_glPixelStorei = _glPixelStorei;
 
-/** @suppress {duplicate } */ function _glPolygonOffset(x0, x1) {
- GLctx.polygonOffset(x0, x1);
-}
+/** @suppress {duplicate } */ var _glPolygonOffset = (x0, x1) => GLctx.polygonOffset(x0, x1);
 
 var _emscripten_glPolygonOffset = _glPolygonOffset;
 
@@ -9429,9 +9304,7 @@ var _emscripten_glPolygonOffset = _glPolygonOffset;
 
 var _emscripten_glQueryCounterEXT = _glQueryCounterEXT;
 
-/** @suppress {duplicate } */ function _glReadBuffer(x0) {
- GLctx.readBuffer(x0);
-}
+/** @suppress {duplicate } */ var _glReadBuffer = x0 => GLctx.readBuffer(x0);
 
 var _emscripten_glReadBuffer = _glReadBuffer;
 
@@ -9470,15 +9343,13 @@ var heapObjectForWebGLType = type => {
  return HEAPU16;
 };
 
-var heapAccessShiftForWebGLHeap = heap => 31 - Math.clz32(heap.BYTES_PER_ELEMENT);
+var toTypedArrayIndex = (pointer, heap) => pointer >>> (31 - Math.clz32(heap.BYTES_PER_ELEMENT));
 
 var emscriptenWebGLGetTexPixelData = (type, format, width, height, pixels, internalFormat) => {
  var heap = heapObjectForWebGLType(type);
- var shift = heapAccessShiftForWebGLHeap(heap);
- var byteSize = 1 << shift;
- var sizePerPixel = colorChannelsInGlTextureFormat(format) * byteSize;
+ var sizePerPixel = colorChannelsInGlTextureFormat(format) * heap.BYTES_PER_ELEMENT;
  var bytes = computeUnpackAlignedImageSize(width, height, sizePerPixel, GL.unpackAlignment);
- return heap.subarray(pixels >> shift, pixels + bytes >> shift);
+ return heap.subarray(toTypedArrayIndex(pixels, heap), toTypedArrayIndex(pixels + bytes, heap));
 };
 
 /** @suppress {duplicate } */ var _glReadPixels = (x, y, width, height, format, type, pixels) => {
@@ -9487,7 +9358,8 @@ var emscriptenWebGLGetTexPixelData = (type, format, width, height, pixels, inter
    GLctx.readPixels(x, y, width, height, format, type, pixels);
   } else {
    var heap = heapObjectForWebGLType(type);
-   GLctx.readPixels(x, y, width, height, format, type, heap, pixels >> heapAccessShiftForWebGLHeap(heap));
+   var target = toTypedArrayIndex(pixels, heap);
+   GLctx.readPixels(x, y, width, height, format, type, heap, target);
   }
   return;
  }
@@ -9505,21 +9377,15 @@ var _emscripten_glReadPixels = _glReadPixels;
 
 var _emscripten_glReleaseShaderCompiler = _glReleaseShaderCompiler;
 
-/** @suppress {duplicate } */ function _glRenderbufferStorage(x0, x1, x2, x3) {
- GLctx.renderbufferStorage(x0, x1, x2, x3);
-}
+/** @suppress {duplicate } */ var _glRenderbufferStorage = (x0, x1, x2, x3) => GLctx.renderbufferStorage(x0, x1, x2, x3);
 
 var _emscripten_glRenderbufferStorage = _glRenderbufferStorage;
 
-/** @suppress {duplicate } */ function _glRenderbufferStorageMultisample(x0, x1, x2, x3, x4) {
- GLctx.renderbufferStorageMultisample(x0, x1, x2, x3, x4);
-}
+/** @suppress {duplicate } */ var _glRenderbufferStorageMultisample = (x0, x1, x2, x3, x4) => GLctx.renderbufferStorageMultisample(x0, x1, x2, x3, x4);
 
 var _emscripten_glRenderbufferStorageMultisample = _glRenderbufferStorageMultisample;
 
-/** @suppress {duplicate } */ function _glResumeTransformFeedback() {
- GLctx.resumeTransformFeedback();
-}
+/** @suppress {duplicate } */ var _glResumeTransformFeedback = () => GLctx.resumeTransformFeedback();
 
 var _emscripten_glResumeTransformFeedback = _glResumeTransformFeedback;
 
@@ -9555,9 +9421,7 @@ var _emscripten_glSamplerParameteri = _glSamplerParameteri;
 
 var _emscripten_glSamplerParameteriv = _glSamplerParameteriv;
 
-/** @suppress {duplicate } */ function _glScissor(x0, x1, x2, x3) {
- GLctx.scissor(x0, x1, x2, x3);
-}
+/** @suppress {duplicate } */ var _glScissor = (x0, x1, x2, x3) => GLctx.scissor(x0, x1, x2, x3);
 
 var _emscripten_glScissor = _glScissor;
 
@@ -9574,39 +9438,27 @@ var _emscripten_glScissor = _glScissor;
 
 var _emscripten_glShaderSource = _glShaderSource;
 
-/** @suppress {duplicate } */ function _glStencilFunc(x0, x1, x2) {
- GLctx.stencilFunc(x0, x1, x2);
-}
+/** @suppress {duplicate } */ var _glStencilFunc = (x0, x1, x2) => GLctx.stencilFunc(x0, x1, x2);
 
 var _emscripten_glStencilFunc = _glStencilFunc;
 
-/** @suppress {duplicate } */ function _glStencilFuncSeparate(x0, x1, x2, x3) {
- GLctx.stencilFuncSeparate(x0, x1, x2, x3);
-}
+/** @suppress {duplicate } */ var _glStencilFuncSeparate = (x0, x1, x2, x3) => GLctx.stencilFuncSeparate(x0, x1, x2, x3);
 
 var _emscripten_glStencilFuncSeparate = _glStencilFuncSeparate;
 
-/** @suppress {duplicate } */ function _glStencilMask(x0) {
- GLctx.stencilMask(x0);
-}
+/** @suppress {duplicate } */ var _glStencilMask = x0 => GLctx.stencilMask(x0);
 
 var _emscripten_glStencilMask = _glStencilMask;
 
-/** @suppress {duplicate } */ function _glStencilMaskSeparate(x0, x1) {
- GLctx.stencilMaskSeparate(x0, x1);
-}
+/** @suppress {duplicate } */ var _glStencilMaskSeparate = (x0, x1) => GLctx.stencilMaskSeparate(x0, x1);
 
 var _emscripten_glStencilMaskSeparate = _glStencilMaskSeparate;
 
-/** @suppress {duplicate } */ function _glStencilOp(x0, x1, x2) {
- GLctx.stencilOp(x0, x1, x2);
-}
+/** @suppress {duplicate } */ var _glStencilOp = (x0, x1, x2) => GLctx.stencilOp(x0, x1, x2);
 
 var _emscripten_glStencilOp = _glStencilOp;
 
-/** @suppress {duplicate } */ function _glStencilOpSeparate(x0, x1, x2, x3) {
- GLctx.stencilOpSeparate(x0, x1, x2, x3);
-}
+/** @suppress {duplicate } */ var _glStencilOpSeparate = (x0, x1, x2, x3) => GLctx.stencilOpSeparate(x0, x1, x2, x3);
 
 var _emscripten_glStencilOpSeparate = _glStencilOpSeparate;
 
@@ -9616,7 +9468,7 @@ var _emscripten_glStencilOpSeparate = _glStencilOpSeparate;
    GLctx.texImage2D(target, level, internalFormat, width, height, border, format, type, pixels);
   } else if (pixels) {
    var heap = heapObjectForWebGLType(type);
-   GLctx.texImage2D(target, level, internalFormat, width, height, border, format, type, heap, pixels >> heapAccessShiftForWebGLHeap(heap));
+   GLctx.texImage2D(target, level, internalFormat, width, height, border, format, type, heap, toTypedArrayIndex(pixels, heap));
   } else {
    GLctx.texImage2D(target, level, internalFormat, width, height, border, format, type, null);
   }
@@ -9632,7 +9484,7 @@ var _emscripten_glTexImage2D = _glTexImage2D;
   GLctx.texImage3D(target, level, internalFormat, width, height, depth, border, format, type, pixels);
  } else if (pixels) {
   var heap = heapObjectForWebGLType(type);
-  GLctx.texImage3D(target, level, internalFormat, width, height, depth, border, format, type, heap, pixels >> heapAccessShiftForWebGLHeap(heap));
+  GLctx.texImage3D(target, level, internalFormat, width, height, depth, border, format, type, heap, toTypedArrayIndex(pixels, heap));
  } else {
   GLctx.texImage3D(target, level, internalFormat, width, height, depth, border, format, type, null);
  }
@@ -9640,9 +9492,7 @@ var _emscripten_glTexImage2D = _glTexImage2D;
 
 var _emscripten_glTexImage3D = _glTexImage3D;
 
-/** @suppress {duplicate } */ function _glTexParameterf(x0, x1, x2) {
- GLctx.texParameterf(x0, x1, x2);
-}
+/** @suppress {duplicate } */ var _glTexParameterf = (x0, x1, x2) => GLctx.texParameterf(x0, x1, x2);
 
 var _emscripten_glTexParameterf = _glTexParameterf;
 
@@ -9653,9 +9503,7 @@ var _emscripten_glTexParameterf = _glTexParameterf;
 
 var _emscripten_glTexParameterfv = _glTexParameterfv;
 
-/** @suppress {duplicate } */ function _glTexParameteri(x0, x1, x2) {
- GLctx.texParameteri(x0, x1, x2);
-}
+/** @suppress {duplicate } */ var _glTexParameteri = (x0, x1, x2) => GLctx.texParameteri(x0, x1, x2);
 
 var _emscripten_glTexParameteri = _glTexParameteri;
 
@@ -9666,15 +9514,11 @@ var _emscripten_glTexParameteri = _glTexParameteri;
 
 var _emscripten_glTexParameteriv = _glTexParameteriv;
 
-/** @suppress {duplicate } */ function _glTexStorage2D(x0, x1, x2, x3, x4) {
- GLctx.texStorage2D(x0, x1, x2, x3, x4);
-}
+/** @suppress {duplicate } */ var _glTexStorage2D = (x0, x1, x2, x3, x4) => GLctx.texStorage2D(x0, x1, x2, x3, x4);
 
 var _emscripten_glTexStorage2D = _glTexStorage2D;
 
-/** @suppress {duplicate } */ function _glTexStorage3D(x0, x1, x2, x3, x4, x5) {
- GLctx.texStorage3D(x0, x1, x2, x3, x4, x5);
-}
+/** @suppress {duplicate } */ var _glTexStorage3D = (x0, x1, x2, x3, x4, x5) => GLctx.texStorage3D(x0, x1, x2, x3, x4, x5);
 
 var _emscripten_glTexStorage3D = _glTexStorage3D;
 
@@ -9684,7 +9528,7 @@ var _emscripten_glTexStorage3D = _glTexStorage3D;
    GLctx.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
   } else if (pixels) {
    var heap = heapObjectForWebGLType(type);
-   GLctx.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, heap, pixels >> heapAccessShiftForWebGLHeap(heap));
+   GLctx.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, heap, toTypedArrayIndex(pixels, heap));
   } else {
    GLctx.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, null);
   }
@@ -9702,7 +9546,7 @@ var _emscripten_glTexSubImage2D = _glTexSubImage2D;
   GLctx.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
  } else if (pixels) {
   var heap = heapObjectForWebGLType(type);
-  GLctx.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, heap, pixels >> heapAccessShiftForWebGLHeap(heap));
+  GLctx.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, heap, toTypedArrayIndex(pixels, heap));
  } else {
   GLctx.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, null);
  }
@@ -9726,7 +9570,7 @@ var _emscripten_glTransformFeedbackVaryings = _glTransformFeedbackVaryings;
 var _emscripten_glUniform1f = _glUniform1f;
 
 /** @suppress {duplicate } */ var _glUniform1fv = (location, count, value) => {
- count && GLctx.uniform1fv(webglGetUniformLocation(location), HEAPF32, value >> 2, count);
+ count && GLctx.uniform1fv(webglGetUniformLocation(location), HEAPF32, ((value) >> 2), count);
 };
 
 var _emscripten_glUniform1fv = _glUniform1fv;
@@ -9738,7 +9582,7 @@ var _emscripten_glUniform1fv = _glUniform1fv;
 var _emscripten_glUniform1i = _glUniform1i;
 
 /** @suppress {duplicate } */ var _glUniform1iv = (location, count, value) => {
- count && GLctx.uniform1iv(webglGetUniformLocation(location), HEAP32, value >> 2, count);
+ count && GLctx.uniform1iv(webglGetUniformLocation(location), HEAP32, ((value) >> 2), count);
 };
 
 var _emscripten_glUniform1iv = _glUniform1iv;
@@ -9750,7 +9594,7 @@ var _emscripten_glUniform1iv = _glUniform1iv;
 var _emscripten_glUniform1ui = _glUniform1ui;
 
 /** @suppress {duplicate } */ var _glUniform1uiv = (location, count, value) => {
- count && GLctx.uniform1uiv(webglGetUniformLocation(location), HEAPU32, value >> 2, count);
+ count && GLctx.uniform1uiv(webglGetUniformLocation(location), HEAPU32, ((value) >> 2), count);
 };
 
 var _emscripten_glUniform1uiv = _glUniform1uiv;
@@ -9762,7 +9606,7 @@ var _emscripten_glUniform1uiv = _glUniform1uiv;
 var _emscripten_glUniform2f = _glUniform2f;
 
 /** @suppress {duplicate } */ var _glUniform2fv = (location, count, value) => {
- count && GLctx.uniform2fv(webglGetUniformLocation(location), HEAPF32, value >> 2, count * 2);
+ count && GLctx.uniform2fv(webglGetUniformLocation(location), HEAPF32, ((value) >> 2), count * 2);
 };
 
 var _emscripten_glUniform2fv = _glUniform2fv;
@@ -9774,7 +9618,7 @@ var _emscripten_glUniform2fv = _glUniform2fv;
 var _emscripten_glUniform2i = _glUniform2i;
 
 /** @suppress {duplicate } */ var _glUniform2iv = (location, count, value) => {
- count && GLctx.uniform2iv(webglGetUniformLocation(location), HEAP32, value >> 2, count * 2);
+ count && GLctx.uniform2iv(webglGetUniformLocation(location), HEAP32, ((value) >> 2), count * 2);
 };
 
 var _emscripten_glUniform2iv = _glUniform2iv;
@@ -9786,7 +9630,7 @@ var _emscripten_glUniform2iv = _glUniform2iv;
 var _emscripten_glUniform2ui = _glUniform2ui;
 
 /** @suppress {duplicate } */ var _glUniform2uiv = (location, count, value) => {
- count && GLctx.uniform2uiv(webglGetUniformLocation(location), HEAPU32, value >> 2, count * 2);
+ count && GLctx.uniform2uiv(webglGetUniformLocation(location), HEAPU32, ((value) >> 2), count * 2);
 };
 
 var _emscripten_glUniform2uiv = _glUniform2uiv;
@@ -9798,7 +9642,7 @@ var _emscripten_glUniform2uiv = _glUniform2uiv;
 var _emscripten_glUniform3f = _glUniform3f;
 
 /** @suppress {duplicate } */ var _glUniform3fv = (location, count, value) => {
- count && GLctx.uniform3fv(webglGetUniformLocation(location), HEAPF32, value >> 2, count * 3);
+ count && GLctx.uniform3fv(webglGetUniformLocation(location), HEAPF32, ((value) >> 2), count * 3);
 };
 
 var _emscripten_glUniform3fv = _glUniform3fv;
@@ -9810,7 +9654,7 @@ var _emscripten_glUniform3fv = _glUniform3fv;
 var _emscripten_glUniform3i = _glUniform3i;
 
 /** @suppress {duplicate } */ var _glUniform3iv = (location, count, value) => {
- count && GLctx.uniform3iv(webglGetUniformLocation(location), HEAP32, value >> 2, count * 3);
+ count && GLctx.uniform3iv(webglGetUniformLocation(location), HEAP32, ((value) >> 2), count * 3);
 };
 
 var _emscripten_glUniform3iv = _glUniform3iv;
@@ -9822,7 +9666,7 @@ var _emscripten_glUniform3iv = _glUniform3iv;
 var _emscripten_glUniform3ui = _glUniform3ui;
 
 /** @suppress {duplicate } */ var _glUniform3uiv = (location, count, value) => {
- count && GLctx.uniform3uiv(webglGetUniformLocation(location), HEAPU32, value >> 2, count * 3);
+ count && GLctx.uniform3uiv(webglGetUniformLocation(location), HEAPU32, ((value) >> 2), count * 3);
 };
 
 var _emscripten_glUniform3uiv = _glUniform3uiv;
@@ -9834,7 +9678,7 @@ var _emscripten_glUniform3uiv = _glUniform3uiv;
 var _emscripten_glUniform4f = _glUniform4f;
 
 /** @suppress {duplicate } */ var _glUniform4fv = (location, count, value) => {
- count && GLctx.uniform4fv(webglGetUniformLocation(location), HEAPF32, value >> 2, count * 4);
+ count && GLctx.uniform4fv(webglGetUniformLocation(location), HEAPF32, ((value) >> 2), count * 4);
 };
 
 var _emscripten_glUniform4fv = _glUniform4fv;
@@ -9846,7 +9690,7 @@ var _emscripten_glUniform4fv = _glUniform4fv;
 var _emscripten_glUniform4i = _glUniform4i;
 
 /** @suppress {duplicate } */ var _glUniform4iv = (location, count, value) => {
- count && GLctx.uniform4iv(webglGetUniformLocation(location), HEAP32, value >> 2, count * 4);
+ count && GLctx.uniform4iv(webglGetUniformLocation(location), HEAP32, ((value) >> 2), count * 4);
 };
 
 var _emscripten_glUniform4iv = _glUniform4iv;
@@ -9858,7 +9702,7 @@ var _emscripten_glUniform4iv = _glUniform4iv;
 var _emscripten_glUniform4ui = _glUniform4ui;
 
 /** @suppress {duplicate } */ var _glUniform4uiv = (location, count, value) => {
- count && GLctx.uniform4uiv(webglGetUniformLocation(location), HEAPU32, value >> 2, count * 4);
+ count && GLctx.uniform4uiv(webglGetUniformLocation(location), HEAPU32, ((value) >> 2), count * 4);
 };
 
 var _emscripten_glUniform4uiv = _glUniform4uiv;
@@ -9871,55 +9715,55 @@ var _emscripten_glUniform4uiv = _glUniform4uiv;
 var _emscripten_glUniformBlockBinding = _glUniformBlockBinding;
 
 /** @suppress {duplicate } */ var _glUniformMatrix2fv = (location, count, transpose, value) => {
- count && GLctx.uniformMatrix2fv(webglGetUniformLocation(location), !!transpose, HEAPF32, value >> 2, count * 4);
+ count && GLctx.uniformMatrix2fv(webglGetUniformLocation(location), !!transpose, HEAPF32, ((value) >> 2), count * 4);
 };
 
 var _emscripten_glUniformMatrix2fv = _glUniformMatrix2fv;
 
 /** @suppress {duplicate } */ var _glUniformMatrix2x3fv = (location, count, transpose, value) => {
- count && GLctx.uniformMatrix2x3fv(webglGetUniformLocation(location), !!transpose, HEAPF32, value >> 2, count * 6);
+ count && GLctx.uniformMatrix2x3fv(webglGetUniformLocation(location), !!transpose, HEAPF32, ((value) >> 2), count * 6);
 };
 
 var _emscripten_glUniformMatrix2x3fv = _glUniformMatrix2x3fv;
 
 /** @suppress {duplicate } */ var _glUniformMatrix2x4fv = (location, count, transpose, value) => {
- count && GLctx.uniformMatrix2x4fv(webglGetUniformLocation(location), !!transpose, HEAPF32, value >> 2, count * 8);
+ count && GLctx.uniformMatrix2x4fv(webglGetUniformLocation(location), !!transpose, HEAPF32, ((value) >> 2), count * 8);
 };
 
 var _emscripten_glUniformMatrix2x4fv = _glUniformMatrix2x4fv;
 
 /** @suppress {duplicate } */ var _glUniformMatrix3fv = (location, count, transpose, value) => {
- count && GLctx.uniformMatrix3fv(webglGetUniformLocation(location), !!transpose, HEAPF32, value >> 2, count * 9);
+ count && GLctx.uniformMatrix3fv(webglGetUniformLocation(location), !!transpose, HEAPF32, ((value) >> 2), count * 9);
 };
 
 var _emscripten_glUniformMatrix3fv = _glUniformMatrix3fv;
 
 /** @suppress {duplicate } */ var _glUniformMatrix3x2fv = (location, count, transpose, value) => {
- count && GLctx.uniformMatrix3x2fv(webglGetUniformLocation(location), !!transpose, HEAPF32, value >> 2, count * 6);
+ count && GLctx.uniformMatrix3x2fv(webglGetUniformLocation(location), !!transpose, HEAPF32, ((value) >> 2), count * 6);
 };
 
 var _emscripten_glUniformMatrix3x2fv = _glUniformMatrix3x2fv;
 
 /** @suppress {duplicate } */ var _glUniformMatrix3x4fv = (location, count, transpose, value) => {
- count && GLctx.uniformMatrix3x4fv(webglGetUniformLocation(location), !!transpose, HEAPF32, value >> 2, count * 12);
+ count && GLctx.uniformMatrix3x4fv(webglGetUniformLocation(location), !!transpose, HEAPF32, ((value) >> 2), count * 12);
 };
 
 var _emscripten_glUniformMatrix3x4fv = _glUniformMatrix3x4fv;
 
 /** @suppress {duplicate } */ var _glUniformMatrix4fv = (location, count, transpose, value) => {
- count && GLctx.uniformMatrix4fv(webglGetUniformLocation(location), !!transpose, HEAPF32, value >> 2, count * 16);
+ count && GLctx.uniformMatrix4fv(webglGetUniformLocation(location), !!transpose, HEAPF32, ((value) >> 2), count * 16);
 };
 
 var _emscripten_glUniformMatrix4fv = _glUniformMatrix4fv;
 
 /** @suppress {duplicate } */ var _glUniformMatrix4x2fv = (location, count, transpose, value) => {
- count && GLctx.uniformMatrix4x2fv(webglGetUniformLocation(location), !!transpose, HEAPF32, value >> 2, count * 8);
+ count && GLctx.uniformMatrix4x2fv(webglGetUniformLocation(location), !!transpose, HEAPF32, ((value) >> 2), count * 8);
 };
 
 var _emscripten_glUniformMatrix4x2fv = _glUniformMatrix4x2fv;
 
 /** @suppress {duplicate } */ var _glUniformMatrix4x3fv = (location, count, transpose, value) => {
- count && GLctx.uniformMatrix4x3fv(webglGetUniformLocation(location), !!transpose, HEAPF32, value >> 2, count * 12);
+ count && GLctx.uniformMatrix4x3fv(webglGetUniformLocation(location), !!transpose, HEAPF32, ((value) >> 2), count * 12);
 };
 
 var _emscripten_glUniformMatrix4x3fv = _glUniformMatrix4x3fv;
@@ -9963,9 +9807,7 @@ var _emscripten_glUseProgram = _glUseProgram;
 
 var _emscripten_glValidateProgram = _glValidateProgram;
 
-/** @suppress {duplicate } */ function _glVertexAttrib1f(x0, x1) {
- GLctx.vertexAttrib1f(x0, x1);
-}
+/** @suppress {duplicate } */ var _glVertexAttrib1f = (x0, x1) => GLctx.vertexAttrib1f(x0, x1);
 
 var _emscripten_glVertexAttrib1f = _glVertexAttrib1f;
 
@@ -9975,9 +9817,7 @@ var _emscripten_glVertexAttrib1f = _glVertexAttrib1f;
 
 var _emscripten_glVertexAttrib1fv = _glVertexAttrib1fv;
 
-/** @suppress {duplicate } */ function _glVertexAttrib2f(x0, x1, x2) {
- GLctx.vertexAttrib2f(x0, x1, x2);
-}
+/** @suppress {duplicate } */ var _glVertexAttrib2f = (x0, x1, x2) => GLctx.vertexAttrib2f(x0, x1, x2);
 
 var _emscripten_glVertexAttrib2f = _glVertexAttrib2f;
 
@@ -9987,9 +9827,7 @@ var _emscripten_glVertexAttrib2f = _glVertexAttrib2f;
 
 var _emscripten_glVertexAttrib2fv = _glVertexAttrib2fv;
 
-/** @suppress {duplicate } */ function _glVertexAttrib3f(x0, x1, x2, x3) {
- GLctx.vertexAttrib3f(x0, x1, x2, x3);
-}
+/** @suppress {duplicate } */ var _glVertexAttrib3f = (x0, x1, x2, x3) => GLctx.vertexAttrib3f(x0, x1, x2, x3);
 
 var _emscripten_glVertexAttrib3f = _glVertexAttrib3f;
 
@@ -9999,9 +9837,7 @@ var _emscripten_glVertexAttrib3f = _glVertexAttrib3f;
 
 var _emscripten_glVertexAttrib3fv = _glVertexAttrib3fv;
 
-/** @suppress {duplicate } */ function _glVertexAttrib4f(x0, x1, x2, x3, x4) {
- GLctx.vertexAttrib4f(x0, x1, x2, x3, x4);
-}
+/** @suppress {duplicate } */ var _glVertexAttrib4f = (x0, x1, x2, x3, x4) => GLctx.vertexAttrib4f(x0, x1, x2, x3, x4);
 
 var _emscripten_glVertexAttrib4f = _glVertexAttrib4f;
 
@@ -10033,9 +9869,7 @@ var _emscripten_glVertexAttribDivisorEXT = _glVertexAttribDivisorEXT;
 
 var _emscripten_glVertexAttribDivisorNV = _glVertexAttribDivisorNV;
 
-/** @suppress {duplicate } */ function _glVertexAttribI4i(x0, x1, x2, x3, x4) {
- GLctx.vertexAttribI4i(x0, x1, x2, x3, x4);
-}
+/** @suppress {duplicate } */ var _glVertexAttribI4i = (x0, x1, x2, x3, x4) => GLctx.vertexAttribI4i(x0, x1, x2, x3, x4);
 
 var _emscripten_glVertexAttribI4i = _glVertexAttribI4i;
 
@@ -10045,9 +9879,7 @@ var _emscripten_glVertexAttribI4i = _glVertexAttribI4i;
 
 var _emscripten_glVertexAttribI4iv = _glVertexAttribI4iv;
 
-/** @suppress {duplicate } */ function _glVertexAttribI4ui(x0, x1, x2, x3, x4) {
- GLctx.vertexAttribI4ui(x0, x1, x2, x3, x4);
-}
+/** @suppress {duplicate } */ var _glVertexAttribI4ui = (x0, x1, x2, x3, x4) => GLctx.vertexAttribI4ui(x0, x1, x2, x3, x4);
 
 var _emscripten_glVertexAttribI4ui = _glVertexAttribI4ui;
 
@@ -10097,9 +9929,7 @@ var _emscripten_glVertexAttribIPointer = _glVertexAttribIPointer;
 
 var _emscripten_glVertexAttribPointer = _glVertexAttribPointer;
 
-/** @suppress {duplicate } */ function _glViewport(x0, x1, x2, x3) {
- GLctx.viewport(x0, x1, x2, x3);
-}
+/** @suppress {duplicate } */ var _glViewport = (x0, x1, x2, x3) => GLctx.viewport(x0, x1, x2, x3);
 
 var _emscripten_glViewport = _glViewport;
 
@@ -10630,10 +10460,10 @@ var _emscripten_sleep = () => {
  throw "Please compile your program with async support in order to use asynchronous operations like emscripten_sleep";
 };
 
-var emscripten_webgl_power_preferences = [ "default", "low-power", "high-performance" ];
+var webglPowerPreferences = [ "default", "low-power", "high-performance" ];
 
 /** @suppress {duplicate } */ var _emscripten_webgl_do_create_context = (target, attributes) => {
- var a = attributes >> 2;
+ var a = ((attributes) >> 2);
  var powerPreference = HEAP32[a + (24 >> 2)];
  var contextAttributes = {
   "alpha": !!HEAP32[a + (0 >> 2)],
@@ -10642,7 +10472,7 @@ var emscripten_webgl_power_preferences = [ "default", "low-power", "high-perform
   "antialias": !!HEAP32[a + (12 >> 2)],
   "premultipliedAlpha": !!HEAP32[a + (16 >> 2)],
   "preserveDrawingBuffer": !!HEAP32[a + (20 >> 2)],
-  "powerPreference": emscripten_webgl_power_preferences[powerPreference],
+  "powerPreference": webglPowerPreferences[powerPreference],
   "failIfMajorPerformanceCaveat": !!HEAP32[a + (28 >> 2)],
   majorVersion: HEAP32[a + (32 >> 2)],
   minorVersion: HEAP32[a + (36 >> 2)],
@@ -10708,9 +10538,9 @@ var getEnvStrings = () => {
 
 var stringToAscii = (str, buffer) => {
  for (var i = 0; i < str.length; ++i) {
-  HEAP8[((buffer++) >> 0)] = str.charCodeAt(i);
+  HEAP8[buffer++] = str.charCodeAt(i);
  }
- HEAP8[((buffer) >> 0)] = 0;
+ HEAP8[buffer] = 0;
 };
 
 var _environ_get = (__environ, environ_buf) => {
