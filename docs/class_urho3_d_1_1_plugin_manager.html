@@ -114,6 +114,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#a875b03a80a88ac67638a9e402d091ce9">IsStarted</a> () const</td></tr>
 <tr class="memdesc:a875b03a80a88ac67638a9e402d091ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the application is started now. <br /></td></tr>
 <tr class="separator:a875b03a80a88ac67638a9e402d091ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c3c61e586aeb467bbb5f07bcc8c698"><td class="memItemLeft" align="right" valign="top"><a id="ab3c3c61e586aeb467bbb5f07bcc8c698"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#ab3c3c61e586aeb467bbb5f07bcc8c698">ArePluginsRenamed</a> () const</td></tr>
+<tr class="memdesc:ab3c3c61e586aeb467bbb5f07bcc8c698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the plugins are renamed on load. <br /></td></tr>
+<tr class="separator:ab3c3c61e586aeb467bbb5f07bcc8c698"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab903d2fc460578f672dff2d1020ad7bb"><td class="memItemLeft" align="right" valign="top"><a id="ab903d2fc460578f672dff2d1020ad7bb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#ab903d2fc460578f672dff2d1020ad7bb">SetPluginsLoaded</a> (const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;plugins)</td></tr>
 <tr class="memdesc:ab903d2fc460578f672dff2d1020ad7bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set loaded plugins. Order is preserved. <br /></td></tr>
@@ -429,7 +433,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>wasStarted_</b> {}</t
 ea::unordered_map&lt; ea::string, <a class="el" href="struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html">DynamicLibraryInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pluginInfoCache_</b></td></tr>
 <tr class="separator:a4386b6406b63be91f6b02ef16b962968"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:abd4d3c5303850ead692fd84f44c89eb6"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#abd4d3c5303850ead692fd84f44c89eb6">reloadIntervalMs_</a> {1000}</td></tr>
+<tr class="memitem:a3b286eaf69a8a300c78879369e2cda3f"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#a3b286eaf69a8a300c78879369e2cda3f">renamePluginBinaries_</a> {}</td></tr>
+<tr class="separator:a3b286eaf69a8a300c78879369e2cda3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd4d3c5303850ead692fd84f44c89eb6"><td class="memItemLeft" align="right" valign="top"><a id="abd4d3c5303850ead692fd84f44c89eb6"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>reloadIntervalMs_</b> {1000}</td></tr>
 <tr class="separator:abd4d3c5303850ead692fd84f44c89eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07867ac78d7b360c37fe39c3482ca7f9"><td class="memItemLeft" align="right" valign="top"><a id="a07867ac78d7b360c37fe39c3482ca7f9"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>reloadTimeoutMs_</b> {10000}</td></tr>
@@ -507,8 +514,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="abd4d3c5303850ead692fd84f44c89eb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd4d3c5303850ead692fd84f44c89eb6">&#9670;&nbsp;</a></span>reloadIntervalMs_</h2>
+<a id="a3b286eaf69a8a300c78879369e2cda3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b286eaf69a8a300c78879369e2cda3f">&#9670;&nbsp;</a></span>renamePluginBinaries_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -517,7 +524,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned Urho3D::PluginManager::reloadIntervalMs_ {1000}</td>
+          <td class="memname">const bool Urho3D::PluginManager::renamePluginBinaries_ {}</td>
         </tr>
       </table>
   </td>
