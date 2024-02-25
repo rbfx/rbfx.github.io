@@ -19,7 +19,6 @@ var _light_8h =
       [ "LIGHT_SPOT", "_light_8h.html#ac36d54d6a282266cc48226d9b36f6b9fa39787495e995886736b8dc2a93fce9f1", null ],
       [ "LIGHT_POINT", "_light_8h.html#ac36d54d6a282266cc48226d9b36f6b9fa299774501a4d1c9a87000d232028de77", null ]
     ] ],
-    [ "CompareLights", "_light_8h.html#a787f8eeaacbfd4006ce20400242d39ff", null ],
     [ "DEFAULT_BIASAUTOADJUST", "_light_8h.html#af92072de5d1d47863049bc8d3e8f948d", null ],
     [ "DEFAULT_BRIGHTNESS", "_light_8h.html#ab18075005432fec53d720d528daa99df", null ],
     [ "DEFAULT_CONSTANTBIAS", "_light_8h.html#ac243fd455e274c8f6c1cd597e66d0ea1", null ],

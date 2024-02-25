@@ -1,6 +1,5 @@
 var NAVTREEINDEX22 =
 {
-"class_urho3_d_1_1_deserializer.html#acc590c8a496ed45d39106a08e369512f":[6,0,2,195,15],
 "class_urho3_d_1_1_deserializer.html#acff4d7732f540451137b8b0de0dba0ed":[6,0,2,195,51],
 "class_urho3_d_1_1_deserializer.html#ad0eb039dde5cc9ec8fedaa044d850db1":[6,0,2,195,5],
 "class_urho3_d_1_1_deserializer.html#ae3abef03d5bd18c80c70c4bc907f7951":[6,0,2,195,53],
@@ -249,5 +248,6 @@ var NAVTREEINDEX22 =
 "class_urho3_d_1_1_directional_pad_adapter.html#abb4f030778221edafea0eb1f5d6f8de7":[6,0,2,198,39],
 "class_urho3_d_1_1_directional_pad_adapter.html#ac0b5c29508acf6e852498d9d9f0fba24":[6,0,2,198,18],
 "class_urho3_d_1_1_directional_pad_adapter.html#aca0eca057fa216ac1fed6c7bfdbaaed0":[6,0,2,198,21],
-"class_urho3_d_1_1_directional_pad_adapter.html#acf64ad11c0f02c8de840ecb19524cd96":[6,0,2,198,8]
+"class_urho3_d_1_1_directional_pad_adapter.html#acf64ad11c0f02c8de840ecb19524cd96":[6,0,2,198,8],
+"class_urho3_d_1_1_directional_pad_adapter.html#adc601f3bb2d632a883892cb2e6707857":[6,0,2,198,41]
 };
