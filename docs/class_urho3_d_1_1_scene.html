@@ -62,6 +62,7 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_scene.html',''); ini
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_urho3_d_1_1_scene-members.html">List of all members</a>  </div>
@@ -148,6 +149,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#ae8285ba738dfb1e8b298123a92b885e5">GetLightmapTexture</a> (unsigned index) const</td></tr>
 <tr class="memdesc:ae8285ba738dfb1e8b298123a92b885e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return lightmap texture. <br /></td></tr>
 <tr class="separator:ae8285ba738dfb1e8b298123a92b885e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76799493029e2a36e0be7a607de13c28"><td class="memItemLeft" align="right" valign="top"><a id="a76799493029e2a36e0be7a607de13c28"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a76799493029e2a36e0be7a607de13c28">SetUpdateEvents</a> (const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;events)</td></tr>
+<tr class="memdesc:a76799493029e2a36e0be7a607de13c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set update events. <br /></td></tr>
+<tr class="separator:a76799493029e2a36e0be7a607de13c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71a4bed2b16bdd21428d5aa5f0c5e072"><td class="memItemLeft" align="right" valign="top"><a id="a71a4bed2b16bdd21428d5aa5f0c5e072"></a>
+const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a71a4bed2b16bdd21428d5aa5f0c5e072">GetUpdateEvents</a> () const</td></tr>
+<tr class="memdesc:a71a4bed2b16bdd21428d5aa5f0c5e072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return update events. <br /></td></tr>
+<tr class="separator:a71a4bed2b16bdd21428d5aa5f0c5e072"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2773f04916fe39bed1fbf0ee08f7c1c0"><td class="memItemLeft" align="right" valign="top"><a id="a2773f04916fe39bed1fbf0ee08f7c1c0"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a2773f04916fe39bed1fbf0ee08f7c1c0">LoadXML</a> (<a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;source)</td></tr>
 <tr class="memdesc:a2773f04916fe39bed1fbf0ee08f7c1c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from an XML file. Return true if successful. <br /></td></tr>
@@ -220,18 +229,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a50ef7c9239ecc6fd3a2c77604fe72f96">ClearRequiredPackageFiles</a> ()</td></tr>
 <tr class="memdesc:a50ef7c9239ecc6fd3a2c77604fe72f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear required package files. <br /></td></tr>
 <tr class="separator:a50ef7c9239ecc6fd3a2c77604fe72f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d23a2ecea737bb6043dd55250b8a732"><td class="memItemLeft" align="right" valign="top"><a id="a9d23a2ecea737bb6043dd55250b8a732"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a9d23a2ecea737bb6043dd55250b8a732">RegisterVar</a> (const ea::string &amp;name)</td></tr>
-<tr class="memdesc:a9d23a2ecea737bb6043dd55250b8a732"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a node user variable hash reverse mapping (for editing). <br /></td></tr>
-<tr class="separator:a9d23a2ecea737bb6043dd55250b8a732"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3929fede4b7893e32486e97427e0b32a"><td class="memItemLeft" align="right" valign="top"><a id="a3929fede4b7893e32486e97427e0b32a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a3929fede4b7893e32486e97427e0b32a">UnregisterVar</a> (const ea::string &amp;name)</td></tr>
-<tr class="memdesc:a3929fede4b7893e32486e97427e0b32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister a node user variable hash reverse mapping. <br /></td></tr>
-<tr class="separator:a3929fede4b7893e32486e97427e0b32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa696692927ca2360290f70d4d0ed73fd"><td class="memItemLeft" align="right" valign="top"><a id="aa696692927ca2360290f70d4d0ed73fd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#aa696692927ca2360290f70d4d0ed73fd">UnregisterAllVars</a> ()</td></tr>
-<tr class="memdesc:aa696692927ca2360290f70d4d0ed73fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all registered node user variable hash reverse mappings. <br /></td></tr>
-<tr class="separator:aa696692927ca2360290f70d4d0ed73fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2d06b3da012a05e4f79968eecc926a3"><td class="memItemLeft" align="right" valign="top"><a id="ae2d06b3da012a05e4f79968eecc926a3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#ae2d06b3da012a05e4f79968eecc926a3">SetFileName</a> (const ea::string_view fileName)</td></tr>
 <tr class="memdesc:ae2d06b3da012a05e4f79968eecc926a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set source file name. <br /></td></tr>
@@ -280,10 +277,6 @@ const ea::unordered_map&lt; unsigned, Node * &gt; &amp;&#160;</td><td class="mem
 const ea::unordered_map&lt; unsigned, <a class="el" href="class_urho3_d_1_1_component.html">Component</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a3bb2bee0b8418eaf31fb6f22dfcbf062">GetAllComponents</a> () const</td></tr>
 <tr class="memdesc:a3bb2bee0b8418eaf31fb6f22dfcbf062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all components parented by this <a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a>. <br /></td></tr>
 <tr class="separator:a3bb2bee0b8418eaf31fb6f22dfcbf062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adab31e6c85f2405dd588b36e3cea58a8"><td class="memItemLeft" align="right" valign="top"><a id="adab31e6c85f2405dd588b36e3cea58a8"></a>
-const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#adab31e6c85f2405dd588b36e3cea58a8">GetVarName</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> hash) const</td></tr>
-<tr class="memdesc:adab31e6c85f2405dd588b36e3cea58a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a node user variable name, or empty if not registered. <br /></td></tr>
-<tr class="separator:adab31e6c85f2405dd588b36e3cea58a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb949e0fedbb2becb9aa7a3dfb0ed7b2"><td class="memItemLeft" align="right" valign="top"><a id="afb949e0fedbb2becb9aa7a3dfb0ed7b2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#afb949e0fedbb2becb9aa7a3dfb0ed7b2">Update</a> (float timeStep)</td></tr>
 <tr class="memdesc:afb949e0fedbb2becb9aa7a3dfb0ed7b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update scene. Called by HandleUpdate. <br /></td></tr>
@@ -336,19 +329,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a72dbbc1c1e593069b21ec3e608d39ba6">ComponentRemoved</a> (<a class="el" href="class_urho3_d_1_1_component.html">Component</a> *component)</td></tr>
 <tr class="memdesc:a72dbbc1c1e593069b21ec3e608d39ba6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_component.html">Component</a> removed. Remove from ID map. <br /></td></tr>
 <tr class="separator:a72dbbc1c1e593069b21ec3e608d39ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3afc2e6a2f114918239ccee27c0a146d"><td class="memItemLeft" align="right" valign="top"><a id="a3afc2e6a2f114918239ccee27c0a146d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a3afc2e6a2f114918239ccee27c0a146d">SetVarNamesAttr</a> (const ea::string &amp;value)</td></tr>
-<tr class="memdesc:a3afc2e6a2f114918239ccee27c0a146d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set node user variable reverse mappings. <br /></td></tr>
-<tr class="separator:a3afc2e6a2f114918239ccee27c0a146d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57082b0d2f3c2a78f1f1e7eb3b1d9897"><td class="memItemLeft" align="right" valign="top"><a id="a57082b0d2f3c2a78f1f1e7eb3b1d9897"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a57082b0d2f3c2a78f1f1e7eb3b1d9897">GetVarNamesAttr</a> () const</td></tr>
-<tr class="memdesc:a57082b0d2f3c2a78f1f1e7eb3b1d9897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return node user variable reverse mappings. <br /></td></tr>
-<tr class="separator:a57082b0d2f3c2a78f1f1e7eb3b1d9897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0fe334f7776874f008b411b66d4e8f0a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a0fe334f7776874f008b411b66d4e8f0a">RegisterObject</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
 <tr class="separator:a0fe334f7776874f008b411b66d4e8f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a7e191f0896ebd4e82a03ce56acf736e8"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a7e191f0896ebd4e82a03ce56acf736e8">DefaultUpdateEvents</a></td></tr>
+<tr class="memdesc:a7e191f0896ebd4e82a03ce56acf736e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a> update events.  <a href="class_urho3_d_1_1_scene.html#a7e191f0896ebd4e82a03ce56acf736e8">More...</a><br /></td></tr>
+<tr class="separator:a7e191f0896ebd4e82a03ce56acf736e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -437,10 +428,6 @@ ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_package_file.html">PackageFile</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#ae4e114c362df6669f862da303adc558f">requiredPackageFiles_</a></td></tr>
 <tr class="memdesc:ae4e114c362df6669f862da303adc558f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required package files for networking. <br /></td></tr>
 <tr class="separator:ae4e114c362df6669f862da303adc558f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d02f5cae508155c68bf9c51f20e5b9c"><td class="memItemLeft" align="right" valign="top"><a id="a8d02f5cae508155c68bf9c51f20e5b9c"></a>
-ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, ea::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a8d02f5cae508155c68bf9c51f20e5b9c">varNames_</a></td></tr>
-<tr class="memdesc:a8d02f5cae508155c68bf9c51f20e5b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registered node user variable reverse mappings. <br /></td></tr>
-<tr class="separator:a8d02f5cae508155c68bf9c51f20e5b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ef15c5b1a0ad52c66fed0d176f20dc4"><td class="memItemLeft" align="right" valign="top"><a id="a1ef15c5b1a0ad52c66fed0d176f20dc4"></a>
 ea::vector&lt; <a class="el" href="class_urho3_d_1_1_component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a1ef15c5b1a0ad52c66fed0d176f20dc4">delayedDirtyComponents_</a></td></tr>
 <tr class="memdesc:a1ef15c5b1a0ad52c66fed0d176f20dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delayed dirty notification queue for components. <br /></td></tr>
@@ -493,6 +480,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_texture2_d.html">Texture2D</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#adb9d4ef3f8e392f2a6419d1c3a7f9422">lightmapTextures_</a></td></tr>
 <tr class="memdesc:adb9d4ef3f8e392f2a6419d1c3a7f9422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loaded lightmap textures. <br /></td></tr>
 <tr class="separator:adb9d4ef3f8e392f2a6419d1c3a7f9422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab253f046e50a8cd54feb282bea747c1b"><td class="memItemLeft" align="right" valign="top"><a id="ab253f046e50a8cd54feb282bea747c1b"></a>
+<a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#ab253f046e50a8cd54feb282bea747c1b">updateEvents_</a></td></tr>
+<tr class="memdesc:ab253f046e50a8cd54feb282bea747c1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update events to be sent on every update. <br /></td></tr>
+<tr class="separator:ab253f046e50a8cd54feb282bea747c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0930742a350eea2dc32e52ac9806cf99"><td class="memItemLeft" align="right" valign="top"><a id="a0930742a350eea2dc32e52ac9806cf99"></a>
+ea::vector&lt; ea::pair&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, bool &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cookedUpdateEvents_</b></td></tr>
+<tr class="separator:a0930742a350eea2dc32e52ac9806cf99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Root scene node, represents the whole scene. </p>
@@ -876,6 +870,39 @@ ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr<
 </div><div class="memdoc">
 
 <p>Update asynchronous loading. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7e191f0896ebd4e82a03ce56acf736e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e191f0896ebd4e82a03ce56acf736e8">&#9670;&nbsp;</a></span>DefaultUpdateEvents</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> Urho3D::Scene::DefaultUpdateEvents</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <span class="stringliteral">&quot;@SceneForcedUpdate&quot;</span>, </div>
+<div class="line">    <span class="stringliteral">&quot;SceneUpdate&quot;</span>, </div>
+<div class="line">    <span class="stringliteral">&quot;AttributeAnimationUpdate&quot;</span>, </div>
+<div class="line">    <span class="stringliteral">&quot;SceneSubsystemUpdate&quot;</span>, </div>
+<div class="line">    <span class="stringliteral">&quot;ScenePostUpdate&quot;</span>, </div>
+<div class="line">    <span class="stringliteral">&quot;@SceneForcedPostUpdate&quot;</span>, </div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Default <a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a> update events. </p>
 
 </div>
 </div>

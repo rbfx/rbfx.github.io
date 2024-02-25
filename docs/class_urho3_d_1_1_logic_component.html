@@ -173,6 +173,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#aa740607df08b5b43904e6c29993844a8">FixedPostUpdate</a> (float timeStep)</td></tr>
 <tr class="memdesc:aa740607df08b5b43904e6c29993844a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on physics post-update, fixed timestep. <br /></td></tr>
 <tr class="separator:aa740607df08b5b43904e6c29993844a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30f3b4f9509a8e9854260811bd59e691"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#a30f3b4f9509a8e9854260811bd59e691">GetUpdateEvent</a> () const</td></tr>
+<tr class="separator:a30f3b4f9509a8e9854260811bd59e691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c6842247f68dfa0b64c94cfbf01c69e"><td class="memItemLeft" align="right" valign="top"><a id="a4c6842247f68dfa0b64c94cfbf01c69e"></a>
 virtual <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#a4c6842247f68dfa0b64c94cfbf01c69e">GetPostUpdateEvent</a> () const</td></tr>
 <tr class="memdesc:a4c6842247f68dfa0b64c94cfbf01c69e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return post update event type. Should stay the same for any given instance of the component. <br /></td></tr>
@@ -643,7 +645,34 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Helper base class for user-defined game logic components that hooks up to update events and forwards them to virtual functions similar to ScriptInstance class. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a30f3b4f9509a8e9854260811bd59e691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30f3b4f9509a8e9854260811bd59e691">&#9670;&nbsp;</a></span>GetUpdateEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> Urho3D::LogicComponent::GetUpdateEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return update event type. Should stay the same for any given instance of the component. DelayedStart is invoked before the first update event of this type. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>Urho3D/Scene/<a class="el" href="_logic_component_8h.html">LogicComponent.h</a></li>
 <li>Urho3D/Scene/LogicComponent.cpp</li>
 </ul>

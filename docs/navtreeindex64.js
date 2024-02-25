@@ -1,6 +1,5 @@
 var NAVTREEINDEX64 =
 {
-"class_urho3_d_1_1_terrain.html#a182a121caab1e7f63219f4a980a65932":[6,0,2,708,58],
 "class_urho3_d_1_1_terrain.html#a185f78b033a3f8eee452069d5afd88db":[6,0,2,708,119],
 "class_urho3_d_1_1_terrain.html#a20daed0587c1743c6f7e8ab186ab3ffb":[6,0,2,708,86],
 "class_urho3_d_1_1_terrain.html#a21d4ac98c83a9d38b1b7639395727e37":[6,0,2,708,47],
@@ -249,5 +248,6 @@ var NAVTREEINDEX64 =
 "class_urho3_d_1_1_text.html#a455e020adbffb931885af79b772eaab9":[6,0,2,715,60],
 "class_urho3_d_1_1_text.html#a464d74e6f4bdad5fa5c19da8c21170ea":[6,0,2,715,38],
 "class_urho3_d_1_1_text.html#a4a5aed1fe91eeb555230fbcd46db590c":[6,0,2,715,16],
-"class_urho3_d_1_1_text.html#a4a856492a587baf4d5892ac89a165669":[6,0,2,715,12]
+"class_urho3_d_1_1_text.html#a4a856492a587baf4d5892ac89a165669":[6,0,2,715,12],
+"class_urho3_d_1_1_text.html#a54427342a93827df3c58e509c22b32e6":[6,0,2,715,7]
 };

@@ -1,6 +1,5 @@
 var NAVTREEINDEX86 =
 {
-"struct_urho3_d_1_1_shader_define_array.html#aa169100a290ddb4de5d1815bf48de658":[6,0,2,628,5],
 "struct_urho3_d_1_1_shader_define_array.html#acb244daa8a3f1d09dca4c0556e05d3be":[6,0,2,628,3],
 "struct_urho3_d_1_1_shader_define_array.html#acc1f3d1211b152ad48dd75e64d022152":[6,0,2,628,4],
 "struct_urho3_d_1_1_shader_define_array.html#ae392e8cd4ef329f47b205b7921bbefe7":[6,0,2,628,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a687346104f91d26b0259b23c6f8b0872":[6,0,2,3,9,7],
 "struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a992ca06050684783557d500d20143c81":[6,0,2,3,9,2],
 "struct_urho3_d_1_1_spriter_1_1_spatial_info.html#aad8bedb5f5a07249a72d54827cbe3f25":[6,0,2,3,9,1],
-"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#aeebd5a8a72189e2b81c4967722732d4a":[6,0,2,3,9,3]
+"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#aeebd5a8a72189e2b81c4967722732d4a":[6,0,2,3,9,3],
+"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#afe20a778f70db8415c6a0c20df02d64f":[6,0,2,3,9,9]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer_instance.html":[6,0,2,2,16],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer_instance.html#a3728901bda38bd25f546de782ee1b9f8":[6,0,2,2,16,2],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer_instance.html#a8ba88605d73afb8b0855736c5b2f1bc0":[6,0,2,2,16,1],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer_instance.html#a96ae519d6bf7ac0db395f2c2312bfa88":[6,0,2,2,16,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "class_urho3_d_1_1_particle_graph_nodes_1_1_make.html#a8bdfb651bfb1a5883da5ac2f4ce6b1c9":[6,0,2,2,60,1],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_make.html#ae11bc49e94884a1784e608933eee6593":[6,0,2,2,60,0],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_move.html":[6,0,2,2,64],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_move.html#a193ea58885716eaa0d3b23a7b853779b":[6,0,2,2,64,1],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_move.html#a5b367953e047f67bbbcada2a61e63c64":[6,0,2,2,64,0]
+"class_urho3_d_1_1_particle_graph_nodes_1_1_move.html#a193ea58885716eaa0d3b23a7b853779b":[6,0,2,2,64,1]
 };

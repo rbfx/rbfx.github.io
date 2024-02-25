@@ -6,6 +6,7 @@ var class_urho3_d_1_1_logic_component =
     [ "FixedPostUpdate", "class_urho3_d_1_1_logic_component.html#aa740607df08b5b43904e6c29993844a8", null ],
     [ "FixedUpdate", "class_urho3_d_1_1_logic_component.html#a538bb1600c71f6c721ca4fd9e434a0d8", null ],
     [ "GetPostUpdateEvent", "class_urho3_d_1_1_logic_component.html#a4c6842247f68dfa0b64c94cfbf01c69e", null ],
+    [ "GetUpdateEvent", "class_urho3_d_1_1_logic_component.html#a30f3b4f9509a8e9854260811bd59e691", null ],
     [ "GetUpdateEventMask", "class_urho3_d_1_1_logic_component.html#ae38a9da10353bea5283f4f38d639e173", null ],
     [ "HandleScenePostUpdate", "class_urho3_d_1_1_logic_component.html#a917286aa2813c0787a347622ebdf06d1", null ],
     [ "HandleSceneUpdate", "class_urho3_d_1_1_logic_component.html#a9a318417ce77addd2c7a161f196e4b00", null ],
