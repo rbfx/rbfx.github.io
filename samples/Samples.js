@@ -1614,7 +1614,6 @@ var IDBFS = {
   if (typeof indexedDB != "undefined") return indexedDB;
   var ret = null;
   if (typeof window == "object") ret = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-  assert(ret, "IDBFS used, but indexedDB not supported");
   return ret;
  },
  DB_VERSION: 21,
@@ -1901,6 +1900,74 @@ var FS = {
  genericErrors: {},
  filesystems: null,
  syncFSRequests: 0,
+ FSStream: class {
+  constructor() {
+   this.shared = {};
+  }
+  get object() {
+   return this.node;
+  }
+  set object(val) {
+   this.node = val;
+  }
+  get isRead() {
+   return (this.flags & 2097155) !== 1;
+  }
+  get isWrite() {
+   return (this.flags & 2097155) !== 0;
+  }
+  get isAppend() {
+   return (this.flags & 1024);
+  }
+  get flags() {
+   return this.shared.flags;
+  }
+  set flags(val) {
+   this.shared.flags = val;
+  }
+  get position() {
+   return this.shared.position;
+  }
+  set position(val) {
+   this.shared.position = val;
+  }
+ },
+ FSNode: class {
+  constructor(parent, name, mode, rdev) {
+   if (!parent) {
+    parent = this;
+   }
+   this.parent = parent;
+   this.mount = parent.mount;
+   this.mounted = null;
+   this.id = FS.nextInode++;
+   this.name = name;
+   this.mode = mode;
+   this.node_ops = {};
+   this.stream_ops = {};
+   this.rdev = rdev;
+   this.readMode = 292 | /*292*/ 73;
+   /*73*/ this.writeMode = 146;
+  }
+  /*146*/ get read() {
+   return (this.mode & this.readMode) === this.readMode;
+  }
+  set read(val) {
+   val ? this.mode |= this.readMode : this.mode &= ~this.readMode;
+  }
+  get write() {
+   return (this.mode & this.writeMode) === this.writeMode;
+  }
+  set write(val) {
+   val ? this.mode |= this.writeMode : this.mode &= ~this.writeMode;
+  }
+  get isFolder() {
+   return FS.isDir(this.mode);
+  }
+  get isDevice() {
+   return FS.isChrdev(this.mode);
+  }
+ },
  lookupPath(path, opts = {}) {
   path = PATH_FS.resolve(path);
   if (!path) return {
@@ -2128,53 +2195,6 @@ var FS = {
  },
  getStream: fd => FS.streams[fd],
  createStream(stream, fd = -1) {
-  if (!FS.FSStream) {
-   FS.FSStream = /** @constructor */ function() {
-    this.shared = {};
-   };
-   FS.FSStream.prototype = {};
-   Object.defineProperties(FS.FSStream.prototype, {
-    object: {
-     /** @this {FS.FSStream} */ get() {
-      return this.node;
-     },
-     /** @this {FS.FSStream} */ set(val) {
-      this.node = val;
-     }
-    },
-    isRead: {
-     /** @this {FS.FSStream} */ get() {
-      return (this.flags & 2097155) !== 1;
-     }
-    },
-    isWrite: {
-     /** @this {FS.FSStream} */ get() {
-      return (this.flags & 2097155) !== 0;
-     }
-    },
-    isAppend: {
-     /** @this {FS.FSStream} */ get() {
-      return (this.flags & 1024);
-     }
-    },
-    flags: {
-     /** @this {FS.FSStream} */ get() {
-      return this.shared.flags;
-     },
-     /** @this {FS.FSStream} */ set(val) {
-      this.shared.flags = val;
-     }
-    },
-    position: {
-     /** @this {FS.FSStream} */ get() {
-      return this.shared.position;
-     },
-     /** @this {FS.FSStream} */ set(val) {
-      this.shared.position = val;
-     }
-    }
-   });
-  }
   stream = Object.assign(new FS.FSStream, stream);
   if (fd == -1) {
    fd = FS.nextfd();
@@ -2185,6 +2205,11 @@ var FS = {
  },
  closeStream(fd) {
   FS.streams[fd] = null;
+ },
+ dupStream(origStream, fd = -1) {
+  var stream = FS.createStream(origStream, fd);
+  stream.stream_ops?.dup?.(stream);
+  return stream;
  },
  chrdev_stream_ops: {
   open(stream) {
@@ -2824,7 +2849,6 @@ var FS = {
   }
   return stream.stream_ops.msync(stream, buffer, offset, length, mmapFlags);
  },
- munmap: stream => 0,
  ioctl(stream, cmd, arg) {
   if (!stream.stream_ops.ioctl) {
    throw new FS.ErrnoError(59);
@@ -3143,91 +3167,87 @@ var FS = {
   }
  },
  createLazyFile(parent, name, url, canRead, canWrite) {
-  /** @constructor */ function LazyUint8Array() {
-   this.lengthKnown = false;
-   this.chunks = [];
-  }
-  LazyUint8Array.prototype.get = /** @this{Object} */ function LazyUint8Array_get(idx) {
-   if (idx > this.length - 1 || idx < 0) {
-    return undefined;
+  class LazyUint8Array {
+   constructor() {
+    this.lengthKnown = false;
+    this.chunks = [];
    }
-   var chunkOffset = idx % this.chunkSize;
-   var chunkNum = (idx / this.chunkSize) | 0;
-   return this.getter(chunkNum)[chunkOffset];
-  };
-  LazyUint8Array.prototype.setDataGetter = function LazyUint8Array_setDataGetter(getter) {
-   this.getter = getter;
-  };
-  LazyUint8Array.prototype.cacheLength = function LazyUint8Array_cacheLength() {
-   var xhr = new XMLHttpRequest;
-   xhr.open("HEAD", url, false);
-   xhr.send(null);
-   if (!(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304)) throw new Error("Couldn't load " + url + ". Status: " + xhr.status);
-   var datalength = Number(xhr.getResponseHeader("Content-length"));
-   var header;
-   var hasByteServing = (header = xhr.getResponseHeader("Accept-Ranges")) && header === "bytes";
-   var usesGzip = (header = xhr.getResponseHeader("Content-Encoding")) && header === "gzip";
-   var chunkSize = 1024 * 1024;
-   if (!hasByteServing) chunkSize = datalength;
-   var doXHR = (from, to) => {
-    if (from > to) throw new Error("invalid range (" + from + ", " + to + ") or no bytes requested!");
-    if (to > datalength - 1) throw new Error("only " + datalength + " bytes available! programmer error!");
-    var xhr = new XMLHttpRequest;
-    xhr.open("GET", url, false);
-    if (datalength !== chunkSize) xhr.setRequestHeader("Range", "bytes=" + from + "-" + to);
-    xhr.responseType = "arraybuffer";
-    if (xhr.overrideMimeType) {
-     xhr.overrideMimeType("text/plain; charset=x-user-defined");
+   get(idx) {
+    if (idx > this.length - 1 || idx < 0) {
+     return undefined;
     }
+    var chunkOffset = idx % this.chunkSize;
+    var chunkNum = (idx / this.chunkSize) | 0;
+    return this.getter(chunkNum)[chunkOffset];
+   }
+   setDataGetter(getter) {
+    this.getter = getter;
+   }
+   cacheLength() {
+    var xhr = new XMLHttpRequest;
+    xhr.open("HEAD", url, false);
     xhr.send(null);
     if (!(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304)) throw new Error("Couldn't load " + url + ". Status: " + xhr.status);
-    if (xhr.response !== undefined) {
-     return new Uint8Array(/** @type{Array<number>} */ (xhr.response || []));
+    var datalength = Number(xhr.getResponseHeader("Content-length"));
+    var header;
+    var hasByteServing = (header = xhr.getResponseHeader("Accept-Ranges")) && header === "bytes";
+    var usesGzip = (header = xhr.getResponseHeader("Content-Encoding")) && header === "gzip";
+    var chunkSize = 1024 * 1024;
+    if (!hasByteServing) chunkSize = datalength;
+    var doXHR = (from, to) => {
+     if (from > to) throw new Error("invalid range (" + from + ", " + to + ") or no bytes requested!");
+     if (to > datalength - 1) throw new Error("only " + datalength + " bytes available! programmer error!");
+     var xhr = new XMLHttpRequest;
+     xhr.open("GET", url, false);
+     if (datalength !== chunkSize) xhr.setRequestHeader("Range", "bytes=" + from + "-" + to);
+     xhr.responseType = "arraybuffer";
+     if (xhr.overrideMimeType) {
+      xhr.overrideMimeType("text/plain; charset=x-user-defined");
+     }
+     xhr.send(null);
+     if (!(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304)) throw new Error("Couldn't load " + url + ". Status: " + xhr.status);
+     if (xhr.response !== undefined) {
+      return new Uint8Array(/** @type{Array<number>} */ (xhr.response || []));
+     }
+     return intArrayFromString(xhr.responseText || "", true);
+    };
+    var lazyArray = this;
+    lazyArray.setDataGetter(chunkNum => {
+     var start = chunkNum * chunkSize;
+     var end = (chunkNum + 1) * chunkSize - 1;
+     end = Math.min(end, datalength - 1);
+     if (typeof lazyArray.chunks[chunkNum] == "undefined") {
+      lazyArray.chunks[chunkNum] = doXHR(start, end);
+     }
+     if (typeof lazyArray.chunks[chunkNum] == "undefined") throw new Error("doXHR failed!");
+     return lazyArray.chunks[chunkNum];
+    });
+    if (usesGzip || !datalength) {
+     chunkSize = datalength = 1;
+     datalength = this.getter(0).length;
+     chunkSize = datalength;
+     out("LazyFiles on gzip forces download of the whole file when length is accessed");
     }
-    return intArrayFromString(xhr.responseText || "", true);
-   };
-   var lazyArray = this;
-   lazyArray.setDataGetter(chunkNum => {
-    var start = chunkNum * chunkSize;
-    var end = (chunkNum + 1) * chunkSize - 1;
-    end = Math.min(end, datalength - 1);
-    if (typeof lazyArray.chunks[chunkNum] == "undefined") {
-     lazyArray.chunks[chunkNum] = doXHR(start, end);
-    }
-    if (typeof lazyArray.chunks[chunkNum] == "undefined") throw new Error("doXHR failed!");
-    return lazyArray.chunks[chunkNum];
-   });
-   if (usesGzip || !datalength) {
-    chunkSize = datalength = 1;
-    datalength = this.getter(0).length;
-    chunkSize = datalength;
-    out("LazyFiles on gzip forces download of the whole file when length is accessed");
+    this._length = datalength;
+    this._chunkSize = chunkSize;
+    this.lengthKnown = true;
    }
-   this._length = datalength;
-   this._chunkSize = chunkSize;
-   this.lengthKnown = true;
-  };
+   get length() {
+    if (!this.lengthKnown) {
+     this.cacheLength();
+    }
+    return this._length;
+   }
+   get chunkSize() {
+    if (!this.lengthKnown) {
+     this.cacheLength();
+    }
+    return this._chunkSize;
+   }
+  }
   if (typeof XMLHttpRequest != "undefined") {
    if (!ENVIRONMENT_IS_WORKER) throw "Cannot do synchronous binary XHRs outside webworkers in modern browsers. Use --embed-file or --preload-file in emcc";
    var lazyArray = new LazyUint8Array;
-   Object.defineProperties(lazyArray, {
-    length: {
-     get: /** @this{Object} */ function() {
-      if (!this.lengthKnown) {
-       this.cacheLength();
-      }
-      return this._length;
-     }
-    },
-    chunkSize: {
-     get: /** @this{Object} */ function() {
-      if (!this.lengthKnown) {
-       this.cacheLength();
-      }
-      return this._chunkSize;
-     }
-    }
-   });
    var properties = {
     isDevice: false,
     contents: lazyArray
@@ -3247,7 +3267,7 @@ var FS = {
   }
   Object.defineProperties(node, {
    usedBytes: {
-    get: /** @this {FSNode} */ function() {
+    get: function() {
      return this.contents.length;
     }
    }
@@ -4092,7 +4112,7 @@ function ___syscall_fcntl64(fd, cmd, varargs) {
      arg++;
     }
     var newStream;
-    newStream = FS.createStream(stream, arg);
+    newStream = FS.dupStream(stream, arg);
     return newStream.fd;
    }
 
@@ -4734,7 +4754,7 @@ function newFunc(constructor, argumentList) {
        * though at creation, the 'dummy' has the correct constructor name.  Thus,
        * objects created with IMVU.new would show up in the debugger as 'dummy',
        * which isn't very helpful.  Using IMVU.createNamedFunction addresses the
-       * issue.  Doublely-unfortunately, there's no way to write a test for this
+       * issue.  Doubly-unfortunately, there's no way to write a test for this
        * behavior.  -NRD 2013.02.22
        */ var dummy = createNamedFunction(constructor.name || "unknownFunctionName", function() {});
  dummy.prototype = constructor.prototype;
@@ -4854,7 +4874,7 @@ var heap32VectorToArray = (count, firstElement) => {
 
 /** @param {number=} numArguments */ var replacePublicSymbol = (name, value, numArguments) => {
  if (!Module.hasOwnProperty(name)) {
-  throwInternalError("Replacing nonexistant public symbol");
+  throwInternalError("Replacing nonexistent public symbol");
  }
  if (undefined !== Module[name].overloadTable && undefined !== numArguments) {
   Module[name].overloadTable[numArguments] = value;
@@ -5388,14 +5408,7 @@ function __localtime_js(time_low, time_high, tmPtr) {
  HEAP32[(((tmPtr) + (32)) >> 2)] = dst;
 }
 
-var stringToNewUTF8 = str => {
- var size = lengthBytesUTF8(str) + 1;
- var ret = _malloc(size);
- if (ret) stringToUTF8(str, ret, size);
- return ret;
-};
-
-var __tzset_js = (timezone, daylight, tzname) => {
+var __tzset_js = (timezone, daylight, std_name, dst_name) => {
  var currentYear = (new Date).getFullYear();
  var winter = new Date(currentYear, 0, 1);
  var summer = new Date(currentYear, 6, 1);
@@ -5410,14 +5423,12 @@ var __tzset_js = (timezone, daylight, tzname) => {
  }
  var winterName = extractZone(winter);
  var summerName = extractZone(summer);
- var winterNamePtr = stringToNewUTF8(winterName);
- var summerNamePtr = stringToNewUTF8(summerName);
  if (summerOffset < winterOffset) {
-  HEAPU32[((tzname) >> 2)] = winterNamePtr;
-  HEAPU32[(((tzname) + (4)) >> 2)] = summerNamePtr;
+  stringToUTF8(winterName, std_name, 7);
+  stringToUTF8(summerName, dst_name, 7);
  } else {
-  HEAPU32[((tzname) >> 2)] = summerNamePtr;
-  HEAPU32[(((tzname) + (4)) >> 2)] = winterNamePtr;
+  stringToUTF8(winterName, dst_name, 7);
+  stringToUTF8(summerName, std_name, 7);
  }
 };
 
@@ -5487,7 +5498,6 @@ _emscripten_get_now = () => performance.now();
      * @param {number=} arg
      * @param {boolean=} noSetTiming
      */ var setMainLoop = (browserIterationFunc, fps, simulateInfiniteLoop, arg, noSetTiming) => {
- assert(!Browser.mainLoop.func, "emscripten_set_main_loop: there can only be one main loop function at once: call emscripten_cancel_main_loop to cancel the previous one before setting a new one with different parameters.");
  Browser.mainLoop.func = browserIterationFunc;
  Browser.mainLoop.arg = arg;
  /** @type{number} */ var thisMainLoopId = (() => Browser.mainLoop.currentlyRunningMainloop)();
@@ -5685,7 +5695,6 @@ var Browser = {
    var url = URL.createObjectURL(b);
    var img = new Image;
    img.onload = () => {
-    assert(img.complete, `Image ${name} could not be decoded`);
     var canvas = /** @type {!HTMLCanvasElement} */ (document.createElement("canvas"));
     canvas.width = img.width;
     canvas.height = img.height;
@@ -5808,7 +5817,6 @@ var Browser = {
   }
   if (!ctx) return null;
   if (setInModule) {
-   if (!useWebGL) assert(typeof GLctx == "undefined", "cannot set in module if GLctx is used, but we are a non-GL context that would replace it");
    Module.ctx = ctx;
    if (useWebGL) GL.makeContextCurrent(contextHandle);
    Module.useWebGL = useWebGL;
@@ -6714,7 +6722,14 @@ var _eglMakeCurrent = (display, draw, read, context) => {
  /* EGL_SUCCESS */ return 1;
 };
 
-/* EGL_TRUE */ var _eglQueryString = (display, name) => {
+/* EGL_TRUE */ var stringToNewUTF8 = str => {
+ var size = lengthBytesUTF8(str) + 1;
+ var ret = _malloc(size);
+ if (ret) stringToUTF8(str, ret, size);
+ return ret;
+};
+
+var _eglQueryString = (display, name) => {
  if (display != 62e3) {
   EGL.setErrorCode(12296);
   /* EGL_BAD_DISPLAY */ return 0;
@@ -7005,7 +7020,7 @@ var JSEvents = {
 
 var currentFullscreenStrategy = {};
 
-var specialHTMLTargets = [ 0, typeof document != "undefined" ? document : 0, typeof window != "undefined" ? window : 0 ];
+/** @type {Object} */ var specialHTMLTargets = [ 0, typeof document != "undefined" ? document : 0, typeof window != "undefined" ? window : 0 ];
 
 var findEventTarget = target => {
  try {
@@ -7422,9 +7437,9 @@ var _emscripten_glBlitFramebuffer = _glBlitFramebuffer;
   } else {
    GLctx.bufferData(target, size, usage);
   }
- } else {
-  GLctx.bufferData(target, data ? HEAPU8.subarray(data, data + size) : size, usage);
+  return;
  }
+ GLctx.bufferData(target, data ? HEAPU8.subarray(data, data + size) : size, usage);
 };
 
 var _emscripten_glBufferData = _glBufferData;
@@ -9529,13 +9544,10 @@ var _emscripten_glTexStorage3D = _glTexStorage3D;
   } else if (pixels) {
    var heap = heapObjectForWebGLType(type);
    GLctx.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, heap, toTypedArrayIndex(pixels, heap));
-  } else {
-   GLctx.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, null);
+   return;
   }
-  return;
  }
- var pixelData = null;
- if (pixels) pixelData = emscriptenWebGLGetTexPixelData(type, format, width, height, pixels, 0);
+ var pixelData = pixels ? emscriptenWebGLGetTexPixelData(type, format, width, height, pixels, 0) : null;
  GLctx.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixelData);
 };
 
@@ -9781,10 +9793,12 @@ var _emscripten_glUniformMatrix4x3fv = _glUniformMatrix4x3fv;
   /* GL_INVALID_OPERATION */ err("buffer was never mapped in glUnmapBuffer");
   return 0;
  }
- if (!(mapping.access & 16)) /* GL_MAP_FLUSH_EXPLICIT_BIT */ if (true) {
-  GLctx.bufferSubData(target, mapping.offset, HEAPU8, mapping.mem, mapping.length);
- } else {
-  GLctx.bufferSubData(target, mapping.offset, HEAPU8.subarray(mapping.mem, mapping.mem + mapping.length));
+ if (!(mapping.access & 16)) {
+  /* GL_MAP_FLUSH_EXPLICIT_BIT */ if (true) {
+   GLctx.bufferSubData(target, mapping.offset, HEAPU8, mapping.mem, mapping.length);
+  } else {
+   GLctx.bufferSubData(target, mapping.offset, HEAPU8.subarray(mapping.mem, mapping.mem + mapping.length));
+  }
  }
  _free(mapping.mem);
  mapping.mem = 0;
@@ -10203,15 +10217,15 @@ var fillMouseEventData = (eventStruct, e, target) => {
  HEAP32[idx + 12] = e["movementY"];
  if (Module["canvas"]) {
   var rect = getBoundingClientRect(Module["canvas"]);
-  HEAP32[idx + 15] = e.clientX - rect.left;
-  HEAP32[idx + 16] = e.clientY - rect.top;
+  HEAP32[idx + 15] = e.clientX - (rect.left | 0);
+  HEAP32[idx + 16] = e.clientY - (rect.top | 0);
  } else {
   HEAP32[idx + 15] = 0;
   HEAP32[idx + 16] = 0;
  }
  var rect = getBoundingClientRect(target);
- HEAP32[idx + 13] = e.clientX - rect.left;
- HEAP32[idx + 14] = e.clientY - rect.top;
+ HEAP32[idx + 13] = e.clientX - (rect.left | 0);
+ HEAP32[idx + 14] = e.clientY - (rect.top | 0);
 };
 
 var registerMouseEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
@@ -10297,15 +10311,15 @@ var registerUiEventCallback = (target, userData, useCapture, callbackfunc, event
    return;
   }
   var uiEvent = JSEvents.uiEvent;
-  HEAP32[((uiEvent) >> 2)] = e.detail;
+  HEAP32[((uiEvent) >> 2)] = 0;
   HEAP32[(((uiEvent) + (4)) >> 2)] = b.clientWidth;
   HEAP32[(((uiEvent) + (8)) >> 2)] = b.clientHeight;
   HEAP32[(((uiEvent) + (12)) >> 2)] = innerWidth;
   HEAP32[(((uiEvent) + (16)) >> 2)] = innerHeight;
   HEAP32[(((uiEvent) + (20)) >> 2)] = outerWidth;
   HEAP32[(((uiEvent) + (24)) >> 2)] = outerHeight;
-  HEAP32[(((uiEvent) + (28)) >> 2)] = pageXOffset;
-  HEAP32[(((uiEvent) + (32)) >> 2)] = pageYOffset;
+  HEAP32[(((uiEvent) + (28)) >> 2)] = pageXOffset | 0;
+  HEAP32[(((uiEvent) + (32)) >> 2)] = pageYOffset | 0;
   if (getWasmTableEntry(callbackfunc)(eventTypeId, uiEvent, userData)) e.preventDefault();
  };
  var eventHandler = {
@@ -10360,10 +10374,10 @@ var registerTouchEventCallback = (target, userData, useCapture, callbackfunc, ev
    HEAP32[idx + 6] = t.pageY;
    HEAP32[idx + 7] = t.isChanged;
    HEAP32[idx + 8] = t.onTarget;
-   HEAP32[idx + 9] = t.clientX - targetRect.left;
-   HEAP32[idx + 10] = t.clientY - targetRect.top;
-   HEAP32[idx + 11] = canvasRect ? t.clientX - canvasRect.left : 0;
-   HEAP32[idx + 12] = canvasRect ? t.clientY - canvasRect.top : 0;
+   HEAP32[idx + 9] = t.clientX - (targetRect.left | 0);
+   HEAP32[idx + 10] = t.clientY - (targetRect.top | 0);
+   HEAP32[idx + 11] = canvasRect ? t.clientX - (canvasRect.left | 0) : 0;
+   HEAP32[idx + 12] = canvasRect ? t.clientY - (canvasRect.top | 0) : 0;
    idx += 13;
    if (++numTouches > 31) {
     break;
@@ -11362,56 +11376,6 @@ var listenOnce = (object, event, func) => {
   });
  });
 };
-
-var FSNode = /** @constructor */ function(parent, name, mode, rdev) {
- if (!parent) {
-  parent = this;
- }
- this.parent = parent;
- this.mount = parent.mount;
- this.mounted = null;
- this.id = FS.nextInode++;
- this.name = name;
- this.mode = mode;
- this.node_ops = {};
- this.stream_ops = {};
- this.rdev = rdev;
-};
-
-var readMode = 292 | /*292*/ 73;
-
-/*73*/ var writeMode = 146;
-
-/*146*/ Object.defineProperties(FSNode.prototype, {
- read: {
-  get: /** @this{FSNode} */ function() {
-   return (this.mode & readMode) === readMode;
-  },
-  set: /** @this{FSNode} */ function(val) {
-   val ? this.mode |= readMode : this.mode &= ~readMode;
-  }
- },
- write: {
-  get: /** @this{FSNode} */ function() {
-   return (this.mode & writeMode) === writeMode;
-  },
-  set: /** @this{FSNode} */ function(val) {
-   val ? this.mode |= writeMode : this.mode &= ~writeMode;
-  }
- },
- isFolder: {
-  get: /** @this{FSNode} */ function() {
-   return FS.isDir(this.mode);
-  }
- },
- isDevice: {
-  get: /** @this{FSNode} */ function() {
-   return FS.isChrdev(this.mode);
-  }
- }
-});
-
-FS.FSNode = FSNode;
 
 FS.createPreloadedFile = FS_createPreloadedFile;
 
