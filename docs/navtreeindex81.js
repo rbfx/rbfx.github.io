@@ -1,5 +1,8 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_frame_info.html#af040a82406f86d10bd85b8f541f61f47":[6,0,2,241,10],
+"struct_urho3_d_1_1_frame_info.html#af1ab5aa2bdaaa87631bb7b169d32581e":[6,0,2,241,4],
+"struct_urho3_d_1_1_frame_info.html#afcd8002822f1cb69e41a72eb59dae5c5":[6,0,2,241,2],
 "struct_urho3_d_1_1_frame_statistics.html":[6,0,2,242],
 "struct_urho3_d_1_1_frame_statistics.html#a171380c20eae82c4f5610a47b71bb77c":[6,0,2,242,0],
 "struct_urho3_d_1_1_frame_statistics.html#a71bf26439af1ce0ebc6fe951d68f38bc":[6,0,2,242,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_instancing_buffer_settings.html":[6,0,2,316],
 "struct_urho3_d_1_1_instancing_buffer_settings.html#a3257e1d7919998ea1d10a03b92eac652":[6,0,2,316,1],
 "struct_urho3_d_1_1_instancing_buffer_settings.html#a38313e462a4967e144364e678a049b9a":[6,0,2,316,5],
-"struct_urho3_d_1_1_instancing_buffer_settings.html#a58967243da703e641de2da372219c76c":[6,0,2,316,7],
-"struct_urho3_d_1_1_instancing_buffer_settings.html#a88d82f2a0d9799abc85fab2687df4fa3":[6,0,2,316,6],
-"struct_urho3_d_1_1_instancing_buffer_settings.html#ada2cf8423d9e0767b0673273566a00de":[6,0,2,316,0],
-"struct_urho3_d_1_1_instancing_buffer_settings.html#ae643a44fe30d3a89712e301947481b39":[6,0,2,316,3]
+"struct_urho3_d_1_1_instancing_buffer_settings.html#a58967243da703e641de2da372219c76c":[6,0,2,316,7]
 };

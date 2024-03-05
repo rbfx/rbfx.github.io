@@ -1,5 +1,8 @@
 var NAVTREEINDEX85 =
 {
+"struct_urho3_d_1_1_ray_query_result.html#a94d74afd25a4aede5f5fab38b887261e":[6,0,2,549,5],
+"struct_urho3_d_1_1_ray_query_result.html#aa6cf1605fa0dfc2017a57573afce1de8":[6,0,2,549,3],
+"struct_urho3_d_1_1_ray_query_result.html#aad9b754e53a09ad1af407032fd950cce":[6,0,2,549,1],
 "struct_urho3_d_1_1_ray_query_result.html#ae52c2e8ab4b1250cedce42fec9b2719b":[6,0,2,549,4],
 "struct_urho3_d_1_1_raytracer_geometry.html":[6,0,2,550],
 "struct_urho3_d_1_1_raytracer_geometry.html#a08da4b4af06f7d81e95e524a694007ff":[6,0,2,550,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX85 =
 "struct_urho3_d_1_1_scene_processor_settings.html#aeb3884200d87c727f0c4183240958ec0":[6,0,2,609,1],
 "struct_urho3_d_1_1_scene_processor_settings.html#afab6603ea9e93ec76fce2d9af3bf1483":[6,0,2,609,7],
 "struct_urho3_d_1_1_shader_define_array.html":[6,0,2,628],
-"struct_urho3_d_1_1_shader_define_array.html#a02865d71a429d074405a848894cc6610":[6,0,2,628,1],
-"struct_urho3_d_1_1_shader_define_array.html#a4dc39352e0a17bac7165d9dfd0e29b66":[6,0,2,628,0],
-"struct_urho3_d_1_1_shader_define_array.html#a69c82620d00a33c2c0935cc073116734":[6,0,2,628,6],
-"struct_urho3_d_1_1_shader_define_array.html#aa169100a290ddb4de5d1815bf48de658":[6,0,2,628,5]
+"struct_urho3_d_1_1_shader_define_array.html#a02865d71a429d074405a848894cc6610":[6,0,2,628,1]
 };
