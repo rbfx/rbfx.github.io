@@ -10,6 +10,7 @@ var class_urho3_d_1_1_navigation_mesh =
     [ "BuildTiles", "class_urho3_d_1_1_navigation_mesh.html#a97f29be1321a1196baf17d5f9caf5e8e", null ],
     [ "BuildTilesFromGeometry", "class_urho3_d_1_1_navigation_mesh.html#aff5b1128bb644a5897a252d819107284", null ],
     [ "BuildTilesInRegion", "class_urho3_d_1_1_navigation_mesh.html#abda7f19ac6d568f03b50eaeafb866ae1", null ],
+    [ "Clear", "class_urho3_d_1_1_navigation_mesh.html#a53cfadadf14c88b0a5f27f2ee9149791", null ],
     [ "CollectGeometries", "class_urho3_d_1_1_navigation_mesh.html#a6526abda6d6d5fd32d13fe210c353a7c", null ],
     [ "CollectGeometries", "class_urho3_d_1_1_navigation_mesh.html#aa4bd017ee11a26bb637aed804c6a6768", null ],
     [ "DrawDebugGeometry", "class_urho3_d_1_1_navigation_mesh.html#a250c94d8ee843a6219679daccf951a1f", null ],

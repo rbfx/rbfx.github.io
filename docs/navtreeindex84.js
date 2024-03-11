@@ -1,5 +1,6 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_package_entry.html#aebdc01ffe647e9ff7e0b246d60ff3ce5":[6,0,2,471,1],
 "struct_urho3_d_1_1_package_entry.html#afc3fe731c4eae884defb611e67b49ca2":[6,0,2,471,0],
 "struct_urho3_d_1_1_package_upload.html":[6,0,2,473],
 "struct_urho3_d_1_1_package_upload.html#a23e87e9d382e9d24cde841262f181bd5":[6,0,2,473,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_ray_query_result.html#a1b3e7a655ad248c700c891dd0fb2cbdd":[6,0,2,549,0],
 "struct_urho3_d_1_1_ray_query_result.html#a3639c0c1b9857cba19eccf53261019de":[6,0,2,549,6],
 "struct_urho3_d_1_1_ray_query_result.html#a48ec7438ad7e3e4a4bb1a5b93582b8eb":[6,0,2,549,2],
-"struct_urho3_d_1_1_ray_query_result.html#a7f595f6027f1cdfcdb1bc286c551ce04":[6,0,2,549,7],
-"struct_urho3_d_1_1_ray_query_result.html#a844538e0f53394d318f90c653073eac6":[6,0,2,549,8]
+"struct_urho3_d_1_1_ray_query_result.html#a7f595f6027f1cdfcdb1bc286c551ce04":[6,0,2,549,7]
 };

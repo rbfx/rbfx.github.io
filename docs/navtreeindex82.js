@@ -1,5 +1,6 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_instancing_buffer_settings.html#a58967243da703e641de2da372219c76c":[6,0,2,316,7],
 "struct_urho3_d_1_1_instancing_buffer_settings.html#a88d82f2a0d9799abc85fab2687df4fa3":[6,0,2,316,6],
 "struct_urho3_d_1_1_instancing_buffer_settings.html#ada2cf8423d9e0767b0673273566a00de":[6,0,2,316,0],
 "struct_urho3_d_1_1_instancing_buffer_settings.html#ae643a44fe30d3a89712e301947481b39":[6,0,2,316,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html#acf5eb3403559d2972855b3f37150bbbf":[6,0,2,375,1,1],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html#acfd89153999ccc3ce529b839124ed9ab":[6,0,2,375,1,0],
 "struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html#af671242697189ffca68fb63ef5a90bc0":[6,0,2,375,1,2],
-"struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html":[6,0,2,375,2],
-"struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html#a30b47c62dba1c5a3597cd4c30e6db4a3":[6,0,2,375,2,0]
+"struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html":[6,0,2,375,2]
 };
