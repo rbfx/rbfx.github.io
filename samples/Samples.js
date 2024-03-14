@@ -7521,9 +7521,9 @@ var _emscripten_glCompileShader = _glCompileShader;
  if (true) {
   if (GLctx.currentPixelUnpackBufferBinding || !imageSize) {
    GLctx.compressedTexImage2D(target, level, internalFormat, width, height, border, imageSize, data);
-  } else {
-   GLctx.compressedTexImage2D(target, level, internalFormat, width, height, border, HEAPU8, data, imageSize);
+   return;
   }
+  GLctx.compressedTexImage2D(target, level, internalFormat, width, height, border, HEAPU8, data, imageSize);
   return;
  }
  GLctx.compressedTexImage2D(target, level, internalFormat, width, height, border, data ? HEAPU8.subarray((data), data + imageSize) : null);
@@ -7545,9 +7545,9 @@ var _emscripten_glCompressedTexImage3D = _glCompressedTexImage3D;
  if (true) {
   if (GLctx.currentPixelUnpackBufferBinding || !imageSize) {
    GLctx.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, imageSize, data);
-  } else {
-   GLctx.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, HEAPU8, data, imageSize);
+   return;
   }
+  GLctx.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, HEAPU8, data, imageSize);
   return;
  }
  GLctx.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, data ? HEAPU8.subarray((data), data + imageSize) : null);
@@ -9371,11 +9371,11 @@ var emscriptenWebGLGetTexPixelData = (type, format, width, height, pixels, inter
  if (true) {
   if (GLctx.currentPixelPackBufferBinding) {
    GLctx.readPixels(x, y, width, height, format, type, pixels);
-  } else {
-   var heap = heapObjectForWebGLType(type);
-   var target = toTypedArrayIndex(pixels, heap);
-   GLctx.readPixels(x, y, width, height, format, type, heap, target);
+   return;
   }
+  var heap = heapObjectForWebGLType(type);
+  var target = toTypedArrayIndex(pixels, heap);
+  GLctx.readPixels(x, y, width, height, format, type, heap, target);
   return;
  }
  var pixelData = emscriptenWebGLGetTexPixelData(type, format, width, height, pixels, format);
@@ -9481,15 +9481,17 @@ var _emscripten_glStencilOpSeparate = _glStencilOpSeparate;
  if (true) {
   if (GLctx.currentPixelUnpackBufferBinding) {
    GLctx.texImage2D(target, level, internalFormat, width, height, border, format, type, pixels);
-  } else if (pixels) {
-   var heap = heapObjectForWebGLType(type);
-   GLctx.texImage2D(target, level, internalFormat, width, height, border, format, type, heap, toTypedArrayIndex(pixels, heap));
-  } else {
-   GLctx.texImage2D(target, level, internalFormat, width, height, border, format, type, null);
+   return;
   }
-  return;
+  if (pixels) {
+   var heap = heapObjectForWebGLType(type);
+   var index = toTypedArrayIndex(pixels, heap);
+   GLctx.texImage2D(target, level, internalFormat, width, height, border, format, type, heap, index);
+   return;
+  }
  }
- GLctx.texImage2D(target, level, internalFormat, width, height, border, format, type, pixels ? emscriptenWebGLGetTexPixelData(type, format, width, height, pixels, internalFormat) : null);
+ var pixelData = pixels ? emscriptenWebGLGetTexPixelData(type, format, width, height, pixels, internalFormat) : null;
+ GLctx.texImage2D(target, level, internalFormat, width, height, border, format, type, pixelData);
 };
 
 var _emscripten_glTexImage2D = _glTexImage2D;
@@ -9541,7 +9543,9 @@ var _emscripten_glTexStorage3D = _glTexStorage3D;
  if (true) {
   if (GLctx.currentPixelUnpackBufferBinding) {
    GLctx.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
-  } else if (pixels) {
+   return;
+  }
+  if (pixels) {
    var heap = heapObjectForWebGLType(type);
    GLctx.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, heap, toTypedArrayIndex(pixels, heap));
    return;
@@ -9796,9 +9800,7 @@ var _emscripten_glUniformMatrix4x3fv = _glUniformMatrix4x3fv;
  if (!(mapping.access & 16)) {
   /* GL_MAP_FLUSH_EXPLICIT_BIT */ if (true) {
    GLctx.bufferSubData(target, mapping.offset, HEAPU8, mapping.mem, mapping.length);
-  } else {
-   GLctx.bufferSubData(target, mapping.offset, HEAPU8.subarray(mapping.mem, mapping.mem + mapping.length));
-  }
+  } else GLctx.bufferSubData(target, mapping.offset, HEAPU8.subarray(mapping.mem, mapping.mem + mapping.length));
  }
  _free(mapping.mem);
  mapping.mem = 0;
