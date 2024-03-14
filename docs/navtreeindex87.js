@@ -1,5 +1,14 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_spriter_1_1_ref.html#ae50b225e63c62ba4a8965c15f5ad665f":[6,0,2,3,8,5],
+"struct_urho3_d_1_1_spriter_1_1_ref.html#ae6c84ef6590ffcedcdb8ef46cc51357e":[6,0,2,3,8,0],
+"struct_urho3_d_1_1_spriter_1_1_spatial_info.html":[6,0,2,3,9],
+"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a0563f1076ffe63f429e67e1aa7da1656":[6,0,2,3,9,0],
+"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a1ca6d1f4e164fe46605b9c0d07cee106":[6,0,2,3,9,6],
+"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a21ecafb274425a3f30a3f79c3b3a3184":[6,0,2,3,9,4],
+"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a54895beedc234906cd824365ce3543ba":[6,0,2,3,9,5],
+"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a6205a9aa8a135193da266c0bdf44039e":[6,0,2,3,9,8],
+"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a687346104f91d26b0259b23c6f8b0872":[6,0,2,3,9,7],
 "struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a992ca06050684783557d500d20143c81":[6,0,2,3,9,2],
 "struct_urho3_d_1_1_spriter_1_1_spatial_info.html#aad8bedb5f5a07249a72d54827cbe3f25":[6,0,2,3,9,1],
 "struct_urho3_d_1_1_spriter_1_1_spatial_info.html#aeebd5a8a72189e2b81c4967722732d4a":[6,0,2,3,9,3],
@@ -138,6 +147,7 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_tetrahedron.html#ae459df021947a99bf01091c49e9bd480":[6,0,2,714,4],
 "struct_urho3_d_1_1_tetrahedron.html#ae8dd0f76f08c378ddba10dd0220bb6fd":[6,0,2,714,5],
 "struct_urho3_d_1_1_text_params3_d.html":[6,0,2,717],
+"struct_urho3_d_1_1_text_params3_d.html#a07d1f61d68601b09bc7d2a170268fab4":[6,0,2,717,14],
 "struct_urho3_d_1_1_text_params3_d.html#a1eb803e9f0798f2c9b84b92416228f5d":[6,0,2,717,9],
 "struct_urho3_d_1_1_text_params3_d.html#a1fdb4004542f0e3853c8275be23c710c":[6,0,2,717,8],
 "struct_urho3_d_1_1_text_params3_d.html#a28cc42ea8d828467b0defe8db0602568":[6,0,2,717,2],
@@ -239,15 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_u_i_batch_state_key.html#a5ed6141d6eab0fef15cb0b3e531167e3":[6,0,2,770,0],
 "struct_urho3_d_1_1_u_i_batch_state_key.html#a7ed0f6ac283e8f3323f82156182889b6":[6,0,2,770,5],
 "struct_urho3_d_1_1_u_i_batch_state_key.html#a81c0fb0c2ed3a8b007ae1b2396d02eee":[6,0,2,770,1],
-"struct_urho3_d_1_1_u_i_batch_state_key.html#a99e0b42d3b72570c4dfe5f7edea7440b":[6,0,2,770,2],
-"struct_urho3_d_1_1_update_context.html":[6,0,2,776],
-"struct_urho3_d_1_1_update_context.html#a03c0253799b19b16f3aea7d76f3f0af5":[6,0,2,776,3],
-"struct_urho3_d_1_1_update_context.html#a52d6f54bc28c26a481e39d4ccf77e877":[6,0,2,776,6],
-"struct_urho3_d_1_1_update_context.html#a78e989274c24ede9fc4c77c884a4e007":[6,0,2,776,5],
-"struct_urho3_d_1_1_update_context.html#a7edabf33d77e88c03a61a8dc5043c592":[6,0,2,776,4],
-"struct_urho3_d_1_1_update_context.html#a9ff1202e1729b378f01c7af84e3c4638":[6,0,2,776,2],
-"struct_urho3_d_1_1_update_context.html#ab0fb7f3d4fdcda3f3fb05cfeca51a131":[6,0,2,776,1],
-"struct_urho3_d_1_1_update_context.html#ae4f6c7f3fe0b18d3746eb7cfb7dca185":[6,0,2,776,0],
-"struct_urho3_d_1_1_v_anim_event_frame.html":[6,0,2,782],
-"struct_urho3_d_1_1_v_anim_event_frame.html#a5691caf627eb0168c196a80f5e98d764":[6,0,2,782,1]
+"struct_urho3_d_1_1_u_i_batch_state_key.html#a99e0b42d3b72570c4dfe5f7edea7440b":[6,0,2,770,2]
 };

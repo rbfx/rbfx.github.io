@@ -1,5 +1,14 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_package_download.html#a1d248dbabcd081a6a417a483581b78d6":[6,0,2,470,0],
+"struct_urho3_d_1_1_package_download.html#a2818e5e0caaff75074fd16fea90ace88":[6,0,2,470,2],
+"struct_urho3_d_1_1_package_download.html#a3b0ef24bdead99bb8dd16209b092edfb":[6,0,2,470,1],
+"struct_urho3_d_1_1_package_download.html#a6d7782a9e49a72075bebfab0a9c4d926":[6,0,2,470,6],
+"struct_urho3_d_1_1_package_download.html#a9f06d96122b78a06ca53d4aaa0d83c67":[6,0,2,470,5],
+"struct_urho3_d_1_1_package_download.html#ad068fc1d198436e967a6751096b824e6":[6,0,2,470,4],
+"struct_urho3_d_1_1_package_download.html#afd441a2c5cc359ef3d5ce7d029350cab":[6,0,2,470,3],
+"struct_urho3_d_1_1_package_entry.html":[6,0,2,471],
+"struct_urho3_d_1_1_package_entry.html#ae7f7f1f2fe2d8a32c40e7fea095edf1a":[6,0,2,471,2],
 "struct_urho3_d_1_1_package_entry.html#aebdc01ffe647e9ff7e0b246d60ff3ce5":[6,0,2,471,1],
 "struct_urho3_d_1_1_package_entry.html#afc3fe731c4eae884defb611e67b49ca2":[6,0,2,471,0],
 "struct_urho3_d_1_1_package_upload.html":[6,0,2,473],
@@ -240,14 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_pipeline_batch_group.html#ae5b6d961b686742676c0c70bf3f9fa56":[6,0,2,514,1],
 "struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html":[6,0,2,523,0],
 "struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html#aa0c0b8636d680d2f1ede30b977de5d7b":[6,0,2,523,0,0],
-"struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html#ae98abb63c4855a67410c282231e3bb21":[6,0,2,523,0,1],
-"struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html":[6,0,2,524,0],
-"struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html#a9a5e22ce6f825962ac427976f0c3fb51":[6,0,2,524,0,2],
-"struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html#abaf9b8fafc7da6c200f96288129b687b":[6,0,2,524,0,1],
-"struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html#aea56cce130d686ac6d5720a39f0fa433":[6,0,2,524,0,0],
-"struct_urho3_d_1_1_ray_query_result.html":[6,0,2,549],
-"struct_urho3_d_1_1_ray_query_result.html#a1b3e7a655ad248c700c891dd0fb2cbdd":[6,0,2,549,0],
-"struct_urho3_d_1_1_ray_query_result.html#a3639c0c1b9857cba19eccf53261019de":[6,0,2,549,6],
-"struct_urho3_d_1_1_ray_query_result.html#a48ec7438ad7e3e4a4bb1a5b93582b8eb":[6,0,2,549,2],
-"struct_urho3_d_1_1_ray_query_result.html#a7f595f6027f1cdfcdb1bc286c551ce04":[6,0,2,549,7]
+"struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html#ae98abb63c4855a67410c282231e3bb21":[6,0,2,523,0,1]
 };

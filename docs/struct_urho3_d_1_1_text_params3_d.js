@@ -13,5 +13,6 @@ var struct_urho3_d_1_1_text_params3_d =
     [ "snapToPixels_", "struct_urho3_d_1_1_text_params3_d.html#aad8aff855b8daf6c88ea66b9b7b6e83f", null ],
     [ "text_", "struct_urho3_d_1_1_text_params3_d.html#af535a96de8462d96e6a17a74a9d53ad7", null ],
     [ "textAlignment_", "struct_urho3_d_1_1_text_params3_d.html#a560a9f1391142cdb6c67507bb6efbd59", null ],
-    [ "verticalAlignment_", "struct_urho3_d_1_1_text_params3_d.html#a649b6b996be30d7d631741c46c9e5388", null ]
+    [ "verticalAlignment_", "struct_urho3_d_1_1_text_params3_d.html#a649b6b996be30d7d631741c46c9e5388", null ],
+    [ "viewMask_", "struct_urho3_d_1_1_text_params3_d.html#a07d1f61d68601b09bc7d2a170268fab4", null ]
 ];

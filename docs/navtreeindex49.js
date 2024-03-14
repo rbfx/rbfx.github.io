@@ -1,5 +1,14 @@
 var NAVTREEINDEX49 =
 {
+"class_urho3_d_1_1_plugin_manager.html#a875b03a80a88ac67638a9e402d091ce9":[6,0,2,523,17],
+"class_urho3_d_1_1_plugin_manager.html#a88b55e84fda229e3d8f82f4d27e42fdd":[6,0,2,523,2],
+"class_urho3_d_1_1_plugin_manager.html#a8de067bb07fd6b9871f84df74167db76":[6,0,2,523,45],
+"class_urho3_d_1_1_plugin_manager.html#a918a4e2b59b6498f14854e2675d47003":[6,0,2,523,26],
+"class_urho3_d_1_1_plugin_manager.html#a98acd450932a11a78dd28300c8d72fd4":[6,0,2,523,11],
+"class_urho3_d_1_1_plugin_manager.html#a9e79cd07530dd04ededac5120c880e05":[6,0,2,523,16],
+"class_urho3_d_1_1_plugin_manager.html#aa978df15129d466455faa8e3cea922b7":[6,0,2,523,7],
+"class_urho3_d_1_1_plugin_manager.html#ab3c3c61e586aeb467bbb5f07bcc8c698":[6,0,2,523,5],
+"class_urho3_d_1_1_plugin_manager.html#ab7102eca7d78380e49024a0a7af5b044":[6,0,2,523,28],
 "class_urho3_d_1_1_plugin_manager.html#ab903d2fc460578f672dff2d1020ad7bb":[6,0,2,523,24],
 "class_urho3_d_1_1_plugin_manager.html#abcd09c27ab8136c1c2117096463963e3":[6,0,2,523,27],
 "class_urho3_d_1_1_plugin_manager.html#abd4d3c5303850ead692fd84f44c89eb6":[6,0,2,523,37],
@@ -240,14 +249,5 @@ var NAVTREEINDEX49 =
 "class_urho3_d_1_1_prefab_writer_to_archive.html#a3c164120c33e826cfcdcd323ac6e4401":[6,0,2,537,13],
 "class_urho3_d_1_1_prefab_writer_to_archive.html#a442e9d6346949b4cda07e4c67bc177cf":[6,0,2,537,6],
 "class_urho3_d_1_1_prefab_writer_to_archive.html#a46a3e34b761d588adb425ab9f86a3f82":[6,0,2,537,2],
-"class_urho3_d_1_1_prefab_writer_to_archive.html#a58bc049f0b9c521425a4054c284d3771":[6,0,2,537,10],
-"class_urho3_d_1_1_prefab_writer_to_archive.html#a6d5092358161bc81adefb2660656a478":[6,0,2,537,17],
-"class_urho3_d_1_1_prefab_writer_to_archive.html#a819a6686fbabff4dd74a1d98a85cf6ac":[6,0,2,537,18],
-"class_urho3_d_1_1_prefab_writer_to_archive.html#a828c1e04ab0e59b219afa75ed9ba7ac6":[6,0,2,537,12],
-"class_urho3_d_1_1_prefab_writer_to_archive.html#a8883d4834053be6b700583581c93e12a":[6,0,2,537,8],
-"class_urho3_d_1_1_prefab_writer_to_archive.html#a8ca08e590cac82512c4e52813da79496":[6,0,2,537,14],
-"class_urho3_d_1_1_prefab_writer_to_archive.html#a9b226fdcad85a309e80985c5586d8b93":[6,0,2,537,9],
-"class_urho3_d_1_1_prefab_writer_to_archive.html#aa75af43ac82c3bab98933aff126df873":[6,0,2,537,15],
-"class_urho3_d_1_1_prefab_writer_to_archive.html#adc4ccac51dd2ee41919d92b658b040c7":[6,0,2,537,5],
-"class_urho3_d_1_1_prefab_writer_to_archive.html#ae60a3f4cbaa2dc48e96d2ba624870f3d":[6,0,2,537,11]
+"class_urho3_d_1_1_prefab_writer_to_archive.html#a58bc049f0b9c521425a4054c284d3771":[6,0,2,537,10]
 };

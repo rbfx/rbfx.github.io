@@ -1,5 +1,14 @@
 var NAVTREEINDEX77 =
 {
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#aa48f3f8e112b84edfd930b017aa22c7d":[6,0,14,26],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ab3133a2e741a4f912457b161398969c8":[6,0,14,23],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ab507bc864f5e8747ff8f5e53def6c3c8":[6,0,14,18],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ab7c45bf1b557c98f6c873e548d905b2b":[6,0,14,16],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#abf046874b02fc70b1557047669f0c5cb":[6,0,14,28],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#abf58bce89d8fc8e7ce8b7be1ce4d6dff":[6,0,14,0],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ac033c0a34b9f1a030807b6c186bffbfd":[6,0,14,15],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ac36f5c2aab0aa0eb73ae3312f2419280":[6,0,14,19],
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ac699192af963e96d60a1a8e4ef74209b":[6,0,14,10],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#acffbc8e39bf16ea35bf2d67b66a21427":[6,0,14,20],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ad5e18122c12d03bef67770c71850666e":[6,0,14,14],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ae1f2a9cffbec7917a910db85e4501f06":[6,0,14,5],
@@ -240,14 +249,5 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_attribute_hook_context.html#aff9e20f4984fef9281d6a49df60a1eb8":[6,0,2,56,0],
 "struct_urho3_d_1_1_attribute_info.html":[6,0,2,57],
 "struct_urho3_d_1_1_attribute_info.html#a04cf4412d6b72477d58fe12b514c86d9":[6,0,2,57,19],
-"struct_urho3_d_1_1_attribute_info.html#a0aed1b995fec36f15d8f60e513295e81":[6,0,2,57,3],
-"struct_urho3_d_1_1_attribute_info.html#a1438c3d3b0e26e84b1d7267ff0a7709e":[6,0,2,57,8],
-"struct_urho3_d_1_1_attribute_info.html#a1949a627722b80a86c86b1ba52dc7fb8":[6,0,2,57,16],
-"struct_urho3_d_1_1_attribute_info.html#a1d00cf1b7ab85264b861d368b1ae40e6":[6,0,2,57,14],
-"struct_urho3_d_1_1_attribute_info.html#a2562e346b9348dac9acb7deedb7b4ddc":[6,0,2,57,7],
-"struct_urho3_d_1_1_attribute_info.html#a347f06301f37db008036b7eeda9355cf":[6,0,2,57,2],
-"struct_urho3_d_1_1_attribute_info.html#a3c5455f9bd3427c38b895fda34169346":[6,0,2,57,15],
-"struct_urho3_d_1_1_attribute_info.html#a4e6874c208b23f645b138e14f25c88a4":[6,0,2,57,17],
-"struct_urho3_d_1_1_attribute_info.html#a59dbc7cabef628ac98629a4ef6fee25e":[6,0,2,57,18],
-"struct_urho3_d_1_1_attribute_info.html#a6525b4285c0ddd489026ef6c800d6931":[6,0,2,57,11]
+"struct_urho3_d_1_1_attribute_info.html#a0aed1b995fec36f15d8f60e513295e81":[6,0,2,57,3]
 };

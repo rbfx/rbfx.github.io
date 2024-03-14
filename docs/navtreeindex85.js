@@ -1,5 +1,14 @@
 var NAVTREEINDEX85 =
 {
+"struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html":[6,0,2,524,0],
+"struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html#a9a5e22ce6f825962ac427976f0c3fb51":[6,0,2,524,0,2],
+"struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html#abaf9b8fafc7da6c200f96288129b687b":[6,0,2,524,0,1],
+"struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html#aea56cce130d686ac6d5720a39f0fa433":[6,0,2,524,0,0],
+"struct_urho3_d_1_1_ray_query_result.html":[6,0,2,549],
+"struct_urho3_d_1_1_ray_query_result.html#a1b3e7a655ad248c700c891dd0fb2cbdd":[6,0,2,549,0],
+"struct_urho3_d_1_1_ray_query_result.html#a3639c0c1b9857cba19eccf53261019de":[6,0,2,549,6],
+"struct_urho3_d_1_1_ray_query_result.html#a48ec7438ad7e3e4a4bb1a5b93582b8eb":[6,0,2,549,2],
+"struct_urho3_d_1_1_ray_query_result.html#a7f595f6027f1cdfcdb1bc286c551ce04":[6,0,2,549,7],
 "struct_urho3_d_1_1_ray_query_result.html#a844538e0f53394d318f90c653073eac6":[6,0,2,549,8],
 "struct_urho3_d_1_1_ray_query_result.html#a94d74afd25a4aede5f5fab38b887261e":[6,0,2,549,5],
 "struct_urho3_d_1_1_ray_query_result.html#aa6cf1605fa0dfc2017a57573afce1de8":[6,0,2,549,3],
@@ -240,14 +249,5 @@ var NAVTREEINDEX85 =
 "struct_urho3_d_1_1_scene_processor_settings.html#a2ca9ea2f208557babc2299c928379b2f":[6,0,2,609,12],
 "struct_urho3_d_1_1_scene_processor_settings.html#a2e7dd16607cc14e3b79e1abbd2801bae":[6,0,2,609,9],
 "struct_urho3_d_1_1_scene_processor_settings.html#a37d20a057982dcce1a6cf074c73f6b26":[6,0,2,609,3],
-"struct_urho3_d_1_1_scene_processor_settings.html#a48dbd0625b62c1c8eef305866b6b5de2":[6,0,2,609,2],
-"struct_urho3_d_1_1_scene_processor_settings.html#a499dad497f7366ec53752155253d0ecd":[6,0,2,609,5],
-"struct_urho3_d_1_1_scene_processor_settings.html#a7b4427214caf783fea5792744dad8024":[6,0,2,609,10],
-"struct_urho3_d_1_1_scene_processor_settings.html#a7fc8153a42a855ab07b7b4631f998728":[6,0,2,609,4],
-"struct_urho3_d_1_1_scene_processor_settings.html#a8593d0bd77c84a839fd1d476e35522e8":[6,0,2,609,8],
-"struct_urho3_d_1_1_scene_processor_settings.html#a9418f554672ff1bb8c5af057f4972892":[6,0,2,609,11],
-"struct_urho3_d_1_1_scene_processor_settings.html#aa95055416d991dfcdd4d5a1213244d92":[6,0,2,609,0],
-"struct_urho3_d_1_1_scene_processor_settings.html#aeb3884200d87c727f0c4183240958ec0":[6,0,2,609,1],
-"struct_urho3_d_1_1_scene_processor_settings.html#afab6603ea9e93ec76fce2d9af3bf1483":[6,0,2,609,7],
-"struct_urho3_d_1_1_shader_define_array.html":[6,0,2,628]
+"struct_urho3_d_1_1_scene_processor_settings.html#a48dbd0625b62c1c8eef305866b6b5de2":[6,0,2,609,2]
 };

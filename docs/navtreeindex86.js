@@ -1,5 +1,14 @@
 var NAVTREEINDEX86 =
 {
+"struct_urho3_d_1_1_scene_processor_settings.html#a499dad497f7366ec53752155253d0ecd":[6,0,2,609,5],
+"struct_urho3_d_1_1_scene_processor_settings.html#a7b4427214caf783fea5792744dad8024":[6,0,2,609,10],
+"struct_urho3_d_1_1_scene_processor_settings.html#a7fc8153a42a855ab07b7b4631f998728":[6,0,2,609,4],
+"struct_urho3_d_1_1_scene_processor_settings.html#a8593d0bd77c84a839fd1d476e35522e8":[6,0,2,609,8],
+"struct_urho3_d_1_1_scene_processor_settings.html#a9418f554672ff1bb8c5af057f4972892":[6,0,2,609,11],
+"struct_urho3_d_1_1_scene_processor_settings.html#aa95055416d991dfcdd4d5a1213244d92":[6,0,2,609,0],
+"struct_urho3_d_1_1_scene_processor_settings.html#aeb3884200d87c727f0c4183240958ec0":[6,0,2,609,1],
+"struct_urho3_d_1_1_scene_processor_settings.html#afab6603ea9e93ec76fce2d9af3bf1483":[6,0,2,609,7],
+"struct_urho3_d_1_1_shader_define_array.html":[6,0,2,628],
 "struct_urho3_d_1_1_shader_define_array.html#a02865d71a429d074405a848894cc6610":[6,0,2,628,1],
 "struct_urho3_d_1_1_shader_define_array.html#a4dc39352e0a17bac7165d9dfd0e29b66":[6,0,2,628,0],
 "struct_urho3_d_1_1_shader_define_array.html#a69c82620d00a33c2c0935cc073116734":[6,0,2,628,6],
@@ -240,14 +249,5 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_spriter_1_1_ref.html#a9e36fda0bb9caf38563557627b140188":[6,0,2,3,8,4],
 "struct_urho3_d_1_1_spriter_1_1_ref.html#aaabf7a93b715a4eaa9f010f9c2f4f4e9":[6,0,2,3,8,3],
 "struct_urho3_d_1_1_spriter_1_1_ref.html#ac7b6487a9203d6d3f998396a4032046f":[6,0,2,3,8,1],
-"struct_urho3_d_1_1_spriter_1_1_ref.html#ad8760b4ca53b19e65b8239ab139fbdbb":[6,0,2,3,8,7],
-"struct_urho3_d_1_1_spriter_1_1_ref.html#ae50b225e63c62ba4a8965c15f5ad665f":[6,0,2,3,8,5],
-"struct_urho3_d_1_1_spriter_1_1_ref.html#ae6c84ef6590ffcedcdb8ef46cc51357e":[6,0,2,3,8,0],
-"struct_urho3_d_1_1_spriter_1_1_spatial_info.html":[6,0,2,3,9],
-"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a0563f1076ffe63f429e67e1aa7da1656":[6,0,2,3,9,0],
-"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a1ca6d1f4e164fe46605b9c0d07cee106":[6,0,2,3,9,6],
-"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a21ecafb274425a3f30a3f79c3b3a3184":[6,0,2,3,9,4],
-"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a54895beedc234906cd824365ce3543ba":[6,0,2,3,9,5],
-"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a6205a9aa8a135193da266c0bdf44039e":[6,0,2,3,9,8],
-"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#a687346104f91d26b0259b23c6f8b0872":[6,0,2,3,9,7]
+"struct_urho3_d_1_1_spriter_1_1_ref.html#ad8760b4ca53b19e65b8239ab139fbdbb":[6,0,2,3,8,7]
 };
