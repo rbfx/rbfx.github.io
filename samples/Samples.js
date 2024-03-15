@@ -148,10 +148,6 @@ var wasmBinary;
 
 if (Module["wasmBinary"]) wasmBinary = Module["wasmBinary"];
 
-if (typeof WebAssembly != "object") {
- abort("no native wasm support detected");
-}
-
 function intArrayFromBase64(s) {
  if (typeof ENVIRONMENT_IS_NODE != "undefined" && ENVIRONMENT_IS_NODE) {
   var buf = Buffer.from(s, "base64");
