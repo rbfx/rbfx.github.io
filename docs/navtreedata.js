@@ -142,9 +142,9 @@ var NAVTREEINDEX =
 "struct_urho3_d_1_1_material_inspector_widget_1_1_property_desc.html#aced15b63d64b36a4a04f951e992c9481",
 "struct_urho3_d_1_1_package_download.html#a1d248dbabcd081a6a417a483581b78d6",
 "struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html",
-"struct_urho3_d_1_1_scene_processor_settings.html#a499dad497f7366ec53752155253d0ecd",
-"struct_urho3_d_1_1_spriter_1_1_ref.html#ae50b225e63c62ba4a8965c15f5ad665f",
-"struct_urho3_d_1_1_update_context.html"
+"struct_urho3_d_1_1_scene_processor_settings.html#a37d20a057982dcce1a6cf074c73f6b26",
+"struct_urho3_d_1_1_spriter_1_1_ref.html#ac7b6487a9203d6d3f998396a4032046f",
+"struct_urho3_d_1_1_u_i_batch_state_key.html#a81c0fb0c2ed3a8b007ae1b2396d02eee"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
