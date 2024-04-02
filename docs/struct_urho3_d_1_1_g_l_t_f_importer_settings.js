@@ -15,5 +15,5 @@ var struct_urho3_d_1_1_g_l_t_f_importer_settings =
     [ "preview_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#a5307e7a4a54652f3036fbad4e599575d", null ],
     [ "rotation_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#abaf1a5288355b9034a9f9535bfbad9fa", null ],
     [ "scale_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#a5c57861ca4668552213407ce97cf32f8", null ],
-    [ "skipTag_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#aab5a60bc7864ac1b1f2473f3199537ea", null ]
+    [ "skipTags_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#ab7fe0a4b38da95977cbb6c594b9fefc7", null ]
 ];
