@@ -467,6 +467,7 @@ var annotated_dup =
       [ "IKLimbSolver", "class_urho3_d_1_1_i_k_limb_solver.html", "class_urho3_d_1_1_i_k_limb_solver" ],
       [ "IKNode", "struct_urho3_d_1_1_i_k_node.html", "struct_urho3_d_1_1_i_k_node" ],
       [ "IKNodeSegment", "struct_urho3_d_1_1_i_k_node_segment.html", "struct_urho3_d_1_1_i_k_node_segment" ],
+      [ "IKRotateTo", "class_urho3_d_1_1_i_k_rotate_to.html", "class_urho3_d_1_1_i_k_rotate_to" ],
       [ "IKSettings", "struct_urho3_d_1_1_i_k_settings.html", "struct_urho3_d_1_1_i_k_settings" ],
       [ "IKSolver", "class_urho3_d_1_1_i_k_solver.html", "class_urho3_d_1_1_i_k_solver" ],
       [ "IKSolverComponent", "class_urho3_d_1_1_i_k_solver_component.html", "class_urho3_d_1_1_i_k_solver_component" ],
