@@ -1,7 +1,5 @@
 var NAVTREEINDEX56 =
 {
-"class_urho3_d_1_1_rml_navigation_manager.html#aeba0b6d7f8c46c91e3b5c04440fe94c7":[6,0,2,598,21],
-"class_urho3_d_1_1_rml_navigation_manager.html#af095cea97f388acec3421ab50fbce62b":[6,0,2,598,24],
 "class_urho3_d_1_1_rml_serializable_inspector.html":[6,0,2,599],
 "class_urho3_d_1_1_rml_serializable_inspector.html#a0767bff5240f458a357837b95dc6da18":[6,0,2,599,5],
 "class_urho3_d_1_1_rml_serializable_inspector.html#a0b7125ca8ae34438e62374779593dc6b":[6,0,2,599,3],
@@ -249,5 +247,7 @@ var NAVTREEINDEX56 =
 "class_urho3_d_1_1_scene_hierarchy_widget.html#a1871390f373e259b912721df75a61d40":[6,0,2,606,15],
 "class_urho3_d_1_1_scene_hierarchy_widget.html#a22cbe5fd2bb3cc739fa0b7e56f9e2ce4":[6,0,2,606,18],
 "class_urho3_d_1_1_scene_hierarchy_widget.html#a292fb01274c2f78ffe4fd70f621feb63":[6,0,2,606,5],
-"class_urho3_d_1_1_scene_hierarchy_widget.html#a3291870e303c44d59fceb100b0c6dfa7":[6,0,2,606,43]
+"class_urho3_d_1_1_scene_hierarchy_widget.html#a3291870e303c44d59fceb100b0c6dfa7":[6,0,2,606,43],
+"class_urho3_d_1_1_scene_hierarchy_widget.html#a35098394bca0d6e5c96319e39e7a52a1":[6,0,2,606,12],
+"class_urho3_d_1_1_scene_hierarchy_widget.html#a45e445cd42dcc410ed33ade1adc4cee7":[6,0,2,606,16]
 };

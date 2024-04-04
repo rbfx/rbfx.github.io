@@ -131,6 +131,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTargetName</b> (co
 <tr class="memitem:aa01dc9b9e2a6bb59e04c406ba9294055"><td class="memItemLeft" align="right" valign="top"><a id="aa01dc9b9e2a6bb59e04c406ba9294055"></a>
 const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetTargetName</b> () const</td></tr>
 <tr class="separator:aa01dc9b9e2a6bb59e04c406ba9294055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb7c30ce30dcb34fa1962c0acb2d4cff"><td class="memItemLeft" align="right" valign="top"><a id="aeb7c30ce30dcb34fa1962c0acb2d4cff"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetHeelTargetName</b> (const ea::string &amp;name)</td></tr>
+<tr class="separator:aeb7c30ce30dcb34fa1962c0acb2d4cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a739643391f0e6e6b758ebe0268627422"><td class="memItemLeft" align="right" valign="top"><a id="a739643391f0e6e6b758ebe0268627422"></a>
+const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetHeelTargetName</b> () const</td></tr>
+<tr class="separator:a739643391f0e6e6b758ebe0268627422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadc035ace7053283de45b405755c54a6"><td class="memItemLeft" align="right" valign="top"><a id="aadc035ace7053283de45b405755c54a6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBendTargetName</b> (const ea::string &amp;name)</td></tr>
 <tr class="separator:aadc035ace7053283de45b405755c54a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,18 +161,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetRotationWeight</b>
 <tr class="memitem:a8681b36b1640a92a8ca0800052c3a35c"><td class="memItemLeft" align="right" valign="top"><a id="a8681b36b1640a92a8ca0800052c3a35c"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>GetRotationWeight</b> () const</td></tr>
 <tr class="separator:a8681b36b1640a92a8ca0800052c3a35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4081782626d786b12af62e732bd51a75"><td class="memItemLeft" align="right" valign="top"><a id="a4081782626d786b12af62e732bd51a75"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetHeelWeight</b> (float weight)</td></tr>
+<tr class="separator:a4081782626d786b12af62e732bd51a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9f2862c6bad9900a90541ed2e070e99"><td class="memItemLeft" align="right" valign="top"><a id="ae9f2862c6bad9900a90541ed2e070e99"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>GetHeelWeight</b> () const</td></tr>
+<tr class="separator:ae9f2862c6bad9900a90541ed2e070e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bef4413cc2733af4606084516c310d0"><td class="memItemLeft" align="right" valign="top"><a id="a9bef4413cc2733af4606084516c310d0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBendWeight</b> (float weight)</td></tr>
 <tr class="separator:a9bef4413cc2733af4606084516c310d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae129e96c92084fb0969fbadbed03b45"><td class="memItemLeft" align="right" valign="top"><a id="aae129e96c92084fb0969fbadbed03b45"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>GetBendWeight</b> () const</td></tr>
 <tr class="separator:aae129e96c92084fb0969fbadbed03b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8395cc06d5104219b3094bb8ab684939"><td class="memItemLeft" align="right" valign="top"><a id="a8395cc06d5104219b3094bb8ab684939"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetFootRotationWeight</b> (float weight)</td></tr>
-<tr class="separator:a8395cc06d5104219b3094bb8ab684939"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07ac8549bf2fe6a95233c765d64c2315"><td class="memItemLeft" align="right" valign="top"><a id="a07ac8549bf2fe6a95233c765d64c2315"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>GetFootRotationWeight</b> () const</td></tr>
-<tr class="separator:a07ac8549bf2fe6a95233c765d64c2315"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d83fda31b148b6a4bcd15be2b00f7d4"><td class="memItemLeft" align="right" valign="top"><a id="a4d83fda31b148b6a4bcd15be2b00f7d4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMinAngle</b> (float angle)</td></tr>
 <tr class="separator:a4d83fda31b148b6a4bcd15be2b00f7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,18 +185,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMaxAngle</b> (floa
 <tr class="memitem:aee647bc0882dc8e2b430db844a5be5aa"><td class="memItemLeft" align="right" valign="top"><a id="aee647bc0882dc8e2b430db844a5be5aa"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>GetMaxAngle</b> () const</td></tr>
 <tr class="separator:aee647bc0882dc8e2b430db844a5be5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a677d21301f8f56766f35070262a7629f"><td class="memItemLeft" align="right" valign="top"><a id="a677d21301f8f56766f35070262a7629f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBaseTiptoe</b> (const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;value)</td></tr>
-<tr class="separator:a677d21301f8f56766f35070262a7629f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0517821925d54496a0cbbddad8643092"><td class="memItemLeft" align="right" valign="top"><a id="a0517821925d54496a0cbbddad8643092"></a>
-const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetBaseTiptoe</b> () const</td></tr>
-<tr class="separator:a0517821925d54496a0cbbddad8643092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfa841c2b1564969e5f5005e42a4f3dd"><td class="memItemLeft" align="right" valign="top"><a id="acfa841c2b1564969e5f5005e42a4f3dd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetGroundTiptoeTweaks</b> (const <a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a> &amp;value)</td></tr>
-<tr class="separator:acfa841c2b1564969e5f5005e42a4f3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab72a46efe0b5fcfbd4394ad6df256b02"><td class="memItemLeft" align="right" valign="top"><a id="ab72a46efe0b5fcfbd4394ad6df256b02"></a>
-const <a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetGroundTiptoeTweaks</b> () const</td></tr>
-<tr class="separator:ab72a46efe0b5fcfbd4394ad6df256b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f06b2254414b497603b1ca936e21995"><td class="memItemLeft" align="right" valign="top"><a id="a7f06b2254414b497603b1ca936e21995"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTiptoeFactor</b> (float factor)</td></tr>
+<tr class="separator:a7f06b2254414b497603b1ca936e21995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adad2afcbebc34dda21828c15d2a07bcb"><td class="memItemLeft" align="right" valign="top"><a id="adad2afcbebc34dda21828c15d2a07bcb"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>GetTiptoeFactor</b> () const</td></tr>
+<tr class="separator:adad2afcbebc34dda21828c15d2a07bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace92604809d1338202f8390c4ea2ecdd"><td class="memItemLeft" align="right" valign="top"><a id="ace92604809d1338202f8390c4ea2ecdd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBendDirection</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;direction)</td></tr>
 <tr class="separator:ace92604809d1338202f8390c4ea2ecdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -661,12 +661,6 @@ ea::pair&lt; <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>, <a
 <tr class="memitem:adbb77d88df251d04f4176b0aad6d7f29"><td class="memItemLeft" align="right" valign="top"><a id="adbb77d88df251d04f4176b0aad6d7f29"></a>
 <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateLegOffset</b> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;frameOfReference, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;toeTargetPosition, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;bendDirection)</td></tr>
 <tr class="separator:adbb77d88df251d04f4176b0aad6d7f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac24f8f6562538f79e0595841bf80fe45"><td class="memItemLeft" align="right" valign="top"><a id="ac24f8f6562538f79e0595841bf80fe45"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateTiptoeFactor</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;toeTargetPosition) const</td></tr>
-<tr class="separator:ac24f8f6562538f79e0595841bf80fe45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bfef70948d12c9ba13b43119b1f867d"><td class="memItemLeft" align="right" valign="top"><a id="a8bfef70948d12c9ba13b43119b1f867d"></a>
-<a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateFootRotation</b> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;frameOfReference, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;toeTargetPosition) const</td></tr>
-<tr class="separator:a8bfef70948d12c9ba13b43119b1f867d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3588daed1bd4902b6022426f9f2807c2"><td class="memItemLeft" align="right" valign="top"><a id="a3588daed1bd4902b6022426f9f2807c2"></a>
 <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateToeToHeel</b> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;frameOfReference, float tiptoeFactor, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;toeTargetPosition, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;originalDirection, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;currentDirection, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;footRotation) const</td></tr>
 <tr class="separator:a3588daed1bd4902b6022426f9f2807c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -691,9 +685,6 @@ struct <a class="el" href="struct_urho3_d_1_1_i_k_leg_solver_1_1_local_cache.htm
 <tr class="memitem:a8bf961ee6bce79fb2133736bfb0cdc11"><td class="memItemLeft" align="right" valign="top"><a id="a8bf961ee6bce79fb2133736bfb0cdc11"></a>
 <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>latestTargetPosition_</b></td></tr>
 <tr class="separator:a8bf961ee6bce79fb2133736bfb0cdc11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a210b6f9efc1cf4df5d10839e710ec2bd"><td class="memItemLeft" align="right" valign="top"><a id="a210b6f9efc1cf4df5d10839e710ec2bd"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>latestTiptoeFactor_</b> {}</td></tr>
-<tr class="separator:a210b6f9efc1cf4df5d10839e710ec2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a11a41f516d26ee433e6d96003cb67c05"><td class="memItemLeft" align="right" valign="top">ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_k_leg_solver.html#a11a41f516d26ee433e6d96003cb67c05">thighBoneName_</a></td></tr>
 <tr class="separator:a11a41f516d26ee433e6d96003cb67c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -709,6 +700,9 @@ ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>toeBoneName_</b
 <tr class="memitem:abecc92afaade3a2dddf61f6a70b4cef8"><td class="memItemLeft" align="right" valign="top"><a id="abecc92afaade3a2dddf61f6a70b4cef8"></a>
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>targetName_</b></td></tr>
 <tr class="separator:abecc92afaade3a2dddf61f6a70b4cef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af90de397cbad64d4034fbbf571ba77cb"><td class="memItemLeft" align="right" valign="top"><a id="af90de397cbad64d4034fbbf571ba77cb"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>heelTargetName_</b></td></tr>
+<tr class="separator:af90de397cbad64d4034fbbf571ba77cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4df67a9d7756546814641f30f1e08394"><td class="memItemLeft" align="right" valign="top"><a id="a4df67a9d7756546814641f30f1e08394"></a>
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>bendTargetName_</b></td></tr>
 <tr class="separator:a4df67a9d7756546814641f30f1e08394"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -721,24 +715,21 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>positionWeight_</b> 
 <tr class="memitem:a05f831546a97edbec44f420ba09d0fb4"><td class="memItemLeft" align="right" valign="top"><a id="a05f831546a97edbec44f420ba09d0fb4"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>rotationWeight_</b> {0.0f}</td></tr>
 <tr class="separator:a05f831546a97edbec44f420ba09d0fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa2060987ab8ddd682b7dc332abbe272"><td class="memItemLeft" align="right" valign="top"><a id="afa2060987ab8ddd682b7dc332abbe272"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>heelWeight_</b> {1.0f}</td></tr>
+<tr class="separator:afa2060987ab8ddd682b7dc332abbe272"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a360329eceb26bc5d4094e26e16246104"><td class="memItemLeft" align="right" valign="top"><a id="a360329eceb26bc5d4094e26e16246104"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>bendWeight_</b> {1.0f}</td></tr>
 <tr class="separator:a360329eceb26bc5d4094e26e16246104"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30d71a5c109e516f2b55c53af2e9b130"><td class="memItemLeft" align="right" valign="top"><a id="a30d71a5c109e516f2b55c53af2e9b130"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>footRotationWeight_</b> {0.0f}</td></tr>
-<tr class="separator:a30d71a5c109e516f2b55c53af2e9b130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88f521226dd02fcc73c9a0c7526f5664"><td class="memItemLeft" align="right" valign="top"><a id="a88f521226dd02fcc73c9a0c7526f5664"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>minKneeAngle_</b> {0.0f}</td></tr>
 <tr class="separator:a88f521226dd02fcc73c9a0c7526f5664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a1a39718b0d7a0b6f4eae5b10034b25"><td class="memItemLeft" align="right" valign="top"><a id="a3a1a39718b0d7a0b6f4eae5b10034b25"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>maxKneeAngle_</b> {180.0f}</td></tr>
 <tr class="separator:a3a1a39718b0d7a0b6f4eae5b10034b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a894a0e73118a71abd42ac7a237d9d7cf"><td class="memItemLeft" align="right" valign="top"><a id="a894a0e73118a71abd42ac7a237d9d7cf"></a>
-<a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>baseTiptoe_</b> {0.5f, 0.0f}</td></tr>
-<tr class="separator:a894a0e73118a71abd42ac7a237d9d7cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3d86be381c7b3c3d0a00a1b0d47fc0e"><td class="memItemLeft" align="right" valign="top"><a id="ae3d86be381c7b3c3d0a00a1b0d47fc0e"></a>
-<a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>groundTiptoeTweaks_</b> {0.2f, 0.2f, 0.2f, 0.2f}</td></tr>
-<tr class="separator:ae3d86be381c7b3c3d0a00a1b0d47fc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66dddb00269d2d5ae91d259a699098bf"><td class="memItemLeft" align="right" valign="top"><a id="a66dddb00269d2d5ae91d259a699098bf"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>tiptoeFactor_</b> {0.0f}</td></tr>
+<tr class="separator:a66dddb00269d2d5ae91d259a699098bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29cf278a58a2de1a22b8a3e6dcd2bcbf"><td class="memItemLeft" align="right" valign="top"><a id="a29cf278a58a2de1a22b8a3e6dcd2bcbf"></a>
 <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bendDirection_</b> {<a class="el" href="class_urho3_d_1_1_vector3.html#a2788aa099bd921f1d06511efda6893a8">Vector3::FORWARD</a>}</td></tr>
 <tr class="separator:a29cf278a58a2de1a22b8a3e6dcd2bcbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -754,6 +745,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>heelGroundOffset_</b
 <tr class="memitem:a9b960d1c97b5f975482964b75d1bd6eb"><td class="memItemLeft" align="right" valign="top"><a id="a9b960d1c97b5f975482964b75d1bd6eb"></a>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>target_</b></td></tr>
 <tr class="separator:a9b960d1c97b5f975482964b75d1bd6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51fbdb3bcad9099dcf8172065c54eb7c"><td class="memItemLeft" align="right" valign="top"><a id="a51fbdb3bcad9099dcf8172065c54eb7c"></a>
+<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>heelTarget_</b></td></tr>
+<tr class="separator:a51fbdb3bcad9099dcf8172065c54eb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a9700847444ad108b6e08560cd794d0"><td class="memItemLeft" align="right" valign="top"><a id="a2a9700847444ad108b6e08560cd794d0"></a>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>bendTarget_</b></td></tr>
 <tr class="separator:a2a9700847444ad108b6e08560cd794d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
