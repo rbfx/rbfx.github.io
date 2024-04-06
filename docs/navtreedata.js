@@ -67,7 +67,7 @@ var NAVTREEINDEX =
 "class_urho3_d_1_1_action_manager.html#a386142b3f37c86ba63bcd37fe1a68433",
 "class_urho3_d_1_1_actions_1_1_finite_time_action_state.html#a75d8fcafa18df1d31ab354235c140003",
 "class_urho3_d_1_1_animated_model.html#a633d564e3ddce582a89a4ae97d59ce9f",
-"class_urho3_d_1_1_animation_parameters.html#a9c5e8d950a9785c6198b2be1e023ff8d",
+"class_urho3_d_1_1_animation_parameters.html#aa0b1b6e75b2f62375424441ae76f4ffe",
 "class_urho3_d_1_1_archive_block.html#a34e6c393125200e5393577f8572b415b",
 "class_urho3_d_1_1_axis_adapter.html#a418147f414bafff2dce5a7c856ed31ce",
 "class_urho3_d_1_1_billboard_set.html#a8fc6fa4aecf86d031526c484cd619155",

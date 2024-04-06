@@ -242,12 +242,12 @@ var NAVTREEINDEX10 =
 "class_urho3_d_1_1_animation_parameters.html#a618cc8fd805acab0dc13fa9b6a6428a3":[6,0,2,25,20],
 "class_urho3_d_1_1_animation_parameters.html#a677f447bcf51dff5c52017d26484e3c7":[6,0,2,25,41],
 "class_urho3_d_1_1_animation_parameters.html#a691ddb3378fd7ccae3eef786e10ea3f9":[6,0,2,25,1],
-"class_urho3_d_1_1_animation_parameters.html#a69a7b9d9c70876180d443a50fcae81ae":[6,0,2,25,24],
 "class_urho3_d_1_1_animation_parameters.html#a69a8a68a2526c5471bbd03631477ab90":[6,0,2,25,13],
 "class_urho3_d_1_1_animation_parameters.html#a6b119213b2f8bb957e5f7105c7fd94d8":[6,0,2,25,46],
 "class_urho3_d_1_1_animation_parameters.html#a6de062fc12c56524cdbe2b63b09e1b31":[6,0,2,25,37],
 "class_urho3_d_1_1_animation_parameters.html#a73ad3f7ff87e7cbd8a5a4a9f495e77cc":[6,0,2,25,11],
 "class_urho3_d_1_1_animation_parameters.html#a8d1cdf063e6d8284887bcd6d92bc6df2":[6,0,2,25,43],
 "class_urho3_d_1_1_animation_parameters.html#a96408f1827bc7070b4a47630cad77092":[6,0,2,25,21],
-"class_urho3_d_1_1_animation_parameters.html#a97ceba8d5e84842ad4c825e35ca4e767":[6,0,2,25,29]
+"class_urho3_d_1_1_animation_parameters.html#a97ceba8d5e84842ad4c825e35ca4e767":[6,0,2,25,29],
+"class_urho3_d_1_1_animation_parameters.html#a9c5e8d950a9785c6198b2be1e023ff8d":[6,0,2,25,40]
 };

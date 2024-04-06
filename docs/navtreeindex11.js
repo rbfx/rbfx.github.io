@@ -1,10 +1,10 @@
 var NAVTREEINDEX11 =
 {
-"class_urho3_d_1_1_animation_parameters.html#a9c5e8d950a9785c6198b2be1e023ff8d":[6,0,2,25,40],
 "class_urho3_d_1_1_animation_parameters.html#aa0b1b6e75b2f62375424441ae76f4ffe":[6,0,2,25,17],
 "class_urho3_d_1_1_animation_parameters.html#ab2a8d4e0f2ad3042455109fa8606d4e4":[6,0,2,25,45],
 "class_urho3_d_1_1_animation_parameters.html#abecdcc2d4bb9d9a32e4c97793708c2b7":[6,0,2,25,26],
 "class_urho3_d_1_1_animation_parameters.html#abf2c5d54c3c4b82f687e822361fb4f8c":[6,0,2,25,22],
+"class_urho3_d_1_1_animation_parameters.html#ac194355b4c6b6d5b57172355738b2bc6":[6,0,2,25,24],
 "class_urho3_d_1_1_animation_parameters.html#ac503db1c74100ae349f218eab5e50a0c":[6,0,2,25,12],
 "class_urho3_d_1_1_animation_parameters.html#ad5a84ba6772c91d172bc81ea0fafc69e":[6,0,2,25,3],
 "class_urho3_d_1_1_animation_parameters.html#ad67c6f625cff853aeb639d7da565aa80":[6,0,2,25,0],
