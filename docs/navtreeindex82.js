@@ -1,5 +1,7 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_index_buffer_desc.html#a7598653767f4440858f90679661efc79":[6,0,2,308,3],
+"struct_urho3_d_1_1_index_buffer_desc.html#adca8c7d71c7663c63f3d4267152ab96a":[6,0,2,308,0],
 "struct_urho3_d_1_1_index_buffer_desc.html#af7d7fba8e1c133f1105755be0136305d":[6,0,2,308,2],
 "struct_urho3_d_1_1_index_in_tuple.html":[6,0,2,309],
 "struct_urho3_d_1_1_index_in_tuple_3_01_t_00_01ea_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html":[6,0,2,310],
@@ -247,7 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a0e4270af06dceaa2ca2080942148804f":[6,0,2,357,0],
 "struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a11f6ce357eb4f8bd6e0162f428596d80":[6,0,2,357,4],
 "struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a769e62d8583eb1c42129683f9597908c":[6,0,2,357,1],
-"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a871a2891d45259ebd63d72e2bb06d132":[6,0,2,357,3],
-"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a9d023cd3b7907392264585fc32bf2f33":[6,0,2,357,2],
-"struct_urho3_d_1_1_manifold_pair.html":[6,0,2,374]
+"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a871a2891d45259ebd63d72e2bb06d132":[6,0,2,357,3]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_lightmap_u_v_generation_settings.html#a9d023cd3b7907392264585fc32bf2f33":[6,0,2,357,2],
+"struct_urho3_d_1_1_manifold_pair.html":[6,0,2,374],
 "struct_urho3_d_1_1_manifold_pair.html#a0595504fa42073c132fad93d2b4f9524":[6,0,2,374,2],
 "struct_urho3_d_1_1_manifold_pair.html#a1040c2e3c778fe55c0f00d4ef0803a15":[6,0,2,374,0],
 "struct_urho3_d_1_1_manifold_pair.html#a828094a8533542b74adf2ed297a7f0f5":[6,0,2,374,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_open_x_r_1_1_temporary_storage.html#afe602367dfe6e2839ad86491768a869a":[6,0,2,462,1,0],
 "struct_urho3_d_1_1_open_x_r_tweaks.html":[6,0,2,467],
 "struct_urho3_d_1_1_open_x_r_tweaks.html#a328cb31f042295a3c9ac6c8212c3a48f":[6,0,2,467,0],
-"struct_urho3_d_1_1_open_x_r_tweaks.html#a381b76bdeed9b5c4a088e240e6297234":[6,0,2,467,2],
-"struct_urho3_d_1_1_open_x_r_tweaks.html#a972313222b024048ae218039c69abc61":[6,0,2,467,1],
-"struct_urho3_d_1_1_open_x_r_tweaks.html#aa0384194e50021ed798b0b8ee2245cf3":[6,0,2,467,3]
+"struct_urho3_d_1_1_open_x_r_tweaks.html#a381b76bdeed9b5c4a088e240e6297234":[6,0,2,467,2]
 };
