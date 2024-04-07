@@ -43,6 +43,7 @@ var class_urho3_d_1_1_animation =
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_animation.html#a327702db5fcf1b0be981fef9dd6df826", null ],
     [ "animationName_", "class_urho3_d_1_1_animation.html#aa1b3cddfa020bdb45febe28349d417e2", null ],
     [ "animationNameHash_", "class_urho3_d_1_1_animation.html#a4eab0c304579d9e22d37a4833c629a09", null ],
+    [ "channelWeightVersion", "class_urho3_d_1_1_animation.html#a4da2df3716b8ff0fa6814b21edaae0b6", null ],
     [ "currentVersion", "class_urho3_d_1_1_animation.html#aef76da9ec8914d5b3efd7cb6cf43c52f", null ],
     [ "legacyVersion", "class_urho3_d_1_1_animation.html#aca649061e3ec0ea912b3e0895339cdbb", null ],
     [ "length_", "class_urho3_d_1_1_animation.html#a3dd3e3d663c28f211ef1f2056e851945", null ],

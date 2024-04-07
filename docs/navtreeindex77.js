@@ -1,5 +1,6 @@
 var NAVTREEINDEX77 =
 {
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a0e0720fe98c91d13c7d012a5f2f43237":[6,0,14,9],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a13806f8ead77941e6fadc0c0e1a38b2b":[6,0,14,3],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a246f834c7d4a11138a717646a0446277":[6,0,14,12],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#a2e6cd5ba8d80e0b945e05ab7728f2200":[6,0,14,22],
@@ -160,10 +161,12 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_animation_key_frame.html#ae09a36e5739e0ca73934843edf9999c0":[6,0,2,24,2],
 "struct_urho3_d_1_1_animation_key_frame.html#af7afd1d81392c686f7e1403fa6b1397e":[6,0,2,24,0],
 "struct_urho3_d_1_1_animation_track.html":[6,0,2,29],
+"struct_urho3_d_1_1_animation_track.html#a3199338650b21e542931886648813a64":[6,0,2,29,7],
+"struct_urho3_d_1_1_animation_track.html#a4fa27dd3db8f40dc120c5a9ec8aa4382":[6,0,2,29,5],
 "struct_urho3_d_1_1_animation_track.html#a602c2d20309dcd737bfbf6522dec7e2d":[6,0,2,29,0],
 "struct_urho3_d_1_1_animation_track.html#a771c16ffe93a555c70b2d3cad7e19e3e":[6,0,2,29,1],
 "struct_urho3_d_1_1_animation_track.html#a8908add3b8fef1c89e52e58af79e0a45":[6,0,2,29,2],
-"struct_urho3_d_1_1_animation_track.html#ac62ff3d4bbe97d169284eeafe17d4b83":[6,0,2,29,5],
+"struct_urho3_d_1_1_animation_track.html#a93b02db0bd031bc8ac1c518594bd59d2":[6,0,2,29,6],
 "struct_urho3_d_1_1_animation_track.html#af5613a1767cf5226f7e6469fce11703b":[6,0,2,29,3],
 "struct_urho3_d_1_1_animation_track.html#aff37bb7241811f95f6051626f0719fe5":[6,0,2,29,4],
 "struct_urho3_d_1_1_animation_trigger_point.html":[6,0,2,30],
@@ -246,8 +249,5 @@ var NAVTREEINDEX77 =
 "struct_urho3_d_1_1_async_progress.html#adfd3994a6e9306aafa14aaf5a9f6047a":[6,0,2,51,6],
 "struct_urho3_d_1_1_async_progress.html#ae004ddfd0c3990fe626409f85b841ea6":[6,0,2,51,2],
 "struct_urho3_d_1_1_async_progress.html#af4591182c1ff1c7b34a16bfed73083c7":[6,0,2,51,8],
-"struct_urho3_d_1_1_attribute_animation_state_track.html":[6,0,2,54],
-"struct_urho3_d_1_1_attribute_animation_state_track.html#a405a16d9c7b309dd1850bc86a5219455":[6,0,2,54,2],
-"struct_urho3_d_1_1_attribute_animation_state_track.html#a61d6cf6fe92ba4535e690f908376aab0":[6,0,2,54,0],
-"struct_urho3_d_1_1_attribute_animation_state_track.html#a841bd6b35d56b9ea21f72d13d0cecf87":[6,0,2,54,1]
+"struct_urho3_d_1_1_attribute_animation_state_track.html":[6,0,2,54]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_focus_parameters.html#a791c15072f3ec1ee1f7de496e7aff8a2":[6,0,2,235,5],
+"struct_urho3_d_1_1_focus_parameters.html#acef47ca405923a7671ec94eee4c153c3":[6,0,2,235,6],
+"struct_urho3_d_1_1_focus_parameters.html#ae026381a2e45b3ece810dd1e9a364623":[6,0,2,235,7],
 "struct_urho3_d_1_1_focus_parameters.html#aed7bfa42d9787271e1f92c5a2ac3d9ef":[6,0,2,235,0],
 "struct_urho3_d_1_1_font_glyph.html":[6,0,2,240],
 "struct_urho3_d_1_1_font_glyph.html#a0d23eef6db5287fcd800f0726588d58b":[6,0,2,240,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_incremental_light_baker_status.html":[6,0,2,305],
 "struct_urho3_d_1_1_incremental_light_baker_status.html#a164cfc3e42a8bbadc6aeeb7b6ba03ddd":[6,0,2,305,2],
 "struct_urho3_d_1_1_incremental_light_baker_status.html#a181d124589f05f211288d673161e325b":[6,0,2,305,0],
-"struct_urho3_d_1_1_incremental_light_baker_status.html#a62ebbee6d23bca15d5bc145e6b370fde":[6,0,2,305,3],
-"struct_urho3_d_1_1_incremental_light_baker_status.html#ab94ff2d43b8cf1bc2947166ff61d417f":[6,0,2,305,1],
-"struct_urho3_d_1_1_index_buffer_desc.html":[6,0,2,308],
-"struct_urho3_d_1_1_index_buffer_desc.html#a4ee0a339e9c9ad52f04afd5ac7d5fcda":[6,0,2,308,1]
+"struct_urho3_d_1_1_incremental_light_baker_status.html#a62ebbee6d23bca15d5bc145e6b370fde":[6,0,2,305,3]
 };
