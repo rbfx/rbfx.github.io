@@ -392,14 +392,14 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 1933444: () => {
+ 1935436: () => {
   FS.syncfs(function(err) {
    if (err) {
     console.error(err);
    }
   });
  },
- 1933508: $0 => {
+ 1935500: $0 => {
   var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
   var reply = window.prompt(str, "i");
   if (reply === null) {
@@ -407,10 +407,10 @@ var ASM_CONSTS = {
   }
   return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
  },
- 1933733: ($0, $1) => {
+ 1935725: ($0, $1) => {
   alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
  },
- 1933790: () => {
+ 1935782: () => {
   if (typeof (AudioContext) !== "undefined") {
    return true;
   } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -418,7 +418,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1933937: () => {
+ 1935929: () => {
   if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
    return true;
   } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -426,7 +426,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1934171: $0 => {
+ 1936163: $0 => {
   if (typeof (Module["SDL2"]) === "undefined") {
    Module["SDL2"] = {};
   }
@@ -448,11 +448,11 @@ var ASM_CONSTS = {
   }
   return SDL2.audioContext === undefined ? -1 : 0;
  },
- 1934664: () => {
+ 1936656: () => {
   var SDL2 = Module["SDL2"];
   return SDL2.audioContext.sampleRate;
  },
- 1934732: ($0, $1, $2, $3) => {
+ 1936724: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   var have_microphone = function(stream) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -493,7 +493,7 @@ var ASM_CONSTS = {
    }, have_microphone, no_microphone);
   }
  },
- 1936384: ($0, $1, $2, $3) => {
+ 1938376: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
   SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -505,7 +505,7 @@ var ASM_CONSTS = {
   };
   SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
  },
- 1936794: ($0, $1) => {
+ 1938786: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
   for (var c = 0; c < numChannels; ++c) {
@@ -524,7 +524,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1937399: ($0, $1) => {
+ 1939391: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
   for (var c = 0; c < numChannels; ++c) {
@@ -537,7 +537,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1937879: $0 => {
+ 1939871: $0 => {
   var SDL2 = Module["SDL2"];
   if ($0) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -575,7 +575,7 @@ var ASM_CONSTS = {
    SDL2.audioContext = undefined;
   }
  },
- 1939051: ($0, $1, $2) => {
+ 1941043: ($0, $1, $2) => {
   var w = $0;
   var h = $1;
   var pixels = $2;
@@ -646,7 +646,7 @@ var ASM_CONSTS = {
   }
   SDL2.ctx.putImageData(SDL2.image, 0, 0);
  },
- 1940520: ($0, $1, $2, $3, $4) => {
+ 1942512: ($0, $1, $2, $3, $4) => {
   var w = $0;
   var h = $1;
   var hot_x = $2;
@@ -683,18 +683,18 @@ var ASM_CONSTS = {
   stringToUTF8(url, urlBuf, url.length + 1);
   return urlBuf;
  },
- 1941509: $0 => {
+ 1943501: $0 => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = UTF8ToString($0);
   }
  },
- 1941592: () => {
+ 1943584: () => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = "none";
   }
  },
- 1941661: () => window.innerWidth,
- 1941691: () => window.innerHeight
+ 1943653: () => window.innerWidth,
+ 1943683: () => window.innerHeight
 };
 
 /** @constructor */ function ExitStatus(status) {
@@ -753,6 +753,10 @@ var noExitRuntime = Module["noExitRuntime"] || true;
   abort(`invalid type for setValue: ${type}`);
  }
 }
+
+var stackRestore = val => __emscripten_stack_restore(val);
+
+var stackSave = () => _emscripten_stack_get_current();
 
 class ExceptionInfo {
  constructor(excPtr) {
@@ -3996,6 +4000,14 @@ function ___syscall_bind(fd, addr, addrlen, d1, d2, d3) {
  }
 }
 
+/** @suppress {duplicate } */ function syscallGetVarargI() {
+ var ret = HEAP32[((+SYSCALLS.varargs) >> 2)];
+ SYSCALLS.varargs += 4;
+ return ret;
+}
+
+var syscallGetVarargP = syscallGetVarargI;
+
 /**
      * Given a pointer 'ptr' to a null-terminated UTF8-encoded string in the
      * emscripten HEAP, returns a copy of that string as a Javascript String object.
@@ -4074,22 +4086,14 @@ var SYSCALLS = {
   var buffer = HEAPU8.slice(addr, addr + len);
   FS.msync(stream, buffer, offset, len, flags);
  },
- varargs: undefined,
- get() {
-  var ret = HEAP32[((+SYSCALLS.varargs) >> 2)];
-  SYSCALLS.varargs += 4;
-  return ret;
- },
- getp() {
-  return SYSCALLS.get();
- },
- getStr(ptr) {
-  var ret = UTF8ToString(ptr);
-  return ret;
- },
  getStreamFromFD(fd) {
   var stream = FS.getStreamChecked(fd);
   return stream;
+ },
+ varargs: undefined,
+ getStr(ptr) {
+  var ret = UTF8ToString(ptr);
+  return ret;
  }
 };
 
@@ -4100,7 +4104,7 @@ function ___syscall_fcntl64(fd, cmd, varargs) {
   switch (cmd) {
   case 0:
    {
-    var arg = SYSCALLS.get();
+    var arg = syscallGetVarargI();
     if (arg < 0) {
      return -28;
     }
@@ -4121,14 +4125,14 @@ function ___syscall_fcntl64(fd, cmd, varargs) {
 
   case 4:
    {
-    var arg = SYSCALLS.get();
+    var arg = syscallGetVarargI();
     stream.flags |= arg;
     return 0;
    }
 
   case 12:
    {
-    var arg = SYSCALLS.getp();
+    var arg = syscallGetVarargP();
     var offset = 0;
     HEAP16[(((arg) + (offset)) >> 1)] = 2;
     return 0;
@@ -4232,7 +4236,7 @@ function ___syscall_ioctl(fd, op, varargs) {
     if (!stream.tty) return -59;
     if (stream.tty.ops.ioctl_tcgets) {
      var termios = stream.tty.ops.ioctl_tcgets(stream);
-     var argp = SYSCALLS.getp();
+     var argp = syscallGetVarargP();
      HEAP32[((argp) >> 2)] = termios.c_iflag || 0;
      HEAP32[(((argp) + (4)) >> 2)] = termios.c_oflag || 0;
      HEAP32[(((argp) + (8)) >> 2)] = termios.c_cflag || 0;
@@ -4259,7 +4263,7 @@ function ___syscall_ioctl(fd, op, varargs) {
    {
     if (!stream.tty) return -59;
     if (stream.tty.ops.ioctl_tcsets) {
-     var argp = SYSCALLS.getp();
+     var argp = syscallGetVarargP();
      var c_iflag = HEAP32[((argp) >> 2)];
      var c_oflag = HEAP32[(((argp) + (4)) >> 2)];
      var c_cflag = HEAP32[(((argp) + (8)) >> 2)];
@@ -4282,7 +4286,7 @@ function ___syscall_ioctl(fd, op, varargs) {
   case 21519:
    {
     if (!stream.tty) return -59;
-    var argp = SYSCALLS.getp();
+    var argp = syscallGetVarargP();
     HEAP32[((argp) >> 2)] = 0;
     return 0;
    }
@@ -4295,7 +4299,7 @@ function ___syscall_ioctl(fd, op, varargs) {
 
   case 21531:
    {
-    var argp = SYSCALLS.getp();
+    var argp = syscallGetVarargP();
     return FS.ioctl(stream, op, argp);
    }
 
@@ -4304,7 +4308,7 @@ function ___syscall_ioctl(fd, op, varargs) {
     if (!stream.tty) return -59;
     if (stream.tty.ops.ioctl_tiocgwinsz) {
      var winsize = stream.tty.ops.ioctl_tiocgwinsz(stream.tty);
-     var argp = SYSCALLS.getp();
+     var argp = syscallGetVarargP();
      HEAP16[((argp) >> 1)] = winsize[0];
      HEAP16[(((argp) + (2)) >> 1)] = winsize[1];
     }
@@ -4375,7 +4379,7 @@ function ___syscall_openat(dirfd, path, flags, varargs) {
  try {
   path = SYSCALLS.getStr(path);
   path = SYSCALLS.calculateAt(dirfd, path);
-  var mode = varargs ? SYSCALLS.get() : 0;
+  var mode = varargs ? syscallGetVarargI() : 0;
   return FS.open(path, flags, mode).fd;
  } catch (e) {
   if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
@@ -4881,6 +4885,7 @@ var heap32VectorToArray = (count, firstElement) => {
 };
 
 var dynCallLegacy = (sig, ptr, args) => {
+ sig = sig.replace(/p/g, "i");
  var f = Module["dynCall_" + sig];
  return f(ptr, ...args);
 };
@@ -5305,6 +5310,8 @@ var nowIsMonotonic = 1;
 
 var __emscripten_get_now_is_monotonic = () => nowIsMonotonic;
 
+var __emscripten_memcpy_js = (dest, src, num) => HEAPU8.copyWithin(dest, src, src + num);
+
 var __emscripten_system = command => {
  if (ENVIRONMENT_IS_NODE) {
   if (!command) return 1;
@@ -5413,18 +5420,18 @@ var __tzset_js = (timezone, daylight, std_name, dst_name) => {
  var stdTimezoneOffset = Math.max(winterOffset, summerOffset);
  HEAPU32[((timezone) >> 2)] = stdTimezoneOffset * 60;
  HEAP32[((daylight) >> 2)] = Number(winterOffset != summerOffset);
- function extractZone(date) {
-  var match = date.toTimeString().match(/\(([A-Za-z ]+)\)$/);
-  return match ? match[1] : "GMT";
- }
+ var extractZone = date => date.toLocaleTimeString(undefined, {
+  hour12: false,
+  timeZoneName: "short"
+ }).split(" ")[1];
  var winterName = extractZone(winter);
  var summerName = extractZone(summer);
  if (summerOffset < winterOffset) {
-  stringToUTF8(winterName, std_name, 7);
-  stringToUTF8(summerName, dst_name, 7);
+  stringToUTF8(winterName, std_name, 17);
+  stringToUTF8(summerName, dst_name, 17);
  } else {
-  stringToUTF8(winterName, dst_name, 7);
-  stringToUTF8(summerName, std_name, 7);
+  stringToUTF8(winterName, dst_name, 17);
+  stringToUTF8(summerName, std_name, 17);
  }
 };
 
@@ -5998,13 +6005,8 @@ var Browser = {
     Browser.mouseMovementX = Browser.getMovementX(event);
     Browser.mouseMovementY = Browser.getMovementY(event);
    }
-   if (typeof SDL != "undefined") {
-    Browser.mouseX = SDL.mouseX + Browser.mouseMovementX;
-    Browser.mouseY = SDL.mouseY + Browser.mouseMovementY;
-   } else {
-    Browser.mouseX += Browser.mouseMovementX;
-    Browser.mouseY += Browser.mouseMovementY;
-   }
+   Browser.mouseX += Browser.mouseMovementX;
+   Browser.mouseY += Browser.mouseMovementY;
   } else {
    if (event.type === "touchstart" || event.type === "touchend" || event.type === "touchmove") {
     var touch = event.touch;
@@ -7045,6 +7047,8 @@ var _emscripten_get_canvas_element_size = (target, width, height) => {
  HEAP32[((width) >> 2)] = canvas.width;
  HEAP32[((height) >> 2)] = canvas.height;
 };
+
+var stackAlloc = sz => __emscripten_stack_alloc(sz);
 
 var stringToUTF8OnStack = str => {
  var size = lengthBytesUTF8(str) + 1;
@@ -9954,8 +9958,6 @@ var _emscripten_glWaitSync = _glWaitSync;
 
 var _emscripten_has_asyncify = () => 0;
 
-var _emscripten_memcpy_js = (dest, src, num) => HEAPU8.copyWithin(dest, src, src + num);
-
 var doRequestFullscreen = (target, strategy) => {
  if (!JSEvents.fullscreenEnabled()) return -1;
  if (!target) target = "#canvas";
@@ -10596,7 +10598,7 @@ function _fd_close(fd) {
   if (curr < 0) return -1;
   ret += curr;
   if (curr < len) break;
-  if (typeof offset !== "undefined") {
+  if (typeof offset != "undefined") {
    offset += curr;
   }
  }
@@ -10640,7 +10642,7 @@ function _fd_seek(fd, offset_low, offset_high, whence, newOffset) {
   var curr = FS.write(stream, HEAP8, ptr, len, offset);
   if (curr < 0) return -1;
   ret += curr;
-  if (typeof offset !== "undefined") {
+  if (typeof offset != "undefined") {
    offset += curr;
   }
  }
@@ -11462,6 +11464,7 @@ var wasmImports = {
  /** @export */ _embind_register_std_wstring: __embind_register_std_wstring,
  /** @export */ _embind_register_void: __embind_register_void,
  /** @export */ _emscripten_get_now_is_monotonic: __emscripten_get_now_is_monotonic,
+ /** @export */ _emscripten_memcpy_js: __emscripten_memcpy_js,
  /** @export */ _emscripten_system: __emscripten_system,
  /** @export */ _emscripten_throw_longjmp: __emscripten_throw_longjmp,
  /** @export */ _gmtime_js: __gmtime_js,
@@ -11774,7 +11777,6 @@ var wasmImports = {
  /** @export */ emscripten_glViewport: _emscripten_glViewport,
  /** @export */ emscripten_glWaitSync: _emscripten_glWaitSync,
  /** @export */ emscripten_has_asyncify: _emscripten_has_asyncify,
- /** @export */ emscripten_memcpy_js: _emscripten_memcpy_js,
  /** @export */ emscripten_request_fullscreen_strategy: _emscripten_request_fullscreen_strategy,
  /** @export */ emscripten_request_pointerlock: _emscripten_request_pointerlock,
  /** @export */ emscripten_resize_heap: _emscripten_resize_heap,
@@ -11983,17 +11985,17 @@ var _htons = a0 => (_htons = wasmExports["htons"])(a0);
 
 var _ntohs = a0 => (_ntohs = wasmExports["ntohs"])(a0);
 
-var setTempRet0 = a0 => (setTempRet0 = wasmExports["setTempRet0"])(a0);
-
 var ___getTypeName = a0 => (___getTypeName = wasmExports["__getTypeName"])(a0);
 
 var _setThrew = (a0, a1) => (_setThrew = wasmExports["setThrew"])(a0, a1);
 
-var stackSave = () => (stackSave = wasmExports["stackSave"])();
+var __emscripten_tempret_set = a0 => (__emscripten_tempret_set = wasmExports["_emscripten_tempret_set"])(a0);
 
-var stackRestore = a0 => (stackRestore = wasmExports["stackRestore"])(a0);
+var __emscripten_stack_restore = a0 => (__emscripten_stack_restore = wasmExports["_emscripten_stack_restore"])(a0);
 
-var stackAlloc = a0 => (stackAlloc = wasmExports["stackAlloc"])(a0);
+var __emscripten_stack_alloc = a0 => (__emscripten_stack_alloc = wasmExports["_emscripten_stack_alloc"])(a0);
+
+var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports["emscripten_stack_get_current"])();
 
 var ___cxa_is_pointer_type = a0 => (___cxa_is_pointer_type = wasmExports["__cxa_is_pointer_type"])(a0);
 
