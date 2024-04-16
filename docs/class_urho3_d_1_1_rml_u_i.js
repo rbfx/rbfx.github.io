@@ -4,6 +4,7 @@ var class_urho3_d_1_1_rml_u_i =
     [ "~RmlUI", "class_urho3_d_1_1_rml_u_i.html#aa3e75612686f8ccde5da83eaf800931b", null ],
     [ "GetDesiredCanvasSize", "class_urho3_d_1_1_rml_u_i.html#ae13ad038770991725c1603a2bce406e9", null ],
     [ "GetRmlContext", "class_urho3_d_1_1_rml_u_i.html#a2f762d68401b78521c3f89dcdc8cf6b3", null ],
+    [ "GetScale", "class_urho3_d_1_1_rml_u_i.html#aa6ff67633b70011266e26edd2385df24", null ],
     [ "HandleDropFile", "class_urho3_d_1_1_rml_u_i.html#a2f115fddd6019504f2e1fbe76e566a1e", null ],
     [ "HandleEndAllViewsRender", "class_urho3_d_1_1_rml_u_i.html#ac44baae86b5df0a894558b2d6aa538b0", null ],
     [ "HandleKeyDown", "class_urho3_d_1_1_rml_u_i.html#a34bac2c2eccc7267218168e120ecfdd1", null ],
