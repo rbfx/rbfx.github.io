@@ -15,6 +15,7 @@ var class_urho3_d_1_1_crowd_manager =
     [ "GetDetourCrowdAgent", "class_urho3_d_1_1_crowd_manager.html#ace1d82b403ff81a70ebb4e8a9159bdf4", null ],
     [ "GetDetourQueryFilter", "class_urho3_d_1_1_crowd_manager.html#afc7b6bad5acfde3e35e47516ab1c86db", null ],
     [ "GetDistanceToWall", "class_urho3_d_1_1_crowd_manager.html#af208c64a57bd9617aec7e36c1f947bfd", null ],
+    [ "GetEditableDetourCrowdAgent", "class_urho3_d_1_1_crowd_manager.html#a41b0ac32a40d9108047cf8be051c3849", null ],
     [ "GetExcludeFlags", "class_urho3_d_1_1_crowd_manager.html#a077161353343ef656df2a2474ec03d03", null ],
     [ "GetIncludeFlags", "class_urho3_d_1_1_crowd_manager.html#a6eda89d8e285ee07f897571a4e708b2f", null ],
     [ "GetMaxAgentRadius", "class_urho3_d_1_1_crowd_manager.html#a93ebe20945de11a9897a06da00f7e849", null ],

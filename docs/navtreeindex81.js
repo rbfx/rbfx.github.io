@@ -1,5 +1,8 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_focus_parameters.html":[6,0,2,235],
+"struct_urho3_d_1_1_focus_parameters.html#a068c61efa9d5910c2b1ce3c105508890":[6,0,2,235,4],
+"struct_urho3_d_1_1_focus_parameters.html#a09add5270977b974e694ed185b70cdb2":[6,0,2,235,3],
 "struct_urho3_d_1_1_focus_parameters.html#a18ea921d8f9ca146192b52b924a0f76d":[6,0,2,235,2],
 "struct_urho3_d_1_1_focus_parameters.html#a73aabf0e77ed27e79a2a2d27212f9be8":[6,0,2,235,1],
 "struct_urho3_d_1_1_focus_parameters.html#a791c15072f3ec1ee1f7de496e7aff8a2":[6,0,2,235,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_incremental_light_baker_settings.html#a92a34c5eb81ae603ff6fdf46ce1ae26c":[6,0,2,304,1],
 "struct_urho3_d_1_1_incremental_light_baker_settings.html#ab9cc104351e0956393763c96ab7af3d5":[6,0,2,304,0],
 "struct_urho3_d_1_1_incremental_light_baker_settings.html#abf83f97b9521111297b578a4e0097f9d":[6,0,2,304,5],
-"struct_urho3_d_1_1_incremental_light_baker_settings.html#ac7dcb976c43b14b1491f90fab5b2c591":[6,0,2,304,2],
-"struct_urho3_d_1_1_incremental_light_baker_settings.html#adfb951382edeaee19720044c87cbd8cf":[6,0,2,304,4],
-"struct_urho3_d_1_1_incremental_light_baker_status.html":[6,0,2,305],
-"struct_urho3_d_1_1_incremental_light_baker_status.html#a164cfc3e42a8bbadc6aeeb7b6ba03ddd":[6,0,2,305,2]
+"struct_urho3_d_1_1_incremental_light_baker_settings.html#ac7dcb976c43b14b1491f90fab5b2c591":[6,0,2,304,2]
 };

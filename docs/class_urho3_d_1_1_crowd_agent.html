@@ -135,6 +135,10 @@ const CrowdAgentHeightCallback &amp;&#160;</td><td class="memItemRight" valign="
 <tr class="separator:a54ada3350dd622792e0447102c993819"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe2055fa49b9a4d10d6668ecafedf24d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#afe2055fa49b9a4d10d6668ecafedf24d">SetTargetVelocity</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;velocity)</td></tr>
 <tr class="separator:afe2055fa49b9a4d10d6668ecafedf24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bfb29cb3ceeaf5adce9e12c2210f935"><td class="memItemLeft" align="right" valign="top"><a id="a9bfb29cb3ceeaf5adce9e12c2210f935"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a9bfb29cb3ceeaf5adce9e12c2210f935">SetActualVelocity</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;velocity)</td></tr>
+<tr class="memdesc:a9bfb29cb3ceeaf5adce9e12c2210f935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set actual immediate velocity. Target is not affected. <br /></td></tr>
+<tr class="separator:a9bfb29cb3ceeaf5adce9e12c2210f935"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72f4e3378a2a6ef1679f1e94b409d286"><td class="memItemLeft" align="right" valign="top"><a id="a72f4e3378a2a6ef1679f1e94b409d286"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a72f4e3378a2a6ef1679f1e94b409d286">ResetTarget</a> ()</td></tr>
 <tr class="memdesc:a72f4e3378a2a6ef1679f1e94b409d286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset any target request for the specified agent. Note that the agent will continue to move into the current direction; set a zero target velocity to actually stop. <br /></td></tr>
@@ -609,6 +613,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 const dtCrowdAgent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a9570c793c0cc976e1c25ac1696ea3e86">GetDetourCrowdAgent</a> () const</td></tr>
 <tr class="memdesc:a9570c793c0cc976e1c25ac1696ea3e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get internal Detour crowd agent. <br /></td></tr>
 <tr class="separator:a9570c793c0cc976e1c25ac1696ea3e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab648448e5fb14273a07f5f4d2714c6a6"><td class="memItemLeft" align="right" valign="top"><a id="ab648448e5fb14273a07f5f4d2714c6a6"></a>
+dtCrowdAgent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#ab648448e5fb14273a07f5f4d2714c6a6">GetEditableDetourCrowdAgent</a> ()</td></tr>
+<tr class="memdesc:ab648448e5fb14273a07f5f4d2714c6a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get editable internal Detour crowd agent. <br /></td></tr>
+<tr class="separator:ab648448e5fb14273a07f5f4d2714c6a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82ba0aab8a4077dc76f61a59f9944609"><td class="memItemLeft" align="right" valign="top"><a id="a82ba0aab8a4077dc76f61a59f9944609"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_crowd_agent.html#a82ba0aab8a4077dc76f61a59f9944609">HandleNavigationTileAdded</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:a82ba0aab8a4077dc76f61a59f9944609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle navigation mesh tile added. <br /></td></tr>
