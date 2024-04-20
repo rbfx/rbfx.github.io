@@ -1,5 +1,7 @@
 var NAVTREEINDEX88 =
 {
+"struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01std_1_1tuple_3_01_types_8_8_8_01_4_01_4.html":[6,0,2,764],
+"struct_urho3_d_1_1_u_i_1_1_drag_data.html":[6,0,2,766,0],
 "struct_urho3_d_1_1_u_i_1_1_drag_data.html#a117a4141a12c928ffccc8e3c899498d4":[6,0,2,766,0,5],
 "struct_urho3_d_1_1_u_i_1_1_drag_data.html#a1370f1fdc247072b979d80ff409bd4ec":[6,0,2,766,0,1],
 "struct_urho3_d_1_1_u_i_1_1_drag_data.html#a96610082866bf7ec36c395eb90e08da4":[6,0,2,766,0,4],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_spriter_1_1_mainline_key.html#a1865df332aa1c446fbf08c4882a14a68":[6,0,2,3,6,1],
+"struct_urho3_d_1_1_spriter_1_1_mainline_key.html#a4f94cac647a7c757894043aea750c495":[6,0,2,3,6,7],
 "struct_urho3_d_1_1_spriter_1_1_mainline_key.html#a5ed563b242446fc019535b6ae0cc9812":[6,0,2,3,6,0],
 "struct_urho3_d_1_1_spriter_1_1_mainline_key.html#a79cf0654ea544bad5087290c900c8cd2":[6,0,2,3,6,6],
 "struct_urho3_d_1_1_spriter_1_1_mainline_key.html#a8eb831e4ec2ac5b2f4ea045aeeb3ca53":[6,0,2,3,6,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_tuple_has_type.html":[6,0,2,760],
 "struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01ea_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html":[6,0,2,761],
 "struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01ea_1_1tuple_3_01_u_00_01_types_8_8_8_01_4_01_4.html":[6,0,2,762],
-"struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01ea_1_1tuple_3_4_01_4.html":[6,0,2,763],
-"struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01std_1_1tuple_3_01_types_8_8_8_01_4_01_4.html":[6,0,2,764],
-"struct_urho3_d_1_1_u_i_1_1_drag_data.html":[6,0,2,766,0]
+"struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01ea_1_1tuple_3_4_01_4.html":[6,0,2,763]
 };

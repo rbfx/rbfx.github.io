@@ -39,6 +39,8 @@ var class_urho3_d_1_1_vector2 =
     [ "operator==", "class_urho3_d_1_1_vector2.html#a93f9f2b2c08d09786925ac4f9be42954", null ],
     [ "ProjectOntoAxis", "class_urho3_d_1_1_vector2.html#a83b60623c2167f47ee53737e46d145ed", null ],
     [ "ReNormalized", "class_urho3_d_1_1_vector2.html#a99b8ecf2ffca66049ef73658063ae8e2", null ],
+    [ "ScalarCrossProduct", "class_urho3_d_1_1_vector2.html#ac01e15f3894d253f97450480944c9633", null ],
+    [ "SignedAngle", "class_urho3_d_1_1_vector2.html#a7feaa752467c00d5b6195eb8d9c417c5", null ],
     [ "ToHash", "class_urho3_d_1_1_vector2.html#ad7f778dcabb89dda1ccf8d733fe258e3", null ],
     [ "ToIntVector2", "class_urho3_d_1_1_vector2.html#ae64e0283dbd6ccd7399b5ca27af09cd8", null ],
     [ "ToIntVector3", "class_urho3_d_1_1_vector2.html#ae7cc35fbe001cf7c80ae58dd0559d7fd", null ],

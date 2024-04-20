@@ -1,5 +1,7 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_file_watcher_1_1_timed_file_change.html#a20a816b63d773f3112a1f65ef98d67ca":[6,0,2,231,0,1],
+"struct_urho3_d_1_1_file_watcher_1_1_timed_file_change.html#a8c52b122ab906879f149c8f7435b735e":[6,0,2,231,0,0],
 "struct_urho3_d_1_1_focus_parameters.html":[6,0,2,235],
 "struct_urho3_d_1_1_focus_parameters.html#a068c61efa9d5910c2b1ce3c105508890":[6,0,2,235,4],
 "struct_urho3_d_1_1_focus_parameters.html#a09add5270977b974e694ed185b70cdb2":[6,0,2,235,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_incremental_light_baker_settings.html#a034958ee9ae8ed8f415aa5f79b56af9f":[6,0,2,304,3],
 "struct_urho3_d_1_1_incremental_light_baker_settings.html#a8aa0d6e00db00f6a6e6c70fde5652da4":[6,0,2,304,6],
 "struct_urho3_d_1_1_incremental_light_baker_settings.html#a92a34c5eb81ae603ff6fdf46ce1ae26c":[6,0,2,304,1],
-"struct_urho3_d_1_1_incremental_light_baker_settings.html#ab9cc104351e0956393763c96ab7af3d5":[6,0,2,304,0],
-"struct_urho3_d_1_1_incremental_light_baker_settings.html#abf83f97b9521111297b578a4e0097f9d":[6,0,2,304,5],
-"struct_urho3_d_1_1_incremental_light_baker_settings.html#ac7dcb976c43b14b1491f90fab5b2c591":[6,0,2,304,2]
+"struct_urho3_d_1_1_incremental_light_baker_settings.html#ab9cc104351e0956393763c96ab7af3d5":[6,0,2,304,0]
 };
