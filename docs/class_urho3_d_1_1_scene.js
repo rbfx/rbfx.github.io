@@ -25,6 +25,7 @@ var class_urho3_d_1_1_scene =
     [ "GetComponent", "class_urho3_d_1_1_scene.html#a0c7ddadabfbb191e42b39877ca84cd67", null ],
     [ "GetComponentIndex", "class_urho3_d_1_1_scene.html#a7014bc2dd08cec14052eb8942d41ef25", null ],
     [ "GetComponentIndex", "class_urho3_d_1_1_scene.html#a1dd6a7063b3920436fdd13ba33b0c1f1", null ],
+    [ "GetEffectiveTimeScale", "class_urho3_d_1_1_scene.html#adfe1a3efbb6f2a1950e51376620cb1d4", null ],
     [ "GetElapsedTime", "class_urho3_d_1_1_scene.html#a15626a9ebb993c67fe50701f158626c7", null ],
     [ "GetFileName", "class_urho3_d_1_1_scene.html#a093e5570e5340e015ef1a47d462fb91d", null ],
     [ "GetFreeComponentID", "class_urho3_d_1_1_scene.html#a4b6753c183f6a4e56864396a696c4696", null ],

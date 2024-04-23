@@ -1,5 +1,10 @@
 var NAVTREEINDEX86 =
 {
+"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_node_search.html#a33d8b42aca3194468e3b81a3a9df8339":[6,0,2,607,0,0],
+"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_node_search.html#a514de4a2eccf8fbaaae772fbc183eb83":[6,0,2,607,0,1],
+"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_node_search.html#ad48ec8e3800802dd14d9285c10941c18":[6,0,2,607,0,2],
+"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html":[6,0,2,607,1],
+"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html#a1f5c1e76b48caf1165e81965049d3e33":[6,0,2,607,1,3],
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html#a37fa556d832b6ed814c8c01548388cd9":[6,0,2,607,1,2],
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html#a6a787d88af6de596a34c664fd54e7976":[6,0,2,607,1,0],
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html#aa43a85da8502f0ec2ec51b8afa6f2888":[6,0,2,607,1,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_spriter_1_1_folder.html#a40e3e9ccb449186784cd728e5128803f":[6,0,2,3,5,2],
 "struct_urho3_d_1_1_spriter_1_1_folder.html#a4a78c975e6f189e28bcc7c930e47e6a3":[6,0,2,3,5,3],
 "struct_urho3_d_1_1_spriter_1_1_folder.html#a51c5ac1b21be4c553137c3640a6b4428":[6,0,2,3,5,6],
-"struct_urho3_d_1_1_spriter_1_1_folder.html#a67dafcbfe91a47832b12e087813101be":[6,0,2,3,5,1],
-"struct_urho3_d_1_1_spriter_1_1_folder.html#ad5446f548901ea714bac4e97c715f660":[6,0,2,3,5,0],
-"struct_urho3_d_1_1_spriter_1_1_folder.html#aee25b2412cb998e72eb3baeb7185b208":[6,0,2,3,5,5],
-"struct_urho3_d_1_1_spriter_1_1_folder.html#afdd7f73ad5f8f86fccf802df5302dae9":[6,0,2,3,5,4],
-"struct_urho3_d_1_1_spriter_1_1_mainline_key.html":[6,0,2,3,6],
-"struct_urho3_d_1_1_spriter_1_1_mainline_key.html#a07eed5ab8aefe9ac45843c0be3065250":[6,0,2,3,6,5]
+"struct_urho3_d_1_1_spriter_1_1_folder.html#a67dafcbfe91a47832b12e087813101be":[6,0,2,3,5,1]
 };

@@ -149,6 +149,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a5064d62f3e709c569a2f363e74c4a630">SetPlayPosition</a> (signed char *pos)</td></tr>
 <tr class="memdesc:a5064d62f3e709c569a2f363e74c4a630"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new playback position. <br /></td></tr>
 <tr class="separator:a5064d62f3e709c569a2f363e74c4a630"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0aee94f734e9dfbb03664b5045260e0"><td class="memItemLeft" align="right" valign="top"><a id="aa0aee94f734e9dfbb03664b5045260e0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#aa0aee94f734e9dfbb03664b5045260e0">SetIgnoreSceneTimeScale</a> (bool ignoreSceneTimeScale)</td></tr>
+<tr class="memdesc:aa0aee94f734e9dfbb03664b5045260e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable ignore scene time scale mode. <br /></td></tr>
+<tr class="separator:aa0aee94f734e9dfbb03664b5045260e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ba2a7a65f12fdf49b938a42cf4a7a58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a5ba2a7a65f12fdf49b938a42cf4a7a58">GetSound</a> () const</td></tr>
 <tr class="separator:a5ba2a7a65f12fdf49b938a42cf4a7a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e98ef2e0bd42cfd1c3b93c9b7d66125"><td class="memItemLeft" align="right" valign="top"><a id="a3e98ef2e0bd42cfd1c3b93c9b7d66125"></a>
@@ -173,6 +177,10 @@ volatile signed char *&#160;</td><td class="memItemRight" valign="bottom"><a cla
 <tr class="separator:a1111b9e028ff1c1109fb76ec1a27ea88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bde4f2d5a263f9ee5843eda920896a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_component_8h.html#a01a03fff19daa9f54c2519fcdd737ce4">AutoRemoveMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a8bde4f2d5a263f9ee5843eda920896a7">GetAutoRemoveMode</a> () const</td></tr>
 <tr class="separator:a8bde4f2d5a263f9ee5843eda920896a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0198e5abbf89c533dd47a9388a4b4b66"><td class="memItemLeft" align="right" valign="top"><a id="a0198e5abbf89c533dd47a9388a4b4b66"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a0198e5abbf89c533dd47a9388a4b4b66">GetIgnoreSceneTimeScale</a> () const</td></tr>
+<tr class="memdesc:a0198e5abbf89c533dd47a9388a4b4b66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if sound source ignores scene time scale. <br /></td></tr>
+<tr class="separator:a0198e5abbf89c533dd47a9388a4b4b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dac4f4733a076eace3a300cef3be92e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a8dac4f4733a076eace3a300cef3be92e">IsPlaying</a> () const</td></tr>
 <tr class="separator:a8dac4f4733a076eace3a300cef3be92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73e8e58990434073b566533cf951125d"><td class="memItemLeft" align="right" valign="top"><a id="a73e8e58990434073b566533cf951125d"></a>
@@ -710,62 +718,66 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a702e41cd423d0f894f23e4e05521e845">SetPlayPositionLockless</a> (signed char *pos)</td></tr>
 <tr class="memdesc:a702e41cd423d0f894f23e4e05521e845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new playback position without locking the audio mutex. Called internally. <br /></td></tr>
 <tr class="separator:a702e41cd423d0f894f23e4e05521e845"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5756c89310433b6f047c3d2c417205c2"><td class="memItemLeft" align="right" valign="top"><a id="a5756c89310433b6f047c3d2c417205c2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a5756c89310433b6f047c3d2c417205c2">MixMonoToMono</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate, int channel=0, int channelCount=1)</td></tr>
-<tr class="memdesc:a5756c89310433b6f047c3d2c417205c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix mono sample to mono buffer. <br /></td></tr>
-<tr class="separator:a5756c89310433b6f047c3d2c417205c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5064d9b6c71891e2969d0721c427eb0c"><td class="memItemLeft" align="right" valign="top"><a id="a5064d9b6c71891e2969d0721c427eb0c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a5064d9b6c71891e2969d0721c427eb0c">MixMonoToStereo</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate)</td></tr>
-<tr class="memdesc:a5064d9b6c71891e2969d0721c427eb0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix mono sample to stereo buffer. <br /></td></tr>
-<tr class="separator:a5064d9b6c71891e2969d0721c427eb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ce3a1a6b2d15238b8ac61cc192f8035"><td class="memItemLeft" align="right" valign="top"><a id="a1ce3a1a6b2d15238b8ac61cc192f8035"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a1ce3a1a6b2d15238b8ac61cc192f8035">MixMonoToMonoIP</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate, int channel=0, int channelCount=1)</td></tr>
-<tr class="memdesc:a1ce3a1a6b2d15238b8ac61cc192f8035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix mono sample to mono buffer interpolated. <br /></td></tr>
-<tr class="separator:a1ce3a1a6b2d15238b8ac61cc192f8035"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeabf8a48aae1acde3f12e1f361b20826"><td class="memItemLeft" align="right" valign="top"><a id="aeabf8a48aae1acde3f12e1f361b20826"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#aeabf8a48aae1acde3f12e1f361b20826">MixMonoToStereoIP</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate)</td></tr>
-<tr class="memdesc:aeabf8a48aae1acde3f12e1f361b20826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix mono sample to stereo buffer interpolated. <br /></td></tr>
-<tr class="separator:aeabf8a48aae1acde3f12e1f361b20826"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a5e4802357bd6515ece12fcf0ab5c55"><td class="memItemLeft" align="right" valign="top"><a id="a2a5e4802357bd6515ece12fcf0ab5c55"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a2a5e4802357bd6515ece12fcf0ab5c55">MixStereoToMono</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate)</td></tr>
-<tr class="memdesc:a2a5e4802357bd6515ece12fcf0ab5c55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix stereo sample to mono buffer. <br /></td></tr>
-<tr class="separator:a2a5e4802357bd6515ece12fcf0ab5c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fd28b75bf751f34346cda7b3a8c3983"><td class="memItemLeft" align="right" valign="top"><a id="a0fd28b75bf751f34346cda7b3a8c3983"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a0fd28b75bf751f34346cda7b3a8c3983">MixStereoToStereo</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate)</td></tr>
-<tr class="memdesc:a0fd28b75bf751f34346cda7b3a8c3983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix stereo sample to stereo buffer. <br /></td></tr>
-<tr class="separator:a0fd28b75bf751f34346cda7b3a8c3983"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42815ebef1aa090e779b274ab854fabf"><td class="memItemLeft" align="right" valign="top"><a id="a42815ebef1aa090e779b274ab854fabf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a42815ebef1aa090e779b274ab854fabf">MixStereoToMonoIP</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate)</td></tr>
-<tr class="memdesc:a42815ebef1aa090e779b274ab854fabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix stereo sample to mono buffer interpolated. <br /></td></tr>
-<tr class="separator:a42815ebef1aa090e779b274ab854fabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4a28df1438962c5643faed31523db9f"><td class="memItemLeft" align="right" valign="top"><a id="ae4a28df1438962c5643faed31523db9f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#ae4a28df1438962c5643faed31523db9f">MixStereoToStereoIP</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate)</td></tr>
-<tr class="memdesc:ae4a28df1438962c5643faed31523db9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix stereo sample to stereo buffer interpolated. <br /></td></tr>
-<tr class="separator:ae4a28df1438962c5643faed31523db9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca51414f7b99af12b23b9ed2779398da"><td class="memItemLeft" align="right" valign="top"><a id="aca51414f7b99af12b23b9ed2779398da"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#aca51414f7b99af12b23b9ed2779398da">MixMonoToSurround</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int *dest, unsigned samples, int mixRate, SpeakerMode speakers)</td></tr>
-<tr class="memdesc:aca51414f7b99af12b23b9ed2779398da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix a mono track to surround buffer. <br /></td></tr>
-<tr class="separator:aca51414f7b99af12b23b9ed2779398da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7cd98c90c585551b6ee1ee7a56fab69"><td class="memItemLeft" align="right" valign="top"><a id="af7cd98c90c585551b6ee1ee7a56fab69"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#af7cd98c90c585551b6ee1ee7a56fab69">MixMonoToSurroundIP</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int *dest, unsigned samples, int mixRate, SpeakerMode speakers)</td></tr>
-<tr class="memdesc:af7cd98c90c585551b6ee1ee7a56fab69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix a mono track into a surround buffer. <br /></td></tr>
-<tr class="separator:af7cd98c90c585551b6ee1ee7a56fab69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7af51bd0f41d88413869110c21fa3b4"><td class="memItemLeft" align="right" valign="top"><a id="ad7af51bd0f41d88413869110c21fa3b4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#ad7af51bd0f41d88413869110c21fa3b4">MixStereoToMulti</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int *dest, unsigned samples, int mixRate, SpeakerMode speakers)</td></tr>
-<tr class="memdesc:ad7af51bd0f41d88413869110c21fa3b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix stereo sample into multichannel. Front-center and LFE are ommitted. <br /></td></tr>
-<tr class="separator:ad7af51bd0f41d88413869110c21fa3b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea8b7af3e848d418b0a1fb95b04a8c93"><td class="memItemLeft" align="right" valign="top"><a id="aea8b7af3e848d418b0a1fb95b04a8c93"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#aea8b7af3e848d418b0a1fb95b04a8c93">MixStereoToMultiIP</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int *dest, unsigned samples, int mixRate, SpeakerMode speakers)</td></tr>
-<tr class="memdesc:aea8b7af3e848d418b0a1fb95b04a8c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix stereo sample into multichannel. Front-center and LFE are ommitted. <br /></td></tr>
-<tr class="separator:aea8b7af3e848d418b0a1fb95b04a8c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97a3af04d91f345aa38911e910ef2317"><td class="memItemLeft" align="right" valign="top"><a id="a97a3af04d91f345aa38911e910ef2317"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a97a3af04d91f345aa38911e910ef2317">MixZeroVolume</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, unsigned samples, int mixRate)</td></tr>
-<tr class="memdesc:a97a3af04d91f345aa38911e910ef2317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advance playback pointer without producing audible output. <br /></td></tr>
-<tr class="separator:a97a3af04d91f345aa38911e910ef2317"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac68eabd8d87e30739b12a2a41dde4ae4"><td class="memItemLeft" align="right" valign="top"><a id="ac68eabd8d87e30739b12a2a41dde4ae4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#ac68eabd8d87e30739b12a2a41dde4ae4">MixNull</a> (float timeStep)</td></tr>
-<tr class="memdesc:ac68eabd8d87e30739b12a2a41dde4ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advance playback pointer to simulate audio playback in headless mode. <br /></td></tr>
-<tr class="separator:ac68eabd8d87e30739b12a2a41dde4ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a856fd0ae81c8dcb187ccc6e34992de22"><td class="memItemLeft" align="right" valign="top"><a id="a856fd0ae81c8dcb187ccc6e34992de22"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a856fd0ae81c8dcb187ccc6e34992de22">MixMonoToMono</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate, float effectiveFrequency, int channel=0, int channelCount=1)</td></tr>
+<tr class="memdesc:a856fd0ae81c8dcb187ccc6e34992de22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix mono sample to mono buffer. <br /></td></tr>
+<tr class="separator:a856fd0ae81c8dcb187ccc6e34992de22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b10382e44eda1be0c0a02a0c9260cf1"><td class="memItemLeft" align="right" valign="top"><a id="a0b10382e44eda1be0c0a02a0c9260cf1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a0b10382e44eda1be0c0a02a0c9260cf1">MixMonoToStereo</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate, float effectiveFrequency)</td></tr>
+<tr class="memdesc:a0b10382e44eda1be0c0a02a0c9260cf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix mono sample to stereo buffer. <br /></td></tr>
+<tr class="separator:a0b10382e44eda1be0c0a02a0c9260cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cbdaa0b7cba01e8097cd650abb18af5"><td class="memItemLeft" align="right" valign="top"><a id="a6cbdaa0b7cba01e8097cd650abb18af5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a6cbdaa0b7cba01e8097cd650abb18af5">MixMonoToMonoIP</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate, float effectiveFrequency, int channel=0, int channelCount=1)</td></tr>
+<tr class="memdesc:a6cbdaa0b7cba01e8097cd650abb18af5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix mono sample to mono buffer interpolated. <br /></td></tr>
+<tr class="separator:a6cbdaa0b7cba01e8097cd650abb18af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada12d4dc3229b8f75c2bac81dcb066bb"><td class="memItemLeft" align="right" valign="top"><a id="ada12d4dc3229b8f75c2bac81dcb066bb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#ada12d4dc3229b8f75c2bac81dcb066bb">MixMonoToStereoIP</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate, float effectiveFrequency)</td></tr>
+<tr class="memdesc:ada12d4dc3229b8f75c2bac81dcb066bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix mono sample to stereo buffer interpolated. <br /></td></tr>
+<tr class="separator:ada12d4dc3229b8f75c2bac81dcb066bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e31acd1504f37e58017462d4e02a893"><td class="memItemLeft" align="right" valign="top"><a id="a5e31acd1504f37e58017462d4e02a893"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a5e31acd1504f37e58017462d4e02a893">MixStereoToMono</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate, float effectiveFrequency)</td></tr>
+<tr class="memdesc:a5e31acd1504f37e58017462d4e02a893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix stereo sample to mono buffer. <br /></td></tr>
+<tr class="separator:a5e31acd1504f37e58017462d4e02a893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a544e4bc058103ae23c4108b1116c775b"><td class="memItemLeft" align="right" valign="top"><a id="a544e4bc058103ae23c4108b1116c775b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a544e4bc058103ae23c4108b1116c775b">MixStereoToStereo</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate, float effectiveFrequency)</td></tr>
+<tr class="memdesc:a544e4bc058103ae23c4108b1116c775b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix stereo sample to stereo buffer. <br /></td></tr>
+<tr class="separator:a544e4bc058103ae23c4108b1116c775b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0470cf6802c4d19ca12ce356524797ab"><td class="memItemLeft" align="right" valign="top"><a id="a0470cf6802c4d19ca12ce356524797ab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a0470cf6802c4d19ca12ce356524797ab">MixStereoToMonoIP</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate, float effectiveFrequency)</td></tr>
+<tr class="memdesc:a0470cf6802c4d19ca12ce356524797ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix stereo sample to mono buffer interpolated. <br /></td></tr>
+<tr class="separator:a0470cf6802c4d19ca12ce356524797ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf0489becdb9b3dac65a0877c53bfdb"><td class="memItemLeft" align="right" valign="top"><a id="a3bf0489becdb9b3dac65a0877c53bfdb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a3bf0489becdb9b3dac65a0877c53bfdb">MixStereoToStereoIP</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int dest[], unsigned samples, int mixRate, float effectiveFrequency)</td></tr>
+<tr class="memdesc:a3bf0489becdb9b3dac65a0877c53bfdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix stereo sample to stereo buffer interpolated. <br /></td></tr>
+<tr class="separator:a3bf0489becdb9b3dac65a0877c53bfdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aee7a02ceb38efeedaf176072cbe5f2"><td class="memItemLeft" align="right" valign="top"><a id="a7aee7a02ceb38efeedaf176072cbe5f2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a7aee7a02ceb38efeedaf176072cbe5f2">MixMonoToSurround</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int *dest, unsigned samples, int mixRate, float effectiveFrequency, SpeakerMode speakers)</td></tr>
+<tr class="memdesc:a7aee7a02ceb38efeedaf176072cbe5f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix a mono track to surround buffer. <br /></td></tr>
+<tr class="separator:a7aee7a02ceb38efeedaf176072cbe5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66664c97c9354a0fa0a93598fb7a89f0"><td class="memItemLeft" align="right" valign="top"><a id="a66664c97c9354a0fa0a93598fb7a89f0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a66664c97c9354a0fa0a93598fb7a89f0">MixMonoToSurroundIP</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int *dest, unsigned samples, int mixRate, float effectiveFrequency, SpeakerMode speakers)</td></tr>
+<tr class="memdesc:a66664c97c9354a0fa0a93598fb7a89f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix a mono track into a surround buffer. <br /></td></tr>
+<tr class="separator:a66664c97c9354a0fa0a93598fb7a89f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2776446dfda0af8013ad3424556ad63e"><td class="memItemLeft" align="right" valign="top"><a id="a2776446dfda0af8013ad3424556ad63e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a2776446dfda0af8013ad3424556ad63e">MixStereoToMulti</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int *dest, unsigned samples, int mixRate, float effectiveFrequency, SpeakerMode speakers)</td></tr>
+<tr class="memdesc:a2776446dfda0af8013ad3424556ad63e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix stereo sample into multichannel. Front-center and LFE are ommitted. <br /></td></tr>
+<tr class="separator:a2776446dfda0af8013ad3424556ad63e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be7fc8bab5caf9318bf5103680c5020"><td class="memItemLeft" align="right" valign="top"><a id="a3be7fc8bab5caf9318bf5103680c5020"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a3be7fc8bab5caf9318bf5103680c5020">MixStereoToMultiIP</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, int *dest, unsigned samples, int mixRate, float effectiveFrequency, SpeakerMode speakers)</td></tr>
+<tr class="memdesc:a3be7fc8bab5caf9318bf5103680c5020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mix stereo sample into multichannel. Front-center and LFE are ommitted. <br /></td></tr>
+<tr class="separator:a3be7fc8bab5caf9318bf5103680c5020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3e88432240d1be9c3e267e01ad342dc"><td class="memItemLeft" align="right" valign="top"><a id="ab3e88432240d1be9c3e267e01ad342dc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#ab3e88432240d1be9c3e267e01ad342dc">MixZeroVolume</a> (<a class="el" href="class_urho3_d_1_1_sound.html">Sound</a> *sound, unsigned samples, int mixRate, float effectiveFrequency)</td></tr>
+<tr class="memdesc:ab3e88432240d1be9c3e267e01ad342dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advance playback pointer without producing audible output. <br /></td></tr>
+<tr class="separator:ab3e88432240d1be9c3e267e01ad342dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fbeaed7f2f1445a82440551fb319ec1"><td class="memItemLeft" align="right" valign="top"><a id="a0fbeaed7f2f1445a82440551fb319ec1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a0fbeaed7f2f1445a82440551fb319ec1">MixNull</a> (float timeStep, float effectiveFrequency)</td></tr>
+<tr class="memdesc:a0fbeaed7f2f1445a82440551fb319ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advance playback pointer to simulate audio playback in headless mode. <br /></td></tr>
+<tr class="separator:a0fbeaed7f2f1445a82440551fb319ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03f3b13966ff5469bdfc05f867002dd"><td class="memItemLeft" align="right" valign="top"><a id="af03f3b13966ff5469bdfc05f867002dd"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#af03f3b13966ff5469bdfc05f867002dd">GetEffectiveTimeScale</a> () const</td></tr>
+<tr class="memdesc:af03f3b13966ff5469bdfc05f867002dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get effective time scale or 0.0 if scene is not set or paused. <br /></td></tr>
+<tr class="separator:af03f3b13966ff5469bdfc05f867002dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -797,6 +809,10 @@ volatile float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a42af4d3af4ad15ac126180e560b9a9c7">unusedStreamSize_</a></td></tr>
 <tr class="memdesc:a42af4d3af4ad15ac126180e560b9a9c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unused stream bytes from previous frame. <br /></td></tr>
 <tr class="separator:a42af4d3af4ad15ac126180e560b9a9c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0488b5b88e5fd45865de7d6f06e393af"><td class="memItemLeft" align="right" valign="top"><a id="a0488b5b88e5fd45865de7d6f06e393af"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_sound_source.html#a0488b5b88e5fd45865de7d6f06e393af">ignoreSceneTimeScale_</a> {false}</td></tr>
+<tr class="memdesc:a0488b5b88e5fd45865de7d6f06e393af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ignore scene time scale and play sound even if scene is paused. <br /></td></tr>
+<tr class="separator:a0488b5b88e5fd45865de7d6f06e393af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
