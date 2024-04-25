@@ -1,5 +1,13 @@
 var Module = typeof Module != "undefined" ? Module : {};
 
+var ENVIRONMENT_IS_WEB = typeof window == "object";
+
+var ENVIRONMENT_IS_WORKER = typeof importScripts == "function";
+
+var ENVIRONMENT_IS_NODE = typeof process == "object" && typeof process.versions == "object" && typeof process.versions.node == "string";
+
+if (ENVIRONMENT_IS_NODE) {}
+
 var Module;
 
 if (typeof Module === "undefined") Module = eval("(function(){try{return Module||{}}catch(e){return{}}})()");
@@ -27,12 +35,6 @@ var thisProgram = "./this.program";
 var quit_ = (status, toThrow) => {
  throw toThrow;
 };
-
-var ENVIRONMENT_IS_WEB = typeof window == "object";
-
-var ENVIRONMENT_IS_WORKER = typeof importScripts == "function";
-
-var ENVIRONMENT_IS_NODE = typeof process == "object" && typeof process.versions == "object" && typeof process.versions.node == "string";
 
 var scriptDirectory = "";
 
@@ -357,11 +359,15 @@ function instantiateAsync(binary, binaryFile, imports, callback) {
  return instantiateArrayBuffer(binaryFile, imports, callback);
 }
 
-function createWasm() {
- var info = {
+function getWasmImports() {
+ return {
   "env": wasmImports,
   "wasi_snapshot_preview1": wasmImports
  };
+}
+
+function createWasm() {
+ var info = getWasmImports();
  /** @param {WebAssembly.Module=} module*/ function receiveInstance(instance, module) {
   wasmExports = instance.exports;
   wasmMemory = wasmExports["memory"];
@@ -6863,13 +6869,13 @@ var _emscripten_async_wget2_data = (url, request, param, userdata, free, onload,
  var handle = wget.getNextWgetRequestHandle();
  function onerrorjs() {
   if (onerror) {
-   withStackSave(() => {
-    var statusText = 0;
-    if (http.statusText) {
-     statusText = stringToUTF8OnStack(http.statusText);
-    }
-    getWasmTableEntry(onerror)(handle, userdata, http.status, statusText);
-   });
+   var sp = stackSave();
+   var statusText = 0;
+   if (http.statusText) {
+    statusText = stringToUTF8OnStack(http.statusText);
+   }
+   getWasmTableEntry(onerror)(handle, userdata, http.status, statusText);
+   stackRestore(sp);
   }
  }
  http.onload = e => {
@@ -6905,13 +6911,6 @@ var _emscripten_async_wget2_data = (url, request, param, userdata, free, onload,
 };
 
 var _emscripten_date_now = () => Date.now();
-
-var withStackSave = f => {
- var stack = stackSave();
- var ret = f();
- stackRestore(stack);
- return ret;
-};
 
 var JSEvents = {
  removeAllEventListeners() {
@@ -7057,14 +7056,16 @@ var stringToUTF8OnStack = str => {
  return ret;
 };
 
-var getCanvasElementSize = target => withStackSave(() => {
+var getCanvasElementSize = target => {
+ var sp = stackSave();
  var w = stackAlloc(8);
  var h = w + 4;
  var targetInt = stringToUTF8OnStack(target.id);
  var ret = _emscripten_get_canvas_element_size(targetInt, w, h);
  var size = [ HEAP32[((w) >> 2)], HEAP32[((h) >> 2)] ];
+ stackRestore(sp);
  return size;
-});
+};
 
 var _emscripten_set_canvas_element_size = (target, width, height) => {
  var canvas = findCanvasEventTarget(target);
@@ -7079,10 +7080,10 @@ var setCanvasElementSize = (target, width, height) => {
   target.width = width;
   target.height = height;
  } else {
-  withStackSave(() => {
-   var targetInt = stringToUTF8OnStack(target.id);
-   _emscripten_set_canvas_element_size(targetInt, width, height);
-  });
+  var sp = stackSave();
+  var targetInt = stringToUTF8OnStack(target.id);
+  _emscripten_set_canvas_element_size(targetInt, width, height);
+  stackRestore(sp);
  }
 };
 

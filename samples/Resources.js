@@ -6,10 +6,12 @@
   }
 
   Module.expectedDataFileDownloads++;
-  (function() {
+  (() => {
     // Do not attempt to redownload the virtual filesystem data when in a pthread or a Wasm Worker context.
-    if (Module['ENVIRONMENT_IS_PTHREAD'] || Module['$ww']) return;
-    var loadPackage = function(metadata) {
+    var isPthread = typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD;
+    var isWasmWorker = typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER;
+    if (isPthread || isWasmWorker) return;
+    function loadPackage(metadata) {
 
       var PACKAGE_PATH = '';
       if (typeof window === 'object') {
@@ -350,6 +352,6 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
     }
 
     }
-    loadPackage({"files": [{"filename": "/CoreData.pak", "start": 0, "end": 695733}, {"filename": "/Data.pak", "start": 695733, "end": 48394174}], "remote_package_size": 48394174, "package_uuid": "sha256-4afb6049c0edb3c01e8d3e8145555209e7ba386c4a55ebd0911337574baa0411"});
+    loadPackage({"files": [{"filename": "/CoreData.pak", "start": 0, "end": 695764}, {"filename": "/Data.pak", "start": 695764, "end": 48394205}], "remote_package_size": 48394205, "package_uuid": "sha256-8db143132176c80a9064edf97f8fc5a0978ead52409d2360aa53f0bc9e39ce60"});
 
   })();
