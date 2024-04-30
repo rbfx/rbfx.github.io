@@ -1,5 +1,6 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_spriter_1_1_folder.html#a67dafcbfe91a47832b12e087813101be":[6,0,2,3,5,1],
 "struct_urho3_d_1_1_spriter_1_1_folder.html#ad5446f548901ea714bac4e97c715f660":[6,0,2,3,5,0],
 "struct_urho3_d_1_1_spriter_1_1_folder.html#aee25b2412cb998e72eb3baeb7185b208":[6,0,2,3,5,5],
 "struct_urho3_d_1_1_spriter_1_1_folder.html#afdd7f73ad5f8f86fccf802df5302dae9":[6,0,2,3,5,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_triangle_mesh_data.html#a0cf34174a41179ebc795e6ca70403343":[6,0,2,758,3],
 "struct_urho3_d_1_1_triangle_mesh_data.html#a3047e0072c9156e75a0585c598ee6d80":[6,0,2,758,5],
 "struct_urho3_d_1_1_triangle_mesh_data.html#a64494c6f4dd41490331d10a75766cd6e":[6,0,2,758,2],
-"struct_urho3_d_1_1_triangle_mesh_data.html#a906045ada397f83997ef57ca766e35fb":[6,0,2,758,0],
-"struct_urho3_d_1_1_triangle_mesh_data.html#a90fb418b8d8c5371db57dd659fc99b60":[6,0,2,758,4]
+"struct_urho3_d_1_1_triangle_mesh_data.html#a906045ada397f83997ef57ca766e35fb":[6,0,2,758,0]
 };

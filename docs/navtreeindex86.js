@@ -1,5 +1,6 @@
 var NAVTREEINDEX86 =
 {
+"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_node_search.html#a32cb317b8c0dde758cfd856f76363b90":[6,0,2,607,0,3],
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_node_search.html#a33d8b42aca3194468e3b81a3a9df8339":[6,0,2,607,0,0],
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_node_search.html#a514de4a2eccf8fbaaae772fbc183eb83":[6,0,2,607,0,1],
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_node_search.html#ad48ec8e3800802dd14d9285c10941c18":[6,0,2,607,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_spriter_1_1_folder.html":[6,0,2,3,5],
 "struct_urho3_d_1_1_spriter_1_1_folder.html#a40e3e9ccb449186784cd728e5128803f":[6,0,2,3,5,2],
 "struct_urho3_d_1_1_spriter_1_1_folder.html#a4a78c975e6f189e28bcc7c930e47e6a3":[6,0,2,3,5,3],
-"struct_urho3_d_1_1_spriter_1_1_folder.html#a51c5ac1b21be4c553137c3640a6b4428":[6,0,2,3,5,6],
-"struct_urho3_d_1_1_spriter_1_1_folder.html#a67dafcbfe91a47832b12e087813101be":[6,0,2,3,5,1]
+"struct_urho3_d_1_1_spriter_1_1_folder.html#a51c5ac1b21be4c553137c3640a6b4428":[6,0,2,3,5,6]
 };

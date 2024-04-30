@@ -6,6 +6,7 @@ var struct_urho3_d_1_1_g_l_t_f_importer_settings =
     [ "cleanupBoneNames_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#a79e13a07f263d35becce372235a3a02f", null ],
     [ "cleanupRootNodes_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#a21075f5f704c177cc6df33b08de08b6f", null ],
     [ "combineLODs_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#ad6eac65dd4cedaad9c1dbffc5530f2b0", null ],
+    [ "fadeTransparency_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#a0195f7c245c1ffb019a45092c55e68b6", null ],
     [ "gpuResources_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#a1a7bbe0a16893a74865966ec45cd7b51", null ],
     [ "keepNamesOnMerge_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#a6570a0773d54c5140af08723ca1dc48e", null ],
     [ "keyFrameTimeError_", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html#af300f413496442695afb9160faca3266", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#af41bba824cace9ccab6b6e5d7ba9aa9c":[6,0,2,297,0,8],
 "struct_urho3_d_1_1_incremental_light_baker_settings.html":[6,0,2,304],
 "struct_urho3_d_1_1_incremental_light_baker_settings.html#a034958ee9ae8ed8f415aa5f79b56af9f":[6,0,2,304,3],
 "struct_urho3_d_1_1_incremental_light_baker_settings.html#a8aa0d6e00db00f6a6e6c70fde5652da4":[6,0,2,304,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_lightmap_seam.html#a2c77451e1f69e89d269d38b43ffb9b54":[6,0,2,354,0],
 "struct_urho3_d_1_1_lightmap_seam.html#a544ba674c125b9368ca56a14a89edb6e":[6,0,2,354,2],
 "struct_urho3_d_1_1_lightmap_seam.html#ae6f3074f0b5547886286e5e8865f4082":[6,0,2,354,1],
-"struct_urho3_d_1_1_lightmap_stitching_context.html":[6,0,2,355],
-"struct_urho3_d_1_1_lightmap_stitching_context.html#a187feeba7ff430950f04d67a0c80f508":[6,0,2,355,1]
+"struct_urho3_d_1_1_lightmap_stitching_context.html":[6,0,2,355]
 };
