@@ -50,11 +50,7 @@ var read_, readAsync, readBinary;
 if (ENVIRONMENT_IS_NODE) {
  var fs = require("fs");
  var nodePath = require("path");
- if (ENVIRONMENT_IS_WORKER) {
-  scriptDirectory = nodePath.dirname(scriptDirectory) + "/";
- } else {
-  scriptDirectory = __dirname + "/";
- }
+ scriptDirectory = __dirname + "/";
  read_ = (filename, binary) => {
   filename = isFileURI(filename) ? new URL(filename) : nodePath.normalize(filename);
   return fs.readFileSync(filename, binary ? undefined : "utf8");
@@ -298,13 +294,15 @@ var dataURIPrefix = "data:application/octet-stream;base64,";
  * @noinline
  */ var isFileURI = filename => filename.startsWith("file://");
 
-var wasmBinaryFile;
-
-wasmBinaryFile = "Samples.wasm";
-
-if (!isDataURI(wasmBinaryFile)) {
- wasmBinaryFile = locateFile(wasmBinaryFile);
+function findWasmBinary() {
+ var f = "Samples.wasm";
+ if (!isDataURI(f)) {
+  return locateFile(f);
+ }
+ return f;
 }
+
+var wasmBinaryFile;
 
 function getBinarySync(file) {
  if (file == wasmBinaryFile && wasmBinary) {
@@ -389,6 +387,7 @@ function createWasm() {
    return false;
   }
  }
+ if (!wasmBinaryFile) wasmBinaryFile = findWasmBinary();
  instantiateAsync(wasmBinary, wasmBinaryFile, info, receiveInstantiationResult);
  return {};
 }
@@ -398,14 +397,14 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 1935660: () => {
+ 1937420: () => {
   FS.syncfs(function(err) {
    if (err) {
     console.error(err);
    }
   });
  },
- 1935724: $0 => {
+ 1937484: $0 => {
   var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
   var reply = window.prompt(str, "i");
   if (reply === null) {
@@ -413,10 +412,10 @@ var ASM_CONSTS = {
   }
   return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
  },
- 1935949: ($0, $1) => {
+ 1937709: ($0, $1) => {
   alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
  },
- 1936006: () => {
+ 1937766: () => {
   if (typeof (AudioContext) !== "undefined") {
    return true;
   } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -424,7 +423,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1936153: () => {
+ 1937913: () => {
   if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
    return true;
   } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -432,7 +431,7 @@ var ASM_CONSTS = {
   }
   return false;
  },
- 1936387: $0 => {
+ 1938147: $0 => {
   if (typeof (Module["SDL2"]) === "undefined") {
    Module["SDL2"] = {};
   }
@@ -454,11 +453,11 @@ var ASM_CONSTS = {
   }
   return SDL2.audioContext === undefined ? -1 : 0;
  },
- 1936880: () => {
+ 1938640: () => {
   var SDL2 = Module["SDL2"];
   return SDL2.audioContext.sampleRate;
  },
- 1936948: ($0, $1, $2, $3) => {
+ 1938708: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   var have_microphone = function(stream) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -499,7 +498,7 @@ var ASM_CONSTS = {
    }, have_microphone, no_microphone);
   }
  },
- 1938600: ($0, $1, $2, $3) => {
+ 1940360: ($0, $1, $2, $3) => {
   var SDL2 = Module["SDL2"];
   SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
   SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -511,7 +510,7 @@ var ASM_CONSTS = {
   };
   SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
  },
- 1939010: ($0, $1) => {
+ 1940770: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
   for (var c = 0; c < numChannels; ++c) {
@@ -530,7 +529,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1939615: ($0, $1) => {
+ 1941375: ($0, $1) => {
   var SDL2 = Module["SDL2"];
   var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
   for (var c = 0; c < numChannels; ++c) {
@@ -543,7 +542,7 @@ var ASM_CONSTS = {
    }
   }
  },
- 1940095: $0 => {
+ 1941855: $0 => {
   var SDL2 = Module["SDL2"];
   if ($0) {
    if (SDL2.capture.silenceTimer !== undefined) {
@@ -581,7 +580,7 @@ var ASM_CONSTS = {
    SDL2.audioContext = undefined;
   }
  },
- 1941267: ($0, $1, $2) => {
+ 1943027: ($0, $1, $2) => {
   var w = $0;
   var h = $1;
   var pixels = $2;
@@ -652,7 +651,7 @@ var ASM_CONSTS = {
   }
   SDL2.ctx.putImageData(SDL2.image, 0, 0);
  },
- 1942736: ($0, $1, $2, $3, $4) => {
+ 1944496: ($0, $1, $2, $3, $4) => {
   var w = $0;
   var h = $1;
   var hot_x = $2;
@@ -689,18 +688,18 @@ var ASM_CONSTS = {
   stringToUTF8(url, urlBuf, url.length + 1);
   return urlBuf;
  },
- 1943725: $0 => {
+ 1945485: $0 => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = UTF8ToString($0);
   }
  },
- 1943808: () => {
+ 1945568: () => {
   if (Module["canvas"]) {
    Module["canvas"].style["cursor"] = "none";
   }
  },
- 1943877: () => window.innerWidth,
- 1943907: () => window.innerHeight
+ 1945637: () => window.innerWidth,
+ 1945667: () => window.innerHeight
 };
 
 /** @constructor */ function ExitStatus(status) {
@@ -4505,6 +4504,10 @@ function ___syscall_unlinkat(dirfd, path, flags) {
  }
 }
 
+var __abort_js = () => {
+ abort("");
+};
+
 var __embind_register_bigint = (primitiveType, name, size, minRange, maxRange) => {};
 
 var embind_init_charCodes = () => {
@@ -4898,7 +4901,7 @@ var dynCallLegacy = (sig, ptr, args) => {
 
 var wasmTableMirror = [];
 
-var wasmTable;
+/** @type {WebAssembly.Table} */ var wasmTable;
 
 var getWasmTableEntry = funcPtr => {
  var func = wasmTableMirror[funcPtr];
@@ -5439,10 +5442,6 @@ var __tzset_js = (timezone, daylight, std_name, dst_name) => {
   stringToUTF8(winterName, dst_name, 17);
   stringToUTF8(summerName, std_name, 17);
  }
-};
-
-var _abort = () => {
- abort("");
 };
 
 var _emscripten_set_main_loop_timing = (mode, value) => {
@@ -11454,6 +11453,7 @@ var wasmImports = {
  /** @export */ __syscall_socket: ___syscall_socket,
  /** @export */ __syscall_stat64: ___syscall_stat64,
  /** @export */ __syscall_unlinkat: ___syscall_unlinkat,
+ /** @export */ _abort_js: __abort_js,
  /** @export */ _embind_register_bigint: __embind_register_bigint,
  /** @export */ _embind_register_bool: __embind_register_bool,
  /** @export */ _embind_register_emval: __embind_register_emval,
@@ -11471,7 +11471,6 @@ var wasmImports = {
  /** @export */ _gmtime_js: __gmtime_js,
  /** @export */ _localtime_js: __localtime_js,
  /** @export */ _tzset_js: __tzset_js,
- /** @export */ abort: _abort,
  /** @export */ eglBindAPI: _eglBindAPI,
  /** @export */ eglChooseConfig: _eglChooseConfig,
  /** @export */ eglCreateContext: _eglCreateContext,
