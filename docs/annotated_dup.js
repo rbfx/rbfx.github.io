@@ -287,6 +287,7 @@ var annotated_dup =
       [ "CachedDrawableZone", "struct_urho3_d_1_1_cached_drawable_zone.html", "struct_urho3_d_1_1_cached_drawable_zone" ],
       [ "CachedUIBatchState", "struct_urho3_d_1_1_cached_u_i_batch_state.html", "struct_urho3_d_1_1_cached_u_i_batch_state" ],
       [ "Camera", "class_urho3_d_1_1_camera.html", "class_urho3_d_1_1_camera" ],
+      [ "CameraOperator", "class_urho3_d_1_1_camera_operator.html", "class_urho3_d_1_1_camera_operator" ],
       [ "CameraProcessor", "class_urho3_d_1_1_camera_processor.html", "class_urho3_d_1_1_camera_processor" ],
       [ "CascadeParameters", "struct_urho3_d_1_1_cascade_parameters.html", "struct_urho3_d_1_1_cascade_parameters" ],
       [ "CharLocation", "struct_urho3_d_1_1_char_location.html", "struct_urho3_d_1_1_char_location" ],

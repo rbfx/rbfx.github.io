@@ -10,6 +10,9 @@ var dir_4332035370c4a6be719a0163e1872ef4 =
     ] ],
     [ "AnimationTrack.h", "_animation_track_8h.html", "_animation_track_8h" ],
     [ "Camera.h", "_camera_8h.html", "_camera_8h" ],
+    [ "CameraOperator.h", "_camera_operator_8h.html", [
+      [ "CameraOperator", "class_urho3_d_1_1_camera_operator.html", "class_urho3_d_1_1_camera_operator" ]
+    ] ],
     [ "CubemapRenderer.h", "_cubemap_renderer_8h.html", "_cubemap_renderer_8h" ],
     [ "Drawable.h", "_drawable_8h.html", "_drawable_8h" ],
     [ "GlobalIllumination.h", "_global_illumination_8h.html", [

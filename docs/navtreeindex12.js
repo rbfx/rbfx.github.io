@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"class_urho3_d_1_1_archive_base_t.html#ae20084ca3eb96a5403a226742aa8a147":[6,0,2,38,14],
 "class_urho3_d_1_1_archive_base_t.html#afbca1864558077b3df67dacc9b5523e1":[6,0,2,38,2],
 "class_urho3_d_1_1_archive_block.html":[6,0,2,39],
 "class_urho3_d_1_1_archive_block.html#a01eab27443b3834c87421d1332c8fe03":[6,0,2,39,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "class_urho3_d_1_1_axis_adapter.html":[6,0,2,62],
 "class_urho3_d_1_1_axis_adapter.html#a0a8bd7681eba646f85961852d1442ea3":[6,0,2,62,11],
 "class_urho3_d_1_1_axis_adapter.html#a0ee35b09de47d7aeb07675c429385ff2":[6,0,2,62,8],
-"class_urho3_d_1_1_axis_adapter.html#a1253bbd202239843222b1c175e32e89a":[6,0,2,62,18],
-"class_urho3_d_1_1_axis_adapter.html#a14b4e77cb81b46ad556781d22f7fb331":[6,0,2,62,19]
+"class_urho3_d_1_1_axis_adapter.html#a1253bbd202239843222b1c175e32e89a":[6,0,2,62,18]
 };
