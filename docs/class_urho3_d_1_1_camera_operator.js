@@ -7,7 +7,7 @@ var class_urho3_d_1_1_camera_operator =
     [ "GetBoundingBox", "class_urho3_d_1_1_camera_operator.html#a1549a334522af02ee87331c399fa52ae", null ],
     [ "GetNodeIDsAttr", "class_urho3_d_1_1_camera_operator.html#ae388cced6e48de6ef98598356d67f927", null ],
     [ "GetNumTrackedNodes", "class_urho3_d_1_1_camera_operator.html#a6755d4322913865944800bbcc22a02a2", null ],
-    [ "GetPadding", "class_urho3_d_1_1_camera_operator.html#a5c86734a230f889435e1216f46aeb0fd", null ],
+    [ "GetPadding", "class_urho3_d_1_1_camera_operator.html#a36a3181efac4cc3c06a86d2197c78a70", null ],
     [ "GetTrackedNode", "class_urho3_d_1_1_camera_operator.html#a54b08d888ffe5a32545807d7cc9bb9db", null ],
     [ "HandleSceneDrawableUpdateFinished", "class_urho3_d_1_1_camera_operator.html#a805ff53c5132481d0fbfd6521abdf57c", null ],
     [ "IsBoundingBoxTrackingEnabled", "class_urho3_d_1_1_camera_operator.html#a50f79bdc7ea0a18feaf54337d703e0d7", null ],
@@ -21,7 +21,7 @@ var class_urho3_d_1_1_camera_operator =
     [ "SetBoundingBox", "class_urho3_d_1_1_camera_operator.html#acec8e45353c460c6392e2af836b75535", null ],
     [ "SetBoundingBoxTrackingEnabled", "class_urho3_d_1_1_camera_operator.html#a3eff18fc1d345902aa3c15d6d12287df", null ],
     [ "SetNodeIDsAttr", "class_urho3_d_1_1_camera_operator.html#a382b5a80baf9ef641aa25845af2beb52", null ],
-    [ "SetPadding", "class_urho3_d_1_1_camera_operator.html#a1fdbd44403bd9ec9e2fd9d4da34d761c", null ],
+    [ "SetPadding", "class_urho3_d_1_1_camera_operator.html#a5bc77ecc8be5653c0d4ccf5920b1daa0", null ],
     [ "SetUniformPadding", "class_urho3_d_1_1_camera_operator.html#a29f0fc3b701a850a92ada40ea083747e", null ],
     [ "TrackNode", "class_urho3_d_1_1_camera_operator.html#a4b647b9d1e9fb9030eff07f38f9ce0b2", null ],
     [ "UpdateNodeIDs", "class_urho3_d_1_1_camera_operator.html#a1ec86f0343488c5ed9c3865f90a7f5bd", null ],
@@ -31,7 +31,7 @@ var class_urho3_d_1_1_camera_operator =
     [ "nodeIDsAttr_", "class_urho3_d_1_1_camera_operator.html#a676736a8f87dfd0122bfe0fb972fbea6", null ],
     [ "nodeIDsDirty_", "class_urho3_d_1_1_camera_operator.html#ab14537751e36399aca349ad292573ccf", null ],
     [ "nodesDirty_", "class_urho3_d_1_1_camera_operator.html#abe2f4bbd7560d7a32021699b780b8f05", null ],
-    [ "padding_", "class_urho3_d_1_1_camera_operator.html#a8b1f8aa49ce87992d1e1683e8e4be241", null ],
+    [ "padding_", "class_urho3_d_1_1_camera_operator.html#a5e155a01dcce9d93fec32b923921c8cd", null ],
     [ "points_", "class_urho3_d_1_1_camera_operator.html#a5e4c1764aa2b9c2d0282cdf22de2c9c2", null ],
     [ "trackedNodes_", "class_urho3_d_1_1_camera_operator.html#ace24739cec503407dfef842cee5ff973", null ]
 ];
