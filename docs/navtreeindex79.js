@@ -1,5 +1,8 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_bone.html#a72c09159b4bfb37d47d2b65c63b6a8bc":[8,0,2,98,7],
+"struct_urho3_d_1_1_bone.html#a79cab97bf6f6d8d44ee9bf26237c540f":[8,0,2,98,2],
+"struct_urho3_d_1_1_bone.html#a81a1ce6f32473a71fe072911cc07e167":[8,0,2,98,1],
 "struct_urho3_d_1_1_bone.html#a99a28562709f72e4617e2206638c8ae4":[8,0,2,98,0],
 "struct_urho3_d_1_1_bone.html#af1e31fcdff163da6d3d4350a1afc3ac9":[8,0,2,98,10],
 "struct_urho3_d_1_1_bone_view.html":[8,0,2,99],
@@ -246,8 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_custom_geometry_vertex.html#af46ccec129285413ba8614c4f05bae3f":[8,0,2,172,2],
 "struct_urho3_d_1_1_custom_variant_value_traits.html":[8,0,2,175],
 "struct_urho3_d_1_1_custom_variant_value_traits.html#a264a43f4c805f2605f826b79e35b8e7d":[8,0,2,175,3],
-"struct_urho3_d_1_1_custom_variant_value_traits.html#a5ef7c9d0c9aab27f816f9edaeeb51ad5":[8,0,2,175,0],
-"struct_urho3_d_1_1_custom_variant_value_traits.html#a6c0acdb810a9345120af36f1072385be":[8,0,2,175,5],
-"struct_urho3_d_1_1_custom_variant_value_traits.html#aa06d7f5ffa9cee11f67ae2df6bb403bf":[8,0,2,175,4],
-"struct_urho3_d_1_1_custom_variant_value_traits.html#aaf6eff538eed33fe4e5424decf71e531":[8,0,2,175,2]
+"struct_urho3_d_1_1_custom_variant_value_traits.html#a5ef7c9d0c9aab27f816f9edaeeb51ad5":[8,0,2,175,0]
 };

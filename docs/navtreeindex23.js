@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"class_urho3_d_1_1_directional_light_shadow_caster_query.html#a4a3651127be0b09fb05cb18710e5d228":[8,0,2,198,1],
 "class_urho3_d_1_1_directional_light_shadow_caster_query.html#aa95d521256070000d13c3f94f2012ada":[8,0,2,198,2],
 "class_urho3_d_1_1_directional_light_shadow_caster_query.html#ae6224baa773c6337f3070beacdf0e7c9":[8,0,2,198,3],
 "class_urho3_d_1_1_directional_pad_adapter.html":[8,0,2,199],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "class_urho3_d_1_1_drawable_processor.html#ac72a5c01ffcfe056c88daa4f93b2eb12":[8,0,2,205,44],
 "class_urho3_d_1_1_drawable_processor.html#acba2cc0f9348c6bf9f00999b64479108":[8,0,2,205,37],
 "class_urho3_d_1_1_drawable_processor.html#acd274ca425936aef829ee5b5182ecc16":[8,0,2,205,33],
-"class_urho3_d_1_1_drawable_processor.html#acdabc652430aff1883701cf36a5d471c":[8,0,2,205,47],
-"class_urho3_d_1_1_drawable_processor.html#ad0fe7b059e1007bdde2149a9ecd09328":[8,0,2,205,36]
+"class_urho3_d_1_1_drawable_processor.html#acdabc652430aff1883701cf36a5d471c":[8,0,2,205,47]
 };

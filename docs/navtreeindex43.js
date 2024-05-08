@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"class_urho3_d_1_1_particle_effect.html#a5fb94af9180486b8af24ab8a1e35f691":[8,0,2,484,23],
 "class_urho3_d_1_1_particle_effect.html#a61c602773d4ffddf3bef8807dde1c25c":[8,0,2,484,81],
 "class_urho3_d_1_1_particle_effect.html#a64edfe41af8d77acf970ae9decb1f485":[8,0,2,484,76],
 "class_urho3_d_1_1_particle_effect.html#a65e1eaacceb0772359425437d953f94f":[8,0,2,484,60],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "class_urho3_d_1_1_particle_emitter.html#ac9641a720fde412731533bcf30347d45":[8,0,2,486,6],
 "class_urho3_d_1_1_particle_emitter.html#ad00b415243fa66d525c918e0a37f42f5":[8,0,2,486,8],
 "class_urho3_d_1_1_particle_emitter.html#addbfd376cf106301d7ec2912e6b0bc5d":[8,0,2,486,32],
-"class_urho3_d_1_1_particle_emitter.html#ae230c54fb0beabf3ded9a5b0496204b4":[8,0,2,486,15],
-"class_urho3_d_1_1_particle_emitter.html#ae24967f01fa9e566d8c961eec091c473":[8,0,2,486,7]
+"class_urho3_d_1_1_particle_emitter.html#ae230c54fb0beabf3ded9a5b0496204b4":[8,0,2,486,15]
 };

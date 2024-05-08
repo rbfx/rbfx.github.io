@@ -1,5 +1,6 @@
 var NAVTREEINDEX66 =
 {
+"class_urho3_d_1_1_text_renderer3_d.html#ab76dfab227f64e6f78da0b7b71b7b802":[8,0,2,721,13],
 "class_urho3_d_1_1_text_renderer3_d.html#abf70602184c1beb6978df4a3724f8e37":[8,0,2,721,19],
 "class_urho3_d_1_1_text_renderer3_d.html#aebe657e141a4335271ad6061fdd0d8f3":[8,0,2,721,5],
 "class_urho3_d_1_1_texture.html":[8,0,2,722],
@@ -248,6 +249,5 @@ var NAVTREEINDEX66 =
 "class_urho3_d_1_1_tile_map_layer2_d.html#a75268fb3f3285baccdccde56c5ab80a3":[8,0,2,738,20],
 "class_urho3_d_1_1_tile_map_layer2_d.html#a76cecc3d67d7acd36fef7452b8b7112c":[8,0,2,738,28],
 "class_urho3_d_1_1_tile_map_layer2_d.html#a8d0e842989dbad2a80eb74c95f4692b2":[8,0,2,738,13],
-"class_urho3_d_1_1_tile_map_layer2_d.html#a954a975cf9b1dbd210d98a0abdcb8c09":[8,0,2,738,12],
-"class_urho3_d_1_1_tile_map_layer2_d.html#a976393b93de1c4f00d2791e897810d1c":[8,0,2,738,5]
+"class_urho3_d_1_1_tile_map_layer2_d.html#a954a975cf9b1dbd210d98a0abdcb8c09":[8,0,2,738,12]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX89 =
 {
+"union_urho3_d_1_1_variant_value.html#a77669fee842cbfd6be72c8e70c5bc0d8":[8,0,2,792,20],
+"union_urho3_d_1_1_variant_value.html#a823a475eb675c5238120288a9f89dfae":[8,0,2,792,5],
+"union_urho3_d_1_1_variant_value.html#a83d66478dadcd3494f8f0f57a613416b":[8,0,2,792,7],
 "union_urho3_d_1_1_variant_value.html#a8aed456f559b24da79f9b8e25df04672":[8,0,2,792,18],
 "union_urho3_d_1_1_variant_value.html#a8d1850ce8247290ae1364a5768266cc7":[8,0,2,792,33],
 "union_urho3_d_1_1_variant_value.html#a9065c5225e0f479b537fc44de0dd3a56":[8,0,2,792,32],

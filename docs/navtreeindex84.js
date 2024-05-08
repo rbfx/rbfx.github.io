@@ -1,5 +1,8 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_quaternion_01_4_01_4.html#aa21d4739096fef8d0f2162a20d07e34d":[8,0,2,437,5],
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_quaternion_01_4_01_4.html#aaf3b7975e7314fe02a150e96b012af6d":[8,0,2,437,7],
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_quaternion_01_4_01_4.html#ad588d5eaf9e9f3f04cbeb2072953b8a1":[8,0,2,437,4],
 "struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_quaternion_01_4_01_4.html#af05d82c50a91147e08ef3aa9aef83084":[8,0,2,437,2],
 "struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_quaternion_01_4_01_4.html#afe20d78ce7afbcbeb2f87d536088fe06":[8,0,2,437,3],
 "struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html":[8,0,2,438],
@@ -246,8 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#aabdbd977556feddde7860e6fec9c632f":[8,0,2,510,0,7],
 "struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#ab0eaaf5324ac7bf077e625f4b8a86ce9":[8,0,2,510,0,3],
 "struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#abfa37eea722bd227307df5cc6310879a":[8,0,2,510,0,9],
-"struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#acbb6b3cdad36d292d0cd2137e5446c61":[8,0,2,510,0,8],
-"struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#ae03fd0d05a73c4936308e457ec518f3a":[8,0,2,510,0,6],
-"struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#ae777512c0ac3e3a52db8475a35d2f0e4":[8,0,2,510,0,11],
-"struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#aee606d72708424eb9e0280b6b9ca3fa2":[8,0,2,510,0,1]
+"struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#acbb6b3cdad36d292d0cd2137e5446c61":[8,0,2,510,0,8]
 };
