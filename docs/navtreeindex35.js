@@ -1,5 +1,6 @@
 var NAVTREEINDEX35 =
 {
+"class_urho3_d_1_1_localization.html#ae7750b564c7b076d25b0f8ad1d8524aa":[8,0,2,370,1],
 "class_urho3_d_1_1_localization.html#af1a8156f24365c02c89dabd913574bcd":[8,0,2,370,10],
 "class_urho3_d_1_1_localization.html#af69e8b7cf507fc462982568baf8c6e34":[8,0,2,370,3],
 "class_urho3_d_1_1_log.html":[8,0,2,371],
@@ -248,6 +249,5 @@ var NAVTREEINDEX35 =
 "class_urho3_d_1_1_matrix2.html#a9f2eba8790089b1190bed263cd322bdd":[8,0,2,380,3],
 "class_urho3_d_1_1_matrix2.html#aab0137b72cbc4479208962a270f7386b":[8,0,2,380,23],
 "class_urho3_d_1_1_matrix2.html#abc1842308e0c2baf57a9e3e0e290fe58":[8,0,2,380,5],
-"class_urho3_d_1_1_matrix2.html#abd730347b0e02d7ab8ab7655dfc1f61c":[8,0,2,380,0],
-"class_urho3_d_1_1_matrix2.html#ac07f2e05b5c6c436cc20b700c3e423ab":[8,0,2,380,24]
+"class_urho3_d_1_1_matrix2.html#abd730347b0e02d7ab8ab7655dfc1f61c":[8,0,2,380,0]
 };

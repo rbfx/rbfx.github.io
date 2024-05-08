@@ -19,6 +19,7 @@ var class_urho3_d_1_1_binary_file =
     [ "SaveObject", "class_urho3_d_1_1_binary_file.html#ac2a2895fcd3b46efd9f9e380d4b4cbed", null ],
     [ "SaveObjectCallback", "class_urho3_d_1_1_binary_file.html#a4b9032a1509e0869c9804e562a1d81f6", null ],
     [ "SetData", "class_urho3_d_1_1_binary_file.html#a04ea8a03cbef6b1e259e6de86141ae33", null ],
+    [ "SetText", "class_urho3_d_1_1_binary_file.html#a0546a0b54b29f1b9d6a6d45d94091c6f", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_binary_file.html#a3aae6b3b1d05274c3ec0c7b8241b8a99", null ],
     [ "buffer_", "class_urho3_d_1_1_binary_file.html#a1db296e58e5b646e2b8ebd1516886c02", null ]
 ];

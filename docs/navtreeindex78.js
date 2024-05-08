@@ -1,5 +1,16 @@
 var NAVTREEINDEX78 =
 {
+"struct_urho3_d_1_1_application_flavor_pattern.html#a0ec50447cf5390a7c761a25a85007e73":[8,0,2,34,0],
+"struct_urho3_d_1_1_application_flavor_pattern.html#a733498f3dc1d3dd23999ff7a93722c9d":[8,0,2,34,1],
+"struct_urho3_d_1_1_application_flavor_pattern.html#ab539a8e8b93b5096c8458b8ee6e81418":[8,0,2,34,2],
+"struct_urho3_d_1_1_application_flavor_pattern.html#afbde87379ade5236811b9bbb08cdb8ec":[8,0,2,34,3],
+"struct_urho3_d_1_1_asset_transformer_dependency.html":[8,0,2,47],
+"struct_urho3_d_1_1_asset_transformer_dependency.html#a378d92114c556ae1b22632d5668b41c7":[8,0,2,47,2],
+"struct_urho3_d_1_1_asset_transformer_dependency.html#a7a8b10a94b03982d033a8aa160c26ad6":[8,0,2,47,1],
+"struct_urho3_d_1_1_asset_transformer_dependency.html#ab1dbd20eb8e3497712e11e7b813985f1":[8,0,2,47,0],
+"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_dependency_graph_node.html":[8,0,2,48,0],
+"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_dependency_graph_node.html#a5dd3e213729a7b3367030a6be410f79d":[8,0,2,48,0,1],
+"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_dependency_graph_node.html#aa19bf88a2f2a8a7443dfb5fca8cf646b":[8,0,2,48,0,2],
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_dependency_graph_node.html#ae384ab7da2aa3b259d02f99758812f23":[8,0,2,48,0,0],
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html":[8,0,2,48,1],
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#a00475e76f28a01ed7a2eafe614a686ed":[8,0,2,48,1,3],
@@ -238,16 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_bone.html#a721ee42d4668df4c9f4fcf6758d1f2be":[8,0,2,98,9],
 "struct_urho3_d_1_1_bone.html#a72c09159b4bfb37d47d2b65c63b6a8bc":[8,0,2,98,7],
 "struct_urho3_d_1_1_bone.html#a79cab97bf6f6d8d44ee9bf26237c540f":[8,0,2,98,2],
-"struct_urho3_d_1_1_bone.html#a81a1ce6f32473a71fe072911cc07e167":[8,0,2,98,1],
-"struct_urho3_d_1_1_bone.html#a99a28562709f72e4617e2206638c8ae4":[8,0,2,98,0],
-"struct_urho3_d_1_1_bone.html#af1e31fcdff163da6d3d4350a1afc3ac9":[8,0,2,98,10],
-"struct_urho3_d_1_1_bone_view.html":[8,0,2,99],
-"struct_urho3_d_1_1_bone_view.html#a10c40127f51e233a1413ec58ed72f507":[8,0,2,99,13],
-"struct_urho3_d_1_1_bone_view.html#a1482b4c69cb8fd68b30eea446a6f6f11":[8,0,2,99,2],
-"struct_urho3_d_1_1_bone_view.html#a16cac87570fc78b900ef55707e9aaa99":[8,0,2,99,9],
-"struct_urho3_d_1_1_bone_view.html#a25c8a47ab7473aacd7581ae417bda25c":[8,0,2,99,6],
-"struct_urho3_d_1_1_bone_view.html#a280d06770296bf11584d0b323baf2653":[8,0,2,99,5],
-"struct_urho3_d_1_1_bone_view.html#a2c910a5a669fc6b3e6ddbb23f0a0a10b":[8,0,2,99,7],
-"struct_urho3_d_1_1_bone_view.html#a4114a234dc079d24cece12726165d31c":[8,0,2,99,0],
-"struct_urho3_d_1_1_bone_view.html#a41b8dc249af2a57f87fbd22f938a6f87":[8,0,2,99,4]
+"struct_urho3_d_1_1_bone.html#a81a1ce6f32473a71fe072911cc07e167":[8,0,2,98,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX55 =
 {
+"class_urho3_d_1_1_ribbon_trail.html#ab15ba3828b203b02a80515ed22a02d33":[8,0,2,593,74],
 "class_urho3_d_1_1_ribbon_trail.html#ab61bb4326fceafb6149fd141edaad391":[8,0,2,593,18],
 "class_urho3_d_1_1_ribbon_trail.html#abcd8d907e0e358d04be6c6dc384b5952":[8,0,2,593,22],
 "class_urho3_d_1_1_ribbon_trail.html#abcd8f1af2ee5d0905a96beaa5a107c7f":[8,0,2,593,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX55 =
 "class_urho3_d_1_1_rml_navigable.html#a87f80927592741b6d95c4a8c43585916":[8,0,2,599,16],
 "class_urho3_d_1_1_rml_navigable.html#a90f4814ee429d8a597f4b3a72d3a38a4":[8,0,2,599,31],
 "class_urho3_d_1_1_rml_navigable.html#a9175aef21fc16a169d1085079ef4b6dd":[8,0,2,599,9],
-"class_urho3_d_1_1_rml_navigable.html#a926b24a6406d01d62c97913cc5af9ea1":[8,0,2,599,26],
-"class_urho3_d_1_1_rml_navigable.html#a94da684ceca93580e924d0c678d639ee":[8,0,2,599,35]
+"class_urho3_d_1_1_rml_navigable.html#a926b24a6406d01d62c97913cc5af9ea1":[8,0,2,599,26]
 };

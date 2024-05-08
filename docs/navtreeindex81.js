@@ -1,5 +1,16 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_edge_stopping_gauss_filter_parameters.html#a5657972e76f3160ac9231dd18faf4f10":[8,0,2,216,2],
+"struct_urho3_d_1_1_edge_stopping_gauss_filter_parameters.html#a6fd7e5f53f1409008ee9478292b0e243":[8,0,2,216,3],
+"struct_urho3_d_1_1_edge_stopping_gauss_filter_parameters.html#acc3bfd3015b0b9ce4e5cf3cf3e17d764":[8,0,2,216,0],
+"struct_urho3_d_1_1_edge_stopping_gauss_filter_parameters.html#acd5a8d814f8416718942f1c1b49409e9":[8,0,2,216,1],
+"struct_urho3_d_1_1_edge_stopping_gauss_filter_parameters.html#afb9cd0cb55398cc083a14ce70d29e9e8":[8,0,2,216,4],
+"struct_urho3_d_1_1_emission_light_tracing_settings.html":[8,0,2,217],
+"struct_urho3_d_1_1_emission_light_tracing_settings.html#a5b5952f0a3a47179badf1be720f80678":[8,0,2,217,0],
+"struct_urho3_d_1_1_empty_object.html":[8,0,2,218],
+"struct_urho3_d_1_1_empty_object.html#a78d309c0cda6f101c9580f6d155387b7":[8,0,2,218,0],
+"struct_urho3_d_1_1_empty_object.html#ab40ee271449ae1ff560a64c3308cbb0f":[8,0,2,218,1],
+"struct_urho3_d_1_1_empty_serializable_object.html":[8,0,2,219],
 "struct_urho3_d_1_1_empty_serializable_object.html#aa711df4027758f6a898951eb6fabfc93":[8,0,2,219,0],
 "struct_urho3_d_1_1_file_change.html":[8,0,2,225],
 "struct_urho3_d_1_1_file_change.html#a72d7fd2a1e21b39d627cd861bdb1d468":[8,0,2,225,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_i_k_node.html#a58cc76f949db7f6b5e772c13b067e096":[8,0,2,290,6],
 "struct_urho3_d_1_1_i_k_node.html#a6be0115bfb29d1ecd3ea91172ff1c9c5":[8,0,2,290,8],
 "struct_urho3_d_1_1_i_k_node.html#a760c4a62d3a15e923c857366ea30ef2a":[8,0,2,290,13],
-"struct_urho3_d_1_1_i_k_node.html#a84bff9fffc28d2a646caaf30dc0d4b3a":[8,0,2,290,17],
-"struct_urho3_d_1_1_i_k_node.html#a9c507d6956767906baab08c1d63c5e75":[8,0,2,290,5],
-"struct_urho3_d_1_1_i_k_node.html#a9ebaf9073487b4c46081182b26bbd74e":[8,0,2,290,3],
-"struct_urho3_d_1_1_i_k_node.html#a9fd7f073175422e0116072e6c7707a00":[8,0,2,290,4],
-"struct_urho3_d_1_1_i_k_node.html#ab42ae35dd67e010fdfe467511a92ae61":[8,0,2,290,11],
-"struct_urho3_d_1_1_i_k_node.html#ab6d37a6b94fc905d45edcbd0e2a725e9":[8,0,2,290,16],
-"struct_urho3_d_1_1_i_k_node.html#abc463fbea8376cd7382c2fd98b39bd28":[8,0,2,290,18],
-"struct_urho3_d_1_1_i_k_node.html#ac4c6268af1e98ba5f96f0290fba11766":[8,0,2,290,15],
-"struct_urho3_d_1_1_i_k_node.html#ac97f620e8b2ab004b944e1cf2f200eea":[8,0,2,290,7],
-"struct_urho3_d_1_1_i_k_node.html#ae400c88f05cddc0a59dcb52cc25adc60":[8,0,2,290,10],
-"struct_urho3_d_1_1_i_k_node.html#af8cc1cffef0b131cd646c6b21b476fd1":[8,0,2,290,1],
-"struct_urho3_d_1_1_i_k_node_segment.html":[8,0,2,291]
+"struct_urho3_d_1_1_i_k_node.html#a84bff9fffc28d2a646caaf30dc0d4b3a":[8,0,2,290,17]
 };

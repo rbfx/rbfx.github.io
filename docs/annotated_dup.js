@@ -802,6 +802,7 @@ var annotated_dup =
       [ "Serializable", "class_urho3_d_1_1_serializable.html", "class_urho3_d_1_1_serializable" ],
       [ "SerializableInspectorWidget", "class_urho3_d_1_1_serializable_inspector_widget.html", "class_urho3_d_1_1_serializable_inspector_widget" ],
       [ "SerializablePrefab", "class_urho3_d_1_1_serializable_prefab.html", "class_urho3_d_1_1_serializable_prefab" ],
+      [ "SerializableResource", "class_urho3_d_1_1_serializable_resource.html", "class_urho3_d_1_1_serializable_resource" ],
       [ "Serializer", "class_urho3_d_1_1_serializer.html", "class_urho3_d_1_1_serializer" ],
       [ "ServerNetworkCallback", "class_urho3_d_1_1_server_network_callback.html", "class_urho3_d_1_1_server_network_callback" ],
       [ "ServerReplicator", "class_urho3_d_1_1_server_replicator.html", "class_urho3_d_1_1_server_replicator" ],

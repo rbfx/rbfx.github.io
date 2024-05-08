@@ -9,6 +9,7 @@ var struct_urho3_d_1_1_resource_ref =
     [ "operator!=", "struct_urho3_d_1_1_resource_ref.html#ae10e7829cbc97806086193b8e7b879a8", null ],
     [ "operator==", "struct_urho3_d_1_1_resource_ref.html#abb010c426eade6831724bc0e3664fb71", null ],
     [ "ToHash", "struct_urho3_d_1_1_resource_ref.html#af93e94bbd524e1d56613da988be3517c", null ],
+    [ "ToString", "struct_urho3_d_1_1_resource_ref.html#a55183181c6a34e35df42fbc36d4350cb", null ],
     [ "name_", "struct_urho3_d_1_1_resource_ref.html#a742cd28ac5541ff1223d93d6f054b986", null ],
     [ "type_", "struct_urho3_d_1_1_resource_ref.html#a9a5e5026e5589d1770381157bbc36dcb", null ]
 ];

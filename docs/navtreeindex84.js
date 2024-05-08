@@ -1,5 +1,16 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_quaternion_01_4_01_4.html#af05d82c50a91147e08ef3aa9aef83084":[8,0,2,437,2],
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_quaternion_01_4_01_4.html#afe20d78ce7afbcbeb2f87d536088fe06":[8,0,2,437,3],
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html":[8,0,2,438],
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html#a30698cddd4e6a8f613360617801a16f3":[8,0,2,438,6],
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html#a3b61d25dd7d712007099792ca4ac06df":[8,0,2,438,0],
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html#a40dd036a1473a87a281de8b34389b6b6":[8,0,2,438,1],
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html#aa0d2f1556043a6ebb7f40d521fce1a86":[8,0,2,438,4],
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html#aac2dba5961930dc436c441c784cc476a":[8,0,2,438,7],
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html#ae7221e49aaa1e06268bc724512f1dcc8":[8,0,2,438,2],
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html#af71e05339d6e1d4f456da6d0bba01790":[8,0,2,438,3],
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html#af83cb5e54e4f26023f29b3554ed3d3c4":[8,0,2,438,5],
 "struct_urho3_d_1_1_node_animation_output.html":[8,0,2,440],
 "struct_urho3_d_1_1_node_animation_output.html#a0a8f6749a8c0d8419779f848b9194a3b":[8,0,2,440,0],
 "struct_urho3_d_1_1_node_animation_output.html#ade0c0223db28f7f60cddc1d1963e83cc":[8,0,2,440,1],
@@ -238,16 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#acbb6b3cdad36d292d0cd2137e5446c61":[8,0,2,510,0,8],
 "struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#ae03fd0d05a73c4936308e457ec518f3a":[8,0,2,510,0,6],
 "struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#ae777512c0ac3e3a52db8475a35d2f0e4":[8,0,2,510,0,11],
-"struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#aee606d72708424eb9e0280b6b9ca3fa2":[8,0,2,510,0,1],
-"struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#afa048063c7b6b0a6e51c06520c122b3f":[8,0,2,510,0,0],
-"struct_urho3_d_1_1_physics_world_config.html":[8,0,2,511],
-"struct_urho3_d_1_1_physics_world_config.html#a463c0cc165496c8ba4a3c5ff0429b269":[8,0,2,511,0],
-"struct_urho3_d_1_1_physics_world_config.html#a91bfd128276906c273acd153997ee5bd":[8,0,2,511,1],
-"struct_urho3_d_1_1_pipeline_batch.html":[8,0,2,512],
-"struct_urho3_d_1_1_pipeline_batch.html#a3df629966c0e6634738d5d818f3116dd":[8,0,2,512,12],
-"struct_urho3_d_1_1_pipeline_batch.html#a48039972e8fd050740e51ed47c3ac7a3":[8,0,2,512,6],
-"struct_urho3_d_1_1_pipeline_batch.html#a59fad4e3e30ee45bf1c88e2b60d45c7b":[8,0,2,512,13],
-"struct_urho3_d_1_1_pipeline_batch.html#a5d95edc43990115105dc44e8d32dd9e9":[8,0,2,512,7],
-"struct_urho3_d_1_1_pipeline_batch.html#a895b81ce3cfdbe7ce8000877ccc9164d":[8,0,2,512,4],
-"struct_urho3_d_1_1_pipeline_batch.html#a8eb83ffe4bb213f118973a6250176c1a":[8,0,2,512,3]
+"struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html#aee606d72708424eb9e0280b6b9ca3fa2":[8,0,2,510,0,1]
 };
