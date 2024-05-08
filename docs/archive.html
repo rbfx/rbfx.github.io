@@ -89,7 +89,13 @@ $(document).ready(function(){initNavTree('archive.html',''); initResizable(); })
 <li><b>GetCurrentBlockPath()</b>: Returns the current string stack (path within the archive).</li>
 <li><b>BeginBlock(const char* name, unsigned&amp; sizeHint, bool safe, ArchiveBlockType type)</b>: Starts a new archive block. sizeHint is required for array blocks. Errors during serialization of a safe block do not affect data outside of the block.</li>
 <li><b>EndBlock()</b>: Ends the current archive block (may postpone exceptions).</li>
-<li><b>Flush()</b>: Flushes all pending events (call before destructor). ValidateName(ea::string_view name): Validates an element or block name.</li>
+<li><b>Flush()</b>: Flushes all pending events (call before destructor).</li>
+<li><b>ValidateName(ea::string_view name)</b>: Validates an element or block name.<ul>
+<li>Empty names are not allowed</li>
+<li>Name must start with letter or underscore.</li>
+<li>Name must contain only letters, digits, underscores, dots or colons.</li>
+</ul>
+</li>
 </ul>
 <h1>Block Types:</h1>
 <p>The class provides methods to open different types of blocks:</p><ul>
@@ -101,24 +107,23 @@ $(document).ready(function(){initNavTree('archive.html',''); initResizable(); })
 </ul>
 <h1>Sample code:</h1>
 <p>Let's take a look at ShaderBytecode::SerializeInBlock method. It takes an Archive object as an argument, which allows it to serialize data. The purpose of this method is to serialize various properties of shader bytecode into the given archive.</p>
-<div class="fragment"><div class="line"> {c++}</div>
-<div class="line">void ShaderBytecode::SerializeInBlock(Archive&amp; archive)</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> ShaderBytecode::SerializeInBlock(Archive&amp; archive)</div>
 <div class="line">{</div>
-<div class="line">    const unsigned version = archive.SerializeVersion(Version);</div>
-<div class="line">    if (version != Version)</div>
-<div class="line">        throw ArchiveException(&quot;Compiled shader version is outdated, cached shader is ignored&quot;);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> version = archive.SerializeVersion(Version);</div>
+<div class="line">    <span class="keywordflow">if</span> (version != Version)</div>
+<div class="line">        <span class="keywordflow">throw</span> ArchiveException(<span class="stringliteral">&quot;Compiled shader version is outdated, cached shader is ignored&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">    SerializeValue(archive, &quot;type&quot;, type_);</div>
-<div class="line">    SerializeValue(archive, &quot;mime&quot;, mime_);</div>
-<div class="line">    SerializeVectorAsBytes(archive, &quot;bytecode&quot;, bytecode_);</div>
+<div class="line">    SerializeValue(archive, <span class="stringliteral">&quot;type&quot;</span>, type_);</div>
+<div class="line">    SerializeValue(archive, <span class="stringliteral">&quot;mime&quot;</span>, mime_);</div>
+<div class="line">    SerializeVectorAsBytes(archive, <span class="stringliteral">&quot;bytecode&quot;</span>, bytecode_);</div>
 <div class="line"> </div>
-<div class="line">    SerializeVectorAsObjects(archive, &quot;vertexAttributes&quot;, vertexAttributes_, &quot;vertexAttribute&quot;,</div>
-<div class="line">        [&amp;](Archive&amp; archive, const char* name, VertexShaderAttribute&amp; value)</div>
+<div class="line">    SerializeVectorAsObjects(archive, <span class="stringliteral">&quot;vertexAttributes&quot;</span>, vertexAttributes_, <span class="stringliteral">&quot;vertexAttribute&quot;</span>,</div>
+<div class="line">        [&amp;](Archive&amp; archive, <span class="keyword">const</span> <span class="keywordtype">char</span>* name, VertexShaderAttribute&amp; value)</div>
 <div class="line">    {</div>
-<div class="line">        auto block = archive.OpenUnorderedBlock(name);</div>
-<div class="line">        SerializeValue(archive, &quot;semantic&quot;, value.semantic_);</div>
-<div class="line">        SerializeValue(archive, &quot;semanticIndex&quot;, value.semanticIndex_);</div>
-<div class="line">        SerializeValue(archive, &quot;inputIndex&quot;, value.inputIndex_);</div>
+<div class="line">        <span class="keyword">auto</span> block = archive.OpenUnorderedBlock(name);</div>
+<div class="line">        SerializeValue(archive, <span class="stringliteral">&quot;semantic&quot;</span>, value.semantic_);</div>
+<div class="line">        SerializeValue(archive, <span class="stringliteral">&quot;semanticIndex&quot;</span>, value.semanticIndex_);</div>
+<div class="line">        SerializeValue(archive, <span class="stringliteral">&quot;inputIndex&quot;</span>, value.inputIndex_);</div>
 <div class="line">    });</div>
 <div class="line">}</div>
 </div><!-- fragment --><ul>
@@ -132,7 +137,84 @@ $(document).ready(function(){initNavTree('archive.html',''); initResizable(); })
 <li>Serialization of Vertex Attributes: The vertexAttributes_ vector is serialized as array named “vertexAttributes”. Each element of the array is serialized within an unordered block named “vertexAttribute”. For each VertexShaderAttribute in the vector, the following steps occur:<ul>
 <li>An unordered block is opened with the attribute’s name.</li>
 <li>The semantic, semantic index, and input index of the attribute are serialized using SerializeValue.</li>
-<li>Destructor of the block variable automatically closes the block. </li>
+<li>Destructor of the block variable automatically closes the block.</li>
+</ul>
+</li>
+</ul>
+<h1>Helper functions:</h1>
+<h2>SerializeValue:</h2>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SerializeValue(Archive&amp; archive, <span class="keyword">const</span> <span class="keywordtype">char</span>* name, T&amp; value);</div>
+</div><!-- fragment --><p><b>SerializeValue</b> function used as a default serializer option. If you define new primitive type that can be serialized with Archive it is recommended to define SerializeValue function for your time.</p>
+<p>Here is an example of SerializeValue defined for a SphericalHarmonicsDot9 type: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> SerializeValue(Archive&amp; archive, <span class="keyword">const</span> <span class="keywordtype">char</span>* name, SphericalHarmonicsDot9&amp; value)</div>
+<div class="line">{</div>
+<div class="line">    ArchiveBlock block = archive.OpenUnorderedBlock(name);</div>
+<div class="line">    SerializeValue(archive, <span class="stringliteral">&quot;Ar&quot;</span>, value.Ar_);</div>
+<div class="line">    SerializeValue(archive, <span class="stringliteral">&quot;Ag&quot;</span>, value.Ag_);</div>
+<div class="line">    SerializeValue(archive, <span class="stringliteral">&quot;Ab&quot;</span>, value.Ab_);</div>
+<div class="line">    SerializeValue(archive, <span class="stringliteral">&quot;Br&quot;</span>, value.Br_);</div>
+<div class="line">    SerializeValue(archive, <span class="stringliteral">&quot;Bg&quot;</span>, value.Bg_);</div>
+<div class="line">    SerializeValue(archive, <span class="stringliteral">&quot;Bb&quot;</span>, value.Bb_);</div>
+<div class="line">    SerializeValue(archive, <span class="stringliteral">&quot;C&quot;</span>, value.C_);</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2>SerializeOptionalValue:</h2>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> U = EmptyObject, <span class="keyword">class</span> TSerializer = Detail::DefaultSerializer&gt;</div>
+<div class="line"><span class="keywordtype">void</span> SerializeOptionalValue(Archive&amp; archive, <span class="keyword">const</span> <span class="keywordtype">char</span>* name, T&amp; value, <span class="keyword">const</span> U&amp; defaultValue = U{},</div>
+<div class="line">    <span class="keyword">const</span> TSerializer&amp; serializeValue = TSerializer{})</div>
+</div><!-- fragment --><h2>SerializeVectorAsObjects:</h2>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> TSerializer = Detail::DefaultSerializer&gt;</div>
+<div class="line"><span class="keywordtype">void</span> SerializeVectorAsObjects(Archive&amp; archive, <span class="keyword">const</span> <span class="keywordtype">char</span>* name, T&amp; vector, <span class="keyword">const</span> <span class="keywordtype">char</span>* element = <span class="stringliteral">&quot;element&quot;</span>, <span class="keyword">const</span> TSerializer&amp; serializeValue = TSerializer{})</div>
+</div><!-- fragment --><p>The <b>SerializeVectorAsObjects</b> function is a templated utility for serializing a vector of objects (elements) using a standard interface. The function allows you to serialize each element of the vector separately.</p>
+<p>Parameters:</p><ul>
+<li><b>archive</b>: An Archive object representing the serialization target.</li>
+<li><b>name</b>: A string specifying the name of the serialized vector (used as a block name in the archive).</li>
+<li><b>vector</b>: A reference to the vector of elements to be serialized.</li>
+<li><b>element</b> (optional): A string specifying the name of each individual element (used within the block).</li>
+<li><b>serializeValue</b> (optional): A serializer function (defaulting to Detail::DefaultSerializer) responsible for serializing an individual element.</li>
+</ul>
+<p>Steps in Serialization:</p>
+<ul>
+<li>Determine the number of elements in the vector (numElements).</li>
+<li>Open an array block within the archive with the specified name and the determined size.</li>
+<li>If the archive is in input mode (i.e., deserialization), adjust the vector size based on the size hint provided by the block.</li>
+<li>Iterate over each element in the vector:<ul>
+<li>Call the serializeValue function to serialize the element using the specified element name.</li>
+</ul>
+</li>
+</ul>
+<h2>SerializeMap:</h2>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> TSerializer = Detail::DefaultSerializer&gt;</div>
+<div class="line"><span class="keywordtype">void</span> SerializeMap(Archive&amp; archive, <span class="keyword">const</span> <span class="keywordtype">char</span>* name, T&amp; map, <span class="keyword">const</span> <span class="keywordtype">char</span>* element = <span class="stringliteral">&quot;element&quot;</span>,</div>
+<div class="line">    <span class="keyword">const</span> TSerializer&amp; serializeValue = TSerializer{}, <span class="keywordtype">bool</span> clear = <span class="keyword">true</span>)</div>
+</div><!-- fragment --><p>The purpose of this function is to serialize the key-value pairs stored in a map (or hash map) into an Archive. It abstracts away the serialization process, allowing you to work with different types of maps consistently.</p>
+<p>Parameters:</p>
+<ul>
+<li><b>archive</b>: An Archive object representing the serialization target.</li>
+<li><b>name</b>: A string specifying the name of the serialized map (used as a block name in the archive).</li>
+<li><b>map</b>: A reference to the map (or hash map) to be serialized.</li>
+<li><b>element</b> (optional): A string specifying the name of each individual element (used within the block).</li>
+<li><b>serializeValue</b> (optional): A serializer function (defaulting to Detail::DefaultSerializer) responsible for serializing individual key-value pairs.</li>
+<li><b>clear</b> (optional): A boolean flag indicating whether to clear the map before deserialization (input mode).</li>
+</ul>
+<p>Type Traits and Conditional Compilation:</p>
+<p>The function uses type traits and conditional compilation (if constexpr) to handle different scenarios. If the value type of the map is Variant and the serializer type matches the default (Detail::DefaultSerializer), it follows one path. Otherwise, it takes a different path.</p>
+<p>Serialization Process:</p><ul>
+<li>The function opens an array block within the archive with the specified name and the size equal to the map’s size.</li>
+<li>If the archive is in input mode (i.e., deserialization):<ul>
+<li>If clear is true, it clears the map.</li>
+<li>It iterates over the expected number of elements (based on the block’s size hint):<ul>
+<li>Opens an unordered block for each element.</li>
+<li>Deserializes the key using serializeValue.</li>
+<li>Deserializes the value (either directly or via SerializeVariantInBlock if the value type is Variant).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If the archive is in output mode (i.e., serialization):<ul>
+<li>It iterates over each key-value pair in the map:<ul>
+<li>Opens an unordered block for each element.</li>
+<li>Serializes the key and value using serializeValue. </li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
