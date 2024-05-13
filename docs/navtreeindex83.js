@@ -1,5 +1,15 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_lightmap_chart_baked_indirect.html":[8,0,2,346],
+"struct_urho3_d_1_1_lightmap_chart_baked_indirect.html#a0fbfc09a44bad3c3cd48ec947ba4eeb4":[8,0,2,346,3],
+"struct_urho3_d_1_1_lightmap_chart_baked_indirect.html#a62c87a07e2aff77563854e3f7dbafd7a":[8,0,2,346,4],
+"struct_urho3_d_1_1_lightmap_chart_baked_indirect.html#a66c9574b67028364ec94879ea97a9f74":[8,0,2,346,1],
+"struct_urho3_d_1_1_lightmap_chart_baked_indirect.html#ab552729e59175edb0f514ae016d5994a":[8,0,2,346,2],
+"struct_urho3_d_1_1_lightmap_chart_baked_indirect.html#abf4253b3086626fbbaf2605febdcd70f":[8,0,2,346,0],
+"struct_urho3_d_1_1_lightmap_chart_element.html":[8,0,2,347],
+"struct_urho3_d_1_1_lightmap_chart_element.html#a6c3fe8ee4c46a87782d0383c83255234":[8,0,2,347,2],
+"struct_urho3_d_1_1_lightmap_chart_element.html#a7e7d67fc209018c25592f6a3cacaf29a":[8,0,2,347,1],
+"struct_urho3_d_1_1_lightmap_chart_element.html#a9e035ccc242ff255e170e1b9ad91eddc":[8,0,2,347,0],
 "struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html":[8,0,2,348],
 "struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a012d4d61b1d7173e6ef45364a5a52269":[8,0,2,348,11],
 "struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a02e53b6310c17f753a5b9ff3c65ca257":[8,0,2,348,16],
@@ -239,15 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_network_value_traits.html#ad35456ce93c3133f64588f4cc714c91a":[8,0,2,435,5],
 "struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html":[8,0,2,436],
 "struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#a096ce6799d95474aef8ac3da3b7e1930":[8,0,2,436,3],
-"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#a2700a9e2bf61a68bb61d001b1e501d58":[8,0,2,436,0],
-"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#a869aa2d198f0a0eba356ff21327d01ec":[8,0,2,436,5],
-"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#aafb023ac19730a9db7a0f4f032e7e5f3":[8,0,2,436,2],
-"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#abb3e9877e9694b982eb9b94170c55949":[8,0,2,436,6],
-"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#ac8e5c2b380af15a75bb87997e2629fae":[8,0,2,436,7],
-"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#ae77c24576256db0f50bb2e4dd8a9eb2b":[8,0,2,436,1],
-"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#af7baf6b4cfaa8e14b51cbf5890061e18":[8,0,2,436,4],
-"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_quaternion_01_4_01_4.html":[8,0,2,437],
-"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_quaternion_01_4_01_4.html#a04073ca74ab41d4525aa589b5f05fb83":[8,0,2,437,6],
-"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_quaternion_01_4_01_4.html#a8a090672f4b02b0da109a57be7072b39":[8,0,2,437,0],
-"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_quaternion_01_4_01_4.html#a994f90dbf90bf42ac9e17ff1beffcac8":[8,0,2,437,1]
+"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#a2700a9e2bf61a68bb61d001b1e501d58":[8,0,2,436,0]
 };

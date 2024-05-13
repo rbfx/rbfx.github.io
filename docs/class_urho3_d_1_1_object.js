@@ -30,8 +30,7 @@ var class_urho3_d_1_1_object =
     [ "HasSubscribedToEvent", "class_urho3_d_1_1_object.html#add04b2157b76b6306db51d1202bd77f1", null ],
     [ "HasSubscribedToEvent", "class_urho3_d_1_1_object.html#ae95c934d09a38268465f0ddbc3cc4a8d", null ],
     [ "IsInstanceOf", "class_urho3_d_1_1_object.html#a17376e0a319ae50dca17ad91c5b1a55b", null ],
-    [ "IsInstanceOf", "class_urho3_d_1_1_object.html#abdd7bb505131b7069a7c6e7eb640d550", null ],
-    [ "IsInstanceOf", "class_urho3_d_1_1_object.html#a7fade3952bd2a1fd71a419d9a0c84a83", null ],
+    [ "IsInstanceOf", "class_urho3_d_1_1_object.html#a26c296bb4de9e175308a26c723d5dc7e", null ],
     [ "OnEvent", "class_urho3_d_1_1_object.html#ad0ce1699ce5bd9d4033e5800bbb8c15b", null ],
     [ "RemoveEventSender", "class_urho3_d_1_1_object.html#ad93a3d6587147656d278eb16807d57d9", null ],
     [ "SendEvent", "class_urho3_d_1_1_object.html#a32020dbf77c196b9777eca479e8abb36", null ],
@@ -54,5 +53,6 @@ var class_urho3_d_1_1_object =
     [ "Context", "class_urho3_d_1_1_object.html#ac26c806e60ca4a0547680edb68f6e39b", null ],
     [ "blockEvents_", "class_urho3_d_1_1_object.html#a7e6bd39a40d1c7b82adc3898a9ca5b08", null ],
     [ "context_", "class_urho3_d_1_1_object.html#aecf686841d86be7e4a2c0092b60d31ad", null ],
-    [ "eventHandlers_", "class_urho3_d_1_1_object.html#a6e41e857910897f0beef6cb875d8b190", null ]
+    [ "eventHandlers_", "class_urho3_d_1_1_object.html#a6e41e857910897f0beef6cb875d8b190", null ],
+    [ "TypeHierarchy", "class_urho3_d_1_1_object.html#a745a18b8e99bf855379e72aac5d544ab", null ]
 ];

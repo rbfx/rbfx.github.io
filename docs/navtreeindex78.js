@@ -1,5 +1,15 @@
 var NAVTREEINDEX78 =
 {
+"struct_urho3_d_1_1_animation_velocity_extractor_1_1_extracted_track_set.html#ab6853cfbc5f3596afb0a4e3b6b00580b":[8,0,2,31,0,0],
+"struct_urho3_d_1_1_animation_velocity_extractor_1_1_extracted_track_set.html#abccb8c31985fd51a584b9620fe0b9e05":[8,0,2,31,0,1],
+"struct_urho3_d_1_1_application_flavor.html":[8,0,2,33],
+"struct_urho3_d_1_1_application_flavor.html#a0c28bf94caefec7f66e53d9fdc2c8d05":[8,0,2,33,5],
+"struct_urho3_d_1_1_application_flavor.html#a28de755c64f30678414988e6c21dcc1e":[8,0,2,33,4],
+"struct_urho3_d_1_1_application_flavor.html#a402c5a75abcf86fd2543d2ee765e7cc2":[8,0,2,33,7],
+"struct_urho3_d_1_1_application_flavor.html#a7ce5c8ce6811dbf51764af4a15c61d14":[8,0,2,33,2],
+"struct_urho3_d_1_1_application_flavor.html#abbacca689c98a2459709b0dd638ad724":[8,0,2,33,1],
+"struct_urho3_d_1_1_application_flavor.html#ac0ff66f357b5e7c40e4008dd1f4c7074":[8,0,2,33,3],
+"struct_urho3_d_1_1_application_flavor.html#ac6af3f435877cf0d84f19c1fceadf8e9":[8,0,2,33,0],
 "struct_urho3_d_1_1_application_flavor.html#adfb74c94dafa05e9d386caa7ea76999c":[8,0,2,33,8],
 "struct_urho3_d_1_1_application_flavor.html#ae0ac112893648a7421aefb5d6d0e6431":[8,0,2,33,6],
 "struct_urho3_d_1_1_application_flavor_pattern.html":[8,0,2,34],
@@ -239,15 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_bloom_pass_settings.html#aca4ebcea1940c4d4290430ce17a9ba89":[8,0,2,97,8],
 "struct_urho3_d_1_1_bloom_pass_settings.html#ad271f4ddbbf73c1fa60c9ca79fbf83e1":[8,0,2,97,5],
 "struct_urho3_d_1_1_bloom_pass_settings.html#ad72cb198e8dab93fd982d311b8c83b56":[8,0,2,97,9],
-"struct_urho3_d_1_1_bloom_pass_settings.html#afad85b50c35105fdc743c03987dd6be6":[8,0,2,97,6],
-"struct_urho3_d_1_1_bloom_pass_settings.html#afec5a8f479e86e66bcf3761e112973a0":[8,0,2,97,0],
-"struct_urho3_d_1_1_bone.html":[8,0,2,98],
-"struct_urho3_d_1_1_bone.html#a14b8d2b91bd31893cd7555003f8eb5c8":[8,0,2,98,12],
-"struct_urho3_d_1_1_bone.html#a28715dece053f257b635ecb7df2f8c0f":[8,0,2,98,6],
-"struct_urho3_d_1_1_bone.html#a28e890eb824a7a6c9422433425b39743":[8,0,2,98,8],
-"struct_urho3_d_1_1_bone.html#a3618c265920795818951817b79e88a66":[8,0,2,98,4],
-"struct_urho3_d_1_1_bone.html#a61217aea454e5d6211e96341e51a0b60":[8,0,2,98,3],
-"struct_urho3_d_1_1_bone.html#a65716a28a39713d7556b8b4ec19ca6c3":[8,0,2,98,5],
-"struct_urho3_d_1_1_bone.html#a6cfaa01387c2a5ab56da1fe316f6569a":[8,0,2,98,11],
-"struct_urho3_d_1_1_bone.html#a721ee42d4668df4c9f4fcf6758d1f2be":[8,0,2,98,9]
+"struct_urho3_d_1_1_bloom_pass_settings.html#afad85b50c35105fdc743c03987dd6be6":[8,0,2,97,6]
 };

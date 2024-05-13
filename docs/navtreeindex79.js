@@ -1,5 +1,15 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_bloom_pass_settings.html#afec5a8f479e86e66bcf3761e112973a0":[8,0,2,97,0],
+"struct_urho3_d_1_1_bone.html":[8,0,2,98],
+"struct_urho3_d_1_1_bone.html#a14b8d2b91bd31893cd7555003f8eb5c8":[8,0,2,98,12],
+"struct_urho3_d_1_1_bone.html#a28715dece053f257b635ecb7df2f8c0f":[8,0,2,98,6],
+"struct_urho3_d_1_1_bone.html#a28e890eb824a7a6c9422433425b39743":[8,0,2,98,8],
+"struct_urho3_d_1_1_bone.html#a3618c265920795818951817b79e88a66":[8,0,2,98,4],
+"struct_urho3_d_1_1_bone.html#a61217aea454e5d6211e96341e51a0b60":[8,0,2,98,3],
+"struct_urho3_d_1_1_bone.html#a65716a28a39713d7556b8b4ec19ca6c3":[8,0,2,98,5],
+"struct_urho3_d_1_1_bone.html#a6cfaa01387c2a5ab56da1fe316f6569a":[8,0,2,98,11],
+"struct_urho3_d_1_1_bone.html#a721ee42d4668df4c9f4fcf6758d1f2be":[8,0,2,98,9],
 "struct_urho3_d_1_1_bone.html#a72c09159b4bfb37d47d2b65c63b6a8bc":[8,0,2,98,7],
 "struct_urho3_d_1_1_bone.html#a79cab97bf6f6d8d44ee9bf26237c540f":[8,0,2,98,2],
 "struct_urho3_d_1_1_bone.html#a81a1ce6f32473a71fe072911cc07e167":[8,0,2,98,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_cursor_shape_info.html#a5ce781087bba808d2aaf89946575b4be":[8,0,2,169,6],
 "struct_urho3_d_1_1_cursor_shape_info.html#a8fa34fb7d0ebf7ead52e8dd2a6a0a451":[8,0,2,169,7],
 "struct_urho3_d_1_1_cursor_shape_info.html#ac08ab0e347f1debdab12cdb1b8e50de9":[8,0,2,169,0],
-"struct_urho3_d_1_1_cursor_shape_info.html#ad5519bda04aded47665708691a351d70":[8,0,2,169,3],
-"struct_urho3_d_1_1_cursor_shape_info.html#afd0d14894ef7a291644de1f23e6aea3c":[8,0,2,169,8],
-"struct_urho3_d_1_1_custom_geometry_vertex.html":[8,0,2,172],
-"struct_urho3_d_1_1_custom_geometry_vertex.html#a000ca86978dd9ecdbe611f8b25acecd0":[8,0,2,172,3],
-"struct_urho3_d_1_1_custom_geometry_vertex.html#a0ba2f922e405a682bbfece8785a697ac":[8,0,2,172,1],
-"struct_urho3_d_1_1_custom_geometry_vertex.html#a4899c57b5dbd507e30c78d8301e962d4":[8,0,2,172,0],
-"struct_urho3_d_1_1_custom_geometry_vertex.html#acd376efaa94f0a7434d33f7d8aef27d7":[8,0,2,172,4],
-"struct_urho3_d_1_1_custom_geometry_vertex.html#af46ccec129285413ba8614c4f05bae3f":[8,0,2,172,2],
-"struct_urho3_d_1_1_custom_variant_value_traits.html":[8,0,2,175],
-"struct_urho3_d_1_1_custom_variant_value_traits.html#a264a43f4c805f2605f826b79e35b8e7d":[8,0,2,175,3],
-"struct_urho3_d_1_1_custom_variant_value_traits.html#a5ef7c9d0c9aab27f816f9edaeeb51ad5":[8,0,2,175,0]
+"struct_urho3_d_1_1_cursor_shape_info.html#ad5519bda04aded47665708691a351d70":[8,0,2,169,3]
 };
