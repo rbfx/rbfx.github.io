@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"class_urho3_d_1_1_ray.html#ad118ea8accd0dca2689b4944a38a62bc":[8,0,2,547,20],
+"class_urho3_d_1_1_ray.html#ae9502d36de0e0e2984de012f79b95479":[8,0,2,547,2],
 "class_urho3_d_1_1_ray.html#aea4afa2ac05cfdc0ee537f24406cfad8":[8,0,2,547,16],
 "class_urho3_d_1_1_ray.html#af567cd1a84949df6a4222e09f5c49a17":[8,0,2,547,4],
 "class_urho3_d_1_1_ray_octree_query.html":[8,0,2,550],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "class_urho3_d_1_1_rect.html#ad9d8d61f7a114f544f68fea5149375c8":[8,0,2,555,33],
 "class_urho3_d_1_1_rect.html#adfd4d71284aa61c242ea7472ed334751":[8,0,2,555,38],
 "class_urho3_d_1_1_rect.html#af519ee3722809ff92e104565928ca6a4":[8,0,2,555,17],
-"class_urho3_d_1_1_ref_counted.html":[8,0,2,557],
-"class_urho3_d_1_1_ref_counted.html#a0ecf38ae8cd7376e989b3fd58bbf5aca":[8,0,2,557,4],
-"class_urho3_d_1_1_ref_counted.html#a27960099d665fa2a05b7d488cfc56d90":[8,0,2,557,10]
+"class_urho3_d_1_1_ref_counted.html":[8,0,2,557]
 };

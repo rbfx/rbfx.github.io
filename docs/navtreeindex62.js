@@ -1,5 +1,7 @@
 var NAVTREEINDEX62 =
 {
+"class_urho3_d_1_1_spline_path.html#a0f115ec8c2245008faf5687aca256a4e":[8,0,2,682,20],
+"class_urho3_d_1_1_spline_path.html#a165c2b395634f9a16e703be8210e8260":[8,0,2,682,0],
 "class_urho3_d_1_1_spline_path.html#a1787b12603686af3f61594477e66c20a":[8,0,2,682,13],
 "class_urho3_d_1_1_spline_path.html#a22a8527026eaa31a3cfe6088d5d249e3":[8,0,2,682,33],
 "class_urho3_d_1_1_spline_path.html#a2d992a829c82f184a356e029866d4b0e":[8,0,2,682,23],
@@ -247,7 +249,5 @@ var NAVTREEINDEX62 =
 "class_urho3_d_1_1_static_model.html#aa6ad0db999b4e06fb67c1673477a0ecb":[8,0,2,689,27],
 "class_urho3_d_1_1_static_model.html#aac7bd4f30d276bad34d0afd36dec5f6f":[8,0,2,689,25],
 "class_urho3_d_1_1_static_model.html#aad9cb6f2af4ee10adc315600c18ee6dc":[8,0,2,689,44],
-"class_urho3_d_1_1_static_model.html#aaf54a9fadd15d371554bdeea827cfe67":[8,0,2,689,16],
-"class_urho3_d_1_1_static_model.html#ab177fdf93ab74c1b1de70da4288360e2":[8,0,2,689,43],
-"class_urho3_d_1_1_static_model.html#ab238b5aa2be43e1497fcdcc04ac76a39":[8,0,2,689,11]
+"class_urho3_d_1_1_static_model.html#aaf54a9fadd15d371554bdeea827cfe67":[8,0,2,689,16]
 };
