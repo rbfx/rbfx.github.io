@@ -26,6 +26,6 @@ var class_urho3_d_1_1_string_hash =
     [ "ToString", "class_urho3_d_1_1_string_hash.html#af5019d1d6900462432ed291ee3419958", null ],
     [ "Value", "class_urho3_d_1_1_string_hash.html#a128b96d97b890372a0ca3b7f27355500", null ],
     [ "Empty", "class_urho3_d_1_1_string_hash.html#ac7b672ec970e35cae390df43fae8e3f8", null ],
-    [ "EmptyValue", "class_urho3_d_1_1_string_hash.html#a0374d3c2f1720047606821f0dc110f76", null ],
+    [ "EmptyValue", "class_urho3_d_1_1_string_hash.html#a6d3c8dcfd41df8b94b8c3052e0bf57a1", null ],
     [ "value_", "class_urho3_d_1_1_string_hash.html#a128a5bc13b5660e969f1ee982d5f4c7e", null ]
 ];

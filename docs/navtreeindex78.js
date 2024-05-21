@@ -1,5 +1,7 @@
 var NAVTREEINDEX78 =
 {
+"struct_urho3_d_1_1_animation_trigger_point.html":[8,0,2,30],
+"struct_urho3_d_1_1_animation_trigger_point.html#a2122535dd432d8624e2cc895d520ff41":[8,0,2,30,1],
 "struct_urho3_d_1_1_animation_trigger_point.html#a976791babf69c44295927bef7f91ee85":[8,0,2,30,0],
 "struct_urho3_d_1_1_animation_velocity_extractor_1_1_extracted_track_set.html":[8,0,2,31,0],
 "struct_urho3_d_1_1_animation_velocity_extractor_1_1_extracted_track_set.html#ab6853cfbc5f3596afb0a4e3b6b00580b":[8,0,2,31,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_bloom_pass_settings.html#a3f5f545e69359c8559dac8ac412d936d":[8,0,2,97,3],
 "struct_urho3_d_1_1_bloom_pass_settings.html#a4d2bff64994768d03f5cf446e4e9197d":[8,0,2,97,7],
 "struct_urho3_d_1_1_bloom_pass_settings.html#a83daadb2d2c2b9ea53aae228a1078a6c":[8,0,2,97,4],
-"struct_urho3_d_1_1_bloom_pass_settings.html#a9d70ff14467ec781581aaec04f2336fa":[8,0,2,97,1],
-"struct_urho3_d_1_1_bloom_pass_settings.html#aca4ebcea1940c4d4290430ce17a9ba89":[8,0,2,97,8],
-"struct_urho3_d_1_1_bloom_pass_settings.html#ad271f4ddbbf73c1fa60c9ca79fbf83e1":[8,0,2,97,5]
+"struct_urho3_d_1_1_bloom_pass_settings.html#a9d70ff14467ec781581aaec04f2336fa":[8,0,2,97,1]
 };

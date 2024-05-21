@@ -1,5 +1,7 @@
 var NAVTREEINDEX88 =
 {
+"struct_urho3_d_1_1_text_params3_d.html#a28cc42ea8d828467b0defe8db0602568":[8,0,2,720,2],
+"struct_urho3_d_1_1_text_params3_d.html#a38e38c1b397aef46a576f7fd89e2373d":[8,0,2,720,6],
 "struct_urho3_d_1_1_text_params3_d.html#a560a9f1391142cdb6c67507bb6efbd59":[8,0,2,720,12],
 "struct_urho3_d_1_1_text_params3_d.html#a649b6b996be30d7d631741c46c9e5388":[8,0,2,720,13],
 "struct_urho3_d_1_1_text_params3_d.html#a6fd2dc35d8d5cbc3176b994c05fdaaa4":[8,0,2,720,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX88 =
 "structfmt_1_1formatter_3_01ea_1_1string_01_4.html":[8,0,1,0],
 "structfmt_1_1formatter_3_01ea_1_1string_01_4.html#a9d00cc0db451d47d33734e3b06565cdc":[8,0,1,0,0],
 "structfmt_1_1formatter_3_01ea_1_1string__view_01_4.html":[8,0,1,1],
-"structfmt_1_1formatter_3_01ea_1_1string__view_01_4.html#a2dc5ce68a6ea11d1d036ef99325f65e1":[8,0,1,1,0],
-"ui-overview.html":[0,0,2,6],
-"union_urho3_d_1_1_variant_value.html":[8,0,2,792]
+"structfmt_1_1formatter_3_01ea_1_1string__view_01_4.html#a2dc5ce68a6ea11d1d036ef99325f65e1":[8,0,1,1,0]
 };
