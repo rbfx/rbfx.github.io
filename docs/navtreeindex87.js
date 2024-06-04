@@ -1,7 +1,5 @@
 var NAVTREEINDEX87 =
 {
-"struct_urho3_d_1_1_spherical_harmonics_dot9.html#a6e5895236f5128e12dc15d77534bebc4":[8,0,2,677,15],
-"struct_urho3_d_1_1_spherical_harmonics_dot9.html#a7060b8b22c1926003716389d0e704ee3":[8,0,2,677,3],
 "struct_urho3_d_1_1_spherical_harmonics_dot9.html#a72326ccef5e78ffe8d810c24dfdb70eb":[8,0,2,677,14],
 "struct_urho3_d_1_1_spherical_harmonics_dot9.html#a82e46ba480998640192460411a200051":[8,0,2,677,2],
 "struct_urho3_d_1_1_spherical_harmonics_dot9.html#a8b325b7a5124f10131c20fd1bf06cc71":[8,0,2,677,16],
@@ -249,5 +247,7 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_text_params3_d.html":[8,0,2,720],
 "struct_urho3_d_1_1_text_params3_d.html#a07d1f61d68601b09bc7d2a170268fab4":[8,0,2,720,14],
 "struct_urho3_d_1_1_text_params3_d.html#a1eb803e9f0798f2c9b84b92416228f5d":[8,0,2,720,9],
-"struct_urho3_d_1_1_text_params3_d.html#a1fdb4004542f0e3853c8275be23c710c":[8,0,2,720,8]
+"struct_urho3_d_1_1_text_params3_d.html#a1fdb4004542f0e3853c8275be23c710c":[8,0,2,720,8],
+"struct_urho3_d_1_1_text_params3_d.html#a28cc42ea8d828467b0defe8db0602568":[8,0,2,720,2],
+"struct_urho3_d_1_1_text_params3_d.html#a38e38c1b397aef46a576f7fd89e2373d":[8,0,2,720,6]
 };

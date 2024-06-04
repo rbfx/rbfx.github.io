@@ -1,7 +1,5 @@
 var NAVTREEINDEX84 =
 {
-"struct_urho3_d_1_1_network_value_traits.html#ad35456ce93c3133f64588f4cc714c91a":[8,0,2,435,5],
-"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html":[8,0,2,436],
 "struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#a096ce6799d95474aef8ac3da3b7e1930":[8,0,2,436,3],
 "struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#a2700a9e2bf61a68bb61d001b1e501d58":[8,0,2,436,0],
 "struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html#a869aa2d198f0a0eba356ff21327d01ec":[8,0,2,436,5],
@@ -249,5 +247,7 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_physics_raycast_result.html#ac546be78168a69e04a3cb4328c893108":[8,0,2,506,5],
 "struct_urho3_d_1_1_physics_raycast_result.html#ac903d2e2f945dd50ff02e387e5799f28":[8,0,2,506,0],
 "struct_urho3_d_1_1_physics_raycast_result2_d.html":[8,0,2,507],
-"struct_urho3_d_1_1_physics_raycast_result2_d.html#a2e80874911363017d6d834cf83caff6f":[8,0,2,507,4]
+"struct_urho3_d_1_1_physics_raycast_result2_d.html#a2e80874911363017d6d834cf83caff6f":[8,0,2,507,4],
+"struct_urho3_d_1_1_physics_raycast_result2_d.html#a39e6fa5e506f844a1e0951a8a42fd246":[8,0,2,507,3],
+"struct_urho3_d_1_1_physics_raycast_result2_d.html#a52bbe96638faf6448aa7fe33ff2b16a7":[8,0,2,507,0]
 };

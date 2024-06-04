@@ -1,7 +1,5 @@
 var NAVTREEINDEX73 =
 {
-"class_urho3_d_1_1_vector4.html#ae9a3f47e1789b3a5a8bc4715088b7cdd":[8,0,2,795,16],
-"class_urho3_d_1_1_vector4.html#aec899dab8c346da65f1a05557821b722":[8,0,2,795,5],
 "class_urho3_d_1_1_vector4.html#aedef0dfc6a12913aa7f3602df5f6d214":[8,0,2,795,14],
 "class_urho3_d_1_1_vector4.html#af085782529d991fe482604fd4e48bc7b":[8,0,2,795,20],
 "class_urho3_d_1_1_vector4.html#afaf2c5ed67040ef184b484459c280192":[8,0,2,795,39],
@@ -249,5 +247,7 @@ var NAVTREEINDEX73 =
 "class_urho3_d_1_1_watchable_mount_point.html#a90ed74570844cee060d35f90cfc0dfaf":[8,0,2,813,0],
 "class_urho3_d_1_1_watchable_mount_point.html#a940b9197f31d2d99ef80f2f89f156ca9":[8,0,2,813,4],
 "class_urho3_d_1_1_watchable_mount_point.html#acafd50b0bf314d95b88f311de85c4456":[8,0,2,813,6],
-"class_urho3_d_1_1_weak_ptr.html":[8,0,2,814]
+"class_urho3_d_1_1_weak_ptr.html":[8,0,2,814],
+"class_urho3_d_1_1_weak_ptr.html#a069720b2d7ea71a8dcee98d24df5dc70":[8,0,2,814,28],
+"class_urho3_d_1_1_weak_ptr.html#a13b33a6469e4e3262aafb1b943ca75e0":[8,0,2,814,31]
 };

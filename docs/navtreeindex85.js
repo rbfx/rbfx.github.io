@@ -1,7 +1,5 @@
 var NAVTREEINDEX85 =
 {
-"struct_urho3_d_1_1_physics_raycast_result2_d.html#a39e6fa5e506f844a1e0951a8a42fd246":[8,0,2,507,3],
-"struct_urho3_d_1_1_physics_raycast_result2_d.html#a52bbe96638faf6448aa7fe33ff2b16a7":[8,0,2,507,0],
 "struct_urho3_d_1_1_physics_raycast_result2_d.html#a71a7b114170c03ffe8a87291e5b90c06":[8,0,2,507,2],
 "struct_urho3_d_1_1_physics_raycast_result2_d.html#a84e55a4423131b39b9fea5048324e14c":[8,0,2,507,1],
 "struct_urho3_d_1_1_physics_world2_d_1_1_contact_info.html":[8,0,2,510,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX85 =
 "struct_urho3_d_1_1_replication_manager_1_1_client_data.html#a9d7aca58848399aa3007142fe2ff2c3c":[8,0,2,582,0,0],
 "struct_urho3_d_1_1_replication_manager_1_1_client_data.html#aa924e5ba82f25dac26fd5b0f91adb3d5":[8,0,2,582,0,5],
 "struct_urho3_d_1_1_replication_manager_1_1_client_data.html#aaac1aa95954af4965dfe21284ea6e0df":[8,0,2,582,0,3],
-"struct_urho3_d_1_1_replication_manager_1_1_client_data.html#ace407be41a22b940dc7f4d4d56c03224":[8,0,2,582,0,4]
+"struct_urho3_d_1_1_replication_manager_1_1_client_data.html#ace407be41a22b940dc7f4d4d56c03224":[8,0,2,582,0,4],
+"struct_urho3_d_1_1_resource_file_descriptor.html":[8,0,2,586],
+"struct_urho3_d_1_1_resource_file_descriptor.html#a016afee8d1124de16cb94daf7d5bf60a":[8,0,2,586,0]
 };
