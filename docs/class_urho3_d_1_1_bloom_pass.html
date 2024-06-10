@@ -62,8 +62,10 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_bloom_pass.html','')
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_urho3_d_1_1_bloom_pass-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -74,44 +76,211 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_bloom_pass.html','')
 <p>Post-processing pass that applies bloom to scene.  
  <a href="class_urho3_d_1_1_bloom_pass.html#details">More...</a></p>
 
-<p><code>#include &lt;Urho3D/RenderPipeline/BloomPass.h&gt;</code></p>
+<p><code>#include &lt;Urho3D/RenderPipeline/Passes/BloomPass.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Urho3D::BloomPass:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_urho3_d_1_1_bloom_pass.png" usemap="#Urho3D::BloomPass_map" alt=""/>
   <map id="Urho3D::BloomPass_map" name="Urho3D::BloomPass_map">
-<area href="class_urho3_d_1_1_post_process_pass.html" title="Post-processing pass of render pipeline. Expected to output to color buffer." alt="Urho3D::PostProcessPass" shape="rect" coords="0,112,158,136"/>
-<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="0,56,158,80"/>
-<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="0,0,158,24"/>
+<area href="class_urho3_d_1_1_render_pass.html" title="Render pass, component of render path." alt="Urho3D::RenderPass" shape="rect" coords="0,168,129,192"/>
+<area href="class_urho3_d_1_1_serializable.html" title="Base class for objects with automatic serialization through attributes." alt="Urho3D::Serializable" shape="rect" coords="0,112,129,136"/>
+<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="0,56,129,80"/>
+<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="0,0,129,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html">CachedStates</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_bloom_pass_1_1_parameters.html">Parameters</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_bloom_pass_1_1_cached_textures.html">CachedTextures</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_bloom_pass_1_1_pipeline_state_cache.html">PipelineStateCache</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_bloom_pass_1_1_texture_cache.html">TextureCache</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aced928565209141cbeea5df4fee7d5d1"><td class="memItemLeft" align="right" valign="top"><a id="aced928565209141cbeea5df4fee7d5d1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BloomPass</b> (<a class="el" href="class_urho3_d_1_1_render_pipeline_interface.html">RenderPipelineInterface</a> *renderPipeline, <a class="el" href="class_urho3_d_1_1_render_buffer_manager.html">RenderBufferManager</a> *renderBufferManager)</td></tr>
-<tr class="separator:aced928565209141cbeea5df4fee7d5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad56b5d92cd294139f08f11b0f8dfd9ea"><td class="memItemLeft" align="right" valign="top"><a id="ad56b5d92cd294139f08f11b0f8dfd9ea"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSettings</b> (const <a class="el" href="struct_urho3_d_1_1_bloom_pass_settings.html">BloomPassSettings</a> &amp;settings)</td></tr>
-<tr class="separator:ad56b5d92cd294139f08f11b0f8dfd9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa62e1c1e9307346e82d09827ac75f6be"><td class="memItemLeft" align="right" valign="top"><a id="aa62e1c1e9307346e82d09827ac75f6be"></a>
-PostProcessPassFlags&#160;</td><td class="memItemRight" valign="bottom"><b>GetExecutionFlags</b> () const override</td></tr>
-<tr class="separator:aa62e1c1e9307346e82d09827ac75f6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fe9349c59e3ac8c12dfb775edbb9e5f"><td class="memItemLeft" align="right" valign="top"><a id="a6fe9349c59e3ac8c12dfb775edbb9e5f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Execute</b> (<a class="el" href="class_urho3_d_1_1_camera.html">Camera</a> *camera) override</td></tr>
-<tr class="separator:a6fe9349c59e3ac8c12dfb775edbb9e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_urho3_d_1_1_post_process_pass"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_post_process_pass')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_post_process_pass.html">Urho3D::PostProcessPass</a></td></tr>
-<tr class="memitem:aef526bc737388232ff4acdc0b6da655e inherit pub_methods_class_urho3_d_1_1_post_process_pass"><td class="memItemLeft" align="right" valign="top"><a id="aef526bc737388232ff4acdc0b6da655e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PostProcessPass</b> (<a class="el" href="class_urho3_d_1_1_render_pipeline_interface.html">RenderPipelineInterface</a> *renderPipeline, <a class="el" href="class_urho3_d_1_1_render_buffer_manager.html">RenderBufferManager</a> *renderBufferManager)</td></tr>
-<tr class="separator:aef526bc737388232ff4acdc0b6da655e inherit pub_methods_class_urho3_d_1_1_post_process_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af633d1e31e04ed73eaecd6f6987ab930"><td class="memItemLeft" align="right" valign="top"><a id="af633d1e31e04ed73eaecd6f6987ab930"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BloomPass</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
+<tr class="separator:af633d1e31e04ed73eaecd6f6987ab930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a92956732329faec8f8c4d713d0e31f2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_bloom_pass.html#a92956732329faec8f8c4d713d0e31f2b">CollectParameters</a> (<a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;params) const override</td></tr>
+<tr class="separator:a92956732329faec8f8c4d713d0e31f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a401db98879a2afdaaf11058375bab013"><td class="memItemLeft" align="right" valign="top"><a id="a401db98879a2afdaaf11058375bab013"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_bloom_pass.html#a401db98879a2afdaaf11058375bab013">InitializeView</a> (<a class="el" href="class_urho3_d_1_1_render_pipeline_view.html">RenderPipelineView</a> *view) override</td></tr>
+<tr class="memdesc:a401db98879a2afdaaf11058375bab013"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize render pass before using it in view. <br /></td></tr>
+<tr class="separator:a401db98879a2afdaaf11058375bab013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad48ddce4276d7cdd5e25394b3d9a4b22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_bloom_pass.html#ad48ddce4276d7cdd5e25394b3d9a4b22">UpdateParameters</a> (const <a class="el" href="struct_urho3_d_1_1_render_pipeline_settings.html">RenderPipelineSettings</a> &amp;settings, const <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;params) override</td></tr>
+<tr class="separator:ad48ddce4276d7cdd5e25394b3d9a4b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a588ce3459cb036944661e2d1696704ce"><td class="memItemLeft" align="right" valign="top"><a id="a588ce3459cb036944661e2d1696704ce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_bloom_pass.html#a588ce3459cb036944661e2d1696704ce">Update</a> (const <a class="el" href="struct_urho3_d_1_1_shared_render_pass_state.html">SharedRenderPassState</a> &amp;sharedState) override</td></tr>
+<tr class="memdesc:a588ce3459cb036944661e2d1696704ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform update that does not invoke any rendering commands. <br /></td></tr>
+<tr class="separator:a588ce3459cb036944661e2d1696704ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea6b91aaefe33daa04a11039f3d2ddf9"><td class="memItemLeft" align="right" valign="top"><a id="aea6b91aaefe33daa04a11039f3d2ddf9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_bloom_pass.html#aea6b91aaefe33daa04a11039f3d2ddf9">Render</a> (const <a class="el" href="struct_urho3_d_1_1_shared_render_pass_state.html">SharedRenderPassState</a> &amp;sharedState) override</td></tr>
+<tr class="memdesc:aea6b91aaefe33daa04a11039f3d2ddf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute render commands. <br /></td></tr>
+<tr class="separator:aea6b91aaefe33daa04a11039f3d2ddf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_urho3_d_1_1_render_pass"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_render_pass')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_render_pass.html">Urho3D::RenderPass</a></td></tr>
+<tr class="memitem:ad8063e84a56e76276d8dccc52154a539 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="ad8063e84a56e76276d8dccc52154a539"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RenderPass</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
+<tr class="separator:ad8063e84a56e76276d8dccc52154a539 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82b1c5e3d8674e75921cfe2759046027 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="a82b1c5e3d8674e75921cfe2759046027"></a>
+virtual const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_pass.html#a82b1c5e3d8674e75921cfe2759046027">GetPassName</a> () const</td></tr>
+<tr class="memdesc:a82b1c5e3d8674e75921cfe2759046027 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return unique pass name. <br /></td></tr>
+<tr class="separator:a82b1c5e3d8674e75921cfe2759046027 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a574908e6d8c8f67d36ee937cfe664e16 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_pass.html#a574908e6d8c8f67d36ee937cfe664e16">SetEnabled</a> (bool enabled)</td></tr>
+<tr class="separator:a574908e6d8c8f67d36ee937cfe664e16 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a301c930795461810072adcd1f0664665 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="a301c930795461810072adcd1f0664665"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsEnabledEffectively</b> () const</td></tr>
+<tr class="separator:a301c930795461810072adcd1f0664665 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c3266129f3f1acf5834bcceab2badc5 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="a1c3266129f3f1acf5834bcceab2badc5"></a>
+const <a class="el" href="struct_urho3_d_1_1_render_pass_traits.html">RenderPassTraits</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetTraits</b> () const</td></tr>
+<tr class="separator:a1c3266129f3f1acf5834bcceab2badc5 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c54cafa4a26f83c7e682447f19f3f60 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="a0c54cafa4a26f83c7e682447f19f3f60"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsEnabledByDefault</b> () const</td></tr>
+<tr class="separator:a0c54cafa4a26f83c7e682447f19f3f60 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af34fa7afb1967acc0375dd528e30c0fc inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="af34fa7afb1967acc0375dd528e30c0fc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetEnabledByDefault</b> (bool enabled)</td></tr>
+<tr class="separator:af34fa7afb1967acc0375dd528e30c0fc inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ff6ce21bbf135d13efdda8c1b3eee7c inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="a1ff6ce21bbf135d13efdda8c1b3eee7c"></a>
+const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetComment</b> () const</td></tr>
+<tr class="separator:a1ff6ce21bbf135d13efdda8c1b3eee7c inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63bc52d690256627a762de321a0d2252 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="a63bc52d690256627a762de321a0d2252"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetComment</b> (const ea::string &amp;comment)</td></tr>
+<tr class="separator:a63bc52d690256627a762de321a0d2252 inherit pub_methods_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_urho3_d_1_1_serializable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_serializable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_serializable.html">Urho3D::Serializable</a></td></tr>
+<tr class="memitem:a23c677a1f43edd6bbd8db693bc1f6bc9 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a23c677a1f43edd6bbd8db693bc1f6bc9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a23c677a1f43edd6bbd8db693bc1f6bc9">Serializable</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
+<tr class="memdesc:a23c677a1f43edd6bbd8db693bc1f6bc9 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br /></td></tr>
+<tr class="separator:a23c677a1f43edd6bbd8db693bc1f6bc9 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90d9809cb57cfa96d16c126d4a6aa584 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a90d9809cb57cfa96d16c126d4a6aa584"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a90d9809cb57cfa96d16c126d4a6aa584">~Serializable</a> () override</td></tr>
+<tr class="memdesc:a90d9809cb57cfa96d16c126d4a6aa584 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
+<tr class="separator:a90d9809cb57cfa96d16c126d4a6aa584 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3785d97ef92557bab8239688af94ac5e inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a3785d97ef92557bab8239688af94ac5e"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a3785d97ef92557bab8239688af94ac5e">OnSetAttribute</a> (const <a class="el" href="struct_urho3_d_1_1_attribute_info.html">AttributeInfo</a> &amp;attr, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;src)</td></tr>
+<tr class="memdesc:a3785d97ef92557bab8239688af94ac5e inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle attribute write access. Default implementation writes to the variable at offset, or invokes the set accessor. <br /></td></tr>
+<tr class="separator:a3785d97ef92557bab8239688af94ac5e inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c5041e406e9df1ff04ac9b31733661 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a18c5041e406e9df1ff04ac9b31733661"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a18c5041e406e9df1ff04ac9b31733661">OnGetAttribute</a> (const <a class="el" href="struct_urho3_d_1_1_attribute_info.html">AttributeInfo</a> &amp;attr, <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;dest) const</td></tr>
+<tr class="memdesc:a18c5041e406e9df1ff04ac9b31733661 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle attribute read access. Default implementation reads the variable at offset, or invokes the get accessor. <br /></td></tr>
+<tr class="separator:a18c5041e406e9df1ff04ac9b31733661 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda34bdd5647ece5fd395a0fc5615984 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="adda34bdd5647ece5fd395a0fc5615984"></a>
+virtual <a class="el" href="class_urho3_d_1_1_object_reflection.html">ObjectReflection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#adda34bdd5647ece5fd395a0fc5615984">GetReflection</a> () const</td></tr>
+<tr class="memdesc:adda34bdd5647ece5fd395a0fc5615984 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reflection used for serialization. <br /></td></tr>
+<tr class="separator:adda34bdd5647ece5fd395a0fc5615984 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ed3b6a42d174e446a93f3c087eddda3 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a1ed3b6a42d174e446a93f3c087eddda3"></a>
+virtual const ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_attribute_info.html">AttributeInfo</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a1ed3b6a42d174e446a93f3c087eddda3">GetAttributes</a> () const</td></tr>
+<tr class="memdesc:a1ed3b6a42d174e446a93f3c087eddda3 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute descriptions, or null if none defined. <br /></td></tr>
+<tr class="separator:a1ed3b6a42d174e446a93f3c087eddda3 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a123f394af3ff1f2002aa051252e0b9a2 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a123f394af3ff1f2002aa051252e0b9a2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a123f394af3ff1f2002aa051252e0b9a2">SerializeInBlock</a> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;archive) override</td></tr>
+<tr class="memdesc:a123f394af3ff1f2002aa051252e0b9a2 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize content from/to archive. May throw <a class="el" href="class_urho3_d_1_1_archive_exception.html">ArchiveException</a>. <br /></td></tr>
+<tr class="separator:a123f394af3ff1f2002aa051252e0b9a2 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57b7a9cdbe1f646195c712c8a0aa4d18 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a57b7a9cdbe1f646195c712c8a0aa4d18"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SerializeInBlock</b> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;archive, bool serializeTemporary)</td></tr>
+<tr class="separator:a57b7a9cdbe1f646195c712c8a0aa4d18 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04fe50c87274dbb2b8b970ea0c199767 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a04fe50c87274dbb2b8b970ea0c199767"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a04fe50c87274dbb2b8b970ea0c199767">Load</a> (<a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;source)</td></tr>
+<tr class="memdesc:a04fe50c87274dbb2b8b970ea0c199767 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from binary data. Return true if successful. <br /></td></tr>
+<tr class="separator:a04fe50c87274dbb2b8b970ea0c199767 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab17751e4bb4888195b6cf1b7d74ff7b inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="aab17751e4bb4888195b6cf1b7d74ff7b"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#aab17751e4bb4888195b6cf1b7d74ff7b">Save</a> (<a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) const</td></tr>
+<tr class="memdesc:aab17751e4bb4888195b6cf1b7d74ff7b inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save as binary data. Return true if successful. <br /></td></tr>
+<tr class="separator:aab17751e4bb4888195b6cf1b7d74ff7b inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a725a0fc06d1b050525e2d02c5e7187ad inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a725a0fc06d1b050525e2d02c5e7187ad"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a725a0fc06d1b050525e2d02c5e7187ad">LoadXML</a> (const <a class="el" href="class_urho3_d_1_1_x_m_l_element.html">XMLElement</a> &amp;source)</td></tr>
+<tr class="memdesc:a725a0fc06d1b050525e2d02c5e7187ad inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from XML data. Return true if successful. <br /></td></tr>
+<tr class="separator:a725a0fc06d1b050525e2d02c5e7187ad inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fbac3aa471adea86dea09bfa4b3960f inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a3fbac3aa471adea86dea09bfa4b3960f"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a3fbac3aa471adea86dea09bfa4b3960f">SaveXML</a> (<a class="el" href="class_urho3_d_1_1_x_m_l_element.html">XMLElement</a> &amp;dest) const</td></tr>
+<tr class="memdesc:a3fbac3aa471adea86dea09bfa4b3960f inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save as XML data. Return true if successful. <br /></td></tr>
+<tr class="separator:a3fbac3aa471adea86dea09bfa4b3960f inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7363a7dda75d1dc158a0841d459b32e4 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a7363a7dda75d1dc158a0841d459b32e4"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a7363a7dda75d1dc158a0841d459b32e4">LoadJSON</a> (const <a class="el" href="class_urho3_d_1_1_j_s_o_n_value.html">JSONValue</a> &amp;source)</td></tr>
+<tr class="memdesc:a7363a7dda75d1dc158a0841d459b32e4 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from JSON data. Return true if successful. <br /></td></tr>
+<tr class="separator:a7363a7dda75d1dc158a0841d459b32e4 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7319eee017bad624295be2f2a6c351f1 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a7319eee017bad624295be2f2a6c351f1"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a7319eee017bad624295be2f2a6c351f1">SaveJSON</a> (<a class="el" href="class_urho3_d_1_1_j_s_o_n_value.html">JSONValue</a> &amp;dest) const</td></tr>
+<tr class="memdesc:a7319eee017bad624295be2f2a6c351f1 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save as JSON data. Return true if successful. <br /></td></tr>
+<tr class="separator:a7319eee017bad624295be2f2a6c351f1 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8dacdf9677205bc1629bdf03331320a inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="ab8dacdf9677205bc1629bdf03331320a"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#ab8dacdf9677205bc1629bdf03331320a">Load</a> (const ea::string &amp;resourceName)</td></tr>
+<tr class="memdesc:ab8dacdf9677205bc1629bdf03331320a inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from binary resource. <br /></td></tr>
+<tr class="separator:ab8dacdf9677205bc1629bdf03331320a inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a807562ec2b693c5ed74d878ade75d3c2 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a807562ec2b693c5ed74d878ade75d3c2"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a807562ec2b693c5ed74d878ade75d3c2">LoadXML</a> (const ea::string &amp;resourceName)</td></tr>
+<tr class="memdesc:a807562ec2b693c5ed74d878ade75d3c2 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from XML resource. <br /></td></tr>
+<tr class="separator:a807562ec2b693c5ed74d878ade75d3c2 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87f1604bc4fd22eaea6889743f660062 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a87f1604bc4fd22eaea6889743f660062"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a87f1604bc4fd22eaea6889743f660062">LoadJSON</a> (const ea::string &amp;resourceName)</td></tr>
+<tr class="memdesc:a87f1604bc4fd22eaea6889743f660062 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from JSON resource. <br /></td></tr>
+<tr class="separator:a87f1604bc4fd22eaea6889743f660062 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f3202ff0d12762cb84127b3d8c7b6a2 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a0f3202ff0d12762cb84127b3d8c7b6a2"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a0f3202ff0d12762cb84127b3d8c7b6a2">LoadFile</a> (const ea::string &amp;resourceName)</td></tr>
+<tr class="memdesc:a0f3202ff0d12762cb84127b3d8c7b6a2 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load from resource of automatically detected type. <br /></td></tr>
+<tr class="separator:a0f3202ff0d12762cb84127b3d8c7b6a2 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58f03d097b05420b50a9017f44a24593 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a58f03d097b05420b50a9017f44a24593"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a58f03d097b05420b50a9017f44a24593">ApplyAttributes</a> ()</td></tr>
+<tr class="memdesc:a58f03d097b05420b50a9017f44a24593 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply attribute changes that can not be applied immediately. Called after scene load or a network update. <br /></td></tr>
+<tr class="separator:a58f03d097b05420b50a9017f44a24593 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03d0b0995c1c55490fa0c42004ad5aac inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a03d0b0995c1c55490fa0c42004ad5aac"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a03d0b0995c1c55490fa0c42004ad5aac">SaveDefaultAttributes</a> (const <a class="el" href="struct_urho3_d_1_1_attribute_info.html">AttributeInfo</a> &amp;attr) const</td></tr>
+<tr class="memdesc:a03d0b0995c1c55490fa0c42004ad5aac inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether should save default-valued attributes into XML. Default false. <br /></td></tr>
+<tr class="separator:a03d0b0995c1c55490fa0c42004ad5aac inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52c377ff65bd3198a3c460c6a43dc008 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a52c377ff65bd3198a3c460c6a43dc008">SetAttribute</a> (unsigned index, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;value)</td></tr>
+<tr class="separator:a52c377ff65bd3198a3c460c6a43dc008 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6b3fbb7dd7f51dcd2426ff42af57051 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="aa6b3fbb7dd7f51dcd2426ff42af57051"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#aa6b3fbb7dd7f51dcd2426ff42af57051">SetAttribute</a> (const ea::string &amp;name, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;value)</td></tr>
+<tr class="memdesc:aa6b3fbb7dd7f51dcd2426ff42af57051 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set attribute by name. Return true if successfully set. <br /></td></tr>
+<tr class="separator:aa6b3fbb7dd7f51dcd2426ff42af57051 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7c4c6b4aaa1375ac927e2c0fdb4537e inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="ae7c4c6b4aaa1375ac927e2c0fdb4537e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#ae7c4c6b4aaa1375ac927e2c0fdb4537e">SetInstanceDefault</a> (bool enable)</td></tr>
+<tr class="memdesc:ae7c4c6b4aaa1375ac927e2c0fdb4537e inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use) Set instance-level default flag. <br /></td></tr>
+<tr class="separator:ae7c4c6b4aaa1375ac927e2c0fdb4537e inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfdafa80730bc8a34fca96b97c874c57 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="adfdafa80730bc8a34fca96b97c874c57"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#adfdafa80730bc8a34fca96b97c874c57">SetInstanceDefault</a> (const ea::string &amp;name, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;defaultValue)</td></tr>
+<tr class="memdesc:adfdafa80730bc8a34fca96b97c874c57 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use) Set instance-level default value. Allocate the internal data structure as necessary. <br /></td></tr>
+<tr class="separator:adfdafa80730bc8a34fca96b97c874c57 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14444dbd254ac44d2663b5a1b4cc3fa3 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a14444dbd254ac44d2663b5a1b4cc3fa3"></a>
+virtual <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a14444dbd254ac44d2663b5a1b4cc3fa3">GetInstanceDefault</a> (const ea::string &amp;name) const</td></tr>
+<tr class="memdesc:a14444dbd254ac44d2663b5a1b4cc3fa3 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use) Get instance-level default value. <br /></td></tr>
+<tr class="separator:a14444dbd254ac44d2663b5a1b4cc3fa3 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9652196ab03ef1f9d98f9dbfa9e1adbb inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a9652196ab03ef1f9d98f9dbfa9e1adbb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a9652196ab03ef1f9d98f9dbfa9e1adbb">ResetToDefault</a> ()</td></tr>
+<tr class="memdesc:a9652196ab03ef1f9d98f9dbfa9e1adbb inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset all editable attributes to their default values. <br /></td></tr>
+<tr class="separator:a9652196ab03ef1f9d98f9dbfa9e1adbb inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa03ec3737aa52aa3f8419f43aff050 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a1aa03ec3737aa52aa3f8419f43aff050"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a1aa03ec3737aa52aa3f8419f43aff050">RemoveInstanceDefault</a> ()</td></tr>
+<tr class="memdesc:a1aa03ec3737aa52aa3f8419f43aff050 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove instance's default values if they are set previously. <br /></td></tr>
+<tr class="separator:a1aa03ec3737aa52aa3f8419f43aff050 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa044160c22b374e032ae85c30520f89 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#aaa044160c22b374e032ae85c30520f89">SetTemporary</a> (bool enable)</td></tr>
+<tr class="separator:aaa044160c22b374e032ae85c30520f89 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3783f928c689a3d4ee2d9766661eca0c inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_variant.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a3783f928c689a3d4ee2d9766661eca0c">GetAttribute</a> (unsigned index) const</td></tr>
+<tr class="separator:a3783f928c689a3d4ee2d9766661eca0c inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae98a54f24eb4a472267a3a94c3b7694 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="aae98a54f24eb4a472267a3a94c3b7694"></a>
+<a class="el" href="class_urho3_d_1_1_variant.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#aae98a54f24eb4a472267a3a94c3b7694">GetAttribute</a> (const ea::string &amp;name) const</td></tr>
+<tr class="memdesc:aae98a54f24eb4a472267a3a94c3b7694 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute value by name. Return empty if not found. <br /></td></tr>
+<tr class="separator:aae98a54f24eb4a472267a3a94c3b7694 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b7ab5369b91ff7b7e47c83347963d8 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_variant.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a48b7ab5369b91ff7b7e47c83347963d8">GetAttributeDefault</a> (unsigned index) const</td></tr>
+<tr class="separator:a48b7ab5369b91ff7b7e47c83347963d8 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8e33fe2611f93eec6663bc5d047850c inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="aa8e33fe2611f93eec6663bc5d047850c"></a>
+<a class="el" href="class_urho3_d_1_1_variant.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#aa8e33fe2611f93eec6663bc5d047850c">GetAttributeDefault</a> (const ea::string &amp;name) const</td></tr>
+<tr class="memdesc:aa8e33fe2611f93eec6663bc5d047850c inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return attribute default value by name. Return empty if not found. <br /></td></tr>
+<tr class="separator:aa8e33fe2611f93eec6663bc5d047850c inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ef3c99945e4467d6f953986ac0ac118 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a4ef3c99945e4467d6f953986ac0ac118">GetNumAttributes</a> () const</td></tr>
+<tr class="separator:a4ef3c99945e4467d6f953986ac0ac118 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af65920406168944f258a9f0087b564b7 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="af65920406168944f258a9f0087b564b7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#af65920406168944f258a9f0087b564b7">CopyAttributes</a> (const <a class="el" href="class_urho3_d_1_1_serializable.html">Serializable</a> *source, bool resetToDefault=true)</td></tr>
+<tr class="memdesc:af65920406168944f258a9f0087b564b7 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy all attributes from another serializable. <br /></td></tr>
+<tr class="separator:af65920406168944f258a9f0087b564b7 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5810c5328870b5a95afe7eabd90bba3 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="aa5810c5328870b5a95afe7eabd90bba3"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_serializable.html">Serializable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#aa5810c5328870b5a95afe7eabd90bba3">Clone</a> (bool resetToDefault=true) const</td></tr>
+<tr class="memdesc:aa5810c5328870b5a95afe7eabd90bba3 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone this serializable. <br /></td></tr>
+<tr class="separator:aa5810c5328870b5a95afe7eabd90bba3 inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa20baf7a00b3c81f16e0c85c69f0b5ce inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#aa20baf7a00b3c81f16e0c85c69f0b5ce">IsTemporary</a> () const</td></tr>
+<tr class="separator:aa20baf7a00b3c81f16e0c85c69f0b5ce inherit pub_methods_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -137,10 +306,6 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#ad0ce1699ce5bd9d4033e5800bbb8c15b">OnEvent</a> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle event. <br /></td></tr>
 <tr class="separator:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13f38914b4398c60eb0b12fb12d73765 inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a13f38914b4398c60eb0b12fb12d73765"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a13f38914b4398c60eb0b12fb12d73765">SerializeInBlock</a> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;archive)</td></tr>
-<tr class="memdesc:a13f38914b4398c60eb0b12fb12d73765 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize content from/to archive. May throw <a class="el" href="class_urho3_d_1_1_archive_exception.html">ArchiveException</a>. <br /></td></tr>
-<tr class="separator:a13f38914b4398c60eb0b12fb12d73765 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17376e0a319ae50dca17ad91c5b1a55b inherit pub_methods_class_urho3_d_1_1_object"><td class="memTemplParams" colspan="2"><a id="a17376e0a319ae50dca17ad91c5b1a55b"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a17376e0a319ae50dca17ad91c5b1a55b inherit pub_methods_class_urho3_d_1_1_object"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a17376e0a319ae50dca17ad91c5b1a55b">IsInstanceOf</a> () const</td></tr>
@@ -306,79 +471,205 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if script reference is strong. <br /></td></tr>
 <tr class="separator:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a3381baea1f8ba035af717b50f18b6179"><td class="memItemLeft" align="right" valign="top"><a id="a3381baea1f8ba035af717b50f18b6179"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterObject</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
+<tr class="separator:a3381baea1f8ba035af717b50f18b6179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_urho3_d_1_1_render_pass"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_urho3_d_1_1_render_pass')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_render_pass.html">Urho3D::RenderPass</a></td></tr>
+<tr class="memitem:ad5a40d2a7283d29d63fb16dabd7ad149 inherit pub_static_methods_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="ad5a40d2a7283d29d63fb16dabd7ad149"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterObject</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
+<tr class="separator:ad5a40d2a7283d29d63fb16dabd7ad149 inherit pub_static_methods_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
+<tr class="memitem:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="aaf5a648d6c449dd14b273c10fdd498a9"></a>
+static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aaf5a648d6c449dd14b273c10fdd498a9">GetTypeInfoStatic</a> ()</td></tr>
+<tr class="memdesc:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type info static. <br /></td></tr>
+<tr class="separator:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a10f462df254045fc9e07645a73bc76bb"><td class="memItemLeft" align="right" valign="top"><a id="a10f462df254045fc9e07645a73bc76bb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeTextures</b> ()</td></tr>
-<tr class="separator:a10f462df254045fc9e07645a73bc76bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe66a32a210d8e0a8693820ae2578eba"><td class="memItemLeft" align="right" valign="top"><a id="abe66a32a210d8e0a8693820ae2578eba"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeStates</b> ()</td></tr>
-<tr class="separator:abe66a32a210d8e0a8693820ae2578eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cfea1d6d13b0cc73b8c1e20c4fb14fc"><td class="memItemLeft" align="right" valign="top"><a id="a4cfea1d6d13b0cc73b8c1e20c4fb14fc"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GatherBrightRegions</b> (<a class="el" href="class_urho3_d_1_1_render_buffer.html">RenderBuffer</a> *destination)</td></tr>
-<tr class="separator:a4cfea1d6d13b0cc73b8c1e20c4fb14fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade17b2953e6f30c8551c56c4c44b7a00"><td class="memItemLeft" align="right" valign="top"><a id="ade17b2953e6f30c8551c56c4c44b7a00"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>BlurTexture</b> (<a class="el" href="class_urho3_d_1_1_render_buffer.html">RenderBuffer</a> *final, <a class="el" href="class_urho3_d_1_1_render_buffer.html">RenderBuffer</a> *temporary)</td></tr>
-<tr class="separator:ade17b2953e6f30c8551c56c4c44b7a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01e36a0610655fa161c2a327262ab59c"><td class="memItemLeft" align="right" valign="top"><a id="a01e36a0610655fa161c2a327262ab59c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>CopyTexture</b> (<a class="el" href="class_urho3_d_1_1_render_buffer.html">RenderBuffer</a> *source, <a class="el" href="class_urho3_d_1_1_render_buffer.html">RenderBuffer</a> *destination)</td></tr>
-<tr class="separator:a01e36a0610655fa161c2a327262ab59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab280f631c437cdd02a45c16298ef71ea"><td class="memItemLeft" align="right" valign="top"><a id="ab280f631c437cdd02a45c16298ef71ea"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ApplyBloom</b> (<a class="el" href="class_urho3_d_1_1_render_buffer.html">RenderBuffer</a> *bloom, float intensity)</td></tr>
-<tr class="separator:ab280f631c437cdd02a45c16298ef71ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7502e3ddd889fc095fcf63e8159ca6de"><td class="memItemLeft" align="right" valign="top"><a id="a7502e3ddd889fc095fcf63e8159ca6de"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InvalidateTextureCache</b> ()</td></tr>
+<tr class="separator:a7502e3ddd889fc095fcf63e8159ca6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f62e24dade7d17b8e0c9d776dcb54eb"><td class="memItemLeft" align="right" valign="top"><a id="a3f62e24dade7d17b8e0c9d776dcb54eb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InvalidatePipelineStateCache</b> ()</td></tr>
+<tr class="separator:a3f62e24dade7d17b8e0c9d776dcb54eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f00052d5a9509b2aad8cfbd370971a"><td class="memItemLeft" align="right" valign="top"><a id="aa6f00052d5a9509b2aad8cfbd370971a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RestoreTextureCache</b> (const <a class="el" href="struct_urho3_d_1_1_shared_render_pass_state.html">SharedRenderPassState</a> &amp;sharedState)</td></tr>
+<tr class="separator:aa6f00052d5a9509b2aad8cfbd370971a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3051437b86daef38931c01db31fc8700"><td class="memItemLeft" align="right" valign="top"><a id="a3051437b86daef38931c01db31fc8700"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RestorePipelineStateCache</b> (const <a class="el" href="struct_urho3_d_1_1_shared_render_pass_state.html">SharedRenderPassState</a> &amp;sharedState)</td></tr>
+<tr class="separator:a3051437b86daef38931c01db31fc8700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac835e5deda7cee3fb28d9e96a6586847"><td class="memItemLeft" align="right" valign="top"><a id="ac835e5deda7cee3fb28d9e96a6586847"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GatherBrightRegions</b> (<a class="el" href="class_urho3_d_1_1_render_buffer_manager.html">RenderBufferManager</a> *renderBufferManager, <a class="el" href="class_urho3_d_1_1_render_buffer.html">RenderBuffer</a> *destination)</td></tr>
+<tr class="separator:ac835e5deda7cee3fb28d9e96a6586847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3f1f185807262ba4d9ad628b89df59"><td class="memItemLeft" align="right" valign="top"><a id="abb3f1f185807262ba4d9ad628b89df59"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>BlurTexture</b> (<a class="el" href="class_urho3_d_1_1_render_buffer_manager.html">RenderBufferManager</a> *renderBufferManager, <a class="el" href="class_urho3_d_1_1_render_buffer.html">RenderBuffer</a> *final, <a class="el" href="class_urho3_d_1_1_render_buffer.html">RenderBuffer</a> *temporary)</td></tr>
+<tr class="separator:abb3f1f185807262ba4d9ad628b89df59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a6399016e613a3dc186cbf2bf2ac315"><td class="memItemLeft" align="right" valign="top"><a id="a9a6399016e613a3dc186cbf2bf2ac315"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CopyTexture</b> (<a class="el" href="class_urho3_d_1_1_render_buffer_manager.html">RenderBufferManager</a> *renderBufferManager, <a class="el" href="class_urho3_d_1_1_render_buffer.html">RenderBuffer</a> *source, <a class="el" href="class_urho3_d_1_1_render_buffer.html">RenderBuffer</a> *destination)</td></tr>
+<tr class="separator:a9a6399016e613a3dc186cbf2bf2ac315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab5c63743c68738b95f682f72fe181c"><td class="memItemLeft" align="right" valign="top"><a id="a0ab5c63743c68738b95f682f72fe181c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ApplyBloom</b> (<a class="el" href="class_urho3_d_1_1_render_buffer_manager.html">RenderBufferManager</a> *renderBufferManager, <a class="el" href="class_urho3_d_1_1_render_buffer.html">RenderBuffer</a> *bloom, float intensity)</td></tr>
+<tr class="separator:a0ab5c63743c68738b95f682f72fe181c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9cba939044dd6231046e4ca1763c037"><td class="memItemLeft" align="right" valign="top"><a id="ab9cba939044dd6231046e4ca1763c037"></a>
 auto&#160;</td><td class="memItemRight" valign="bottom"><b>GetShaderParameters</b> (const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;inputInvSize) const</td></tr>
 <tr class="separator:ab9cba939044dd6231046e4ca1763c037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_urho3_d_1_1_render_pass"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_render_pass')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_render_pass.html">Urho3D::RenderPass</a></td></tr>
+<tr class="memitem:a37853e819fc23dcd6dfe98368a9c30f8 inherit pro_methods_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="a37853e819fc23dcd6dfe98368a9c30f8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DeclareParameter</b> (const ea::string &amp;name, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;value, <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;params) const</td></tr>
+<tr class="separator:a37853e819fc23dcd6dfe98368a9c30f8 inherit pro_methods_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84cc22ba50ee320d625e54d127a6e6c3 inherit pro_methods_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="a84cc22ba50ee320d625e54d127a6e6c3"></a>
+const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>LoadParameter</b> (const ea::string &amp;name, const <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;params) const</td></tr>
+<tr class="separator:a84cc22ba50ee320d625e54d127a6e6c3 inherit pro_methods_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebbc56832886da9b4475e090773783b9 inherit pro_methods_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="aebbc56832886da9b4475e090773783b9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ConnectToRenderBuffer</b> (<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_render_buffer.html">RenderBuffer</a> &gt; &amp;renderBuffer, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> name, const <a class="el" href="struct_urho3_d_1_1_shared_render_pass_state.html">SharedRenderPassState</a> &amp;sharedState, bool required=true) const</td></tr>
+<tr class="separator:aebbc56832886da9b4475e090773783b9 inherit pro_methods_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a7b918810801109273e9b43d5d9c19222"><td class="memItemLeft" align="right" valign="top"><a id="a7b918810801109273e9b43d5d9c19222"></a>
-<a class="el" href="struct_urho3_d_1_1_bloom_pass_settings.html">BloomPassSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><b>settings_</b></td></tr>
-<tr class="separator:a7b918810801109273e9b43d5d9c19222"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf10439875396cb60b986c8b255e3e51"><td class="memItemLeft" align="right" valign="top"><a id="adf10439875396cb60b986c8b255e3e51"></a>
-ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_bloom_pass_1_1_cached_textures.html">CachedTextures</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>textures_</b></td></tr>
-<tr class="separator:adf10439875396cb60b986c8b255e3e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b0ecc66f89e50d1dae45f5ce1cbf208"><td class="memItemLeft" align="right" valign="top"><a id="a9b0ecc66f89e50d1dae45f5ce1cbf208"></a>
-ea::optional&lt; <a class="el" href="struct_urho3_d_1_1_bloom_pass_1_1_cached_states.html">CachedStates</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pipelineStates_</b></td></tr>
-<tr class="separator:a9b0ecc66f89e50d1dae45f5ce1cbf208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c808f89c03840243b5037d93cc46c32"><td class="memItemLeft" align="right" valign="top"><a id="a8c808f89c03840243b5037d93cc46c32"></a>
+ea::optional&lt; <a class="el" href="struct_urho3_d_1_1_bloom_pass_1_1_pipeline_state_cache.html">PipelineStateCache</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pipelineStates_</b></td></tr>
+<tr class="separator:a8c808f89c03840243b5037d93cc46c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e54a8335c03fb70cfc2149048b5ce99"><td class="memItemLeft" align="right" valign="top"><a id="a6e54a8335c03fb70cfc2149048b5ce99"></a>
+ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_bloom_pass_1_1_texture_cache.html">TextureCache</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>textures_</b></td></tr>
+<tr class="separator:a6e54a8335c03fb70cfc2149048b5ce99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb95ec1b5bcf1ffb414f1484bd1c2f0"><td class="memItemLeft" align="right" valign="top"><a id="afdb95ec1b5bcf1ffb414f1484bd1c2f0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isHDR_</b> {}</td></tr>
+<tr class="separator:afdb95ec1b5bcf1ffb414f1484bd1c2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d3c0a0193a8bc4a0c5a71d82bb3ded0"><td class="memItemLeft" align="right" valign="top"><a id="a8d3c0a0193a8bc4a0c5a71d82bb3ded0"></a>
+<a class="el" href="struct_urho3_d_1_1_bloom_pass_1_1_parameters.html">Parameters</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parameters_</b></td></tr>
+<tr class="separator:a8d3c0a0193a8bc4a0c5a71d82bb3ded0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a820fcab83ccbe66f78d3ec7bc4aeca72"><td class="memItemLeft" align="right" valign="top"><a id="a820fcab83ccbe66f78d3ec7bc4aeca72"></a>
 <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>luminanceWeights_</b></td></tr>
 <tr class="separator:a820fcab83ccbe66f78d3ec7bc4aeca72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbd317e41fa191f0f470531b89705f2c"><td class="memItemLeft" align="right" valign="top"><a id="afbd317e41fa191f0f470531b89705f2c"></a>
 ea::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>intensityMultipliers_</b></td></tr>
 <tr class="separator:afbd317e41fa191f0f470531b89705f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_urho3_d_1_1_post_process_pass"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_post_process_pass')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_post_process_pass.html">Urho3D::PostProcessPass</a></td></tr>
-<tr class="memitem:ad781cab90ebfcb82ec164be838bc9ceb inherit pro_attribs_class_urho3_d_1_1_post_process_pass"><td class="memItemLeft" align="right" valign="top"><a id="ad781cab90ebfcb82ec164be838bc9ceb"></a>
-<a class="el" href="class_urho3_d_1_1_render_buffer_manager.html">RenderBufferManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>renderBufferManager_</b> {}</td></tr>
-<tr class="separator:ad781cab90ebfcb82ec164be838bc9ceb inherit pro_attribs_class_urho3_d_1_1_post_process_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_urho3_d_1_1_render_pass"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_render_pass')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_render_pass.html">Urho3D::RenderPass</a></td></tr>
+<tr class="memitem:a1c8848789bc3d40cd56918df0a4467fb inherit pro_attribs_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="a1c8848789bc3d40cd56918df0a4467fb"></a>
+struct <a class="el" href="struct_urho3_d_1_1_render_pass_1_1_attributes.html">Urho3D::RenderPass::Attributes</a>&#160;</td><td class="memItemRight" valign="bottom"><b>attributes_</b></td></tr>
+<tr class="separator:a1c8848789bc3d40cd56918df0a4467fb inherit pro_attribs_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49137a38d1a5a8bd6b1b4a140124a062 inherit pro_attribs_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="a49137a38d1a5a8bd6b1b4a140124a062"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEnabledByUser_</b> {}</td></tr>
+<tr class="separator:a49137a38d1a5a8bd6b1b4a140124a062 inherit pro_attribs_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9186925d3829d1c629f88848643f697e inherit pro_attribs_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="a9186925d3829d1c629f88848643f697e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEnabledInternally_</b> {true}</td></tr>
+<tr class="separator:a9186925d3829d1c629f88848643f697e inherit pro_attribs_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefe71fc031f80dc960cf2cc2a963b7e3 inherit pro_attribs_class_urho3_d_1_1_render_pass"><td class="memItemLeft" align="right" valign="top"><a id="aefe71fc031f80dc960cf2cc2a963b7e3"></a>
+<a class="el" href="struct_urho3_d_1_1_render_pass_traits.html">RenderPassTraits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>traits_</b></td></tr>
+<tr class="separator:aefe71fc031f80dc960cf2cc2a963b7e3 inherit pro_attribs_class_urho3_d_1_1_render_pass"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_urho3_d_1_1_serializable"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_serializable')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_serializable.html">Urho3D::Serializable</a></td></tr>
+<tr class="memitem:ac6128cecfe8decc17084fe2aa7e6cf57 inherit pro_attribs_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="ac6128cecfe8decc17084fe2aa7e6cf57"></a>
+ea::unique_ptr&lt; <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#ac6128cecfe8decc17084fe2aa7e6cf57">instanceDefaultValues_</a></td></tr>
+<tr class="memdesc:ac6128cecfe8decc17084fe2aa7e6cf57 inherit pro_attribs_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribute default value at each instance level. <br /></td></tr>
+<tr class="separator:ac6128cecfe8decc17084fe2aa7e6cf57 inherit pro_attribs_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accaf6b2938d392f127885f6673f6985e inherit pro_attribs_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="accaf6b2938d392f127885f6673f6985e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#accaf6b2938d392f127885f6673f6985e">setInstanceDefault_</a></td></tr>
+<tr class="memdesc:accaf6b2938d392f127885f6673f6985e inherit pro_attribs_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">When true, store the attribute value as instance's default value (internal use only). <br /></td></tr>
+<tr class="separator:accaf6b2938d392f127885f6673f6985e inherit pro_attribs_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e600cc84e1f680cc08714f733739c20 inherit pro_attribs_class_urho3_d_1_1_serializable"><td class="memItemLeft" align="right" valign="top"><a id="a7e600cc84e1f680cc08714f733739c20"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#a7e600cc84e1f680cc08714f733739c20">temporary_</a></td></tr>
+<tr class="memdesc:a7e600cc84e1f680cc08714f733739c20 inherit pro_attribs_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary flag. <br /></td></tr>
+<tr class="separator:a7e600cc84e1f680cc08714f733739c20 inherit pro_attribs_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="aecf686841d86be7e4a2c0092b60d31ad"></a>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aecf686841d86be7e4a2c0092b60d31ad">context_</a></td></tr>
 <tr class="memdesc:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution context. <br /></td></tr>
 <tr class="separator:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a366641902d7caebd192b69948b7756e6"><td class="memItemLeft" align="right" valign="top"><a id="a366641902d7caebd192b69948b7756e6"></a>
+static constexpr unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>MaxIterations</b> = 16</td></tr>
+<tr class="separator:a366641902d7caebd192b69948b7756e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:af8b275754ff9470610c8fd53aaf5355c"><td class="memItemLeft" align="right" valign="top"><a id="af8b275754ff9470610c8fd53aaf5355c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_bloom_pass.html">BloomPass</a>, <a class="el" href="class_urho3_d_1_1_post_process_pass.html">PostProcessPass</a>)</td></tr>
-<tr class="separator:af8b275754ff9470610c8fd53aaf5355c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e2a9bda23f0ef77dbe552f1cfca761"><td class="memItemLeft" align="right" valign="top"><a id="a18e2a9bda23f0ef77dbe552f1cfca761"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_bloom_pass.html">BloomPass</a>, <a class="el" href="class_urho3_d_1_1_render_pass.html">RenderPass</a>)</td></tr>
+<tr class="separator:a18e2a9bda23f0ef77dbe552f1cfca761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
-<tr class="memitem:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="aaf5a648d6c449dd14b273c10fdd498a9"></a>
-static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aaf5a648d6c449dd14b273c10fdd498a9">GetTypeInfoStatic</a> ()</td></tr>
-<tr class="memdesc:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type info static. <br /></td></tr>
-<tr class="separator:aaf5a648d6c449dd14b273c10fdd498a9 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top">static constexpr ea::array&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a745a18b8e99bf855379e72aac5d544ab">TypeHierarchy</a> {}</td></tr>
 <tr class="separator:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Post-processing pass that applies bloom to scene. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/RenderPipeline/BloomPass.h</li>
-<li>Urho3D/RenderPipeline/BloomPass.cpp</li>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a92956732329faec8f8c4d713d0e31f2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92956732329faec8f8c4d713d0e31f2b">&#9670;&nbsp;</a></span>CollectParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::BloomPass::CollectParameters </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Implement <a class="el" href="class_urho3_d_1_1_render_pass.html" title="Render pass, component of render path.">RenderPass</a>. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_render_pass.html#a6eaec350a9ba0d0890a1fd25241a304a">Urho3D::RenderPass</a>.</p>
+
+</div>
+</div>
+<a id="ad48ddce4276d7cdd5e25394b3d9a4b22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad48ddce4276d7cdd5e25394b3d9a4b22">&#9670;&nbsp;</a></span>UpdateParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::BloomPass::UpdateParameters </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_render_pipeline_settings.html">RenderPipelineSettings</a> &amp;&#160;</td>
+          <td class="paramname"><em>settings</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Update settings and parameters of the pass. This function is always called before any rendering updates or getters. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_render_pass.html#ab3430f239bb346dcf78cd8d11e8b3e9a">Urho3D::RenderPass</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>Urho3D/RenderPipeline/Passes/BloomPass.h</li>
+<li>Urho3D/RenderPipeline/Passes/BloomPass.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

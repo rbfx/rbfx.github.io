@@ -104,6 +104,12 @@ const <a class="el" href="struct_urho3_d_1_1_render_pipeline_settings.html">Rend
 <tr class="memitem:add75e536819292fe271070debb6eb299"><td class="memItemLeft" align="right" valign="top"><a id="add75e536819292fe271070debb6eb299"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSettings</b> (const <a class="el" href="struct_urho3_d_1_1_render_pipeline_settings.html">RenderPipelineSettings</a> &amp;settings)</td></tr>
 <tr class="separator:add75e536819292fe271070debb6eb299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f80851aeb1af64dcdcaee14e43dffae"><td class="memItemLeft" align="right" valign="top"><a id="a0f80851aeb1af64dcdcaee14e43dffae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetRenderPath</b> (<a class="el" href="class_urho3_d_1_1_render_path.html">RenderPath</a> *renderPath)</td></tr>
+<tr class="separator:a0f80851aeb1af64dcdcaee14e43dffae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac76d5f95012fa62a61c71c1785f12f10"><td class="memItemLeft" align="right" valign="top"><a id="ac76d5f95012fa62a61c71c1785f12f10"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>MarkParametersDirty</b> ()</td></tr>
+<tr class="separator:ac76d5f95012fa62a61c71c1785f12f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:aea724d29feaec713e2ebbd98d372eb26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_render_pipeline_debugger.html">RenderPipelineDebugger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_default_render_pipeline_view.html#aea724d29feaec713e2ebbd98d372eb26">GetDebugger</a> () override</td></tr>
 <tr class="separator:aea724d29feaec713e2ebbd98d372eb26"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -354,6 +360,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SendViewEvent</b> (<a
 <tr class="memitem:a8f60390d741b15e886d9fc2fecd37063"><td class="memItemLeft" align="right" valign="top"><a id="a8f60390d741b15e886d9fc2fecd37063"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ApplySettings</b> ()</td></tr>
 <tr class="separator:a8f60390d741b15e886d9fc2fecd37063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe9e2739da14e443ac3d61ebd45535d9"><td class="memItemLeft" align="right" valign="top"><a id="afe9e2739da14e443ac3d61ebd45535d9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateRenderOutputFlags</b> ()</td></tr>
+<tr class="separator:afe9e2739da14e443ac3d61ebd45535d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -363,6 +372,15 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a9e89672687572bf98be1a63ba478935e"><td class="memItemLeft" align="right" valign="top"><a id="a9e89672687572bf98be1a63ba478935e"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_render_path.html">RenderPath</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>originalRenderPath_</b></td></tr>
+<tr class="separator:a9e89672687572bf98be1a63ba478935e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c3f3de262a4e92924f44a86ffbe8e4b"><td class="memItemLeft" align="right" valign="top"><a id="a9c3f3de262a4e92924f44a86ffbe8e4b"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_render_path.html">RenderPath</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>renderPath_</b></td></tr>
+<tr class="separator:a9c3f3de262a4e92924f44a86ffbe8e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd9850777f4dcaad2bbe1041f7eae986"><td class="memItemLeft" align="right" valign="top"><a id="afd9850777f4dcaad2bbe1041f7eae986"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>parametersDirty_</b> {}</td></tr>
+<tr class="separator:afd9850777f4dcaad2bbe1041f7eae986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17a89a8dc28acc0ddfb0de4e836dc50b"><td class="memItemLeft" align="right" valign="top"><a id="a17a89a8dc28acc0ddfb0de4e836dc50b"></a>
 <a class="el" href="struct_urho3_d_1_1_render_pipeline_settings.html">RenderPipelineSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><b>settings_</b></td></tr>
 <tr class="separator:a17a89a8dc28acc0ddfb0de4e836dc50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -388,15 +406,18 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="memitem:aaf54d6cd240817addd2da7a4e25fe17f"><td class="memItemLeft" align="right" valign="top"><a id="aaf54d6cd240817addd2da7a4e25fe17f"></a>
 <a class="el" href="struct_urho3_d_1_1_common_frame_info.html">CommonFrameInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>frameInfo_</b></td></tr>
 <tr class="separator:aaf54d6cd240817addd2da7a4e25fe17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69c1abc7623489c136257f45a460fbe3"><td class="memItemLeft" align="right" valign="top"><a id="a69c1abc7623489c136257f45a460fbe3"></a>
-PostProcessPassFlags&#160;</td><td class="memItemRight" valign="bottom"><b>postProcessFlags_</b></td></tr>
-<tr class="separator:a69c1abc7623489c136257f45a460fbe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86f3f6cef491f7f608a3554b6b733b93"><td class="memItemLeft" align="right" valign="top"><a id="a86f3f6cef491f7f608a3554b6b733b93"></a>
+RenderOutputFlags&#160;</td><td class="memItemRight" valign="bottom"><b>renderOutputFlags_</b></td></tr>
+<tr class="separator:a86f3f6cef491f7f608a3554b6b733b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf8db60dc18b5a016ecbd51e2d4207b4"><td class="memItemLeft" align="right" valign="top"><a id="acf8db60dc18b5a016ecbd51e2d4207b4"></a>
 <a class="el" href="struct_urho3_d_1_1_render_pipeline_stats.html">RenderPipelineStats</a>&#160;</td><td class="memItemRight" valign="bottom"><b>stats_</b></td></tr>
 <tr class="separator:acf8db60dc18b5a016ecbd51e2d4207b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5219ba3d0a5875e28a379bc21c5117d0"><td class="memItemLeft" align="right" valign="top"><a id="a5219ba3d0a5875e28a379bc21c5117d0"></a>
 <a class="el" href="class_urho3_d_1_1_render_pipeline_debugger.html">RenderPipelineDebugger</a>&#160;</td><td class="memItemRight" valign="bottom"><b>debugger_</b></td></tr>
 <tr class="separator:a5219ba3d0a5875e28a379bc21c5117d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a566af8a17e08f00ba863f969c20ecc14"><td class="memItemLeft" align="right" valign="top"><a id="a566af8a17e08f00ba863f969c20ecc14"></a>
+<a class="el" href="struct_urho3_d_1_1_shared_render_pass_state.html">SharedRenderPassState</a>&#160;</td><td class="memItemRight" valign="bottom"><b>state_</b></td></tr>
+<tr class="separator:a566af8a17e08f00ba863f969c20ecc14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e78d50546e25ea9551ef7e948570f13"><td class="memItemLeft" align="right" valign="top"><a id="a5e78d50546e25ea9551ef7e948570f13"></a>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_render_buffer_manager.html">RenderBufferManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>renderBufferManager_</b></td></tr>
 <tr class="separator:a5e78d50546e25ea9551ef7e948570f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -427,21 +448,15 @@ PostProcessPassFlags&#160;</td><td class="memItemRight" valign="bottom"><b>postP
 <tr class="memitem:ad51871c2da784408c0e7eece1f291b45"><td class="memItemLeft" align="right" valign="top"><a id="ad51871c2da784408c0e7eece1f291b45"></a>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_back_to_front_scene_pass.html">BackToFrontScenePass</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>postAlphaPass_</b></td></tr>
 <tr class="separator:ad51871c2da784408c0e7eece1f291b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7ed737b0c378518bdde1c54329de49d"><td class="memItemLeft" align="right" valign="top"><a id="aa7ed737b0c378518bdde1c54329de49d"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_render_buffer.html">RenderBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>outlineBuffer_</b></td></tr>
+<tr class="separator:aa7ed737b0c378518bdde1c54329de49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ac1ff347e20ab02e7a724278bda31d4"><td class="memItemLeft" align="right" valign="top"><a id="a1ac1ff347e20ab02e7a724278bda31d4"></a>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_outline_scene_pass.html">OutlineScenePass</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>outlineScenePass_</b></td></tr>
 <tr class="separator:a1ac1ff347e20ab02e7a724278bda31d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf04c3a5b2d1fb3039667960bf756652"><td class="memItemLeft" align="right" valign="top"><a id="adf04c3a5b2d1fb3039667960bf756652"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_outline_pass.html">OutlinePass</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>outlinePostProcessPass_</b></td></tr>
-<tr class="separator:adf04c3a5b2d1fb3039667960bf756652"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a636333677a8f782a1de5cd23460431ed"><td class="memItemLeft" align="right" valign="top"><a id="a636333677a8f782a1de5cd23460431ed"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_ambient_occlusion_pass.html">AmbientOcclusionPass</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ssaoPass_</b></td></tr>
-<tr class="separator:a636333677a8f782a1de5cd23460431ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa16b3a4f0d88b8461060f5c400ce3712"><td class="memItemLeft" align="right" valign="top"><a id="aa16b3a4f0d88b8461060f5c400ce3712"></a>
 ea::optional&lt; <a class="el" href="struct_urho3_d_1_1_default_render_pipeline_view_1_1_deferred_lighting_data.html">DeferredLightingData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>deferred_</b></td></tr>
 <tr class="separator:aa16b3a4f0d88b8461060f5c400ce3712"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a479f8e4deb0a34f1da9c4a86304dbfbd"><td class="memItemLeft" align="right" valign="top"><a id="a479f8e4deb0a34f1da9c4a86304dbfbd"></a>
-ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_post_process_pass.html">PostProcessPass</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>postProcessPasses_</b></td></tr>
-<tr class="separator:a479f8e4deb0a34f1da9c4a86304dbfbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

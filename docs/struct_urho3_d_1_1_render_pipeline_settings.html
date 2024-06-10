@@ -88,13 +88,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <tr class="memdesc:ab391b169e7cdfe0ae89fcfbd8eb3f1e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adjust to closest settings suported by the platform. <br /></td></tr>
 <tr class="separator:ab391b169e7cdfe0ae89fcfbd8eb3f1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a5a9a9aa7c48df8f95f00eabb2f358b13"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_render_pipeline_settings.html#a5a9a9aa7c48df8f95f00eabb2f358b13">CalculatePipelineStateHash</a> () const</td></tr>
-<tr class="separator:a5a9a9aa7c48df8f95f00eabb2f358b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd5998f43e6996a802536a0d5714c18c"><td class="memItemLeft" align="right" valign="top"><a id="afd5998f43e6996a802536a0d5714c18c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Validate</b> ()</td></tr>
-<tr class="separator:afd5998f43e6996a802536a0d5714c18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcf83a8558488128a4c1a9a739928fec"><td class="memItemLeft" align="right" valign="top"><a id="afcf83a8558488128a4c1a9a739928fec"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="struct_urho3_d_1_1_render_pipeline_settings.html">RenderPipelineSettings</a> &amp;rhs) const</td></tr>
+<tr class="memitem:afcf83a8558488128a4c1a9a739928fec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_render_pipeline_settings.html#afcf83a8558488128a4c1a9a739928fec">operator==</a> (const <a class="el" href="struct_urho3_d_1_1_render_pipeline_settings.html">RenderPipelineSettings</a> &amp;rhs) const</td></tr>
 <tr class="separator:afcf83a8558488128a4c1a9a739928fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a974c68c95fea6add6c1a463e94d0ebb2"><td class="memItemLeft" align="right" valign="top"><a id="a974c68c95fea6add6c1a463e94d0ebb2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="struct_urho3_d_1_1_render_pipeline_settings.html">RenderPipelineSettings</a> &amp;rhs) const</td></tr>
@@ -102,9 +96,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ac6f92bb70b18d109185f0d03860e88af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_render_pipeline_settings.html#ac6f92bb70b18d109185f0d03860e88af">PropagateImpliedSettings</a> ()</td></tr>
 <tr class="separator:ac6f92bb70b18d109185f0d03860e88af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adec4e413e8d559d5a59880d61b3d99de"><td class="memItemLeft" align="right" valign="top"><a id="adec4e413e8d559d5a59880d61b3d99de"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AdjustForPostProcessing</b> (PostProcessPassFlags flags)</td></tr>
-<tr class="separator:adec4e413e8d559d5a59880d61b3d99de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab04c6132d77fe4109d3ffee2b7af3bf"><td class="memItemLeft" align="right" valign="top"><a id="aab04c6132d77fe4109d3ffee2b7af3bf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AdjustForRenderPath</b> (RenderOutputFlags flags)</td></tr>
+<tr class="separator:aab04c6132d77fe4109d3ffee2b7af3bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_struct_urho3_d_1_1_shader_program_compositor_settings"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_struct_urho3_d_1_1_shader_program_compositor_settings')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="struct_urho3_d_1_1_shader_program_compositor_settings.html">Urho3D::ShaderProgramCompositorSettings</a></td></tr>
 <tr class="memitem:a0bbfe95b1c5e540fc069d99699116193 inherit pub_methods_struct_urho3_d_1_1_shader_program_compositor_settings"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_shader_program_compositor_settings.html#a0bbfe95b1c5e540fc069d99699116193">CalculatePipelineStateHash</a> () const</td></tr>
 <tr class="separator:a0bbfe95b1c5e540fc069d99699116193 inherit pub_methods_struct_urho3_d_1_1_shader_program_compositor_settings"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,39 +117,6 @@ Public Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:afa7e77b4d999e610317ffb949b02e561"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_render_pipeline_settings.html#afa7e77b4d999e610317ffb949b02e561">drawDebugGeometry_</a> {true}</td></tr>
 <tr class="separator:afa7e77b4d999e610317ffb949b02e561"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ac9eb43f8f10d413bb25560e9b66a4821"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_urho3_d_1_1_auto_exposure_pass_settings.html">AutoExposurePassSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_render_pipeline_settings.html#ac9eb43f8f10d413bb25560e9b66a4821">autoExposure_</a></td></tr>
-<tr class="separator:ac9eb43f8f10d413bb25560e9b66a4821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75582852374f336a4bfb54bf80f3c4f6"><td class="memItemLeft" align="right" valign="top"><a id="a75582852374f336a4bfb54bf80f3c4f6"></a>
-<a class="el" href="struct_urho3_d_1_1_bloom_pass_settings.html">BloomPassSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bloom_</b></td></tr>
-<tr class="separator:a75582852374f336a4bfb54bf80f3c4f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b969f3e17ab4d0c044f36a6292c799e"><td class="memItemLeft" align="right" valign="top"><a id="a9b969f3e17ab4d0c044f36a6292c799e"></a>
-<a class="el" href="struct_urho3_d_1_1_ambient_occlusion_pass_settings.html">AmbientOcclusionPassSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ssao_</b></td></tr>
-<tr class="separator:a9b969f3e17ab4d0c044f36a6292c799e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab740ab4ad29672e88eaf3523fc3af0bf"><td class="memItemLeft" align="right" valign="top"><a id="ab740ab4ad29672e88eaf3523fc3af0bf"></a>
-ToneMappingMode&#160;</td><td class="memItemRight" valign="bottom"><b>toneMapping_</b> {}</td></tr>
-<tr class="separator:ab740ab4ad29672e88eaf3523fc3af0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd0976d79730e8efeb2cb93f640b0596"><td class="memItemLeft" align="right" valign="top"><a id="afd0976d79730e8efeb2cb93f640b0596"></a>
-PostProcessAntialiasing&#160;</td><td class="memItemRight" valign="bottom"><b>antialiasing_</b> {}</td></tr>
-<tr class="separator:afd0976d79730e8efeb2cb93f640b0596"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa084eb4fd1381d48ea2b8d0e8f9a3334"><td class="memItemLeft" align="right" valign="top"><a id="aa084eb4fd1381d48ea2b8d0e8f9a3334"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>hueShift_</b> {1.0f}</td></tr>
-<tr class="separator:aa084eb4fd1381d48ea2b8d0e8f9a3334"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af71762ae55cf0f20e2578a768a86e4fb"><td class="memItemLeft" align="right" valign="top"><a id="af71762ae55cf0f20e2578a768a86e4fb"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>saturation_</b> {1.0f}</td></tr>
-<tr class="separator:af71762ae55cf0f20e2578a768a86e4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05da09b851c64d389b50693daa38a35f"><td class="memItemLeft" align="right" valign="top"><a id="a05da09b851c64d389b50693daa38a35f"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>brightness_</b> {1.0f}</td></tr>
-<tr class="separator:a05da09b851c64d389b50693daa38a35f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a921a87152949649b1ef62831acc8e975"><td class="memItemLeft" align="right" valign="top"><a id="a921a87152949649b1ef62831acc8e975"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>contrast_</b> {1.0f}</td></tr>
-<tr class="separator:a921a87152949649b1ef62831acc8e975"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f401be33b90a843791e872bf21b78b4"><td class="memItemLeft" align="right" valign="top"><a id="a1f401be33b90a843791e872bf21b78b4"></a>
-<a class="el" href="class_urho3_d_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>colorFilter_</b> {<a class="el" href="class_urho3_d_1_1_color.html#a42aad3adf983cede243a815e0cccd76f">Color::WHITE</a>}</td></tr>
-<tr class="separator:a1f401be33b90a843791e872bf21b78b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c230dfc9f65915fe82d5d0073b3f3e7"><td class="memItemLeft" align="right" valign="top"><a id="a9c230dfc9f65915fe82d5d0073b3f3e7"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>colorOffset_</b> {<a class="el" href="class_urho3_d_1_1_vector3.html#ad412e0011a7987f2b91c530158f19f16">Vector3::ZERO</a>}</td></tr>
-<tr class="separator:a9c230dfc9f65915fe82d5d0073b3f3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_struct_urho3_d_1_1_shader_program_compositor_settings"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_struct_urho3_d_1_1_shader_program_compositor_settings')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="struct_urho3_d_1_1_shader_program_compositor_settings.html">Urho3D::ShaderProgramCompositorSettings</a></td></tr>
 <tr class="memitem:ab0be4d1e836fb9216ea5a0ccad03922e inherit pub_attribs_struct_urho3_d_1_1_shader_program_compositor_settings"><td class="memItemLeft" align="right" valign="top"><a id="ab0be4d1e836fb9216ea5a0ccad03922e"></a>
 <a class="el" href="struct_urho3_d_1_1_render_buffer_manager_settings.html">RenderBufferManagerSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><b>renderBufferManager_</b></td></tr>
@@ -173,8 +134,8 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>contrast_</b> {1.0f}
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Settings of default render pipeline. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5a9a9aa7c48df8f95f00eabb2f358b13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a9a9aa7c48df8f95f00eabb2f358b13">&#9670;&nbsp;</a></span>CalculatePipelineStateHash()</h2>
+<a id="afcf83a8558488128a4c1a9a739928fec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcf83a8558488128a4c1a9a739928fec">&#9670;&nbsp;</a></span>operator==()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,9 +144,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>contrast_</b> {1.0f}
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned Urho3D::RenderPipelineSettings::CalculatePipelineStateHash </td>
+          <td class="memname">bool Urho3D::RenderPipelineSettings::operator== </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_render_pipeline_settings.html">RenderPipelineSettings</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -218,21 +180,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>contrast_</b> {1.0f}
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac9eb43f8f10d413bb25560e9b66a4821"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9eb43f8f10d413bb25560e9b66a4821">&#9670;&nbsp;</a></span>autoExposure_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_urho3_d_1_1_auto_exposure_pass_settings.html">AutoExposurePassSettings</a> Urho3D::RenderPipelineSettings::autoExposure_</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Post-processing settings </p>
-
-</div>
-</div>
 <a id="afa7e77b4d999e610317ffb949b02e561"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa7e77b4d999e610317ffb949b02e561">&#9670;&nbsp;</a></span>drawDebugGeometry_</h2>
 

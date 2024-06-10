@@ -103,6 +103,14 @@ RenderTargetView&#160;</td><td class="memItemRight" valign="bottom"><b>GetReadOn
 <tr class="separator:a3c9af9836c96857c491f9d35a863886f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4c82b6901f140907360ec0c00a4193e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_int_rect.html">IntRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_viewport_color_render_buffer.html#ab4c82b6901f140907360ec0c00a4193e">GetViewportRect</a> () const override</td></tr>
 <tr class="separator:ab4c82b6901f140907360ec0c00a4193e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_urho3_d_1_1_render_buffer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_render_buffer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_render_buffer.html">Urho3D::RenderBuffer</a></td></tr>
+<tr class="memitem:a548182002ee72f2f8c319ac59e7cb4c5 inherit pub_methods_class_urho3_d_1_1_render_buffer"><td class="memItemLeft" align="right" valign="top"><a id="a548182002ee72f2f8c319ac59e7cb4c5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_buffer.html#a548182002ee72f2f8c319ac59e7cb4c5">SetEnabled</a> (bool enabled)</td></tr>
+<tr class="memdesc:a548182002ee72f2f8c319ac59e7cb4c5 inherit pub_methods_class_urho3_d_1_1_render_buffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the render buffer is enabled. Disabled buffers should not be accessed during the frame. <br /></td></tr>
+<tr class="separator:a548182002ee72f2f8c319ac59e7cb4c5 inherit pub_methods_class_urho3_d_1_1_render_buffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1076db5079b5bae2bbafb90c4cc368eb inherit pub_methods_class_urho3_d_1_1_render_buffer"><td class="memItemLeft" align="right" valign="top"><a id="a1076db5079b5bae2bbafb90c4cc368eb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsEnabled</b> () const</td></tr>
+<tr class="separator:a1076db5079b5bae2bbafb90c4cc368eb inherit pub_methods_class_urho3_d_1_1_render_buffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -342,6 +350,9 @@ RenderDevice *&#160;</td><td class="memItemRight" valign="bottom"><b>renderDevic
 <tr class="memitem:acee9665b85822af87783708080165750 inherit pro_attribs_class_urho3_d_1_1_render_buffer"><td class="memItemLeft" align="right" valign="top"><a id="acee9665b85822af87783708080165750"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>bufferIsReady_</b> {}</td></tr>
 <tr class="separator:acee9665b85822af87783708080165750 inherit pro_attribs_class_urho3_d_1_1_render_buffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add8e5a2fd96bbbe7936332dcd8a7e604 inherit pro_attribs_class_urho3_d_1_1_render_buffer"><td class="memItemLeft" align="right" valign="top"><a id="add8e5a2fd96bbbe7936332dcd8a7e604"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEnabled_</b> {true}</td></tr>
+<tr class="separator:add8e5a2fd96bbbe7936332dcd8a7e604 inherit pro_attribs_class_urho3_d_1_1_render_buffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="aecf686841d86be7e4a2c0092b60d31ad"></a>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aecf686841d86be7e4a2c0092b60d31ad">context_</a></td></tr>

@@ -3,6 +3,7 @@ var class_urho3_d_1_1_serializable =
     [ "Serializable", "class_urho3_d_1_1_serializable.html#a23c677a1f43edd6bbd8db693bc1f6bc9", null ],
     [ "~Serializable", "class_urho3_d_1_1_serializable.html#a90d9809cb57cfa96d16c126d4a6aa584", null ],
     [ "ApplyAttributes", "class_urho3_d_1_1_serializable.html#a58f03d097b05420b50a9017f44a24593", null ],
+    [ "Clone", "class_urho3_d_1_1_serializable.html#aa5810c5328870b5a95afe7eabd90bba3", null ],
     [ "CopyAttributes", "class_urho3_d_1_1_serializable.html#af65920406168944f258a9f0087b564b7", null ],
     [ "GetAttribute", "class_urho3_d_1_1_serializable.html#aae98a54f24eb4a472267a3a94c3b7694", null ],
     [ "GetAttribute", "class_urho3_d_1_1_serializable.html#a3783f928c689a3d4ee2d9766661eca0c", null ],

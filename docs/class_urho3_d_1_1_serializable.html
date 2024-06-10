@@ -79,14 +79,15 @@ Inheritance diagram for Urho3D::Serializable:</div>
  <div class="center">
   <img src="class_urho3_d_1_1_serializable.png" usemap="#Urho3D::Serializable_map" alt=""/>
   <map id="Urho3D::Serializable_map" name="Urho3D::Serializable_map">
-<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="2103,56,2794,80"/>
-<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="2103,0,2794,24"/>
+<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="2804,56,3495,80"/>
+<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="2804,0,3495,24"/>
 <area href="class_urho3_d_1_1_actions_1_1_base_action.html" title="Base action state." alt="Urho3D::Actions::BaseAction" shape="rect" coords="0,168,691,192"/>
 <area href="class_urho3_d_1_1_animatable.html" title="Base class for animatable object, an animatable object can be set animation on it&#39;s attributes,..." alt="Urho3D::Animatable" shape="rect" coords="701,168,1392,192"/>
 <area href="class_urho3_d_1_1_asset_transformer.html" alt="Urho3D::AssetTransformer" shape="rect" coords="1402,168,2093,192"/>
 <area href="class_urho3_d_1_1_component.html" alt="Urho3D::Component" shape="rect" coords="2804,168,3495,192"/>
 <area href="class_urho3_d_1_1_particle_graph_layer.html" alt="Urho3D::ParticleGraphLayer" shape="rect" coords="3505,168,4196,192"/>
 <area href="class_urho3_d_1_1_particle_graph_node.html" alt="Urho3D::ParticleGraphNode" shape="rect" coords="4206,168,4897,192"/>
+<area href="class_urho3_d_1_1_render_pass.html" title="Render pass, component of render path." alt="Urho3D::RenderPass" shape="rect" coords="5608,168,6299,192"/>
 <area href="class_urho3_d_1_1_actions_1_1_finite_time_action.html" title="Finite time action." alt="Urho3D::Actions::FiniteTimeAction" shape="rect" coords="0,224,691,248"/>
 <area href="class_urho3_d_1_1_u_i_element.html" title="Base class for UI elements." alt="Urho3D::UIElement" shape="rect" coords="701,224,1392,248"/>
 <area href="class_urho3_d_1_1_animation_velocity_extractor.html" title="Asset transformer that extracts velocity from movement animations." alt="Urho3D::AnimationVelocityExtractor" shape="rect" coords="2103,224,2794,248"/>
@@ -171,6 +172,12 @@ Inheritance diagram for Urho3D::Serializable:</div>
 <area href="class_urho3_d_1_1_particle_graph_nodes_1_1_random.html" title="Operation on attribute." alt="Urho3D::ParticleGraphNodes::Random" shape="rect" coords="4907,1960,5598,1984"/>
 <area href="class_urho3_d_1_1_particle_graph_nodes_1_1_template_node.html" title="Template for a particle graph node class." alt="Urho3D::ParticleGraphNodes::TemplateNode&lt; Instance, Values &gt;" shape="rect" coords="4907,2016,5598,2040"/>
 <area href="class_urho3_d_1_1_particle_graph_nodes_1_1_uniform.html" title="Operation on attribute." alt="Urho3D::ParticleGraphNodes::Uniform" shape="rect" coords="4907,2072,5598,2096"/>
+<area href="class_urho3_d_1_1_ambient_occlusion_pass.html" title="Post-processing pass that adjusts HDR scene exposure." alt="Urho3D::AmbientOcclusionPass" shape="rect" coords="6309,224,7000,248"/>
+<area href="class_urho3_d_1_1_auto_exposure_pass.html" title="Post-processing pass that adjusts HDR scene exposure." alt="Urho3D::AutoExposurePass" shape="rect" coords="6309,280,7000,304"/>
+<area href="class_urho3_d_1_1_bloom_pass.html" title="Post-processing pass that applies bloom to scene." alt="Urho3D::BloomPass" shape="rect" coords="6309,336,7000,360"/>
+<area href="class_urho3_d_1_1_full_screen_shader_pass.html" title="Render pass that applied shader to the entire output area." alt="Urho3D::FullScreenShaderPass" shape="rect" coords="6309,392,7000,416"/>
+<area href="class_urho3_d_1_1_outline_render_pass.html" title="Post-processing pass that renders outline from color buffer." alt="Urho3D::OutlineRenderPass" shape="rect" coords="6309,448,7000,472"/>
+<area href="class_urho3_d_1_1_tone_mapping_pass.html" title="Post-processing pass that converts HDR linear color input to LDR gamma color." alt="Urho3D::ToneMappingPass" shape="rect" coords="6309,504,7000,528"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -301,6 +308,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#af65920406168944f258a9f0087b564b7">CopyAttributes</a> (const <a class="el" href="class_urho3_d_1_1_serializable.html">Serializable</a> *source, bool resetToDefault=true)</td></tr>
 <tr class="memdesc:af65920406168944f258a9f0087b564b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy all attributes from another serializable. <br /></td></tr>
 <tr class="separator:af65920406168944f258a9f0087b564b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5810c5328870b5a95afe7eabd90bba3"><td class="memItemLeft" align="right" valign="top"><a id="aa5810c5328870b5a95afe7eabd90bba3"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_serializable.html">Serializable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#aa5810c5328870b5a95afe7eabd90bba3">Clone</a> (bool resetToDefault=true) const</td></tr>
+<tr class="memdesc:aa5810c5328870b5a95afe7eabd90bba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone this serializable. <br /></td></tr>
+<tr class="separator:aa5810c5328870b5a95afe7eabd90bba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa20baf7a00b3c81f16e0c85c69f0b5ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_serializable.html#aa20baf7a00b3c81f16e0c85c69f0b5ce">IsTemporary</a> () const</td></tr>
 <tr class="separator:aa20baf7a00b3c81f16e0c85c69f0b5ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
