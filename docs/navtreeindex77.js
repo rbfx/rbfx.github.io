@@ -1,5 +1,7 @@
 var NAVTREEINDEX77 =
 {
+"functions_j.html":[8,3,0,10],
+"functions_k.html":[8,3,0,11],
 "functions_l.html":[8,3,0,12],
 "functions_m.html":[8,3,0,13],
 "functions_n.html":[8,3,0,14],
@@ -57,8 +59,8 @@ var NAVTREEINDEX77 =
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html":[2],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html":[5],
 "multiplayer-and-networking.html":[0,0,2,2],
-"namespace_urho3_d_1_1_actions.html":[7,0,0,0],
 "namespace_urho3_d_1_1_actions.html":[8,0,2,0],
+"namespace_urho3_d_1_1_actions.html":[7,0,0,0],
 "namespace_urho3_d_1_1_attribute_metadata.html":[7,0,0,1],
 "namespace_urho3_d_1_1_linked_plugins.html":[7,0,0,2],
 "namespace_urho3_d_1_1_network_settings.html":[7,0,0,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX77 =
 "struct___i_m_a_g_e___r_e_l_o_c_a_t_i_o_n.html#abe46cbe2df54c395acadd369c3d7d58e":[8,0,16,0],
 "struct___i_m_a_g_e___r_e_l_o_c_a_t_i_o_n.html#ada57b5c341607617212f2ae7766eb0f1":[8,0,16,1],
 "struct___i_m_a_g_e___r_o_m___h_e_a_d_e_r_s.html":[8,0,17],
-"struct___i_m_a_g_e___r_o_m___h_e_a_d_e_r_s.html#a55200576b11023b48894997c119c872a":[8,0,17,0],
-"struct___i_m_a_g_e___r_o_m___h_e_a_d_e_r_s.html#acb1c195205fac3b3e88356da136be1f1":[8,0,17,1],
-"struct___i_m_a_g_e___r_o_m___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html":[8,0,18]
+"struct___i_m_a_g_e___r_o_m___h_e_a_d_e_r_s.html#a55200576b11023b48894997c119c872a":[8,0,17,0]
 };

@@ -140,16 +140,23 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:aabc352ef555bbe69733d76b2c4c45d06"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:aabc352ef555bbe69733d76b2c4c45d06"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_math_defs_8h.html#aabc352ef555bbe69733d76b2c4c45d06">Urho3D::SmoothStep</a> (T lhs, T rhs, T t)</td></tr>
 <tr class="separator:aabc352ef555bbe69733d76b2c4c45d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07321a3d94dbf42d6d0766835f50f533"><td class="memTemplParams" colspan="2"><a id="a07321a3d94dbf42d6d0766835f50f533"></a>
+<tr class="memitem:a22e2b7bd695c556893b1823980b8c0cd"><td class="memTemplParams" colspan="2"><a id="a22e2b7bd695c556893b1823980b8c0cd"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:a07321a3d94dbf42d6d0766835f50f533"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_math_defs_8h.html#a07321a3d94dbf42d6d0766835f50f533">Urho3D::ExpSmoothingInv</a> (T constant, T timeStep)</td></tr>
-<tr class="memdesc:a07321a3d94dbf42d6d0766835f50f533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return constant for exponential smoothing. The input constant is the rate of smoothing, in seconds^-1. <br /></td></tr>
-<tr class="separator:a07321a3d94dbf42d6d0766835f50f533"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1fc7447e55e645f9b93c378ef07c076"><td class="memTemplParams" colspan="2"><a id="ae1fc7447e55e645f9b93c378ef07c076"></a>
+<tr class="memitem:a22e2b7bd695c556893b1823980b8c0cd"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_math_defs_8h.html#a22e2b7bd695c556893b1823980b8c0cd">Urho3D::ExponentialDecay</a> (T x)</td></tr>
+<tr class="memdesc:a22e2b7bd695c556893b1823980b8c0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate exponential decay function. <br /></td></tr>
+<tr class="separator:a22e2b7bd695c556893b1823980b8c0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c2d4ac6e3312a76a03af5946940decd"><td class="memTemplParams" colspan="2"><a id="a1c2d4ac6e3312a76a03af5946940decd"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:ae1fc7447e55e645f9b93c378ef07c076"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_math_defs_8h.html#ae1fc7447e55e645f9b93c378ef07c076">Urho3D::ExpSmoothing</a> (T constant, T timeStep)</td></tr>
-<tr class="memdesc:ae1fc7447e55e645f9b93c378ef07c076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return constant for exponential smoothing. The input constant is the half-duration of blending, in seconds. <br /></td></tr>
-<tr class="separator:ae1fc7447e55e645f9b93c378ef07c076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c2d4ac6e3312a76a03af5946940decd"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Urho3D::InverseExponentialDecay</b> (T x)</td></tr>
+<tr class="separator:a1c2d4ac6e3312a76a03af5946940decd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9081c1ab1f426bb1d45cb1e2028a2ad"><td class="memTemplParams" colspan="2">template&lt;class T , class U &gt; </td></tr>
+<tr class="memitem:aa9081c1ab1f426bb1d45cb1e2028a2ad"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_math_defs_8h.html#aa9081c1ab1f426bb1d45cb1e2028a2ad">Urho3D::Smooth</a> (const T &amp;lhs, const T &amp;rhs, U t)</td></tr>
+<tr class="separator:aa9081c1ab1f426bb1d45cb1e2028a2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b929acaad2a243dc2f7ac70e950fa3d"><td class="memTemplParams" colspan="2"><a id="a7b929acaad2a243dc2f7ac70e950fa3d"></a>
+template&lt;class T , class U &gt; </td></tr>
+<tr class="memitem:a7b929acaad2a243dc2f7ac70e950fa3d"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_math_defs_8h.html#a7b929acaad2a243dc2f7ac70e950fa3d">Urho3D::Smooth</a> (const T &amp;lhs, const T &amp;rhs, U halfTime, U timeStep)</td></tr>
+<tr class="memdesc:a7b929acaad2a243dc2f7ac70e950fa3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <code>Smooth(lhs, rhs, timeStep / halfTime)</code>. <br /></td></tr>
+<tr class="separator:a7b929acaad2a243dc2f7ac70e950fa3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e064ec2f12ba951dafbe7d38b6f89ed"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a1e064ec2f12ba951dafbe7d38b6f89ed"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_math_defs_8h.html#a1e064ec2f12ba951dafbe7d38b6f89ed">Urho3D::Sin</a> (T angle)</td></tr>
 <tr class="separator:a1e064ec2f12ba951dafbe7d38b6f89ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1327,6 +1334,43 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Return sine of an angle in degrees. </p>
+
+</div>
+</div>
+<a id="aa9081c1ab1f426bb1d45cb1e2028a2ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9081c1ab1f426bb1d45cb1e2028a2ad">&#9670;&nbsp;</a></span>Smooth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T Urho3D::Smooth </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">U&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Apply exponential smoothing to raw value. Typical usage: <code>smoothValue = Smooth(smoothValue, rawValue, timeStep / halfTimeOfSmoothing)</code> or <code>smoothValue = Smooth(smoothValue, rawValue, timeStep * smoothingRate)</code> </p>
 
 </div>
 </div>

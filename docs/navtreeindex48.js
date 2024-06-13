@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"class_urho3_d_1_1_physics_tick_synchronizer.html#a2f5ea66844a217c0a78d8b55d9ce326f":[8,0,2,506,1],
+"class_urho3_d_1_1_physics_tick_synchronizer.html#a4a52c311f8766f51db7d4af5cf2fccce":[8,0,2,506,0],
 "class_urho3_d_1_1_physics_tick_synchronizer.html#ab8621c925745c02632c3cc232756f397":[8,0,2,506,3],
 "class_urho3_d_1_1_physics_tick_synchronizer.html#ada999a4724b48ccc5d30a3ec2f225600":[8,0,2,506,4],
 "class_urho3_d_1_1_physics_tick_synchronizer.html#ae376a2e5f8e38615322e5ea7d44fbb7e":[8,0,2,506,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "class_urho3_d_1_1_plane.html#a761daf44d0c41f59aa2f853d7615e6ef":[8,0,2,518,17],
 "class_urho3_d_1_1_plane.html#a77074b63d02fd56bee9f1ef959b099bc":[8,0,2,518,13],
 "class_urho3_d_1_1_plane.html#a8360958210942001e60b7b8be8f1ef4f":[8,0,2,518,2],
-"class_urho3_d_1_1_plane.html#a8e5a1ef3f7a13c983b64e36258ce5e24":[8,0,2,518,7],
-"class_urho3_d_1_1_plane.html#a90dc59c663add20eeef3603118962dac":[8,0,2,518,19],
-"class_urho3_d_1_1_plane.html#a90eaeab6f30613fcb17f98b9cb2c7c31":[8,0,2,518,10]
+"class_urho3_d_1_1_plane.html#a8e5a1ef3f7a13c983b64e36258ce5e24":[8,0,2,518,7]
 };

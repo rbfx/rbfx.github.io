@@ -1,11 +1,13 @@
 var NAVTREEINDEX5 =
 {
-"_math_defs_8h.html#ae9a889fa010b83d894071cf699d9c148":[9,0,0,6,1,53],
-"_math_defs_8h.html#aeabb7dc94ef552000d9c4580320f3c61":[9,0,0,6,1,73],
+"_math_defs_8h.html#ae045602f274c42e94ba6bbbe029771db":[9,0,0,6,1,62],
+"_math_defs_8h.html#ae06da342f26e253d43b29c1681da4a77":[9,0,0,6,1,30],
+"_math_defs_8h.html#ae9a889fa010b83d894071cf699d9c148":[9,0,0,6,1,55],
+"_math_defs_8h.html#aeabb7dc94ef552000d9c4580320f3c61":[9,0,0,6,1,75],
 "_math_defs_8h.html#aecf8dfbf9fc209ef79ed2512e449663b":[9,0,0,6,1,25],
-"_math_defs_8h.html#aef1daaade12671fdd4f3ae2d024811d4":[9,0,0,6,1,74],
+"_math_defs_8h.html#aef1daaade12671fdd4f3ae2d024811d4":[9,0,0,6,1,76],
 "_math_defs_8h.html#af7564744da23adb0019e989279ea7d88":[9,0,0,6,1,12],
-"_math_defs_8h.html#aff47495e5417aaaa2e3381b2e7272f8a":[9,0,0,6,1,52],
+"_math_defs_8h.html#aff47495e5417aaaa2e3381b2e7272f8a":[9,0,0,6,1,54],
 "_math_defs_8h.html#affd1d991496adcfd0dd0f60b94eb85a3":[9,0,0,6,1,42],
 "_misc__how_tos.html":[0,1,7],
 "_misc__how_tos.html#Running_Xcode_AngelScript_Info":[0,1,7,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX5 =
 "_renderer_8h.html#a8f085ae31ea999d55b03c9b9212b3886abc8c006ec987bae500a71ddb241e4e01":[9,0,0,3,20,4,0],
 "_renderer_8h.html#a8f085ae31ea999d55b03c9b9212b3886ac1608223f5865a498eff2e8715ec6198":[9,0,0,3,20,4,16],
 "_renderer_8h.html#a8f085ae31ea999d55b03c9b9212b3886ac5b28b6024434f7188f2baa2ea2c55a3":[9,0,0,3,20,4,11],
-"_renderer_8h.html#a8f085ae31ea999d55b03c9b9212b3886ac6dfcffe5786040241ef531dcba14e61":[9,0,0,3,20,4,8],
-"_renderer_8h.html#a8f085ae31ea999d55b03c9b9212b3886ad78127599f992e9a0fdc4e263e44f2be":[9,0,0,3,20,4,2],
-"_renderer_8h.html#a8f085ae31ea999d55b03c9b9212b3886ae6f55a82894d25960a727ede9dea2b95":[9,0,0,3,20,4,15]
+"_renderer_8h.html#a8f085ae31ea999d55b03c9b9212b3886ac6dfcffe5786040241ef531dcba14e61":[9,0,0,3,20,4,8]
 };
