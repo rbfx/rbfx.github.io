@@ -5,9 +5,6 @@ var dir_4332035370c4a6be719a0163e1872ef4 =
       [ "Animation", "class_urho3_d_1_1_animation.html", "class_urho3_d_1_1_animation" ]
     ] ],
     [ "AnimationState.h", "_animation_state_8h.html", "_animation_state_8h" ],
-    [ "AnimationStateSource.h", "_animation_state_source_8h.html", [
-      [ "AnimationStateSource", "class_urho3_d_1_1_animation_state_source.html", "class_urho3_d_1_1_animation_state_source" ]
-    ] ],
     [ "AnimationTrack.h", "_animation_track_8h.html", "_animation_track_8h" ],
     [ "Camera.h", "_camera_8h.html", "_camera_8h" ],
     [ "CameraOperator.h", "_camera_operator_8h.html", [

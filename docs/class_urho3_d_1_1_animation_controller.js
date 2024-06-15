@@ -74,7 +74,6 @@ var class_urho3_d_1_1_animation_controller =
     [ "animations_", "class_urho3_d_1_1_animation_controller.html#a44fd873778e8b02159fc31950c0b09f2", null ],
     [ "animationStatesDirty_", "class_urho3_d_1_1_animation_controller.html#af931273ed1b82a470d28d1903df7b1b2", null ],
     [ "pendingTriggers_", "class_urho3_d_1_1_animation_controller.html#a20ea64f1a2e84f5251c04cb2855b001b", null ],
-    [ "resetSkeleton_", "class_urho3_d_1_1_animation_controller.html#a9b33f29a7c257f001e77cdbc993d94de", null ],
     [ "revision_", "class_urho3_d_1_1_animation_controller.html#a18bea0ae130921f874f3459e8d9d246c", null ],
     [ "revisionDirty_", "class_urho3_d_1_1_animation_controller.html#ad3260bf9b1b251d78bc5fa343f6a0c36", null ],
     [ "tempAnimations_", "class_urho3_d_1_1_animation_controller.html#a8663bcb6b183b17b49e969161cfa2af0", null ]
