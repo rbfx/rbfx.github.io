@@ -403,14 +403,14 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
-  1937868: () => {
+  1938220: () => {
     FS.syncfs(function(err) {
       if (err) {
         console.error(err);
       }
     });
   },
-  1937932: $0 => {
+  1938284: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -418,10 +418,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1938157: ($0, $1) => {
+  1938509: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1938214: () => {
+  1938566: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -429,7 +429,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1938361: () => {
+  1938713: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -437,7 +437,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1938595: $0 => {
+  1938947: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -459,11 +459,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1939088: () => {
+  1939440: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1939156: ($0, $1, $2, $3) => {
+  1939508: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -504,7 +504,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1940808: ($0, $1, $2, $3) => {
+  1941160: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -516,7 +516,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1941218: ($0, $1) => {
+  1941570: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -535,7 +535,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1941823: ($0, $1) => {
+  1942175: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -548,7 +548,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1942303: $0 => {
+  1942655: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -586,7 +586,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1943475: ($0, $1, $2) => {
+  1943827: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -657,7 +657,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1944944: ($0, $1, $2, $3, $4) => {
+  1945296: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -694,18 +694,18 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1945933: $0 => {
+  1946285: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1946016: () => {
+  1946368: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1946085: () => window.innerWidth,
-  1946115: () => window.innerHeight
+  1946437: () => window.innerWidth,
+  1946467: () => window.innerHeight
 };
 
 /** @constructor */ function ExitStatus(status) {
@@ -5361,6 +5361,16 @@ var __embind_register_void = (rawType, name) => {
   });
 };
 
+function __emscripten_fetch_free(id) {
+  if (Fetch.xhrs.has(id)) {
+    var xhr = Fetch.xhrs.get(id);
+    Fetch.xhrs.free(id);
+    if (xhr.readyState > 0 && xhr.readyState < 4) {
+      xhr.abort();
+    }
+  }
+}
+
 var nowIsMonotonic = 1;
 
 var __emscripten_get_now_is_monotonic = () => nowIsMonotonic;
@@ -6889,72 +6899,6 @@ var runMainThreadEmAsm = (emAsmAddr, sigPtr, argbuf, sync) => {
 };
 
 var _emscripten_asm_const_int_sync_on_main_thread = (emAsmAddr, sigPtr, argbuf) => runMainThreadEmAsm(emAsmAddr, sigPtr, argbuf, 1);
-
-var wget = {
-  wgetRequests: {},
-  nextWgetRequestHandle: 0,
-  getNextWgetRequestHandle() {
-    var handle = wget.nextWgetRequestHandle;
-    wget.nextWgetRequestHandle++;
-    return handle;
-  }
-};
-
-var _emscripten_async_wget2_abort = handle => {
-  var http = wget.wgetRequests[handle];
-  http?.abort();
-};
-
-var _emscripten_async_wget2_data = (url, request, param, userdata, free, onload, onerror, onprogress) => {
-  var _url = UTF8ToString(url);
-  var _request = UTF8ToString(request);
-  var _param = UTF8ToString(param);
-  var http = new XMLHttpRequest;
-  http.open(_request, _url, true);
-  http.responseType = "arraybuffer";
-  var handle = wget.getNextWgetRequestHandle();
-  function onerrorjs() {
-    if (onerror) {
-      var sp = stackSave();
-      var statusText = 0;
-      if (http.statusText) {
-        statusText = stringToUTF8OnStack(http.statusText);
-      }
-      getWasmTableEntry(onerror)(handle, userdata, http.status, statusText);
-      stackRestore(sp);
-    }
-  }
-  http.onload = e => {
-    if (http.status >= 200 && http.status < 300 || (http.status === 0 && _url.substr(0, 4).toLowerCase() != "http")) {
-      var byteArray = new Uint8Array(/** @type{ArrayBuffer} */ (http.response));
-      var buffer = _malloc(byteArray.length);
-      HEAPU8.set(byteArray, buffer);
-      if (onload) getWasmTableEntry(onload)(handle, userdata, buffer, byteArray.length);
-      if (free) _free(buffer);
-    } else {
-      onerrorjs();
-    }
-    delete wget.wgetRequests[handle];
-  };
-  http.onerror = e => {
-    onerrorjs();
-    delete wget.wgetRequests[handle];
-  };
-  http.onprogress = e => {
-    if (onprogress) getWasmTableEntry(onprogress)(handle, userdata, e.loaded, e.lengthComputable || e.lengthComputable === undefined ? e.total : 0);
-  };
-  http.onabort = e => {
-    delete wget.wgetRequests[handle];
-  };
-  if (_request == "POST") {
-    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    http.send(_param);
-  } else {
-    http.send(null);
-  }
-  wget.wgetRequests[handle] = http;
-  return handle;
-};
 
 var _emscripten_date_now = () => Date.now();
 
@@ -10007,6 +9951,8 @@ var _emscripten_glWaitSync = _glWaitSync;
 
 var _emscripten_has_asyncify = () => 0;
 
+var _emscripten_is_main_browser_thread = () => !ENVIRONMENT_IS_WORKER;
+
 var doRequestFullscreen = (target, strategy) => {
   if (!JSEvents.fullscreenEnabled()) return -1;
   if (!target) target = "#canvas";
@@ -10522,6 +10468,377 @@ var _emscripten_set_window_title = title => document.title = UTF8ToString(title)
 var _emscripten_sleep = () => {
   throw "Please compile your program with async support in order to use asynchronous operations like emscripten_sleep";
 };
+
+class HandleAllocator {
+  constructor() {
+    this.allocated = [ undefined ];
+    this.freelist = [];
+  }
+  get(id) {
+    return this.allocated[id];
+  }
+  has(id) {
+    return this.allocated[id] !== undefined;
+  }
+  allocate(handle) {
+    var id = this.freelist.pop() || this.allocated.length;
+    this.allocated[id] = handle;
+    return id;
+  }
+  free(id) {
+    this.allocated[id] = undefined;
+    this.freelist.push(id);
+  }
+}
+
+var Fetch = {
+  openDatabase(dbname, dbversion, onsuccess, onerror) {
+    try {
+      var openRequest = indexedDB.open(dbname, dbversion);
+    } catch (e) {
+      return onerror(e);
+    }
+    openRequest.onupgradeneeded = event => {
+      var db = /** @type {IDBDatabase} */ (event.target.result);
+      if (db.objectStoreNames.contains("FILES")) {
+        db.deleteObjectStore("FILES");
+      }
+      db.createObjectStore("FILES");
+    };
+    openRequest.onsuccess = event => onsuccess(event.target.result);
+    openRequest.onerror = onerror;
+  },
+  init() {
+    Fetch.xhrs = new HandleAllocator;
+    var onsuccess = db => {
+      Fetch.dbInstance = db;
+      removeRunDependency("library_fetch_init");
+    };
+    var onerror = () => {
+      Fetch.dbInstance = false;
+      removeRunDependency("library_fetch_init");
+    };
+    addRunDependency("library_fetch_init");
+    Fetch.openDatabase("emscripten_filesystem", 1, onsuccess, onerror);
+  }
+};
+
+function fetchXHR(fetch, onsuccess, onerror, onprogress, onreadystatechange) {
+  var url = HEAPU32[(((fetch) + (8)) >> 2)];
+  if (!url) {
+    onerror(fetch, 0, "no url specified!");
+    return;
+  }
+  var url_ = UTF8ToString(url);
+  var fetch_attr = fetch + 112;
+  var requestMethod = UTF8ToString(fetch_attr + 0);
+  requestMethod ||= "GET";
+  var timeoutMsecs = HEAPU32[(((fetch_attr) + (56)) >> 2)];
+  var userName = HEAPU32[(((fetch_attr) + (68)) >> 2)];
+  var password = HEAPU32[(((fetch_attr) + (72)) >> 2)];
+  var requestHeaders = HEAPU32[(((fetch_attr) + (76)) >> 2)];
+  var overriddenMimeType = HEAPU32[(((fetch_attr) + (80)) >> 2)];
+  var dataPtr = HEAPU32[(((fetch_attr) + (84)) >> 2)];
+  var dataLength = HEAPU32[(((fetch_attr) + (88)) >> 2)];
+  var fetchAttributes = HEAPU32[(((fetch_attr) + (52)) >> 2)];
+  var fetchAttrLoadToMemory = !!(fetchAttributes & 1);
+  var fetchAttrStreamData = !!(fetchAttributes & 2);
+  var fetchAttrSynchronous = !!(fetchAttributes & 64);
+  var userNameStr = userName ? UTF8ToString(userName) : undefined;
+  var passwordStr = password ? UTF8ToString(password) : undefined;
+  var xhr = new XMLHttpRequest;
+  xhr.withCredentials = !!HEAPU8[(fetch_attr) + (60)];
+  xhr.open(requestMethod, url_, !fetchAttrSynchronous, userNameStr, passwordStr);
+  if (!fetchAttrSynchronous) xhr.timeout = timeoutMsecs;
+  xhr.url_ = url_;
+  xhr.responseType = "arraybuffer";
+  if (overriddenMimeType) {
+    var overriddenMimeTypeStr = UTF8ToString(overriddenMimeType);
+    xhr.overrideMimeType(overriddenMimeTypeStr);
+  }
+  if (requestHeaders) {
+    for (;;) {
+      var key = HEAPU32[((requestHeaders) >> 2)];
+      if (!key) break;
+      var value = HEAPU32[(((requestHeaders) + (4)) >> 2)];
+      if (!value) break;
+      requestHeaders += 8;
+      var keyStr = UTF8ToString(key);
+      var valueStr = UTF8ToString(value);
+      xhr.setRequestHeader(keyStr, valueStr);
+    }
+  }
+  var id = Fetch.xhrs.allocate(xhr);
+  HEAPU32[((fetch) >> 2)] = id;
+  var data = (dataPtr && dataLength) ? HEAPU8.slice(dataPtr, dataPtr + dataLength) : null;
+  function saveResponseAndStatus() {
+    var ptr = 0;
+    var ptrLen = 0;
+    if (xhr.response && fetchAttrLoadToMemory && HEAPU32[(((fetch) + (12)) >> 2)] === 0) {
+      ptrLen = xhr.response.byteLength;
+    }
+    if (ptrLen > 0) {
+      ptr = _malloc(ptrLen);
+      HEAPU8.set(new Uint8Array(/** @type{Array<number>} */ (xhr.response)), ptr);
+    }
+    HEAPU32[(((fetch) + (12)) >> 2)] = ptr;
+    writeI53ToI64(fetch + 16, ptrLen);
+    writeI53ToI64(fetch + 24, 0);
+    var len = xhr.response ? xhr.response.byteLength : 0;
+    if (len) {
+      writeI53ToI64(fetch + 32, len);
+    }
+    HEAP16[(((fetch) + (40)) >> 1)] = xhr.readyState;
+    HEAP16[(((fetch) + (42)) >> 1)] = xhr.status;
+    if (xhr.statusText) stringToUTF8(xhr.statusText, fetch + 44, 64);
+  }
+  xhr.onload = e => {
+    if (!Fetch.xhrs.has(id)) {
+      return;
+    }
+    saveResponseAndStatus();
+    if (xhr.status >= 200 && xhr.status < 300) {
+      onsuccess?.(fetch, xhr, e);
+    } else {
+      onerror?.(fetch, xhr, e);
+    }
+  };
+  xhr.onerror = e => {
+    if (!Fetch.xhrs.has(id)) {
+      return;
+    }
+    saveResponseAndStatus();
+    onerror?.(fetch, xhr, e);
+  };
+  xhr.ontimeout = e => {
+    if (!Fetch.xhrs.has(id)) {
+      return;
+    }
+    onerror?.(fetch, xhr, e);
+  };
+  xhr.onprogress = e => {
+    if (!Fetch.xhrs.has(id)) {
+      return;
+    }
+    var ptrLen = (fetchAttrLoadToMemory && fetchAttrStreamData && xhr.response) ? xhr.response.byteLength : 0;
+    var ptr = 0;
+    if (ptrLen > 0 && fetchAttrLoadToMemory && fetchAttrStreamData) {
+      ptr = _malloc(ptrLen);
+      HEAPU8.set(new Uint8Array(/** @type{Array<number>} */ (xhr.response)), ptr);
+    }
+    HEAPU32[(((fetch) + (12)) >> 2)] = ptr;
+    writeI53ToI64(fetch + 16, ptrLen);
+    writeI53ToI64(fetch + 24, e.loaded - ptrLen);
+    writeI53ToI64(fetch + 32, e.total);
+    HEAP16[(((fetch) + (40)) >> 1)] = xhr.readyState;
+    if (xhr.readyState >= 3 && xhr.status === 0 && e.loaded > 0) xhr.status = 200;
+    HEAP16[(((fetch) + (42)) >> 1)] = xhr.status;
+    if (xhr.statusText) stringToUTF8(xhr.statusText, fetch + 44, 64);
+    onprogress?.(fetch, xhr, e);
+    if (ptr) {
+      _free(ptr);
+    }
+  };
+  xhr.onreadystatechange = e => {
+    if (!Fetch.xhrs.has(id)) {
+      return;
+    }
+    HEAP16[(((fetch) + (40)) >> 1)] = xhr.readyState;
+    if (xhr.readyState >= 2) {
+      HEAP16[(((fetch) + (42)) >> 1)] = xhr.status;
+    }
+    onreadystatechange?.(fetch, xhr, e);
+  };
+  try {
+    xhr.send(data);
+  } catch (e) {
+    onerror?.(fetch, xhr, e);
+  }
+}
+
+function fetchCacheData(/** @type {IDBDatabase} */ db, fetch, data, onsuccess, onerror) {
+  if (!db) {
+    onerror(fetch, 0, "IndexedDB not available!");
+    return;
+  }
+  var fetch_attr = fetch + 112;
+  var destinationPath = HEAPU32[(((fetch_attr) + (64)) >> 2)];
+  destinationPath ||= HEAPU32[(((fetch) + (8)) >> 2)];
+  var destinationPathStr = UTF8ToString(destinationPath);
+  try {
+    var transaction = db.transaction([ "FILES" ], "readwrite");
+    var packages = transaction.objectStore("FILES");
+    var putRequest = packages.put(data, destinationPathStr);
+    putRequest.onsuccess = event => {
+      HEAP16[(((fetch) + (40)) >> 1)] = 4;
+      HEAP16[(((fetch) + (42)) >> 1)] = 200;
+      stringToUTF8("OK", fetch + 44, 64);
+      onsuccess(fetch, 0, destinationPathStr);
+    };
+    putRequest.onerror = error => {
+      HEAP16[(((fetch) + (40)) >> 1)] = 4;
+      HEAP16[(((fetch) + (42)) >> 1)] = 413;
+      stringToUTF8("Payload Too Large", fetch + 44, 64);
+      onerror(fetch, 0, error);
+    };
+  } catch (e) {
+    onerror(fetch, 0, e);
+  }
+}
+
+function fetchLoadCachedData(db, fetch, onsuccess, onerror) {
+  if (!db) {
+    onerror(fetch, 0, "IndexedDB not available!");
+    return;
+  }
+  var fetch_attr = fetch + 112;
+  var path = HEAPU32[(((fetch_attr) + (64)) >> 2)];
+  path ||= HEAPU32[(((fetch) + (8)) >> 2)];
+  var pathStr = UTF8ToString(path);
+  try {
+    var transaction = db.transaction([ "FILES" ], "readonly");
+    var packages = transaction.objectStore("FILES");
+    var getRequest = packages.get(pathStr);
+    getRequest.onsuccess = event => {
+      if (event.target.result) {
+        var value = event.target.result;
+        var len = value.byteLength || value.length;
+        var ptr = _malloc(len);
+        HEAPU8.set(new Uint8Array(value), ptr);
+        HEAPU32[(((fetch) + (12)) >> 2)] = ptr;
+        writeI53ToI64(fetch + 16, len);
+        writeI53ToI64(fetch + 24, 0);
+        writeI53ToI64(fetch + 32, len);
+        HEAP16[(((fetch) + (40)) >> 1)] = 4;
+        HEAP16[(((fetch) + (42)) >> 1)] = 200;
+        stringToUTF8("OK", fetch + 44, 64);
+        onsuccess(fetch, 0, value);
+      } else {
+        HEAP16[(((fetch) + (40)) >> 1)] = 4;
+        HEAP16[(((fetch) + (42)) >> 1)] = 404;
+        stringToUTF8("Not Found", fetch + 44, 64);
+        onerror(fetch, 0, "no data");
+      }
+    };
+    getRequest.onerror = error => {
+      HEAP16[(((fetch) + (40)) >> 1)] = 4;
+      HEAP16[(((fetch) + (42)) >> 1)] = 404;
+      stringToUTF8("Not Found", fetch + 44, 64);
+      onerror(fetch, 0, error);
+    };
+  } catch (e) {
+    onerror(fetch, 0, e);
+  }
+}
+
+function fetchDeleteCachedData(db, fetch, onsuccess, onerror) {
+  if (!db) {
+    onerror(fetch, 0, "IndexedDB not available!");
+    return;
+  }
+  var fetch_attr = fetch + 112;
+  var path = HEAPU32[(((fetch_attr) + (64)) >> 2)];
+  path ||= HEAPU32[(((fetch) + (8)) >> 2)];
+  var pathStr = UTF8ToString(path);
+  try {
+    var transaction = db.transaction([ "FILES" ], "readwrite");
+    var packages = transaction.objectStore("FILES");
+    var request = packages.delete(pathStr);
+    request.onsuccess = event => {
+      var value = event.target.result;
+      HEAPU32[(((fetch) + (12)) >> 2)] = 0;
+      writeI53ToI64(fetch + 16, 0);
+      writeI53ToI64(fetch + 24, 0);
+      writeI53ToI64(fetch + 32, 0);
+      HEAP16[(((fetch) + (40)) >> 1)] = 4;
+      HEAP16[(((fetch) + (42)) >> 1)] = 200;
+      stringToUTF8("OK", fetch + 44, 64);
+      onsuccess(fetch, 0, value);
+    };
+    request.onerror = error => {
+      HEAP16[(((fetch) + (40)) >> 1)] = 4;
+      HEAP16[(((fetch) + (42)) >> 1)] = 404;
+      stringToUTF8("Not Found", fetch + 44, 64);
+      onerror(fetch, 0, error);
+    };
+  } catch (e) {
+    onerror(fetch, 0, e);
+  }
+}
+
+function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readystatechangecb) {
+  var fetch_attr = fetch + 112;
+  var onsuccess = HEAPU32[(((fetch_attr) + (36)) >> 2)];
+  var onerror = HEAPU32[(((fetch_attr) + (40)) >> 2)];
+  var onprogress = HEAPU32[(((fetch_attr) + (44)) >> 2)];
+  var onreadystatechange = HEAPU32[(((fetch_attr) + (48)) >> 2)];
+  var fetchAttributes = HEAPU32[(((fetch_attr) + (52)) >> 2)];
+  var fetchAttrSynchronous = !!(fetchAttributes & 64);
+  function doCallback(f) {
+    if (fetchAttrSynchronous) {
+      f();
+    } else {
+      callUserCallback(f);
+    }
+  }
+  var reportSuccess = (fetch, xhr, e) => {
+    doCallback(() => {
+      if (onsuccess) getWasmTableEntry(onsuccess)(fetch); else successcb?.(fetch);
+    });
+  };
+  var reportProgress = (fetch, xhr, e) => {
+    doCallback(() => {
+      if (onprogress) getWasmTableEntry(onprogress)(fetch); else progresscb?.(fetch);
+    });
+  };
+  var reportError = (fetch, xhr, e) => {
+    doCallback(() => {
+      if (onerror) getWasmTableEntry(onerror)(fetch); else errorcb?.(fetch);
+    });
+  };
+  var reportReadyStateChange = (fetch, xhr, e) => {
+    doCallback(() => {
+      if (onreadystatechange) getWasmTableEntry(onreadystatechange)(fetch); else readystatechangecb?.(fetch);
+    });
+  };
+  var performUncachedXhr = (fetch, xhr, e) => {
+    fetchXHR(fetch, reportSuccess, reportError, reportProgress, reportReadyStateChange);
+  };
+  var cacheResultAndReportSuccess = (fetch, xhr, e) => {
+    var storeSuccess = (fetch, xhr, e) => {
+      doCallback(() => {
+        if (onsuccess) getWasmTableEntry(onsuccess)(fetch); else successcb?.(fetch);
+      });
+    };
+    var storeError = (fetch, xhr, e) => {
+      doCallback(() => {
+        if (onsuccess) getWasmTableEntry(onsuccess)(fetch); else successcb?.(fetch);
+      });
+    };
+    fetchCacheData(Fetch.dbInstance, fetch, xhr.response, storeSuccess, storeError);
+  };
+  var performCachedXhr = (fetch, xhr, e) => {
+    fetchXHR(fetch, cacheResultAndReportSuccess, reportError, reportProgress, reportReadyStateChange);
+  };
+  var requestMethod = UTF8ToString(fetch_attr + 0);
+  var fetchAttrReplace = !!(fetchAttributes & 16);
+  var fetchAttrPersistFile = !!(fetchAttributes & 4);
+  var fetchAttrNoDownload = !!(fetchAttributes & 32);
+  if (requestMethod === "EM_IDB_STORE") {
+    var ptr = HEAPU32[(((fetch_attr) + (84)) >> 2)];
+    var size = HEAPU32[(((fetch_attr) + (88)) >> 2)];
+    fetchCacheData(Fetch.dbInstance, fetch, HEAPU8.slice(ptr, ptr + size), reportSuccess, reportError);
+  } else if (requestMethod === "EM_IDB_DELETE") {
+    fetchDeleteCachedData(Fetch.dbInstance, fetch, reportSuccess, reportError);
+  } else if (!fetchAttrReplace) {
+    fetchLoadCachedData(Fetch.dbInstance, fetch, reportSuccess, fetchAttrNoDownload ? reportError : (fetchAttrPersistFile ? performCachedXhr : performUncachedXhr));
+  } else if (!fetchAttrNoDownload) {
+    fetchXHR(fetch, fetchAttrPersistFile ? cacheResultAndReportSuccess : reportSuccess, reportError, reportProgress, reportReadyStateChange);
+  } else {
+    return 0;
+  }
+  return fetch;
+}
 
 var webglPowerPreferences = [ "default", "low-power", "high-performance" ];
 
@@ -11492,6 +11809,8 @@ var GLctx;
 
 for (var i = 0; i < 32; ++i) tempFixedLengthArray.push(new Array(i));
 
+Fetch.init();
+
 var wasmImports = {
   /** @export */ __cxa_throw: ___cxa_throw,
   /** @export */ __syscall_bind: ___syscall_bind,
@@ -11521,6 +11840,7 @@ var wasmImports = {
   /** @export */ _embind_register_std_string: __embind_register_std_string,
   /** @export */ _embind_register_std_wstring: __embind_register_std_wstring,
   /** @export */ _embind_register_void: __embind_register_void,
+  /** @export */ _emscripten_fetch_free: __emscripten_fetch_free,
   /** @export */ _emscripten_get_now_is_monotonic: __emscripten_get_now_is_monotonic,
   /** @export */ _emscripten_memcpy_js: __emscripten_memcpy_js,
   /** @export */ _emscripten_system: __emscripten_system,
@@ -11547,8 +11867,6 @@ var wasmImports = {
   /** @export */ eglWaitNative: _eglWaitNative,
   /** @export */ emscripten_asm_const_int: _emscripten_asm_const_int,
   /** @export */ emscripten_asm_const_int_sync_on_main_thread: _emscripten_asm_const_int_sync_on_main_thread,
-  /** @export */ emscripten_async_wget2_abort: _emscripten_async_wget2_abort,
-  /** @export */ emscripten_async_wget2_data: _emscripten_async_wget2_data,
   /** @export */ emscripten_date_now: _emscripten_date_now,
   /** @export */ emscripten_exit_fullscreen: _emscripten_exit_fullscreen,
   /** @export */ emscripten_exit_pointerlock: _emscripten_exit_pointerlock,
@@ -11834,6 +12152,7 @@ var wasmImports = {
   /** @export */ emscripten_glViewport: _emscripten_glViewport,
   /** @export */ emscripten_glWaitSync: _emscripten_glWaitSync,
   /** @export */ emscripten_has_asyncify: _emscripten_has_asyncify,
+  /** @export */ emscripten_is_main_browser_thread: _emscripten_is_main_browser_thread,
   /** @export */ emscripten_request_fullscreen_strategy: _emscripten_request_fullscreen_strategy,
   /** @export */ emscripten_request_pointerlock: _emscripten_request_pointerlock,
   /** @export */ emscripten_resize_heap: _emscripten_resize_heap,
@@ -11865,6 +12184,7 @@ var wasmImports = {
   /** @export */ emscripten_set_wheel_callback_on_thread: _emscripten_set_wheel_callback_on_thread,
   /** @export */ emscripten_set_window_title: _emscripten_set_window_title,
   /** @export */ emscripten_sleep: _emscripten_sleep,
+  /** @export */ emscripten_start_fetch: _emscripten_start_fetch,
   /** @export */ emscripten_webgl_create_context: _emscripten_webgl_create_context,
   /** @export */ emscripten_webgl_destroy_context: _emscripten_webgl_destroy_context,
   /** @export */ emscripten_webgl_get_current_context: _emscripten_webgl_get_current_context,
