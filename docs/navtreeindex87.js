@@ -1,5 +1,6 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_shadow_map_allocator_1_1_atlas_page.html#ad221c55567e894b83095cdf62f97eea9":[8,0,2,639,0,0],
 "struct_urho3_d_1_1_shadow_map_allocator_1_1_atlas_page.html#ae0c724ed97e90b0090e3c8351565a5f5":[8,0,2,639,0,1],
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html":[8,0,2,640],
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#a1f29b451a988c3525db68b000b0414c5":[8,0,2,640,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#a612defb7576b9bdc60db08c28409e758":[8,0,2,3,13,7],
 "struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#a901443e72dd19bb6968f4a2274148b31":[8,0,2,3,13,1],
 "struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#aa6373940c4db5b3c2b2fdae7f26fe253":[8,0,2,3,13,10],
-"struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#aa968f9184b9f36bae7f34f9f024c4599":[8,0,2,3,13,6],
-"struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#aacecd9453390b794b06c8a73cb5be964":[8,0,2,3,13,8]
+"struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#aa968f9184b9f36bae7f34f9f024c4599":[8,0,2,3,13,6]
 };
