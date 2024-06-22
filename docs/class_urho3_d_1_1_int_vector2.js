@@ -21,6 +21,7 @@ var class_urho3_d_1_1_int_vector2 =
     [ "operator/", "class_urho3_d_1_1_int_vector2.html#a10ec2c9441ba87d426bba50c8b6b8833", null ],
     [ "operator/=", "class_urho3_d_1_1_int_vector2.html#a63e45c68dcf57f8da19bae0bf0420809", null ],
     [ "operator/=", "class_urho3_d_1_1_int_vector2.html#a52b2f67d13d9c2b9bbaf64ef3b6e5671", null ],
+    [ "operator<", "class_urho3_d_1_1_int_vector2.html#a25da7cc0e1f2f327d72fc90d9ade7ed4", null ],
     [ "operator=", "class_urho3_d_1_1_int_vector2.html#a36e93fdf961f7157af95523e1680885f", null ],
     [ "operator==", "class_urho3_d_1_1_int_vector2.html#ad3d70e463488f21a77b6f9d81492cc66", null ],
     [ "ToHash", "class_urho3_d_1_1_int_vector2.html#a7683408860c95954b23c76ad6d43c6cb", null ],
