@@ -1,5 +1,6 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_model_vertex.html#a6d29e9a17f7038cbe23ed2425875db71":[8,0,2,392,18],
 "struct_urho3_d_1_1_model_vertex.html#a6e331f0e87f55d45816386f1ba135111":[8,0,2,392,28],
 "struct_urho3_d_1_1_model_vertex.html#a81460b66d55614476958d52e818790ab":[8,0,2,392,6],
 "struct_urho3_d_1_1_model_vertex.html#a817959f21132108d993cb888a61504a3":[8,0,2,392,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_particle.html#ad766c7a5ab1be06ac35f15f48d5d16bc":[8,0,2,480,3],
 "struct_urho3_d_1_1_particle2_d.html":[8,0,2,481],
 "struct_urho3_d_1_1_particle2_d.html#a07b301e27cd784cd2e5c23487ae3b238":[8,0,2,481,7],
-"struct_urho3_d_1_1_particle2_d.html#a0fc560a5ea152a520523c7ba5b82b3bd":[8,0,2,481,8],
-"struct_urho3_d_1_1_particle2_d.html#a3305bd458da6975338f66ec1de7b43c4":[8,0,2,481,10]
+"struct_urho3_d_1_1_particle2_d.html#a0fc560a5ea152a520523c7ba5b82b3bd":[8,0,2,481,8]
 };

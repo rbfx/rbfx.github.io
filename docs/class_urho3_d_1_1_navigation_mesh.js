@@ -15,6 +15,7 @@ var class_urho3_d_1_1_navigation_mesh =
     [ "CollectGeometries", "class_urho3_d_1_1_navigation_mesh.html#aa4bd017ee11a26bb637aed804c6a6768", null ],
     [ "DrawDebugGeometry", "class_urho3_d_1_1_navigation_mesh.html#a250c94d8ee843a6219679daccf951a1f", null ],
     [ "DrawDebugGeometry", "class_urho3_d_1_1_navigation_mesh.html#aa810398f062f052eb649c02f2ba4f02c", null ],
+    [ "DrawDebugTileGeometry", "class_urho3_d_1_1_navigation_mesh.html#ae86b78ef8e66c98e02c09d589f6b3c0c", null ],
     [ "FindNearestPoint", "class_urho3_d_1_1_navigation_mesh.html#acdc15f90748942e9836cb19e0e15ed81", null ],
     [ "FindPath", "class_urho3_d_1_1_navigation_mesh.html#ae2d6851805e72e66269bbfb54ac6c7f6", null ],
     [ "FindPath", "class_urho3_d_1_1_navigation_mesh.html#a5b6aad843ed27fa4aec191f44b84a28c", null ],
