@@ -68,9 +68,9 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
               num++;
             }
             total = Math.ceil(total * Module.expectedDataFileDownloads/num);
-            if (Module['setStatus']) Module['setStatus'](`Downloading data... (${loaded}/${total})`);
+            Module['setStatus']?.(`Downloading data... (${loaded}/${total})`);
           } else if (!Module.dataFileDownloads) {
-            if (Module['setStatus']) Module['setStatus']('Downloading data...');
+            Module['setStatus']?.('Downloading data...');
           }
         };
         xhr.onerror = function(event) {
@@ -91,7 +91,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
         console.error('package error:', error);
       };
 
-    function runWithFS() {
+    function runWithFS(Module) {
 
       function assert(check, msg) {
         if (!check) throw msg + new Error().stack;
@@ -341,11 +341,11 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
           }
         , preloadFallback);
 
-        if (Module['setStatus']) Module['setStatus']('Downloading...');
+        Module['setStatus']?.('Downloading...');
 
     }
     if (Module['calledRun']) {
-      runWithFS();
+      runWithFS(Module);
     } else {
       if (!Module['preRun']) Module['preRun'] = [];
       Module["preRun"].push(runWithFS); // FS is not initialized yet, wait for it
