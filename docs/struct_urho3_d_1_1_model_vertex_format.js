@@ -4,6 +4,7 @@ var struct_urho3_d_1_1_model_vertex_format =
     [ "operator!=", "struct_urho3_d_1_1_model_vertex_format.html#a333d914ba22645e29ff0d469fd2b1191", null ],
     [ "operator==", "struct_urho3_d_1_1_model_vertex_format.html#a61bd3a9d44d14dbc5eace5d00e8f4925", null ],
     [ "ToHash", "struct_urho3_d_1_1_model_vertex_format.html#a4209c98a096275058b2e17c6f87cc4ff", null ],
+    [ "ToVertexElements", "struct_urho3_d_1_1_model_vertex_format.html#a59b9dfa9f45332f17524b12aa242fbaa", null ],
     [ "binormal_", "struct_urho3_d_1_1_model_vertex_format.html#aed234991d2023c7ba8caa12992b86b5f", null ],
     [ "blendIndices_", "struct_urho3_d_1_1_model_vertex_format.html#ae1a3d226bbe43e78e7b2eea469548d94", null ],
     [ "blendWeights_", "struct_urho3_d_1_1_model_vertex_format.html#a6f868611ad1f7f555aac27f6418014d5", null ],

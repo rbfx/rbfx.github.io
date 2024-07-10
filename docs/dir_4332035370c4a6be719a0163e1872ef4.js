@@ -32,7 +32,6 @@ var dir_4332035370c4a6be719a0163e1872ef4 =
       [ "LightBakingSettings", "struct_urho3_d_1_1_light_baking_settings.html", "struct_urho3_d_1_1_light_baking_settings" ]
     ] ],
     [ "LightProbeGroup.h", "_light_probe_group_8h.html", "_light_probe_group_8h" ],
-    [ "ModelView.h", "_model_view_8h.html", "_model_view_8h" ],
     [ "OcclusionBuffer.h", "_occlusion_buffer_8h.html", "_occlusion_buffer_8h" ],
     [ "OctreeQuery.h", "_octree_query_8h.html", "_octree_query_8h" ],
     [ "ParticleEffect.h", "_particle_effect_8h.html", "_particle_effect_8h" ],
