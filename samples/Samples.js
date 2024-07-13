@@ -565,14 +565,14 @@ var tempI64;
 // end include: runtime_debug.js
 // === Body ===
 var ASM_CONSTS = {
-  1938540: () => {
+  1938556: () => {
     FS.syncfs(function(err) {
       if (err) {
         console.error(err);
       }
     });
   },
-  1938604: $0 => {
+  1938620: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -580,10 +580,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1938829: ($0, $1) => {
+  1938845: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1938886: () => {
+  1938902: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -591,7 +591,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1939033: () => {
+  1939049: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -599,7 +599,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1939267: $0 => {
+  1939283: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -621,11 +621,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1939760: () => {
+  1939776: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1939828: ($0, $1, $2, $3) => {
+  1939844: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -666,7 +666,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1941480: ($0, $1, $2, $3) => {
+  1941496: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -678,7 +678,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1941890: ($0, $1) => {
+  1941906: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -697,7 +697,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1942495: ($0, $1) => {
+  1942511: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -710,7 +710,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1942975: $0 => {
+  1942991: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -748,7 +748,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1944147: ($0, $1, $2) => {
+  1944163: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -819,7 +819,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1945616: ($0, $1, $2, $3, $4) => {
+  1945632: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -856,18 +856,18 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1946605: $0 => {
+  1946621: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1946688: () => {
+  1946704: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1946757: () => window.innerWidth,
-  1946787: () => window.innerHeight
+  1946773: () => window.innerWidth,
+  1946803: () => window.innerHeight
 };
 
 // end include: preamble.js
@@ -7870,8 +7870,7 @@ var JSEvents = {
       return true;
     }
     // Test if the given call was already queued, and if so, don't add it again.
-    for (var i in JSEvents.deferredCalls) {
-      var call = JSEvents.deferredCalls[i];
+    for (var call of JSEvents.deferredCalls) {
       if (call.targetFunction == targetFunction && arraysHaveEqualContent(call.argsList, argsList)) {
         return;
       }
@@ -7884,12 +7883,7 @@ var JSEvents = {
     JSEvents.deferredCalls.sort((x, y) => x.precedence < y.precedence);
   },
   removeDeferredCalls(targetFunction) {
-    for (var i = 0; i < JSEvents.deferredCalls.length; ++i) {
-      if (JSEvents.deferredCalls[i].targetFunction == targetFunction) {
-        JSEvents.deferredCalls.splice(i, 1);
-        --i;
-      }
-    }
+    JSEvents.deferredCalls = JSEvents.deferredCalls.filter(call => call.targetFunction != targetFunction);
   },
   canPerformEventHandlerRequests() {
     if (navigator.userActivation) {
@@ -7906,10 +7900,9 @@ var JSEvents = {
     if (!JSEvents.canPerformEventHandlerRequests()) {
       return;
     }
-    for (var i = 0; i < JSEvents.deferredCalls.length; ++i) {
-      var call = JSEvents.deferredCalls[i];
-      JSEvents.deferredCalls.splice(i, 1);
-      --i;
+    var deferredCalls = JSEvents.deferredCalls;
+    JSEvents.deferredCalls = [];
+    for (var call of deferredCalls) {
       call.targetFunction(...call.argsList);
     }
   },
@@ -11224,9 +11217,9 @@ var doRequestFullscreen = (target, strategy) => {
   if (!target.requestFullscreen && !target.webkitRequestFullscreen) {
     return -3;
   }
-  var canPerformRequests = JSEvents.canPerformEventHandlerRequests();
-  // Queue this function call if we're not currently in an event handler and the user saw it appropriate to do so.
-  if (!canPerformRequests) {
+  // Queue this function call if we're not currently in an event handler and
+  // the user saw it appropriate to do so.
+  if (!JSEvents.canPerformEventHandlerRequests()) {
     if (strategy.deferUntilInEventHandler) {
       JSEvents.deferCall(JSEvents_requestFullscreen, 1, /* priority over pointer lock */ [ target, strategy ]);
       return 1;
@@ -11255,9 +11248,9 @@ var _emscripten_request_pointerlock = (target, deferUntilInEventHandler) => {
   if (!target.requestPointerLock) {
     return -1;
   }
-  var canPerformRequests = JSEvents.canPerformEventHandlerRequests();
-  // Queue this function call if we're not currently in an event handler and the user saw it appropriate to do so.
-  if (!canPerformRequests) {
+  // Queue this function call if we're not currently in an event handler and
+  // the user saw it appropriate to do so.
+  if (!JSEvents.canPerformEventHandlerRequests()) {
     if (deferUntilInEventHandler) {
       JSEvents.deferCall(requestPointerLock, 2, /* priority below fullscreen */ [ target ]);
       return 1;
@@ -11435,11 +11428,11 @@ var registerKeyEventCallback = (target, userData, useCapture, callbackfunc, even
     HEAPF64[((keyEventData) >> 3)] = e.timeStamp;
     var idx = ((keyEventData) >> 2);
     HEAP32[idx + 2] = e.location;
-    HEAP8[idx + 12] = e.ctrlKey;
-    HEAP8[idx + 13] = e.shiftKey;
-    HEAP8[idx + 14] = e.altKey;
-    HEAP8[idx + 15] = e.metaKey;
-    HEAP8[idx + 16] = e.repeat;
+    HEAP8[keyEventData + 12] = e.ctrlKey;
+    HEAP8[keyEventData + 13] = e.shiftKey;
+    HEAP8[keyEventData + 14] = e.altKey;
+    HEAP8[keyEventData + 15] = e.metaKey;
+    HEAP8[keyEventData + 16] = e.repeat;
     HEAP32[idx + 5] = e.charCode;
     HEAP32[idx + 6] = e.keyCode;
     HEAP32[idx + 7] = e.which;
@@ -11477,10 +11470,10 @@ var fillMouseEventData = (eventStruct, e, target) => {
   HEAP32[idx + 3] = e.screenY;
   HEAP32[idx + 4] = e.clientX;
   HEAP32[idx + 5] = e.clientY;
-  HEAP8[idx + 24] = e.ctrlKey;
-  HEAP8[idx + 25] = e.shiftKey;
-  HEAP8[idx + 26] = e.altKey;
-  HEAP8[idx + 27] = e.metaKey;
+  HEAP8[eventStruct + 24] = e.ctrlKey;
+  HEAP8[eventStruct + 25] = e.shiftKey;
+  HEAP8[eventStruct + 26] = e.altKey;
+  HEAP8[eventStruct + 27] = e.metaKey;
   HEAP16[idx * 2 + 14] = e.button;
   HEAP16[idx * 2 + 15] = e.buttons;
   HEAP32[idx + 8] = e["movementX"];
@@ -11628,52 +11621,48 @@ var registerTouchEventCallback = (target, userData, useCapture, callbackfunc, ev
     // To ease marshalling different kinds of touches that browser reports (all touches are listed in e.touches,
     // only changed touches in e.changedTouches, and touches on target at a.targetTouches), mark a boolean in
     // each Touch object so that we can later loop only once over all touches we see to marshall over to Wasm.
-    for (var i = 0; i < et.length; ++i) {
-      t = et[i];
+    for (let t of et) {
       // Browser might recycle the generated Touch objects between each frame (Firefox on Android), so reset any
       // changed/target states we may have set from previous frame.
       t.isChanged = t.onTarget = 0;
       touches[t.identifier] = t;
     }
     // Mark which touches are part of the changedTouches list.
-    for (var i = 0; i < e.changedTouches.length; ++i) {
-      t = e.changedTouches[i];
+    for (let t of e.changedTouches) {
       t.isChanged = 1;
       touches[t.identifier] = t;
     }
     // Mark which touches are part of the targetTouches list.
-    for (var i = 0; i < e.targetTouches.length; ++i) {
-      touches[e.targetTouches[i].identifier].onTarget = 1;
+    for (let t of e.targetTouches) {
+      touches[t.identifier].onTarget = 1;
     }
     var touchEvent = JSEvents.touchEvent;
     HEAPF64[((touchEvent) >> 3)] = e.timeStamp;
-    var idx = ((touchEvent) >> 2);
-    // Pre-shift the ptr to index to HEAP32 to save code size
-    HEAP8[idx + 12] = e.ctrlKey;
-    HEAP8[idx + 13] = e.shiftKey;
-    HEAP8[idx + 14] = e.altKey;
-    HEAP8[idx + 15] = e.metaKey;
-    idx += 4;
-    // Advance to the start of the touch array.
+    HEAP8[touchEvent + 12] = e.ctrlKey;
+    HEAP8[touchEvent + 13] = e.shiftKey;
+    HEAP8[touchEvent + 14] = e.altKey;
+    HEAP8[touchEvent + 15] = e.metaKey;
+    var idx = touchEvent + 16;
     var canvasRect = Module["canvas"] ? getBoundingClientRect(Module["canvas"]) : undefined;
     var targetRect = getBoundingClientRect(target);
     var numTouches = 0;
-    for (var i in touches) {
-      t = touches[i];
-      HEAP32[idx + 0] = t.identifier;
-      HEAP32[idx + 1] = t.screenX;
-      HEAP32[idx + 2] = t.screenY;
-      HEAP32[idx + 3] = t.clientX;
-      HEAP32[idx + 4] = t.clientY;
-      HEAP32[idx + 5] = t.pageX;
-      HEAP32[idx + 6] = t.pageY;
+    for (let t of Object.values(touches)) {
+      var idx32 = ((idx) >> 2);
+      // Pre-shift the ptr to index to HEAP32 to save code size
+      HEAP32[idx32 + 0] = t.identifier;
+      HEAP32[idx32 + 1] = t.screenX;
+      HEAP32[idx32 + 2] = t.screenY;
+      HEAP32[idx32 + 3] = t.clientX;
+      HEAP32[idx32 + 4] = t.clientY;
+      HEAP32[idx32 + 5] = t.pageX;
+      HEAP32[idx32 + 6] = t.pageY;
       HEAP8[idx + 28] = t.isChanged;
       HEAP8[idx + 29] = t.onTarget;
-      HEAP32[idx + 8] = t.clientX - (targetRect.left | 0);
-      HEAP32[idx + 9] = t.clientY - (targetRect.top | 0);
-      HEAP32[idx + 10] = canvasRect ? t.clientX - (canvasRect.left | 0) : 0;
-      HEAP32[idx + 11] = canvasRect ? t.clientY - (canvasRect.top | 0) : 0;
-      idx += 12;
+      HEAP32[idx32 + 8] = t.clientX - (targetRect.left | 0);
+      HEAP32[idx32 + 9] = t.clientY - (targetRect.top | 0);
+      HEAP32[idx32 + 10] = canvasRect ? t.clientX - (canvasRect.left | 0) : 0;
+      HEAP32[idx32 + 11] = canvasRect ? t.clientY - (canvasRect.top | 0) : 0;
+      idx += 48;
       if (++numTouches > 31) {
         break;
       }
