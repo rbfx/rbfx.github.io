@@ -6223,12 +6223,17 @@ var __tzset_js = (timezone, daylight, std_name, dst_name) => {
   // See http://pubs.opengroup.org/onlinepubs/009695399/functions/tzset.html
   HEAPU32[((timezone) >> 2)] = stdTimezoneOffset * 60;
   HEAP32[((daylight) >> 2)] = Number(winterOffset != summerOffset);
-  var extractZone = date => date.toLocaleTimeString(undefined, {
-    hour12: false,
-    timeZoneName: "short"
-  }).split(" ")[1];
-  var winterName = extractZone(winter);
-  var summerName = extractZone(summer);
+  var extractZone = timezoneOffset => {
+    // Why inverse sign?
+    // Read here https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
+    var sign = timezoneOffset >= 0 ? "-" : "+";
+    var absOffset = Math.abs(timezoneOffset);
+    var hours = String(Math.floor(absOffset / 60)).padStart(2, "0");
+    var minutes = String(absOffset % 60).padStart(2, "0");
+    return `UTC${sign}${hours}${minutes}`;
+  };
+  var winterName = extractZone(winterOffset);
+  var summerName = extractZone(summerOffset);
   if (summerOffset < winterOffset) {
     // Northern hemisphere
     stringToUTF8(winterName, std_name, 17);
