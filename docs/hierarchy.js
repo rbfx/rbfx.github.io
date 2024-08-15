@@ -424,9 +424,6 @@ var hierarchy =
       [ "Urho3D::ParticleGraphNodes::BoxInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_box_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
-      [ "Urho3D::ParticleGraphNodes::Noise3DInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_noise3_d_instance.html", null ]
-    ] ],
-    [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::DestroyInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_destroy_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
@@ -464,6 +461,9 @@ var hierarchy =
     ] ],
     [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::BounceInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_bounce_instance.html", null ]
+    ] ],
+    [ "InstanceBase", null, [
+      [ "Urho3D::ParticleGraphNodes::Noise3DInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_noise3_d_instance.html", null ]
     ] ],
     [ "InstanceBase", null, [
       [ "Urho3D::ParticleGraphNodes::CircleInstance", "class_urho3_d_1_1_particle_graph_nodes_1_1_circle_instance.html", null ]
@@ -1956,8 +1956,8 @@ var hierarchy =
     [ "Urho3D::TetrahedralMeshSurfaceTriangle", "struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html", null ],
     [ "Urho3D::Tetrahedron", "struct_urho3_d_1_1_tetrahedron.html", null ],
     [ "Urho3D::TextParams3D", "struct_urho3_d_1_1_text_params3_d.html", null ],
-    [ "Urho3D::AmbientOcclusionPass::TextureCache", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_texture_cache.html", null ],
     [ "Urho3D::BloomPass::TextureCache", "struct_urho3_d_1_1_bloom_pass_1_1_texture_cache.html", null ],
+    [ "Urho3D::AmbientOcclusionPass::TextureCache", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_texture_cache.html", null ],
     [ "Urho3D::TextureFrame", "struct_urho3_d_1_1_texture_frame.html", null ],
     [ "Urho3D::MaterialInspectorWidget::TextureUnitDesc", "struct_urho3_d_1_1_material_inspector_widget_1_1_texture_unit_desc.html", null ],
     [ "Urho3D::Thread", "class_urho3_d_1_1_thread.html", [
@@ -1997,10 +1997,10 @@ var hierarchy =
     [ "Urho3D::TransformNodesGizmo", "class_urho3_d_1_1_transform_nodes_gizmo.html", null ],
     [ "Urho3D::AssetTransformerHierarchy::TreeNode", "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html", null ],
     [ "true_type", null, [
-      [ "Urho3D::TupleHasType< T, ea::tuple< T, Types... > >", "struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01ea_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html", null ]
+      [ "eastl::detail::is_hashable< T, decltype(void(&T::ToHash))>", "structeastl_1_1detail_1_1is__hashable_3_01_t_00_01decltype_07void_07_6_t_1_1_to_hash_08_08_4.html", null ]
     ] ],
     [ "true_type", null, [
-      [ "eastl::detail::is_hashable< T, decltype(void(&T::ToHash))>", "structeastl_1_1detail_1_1is__hashable_3_01_t_00_01decltype_07void_07_6_t_1_1_to_hash_08_08_4.html", null ]
+      [ "Urho3D::TupleHasType< T, ea::tuple< T, Types... > >", "struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01ea_1_1tuple_3_01_t_00_01_types_8_8_8_01_4_01_4.html", null ]
     ] ],
     [ "Urho3D::TupleHasType< T, Tuple >", "struct_urho3_d_1_1_tuple_has_type.html", null ],
     [ "Urho3D::TupleHasType< T, ea::tuple< Types... > >", "struct_urho3_d_1_1_tuple_has_type.html", [
