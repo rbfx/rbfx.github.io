@@ -108,12 +108,6 @@ if (ENVIRONMENT_IS_NODE) {
   if (typeof module != "undefined") {
     module["exports"] = Module;
   }
-  process.on("uncaughtException", ex => {
-    // suppress ExitStatus exceptions from showing an error
-    if (ex !== "unwind" && !(ex instanceof ExitStatus) && !(ex.context instanceof ExitStatus)) {
-      throw ex;
-    }
-  });
   quit_ = (status, toThrow) => {
     process.exitCode = status;
     throw toThrow;
@@ -157,7 +151,7 @@ if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
       // Cordova or Electron apps are typically loaded from a file:// url.
       // So use XHR on webview if URL is a file URL.
       if (isFileURI(url)) {
-        return new Promise((reject, resolve) => {
+        return new Promise((resolve, reject) => {
           var xhr = new XMLHttpRequest;
           xhr.open("GET", url, true);
           xhr.responseType = "arraybuffer";
@@ -165,6 +159,7 @@ if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
             if (xhr.status == 200 || (xhr.status == 0 && xhr.response)) {
               // file URLs can return 0
               resolve(xhr.response);
+              return;
             }
             reject(xhr.status);
           };
@@ -204,8 +199,6 @@ if (Module["arguments"]) arguments_ = Module["arguments"];
 
 if (Module["thisProgram"]) thisProgram = Module["thisProgram"];
 
-if (Module["quit"]) quit_ = Module["quit"];
-
 // perform assertions in shell.js after we set up out() and err(), as otherwise if an assertion fails it cannot print the message
 // end include: shell.js
 // include: preamble.js
@@ -217,9 +210,7 @@ if (Module["quit"]) quit_ = Module["quit"];
 // You can also build docs locally as HTML or other formats in site/
 // An online HTML version (which may be of a different version of Emscripten)
 //    is up at http://kripken.github.io/emscripten-site/docs/api_reference/preamble.js.html
-var wasmBinary;
-
-if (Module["wasmBinary"]) wasmBinary = Module["wasmBinary"];
+var wasmBinary = Module["wasmBinary"];
 
 // include: base64Utils.js
 // Converts a string of base64 into a byte array (Uint8Array).
@@ -284,8 +275,6 @@ function updateMemoryViews() {
 // end include: runtime_shared.js
 // include: runtime_stack_check.js
 // end include: runtime_stack_check.js
-// include: runtime_assertions.js
-// end include: runtime_assertions.js
 var __ATPRERUN__ = [];
 
 // functions called before the runtime is initialized
@@ -313,7 +302,7 @@ function preRun() {
 function initRuntime() {
   runtimeInitialized = true;
   SOCKFS.root = FS.mount(SOCKFS, {}, null);
-  if (!Module["noFSInit"] && !FS.init.initialized) FS.init();
+  if (!Module["noFSInit"] && !FS.initialized) FS.init();
   FS.ignorePermissions = false;
   TTY.init();
   callRuntimeCallbacks(__ATINIT__);
@@ -565,14 +554,14 @@ var tempI64;
 // end include: runtime_debug.js
 // === Body ===
 var ASM_CONSTS = {
-  1938556: () => {
+  1938668: () => {
     FS.syncfs(function(err) {
       if (err) {
         console.error(err);
       }
     });
   },
-  1938620: $0 => {
+  1938732: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -580,10 +569,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1938845: ($0, $1) => {
+  1938957: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1938902: () => {
+  1939014: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -591,7 +580,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1939049: () => {
+  1939161: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -599,7 +588,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1939283: $0 => {
+  1939395: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -621,11 +610,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1939776: () => {
+  1939888: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1939844: ($0, $1, $2, $3) => {
+  1939956: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -666,7 +655,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1941496: ($0, $1, $2, $3) => {
+  1941608: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -678,7 +667,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1941906: ($0, $1) => {
+  1942018: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -697,7 +686,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1942511: ($0, $1) => {
+  1942623: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -710,7 +699,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1942991: $0 => {
+  1943103: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -748,7 +737,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1944163: ($0, $1, $2) => {
+  1944275: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -819,7 +808,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1945632: ($0, $1, $2, $3, $4) => {
+  1945744: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -856,18 +845,18 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1946621: $0 => {
+  1946733: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1946704: () => {
+  1946816: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1946773: () => window.innerWidth,
-  1946803: () => window.innerHeight
+  1946885: () => window.innerWidth,
+  1946915: () => window.innerHeight
 };
 
 // end include: preamble.js
@@ -976,21 +965,6 @@ class ExceptionInfo {
   }
   get_adjusted_ptr() {
     return HEAPU32[(((this.ptr) + (16)) >> 2)];
-  }
-  // Get pointer which is expected to be received by catch clause in C++ code. It may be adjusted
-  // when the pointer is casted to some of the exception object base classes (e.g. when virtual
-  // inheritance is used). When a pointer is thrown this method should return the thrown pointer
-  // itself.
-  get_exception_ptr() {
-    // Work around a fastcomp bug, this code is still included for some reason in a build without
-    // exceptions support.
-    var isPointer = ___cxa_is_pointer_type(this.get_type());
-    if (isPointer) {
-      return HEAPU32[((this.excPtr) >> 2)];
-    }
-    var adjusted = this.get_adjusted_ptr();
-    if (adjusted !== 0) return adjusted;
-    return this.excPtr;
   }
 }
 
@@ -1775,26 +1749,28 @@ var MEMFS = {
       var allocated;
       var contents = stream.node.contents;
       // Only make a new copy when MAP_PRIVATE is specified.
-      if (!(flags & 2) && contents.buffer === HEAP8.buffer) {
+      if (!(flags & 2) && contents && contents.buffer === HEAP8.buffer) {
         // We can't emulate MAP_SHARED when the file is not backed by the
         // buffer we're mapping to (e.g. the HEAP buffer).
         allocated = false;
         ptr = contents.byteOffset;
       } else {
-        // Try to avoid unnecessary slices.
-        if (position > 0 || position + length < contents.length) {
-          if (contents.subarray) {
-            contents = contents.subarray(position, position + length);
-          } else {
-            contents = Array.prototype.slice.call(contents, position, position + length);
-          }
-        }
         allocated = true;
         ptr = mmapAlloc(length);
         if (!ptr) {
           throw new FS.ErrnoError(48);
         }
-        HEAP8.set(contents, ptr);
+        if (contents) {
+          // Try to avoid unnecessary slices.
+          if (position > 0 || position + length < contents.length) {
+            if (contents.subarray) {
+              contents = contents.subarray(position, position + length);
+            } else {
+              contents = Array.prototype.slice.call(contents, position, position + length);
+            }
+          }
+          HEAP8.set(contents, ptr);
+        }
       }
       return {
         ptr: ptr,
@@ -2328,10 +2304,10 @@ var FS = {
       this.node_ops = {};
       this.stream_ops = {};
       this.rdev = rdev;
-      this.readMode = 292 | /*292*/ 73;
-      /*73*/ this.writeMode = 146;
+      this.readMode = 292 | 73;
+      this.writeMode = 146;
     }
-    /*146*/ get read() {
+    get read() {
       return (this.mode & this.readMode) === this.readMode;
     }
     set read(val) {
@@ -3291,6 +3267,9 @@ var FS = {
     if (!stream.stream_ops.mmap) {
       throw new FS.ErrnoError(43);
     }
+    if (!length) {
+      throw new FS.ErrnoError(28);
+    }
     return stream.stream_ops.mmap(stream, length, position, prot, flags);
   },
   msync(stream, buffer, offset, length, mmapFlags) {
@@ -3424,7 +3403,7 @@ var FS = {
       }
     }, {}, "/proc/self/fd");
   },
-  createStandardStreams() {
+  createStandardStreams(input, output, error) {
     // TODO deprecate the old functionality of a single
     // input / output callback and that utilizes FS.createDevice
     // and instead require a unique set of stream ops
@@ -3432,18 +3411,18 @@ var FS = {
     // default tty devices. however, if the standard streams
     // have been overwritten we create a unique device for
     // them instead.
-    if (Module["stdin"]) {
-      FS.createDevice("/dev", "stdin", Module["stdin"]);
+    if (input) {
+      FS.createDevice("/dev", "stdin", input);
     } else {
       FS.symlink("/dev/tty", "/dev/stdin");
     }
-    if (Module["stdout"]) {
-      FS.createDevice("/dev", "stdout", null, Module["stdout"]);
+    if (output) {
+      FS.createDevice("/dev", "stdout", null, output);
     } else {
       FS.symlink("/dev/tty", "/dev/stdout");
     }
-    if (Module["stderr"]) {
-      FS.createDevice("/dev", "stderr", null, Module["stderr"]);
+    if (error) {
+      FS.createDevice("/dev", "stderr", null, error);
     } else {
       FS.symlink("/dev/tty1", "/dev/stderr");
     }
@@ -3469,15 +3448,15 @@ var FS = {
     };
   },
   init(input, output, error) {
-    FS.init.initialized = true;
+    FS.initialized = true;
     // Allow Module.stdin etc. to provide defaults, if none explicitly passed to us here
-    Module["stdin"] = input || Module["stdin"];
-    Module["stdout"] = output || Module["stdout"];
-    Module["stderr"] = error || Module["stderr"];
-    FS.createStandardStreams();
+    input ??= Module["stdin"];
+    output ??= Module["stdout"];
+    error ??= Module["stderr"];
+    FS.createStandardStreams(input, output, error);
   },
   quit() {
-    FS.init.initialized = false;
+    FS.initialized = false;
     // force-flush all streams, so we get musl std streams printed out
     // close all of our streams
     for (var i = 0; i < FS.streams.length; i++) {
@@ -5279,9 +5258,6 @@ var whenDependentTypesAreResolved = (myTypes, dependentTypes, getTypeConverters)
 }
 
 /** @param {Object=} options */ function registerType(rawType, registeredInstance, options = {}) {
-  if (!("argPackAdvance" in registeredInstance)) {
-    throw new TypeError("registerType registeredInstance requires argPackAdvance");
-  }
   return sharedRegisterType(rawType, registeredInstance, options);
 }
 
@@ -5299,7 +5275,7 @@ var GenericWireTypeSize = 8;
     "toWireType": function(destructors, o) {
       return o ? trueValue : falseValue;
     },
-    "argPackAdvance": GenericWireTypeSize,
+    argPackAdvance: GenericWireTypeSize,
     "readValueFromPointer": function(pointer) {
       return this["fromWireType"](HEAPU8[pointer]);
     },
@@ -5371,7 +5347,7 @@ var EmValType = {
     return rv;
   },
   "toWireType": (destructors, value) => Emval.toHandle(value),
-  "argPackAdvance": GenericWireTypeSize,
+  argPackAdvance: GenericWireTypeSize,
   "readValueFromPointer": readPointer,
   destructorFunction: null
 };
@@ -5404,7 +5380,7 @@ var __embind_register_float = (rawType, name, size) => {
     name: name,
     "fromWireType": value => value,
     "toWireType": (destructors, value) => value,
-    "argPackAdvance": GenericWireTypeSize,
+    argPackAdvance: GenericWireTypeSize,
     "readValueFromPointer": floatReadValueFromPointer(name, size),
     destructorFunction: null
   });
@@ -5456,30 +5432,32 @@ function newFunc(constructor, argumentList) {
 
 function createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync) {
   var needsDestructorStack = usesDestructorStack(argTypes);
-  var argCount = argTypes.length;
-  var argsList = "";
-  var argsListWired = "";
-  for (var i = 0; i < argCount - 2; ++i) {
-    argsList += (i !== 0 ? ", " : "") + "arg" + i;
-    argsListWired += (i !== 0 ? ", " : "") + "arg" + i + "Wired";
+  var argCount = argTypes.length - 2;
+  var argsList = [];
+  var argsListWired = [ "fn" ];
+  if (isClassMethodFunc) {
+    argsListWired.push("thisWired");
   }
-  var invokerFnBody = `\n        return function (${argsList}) {\n        if (arguments.length !== ${argCount - 2}) {\n          throwBindingError('function ' + humanName + ' called with ' + arguments.length + ' arguments, expected ${argCount - 2}');\n        }`;
+  for (var i = 0; i < argCount; ++i) {
+    argsList.push(`arg${i}`);
+    argsListWired.push(`arg${i}Wired`);
+  }
+  argsList = argsList.join(",");
+  argsListWired = argsListWired.join(",");
+  var invokerFnBody = `\n        return function (${argsList}) {\n        if (arguments.length !== ${argCount}) {\n          throwBindingError('function ' + humanName + ' called with ' + arguments.length + ' arguments, expected ${argCount}');\n        }`;
   if (needsDestructorStack) {
     invokerFnBody += "var destructors = [];\n";
   }
   var dtorStack = needsDestructorStack ? "destructors" : "null";
   var args1 = [ "humanName", "throwBindingError", "invoker", "fn", "runDestructors", "retType", "classParam" ];
   if (isClassMethodFunc) {
-    invokerFnBody += "var thisWired = classParam['toWireType'](" + dtorStack + ", this);\n";
+    invokerFnBody += `var thisWired = classParam['toWireType'](${dtorStack}, this);\n`;
   }
-  for (var i = 0; i < argCount - 2; ++i) {
-    invokerFnBody += "var arg" + i + "Wired = argType" + i + "['toWireType'](" + dtorStack + ", arg" + i + ");\n";
-    args1.push("argType" + i);
+  for (var i = 0; i < argCount; ++i) {
+    invokerFnBody += `var arg${i}Wired = argType${i}['toWireType'](${dtorStack}, arg${i});\n`;
+    args1.push(`argType${i}`);
   }
-  if (isClassMethodFunc) {
-    argsListWired = "thisWired" + (argsListWired.length > 0 ? ", " : "") + argsListWired;
-  }
-  invokerFnBody += (returns || isAsync ? "var rv = " : "") + "invoker(fn" + (argsListWired.length > 0 ? ", " : "") + argsListWired + ");\n";
+  invokerFnBody += (returns || isAsync ? "var rv = " : "") + `invoker(${argsListWired});\n`;
   if (needsDestructorStack) {
     invokerFnBody += "runDestructors(destructors);\n";
   } else {
@@ -5776,7 +5754,7 @@ var integerReadValueFromPointer = (name, width, signed) => {
     name: name,
     "fromWireType": fromWireType,
     "toWireType": toWireType,
-    "argPackAdvance": GenericWireTypeSize,
+    argPackAdvance: GenericWireTypeSize,
     "readValueFromPointer": integerReadValueFromPointer(name, size, minRange !== 0),
     destructorFunction: null
   });
@@ -5795,7 +5773,7 @@ var __embind_register_memory_view = (rawType, dataTypeIndex, name) => {
   registerType(rawType, {
     name: name,
     "fromWireType": decodeMemoryView,
-    "argPackAdvance": GenericWireTypeSize,
+    argPackAdvance: GenericWireTypeSize,
     "readValueFromPointer": decodeMemoryView
   }, {
     ignoreDuplicateRegistrations: true
@@ -5882,7 +5860,7 @@ var __embind_register_std_string = (rawType, name) => {
       }
       return base;
     },
-    "argPackAdvance": GenericWireTypeSize,
+    argPackAdvance: GenericWireTypeSize,
     "readValueFromPointer": readPointer,
     destructorFunction(ptr) {
       _free(ptr);
@@ -6053,7 +6031,7 @@ var __embind_register_std_wstring = (rawType, charSize, name) => {
       }
       return ptr;
     },
-    "argPackAdvance": GenericWireTypeSize,
+    argPackAdvance: GenericWireTypeSize,
     "readValueFromPointer": readPointer,
     destructorFunction(ptr) {
       _free(ptr);
@@ -6067,7 +6045,7 @@ var __embind_register_void = (rawType, name) => {
     isVoid: true,
     // void return values can be optimized out sometimes
     name: name,
-    "argPackAdvance": 0,
+    argPackAdvance: 0,
     "fromWireType": () => undefined,
     // TODO: assert if anything else is given?
     "toWireType": (destructors, o) => undefined
@@ -6523,6 +6501,7 @@ var Browser = {
       Module["postMainLoop"]?.();
     }
   },
+  useWebGL: false,
   isFullscreen: false,
   pointerLock: false,
   moduleContextCreatedCallbacks: [],
@@ -6538,7 +6517,7 @@ var Browser = {
     // might create some side data structure for use later (like an Image element, etc.).
     var imagePlugin = {};
     imagePlugin["canHandle"] = function imagePlugin_canHandle(name) {
-      return !Module.noImageDecoding && /\.(jpg|jpeg|png|bmp)$/i.test(name);
+      return !Module["noImageDecoding"] && /\.(jpg|jpeg|png|bmp|webp)$/i.test(name);
     };
     imagePlugin["handle"] = function imagePlugin_handle(byteArray, name, onload, onerror) {
       var b = new Blob([ byteArray ], {
@@ -6572,7 +6551,7 @@ var Browser = {
     preloadPlugins.push(imagePlugin);
     var audioPlugin = {};
     audioPlugin["canHandle"] = function audioPlugin_canHandle(name) {
-      return !Module.noAudioDecoding && name.substr(-4) in {
+      return !Module["noAudioDecoding"] && name.substr(-4) in {
         ".ogg": 1,
         ".wav": 1,
         ".mp3": 1
@@ -6692,13 +6671,12 @@ var Browser = {
     if (setInModule) {
       Module.ctx = ctx;
       if (useWebGL) GL.makeContextCurrent(contextHandle);
-      Module.useWebGL = useWebGL;
+      Browser.useWebGL = useWebGL;
       Browser.moduleContextCreatedCallbacks.forEach(callback => callback());
       Browser.init();
     }
     return ctx;
   },
-  destroyContext(canvas, useWebGL, setInModule) {},
   fullscreenHandlersInstalled: false,
   lockPointer: undefined,
   resizeCanvas: undefined,
@@ -7084,6 +7062,8 @@ var _eglBindAPI = api => {
 
 var _eglChooseConfig = (display, attrib_list, configs, config_size, numConfigs) => EGL.chooseConfig(display, attrib_list, configs, config_size, numConfigs);
 
+var GLctx;
+
 var webgl_enable_WEBGL_draw_instanced_base_vertex_base_instance = ctx => // Closure is expected to be allowed to minify the '.dibvbi' property, so not accessing it quoted.
 !!(ctx.dibvbi = ctx.getExtension("WEBGL_draw_instanced_base_vertex_base_instance"));
 
@@ -7430,7 +7410,7 @@ var _eglCreateContext = (display, config, hmm, contextAttribs) => {
     EGL.setErrorCode(12288);
     // Run callbacks so that GL emulation works
     GL.makeContextCurrent(EGL.context);
-    Module.useWebGL = true;
+    Browser.useWebGL = true;
     Browser.moduleContextCreatedCallbacks.forEach(function(callback) {
       callback();
     });
@@ -8450,11 +8430,6 @@ var _emscripten_glBlitFramebuffer = _glBlitFramebuffer;
     }
     return;
   }
-  // N.b. here first form specifies a heap subarray, second form an integer
-  // size, so the ?: code here is polymorphic. It is advised to avoid
-  // randomly mixing both uses in calling code, to avoid any potential JS
-  // engine JIT issues.
-  GLctx.bufferData(target, data ? HEAPU8.subarray(data, data + size) : size, usage);
 };
 
 var _emscripten_glBufferData = _glBufferData;
@@ -8464,7 +8439,6 @@ var _emscripten_glBufferData = _glBufferData;
     size && GLctx.bufferSubData(target, offset, HEAPU8, data, size);
     return;
   }
-  GLctx.bufferSubData(target, offset, HEAPU8.subarray(data, data + size));
 };
 
 var _emscripten_glBufferSubData = _glBufferSubData;
@@ -8545,7 +8519,6 @@ var _emscripten_glCompileShader = _glCompileShader;
     GLctx.compressedTexImage2D(target, level, internalFormat, width, height, border, HEAPU8, data, imageSize);
     return;
   }
-  GLctx.compressedTexImage2D(target, level, internalFormat, width, height, border, data ? HEAPU8.subarray((data), data + imageSize) : null);
 };
 
 var _emscripten_glCompressedTexImage2D = _glCompressedTexImage2D;
@@ -8569,7 +8542,6 @@ var _emscripten_glCompressedTexImage3D = _glCompressedTexImage3D;
     GLctx.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, HEAPU8, data, imageSize);
     return;
   }
-  GLctx.compressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, data ? HEAPU8.subarray((data), data + imageSize) : null);
 };
 
 var _emscripten_glCompressedTexSubImage2D = _glCompressedTexSubImage2D;
@@ -9946,11 +9918,10 @@ var _emscripten_glGetShaderiv = _glGetShaderiv;
       break;
 
      case 7938:
-      /* GL_VERSION */ var glVersion = GLctx.getParameter(7938);
+      /* GL_VERSION */ var webGLVersion = GLctx.getParameter(7938);
       // return GLES version string corresponding to the version of the WebGL context
-      if (true) glVersion = `OpenGL ES 3.0 (${glVersion})`; else {
-        glVersion = `OpenGL ES 2.0 (${glVersion})`;
-      }
+      var glVersion = `OpenGL ES 2.0 (${webGLVersion})`;
+      if (true) glVersion = `OpenGL ES 3.0 (${webGLVersion})`;
       ret = stringToNewUTF8(glVersion);
       break;
 
@@ -10628,12 +10599,6 @@ var emscriptenWebGLGetTexPixelData = (type, format, width, height, pixels, inter
     GLctx.readPixels(x, y, width, height, format, type, heap, target);
     return;
   }
-  var pixelData = emscriptenWebGLGetTexPixelData(type, format, width, height, pixels, format);
-  if (!pixelData) {
-    GL.recordError(1280);
-    /*GL_INVALID_ENUM*/ return;
-  }
-  GLctx.readPixels(x, y, width, height, format, type, pixelData);
 };
 
 var _emscripten_glReadPixels = _glReadPixels;
@@ -12361,6 +12326,10 @@ function _fd_seek(fd, offset_low, offset_high, whence, newOffset) {
     var curr = FS.write(stream, HEAP8, ptr, len, offset);
     if (curr < 0) return -1;
     ret += curr;
+    if (curr < len) {
+      // No more space to write.
+      break;
+    }
     if (typeof offset != "undefined") {
       offset += curr;
     }
@@ -12874,6 +12843,7 @@ FS.createPreloadedFile = FS_createPreloadedFile;
 
 FS.staticInit();
 
+// Set module methods based on EXPORTED_RUNTIME_METHODS
 Module["FS_createPath"] = FS.createPath;
 
 Module["FS_createDataFile"] = FS.createDataFile;
@@ -12924,8 +12894,6 @@ Module["createContext"] = Browser.createContext;
 var preloadedImages = {};
 
 var preloadedAudios = {};
-
-var GLctx;
 
 for (var i = 0; i < 32; ++i) tempFixedLengthArray.push(new Array(i));
 
@@ -13491,8 +13459,6 @@ var __emscripten_stack_restore = a0 => (__emscripten_stack_restore = wasmExports
 var __emscripten_stack_alloc = a0 => (__emscripten_stack_alloc = wasmExports["_emscripten_stack_alloc"])(a0);
 
 var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports["emscripten_stack_get_current"])();
-
-var ___cxa_is_pointer_type = a0 => (___cxa_is_pointer_type = wasmExports["__cxa_is_pointer_type"])(a0);
 
 var dynCall_vijii = Module["dynCall_vijii"] = (a0, a1, a2, a3, a4, a5) => (dynCall_vijii = Module["dynCall_vijii"] = wasmExports["dynCall_vijii"])(a0, a1, a2, a3, a4, a5);
 

@@ -1,11 +1,11 @@
 
   var Module = typeof Module != 'undefined' ? Module : {};
 
-  if (!Module.expectedDataFileDownloads) {
-    Module.expectedDataFileDownloads = 0;
+  if (!Module['expectedDataFileDownloads']) {
+    Module['expectedDataFileDownloads'] = 0;
   }
 
-  Module.expectedDataFileDownloads++;
+  Module['expectedDataFileDownloads']++;
   (() => {
     // Do not attempt to redownload the virtual filesystem data when in a pthread or a Wasm Worker context.
     var isPthread = typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD;
@@ -31,7 +31,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
 
       function fetchRemotePackage(packageName, packageSize, callback, errback) {
         if (typeof process === 'object' && typeof process.versions === 'object' && typeof process.versions.node === 'string') {
-          require('fs').readFile(packageName, function(err, contents) {
+          require('fs').readFile(packageName, (err, contents) => {
             if (err) {
               errback(err);
             } else {
@@ -43,40 +43,40 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
         var xhr = new XMLHttpRequest();
         xhr.open('GET', packageName, true);
         xhr.responseType = 'arraybuffer';
-        xhr.onprogress = function(event) {
+        xhr.onprogress = (event) => {
           var url = packageName;
           var size = packageSize;
           if (event.total) size = event.total;
           if (event.loaded) {
             if (!xhr.addedTotal) {
               xhr.addedTotal = true;
-              if (!Module.dataFileDownloads) Module.dataFileDownloads = {};
-              Module.dataFileDownloads[url] = {
+              if (!Module['dataFileDownloads']) Module['dataFileDownloads'] = {};
+              Module['dataFileDownloads'][url] = {
                 loaded: event.loaded,
                 total: size
               };
             } else {
-              Module.dataFileDownloads[url].loaded = event.loaded;
+              Module['dataFileDownloads'][url].loaded = event.loaded;
             }
             var total = 0;
             var loaded = 0;
             var num = 0;
-            for (var download in Module.dataFileDownloads) {
-            var data = Module.dataFileDownloads[download];
+            for (var download in Module['dataFileDownloads']) {
+            var data = Module['dataFileDownloads'][download];
               total += data.total;
               loaded += data.loaded;
               num++;
             }
-            total = Math.ceil(total * Module.expectedDataFileDownloads/num);
+            total = Math.ceil(total * Module['expectedDataFileDownloads']/num);
             Module['setStatus']?.(`Downloading data... (${loaded}/${total})`);
-          } else if (!Module.dataFileDownloads) {
+          } else if (!Module['dataFileDownloads']) {
             Module['setStatus']?.('Downloading data...');
           }
         };
-        xhr.onerror = function(event) {
+        xhr.onerror = (event) => {
           throw new Error("NetworkError for: " + packageName);
         }
-        xhr.onload = function(event) {
+        xhr.onload = (event) => {
           if (xhr.status == 200 || xhr.status == 304 || xhr.status == 206 || (xhr.status == 0 && xhr.response)) { // file URLs can return 0
             var packageData = xhr.response;
             callback(packageData);
@@ -151,7 +151,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
           } catch (e) {
             return errback(e);
           }
-          openRequest.onupgradeneeded = function(event) {
+          openRequest.onupgradeneeded = (event) => {
             var db = /** @type {IDBDatabase} */ (event.target.result);
 
             if (db.objectStoreNames.contains(PACKAGE_STORE_NAME)) {
@@ -164,13 +164,11 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
             }
             var metadata = db.createObjectStore(METADATA_STORE_NAME);
           };
-          openRequest.onsuccess = function(event) {
+          openRequest.onsuccess = (event) => {
             var db = /** @type {IDBDatabase} */ (event.target.result);
             callback(db);
           };
-          openRequest.onerror = function(error) {
-            errback(error);
-          };
+          openRequest.onerror = (error) => errback(error);
         };
 
         // This is needed as chromium has a limit on per-entry files in IndexedDB
@@ -200,7 +198,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
               `package/${packageName}/${chunkId}`
             );
             chunkSliceStart = nextChunkSliceStart;
-            putPackageRequest.onsuccess = function(event) {
+            putPackageRequest.onsuccess = (event) => {
               finishedChunks++;
               if (finishedChunks == chunkCount) {
                 var transaction_metadata = db.transaction(
@@ -215,17 +213,11 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
                   },
                   `metadata/${packageName}`
                 );
-                putMetadataRequest.onsuccess = function(event) {
-                  callback(packageData);
-                };
-                putMetadataRequest.onerror = function(error) {
-                  errback(error);
-                };
+                putMetadataRequest.onsuccess = (event) =>  callback(packageData);
+                putMetadataRequest.onerror = (error) => errback(error);
               }
             };
-            putPackageRequest.onerror = function(error) {
-              errback(error);
-            };
+            putPackageRequest.onerror = (error) => errback(error);
           }
         }
 
@@ -234,7 +226,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
           var transaction = db.transaction([METADATA_STORE_NAME], IDB_RO);
           var metadata = transaction.objectStore(METADATA_STORE_NAME);
           var getRequest = metadata.get(`metadata/${packageName}`);
-          getRequest.onsuccess = function(event) {
+          getRequest.onsuccess = (event) => {
             var result = event.target.result;
             if (!result) {
               return callback(false, null);
@@ -242,9 +234,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
               return callback(PACKAGE_UUID === result['uuid'], result);
             }
           };
-          getRequest.onerror = function(error) {
-            errback(error);
-          };
+          getRequest.onerror = (error) => errback(error);
         }
 
         function fetchCachedPackage(db, packageName, metadata, callback, errback) {
@@ -258,7 +248,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
 
           for (var chunkId = 0; chunkId < chunkCount; chunkId++) {
             var getRequest = packages.get(`package/${packageName}/${chunkId}`);
-            getRequest.onsuccess = function(event) {
+            getRequest.onsuccess = (event) => {
               if (!event.target.result) {
                 errback(new Error(`CachedPackageNotFound for: ${packageName}`));
                 return;
@@ -289,9 +279,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
                 }
               }
             };
-            getRequest.onerror = function(error) {
-              errback(error);
-            };
+            getRequest.onerror = (error) => errback(error);
           }
         }
 
@@ -310,7 +298,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
       };
       Module['addRunDependency']('datafile_/home/runner/work/rbfx/rbfx/cmake-build/bin/Resources.js.data');
 
-      if (!Module.preloadResults) Module.preloadResults = {};
+      if (!Module['preloadResults']) Module['preloadResults'] = {};
 
         function preloadFallback(error) {
           console.error(error);
@@ -319,26 +307,23 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
         };
 
         openDatabase(
-          function(db) {
-            checkCachedPackage(db, PACKAGE_PATH + PACKAGE_NAME,
-              function(useCached, metadata) {
-                Module.preloadResults[PACKAGE_NAME] = {fromCache: useCached};
+          (db) => checkCachedPackage(db, PACKAGE_PATH + PACKAGE_NAME,
+              (useCached, metadata) => {
+                Module['preloadResults'][PACKAGE_NAME] = {fromCache: useCached};
                 if (useCached) {
                   fetchCachedPackage(db, PACKAGE_PATH + PACKAGE_NAME, metadata, processPackageData, preloadFallback);
                 } else {
                   fetchRemotePackage(REMOTE_PACKAGE_NAME, REMOTE_PACKAGE_SIZE,
-                    function(packageData) {
+                    (packageData) => {
                       cacheRemotePackage(db, PACKAGE_PATH + PACKAGE_NAME, packageData, {uuid:PACKAGE_UUID}, processPackageData,
-                        function(error) {
+                        (error) => {
                           console.error(error);
                           processPackageData(packageData);
                         });
                     }
                   , preloadFallback);
                 }
-              }
-            , preloadFallback);
-          }
+              }, preloadFallback)
         , preloadFallback);
 
         Module['setStatus']?.('Downloading...');
