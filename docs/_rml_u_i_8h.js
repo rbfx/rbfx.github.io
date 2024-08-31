@@ -6,6 +6,7 @@ var _rml_u_i_8h =
     [ "RmlContext", "class_urho3_d_1_1_detail_1_1_rml_context.html", "class_urho3_d_1_1_detail_1_1_rml_context" ],
     [ "FromRmlUi", "_rml_u_i_8h.html#ab96bc979f84691614f713cb42cb7aa63", null ],
     [ "RegisterRmlUILibrary", "_rml_u_i_8h.html#ab78bf7771d1a915336af97672e88fe9a", null ],
+    [ "RegisterVariantDefinition", "_rml_u_i_8h.html#a7d9dea66158c70303882b00e82d215a4", null ],
     [ "ToColor", "_rml_u_i_8h.html#a81d8107aa042dfb7a0dfaf943ea5f105", null ],
     [ "ToColor", "_rml_u_i_8h.html#aab336f01379610694c47909c0cc9da26", null ],
     [ "ToIntVector2", "_rml_u_i_8h.html#a5813a3148001465b5de048f517cce46b", null ],

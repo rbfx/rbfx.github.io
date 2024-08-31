@@ -116,6 +116,15 @@ Rml::ElementDocument *&#160;</td><td class="memItemRight" valign="bottom"><a cla
 <tr class="memitem:a46942206ab0399cbe640a89f78eb4ee8"><td class="memItemLeft" align="right" valign="top"><a id="a46942206ab0399cbe640a89f78eb4ee8"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>BindDataModelProperty</b> (const ea::string &amp;name, GetterFunc getter, SetterFunc setter)</td></tr>
 <tr class="separator:a46942206ab0399cbe640a89f78eb4ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c8cf846f0ceac4bb9a12247f7a7f4a"><td class="memItemLeft" align="right" valign="top"><a id="a29c8cf846f0ceac4bb9a12247f7a7f4a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>BindDataModelVariant</b> (const ea::string &amp;name, <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> *value)</td></tr>
+<tr class="separator:a29c8cf846f0ceac4bb9a12247f7a7f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51639da8989f4299781ce6f2a5857839"><td class="memItemLeft" align="right" valign="top"><a id="a51639da8989f4299781ce6f2a5857839"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>BindDataModelVariantVector</b> (const ea::string &amp;name, <a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a> *value)</td></tr>
+<tr class="separator:a51639da8989f4299781ce6f2a5857839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a85c23fee970bf480a5140ab6191dd8"><td class="memItemLeft" align="right" valign="top"><a id="a8a85c23fee970bf480a5140ab6191dd8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>BindDataModelVariantMap</b> (const ea::string &amp;name, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> *value)</td></tr>
+<tr class="separator:a8a85c23fee970bf480a5140ab6191dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bd9849f8426c791fa164b1ce83638e9"><td class="memItemLeft" align="right" valign="top"><a id="a1bd9849f8426c791fa164b1ce83638e9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>BindDataModelEvent</b> (const ea::string &amp;name, EventFunc eventCallback)</td></tr>
 <tr class="separator:a1bd9849f8426c791fa164b1ce83638e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -703,6 +712,10 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:aae6117cb5343344e520b5572dbb3589a"><td class="memItemLeft" align="right" valign="top"><a id="aae6117cb5343344e520b5572dbb3589a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_rml_u_i_component.html">RmlUIComponent</a>, <a class="el" href="class_urho3_d_1_1_logic_component.html">LogicComponent</a>)</td></tr>
 <tr class="separator:aae6117cb5343344e520b5572dbb3589a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41b01e769e19a2257c80510075d9ad77"><td class="memItemLeft" align="right" valign="top"><a id="a41b01e769e19a2257c80510075d9ad77"></a>
+Rml::DataModelConstructor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a41b01e769e19a2257c80510075d9ad77">ExpectDataModelConstructor</a> () const</td></tr>
+<tr class="memdesc:a41b01e769e19a2257c80510075d9ad77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get data model constructor. Logs error if the constructor is not available. <br /></td></tr>
+<tr class="separator:a41b01e769e19a2257c80510075d9ad77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a0d5b8e439529c18d7d26fd91e60a8a"><td class="memItemLeft" align="right" valign="top"><a id="a1a0d5b8e439529c18d7d26fd91e60a8a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a1a0d5b8e439529c18d7d26fd91e60a8a">OpenInternal</a> ()</td></tr>
 <tr class="memdesc:a1a0d5b8e439529c18d7d26fd91e60a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a window document if it was not already open. <br /></td></tr>
