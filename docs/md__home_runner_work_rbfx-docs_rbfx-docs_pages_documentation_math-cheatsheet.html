@@ -140,7 +140,25 @@ $(document).ready(function(){initNavTree('md__home_runner_work_rbfx-docs_rbfx-do
 <div class="line">Axis Z (Vector::FORWARD): { x, y, z } =&gt; {-y, x, z }</div>
 </div><!-- fragment --><h1>Matrix operations</h1>
 <p>In the engine, matrices are column-major (like in OpenGL) while in DirectX they are row-major.</p>
+<h2>Matrix Multiplication Order</h2>
 <p>In general, for a column-vector on the right (OpenGL convention), M1 * (M2 * (M3 * v)) = (M1 M2 M3) * v, i.e. the left-most matrix is at the root node while the right-most is at the leaf node.</p>
+<p>When you apply multiple transformations (like translation, rotation, and scaling) to an object, the order in which you multiply the matrices matters. The general order is:</p>
+<ul>
+<li>Scale</li>
+<li>Rotate</li>
+<li>Translate</li>
+</ul>
+<p>This order ensures that each transformation is applied correctly without unintended distortions. For example, if you scale an object first, then rotate it, the rotation will not affect the scale. Similarly, translating an object after scaling and rotating it ensures that the object moves to the correct position.</p>
+<h2>Mental Model for Applying Transformations</h2>
+<p>To visualize how matrices are applied to object transformations, you can think of it as a series of steps:</p>
+<ul>
+<li>Start with the object at the origin.</li>
+<li>Apply scaling: This changes the size of the object.</li>
+<li>Apply rotation: This rotates the object around the origin.</li>
+<li>Apply translation: This moves the object to its final position.</li>
+</ul>
+<p>In the engine, this sequence is represented by multiplying the matrices in the reverse order of how you want the transformations to be applied. For example, if you want to scale, then rotate, and finally translate an object, you would multiply the translation matrix by the rotation matrix, and then by the scaling matrix.</p>
+<p>Below is a sample code demonstrating the order of matrix multiplication:</p>
 <div class="fragment"><div class="line"><span class="comment">// Make Vector3</span></div>
 <div class="line"><span class="keyword">const</span> Vector3 vec3{1, 2, 3};</div>
 <div class="line"><span class="comment">// Make rotation matrix</span></div>
@@ -151,7 +169,18 @@ $(document).ready(function(){initNavTree('md__home_runner_work_rbfx-docs_rbfx-do
 <div class="line">Vector3 rt = (rotation * translation) * vec3; <span class="comment">//33, 22, -11</span></div>
 <div class="line">Vector3 expl = rotation * (translation * vec3); <span class="comment">//33, 22, -11</span></div>
 <div class="line">Vector3 tr = (translation * rotation) * vec3; <span class="comment">//13, 22, 29</span></div>
-</div><!-- fragment --><h2>Node transform matrices</h2>
+</div><!-- fragment --><p>Alternatively, if you prefer a visual approach, here are some illustrations depicting the matrix multiplication sequence:</p>
+<h3>translation * rotation:</h3>
+<div class="image">
+<img src="rotate-translate.gif" alt=""/>
+<div class="caption">
+translation * rotation</div></div>
+   <h3>rotation * translation:</h3>
+<div class="image">
+<img src="translate-rotate.gif" alt=""/>
+<div class="caption">
+rotation * translation</div></div>
+   <h2>Node transform matrices</h2>
 <p>To combine world transform matrices to make a matrix that would transform from one game object space into another object space, you can multiply the inverse of the world transform matrix of the second object by the world transform matrix of the first object. This will give you a matrix that will transform from one object space to another object space.</p>
 <p>Here is an example code: </p><div class="fragment"><div class="line">Matrix3x4 transformA = nodeA-&gt;GetWorldTransform();</div>
 <div class="line">Matrix3x4 transformB = nodeB-&gt;GetWorldTransform();</div>
@@ -166,6 +195,14 @@ $(document).ready(function(){initNavTree('md__home_runner_work_rbfx-docs_rbfx-do
 <div class="line"><span class="keyword">const</span> Matrix3x4 offsetMatrix = animatedModel-&gt;GetSkeleton().GetBone(0u)-&gt;offsetMatrix_;</div>
 <div class="line"><span class="keyword">const</span> Vector3 localSpacePosition = offsetMatrix * bindSpacePosition;</div>
 </div><!-- fragment --><h1>Quaternion operations</h1>
+<p>To build a quaternion that rotates an object by 180 degrees around each axis (X, Y, and Z), you can use the axis-angle representation of quaternions. Here’s how you can do it:</p>
+<div class="fragment"><div class="line"><span class="comment">// Quaternion for 180 degrees rotation around X-axis</span></div>
+<div class="line">Quaternion rotationX{0.0f, 1.0f, 0.0f, 0.0f};</div>
+<div class="line"><span class="comment">// Quaternion for 180 degrees rotation around Y-axis</span></div>
+<div class="line">Quaternion rotationY{0.0f, 0.0f, 1.0f, 0.0f};</div>
+<div class="line"><span class="comment">// Quaternion for 180 degrees rotation around Z-axis</span></div>
+<div class="line">Quaternion rotationZ{0.0f, 0.0f, 0.0f, 1.0f};</div>
+</div><!-- fragment --><h2>Quaternion Multiplication Order</h2>
 <p>Quaternion multiplication order is the same as with matrices. Here is an example to illustrate it:</p>
 <div class="fragment"><div class="line"><span class="comment">// Make Vector3</span></div>
 <div class="line"><span class="keyword">const</span> Vector3 vec3{1, 2, 3};</div>
