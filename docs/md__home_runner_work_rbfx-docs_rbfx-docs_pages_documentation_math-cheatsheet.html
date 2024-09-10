@@ -198,11 +198,23 @@ rotation * translation</div></div>
 <p>To build a quaternion that rotates an object by 180 degrees around each axis (X, Y, and Z), you can use the axis-angle representation of quaternions. Here’s how you can do it:</p>
 <div class="fragment"><div class="line"><span class="comment">// Quaternion for 180 degrees rotation around X-axis</span></div>
 <div class="line">Quaternion rotationX{0.0f, 1.0f, 0.0f, 0.0f};</div>
-<div class="line"><span class="comment">// Quaternion for 180 degrees rotation around Y-axis</span></div>
+</div><!-- fragment --><div class="image">
+<img src="x.gif" alt=""/>
+<div class="caption">
+180 degrees rotation around X-axis</div></div>
+   <div class="fragment"><div class="line"><span class="comment">// Quaternion for 180 degrees rotation around Y-axis</span></div>
 <div class="line">Quaternion rotationY{0.0f, 0.0f, 1.0f, 0.0f};</div>
-<div class="line"><span class="comment">// Quaternion for 180 degrees rotation around Z-axis</span></div>
+</div><!-- fragment --><div class="image">
+<img src="y.gif" alt=""/>
+<div class="caption">
+180 degrees rotation around Y-axis</div></div>
+   <div class="fragment"><div class="line"><span class="comment">// Quaternion for 180 degrees rotation around Z-axis</span></div>
 <div class="line">Quaternion rotationZ{0.0f, 0.0f, 0.0f, 1.0f};</div>
-</div><!-- fragment --><h2>Quaternion Multiplication Order</h2>
+</div><!-- fragment --><div class="image">
+<img src="z.gif" alt=""/>
+<div class="caption">
+180 degrees rotation around Z-axis</div></div>
+   <h2>Quaternion Multiplication Order</h2>
 <p>Quaternion multiplication order is the same as with matrices. Here is an example to illustrate it:</p>
 <div class="fragment"><div class="line"><span class="comment">// Make Vector3</span></div>
 <div class="line"><span class="keyword">const</span> Vector3 vec3{1, 2, 3};</div>
