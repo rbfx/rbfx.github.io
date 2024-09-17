@@ -26,7 +26,6 @@ var NAVTREE =
     [ "Home", "index.html", "index" ],
     [ "Quick Start for C++ developers", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_cpp-quick-start.html", null ],
     [ "Quick Start for C# developers", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html", null ],
-    [ "Inverse Kinematics", "inverse-kinematics.html", null ],
     [ "Camera Operator", "camera-operator.html", null ],
     [ "Shake Component", "shake-component.html", null ],
     [ "Math Cheatsheet", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html", null ],
