@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rebel Fork Framework: Related Pages</title>
+<title>Rebel Fork Framework: Inverse Kinematics</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -54,27 +54,32 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('pages.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('inverse-kinematics.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Related Pages</div>  </div>
+<div class="title">Inverse Kinematics </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all related documentation pages:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_cpp-quick-start.html" target="_self">Quick Start for C++ developers</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html" target="_self">Quick Start for C# developers</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="inverse-kinematics.html" target="_self">Inverse Kinematics</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="camera-operator.html" target="_self">Camera Operator</a></td><td class="desc"></td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="shake-component.html" target="_self">Shake Component</a></td><td class="desc"></td></tr>
-<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html" target="_self">Math Cheatsheet</a></td><td class="desc"></td></tr>
-<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md__home_runner_work_rbfx-docs_rbfx-docs__r_e_a_d_m_e.html" target="_self">Documentation for Rebel Fork Framework</a></td><td class="desc"></td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
+<div class="textblock"><p>Inverse Kinematics (IK) system is used to calculate the positions and rotations of bones in a skeleton to achieve a desired end-effector position.</p>
+<h1>IKSolver</h1>
+<p>The <b>IKSolver</b> class is designed to be used in conjunction with other components of the engine to animate characters and objects in a realistic manner.</p>
+<p>Contains methods such as Solve() which performs the IK calculations.</p>
+<p>The <b>IKSolver</b> searches for <b>IKSolverComponent</b> components within the same node and it's children and processes each one every frame. The IKSolverComponent serves as a base class for components that specify the bone chains to be solved.</p>
+<h1>IKArmSolver</h1>
+<h1>IKChainSolver</h1>
+<h1>IKHeadSolver</h1>
+<h1>IKIdentitySolver</h1>
+<h1>IKLegSolver</h1>
+<h1>IKLimbSolver</h1>
+<h1>IKRotateTo</h1>
+<h1>IKSpineSolver</h1>
+<h1>IKStickTargets</h1>
+<p>To be continued... Please contribute to documentation at <a href="https://github.com/rbfx/rbfx-docs">rbfx-docs</a>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

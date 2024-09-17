@@ -26,6 +26,7 @@ var NAVTREE =
     [ "Home", "index.html", "index" ],
     [ "Quick Start for C++ developers", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_cpp-quick-start.html", null ],
     [ "Quick Start for C# developers", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html", null ],
+    [ "Inverse Kinematics", "inverse-kinematics.html", null ],
     [ "Camera Operator", "camera-operator.html", null ],
     [ "Shake Component", "shake-component.html", null ],
     [ "Math Cheatsheet", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html", null ],
@@ -136,18 +137,18 @@ var NAVTREEINDEX =
 "class_urho3_d_1_1_wrapped_scalar.html#aad53e188ed584ef412f91521bee9f5e2",
 "class_urho3_d_1_1_x_m_l_output_archive_block.html#a4fb770feef214c6ec346eb495e26f4f8",
 "functions_func_y.html",
-"struct___i_m_a_g_e___r_e_l_o_c_a_t_i_o_n.html",
-"struct_urho3_d_1_1_baked_light.html#a0efef339d0b3bd1b440f92e60a711afe",
-"struct_urho3_d_1_1_compressed_level.html",
-"struct_urho3_d_1_1_detail_1_1_default_serializer.html",
-"struct_urho3_d_1_1_g_l_t_f_importer_settings.html#ab7fe0a4b38da95977cbb6c594b9fefc7",
-"struct_urho3_d_1_1_joystick_state.html#ae680d7db8a0bd70d3765a0d8ac2aca10",
-"struct_urho3_d_1_1_model_vertex.html#a3f9f49f6c5aaafcf53f9e5b3f7624b08",
-"struct_urho3_d_1_1_particle2_d.html",
-"struct_urho3_d_1_1_raytracing_geometry_material.html#af0c3cd9a487b31db0766913fa81e0d16",
-"struct_urho3_d_1_1_shader_resource_desc.html#a698a40b040abac09daa674c5bf00e358",
-"struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#a4176de3fc9a619af2819e8517c087e30",
-"struct_urho3_d_1_1_v_r_rig_desc.html#a743f7968dbbe92f0f6ed324611496471"
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#aeab22515e19857092a8489a043ec3db0",
+"struct_urho3_d_1_1_baked_light.html",
+"struct_urho3_d_1_1_common_frame_info.html#af87d8c6f21d196102d3bc7858283024e",
+"struct_urho3_d_1_1_detail_1_1_controller_hat_mapping.html#afcbeb21cde5015319f059bd53a848c96",
+"struct_urho3_d_1_1_g_l_t_f_importer_settings.html#a79e13a07f263d35becce372235a3a02f",
+"struct_urho3_d_1_1_joystick_state.html#ae30b4420cfd726994d49b34a52861120",
+"struct_urho3_d_1_1_model_vertex.html#a3c53f733a667752ec4124ee0e88924aa",
+"struct_urho3_d_1_1_particle.html#ad766c7a5ab1be06ac35f15f48d5d16bc",
+"struct_urho3_d_1_1_raytracing_geometry_material.html#af08cce642020da324d737d837de06ed5",
+"struct_urho3_d_1_1_shader_resource_desc.html",
+"struct_urho3_d_1_1_spriter_1_1_sprite_timeline_key.html#a3753358f856c907ae198b0cfe30f97ad",
+"struct_urho3_d_1_1_v_r_rig_desc.html#a5ed5206673445bb20c76470fded61bb6"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
