@@ -90,6 +90,43 @@ asset-pipeline.png</div></div>
 <img src="imported-resource.png" alt=""/>
 <div class="caption">
 imported-resource.png</div></div>
+   <h1>Coordinate System Conversion between Blender and Engine</h1>
+<p>Blender and the engine use different coordinate systems. In Blender, the Z-axis represents the up direction, whereas in the engine, the Y-axis is used as the up direction. When processing assets from .blend files, everything will be rotated by 180 degrees when placed in the engine:</p>
+<div class="image">
+<img src="blender-initial.jpg" alt=""/>
+<div class="caption">
+blender default rotation</div></div>
+    <div class="image">
+<img src="engine-initial.jpg" alt=""/>
+<div class="caption">
+engine default import result</div></div>
+   <p>To avoid this, you can bake the asset rotation in Blender.</p>
+<h2>Axis Conversion</h2>
+<ul>
+<li><b>Blender X-axis</b>: Remains the X-axis in the engine, pointing right.</li>
+<li><b>Blender Y-axis</b>: Becomes the Z-axis in the engine, pointing forward.</li>
+<li><b>Blender Z-axis</b>: Becomes the Y-axis in the engine, pointing up.</li>
+</ul>
+<h2>Steps to Correct Orientation</h2>
+<h3>Rotate the Object’s Pivot:</h3>
+<ul>
+<li>Rotate the object by 180 degrees around the Z-axis.</li>
+<li>Apply the rotation.</li>
+</ul>
+<div class="image">
+<img src="blender-rotate-pivot.jpg" alt=""/>
+<div class="caption">
+blender default rotation</div></div>
+   <h3>Reorient the Object, save and import:</h3>
+<p>Rotate the object again to maintain the correct orientation in space. After importing the object into the engine with the default rotation, the object’s orientation will match what you see in Blender’s viewport.</p>
+<div class="image">
+<img src="blender-result.jpg" alt=""/>
+<div class="caption">
+blender fixed rotation</div></div>
+    <div class="image">
+<img src="engine-result.jpg" alt=""/>
+<div class="caption">
+engine import result</div></div>
     </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
