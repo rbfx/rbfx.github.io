@@ -553,14 +553,14 @@ var tempI64;
 // end include: runtime_debug.js
 // === Body ===
 var ASM_CONSTS = {
-  1939340: () => {
+  1949260: () => {
     FS.syncfs(function(err) {
       if (err) {
         console.error(err);
       }
     });
   },
-  1939404: $0 => {
+  1949324: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -568,10 +568,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1939629: ($0, $1) => {
+  1949549: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1939686: () => {
+  1949606: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -579,7 +579,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1939833: () => {
+  1949753: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -587,7 +587,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1940067: $0 => {
+  1949987: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -609,11 +609,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1940560: () => {
+  1950480: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1940628: ($0, $1, $2, $3) => {
+  1950548: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -654,7 +654,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1942280: ($0, $1, $2, $3) => {
+  1952200: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -666,7 +666,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1942690: ($0, $1) => {
+  1952610: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -685,7 +685,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1943295: ($0, $1) => {
+  1953215: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -698,7 +698,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1943775: $0 => {
+  1953695: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -736,7 +736,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1944947: ($0, $1, $2) => {
+  1954867: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -807,7 +807,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1946416: ($0, $1, $2, $3, $4) => {
+  1956336: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -844,19 +844,24 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1947405: $0 => {
+  1957325: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1947488: () => {
+  1957408: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1947557: () => window.innerWidth,
-  1947587: () => window.innerHeight
+  1957477: () => window.innerWidth,
+  1957507: () => window.innerHeight
 };
+
+function ImGui_ImplSDL2_EmscriptenOpenURL(url) {
+  url = url ? UTF8ToString(url) : null;
+  if (url) window.open(url, "_blank");
+}
 
 // end include: preamble.js
 /** @constructor */ function ExitStatus(status) {
@@ -12960,6 +12965,7 @@ for (var i = 0; i < 32; ++i) tempFixedLengthArray.push(new Array(i));
 Fetch.init();
 
 var wasmImports = {
+  /** @export */ ImGui_ImplSDL2_EmscriptenOpenURL,
   /** @export */ __cxa_throw: ___cxa_throw,
   /** @export */ __syscall_bind: ___syscall_bind,
   /** @export */ __syscall_fcntl64: ___syscall_fcntl64,
@@ -13342,6 +13348,7 @@ var wasmImports = {
   /** @export */ emscripten_webgl_make_context_current: _emscripten_webgl_make_context_current,
   /** @export */ environ_get: _environ_get,
   /** @export */ environ_sizes_get: _environ_sizes_get,
+  /** @export */ exit: _exit,
   /** @export */ fd_close: _fd_close,
   /** @export */ fd_read: _fd_read,
   /** @export */ fd_seek: _fd_seek,
