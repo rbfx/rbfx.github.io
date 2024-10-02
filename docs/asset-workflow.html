@@ -100,30 +100,33 @@ blender default rotation</div></div>
 <img src="engine-initial.jpg" alt=""/>
 <div class="caption">
 engine default import result</div></div>
-   <p>To avoid this, you can bake the asset rotation in Blender.</p>
+   <p>To avoid this, you can model everything taking into account coordinate system transformation.</p>
 <h2>Axis Conversion</h2>
+<h3>Blender’s Coordinate System:</h3>
 <ul>
-<li><b>Blender X-axis</b>: Remains the X-axis in the engine, pointing right.</li>
-<li><b>Blender Y-axis</b>: Becomes the Z-axis in the engine, pointing forward.</li>
-<li><b>Blender Z-axis</b>: Becomes the Y-axis in the engine, pointing up.</li>
+<li>Z-axis: Up</li>
+<li>Y-axis: Forward</li>
+<li>X-axis: Right <h3>Engine's Coordinate System:</h3>
+</li>
 </ul>
-<h2>Steps to Correct Orientation</h2>
-<h3>Rotate the Object’s Pivot:</h3>
 <ul>
-<li>Rotate the object by 180 degrees around the Z-axis.</li>
-<li>Apply the rotation.</li>
+<li>Y-axis: Up</li>
+<li>Z-axis: Forward</li>
+<li>X-axis: Right</li>
 </ul>
-<div class="image">
-<img src="blender-rotate-pivot.jpg" alt=""/>
-<div class="caption">
-blender default rotation</div></div>
-   <h3>Reorient the Object, save and import:</h3>
-<p>Rotate the object again to maintain the correct orientation in space. After importing the object into the engine with the default rotation, the object’s orientation will match what you see in Blender’s viewport.</p>
+<p>To convert coordinates from Blender to the engine, you need to remap the axes as follows:</p>
+<ul>
+<li>Blender’s Z-axis (Up) becomes engine’s Y-axis (Up).</li>
+<li>Blender’s X-axis (Right) becomes engine’s negative X-axis (Left).</li>
+<li>Blender’s Y-axis (Forward) becomes engine’s negative Z-axis (Backward).</li>
+</ul>
+<p>So if you model in Blender taking into account axis conversion:</p>
 <div class="image">
 <img src="blender-result.jpg" alt=""/>
 <div class="caption">
 blender fixed rotation</div></div>
-    <div class="image">
+   <p>The result will naturally fit engine's coordinate system.</p>
+<div class="image">
 <img src="engine-result.jpg" alt=""/>
 <div class="caption">
 engine import result</div></div>
