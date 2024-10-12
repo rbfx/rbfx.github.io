@@ -290,11 +290,10 @@ var __ATPOSTRUN__ = [];
 var runtimeInitialized = false;
 
 function preRun() {
-  if (Module["preRun"]) {
-    if (typeof Module["preRun"] == "function") Module["preRun"] = [ Module["preRun"] ];
-    while (Module["preRun"].length) {
-      addOnPreRun(Module["preRun"].shift());
-    }
+  var preRuns = Module["preRun"];
+  if (preRuns) {
+    if (typeof preRuns == "function") preRuns = [ preRuns ];
+    preRuns.forEach(addOnPreRun);
   }
   callRuntimeCallbacks(__ATPRERUN__);
 }
@@ -313,11 +312,10 @@ function preMain() {
 }
 
 function postRun() {
-  if (Module["postRun"]) {
-    if (typeof Module["postRun"] == "function") Module["postRun"] = [ Module["postRun"] ];
-    while (Module["postRun"].length) {
-      addOnPostRun(Module["postRun"].shift());
-    }
+  var postRuns = Module["postRun"];
+  if (postRuns) {
+    if (typeof postRuns == "function") postRuns = [ postRuns ];
+    postRuns.forEach(addOnPostRun);
   }
   callRuntimeCallbacks(__ATPOSTRUN__);
 }
@@ -553,14 +551,14 @@ var tempI64;
 // end include: runtime_debug.js
 // === Body ===
 var ASM_CONSTS = {
-  1949260: () => {
+  1949292: () => {
     FS.syncfs(function(err) {
       if (err) {
         console.error(err);
       }
     });
   },
-  1949324: $0 => {
+  1949356: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -568,10 +566,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1949549: ($0, $1) => {
+  1949581: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1949606: () => {
+  1949638: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -579,7 +577,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1949753: () => {
+  1949785: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -587,7 +585,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1949987: $0 => {
+  1950019: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -609,11 +607,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1950480: () => {
+  1950512: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1950548: ($0, $1, $2, $3) => {
+  1950580: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -654,7 +652,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1952200: ($0, $1, $2, $3) => {
+  1952232: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -666,7 +664,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1952610: ($0, $1) => {
+  1952642: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -685,7 +683,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1953215: ($0, $1) => {
+  1953247: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -698,7 +696,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1953695: $0 => {
+  1953727: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -736,7 +734,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1954867: ($0, $1, $2) => {
+  1954899: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -807,7 +805,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1956336: ($0, $1, $2, $3, $4) => {
+  1956368: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -844,18 +842,18 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1957325: $0 => {
+  1957357: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1957408: () => {
+  1957440: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1957477: () => window.innerWidth,
-  1957507: () => window.innerHeight
+  1957509: () => window.innerWidth,
+  1957539: () => window.innerHeight
 };
 
 function ImGui_ImplSDL2_EmscriptenOpenURL(url) {
@@ -871,10 +869,8 @@ function ImGui_ImplSDL2_EmscriptenOpenURL(url) {
 }
 
 var callRuntimeCallbacks = callbacks => {
-  while (callbacks.length > 0) {
-    // Pass the module as the first argument.
-    callbacks.shift()(Module);
-  }
+  // Pass the module as the first argument.
+  callbacks.forEach(f => f(Module));
 };
 
 var noExitRuntime = Module["noExitRuntime"] || true;
@@ -1137,17 +1133,17 @@ var UTF8Decoder = typeof TextDecoder != "undefined" ? new TextDecoder : undefine
      * array that contains uint8 values, returns a copy of that string as a
      * Javascript String object.
      * heapOrArray is either a regular array, or a JavaScript typed array view.
-     * @param {number} idx
+     * @param {number=} idx
      * @param {number=} maxBytesToRead
      * @return {string}
-     */ var UTF8ArrayToString = (heapOrArray, idx, maxBytesToRead) => {
+     */ var UTF8ArrayToString = (heapOrArray, idx = 0, maxBytesToRead = NaN) => {
   var endIdx = idx + maxBytesToRead;
   var endPtr = idx;
   // TextDecoder needs to know the byte length in advance, it doesn't stop on
   // null terminator by itself.  Also, use the length info to avoid running tiny
   // strings through TextDecoder, since .subarray() allocates garbage.
   // (As a tiny code save trick, compare endPtr against endIdx using a negation,
-  // so that undefined means Infinity)
+  // so that undefined/NaN means Infinity)
   while (heapOrArray[endPtr] && !(endPtr >= endIdx)) ++endPtr;
   if (endPtr - idx > 16 && heapOrArray.buffer && UTF8Decoder) {
     return UTF8Decoder.decode(heapOrArray.subarray(idx, endPtr));
@@ -1399,7 +1395,7 @@ var TTY = {
     },
     put_char(tty, val) {
       if (val === null || val === 10) {
-        out(UTF8ArrayToString(tty.output, 0));
+        out(UTF8ArrayToString(tty.output));
         tty.output = [];
       } else {
         if (val != 0) tty.output.push(val);
@@ -1408,7 +1404,7 @@ var TTY = {
     // val == 0 would cut text output off in the middle.
     fsync(tty) {
       if (tty.output && tty.output.length > 0) {
-        out(UTF8ArrayToString(tty.output, 0));
+        out(UTF8ArrayToString(tty.output));
         tty.output = [];
       }
     },
@@ -1433,7 +1429,7 @@ var TTY = {
   default_tty1_ops: {
     put_char(tty, val) {
       if (val === null || val === 10) {
-        err(UTF8ArrayToString(tty.output, 0));
+        err(UTF8ArrayToString(tty.output));
         tty.output = [];
       } else {
         if (val != 0) tty.output.push(val);
@@ -1441,7 +1437,7 @@ var TTY = {
     },
     fsync(tty) {
       if (tty.output && tty.output.length > 0) {
-        err(UTF8ArrayToString(tty.output, 0));
+        err(UTF8ArrayToString(tty.output));
         tty.output = [];
       }
     }
@@ -1450,7 +1446,6 @@ var TTY = {
 
 var zeroMemory = (address, size) => {
   HEAPU8.fill(0, address, address + size);
-  return address;
 };
 
 var mmapAlloc = size => {
@@ -3301,7 +3296,7 @@ var FS = {
     var buf = new Uint8Array(length);
     FS.read(stream, buf, 0, length, 0);
     if (opts.encoding === "utf8") {
-      ret = UTF8ArrayToString(buf, 0);
+      ret = UTF8ArrayToString(buf);
     } else if (opts.encoding === "binary") {
       ret = buf;
     }
@@ -3982,7 +3977,7 @@ var SOCKFS = {
         addr,
         port,
         socket: ws,
-        dgram_send_queue: []
+        msg_send_queue: []
       };
       SOCKFS.websocket_sock_ops.addPeer(sock, peer);
       SOCKFS.websocket_sock_ops.handlePeerEvents(sock, peer);
@@ -3990,7 +3985,7 @@ var SOCKFS = {
       // us to override the ephemeral port reported to us by remotePort on the
       // remote end.
       if (sock.type === 2 && typeof sock.sport != "undefined") {
-        peer.dgram_send_queue.push(new Uint8Array([ 255, 255, 255, 255, "p".charCodeAt(0), "o".charCodeAt(0), "r".charCodeAt(0), "t".charCodeAt(0), ((sock.sport & 65280) >> 8), (sock.sport & 255) ]));
+        peer.msg_send_queue.push(new Uint8Array([ 255, 255, 255, 255, "p".charCodeAt(0), "o".charCodeAt(0), "r".charCodeAt(0), "t".charCodeAt(0), ((sock.sport & 65280) >> 8), (sock.sport & 255) ]));
       }
       return peer;
     },
@@ -4008,10 +4003,10 @@ var SOCKFS = {
       var handleOpen = function() {
         Module["websocket"].emit("open", sock.stream.fd);
         try {
-          var queued = peer.dgram_send_queue.shift();
+          var queued = peer.msg_send_queue.shift();
           while (queued) {
             peer.socket.send(queued);
-            queued = peer.dgram_send_queue.shift();
+            queued = peer.msg_send_queue.shift();
           }
         } catch (e) {
           // not much we can do here in the way of proper error handling as we've already
@@ -4197,9 +4192,10 @@ var SOCKFS = {
       var peer = SOCKFS.websocket_sock_ops.createPeer(sock, addr, port);
       sock.daddr = peer.addr;
       sock.dport = peer.port;
-      // always "fail" in non-blocking mode
-      throw new FS.ErrnoError(26);
     },
+    // because we cannot synchronously block to wait for the WebSocket
+    // connection to complete, we return here pretending that the connection
+    // was a success.
     listen(sock, backlog) {
       if (!ENVIRONMENT_IS_NODE) {
         throw new FS.ErrnoError(138);
@@ -4302,8 +4298,6 @@ var SOCKFS = {
       if (sock.type === 1) {
         if (!dest || dest.socket.readyState === dest.socket.CLOSING || dest.socket.readyState === dest.socket.CLOSED) {
           throw new FS.ErrnoError(53);
-        } else if (dest.socket.readyState === dest.socket.CONNECTING) {
-          throw new FS.ErrnoError(6);
         }
       }
       // create a copy of the incoming data to send, as the WebSocket API
@@ -4315,18 +4309,18 @@ var SOCKFS = {
       }
       var data;
       data = buffer.slice(offset, offset + length);
-      // if we're emulating a connection-less dgram socket and don't have
-      // a cached connection, queue the buffer to send upon connect and
-      // lie, saying the data was sent now.
-      if (sock.type === 2) {
-        if (!dest || dest.socket.readyState !== dest.socket.OPEN) {
-          // if we're not connected, open a new connection
+      // if we don't have a cached connectionless UDP datagram connection, or
+      // the TCP socket is still connecting, queue the message to be sent upon
+      // connect, and lie, saying the data was sent now.
+      if (!dest || dest.socket.readyState !== dest.socket.OPEN) {
+        // if we're not connected, open a new connection
+        if (sock.type === 2) {
           if (!dest || dest.socket.readyState === dest.socket.CLOSING || dest.socket.readyState === dest.socket.CLOSED) {
             dest = SOCKFS.websocket_sock_ops.createPeer(sock, addr, port);
           }
-          dest.dgram_send_queue.push(data);
-          return length;
         }
+        dest.msg_send_queue.push(data);
+        return length;
       }
       try {
         // send the actual data
@@ -13631,6 +13625,8 @@ Module["FS_createLazyFile"] = FS_createLazyFile;
 
 var calledRun;
 
+var calledPrerun;
+
 dependenciesFulfilled = function runCaller() {
   // If run has never been called, and we should call run (INVOKE_RUN is true, and Module.noInitialRun is not false)
   if (!calledRun) run();
@@ -13663,17 +13659,20 @@ function run(args = arguments_) {
   if (runDependencies > 0) {
     return;
   }
-  preRun();
-  // a preRun added a dependency, run will be called later
-  if (runDependencies > 0) {
-    return;
+  if (!calledPrerun) {
+    calledPrerun = 1;
+    preRun();
+    // a preRun added a dependency, run will be called later
+    if (runDependencies > 0) {
+      return;
+    }
   }
   function doRun() {
     // run may have just been called through dependencies being fulfilled just in this very frame,
     // or while the async setStatus time below was happening
     if (calledRun) return;
-    calledRun = true;
-    Module["calledRun"] = true;
+    calledRun = 1;
+    Module["calledRun"] = 1;
     if (ABORT) return;
     initRuntime();
     preMain();
