@@ -551,14 +551,14 @@ var tempI64;
 // end include: runtime_debug.js
 // === Body ===
 var ASM_CONSTS = {
-  1949292: () => {
+  1945676: () => {
     FS.syncfs(function(err) {
       if (err) {
         console.error(err);
       }
     });
   },
-  1949356: $0 => {
+  1945740: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -566,10 +566,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1949581: ($0, $1) => {
+  1945965: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1949638: () => {
+  1946022: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -577,7 +577,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1949785: () => {
+  1946169: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -585,7 +585,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1950019: $0 => {
+  1946403: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -607,11 +607,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1950512: () => {
+  1946896: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1950580: ($0, $1, $2, $3) => {
+  1946964: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -652,7 +652,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1952232: ($0, $1, $2, $3) => {
+  1948616: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -664,7 +664,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1952642: ($0, $1) => {
+  1949026: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -683,7 +683,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1953247: ($0, $1) => {
+  1949631: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -696,7 +696,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1953727: $0 => {
+  1950111: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -734,7 +734,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1954899: ($0, $1, $2) => {
+  1951283: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -805,7 +805,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1956368: ($0, $1, $2, $3, $4) => {
+  1952752: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -842,18 +842,35 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1957357: $0 => {
+  1953741: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1957440: () => {
+  1953824: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1957509: () => window.innerWidth,
-  1957539: () => window.innerHeight
+  1953893: () => window.innerWidth,
+  1953923: () => window.innerHeight,
+  1953954: $0 => {
+    try {
+      const context = GL.getContext($0);
+      if (!context) {
+        console.error("Failed to get gl context from handle");
+        return;
+      }
+      const epv = context.GLctx.getExtension("WEBGL_provoking_vertex");
+      if (epv) {
+        epv.provokingVertexWEBGL(epv.FIRST_VERTEX_CONVENTION_WEBGL);
+      } else {
+        console.warn("WEBGL_provoking_vertex is not supported. Using flat shading may result in catastrophic performance degradation.");
+      }
+    } catch (error) {
+      console.error("An unexpected error occurred while setting the first vertex convention: ", error, "\nUsing flat shading may result in catastrophic performance degradation.");
+    }
+  }
 };
 
 function ImGui_ImplSDL2_EmscriptenOpenURL(url) {
@@ -12532,6 +12549,32 @@ function _getDataChannelOrdered(dc) {
   }
 }
 
+var _glDrawArraysInstancedBaseInstanceWEBGL = (mode, first, count, instanceCount, baseInstance) => {
+  GLctx.dibvbi["drawArraysInstancedBaseInstanceWEBGL"](mode, first, count, instanceCount, baseInstance);
+};
+
+var _glDrawElementsInstancedBaseVertexBaseInstanceWEBGL = (mode, count, type, offset, instanceCount, baseVertex, baseinstance) => {
+  GLctx.dibvbi["drawElementsInstancedBaseVertexBaseInstanceWEBGL"](mode, count, type, offset, instanceCount, baseVertex, baseinstance);
+};
+
+var _glGetBufferSubData = (target, offset, size, data) => {
+  if (!data) {
+    // GLES2 specification does not specify how to behave if data is a null pointer. Since calling this function does not make sense
+    // if data == null, issue a GL error to notify user about it.
+    GL.recordError(1281);
+    /* GL_INVALID_VALUE */ return;
+  }
+  size && GLctx.getBufferSubData(target, offset, HEAPU8, data, size);
+};
+
+var _glMultiDrawArraysWEBGL = (mode, firsts, counts, drawcount) => {
+  GLctx.multiDrawWebgl["multiDrawArraysWEBGL"](mode, HEAP32, ((firsts) >> 2), HEAP32, ((counts) >> 2), drawcount);
+};
+
+var _glMultiDrawElementsWEBGL = (mode, counts, type, offsets, drawcount) => {
+  GLctx.multiDrawWebgl["multiDrawElementsWEBGL"](mode, HEAP32, ((counts) >> 2), type, HEAP32, ((offsets) >> 2), drawcount);
+};
+
 function _rtcAddRemoteCandidate(pc, pCandidate, pSdpMid) {
   var iceCandidate = new RTCIceCandidate({
     candidate: UTF8ToString(pCandidate),
@@ -13010,6 +13053,7 @@ var wasmImports = {
   /** @export */ emscripten_date_now: _emscripten_date_now,
   /** @export */ emscripten_exit_fullscreen: _emscripten_exit_fullscreen,
   /** @export */ emscripten_exit_pointerlock: _emscripten_exit_pointerlock,
+  /** @export */ emscripten_get_canvas_element_size: _emscripten_get_canvas_element_size,
   /** @export */ emscripten_get_device_pixel_ratio: _emscripten_get_device_pixel_ratio,
   /** @export */ emscripten_get_element_css_size: _emscripten_get_element_css_size,
   /** @export */ emscripten_get_gamepad_status: _emscripten_get_gamepad_status,
@@ -13361,6 +13405,8 @@ var wasmImports = {
   /** @export */ glCheckFramebufferStatus: _glCheckFramebufferStatus,
   /** @export */ glClear: _glClear,
   /** @export */ glClearBufferfv: _glClearBufferfv,
+  /** @export */ glClearBufferiv: _glClearBufferiv,
+  /** @export */ glClearBufferuiv: _glClearBufferuiv,
   /** @export */ glClearDepthf: _glClearDepthf,
   /** @export */ glClearStencil: _glClearStencil,
   /** @export */ glClientWaitSync: _glClientWaitSync,
@@ -13369,6 +13415,8 @@ var wasmImports = {
   /** @export */ glCompressedTexSubImage2D: _glCompressedTexSubImage2D,
   /** @export */ glCompressedTexSubImage3D: _glCompressedTexSubImage3D,
   /** @export */ glCopyBufferSubData: _glCopyBufferSubData,
+  /** @export */ glCopyTexSubImage2D: _glCopyTexSubImage2D,
+  /** @export */ glCopyTexSubImage3D: _glCopyTexSubImage3D,
   /** @export */ glCreateProgram: _glCreateProgram,
   /** @export */ glCreateShader: _glCreateShader,
   /** @export */ glCullFace: _glCullFace,
@@ -13388,9 +13436,11 @@ var wasmImports = {
   /** @export */ glDisable: _glDisable,
   /** @export */ glDrawArrays: _glDrawArrays,
   /** @export */ glDrawArraysInstanced: _glDrawArraysInstanced,
+  /** @export */ glDrawArraysInstancedBaseInstanceWEBGL: _glDrawArraysInstancedBaseInstanceWEBGL,
   /** @export */ glDrawBuffers: _glDrawBuffers,
   /** @export */ glDrawElements: _glDrawElements,
   /** @export */ glDrawElementsInstanced: _glDrawElementsInstanced,
+  /** @export */ glDrawElementsInstancedBaseVertexBaseInstanceWEBGL: _glDrawElementsInstancedBaseVertexBaseInstanceWEBGL,
   /** @export */ glEnable: _glEnable,
   /** @export */ glEnableVertexAttribArray: _glEnableVertexAttribArray,
   /** @export */ glEndQuery: _glEndQuery,
@@ -13414,6 +13464,7 @@ var wasmImports = {
   /** @export */ glGetActiveUniformsiv: _glGetActiveUniformsiv,
   /** @export */ glGetAttribLocation: _glGetAttribLocation,
   /** @export */ glGetBufferParameteriv: _glGetBufferParameteriv,
+  /** @export */ glGetBufferSubData: _glGetBufferSubData,
   /** @export */ glGetError: _glGetError,
   /** @export */ glGetIntegerv: _glGetIntegerv,
   /** @export */ glGetProgramInfoLog: _glGetProgramInfoLog,
@@ -13428,7 +13479,8 @@ var wasmImports = {
   /** @export */ glGetUniformLocation: _glGetUniformLocation,
   /** @export */ glInvalidateFramebuffer: _glInvalidateFramebuffer,
   /** @export */ glLinkProgram: _glLinkProgram,
-  /** @export */ glMapBufferRange: _glMapBufferRange,
+  /** @export */ glMultiDrawArraysWEBGL: _glMultiDrawArraysWEBGL,
+  /** @export */ glMultiDrawElementsWEBGL: _glMultiDrawElementsWEBGL,
   /** @export */ glPixelStorei: _glPixelStorei,
   /** @export */ glPolygonOffset: _glPolygonOffset,
   /** @export */ glProgramParameteri: _glProgramParameteri,
@@ -13448,7 +13500,6 @@ var wasmImports = {
   /** @export */ glTexSubImage3D: _glTexSubImage3D,
   /** @export */ glUniform1i: _glUniform1i,
   /** @export */ glUniformBlockBinding: _glUniformBlockBinding,
-  /** @export */ glUnmapBuffer: _glUnmapBuffer,
   /** @export */ glUseProgram: _glUseProgram,
   /** @export */ glVertexAttribDivisor: _glVertexAttribDivisor,
   /** @export */ glVertexAttribIPointer: _glVertexAttribIPointer,
