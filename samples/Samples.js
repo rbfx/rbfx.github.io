@@ -551,14 +551,14 @@ var tempI64;
 // end include: runtime_debug.js
 // === Body ===
 var ASM_CONSTS = {
-  1946364: () => {
+  1946412: () => {
     FS.syncfs(function(err) {
       if (err) {
         console.error(err);
       }
     });
   },
-  1946428: $0 => {
+  1946476: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -566,10 +566,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1946653: ($0, $1) => {
+  1946701: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1946710: () => {
+  1946758: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -577,7 +577,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1946857: () => {
+  1946905: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -585,7 +585,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1947091: $0 => {
+  1947139: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -607,11 +607,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1947584: () => {
+  1947632: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1947652: ($0, $1, $2, $3) => {
+  1947700: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -652,7 +652,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1949304: ($0, $1, $2, $3) => {
+  1949352: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -664,7 +664,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1949714: ($0, $1) => {
+  1949762: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -683,7 +683,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1950319: ($0, $1) => {
+  1950367: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -696,7 +696,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1950799: $0 => {
+  1950847: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -734,7 +734,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1951971: ($0, $1, $2) => {
+  1952019: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -805,7 +805,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1953440: ($0, $1, $2, $3, $4) => {
+  1953488: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -842,19 +842,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1954429: $0 => {
+  1954477: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1954512: () => {
+  1954560: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1954581: () => window.innerWidth,
-  1954611: () => window.innerHeight,
-  1954642: $0 => {
+  1954629: () => window.innerWidth,
+  1954659: () => window.innerHeight,
+  1954690: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
@@ -5558,16 +5558,14 @@ var ensureOverloadTable = (proto, methodName, humanName) => {
     // We are exposing a function with the same name as an existing function. Create an overload table and a function selector
     // that routes between the two.
     ensureOverloadTable(Module, name, name);
-    if (Module.hasOwnProperty(numArguments)) {
+    if (Module[name].overloadTable.hasOwnProperty(numArguments)) {
       throwBindingError(`Cannot register multiple overloads of a function with the same number of arguments (${numArguments})!`);
     }
     // Add the new function into the overload table.
     Module[name].overloadTable[numArguments] = value;
   } else {
     Module[name] = value;
-    if (undefined !== numArguments) {
-      Module[name].numArguments = numArguments;
-    }
+    Module[name].argCount = numArguments;
   }
 };
 
