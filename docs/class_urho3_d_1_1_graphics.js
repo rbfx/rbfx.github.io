@@ -16,7 +16,6 @@ var class_urho3_d_1_1_graphics =
     [ "GetDisplayDPI", "class_urho3_d_1_1_graphics.html#a2c84d6aa86c8a355f4a85c9d2409702b", null ],
     [ "GetDummyColorFormat", "class_urho3_d_1_1_graphics.html#a64111386130737cefb87b6b266c8b46c", null ],
     [ "GetExternalWindow", "class_urho3_d_1_1_graphics.html#a3ed79b54e756e6ee2f49891662bce1bb", null ],
-    [ "GetFormat", "class_urho3_d_1_1_graphics.html#ac580bc018289722fc327a5a9d6d24c27", null ],
     [ "GetFullscreen", "class_urho3_d_1_1_graphics.html#accb3cf82f51059fa7a709b49c5127f35", null ],
     [ "GetGL3Support", "class_urho3_d_1_1_graphics.html#af6dd8e4ede9137976b0f178caa511127", null ],
     [ "GetHardwareShadowSupport", "class_urho3_d_1_1_graphics.html#a32c37d1484583eb15c9bdc243a47b4b9", null ],

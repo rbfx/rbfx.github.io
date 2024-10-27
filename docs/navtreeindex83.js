@@ -1,5 +1,7 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_joystick_state.html#ab822ab482dec21f64a7072aab0c4a933":[8,0,2,323,14],
+"struct_urho3_d_1_1_joystick_state.html#ae2a9cb737bb308f5a7963b562204f189":[8,0,2,323,21],
 "struct_urho3_d_1_1_joystick_state.html#ae30b4420cfd726994d49b34a52861120":[8,0,2,323,3],
 "struct_urho3_d_1_1_joystick_state.html#ae680d7db8a0bd70d3765a0d8ac2aca10":[8,0,2,323,15],
 "struct_urho3_d_1_1_joystick_state.html#af86d5ff5f7349c1d130839c846646f7c":[8,0,2,323,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_model_vertex.html#a0375b15126f44daec433af12f6f82080":[8,0,2,392,2],
 "struct_urho3_d_1_1_model_vertex.html#a087618c28205f5ccdbe9486ca80c46c5":[8,0,2,392,29],
 "struct_urho3_d_1_1_model_vertex.html#a10d542721719ab9fd92ec527e40ee9eb":[8,0,2,392,1],
-"struct_urho3_d_1_1_model_vertex.html#a111727284176d4ec340350dfa3e38a2d":[8,0,2,392,24],
-"struct_urho3_d_1_1_model_vertex.html#a1e91083f746f2552a94fc39a721f64fa":[8,0,2,392,17],
-"struct_urho3_d_1_1_model_vertex.html#a21e219fc5e0341e9db5d421b23a6d195":[8,0,2,392,20]
+"struct_urho3_d_1_1_model_vertex.html#a111727284176d4ec340350dfa3e38a2d":[8,0,2,392,24]
 };
