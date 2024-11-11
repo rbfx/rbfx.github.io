@@ -1,36 +1,30 @@
 
   var Module = typeof Module != 'undefined' ? Module : {};
 
-  if (!Module['expectedDataFileDownloads']) {
-    Module['expectedDataFileDownloads'] = 0;
-  }
-
+  Module['expectedDataFileDownloads'] ??= 0;
   Module['expectedDataFileDownloads']++;
   (() => {
     // Do not attempt to redownload the virtual filesystem data when in a pthread or a Wasm Worker context.
     var isPthread = typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD;
     var isWasmWorker = typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER;
     if (isPthread || isWasmWorker) return;
+    var isNode = typeof process === 'object' && typeof process.versions === 'object' && typeof process.versions.node === 'string';
     function loadPackage(metadata) {
 
       var PACKAGE_PATH = '';
       if (typeof window === 'object') {
-        PACKAGE_PATH = window['encodeURIComponent'](window.location.pathname.toString().substring(0, window.location.pathname.toString().lastIndexOf('/')) + '/');
+        PACKAGE_PATH = window['encodeURIComponent'](window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/')) + '/');
       } else if (typeof process === 'undefined' && typeof location !== 'undefined') {
         // web worker
-        PACKAGE_PATH = encodeURIComponent(location.pathname.toString().substring(0, location.pathname.toString().lastIndexOf('/')) + '/');
+        PACKAGE_PATH = encodeURIComponent(location.pathname.substring(0, location.pathname.lastIndexOf('/')) + '/');
       }
       var PACKAGE_NAME = '/home/runner/work/rbfx/rbfx/cmake-build/bin/Resources.js.data';
       var REMOTE_PACKAGE_BASE = 'Resources.js.data';
-      if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
-        Module['locateFile'] = Module['locateFilePackage'];
-        err('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
-      }
       var REMOTE_PACKAGE_NAME = Module['locateFile'] ? Module['locateFile'](REMOTE_PACKAGE_BASE, '') : REMOTE_PACKAGE_BASE;
 var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
 
       function fetchRemotePackage(packageName, packageSize, callback, errback) {
-        if (typeof process === 'object' && typeof process.versions === 'object' && typeof process.versions.node === 'string') {
+        if (isNode) {
           require('fs').readFile(packageName, (err, contents) => {
             if (err) {
               errback(err);
@@ -137,15 +131,6 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
       }
 
         var PACKAGE_UUID = metadata['package_uuid'];
-        var indexedDB;
-        if (typeof window === 'object') {
-          indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-        } else if (typeof location !== 'undefined') {
-          // worker
-          indexedDB = self.indexedDB;
-        } else {
-          throw 'using IndexedDB to cache data can only be done on a web page or in a web worker';
-        }
         var IDB_RO = "readonly";
         var IDB_RW = "readwrite";
         var DB_NAME = "EM_PRELOAD_CACHE";
@@ -153,6 +138,18 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
         var METADATA_STORE_NAME = 'METADATA';
         var PACKAGE_STORE_NAME = 'PACKAGES';
         function openDatabase(callback, errback) {
+          if (isNode) {
+            return errback();
+          }
+          var indexedDB;
+          if (typeof window === 'object') {
+            indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+          } else if (typeof location !== 'undefined') {
+            // worker
+            indexedDB = self.indexedDB;
+          } else {
+            throw 'using IndexedDB to cache data can only be done on a web page or in a web worker';
+          }
           try {
             var openRequest = indexedDB.open(DB_NAME, DB_VERSION);
           } catch (e) {
@@ -305,7 +302,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
       };
       Module['addRunDependency']('datafile_/home/runner/work/rbfx/rbfx/cmake-build/bin/Resources.js.data');
 
-      if (!Module['preloadResults']) Module['preloadResults'] = {};
+      Module['preloadResults'] ??= {};
 
         function preloadFallback(error) {
           console.error(error);
@@ -339,11 +336,10 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
     if (Module['calledRun']) {
       runWithFS(Module);
     } else {
-      if (!Module['preRun']) Module['preRun'] = [];
-      Module["preRun"].push(runWithFS); // FS is not initialized yet, wait for it
+      (Module['preRun'] ??= []).push(runWithFS); // FS is not initialized yet, wait for it
     }
 
     }
-    loadPackage({"files": [{"filename": "/CoreData.pak", "start": 0, "end": 698861}, {"filename": "/Data.pak", "start": 698861, "end": 48408474}], "remote_package_size": 48408474, "package_uuid": "sha256-7734601e4af5304654207a5833a033730b5f14faa8807a9e1ca4f5ffd960e4c5"});
+    loadPackage({"files": [{"filename": "/CoreData.pak", "start": 0, "end": 699341}, {"filename": "/Data.pak", "start": 699341, "end": 48424472}], "remote_package_size": 48424472, "package_uuid": "sha256-41c22b67dd52f52d33c4a65be003443ba249802ea2d31864147212076a17be4e"});
 
   })();

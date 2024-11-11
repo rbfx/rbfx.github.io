@@ -19,7 +19,7 @@ var Module = typeof Module != "undefined" ? Module : {};
 // Attempt to auto-detect the environment
 var ENVIRONMENT_IS_WEB = typeof window == "object";
 
-var ENVIRONMENT_IS_WORKER = typeof importScripts == "function";
+var ENVIRONMENT_IS_WORKER = typeof WorkerGlobalScope != "undefined";
 
 // N.b. Electron.js environment is simultaneously a NODE-environment, but
 // also a web environment.
@@ -290,10 +290,11 @@ var __ATPOSTRUN__ = [];
 var runtimeInitialized = false;
 
 function preRun() {
-  var preRuns = Module["preRun"];
-  if (preRuns) {
-    if (typeof preRuns == "function") preRuns = [ preRuns ];
-    preRuns.forEach(addOnPreRun);
+  if (Module["preRun"]) {
+    if (typeof Module["preRun"] == "function") Module["preRun"] = [ Module["preRun"] ];
+    while (Module["preRun"].length) {
+      addOnPreRun(Module["preRun"].shift());
+    }
   }
   callRuntimeCallbacks(__ATPRERUN__);
 }
@@ -312,10 +313,11 @@ function preMain() {
 }
 
 function postRun() {
-  var postRuns = Module["postRun"];
-  if (postRuns) {
-    if (typeof postRuns == "function") postRuns = [ postRuns ];
-    postRuns.forEach(addOnPostRun);
+  if (Module["postRun"]) {
+    if (typeof Module["postRun"] == "function") Module["postRun"] = [ Module["postRun"] ];
+    while (Module["postRun"].length) {
+      addOnPostRun(Module["postRun"].shift());
+    }
   }
   callRuntimeCallbacks(__ATPOSTRUN__);
 }
@@ -551,14 +553,14 @@ var tempI64;
 // end include: runtime_debug.js
 // === Body ===
 var ASM_CONSTS = {
-  1946476: () => {
+  1947244: () => {
     FS.syncfs(function(err) {
       if (err) {
         console.error(err);
       }
     });
   },
-  1946540: $0 => {
+  1947308: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -566,10 +568,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1946765: ($0, $1) => {
+  1947533: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1946822: () => {
+  1947590: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -577,7 +579,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1946969: () => {
+  1947737: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -585,7 +587,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1947203: $0 => {
+  1947971: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -607,11 +609,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1947696: () => {
+  1948464: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1947764: ($0, $1, $2, $3) => {
+  1948532: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -652,7 +654,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1949416: ($0, $1, $2, $3) => {
+  1950184: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -664,7 +666,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1949826: ($0, $1) => {
+  1950594: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -683,7 +685,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1950431: ($0, $1) => {
+  1951199: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -696,7 +698,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1950911: $0 => {
+  1951679: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -734,7 +736,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1952083: ($0, $1, $2) => {
+  1952851: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -805,7 +807,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1953552: ($0, $1, $2, $3, $4) => {
+  1954320: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -842,19 +844,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1954541: $0 => {
+  1955309: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1954624: () => {
+  1955392: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1954693: () => window.innerWidth,
-  1954723: () => window.innerHeight,
-  1954754: $0 => {
+  1955461: () => window.innerWidth,
+  1955491: () => window.innerHeight,
+  1955522: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
@@ -879,15 +881,19 @@ function ImGui_ImplSDL2_EmscriptenOpenURL(url) {
 }
 
 // end include: preamble.js
-/** @constructor */ function ExitStatus(status) {
-  this.name = "ExitStatus";
-  this.message = `Program terminated with exit(${status})`;
-  this.status = status;
+class ExitStatus {
+  name="ExitStatus";
+  constructor(status) {
+    this.message = `Program terminated with exit(${status})`;
+    this.status = status;
+  }
 }
 
 var callRuntimeCallbacks = callbacks => {
-  // Pass the module as the first argument.
-  callbacks.forEach(f => f(Module));
+  while (callbacks.length > 0) {
+    // Pass the module as the first argument.
+    callbacks.shift()(Module);
+  }
 };
 
 var noExitRuntime = Module["noExitRuntime"] || true;
@@ -2255,6 +2261,7 @@ var FS = {
   initialized: false,
   ignorePermissions: true,
   ErrnoError: class {
+    name="ErrnoError";
     // We set the `name` property to be able to identify `FS.ErrnoError`
     // - the `name` is a standard ECMA-262 property of error objects. Kind of good to have it anyway.
     // - when using PROXYFS, an error can come from an underlying FS
@@ -2262,9 +2269,6 @@ var FS = {
     // the test `err instanceof FS.ErrnoError` won't detect an error coming from another filesystem, causing bugs.
     // we'll use the reliable test `err.name == "ErrnoError"` instead
     constructor(errno) {
-      // TODO(sbc): Use the inline member declaration syntax once we
-      // support it in acorn and closure.
-      this.name = "ErrnoError";
       this.errno = errno;
     }
   },
@@ -2273,11 +2277,7 @@ var FS = {
   syncFSRequests: 0,
   readFiles: {},
   FSStream: class {
-    constructor() {
-      // TODO(https://github.com/emscripten-core/emscripten/issues/21414):
-      // Use inline field declarations.
-      this.shared = {};
-    }
+    shared={};
     get object() {
       return this.node;
     }
@@ -2307,6 +2307,11 @@ var FS = {
     }
   },
   FSNode: class {
+    node_ops={};
+    stream_ops={};
+    readMode=292 | 73;
+    writeMode=146;
+    mounted=null;
     constructor(parent, name, mode, rdev) {
       if (!parent) {
         parent = this;
@@ -2314,15 +2319,10 @@ var FS = {
       // root node sets parent to itself
       this.parent = parent;
       this.mount = parent.mount;
-      this.mounted = null;
       this.id = FS.nextInode++;
       this.name = name;
       this.mode = mode;
-      this.node_ops = {};
-      this.stream_ops = {};
       this.rdev = rdev;
-      this.readMode = 292 | 73;
-      this.writeMode = 146;
     }
     get read() {
       return (this.mode & this.readMode) === this.readMode;
@@ -3644,10 +3644,8 @@ var FS = {
     // Lazy chunked Uint8Array (implements get and length from Uint8Array).
     // Actual getting is abstracted away for eventual reuse.
     class LazyUint8Array {
-      constructor() {
-        this.lengthKnown = false;
-        this.chunks = [];
-      }
+      lengthKnown=false;
+      chunks=[];
       // Loaded chunks. Index is the chunk number
       get(idx) {
         if (idx > this.length - 1 || idx < 0) {
@@ -3813,26 +3811,22 @@ var FS = {
 };
 
 var SOCKFS = {
+  websocketArgs: {},
+  callbacks: {},
+  on(event, callback) {
+    SOCKFS.callbacks[event] = callback;
+  },
+  emit(event, param) {
+    SOCKFS.callbacks[event]?.(param);
+  },
   mount(mount) {
-    // If Module['websocket'] has already been defined (e.g. for configuring
-    // the subprotocol/url) use that, if not initialise it to a new object.
-    Module["websocket"] = (Module["websocket"] && ("object" === typeof Module["websocket"])) ? Module["websocket"] : {};
+    // The incomming Module['websocket'] can be used for configuring 
+    // configuring subprotocol/url, etc
+    SOCKFS.websocketArgs = Module["websocket"] || {};
     // Add the Event registration mechanism to the exported websocket configuration
     // object so we can register network callbacks from native JavaScript too.
     // For more documentation see system/include/emscripten/emscripten.h
-    Module["websocket"]._callbacks = {};
-    Module["websocket"]["on"] = /** @this{Object} */ function(event, callback) {
-      if ("function" === typeof callback) {
-        this._callbacks[event] = callback;
-      }
-      return this;
-    };
-    Module["websocket"].emit = /** @this{Object} */ function(event, param) {
-      if ("function" === typeof this._callbacks[event]) {
-        this._callbacks[event].call(this, param);
-      }
-    };
-    // If debug is enabled register simple default logging callbacks for each Event.
+    (Module["websocket"] ??= {})["on"] = SOCKFS.on;
     return FS.createNode(null, "/", 16384 | 511, /* 0777 */ 0);
   },
   createSocket(family, type, protocol) {
@@ -3941,41 +3935,34 @@ var SOCKFS = {
       } else {
         // create the actual websocket object and connect
         try {
-          // runtimeConfig gets set to true if WebSocket runtime configuration is available.
-          var runtimeConfig = (Module["websocket"] && ("object" === typeof Module["websocket"]));
           // The default value is 'ws://' the replace is needed because the compiler replaces '//' comments with '#'
           // comments without checking context, so we'd end up with ws:#, the replace swaps the '#' for '//' again.
           var url = "ws:#".replace("#", "//");
-          if (runtimeConfig) {
-            if ("string" === typeof Module["websocket"]["url"]) {
-              url = Module["websocket"]["url"];
-            }
+          // Make the WebSocket subprotocol (Sec-WebSocket-Protocol) default to binary if no configuration is set.
+          var subProtocols = "binary";
+          // The default value is 'binary'
+          // The default WebSocket options
+          var opts = undefined;
+          // Fetch runtime WebSocket URL config.
+          if (SOCKFS.websocketArgs["url"]) {
+            url = SOCKFS.websocketArgs["url"];
+          }
+          // Fetch runtime WebSocket subprotocol config.
+          if (SOCKFS.websocketArgs["subprotocol"]) {
+            subProtocols = SOCKFS.websocketArgs["subprotocol"];
+          } else if (SOCKFS.websocketArgs["subprotocol"] === null) {
+            subProtocols = "null";
           }
           if (url === "ws://" || url === "wss://") {
             // Is the supplied URL config just a prefix, if so complete it.
             var parts = addr.split("/");
             url = url + parts[0] + ":" + port + "/" + parts.slice(1).join("/");
           }
-          // Make the WebSocket subprotocol (Sec-WebSocket-Protocol) default to binary if no configuration is set.
-          var subProtocols = "binary";
-          // The default value is 'binary'
-          if (runtimeConfig) {
-            if ("string" === typeof Module["websocket"]["subprotocol"]) {
-              subProtocols = Module["websocket"]["subprotocol"];
-            }
-          }
-          // The default WebSocket options
-          var opts = undefined;
           if (subProtocols !== "null") {
             // The regex trims the string (removes spaces at the beginning and end, then splits the string by
             // <any space>,<any space> into an Array. Whitespace removal is important for Websockify and ws.
             subProtocols = subProtocols.replace(/^ +| +$/g, "").split(/ *, */);
             opts = subProtocols;
-          }
-          // some webservers (azure) does not support subprotocol header
-          if (runtimeConfig && null === Module["websocket"]["subprotocol"]) {
-            subProtocols = "null";
-            opts = undefined;
           }
           // If node we use the ws library.
           var WebSocketConstructor;
@@ -4018,7 +4005,8 @@ var SOCKFS = {
     handlePeerEvents(sock, peer) {
       var first = true;
       var handleOpen = function() {
-        Module["websocket"].emit("open", sock.stream.fd);
+        sock.connecting = false;
+        SOCKFS.emit("open", sock.stream.fd);
         try {
           var queued = peer.msg_send_queue.shift();
           while (queued) {
@@ -4064,7 +4052,7 @@ var SOCKFS = {
           port: peer.port,
           data
         });
-        Module["websocket"].emit("message", sock.stream.fd);
+        SOCKFS.emit("message", sock.stream.fd);
       }
       if (ENVIRONMENT_IS_NODE) {
         peer.socket.on("open", handleOpen);
@@ -4076,7 +4064,7 @@ var SOCKFS = {
         });
         // copy from node Buffer -> ArrayBuffer
         peer.socket.on("close", function() {
-          Module["websocket"].emit("close", sock.stream.fd);
+          SOCKFS.emit("close", sock.stream.fd);
         });
         peer.socket.on("error", function(error) {
           // Although the ws library may pass errors that may be more descriptive than
@@ -4085,12 +4073,12 @@ var SOCKFS = {
           // is still probably the most useful thing to do.
           sock.error = 14;
           // Used in getsockopt for SOL_SOCKET/SO_ERROR test.
-          Module["websocket"].emit("error", [ sock.stream.fd, sock.error, "ECONNREFUSED: Connection refused" ]);
+          SOCKFS.emit("error", [ sock.stream.fd, sock.error, "ECONNREFUSED: Connection refused" ]);
         });
       } else {
         peer.socket.onopen = handleOpen;
         peer.socket.onclose = function() {
-          Module["websocket"].emit("close", sock.stream.fd);
+          SOCKFS.emit("close", sock.stream.fd);
         };
         peer.socket.onmessage = function peer_socket_onmessage(event) {
           handleMessage(event.data);
@@ -4100,7 +4088,7 @@ var SOCKFS = {
           // so we only really know as much as ECONNREFUSED.
           sock.error = 14;
           // Used in getsockopt for SOL_SOCKET/SO_ERROR test.
-          Module["websocket"].emit("error", [ sock.stream.fd, sock.error, "ECONNREFUSED: Connection refused" ]);
+          SOCKFS.emit("error", [ sock.stream.fd, sock.error, "ECONNREFUSED: Connection refused" ]);
         };
       }
     },
@@ -4123,7 +4111,15 @@ var SOCKFS = {
         mask |= 4;
       }
       if ((dest && dest.socket.readyState === dest.socket.CLOSING) || (dest && dest.socket.readyState === dest.socket.CLOSED)) {
-        mask |= 16;
+        // When an non-blocking connect fails mark the socket as writable.
+        // Its up to the calling code to then use getsockopt with SO_ERROR to
+        // retrieve the error.
+        // See https://man7.org/linux/man-pages/man2/connect.2.html
+        if (sock.connecting) {
+          mask |= 4;
+        } else {
+          mask |= 16;
+        }
       }
       return mask;
     },
@@ -4209,10 +4205,11 @@ var SOCKFS = {
       var peer = SOCKFS.websocket_sock_ops.createPeer(sock, addr, port);
       sock.daddr = peer.addr;
       sock.dport = peer.port;
+      // because we cannot synchronously block to wait for the WebSocket
+      // connection to complete, we return here pretending that the connection
+      // was a success.
+      sock.connecting = true;
     },
-    // because we cannot synchronously block to wait for the WebSocket
-    // connection to complete, we return here pretending that the connection
-    // was a success.
     listen(sock, backlog) {
       if (!ENVIRONMENT_IS_NODE) {
         throw new FS.ErrnoError(138);
@@ -4228,7 +4225,7 @@ var SOCKFS = {
         port: sock.sport
       });
       // TODO support backlog
-      Module["websocket"].emit("listen", sock.stream.fd);
+      SOCKFS.emit("listen", sock.stream.fd);
       // Send Event with listen fd.
       sock.server.on("connection", function(ws) {
         if (sock.type === 1) {
@@ -4239,17 +4236,17 @@ var SOCKFS = {
           newsock.dport = peer.port;
           // push to queue for accept to pick up
           sock.pending.push(newsock);
-          Module["websocket"].emit("connection", newsock.stream.fd);
+          SOCKFS.emit("connection", newsock.stream.fd);
         } else {
           // create a peer on the listen socket so calling sendto
           // with the listen socket and an address will resolve
           // to the correct client
           SOCKFS.websocket_sock_ops.createPeer(sock, ws);
-          Module["websocket"].emit("connection", sock.stream.fd);
+          SOCKFS.emit("connection", sock.stream.fd);
         }
       });
       sock.server.on("close", function() {
-        Module["websocket"].emit("close", sock.stream.fd);
+        SOCKFS.emit("close", sock.stream.fd);
         sock.server = null;
       });
       sock.server.on("error", function(error) {
@@ -4261,7 +4258,7 @@ var SOCKFS = {
         // app's own getaddrinfo call.
         sock.error = 23;
         // Used in getsockopt for SOL_SOCKET/SO_ERROR test.
-        Module["websocket"].emit("error", [ sock.stream.fd, sock.error, "EHOSTUNREACH: Host is unreachable" ]);
+        SOCKFS.emit("error", [ sock.stream.fd, sock.error, "EHOSTUNREACH: Host is unreachable" ]);
       });
     },
     // don't throw
@@ -4644,12 +4641,12 @@ function ___syscall_bind(fd, addr, addrlen, d1, d2, d3) {
   }
 }
 
-/** @suppress {duplicate } */ function syscallGetVarargI() {
+/** @suppress {duplicate } */ var syscallGetVarargI = () => {
   // the `+` prepended here is necessary to convince the JSCompiler that varargs is indeed a number.
   var ret = HEAP32[((+SYSCALLS.varargs) >> 2)];
   SYSCALLS.varargs += 4;
   return ret;
-}
+};
 
 var syscallGetVarargP = syscallGetVarargI;
 
@@ -11791,12 +11788,8 @@ var _emscripten_sleep = () => {
 };
 
 class HandleAllocator {
-  constructor() {
-    // TODO(https://github.com/emscripten-core/emscripten/issues/21414):
-    // Use inline field declarations.
-    this.allocated = [ undefined ];
-    this.freelist = [];
-  }
+  allocated=[ undefined ];
+  freelist=[];
   get(id) {
     return this.allocated[id];
   }
@@ -13674,8 +13667,6 @@ Module["FS_createLazyFile"] = FS_createLazyFile;
 
 var calledRun;
 
-var calledPrerun;
-
 dependenciesFulfilled = function runCaller() {
   // If run has never been called, and we should call run (INVOKE_RUN is true, and Module.noInitialRun is not false)
   if (!calledRun) run();
@@ -13708,20 +13699,17 @@ function run(args = arguments_) {
   if (runDependencies > 0) {
     return;
   }
-  if (!calledPrerun) {
-    calledPrerun = 1;
-    preRun();
-    // a preRun added a dependency, run will be called later
-    if (runDependencies > 0) {
-      return;
-    }
+  preRun();
+  // a preRun added a dependency, run will be called later
+  if (runDependencies > 0) {
+    return;
   }
   function doRun() {
     // run may have just been called through dependencies being fulfilled just in this very frame,
     // or while the async setStatus time below was happening
     if (calledRun) return;
-    calledRun = 1;
-    Module["calledRun"] = 1;
+    calledRun = true;
+    Module["calledRun"] = true;
     if (ABORT) return;
     initRuntime();
     preMain();
