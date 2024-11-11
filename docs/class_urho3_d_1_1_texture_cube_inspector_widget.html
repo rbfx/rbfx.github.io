@@ -62,6 +62,7 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_texture_cube_inspect
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_urho3_d_1_1_texture_cube_inspector_widget-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -91,6 +92,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a447da7b64668c32beea350ff2f45dd74"><td class="memItemLeft" align="right" valign="top"><a id="a447da7b64668c32beea350ff2f45dd74"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TextureCubeInspectorWidget</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context, const ResourceVector &amp;resources)</td></tr>
 <tr class="separator:a447da7b64668c32beea350ff2f45dd74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7cb59a2a26879f06a92fa7efcae8379"><td class="memItemLeft" align="right" valign="top"><a id="ac7cb59a2a26879f06a92fa7efcae8379"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderContent</b> () override</td></tr>
+<tr class="separator:ac7cb59a2a26879f06a92fa7efcae8379"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a408bd6a4447723db4daa72a6cbb8cd"><td class="memItemLeft" align="right" valign="top"><a id="a6a408bd6a4447723db4daa72a6cbb8cd"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>CanSave</b> () const override</td></tr>
 <tr class="separator:a6a408bd6a4447723db4daa72a6cbb8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,9 +105,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>CanSave</b> () const 
 <tr class="memitem:ab4a5378e82e3f04584d84e95e3f10186 inherit pub_methods_class_urho3_d_1_1_resource_inspector_widget"><td class="memItemLeft" align="right" valign="top"><a id="ab4a5378e82e3f04584d84e95e3f10186"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderTitle</b> ()</td></tr>
 <tr class="separator:ab4a5378e82e3f04584d84e95e3f10186 inherit pub_methods_class_urho3_d_1_1_resource_inspector_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9c536000d48c9fc2ef1ce61ac252944 inherit pub_methods_class_urho3_d_1_1_resource_inspector_widget"><td class="memItemLeft" align="right" valign="top"><a id="ab9c536000d48c9fc2ef1ce61ac252944"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderContent</b> () override</td></tr>
-<tr class="separator:ab9c536000d48c9fc2ef1ce61ac252944 inherit pub_methods_class_urho3_d_1_1_resource_inspector_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a1013ee06d30c0abe359e320dcd83f1 inherit pub_methods_class_urho3_d_1_1_resource_inspector_widget"><td class="memItemLeft" align="right" valign="top"><a id="a0a1013ee06d30c0abe359e320dcd83f1"></a>
 const ResourceVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetResources</b> () const</td></tr>
 <tr class="separator:a0a1013ee06d30c0abe359e320dcd83f1 inherit pub_methods_class_urho3_d_1_1_resource_inspector_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -310,11 +311,23 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a03e7dc27ec80c26a883ca9319221d6c8"><td class="memItemLeft" align="right" valign="top"><a id="a03e7dc27ec80c26a883ca9319221d6c8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_texture_cube_inspector_widget.html">TextureCubeInspectorWidget</a>, <a class="el" href="class_urho3_d_1_1_resource_inspector_widget.html">ResourceInspectorWidget</a>)</td></tr>
 <tr class="separator:a03e7dc27ec80c26a883ca9319221d6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08e1c886f4c631c16a9a49d15eabe384"><td class="memItemLeft" align="right" valign="top"><a id="a08e1c886f4c631c16a9a49d15eabe384"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>GeneratePendingSH</b> ()</td></tr>
+<tr class="separator:a08e1c886f4c631c16a9a49d15eabe384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a22d604d6d195df5fc0f82fd62e1321dc"><td class="memItemLeft" align="right" valign="top"><a id="a22d604d6d195df5fc0f82fd62e1321dc"></a>
+ea::vector&lt; ea::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>texturesToGenerateSH_</b></td></tr>
+<tr class="separator:a22d604d6d195df5fc0f82fd62e1321dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc0e6eb56951ee56c371908b5dea84de"><td class="memItemLeft" align="right" valign="top"><a id="adc0e6eb56951ee56c371908b5dea84de"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_spherical_harmonics_generator.html">SphericalHarmonicsGenerator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>generator_</b></td></tr>
+<tr class="separator:adc0e6eb56951ee56c371908b5dea84de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a9f18651bc03e91d18e1f113652a817c3"><td class="memItemLeft" align="right" valign="top"><a id="a9f18651bc03e91d18e1f113652a817c3"></a>
-static const ea::vector&lt; PropertyDesc &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>properties</b></td></tr>
+static const ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_resource_inspector_widget_1_1_property_desc.html">PropertyDesc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>properties</b></td></tr>
 <tr class="separator:a9f18651bc03e91d18e1f113652a817c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>

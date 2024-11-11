@@ -9,6 +9,7 @@ var struct_urho3_d_1_1_scene_processor_settings =
     [ "directionalShadowSize_", "struct_urho3_d_1_1_scene_processor_settings.html#a11d40599591465958f060a0fc6c4408a", null ],
     [ "enableShadows_", "struct_urho3_d_1_1_scene_processor_settings.html#afab6603ea9e93ec76fce2d9af3bf1483", null ],
     [ "lightingMode_", "struct_urho3_d_1_1_scene_processor_settings.html#a8593d0bd77c84a839fd1d476e35522e8", null ],
+    [ "linearReflectionMaps_", "struct_urho3_d_1_1_scene_processor_settings.html#a3a55755f04ab31f512c4a4155d9119c4", null ],
     [ "pointShadowSize_", "struct_urho3_d_1_1_scene_processor_settings.html#a2e7dd16607cc14e3b79e1abbd2801bae", null ],
     [ "reflectionQuality_", "struct_urho3_d_1_1_scene_processor_settings.html#a7b4427214caf783fea5792744dad8024", null ],
     [ "specularQuality_", "struct_urho3_d_1_1_scene_processor_settings.html#a9418f554672ff1bb8c5af057f4972892", null ],

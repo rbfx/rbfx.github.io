@@ -1,0 +1,26 @@
+var struct_urho3_d_1_1_d_d_surface_desc2 =
+[
+    [ "ddckCKDestBlt_", "struct_urho3_d_1_1_d_d_surface_desc2.html#af96660236c7bbd5b1a23532669b46eb6", null ],
+    [ "ddckCKDestOverlay_", "struct_urho3_d_1_1_d_d_surface_desc2.html#a9f76525dbe018d244936912fc2d0687e", null ],
+    [ "ddckCKSrcBlt_", "struct_urho3_d_1_1_d_d_surface_desc2.html#a49039471848244ec3096a1ce058a8e2b", null ],
+    [ "ddckCKSrcOverlay_", "struct_urho3_d_1_1_d_d_surface_desc2.html#ab439996a20ab95ae59dc29afa114e371", null ],
+    [ "ddpfPixelFormat_", "struct_urho3_d_1_1_d_d_surface_desc2.html#a4f6e0ba08fa4fc10d21ac6b85f79a14a", null ],
+    [ "ddsCaps_", "struct_urho3_d_1_1_d_d_surface_desc2.html#a861deb57e44275b19e54a4438c666454", null ],
+    [ "dwAlphaBitDepth_", "struct_urho3_d_1_1_d_d_surface_desc2.html#a3ee250fc53334affe1c287753fc3a7f3", null ],
+    [ "dwBackBufferCount_", "struct_urho3_d_1_1_d_d_surface_desc2.html#abd3be1d91fb0068b325d5fa76114e2ae", null ],
+    [ "dwDepth_", "struct_urho3_d_1_1_d_d_surface_desc2.html#a1fbb3a16c8619c7d655dfc4223631a74", null ],
+    [ "dwEmptyFaceColor_", "struct_urho3_d_1_1_d_d_surface_desc2.html#aa7334bf88594fe3cd66ee88e4071803c", null ],
+    [ "dwFlags_", "struct_urho3_d_1_1_d_d_surface_desc2.html#a6f26755c555419267f3f0d392ce679e6", null ],
+    [ "dwFVF_", "struct_urho3_d_1_1_d_d_surface_desc2.html#ab2ce398c69410f88532d1b4dca03ea3e", null ],
+    [ "dwHeight_", "struct_urho3_d_1_1_d_d_surface_desc2.html#a6a5c6bd852aa92184d6c72f14b8becea", null ],
+    [ "dwLinearSize_", "struct_urho3_d_1_1_d_d_surface_desc2.html#a920d7c4c84b000644b33637edd90bb59", null ],
+    [ "dwMipMapCount_", "struct_urho3_d_1_1_d_d_surface_desc2.html#ac96f3ddff6c88b7d1ceb54fb64b31a63", null ],
+    [ "dwRefreshRate_", "struct_urho3_d_1_1_d_d_surface_desc2.html#a652eb7382232fdad1d0234cc5d14789a", null ],
+    [ "dwReserved_", "struct_urho3_d_1_1_d_d_surface_desc2.html#a7628aca78c7225ef5b2b59d1ddf18563", null ],
+    [ "dwSize_", "struct_urho3_d_1_1_d_d_surface_desc2.html#aa736551652249d4324e4b85ba56be67c", null ],
+    [ "dwSrcVBHandle_", "struct_urho3_d_1_1_d_d_surface_desc2.html#a7aee6bc88ff4f884e5b06bffa3ed7d81", null ],
+    [ "dwTextureStage_", "struct_urho3_d_1_1_d_d_surface_desc2.html#a1987563c0bb5a05d25ee39658e05ff7e", null ],
+    [ "dwWidth_", "struct_urho3_d_1_1_d_d_surface_desc2.html#a0f75c94caf64a57018c62da97dc27242", null ],
+    [ "lPitch_", "struct_urho3_d_1_1_d_d_surface_desc2.html#ab1b01fc86ae9b6f40e6cd9142852cddb", null ],
+    [ "lpSurface_", "struct_urho3_d_1_1_d_d_surface_desc2.html#aee630af5375e55ad8a4f857416860f30", null ]
+];
