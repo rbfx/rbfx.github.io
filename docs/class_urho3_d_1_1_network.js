@@ -24,7 +24,6 @@ var class_urho3_d_1_1_network =
     [ "HandleRenderUpdate", "class_urho3_d_1_1_network.html#aa55c8b895bbfaefbf08635caf20d182a", null ],
     [ "IsServerRunning", "class_urho3_d_1_1_network.html#a7e48cfa25d86afa02a2c045a27bbc7d9", null ],
     [ "IsUpdateNow", "class_urho3_d_1_1_network.html#a4ab380390d74325f509891f0421e64c5", null ],
-    [ "MakeHttpRequest", "class_urho3_d_1_1_network.html#a4176da872b16a4dc0415f3c52c8b1ace", null ],
     [ "OnClientConnected", "class_urho3_d_1_1_network.html#ae95b6da2ad0d6aa4275a6c473a515279", null ],
     [ "OnClientDisconnected", "class_urho3_d_1_1_network.html#a8dba85d32722215ee69cc46f6fe00696", null ],
     [ "OnConnectedToServer", "class_urho3_d_1_1_network.html#aaf163068f60df466848a79b24805acbc", null ],

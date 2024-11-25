@@ -1,6 +1,5 @@
 var NAVTREEINDEX79 =
 {
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#ad5c4fac3c77b636851e0ac484cfdc7f0":[8,0,2,59,2,6],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#ae5e6b51e6e497993fc72b084d7e68e88":[8,0,2,59,2,0],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#aee65289d072d5f53e530f6ecc2e6cb89":[8,0,2,59,2,4],
 "struct_urho3_d_1_1_background_load_item.html":[8,0,2,62],
@@ -249,5 +248,6 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_color_frame.html#a41ef68e9dd336a0f6bcce4ae281b992b":[8,0,2,131,3],
 "struct_urho3_d_1_1_color_frame.html#a42c2a6850b1c33711d03a881c8bb0737":[8,0,2,131,4],
 "struct_urho3_d_1_1_color_frame.html#a9d4fede3ee02a39180d14afbb4d1bb46":[8,0,2,131,2],
-"struct_urho3_d_1_1_color_frame.html#aa3a2c5d1db34bebaf7ae9de73abc534b":[8,0,2,131,5]
+"struct_urho3_d_1_1_color_frame.html#aa3a2c5d1db34bebaf7ae9de73abc534b":[8,0,2,131,5],
+"struct_urho3_d_1_1_color_frame.html#ab34d7a94b3c35eca59ab37dba18ba60a":[8,0,2,131,0]
 };

@@ -1,6 +1,5 @@
 var NAVTREEINDEX80 =
 {
-"struct_urho3_d_1_1_color_frame.html#ab34d7a94b3c35eca59ab37dba18ba60a":[8,0,2,131,0],
 "struct_urho3_d_1_1_common_frame_info.html":[8,0,2,133],
 "struct_urho3_d_1_1_common_frame_info.html#a1e828681467fd01afc7593a4f2f4c82e":[8,0,2,133,3],
 "struct_urho3_d_1_1_common_frame_info.html#a208b48291adfbe2f11495fe50bdf1dba":[8,0,2,133,5],
@@ -249,5 +248,6 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_debug_triangle.html#a9b0783cecd859ea200895cc3ab570e92":[8,0,2,188,3],
 "struct_urho3_d_1_1_debug_triangle.html#aaeb864c65e4036fbb8164136717e6310":[8,0,2,188,4],
 "struct_urho3_d_1_1_debug_triangle.html#ab8b26f63e2d197adde9f982a89b77444":[8,0,2,188,1],
-"struct_urho3_d_1_1_debug_triangle.html#aba031c62c1443e1d2d962928976e5bbd":[8,0,2,188,0]
+"struct_urho3_d_1_1_debug_triangle.html#aba031c62c1443e1d2d962928976e5bbd":[8,0,2,188,0],
+"struct_urho3_d_1_1_debug_triangle.html#aedad41734fa5a53be477d9dfa73aa022":[8,0,2,188,5]
 };

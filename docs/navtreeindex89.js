@@ -1,6 +1,5 @@
 var NAVTREEINDEX89 =
 {
-"struct_urho3_d_1_1_touch_state.html#ad33ca29a42d0062ab9ca38d9665611cc":[8,0,2,756,6],
 "struct_urho3_d_1_1_trail_point.html":[8,0,2,761],
 "struct_urho3_d_1_1_trail_point.html#a1b8a2a7ff2a4d4c59390c04f785454f7":[8,0,2,761,8],
 "struct_urho3_d_1_1_trail_point.html#a2606bccf616806e521131b985669cb02":[8,0,2,761,5],

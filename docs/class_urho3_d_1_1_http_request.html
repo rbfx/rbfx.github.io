@@ -68,9 +68,6 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_http_request.html','
 </div><!--header-->
 <div class="contents">
 
-<p>An HTTP connection with response data stream.  
- <a href="class_urho3_d_1_1_http_request.html#details">More...</a></p>
-
 <p><code>#include &lt;Urho3D/Network/HttpRequest.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Urho3D::HttpRequest:</div>
@@ -86,10 +83,10 @@ Inheritance diagram for Urho3D::HttpRequest:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0487f6205b694571c04b8d991e2bce62"><td class="memItemLeft" align="right" valign="top"><a id="a0487f6205b694571c04b8d991e2bce62"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a0487f6205b694571c04b8d991e2bce62">HttpRequest</a> (const ea::string &amp;url, const ea::string &amp;verb, const ea::vector&lt; ea::string &gt; &amp;headers, const ea::string &amp;postData)</td></tr>
-<tr class="memdesc:a0487f6205b694571c04b8d991e2bce62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with parameters. <br /></td></tr>
-<tr class="separator:a0487f6205b694571c04b8d991e2bce62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a041f9d0ccab85662954d03bad3cdb2"><td class="memItemLeft" align="right" valign="top"><a id="a8a041f9d0ccab85662954d03bad3cdb2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#a8a041f9d0ccab85662954d03bad3cdb2">HttpRequest</a> (const ea::string &amp;url, const ea::string &amp;verb=EMPTY_STRING, const ea::vector&lt; ea::string &gt; &amp;headers=ea::vector&lt; ea::string &gt;(), const ea::string &amp;postData=EMPTY_STRING)</td></tr>
+<tr class="memdesc:a8a041f9d0ccab85662954d03bad3cdb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with parameters. <br /></td></tr>
+<tr class="separator:a8a041f9d0ccab85662954d03bad3cdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2b86e768d003cfeeefbdae02b594a70"><td class="memItemLeft" align="right" valign="top"><a id="ad2b86e768d003cfeeefbdae02b594a70"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_http_request.html#ad2b86e768d003cfeeefbdae02b594a70">~HttpRequest</a> () override</td></tr>
 <tr class="memdesc:ad2b86e768d003cfeeefbdae02b594a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. Release the connection object. <br /></td></tr>
@@ -466,7 +463,7 @@ static ThreadID&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr class="separator:ac2346434e8b953e5a33ca3c19f5cb3cc inherit pro_static_attribs_class_urho3_d_1_1_thread"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An HTTP connection with response data stream. </p>
+<div class="textblock"><p>An HTTP connection with response data stream. Perform an HTTP request to the specified <a class="el" href="class_urho3_d_1_1_u_r_l.html">URL</a>. Empty verb defaults to a GET request. Return a request object which can be used to read the response data. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8cb68df22c51ceeed001ccce31b103d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8cb68df22c51ceeed001ccce31b103d6">&#9670;&nbsp;</a></span>GetAvailableSize()</h2>
