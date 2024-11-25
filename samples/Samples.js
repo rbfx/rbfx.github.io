@@ -502,7 +502,6 @@ function getWasmImports() {
 // Create the wasm instance.
 // Receives the wasm imports, returns the exports.
 function createWasm() {
-  var info = getWasmImports();
   // Load the wasm module and create an instance of using native support in the JS engine.
   // handle a generated wasm instance, receiving its exports and
   // performing other necessary setup
@@ -525,6 +524,7 @@ function createWasm() {
     // When the regression is fixed, can restore the above PTHREADS-enabled path.
     receiveInstance(result["instance"]);
   }
+  var info = getWasmImports();
   // User shell pages can write their own Module.instantiateWasm = function(imports, successCallback) callback
   // to manually instantiate the Wasm module themselves. This allows pages to
   // run the instantiation parallel to any other async startup actions they are
@@ -553,14 +553,14 @@ var tempI64;
 // end include: runtime_debug.js
 // === Body ===
 var ASM_CONSTS = {
-  1947244: () => {
+  1947196: () => {
     FS.syncfs(function(err) {
       if (err) {
         console.error(err);
       }
     });
   },
-  1947308: $0 => {
+  1947260: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -568,10 +568,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1947533: ($0, $1) => {
+  1947485: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1947590: () => {
+  1947542: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -579,7 +579,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1947737: () => {
+  1947689: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -587,7 +587,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1947971: $0 => {
+  1947923: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -609,11 +609,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1948464: () => {
+  1948416: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1948532: ($0, $1, $2, $3) => {
+  1948484: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -654,7 +654,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1950184: ($0, $1, $2, $3) => {
+  1950136: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -666,7 +666,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1950594: ($0, $1) => {
+  1950546: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -685,7 +685,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1951199: ($0, $1) => {
+  1951151: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -698,7 +698,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1951679: $0 => {
+  1951631: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -736,7 +736,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1952851: ($0, $1, $2) => {
+  1952803: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -807,7 +807,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1954320: ($0, $1, $2, $3, $4) => {
+  1954272: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -844,19 +844,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1955309: $0 => {
+  1955261: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1955392: () => {
+  1955344: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1955461: () => window.innerWidth,
-  1955491: () => window.innerHeight,
-  1955522: $0 => {
+  1955413: () => window.innerWidth,
+  1955443: () => window.innerHeight,
+  1955474: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
@@ -1642,7 +1642,7 @@ var MEMFS = {
       }
     },
     lookup(parent, name) {
-      throw FS.genericErrors[44];
+      throw MEMFS.doesNotExistError;
     },
     mknod(parent, name, mode, dev) {
       return MEMFS.createNode(parent, name, mode, dev);
@@ -2272,7 +2272,6 @@ var FS = {
       this.errno = errno;
     }
   },
-  genericErrors: {},
   filesystems: null,
   syncFSRequests: 0,
   readFiles: {},
@@ -3362,7 +3361,8 @@ var FS = {
     // setup /dev/null
     FS.registerDevice(FS.makedev(1, 3), {
       read: () => 0,
-      write: (stream, buffer, offset, length, pos) => length
+      write: (stream, buffer, offset, length, pos) => length,
+      llseek: () => 0
     });
     FS.mkdev("/dev/null", FS.makedev(1, 3));
     // setup /dev/tty and /dev/tty1
@@ -3448,11 +3448,6 @@ var FS = {
     var stderr = FS.open("/dev/stderr", 1);
   },
   staticInit() {
-    // Some errors may happen quite a bit, to avoid overhead we reuse them (and suffer a lack of stack info)
-    [ 44 ].forEach(code => {
-      FS.genericErrors[code] = new FS.ErrnoError(code);
-      FS.genericErrors[code].stack = "<generic error, no stack>";
-    });
     FS.nameTable = new Array(4096);
     FS.mount(MEMFS, {}, "/");
     FS.createDefaultDirectories();
@@ -5603,7 +5598,7 @@ var getWasmTableEntry = funcPtr => {
   var func = wasmTableMirror[funcPtr];
   if (!func) {
     if (funcPtr >= wasmTableMirror.length) wasmTableMirror.length = funcPtr + 1;
-    wasmTableMirror[funcPtr] = func = wasmTable.get(funcPtr);
+    /** @suppress {checkTypes} */ wasmTableMirror[funcPtr] = func = wasmTable.get(funcPtr);
   }
   return func;
 };
@@ -6300,6 +6295,8 @@ var Browser = {
   pointerLock: false,
   moduleContextCreatedCallbacks: [],
   workers: [],
+  preloadedImages: {},
+  preloadedAudios: {},
   init() {
     if (Browser.initted) return;
     Browser.initted = true;
@@ -6332,7 +6329,7 @@ var Browser = {
         canvas.height = img.height;
         var ctx = canvas.getContext("2d");
         ctx.drawImage(img, 0, 0);
-        preloadedImages[name] = canvas;
+        Browser.preloadedImages[name] = canvas;
         URL.revokeObjectURL(url);
         onload?.(byteArray);
       };
@@ -6356,7 +6353,7 @@ var Browser = {
       function finish(audio) {
         if (done) return;
         done = true;
-        preloadedAudios[name] = audio;
+        Browser.preloadedAudios[name] = audio;
         onload?.(byteArray);
       }
       var b = new Blob([ byteArray ], {
@@ -6433,7 +6430,7 @@ var Browser = {
     }
   },
   createContext(/** @type {HTMLCanvasElement} */ canvas, useWebGL, setInModule, webGLContextAttributes) {
-    if (useWebGL && Module.ctx && canvas == Module.canvas) return Module.ctx;
+    if (useWebGL && Module.ctx && canvas == Module["canvas"]) return Module.ctx;
     // no need to recreate GL context if it's already been created for this canvas.
     var ctx;
     var contextHandle;
@@ -7530,9 +7527,9 @@ var _eglQueryString = (display, name) => {
 var _eglSwapBuffers = (dpy, surface) => {
   if (!EGL.defaultDisplayInitialized) {
     EGL.setErrorCode(12289);
-  } else /* EGL_NOT_INITIALIZED */ if (!Module.ctx) {
+  } else /* EGL_NOT_INITIALIZED */ if (!GLctx) {
     EGL.setErrorCode(12290);
-  } else /* EGL_BAD_ACCESS */ if (Module.ctx.isContextLost()) {
+  } else /* EGL_BAD_ACCESS */ if (GLctx.isContextLost()) {
     EGL.setErrorCode(12302);
   } else /* EGL_CONTEXT_LOST */ {
     // According to documentation this does an implicit flush.
@@ -7840,6 +7837,9 @@ var _emscripten_asm_const_int_sync_on_main_thread = (emAsmAddr, sigPtr, argbuf) 
 var _emscripten_date_now = () => Date.now();
 
 var JSEvents = {
+  memcpy(target, src, size) {
+    HEAP8.set(HEAP8.subarray(src, src + size), target);
+  },
   removeAllEventListeners() {
     while (JSEvents.eventHandlers.length) {
       JSEvents._removeHandler(JSEvents.eventHandlers.length - 1);
@@ -12935,6 +12935,12 @@ Module["FS_createLazyFile"] = FS.createLazyFile;
 
 Module["FS_createDevice"] = FS.createDevice;
 
+// This error may happen quite a bit. To avoid overhead we reuse it (and
+// suffer a lack of stack info).
+MEMFS.doesNotExistError = new FS.ErrnoError(44);
+
+/** @suppress {checkTypes} */ MEMFS.doesNotExistError.stack = "<generic error, no stack>";
+
 embind_init_charCodes();
 
 BindingError = Module["BindingError"] = class BindingError extends Error {
@@ -12963,10 +12969,6 @@ Module["setCanvasSize"] = Browser.setCanvasSize;
 Module["getUserMedia"] = Browser.getUserMedia;
 
 Module["createContext"] = Browser.createContext;
-
-var preloadedImages = {};
-
-var preloadedAudios = {};
 
 // Signal GL rendering layer that processing of a new frame is about to
 // start. This helps it optimize VBO double-buffering and reduce GPU stalls.
