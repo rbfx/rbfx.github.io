@@ -60,6 +60,7 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_network.html',''); i
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -84,6 +85,15 @@ Inheritance diagram for Urho3D::Network:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ac4b25ba88290180589cacad3347d593e"><td class="memItemLeft" align="right" valign="top"><a id="ac4b25ba88290180589cacad3347d593e"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>CreateServerCallback</b> = ea::function&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_network_server.html">NetworkServer</a> &gt;(<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)&gt;</td></tr>
+<tr class="separator:ac4b25ba88290180589cacad3347d593e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a006021fe334b88d4847b3dd6892af099"><td class="memItemLeft" align="right" valign="top"><a id="a006021fe334b88d4847b3dd6892af099"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>CreateConnectionCallback</b> = ea::function&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_network_connection.html">NetworkConnection</a> &gt;(<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)&gt;</td></tr>
+<tr class="separator:a006021fe334b88d4847b3dd6892af099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a566fbbabc194a73f96b4dee6a62a3854"><td class="memItemLeft" align="right" valign="top"><a id="a566fbbabc194a73f96b4dee6a62a3854"></a>
@@ -184,6 +194,18 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a5bd2e15766d580aaffab3b7d53e3ce87">GetUpdateOvertime</a> () const</td></tr>
 <tr class="memdesc:a5bd2e15766d580aaffab3b7d53e3ce87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the amount of time that happened after fixed-time network update. <br /></td></tr>
 <tr class="separator:a5bd2e15766d580aaffab3b7d53e3ce87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf716f83a4e86c8ca99eb3454546c802"><td class="memItemLeft" align="right" valign="top"><a id="adf716f83a4e86c8ca99eb3454546c802"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#adf716f83a4e86c8ca99eb3454546c802">SetTransportDefault</a> ()</td></tr>
+<tr class="memdesc:adf716f83a4e86c8ca99eb3454546c802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the default transport (WebRTC) <br /></td></tr>
+<tr class="separator:adf716f83a4e86c8ca99eb3454546c802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60446750e4893988d618c91d973cf1b0"><td class="memItemLeft" align="right" valign="top"><a id="a60446750e4893988d618c91d973cf1b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a60446750e4893988d618c91d973cf1b0">SetTransportWebRTC</a> ()</td></tr>
+<tr class="memdesc:a60446750e4893988d618c91d973cf1b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the WebRTC transport. <br /></td></tr>
+<tr class="separator:a60446750e4893988d618c91d973cf1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3758e763858281e91624c5adf412b6c"><td class="memItemLeft" align="right" valign="top"><a id="ab3758e763858281e91624c5adf412b6c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#ab3758e763858281e91624c5adf412b6c">SetTransportCustom</a> (const CreateServerCallback &amp;createServer, const CreateConnectionCallback &amp;createConnection)</td></tr>
+<tr class="memdesc:ab3758e763858281e91624c5adf412b6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use a user defined transport. <br /></td></tr>
+<tr class="separator:ab3758e763858281e91624c5adf412b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ab380390d74325f509891f0421e64c5"><td class="memItemLeft" align="right" valign="top"><a id="a4ab380390d74325f509891f0421e64c5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a4ab380390d74325f509891f0421e64c5">IsUpdateNow</a> () const</td></tr>
 <tr class="memdesc:a4ab380390d74325f509891f0421e64c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the network is updated on this frame. <br /></td></tr>
@@ -423,6 +445,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:aac5ca05aca6ce86869d36b7b29ee6b96"><td class="memItemLeft" align="right" valign="top"><a id="aac5ca05aca6ce86869d36b7b29ee6b96"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_network.html">Network</a>, <a class="el" href="class_urho3_d_1_1_object.html">Object</a>)</td></tr>
 <tr class="separator:aac5ca05aca6ce86869d36b7b29ee6b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad93777d2f041636bfa11a82a080b3da7"><td class="memItemLeft" align="right" valign="top"><a id="ad93777d2f041636bfa11a82a080b3da7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeTransportCreateFuncs</b> ()</td></tr>
+<tr class="separator:ad93777d2f041636bfa11a82a080b3da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e07463f4eb6a28ef240009bc5b0af76"><td class="memItemLeft" align="right" valign="top"><a id="a2e07463f4eb6a28ef240009bc5b0af76"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SendNetworkUpdateEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, bool isServer)</td></tr>
 <tr class="separator:a2e07463f4eb6a28ef240009bc5b0af76"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -474,6 +499,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_network_server.html">NetworkServer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#a6e44a431dea1c126923dcb4d0dc142b8">transportServer_</a></td></tr>
 <tr class="memdesc:a6e44a431dea1c126923dcb4d0dc142b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actual server, which accepts connections. <br /></td></tr>
 <tr class="separator:a6e44a431dea1c126923dcb4d0dc142b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64ff1d75671a2d67c2a2e9c434742c76"><td class="memItemLeft" align="right" valign="top"><a id="a64ff1d75671a2d67c2a2e9c434742c76"></a>
+CreateServerCallback&#160;</td><td class="memItemRight" valign="bottom"><b>createServer_</b></td></tr>
+<tr class="separator:a64ff1d75671a2d67c2a2e9c434742c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609420be16502409b2eb3e94ebcd5fed"><td class="memItemLeft" align="right" valign="top"><a id="a609420be16502409b2eb3e94ebcd5fed"></a>
+CreateConnectionCallback&#160;</td><td class="memItemRight" valign="bottom"><b>createConnection_</b></td></tr>
+<tr class="separator:a609420be16502409b2eb3e94ebcd5fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:aa581cb92c00f26370f50ec960eda2cd7"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network.html#aa581cb92c00f26370f50ec960eda2cd7">updateFps_</a> {30}</td></tr>
 <tr class="separator:aa581cb92c00f26370f50ec960eda2cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>

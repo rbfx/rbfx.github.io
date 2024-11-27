@@ -1,5 +1,13 @@
 var NAVTREEINDEX88 =
 {
+"struct_urho3_d_1_1_spriter_1_1_character_map.html":[8,0,2,3,2],
+"struct_urho3_d_1_1_spriter_1_1_character_map.html#a0085549ded96e27e53c47072a708d837":[8,0,2,3,2,2],
+"struct_urho3_d_1_1_spriter_1_1_character_map.html#a2704a96fc15bf21ededc99d9b75966a2":[8,0,2,3,2,5],
+"struct_urho3_d_1_1_spriter_1_1_character_map.html#a7782727dcf8794291cb8af7092f99405":[8,0,2,3,2,4],
+"struct_urho3_d_1_1_spriter_1_1_character_map.html#a8275835351eac1676895b39491e3074d":[8,0,2,3,2,6],
+"struct_urho3_d_1_1_spriter_1_1_character_map.html#aab3ed25e053559c563ceadc88a99506e":[8,0,2,3,2,3],
+"struct_urho3_d_1_1_spriter_1_1_character_map.html#ac51fade99cc597be227087d64c621d7f":[8,0,2,3,2,1],
+"struct_urho3_d_1_1_spriter_1_1_character_map.html#aefb2ec79042e5fb187f0c777a5bf130d":[8,0,2,3,2,0],
 "struct_urho3_d_1_1_spriter_1_1_entity.html":[8,0,2,3,3],
 "struct_urho3_d_1_1_spriter_1_1_entity.html#a082f500e2a01cefa398ee474a36f27b9":[8,0,2,3,3,0],
 "struct_urho3_d_1_1_spriter_1_1_entity.html#a388f250f0764ba121563a75dda3f8879":[8,0,2,3,3,6],
@@ -241,13 +249,5 @@ var NAVTREEINDEX88 =
 "struct_urho3_d_1_1_tile_map_info2_d.html#aeffb8d16f5cc16378906cd4b9d191020":[8,0,2,743,1],
 "struct_urho3_d_1_1_tile_map_info2_d.html#af7f27de70ce63dce0237208323fc930b":[8,0,2,743,5],
 "struct_urho3_d_1_1_tone_mapping_pass_1_1_pipeline_state_cache.html":[8,0,2,754,0],
-"struct_urho3_d_1_1_tone_mapping_pass_1_1_pipeline_state_cache.html#a2f8938ff76c59cf58a6153df155451ce":[8,0,2,754,0,0],
-"struct_urho3_d_1_1_touch_state.html":[8,0,2,756],
-"struct_urho3_d_1_1_touch_state.html#a3d1f1c8a8aff0d850c307510100d19b1":[8,0,2,756,3],
-"struct_urho3_d_1_1_touch_state.html#a42e8585982f0a310de52fac3cc0b2125":[8,0,2,756,4],
-"struct_urho3_d_1_1_touch_state.html#a60557f62da1c5598ebf5a8dc5bff72bc":[8,0,2,756,2],
-"struct_urho3_d_1_1_touch_state.html#a6bdfed7a884e34878b7a3e9b1c1774e3":[8,0,2,756,5],
-"struct_urho3_d_1_1_touch_state.html#a82d339471834da69285faa28468af63a":[8,0,2,756,0],
-"struct_urho3_d_1_1_touch_state.html#ac8d1a9b97565ed9eb7f1a67f0803f012":[8,0,2,756,1],
-"struct_urho3_d_1_1_touch_state.html#ad33ca29a42d0062ab9ca38d9665611cc":[8,0,2,756,6]
+"struct_urho3_d_1_1_tone_mapping_pass_1_1_pipeline_state_cache.html#a2f8938ff76c59cf58a6153df155451ce":[8,0,2,754,0,0]
 };

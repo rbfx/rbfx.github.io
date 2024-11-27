@@ -1,5 +1,13 @@
 var NAVTREEINDEX77 =
 {
+"functions_func_j.html":[8,3,1,9],
+"functions_func_k.html":[8,3,1,10],
+"functions_func_l.html":[8,3,1,11],
+"functions_func_m.html":[8,3,1,12],
+"functions_func_n.html":[8,3,1,13],
+"functions_func_o.html":[8,3,1,14],
+"functions_func_p.html":[8,3,1,15],
+"functions_func_q.html":[8,3,1,16],
 "functions_func_r.html":[8,3,1,17],
 "functions_func_s.html":[8,3,1,18],
 "functions_func_t.html":[8,3,1,19],
@@ -73,8 +81,8 @@ var NAVTREEINDEX77 =
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html":[2],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html":[5],
 "multiplayer-and-networking.html":[0,0,2,2],
-"namespace_urho3_d_1_1_actions.html":[7,0,0,0],
 "namespace_urho3_d_1_1_actions.html":[8,0,2,0],
+"namespace_urho3_d_1_1_actions.html":[7,0,0,0],
 "namespace_urho3_d_1_1_attribute_metadata.html":[7,0,0,1],
 "namespace_urho3_d_1_1_linked_plugins.html":[7,0,0,2],
 "namespace_urho3_d_1_1_network_settings.html":[7,0,0,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX77 =
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a38723bb641e7b109cddf93e6446a54bd":[8,0,15,8],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a4bc580a9949abc0dd61b44b610848282":[8,0,15,12],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a4efad7dd8c2ab02095c31f4891a662f1":[8,0,15,22],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a506003d2a606439b7cb97f4ba76afb01":[8,0,15,23],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a596f6b2061f647841b2d3531a53788dc":[8,0,15,0],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a5b81df574c7391d1cc79623b4f7a28e5":[8,0,15,27],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a5cfadfb0ada14d3590e7c5b6fe2b192d":[8,0,15,26],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a5f08edde6ca7f92f876c98655cef3cbc":[8,0,15,28],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a5f51170a7fcde8a217713ffc1d5e9d17":[8,0,15,13],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a6b67f915789f7a8af3e8a52d9e4a4c64":[8,0,15,7],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a735a66b4bd5d91214643348a491f260b":[8,0,15,6],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a81e31d8bbc5cdee1927bb25d14d30ccb":[8,0,15,24]
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a506003d2a606439b7cb97f4ba76afb01":[8,0,15,23]
 };

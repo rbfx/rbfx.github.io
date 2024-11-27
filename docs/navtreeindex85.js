@@ -1,5 +1,13 @@
 var NAVTREEINDEX85 =
 {
+"struct_urho3_d_1_1_occlusion_batch.html#a34117dc084911272c478d6c08a64d05b":[8,0,2,456,0],
+"struct_urho3_d_1_1_occlusion_batch.html#a46fb0a4ddcd88299d35cda012051f804":[8,0,2,456,4],
+"struct_urho3_d_1_1_occlusion_batch.html#a481fee5977eece89ba444f400f9206c1":[8,0,2,456,5],
+"struct_urho3_d_1_1_occlusion_batch.html#a52eb5a9cf62c204e345a55d3485e6f34":[8,0,2,456,1],
+"struct_urho3_d_1_1_occlusion_batch.html#a7de17444f5b55cfc467b7edabe469b48":[8,0,2,456,2],
+"struct_urho3_d_1_1_occlusion_batch.html#a8d771ef669e136495652a2068b09db9f":[8,0,2,456,3],
+"struct_urho3_d_1_1_occlusion_buffer_data.html":[8,0,2,458],
+"struct_urho3_d_1_1_occlusion_buffer_data.html#a126460cb3b1cd3531db3ee042c6d4322":[8,0,2,458,0],
 "struct_urho3_d_1_1_occlusion_buffer_data.html#a154f911c96be093cbb4390dceca34acd":[8,0,2,458,1],
 "struct_urho3_d_1_1_occlusion_buffer_data.html#afaa9fe185945d8fe5a9860ad6aeb253f":[8,0,2,458,2],
 "struct_urho3_d_1_1_occlusion_buffer_settings.html":[8,0,2,459],
@@ -241,13 +249,5 @@ var NAVTREEINDEX85 =
 "struct_urho3_d_1_1_pipeline_batch_back_to_front.html#a8fec93093b030e0728b988705699d141":[8,0,2,516,3],
 "struct_urho3_d_1_1_pipeline_batch_back_to_front.html#acee6bfeb4b828d1ac6d533a12049c42e":[8,0,2,516,0],
 "struct_urho3_d_1_1_pipeline_batch_back_to_front.html#afae0543e7f087d59e8743b3516554f2c":[8,0,2,516,4],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html":[8,0,2,517],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a0e3b179abac7c0807030672aa8b19cd7":[8,0,2,517,17],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a1b56f166f9b386db4ae7ee3f06a8629c":[8,0,2,517,25],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a1b6415ee87123d381c0f11edd2a1ff75":[8,0,2,517,23],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a22b981f0e8b9a0cee714078dd17df9ee":[8,0,2,517,7],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a2d8a0b4e874de86522f109bd2cd30eea":[8,0,2,517,9],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a38ad77238aaedc615c4afba044e92e4b":[8,0,2,517,29],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a3c70ca5c3d29e55008ae017b3afbfc1d":[8,0,2,517,14],
-"struct_urho3_d_1_1_pipeline_batch_by_state.html#a4b222610998dd64b58246685ef713d1c":[8,0,2,517,27]
+"struct_urho3_d_1_1_pipeline_batch_by_state.html":[8,0,2,517]
 };

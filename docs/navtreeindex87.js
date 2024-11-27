@@ -1,5 +1,13 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_rml_canvas_resized_args.html":[8,0,2,602],
+"struct_urho3_d_1_1_rml_canvas_resized_args.html#a2f8635a2ffad2071df12ea13051bfdb1":[8,0,2,602,0],
+"struct_urho3_d_1_1_rml_canvas_resized_args.html#af1cbc816bcec60757660382eb3d994bb":[8,0,2,602,1],
+"struct_urho3_d_1_1_rml_document_reloaded_args.html":[8,0,2,603],
+"struct_urho3_d_1_1_rml_document_reloaded_args.html#a7f2b571a9f800172807ee47efbfe1bcc":[8,0,2,603,0],
+"struct_urho3_d_1_1_rml_document_reloaded_args.html#aea296395c9b345125a6ca458c1caca3f":[8,0,2,603,1],
+"struct_urho3_d_1_1_rml_navigable_1_1_cache.html":[8,0,2,604,0],
+"struct_urho3_d_1_1_rml_navigable_1_1_cache.html#a321cacaa14191dafadf7b51ea72efaea":[8,0,2,604,0,4],
 "struct_urho3_d_1_1_rml_navigable_1_1_cache.html#a914d87c4ca35ec07a4eb5fb7d7abc9a3":[8,0,2,604,0,2],
 "struct_urho3_d_1_1_rml_navigable_1_1_cache.html#a97e70087da2ae877689920f82ace1b52":[8,0,2,604,0,0],
 "struct_urho3_d_1_1_rml_navigable_1_1_cache.html#ad24c918d8d994c9673ac7b70cd85deff":[8,0,2,604,0,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_spriter_1_1_bone_timeline_key.html#a91b91443bda395a2ed158411ba5757ff":[8,0,2,3,1,3],
 "struct_urho3_d_1_1_spriter_1_1_bone_timeline_key.html#a9c6c2662fc7e97538d13a935b5e8ffef":[8,0,2,3,1,2],
 "struct_urho3_d_1_1_spriter_1_1_bone_timeline_key.html#aa094ca302affed802d1a93cf94511ebc":[8,0,2,3,1,5],
-"struct_urho3_d_1_1_spriter_1_1_bone_timeline_key.html#ace9dc9167015506c2094d4bdd85bc91b":[8,0,2,3,1,7],
-"struct_urho3_d_1_1_spriter_1_1_character_map.html":[8,0,2,3,2],
-"struct_urho3_d_1_1_spriter_1_1_character_map.html#a0085549ded96e27e53c47072a708d837":[8,0,2,3,2,2],
-"struct_urho3_d_1_1_spriter_1_1_character_map.html#a2704a96fc15bf21ededc99d9b75966a2":[8,0,2,3,2,5],
-"struct_urho3_d_1_1_spriter_1_1_character_map.html#a7782727dcf8794291cb8af7092f99405":[8,0,2,3,2,4],
-"struct_urho3_d_1_1_spriter_1_1_character_map.html#a8275835351eac1676895b39491e3074d":[8,0,2,3,2,6],
-"struct_urho3_d_1_1_spriter_1_1_character_map.html#aab3ed25e053559c563ceadc88a99506e":[8,0,2,3,2,3],
-"struct_urho3_d_1_1_spriter_1_1_character_map.html#ac51fade99cc597be227087d64c621d7f":[8,0,2,3,2,1],
-"struct_urho3_d_1_1_spriter_1_1_character_map.html#aefb2ec79042e5fb187f0c777a5bf130d":[8,0,2,3,2,0]
+"struct_urho3_d_1_1_spriter_1_1_bone_timeline_key.html#ace9dc9167015506c2094d4bdd85bc91b":[8,0,2,3,1,7]
 };

@@ -1,5 +1,13 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_color_1_1_channel_mask.html#aba705fe0fb82a3a3ee7a3962b28aeb1f":[8,0,2,130,0,2],
+"struct_urho3_d_1_1_color_frame.html":[8,0,2,131],
+"struct_urho3_d_1_1_color_frame.html#a26c8b15020e9b9a3a1e1f144b8868d53":[8,0,2,131,1],
+"struct_urho3_d_1_1_color_frame.html#a41ef68e9dd336a0f6bcce4ae281b992b":[8,0,2,131,3],
+"struct_urho3_d_1_1_color_frame.html#a42c2a6850b1c33711d03a881c8bb0737":[8,0,2,131,4],
+"struct_urho3_d_1_1_color_frame.html#a9d4fede3ee02a39180d14afbb4d1bb46":[8,0,2,131,2],
+"struct_urho3_d_1_1_color_frame.html#aa3a2c5d1db34bebaf7ae9de73abc534b":[8,0,2,131,5],
+"struct_urho3_d_1_1_color_frame.html#ab34d7a94b3c35eca59ab37dba18ba60a":[8,0,2,131,0],
 "struct_urho3_d_1_1_common_frame_info.html":[8,0,2,133],
 "struct_urho3_d_1_1_common_frame_info.html#a1e828681467fd01afc7593a4f2f4c82e":[8,0,2,133,3],
 "struct_urho3_d_1_1_common_frame_info.html#a208b48291adfbe2f11495fe50bdf1dba":[8,0,2,133,5],
@@ -241,13 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_debug_line.html":[8,0,2,186],
 "struct_urho3_d_1_1_debug_line.html#a38ddb9baf5d177e523e3db272cef3572":[8,0,2,186,0],
 "struct_urho3_d_1_1_debug_line.html#a3ea57371e64b0d0c2a373cb1788040f9":[8,0,2,186,3],
-"struct_urho3_d_1_1_debug_line.html#a510b434e3b34530575a5f07f0f5b4945":[8,0,2,186,1],
-"struct_urho3_d_1_1_debug_line.html#a9e5b06832bfb5d775311c3c5ecb9514d":[8,0,2,186,2],
-"struct_urho3_d_1_1_debug_line.html#ae77d457d7f71298ab65db1481da6af2e":[8,0,2,186,4],
-"struct_urho3_d_1_1_debug_triangle.html":[8,0,2,188],
-"struct_urho3_d_1_1_debug_triangle.html#a9b0783cecd859ea200895cc3ab570e92":[8,0,2,188,3],
-"struct_urho3_d_1_1_debug_triangle.html#aaeb864c65e4036fbb8164136717e6310":[8,0,2,188,4],
-"struct_urho3_d_1_1_debug_triangle.html#ab8b26f63e2d197adde9f982a89b77444":[8,0,2,188,1],
-"struct_urho3_d_1_1_debug_triangle.html#aba031c62c1443e1d2d962928976e5bbd":[8,0,2,188,0],
-"struct_urho3_d_1_1_debug_triangle.html#aedad41734fa5a53be477d9dfa73aa022":[8,0,2,188,5]
+"struct_urho3_d_1_1_debug_line.html#a510b434e3b34530575a5f07f0f5b4945":[8,0,2,186,1]
 };

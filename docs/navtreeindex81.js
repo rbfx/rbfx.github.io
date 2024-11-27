@@ -1,5 +1,13 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_debug_line.html#a9e5b06832bfb5d775311c3c5ecb9514d":[8,0,2,186,2],
+"struct_urho3_d_1_1_debug_line.html#ae77d457d7f71298ab65db1481da6af2e":[8,0,2,186,4],
+"struct_urho3_d_1_1_debug_triangle.html":[8,0,2,188],
+"struct_urho3_d_1_1_debug_triangle.html#a9b0783cecd859ea200895cc3ab570e92":[8,0,2,188,3],
+"struct_urho3_d_1_1_debug_triangle.html#aaeb864c65e4036fbb8164136717e6310":[8,0,2,188,4],
+"struct_urho3_d_1_1_debug_triangle.html#ab8b26f63e2d197adde9f982a89b77444":[8,0,2,188,1],
+"struct_urho3_d_1_1_debug_triangle.html#aba031c62c1443e1d2d962928976e5bbd":[8,0,2,188,0],
+"struct_urho3_d_1_1_debug_triangle.html#aedad41734fa5a53be477d9dfa73aa022":[8,0,2,188,5],
 "struct_urho3_d_1_1_debug_triangle.html#af3390ad58f865c882e99f240b206ccae":[8,0,2,188,2],
 "struct_urho3_d_1_1_decal.html":[8,0,2,189],
 "struct_urho3_d_1_1_decal.html#a016dea5d4b0d65db727ea158529500a9":[8,0,2,189,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_file_system_entry.html#a1a404d3f1a9c9eaf1f69e13ca9db6454":[8,0,2,232,13],
 "struct_urho3_d_1_1_file_system_entry.html#a23609dbddf861b391f9c0caadf9980a4":[8,0,2,232,8],
 "struct_urho3_d_1_1_file_system_entry.html#a352703e9d37527afa7d3346e45bf8665":[8,0,2,232,9],
-"struct_urho3_d_1_1_file_system_entry.html#a3613761e1077210f3aec0f39b2ef1611":[8,0,2,232,5],
-"struct_urho3_d_1_1_file_system_entry.html#a487bd9c1dada145ee5c1c1787395b8cb":[8,0,2,232,3],
-"struct_urho3_d_1_1_file_system_entry.html#a565a65d31fe7c6f3fa23434eaad480c9":[8,0,2,232,0],
-"struct_urho3_d_1_1_file_system_entry.html#a57f566871a298736a9d8bb59a1674558":[8,0,2,232,7],
-"struct_urho3_d_1_1_file_system_entry.html#a5c679f111c39d975b9247834acb27dac":[8,0,2,232,6],
-"struct_urho3_d_1_1_file_system_entry.html#a70ea898137e04536b31f9d025d67ede9":[8,0,2,232,15],
-"struct_urho3_d_1_1_file_system_entry.html#aa8b9ea13faf77b8fd7a0ba90ec76dba2":[8,0,2,232,14],
-"struct_urho3_d_1_1_file_system_entry.html#ab44ac4d5e73212f632ee03fc8469180b":[8,0,2,232,10],
-"struct_urho3_d_1_1_file_system_entry.html#ad3e8948575c829429e1a936620037630":[8,0,2,232,11]
+"struct_urho3_d_1_1_file_system_entry.html#a3613761e1077210f3aec0f39b2ef1611":[8,0,2,232,5]
 };

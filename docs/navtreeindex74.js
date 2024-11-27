@@ -1,5 +1,13 @@
 var NAVTREEINDEX74 =
 {
+"class_urho3_d_1_1_viewport_color_render_buffer.html#a05e7795f2c1de34f24c1f759f6c07aa4":[8,0,2,812,2],
+"class_urho3_d_1_1_viewport_color_render_buffer.html#a147b1af65001a208eda56c7a39ba62bd":[8,0,2,812,0],
+"class_urho3_d_1_1_viewport_color_render_buffer.html#a1f52e285209e73b74010309a1e4b6af7":[8,0,2,812,7],
+"class_urho3_d_1_1_viewport_color_render_buffer.html#a3c9af9836c96857c491f9d35a863886f":[8,0,2,812,1],
+"class_urho3_d_1_1_viewport_color_render_buffer.html#a6c3c2cf38a8be7a1020a6c7828f2f01c":[8,0,2,812,9],
+"class_urho3_d_1_1_viewport_color_render_buffer.html#ab4c82b6901f140907360ec0c00a4193e":[8,0,2,812,4],
+"class_urho3_d_1_1_viewport_color_render_buffer.html#ab7f9498b2af7a2567b84e773b105fd60":[8,0,2,812,6],
+"class_urho3_d_1_1_viewport_color_render_buffer.html#ac87d5333d63f9e732a9734d3ba575fb4":[8,0,2,812,3],
 "class_urho3_d_1_1_viewport_color_render_buffer.html#acc803fe70df4dfe399aab031ba7a16cf":[8,0,2,812,8],
 "class_urho3_d_1_1_viewport_color_render_buffer.html#af3604f331dbc7a879f16ed098fa2e30e":[8,0,2,812,5],
 "class_urho3_d_1_1_viewport_depth_stencil_render_buffer.html":[8,0,2,813],
@@ -241,13 +249,5 @@ var NAVTREEINDEX74 =
 "class_urho3_d_1_1_work_queue.html#ae1d2d3ce1858a34ce18726062d54807d":[8,0,2,823,4],
 "class_urho3_d_1_1_work_queue.html#aeabc95017ebdcc3157b951928539dec2":[8,0,2,823,29],
 "class_urho3_d_1_1_work_queue.html#af43f66bab18f6304ca73804a1da990cb":[8,0,2,823,12],
-"class_urho3_d_1_1_work_queue.html#af540953dcc67e4f529419001e65d7c3b":[8,0,2,823,10],
-"class_urho3_d_1_1_work_queue.html#af92ac9e3dff9fbf74b3f0907d560929d":[8,0,2,823,39],
-"class_urho3_d_1_1_work_queue.html#affd534c0ffe49225156093d6101b90cd":[8,0,2,823,3],
-"class_urho3_d_1_1_work_queue_vector.html":[8,0,2,824],
-"class_urho3_d_1_1_work_queue_vector.html#a890ed3b3573a352031ddcd08df8740ae":[8,0,2,824,2],
-"class_urho3_d_1_1_work_queue_vector.html#ad4f68156bd6714d9a23fd7e8143bce66":[8,0,2,824,0],
-"class_urho3_d_1_1_work_queue_vector.html#ae19eed867fb98fb717ba3d33ffc81133":[8,0,2,824,1],
-"class_urho3_d_1_1_wrapped_scalar.html":[8,0,2,825],
-"class_urho3_d_1_1_wrapped_scalar.html#a2d567dd61383a8ac84ef3aecde837472":[8,0,2,825,13]
+"class_urho3_d_1_1_work_queue.html#af540953dcc67e4f529419001e65d7c3b":[8,0,2,823,10]
 };

@@ -1,5 +1,13 @@
 var NAVTREEINDEX89 =
 {
+"struct_urho3_d_1_1_touch_state.html":[8,0,2,756],
+"struct_urho3_d_1_1_touch_state.html#a3d1f1c8a8aff0d850c307510100d19b1":[8,0,2,756,3],
+"struct_urho3_d_1_1_touch_state.html#a42e8585982f0a310de52fac3cc0b2125":[8,0,2,756,4],
+"struct_urho3_d_1_1_touch_state.html#a60557f62da1c5598ebf5a8dc5bff72bc":[8,0,2,756,2],
+"struct_urho3_d_1_1_touch_state.html#a6bdfed7a884e34878b7a3e9b1c1774e3":[8,0,2,756,5],
+"struct_urho3_d_1_1_touch_state.html#a82d339471834da69285faa28468af63a":[8,0,2,756,0],
+"struct_urho3_d_1_1_touch_state.html#ac8d1a9b97565ed9eb7f1a67f0803f012":[8,0,2,756,1],
+"struct_urho3_d_1_1_touch_state.html#ad33ca29a42d0062ab9ca38d9665611cc":[8,0,2,756,6],
 "struct_urho3_d_1_1_trail_point.html":[8,0,2,761],
 "struct_urho3_d_1_1_trail_point.html#a1b8a2a7ff2a4d4c59390c04f785454f7":[8,0,2,761,8],
 "struct_urho3_d_1_1_trail_point.html#a2606bccf616806e521131b985669cb02":[8,0,2,761,5],
@@ -241,6 +249,5 @@ var NAVTREEINDEX89 =
 "union_urho3_d_1_1_variant_value.html#ade864b56f81a4c106a4fec44bd16ebcd":[8,0,2,798,29],
 "union_urho3_d_1_1_variant_value.html#ae0a22d26c86bbf148486fe2f58ed527e":[8,0,2,798,11],
 "union_urho3_d_1_1_variant_value.html#ae15df131e14c2b2d17b4a673b4905dc3":[8,0,2,798,22],
-"union_urho3_d_1_1_variant_value.html#af1993f792ce9b69ffbc9c699c8a465b7":[8,0,2,798,31],
-"union_urho3_d_1_1_variant_value.html#afbe7ff133360ef792534dfca1a3e0a6d":[8,0,2,798,1]
+"union_urho3_d_1_1_variant_value.html#af1993f792ce9b69ffbc9c699c8a465b7":[8,0,2,798,31]
 };

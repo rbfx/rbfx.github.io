@@ -1,5 +1,13 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#a0a4d473a90ad68c60952b6bf9f490fa1":[8,0,2,354,5],
+"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#a3ca00dcc8429257f1cdedb0c59ae631f":[8,0,2,354,2],
+"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#a5c2456109241247dc659849fc002df5c":[8,0,2,354,3],
+"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#a687c0922ab04f876bcd1eeb175305ebc":[8,0,2,354,0],
+"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#aed8cc165e29b66596f6bca2eb71ebeb2":[8,0,2,354,4],
+"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#af9f2ea4ea22d611a5f1f9ee0451c1179":[8,0,2,354,1],
+"struct_urho3_d_1_1_lightmap_geometry_baking_scenes_array.html":[8,0,2,355],
+"struct_urho3_d_1_1_lightmap_geometry_baking_scenes_array.html#a12e4d4cc2fe5e3506f8d7bd354d41d6e":[8,0,2,355,0],
 "struct_urho3_d_1_1_lightmap_geometry_baking_scenes_array.html#a4b1812d3f9253cffc1fa6b37f07eaf2c":[8,0,2,355,1],
 "struct_urho3_d_1_1_lightmap_geometry_baking_settings.html":[8,0,2,356],
 "struct_urho3_d_1_1_lightmap_geometry_baking_settings.html#a072609605deb959f12af33c0029ac6c2":[8,0,2,356,2],
@@ -241,13 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_numeric_range.html#abde91a0e3d4b379d514904bfe7602c52":[8,0,2,449,8],
 "struct_urho3_d_1_1_numeric_range.html#afdb194a4f30c965f53c6c6868bab51d1":[8,0,2,449,3],
 "struct_urho3_d_1_1_occlusion_batch.html":[8,0,2,456],
-"struct_urho3_d_1_1_occlusion_batch.html#a1f922d3a11fef4a84f73856b503a05d1":[8,0,2,456,6],
-"struct_urho3_d_1_1_occlusion_batch.html#a34117dc084911272c478d6c08a64d05b":[8,0,2,456,0],
-"struct_urho3_d_1_1_occlusion_batch.html#a46fb0a4ddcd88299d35cda012051f804":[8,0,2,456,4],
-"struct_urho3_d_1_1_occlusion_batch.html#a481fee5977eece89ba444f400f9206c1":[8,0,2,456,5],
-"struct_urho3_d_1_1_occlusion_batch.html#a52eb5a9cf62c204e345a55d3485e6f34":[8,0,2,456,1],
-"struct_urho3_d_1_1_occlusion_batch.html#a7de17444f5b55cfc467b7edabe469b48":[8,0,2,456,2],
-"struct_urho3_d_1_1_occlusion_batch.html#a8d771ef669e136495652a2068b09db9f":[8,0,2,456,3],
-"struct_urho3_d_1_1_occlusion_buffer_data.html":[8,0,2,458],
-"struct_urho3_d_1_1_occlusion_buffer_data.html#a126460cb3b1cd3531db3ee042c6d4322":[8,0,2,458,0]
+"struct_urho3_d_1_1_occlusion_batch.html#a1f922d3a11fef4a84f73856b503a05d1":[8,0,2,456,6]
 };

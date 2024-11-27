@@ -1,5 +1,13 @@
 var NAVTREEINDEX61 =
 {
+"class_urho3_d_1_1_slider.html#a82235b9b0a60fb7f36a3b2c8ade6193d":[8,0,2,658,0],
+"class_urho3_d_1_1_slider.html#a852d8f37333dfeed13dc592d7b0bd013":[8,0,2,658,28],
+"class_urho3_d_1_1_slider.html#a8626f68f630006ee68c9d9861ee37112":[8,0,2,658,9],
+"class_urho3_d_1_1_slider.html#a8f9fb47955481b58a44ea04461c1c34d":[8,0,2,658,19],
+"class_urho3_d_1_1_slider.html#a970525f9bbe5a697585e3642d84529ec":[8,0,2,658,27],
+"class_urho3_d_1_1_slider.html#a9fa9f953ceaed2080a870f498b4492fc":[8,0,2,658,12],
+"class_urho3_d_1_1_slider.html#aaa1091c237b161c41c53636c94abcc97":[8,0,2,658,2],
+"class_urho3_d_1_1_slider.html#ab7214d023dca1013378e084378769753":[8,0,2,658,13],
 "class_urho3_d_1_1_slider.html#ab9a4233b621f93c4dc2a6b20f36538b5":[8,0,2,658,24],
 "class_urho3_d_1_1_slider.html#abdc26dff7a5f58c1dd00460f205f62c4":[8,0,2,658,11],
 "class_urho3_d_1_1_slider.html#ac027feff92e3d0aac90bb9af878c9118":[8,0,2,658,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX61 =
 "class_urho3_d_1_1_sphere.html#a8164a8279b94e907d6f1f6e1b3d621a4":[8,0,2,678,15],
 "class_urho3_d_1_1_sphere.html#a86aa6ab6cbb630ebdf16ee8c4ac834f9":[8,0,2,678,26],
 "class_urho3_d_1_1_sphere.html#a874cb74998723002fcffbc591313de5f":[8,0,2,678,8],
-"class_urho3_d_1_1_sphere.html#a87d3287a4cae266144da2ae624933ef1":[8,0,2,678,17],
-"class_urho3_d_1_1_sphere.html#a97194148abd15ecea37c417304c1173c":[8,0,2,678,34],
-"class_urho3_d_1_1_sphere.html#a97bc52f5276301bf63a2e3a36ea22469":[8,0,2,678,32],
-"class_urho3_d_1_1_sphere.html#a97d624c4eb77e300556222e5e5898821":[8,0,2,678,24],
-"class_urho3_d_1_1_sphere.html#a9c36975933ebb46c9be6a788e82e4dc5":[8,0,2,678,3],
-"class_urho3_d_1_1_sphere.html#aaa740dc9513756293812885736652a6b":[8,0,2,678,6],
-"class_urho3_d_1_1_sphere.html#ab48a46b094436f9c12efac572dd1efef":[8,0,2,678,16],
-"class_urho3_d_1_1_sphere.html#abc87c8154a0c1646d5182f4c7cde55ee":[8,0,2,678,4],
-"class_urho3_d_1_1_sphere.html#ac5d5f99064023816b297780fcab85109":[8,0,2,678,33]
+"class_urho3_d_1_1_sphere.html#a87d3287a4cae266144da2ae624933ef1":[8,0,2,678,17]
 };

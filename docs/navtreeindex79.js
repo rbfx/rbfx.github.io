@@ -1,5 +1,13 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#aac01b69eca100e9da8b65171a82cf72a":[8,0,2,59,1,2],
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#ab57ea0ad352fd3ce073f18e8b3b1016a":[8,0,2,59,1,5],
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html":[8,0,2,59,2],
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#a091b8ee49b97acb1ad98e7aa9337772b":[8,0,2,59,2,1],
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#a93c57af638079595d3e8b9f507a91edd":[8,0,2,59,2,3],
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#abac74e5a056ef8db08bb774461fcf7f5":[8,0,2,59,2,5],
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#abb8b062add4b8c003fb7ea59f832b2ae":[8,0,2,59,2,2],
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#ad5c4fac3c77b636851e0ac484cfdc7f0":[8,0,2,59,2,6],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#ae5e6b51e6e497993fc72b084d7e68e88":[8,0,2,59,2,0],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#aee65289d072d5f53e530f6ecc2e6cb89":[8,0,2,59,2,4],
 "struct_urho3_d_1_1_background_load_item.html":[8,0,2,62],
@@ -241,13 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_color_1_1_channel_mask.html":[8,0,2,130,0],
 "struct_urho3_d_1_1_color_1_1_channel_mask.html#a1d14a36ecc006c129890c231135872f7":[8,0,2,130,0,1],
 "struct_urho3_d_1_1_color_1_1_channel_mask.html#a55ffa12986c8157a3fd6d9f66ef9e073":[8,0,2,130,0,3],
-"struct_urho3_d_1_1_color_1_1_channel_mask.html#a7310fcddfe05edd45acd5ee46111dcff":[8,0,2,130,0,0],
-"struct_urho3_d_1_1_color_1_1_channel_mask.html#aba705fe0fb82a3a3ee7a3962b28aeb1f":[8,0,2,130,0,2],
-"struct_urho3_d_1_1_color_frame.html":[8,0,2,131],
-"struct_urho3_d_1_1_color_frame.html#a26c8b15020e9b9a3a1e1f144b8868d53":[8,0,2,131,1],
-"struct_urho3_d_1_1_color_frame.html#a41ef68e9dd336a0f6bcce4ae281b992b":[8,0,2,131,3],
-"struct_urho3_d_1_1_color_frame.html#a42c2a6850b1c33711d03a881c8bb0737":[8,0,2,131,4],
-"struct_urho3_d_1_1_color_frame.html#a9d4fede3ee02a39180d14afbb4d1bb46":[8,0,2,131,2],
-"struct_urho3_d_1_1_color_frame.html#aa3a2c5d1db34bebaf7ae9de73abc534b":[8,0,2,131,5],
-"struct_urho3_d_1_1_color_frame.html#ab34d7a94b3c35eca59ab37dba18ba60a":[8,0,2,131,0]
+"struct_urho3_d_1_1_color_1_1_channel_mask.html#a7310fcddfe05edd45acd5ee46111dcff":[8,0,2,130,0,0]
 };

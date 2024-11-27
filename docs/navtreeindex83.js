@@ -1,5 +1,13 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html#aefe3516654f4adde63803a1fa9e4cc61":[8,0,2,298,0,4],
+"struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html#afdbc25b22acb3ae21763e3ca3796e17d":[8,0,2,298,0,3],
+"struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html":[8,0,2,300,0],
+"struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html#a356060649986220208cf3d749fa1dbb6":[8,0,2,300,0,1],
+"struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html#a9db85d9a5cdde36b4bff7cca9da1d0a1":[8,0,2,300,0,0],
+"struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html#ad777f49238e14071bf96229f109d4d8f":[8,0,2,300,0,2],
+"struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html":[8,0,2,301,0],
+"struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#a0918a9c75295b3ea564201e766d4db6b":[8,0,2,301,0,13],
 "struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#a0e1f532dc91a022a9bb4e732e1d44e0e":[8,0,2,301,0,3],
 "struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#a192c85239217f65f1b99f607aad7cb27":[8,0,2,301,0,12],
 "struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html#a351690401e8382bcb29fcfcf0a6b46c8":[8,0,2,301,0,5],
@@ -241,13 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_lightmap_charting_settings.html#a1c69f3adbc235f81757a8c25b77ab45c":[8,0,2,352,4],
 "struct_urho3_d_1_1_lightmap_charting_settings.html#aedc63fe84ee3dc5b2dc23767dead5a24":[8,0,2,352,3],
 "struct_urho3_d_1_1_lightmap_charting_settings.html#afc8c3edc70e7c56aea4edfd60f9b8469":[8,0,2,352,1],
-"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html":[8,0,2,354],
-"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#a0a4d473a90ad68c60952b6bf9f490fa1":[8,0,2,354,5],
-"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#a3ca00dcc8429257f1cdedb0c59ae631f":[8,0,2,354,2],
-"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#a5c2456109241247dc659849fc002df5c":[8,0,2,354,3],
-"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#a687c0922ab04f876bcd1eeb175305ebc":[8,0,2,354,0],
-"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#aed8cc165e29b66596f6bca2eb71ebeb2":[8,0,2,354,4],
-"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#af9f2ea4ea22d611a5f1f9ee0451c1179":[8,0,2,354,1],
-"struct_urho3_d_1_1_lightmap_geometry_baking_scenes_array.html":[8,0,2,355],
-"struct_urho3_d_1_1_lightmap_geometry_baking_scenes_array.html#a12e4d4cc2fe5e3506f8d7bd354d41d6e":[8,0,2,355,0]
+"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html":[8,0,2,354]
 };

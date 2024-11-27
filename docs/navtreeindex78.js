@@ -1,5 +1,13 @@
 var NAVTREEINDEX78 =
 {
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a596f6b2061f647841b2d3531a53788dc":[8,0,15,0],
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a5b81df574c7391d1cc79623b4f7a28e5":[8,0,15,27],
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a5cfadfb0ada14d3590e7c5b6fe2b192d":[8,0,15,26],
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a5f08edde6ca7f92f876c98655cef3cbc":[8,0,15,28],
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a5f51170a7fcde8a217713ffc1d5e9d17":[8,0,15,13],
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a6b67f915789f7a8af3e8a52d9e4a4c64":[8,0,15,7],
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a735a66b4bd5d91214643348a491f260b":[8,0,15,6],
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a81e31d8bbc5cdee1927bb25d14d30ccb":[8,0,15,24],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a8796acd6a431e009d273862992c09b66":[8,0,15,21],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a8f63a99fd5719967fac29062a7ce4215":[8,0,15,10],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a96f4ba9e88648f80cfa10743adc6859e":[8,0,15,20],
@@ -241,13 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a48ba09ab3bf1b6a2af28eb9fae0469df":[8,0,2,59,1,6],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a5c6ccd0333a41bb4e745bc337915afd7":[8,0,2,59,1,4],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a867f2685f3e6331708d3c6e87b73b0ca":[8,0,2,59,1,3],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a98554ecb7246fb432bfdac13a2ec09a6":[8,0,2,59,1,0],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#aac01b69eca100e9da8b65171a82cf72a":[8,0,2,59,1,2],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#ab57ea0ad352fd3ce073f18e8b3b1016a":[8,0,2,59,1,5],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html":[8,0,2,59,2],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#a091b8ee49b97acb1ad98e7aa9337772b":[8,0,2,59,2,1],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#a93c57af638079595d3e8b9f507a91edd":[8,0,2,59,2,3],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#abac74e5a056ef8db08bb774461fcf7f5":[8,0,2,59,2,5],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#abb8b062add4b8c003fb7ea59f832b2ae":[8,0,2,59,2,2],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html#ad5c4fac3c77b636851e0ac484cfdc7f0":[8,0,2,59,2,6]
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a98554ecb7246fb432bfdac13a2ec09a6":[8,0,2,59,1,0]
 };
