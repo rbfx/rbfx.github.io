@@ -30,23 +30,15 @@ if (ENVIRONMENT_IS_NODE) {}
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
 // include: /home/runner/work/rbfx/rbfx/cmake-build/Source/Samples/Resources.js.load.js
-var Module;
-
-if (typeof Module === "undefined") Module = eval("(function(){try{return Module||{}}catch(e){return{}}})()");
-
-var s = document.createElement("script");
-
-s.src = "Resources.js";
-
-document.body.appendChild(s);
-
 Module["preRun"].push(function() {
   Module["addRunDependency"]("Resources.js.loader");
+  var s = document.createElement("script");
+  s.src = "Resources.js";
+  document.body.appendChild(s);
+  s.onload = function() {
+    Module["removeRunDependency"]("Resources.js.loader");
+  };
 });
-
-s.onload = function() {
-  if (Module.finishedDataFileDownloads < Module.expectedDataFileDownloads) setTimeout(s.onload, 100); else Module["removeRunDependency"]("Resources.js.loader");
-};
 
 // end include: /home/runner/work/rbfx/rbfx/cmake-build/Source/Samples/Resources.js.load.js
 // Sometimes an existing Module object exists with properties
@@ -1471,6 +1463,8 @@ var zeroMemory = (address, size) => {
   HEAPU8.fill(0, address, address + size);
 };
 
+var alignMemory = (size, alignment) => Math.ceil(size / alignment) * alignment;
+
 var mmapAlloc = size => {
   abort();
 };
@@ -1478,7 +1472,7 @@ var mmapAlloc = size => {
 var MEMFS = {
   ops_table: null,
   mount(mount) {
-    return MEMFS.createNode(null, "/", 16384 | 511, /* 0777 */ 0);
+    return MEMFS.createNode(null, "/", 16895, 0);
   },
   createNode(parent, name, mode, dev) {
     if (FS.isBlkdev(mode) || FS.isFIFO(mode)) {
@@ -1687,7 +1681,7 @@ var MEMFS = {
       return entries;
     },
     symlink(parent, newname, oldpath) {
-      var node = MEMFS.createNode(parent, newname, 511 | /* 0777 */ 40960, 0);
+      var node = MEMFS.createNode(parent, newname, 511 | 40960, 0);
       node.link = oldpath;
       return node;
     },
@@ -1712,6 +1706,13 @@ var MEMFS = {
       return size;
     },
     write(stream, buffer, offset, length, position, canOwn) {
+      // If the buffer is located in main memory (HEAP), and if
+      // memory can grow, we can't hold on to references of the
+      // memory buffer, as they may get invalidated. That means we
+      // need to do copy its contents.
+      if (buffer.buffer === HEAP8.buffer) {
+        canOwn = false;
+      }
       if (!length) return 0;
       var node = stream.node;
       node.timestamp = Date.now();
@@ -2754,15 +2755,36 @@ var FS = {
     }
     return parent.node_ops.mknod(parent, name, mode, dev);
   },
-  create(path, mode) {
-    mode = mode !== undefined ? mode : 438;
-    /* 0666 */ mode &= 4095;
+  statfs(path) {
+    // NOTE: None of the defaults here are true. We're just returning safe and
+    //       sane values.
+    var rtn = {
+      bsize: 4096,
+      frsize: 4096,
+      blocks: 1e6,
+      bfree: 5e5,
+      bavail: 5e5,
+      files: FS.nextInode,
+      ffree: FS.nextInode - 1,
+      fsid: 42,
+      flags: 2,
+      namelen: 255
+    };
+    var parent = FS.lookupPath(path, {
+      follow: true
+    }).node;
+    if (parent?.node_ops.statfs) {
+      Object.assign(rtn, parent.node_ops.statfs(parent.mount.opts.root));
+    }
+    return rtn;
+  },
+  create(path, mode = 438) {
+    mode &= 4095;
     mode |= 32768;
     return FS.mknod(path, mode, 0);
   },
-  mkdir(path, mode) {
-    mode = mode !== undefined ? mode : 511;
-    /* 0777 */ mode &= 511 | 512;
+  mkdir(path, mode = 511) {
+    mode &= 511 | 512;
     mode |= 16384;
     return FS.mknod(path, mode, 0);
   },
@@ -2784,7 +2806,7 @@ var FS = {
       dev = mode;
       mode = 438;
     }
-    /* 0666 */ mode |= 8192;
+    mode |= 8192;
     return FS.mknod(path, mode, dev);
   },
   symlink(oldpath, newpath) {
@@ -2880,7 +2902,7 @@ var FS = {
     // do the underlying fs rename
     try {
       old_dir.node_ops.rename(old_node, new_dir, new_name);
-      // update old node (we do this here to avoid each backend 
+      // update old node (we do this here to avoid each backend
       // needing to)
       old_node.parent = new_dir;
     } catch (e) {
@@ -2956,7 +2978,7 @@ var FS = {
     if (!link.node_ops.readlink) {
       throw new FS.ErrnoError(28);
     }
-    return PATH_FS.resolve(FS.getPath(link.parent), link.node_ops.readlink(link));
+    return link.node_ops.readlink(link);
   },
   stat(path, dontFollow) {
     var lookup = FS.lookupPath(path, {
@@ -3071,13 +3093,12 @@ var FS = {
       timestamp: Math.max(atime, mtime)
     });
   },
-  open(path, flags, mode) {
+  open(path, flags, mode = 438) {
     if (path === "") {
       throw new FS.ErrnoError(44);
     }
     flags = typeof flags == "string" ? FS_modeStringToFlags(flags) : flags;
     if ((flags & 64)) {
-      mode = typeof mode == "undefined" ? 438 : /* 0666 */ mode;
       mode = (mode & 4095) | 32768;
     } else {
       mode = 0;
@@ -3396,7 +3417,7 @@ var FS = {
     FS.mkdir("/proc/self/fd");
     FS.mount({
       mount() {
-        var node = FS.createNode(proc_self, "fd", 16384 | 511, /* 0777 */ 73);
+        var node = FS.createNode(proc_self, "fd", 16895, 73);
         node.node_ops = {
           lookup(parent, name) {
             var fd = +name;
@@ -3822,7 +3843,7 @@ var SOCKFS = {
     // object so we can register network callbacks from native JavaScript too.
     // For more documentation see system/include/emscripten/emscripten.h
     (Module["websocket"] ??= {})["on"] = SOCKFS.on;
-    return FS.createNode(null, "/", 16384 | 511, /* 0777 */ 0);
+    return FS.createNode(null, "/", 16895, 0);
   },
   createSocket(family, type, protocol) {
     type &= ~526336;
@@ -3901,7 +3922,7 @@ var SOCKFS = {
     if (!SOCKFS.nextname.current) {
       SOCKFS.nextname.current = 0;
     }
-    return "socket[" + (SOCKFS.nextname.current++) + "]";
+    return `socket[${SOCKFS.nextname.current++}]`;
   },
   websocket_sock_ops: {
     createPeer(sock, addr, port) {
@@ -4316,8 +4337,7 @@ var SOCKFS = {
         offset += buffer.byteOffset;
         buffer = buffer.buffer;
       }
-      var data;
-      data = buffer.slice(offset, offset + length);
+      var data = buffer.slice(offset, offset + length);
       // if we don't have a cached connectionless UDP datagram connection, or
       // the TCP socket is still connecting, queue the message to be sent upon
       // connect, and lie, saying the data was sent now.
@@ -5161,9 +5181,7 @@ function ___syscall_unlinkat(dirfd, path, flags) {
   }
 }
 
-var __abort_js = () => {
-  abort("");
-};
+var __abort_js = () => abort("");
 
 var __embind_register_bigint = (primitiveType, name, size, minRange, maxRange) => {};
 
@@ -6430,7 +6448,7 @@ var Browser = {
     }
   },
   createContext(/** @type {HTMLCanvasElement} */ canvas, useWebGL, setInModule, webGLContextAttributes) {
-    if (useWebGL && Module.ctx && canvas == Module["canvas"]) return Module.ctx;
+    if (useWebGL && Module["ctx"] && canvas == Module["canvas"]) return Module["ctx"];
     // no need to recreate GL context if it's already been created for this canvas.
     var ctx;
     var contextHandle;
@@ -6460,7 +6478,7 @@ var Browser = {
     }
     if (!ctx) return null;
     if (setInModule) {
-      Module.ctx = ctx;
+      Module["ctx"] = ctx;
       if (useWebGL) GL.makeContextCurrent(contextHandle);
       Browser.useWebGL = useWebGL;
       Browser.moduleContextCreatedCallbacks.forEach(callback => callback());
@@ -6838,7 +6856,8 @@ var webgl_enable_EXT_clip_control = ctx => !!(ctx.extClipControl = ctx.getExtens
 
 var webgl_enable_WEBGL_polygon_mode = ctx => !!(ctx.webglPolygonMode = ctx.getExtension("WEBGL_polygon_mode"));
 
-var webgl_enable_WEBGL_multi_draw = ctx => !!(ctx.multiDrawWebgl = ctx.getExtension("WEBGL_multi_draw"));
+var webgl_enable_WEBGL_multi_draw = ctx => // Closure is expected to be allowed to minify the '.multiDrawWebgl' property, so not accessing it quoted.
+!!(ctx.multiDrawWebgl = ctx.getExtension("WEBGL_multi_draw"));
 
 var getEmscriptenSupportedExtensions = ctx => {
   // Restrict the list of advertised extensions to those that we actually
@@ -7096,7 +7115,7 @@ var GL = {
     // Active Emscripten GL layer context object.
     GL.currentContext = GL.contexts[contextHandle];
     // Active WebGL context object.
-    Module.ctx = GLctx = GL.currentContext?.GLctx;
+    Module["ctx"] = GLctx = GL.currentContext?.GLctx;
     return !(contextHandle && !GLctx);
   },
   getContext: contextHandle => GL.contexts[contextHandle],
@@ -7953,19 +7972,13 @@ var currentFullscreenStrategy = {};
 /** @type {Object} */ var specialHTMLTargets = [ 0, typeof document != "undefined" ? document : 0, typeof window != "undefined" ? window : 0 ];
 
 var findEventTarget = target => {
-  try {
-    // The sensible "default" target varies between events, but use window as the default
-    // since DOM events mostly can default to that. Specific callback registrations
-    // override their own defaults.
-    if (!target) return window;
-    if (typeof target == "number") target = specialHTMLTargets[target] || UTF8ToString(target);
-    if (target === "#window") return window; else if (target === "#document") return document; else if (target === "#screen") return screen; else if (target === "#canvas") return Module["canvas"];
-    return (typeof target == "string") ? document.getElementById(target) : target;
-  } catch (e) {
-    // In Web Workers, some objects above, such as '#document' do not exist. Gracefully
-    // return null for them.
-    return null;
-  }
+  // The sensible "default" target varies between events, but use window as the default
+  // since DOM events mostly can default to that. Specific callback registrations
+  // override their own defaults.
+  if (!target) return window;
+  if (typeof target == "number") target = specialHTMLTargets[target] || UTF8ToString(target);
+  if (target === "#window") return window; else if (target === "#document") return document; else if (target === "#screen") return screen; else if (target === "#canvas") return Module["canvas"]; else if (typeof target == "string") return (typeof document != "undefined") ? document.getElementById(target) : null;
+  return target;
 };
 
 var findCanvasEventTarget = target => {
@@ -9200,15 +9213,11 @@ var __glGetActiveAttribOrUniform = (funcName, program, index, bufSize, length, s
   }
 };
 
-/** @suppress {duplicate } */ var _glGetActiveAttrib = (program, index, bufSize, length, size, type, name) => {
-  __glGetActiveAttribOrUniform("getActiveAttrib", program, index, bufSize, length, size, type, name);
-};
+/** @suppress {duplicate } */ var _glGetActiveAttrib = (program, index, bufSize, length, size, type, name) => __glGetActiveAttribOrUniform("getActiveAttrib", program, index, bufSize, length, size, type, name);
 
 var _emscripten_glGetActiveAttrib = _glGetActiveAttrib;
 
-/** @suppress {duplicate } */ var _glGetActiveUniform = (program, index, bufSize, length, size, type, name) => {
-  __glGetActiveAttribOrUniform("getActiveUniform", program, index, bufSize, length, size, type, name);
-};
+/** @suppress {duplicate } */ var _glGetActiveUniform = (program, index, bufSize, length, size, type, name) => __glGetActiveAttribOrUniform("getActiveUniform", program, index, bufSize, length, size, type, name);
 
 var _emscripten_glGetActiveUniform = _glGetActiveUniform;
 
@@ -9306,7 +9315,7 @@ var writeI53ToI64 = (ptr, num) => {
   HEAPU32[(((ptr) + (4)) >> 2)] = (num - lower) / 4294967296;
 };
 
-var webglGetExtensions = function $webglGetExtensions() {
+var webglGetExtensions = () => {
   var exts = getEmscriptenSupportedExtensions(GLctx);
   exts = exts.concat(exts.map(e => "GL_" + e));
   return exts;
@@ -11287,15 +11296,69 @@ var _emscripten_request_pointerlock = (target, deferUntilInEventHandler) => {
   return requestPointerLock(target);
 };
 
-var abortOnCannotGrowMemory = requestedSize => {
-  abort("OOM");
+var getHeapMax = () => // Stay one Wasm page short of 4GB: while e.g. Chrome is able to allocate
+// full 4GB Wasm memories, the size will wrap back to 0 bytes in Wasm side
+// for any code that deals with heap sizes, which would require special
+// casing all heap size related code to treat 0 specially.
+2147483648;
+
+var growMemory = size => {
+  var b = wasmMemory.buffer;
+  var pages = ((size - b.byteLength + 65535) / 65536) | 0;
+  try {
+    // round size grow request up to wasm page size (fixed 64KB per spec)
+    wasmMemory.grow(pages);
+    // .grow() takes a delta compared to the previous size
+    updateMemoryViews();
+    return 1;
+  } /*success*/ catch (e) {}
 };
 
+// implicit 0 return to save code size (caller will cast "undefined" into 0
+// anyhow)
 var _emscripten_resize_heap = requestedSize => {
   var oldSize = HEAPU8.length;
   // With CAN_ADDRESS_2GB or MEMORY64, pointers are already unsigned.
   requestedSize >>>= 0;
-  abortOnCannotGrowMemory(requestedSize);
+  // With multithreaded builds, races can happen (another thread might increase the size
+  // in between), so return a failure, and let the caller retry.
+  // Memory resize rules:
+  // 1.  Always increase heap size to at least the requested size, rounded up
+  //     to next page multiple.
+  // 2a. If MEMORY_GROWTH_LINEAR_STEP == -1, excessively resize the heap
+  //     geometrically: increase the heap size according to
+  //     MEMORY_GROWTH_GEOMETRIC_STEP factor (default +20%), At most
+  //     overreserve by MEMORY_GROWTH_GEOMETRIC_CAP bytes (default 96MB).
+  // 2b. If MEMORY_GROWTH_LINEAR_STEP != -1, excessively resize the heap
+  //     linearly: increase the heap size by at least
+  //     MEMORY_GROWTH_LINEAR_STEP bytes.
+  // 3.  Max size for the heap is capped at 2048MB-WASM_PAGE_SIZE, or by
+  //     MAXIMUM_MEMORY, or by ASAN limit, depending on which is smallest
+  // 4.  If we were unable to allocate as much memory, it may be due to
+  //     over-eager decision to excessively reserve due to (3) above.
+  //     Hence if an allocation fails, cut down on the amount of excess
+  //     growth, in an attempt to succeed to perform a smaller allocation.
+  // A limit is set for how much we can grow. We should not exceed that
+  // (the wasm binary specifies it, so if we tried, we'd fail anyhow).
+  var maxHeapSize = getHeapMax();
+  if (requestedSize > maxHeapSize) {
+    return false;
+  }
+  // Loop through potential heap size increases. If we attempt a too eager
+  // reservation that fails, cut down on the attempted size and reserve a
+  // smaller bump instead. (max 3 times, chosen somewhat arbitrarily)
+  for (var cutDown = 1; cutDown <= 4; cutDown *= 2) {
+    var overGrownHeapSize = oldSize * (1 + .2 / cutDown);
+    // ensure geometric growth
+    // but limit overreserving (default to capping at +96MB overgrowth at most)
+    overGrownHeapSize = Math.min(overGrownHeapSize, requestedSize + 100663296);
+    var newSize = Math.min(maxHeapSize, alignMemory(Math.max(requestedSize, overGrownHeapSize), 65536));
+    var replacement = growMemory(newSize);
+    if (replacement) {
+      return true;
+    }
+  }
+  return false;
 };
 
 /** @suppress {checkTypes} */ var _emscripten_sample_gamepad_data = () => {
@@ -12889,11 +12952,9 @@ function _wsSetUserPointer(ws, ptr) {
   if (webSocket) webSocket.rtcUserPointer = ptr;
 }
 
-var listenOnce = (object, event, func) => {
-  object.addEventListener(event, func, {
-    "once": true
-  });
-};
+var listenOnce = (object, event, func) => object.addEventListener(event, func, {
+  "once": true
+});
 
 /** @param {Object=} elements */ var autoResumeAudioContext = (ctx, elements) => {
   if (!elements) {
