@@ -1,5 +1,6 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html":[8,0,2,354],
 "struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#a0a4d473a90ad68c60952b6bf9f490fa1":[8,0,2,354,5],
 "struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#a3ca00dcc8429257f1cdedb0c59ae631f":[8,0,2,354,2],
 "struct_urho3_d_1_1_lightmap_geometry_baking_scene.html#a5c2456109241247dc659849fc002df5c":[8,0,2,354,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_numeric_range.html#ab3f025ceba4313d31732f7cbe5b20a00":[8,0,2,449,5],
 "struct_urho3_d_1_1_numeric_range.html#abde91a0e3d4b379d514904bfe7602c52":[8,0,2,449,8],
 "struct_urho3_d_1_1_numeric_range.html#afdb194a4f30c965f53c6c6868bab51d1":[8,0,2,449,3],
-"struct_urho3_d_1_1_occlusion_batch.html":[8,0,2,456],
-"struct_urho3_d_1_1_occlusion_batch.html#a1f922d3a11fef4a84f73856b503a05d1":[8,0,2,456,6]
+"struct_urho3_d_1_1_occlusion_batch.html":[8,0,2,456]
 };

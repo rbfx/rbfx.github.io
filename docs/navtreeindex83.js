@@ -1,5 +1,6 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html#ae9fc00f7eccbe05b18b4f0cf002112bd":[8,0,2,298,0,7],
 "struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html#aefe3516654f4adde63803a1fa9e4cc61":[8,0,2,298,0,4],
 "struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html#afdbc25b22acb3ae21763e3ca3796e17d":[8,0,2,298,0,3],
 "struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html":[8,0,2,300,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_lightmap_charting_settings.html#a18ae8140c0874b69b2c1715d350ff4ec":[8,0,2,352,0],
 "struct_urho3_d_1_1_lightmap_charting_settings.html#a1c69f3adbc235f81757a8c25b77ab45c":[8,0,2,352,4],
 "struct_urho3_d_1_1_lightmap_charting_settings.html#aedc63fe84ee3dc5b2dc23767dead5a24":[8,0,2,352,3],
-"struct_urho3_d_1_1_lightmap_charting_settings.html#afc8c3edc70e7c56aea4edfd60f9b8469":[8,0,2,352,1],
-"struct_urho3_d_1_1_lightmap_geometry_baking_scene.html":[8,0,2,354]
+"struct_urho3_d_1_1_lightmap_charting_settings.html#afc8c3edc70e7c56aea4edfd60f9b8469":[8,0,2,352,1]
 };

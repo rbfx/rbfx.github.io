@@ -1,5 +1,6 @@
 var NAVTREEINDEX78 =
 {
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a506003d2a606439b7cb97f4ba76afb01":[8,0,15,23],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a596f6b2061f647841b2d3531a53788dc":[8,0,15,0],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a5b81df574c7391d1cc79623b4f7a28e5":[8,0,15,27],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a5cfadfb0ada14d3590e7c5b6fe2b192d":[8,0,15,26],
@@ -248,6 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a170a6d447758235ee4f72ea106d42a22":[8,0,2,59,1,1],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a48ba09ab3bf1b6a2af28eb9fae0469df":[8,0,2,59,1,6],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a5c6ccd0333a41bb4e745bc337915afd7":[8,0,2,59,1,4],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a867f2685f3e6331708d3c6e87b73b0ca":[8,0,2,59,1,3],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a98554ecb7246fb432bfdac13a2ec09a6":[8,0,2,59,1,0]
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a867f2685f3e6331708d3c6e87b73b0ca":[8,0,2,59,1,3]
 };

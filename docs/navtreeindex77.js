@@ -1,5 +1,6 @@
 var NAVTREEINDEX77 =
 {
+"functions_func_i.html":[8,3,1,8],
 "functions_func_j.html":[8,3,1,9],
 "functions_func_k.html":[8,3,1,10],
 "functions_func_l.html":[8,3,1,11],
@@ -36,8 +37,8 @@ var NAVTREEINDEX77 =
 "functions_type.html":[8,3,3],
 "functions_u.html":[8,3,0,21],
 "functions_v.html":[8,3,0,22],
-"functions_vars.html":[8,3,2,0],
 "functions_vars.html":[8,3,2],
+"functions_vars.html":[8,3,2,0],
 "functions_vars_a.html":[8,3,2,1],
 "functions_vars_b.html":[8,3,2,2],
 "functions_vars_c.html":[8,3,2,3],
@@ -71,8 +72,8 @@ var NAVTREEINDEX77 =
 "functions_~.html":[8,3,0,27],
 "graphics-and-rendering.html":[0,0,2,1],
 "hierarchy.html":[8,2],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "input.html":[0,0,2,5],
 "inverse-kinematics.html":[0,0,2,6],
 "low-level-transport.html":[0,0,2,2,0],
@@ -81,8 +82,8 @@ var NAVTREEINDEX77 =
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html":[2],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html":[5],
 "multiplayer-and-networking.html":[0,0,2,2],
-"namespace_urho3_d_1_1_actions.html":[8,0,2,0],
 "namespace_urho3_d_1_1_actions.html":[7,0,0,0],
+"namespace_urho3_d_1_1_actions.html":[8,0,2,0],
 "namespace_urho3_d_1_1_attribute_metadata.html":[7,0,0,1],
 "namespace_urho3_d_1_1_linked_plugins.html":[7,0,0,2],
 "namespace_urho3_d_1_1_network_settings.html":[7,0,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX77 =
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a31ad5966a794099b2563ba4749aaf0f7":[8,0,15,2],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a38723bb641e7b109cddf93e6446a54bd":[8,0,15,8],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a4bc580a9949abc0dd61b44b610848282":[8,0,15,12],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a4efad7dd8c2ab02095c31f4891a662f1":[8,0,15,22],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a506003d2a606439b7cb97f4ba76afb01":[8,0,15,23]
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a4efad7dd8c2ab02095c31f4891a662f1":[8,0,15,22]
 };

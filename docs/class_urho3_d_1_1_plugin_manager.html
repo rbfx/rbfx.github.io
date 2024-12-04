@@ -102,6 +102,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#a163ba6c63437cb6d9aadf5229b148c8c">Reload</a> ()</td></tr>
 <tr class="memdesc:a163ba6c63437cb6d9aadf5229b148c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload all dynamic modules. <br /></td></tr>
 <tr class="separator:a163ba6c63437cb6d9aadf5229b148c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1985a142cc64cc3e13c0a546d13784a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#a1985a142cc64cc3e13c0a546d13784a0">Commit</a> ()</td></tr>
+<tr class="separator:a1985a142cc64cc3e13c0a546d13784a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9442ce55fa2955d827cec17f61c2b7a"><td class="memItemLeft" align="right" valign="top"><a id="af9442ce55fa2955d827cec17f61c2b7a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#af9442ce55fa2955d827cec17f61c2b7a">StartApplication</a> ()</td></tr>
 <tr class="memdesc:af9442ce55fa2955d827cec17f61c2b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start plugin application for all loaded plugins. <br /></td></tr>
@@ -466,7 +468,26 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages engine plugins. Note that module being loaded and plugin being loaded are two different things. </p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1985a142cc64cc3e13c0a546d13784a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1985a142cc64cc3e13c0a546d13784a0">&#9670;&nbsp;</a></span>Commit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::PluginManager::Commit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Commit updates to the list of loaded plugins and to application status. This may be unsafe to call inside of the frame. Called automatically between frames. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="ae3cb7b399650fad8785a1300d24d482d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae3cb7b399650fad8785a1300d24d482d">&#9670;&nbsp;</a></span>dynamicPlugins_</h2>
 

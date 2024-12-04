@@ -7,6 +7,7 @@ var class_urho3_d_1_1_plugin_manager =
     [ "AddStaticPlugin", "class_urho3_d_1_1_plugin_manager.html#a70b9bf967c371e4daf97aebbb9553f2e", null ],
     [ "ArePluginsRenamed", "class_urho3_d_1_1_plugin_manager.html#ab3c3c61e586aeb467bbb5f07bcc8c698", null ],
     [ "CheckAndRemoveUnloadedPlugin", "class_urho3_d_1_1_plugin_manager.html#a7d1b117aa063b78512c3eea4863020f6", null ],
+    [ "Commit", "class_urho3_d_1_1_plugin_manager.html#a1985a142cc64cc3e13c0a546d13784a0", null ],
     [ "DisposeStack", "class_urho3_d_1_1_plugin_manager.html#aa978df15129d466455faa8e3cea922b7", null ],
     [ "EnumerateLoadedModules", "class_urho3_d_1_1_plugin_manager.html#a6aec06babbffe0a16becbbd84e54e9db", null ],
     [ "ForEachPluginApplication", "class_urho3_d_1_1_plugin_manager.html#a69bd8f0772623db3205a4f3bcd95efe9", null ],
