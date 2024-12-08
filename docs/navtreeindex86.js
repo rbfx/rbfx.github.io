@@ -1,5 +1,11 @@
 var NAVTREEINDEX86 =
 {
+"struct_urho3_d_1_1_pipeline_batch_back_to_front.html#a165ba4967d3e1084e79ccdfbc9237d85":[8,0,2,516,2],
+"struct_urho3_d_1_1_pipeline_batch_back_to_front.html#a271cc82a53029c60f0f4ac0a7748b39c":[8,0,2,516,5],
+"struct_urho3_d_1_1_pipeline_batch_back_to_front.html#a492c3f20b2470119764b6c7d99ac2dca":[8,0,2,516,1],
+"struct_urho3_d_1_1_pipeline_batch_back_to_front.html#a8fec93093b030e0728b988705699d141":[8,0,2,516,3],
+"struct_urho3_d_1_1_pipeline_batch_back_to_front.html#acee6bfeb4b828d1ac6d533a12049c42e":[8,0,2,516,0],
+"struct_urho3_d_1_1_pipeline_batch_back_to_front.html#afae0543e7f087d59e8743b3516554f2c":[8,0,2,516,4],
 "struct_urho3_d_1_1_pipeline_batch_by_state.html":[8,0,2,517],
 "struct_urho3_d_1_1_pipeline_batch_by_state.html#a0e3b179abac7c0807030672aa8b19cd7":[8,0,2,517,17],
 "struct_urho3_d_1_1_pipeline_batch_by_state.html#a1b56f166f9b386db4ae7ee3f06a8629c":[8,0,2,517,25],
@@ -243,11 +249,5 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_resource_ref.html#af93e94bbd524e1d56613da988be3517c":[8,0,2,594,8],
 "struct_urho3_d_1_1_resource_ref_list.html":[8,0,2,595],
 "struct_urho3_d_1_1_resource_ref_list.html#a20ab60977844d31fdb7567d60c69a63c":[8,0,2,595,5],
-"struct_urho3_d_1_1_resource_ref_list.html#a2eddd663043605d1ddef851a60ea3a0a":[8,0,2,595,4],
-"struct_urho3_d_1_1_resource_ref_list.html#a8451f4c21479660e4cd25fd50f6bd0af":[8,0,2,595,1],
-"struct_urho3_d_1_1_resource_ref_list.html#a986ec68bb427b72311f7dceb978158e4":[8,0,2,595,0],
-"struct_urho3_d_1_1_resource_ref_list.html#aa6d4bb302d8f0746cfacf273f94b50f2":[8,0,2,595,7],
-"struct_urho3_d_1_1_resource_ref_list.html#aa6dee9f932a9185daed368f1f3d4a340":[8,0,2,595,6],
-"struct_urho3_d_1_1_resource_ref_list.html#ae963d5077cf26428dd451b802c6a353e":[8,0,2,595,2],
-"struct_urho3_d_1_1_resource_ref_list.html#aebbfd3e8b73ea956d54c393ec76169f8":[8,0,2,595,8]
+"struct_urho3_d_1_1_resource_ref_list.html#a2eddd663043605d1ddef851a60ea3a0a":[8,0,2,595,4]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html":[8,0,2,298,0],
+"struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html#a165d11d6ecf6ab683e5b39779ca8e66f":[8,0,2,298,0,2],
+"struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html#a2dfc88651bab9b02f76e72b49a25b833":[8,0,2,298,0,6],
+"struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html#aaf68a374194c3455173e1ae9f7fec334":[8,0,2,298,0,5],
+"struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html#ac053a97fa606eb045c23afc74d1d813c":[8,0,2,298,0,0],
+"struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html#ac5ed841f5d850564d9fd6cec560d2f41":[8,0,2,298,0,1],
 "struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html#ae9fc00f7eccbe05b18b4f0cf002112bd":[8,0,2,298,0,7],
 "struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html#aefe3516654f4adde63803a1fa9e4cc61":[8,0,2,298,0,4],
 "struct_urho3_d_1_1_i_k_solver_component_1_1_bend_calculation_params.html#afdbc25b22acb3ae21763e3ca3796e17d":[8,0,2,298,0,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_lightmap_chart_region.html#a9d13d2d19c314a1819fa80760c9e4188":[8,0,2,353,2],
 "struct_urho3_d_1_1_lightmap_chart_region.html#aab0bd8d19e10156ba054c193c5b22826":[8,0,2,353,3],
 "struct_urho3_d_1_1_lightmap_chart_region.html#ace706979a06a0ed9570d67a7a938d73c":[8,0,2,353,0],
-"struct_urho3_d_1_1_lightmap_chart_region.html#ad41252bd80c90f53903d90461c7d6482":[8,0,2,353,1],
-"struct_urho3_d_1_1_lightmap_charting_settings.html":[8,0,2,352],
-"struct_urho3_d_1_1_lightmap_charting_settings.html#a14589fa883b068182c91d2155d1a0b39":[8,0,2,352,2],
-"struct_urho3_d_1_1_lightmap_charting_settings.html#a18ae8140c0874b69b2c1715d350ff4ec":[8,0,2,352,0],
-"struct_urho3_d_1_1_lightmap_charting_settings.html#a1c69f3adbc235f81757a8c25b77ab45c":[8,0,2,352,4],
-"struct_urho3_d_1_1_lightmap_charting_settings.html#aedc63fe84ee3dc5b2dc23767dead5a24":[8,0,2,352,3],
-"struct_urho3_d_1_1_lightmap_charting_settings.html#afc8c3edc70e7c56aea4edfd60f9b8469":[8,0,2,352,1]
+"struct_urho3_d_1_1_lightmap_chart_region.html#ad41252bd80c90f53903d90461c7d6482":[8,0,2,353,1]
 };

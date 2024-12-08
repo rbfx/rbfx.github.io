@@ -1,5 +1,11 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#ab2a30222f69ec49336e9c6ab907eadc3":[8,0,2,59,0,5],
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html":[8,0,2,59,1],
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a170a6d447758235ee4f72ea106d42a22":[8,0,2,59,1,1],
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a48ba09ab3bf1b6a2af28eb9fae0469df":[8,0,2,59,1,6],
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a5c6ccd0333a41bb4e745bc337915afd7":[8,0,2,59,1,4],
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a867f2685f3e6331708d3c6e87b73b0ca":[8,0,2,59,1,3],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a98554ecb7246fb432bfdac13a2ec09a6":[8,0,2,59,1,0],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#aac01b69eca100e9da8b65171a82cf72a":[8,0,2,59,1,2],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#ab57ea0ad352fd3ce073f18e8b3b1016a":[8,0,2,59,1,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_clock_synchronizer_message.html#a33c14f0b19f40bf8acc9241cda0320ee":[8,0,2,121,4],
 "struct_urho3_d_1_1_clock_synchronizer_message.html#a51b882cb0f388191e4368e6d8e6f9381":[8,0,2,121,5],
 "struct_urho3_d_1_1_clock_synchronizer_message.html#a6021da0c88593bfff1dbb07f632ed065":[8,0,2,121,2],
-"struct_urho3_d_1_1_clock_synchronizer_message.html#a60876b27ce259389876e728503601a7e":[8,0,2,121,6],
-"struct_urho3_d_1_1_clock_synchronizer_message.html#a664db36941c3ae394d1773bcd76acfe7":[8,0,2,121,3],
-"struct_urho3_d_1_1_clock_synchronizer_message.html#af04a9a47b6b32a3fb73b04912c65846b":[8,0,2,121,1],
-"struct_urho3_d_1_1_collision_geometry_data.html":[8,0,2,126],
-"struct_urho3_d_1_1_color_1_1_channel_mask.html":[8,0,2,130,0],
-"struct_urho3_d_1_1_color_1_1_channel_mask.html#a1d14a36ecc006c129890c231135872f7":[8,0,2,130,0,1],
-"struct_urho3_d_1_1_color_1_1_channel_mask.html#a55ffa12986c8157a3fd6d9f66ef9e073":[8,0,2,130,0,3]
+"struct_urho3_d_1_1_clock_synchronizer_message.html#a60876b27ce259389876e728503601a7e":[8,0,2,121,6]
 };

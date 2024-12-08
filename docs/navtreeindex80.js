@@ -1,5 +1,11 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_clock_synchronizer_message.html#a664db36941c3ae394d1773bcd76acfe7":[8,0,2,121,3],
+"struct_urho3_d_1_1_clock_synchronizer_message.html#af04a9a47b6b32a3fb73b04912c65846b":[8,0,2,121,1],
+"struct_urho3_d_1_1_collision_geometry_data.html":[8,0,2,126],
+"struct_urho3_d_1_1_color_1_1_channel_mask.html":[8,0,2,130,0],
+"struct_urho3_d_1_1_color_1_1_channel_mask.html#a1d14a36ecc006c129890c231135872f7":[8,0,2,130,0,1],
+"struct_urho3_d_1_1_color_1_1_channel_mask.html#a55ffa12986c8157a3fd6d9f66ef9e073":[8,0,2,130,0,3],
 "struct_urho3_d_1_1_color_1_1_channel_mask.html#a7310fcddfe05edd45acd5ee46111dcff":[8,0,2,130,0,0],
 "struct_urho3_d_1_1_color_1_1_channel_mask.html#aba705fe0fb82a3a3ee7a3962b28aeb1f":[8,0,2,130,0,2],
 "struct_urho3_d_1_1_color_frame.html":[8,0,2,131],
@@ -243,11 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_debug_frame_snapshot_pass.html#a72ce69ab0ae20a08c742dd89907d677f":[8,0,2,183,1],
 "struct_urho3_d_1_1_debug_frame_snapshot_pass.html#a8228df3bf9ee12259fd4310cf3a3ab63":[8,0,2,183,3],
 "struct_urho3_d_1_1_debug_frame_snapshot_pass.html#ab2c1a5edf68eac5a5ec2d31a3e13d131":[8,0,2,183,2],
-"struct_urho3_d_1_1_debug_frame_snapshot_quad.html":[8,0,2,184],
-"struct_urho3_d_1_1_debug_frame_snapshot_quad.html#a13c0a2830c8439b54ef6e7686d7ff45f":[8,0,2,184,1],
-"struct_urho3_d_1_1_debug_frame_snapshot_quad.html#a1be1fe0b851936692aa90a376161a53b":[8,0,2,184,0],
-"struct_urho3_d_1_1_debug_frame_snapshot_quad.html#a3f2f32ff057173d7fd39005a1d5d7b57":[8,0,2,184,2],
-"struct_urho3_d_1_1_debug_line.html":[8,0,2,186],
-"struct_urho3_d_1_1_debug_line.html#a38ddb9baf5d177e523e3db272cef3572":[8,0,2,186,0],
-"struct_urho3_d_1_1_debug_line.html#a3ea57371e64b0d0c2a373cb1788040f9":[8,0,2,186,3]
+"struct_urho3_d_1_1_debug_frame_snapshot_quad.html":[8,0,2,184]
 };

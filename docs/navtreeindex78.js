@@ -1,5 +1,11 @@
 var NAVTREEINDEX78 =
 {
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a2c3d74d2a7750eafac47340b5b18cdae":[8,0,15,11],
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a2fb2e1e4e1e5a941c4a17693c7830249":[8,0,15,3],
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a31ad5966a794099b2563ba4749aaf0f7":[8,0,15,2],
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a38723bb641e7b109cddf93e6446a54bd":[8,0,15,8],
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a4bc580a9949abc0dd61b44b610848282":[8,0,15,12],
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a4efad7dd8c2ab02095c31f4891a662f1":[8,0,15,22],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a506003d2a606439b7cb97f4ba76afb01":[8,0,15,23],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a596f6b2061f647841b2d3531a53788dc":[8,0,15,0],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a5b81df574c7391d1cc79623b4f7a28e5":[8,0,15,27],
@@ -243,11 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#a227db2678b3c04f7c487e21b07b938bf":[8,0,2,59,0,0],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#a6840411f2ccb43fc875e5e3444180593":[8,0,2,59,0,4],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#a857aa208262eb3911003df5b5ceafd48":[8,0,2,59,0,1],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#a9b20e4cb34c5ab6cb6ab14d628deefdd":[8,0,2,59,0,3],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#ab2a30222f69ec49336e9c6ab907eadc3":[8,0,2,59,0,5],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html":[8,0,2,59,1],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a170a6d447758235ee4f72ea106d42a22":[8,0,2,59,1,1],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a48ba09ab3bf1b6a2af28eb9fae0469df":[8,0,2,59,1,6],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a5c6ccd0333a41bb4e745bc337915afd7":[8,0,2,59,1,4],
-"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a867f2685f3e6331708d3c6e87b73b0ca":[8,0,2,59,1,3]
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#a9b20e4cb34c5ab6cb6ab14d628deefdd":[8,0,2,59,0,3]
 };

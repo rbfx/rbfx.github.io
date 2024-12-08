@@ -624,10 +624,18 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:abbdde7af237e597a2f4d986efec2efa0"><td class="memTemplItemLeft" align="right" valign="top">Rml::DataEventFunc&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#abbdde7af237e597a2f4d986efec2efa0">WrapCallback</a> (void(T::*callback)())</td></tr>
 <tr class="memdesc:abbdde7af237e597a2f4d986efec2efa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap data event callback. <br /></td></tr>
 <tr class="separator:abbdde7af237e597a2f4d986efec2efa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a3cd389f4a1313cf514f21bd04e38bc"><td class="memTemplParams" colspan="2"><a id="a2a3cd389f4a1313cf514f21bd04e38bc"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a2a3cd389f4a1313cf514f21bd04e38bc"><td class="memTemplItemLeft" align="right" valign="top">Rml::DataEventFunc&#160;</td><td class="memTemplItemRight" valign="bottom"><b>WrapCallback</b> (void(T::*callback)(const Rml::VariantList &amp;args))</td></tr>
+<tr class="separator:a2a3cd389f4a1313cf514f21bd04e38bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6dbbbd735b5db7ded71bcf83db7e5f7"><td class="memItemLeft" align="right" valign="top"><a id="af6dbbbd735b5db7ded71bcf83db7e5f7"></a>
 Rml::DataModelConstructor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#af6dbbbd735b5db7ded71bcf83db7e5f7">GetDataModelConstructor</a> () const</td></tr>
 <tr class="memdesc:af6dbbbd735b5db7ded71bcf83db7e5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get data model constructor. Only available in OnDataModelInitialized method. <br /></td></tr>
 <tr class="separator:af6dbbbd735b5db7ded71bcf83db7e5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94a67c3e753fd60ec587f25ac77877c7"><td class="memItemLeft" align="right" valign="top"><a id="a94a67c3e753fd60ec587f25ac77877c7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a94a67c3e753fd60ec587f25ac77877c7">RestoreFocus</a> ()</td></tr>
+<tr class="memdesc:a94a67c3e753fd60ec587f25ac77877c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">If current focus is invalid, focus on the first valid navigable element. <br /></td></tr>
+<tr class="separator:a94a67c3e753fd60ec587f25ac77877c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ad52c26e379a0f236d26d281094e37512"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#ad52c26e379a0f236d26d281094e37512">IsVariableDirty</a> (const ea::string &amp;variableName)</td></tr>
 <tr class="separator:ad52c26e379a0f236d26d281094e37512"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -734,6 +742,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateDocumentOpen</b
 <tr class="memitem:a93a265bfd37e3fc3a3ab473fb25229c9"><td class="memItemLeft" align="right" valign="top"><a id="a93a265bfd37e3fc3a3ab473fb25229c9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateConnectedCanvas</b> ()</td></tr>
 <tr class="separator:a93a265bfd37e3fc3a3ab473fb25229c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc06c185b2fd5d807deda70f61fa63c"><td class="memItemLeft" align="right" valign="top"><a id="a2dc06c185b2fd5d807deda70f61fa63c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdatePendingFocus</b> ()</td></tr>
+<tr class="separator:a2dc06c185b2fd5d807deda70f61fa63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60e37783815d2680d447ad59b5a0747f"><td class="memItemLeft" align="right" valign="top"><a id="a60e37783815d2680d447ad59b5a0747f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>CreateDataModel</b> ()</td></tr>
 <tr class="separator:a60e37783815d2680d447ad59b5a0747f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -749,6 +760,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DoNavigablePush</b> (
 <tr class="memitem:ae0416281c84bd4c82eea5a742f93ea17"><td class="memItemLeft" align="right" valign="top"><a id="ae0416281c84bd4c82eea5a742f93ea17"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>DoNavigablePop</b> (Rml::DataModelHandle model, Rml::Event &amp;event, const Rml::VariantList &amp;args)</td></tr>
 <tr class="separator:ae0416281c84bd4c82eea5a742f93ea17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad47f295a30e0f9eea4f0505a479423f7"><td class="memItemLeft" align="right" valign="top"><a id="ad47f295a30e0f9eea4f0505a479423f7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DoFocusById</b> (Rml::DataModelHandle model, Rml::Event &amp;event, const Rml::VariantList &amp;args)</td></tr>
+<tr class="separator:ad47f295a30e0f9eea4f0505a479423f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a62cd8c66a61f45a44a12cdc2f42758f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a62cd8c66a61f45a44a12cdc2f42758f1">OnDocumentClosed</a> (Rml::ElementDocument *document)</td></tr>
 <tr class="separator:a62cd8c66a61f45a44a12cdc2f42758f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -769,9 +783,7 @@ Private Attributes</h2></td></tr>
 Rml::ElementDocument *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a2f627a252f790fc8082652409bf8c5f8">document_</a> {}</td></tr>
 <tr class="memdesc:a2f627a252f790fc8082652409bf8c5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently open document. Null if document was closed. <br /></td></tr>
 <tr class="separator:a2f627a252f790fc8082652409bf8c5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ae6ee139642bc05b7d48348d3afec19"><td class="memItemLeft" align="right" valign="top"><a id="a3ae6ee139642bc05b7d48348d3afec19"></a>
-<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_rml_canvas_component.html">RmlCanvasComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a3ae6ee139642bc05b7d48348d3afec19">canvasComponent_</a></td></tr>
-<tr class="memdesc:a3ae6ee139642bc05b7d48348d3afec19"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_component.html">Component</a> which holds <a class="el" href="class_urho3_d_1_1_rml_u_i.html" title="UI subsystem. Manages the graphical user interface.">RmlUI</a> instance containing <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> managed by this component. May be null if <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> is rendered into default <a class="el" href="class_urho3_d_1_1_rml_u_i.html" title="UI subsystem. Manages the graphical user interface.">RmlUI</a> subsystem. <br /></td></tr>
+<tr class="memitem:a3ae6ee139642bc05b7d48348d3afec19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_rml_canvas_component.html">RmlCanvasComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a3ae6ee139642bc05b7d48348d3afec19">canvasComponent_</a></td></tr>
 <tr class="separator:a3ae6ee139642bc05b7d48348d3afec19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0319a541d60ed16c75762882066f7b00"><td class="memItemLeft" align="right" valign="top"><a id="a0319a541d60ed16c75762882066f7b00"></a>
 ea::optional&lt; Rml::DataTypeRegister &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a0319a541d60ed16c75762882066f7b00">typeRegister_</a></td></tr>
@@ -789,6 +801,14 @@ ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 ea::unique_ptr&lt; Rml::DataModelConstructor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#ae5f6d25e0f8ccb4209eff15d3dabea5d">modelConstructor_</a></td></tr>
 <tr class="memdesc:ae5f6d25e0f8ccb4209eff15d3dabea5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data model constructor. <br /></td></tr>
 <tr class="separator:ae5f6d25e0f8ccb4209eff15d3dabea5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e4f45475aab36a442d83826cc05bde1"><td class="memItemLeft" align="right" valign="top"><a id="a6e4f45475aab36a442d83826cc05bde1"></a>
+ea::optional&lt; ea::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a6e4f45475aab36a442d83826cc05bde1">pendingFocusId_</a></td></tr>
+<tr class="memdesc:a6e4f45475aab36a442d83826cc05bde1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element id to be focused on next update. <br /></td></tr>
+<tr class="separator:a6e4f45475aab36a442d83826cc05bde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae7022a89e219e3a4bd297a5a0870bdc"><td class="memItemLeft" align="right" valign="top"><a id="aae7022a89e219e3a4bd297a5a0870bdc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#aae7022a89e219e3a4bd297a5a0870bdc">suppressRestoreFocus_</a> {}</td></tr>
+<tr class="memdesc:aae7022a89e219e3a4bd297a5a0870bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to suppress next call to <a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a94a67c3e753fd60ec587f25ac77877c7" title="If current focus is invalid, focus on the first valid navigable element.">RestoreFocus()</a>. <br /></td></tr>
+<tr class="separator:aae7022a89e219e3a4bd297a5a0870bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a88f3aed2c26cd270157d0755bf9636b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a88f3aed2c26cd270157d0755bf9636b0">resource_</a></td></tr>
 <tr class="separator:a88f3aed2c26cd270157d0755bf9636b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -898,7 +918,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Data model facade </p>
+<p>Data model facade. </p>
 
 </div>
 </div>
@@ -1006,6 +1026,29 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3ae6ee139642bc05b7d48348d3afec19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ae6ee139642bc05b7d48348d3afec19">&#9670;&nbsp;</a></span>canvasComponent_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt;<a class="el" href="class_urho3_d_1_1_rml_canvas_component.html">RmlCanvasComponent</a>&gt; Urho3D::RmlUIComponent::canvasComponent_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="class_urho3_d_1_1_component.html">Component</a> which holds <a class="el" href="class_urho3_d_1_1_rml_u_i.html" title="UI subsystem. Manages the graphical user interface.">RmlUI</a> instance containing <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> managed by this component. May be null if <a class="el" href="class_urho3_d_1_1_u_i.html" title="UI subsystem. Manages the graphical user interface.">UI</a> is rendered into default <a class="el" href="class_urho3_d_1_1_rml_u_i.html" title="UI subsystem. Manages the graphical user interface.">RmlUI</a> subsystem. </p>
+
+</div>
+</div>
 <a id="a88f3aed2c26cd270157d0755bf9636b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88f3aed2c26cd270157d0755bf9636b0">&#9670;&nbsp;</a></span>resource_</h2>
 
