@@ -65,6 +65,6 @@ var class_urho3_d_1_1_rml_u_i_component =
     [ "position_", "class_urho3_d_1_1_rml_u_i_component.html#afeda7b0f836e5e51be4aa1f4dbaac777", null ],
     [ "resource_", "class_urho3_d_1_1_rml_u_i_component.html#a88f3aed2c26cd270157d0755bf9636b0", null ],
     [ "size_", "class_urho3_d_1_1_rml_u_i_component.html#aea674b6bacf220a8d6ff2000caf7c89f", null ],
-    [ "typeRegister_", "class_urho3_d_1_1_rml_u_i_component.html#a5367697efd14c0e24b310105c5dfe5f9", null ],
+    [ "typeRegister_", "class_urho3_d_1_1_rml_u_i_component.html#a0319a541d60ed16c75762882066f7b00", null ],
     [ "useNormalized_", "class_urho3_d_1_1_rml_u_i_component.html#ab94d8b970026333d80a07258f031f2a8", null ]
 ];
