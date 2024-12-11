@@ -1,5 +1,6 @@
 var NAVTREEINDEX77 =
 {
+"functions_func_b.html":[8,3,1,1],
 "functions_func_c.html":[8,3,1,2],
 "functions_func_d.html":[8,3,1,3],
 "functions_func_e.html":[8,3,1,4],
@@ -43,8 +44,8 @@ var NAVTREEINDEX77 =
 "functions_type.html":[8,3,3],
 "functions_u.html":[8,3,0,21],
 "functions_v.html":[8,3,0,22],
-"functions_vars.html":[8,3,2],
 "functions_vars.html":[8,3,2,0],
+"functions_vars.html":[8,3,2],
 "functions_vars_a.html":[8,3,2,1],
 "functions_vars_b.html":[8,3,2,2],
 "functions_vars_c.html":[8,3,2,3],
@@ -88,8 +89,8 @@ var NAVTREEINDEX77 =
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html":[2],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html":[5],
 "multiplayer-and-networking.html":[0,0,2,2],
-"namespace_urho3_d_1_1_actions.html":[8,0,2,0],
 "namespace_urho3_d_1_1_actions.html":[7,0,0,0],
+"namespace_urho3_d_1_1_actions.html":[8,0,2,0],
 "namespace_urho3_d_1_1_attribute_metadata.html":[7,0,0,1],
 "namespace_urho3_d_1_1_linked_plugins.html":[7,0,0,2],
 "namespace_urho3_d_1_1_network_settings.html":[7,0,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX77 =
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a1e0c26dc1c27cc15aebe8bc02502ccfe":[8,0,15,5],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a2111667748393b34df61ed44fbe071d0":[8,0,15,25],
 "struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a23e368ca6d579360834ff390676463bd":[8,0,15,18],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a27a239cbac415fe80bf3afd516c678a0":[8,0,15,29],
-"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a2ab8c040bbc3b1fda3667c60c20b09ed":[8,0,15,4]
+"struct___i_m_a_g_e___o_s2___h_e_a_d_e_r.html#a27a239cbac415fe80bf3afd516c678a0":[8,0,15,29]
 };

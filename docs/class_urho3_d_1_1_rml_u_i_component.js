@@ -45,6 +45,7 @@ var class_urho3_d_1_1_rml_u_i_component =
     [ "RegisterObject", "class_urho3_d_1_1_rml_u_i_component.html#a3e01164987adb63b3b6c6abf24a2061a", null ],
     [ "RemoveDataModel", "class_urho3_d_1_1_rml_u_i_component.html#a4bd3105a1f9c4f764fe42ed80f1f0962", null ],
     [ "RestoreFocus", "class_urho3_d_1_1_rml_u_i_component.html#a94a67c3e753fd60ec587f25ac77877c7", null ],
+    [ "ScheduleFocusById", "class_urho3_d_1_1_rml_u_i_component.html#a6f3c8f834fe434a64a90ba5c5874a458", null ],
     [ "SetAutoSize", "class_urho3_d_1_1_rml_u_i_component.html#a111aa4cc41d4f62d55b8c45194fdcd5a", null ],
     [ "SetDocument", "class_urho3_d_1_1_rml_u_i_component.html#ab10b0eea57016cbaf187fc999b7f7c80", null ],
     [ "SetPosition", "class_urho3_d_1_1_rml_u_i_component.html#a2d5d45ec7e3734b55a831fcbde122290", null ],

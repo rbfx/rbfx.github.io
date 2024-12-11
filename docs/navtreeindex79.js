@@ -1,5 +1,6 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#a9b20e4cb34c5ab6cb6ab14d628deefdd":[8,0,2,59,0,3],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#ab2a30222f69ec49336e9c6ab907eadc3":[8,0,2,59,0,5],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html":[8,0,2,59,1],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html#a170a6d447758235ee4f72ea106d42a22":[8,0,2,59,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_clock_synchronizer_message.html#a044bbc2fe3a234f56e1e3bd738909e1b":[8,0,2,121,0],
 "struct_urho3_d_1_1_clock_synchronizer_message.html#a33c14f0b19f40bf8acc9241cda0320ee":[8,0,2,121,4],
 "struct_urho3_d_1_1_clock_synchronizer_message.html#a51b882cb0f388191e4368e6d8e6f9381":[8,0,2,121,5],
-"struct_urho3_d_1_1_clock_synchronizer_message.html#a6021da0c88593bfff1dbb07f632ed065":[8,0,2,121,2],
-"struct_urho3_d_1_1_clock_synchronizer_message.html#a60876b27ce259389876e728503601a7e":[8,0,2,121,6]
+"struct_urho3_d_1_1_clock_synchronizer_message.html#a6021da0c88593bfff1dbb07f632ed065":[8,0,2,121,2]
 };
