@@ -1,5 +1,8 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#a227db2678b3c04f7c487e21b07b938bf":[8,0,2,59,0,0],
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#a6840411f2ccb43fc875e5e3444180593":[8,0,2,59,0,4],
+"struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#a857aa208262eb3911003df5b5ceafd48":[8,0,2,59,0,1],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#a9b20e4cb34c5ab6cb6ab14d628deefdd":[8,0,2,59,0,3],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_states.html#ab2a30222f69ec49336e9c6ab907eadc3":[8,0,2,59,0,5],
 "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html":[8,0,2,59,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_pong.html#a66262053259c8cb81c7b766a25d9aaa0":[8,0,2,120,1,0],
 "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_pong.html#a68717347d82dddbd812db9318465c0b4":[8,0,2,120,1,2],
 "struct_urho3_d_1_1_clock_synchronizer_message.html":[8,0,2,121],
-"struct_urho3_d_1_1_clock_synchronizer_message.html#a044bbc2fe3a234f56e1e3bd738909e1b":[8,0,2,121,0],
-"struct_urho3_d_1_1_clock_synchronizer_message.html#a33c14f0b19f40bf8acc9241cda0320ee":[8,0,2,121,4],
-"struct_urho3_d_1_1_clock_synchronizer_message.html#a51b882cb0f388191e4368e6d8e6f9381":[8,0,2,121,5],
-"struct_urho3_d_1_1_clock_synchronizer_message.html#a6021da0c88593bfff1dbb07f632ed065":[8,0,2,121,2]
+"struct_urho3_d_1_1_clock_synchronizer_message.html#a044bbc2fe3a234f56e1e3bd738909e1b":[8,0,2,121,0]
 };

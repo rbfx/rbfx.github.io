@@ -1,5 +1,8 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_resource_ref.html#af93e94bbd524e1d56613da988be3517c":[8,0,2,594,8],
+"struct_urho3_d_1_1_resource_ref_list.html":[8,0,2,595],
+"struct_urho3_d_1_1_resource_ref_list.html#a20ab60977844d31fdb7567d60c69a63c":[8,0,2,595,5],
 "struct_urho3_d_1_1_resource_ref_list.html#a2eddd663043605d1ddef851a60ea3a0a":[8,0,2,595,4],
 "struct_urho3_d_1_1_resource_ref_list.html#a8451f4c21479660e4cd25fd50f6bd0af":[8,0,2,595,1],
 "struct_urho3_d_1_1_resource_ref_list.html#a986ec68bb427b72311f7dceb978158e4":[8,0,2,595,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_spriter_1_1_animation.html#a53809121aa62aa6e7d3066b9c188353b":[8,0,2,3,0,5],
 "struct_urho3_d_1_1_spriter_1_1_animation.html#a5e21e61305a8d8913e3a19c55d2f55f0":[8,0,2,3,0,7],
 "struct_urho3_d_1_1_spriter_1_1_animation.html#a7eafe683d61cf290833710275d2c773b":[8,0,2,3,0,8],
-"struct_urho3_d_1_1_spriter_1_1_animation.html#ab62e70c6138306e3d69cf08b590006e4":[8,0,2,3,0,6],
-"struct_urho3_d_1_1_spriter_1_1_animation.html#addf8cef23e887cafec76d0193a701ea1":[8,0,2,3,0,2],
-"struct_urho3_d_1_1_spriter_1_1_bone_timeline_key.html":[8,0,2,3,1],
-"struct_urho3_d_1_1_spriter_1_1_bone_timeline_key.html#a10a85657da30cdcfbf12fe79f2ed103d":[8,0,2,3,1,8]
+"struct_urho3_d_1_1_spriter_1_1_animation.html#ab62e70c6138306e3d69cf08b590006e4":[8,0,2,3,0,6]
 };

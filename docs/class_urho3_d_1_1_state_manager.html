@@ -99,6 +99,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_state_manager.html#a2537b931a0a5f5d5b9d9781105154b05">Update</a> (float timeStep)</td></tr>
 <tr class="memdesc:a2537b931a0a5f5d5b9d9781105154b05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update state manager. This is called automatically by the engine every frame. <br /></td></tr>
 <tr class="separator:a2537b931a0a5f5d5b9d9781105154b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a117baa4284134f87d0739c8d638d3ac2"><td class="memItemLeft" align="right" valign="top"><a id="a117baa4284134f87d0739c8d638d3ac2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_state_manager.html#a117baa4284134f87d0739c8d638d3ac2">CacheState</a> (<a class="el" href="class_urho3_d_1_1_application_state.html">ApplicationState</a> *state)</td></tr>
+<tr class="memdesc:a117baa4284134f87d0739c8d638d3ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache state without using it. <br /></td></tr>
+<tr class="separator:a117baa4284134f87d0739c8d638d3ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a741e2d0ba97ff5b3e6e8e1f4f74b9a0f"><td class="memItemLeft" align="right" valign="top"><a id="a741e2d0ba97ff5b3e6e8e1f4f74b9a0f"></a>
+<a class="el" href="class_urho3_d_1_1_application_state.html">ApplicationState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_state_manager.html#a741e2d0ba97ff5b3e6e8e1f4f74b9a0f">GetCachedState</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type) const</td></tr>
+<tr class="memdesc:a741e2d0ba97ff5b3e6e8e1f4f74b9a0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get cached state if present. <br /></td></tr>
+<tr class="separator:a741e2d0ba97ff5b3e6e8e1f4f74b9a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e7dc04a7c98ba8497f8cf128059b3ea"><td class="memTemplParams" colspan="2"><a id="a1e7dc04a7c98ba8497f8cf128059b3ea"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a1e7dc04a7c98ba8497f8cf128059b3ea"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>GetCachedState</b> () const</td></tr>
+<tr class="separator:a1e7dc04a7c98ba8497f8cf128059b3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3b96571e7ff889551e2d3f8a5755592"><td class="memItemLeft" align="right" valign="top"><a id="af3b96571e7ff889551e2d3f8a5755592"></a>
 <a class="el" href="class_urho3_d_1_1_application_state.html">ApplicationState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_state_manager.html#af3b96571e7ff889551e2d3f8a5755592">GetState</a> () const</td></tr>
 <tr class="memdesc:af3b96571e7ff889551e2d3f8a5755592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current application state. <br /></td></tr>
@@ -129,19 +141,15 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr class="separator:a63b330721af8da0061c693ef719d3bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a3803e7e4e6b672fb9127447695177b45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_state_manager.html#a3803e7e4e6b672fb9127447695177b45">EnqueueState</a> (<a class="el" href="class_urho3_d_1_1_application_state.html">ApplicationState</a> *gameScreen, <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;bundle)</td></tr>
-<tr class="memdesc:a3803e7e4e6b672fb9127447695177b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current game state.  <a href="class_urho3_d_1_1_state_manager.html#a3803e7e4e6b672fb9127447695177b45">More...</a><br /></td></tr>
 <tr class="separator:a3803e7e4e6b672fb9127447695177b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac39623bcfc4a1156a5bed1991946ef87"><td class="memItemLeft" align="right" valign="top"><a id="ac39623bcfc4a1156a5bed1991946ef87"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_state_manager.html#ac39623bcfc4a1156a5bed1991946ef87">EnqueueState</a> (<a class="el" href="class_urho3_d_1_1_application_state.html">ApplicationState</a> *gameScreen)</td></tr>
-<tr class="memdesc:ac39623bcfc4a1156a5bed1991946ef87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transition to the application state. <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>EnqueueState</b> (<a class="el" href="class_urho3_d_1_1_application_state.html">ApplicationState</a> *gameScreen)</td></tr>
 <tr class="separator:ac39623bcfc4a1156a5bed1991946ef87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70e4d6706d2a0a988fbe9ca17207316c"><td class="memItemLeft" align="right" valign="top"><a id="a70e4d6706d2a0a988fbe9ca17207316c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_state_manager.html#a70e4d6706d2a0a988fbe9ca17207316c">EnqueueState</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type, <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;bundle)</td></tr>
-<tr class="memdesc:a70e4d6706d2a0a988fbe9ca17207316c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transition to the application state. <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>EnqueueState</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type, <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;bundle)</td></tr>
 <tr class="separator:a70e4d6706d2a0a988fbe9ca17207316c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef26755bb07b99bfdb0e94c913e5ff6c"><td class="memItemLeft" align="right" valign="top"><a id="aef26755bb07b99bfdb0e94c913e5ff6c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_state_manager.html#aef26755bb07b99bfdb0e94c913e5ff6c">EnqueueState</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type)</td></tr>
-<tr class="memdesc:aef26755bb07b99bfdb0e94c913e5ff6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transition to the application state. <br /></td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>EnqueueState</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type)</td></tr>
 <tr class="separator:aef26755bb07b99bfdb0e94c913e5ff6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98d30f2984199c1e91a28c7c1ce3e772"><td class="memTemplParams" colspan="2"><a id="a98d30f2984199c1e91a28c7c1ce3e772"></a>
 template&lt;typename T &gt; </td></tr>
@@ -375,8 +383,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_state_manager.html#a3922b9b7817c428538f0515b16ef6b1b">UpdateFadeOverlay</a> (float t)</td></tr>
 <tr class="memdesc:a3922b9b7817c428538f0515b16ef6b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update fade overlay size and transparency. <br /></td></tr>
 <tr class="separator:a3922b9b7817c428538f0515b16ef6b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14fded322de983adedecec2ae2c74569"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_state_manager.html#a14fded322de983adedecec2ae2c74569">StartTransition</a> ()</td></tr>
-<tr class="memdesc:a14fded322de983adedecec2ae2c74569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start transition out of the current state.  <a href="class_urho3_d_1_1_state_manager.html#a14fded322de983adedecec2ae2c74569">More...</a><br /></td></tr>
+<tr class="memitem:a14fded322de983adedecec2ae2c74569"><td class="memItemLeft" align="right" valign="top"><a id="a14fded322de983adedecec2ae2c74569"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_state_manager.html#a14fded322de983adedecec2ae2c74569">StartTransition</a> ()</td></tr>
+<tr class="memdesc:a14fded322de983adedecec2ae2c74569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start transition out of the current state. <br /></td></tr>
 <tr class="separator:a14fded322de983adedecec2ae2c74569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfb39b85d80d447af18da83e543356a7"><td class="memItemLeft" align="right" valign="top"><a id="adfb39b85d80d447af18da83e543356a7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_state_manager.html#adfb39b85d80d447af18da83e543356a7">CompleteTransition</a> ()</td></tr>
@@ -508,37 +517,7 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Set current game state. </p>
 <p>Transition to the application state. </p>
-
-</div>
-</div>
-<a id="a14fded322de983adedecec2ae2c74569"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14fded322de983adedecec2ae2c74569">&#9670;&nbsp;</a></span>StartTransition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::StateManager::StartTransition </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Start transition out of the current state. </p>
-<p>Start transition out of current state. </p>
 
 </div>
 </div>
