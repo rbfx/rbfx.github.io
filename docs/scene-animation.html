@@ -201,36 +201,36 @@ Base animation</div></div>
 <div class="image">
 <img src="play_new.png" alt=""/>
 <div class="caption">
-play_new</div></div>
+PlayNew</div></div>
    <h3>PlayNewExclusive</h3>
 <p>When <code>PlayNewExclusive</code> is executed, it adds a new instance of the Y animation, disregarding any existing instances. This addition occurs in exclusive mode, causing the current X animation to start fading away. As a result, the list ends up with only one animation — the latest Y animation.</p>
 <div class="image">
 <img src="play_new_exclisive.png" alt=""/>
 <div class="caption">
-play_new_exclisive</div></div>
+PlayNewExclusive</div></div>
    <h3>PlayExisting</h3>
 <p>When <code>PlayExisting</code> is executed, it checks if the same animation (Y animation in this case) already exists. If it does, it boosts its weight to 1. Since this method doesn't play the animation in exclusive mode, the existing animations retain their dynamics.</p>
 <p>Below are two diagrams: one for when the Y animation exists in the list, and one for when it doesn't. Notice how the outcomes differ significantly. If the Y animation already exists, it is overridden by the later-added X animation, meaning PlayExisting doesn't alter the final node position and the animation time is preserved.</p>
 <div class="image">
 <img src="play_existing.png" alt=""/>
 <div class="caption">
-play_existing</div></div>
+PlayExisting</div></div>
    <p>If Y doesn't exist, the new Y animation overrides the existing X animation, thus influencing the node's position.</p>
 <div class="image">
 <img src="play_non_existing.png" alt=""/>
 <div class="caption">
-play_non_existing</div></div>
+PlayExisting</div></div>
    <h3>PlayExistingExclusive</h3>
 <p>When <code>PlayExistingExclusive</code> is executed, it checks if the same animation (Y animation in this case) already exists. If it does, it boosts its weight to 1. Since this method plays the animation in exclusive mode, existing animations are faded away. Below are two diagrams: one for the scenario where the Y animation is already in the list, and one where it isn't. Notice that the results of this operation are similar. When the Y animation already exists, the animation time that dictates the phase of the animation is preserved. However, the dynamics differ in each case. When the Y animation already exists, the weight of X dictates the overall result.</p>
 <div class="image">
 <img src="play_existing_exclisive.png" alt=""/>
 <div class="caption">
-play_existing_exclisive</div></div>
+PlayExistingExclusive</div></div>
    <p>In contrast, when the Y animation is newly added, its weight dictates the final node position.</p>
 <div class="image">
 <img src="play_non_existing_exclisive.png" alt=""/>
 <div class="caption">
-play_non_existing_exclisive</div></div>
+PlayExistingExclusive</div></div>
     </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
