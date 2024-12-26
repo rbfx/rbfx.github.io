@@ -1,5 +1,6 @@
 var NAVTREEINDEX88 =
 {
+"struct_urho3_d_1_1_spriter_1_1_animation.html#ab62e70c6138306e3d69cf08b590006e4":[8,0,2,3,0,6],
 "struct_urho3_d_1_1_spriter_1_1_animation.html#addf8cef23e887cafec76d0193a701ea1":[8,0,2,3,0,2],
 "struct_urho3_d_1_1_spriter_1_1_bone_timeline_key.html":[8,0,2,3,1],
 "struct_urho3_d_1_1_spriter_1_1_bone_timeline_key.html#a10a85657da30cdcfbf12fe79f2ed103d":[8,0,2,3,1,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX88 =
 "struct_urho3_d_1_1_texture_frame.html#ad2d69579af25f51ae2278f97b2bee681":[8,0,2,736,3],
 "struct_urho3_d_1_1_texture_frame.html#aefa30b2c6fcd4329d49b7ac7de4cb083":[8,0,2,736,2],
 "struct_urho3_d_1_1_texture_frame.html#af2be510a9c741da4506ab3aa0cd71118":[8,0,2,736,4],
-"struct_urho3_d_1_1_tile_map_info2_d.html":[8,0,2,743],
-"struct_urho3_d_1_1_tile_map_info2_d.html#a3ee0159983d648eadec68b85eb15f0d5":[8,0,2,743,6]
+"struct_urho3_d_1_1_tile_map_info2_d.html":[8,0,2,743]
 };

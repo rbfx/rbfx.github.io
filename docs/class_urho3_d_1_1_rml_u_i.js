@@ -20,6 +20,7 @@ var class_urho3_d_1_1_rml_u_i =
     [ "HandleTouchBegin", "class_urho3_d_1_1_rml_u_i.html#ac4c072dc2b8736d64f84981437b33db7", null ],
     [ "HandleTouchEnd", "class_urho3_d_1_1_rml_u_i.html#a7f3d70a568dc59973d2d2c9288d23286", null ],
     [ "HandleTouchMove", "class_urho3_d_1_1_rml_u_i.html#a6e69a0bb8d741f344913c4d77801cd60", null ],
+    [ "IsDebuggerVisible", "class_urho3_d_1_1_rml_u_i.html#a5e7b850c97387e75c1051b06f418d81d", null ],
     [ "IsHovered", "class_urho3_d_1_1_rml_u_i.html#a8e26c62148545bac5b27b13052b5b15a", null ],
     [ "IsInputCaptured", "class_urho3_d_1_1_rml_u_i.html#ad7ea546434aced37c9cee93290193cfa", null ],
     [ "IsInputCapturedInternal", "class_urho3_d_1_1_rml_u_i.html#a2932b8bd9f5b820eb73ad871689e2a02", null ],
