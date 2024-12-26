@@ -77,20 +77,16 @@ if (ENVIRONMENT_IS_NODE) {
   scriptDirectory = __dirname + "/";
   // include: node_shell_read.js
   readBinary = filename => {
-    // We need to re-wrap `file://` strings to URLs. Normalizing isn't
-    // necessary in that case, the path should already be absolute.
-    filename = isFileURI(filename) ? new URL(filename) : nodePath.normalize(filename);
+    // We need to re-wrap `file://` strings to URLs.
+    filename = isFileURI(filename) ? new URL(filename) : filename;
     var ret = fs.readFileSync(filename);
     return ret;
   };
-  readAsync = (filename, binary = true) => {
+  readAsync = async (filename, binary = true) => {
     // See the comment in the `readBinary` function.
-    filename = isFileURI(filename) ? new URL(filename) : nodePath.normalize(filename);
-    return new Promise((resolve, reject) => {
-      fs.readFile(filename, binary ? undefined : "utf8", (err, data) => {
-        if (err) reject(err); else resolve(binary ? data.buffer : data);
-      });
-    });
+    filename = isFileURI(filename) ? new URL(filename) : filename;
+    var ret = fs.readFileSync(filename, binary ? undefined : "utf8");
+    return ret;
   };
   // end include: node_shell_read.js
   if (!Module["thisProgram"] && process.argv.length > 1) {
@@ -137,7 +133,7 @@ if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
         return new Uint8Array(/** @type{!ArrayBuffer} */ (xhr.response));
       };
     }
-    readAsync = url => {
+    readAsync = async url => {
       // Fetch has some additional restrictions over XHR, like it can't be used on a file:// url.
       // See https://github.com/github/fetch/pull/92#issuecomment-140665932
       // Cordova or Electron apps are typically loaded from a file:// url.
@@ -159,14 +155,13 @@ if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
           xhr.send(null);
         });
       }
-      return fetch(url, {
+      var response = await fetch(url, {
         credentials: "same-origin"
-      }).then(response => {
-        if (response.ok) {
-          return response.arrayBuffer();
-        }
-        return Promise.reject(new Error(response.status + " : " + response.url));
       });
+      if (response.ok) {
+        return response.arrayBuffer();
+      }
+      throw new Error(response.status + " : " + response.url);
     };
   }
 } else // end include: web_or_worker_shell_read.js
@@ -341,8 +336,6 @@ function addOnPostRun(cb) {
 // the dependencies are met.
 var runDependencies = 0;
 
-var runDependencyWatcher = null;
-
 var dependenciesFulfilled = null;
 
 // overridden to take different actions when all run dependencies are fulfilled
@@ -359,10 +352,6 @@ function removeRunDependency(id) {
   runDependencies--;
   Module["monitorRunDependencies"]?.(runDependencies);
   if (runDependencies == 0) {
-    if (runDependencyWatcher !== null) {
-      clearInterval(runDependencyWatcher);
-      runDependencyWatcher = null;
-    }
     if (dependenciesFulfilled) {
       var callback = dependenciesFulfilled;
       dependenciesFulfilled = null;
@@ -437,25 +426,31 @@ function getBinarySync(file) {
   throw "both async and sync fetching of the wasm failed";
 }
 
-function getBinaryPromise(binaryFile) {
+async function getWasmBinary(binaryFile) {
   // If we don't have the binary yet, load it asynchronously using readAsync.
   if (!wasmBinary) {
     // Fetch the binary using readAsync
-    return readAsync(binaryFile).then(response => new Uint8Array(/** @type{!ArrayBuffer} */ (response)), // Fall back to getBinarySync if readAsync fails
-    () => getBinarySync(binaryFile));
+    try {
+      var response = await readAsync(binaryFile);
+      return new Uint8Array(response);
+    } catch {}
   }
   // Otherwise, getBinarySync should be able to get it synchronously
-  return Promise.resolve().then(() => getBinarySync(binaryFile));
+  return getBinarySync(binaryFile);
 }
 
-function instantiateArrayBuffer(binaryFile, imports, receiver) {
-  return getBinaryPromise(binaryFile).then(binary => WebAssembly.instantiate(binary, imports)).then(receiver, reason => {
+async function instantiateArrayBuffer(binaryFile, imports) {
+  try {
+    var binary = await getWasmBinary(binaryFile);
+    var instance = await WebAssembly.instantiate(binary, imports);
+    return instance;
+  } catch (reason) {
     err(`failed to asynchronously prepare wasm: ${reason}`);
     abort(reason);
-  });
+  }
 }
 
-function instantiateAsync(binary, binaryFile, imports, callback) {
+async function instantiateAsync(binary, binaryFile, imports) {
   if (!binary && typeof WebAssembly.instantiateStreaming == "function" && !isDataURI(binaryFile) && // Don't use streaming for file:// delivered objects in a webview, fetch them synchronously.
   !isFileURI(binaryFile) && // Avoid instantiateStreaming() on Node.js environment for now, as while
   // Node.js v18.1.0 implements it, it does not have a full fetch()
@@ -463,24 +458,20 @@ function instantiateAsync(binary, binaryFile, imports, callback) {
   // Reference:
   //   https://github.com/emscripten-core/emscripten/pull/16917
   !ENVIRONMENT_IS_NODE && typeof fetch == "function") {
-    return fetch(binaryFile, {
-      credentials: "same-origin"
-    }).then(response => {
-      // Suppress closure warning here since the upstream definition for
-      // instantiateStreaming only allows Promise<Repsponse> rather than
-      // an actual Response.
-      // TODO(https://github.com/google/closure-compiler/pull/3913): Remove if/when upstream closure is fixed.
-      /** @suppress {checkTypes} */ var result = WebAssembly.instantiateStreaming(response, imports);
-      return result.then(callback, function(reason) {
-        // We expect the most common failure cause to be a bad MIME type for the binary,
-        // in which case falling back to ArrayBuffer instantiation should work.
-        err(`wasm streaming compile failed: ${reason}`);
-        err("falling back to ArrayBuffer instantiation");
-        return instantiateArrayBuffer(binaryFile, imports, callback);
+    try {
+      var response = fetch(binaryFile, {
+        credentials: "same-origin"
       });
-    });
+      var instantiationResult = await WebAssembly.instantiateStreaming(response, imports);
+      return instantiationResult;
+    } catch (reason) {
+      // We expect the most common failure cause to be a bad MIME type for the binary,
+      // in which case falling back to ArrayBuffer instantiation should work.
+      err(`wasm streaming compile failed: ${reason}`);
+      err("falling back to ArrayBuffer instantiation");
+    }
   }
-  return instantiateArrayBuffer(binaryFile, imports, callback);
+  return instantiateArrayBuffer(binaryFile, imports);
 }
 
 function getWasmImports() {
@@ -493,7 +484,7 @@ function getWasmImports() {
 
 // Create the wasm instance.
 // Receives the wasm imports, returns the exports.
-function createWasm() {
+async function createWasm() {
   // Load the wasm module and create an instance of using native support in the JS engine.
   // handle a generated wasm instance, receiving its exports and
   // performing other necessary setup
@@ -532,8 +523,9 @@ function createWasm() {
     }
   }
   wasmBinaryFile ??= findWasmBinary();
-  instantiateAsync(wasmBinary, wasmBinaryFile, info, receiveInstantiationResult);
-  return {};
+  var result = await instantiateAsync(wasmBinary, wasmBinaryFile, info);
+  receiveInstantiationResult(result);
+  return result;
 }
 
 // Globals used by JS i64 conversions (see makeSetValue)
@@ -545,14 +537,14 @@ var tempI64;
 // end include: runtime_debug.js
 // === Body ===
 var ASM_CONSTS = {
-  1947260: () => {
+  1947132: () => {
     FS.syncfs(function(err) {
       if (err) {
         console.error(err);
       }
     });
   },
-  1947324: $0 => {
+  1947196: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -560,10 +552,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1947549: ($0, $1) => {
+  1947421: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1947606: () => {
+  1947478: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -571,7 +563,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1947753: () => {
+  1947625: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -579,7 +571,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1947987: $0 => {
+  1947859: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -601,11 +593,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1948480: () => {
+  1948352: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1948548: ($0, $1, $2, $3) => {
+  1948420: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -646,7 +638,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1950200: ($0, $1, $2, $3) => {
+  1950072: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -658,7 +650,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1950610: ($0, $1) => {
+  1950482: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -677,7 +669,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1951215: ($0, $1) => {
+  1951087: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -690,7 +682,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1951695: $0 => {
+  1951567: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -728,7 +720,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1952867: ($0, $1, $2) => {
+  1952739: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -799,7 +791,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1954336: ($0, $1, $2, $3, $4) => {
+  1954208: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -836,19 +828,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1955325: $0 => {
+  1955197: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1955408: () => {
+  1955280: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1955477: () => window.innerWidth,
-  1955507: () => window.innerHeight,
-  1955538: $0 => {
+  1955349: () => window.innerWidth,
+  1955379: () => window.innerHeight,
+  1955410: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
@@ -1383,7 +1375,7 @@ var TTY = {
         buffer[offset + i] = result;
       }
       if (bytesRead) {
-        stream.node.timestamp = Date.now();
+        stream.node.atime = Date.now();
       }
       return bytesRead;
     },
@@ -1399,7 +1391,7 @@ var TTY = {
         throw new FS.ErrnoError(29);
       }
       if (length) {
-        stream.node.timestamp = Date.now();
+        stream.node.mtime = stream.node.ctime = Date.now();
       }
       return i;
     }
@@ -1547,11 +1539,11 @@ var MEMFS = {
       node.node_ops = MEMFS.ops_table.chrdev.node;
       node.stream_ops = MEMFS.ops_table.chrdev.stream;
     }
-    node.timestamp = Date.now();
+    node.atime = node.mtime = node.ctime = Date.now();
     // add the new node to the parent
     if (parent) {
       parent.contents[name] = node;
-      parent.timestamp = node.timestamp;
+      parent.atime = parent.mtime = parent.ctime = node.atime;
     }
     return node;
   },
@@ -1615,9 +1607,9 @@ var MEMFS = {
       } else {
         attr.size = 0;
       }
-      attr.atime = new Date(node.timestamp);
-      attr.mtime = new Date(node.timestamp);
-      attr.ctime = new Date(node.timestamp);
+      attr.atime = new Date(node.atime);
+      attr.mtime = new Date(node.mtime);
+      attr.ctime = new Date(node.ctime);
       // NOTE: In our implementation, st_blocks = Math.ceil(st_size/st_blksize),
       //       but this is not required by the standard.
       attr.blksize = 4096;
@@ -1625,11 +1617,10 @@ var MEMFS = {
       return attr;
     },
     setattr(node, attr) {
-      if (attr.mode !== undefined) {
-        node.mode = attr.mode;
-      }
-      if (attr.timestamp !== undefined) {
-        node.timestamp = attr.timestamp;
+      for (const key of [ "mode", "atime", "mtime", "ctime" ]) {
+        if (attr[key]) {
+          node[key] = attr[key];
+        }
       }
       if (attr.size !== undefined) {
         MEMFS.resizeFileStorage(node, attr.size);
@@ -1642,28 +1633,28 @@ var MEMFS = {
       return MEMFS.createNode(parent, name, mode, dev);
     },
     rename(old_node, new_dir, new_name) {
-      // if we're overwriting a directory at new_name, make sure it's empty.
-      if (FS.isDir(old_node.mode)) {
-        var new_node;
-        try {
-          new_node = FS.lookupNode(new_dir, new_name);
-        } catch (e) {}
-        if (new_node) {
+      var new_node;
+      try {
+        new_node = FS.lookupNode(new_dir, new_name);
+      } catch (e) {}
+      if (new_node) {
+        if (FS.isDir(old_node.mode)) {
+          // if we're overwriting a directory at new_name, make sure it's empty.
           for (var i in new_node.contents) {
             throw new FS.ErrnoError(55);
           }
         }
+        FS.hashRemoveNode(new_node);
       }
       // do the internal rewiring
       delete old_node.parent.contents[old_node.name];
-      old_node.parent.timestamp = Date.now();
-      old_node.name = new_name;
       new_dir.contents[new_name] = old_node;
-      new_dir.timestamp = old_node.parent.timestamp;
+      old_node.name = new_name;
+      new_dir.ctime = new_dir.mtime = old_node.parent.ctime = old_node.parent.mtime = Date.now();
     },
     unlink(parent, name) {
       delete parent.contents[name];
-      parent.timestamp = Date.now();
+      parent.ctime = parent.mtime = Date.now();
     },
     rmdir(parent, name) {
       var node = FS.lookupNode(parent, name);
@@ -1671,14 +1662,10 @@ var MEMFS = {
         throw new FS.ErrnoError(55);
       }
       delete parent.contents[name];
-      parent.timestamp = Date.now();
+      parent.ctime = parent.mtime = Date.now();
     },
     readdir(node) {
-      var entries = [ ".", ".." ];
-      for (var key of Object.keys(node.contents)) {
-        entries.push(key);
-      }
-      return entries;
+      return [ ".", "..", ...Object.keys(node.contents) ];
     },
     symlink(parent, newname, oldpath) {
       var node = MEMFS.createNode(parent, newname, 511 | 40960, 0);
@@ -1715,7 +1702,7 @@ var MEMFS = {
       }
       if (!length) return 0;
       var node = stream.node;
-      node.timestamp = Date.now();
+      node.mtime = node.ctime = Date.now();
       if (buffer.subarray && (!node.contents || node.contents.subarray)) {
         // This write is from a typed array to a typed array?
         if (canOwn) {
@@ -1808,19 +1795,9 @@ var MEMFS = {
   }
 };
 
-/** @param {boolean=} noRunDep */ var asyncLoad = (url, onload, onerror, noRunDep) => {
-  var dep = !noRunDep ? getUniqueRunDependency(`al ${url}`) : "";
-  readAsync(url).then(arrayBuffer => {
-    onload(new Uint8Array(arrayBuffer));
-    if (dep) removeRunDependency(dep);
-  }, err => {
-    if (onerror) {
-      onerror();
-    } else {
-      throw `Loading data file "${url}" failed.`;
-    }
-  });
-  if (dep) addRunDependency(dep);
+var asyncLoad = async url => {
+  var arrayBuffer = await readAsync(url);
+  return new Uint8Array(arrayBuffer);
 };
 
 var FS_createDataFile = (parent, name, fileData, canRead, canWrite, canOwn) => {
@@ -1868,7 +1845,7 @@ var FS_createPreloadedFile = (parent, name, url, canRead, canWrite, onload, oner
   }
   addRunDependency(dep);
   if (typeof url == "string") {
-    asyncLoad(url, processData, onerror);
+    asyncLoad(url).then(processData, onerror);
   } else {
     processData(url);
   }
@@ -2323,6 +2300,7 @@ var FS = {
       this.name = name;
       this.mode = mode;
       this.rdev = rdev;
+      this.atime = this.mtime = this.ctime = Date.now();
     }
     get read() {
       return (this.mode & this.readMode) === this.readMode;
@@ -2344,61 +2322,70 @@ var FS = {
     }
   },
   lookupPath(path, opts = {}) {
-    path = PATH_FS.resolve(path);
     if (!path) return {
       path: "",
       node: null
     };
-    var defaults = {
-      follow_mount: true,
-      recurse_count: 0
-    };
-    opts = Object.assign(defaults, opts);
-    if (opts.recurse_count > 8) {
-      // max recursive lookup of 8
-      throw new FS.ErrnoError(32);
+    opts.follow_mount ??= true;
+    if (!PATH.isAbs(path)) {
+      path = FS.cwd() + "/" + path;
     }
-    // split the absolute path
-    var parts = path.split("/").filter(p => !!p);
-    // start at the root
-    var current = FS.root;
-    var current_path = "/";
-    for (var i = 0; i < parts.length; i++) {
-      var islast = (i === parts.length - 1);
-      if (islast && opts.parent) {
-        // stop resolving
-        break;
-      }
-      current = FS.lookupNode(current, parts[i]);
-      current_path = PATH.join2(current_path, parts[i]);
-      // jump to the mount's root node if this is a mountpoint
-      if (FS.isMountpoint(current)) {
-        if (!islast || (islast && opts.follow_mount)) {
+    // limit max consecutive symlinks to 40 (SYMLOOP_MAX).
+    linkloop: for (var nlinks = 0; nlinks < 40; nlinks++) {
+      // split the absolute path
+      var parts = path.split("/").filter(p => !!p && (p !== "."));
+      // start at the root
+      var current = FS.root;
+      var current_path = "/";
+      for (var i = 0; i < parts.length; i++) {
+        var islast = (i === parts.length - 1);
+        if (islast && opts.parent) {
+          // stop resolving
+          break;
+        }
+        if (parts[i] === "..") {
+          current_path = PATH.dirname(current_path);
+          current = current.parent;
+          continue;
+        }
+        current_path = PATH.join2(current_path, parts[i]);
+        try {
+          current = FS.lookupNode(current, parts[i]);
+        } catch (e) {
+          // if noent_okay is true, suppress a ENOENT in the last component
+          // and return an object with an undefined node. This is needed for
+          // resolving symlinks in the path when creating a file.
+          if ((e?.errno === 44) && islast && opts.noent_okay) {
+            return {
+              path: current_path
+            };
+          }
+          throw e;
+        }
+        // jump to the mount's root node if this is a mountpoint
+        if (FS.isMountpoint(current) && (!islast || opts.follow_mount)) {
           current = current.mounted.root;
         }
-      }
-      // by default, lookupPath will not follow a symlink if it is the final path component.
-      // setting opts.follow = true will override this behavior.
-      if (!islast || opts.follow) {
-        var count = 0;
-        while (FS.isLink(current.mode)) {
-          var link = FS.readlink(current_path);
-          current_path = PATH_FS.resolve(PATH.dirname(current_path), link);
-          var lookup = FS.lookupPath(current_path, {
-            recurse_count: opts.recurse_count + 1
-          });
-          current = lookup.node;
-          if (count++ > 40) {
-            // limit max consecutive symlinks to 40 (SYMLOOP_MAX).
-            throw new FS.ErrnoError(32);
+        // by default, lookupPath will not follow a symlink if it is the final path component.
+        // setting opts.follow = true will override this behavior.
+        if (FS.isLink(current.mode) && (!islast || opts.follow)) {
+          if (!current.node_ops.readlink) {
+            throw new FS.ErrnoError(52);
           }
+          var link = current.node_ops.readlink(current);
+          if (!PATH.isAbs(link)) {
+            link = PATH.dirname(current_path) + "/" + link;
+          }
+          path = link + "/" + parts.slice(i + 1).join("/");
+          continue linkloop;
         }
       }
+      return {
+        path: current_path,
+        node: current
+      };
     }
-    return {
-      path: current_path,
-      node: current
-    };
+    throw new FS.ErrnoError(32);
   },
   getPath(node) {
     var path;
@@ -2518,6 +2505,9 @@ var FS = {
     return 0;
   },
   mayCreate(dir, name) {
+    if (!FS.isDir(dir.mode)) {
+      return 54;
+    }
     try {
       var node = FS.lookupNode(dir, name);
       return 20;
@@ -3011,7 +3001,7 @@ var FS = {
     }
     node.node_ops.setattr(node, {
       mode: (mode & 4095) | (node.mode & ~4095),
-      timestamp: Date.now()
+      ctime: Date.now()
     });
   },
   lchmod(path, mode) {
@@ -3090,7 +3080,8 @@ var FS = {
     });
     var node = lookup.node;
     node.node_ops.setattr(node, {
-      timestamp: Math.max(atime, mtime)
+      atime,
+      mtime
     });
   },
   open(path, flags, mode = 438) {
@@ -3107,13 +3098,15 @@ var FS = {
     if (typeof path == "object") {
       node = path;
     } else {
-      path = PATH.normalize(path);
-      try {
-        var lookup = FS.lookupPath(path, {
-          follow: !(flags & 131072)
-        });
-        node = lookup.node;
-      } catch (e) {}
+      // noent_okay makes it so that if the final component of the path
+      // doesn't exist, lookupPath returns `node: undefined`. `path` will be
+      // updated to point to the target of all symlinks.
+      var lookup = FS.lookupPath(path, {
+        follow: !(flags & 131072),
+        noent_okay: true
+      });
+      node = lookup.node;
+      path = lookup.path;
     }
     // perhaps we need to create the node
     var created = false;
@@ -3418,6 +3411,9 @@ var FS = {
     FS.mount({
       mount() {
         var node = FS.createNode(proc_self, "fd", 16895, 73);
+        node.stream_ops = {
+          llseek: MEMFS.stream_ops.llseek
+        };
         node.node_ops = {
           lookup(parent, name) {
             var fd = +name;
@@ -3429,11 +3425,15 @@ var FS = {
               },
               node_ops: {
                 readlink: () => stream.path
-              }
+              },
+              id: fd + 1
             };
             ret.parent = ret;
             // make it look like a simple root node
             return ret;
+          },
+          readdir() {
+            return Array.from(FS.streams.entries()).filter(([k, v]) => v).map(([k, v]) => k.toString());
           }
         };
         return node;
@@ -3622,7 +3622,7 @@ var FS = {
           buffer[offset + i] = result;
         }
         if (bytesRead) {
-          stream.node.timestamp = Date.now();
+          stream.node.atime = Date.now();
         }
         return bytesRead;
       },
@@ -3635,7 +3635,7 @@ var FS = {
           }
         }
         if (length) {
-          stream.node.timestamp = Date.now();
+          stream.node.mtime = stream.node.ctime = Date.now();
         }
         return i;
       }
@@ -4701,7 +4701,7 @@ var SYSCALLS = {
       }
       return dir;
     }
-    return PATH.join2(dir, path);
+    return dir + "/" + path;
   },
   doStat(func, path, buf) {
     var stat = func(path);
@@ -4844,8 +4844,9 @@ function ___syscall_getdents64(fd, dirp, count) {
     var struct_size = 280;
     var pos = 0;
     var off = FS.llseek(stream, 0, 1);
-    var idx = Math.floor(off / struct_size);
-    while (idx < stream.getdents.length && pos + struct_size <= count) {
+    var startIdx = Math.floor(off / struct_size);
+    var endIdx = Math.min(stream.getdents.length, startIdx + Math.floor(count / struct_size));
+    for (var idx = startIdx; idx < endIdx; idx++) {
       var id;
       var type;
       var name = stream.getdents[idx];
@@ -4861,7 +4862,17 @@ function ___syscall_getdents64(fd, dirp, count) {
         type = 4;
       } else // DT_DIR
       {
-        var child = FS.lookupNode(stream.node, name);
+        var child;
+        try {
+          child = FS.lookupNode(stream.node, name);
+        } catch (e) {
+          // If the entry is not a directory, file, or symlink, nodefs
+          // lookupNode will raise EINVAL. Skip these and continue.
+          if (e?.errno === 28) {
+            continue;
+          }
+          throw e;
+        }
         id = child.id;
         type = FS.isChrdev(child.mode) ? 2 : // DT_CHR, character device.
         FS.isDir(child.mode) ? 4 : // DT_DIR, directory.
@@ -4878,7 +4889,6 @@ function ___syscall_getdents64(fd, dirp, count) {
       HEAP8[(dirp + pos) + (18)] = type;
       stringToUTF8(name, dirp + pos + 19, 256);
       pos += struct_size;
-      idx += 1;
     }
     FS.llseek(stream, idx * struct_size, 0);
     return pos;
@@ -5027,10 +5037,6 @@ function ___syscall_mkdirat(dirfd, path, mode) {
   try {
     path = SYSCALLS.getStr(path);
     path = SYSCALLS.calculateAt(dirfd, path);
-    // remove a trailing slash, if one - /a/b/ has basename of '', but
-    // we want to create b in the context of this function
-    path = PATH.normalize(path);
-    if (path[path.length - 1] === "/") path = path.substr(0, path.length - 1);
     FS.mkdir(path, mode, 0);
     return 0;
   } catch (e) {
@@ -5802,8 +5808,7 @@ var __embind_register_memory_view = (rawType, dataTypeIndex, name) => {
 
 var __embind_register_std_string = (rawType, name) => {
   name = readLatin1String(name);
-  var stdStringIsUTF8 = //process only std::string bindings with UTF8 support, in contrast to e.g. std::basic_string<unsigned char>
-  (name === "std::string");
+  var stdStringIsUTF8 = true;
   registerType(rawType, {
     name,
     // For some method names we use string keys here since they are part of
@@ -6083,10 +6088,6 @@ function __emscripten_fetch_free(id) {
   }
 }
 
-var nowIsMonotonic = 1;
-
-var __emscripten_get_now_is_monotonic = () => nowIsMonotonic;
-
 var __emscripten_memcpy_js = (dest, src, num) => HEAPU8.copyWithin(dest, src, src + num);
 
 var __emscripten_system = command => {
@@ -6239,6 +6240,35 @@ var __tzset_js = (timezone, daylight, std_name, dst_name) => {
     stringToUTF8(summerName, std_name, 17);
   }
 };
+
+var _emscripten_get_now = () => performance.now();
+
+var _emscripten_date_now = () => Date.now();
+
+var nowIsMonotonic = 1;
+
+var checkWasiClock = clock_id => clock_id >= 0 && clock_id <= 3;
+
+function _clock_time_get(clk_id, ignored_precision_low, ignored_precision_high, ptime) {
+  var ignored_precision = convertI32PairToI53Checked(ignored_precision_low, ignored_precision_high);
+  if (!checkWasiClock(clk_id)) {
+    return 28;
+  }
+  var now;
+  // all wasi clocks but realtime are monotonic
+  if (clk_id === 0) {
+    now = _emscripten_date_now();
+  } else if (nowIsMonotonic) {
+    now = _emscripten_get_now();
+  } else {
+    return 52;
+  }
+  // "now" is in ms, and wasi times are in ns.
+  var nsec = Math.round(now * 1e3 * 1e3);
+  (tempI64 = [ nsec >>> 0, (tempDouble = nsec, (+(Math.abs(tempDouble))) >= 1 ? (tempDouble > 0 ? (+(Math.floor((tempDouble) / 4294967296))) >>> 0 : (~~((+(Math.ceil((tempDouble - +(((~~(tempDouble))) >>> 0)) / 4294967296))))) >>> 0) : 0) ], 
+  HEAP32[((ptime) >> 2)] = tempI64[0], HEAP32[(((ptime) + (4)) >> 2)] = tempI64[1]);
+  return 0;
+}
 
 var handleException = e => {
   // Certain exception types we do not treat as errors since they are used for
@@ -7561,8 +7591,6 @@ var _eglSwapBuffers = (dpy, surface) => {
   /* EGL_TRUE */ return 0;
 };
 
-/* EGL_FALSE */ var _emscripten_get_now = () => performance.now();
-
 /**
      * @param {number=} arg
      * @param {boolean=} noSetTiming
@@ -7852,8 +7880,6 @@ var runMainThreadEmAsm = (emAsmAddr, sigPtr, argbuf, sync) => {
 };
 
 var _emscripten_asm_const_int_sync_on_main_thread = (emAsmAddr, sigPtr, argbuf) => runMainThreadEmAsm(emAsmAddr, sigPtr, argbuf, 1);
-
-var _emscripten_date_now = () => Date.now();
 
 var JSEvents = {
   memcpy(target, src, size) {
@@ -13078,13 +13104,13 @@ var wasmImports = {
   /** @export */ _embind_register_std_wstring: __embind_register_std_wstring,
   /** @export */ _embind_register_void: __embind_register_void,
   /** @export */ _emscripten_fetch_free: __emscripten_fetch_free,
-  /** @export */ _emscripten_get_now_is_monotonic: __emscripten_get_now_is_monotonic,
   /** @export */ _emscripten_memcpy_js: __emscripten_memcpy_js,
   /** @export */ _emscripten_system: __emscripten_system,
   /** @export */ _emscripten_throw_longjmp: __emscripten_throw_longjmp,
   /** @export */ _gmtime_js: __gmtime_js,
   /** @export */ _localtime_js: __localtime_js,
   /** @export */ _tzset_js: __tzset_js,
+  /** @export */ clock_time_get: _clock_time_get,
   /** @export */ eglBindAPI: _eglBindAPI,
   /** @export */ eglChooseConfig: _eglChooseConfig,
   /** @export */ eglCreateContext: _eglCreateContext,
@@ -13595,7 +13621,9 @@ var wasmImports = {
   /** @export */ wsSetUserPointer: _wsSetUserPointer
 };
 
-var wasmExports = createWasm();
+var wasmExports;
+
+createWasm();
 
 var ___wasm_call_ctors = () => (___wasm_call_ctors = wasmExports["__wasm_call_ctors"])();
 
