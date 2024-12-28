@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_position_instance.html":[8,0,2,2,39],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_position_instance.html#ac6a548d722aaa281ff418f97014d4a1a":[8,0,2,2,39,0],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_rotation.html":[8,0,2,2,40],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_rotation.html#a2f36c27bf6c3f9948f86403f2437bedf":[8,0,2,2,40,0],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_rotation.html#ab1e45ffc276757a7f2ea3db73c93178f":[8,0,2,2,40,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "class_urho3_d_1_1_particle_graph_nodes_1_1_render_mesh_instance.html#ac1432386f87338258cadf992b9fbe29d":[8,0,2,2,84,8],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_render_mesh_instance.html#ad46623def4019dfe827aef04abd1611f":[8,0,2,2,84,4],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_render_mesh_instance.html#ad895d906bffe4a0fc7d80067ecaafc69":[8,0,2,2,84,2],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_set_attribute.html":[8,0,2,2,85],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_set_attribute.html#a38eb72d2e69bc5c135755ec5954bdb5e":[8,0,2,2,85,10],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_set_attribute.html#a46b4987d1128bb2af676c21007748cb4":[8,0,2,2,85,2]
+"class_urho3_d_1_1_particle_graph_nodes_1_1_set_attribute.html":[8,0,2,2,85]
 };

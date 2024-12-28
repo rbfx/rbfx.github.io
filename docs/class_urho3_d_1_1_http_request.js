@@ -5,6 +5,7 @@ var class_urho3_d_1_1_http_request =
     [ "GetAvailableSize", "class_urho3_d_1_1_http_request.html#a8cb68df22c51ceeed001ccce31b103d6", null ],
     [ "GetError", "class_urho3_d_1_1_http_request.html#aeda509407e3bbe00059aaf99731909d6", null ],
     [ "GetState", "class_urho3_d_1_1_http_request.html#a687c17d7c33831e6f68ceddd643d7383", null ],
+    [ "GetStatusCode", "class_urho3_d_1_1_http_request.html#ae7ce8d93ab77f7f9c6446e1178f8c510", null ],
     [ "GetURL", "class_urho3_d_1_1_http_request.html#a255360928dcd6a6e24e6a3424e0ea278", null ],
     [ "GetVerb", "class_urho3_d_1_1_http_request.html#a0e95441c88e7d054c12005e4ee780fa9", null ],
     [ "IsEof", "class_urho3_d_1_1_http_request.html#a5b83ae3fd9b78b1de195bd9cd9103173", null ],
@@ -19,6 +20,7 @@ var class_urho3_d_1_1_http_request =
     [ "readBuffer_", "class_urho3_d_1_1_http_request.html#a9c3968fa085933cf76d671f4a9563ea6", null ],
     [ "readPosition_", "class_urho3_d_1_1_http_request.html#aaee1e81a37e6dbee7b7bdd36473862ce", null ],
     [ "state_", "class_urho3_d_1_1_http_request.html#ac857b1da935941418ee65ce8e408f463", null ],
+    [ "statusCode_", "class_urho3_d_1_1_http_request.html#a6845d123dee779bca92137297cbfba99", null ],
     [ "url_", "class_urho3_d_1_1_http_request.html#a356ee84c844bbff6cc5a5deea8399591", null ],
     [ "verb_", "class_urho3_d_1_1_http_request.html#a88a135ddc7dbedfb302efedf45e86585", null ]
 ];
