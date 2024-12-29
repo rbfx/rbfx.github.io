@@ -1,5 +1,9 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#af6e2b5076f2b102b46339a1f2930a263":[8,0,2,351,10],
+"struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#af846d1fed94fbfbb8036dcd0fc9a1a97":[8,0,2,351,6],
+"struct_urho3_d_1_1_lightmap_chart_region.html":[8,0,2,353],
+"struct_urho3_d_1_1_lightmap_chart_region.html#a22522fb2b472f5b232cf47d688e3a9c1":[8,0,2,353,4],
 "struct_urho3_d_1_1_lightmap_chart_region.html#a4b31037378d776798babe3fcd4cbfc3a":[8,0,2,353,6],
 "struct_urho3_d_1_1_lightmap_chart_region.html#a571ddafb364135bd2934bd1926a69d76":[8,0,2,353,7],
 "struct_urho3_d_1_1_lightmap_chart_region.html#a97fec1ade12dac21d278eb05d2dc3fcc":[8,0,2,353,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html#af71e05339d6e1d4f456da6d0bba01790":[8,0,2,441,3],
 "struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html#af83cb5e54e4f26023f29b3554ed3d3c4":[8,0,2,441,5],
 "struct_urho3_d_1_1_node_animation_output.html":[8,0,2,443],
-"struct_urho3_d_1_1_node_animation_output.html#a0a8f6749a8c0d8419779f848b9194a3b":[8,0,2,443,0],
-"struct_urho3_d_1_1_node_animation_output.html#ade0c0223db28f7f60cddc1d1963e83cc":[8,0,2,443,1],
-"struct_urho3_d_1_1_node_animation_state_track.html":[8,0,2,444],
-"struct_urho3_d_1_1_node_animation_state_track.html#a2dceaf7600dda940c935781a9c5fdccb":[8,0,2,444,0],
-"struct_urho3_d_1_1_node_animation_state_track.html#a988386bb4b034ea199529dc787388f61":[8,0,2,444,2]
+"struct_urho3_d_1_1_node_animation_output.html#a0a8f6749a8c0d8419779f848b9194a3b":[8,0,2,443,0]
 };

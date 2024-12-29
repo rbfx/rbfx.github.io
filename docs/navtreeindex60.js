@@ -1,5 +1,9 @@
 var NAVTREEINDEX60 =
 {
+"class_urho3_d_1_1_shader_program_compositor.html#a142215da49bbca04446e03a4456b1272":[8,0,2,639,20],
+"class_urho3_d_1_1_shader_program_compositor.html#a1ca1f6552ce8893b311ad52e08660c86":[8,0,2,639,13],
+"class_urho3_d_1_1_shader_program_compositor.html#a22ffe9b7498035da939be290c93caec6":[8,0,2,639,2],
+"class_urho3_d_1_1_shader_program_compositor.html#a2c2774daa4b21f86bb05311f8e863167":[8,0,2,639,10],
 "class_urho3_d_1_1_shader_program_compositor.html#a2dc60bb3f327420ad68b0cbbde133394":[8,0,2,639,0],
 "class_urho3_d_1_1_shader_program_compositor.html#a3295786a271d73f1dddf7d676c4e6bf5":[8,0,2,639,4],
 "class_urho3_d_1_1_shader_program_compositor.html#a4fc88574cbb3ad83136714f355385eb8":[8,0,2,639,8],
@@ -245,9 +249,5 @@ var NAVTREEINDEX60 =
 "class_urho3_d_1_1_skybox.html#a61e3d9e649b43a47f45228145ddbd24b":[8,0,2,657,2],
 "class_urho3_d_1_1_skybox.html#a6359501d188f3bbf76a20d7ef40631e5":[8,0,2,657,7],
 "class_urho3_d_1_1_skybox.html#a6d2fcb14f15a571751bf9ee41c62b826":[8,0,2,657,6],
-"class_urho3_d_1_1_skybox.html#a774d9bc91936f5d7e7b72d5d3398f81c":[8,0,2,657,8],
-"class_urho3_d_1_1_skybox.html#a95dd1dd62bf43699ffd1d75f50b99897":[8,0,2,657,5],
-"class_urho3_d_1_1_skybox.html#acc5698f4dd72db2a31a01431c025c23f":[8,0,2,657,9],
-"class_urho3_d_1_1_skybox.html#aea4440c42e417b55217ea97ec1790290":[8,0,2,657,4],
-"class_urho3_d_1_1_slider.html":[8,0,2,658]
+"class_urho3_d_1_1_skybox.html#a774d9bc91936f5d7e7b72d5d3398f81c":[8,0,2,657,8]
 };

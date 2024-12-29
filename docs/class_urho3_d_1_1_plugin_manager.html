@@ -61,6 +61,7 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_plugin_manager.html'
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
@@ -89,6 +90,13 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached info about dynamic library on the disk. It may or may not be loaded.  <a href="struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a0f52730f1532fd126aaf1de21828566d"><td class="memItemLeft" align="right" valign="top"><a id="a0f52730f1532fd126aaf1de21828566d"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#a0f52730f1532fd126aaf1de21828566d">QuitApplicationCallback</a> = ea::function&lt; void()&gt;</td></tr>
+<tr class="memdesc:a0f52730f1532fd126aaf1de21828566d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quit application callback. <br /></td></tr>
+<tr class="separator:a0f52730f1532fd126aaf1de21828566d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a60902488f0aa53eba41df389787bd977"><td class="memItemLeft" align="right" valign="top"><a id="a60902488f0aa53eba41df389787bd977"></a>
@@ -112,6 +120,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#a918a4e2b59b6498f14854e2675d47003">StopApplication</a> ()</td></tr>
 <tr class="memdesc:a918a4e2b59b6498f14854e2675d47003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop plugin application for all loaded plugins. <br /></td></tr>
 <tr class="separator:a918a4e2b59b6498f14854e2675d47003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08783f3376dd179b2106ca5afff34056"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#a08783f3376dd179b2106ca5afff34056">QuitApplication</a> ()</td></tr>
+<tr class="separator:a08783f3376dd179b2106ca5afff34056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba24c82cbff5a69eb6e2ada135173357"><td class="memItemLeft" align="right" valign="top"><a id="aba24c82cbff5a69eb6e2ada135173357"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#aba24c82cbff5a69eb6e2ada135173357">SetQuitApplicationCallback</a> (const <a class="el" href="class_urho3_d_1_1_plugin_manager.html#a0f52730f1532fd126aaf1de21828566d">QuitApplicationCallback</a> &amp;callback)</td></tr>
+<tr class="memdesc:aba24c82cbff5a69eb6e2ada135173357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback for <a class="el" href="class_urho3_d_1_1_plugin_manager.html#a08783f3376dd179b2106ca5afff34056">QuitApplication()</a>. <br /></td></tr>
+<tr class="separator:aba24c82cbff5a69eb6e2ada135173357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a875b03a80a88ac67638a9e402d091ce9"><td class="memItemLeft" align="right" valign="top"><a id="a875b03a80a88ac67638a9e402d091ce9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#a875b03a80a88ac67638a9e402d091ce9">IsStarted</a> () const</td></tr>
 <tr class="memdesc:a875b03a80a88ac67638a9e402d091ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the application is started now. <br /></td></tr>
@@ -421,6 +435,9 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>revision_</b> {}<
 <tr class="memitem:af908367e728b00d238d85409c5e547a2"><td class="memItemLeft" align="right" valign="top"><a id="af908367e728b00d238d85409c5e547a2"></a>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_plugin_stack.html">PluginStack</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pluginStack_</b></td></tr>
 <tr class="separator:af908367e728b00d238d85409c5e547a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae25dba9738427d390547adb1d424f941"><td class="memItemLeft" align="right" valign="top"><a id="ae25dba9738427d390547adb1d424f941"></a>
+<a class="el" href="class_urho3_d_1_1_plugin_manager.html#a0f52730f1532fd126aaf1de21828566d">QuitApplicationCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><b>quitApplication_</b></td></tr>
+<tr class="separator:ae25dba9738427d390547adb1d424f941"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cdd8032b41165c95fefe8fd41bc2743"><td class="memItemLeft" align="right" valign="top"><a id="a6cdd8032b41165c95fefe8fd41bc2743"></a>
 SerializedPlugins&#160;</td><td class="memItemRight" valign="bottom"><b>restoreBuffer_</b></td></tr>
 <tr class="separator:a6cdd8032b41165c95fefe8fd41bc2743"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -484,6 +501,24 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Commit updates to the list of loaded plugins and to application status. This may be unsafe to call inside of the frame. Called automatically between frames. </p>
+
+</div>
+</div>
+<a id="a08783f3376dd179b2106ca5afff34056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08783f3376dd179b2106ca5afff34056">&#9670;&nbsp;</a></span>QuitApplication()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::PluginManager::QuitApplication </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Quit application on user request. <a class="el" href="class_urho3_d_1_1_engine.html" title="Urho3D engine. Creates the other subsystems.">Engine</a> is shut down by default. External tooling like Editor may override this behavior. </p>
 
 </div>
 </div>
