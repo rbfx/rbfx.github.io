@@ -12,6 +12,8 @@ var class_urho3_d_1_1_simple_resource =
     [ "SaveFile", "class_urho3_d_1_1_simple_resource.html#af76760959bfdfbbc9227c20fa80b26bd", null ],
     [ "SaveFile", "class_urho3_d_1_1_simple_resource.html#a792b62769d1f791c7243e065ce678d6a", null ],
     [ "SerializeInBlock", "class_urho3_d_1_1_simple_resource.html#af14304c741a3cb38b98721212e7ba353", null ],
+    [ "SetSaveFormatHint", "class_urho3_d_1_1_simple_resource.html#adb7ce6207c6fa44736b942593142d8bd", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_simple_resource.html#aa1f80fce3207a34a1132dc1040aa6960", null ],
-    [ "loadFormat_", "class_urho3_d_1_1_simple_resource.html#a00a261bb552cae9df4bd086e7291e7a6", null ]
+    [ "loadFormat_", "class_urho3_d_1_1_simple_resource.html#a00a261bb552cae9df4bd086e7291e7a6", null ],
+    [ "saveFormat_", "class_urho3_d_1_1_simple_resource.html#aa845cf97c8d7613769bb469697a70e22", null ]
 ];

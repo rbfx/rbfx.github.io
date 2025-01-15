@@ -12,6 +12,7 @@ var class_urho3_d_1_1_scene_resource =
     [ "SaveFile", "class_urho3_d_1_1_scene_resource.html#a59f62bedadb34648ea738d4098e16598", null ],
     [ "SaveFile", "class_urho3_d_1_1_scene_resource.html#a587d49a87a41169cfa0946ec1ce0bb25", null ],
     [ "SetPrefab", "class_urho3_d_1_1_scene_resource.html#afb3db1f1195d8862f58b1609194c4900", null ],
+    [ "SetSaveFormatHint", "class_urho3_d_1_1_scene_resource.html#a8c534759b91e9ae0b6262e489936b532", null ],
     [ "isPrefab_", "class_urho3_d_1_1_scene_resource.html#a3c8faa2018e064de0c1f129a35e0fce0", null ],
     [ "loadBinaryFile_", "class_urho3_d_1_1_scene_resource.html#afc06c6de917eeeb40237c0b3d2a2dd56", null ],
     [ "loadFormat_", "class_urho3_d_1_1_scene_resource.html#a21c35c8ab02bf74b78f4b876cadba9e2", null ],
@@ -19,5 +20,6 @@ var class_urho3_d_1_1_scene_resource =
     [ "loadXmlFile_", "class_urho3_d_1_1_scene_resource.html#aac45bc4c531ca6fc74c6cc95f209e556", null ],
     [ "OnReloadBegin", "class_urho3_d_1_1_scene_resource.html#adad47c45e9e8239c4db0bb5c4500e451", null ],
     [ "OnReloadEnd", "class_urho3_d_1_1_scene_resource.html#aab613016f2c720c1e29b3c580ac9c642", null ],
+    [ "saveFormat_", "class_urho3_d_1_1_scene_resource.html#a3cce80d61e588eb4277ad1e8d645c649", null ],
     [ "scene_", "class_urho3_d_1_1_scene_resource.html#a559aa219725ec3d7482e5d86ca08086c", null ]
 ];

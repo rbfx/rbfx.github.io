@@ -1,5 +1,9 @@
 var NAVTREEINDEX88 =
 {
+"struct_urho3_d_1_1_spir_v_shader.html#aae1ecac7d0ad3146a11d21a098fb636a":[8,0,2,685,0],
+"struct_urho3_d_1_1_spriter_1_1_animation.html":[8,0,2,3,0],
+"struct_urho3_d_1_1_spriter_1_1_animation.html#a118f6d82d2ef785be4e1fd2d2885ff1a":[8,0,2,3,0,4],
+"struct_urho3_d_1_1_spriter_1_1_animation.html#a1d9d78c83ed1989d344b76da9279e639":[8,0,2,3,0,0],
 "struct_urho3_d_1_1_spriter_1_1_animation.html#a203779a6ea993c8b8fb35f0b6ca779c1":[8,0,2,3,0,1],
 "struct_urho3_d_1_1_spriter_1_1_animation.html#a4210acb2671da184faf83329bbdb6eeb":[8,0,2,3,0,9],
 "struct_urho3_d_1_1_spriter_1_1_animation.html#a43cb9ec2cee5f8c857bfaa4a22544240":[8,0,2,3,0,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX88 =
 "struct_urho3_d_1_1_text_renderer3_d_1_1_cached_text_element.html#a564906ded4b86d60268c3150bcc41e88":[8,0,2,727,0,1],
 "struct_urho3_d_1_1_text_renderer3_d_1_1_cached_text_element.html#a5d6ab8e899ddd2693c7e860fb553abb6":[8,0,2,727,0,0],
 "struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html":[8,0,2,727,1],
-"struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html#a1b6d31a0ec5bc5650db9b6275dcc88a3":[8,0,2,727,1,0],
-"struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html#a4151580f3ef577dbeae7b53d88670ecc":[8,0,2,727,1,2],
-"struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html#a4aa32da41f59be1c413d988c618bcd29":[8,0,2,727,1,3],
-"struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html#a933df964c7a8e2e6628572874aba701a":[8,0,2,727,1,1],
-"struct_urho3_d_1_1_texture_frame.html":[8,0,2,736]
+"struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html#a1b6d31a0ec5bc5650db9b6275dcc88a3":[8,0,2,727,1,0]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX77 =
 {
+"files.html":[9,0],
+"folder-structure.html":[0,0,1],
+"framework-overview.html":[0,0,2],
+"functions.html":[8,3,0],
 "functions.html":[8,3,0,0],
 "functions_a.html":[8,3,0,1],
 "functions_b.html":[8,3,0,2],
@@ -54,8 +58,8 @@ var NAVTREEINDEX77 =
 "functions_type.html":[8,3,3],
 "functions_u.html":[8,3,0,21],
 "functions_v.html":[8,3,0,22],
-"functions_vars.html":[8,3,2,0],
 "functions_vars.html":[8,3,2],
+"functions_vars.html":[8,3,2,0],
 "functions_vars_a.html":[8,3,2,1],
 "functions_vars_b.html":[8,3,2,2],
 "functions_vars_c.html":[8,3,2,3],
@@ -99,8 +103,8 @@ var NAVTREEINDEX77 =
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html":[2],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html":[5],
 "multiplayer-and-networking.html":[0,0,2,2],
-"namespace_urho3_d_1_1_actions.html":[8,0,2,0],
 "namespace_urho3_d_1_1_actions.html":[7,0,0,0],
+"namespace_urho3_d_1_1_actions.html":[8,0,2,0],
 "namespace_urho3_d_1_1_attribute_metadata.html":[7,0,0,1],
 "namespace_urho3_d_1_1_linked_plugins.html":[7,0,0,2],
 "namespace_urho3_d_1_1_network_settings.html":[7,0,0,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX77 =
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#abf58bce89d8fc8e7ce8b7be1ce4d6dff":[8,0,14,0],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ac033c0a34b9f1a030807b6c186bffbfd":[8,0,14,15],
 "struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ac36f5c2aab0aa0eb73ae3312f2419280":[8,0,14,19],
-"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ac699192af963e96d60a1a8e4ef74209b":[8,0,14,10],
-"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#acffbc8e39bf16ea35bf2d67b66a21427":[8,0,14,20],
-"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ad5e18122c12d03bef67770c71850666e":[8,0,14,14],
-"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ae1f2a9cffbec7917a910db85e4501f06":[8,0,14,5],
-"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ae604f9f34103984550040f8384105d20":[8,0,14,29]
+"struct___i_m_a_g_e___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html#ac699192af963e96d60a1a8e4ef74209b":[8,0,14,10]
 };

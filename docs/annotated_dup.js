@@ -16,7 +16,8 @@ var annotated_dup =
     [ "fmt", null, [
       [ "formatter< ea::string >", "structfmt_1_1formatter_3_01ea_1_1string_01_4.html", "structfmt_1_1formatter_3_01ea_1_1string_01_4" ],
       [ "formatter< ea::string_view >", "structfmt_1_1formatter_3_01ea_1_1string__view_01_4.html", "structfmt_1_1formatter_3_01ea_1_1string__view_01_4" ],
-      [ "formatter< T, char, ea::enable_if_t< ea::is_enum_v< T > > >", "structfmt_1_1formatter_3_01_t_00_01char_00_01ea_1_1enable__if__t_3_01ea_1_1is__enum__v_3_01_t_01_4_01_4_01_4.html", "structfmt_1_1formatter_3_01_t_00_01char_00_01ea_1_1enable__if__t_3_01ea_1_1is__enum__v_3_01_t_01_4_01_4_01_4" ]
+      [ "formatter< T, char, ea::enable_if_t< ea::is_enum_v< T > > >", "structfmt_1_1formatter_3_01_t_00_01char_00_01ea_1_1enable__if__t_3_01ea_1_1is__enum__v_3_01_t_01_4_01_4_01_4.html", "structfmt_1_1formatter_3_01_t_00_01char_00_01ea_1_1enable__if__t_3_01ea_1_1is__enum__v_3_01_t_01_4_01_4_01_4" ],
+      [ "formatter< Urho3D::FileIdentifier >", "structfmt_1_1formatter_3_01_urho3_d_1_1_file_identifier_01_4.html", "structfmt_1_1formatter_3_01_urho3_d_1_1_file_identifier_01_4" ]
     ] ],
     [ "Urho3D", null, [
       [ "Actions", "namespace_urho3_d_1_1_actions.html", "namespace_urho3_d_1_1_actions" ],
