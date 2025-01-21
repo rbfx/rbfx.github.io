@@ -164,8 +164,7 @@ if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
       throw new Error(response.status + " : " + response.url);
     };
   }
-} else // end include: web_or_worker_shell_read.js
-{}
+} else {}
 
 var out = Module["print"] || console.log.bind(console);
 
@@ -435,13 +434,7 @@ async function instantiateArrayBuffer(binaryFile, imports) {
 }
 
 async function instantiateAsync(binary, binaryFile, imports) {
-  if (!binary && typeof WebAssembly.instantiateStreaming == "function" && !isDataURI(binaryFile) && // Don't use streaming for file:// delivered objects in a webview, fetch them synchronously.
-  !isFileURI(binaryFile) && // Avoid instantiateStreaming() on Node.js environment for now, as while
-  // Node.js v18.1.0 implements it, it does not have a full fetch()
-  // implementation yet.
-  // Reference:
-  //   https://github.com/emscripten-core/emscripten/pull/16917
-  !ENVIRONMENT_IS_NODE) {
+  if (!binary && typeof WebAssembly.instantiateStreaming == "function" && !isDataURI(binaryFile) && !isFileURI(binaryFile) && !ENVIRONMENT_IS_NODE) {
     try {
       var response = fetch(binaryFile, {
         credentials: "same-origin"
@@ -1042,7 +1035,6 @@ var PATH_FS = {
       } else if (!path) {
         return "";
       }
-      // an invalid portion invalidates the whole thing
       resolvedPath = path + "/" + resolvedPath;
       resolvedAbsolute = PATH.isAbs(path);
     }
@@ -1265,24 +1257,7 @@ var FS_stdin_getChar = () => {
 var TTY = {
   ttys: [],
   init() {},
-  // https://github.com/emscripten-core/emscripten/pull/1555
-  // if (ENVIRONMENT_IS_NODE) {
-  //   // currently, FS.init does not distinguish if process.stdin is a file or TTY
-  //   // device, it always assumes it's a TTY device. because of this, we're forcing
-  //   // process.stdin to UTF8 encoding to at least make stdin reading compatible
-  //   // with text files until FS.init can be refactored.
-  //   process.stdin.setEncoding('utf8');
-  // }
   shutdown() {},
-  // https://github.com/emscripten-core/emscripten/pull/1555
-  // if (ENVIRONMENT_IS_NODE) {
-  //   // inolen: any idea as to why node -e 'process.stdin.read()' wouldn't exit immediately (with process.stdin being a tty)?
-  //   // isaacs: because now it's reading from the stream, you've expressed interest in it, so that read() kicks off a _read() which creates a ReadReq operation
-  //   // inolen: I thought read() in that case was a synchronous operation that just grabbed some amount of buffered data if it exists?
-  //   // isaacs: it is. but it also triggers a _read() call, which calls readStart() on the handle
-  //   // isaacs: do process.stdin.pause() and i'd think it'd probably close the pending call
-  //   process.stdin.pause();
-  // }
   register(dev, ops) {
     TTY.ttys[dev] = {
       input: [],
@@ -1308,7 +1283,7 @@ var TTY = {
       stream.tty.ops.fsync(stream.tty);
     },
     read(stream, buffer, offset, length, pos) {
-      /* ignored */ if (!stream.tty || !stream.tty.ops.get_char) {
+      if (!stream.tty || !stream.tty.ops.get_char) {
         throw new FS.ErrnoError(60);
       }
       var bytesRead = 0;
@@ -1360,7 +1335,6 @@ var TTY = {
         if (val != 0) tty.output.push(val);
       }
     },
-    // val == 0 would cut text output off in the middle.
     fsync(tty) {
       if (tty.output && tty.output.length > 0) {
         out(UTF8ArrayToString(tty.output));
@@ -1521,7 +1495,6 @@ var MEMFS = {
     // Allocate new storage.
     if (node.usedBytes > 0) node.contents.set(oldContents.subarray(0, node.usedBytes), 0);
   },
-  // Copy old data over to the new storage.
   resizeFileStorage(node, newSize) {
     if (node.usedBytes == newSize) return;
     if (newSize == 0) {
@@ -1535,7 +1508,6 @@ var MEMFS = {
       if (oldContents) {
         node.contents.set(oldContents.subarray(0, Math.min(newSize, node.usedBytes)));
       }
-      // Copy old data over to the new storage.
       node.usedBytes = newSize;
     }
   },
@@ -1838,10 +1810,8 @@ var IDBFS = {
   DB_STORE_NAME: "FILE_DATA",
   queuePersist: mount => {
     function onPersistComplete() {
-      if (mount.idbPersistState === "again") startPersist(); else // If a new sync request has appeared in between, kick off a new sync
-      mount.idbPersistState = 0;
+      if (mount.idbPersistState === "again") startPersist(); else mount.idbPersistState = 0;
     }
-    // Otherwise reset sync state back to idle to wait for a new sync later
     function startPersist() {
       mount.idbPersistState = "idb";
       // Mark that we are currently running a sync operation
@@ -2245,7 +2215,6 @@ var FS = {
       if (!parent) {
         parent = this;
       }
-      // root node sets parent to itself
       this.parent = parent;
       this.mount = parent.mount;
       this.id = FS.nextInode++;
@@ -2500,8 +2469,7 @@ var FS = {
     if (FS.isLink(node.mode)) {
       return 32;
     } else if (FS.isDir(node.mode)) {
-      if (FS.flagsToPermissionString(flags) !== "r" || // opening for write
-      (flags & (512 | 64))) {
+      if (FS.flagsToPermissionString(flags) !== "r" || (flags & (512 | 64))) {
         // TODO: check for O_SEARCH? (== search for dir only)
         return 31;
       }
@@ -2709,8 +2677,20 @@ var FS = {
     return parent.node_ops.mknod(parent, name, mode, dev);
   },
   statfs(path) {
+    return FS.statfsNode(FS.lookupPath(path, {
+      follow: true
+    }).node);
+  },
+  statfsStream(stream) {
+    // We keep a separate statfsStream function because noderawfs overrides
+    // it. In noderawfs, stream.node is sometimes null. Instead, we need to
+    // look at stream.path.
+    return FS.statfsNode(stream.node);
+  },
+  statfsNode(node) {
     // NOTE: None of the defaults here are true. We're just returning safe and
-    //       sane values.
+    //       sane values. Currently nodefs and rawfs replace these defaults,
+    //       other file systems leave them alone.
     var rtn = {
       bsize: 4096,
       frsize: 4096,
@@ -2723,11 +2703,8 @@ var FS = {
       flags: 2,
       namelen: 255
     };
-    var parent = FS.lookupPath(path, {
-      follow: true
-    }).node;
-    if (parent?.node_ops.statfs) {
-      Object.assign(rtn, parent.node_ops.statfs(parent.mount.opts.root));
+    if (node.node_ops.statfs) {
+      Object.assign(rtn, node.node_ops.statfs(node.mount.opts.root));
     }
     return rtn;
   },
@@ -2982,7 +2959,6 @@ var FS = {
       dontFollow
     });
   },
-  // we ignore the uid / gid for now
   lchown(path, uid, gid) {
     FS.chown(path, uid, gid, true);
   },
@@ -3520,7 +3496,6 @@ var FS = {
       try {
         FS.mkdir(current);
       } catch (e) {}
-      // ignore EEXIST
       parent = current;
     }
     return current;
@@ -3570,7 +3545,7 @@ var FS = {
         }
       },
       read(stream, buffer, offset, length, pos) {
-        /* ignored */ var bytesRead = 0;
+        var bytesRead = 0;
         for (var i = 0; i < length; i++) {
           var result;
           try {
@@ -3864,7 +3839,7 @@ var SOCKFS = {
       return sock.sock_ops.ioctl(sock, request, varargs);
     },
     read(stream, buffer, offset, length, position) {
-      /* ignored */ var sock = stream.node.sock;
+      var sock = stream.node.sock;
       var msg = sock.sock_ops.recvmsg(sock, length);
       if (!msg) {
         // socket is closed
@@ -3874,7 +3849,7 @@ var SOCKFS = {
       return msg.buffer.length;
     },
     write(stream, buffer, offset, length, position) {
-      /* ignored */ var sock = stream.node.sock;
+      var sock = stream.node.sock;
       return sock.sock_ops.sendmsg(sock, buffer, offset, length);
     },
     close(stream) {
@@ -3902,9 +3877,7 @@ var SOCKFS = {
         if (ws._socket) {
           addr = ws._socket.remoteAddress;
           port = ws._socket.remotePort;
-        } else // if we're just now initializing a connection to the remote,
-        // inspect the url property
-        {
+        } else {
           var result = /ws[s]?:\/\/([^:]+):(\d+)/.exec(ws.url);
           if (!result) {
             throw new Error("WebSocket URL must be in the format ws(s)://address:port");
@@ -4004,8 +3977,7 @@ var SOCKFS = {
           var encoder = new TextEncoder;
           // should be utf-8
           data = encoder.encode(data);
-        } else // make a typed array from the string
-        {
+        } else {
           assert(data.byteLength !== undefined);
           // must receive an ArrayBuffer
           if (data.byteLength == 0) {
@@ -4042,7 +4014,6 @@ var SOCKFS = {
           }
           handleMessage((new Uint8Array(data)).buffer);
         });
-        // copy from node Buffer -> ArrayBuffer
         peer.socket.on("close", function() {
           SOCKFS.emit("close", sock.stream.fd);
         });
@@ -4140,7 +4111,6 @@ var SOCKFS = {
       if (typeof sock.saddr != "undefined" || typeof sock.sport != "undefined") {
         throw new FS.ErrnoError(28);
       }
-      // already bound
       sock.saddr = addr;
       sock.sport = port;
       // in order to emulate dgram sockets, we need to launch a listen server when
@@ -4197,14 +4167,12 @@ var SOCKFS = {
       if (sock.server) {
         throw new FS.ErrnoError(28);
       }
-      // already listening
       var WebSocketServer = require("ws").Server;
       var host = sock.saddr;
       sock.server = new WebSocketServer({
         host,
         port: sock.sport
       });
-      // TODO support backlog
       SOCKFS.emit("listen", sock.stream.fd);
       // Send Event with listen fd.
       sock.server.on("connection", function(ws) {
@@ -4241,7 +4209,6 @@ var SOCKFS = {
         SOCKFS.emit("error", [ sock.stream.fd, sock.error, "EHOSTUNREACH: Host is unreachable" ]);
       });
     },
-    // don't throw
     accept(listensock) {
       if (!listensock.server || !listensock.pending.length) {
         throw new FS.ErrnoError(28);
@@ -4453,7 +4420,6 @@ var inetNtop6 = ints => {
           str += ":";
           if (zstart === 0) str += ":";
         }
-        //leading zeros case
         continue;
       }
     }
@@ -4528,8 +4494,7 @@ var inetPton6 = str => {
   // Z placeholder to keep track of zeros when splitting the string on ":"
   if (str.startsWith("::")) {
     str = str.replace("::", "Z:");
-  } else // leading zeros case
-  {
+  } else {
     str = str.replace("::", ":Z:");
   }
   if (str.indexOf(".") > 0) {
@@ -4689,6 +4654,19 @@ var SYSCALLS = {
     HEAP64[(((buf) + (88)) >> 3)] = BigInt(stat.ino);
     return 0;
   },
+  writeStatFs(buf, stats) {
+    HEAP32[(((buf) + (4)) >> 2)] = stats.bsize;
+    HEAP32[(((buf) + (40)) >> 2)] = stats.bsize;
+    HEAP32[(((buf) + (8)) >> 2)] = stats.blocks;
+    HEAP32[(((buf) + (12)) >> 2)] = stats.bfree;
+    HEAP32[(((buf) + (16)) >> 2)] = stats.bavail;
+    HEAP32[(((buf) + (20)) >> 2)] = stats.files;
+    HEAP32[(((buf) + (24)) >> 2)] = stats.ffree;
+    HEAP32[(((buf) + (28)) >> 2)] = stats.fsid;
+    HEAP32[(((buf) + (44)) >> 2)] = stats.flags;
+    // ST_NOSUID
+    HEAP32[(((buf) + (36)) >> 2)] = stats.namelen;
+  },
   doMsync(addr, stream, len, flags, offset) {
     if (!FS.isFile(stream.node.mode)) {
       throw new FS.ErrnoError(43);
@@ -4758,7 +4736,6 @@ function ___syscall_fcntl64(fd, cmd, varargs) {
      case 14:
       return 0;
     }
-    // Pretend that the locking is successful.
     return -28;
   } catch (e) {
     if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
@@ -4808,15 +4785,13 @@ function ___syscall_getdents64(fd, dirp, count) {
       if (name === ".") {
         id = stream.node.id;
         type = 4;
-      } else // DT_DIR
-      if (name === "..") {
+      } else if (name === "..") {
         var lookup = FS.lookupPath(stream.path, {
           parent: true
         });
         id = lookup.node.id;
         type = 4;
-      } else // DT_DIR
-      {
+      } else {
         var child;
         try {
           child = FS.lookupNode(stream.node, name);
@@ -4834,7 +4809,6 @@ function ___syscall_getdents64(fd, dirp, count) {
         FS.isLink(child.mode) ? 10 : // DT_LNK, symbolic link.
         8;
       }
-      // DT_REG, regular file.
       HEAP64[((dirp + pos) >> 3)] = BigInt(id);
       HEAP64[(((dirp + pos) + (8)) >> 3)] = BigInt((idx + 1) * struct_size);
       HEAP16[(((dirp + pos) + (16)) >> 1)] = 280;
@@ -4887,8 +4861,7 @@ function ___syscall_ioctl(fd, op, varargs) {
         return 0;
       }
 
-     // no-op, not actually adjusting terminal settings
-      case 21506:
+     case 21506:
      case 21507:
      case 21508:
       {
@@ -4914,8 +4887,7 @@ function ___syscall_ioctl(fd, op, varargs) {
         return 0;
       }
 
-     // no-op, not actually adjusting terminal settings
-      case 21519:
+     case 21519:
       {
         if (!stream.tty) return -59;
         var argp = syscallGetVarargP();
@@ -4929,8 +4901,7 @@ function ___syscall_ioctl(fd, op, varargs) {
         return -28;
       }
 
-     // not supported
-      case 21531:
+     case 21531:
       {
         var argp = syscallGetVarargP();
         return FS.ioctl(stream, op, argp);
@@ -4968,8 +4939,7 @@ function ___syscall_ioctl(fd, op, varargs) {
      default:
       return -28;
     }
-  } // not supported
-  catch (e) {
+  } catch (e) {
     if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
@@ -5296,7 +5266,6 @@ var integerReadValueFromPointer = (name, width, signed) => {
   });
 };
 
-// This type does not need a destructor
 var GenericWireTypeSize = 8;
 
 /** @suppress {globalThis} */ var __embind_register_bool = (rawType, name, trueValue, falseValue) => {
@@ -5319,7 +5288,6 @@ var GenericWireTypeSize = 8;
   });
 };
 
-// This type does not need a destructor
 var emval_freelist = [];
 
 var emval_handles = [];
@@ -5388,9 +5356,6 @@ var EmValType = {
   destructorFunction: null
 };
 
-// This type does not need a destructor
-// TODO: do we need a deleteObject here?  write a test where
-// emval is passed into JS via an interface
 var __embind_register_emval = rawType => registerType(rawType, EmValType);
 
 var floatReadValueFromPointer = (name, width) => {
@@ -5422,7 +5387,6 @@ var __embind_register_float = (rawType, name, size) => {
   });
 };
 
-// This type does not need a destructor
 var createNamedFunction = (name, body) => Object.defineProperty(body, "name", {
   value: name
 });
@@ -5711,8 +5675,8 @@ var __embind_register_function = (name, argCount, rawArgTypesAddr, signature, ra
     throwUnboundTypeError(`Cannot call ${name} due to unbound types`, argTypes);
   }, argCount - 1);
   whenDependentTypesAreResolved([], argTypes, argTypes => {
-    var invokerArgsArray = [ argTypes[0], /* return value */ null ].concat(/* no class 'this'*/ argTypes.slice(1));
-    /* actual params */ replacePublicSymbol(name, craftInvokerFunction(name, invokerArgsArray, null, /* no class 'this'*/ rawInvoker, fn, isAsync), argCount - 1);
+    var invokerArgsArray = [ argTypes[0], null ].concat(argTypes.slice(1));
+    replacePublicSymbol(name, craftInvokerFunction(name, invokerArgsArray, null, rawInvoker, fn, isAsync), argCount - 1);
     return [];
   });
 };
@@ -5755,7 +5719,6 @@ var __embind_register_function = (name, argCount, rawArgTypesAddr, signature, ra
   });
 };
 
-// This type does not need a destructor
 var __embind_register_memory_view = (rawType, dataTypeIndex, name) => {
   var typeMapping = [ Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array, BigInt64Array, BigUint64Array ];
   var TA = typeMapping[dataTypeIndex];
@@ -6401,13 +6364,11 @@ var Browser = {
         audio.src = "data:audio/x-" + name.substr(-3) + ";base64," + encode64(byteArray);
         finish(audio);
       };
-      // we don't wait for confirmation this worked - but it's worth trying
       audio.src = url;
       // workaround for chrome bug 124926 - we do not always get oncanplaythrough or onerror
       safeSetTimeout(() => {
         finish(audio);
-      }, // try to use it even though it is not necessarily ready to play
-      1e4);
+      }, 1e4);
     };
     preloadPlugins.push(audioPlugin);
     // Canvas event setup
@@ -6660,7 +6621,6 @@ var Browser = {
         if (touch === undefined) {
           return;
         }
-        // the "touch" property is only defined in SDL
         var coords = Browser.calculateMouseCoords(touch.pageX, touch.pageY);
         if (event.type === "touchstart") {
           Browser.lastTouches[touch.identifier] = coords;
@@ -6774,31 +6734,31 @@ var EGL = {
   chooseConfig(display, attribList, config, config_size, numConfigs) {
     if (display != 62e3) {
       EGL.setErrorCode(12296);
-      /* EGL_BAD_DISPLAY */ return 0;
+      return 0;
     }
     if (attribList) {
       // read attribList if it is non-null
       for (;;) {
         var param = HEAP32[((attribList) >> 2)];
-        if (param == 12321) /*EGL_ALPHA_SIZE*/ {
+        if (param == 12321) {
           var alphaSize = HEAP32[(((attribList) + (4)) >> 2)];
           EGL.contextAttributes.alpha = (alphaSize > 0);
-        } else if (param == 12325) /*EGL_DEPTH_SIZE*/ {
+        } else if (param == 12325) {
           var depthSize = HEAP32[(((attribList) + (4)) >> 2)];
           EGL.contextAttributes.depth = (depthSize > 0);
-        } else if (param == 12326) /*EGL_STENCIL_SIZE*/ {
+        } else if (param == 12326) {
           var stencilSize = HEAP32[(((attribList) + (4)) >> 2)];
           EGL.contextAttributes.stencil = (stencilSize > 0);
-        } else if (param == 12337) /*EGL_SAMPLES*/ {
+        } else if (param == 12337) {
           var samples = HEAP32[(((attribList) + (4)) >> 2)];
           EGL.contextAttributes.antialias = (samples > 0);
-        } else if (param == 12338) /*EGL_SAMPLE_BUFFERS*/ {
+        } else if (param == 12338) {
           var samples = HEAP32[(((attribList) + (4)) >> 2)];
           EGL.contextAttributes.antialias = (samples == 1);
-        } else if (param == 12544) /*EGL_CONTEXT_PRIORITY_LEVEL_IMG*/ {
+        } else if (param == 12544) {
           var requestedPriority = HEAP32[(((attribList) + (4)) >> 2)];
           EGL.contextAttributes.lowLatency = (requestedPriority != 12547);
-        } else if (param == 12344) /*EGL_NONE*/ {
+        } else if (param == 12344) {
           break;
         }
         attribList += 8;
@@ -6806,28 +6766,27 @@ var EGL = {
     }
     if ((!config || !config_size) && !numConfigs) {
       EGL.setErrorCode(12300);
-      /* EGL_BAD_PARAMETER */ return 0;
+      return 0;
     }
     if (numConfigs) {
       HEAP32[((numConfigs) >> 2)] = 1;
     }
-    // Total number of supported configs: 1.
     if (config && config_size > 0) {
       HEAPU32[((config) >> 2)] = 62002;
     }
     EGL.setErrorCode(12288);
-    /* EGL_SUCCESS */ return 1;
+    return 1;
   }
 };
 
 var _eglBindAPI = api => {
-  if (api == 12448) /* EGL_OPENGL_ES_API */ {
+  if (api == 12448) {
     EGL.setErrorCode(12288);
-    /* EGL_SUCCESS */ return 1;
+    return 1;
   }
   // if (api == 0x30A1 /* EGL_OPENVG_API */ || api == 0x30A2 /* EGL_OPENGL_API */) {
   EGL.setErrorCode(12300);
-  /* EGL_BAD_PARAMETER */ return 0;
+  return 0;
 };
 
 var _eglChooseConfig = (display, attrib_list, configs, config_size, numConfigs) => EGL.chooseConfig(display, attrib_list, configs, config_size, numConfigs);
@@ -6940,7 +6899,7 @@ var GL = {
     if (quads) {
       // GL_QUAD indexes can be precalculated
       context.tempQuadIndexBuffer = GLctx.createBuffer();
-      context.GLctx.bindBuffer(34963, /*GL_ELEMENT_ARRAY_BUFFER*/ context.tempQuadIndexBuffer);
+      context.GLctx.bindBuffer(34963, context.tempQuadIndexBuffer);
       var numIndexes = GL.MAX_TEMP_BUFFER_SIZE >> 1;
       var quadIndexes = new Uint16Array(numIndexes);
       var i = 0, v = 0;
@@ -6959,8 +6918,8 @@ var GL = {
         if (i >= numIndexes) break;
         v += 4;
       }
-      context.GLctx.bufferData(34963, /*GL_ELEMENT_ARRAY_BUFFER*/ quadIndexes, 35044);
-      /*GL_STATIC_DRAW*/ context.GLctx.bindBuffer(34963, /*GL_ELEMENT_ARRAY_BUFFER*/ null);
+      context.GLctx.bufferData(34963, quadIndexes, 35044);
+      context.GLctx.bindBuffer(34963, null);
     }
   },
   getTempVertexBuffer: sizeBytes => {
@@ -6973,10 +6932,10 @@ var GL = {
       return vbo;
     }
     var prevVBO = GLctx.getParameter(34964);
-    /*GL_ARRAY_BUFFER_BINDING*/ ringbuffer[nextFreeBufferIndex] = GLctx.createBuffer();
-    GLctx.bindBuffer(34962, /*GL_ARRAY_BUFFER*/ ringbuffer[nextFreeBufferIndex]);
-    GLctx.bufferData(34962, /*GL_ARRAY_BUFFER*/ 1 << idx, 35048);
-    /*GL_DYNAMIC_DRAW*/ GLctx.bindBuffer(34962, /*GL_ARRAY_BUFFER*/ prevVBO);
+    ringbuffer[nextFreeBufferIndex] = GLctx.createBuffer();
+    GLctx.bindBuffer(34962, ringbuffer[nextFreeBufferIndex]);
+    GLctx.bufferData(34962, 1 << idx, 35048);
+    GLctx.bindBuffer(34962, prevVBO);
     return ringbuffer[nextFreeBufferIndex];
   },
   getTempIndexBuffer: sizeBytes => {
@@ -6986,10 +6945,10 @@ var GL = {
       return ibo;
     }
     var prevIBO = GLctx.getParameter(34965);
-    /*ELEMENT_ARRAY_BUFFER_BINDING*/ GL.currentContext.tempIndexBuffers[idx] = GLctx.createBuffer();
-    GLctx.bindBuffer(34963, /*GL_ELEMENT_ARRAY_BUFFER*/ GL.currentContext.tempIndexBuffers[idx]);
-    GLctx.bufferData(34963, /*GL_ELEMENT_ARRAY_BUFFER*/ 1 << idx, 35048);
-    /*GL_DYNAMIC_DRAW*/ GLctx.bindBuffer(34963, /*GL_ELEMENT_ARRAY_BUFFER*/ prevIBO);
+    GL.currentContext.tempIndexBuffers[idx] = GLctx.createBuffer();
+    GLctx.bindBuffer(34963, GL.currentContext.tempIndexBuffers[idx]);
+    GLctx.bufferData(34963, 1 << idx, 35048);
+    GLctx.bindBuffer(34963, prevIBO);
     return GL.currentContext.tempIndexBuffers[idx];
   },
   newRenderingFrameStarted: () => {
@@ -7019,7 +6978,6 @@ var GL = {
     if (stride > 0) {
       return count * stride;
     }
-    // XXXvlad this is not exactly correct I don't think
     var typeSize = GL.byteSizeByType[type - GL.byteSizeByTypeRoot];
     return size * typeSize * count;
   },
@@ -7034,14 +6992,14 @@ var GL = {
       GL.resetBufferBinding = true;
       var size = GL.calcBufLength(cb.size, cb.type, cb.stride, count);
       var buf = GL.getTempVertexBuffer(size);
-      GLctx.bindBuffer(34962, /*GL_ARRAY_BUFFER*/ buf);
+      GLctx.bindBuffer(34962, buf);
       GLctx.bufferSubData(34962, 0, HEAPU8.subarray(cb.ptr, cb.ptr + size));
       cb.vertexAttribPointerAdaptor.call(GLctx, i, cb.size, cb.type, cb.normalized, cb.stride, 0);
     }
   },
   postDrawHandleClientVertexAttribBindings: () => {
     if (GL.resetBufferBinding) {
-      GLctx.bindBuffer(34962, /*GL_ARRAY_BUFFER*/ GL.buffers[GLctx.currentArrayBufferBinding]);
+      GLctx.bindBuffer(34962, GL.buffers[GLctx.currentArrayBufferBinding]);
     }
   },
   createContext: (/** @type {HTMLCanvasElement} */ canvas, webGLContextAttributes) => {
@@ -7084,7 +7042,7 @@ var GL = {
       GL.initExtensions(context);
     }
     context.maxVertexAttribs = context.GLctx.getParameter(34921);
-    /*GL_MAX_VERTEX_ATTRIBS*/ context.clientBuffers = [];
+    context.clientBuffers = [];
     for (var i = 0; i < context.maxVertexAttribs; i++) {
       context.clientBuffers[i] = {
         enabled: false,
@@ -7167,28 +7125,28 @@ var GL = {
 var _eglCreateContext = (display, config, hmm, contextAttribs) => {
   if (display != 62e3) {
     EGL.setErrorCode(12296);
-    /* EGL_BAD_DISPLAY */ return 0;
+    return 0;
   }
   // EGL 1.4 spec says default EGL_CONTEXT_CLIENT_VERSION is GLES1, but this is not supported by Emscripten.
   // So user must pass EGL_CONTEXT_CLIENT_VERSION == 2 to initialize EGL.
   var glesContextVersion = 1;
   for (;;) {
     var param = HEAP32[((contextAttribs) >> 2)];
-    if (param == 12440) /*EGL_CONTEXT_CLIENT_VERSION*/ {
+    if (param == 12440) {
       glesContextVersion = HEAP32[(((contextAttribs) + (4)) >> 2)];
-    } else if (param == 12344) /*EGL_NONE*/ {
+    } else if (param == 12344) {
       break;
     } else {
       /* EGL1.4 specifies only EGL_CONTEXT_CLIENT_VERSION as supported attribute */ EGL.setErrorCode(12292);
-      /*EGL_BAD_ATTRIBUTE*/ return 0;
+      return 0;
     }
     contextAttribs += 8;
   }
   if (glesContextVersion < 2 || glesContextVersion > 3) {
     EGL.setErrorCode(12293);
-    /* EGL_BAD_CONFIG */ return 0;
+    return 0;
   }
-  /* EGL_NO_CONTEXT */ EGL.contextAttributes.majorVersion = glesContextVersion - 1;
+  EGL.contextAttributes.majorVersion = glesContextVersion - 1;
   // WebGL 1 is GLES 2, WebGL2 is GLES3
   EGL.contextAttributes.minorVersion = 0;
   EGL.context = GL.createContext(Module["canvas"], EGL.contextAttributes);
@@ -7208,48 +7166,48 @@ var _eglCreateContext = (display, config, hmm, contextAttribs) => {
   }
 };
 
-/* EGL_NO_CONTEXT */ var _eglCreateWindowSurface = (display, config, win, attrib_list) => {
+var _eglCreateWindowSurface = (display, config, win, attrib_list) => {
   if (display != 62e3) {
     EGL.setErrorCode(12296);
-    /* EGL_BAD_DISPLAY */ return 0;
+    return 0;
   }
   if (config != 62002) {
     EGL.setErrorCode(12293);
-    /* EGL_BAD_CONFIG */ return 0;
+    return 0;
   }
   // TODO: Examine attrib_list! Parameters that can be present there are:
   // - EGL_RENDER_BUFFER (must be EGL_BACK_BUFFER)
   // - EGL_VG_COLORSPACE (can't be set)
   // - EGL_VG_ALPHA_FORMAT (can't be set)
   EGL.setErrorCode(12288);
-  /* EGL_SUCCESS */ return 62006;
+  return 62006;
 };
 
-/* Magic ID for Emscripten 'default surface' */ var _eglDestroyContext = (display, context) => {
+var _eglDestroyContext = (display, context) => {
   if (display != 62e3) {
     EGL.setErrorCode(12296);
-    /* EGL_BAD_DISPLAY */ return 0;
+    return 0;
   }
   if (context != 62004) {
     EGL.setErrorCode(12294);
-    /* EGL_BAD_CONTEXT */ return 0;
+    return 0;
   }
   GL.deleteContext(EGL.context);
   EGL.setErrorCode(12288);
-  /* EGL_SUCCESS */ if (EGL.currentContext == context) {
+  if (EGL.currentContext == context) {
     EGL.currentContext = 0;
   }
   return 1;
 };
 
-/* EGL_TRUE */ var _eglDestroySurface = (display, surface) => {
+var _eglDestroySurface = (display, surface) => {
   if (display != 62e3) {
     EGL.setErrorCode(12296);
-    /* EGL_BAD_DISPLAY */ return 0;
+    return 0;
   }
-  if (surface != 62006) /* Magic ID for the only EGLSurface supported by Emscripten */ {
+  if (surface != 62006) {
     EGL.setErrorCode(12301);
-    /* EGL_BAD_SURFACE */ return 1;
+    return 1;
   }
   if (EGL.currentReadSurface == surface) {
     EGL.currentReadSurface = 0;
@@ -7258,24 +7216,24 @@ var _eglCreateContext = (display, config, hmm, contextAttribs) => {
     EGL.currentDrawSurface = 0;
   }
   EGL.setErrorCode(12288);
-  /* EGL_SUCCESS */ return 1;
+  return 1;
 };
 
-/* Magic ID for Emscripten 'default surface' */ var _eglGetConfigAttrib = (display, config, attribute, value) => {
+var _eglGetConfigAttrib = (display, config, attribute, value) => {
   if (display != 62e3) {
     EGL.setErrorCode(12296);
-    /* EGL_BAD_DISPLAY */ return 0;
+    return 0;
   }
   if (config != 62002) {
     EGL.setErrorCode(12293);
-    /* EGL_BAD_CONFIG */ return 0;
+    return 0;
   }
   if (!value) {
     EGL.setErrorCode(12300);
-    /* EGL_BAD_PARAMETER */ return 0;
+    return 0;
   }
   EGL.setErrorCode(12288);
-  /* EGL_SUCCESS */ switch (attribute) {
+  switch (attribute) {
    case 12320:
     // EGL_BUFFER_SIZE
     HEAP32[((value) >> 2)] = EGL.contextAttributes.alpha ? 32 : 24;
@@ -7432,7 +7390,7 @@ var _eglCreateContext = (display, config, hmm, contextAttribs) => {
 
    default:
     EGL.setErrorCode(12292);
-    /* EGL_BAD_ATTRIBUTE */ return 0;
+    return 0;
   }
 };
 
@@ -7441,10 +7399,9 @@ var _eglGetDisplay = nativeDisplayType => {
   // Emscripten EGL implementation "emulates" X11, and eglGetDisplay is
   // expected to accept/receive a pointer to an X11 Display object (or
   // EGL_DEFAULT_DISPLAY).
-  if (nativeDisplayType != 0 && /* EGL_DEFAULT_DISPLAY */ nativeDisplayType != 1) /* see library_xlib.js */ {
+  if (nativeDisplayType != 0 && nativeDisplayType != 1) {
     return 0;
   }
-  // EGL_NO_DISPLAY
   return 62e3;
 };
 
@@ -7453,44 +7410,42 @@ var _eglGetError = () => EGL.errorCode;
 var _eglInitialize = (display, majorVersion, minorVersion) => {
   if (display != 62e3) {
     EGL.setErrorCode(12296);
-    /* EGL_BAD_DISPLAY */ return 0;
+    return 0;
   }
   if (majorVersion) {
     HEAP32[((majorVersion) >> 2)] = 1;
   }
-  // Advertise EGL Major version: '1'
   if (minorVersion) {
     HEAP32[((minorVersion) >> 2)] = 4;
   }
-  // Advertise EGL Minor version: '4'
   EGL.defaultDisplayInitialized = true;
   EGL.setErrorCode(12288);
-  /* EGL_SUCCESS */ return 1;
+  return 1;
 };
 
 var _eglMakeCurrent = (display, draw, read, context) => {
   if (display != 62e3) {
     EGL.setErrorCode(12296);
-    /* EGL_BAD_DISPLAY */ return 0;
+    return 0;
   }
   //\todo An EGL_NOT_INITIALIZED error is generated if EGL is not initialized for dpy.
   if (context != 0 && context != 62004) {
     EGL.setErrorCode(12294);
-    /* EGL_BAD_CONTEXT */ return 0;
+    return 0;
   }
-  if ((read != 0 && read != 62006) || (draw != 0 && draw != 62006)) /* Magic ID for Emscripten 'default surface' */ {
+  if ((read != 0 && read != 62006) || (draw != 0 && draw != 62006)) {
     EGL.setErrorCode(12301);
-    /* EGL_BAD_SURFACE */ return 0;
+    return 0;
   }
   GL.makeContextCurrent(context ? EGL.context : null);
   EGL.currentContext = context;
   EGL.currentDrawSurface = draw;
   EGL.currentReadSurface = read;
   EGL.setErrorCode(12288);
-  /* EGL_SUCCESS */ return 1;
+  return 1;
 };
 
-/* EGL_TRUE */ var stringToNewUTF8 = str => {
+var stringToNewUTF8 = str => {
   var size = lengthBytesUTF8(str) + 1;
   var ret = _malloc(size);
   if (ret) stringToUTF8(str, ret, size);
@@ -7500,33 +7455,33 @@ var _eglMakeCurrent = (display, draw, read, context) => {
 var _eglQueryString = (display, name) => {
   if (display != 62e3) {
     EGL.setErrorCode(12296);
-    /* EGL_BAD_DISPLAY */ return 0;
+    return 0;
   }
   //\todo An EGL_NOT_INITIALIZED error is generated if EGL is not initialized for dpy.
   EGL.setErrorCode(12288);
-  /* EGL_SUCCESS */ if (EGL.stringCache[name]) return EGL.stringCache[name];
+  if (EGL.stringCache[name]) return EGL.stringCache[name];
   var ret;
   switch (name) {
    case 12371:
-    /* EGL_VENDOR */ ret = stringToNewUTF8("Emscripten");
+    ret = stringToNewUTF8("Emscripten");
     break;
 
    case 12372:
-    /* EGL_VERSION */ ret = stringToNewUTF8("1.4 Emscripten EGL");
+    ret = stringToNewUTF8("1.4 Emscripten EGL");
     break;
 
    case 12373:
-    /* EGL_EXTENSIONS */ ret = stringToNewUTF8("");
+    ret = stringToNewUTF8("");
     break;
 
    // Currently not supporting any EGL extensions.
     case 12429:
-    /* EGL_CLIENT_APIS */ ret = stringToNewUTF8("OpenGL_ES");
+    ret = stringToNewUTF8("OpenGL_ES");
     break;
 
    default:
     EGL.setErrorCode(12300);
-    /* EGL_BAD_PARAMETER */ return 0;
+    return 0;
   }
   EGL.stringCache[name] = ret;
   return ret;
@@ -7535,19 +7490,19 @@ var _eglQueryString = (display, name) => {
 var _eglSwapBuffers = (dpy, surface) => {
   if (!EGL.defaultDisplayInitialized) {
     EGL.setErrorCode(12289);
-  } else /* EGL_NOT_INITIALIZED */ if (!GLctx) {
+  } else if (!GLctx) {
     EGL.setErrorCode(12290);
-  } else /* EGL_BAD_ACCESS */ if (GLctx.isContextLost()) {
+  } else if (GLctx.isContextLost()) {
     EGL.setErrorCode(12302);
-  } else /* EGL_CONTEXT_LOST */ {
+  } else {
     // According to documentation this does an implicit flush.
     // Due to discussion at https://github.com/emscripten-core/emscripten/pull/1871
     // the flush was removed since this _may_ result in slowing code down.
     //_glFlush();
     EGL.setErrorCode(12288);
-    /* EGL_SUCCESS */ return 1;
+    return 1;
   }
-  /* EGL_TRUE */ return 0;
+  return 0;
 };
 
 /**
@@ -7680,7 +7635,6 @@ var MainLoop = {
         return;
       }
     }
-    // |return false| skips a frame
     callUserCallback(func);
     for (var post of MainLoop.postMainLoop) {
       post();
@@ -7717,7 +7671,6 @@ var _emscripten_set_main_loop_timing = (mode, value) => {
   if (!MainLoop.func) {
     return 1;
   }
-  // Return non-zero on failure, can't set timing mode when there is no main loop.
   if (!MainLoop.running) {
     MainLoop.running = true;
   }
@@ -7726,7 +7679,6 @@ var _emscripten_set_main_loop_timing = (mode, value) => {
       var timeUntilNextTick = Math.max(0, MainLoop.tickStartTime + value - _emscripten_get_now()) | 0;
       setTimeout(MainLoop.runner, timeUntilNextTick);
     };
-    // doing this each time means that on exception, we stop
     MainLoop.method = "timeout";
   } else if (mode == 1) {
     MainLoop.scheduler = function MainLoop_scheduler_rAF() {
@@ -7756,8 +7708,7 @@ var _emscripten_set_main_loop_timing = (mode, value) => {
             postMessage({
               target: emscriptenMainLoopMessageId
             });
-          } else // In --proxy-to-worker, route the message via proxyClient.js
-          postMessage(emscriptenMainLoopMessageId, "*");
+          } else postMessage(emscriptenMainLoopMessageId, "*");
         });
       } else {
         MainLoop.setImmediate = setImmediate;
@@ -7774,36 +7725,36 @@ var _emscripten_set_main_loop_timing = (mode, value) => {
 var _eglSwapInterval = (display, interval) => {
   if (display != 62e3) {
     EGL.setErrorCode(12296);
-    /* EGL_BAD_DISPLAY */ return 0;
+    return 0;
   }
   if (interval == 0) _emscripten_set_main_loop_timing(0, 0); else _emscripten_set_main_loop_timing(1, interval);
   EGL.setErrorCode(12288);
-  /* EGL_SUCCESS */ return 1;
+  return 1;
 };
 
 var _eglTerminate = display => {
   if (display != 62e3) {
     EGL.setErrorCode(12296);
-    /* EGL_BAD_DISPLAY */ return 0;
+    return 0;
   }
   EGL.currentContext = 0;
   EGL.currentReadSurface = 0;
   EGL.currentDrawSurface = 0;
   EGL.defaultDisplayInitialized = false;
   EGL.setErrorCode(12288);
-  /* EGL_SUCCESS */ return 1;
+  return 1;
 };
 
 /** @suppress {duplicate } */ var _eglWaitClient = () => {
   EGL.setErrorCode(12288);
-  /* EGL_SUCCESS */ return 1;
+  return 1;
 };
 
 var _eglWaitGL = _eglWaitClient;
 
 var _eglWaitNative = nativeEngineId => {
   EGL.setErrorCode(12288);
-  /* EGL_SUCCESS */ return 1;
+  return 1;
 };
 
 var readEmAsmArgsArray = [];
@@ -7946,9 +7897,7 @@ var JSEvents = {
     return target?.nodeName || "";
   },
   fullscreenEnabled() {
-    return document.fullscreenEnabled || // Safari 13.0.3 on macOS Catalina 10.15.1 still ships with prefixed webkitFullscreenEnabled.
-    // TODO: If Safari at some point ships with unprefixed version, update the version check above.
-    document.webkitFullscreenEnabled;
+    return document.fullscreenEnabled || document.webkitFullscreenEnabled;
   }
 };
 
@@ -8325,19 +8274,19 @@ var _emscripten_glBeginTransformFeedback = _glBeginTransformFeedback;
 var _emscripten_glBindAttribLocation = _glBindAttribLocation;
 
 /** @suppress {duplicate } */ var _glBindBuffer = (target, buffer) => {
-  if (target == 34962) /*GL_ARRAY_BUFFER*/ {
+  if (target == 34962) {
     GLctx.currentArrayBufferBinding = buffer;
-  } else if (target == 34963) /*GL_ELEMENT_ARRAY_BUFFER*/ {
+  } else if (target == 34963) {
     GLctx.currentElementArrayBufferBinding = buffer;
   }
-  if (target == 35051) /*GL_PIXEL_PACK_BUFFER*/ {
+  if (target == 35051) {
     // In WebGL 2 glReadPixels entry point, we need to use a different WebGL 2
     // API function call when a buffer is bound to
     // GL_PIXEL_PACK_BUFFER_BINDING point, so must keep track whether that
     // binding point is non-null to know what is the proper API function to
     // call.
     GLctx.currentPixelPackBufferBinding = buffer;
-  } else if (target == 35052) /*GL_PIXEL_UNPACK_BUFFER*/ {
+  } else if (target == 35052) {
     // In WebGL 2 gl(Compressed)Tex(Sub)Image[23]D entry points, we need to
     // use a different WebGL 2 API function call when a buffer is bound to
     // GL_PIXEL_UNPACK_BUFFER_BINDING point, so must keep track whether that
@@ -8395,7 +8344,7 @@ var _emscripten_glBindTransformFeedback = _glBindTransformFeedback;
 /** @suppress {duplicate } */ var _glBindVertexArray = vao => {
   GLctx.bindVertexArray(GL.vaos[vao]);
   var ibo = GLctx.getParameter(34965);
-  /*ELEMENT_ARRAY_BUFFER_BINDING*/ GLctx.currentElementArrayBufferBinding = ibo ? (ibo.name | 0) : 0;
+  GLctx.currentElementArrayBufferBinding = ibo ? (ibo.name | 0) : 0;
 };
 
 var _emscripten_glBindVertexArray = _glBindVertexArray;
@@ -8659,7 +8608,7 @@ var _emscripten_glDeleteFramebuffers = _glDeleteFramebuffers;
     // glDeleteProgram actually signals an error when deleting a nonexisting
     // object, unlike some other GL delete functions.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   GLctx.deleteProgram(program);
   program.name = 0;
@@ -8728,7 +8677,7 @@ var _emscripten_glDeleteSamplers = _glDeleteSamplers;
     // glDeleteShader actually signals an error when deleting a nonexisting
     // object, unlike some other GL delete functions.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   GLctx.deleteShader(shader);
   GL.shaders[id] = null;
@@ -8742,7 +8691,7 @@ var _emscripten_glDeleteShader = _glDeleteShader;
   if (!sync) {
     // glDeleteSync signals an error when deleting a nonexisting object, unlike some other GL delete functions.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   GLctx.deleteSync(sync);
   sync.name = 0;
@@ -8883,7 +8832,7 @@ var _emscripten_glDrawBuffersWEBGL = _glDrawBuffersWEBGL;
   if (!GLctx.currentElementArrayBufferBinding) {
     var size = GL.calcBufLength(1, type, 0, count);
     buf = GL.getTempIndexBuffer(size);
-    GLctx.bindBuffer(34963, /*GL_ELEMENT_ARRAY_BUFFER*/ buf);
+    GLctx.bindBuffer(34963, buf);
     GLctx.bufferSubData(34963, 0, HEAPU8.subarray(indices, indices + size));
     // Calculating vertex count if shader's attribute data is on client side
     if (count > 0) {
@@ -8893,15 +8842,15 @@ var _emscripten_glDrawBuffersWEBGL = _glDrawBuffersWEBGL;
           let arrayClass;
           switch (type) {
            case 5121:
-            /* GL_UNSIGNED_BYTE */ arrayClass = Uint8Array;
+            arrayClass = Uint8Array;
             break;
 
            case 5123:
-            /* GL_UNSIGNED_SHORT */ arrayClass = Uint16Array;
+            arrayClass = Uint16Array;
             break;
 
            case 5125:
-            /* GL_UNSIGNED_INT */ arrayClass = Uint32Array;
+            arrayClass = Uint32Array;
             break;
 
            default:
@@ -8921,7 +8870,7 @@ var _emscripten_glDrawBuffersWEBGL = _glDrawBuffersWEBGL;
   GLctx.drawElements(mode, count, type, indices);
   GL.postDrawHandleClientVertexAttribBindings(count);
   if (!GLctx.currentElementArrayBufferBinding) {
-    GLctx.bindBuffer(34963, /*GL_ELEMENT_ARRAY_BUFFER*/ null);
+    GLctx.bindBuffer(34963, null);
   }
 };
 
@@ -8996,7 +8945,6 @@ var _emscripten_glEndTransformFeedback = _glEndTransformFeedback;
   return 0;
 };
 
-// Failed to create a sync object
 var _emscripten_glFenceSync = _glFenceSync;
 
 /** @suppress {duplicate } */ var _glFinish = () => GLctx.finish();
@@ -9010,38 +8958,37 @@ var _emscripten_glFlush = _glFlush;
 var emscriptenWebGLGetBufferBinding = target => {
   switch (target) {
    case 34962:
-    /*GL_ARRAY_BUFFER*/ target = 34964;
-    /*GL_ARRAY_BUFFER_BINDING*/ break;
+    target = 34964;
+    break;
 
    case 34963:
-    /*GL_ELEMENT_ARRAY_BUFFER*/ target = 34965;
-    /*GL_ELEMENT_ARRAY_BUFFER_BINDING*/ break;
+    target = 34965;
+    break;
 
    case 35051:
-    /*GL_PIXEL_PACK_BUFFER*/ target = 35053;
-    /*GL_PIXEL_PACK_BUFFER_BINDING*/ break;
+    target = 35053;
+    break;
 
    case 35052:
-    /*GL_PIXEL_UNPACK_BUFFER*/ target = 35055;
-    /*GL_PIXEL_UNPACK_BUFFER_BINDING*/ break;
+    target = 35055;
+    break;
 
    case 35982:
-    /*GL_TRANSFORM_FEEDBACK_BUFFER*/ target = 35983;
-    /*GL_TRANSFORM_FEEDBACK_BUFFER_BINDING*/ break;
+    target = 35983;
+    break;
 
    case 36662:
-    /*GL_COPY_READ_BUFFER*/ target = 36662;
-    /*GL_COPY_READ_BUFFER_BINDING*/ break;
+    target = 36662;
+    break;
 
    case 36663:
-    /*GL_COPY_WRITE_BUFFER*/ target = 36663;
-    /*GL_COPY_WRITE_BUFFER_BINDING*/ break;
+    target = 36663;
+    break;
 
    case 35345:
-    /*GL_UNIFORM_BUFFER*/ target = 35368;
-    /*GL_UNIFORM_BUFFER_BINDING*/ break;
+    target = 35368;
+    break;
   }
-  // In default case, fall through and assume passed one of the _BINDING enums directly.
   var buffer = GLctx.getParameter(target);
   if (buffer) return buffer.name | 0; else return 0;
 };
@@ -9076,23 +9023,23 @@ var emscriptenWebGLValidateMapBufferTarget = target => {
 /** @suppress {duplicate } */ var _glFlushMappedBufferRange = (target, offset, length) => {
   if (!emscriptenWebGLValidateMapBufferTarget(target)) {
     GL.recordError(1280);
-    /*GL_INVALID_ENUM*/ err("GL_INVALID_ENUM in glFlushMappedBufferRange");
+    err("GL_INVALID_ENUM in glFlushMappedBufferRange");
     return;
   }
   var mapping = GL.mappedBuffers[emscriptenWebGLGetBufferBinding(target)];
   if (!mapping) {
     GL.recordError(1282);
-    /* GL_INVALID_OPERATION */ err("buffer was never mapped in glFlushMappedBufferRange");
+    err("buffer was never mapped in glFlushMappedBufferRange");
     return;
   }
   if (!(mapping.access & 16)) {
     GL.recordError(1282);
-    /* GL_INVALID_OPERATION */ err("buffer was not mapped with GL_MAP_FLUSH_EXPLICIT_BIT in glFlushMappedBufferRange");
+    err("buffer was not mapped with GL_MAP_FLUSH_EXPLICIT_BIT in glFlushMappedBufferRange");
     return;
   }
   if (offset < 0 || length < 0 || offset + length > mapping.length) {
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ err("invalid range in glFlushMappedBufferRange");
+    err("invalid range in glFlushMappedBufferRange");
     return;
   }
   GLctx.bufferSubData(target, mapping.offset, HEAPU8.subarray(mapping.mem + offset, mapping.mem + offset + length));
@@ -9145,7 +9092,7 @@ var _emscripten_glGenQueries = _glGenQueries;
     var query = GLctx.disjointTimerQueryExt["createQueryEXT"]();
     if (!query) {
       GL.recordError(1282);
-      /* GL_INVALID_OPERATION */ while (i < n) HEAP32[(((ids) + (i++ * 4)) >> 2)] = 0;
+      while (i < n) HEAP32[(((ids) + (i++ * 4)) >> 2)] = 0;
       return;
     }
     var id = GL.getNewId(GL.queries);
@@ -9235,10 +9182,10 @@ var _emscripten_glGetActiveUniformBlockName = _glGetActiveUniformBlockName;
     // GLES2 specification does not specify how to behave if params is a null pointer. Since calling this function does not make sense
     // if params == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   program = GL.programs[program];
-  if (pname == 35393) /* GL_UNIFORM_BLOCK_NAME_LENGTH */ {
+  if (pname == 35393) {
     var name = GLctx.getActiveUniformBlockName(program, uniformBlockIndex);
     HEAP32[((params) >> 2)] = name.length + 1;
     return;
@@ -9246,7 +9193,7 @@ var _emscripten_glGetActiveUniformBlockName = _glGetActiveUniformBlockName;
   var result = GLctx.getActiveUniformBlockParameter(program, uniformBlockIndex, pname);
   if (result === null) return;
   // If an error occurs, nothing should be written to params.
-  if (pname == 35395) /*GL_UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES*/ {
+  if (pname == 35395) {
     for (var i = 0; i < result.length; i++) {
       HEAP32[(((params) + (i * 4)) >> 2)] = result[i];
     }
@@ -9262,11 +9209,11 @@ var _emscripten_glGetActiveUniformBlockiv = _glGetActiveUniformBlockiv;
     // GLES2 specification does not specify how to behave if params is a null pointer. Since calling this function does not make sense
     // if params == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   if (uniformCount > 0 && uniformIndices == 0) {
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   program = GL.programs[program];
   var ids = [];
@@ -9323,7 +9270,7 @@ var emscriptenWebGLGet = (name_, p, type) => {
   // instead of doing anything random.
   if (!p) {
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   var ret = undefined;
   switch (name_) {
@@ -9356,7 +9303,7 @@ var emscriptenWebGLGet = (name_, p, type) => {
     // queried for length), so implement it ourselves to allow C++ GLES2
     // code get the length.
     var formats = GLctx.getParameter(34467);
-    /*GL_COMPRESSED_TEXTURE_FORMATS*/ ret = formats ? formats.length : 0;
+    ret = formats ? formats.length : 0;
     break;
 
    case 33309:
@@ -9364,7 +9311,7 @@ var emscriptenWebGLGet = (name_, p, type) => {
     if (GL.currentContext.version < 2) {
       // Calling GLES3/WebGL2 function with a GLES2/WebGL1 context
       GL.recordError(1282);
-      /* GL_INVALID_OPERATION */ return;
+      return;
     }
     ret = webglGetExtensions().length;
     break;
@@ -9518,7 +9465,7 @@ var _emscripten_glGetBooleanv = _glGetBooleanv;
     // GLES2 specification does not specify how to behave if data is a null pointer. Since calling this function does not make sense
     // if data == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   writeI53ToI64(data, GLctx.getBufferParameter(target, value));
 };
@@ -9531,7 +9478,7 @@ var _emscripten_glGetBufferParameteri64v = _glGetBufferParameteri64v;
     // pointer. Since calling this function does not make sense if data ==
     // null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   HEAP32[((data) >> 2)] = GLctx.getBufferParameter(target, value);
 };
@@ -9539,7 +9486,7 @@ var _emscripten_glGetBufferParameteri64v = _glGetBufferParameteri64v;
 var _emscripten_glGetBufferParameteriv = _glGetBufferParameteriv;
 
 /** @suppress {duplicate } */ var _glGetBufferPointerv = (target, pname, params) => {
-  if (pname == 35005) /*GL_BUFFER_MAP_POINTER*/ {
+  if (pname == 35005) {
     var ptr = 0;
     var mappedBuffer = GL.mappedBuffers[emscriptenWebGLGetBufferBinding(target)];
     if (mappedBuffer) {
@@ -9548,7 +9495,7 @@ var _emscripten_glGetBufferParameteriv = _glGetBufferParameteriv;
     HEAP32[((params) >> 2)] = ptr;
   } else {
     GL.recordError(1280);
-    /*GL_INVALID_ENUM*/ err("GL_INVALID_ENUM in glGetBufferPointerv");
+    err("GL_INVALID_ENUM in glGetBufferPointerv");
   }
 };
 
@@ -9557,7 +9504,7 @@ var _emscripten_glGetBufferPointerv = _glGetBufferPointerv;
 /** @suppress {duplicate } */ var _glGetError = () => {
   var error = GLctx.getError() || GL.lastError;
   GL.lastError = 0;
-  /*GL_NO_ERROR*/ return error;
+  return error;
 };
 
 var _emscripten_glGetError = _glGetError;
@@ -9585,7 +9532,7 @@ var emscriptenWebGLGetIndexed = (target, index, data, type) => {
     // GLES2 specification does not specify how to behave if data is a null pointer. Since calling this function does not make sense
     // if data == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   var result = GLctx.getIndexedParameter(target, index);
   var ret;
@@ -9672,13 +9619,13 @@ var _emscripten_glGetIntegerv = _glGetIntegerv;
 /** @suppress {duplicate } */ var _glGetInternalformativ = (target, internalformat, pname, bufSize, params) => {
   if (bufSize < 0) {
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   if (!params) {
     // GLES3 specification does not specify how to behave if values is a null pointer. Since calling this function does not make sense
     // if values == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   var ret = GLctx.getInternalformatParameter(target, internalformat, pname);
   if (ret === null) return;
@@ -9693,7 +9640,7 @@ var _emscripten_glGetInternalformativ = _glGetInternalformativ;
   GL.recordError(1282);
 };
 
-/*GL_INVALID_OPERATION*/ var _emscripten_glGetProgramBinary = _glGetProgramBinary;
+var _emscripten_glGetProgramBinary = _glGetProgramBinary;
 
 /** @suppress {duplicate } */ var _glGetProgramInfoLog = (program, maxLength, length, infoLog) => {
   var log = GLctx.getProgramInfoLog(GL.programs[program]);
@@ -9710,11 +9657,11 @@ var _emscripten_glGetProgramInfoLog = _glGetProgramInfoLog;
     // pointer. Since calling this function does not make sense if p == null,
     // issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   if (program >= GL.counter) {
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   program = GL.programs[program];
   if (pname == 35716) {
@@ -9722,26 +9669,26 @@ var _emscripten_glGetProgramInfoLog = _glGetProgramInfoLog;
     var log = GLctx.getProgramInfoLog(program);
     if (log === null) log = "(unknown error)";
     HEAP32[((p) >> 2)] = log.length + 1;
-  } else if (pname == 35719) /* GL_ACTIVE_UNIFORM_MAX_LENGTH */ {
+  } else if (pname == 35719) {
     if (!program.maxUniformLength) {
       var numActiveUniforms = GLctx.getProgramParameter(program, 35718);
-      /*GL_ACTIVE_UNIFORMS*/ for (var i = 0; i < numActiveUniforms; ++i) {
+      for (var i = 0; i < numActiveUniforms; ++i) {
         program.maxUniformLength = Math.max(program.maxUniformLength, GLctx.getActiveUniform(program, i).name.length + 1);
       }
     }
     HEAP32[((p) >> 2)] = program.maxUniformLength;
-  } else if (pname == 35722) /* GL_ACTIVE_ATTRIBUTE_MAX_LENGTH */ {
+  } else if (pname == 35722) {
     if (!program.maxAttributeLength) {
       var numActiveAttributes = GLctx.getProgramParameter(program, 35721);
-      /*GL_ACTIVE_ATTRIBUTES*/ for (var i = 0; i < numActiveAttributes; ++i) {
+      for (var i = 0; i < numActiveAttributes; ++i) {
         program.maxAttributeLength = Math.max(program.maxAttributeLength, GLctx.getActiveAttrib(program, i).name.length + 1);
       }
     }
     HEAP32[((p) >> 2)] = program.maxAttributeLength;
-  } else if (pname == 35381) /* GL_ACTIVE_UNIFORM_BLOCK_MAX_NAME_LENGTH */ {
+  } else if (pname == 35381) {
     if (!program.maxUniformBlockNameLength) {
       var numActiveUniformBlocks = GLctx.getProgramParameter(program, 35382);
-      /*GL_ACTIVE_UNIFORM_BLOCKS*/ for (var i = 0; i < numActiveUniformBlocks; ++i) {
+      for (var i = 0; i < numActiveUniformBlocks; ++i) {
         program.maxUniformBlockNameLength = Math.max(program.maxUniformBlockNameLength, GLctx.getActiveUniformBlockName(program, i).length + 1);
       }
     }
@@ -9758,7 +9705,7 @@ var _emscripten_glGetProgramiv = _glGetProgramiv;
     // GLES2 specification does not specify how to behave if params is a null pointer. Since calling this function does not make sense
     // if p == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   var query = GL.queries[id];
   var param;
@@ -9783,7 +9730,7 @@ var _emscripten_glGetQueryObjecti64vEXT = _glGetQueryObjecti64vEXT;
     // GLES2 specification does not specify how to behave if params is a null pointer. Since calling this function does not make sense
     // if p == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   var query = GL.queries[id];
   var param = GLctx.disjointTimerQueryExt["getQueryObjectEXT"](query, pname);
@@ -9807,7 +9754,7 @@ var _emscripten_glGetQueryObjectui64vEXT = _glGetQueryObjectui64vEXT;
     // GLES2 specification does not specify how to behave if params is a null pointer. Since calling this function does not make sense
     // if p == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   var query = GL.queries[id];
   var param = GLctx.getQueryParameter(query, pname);
@@ -9831,7 +9778,7 @@ var _emscripten_glGetQueryObjectuivEXT = _glGetQueryObjectuivEXT;
     // GLES2 specification does not specify how to behave if params is a null pointer. Since calling this function does not make sense
     // if p == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   HEAP32[((params) >> 2)] = GLctx.getQuery(target, pname);
 };
@@ -9843,7 +9790,7 @@ var _emscripten_glGetQueryiv = _glGetQueryiv;
     // GLES2 specification does not specify how to behave if params is a null pointer. Since calling this function does not make sense
     // if p == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   HEAP32[((params) >> 2)] = GLctx.disjointTimerQueryExt["getQueryEXT"](target, pname);
 };
@@ -9855,7 +9802,7 @@ var _emscripten_glGetQueryivEXT = _glGetQueryivEXT;
     // GLES2 specification does not specify how to behave if params is a null pointer. Since calling this function does not make sense
     // if params == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   HEAP32[((params) >> 2)] = GLctx.getRenderbufferParameter(target, pname);
 };
@@ -9867,7 +9814,7 @@ var _emscripten_glGetRenderbufferParameteriv = _glGetRenderbufferParameteriv;
     // GLES3 specification does not specify how to behave if params is a null pointer. Since calling this function does not make sense
     // if p == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   HEAPF32[((params) >> 2)] = GLctx.getSamplerParameter(GL.samplers[sampler], pname);
 };
@@ -9879,7 +9826,7 @@ var _emscripten_glGetSamplerParameterfv = _glGetSamplerParameterfv;
     // GLES3 specification does not specify how to behave if params is a null pointer. Since calling this function does not make sense
     // if p == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   HEAP32[((params) >> 2)] = GLctx.getSamplerParameter(GL.samplers[sampler], pname);
 };
@@ -9920,7 +9867,7 @@ var _emscripten_glGetShaderSource = _glGetShaderSource;
     // pointer. Since calling this function does not make sense if p == null,
     // issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   if (pname == 35716) {
     // GL_INFO_LOG_LENGTH
@@ -9951,14 +9898,14 @@ var _emscripten_glGetShaderiv = _glGetShaderiv;
   if (!ret) {
     switch (name_) {
      case 7939:
-      /* GL_EXTENSIONS */ ret = stringToNewUTF8(webglGetExtensions().join(" "));
+      ret = stringToNewUTF8(webglGetExtensions().join(" "));
       break;
 
      case 7936:
-     /* GL_VENDOR */ case 7937:
-     /* GL_RENDERER */ case 37445:
-     /* UNMASKED_VENDOR_WEBGL */ case 37446:
-      /* UNMASKED_RENDERER_WEBGL */ var s = GLctx.getParameter(name_);
+     case 7937:
+     case 37445:
+     case 37446:
+      var s = GLctx.getParameter(name_);
       if (!s) {
         GL.recordError(1280);
       }
@@ -9966,7 +9913,7 @@ var _emscripten_glGetShaderiv = _glGetShaderiv;
       break;
 
      case 7938:
-      /* GL_VERSION */ var webGLVersion = GLctx.getParameter(7938);
+      var webGLVersion = GLctx.getParameter(7938);
       // return GLES version string corresponding to the version of the WebGL context
       var glVersion = `OpenGL ES 2.0 (${webGLVersion})`;
       if (true) glVersion = `OpenGL ES 3.0 (${webGLVersion})`;
@@ -9974,7 +9921,7 @@ var _emscripten_glGetShaderiv = _glGetShaderiv;
       break;
 
      case 35724:
-      /* GL_SHADING_LANGUAGE_VERSION */ var glslVersion = GLctx.getParameter(35724);
+      var glslVersion = GLctx.getParameter(35724);
       // extract the version number 'N.M' from the string 'WebGL GLSL ES N.M ...'
       var ver_re = /^WebGL GLSL ES ([0-9]\.[0-9][0-9]?)(?:$| .*)/;
       var ver_num = glslVersion.match(ver_re);
@@ -9989,7 +9936,6 @@ var _emscripten_glGetShaderiv = _glGetShaderiv;
      default:
       GL.recordError(1280);
     }
-    // fall through
     GL.stringCache[name_] = ret;
   }
   return ret;
@@ -10007,23 +9953,23 @@ var _emscripten_glGetString = _glGetString;
   if (stringiCache) {
     if (index < 0 || index >= stringiCache.length) {
       GL.recordError(1281);
-      /*GL_INVALID_VALUE*/ return 0;
+      return 0;
     }
     return stringiCache[index];
   }
   switch (name) {
    case 7939:
-    /* GL_EXTENSIONS */ var exts = webglGetExtensions().map(stringToNewUTF8);
+    var exts = webglGetExtensions().map(stringToNewUTF8);
     stringiCache = GL.stringiCache[name] = exts;
     if (index < 0 || index >= stringiCache.length) {
       GL.recordError(1281);
-      /*GL_INVALID_VALUE*/ return 0;
+      return 0;
     }
     return stringiCache[index];
 
    default:
     GL.recordError(1280);
-    /*GL_INVALID_ENUM*/ return 0;
+    return 0;
   }
 };
 
@@ -10034,13 +9980,13 @@ var _emscripten_glGetStringi = _glGetStringi;
     // GLES3 specification does not specify how to behave if bufSize < 0, however in the spec wording for glGetInternalformativ, it does say that GL_INVALID_VALUE should be raised,
     // so raise GL_INVALID_VALUE here as well.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   if (!values) {
     // GLES3 specification does not specify how to behave if values is a null pointer. Since calling this function does not make sense
     // if values == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   var ret = GLctx.getSyncParameter(GL.syncs[sync], pname);
   if (ret !== null) {
@@ -10049,7 +9995,6 @@ var _emscripten_glGetStringi = _glGetStringi;
   }
 };
 
-// Report a single value outputted.
 var _emscripten_glGetSynciv = _glGetSynciv;
 
 /** @suppress {duplicate } */ var _glGetTexParameterfv = (target, pname, params) => {
@@ -10058,7 +10003,7 @@ var _emscripten_glGetSynciv = _glGetSynciv;
     // pointer. Since calling this function does not make sense if p == null,
     // issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   HEAPF32[((params) >> 2)] = GLctx.getTexParameter(target, pname);
 };
@@ -10071,7 +10016,7 @@ var _emscripten_glGetTexParameterfv = _glGetTexParameterfv;
     // pointer. Since calling this function does not make sense if p == null,
     // issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   HEAP32[((params) >> 2)] = GLctx.getTexParameter(target, pname);
 };
@@ -10104,11 +10049,11 @@ var _emscripten_glGetUniformBlockIndex = _glGetUniformBlockIndex;
     // GLES2 specification does not specify how to behave if uniformIndices is a null pointer. Since calling this function does not make sense
     // if uniformIndices == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   if (uniformCount > 0 && (uniformNames == 0 || uniformIndices == 0)) {
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   program = GL.programs[program];
   var names = [];
@@ -10138,7 +10083,7 @@ var webglPrepareUniformLocationsBeforeFirstUse = program => {
     // maps integer locations back to uniform name strings, so that we can lazily fetch uniform array locations
     program.uniformArrayNamesById = {};
     var numActiveUniforms = GLctx.getProgramParameter(program, 35718);
-    /*GL_ACTIVE_UNIFORMS*/ for (i = 0; i < numActiveUniforms; ++i) {
+    for (i = 0; i < numActiveUniforms; ++i) {
       var u = GLctx.getActiveUniform(program, i);
       var nm = u.name;
       var sz = u.size;
@@ -10205,7 +10150,7 @@ var webglPrepareUniformLocationsBeforeFirstUse = program => {
     // GL_INVALID_VALUE in both cases.
     GL.recordError(1281);
   }
-  /* GL_INVALID_VALUE */ return -1;
+  return -1;
 };
 
 var _emscripten_glGetUniformLocation = _glGetUniformLocation;
@@ -10234,7 +10179,7 @@ var webglGetUniformLocation = location => {
     // pointer. Since calling this function does not make sense if params ==
     // null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   program = GL.programs[program];
   webglPrepareUniformLocationsBeforeFirstUse(program);
@@ -10286,13 +10231,13 @@ var _emscripten_glGetUniformuiv = _glGetUniformuiv;
     // pointer. Since calling this function does not make sense if params ==
     // null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   if (GL.currentContext.clientBuffers[index].enabled) {
     err("glGetVertexAttrib*v on client-side array: not supported, bad data returned");
   }
   var data = GLctx.getVertexAttrib(index, pname);
-  if (pname == 34975) /*VERTEX_ATTRIB_ARRAY_BUFFER_BINDING*/ {
+  if (pname == 34975) {
     HEAP32[((params) >> 2)] = data && data["name"];
   } else if (typeof data == "number" || typeof data == "boolean") {
     switch (type) {
@@ -10345,7 +10290,7 @@ var _emscripten_glGetVertexAttribIuiv = _glGetVertexAttribIuiv;
     // pointer. Since calling this function does not make sense if pointer ==
     // null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   if (GL.currentContext.clientBuffers[index].enabled) {
     err("glGetVertexAttribPointer on client-side array: not supported, bad data returned");
@@ -10509,21 +10454,21 @@ var _emscripten_glLineWidth = _glLineWidth;
 var _emscripten_glLinkProgram = _glLinkProgram;
 
 /** @suppress {duplicate } */ var _glMapBufferRange = (target, offset, length, access) => {
-  if ((access & (1 | /*GL_MAP_READ_BIT*/ 32)) != /*GL_MAP_UNSYNCHRONIZED_BIT*/ 0) {
+  if ((access & (1 | 32)) != 0) {
     err("glMapBufferRange access does not support MAP_READ or MAP_UNSYNCHRONIZED");
     return 0;
   }
-  if ((access & 2) == /*GL_MAP_WRITE_BIT*/ 0) {
+  if ((access & 2) == 0) {
     err("glMapBufferRange access must include MAP_WRITE");
     return 0;
   }
-  if ((access & (4 | /*GL_MAP_INVALIDATE_BUFFER_BIT*/ 8)) == /*GL_MAP_INVALIDATE_RANGE_BIT*/ 0) {
+  if ((access & (4 | 8)) == 0) {
     err("glMapBufferRange access must include INVALIDATE_BUFFER or INVALIDATE_RANGE");
     return 0;
   }
   if (!emscriptenWebGLValidateMapBufferTarget(target)) {
     GL.recordError(1280);
-    /*GL_INVALID_ENUM*/ err("GL_INVALID_ENUM in glMapBufferRange");
+    err("GL_INVALID_ENUM in glMapBufferRange");
     return 0;
   }
   var mem = _malloc(length), binding = emscriptenWebGLGetBufferBinding(target);
@@ -10573,13 +10518,13 @@ var _emscripten_glPolygonOffsetClampEXT = _glPolygonOffsetClampEXT;
   GL.recordError(1280);
 };
 
-/*GL_INVALID_ENUM*/ var _emscripten_glProgramBinary = _glProgramBinary;
+var _emscripten_glProgramBinary = _glProgramBinary;
 
 /** @suppress {duplicate } */ var _glProgramParameteri = (program, pname, value) => {
   GL.recordError(1280);
 };
 
-/*GL_INVALID_ENUM*/ var _emscripten_glProgramParameteri = _glProgramParameteri;
+var _emscripten_glProgramParameteri = _glProgramParameteri;
 
 /** @suppress {duplicate } */ var _glQueryCounterEXT = (id, target) => {
   GLctx.disjointTimerQueryExt["queryCounterEXT"](GL.queries[id], target);
@@ -10665,7 +10610,6 @@ var _emscripten_glReadPixels = _glReadPixels;
 
 /** @suppress {duplicate } */ var _glReleaseShaderCompiler = () => {};
 
-// NOP (as allowed by GLES 2.0 spec)
 var _emscripten_glReleaseShaderCompiler = _glReleaseShaderCompiler;
 
 /** @suppress {duplicate } */ var _glRenderbufferStorage = (x0, x1, x2, x3) => GLctx.renderbufferStorage(x0, x1, x2, x3);
@@ -10720,7 +10664,7 @@ var _emscripten_glScissor = _glScissor;
   GL.recordError(1280);
 };
 
-/*GL_INVALID_ENUM*/ var _emscripten_glShaderBinary = _glShaderBinary;
+var _emscripten_glShaderBinary = _glShaderBinary;
 
 /** @suppress {duplicate } */ var _glShaderSource = (shader, count, string, length) => {
   var source = GL.getSource(shader, count, string, length);
@@ -11063,14 +11007,14 @@ var _emscripten_glUniformMatrix4x3fv = _glUniformMatrix4x3fv;
 /** @suppress {duplicate } */ var _glUnmapBuffer = target => {
   if (!emscriptenWebGLValidateMapBufferTarget(target)) {
     GL.recordError(1280);
-    /*GL_INVALID_ENUM*/ err("GL_INVALID_ENUM in glUnmapBuffer");
+    err("GL_INVALID_ENUM in glUnmapBuffer");
     return 0;
   }
   var buffer = emscriptenWebGLGetBufferBinding(target);
   var mapping = GL.mappedBuffers[buffer];
   if (!mapping || !mapping.mem) {
     GL.recordError(1282);
-    /* GL_INVALID_OPERATION */ err("buffer was never mapped in glUnmapBuffer");
+    err("buffer was never mapped in glUnmapBuffer");
     return 0;
   }
   if (!(mapping.access & 16)) {
@@ -11251,7 +11195,7 @@ var doRequestFullscreen = (target, strategy) => {
   // the user saw it appropriate to do so.
   if (!JSEvents.canPerformEventHandlerRequests()) {
     if (strategy.deferUntilInEventHandler) {
-      JSEvents.deferCall(JSEvents_requestFullscreen, 1, /* priority over pointer lock */ [ target, strategy ]);
+      JSEvents.deferCall(JSEvents_requestFullscreen, 1, [ target, strategy ]);
       return 1;
     }
     return -2;
@@ -11282,7 +11226,7 @@ var _emscripten_request_pointerlock = (target, deferUntilInEventHandler) => {
   // the user saw it appropriate to do so.
   if (!JSEvents.canPerformEventHandlerRequests()) {
     if (deferUntilInEventHandler) {
-      JSEvents.deferCall(requestPointerLock, 2, /* priority below fullscreen */ [ target ]);
+      JSEvents.deferCall(requestPointerLock, 2, [ target ]);
       return 1;
     }
     return -2;
@@ -11305,11 +11249,9 @@ var growMemory = size => {
     // .grow() takes a delta compared to the previous size
     updateMemoryViews();
     return 1;
-  } /*success*/ catch (e) {}
+  } catch (e) {}
 };
 
-// implicit 0 return to save code size (caller will cast "undefined" into 0
-// anyhow)
 var _emscripten_resize_heap = requestedSize => {
   var oldSize = HEAPU8.length;
   // With CAN_ADDRESS_2GB or MEMORY64, pointers are already unsigned.
@@ -11361,7 +11303,6 @@ var _emscripten_resize_heap = requestedSize => {
   } catch (e) {
     navigator.getGamepads = null;
   }
-  // Disable getGamepads() so that it won't be attempted to be used again.
   return -1;
 };
 
@@ -11653,8 +11594,7 @@ var registerUiEventCallback = (target, userData, useCapture, callbackfunc, event
   JSEvents.uiEvent ||= _malloc(36);
   if (eventTypeId == 11 && !target) {
     target = document;
-  } else // By default read scroll events on document rather than window.
-  {
+  } else {
     target = findEventTarget(target);
   }
   var uiEventHandlerFunc = (e = event) => {
@@ -12254,7 +12194,6 @@ function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readysta
   } else {
     return 0;
   }
-  // todo: free
   return fetch;
 }
 
@@ -12609,7 +12548,7 @@ var _glGetBufferSubData = (target, offset, size, data) => {
     // GLES2 specification does not specify how to behave if data is a null pointer. Since calling this function does not make sense
     // if data == null, issue a GL error to notify user about it.
     GL.recordError(1281);
-    /* GL_INVALID_VALUE */ return;
+    return;
   }
   size && GLctx.getBufferSubData(target, offset, HEAPU8, data, size);
 };

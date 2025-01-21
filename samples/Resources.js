@@ -138,9 +138,9 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
         var METADATA_STORE_NAME = 'METADATA';
         var PACKAGE_STORE_NAME = 'PACKAGES';
         function openDatabase(callback, errback) {
-          if (isNode) {
-            return errback();
-          }
+            if (isNode) {
+              return errback();
+            }
           var indexedDB;
           if (typeof window === 'object') {
             indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
