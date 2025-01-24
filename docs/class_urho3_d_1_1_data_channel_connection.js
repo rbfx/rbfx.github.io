@@ -16,6 +16,7 @@ var class_urho3_d_1_1_data_channel_connection =
     [ "maxDataSize_", "class_urho3_d_1_1_data_channel_connection.html#a48c35366fd15d9505b008a43cc6ba25c", null ],
     [ "mutex_", "class_urho3_d_1_1_data_channel_connection.html#aa6800d3db703c87368e11268382f7560", null ],
     [ "peer_", "class_urho3_d_1_1_data_channel_connection.html#aad1bfc2b6565c6ed31aa3e186748952a", null ],
+    [ "selfHolder_", "class_urho3_d_1_1_data_channel_connection.html#a91a604f97dcb3defb76c0f8a4be3da72", null ],
     [ "server_", "class_urho3_d_1_1_data_channel_connection.html#a088d8a24a309ad1f0ed23ec2fd09bb3c", null ],
     [ "websocket_", "class_urho3_d_1_1_data_channel_connection.html#a736dbc872a3402fc546fc0a63dfe2a8e", null ],
     [ "websocketWasOpened_", "class_urho3_d_1_1_data_channel_connection.html#a6f9adf22979498d004e77e9d18525a92", null ]

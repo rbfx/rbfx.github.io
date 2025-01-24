@@ -1,5 +1,6 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_resource_ref.html":[8,0,2,594],
 "struct_urho3_d_1_1_resource_ref.html#a55183181c6a34e35df42fbc36d4350cb":[8,0,2,594,9],
 "struct_urho3_d_1_1_resource_ref.html#a6335add9ec15162e7cdca3282b9d8cfe":[8,0,2,594,1],
 "struct_urho3_d_1_1_resource_ref.html#a742cd28ac5541ff1223d93d6f054b986":[8,0,2,594,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_spherical_harmonics_dot9.html#adc1be0053e20c6220f521d3e96baf22e":[8,0,2,682,11],
 "struct_urho3_d_1_1_spir_v_shader.html":[8,0,2,685],
 "struct_urho3_d_1_1_spir_v_shader.html#a2912c6c11e8445a25c2725b36283d0c6":[8,0,2,685,3],
-"struct_urho3_d_1_1_spir_v_shader.html#a2f4ea486c89a1aa4cdca1328cea4618c":[8,0,2,685,1],
-"struct_urho3_d_1_1_spir_v_shader.html#a8aec09c468c694c2557d466675c196ba":[8,0,2,685,2]
+"struct_urho3_d_1_1_spir_v_shader.html#a2f4ea486c89a1aa4cdca1328cea4618c":[8,0,2,685,1]
 };

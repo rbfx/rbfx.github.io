@@ -1,5 +1,6 @@
 var NAVTREEINDEX86 =
 {
+"struct_urho3_d_1_1_pipeline_batch.html#a3df629966c0e6634738d5d818f3116dd":[8,0,2,515,12],
 "struct_urho3_d_1_1_pipeline_batch.html#a48039972e8fd050740e51ed47c3ac7a3":[8,0,2,515,6],
 "struct_urho3_d_1_1_pipeline_batch.html#a59fad4e3e30ee45bf1c88e2b60d45c7b":[8,0,2,515,13],
 "struct_urho3_d_1_1_pipeline_batch.html#a5d95edc43990115105dc44e8d32dd9e9":[8,0,2,515,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_resource_inspector_widget_1_1_property_desc.html#a80ccc1aefb17dd361fb38b3cb51e346f":[8,0,2,593,0,0],
 "struct_urho3_d_1_1_resource_inspector_widget_1_1_property_desc.html#aaa748b9d11bf2737a51ced1087cf38d8":[8,0,2,593,0,4],
 "struct_urho3_d_1_1_resource_inspector_widget_1_1_property_desc.html#ae1a312c86434a9f9093b76f0297256f5":[8,0,2,593,0,1],
-"struct_urho3_d_1_1_resource_inspector_widget_1_1_property_desc.html#aebdc92321e4b77380f9009de8b4e1ad8":[8,0,2,593,0,3],
-"struct_urho3_d_1_1_resource_ref.html":[8,0,2,594]
+"struct_urho3_d_1_1_resource_inspector_widget_1_1_property_desc.html#aebdc92321e4b77380f9009de8b4e1ad8":[8,0,2,593,0,3]
 };
