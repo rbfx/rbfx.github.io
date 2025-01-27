@@ -27,7 +27,7 @@ var class_urho3_d_1_1_work_queue =
     [ "PostTaskForMainThread", "class_urho3_d_1_1_work_queue.html#a6c2506d6a35742b37cf23e871fdd5337", null ],
     [ "PostTaskForThread", "class_urho3_d_1_1_work_queue.html#a5f73a47599cb2ee2fc550bcb05caf79a", null ],
     [ "PostTaskForThread", "class_urho3_d_1_1_work_queue.html#a946b8917d2272641ab2fe8f65bcac8a1", null ],
-    [ "ProcessMainThreadTasks", "class_urho3_d_1_1_work_queue.html#a546e5fe1b53e212d63f4a127a41619c5", null ],
+    [ "ProcessMainThreadTasks", "class_urho3_d_1_1_work_queue.html#a9c51d33b583ba8c3d1c9981063648959", null ],
     [ "ProcessPostedTasks", "class_urho3_d_1_1_work_queue.html#a6036416af0ad5e666c9e05e10fde8d3d", null ],
     [ "PurgeProcessedTasksInFallbackQueue", "class_urho3_d_1_1_work_queue.html#aeabc95017ebdcc3157b951928539dec2", null ],
     [ "SetNonThreadedWorkMs", "class_urho3_d_1_1_work_queue.html#a7f7e58daad2dc7d1962d5d8a2b48708f", null ],

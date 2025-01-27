@@ -1,5 +1,8 @@
 var NAVTREEINDEX29 =
 {
+"class_urho3_d_1_1_i_k_identity_solver.html#af00134d6ff8d64d44c2f9675c956b26b":[8,0,2,290,13],
+"class_urho3_d_1_1_i_k_identity_solver.html#af5c06d0817a08dee75fdee986e58bc63":[8,0,2,290,16],
+"class_urho3_d_1_1_i_k_identity_solver.html#afde8fb890af31117a9dae121b4f19409":[8,0,2,290,17],
 "class_urho3_d_1_1_i_k_leg_solver.html":[8,0,2,291],
 "class_urho3_d_1_1_i_k_leg_solver.html#a05f831546a97edbec44f420ba09d0fb4":[8,0,2,291,78],
 "class_urho3_d_1_1_i_k_leg_solver.html#a07ab3c5fd7a7a07849c1da232855207e":[8,0,2,291,15],
@@ -246,8 +249,5 @@ var NAVTREEINDEX29 =
 "class_urho3_d_1_1_i_k_spine_solver.html#a6b98b9bee8092dee5d344e8981d9b1f7":[8,0,2,300,25],
 "class_urho3_d_1_1_i_k_spine_solver.html#a6e05909467f1356763a4251b5e825fc8":[8,0,2,300,13],
 "class_urho3_d_1_1_i_k_spine_solver.html#a72ac42728ab65347714f02e009310cdd":[8,0,2,300,7],
-"class_urho3_d_1_1_i_k_spine_solver.html#a78a4dda5ea06402f10ab3908a0c1cb73":[8,0,2,300,21],
-"class_urho3_d_1_1_i_k_spine_solver.html#a8035a56adb8462a01f1275d277e8290d":[8,0,2,300,34],
-"class_urho3_d_1_1_i_k_spine_solver.html#a841afb45dd5a32289eb14f7937186a7b":[8,0,2,300,6],
-"class_urho3_d_1_1_i_k_spine_solver.html#a878709cb1c1c5701afeaefb617501143":[8,0,2,300,2]
+"class_urho3_d_1_1_i_k_spine_solver.html#a78a4dda5ea06402f10ab3908a0c1cb73":[8,0,2,300,21]
 };

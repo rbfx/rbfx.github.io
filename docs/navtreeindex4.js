@@ -1,6 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"_input_constants_8h.html#a9ef1e93a80ac320fccb79e7c2a9d805eae927a97aba11f2fd18c699178302cc06":[9,0,0,4,1,7,97],
 "_input_constants_8h.html#a9ef1e93a80ac320fccb79e7c2a9d805eae93e5501c253635885429b492f2945b1":[9,0,0,4,1,7,181],
 "_input_constants_8h.html#a9ef1e93a80ac320fccb79e7c2a9d805eaeac7018d86a2ee7ce93c13b25d0e9ae1":[9,0,0,4,1,7,42],
 "_input_constants_8h.html#a9ef1e93a80ac320fccb79e7c2a9d805eaebd77c185b09dcf39e28e8a0be56ed94":[9,0,0,4,1,7,164],
@@ -249,5 +248,6 @@ var NAVTREEINDEX4 =
 "_misc__how_tos.html#Running_Xcode_AngelScript_Info":[0,1,7,1],
 "_misc__how_tos.html#Using_ccache":[0,1,7,0],
 "_misc__how_tos.html#symlinking_on_windows":[0,1,7,2],
-"_multithreading.html":[0,1,27]
+"_multithreading.html":[0,1,27],
+"_navigation.html":[0,1,21]
 };

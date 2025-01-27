@@ -1,6 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"_rendering.html#Rendering_Renderer":[0,1,16,1],
 "_rendering.html#Rendering_ReuseView":[0,1,16,4],
 "_rendering_modes.html":[0,1,16,17],
 "_rendering_modes.html#RenderingModes_Comparison":[0,1,16,17,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX6 =
 "_u_i_element_8h.html#a4e82c24fb243e4c1d090c6f9dfbfd6f9a6510dd80b35028a0e018b2d02d71878d":[9,0,0,16,6,1,4],
 "_u_i_element_8h.html#a4e82c24fb243e4c1d090c6f9dfbfd6f9a68e7917ede75fc34ba6b28414afe3f71":[9,0,0,16,6,1,2],
 "_u_i_element_8h.html#a4e82c24fb243e4c1d090c6f9dfbfd6f9a7eaf68959190bf761dea2106077b5305":[9,0,0,16,6,1,3],
-"_u_i_element_8h.html#a4e82c24fb243e4c1d090c6f9dfbfd6f9ad6dd498209275fcee143e7578c4e68ec":[9,0,0,16,6,1,0]
+"_u_i_element_8h.html#a4e82c24fb243e4c1d090c6f9dfbfd6f9ad6dd498209275fcee143e7578c4e68ec":[9,0,0,16,6,1,0],
+"_u_i_element_8h.html#a9a4b59557c2fe4229a709d077c655dcd":[9,0,0,16,6,6]
 };

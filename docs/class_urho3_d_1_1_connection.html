@@ -188,13 +188,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetIsClient</b> (bool
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a6dae739b15dfd75880596f396769f2e8">SendPackageToClient</a> (<a class="el" href="class_urho3_d_1_1_package_file.html">PackageFile</a> *package)</td></tr>
 <tr class="memdesc:a6dae739b15dfd75880596f396769f2e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trigger client connection to download a package file from the server. Can be used to download additional resource packages when client is already joined in a scene. The package must have been added as a requirement to the scene the client is joined in, or else the eventual download will fail. <br /></td></tr>
 <tr class="separator:a6dae739b15dfd75880596f396769f2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04bdbdfd2020af0aff0bee075de52422"><td class="memItemLeft" align="right" valign="top"><a id="a04bdbdfd2020af0aff0bee075de52422"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a04bdbdfd2020af0aff0bee075de52422">SetPacketSizeLimit</a> (int limit)</td></tr>
-<tr class="memdesc:a04bdbdfd2020af0aff0bee075de52422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffered packet size limit, when reached, packet is sent out immediately. <br /></td></tr>
-<tr class="separator:a04bdbdfd2020af0aff0bee075de52422"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbac4b520ffd5e06b028a8a05cc58499"><td class="memItemLeft" align="right" valign="top"><a id="abbac4b520ffd5e06b028a8a05cc58499"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessage</b> (NetworkMessageId messageId, const unsigned char *data=nullptr, unsigned numBytes=0, PacketTypeFlags packetType=PacketType::ReliableOrdered, ea::string_view debugInfo={})</td></tr>
-<tr class="separator:abbac4b520ffd5e06b028a8a05cc58499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ac63827226d7484579383f61d1d1d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a58ac63827226d7484579383f61d1d1d9">SendMessage</a> (NetworkMessageId messageId, ConstByteSpan payload={}, PacketTypeFlags packetType=PacketType::ReliableOrdered, ea::string_view debugInfo={})</td></tr>
+<tr class="separator:a58ac63827226d7484579383f61d1d1d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77d6e3d83b7038f6d4ce5f16ca1e5557"><td class="memItemLeft" align="right" valign="top"><a id="a77d6e3d83b7038f6d4ce5f16ca1e5557"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessage</b> (NetworkMessageId messageId, const <a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorBuffer</a> &amp;msg, PacketTypeFlags packetType=PacketType::ReliableOrdered, ea::string_view debugInfo={})</td></tr>
 <tr class="separator:a77d6e3d83b7038f6d4ce5f16ca1e5557"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,32 +228,38 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="memitem:ae88595578997390056147f29f9b784bd inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="ae88595578997390056147f29f9b784bd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AbstractConnection</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
 <tr class="separator:ae88595578997390056147f29f9b784bd inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68ab444d3dee753f34016ff2ec7463ca inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#a68ab444d3dee753f34016ff2ec7463ca">SendLoggedMessage</a> (NetworkMessageId messageId, const unsigned char *data, unsigned numBytes, PacketTypeFlags packetType=PacketType::ReliableOrdered, ea::string_view debugInfo={})</td></tr>
-<tr class="separator:a68ab444d3dee753f34016ff2ec7463ca inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbac4b520ffd5e06b028a8a05cc58499 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="abbac4b520ffd5e06b028a8a05cc58499"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessage</b> (NetworkMessageId messageId, const unsigned char *data=nullptr, unsigned numBytes=0, PacketTypeFlags packetType=PacketType::ReliableOrdered, ea::string_view debugInfo={})</td></tr>
-<tr class="separator:abbac4b520ffd5e06b028a8a05cc58499 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca38662b8421e22799dd396154d354d7 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#aca38662b8421e22799dd396154d354d7">SetMaxPacketSize</a> (unsigned limit)</td></tr>
+<tr class="separator:aca38662b8421e22799dd396154d354d7 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe3cbae4c156eb8b299ff6e97fd65cb4 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="abe3cbae4c156eb8b299ff6e97fd65cb4"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetMaxPacketSize</b> () const</td></tr>
+<tr class="separator:abe3cbae4c156eb8b299ff6e97fd65cb4 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26fd02c0d4cb8390858e3825feafe48d inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="a26fd02c0d4cb8390858e3825feafe48d"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetMaxMessageSize</b> () const</td></tr>
+<tr class="separator:a26fd02c0d4cb8390858e3825feafe48d inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ac63827226d7484579383f61d1d1d9 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#a58ac63827226d7484579383f61d1d1d9">SendMessage</a> (NetworkMessageId messageId, ConstByteSpan payload={}, PacketTypeFlags packetType=PacketType::ReliableOrdered, ea::string_view debugInfo={})</td></tr>
+<tr class="separator:a58ac63827226d7484579383f61d1d1d9 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77d6e3d83b7038f6d4ce5f16ca1e5557 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="a77d6e3d83b7038f6d4ce5f16ca1e5557"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessage</b> (NetworkMessageId messageId, const <a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorBuffer</a> &amp;msg, PacketTypeFlags packetType=PacketType::ReliableOrdered, ea::string_view debugInfo={})</td></tr>
 <tr class="separator:a77d6e3d83b7038f6d4ce5f16ca1e5557 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8b26f2e5c7b44ce724ec9de6a96508b inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memTemplParams" colspan="2"><a id="aa8b26f2e5c7b44ce724ec9de6a96508b"></a>
+<tr class="memitem:a52ceda2ecbeec4f01c9b25449d4c118a inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="a52ceda2ecbeec4f01c9b25449d4c118a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LogReceivedMessage</b> (NetworkMessageId messageId, ea::string_view debugInfo) const</td></tr>
+<tr class="separator:a52ceda2ecbeec4f01c9b25449d4c118a inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc6b819959b1466f6b5e0b13eb6691bc inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memTemplParams" colspan="2"><a id="abc6b819959b1466f6b5e0b13eb6691bc"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:aa8b26f2e5c7b44ce724ec9de6a96508b inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SendSerializedMessage</b> (NetworkMessageId messageId, const T &amp;message, PacketTypeFlags messageType=PacketType::ReliableOrdered)</td></tr>
-<tr class="separator:aa8b26f2e5c7b44ce724ec9de6a96508b inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c68db722ff4734d3d058b00b44b3b73 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memTemplParams" colspan="2"><a id="a1c68db722ff4734d3d058b00b44b3b73"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a1c68db722ff4734d3d058b00b44b3b73 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SendGeneratedMessage</b> (NetworkMessageId messageId, PacketTypeFlags messageType, T generator)</td></tr>
-<tr class="separator:a1c68db722ff4734d3d058b00b44b3b73 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7deb1b1dc367e17465b655b9fba719f inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="ad7deb1b1dc367e17465b655b9fba719f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnMessageReceived</b> (NetworkMessageId messageId, <a class="el" href="class_urho3_d_1_1_memory_buffer.html">MemoryBuffer</a> &amp;messageData) const</td></tr>
-<tr class="separator:ad7deb1b1dc367e17465b655b9fba719f inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa72caf9c7e4f2b29c271b847ba065f3d inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memTemplParams" colspan="2"><a id="aa72caf9c7e4f2b29c271b847ba065f3d"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:aa72caf9c7e4f2b29c271b847ba065f3d inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>OnMessageReceived</b> (NetworkMessageId messageId, const T &amp;message) const</td></tr>
-<tr class="separator:aa72caf9c7e4f2b29c271b847ba065f3d inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc6b819959b1466f6b5e0b13eb6691bc inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>LogReceivedMessage</b> (NetworkMessageId messageId, const T &amp;message) const</td></tr>
+<tr class="separator:abc6b819959b1466f6b5e0b13eb6691bc inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8884ac2291eac855a6ead7231832962f inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="a8884ac2291eac855a6ead7231832962f"></a>
 LogLevel&#160;</td><td class="memItemRight" valign="bottom"><b>GetMessageLogLevel</b> (NetworkMessageId messageId) const</td></tr>
 <tr class="separator:a8884ac2291eac855a6ead7231832962f inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e6f4af22c8135a99e36ce9d84f351a1 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="a0e6f4af22c8135a99e36ce9d84f351a1"></a>
+<a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorBuffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetOutgoingMessageBuffer</b> ()</td></tr>
+<tr class="separator:a0e6f4af22c8135a99e36ce9d84f351a1 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac646da94164ec0d061d7e682090b9e9d inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="ac646da94164ec0d061d7e682090b9e9d"></a>
+ByteVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetIncomingMessageBuffer</b> ()</td></tr>
+<tr class="separator:ac646da94164ec0d061d7e682090b9e9d inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f6dd84a70efe0ae3aa1c5ecee26945 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="af0f6dd84a70efe0ae3aa1c5ecee26945"></a>
+ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetDebugInfoBuffer</b> ()</td></tr>
+<tr class="separator:af0f6dd84a70efe0ae3aa1c5ecee26945 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a95a6cd1c5c12a458fda4b38f873a334d">Object</a> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -599,10 +600,6 @@ ea::vector&lt; <a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorB
 ea::unordered_map&lt; int, <a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a336661c1a9aff0180c3ada7872daa1f1">outgoingBuffer_</a></td></tr>
 <tr class="memdesc:a336661c1a9aff0180c3ada7872daa1f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outgoing packet buffer which can contain multiple messages. <br /></td></tr>
 <tr class="separator:a336661c1a9aff0180c3ada7872daa1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a731f7760259f012a9619f4e1f4b01933"><td class="memItemLeft" align="right" valign="top"><a id="a731f7760259f012a9619f4e1f4b01933"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a731f7760259f012a9619f4e1f4b01933">packedMessageLimit_</a> = 1024</td></tr>
-<tr class="memdesc:a731f7760259f012a9619f4e1f4b01933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outgoing packet size limit. <br /></td></tr>
-<tr class="separator:a731f7760259f012a9619f4e1f4b01933"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af22f7551c8e8130a9b3d0a29082d394d"><td class="memItemLeft" align="right" valign="top"><a id="af22f7551c8e8130a9b3d0a29082d394d"></a>
 ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_remote_event.html">RemoteEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#af22f7551c8e8130a9b3d0a29082d394d">remoteEvents_</a></td></tr>
 <tr class="memdesc:af22f7551c8e8130a9b3d0a29082d394d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queued remote events. <br /></td></tr>
@@ -658,8 +655,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_abstract_connection"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_abstract_connection')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_abstract_connection.html">Urho3D::AbstractConnection</a></td></tr>
 <tr class="memitem:ab24c95c2a91f2c3b1a5d1c18c47a9998 inherit pro_attribs_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="ab24c95c2a91f2c3b1a5d1c18c47a9998"></a>
-<a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#ab24c95c2a91f2c3b1a5d1c18c47a9998">msg_</a></td></tr>
-<tr class="memdesc:ab24c95c2a91f2c3b1a5d1c18c47a9998 inherit pro_attribs_class_urho3_d_1_1_abstract_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reusable message buffer. <br /></td></tr>
+<a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>msg_</b></td></tr>
 <tr class="separator:ab24c95c2a91f2c3b1a5d1c18c47a9998 inherit pro_attribs_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="aecf686841d86be7e4a2c0092b60d31ad"></a>
@@ -969,6 +965,21 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Return whether the scene is loaded and ready to receive server updates. </p>
+
+</div>
+</div>
+<a id="a58ac63827226d7484579383f61d1d1d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ac63827226d7484579383f61d1d1d9">&#9670;&nbsp;</a></span>SendMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::AbstractConnection::SendMessage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Syntax sugar for sending and receiving messages. </p>
 
 </div>
 </div>

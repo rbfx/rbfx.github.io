@@ -1,6 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"_navigation.html":[0,1,21],
 "_navigation.html#CrowdNavigation":[0,1,21,2],
 "_navigation.html#DynamicNavMesh":[0,1,21,1],
 "_navigation.html#PathfindingWeights":[0,1,21,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX5 =
 "_rendering.html#Rendering_Further":[0,1,16,7],
 "_rendering.html#Rendering_GPUResourceLoss":[0,1,16,5],
 "_rendering.html#Rendering_Graphics":[0,1,16,0],
-"_rendering.html#Rendering_Optimizations":[0,1,16,3]
+"_rendering.html#Rendering_Optimizations":[0,1,16,3],
+"_rendering.html#Rendering_Renderer":[0,1,16,1]
 };
