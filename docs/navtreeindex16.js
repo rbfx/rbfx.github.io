@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"class_urho3_d_1_1_client_input_statistics.html#a000db84e59eaf1e6d25b282abe4bceba":[8,0,2,114,7],
 "class_urho3_d_1_1_client_input_statistics.html#a2ef6998985bb850384bb1406bdda076c":[8,0,2,114,6],
 "class_urho3_d_1_1_client_input_statistics.html#a542ec6e9b435d46167a29c1671f67a94":[8,0,2,114,1],
 "class_urho3_d_1_1_client_input_statistics.html#a5b747d2ad45705cdff3cbfa13e702994":[8,0,2,114,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "class_urho3_d_1_1_collision_shape.html#a6a675622871c1c2d7b7add9c3e440de4":[8,0,2,128,26],
 "class_urho3_d_1_1_collision_shape.html#a70492a0f8058a2ac5e504a11d4d00e9f":[8,0,2,128,58],
 "class_urho3_d_1_1_collision_shape.html#a729b6dbaf45128cdb33d69cf4a5887ab":[8,0,2,128,70],
-"class_urho3_d_1_1_collision_shape.html#a76cfde7c11d4092e76f8f5d045471e47":[8,0,2,128,5],
-"class_urho3_d_1_1_collision_shape.html#a778bca197135e500e0aed8b6a510bb91":[8,0,2,128,45]
+"class_urho3_d_1_1_collision_shape.html#a76cfde7c11d4092e76f8f5d045471e47":[8,0,2,128,5]
 };

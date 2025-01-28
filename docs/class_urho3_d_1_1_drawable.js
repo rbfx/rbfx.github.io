@@ -47,7 +47,7 @@ var class_urho3_d_1_1_drawable =
     [ "OnMarkedDirty", "class_urho3_d_1_1_drawable.html#a04a978441415a93f044721f6473df0e3", null ],
     [ "OnNodeSet", "class_urho3_d_1_1_drawable.html#ac7fc9ea5505fdeca995501caf8013684", null ],
     [ "OnRemoveFromOctree", "class_urho3_d_1_1_drawable.html#a2ab23fcc436cde69fe74bfefa4ead968", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_drawable.html#acf1d2b41b502aebfa72c2e280470b453", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_drawable.html#ab9dd8d560ccfc97bf7855f943a7e2ba8", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_drawable.html#aeff4f69d702780990bcc4e347a2394f0", null ],
     [ "OnWorldBoundingBoxUpdate", "class_urho3_d_1_1_drawable.html#af146747caaf6fd85ab71fda4e364bde4", null ],
     [ "ProcessCustomRayQuery", "class_urho3_d_1_1_drawable.html#a55c10c8ddea2706add6a8816a81b5634", null ],

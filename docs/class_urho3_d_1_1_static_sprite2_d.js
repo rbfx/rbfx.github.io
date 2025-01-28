@@ -19,7 +19,7 @@ var class_urho3_d_1_1_static_sprite2_d =
     [ "GetUseHotSpot", "class_urho3_d_1_1_static_sprite2_d.html#a53dbb82b2a7bb45b2254faf503b58789", null ],
     [ "GetUseTextureRect", "class_urho3_d_1_1_static_sprite2_d.html#a01adde3befc205a924d8b104641636c2", null ],
     [ "OnDrawOrderChanged", "class_urho3_d_1_1_static_sprite2_d.html#a2f584178753d31bc0cb09b0da3e85e49", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_static_sprite2_d.html#a447ce7974ea1bce8641effdfb9cc3ddc", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_static_sprite2_d.html#a4bd2827dd4a00390fb08fd31b2faad60", null ],
     [ "OnWorldBoundingBoxUpdate", "class_urho3_d_1_1_static_sprite2_d.html#ab575c3117f1e436f04dd85d237def582", null ],
     [ "RegisterObject", "class_urho3_d_1_1_static_sprite2_d.html#ae712ba8508c5ae231b35f16158b5f034", null ],
     [ "SetAlpha", "class_urho3_d_1_1_static_sprite2_d.html#a6f21758ff295d02f202a4c8cae4bf47d", null ],

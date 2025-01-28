@@ -10,7 +10,7 @@ var class_urho3_d_1_1_animated_sprite2_d =
     [ "GetLoopMode", "class_urho3_d_1_1_animated_sprite2_d.html#a7e520fdb2d8859f34afb22c250dff649", null ],
     [ "GetSpeed", "class_urho3_d_1_1_animated_sprite2_d.html#a2b6039498eb07066ede75e054a3c2476", null ],
     [ "HandleScenePostUpdate", "class_urho3_d_1_1_animated_sprite2_d.html#ae3255ba15b94ff8c099fd69dac6f175b", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_animated_sprite2_d.html#a04cec7e57129b4f205c9976878f47f57", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_animated_sprite2_d.html#ac68560cd41445acdc9aa463ee48f35e0", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_animated_sprite2_d.html#a64ed9baed42a39436bd1904fa0716847", null ],
     [ "RegisterObject", "class_urho3_d_1_1_animated_sprite2_d.html#a2cdc244b703ae343d18293c7fe38f18e", null ],
     [ "SetAnimation", "class_urho3_d_1_1_animated_sprite2_d.html#a67994c50279cf8865da097d3580ac453", null ],

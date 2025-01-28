@@ -10,7 +10,7 @@ var class_urho3_d_1_1_obstacle =
     [ "HandleNavigationTileAdded", "class_urho3_d_1_1_obstacle.html#a48186992e849b654c89170fd9a7c34fc", null ],
     [ "OnMarkedDirty", "class_urho3_d_1_1_obstacle.html#ab5e0882250b2ea29cf6b8b77f5fb5432", null ],
     [ "OnNodeSet", "class_urho3_d_1_1_obstacle.html#a45c0ba3a56e90e240d67ccbdb7e07bb6", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_obstacle.html#abd60888c5ccbb5cfe9f70c08b0b6ae90", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_obstacle.html#a54ee70ce5d63ed170b500569b0c2b112", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_obstacle.html#a5c0de2dea6f7b15637044e01fefa3083", null ],
     [ "RegisterObject", "class_urho3_d_1_1_obstacle.html#a709237eb5c9ddc9c3657715c9d3e05a9", null ],
     [ "SetHeight", "class_urho3_d_1_1_obstacle.html#ad9a64bbab67f032de0735396681d62c3", null ],

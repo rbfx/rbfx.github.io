@@ -33,7 +33,7 @@ var class_urho3_d_1_1_crowd_manager =
     [ "HandleNavMeshChanged", "class_urho3_d_1_1_crowd_manager.html#acd1475ee2f1c1705aeb6efeed7382999", null ],
     [ "HandleSceneSubsystemUpdate", "class_urho3_d_1_1_crowd_manager.html#a92e9efa70d2b29f655120eccf6f0ce2d", null ],
     [ "MoveAlongSurface", "class_urho3_d_1_1_crowd_manager.html#ada943d313c32013e05b71ce5aed99c83", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_crowd_manager.html#a9dbdfed1b0a990177a765546f090efc2", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_crowd_manager.html#a7a84fe8b6b5ba22bfdfbf02f6be64817", null ],
     [ "Raycast", "class_urho3_d_1_1_crowd_manager.html#a43881cc76f295f62670e0e8f070cc8b6", null ],
     [ "RegisterObject", "class_urho3_d_1_1_crowd_manager.html#a828208b8844d62f6f353cdbdbb27b290", null ],
     [ "RemoveAgent", "class_urho3_d_1_1_crowd_manager.html#a913715898ca3791da7359952ea9bd59b", null ],

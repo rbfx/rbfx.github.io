@@ -19,7 +19,7 @@ var class_urho3_d_1_1_reflection_probe_manager =
     [ "MarkProbeTransformDirty", "class_urho3_d_1_1_reflection_probe_manager.html#ad08af41d1f8613a8f869609a7cc9c101", null ],
     [ "OnComponentAdded", "class_urho3_d_1_1_reflection_probe_manager.html#ae29aafd55600c944b8710eb9dcee851d", null ],
     [ "OnComponentRemoved", "class_urho3_d_1_1_reflection_probe_manager.html#ac59055fcf30711e875aa490a20dd9fbd", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_reflection_probe_manager.html#a4b0c97c0a68ea2810360fec99d19249d", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_reflection_probe_manager.html#ad9af1de5a4bf198dcecf20c52d3bc68b", null ],
     [ "QueryDynamicProbes", "class_urho3_d_1_1_reflection_probe_manager.html#ab93af59138446af27a4283efc9ea1ad2", null ],
     [ "QueryStaticProbes", "class_urho3_d_1_1_reflection_probe_manager.html#a9c76033c5c114a27f45ed34f459e6c96", null ],
     [ "QueueBakeAll", "class_urho3_d_1_1_reflection_probe_manager.html#a83b17b9ee0a989b86921c102c189f569", null ],

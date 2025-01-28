@@ -1,5 +1,6 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_asset_transformer_output.html#ada1826533413d6d4ea78f22f7a800689":[8,0,2,49,6],
 "struct_urho3_d_1_1_asset_transformer_output.html#af35651d46c224ed7dfae84a21495f90b":[8,0,2,49,5],
 "struct_urho3_d_1_1_async_progress.html":[8,0,2,50],
 "struct_urho3_d_1_1_async_progress.html#a1039f5090bf35168547a465ece8a1ca0":[8,0,2,50,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_cached_drawable_zone.html":[8,0,2,105],
 "struct_urho3_d_1_1_cached_drawable_zone.html#a543954c0c85b112f6699dcf6f96482ec":[8,0,2,105,0],
 "struct_urho3_d_1_1_cached_drawable_zone.html#abab14c96417c1377a07e1b5d518df629":[8,0,2,105,2],
-"struct_urho3_d_1_1_cached_drawable_zone.html#ad346c0b1604abc3e978e14a3fd3fd9d5":[8,0,2,105,1],
-"struct_urho3_d_1_1_cached_u_i_batch_state.html":[8,0,2,106]
+"struct_urho3_d_1_1_cached_drawable_zone.html#ad346c0b1604abc3e978e14a3fd3fd9d5":[8,0,2,105,1]
 };

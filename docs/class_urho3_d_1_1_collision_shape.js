@@ -24,7 +24,7 @@ var class_urho3_d_1_1_collision_shape =
     [ "NotifyRigidBody", "class_urho3_d_1_1_collision_shape.html#a8cfe09cb27ec041dedcd92a69293bcbc", null ],
     [ "OnMarkedDirty", "class_urho3_d_1_1_collision_shape.html#a61df21132c5462e779a85b7c0ebf2fad", null ],
     [ "OnNodeSet", "class_urho3_d_1_1_collision_shape.html#a9286071ef346ff1b05c11a3244b3e706", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_collision_shape.html#ab4e82085078bf7e031f32657ebe2565c", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_collision_shape.html#af3265d261b5229d928a15d45e8c1da6e", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_collision_shape.html#a9259e387ac06fe25afa38cd2f839ab80", null ],
     [ "RegisterObject", "class_urho3_d_1_1_collision_shape.html#a6a675622871c1c2d7b7add9c3e440de4", null ],
     [ "ReleaseShape", "class_urho3_d_1_1_collision_shape.html#ae8711104bc670ce7d5ec44ee687c5986", null ],

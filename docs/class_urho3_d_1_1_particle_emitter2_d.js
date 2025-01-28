@@ -12,7 +12,7 @@ var class_urho3_d_1_1_particle_emitter2_d =
     [ "HandleScenePostUpdate", "class_urho3_d_1_1_particle_emitter2_d.html#abaa5fbe514eb5d5904039f69cd75257d", null ],
     [ "IsEmitting", "class_urho3_d_1_1_particle_emitter2_d.html#a96281d73dd7eb1444fafa21032a8f80b", null ],
     [ "OnDrawOrderChanged", "class_urho3_d_1_1_particle_emitter2_d.html#a05eefd042ade1b6c30834ce12f844d9f", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_particle_emitter2_d.html#a09b2df5a425839d0feff440a78ce1f5f", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_particle_emitter2_d.html#acda9b40afc3dd37f69a588ccb760549e", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_particle_emitter2_d.html#aaa7a512b4fb84e3343be39bf899fb58d", null ],
     [ "OnWorldBoundingBoxUpdate", "class_urho3_d_1_1_particle_emitter2_d.html#a8c4cf85f0f4a7fc07fcfc7de6b963897", null ],
     [ "RegisterObject", "class_urho3_d_1_1_particle_emitter2_d.html#a19580e35a9410d2ae90ab7acc0c72d29", null ],

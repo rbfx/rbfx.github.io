@@ -37,7 +37,7 @@ var class_urho3_d_1_1_kinematic_character_controller =
     [ "Jump", "class_urho3_d_1_1_kinematic_character_controller.html#aeb4e8a0134b9a6d451eec5617d238c4a", null ],
     [ "OnGround", "class_urho3_d_1_1_kinematic_character_controller.html#a5dc1f5404abc2ee949d9431737bfc375", null ],
     [ "OnNodeSet", "class_urho3_d_1_1_kinematic_character_controller.html#a6a83cd0f1b75090ed504fc87147aef12", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_kinematic_character_controller.html#a84f165d4affbe2810470cf66b990a913", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_kinematic_character_controller.html#a752e23152264f01edc46ff3fe4871523", null ],
     [ "OnSetAttribute", "class_urho3_d_1_1_kinematic_character_controller.html#af5e5e26c01b307259d9a105e3bc72f6c", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_kinematic_character_controller.html#a2727b4a00725a8952890c6b0d42b817f", null ],
     [ "RegisterObject", "class_urho3_d_1_1_kinematic_character_controller.html#ace22d36ff10a37d99177da8d12657462", null ],

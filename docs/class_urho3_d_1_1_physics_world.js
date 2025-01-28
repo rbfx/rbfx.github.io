@@ -38,7 +38,7 @@ var class_urho3_d_1_1_physics_world =
     [ "IsSimulating", "class_urho3_d_1_1_physics_world.html#a50671c5f9d849ac3f8d479b2f5de1be7", null ],
     [ "IsUpdateEnabled", "class_urho3_d_1_1_physics_world.html#a0b6ec7c99e3ac48a06447a70d2440f05", null ],
     [ "isVisible", "class_urho3_d_1_1_physics_world.html#a8d84ecf113e4758d93ac7acff981dba7", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_physics_world.html#a0b0a8200a977bb58e0a7ee4693ed6b30", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_physics_world.html#a70aed1332c723854b1cd3247af572edd", null ],
     [ "PostStep", "class_urho3_d_1_1_physics_world.html#a4d42550d32c7f33394c2acede1e3a481", null ],
     [ "PostUpdate", "class_urho3_d_1_1_physics_world.html#a584371f4092d0cb69573ecc5fa26a878", null ],
     [ "PreStep", "class_urho3_d_1_1_physics_world.html#a94357d54aa72238c942ba3c780075dfd", null ],

@@ -20,7 +20,7 @@ var class_urho3_d_1_1_component =
     [ "OnMarkedDirty", "class_urho3_d_1_1_component.html#ab49b4b66b2eb1601cf166972fe42e5ce", null ],
     [ "OnNodeSet", "class_urho3_d_1_1_component.html#aa68563fbc08bf63ae120a36926282bff", null ],
     [ "OnNodeSetEnabled", "class_urho3_d_1_1_component.html#a694661584adfa38834d4b7ee960fb29a", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_component.html#ab4aa26ec7ab7f60d8b50ee4ab8ff1ce3", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_component.html#adf51a61ab4b9c0406e04ed2d69a9cc98", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_component.html#a97c506dfb55216668b1fdf4d4425f7d7", null ],
     [ "Remove", "class_urho3_d_1_1_component.html#a9cb217364df06d4886bfba9d3aec3bed", null ],
     [ "Save", "class_urho3_d_1_1_component.html#a753c0051bc1080efc07b5ba1e12ee74b", null ],

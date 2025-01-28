@@ -14,7 +14,7 @@ var class_urho3_d_1_1_move_and_orbit_controller =
     [ "HandleInputEnd", "class_urho3_d_1_1_move_and_orbit_controller.html#ac3dc509ea44c05044f130d17918682a4", null ],
     [ "LoadInputMap", "class_urho3_d_1_1_move_and_orbit_controller.html#ad18275da036a360b605f57efa4bfe8e6", null ],
     [ "OnNodeSet", "class_urho3_d_1_1_move_and_orbit_controller.html#a6a8936a6fb3c3fc813b97c55b13c5806", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_move_and_orbit_controller.html#a197a9e6a47ba744e950f15c0b7d1559d", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_move_and_orbit_controller.html#a41408e997afefb9162297ab2f3f1cd41", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_move_and_orbit_controller.html#adb41cd2c0aae6e6b2607b7a2623d5d87", null ],
     [ "RegisterObject", "class_urho3_d_1_1_move_and_orbit_controller.html#aaa13c2e1000d3a6696c72c4a397a67ca", null ],
     [ "SetInputMap", "class_urho3_d_1_1_move_and_orbit_controller.html#a89e36cd2efaa3cc7b9b6ac330978cfa6", null ],

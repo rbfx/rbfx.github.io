@@ -33,7 +33,7 @@ var class_urho3_d_1_1_animation_controller =
     [ "IsSkeletonReset", "class_urho3_d_1_1_animation_controller.html#aa94cbadd68a00f25e9912e720af89152", null ],
     [ "MarkAnimationStateTracksDirty", "class_urho3_d_1_1_animation_controller.html#a5cedf3a3d64620f6d528ddbc77a2e0e3", null ],
     [ "OnNodeSet", "class_urho3_d_1_1_animation_controller.html#a199d57cf92a4d0bb94b21ab811a00f8d", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_animation_controller.html#a6c13fabcbc9319fdfe14a83e87b42d2d", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_animation_controller.html#a9c4c644e06d48234044a985d972124db", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_animation_controller.html#aa54134ff4083cc5d722a300011002b8f", null ],
     [ "ParseAnimatablePath", "class_urho3_d_1_1_animation_controller.html#ad0374417750d190f63accbb09e16b290", null ],
     [ "Play", "class_urho3_d_1_1_animation_controller.html#a4b540de20627d64d3774b88dbdc37967", null ],

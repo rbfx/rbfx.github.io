@@ -12,7 +12,7 @@ var class_urho3_d_1_1_tracked_component_registry_base =
     [ "OnComponentMoved", "class_urho3_d_1_1_tracked_component_registry_base.html#a0643f25220a3e806117af65a3a21d8bb", null ],
     [ "OnComponentRemoved", "class_urho3_d_1_1_tracked_component_registry_base.html#ae20e8fc5db35c240f43e55ad92501eff", null ],
     [ "OnRemovedFromScene", "class_urho3_d_1_1_tracked_component_registry_base.html#aad105b433eaefe4354d3b62d8374e63e", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_tracked_component_registry_base.html#a00c426005a0130e295cdecf30b19ae65", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_tracked_component_registry_base.html#a8037fb65ac35d80b9bd48a59aee2c34e", null ],
     [ "RemoveTrackedComponent", "class_urho3_d_1_1_tracked_component_registry_base.html#ac039a830af638a041c968081d4f50e45", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_tracked_component_registry_base.html#a67086ffcd63089a4289da7588b8ee4e1", null ],
     [ "componentsArray_", "class_urho3_d_1_1_tracked_component_registry_base.html#a5190f4878690d6be68bb7c6ae9977157", null ],

@@ -18,7 +18,7 @@ var class_urho3_d_1_1_dynamic_navigation_mesh =
     [ "HandleSceneSubsystemUpdate", "class_urho3_d_1_1_dynamic_navigation_mesh.html#a8e6a7bb853abddc4c1a7fbec84e1cafb", null ],
     [ "IsObstacleInTile", "class_urho3_d_1_1_dynamic_navigation_mesh.html#a651701269fd4b2135c308759ef526e86", null ],
     [ "ObstacleChanged", "class_urho3_d_1_1_dynamic_navigation_mesh.html#ad1de8246e40e3151be5097345c56c637", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_dynamic_navigation_mesh.html#a4becbd12923b981a18a05cf2a0ca63df", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_dynamic_navigation_mesh.html#a3d83f1c653b52a8e456b183b12d0f367", null ],
     [ "ReadTiles", "class_urho3_d_1_1_dynamic_navigation_mesh.html#acb3cec975698de0326b5b23f1587a5d1", null ],
     [ "RebuildMesh", "class_urho3_d_1_1_dynamic_navigation_mesh.html#ac5ea2d506acb762f12e4095497ef551c", null ],
     [ "RegisterObject", "class_urho3_d_1_1_dynamic_navigation_mesh.html#ae681c3e4f39d1251e3d34fefe73aef74", null ],

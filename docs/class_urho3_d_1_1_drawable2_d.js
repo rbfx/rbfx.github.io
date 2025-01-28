@@ -8,7 +8,7 @@ var class_urho3_d_1_1_drawable2_d =
     [ "GetSourceBatches", "class_urho3_d_1_1_drawable2_d.html#a7525d62856ade0ac21fc60c4f78a2b33", null ],
     [ "OnDrawOrderChanged", "class_urho3_d_1_1_drawable2_d.html#a8decb5bbd0d13df6c899fca31ca9f2ad", null ],
     [ "OnMarkedDirty", "class_urho3_d_1_1_drawable2_d.html#a6cfc4f8cf7b85322f10171e5c4a6eeff", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_drawable2_d.html#ae55f58970b6c3cb563adec9ce9dbbb5c", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_drawable2_d.html#a63cffc9c4c7fec0cb7837a46213fc1c9", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_drawable2_d.html#a3b57577a9a06e84567d215bc0c31bc86", null ],
     [ "RegisterObject", "class_urho3_d_1_1_drawable2_d.html#a5998406d2ae3a93eb6c4b43dc5c9d735", null ],
     [ "SetLayer", "class_urho3_d_1_1_drawable2_d.html#ac9f626566fe697b52a9a480124a9d17b", null ],

@@ -36,7 +36,7 @@ var class_urho3_d_1_1_crowd_agent =
     [ "OnCrowdVelocityUpdate", "class_urho3_d_1_1_crowd_agent.html#acc3feff68159cd3359d65cf467e989c2", null ],
     [ "OnMarkedDirty", "class_urho3_d_1_1_crowd_agent.html#af46aaf3983f59aee19ad367d03fcbcd3", null ],
     [ "OnNodeSet", "class_urho3_d_1_1_crowd_agent.html#a94581f641d02d66fbc6ab4dd46382a61", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_crowd_agent.html#a579c4cf2fad3ab4d79ed1bc2b3baf055", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_crowd_agent.html#a57ecf3f135032faf88615c4b138c9e79", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_crowd_agent.html#a64f312f91d82a57355673d0c8cc4bd94", null ],
     [ "RegisterObject", "class_urho3_d_1_1_crowd_agent.html#a4340d005d1c54564865656edcd36f359", null ],
     [ "RemoveAgentFromCrowd", "class_urho3_d_1_1_crowd_agent.html#aaece7e290f7941476f7ceeb2676e2fa1", null ],

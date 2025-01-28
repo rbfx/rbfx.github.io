@@ -16,7 +16,7 @@ var class_urho3_d_1_1_replication_manager =
     [ "IsServer", "class_urho3_d_1_1_replication_manager.html#aaa20f38367250bf73f3191e1863351e9", null ],
     [ "IsStandalone", "class_urho3_d_1_1_replication_manager.html#a7c1a053dfdacda4a0b9b9be4aa21236a", null ],
     [ "OnComponentAdded", "class_urho3_d_1_1_replication_manager.html#aed2dd92804b751baf8f7d13d86a93052", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_replication_manager.html#aa96f8c9178af6b22b73cff5eb7ee55a9", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_replication_manager.html#acc99ee1c51f8bf19eb859b879e3643dc", null ],
     [ "OnSceneUpdate", "class_urho3_d_1_1_replication_manager.html#a2d328631fd01fc4c823c7bebb7d0d247", null ],
     [ "ProcessMessage", "class_urho3_d_1_1_replication_manager.html#aac07b81a1a588278831286686638491e", null ],
     [ "ProcessMessageOnUninitializedClient", "class_urho3_d_1_1_replication_manager.html#a26abeab3772b06b4fc0b14971195a860", null ],

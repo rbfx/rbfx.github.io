@@ -30,7 +30,7 @@ var class_urho3_d_1_1_rigid_body2_d =
     [ "IsFixedRotation", "class_urho3_d_1_1_rigid_body2_d.html#ab97a6b0bc65f7c5110686f5925d35273", null ],
     [ "OnMarkedDirty", "class_urho3_d_1_1_rigid_body2_d.html#a8a4d448e59079ef0de29b72d0f7c9684", null ],
     [ "OnNodeSet", "class_urho3_d_1_1_rigid_body2_d.html#a49e46715f9d210271354d7351af66cc1", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_rigid_body2_d.html#a633bf73a98b1099f261f061ab3c65ce2", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_rigid_body2_d.html#ac051bf44f2818559258bb7a3b4c11494", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_rigid_body2_d.html#ab1ea2ffb93b7896c20ba717416dbbba9", null ],
     [ "RegisterObject", "class_urho3_d_1_1_rigid_body2_d.html#a5ceab20e211a796e426523b6b98f46a0", null ],
     [ "ReleaseBody", "class_urho3_d_1_1_rigid_body2_d.html#a1aa34799d9d5766e12948dfcff9c9015", null ],

@@ -12,7 +12,7 @@ var class_urho3_d_1_1_logic_component =
     [ "HandleSceneUpdate", "class_urho3_d_1_1_logic_component.html#a9a318417ce77addd2c7a161f196e4b00", null ],
     [ "IsDelayedStartCalled", "class_urho3_d_1_1_logic_component.html#a2cfd1e8a5c49518a7fa5a260d4f5dd82", null ],
     [ "OnNodeSet", "class_urho3_d_1_1_logic_component.html#aaeead90990d9c3a8837f9b359300f681", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_logic_component.html#a394e35fead581b844c588c5f6bdd0f3b", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_logic_component.html#a6ad52db1fa2d4d400bbd7d96c9726964", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_logic_component.html#ae52c84212a7e10c717157a76adcb096e", null ],
     [ "PostUpdate", "class_urho3_d_1_1_logic_component.html#ac5d84eea37c43d10f358500c97fae876", null ],
     [ "SetUpdateEventMask", "class_urho3_d_1_1_logic_component.html#aed6fce6c91519714ba64fb61505a71d0", null ],

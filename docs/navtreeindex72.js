@@ -1,5 +1,6 @@
 var NAVTREEINDEX72 =
 {
+"class_urho3_d_1_1_variant.html#a3857691a7da25ce7435addd7a3926929":[8,0,2,796,124],
 "class_urho3_d_1_1_variant.html#a392330ba4bf7c273225b507b70e56de2":[8,0,2,796,27],
 "class_urho3_d_1_1_variant.html#a396190ff53cc31b11fc526bf1992c7cd":[8,0,2,796,296],
 "class_urho3_d_1_1_variant.html#a399ff56eaebd560820b20303d72d10a5":[8,0,2,796,194],
@@ -248,6 +249,5 @@ var NAVTREEINDEX72 =
 "class_urho3_d_1_1_variant.html#afef540e0ac4bca655d1617e853fe48fa":[8,0,2,796,244],
 "class_urho3_d_1_1_variant.html#affb1b1c3ad33ab1043ff3a63e8c440f1":[8,0,2,796,4],
 "class_urho3_d_1_1_variant.html#affdd9e355d4b3d05b4d69afd6cf27fdd":[8,0,2,796,10],
-"class_urho3_d_1_1_variant.html#afff279cdbf1f0608e2832e824029932a":[8,0,2,796,52],
-"class_urho3_d_1_1_variant_attribute_accessor_impl.html":[8,0,2,798]
+"class_urho3_d_1_1_variant.html#afff279cdbf1f0608e2832e824029932a":[8,0,2,796,52]
 };

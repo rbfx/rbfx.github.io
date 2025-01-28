@@ -22,7 +22,7 @@ var class_urho3_d_1_1_ribbon_trail =
     [ "IsEmitting", "class_urho3_d_1_1_ribbon_trail.html#a9205a710530941d69d0faad235e72692", null ],
     [ "IsSorted", "class_urho3_d_1_1_ribbon_trail.html#af0099e4c5d9f7e25e5b351c04adbc107", null ],
     [ "MarkPositionsDirty", "class_urho3_d_1_1_ribbon_trail.html#acec816736eed7f59ab63aafaa0da4fc2", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_ribbon_trail.html#abcd8d907e0e358d04be6c6dc384b5952", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_ribbon_trail.html#ab88c9c2b8da9d947ea8f19cee405904f", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_ribbon_trail.html#ad528c577d774550e285139ff929eb59f", null ],
     [ "OnWorldBoundingBoxUpdate", "class_urho3_d_1_1_ribbon_trail.html#a97c50efe75002f52792d02be1c9ec338", null ],
     [ "ProcessRayQuery", "class_urho3_d_1_1_ribbon_trail.html#a65c987cd9a08745df753bf18ba98e643", null ],

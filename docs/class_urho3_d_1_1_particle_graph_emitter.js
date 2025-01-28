@@ -16,7 +16,7 @@ var class_urho3_d_1_1_particle_graph_emitter =
     [ "HandleEffectReloadFinished", "class_urho3_d_1_1_particle_graph_emitter.html#aed56df2407b73dcee3ad539dab531549", null ],
     [ "HandleScenePostUpdate", "class_urho3_d_1_1_particle_graph_emitter.html#a650bc05abd5aea7ab9655d0fb4f6f537", null ],
     [ "IsEmitting", "class_urho3_d_1_1_particle_graph_emitter.html#a29f4ca0328170c1842294f4ffdebd51b", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_particle_graph_emitter.html#a4e837d460fc6dd46f14a56e9d92876a5", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_particle_graph_emitter.html#aa7dd34c18754f92267d94bc2fa023244", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_particle_graph_emitter.html#a72207e5696154234053f15f6357a5186", null ],
     [ "RegisterObject", "class_urho3_d_1_1_particle_graph_emitter.html#a478b368bcd5c4521c06396f6cd84715a", null ],
     [ "RemoveAllParticles", "class_urho3_d_1_1_particle_graph_emitter.html#ab683261e7223e43dee00d2aa010b77f2", null ],

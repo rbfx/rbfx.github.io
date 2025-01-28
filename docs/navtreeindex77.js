@@ -1,5 +1,6 @@
 var NAVTREEINDEX77 =
 {
+"class_urho3_d_1_1_zone.html#aec09a0a10e741ba382282d9ef1c4dcda":[8,0,2,843,26],
 "class_urho3_d_1_1_zone.html#af00b87d0ee95f1afc2a94d13922430c4":[8,0,2,843,12],
 "class_urho3_d_1_1_zone.html#af290b5d064ad2b7f247f487d9ad74a5c":[8,0,2,843,6],
 "class_urho3_d_1_1_zone.html#afce30cadde6c11c5c168f60d38002234":[8,0,2,843,23],
@@ -142,8 +143,8 @@ var NAVTREEINDEX77 =
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html":[2],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html":[5],
 "multiplayer-and-networking.html":[0,0,2,2],
-"namespace_urho3_d_1_1_actions.html":[8,0,2,0],
 "namespace_urho3_d_1_1_actions.html":[7,0,0,0],
+"namespace_urho3_d_1_1_actions.html":[8,0,2,0],
 "namespace_urho3_d_1_1_attribute_metadata.html":[7,0,0,1],
 "namespace_urho3_d_1_1_linked_plugins.html":[7,0,0,2],
 "namespace_urho3_d_1_1_network_settings.html":[7,0,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX77 =
 "struct___i_m_a_g_e___f_i_l_e___h_e_a_d_e_r.html#abd08dd191a9f6a5fa9a3e77dbe499ac8":[8,0,9,2],
 "struct___i_m_a_g_e___f_i_l_e___h_e_a_d_e_r.html#afacfc23ca4dcac8a9e29794041c380a8":[8,0,9,6],
 "struct___i_m_a_g_e___i_m_p_o_r_t___b_y___n_a_m_e.html":[8,0,10],
-"struct___i_m_a_g_e___i_m_p_o_r_t___b_y___n_a_m_e.html#a78cab19f9f0822c46cdb870a186ab1d2":[8,0,10,0],
-"struct___i_m_a_g_e___i_m_p_o_r_t___b_y___n_a_m_e.html#a9eebfe7d6607ece1f100357f3320db24":[8,0,10,1]
+"struct___i_m_a_g_e___i_m_p_o_r_t___b_y___n_a_m_e.html#a78cab19f9f0822c46cdb870a186ab1d2":[8,0,10,0]
 };

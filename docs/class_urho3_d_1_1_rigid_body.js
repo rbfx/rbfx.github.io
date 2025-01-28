@@ -52,7 +52,7 @@ var class_urho3_d_1_1_rigid_body =
     [ "MarkBodyDirty", "class_urho3_d_1_1_rigid_body.html#a409e3939e65520bb723872f006ccf26f", null ],
     [ "OnMarkedDirty", "class_urho3_d_1_1_rigid_body.html#ab3ed9093acbb2d9cfc5cb5e7d9568a09", null ],
     [ "OnNodeSet", "class_urho3_d_1_1_rigid_body.html#afe6f7e5dd0d4f198c4a103e3ce6f9325", null ],
-    [ "OnSceneSet", "class_urho3_d_1_1_rigid_body.html#a35e4e2fa8e216fdf3ac1f20a86820e28", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_rigid_body.html#a5dda38a0ce3a1b02647d7fe3839b8d16", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_rigid_body.html#a8dcd771562cd610ae04f1bd46772fd28", null ],
     [ "ReAddBodyToWorld", "class_urho3_d_1_1_rigid_body.html#ab383b16970f61b3d10f776ce6d616abf", null ],
     [ "RegisterObject", "class_urho3_d_1_1_rigid_body.html#a290f1f44cc003d8c7c5c419b3bfd4c3a", null ],
