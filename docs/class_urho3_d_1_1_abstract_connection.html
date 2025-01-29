@@ -89,6 +89,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae88595578997390056147f29f9b784bd"><td class="memItemLeft" align="right" valign="top"><a id="ae88595578997390056147f29f9b784bd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AbstractConnection</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
 <tr class="separator:ae88595578997390056147f29f9b784bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca38662b8421e22799dd396154d354d7"><td class="memItemLeft" align="right" valign="top"><a id="aca38662b8421e22799dd396154d354d7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#aca38662b8421e22799dd396154d354d7">SetMaxPacketSize</a> (unsigned limit)</td></tr>
+<tr class="memdesc:aca38662b8421e22799dd396154d354d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximum size of network packet. <a class="el" href="class_urho3_d_1_1_connection.html" title="Connection to a remote network host.">Connection</a> transport may override this value. <br /></td></tr>
+<tr class="separator:aca38662b8421e22799dd396154d354d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a988b4bb1ac2c78840ce5ab50fa989e06"><td class="memItemLeft" align="right" valign="top"><a id="a988b4bb1ac2c78840ce5ab50fa989e06"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#a988b4bb1ac2c78840ce5ab50fa989e06">SendMessageInternal</a> (NetworkMessageId messageId, const unsigned char *data, unsigned numBytes, PacketTypeFlags packetType=PacketType::ReliableOrdered)=0</td></tr>
 <tr class="memdesc:a988b4bb1ac2c78840ce5ab50fa989e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send message to the other end of the connection. <br /></td></tr>
@@ -122,10 +126,7 @@ virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <tr class="memdesc:a142e84be5d439d495491214fb2a00983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return ping of the connection. <br /></td></tr>
 <tr class="separator:a142e84be5d439d495491214fb2a00983"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:aca38662b8421e22799dd396154d354d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#aca38662b8421e22799dd396154d354d7">SetMaxPacketSize</a> (unsigned limit)</td></tr>
-<tr class="separator:aca38662b8421e22799dd396154d354d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe3cbae4c156eb8b299ff6e97fd65cb4"><td class="memItemLeft" align="right" valign="top"><a id="abe3cbae4c156eb8b299ff6e97fd65cb4"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetMaxPacketSize</b> () const</td></tr>
+<tr class="memitem:abe3cbae4c156eb8b299ff6e97fd65cb4"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#abe3cbae4c156eb8b299ff6e97fd65cb4">GetMaxPacketSize</a> () const</td></tr>
 <tr class="separator:abe3cbae4c156eb8b299ff6e97fd65cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26fd02c0d4cb8390858e3825feafe48d"><td class="memItemLeft" align="right" valign="top"><a id="a26fd02c0d4cb8390858e3825feafe48d"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetMaxMessageSize</b> () const</td></tr>
@@ -390,7 +391,7 @@ Private Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:aa9560e39978513c8f11a0d6835d922f5"><td class="memItemLeft" align="right" valign="top"><a id="aa9560e39978513c8f11a0d6835d922f5"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>maxPacketSize_</b> {DefaultMaxPacketSize}</td></tr>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>maxPacketSize_</b> {}</td></tr>
 <tr class="separator:aa9560e39978513c8f11a0d6835d922f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a325fe4d29297a08cc810c33a19a84157"><td class="memItemLeft" align="right" valign="top"><a id="a325fe4d29297a08cc810c33a19a84157"></a>
 ByteVector&#160;</td><td class="memItemRight" valign="bottom"><b>incomingMessageBuffer_</b></td></tr>
@@ -418,6 +419,24 @@ static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a clas
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface of connection to another host. Virtual for easier unit testing. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="abe3cbae4c156eb8b299ff6e97fd65cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe3cbae4c156eb8b299ff6e97fd65cb4">&#9670;&nbsp;</a></span>GetMaxPacketSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Urho3D::AbstractConnection::GetMaxPacketSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="class_urho3_d_1_1_connection.html" title="Connection to a remote network host.">Connection</a> limits. </p>
+
+</div>
+</div>
 <a id="a58ac63827226d7484579383f61d1d1d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58ac63827226d7484579383f61d1d1d9">&#9670;&nbsp;</a></span>SendMessage()</h2>
 
@@ -456,33 +475,6 @@ static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a clas
       </table>
 </div><div class="memdoc">
 <p>Syntax sugar for sending and receiving messages. </p>
-
-</div>
-</div>
-<a id="aca38662b8421e22799dd396154d354d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca38662b8421e22799dd396154d354d7">&#9670;&nbsp;</a></span>SetMaxPacketSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::AbstractConnection::SetMaxPacketSize </td>
-          <td>(</td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>limit</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p><a class="el" href="class_urho3_d_1_1_connection.html" title="Connection to a remote network host.">Connection</a> limits. </p>
 
 </div>
 </div>

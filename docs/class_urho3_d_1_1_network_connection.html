@@ -108,6 +108,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_connection.html#a1ea3e000b0d786ae9b1d0117d4628522">SendMessage</a> (ea::string_view data, PacketTypeFlags type=PacketType::ReliableOrdered)=0</td></tr>
 <tr class="memdesc:a1ea3e000b0d786ae9b1d0117d4628522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data and queues it for sending. <br /></td></tr>
 <tr class="separator:a1ea3e000b0d786ae9b1d0117d4628522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95e79e4289b5fd9dc7e0686539920c74"><td class="memItemLeft" align="right" valign="top"><a id="a95e79e4289b5fd9dc7e0686539920c74"></a>
+virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_connection.html#a95e79e4289b5fd9dc7e0686539920c74">GetMaxMessageSize</a> () const =0</td></tr>
+<tr class="memdesc:a95e79e4289b5fd9dc7e0686539920c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return maximum size of network message. <br /></td></tr>
+<tr class="separator:a95e79e4289b5fd9dc7e0686539920c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a250775e4a6ecf5938ada084b8537c798"><td class="memItemLeft" align="right" valign="top"><a id="a250775e4a6ecf5938ada084b8537c798"></a>
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_connection.html#a250775e4a6ecf5938ada084b8537c798">GetAddress</a> () const</td></tr>
 <tr class="memdesc:a250775e4a6ecf5938ada084b8537c798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result may be empty, when connection is not State::Connected. <br /></td></tr>
@@ -117,7 +121,8 @@ unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="memdesc:ab2a055f5eccdb3bdb94a21dbc5f630e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result may be 0, when connection is not State::Connected or when result is not applicable to the underlying transport. <br /></td></tr>
 <tr class="separator:ab2a055f5eccdb3bdb94a21dbc5f630e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5e7ffe8a1eb0d369854cf982ef3095d"><td class="memItemLeft" align="right" valign="top"><a id="ab5e7ffe8a1eb0d369854cf982ef3095d"></a>
-<a class="el" href="class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33c">State</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetState</b> () const</td></tr>
+<a class="el" href="class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33c">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_connection.html#ab5e7ffe8a1eb0d369854cf982ef3095d">GetState</a> () const</td></tr>
+<tr class="memdesc:ab5e7ffe8a1eb0d369854cf982ef3095d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current state of the connection. <br /></td></tr>
 <tr class="separator:ab5e7ffe8a1eb0d369854cf982ef3095d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>

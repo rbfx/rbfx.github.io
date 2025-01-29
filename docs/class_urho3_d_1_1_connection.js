@@ -58,6 +58,7 @@ var class_urho3_d_1_1_connection =
     [ "SetIdentity", "class_urho3_d_1_1_connection.html#ac3471c5f3380be2618a1c36c57c99698", null ],
     [ "SetIsClient", "class_urho3_d_1_1_connection.html#aeb1727b71b7b7c4bddc1195b7873d36f", null ],
     [ "SetLogStatistics", "class_urho3_d_1_1_connection.html#af80a1e8f800d20f5053b2f242cfaa26e", null ],
+    [ "SetMaxPacketSize", "class_urho3_d_1_1_connection.html#a2131aafc7d545d3d861c355ef76535eb", null ],
     [ "SetScene", "class_urho3_d_1_1_connection.html#af2b95e276d096a3310b16fa5ce20e02e", null ],
     [ "ToString", "class_urho3_d_1_1_connection.html#a11c025cd59e1bad02de92bb60a3ecb3f", null ],
     [ "URHO3D_OBJECT", "class_urho3_d_1_1_connection.html#a4ac8e5b93bd4bf2cac0c7e074f32b19f", null ],

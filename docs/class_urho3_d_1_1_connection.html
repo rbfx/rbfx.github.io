@@ -194,7 +194,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessage</b> (NetworkMessageId messageId, const <a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorBuffer</a> &amp;msg, PacketTypeFlags packetType=PacketType::ReliableOrdered, ea::string_view debugInfo={})</td></tr>
 <tr class="separator:a77d6e3d83b7038f6d4ce5f16ca1e5557"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a8b9baa96c9eb9a81b0299fb05f11254b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a8b9baa96c9eb9a81b0299fb05f11254b">SendMessageInternal</a> (NetworkMessageId messageId, const unsigned char *data, unsigned numBytes, PacketTypeFlags packetType=PacketType::ReliableOrdered) override</td></tr>
+<tr class="memitem:a2131aafc7d545d3d861c355ef76535eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a2131aafc7d545d3d861c355ef76535eb">SetMaxPacketSize</a> (unsigned limit) override</td></tr>
+<tr class="separator:a2131aafc7d545d3d861c355ef76535eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b9baa96c9eb9a81b0299fb05f11254b"><td class="memItemLeft" align="right" valign="top"><a id="a8b9baa96c9eb9a81b0299fb05f11254b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a8b9baa96c9eb9a81b0299fb05f11254b">SendMessageInternal</a> (NetworkMessageId messageId, const unsigned char *data, unsigned numBytes, PacketTypeFlags packetType=PacketType::ReliableOrdered) override</td></tr>
+<tr class="memdesc:a8b9baa96c9eb9a81b0299fb05f11254b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send message to the other end of the connection. <br /></td></tr>
 <tr class="separator:a8b9baa96c9eb9a81b0299fb05f11254b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11c025cd59e1bad02de92bb60a3ecb3f"><td class="memItemLeft" align="right" valign="top"><a id="a11c025cd59e1bad02de92bb60a3ecb3f"></a>
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_connection.html#a11c025cd59e1bad02de92bb60a3ecb3f">ToString</a> () const override</td></tr>
@@ -228,10 +232,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="memitem:ae88595578997390056147f29f9b784bd inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="ae88595578997390056147f29f9b784bd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AbstractConnection</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
 <tr class="separator:ae88595578997390056147f29f9b784bd inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca38662b8421e22799dd396154d354d7 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#aca38662b8421e22799dd396154d354d7">SetMaxPacketSize</a> (unsigned limit)</td></tr>
-<tr class="separator:aca38662b8421e22799dd396154d354d7 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe3cbae4c156eb8b299ff6e97fd65cb4 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="abe3cbae4c156eb8b299ff6e97fd65cb4"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetMaxPacketSize</b> () const</td></tr>
+<tr class="memitem:abe3cbae4c156eb8b299ff6e97fd65cb4 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#abe3cbae4c156eb8b299ff6e97fd65cb4">GetMaxPacketSize</a> () const</td></tr>
 <tr class="separator:abe3cbae4c156eb8b299ff6e97fd65cb4 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26fd02c0d4cb8390858e3825feafe48d inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="a26fd02c0d4cb8390858e3825feafe48d"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetMaxMessageSize</b> () const</td></tr>
@@ -983,57 +984,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a8b9baa96c9eb9a81b0299fb05f11254b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b9baa96c9eb9a81b0299fb05f11254b">&#9670;&nbsp;</a></span>SendMessageInternal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::Connection::SendMessageInternal </td>
-          <td>(</td>
-          <td class="paramtype">NetworkMessageId&#160;</td>
-          <td class="paramname"><em>messageId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned char *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>numBytes</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">PacketTypeFlags&#160;</td>
-          <td class="paramname"><em>packetType</em> = <code>PacketType::ReliableOrdered</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Implement <a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> </p>
-
-<p>Implements <a class="el" href="class_urho3_d_1_1_abstract_connection.html#a988b4bb1ac2c78840ce5ab50fa989e06">Urho3D::AbstractConnection</a>.</p>
-
-</div>
-</div>
 <a id="af80a1e8f800d20f5053b2f242cfaa26e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af80a1e8f800d20f5053b2f242cfaa26e">&#9670;&nbsp;</a></span>SetLogStatistics()</h2>
 
@@ -1050,6 +1000,35 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Set whether to log data in/out statistics. </p>
+
+</div>
+</div>
+<a id="a2131aafc7d545d3d861c355ef76535eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2131aafc7d545d3d861c355ef76535eb">&#9670;&nbsp;</a></span>SetMaxPacketSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::Connection::SetMaxPacketSize </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>limit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Implement <a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_abstract_connection.html#aca38662b8421e22799dd396154d354d7">Urho3D::AbstractConnection</a>.</p>
 
 </div>
 </div>

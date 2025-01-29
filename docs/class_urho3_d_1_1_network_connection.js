@@ -10,6 +10,7 @@ var class_urho3_d_1_1_network_connection =
     [ "Connect", "class_urho3_d_1_1_network_connection.html#abc50a78c09548c59d59e5e14c2121b20", null ],
     [ "Disconnect", "class_urho3_d_1_1_network_connection.html#a4fe60485d70feb42ec228959fe7fb5f3", null ],
     [ "GetAddress", "class_urho3_d_1_1_network_connection.html#a250775e4a6ecf5938ada084b8537c798", null ],
+    [ "GetMaxMessageSize", "class_urho3_d_1_1_network_connection.html#a95e79e4289b5fd9dc7e0686539920c74", null ],
     [ "GetPort", "class_urho3_d_1_1_network_connection.html#ab2a055f5eccdb3bdb94a21dbc5f630e8", null ],
     [ "GetState", "class_urho3_d_1_1_network_connection.html#ab5e7ffe8a1eb0d369854cf982ef3095d", null ],
     [ "SendMessage", "class_urho3_d_1_1_network_connection.html#a1ea3e000b0d786ae9b1d0117d4628522", null ],

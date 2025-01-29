@@ -64,7 +64,6 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_data_channel_connect
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_urho3_d_1_1_data_channel_connection-members.html">List of all members</a>  </div>
@@ -101,6 +100,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_data_channel_connection.html#ad37a6ca2e37bc6fa7159757fda46d7c7">SendMessage</a> (ea::string_view data, PacketTypeFlags type=PacketType::ReliableOrdered) override</td></tr>
 <tr class="memdesc:ad37a6ca2e37bc6fa7159757fda46d7c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data and queues it for sending. <br /></td></tr>
 <tr class="separator:ad37a6ca2e37bc6fa7159757fda46d7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed6bac50a6d66d6d666f1085096de7c4"><td class="memItemLeft" align="right" valign="top"><a id="aed6bac50a6d66d6d666f1085096de7c4"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_data_channel_connection.html#aed6bac50a6d66d6d666f1085096de7c4">GetMaxMessageSize</a> () const override</td></tr>
+<tr class="memdesc:aed6bac50a6d66d6d666f1085096de7c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return maximum size of network message. <br /></td></tr>
+<tr class="separator:aed6bac50a6d66d6d666f1085096de7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_network_connection"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_network_connection')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_network_connection.html">Urho3D::NetworkConnection</a></td></tr>
 <tr class="memitem:a54af55aac6441535d8f5a55169aa966a inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memItemLeft" align="right" valign="top"><a id="a54af55aac6441535d8f5a55169aa966a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>NetworkConnection</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -114,7 +117,8 @@ unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="memdesc:ab2a055f5eccdb3bdb94a21dbc5f630e8 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result may be 0, when connection is not State::Connected or when result is not applicable to the underlying transport. <br /></td></tr>
 <tr class="separator:ab2a055f5eccdb3bdb94a21dbc5f630e8 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5e7ffe8a1eb0d369854cf982ef3095d inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memItemLeft" align="right" valign="top"><a id="ab5e7ffe8a1eb0d369854cf982ef3095d"></a>
-<a class="el" href="class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33c">State</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetState</b> () const</td></tr>
+<a class="el" href="class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33c">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_connection.html#ab5e7ffe8a1eb0d369854cf982ef3095d">GetState</a> () const</td></tr>
+<tr class="memdesc:ab5e7ffe8a1eb0d369854cf982ef3095d inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current state of the connection. <br /></td></tr>
 <tr class="separator:ab5e7ffe8a1eb0d369854cf982ef3095d inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object"><td class="memItemLeft" align="right" valign="top"><a id="a95a6cd1c5c12a458fda4b38f873a334d"></a>
@@ -374,12 +378,6 @@ unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>port_</b> =
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#aecf686841d86be7e4a2c0092b60d31ad">context_</a></td></tr>
 <tr class="memdesc:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution context. <br /></td></tr>
 <tr class="separator:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
-Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a48c35366fd15d9505b008a43cc6ba25c"><td class="memItemLeft" align="right" valign="top"><a id="a48c35366fd15d9505b008a43cc6ba25c"></a>
-static const unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>maxDataSize_</b> = UINT16_MAX</td></tr>
-<tr class="separator:a48c35366fd15d9505b008a43cc6ba25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
