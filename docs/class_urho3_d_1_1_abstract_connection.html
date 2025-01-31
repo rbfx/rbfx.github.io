@@ -89,6 +89,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae88595578997390056147f29f9b784bd"><td class="memItemLeft" align="right" valign="top"><a id="ae88595578997390056147f29f9b784bd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AbstractConnection</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
 <tr class="separator:ae88595578997390056147f29f9b784bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5c6bd24d4ede9bd746285486e4e6043"><td class="memItemLeft" align="right" valign="top"><a id="ae5c6bd24d4ede9bd746285486e4e6043"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLogAllMessages</b> (bool enabled)</td></tr>
+<tr class="separator:ae5c6bd24d4ede9bd746285486e4e6043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d39c4f05fa6777a2e642bddca4ff69d"><td class="memItemLeft" align="right" valign="top"><a id="a6d39c4f05fa6777a2e642bddca4ff69d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsLogAllMessages</b> () const</td></tr>
+<tr class="separator:a6d39c4f05fa6777a2e642bddca4ff69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca38662b8421e22799dd396154d354d7"><td class="memItemLeft" align="right" valign="top"><a id="aca38662b8421e22799dd396154d354d7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#aca38662b8421e22799dd396154d354d7">SetMaxPacketSize</a> (unsigned limit)</td></tr>
 <tr class="memdesc:aca38662b8421e22799dd396154d354d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximum size of network packet. <a class="el" href="class_urho3_d_1_1_connection.html" title="Connection to a remote network host.">Connection</a> transport may override this value. <br /></td></tr>
@@ -137,13 +143,13 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetMaxMessageSize
 <tr class="memitem:a77d6e3d83b7038f6d4ce5f16ca1e5557"><td class="memItemLeft" align="right" valign="top"><a id="a77d6e3d83b7038f6d4ce5f16ca1e5557"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessage</b> (NetworkMessageId messageId, const <a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorBuffer</a> &amp;msg, PacketTypeFlags packetType=PacketType::ReliableOrdered, ea::string_view debugInfo={})</td></tr>
 <tr class="separator:a77d6e3d83b7038f6d4ce5f16ca1e5557"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52ceda2ecbeec4f01c9b25449d4c118a"><td class="memItemLeft" align="right" valign="top"><a id="a52ceda2ecbeec4f01c9b25449d4c118a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LogReceivedMessage</b> (NetworkMessageId messageId, ea::string_view debugInfo) const</td></tr>
-<tr class="separator:a52ceda2ecbeec4f01c9b25449d4c118a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc6b819959b1466f6b5e0b13eb6691bc"><td class="memTemplParams" colspan="2"><a id="abc6b819959b1466f6b5e0b13eb6691bc"></a>
+<tr class="memitem:a3ec419ce2e8bf4e01e69104a6c537aee"><td class="memItemLeft" align="right" valign="top"><a id="a3ec419ce2e8bf4e01e69104a6c537aee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LogMessagePayload</b> (NetworkMessageId messageId, ea::string_view debugInfo) const</td></tr>
+<tr class="separator:a3ec419ce2e8bf4e01e69104a6c537aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a3e228a58311f4530a6502cc9432ea"><td class="memTemplParams" colspan="2"><a id="aa0a3e228a58311f4530a6502cc9432ea"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:abc6b819959b1466f6b5e0b13eb6691bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>LogReceivedMessage</b> (NetworkMessageId messageId, const T &amp;message) const</td></tr>
-<tr class="separator:abc6b819959b1466f6b5e0b13eb6691bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a3e228a58311f4530a6502cc9432ea"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>LogMessagePayload</b> (NetworkMessageId messageId, const T &amp;message) const</td></tr>
+<tr class="separator:aa0a3e228a58311f4530a6502cc9432ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8884ac2291eac855a6ead7231832962f"><td class="memItemLeft" align="right" valign="top"><a id="a8884ac2291eac855a6ead7231832962f"></a>
 LogLevel&#160;</td><td class="memItemRight" valign="bottom"><b>GetMessageLogLevel</b> (NetworkMessageId messageId) const</td></tr>
 <tr class="separator:a8884ac2291eac855a6ead7231832962f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -393,6 +399,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:aa9560e39978513c8f11a0d6835d922f5"><td class="memItemLeft" align="right" valign="top"><a id="aa9560e39978513c8f11a0d6835d922f5"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>maxPacketSize_</b> {}</td></tr>
 <tr class="separator:aa9560e39978513c8f11a0d6835d922f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae56bb07c221b2c6d10219169b650b4d6"><td class="memItemLeft" align="right" valign="top"><a id="ae56bb07c221b2c6d10219169b650b4d6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>logAllMessages_</b> {}</td></tr>
+<tr class="separator:ae56bb07c221b2c6d10219169b650b4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a325fe4d29297a08cc810c33a19a84157"><td class="memItemLeft" align="right" valign="top"><a id="a325fe4d29297a08cc810c33a19a84157"></a>
 ByteVector&#160;</td><td class="memItemRight" valign="bottom"><b>incomingMessageBuffer_</b></td></tr>
 <tr class="separator:a325fe4d29297a08cc810c33a19a84157"><td class="memSeparator" colspan="2">&#160;</td></tr>

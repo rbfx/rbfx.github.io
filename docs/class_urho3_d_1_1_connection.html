@@ -232,6 +232,12 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="memitem:ae88595578997390056147f29f9b784bd inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="ae88595578997390056147f29f9b784bd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AbstractConnection</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
 <tr class="separator:ae88595578997390056147f29f9b784bd inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5c6bd24d4ede9bd746285486e4e6043 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="ae5c6bd24d4ede9bd746285486e4e6043"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLogAllMessages</b> (bool enabled)</td></tr>
+<tr class="separator:ae5c6bd24d4ede9bd746285486e4e6043 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d39c4f05fa6777a2e642bddca4ff69d inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="a6d39c4f05fa6777a2e642bddca4ff69d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsLogAllMessages</b> () const</td></tr>
+<tr class="separator:a6d39c4f05fa6777a2e642bddca4ff69d inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe3cbae4c156eb8b299ff6e97fd65cb4 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_abstract_connection.html#abe3cbae4c156eb8b299ff6e97fd65cb4">GetMaxPacketSize</a> () const</td></tr>
 <tr class="separator:abe3cbae4c156eb8b299ff6e97fd65cb4 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26fd02c0d4cb8390858e3825feafe48d inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="a26fd02c0d4cb8390858e3825feafe48d"></a>
@@ -242,13 +248,13 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetMaxMessageSize
 <tr class="memitem:a77d6e3d83b7038f6d4ce5f16ca1e5557 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="a77d6e3d83b7038f6d4ce5f16ca1e5557"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessage</b> (NetworkMessageId messageId, const <a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorBuffer</a> &amp;msg, PacketTypeFlags packetType=PacketType::ReliableOrdered, ea::string_view debugInfo={})</td></tr>
 <tr class="separator:a77d6e3d83b7038f6d4ce5f16ca1e5557 inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52ceda2ecbeec4f01c9b25449d4c118a inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="a52ceda2ecbeec4f01c9b25449d4c118a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LogReceivedMessage</b> (NetworkMessageId messageId, ea::string_view debugInfo) const</td></tr>
-<tr class="separator:a52ceda2ecbeec4f01c9b25449d4c118a inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc6b819959b1466f6b5e0b13eb6691bc inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memTemplParams" colspan="2"><a id="abc6b819959b1466f6b5e0b13eb6691bc"></a>
+<tr class="memitem:a3ec419ce2e8bf4e01e69104a6c537aee inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="a3ec419ce2e8bf4e01e69104a6c537aee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LogMessagePayload</b> (NetworkMessageId messageId, ea::string_view debugInfo) const</td></tr>
+<tr class="separator:a3ec419ce2e8bf4e01e69104a6c537aee inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a3e228a58311f4530a6502cc9432ea inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memTemplParams" colspan="2"><a id="aa0a3e228a58311f4530a6502cc9432ea"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:abc6b819959b1466f6b5e0b13eb6691bc inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>LogReceivedMessage</b> (NetworkMessageId messageId, const T &amp;message) const</td></tr>
-<tr class="separator:abc6b819959b1466f6b5e0b13eb6691bc inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a3e228a58311f4530a6502cc9432ea inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>LogMessagePayload</b> (NetworkMessageId messageId, const T &amp;message) const</td></tr>
+<tr class="separator:aa0a3e228a58311f4530a6502cc9432ea inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8884ac2291eac855a6ead7231832962f inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memItemLeft" align="right" valign="top"><a id="a8884ac2291eac855a6ead7231832962f"></a>
 LogLevel&#160;</td><td class="memItemRight" valign="bottom"><b>GetMessageLogLevel</b> (NetworkMessageId messageId) const</td></tr>
 <tr class="separator:a8884ac2291eac855a6ead7231832962f inherit pub_methods_class_urho3_d_1_1_abstract_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -1,5 +1,8 @@
 var NAVTREEINDEX50 =
 {
+"class_urho3_d_1_1_polyhedron.html#aad454fa12c237493d672fe432a31bf9c":[8,0,2,536,4],
+"class_urho3_d_1_1_polyhedron.html#ab4853dda1c08507ed3871352f4e935c4":[8,0,2,536,3],
+"class_urho3_d_1_1_polyhedron.html#ac049c992a7a2d428f691a8766916b01a":[8,0,2,536,21],
 "class_urho3_d_1_1_polyhedron.html#acb4941727d1b711c77f4e8062928ff65":[8,0,2,536,8],
 "class_urho3_d_1_1_polyhedron.html#adccd818de1b824123ef93c9d48d1e075":[8,0,2,536,10],
 "class_urho3_d_1_1_polyhedron.html#adf53bf03296059dd391877e581f78a91":[8,0,2,536,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX50 =
 "class_urho3_d_1_1_quaternion.html#a98889af120551d661b209a98a47818e6":[8,0,2,550,34],
 "class_urho3_d_1_1_quaternion.html#a9ec7abf5e6056b033d2be7fafa312365":[8,0,2,550,37],
 "class_urho3_d_1_1_quaternion.html#aa38091bbbde494c635f88d4a747c9917":[8,0,2,550,18],
-"class_urho3_d_1_1_quaternion.html#aa873e761885025dc47178cb1464c8838":[8,0,2,550,14],
-"class_urho3_d_1_1_quaternion.html#aaa5218028498bfc52cd25cd4c341a59f":[8,0,2,550,35],
-"class_urho3_d_1_1_quaternion.html#ab0fb7d74bb71be0d5ca3b14d0d08e8ec":[8,0,2,550,0],
-"class_urho3_d_1_1_quaternion.html#ab438a481269a510b3683a7d0f5cec9ec":[8,0,2,550,10]
+"class_urho3_d_1_1_quaternion.html#aa873e761885025dc47178cb1464c8838":[8,0,2,550,14]
 };
