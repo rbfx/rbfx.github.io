@@ -41,10 +41,6 @@ var dir_8a65c0f2772aac66424a8efb5dfdca3e =
     [ "StaticNetworkObject.h", "_static_network_object_8h.html", [
       [ "StaticNetworkObject", "class_urho3_d_1_1_static_network_object.html", "class_urho3_d_1_1_static_network_object" ]
     ] ],
-    [ "TickSynchronizer.h", "_tick_synchronizer_8h.html", [
-      [ "TickSynchronizer", "class_urho3_d_1_1_tick_synchronizer.html", "class_urho3_d_1_1_tick_synchronizer" ],
-      [ "PhysicsTickSynchronizer", "class_urho3_d_1_1_physics_tick_synchronizer.html", "class_urho3_d_1_1_physics_tick_synchronizer" ]
-    ] ],
     [ "TrackedAnimatedModel.h", "_tracked_animated_model_8h.html", [
       [ "TrackedAnimatedModel", "class_urho3_d_1_1_tracked_animated_model.html", "class_urho3_d_1_1_tracked_animated_model" ]
     ] ]

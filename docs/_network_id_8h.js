@@ -1,5 +1,6 @@
 var _network_id_8h =
 [
+    [ "NetworkFrameSync", "struct_urho3_d_1_1_network_frame_sync.html", "struct_urho3_d_1_1_network_frame_sync" ],
     [ "NetworkId", "_network_id_8h.html#abdf13fca35c18bb01515f2224b08b23e", null ],
     [ "NetworkFrame", "_network_id_8h.html#a6c75215b5732511b6252265cf74a363b", [
       [ "Min", "_network_id_8h.html#a6c75215b5732511b6252265cf74a363ba78d811e98514cd165dda532286610fd2", null ],

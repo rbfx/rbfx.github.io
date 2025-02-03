@@ -1,6 +1,5 @@
 var NAVTREEINDEX19 =
 {
-"class_urho3_d_1_1_constraint_friction2_d.html#afb9d2a70b4c1b97aa0c37ee3154a4fc0":[8,0,2,144,12],
 "class_urho3_d_1_1_constraint_gear2_d.html":[8,0,2,145],
 "class_urho3_d_1_1_constraint_gear2_d.html#a3bfb61ab20aee015a3ec7c0d0d1c5fb3":[8,0,2,145,10],
 "class_urho3_d_1_1_constraint_gear2_d.html#a495103c5492da7d6838b15466863e6a3":[8,0,2,145,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX19 =
 "class_urho3_d_1_1_crowd_agent.html#a66f73415acd8ca43b52275fa094e83f5":[8,0,2,158,68],
 "class_urho3_d_1_1_crowd_agent.html#a66fa42c34780c8710a52f15e749576d8":[8,0,2,158,20],
 "class_urho3_d_1_1_crowd_agent.html#a6c37124d028ca907fbf961664b86be10":[8,0,2,158,65],
-"class_urho3_d_1_1_crowd_agent.html#a721c3cbcf88027c7e074a055746559d2":[8,0,2,158,64]
+"class_urho3_d_1_1_crowd_agent.html#a721c3cbcf88027c7e074a055746559d2":[8,0,2,158,64],
+"class_urho3_d_1_1_crowd_agent.html#a72f4e3378a2a6ef1679f1e94b409d286":[8,0,2,158,40]
 };

@@ -91,7 +91,11 @@ Inheritance diagram for Urho3D::ReplicationManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_replication_manager_1_1_attributes.html">Attributes</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_replication_manager_1_1_client_data.html">ClientData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_replication_manager_1_1_standalone_data.html">StandaloneData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -119,6 +123,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_replication_manager.html#a78ac48472049d7153f545a9b3b44dd1b">DropConnection</a> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection)</td></tr>
 <tr class="memdesc:a78ac48472049d7153f545a9b3b44dd1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process connection dropped. Removes client connection for server, converts scene to standalone for client. <br /></td></tr>
 <tr class="separator:a78ac48472049d7153f545a9b3b44dd1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a3b8d34a5af078f90c5dd63d003a2d1b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_replication_manager.html#a3b8d34a5af078f90c5dd63d003a2d1b6">IsFixedUpdateServer</a> () const</td></tr>
+<tr class="separator:a3b8d34a5af078f90c5dd63d003a2d1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7414f0456c894a66f06afbde63420868"><td class="memItemLeft" align="right" valign="top"><a id="a7414f0456c894a66f06afbde63420868"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetFixedUpdateServer</b> (bool fixed)</td></tr>
+<tr class="separator:a7414f0456c894a66f06afbde63420868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda907f495b44cecca9a4126e49bfef4"><td class="memItemLeft" align="right" valign="top"><a id="abda907f495b44cecca9a4126e49bfef4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsAllowZeroUpdatesOnServer</b> () const</td></tr>
+<tr class="separator:abda907f495b44cecca9a4126e49bfef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a524a43f3387837b8ed92d4c19140aa8f"><td class="memItemLeft" align="right" valign="top"><a id="a524a43f3387837b8ed92d4c19140aa8f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAllowZeroUpdatesOnServer</b> (bool allow)</td></tr>
+<tr class="separator:a524a43f3387837b8ed92d4c19140aa8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a557acd483d74aee40b7dc34eb6594fb4"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_replication_manager.html#a557acd483d74aee40b7dc34eb6594fb4">GetUpdateFrequency</a> () const</td></tr>
 <tr class="separator:a557acd483d74aee40b7dc34eb6594fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -617,10 +633,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:aed2dd92804b751baf8f7d13d86a93052"><td class="memItemLeft" align="right" valign="top"><a id="aed2dd92804b751baf8f7d13d86a93052"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnComponentAdded</b> (<a class="el" href="class_urho3_d_1_1_tracked_component_base.html">TrackedComponentBase</a> *baseComponent) override</td></tr>
 <tr class="separator:aed2dd92804b751baf8f7d13d86a93052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_class_urho3_d_1_1_network_object_registry"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_network_object_registry')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_network_object_registry.html">Urho3D::NetworkObjectRegistry</a></td></tr>
-<tr class="memitem:a46bfde039497cce60ff82f2fccee4767 inherit pro_methods_class_urho3_d_1_1_network_object_registry"><td class="memItemLeft" align="right" valign="top"><a id="a46bfde039497cce60ff82f2fccee4767"></a>
+<tr class="memitem:ac5443f0c2b177c4385a4e32335a56196"><td class="memItemLeft" align="right" valign="top"><a id="ac5443f0c2b177c4385a4e32335a56196"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnComponentRemoved</b> (<a class="el" href="class_urho3_d_1_1_tracked_component_base.html">TrackedComponentBase</a> *baseComponent) override</td></tr>
-<tr class="separator:a46bfde039497cce60ff82f2fccee4767 inherit pro_methods_class_urho3_d_1_1_network_object_registry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ac5443f0c2b177c4385a4e32335a56196"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_urho3_d_1_1_referenced_component_registry_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_referenced_component_registry_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_referenced_component_registry_base.html">Urho3D::ReferencedComponentRegistryBase</a></td></tr>
 <tr class="memitem:a8b81e6868db4e6a4385858e1cc8f5ad8 inherit pro_methods_class_urho3_d_1_1_referenced_component_registry_base"><td class="memItemLeft" align="right" valign="top"><a id="a8b81e6868db4e6a4385858e1cc8f5ad8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnComponentAdded</b> (<a class="el" href="class_urho3_d_1_1_tracked_component_base.html">TrackedComponentBase</a> *baseComponent) override</td></tr>
@@ -678,6 +693,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a2d328631fd01fc4c823c7bebb7d0d247"><td class="memItemLeft" align="right" valign="top"><a id="a2d328631fd01fc4c823c7bebb7d0d247"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnSceneUpdate</b> (float timeStep)</td></tr>
 <tr class="separator:a2d328631fd01fc4c823c7bebb7d0d247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace9ef77dbc5bb0b98a5f75fcf1ae5b9b"><td class="memItemLeft" align="right" valign="top"><a id="ace9ef77dbc5bb0b98a5f75fcf1ae5b9b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeObjectsStandalone</b> ()</td></tr>
+<tr class="separator:ace9ef77dbc5bb0b98a5f75fcf1ae5b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea663a9be9b61e7293ecb94e429e5689"><td class="memItemLeft" align="right" valign="top"><a id="aea663a9be9b61e7293ecb94e429e5689"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Stop</b> ()</td></tr>
 <tr class="separator:aea663a9be9b61e7293ecb94e429e5689"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -690,6 +708,9 @@ ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetUninitialize
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:ad55428643c4a4903130c43efe492e840"><td class="memItemLeft" align="right" valign="top"><a id="ad55428643c4a4903130c43efe492e840"></a>
+struct <a class="el" href="struct_urho3_d_1_1_replication_manager_1_1_attributes.html">Urho3D::ReplicationManager::Attributes</a>&#160;</td><td class="memItemRight" valign="bottom"><b>attributes_</b></td></tr>
+<tr class="separator:ad55428643c4a4903130c43efe492e840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4f010ff2b09c04d6ea664a25a762256"><td class="memItemLeft" align="right" valign="top"><a id="aa4f010ff2b09c04d6ea664a25a762256"></a>
 ReplicationManagerMode&#160;</td><td class="memItemRight" valign="bottom"><b>mode_</b> {}</td></tr>
 <tr class="separator:aa4f010ff2b09c04d6ea664a25a762256"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -699,6 +720,9 @@ ReplicationManagerMode&#160;</td><td class="memItemRight" valign="bottom"><b>mod
 <tr class="memitem:a21613253c6f147e8b1482a8fd41043e2"><td class="memItemLeft" align="right" valign="top"><a id="a21613253c6f147e8b1482a8fd41043e2"></a>
 ea::optional&lt; <a class="el" href="struct_urho3_d_1_1_replication_manager_1_1_client_data.html">ClientData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>client_</b></td></tr>
 <tr class="separator:a21613253c6f147e8b1482a8fd41043e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7b106ec1b6c4ca6f7131823cc983ad"><td class="memItemLeft" align="right" valign="top"><a id="a9d7b106ec1b6c4ca6f7131823cc983ad"></a>
+<a class="el" href="struct_urho3_d_1_1_replication_manager_1_1_standalone_data.html">StandaloneData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>standalone_</b></td></tr>
+<tr class="separator:a9d7b106ec1b6c4ca6f7131823cc983ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -774,6 +798,32 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div><div class="memdoc">
 <p>Return current state specific to client or server. </p>
+
+</div>
+</div>
+<a id="a3b8d34a5af078f90c5dd63d003a2d1b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b8d34a5af078f90c5dd63d003a2d1b6">&#9670;&nbsp;</a></span>IsFixedUpdateServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Urho3D::ReplicationManager::IsFixedUpdateServer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="struct_urho3_d_1_1_replication_manager_1_1_attributes.html">Attributes</a>. </p>
 
 </div>
 </div>

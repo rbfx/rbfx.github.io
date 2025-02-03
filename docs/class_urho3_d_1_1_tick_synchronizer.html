@@ -79,6 +79,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af3a44a8f42e04cec546a65251831caf1"><td class="memItemLeft" align="right" valign="top"><a id="af3a44a8f42e04cec546a65251831caf1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetFollowerFrequency</b> (unsigned followerFrequency)</td></tr>
 <tr class="separator:af3a44a8f42e04cec546a65251831caf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bbf63b63dff48e899d66ff229ebdddd"><td class="memItemLeft" align="right" valign="top"><a id="a3bbf63b63dff48e899d66ff229ebdddd"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetFollowerFrequency</b> () const</td></tr>
+<tr class="separator:a3bbf63b63dff48e899d66ff229ebdddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f4da5d7bf66b3daf6c29790dce25d66"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_tick_synchronizer.html#a6f4da5d7bf66b3daf6c29790dce25d66">Synchronize</a> (float overtime)</td></tr>
 <tr class="separator:a6f4da5d7bf66b3daf6c29790dce25d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb95af1b58013c421972a29ff6664897"><td class="memItemLeft" align="right" valign="top"><a id="aeb95af1b58013c421972a29ff6664897"></a>
@@ -86,13 +89,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:aeb95af1b58013c421972a29ff6664897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update follower clock within one tick of leader clock. <br /></td></tr>
 <tr class="separator:aeb95af1b58013c421972a29ff6664897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a018d9f66ab97a2416444a2ecd2bfb458"><td class="memItemLeft" align="right" valign="top"><a id="a018d9f66ab97a2416444a2ecd2bfb458"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetPendingFollowerTicks</b> () const</td></tr>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_tick_synchronizer.html#a018d9f66ab97a2416444a2ecd2bfb458">GetPendingFollowerTicks</a> () const</td></tr>
+<tr class="memdesc:a018d9f66ab97a2416444a2ecd2bfb458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of the follower clock ticks that are expected to happen during current engine update. <br /></td></tr>
 <tr class="separator:a018d9f66ab97a2416444a2ecd2bfb458"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bbf63b63dff48e899d66ff229ebdddd"><td class="memItemLeft" align="right" valign="top"><a id="a3bbf63b63dff48e899d66ff229ebdddd"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetFollowerFrequency</b> () const</td></tr>
-<tr class="separator:a3bbf63b63dff48e899d66ff229ebdddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02c41832f8995942b3399db49f2b6232"><td class="memItemLeft" align="right" valign="top"><a id="a02c41832f8995942b3399db49f2b6232"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>GetFollowerAccumulatedTime</b> () const</td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_tick_synchronizer.html#a02c41832f8995942b3399db49f2b6232">GetFollowerAccumulatedTime</a> () const</td></tr>
+<tr class="memdesc:a02c41832f8995942b3399db49f2b6232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return amount of time elapsed after latest follower tick. <br /></td></tr>
 <tr class="separator:a02c41832f8995942b3399db49f2b6232"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
@@ -123,7 +125,11 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>numPendingFollowe
 <tr class="separator:a2496f81a79b6508fbaec4b69250df3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Helper class that synchronizes two fixed-timestep clocks. Leader clock should not tick faster than follower clock. Leader clock should be explicitly reset on each tick. </p>
+<div class="textblock"><p>Helper class that synchronizes two fixed-timestep clocks. Leader and follower ticks are considered synchronized if their beginnings logically correspond to the same moment in time. </p><dl class="section note"><dt>Note</dt><dd>Leader clock should not tick faster than follower clock. </dd>
+<dd>
+Leader clock should be explicitly reset on each tick. </dd>
+<dd>
+Follower clock will never tick ahead of the leader clock. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6f4da5d7bf66b3daf6c29790dce25d66"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f4da5d7bf66b3daf6c29790dce25d66">&#9670;&nbsp;</a></span>Synchronize()</h2>
@@ -145,7 +151,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>numPendingFollowe
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/Replica/<a class="el" href="_tick_synchronizer_8h.html">TickSynchronizer.h</a></li>
+<li>Urho3D/Replica/TickSynchronizer.h</li>
 <li>Urho3D/Replica/TickSynchronizer.cpp</li>
 </ul>
 </div><!-- contents -->

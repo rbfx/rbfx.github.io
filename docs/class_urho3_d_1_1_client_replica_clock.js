@@ -28,12 +28,12 @@ var class_urho3_d_1_1_client_replica_clock =
     [ "isNewInputFrame_", "class_urho3_d_1_1_client_replica_clock.html#a04a585c4ad3bd12fabd6097c8169fcd0", null ],
     [ "latestScaledInputTime_", "class_urho3_d_1_1_client_replica_clock.html#ad8ac9b298a7a2927991f7301da278002", null ],
     [ "latestServerFrame_", "class_urho3_d_1_1_client_replica_clock.html#a231d7ad18319de137685a8f9a8ec9eb7", null ],
-    [ "physicsSync_", "class_urho3_d_1_1_client_replica_clock.html#a3ac783c3eb9bdb3e367907a942d74dca", null ],
     [ "replicaTime_", "class_urho3_d_1_1_client_replica_clock.html#ad564d4f1a50f80e03a0ad9aff15b9e8e", null ],
     [ "replicaTimeStep_", "class_urho3_d_1_1_client_replica_clock.html#aa5be1efdb866c90c1cf5e8387cd8fbc3", null ],
     [ "scene_", "class_urho3_d_1_1_client_replica_clock.html#a826db704d74dd8891c7d83bc1a90321a", null ],
     [ "serverSettings_", "class_urho3_d_1_1_client_replica_clock.html#a1089b94c41c969ec4c76e98c0224a7ad", null ],
     [ "serverTime_", "class_urho3_d_1_1_client_replica_clock.html#a25cec6e019a12a43392e54d28093998f", null ],
     [ "thisConnectionId_", "class_urho3_d_1_1_client_replica_clock.html#a7db023866dc7fd3585f48956a68febd2", null ],
-    [ "updateFrequency_", "class_urho3_d_1_1_client_replica_clock.html#a44bbfd281b85eaabb4ebab34a91dd0a5", null ]
+    [ "updateFrequency_", "class_urho3_d_1_1_client_replica_clock.html#a44bbfd281b85eaabb4ebab34a91dd0a5", null ],
+    [ "updateSync_", "class_urho3_d_1_1_client_replica_clock.html#a173e9351a97759e983d5391b8d308ac2", null ]
 ];

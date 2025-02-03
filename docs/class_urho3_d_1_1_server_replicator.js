@@ -23,10 +23,10 @@ var class_urho3_d_1_1_server_replicator =
     [ "connections_", "class_urho3_d_1_1_server_replicator.html#acd5ddeabab6bb903e1715574bab41ba7", null ],
     [ "currentFrame_", "class_urho3_d_1_1_server_replicator.html#a90091181ec742302a8b47edc61d8a089", null ],
     [ "network_", "class_urho3_d_1_1_server_replicator.html#ae79c8c20f1afd31fda6e2c32e1f5ced8", null ],
-    [ "objectRegistry_", "class_urho3_d_1_1_server_replicator.html#aca93e9da927f4f753e830da20279a37d", null ],
-    [ "physicsSync_", "class_urho3_d_1_1_server_replicator.html#a3831efdf3472526077df86a4baf03d79", null ],
+    [ "replicationManager_", "class_urho3_d_1_1_server_replicator.html#ab478b35e0efa1083df1ffb6f61c7f403", null ],
     [ "scene_", "class_urho3_d_1_1_server_replicator.html#af7971a5e80ab377c4a48cba947f1eb5b", null ],
     [ "settings_", "class_urho3_d_1_1_server_replicator.html#a177d5ff6f4a0a7006a155780dc6a6d34", null ],
     [ "sharedState_", "class_urho3_d_1_1_server_replicator.html#ab351788ff580471fce9df53bf790e08a", null ],
-    [ "updateFrequency_", "class_urho3_d_1_1_server_replicator.html#a80f5a3348500e257ed3a96daa93bd0f5", null ]
+    [ "updateFrequency_", "class_urho3_d_1_1_server_replicator.html#a80f5a3348500e257ed3a96daa93bd0f5", null ],
+    [ "updateSync_", "class_urho3_d_1_1_server_replicator.html#ae94044537462613bdc96d7dfc989be91", null ]
 ];
