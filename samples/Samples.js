@@ -233,14 +233,6 @@ var /** @type {!Int8Array} */ HEAP8, /** @type {!Uint8Array} */ HEAPU8, /** @typ
 
 var runtimeInitialized = false;
 
-// Prefix of data URIs emitted by SINGLE_FILE and related options.
-var dataURIPrefix = "data:application/octet-stream;base64,";
-
-/**
- * Indicates whether filename is a base64 data URI.
- * @noinline
- */ var isDataURI = filename => filename.startsWith(dataURIPrefix);
-
 /**
  * Indicates whether filename is delivered via file protocol (as opposed to http/https)
  * @noinline
@@ -270,18 +262,6 @@ function updateMemoryViews() {
 }
 
 // end include: runtime_shared.js
-var __ATPRERUN__ = [];
-
-// functions called before the runtime is initialized
-var __ATINIT__ = [];
-
-// functions called during startup
-var __ATMAIN__ = [];
-
-// functions called during shutdown
-var __ATPOSTRUN__ = [];
-
-// functions called after the main() is called
 function preRun() {
   if (Module["preRun"]) {
     if (typeof Module["preRun"] == "function") Module["preRun"] = [ Module["preRun"] ];
@@ -289,21 +269,19 @@ function preRun() {
       addOnPreRun(Module["preRun"].shift());
     }
   }
-  callRuntimeCallbacks(__ATPRERUN__);
+  callRuntimeCallbacks(onPreRuns);
 }
 
 function initRuntime() {
   runtimeInitialized = true;
   SOCKFS.root = FS.mount(SOCKFS, {}, null);
   if (!Module["noFSInit"] && !FS.initialized) FS.init();
-  FS.ignorePermissions = false;
   TTY.init();
-  callRuntimeCallbacks(__ATINIT__);
+  wasmExports["__wasm_call_ctors"]();
+  FS.ignorePermissions = false;
 }
 
-function preMain() {
-  callRuntimeCallbacks(__ATMAIN__);
-}
+function preMain() {}
 
 function postRun() {
   if (Module["postRun"]) {
@@ -312,19 +290,7 @@ function postRun() {
       addOnPostRun(Module["postRun"].shift());
     }
   }
-  callRuntimeCallbacks(__ATPOSTRUN__);
-}
-
-function addOnPreRun(cb) {
-  __ATPRERUN__.unshift(cb);
-}
-
-function addOnInit(cb) {
-  __ATINIT__.unshift(cb);
-}
-
-function addOnPostRun(cb) {
-  __ATPOSTRUN__.unshift(cb);
+  callRuntimeCallbacks(onPostRuns);
 }
 
 // A counter of dependencies for calling run(). If we need to
@@ -390,11 +356,7 @@ function removeRunDependency(id) {
 var wasmBinaryFile;
 
 function findWasmBinary() {
-  var f = "Samples.wasm";
-  if (!isDataURI(f)) {
-    return locateFile(f);
-  }
-  return f;
+  return locateFile("Samples.wasm");
 }
 
 function getBinarySync(file) {
@@ -432,7 +394,7 @@ async function instantiateArrayBuffer(binaryFile, imports) {
 }
 
 async function instantiateAsync(binary, binaryFile, imports) {
-  if (!binary && typeof WebAssembly.instantiateStreaming == "function" && !isDataURI(binaryFile) && !isFileURI(binaryFile) && !ENVIRONMENT_IS_NODE) {
+  if (!binary && typeof WebAssembly.instantiateStreaming == "function" && !isFileURI(binaryFile) && !ENVIRONMENT_IS_NODE) {
     try {
       var response = fetch(binaryFile, {
         credentials: "same-origin"
@@ -468,7 +430,6 @@ async function createWasm() {
     wasmMemory = wasmExports["memory"];
     updateMemoryViews();
     wasmTable = wasmExports["__indirect_function_table"];
-    addOnInit(wasmExports["__wasm_call_ctors"]);
     removeRunDependency("wasm-instantiate");
     return wasmExports;
   }
@@ -490,12 +451,12 @@ async function createWasm() {
   // Also pthreads and wasm workers initialize the wasm instance through this
   // path.
   if (Module["instantiateWasm"]) {
-    try {
-      return Module["instantiateWasm"](info, receiveInstance);
-    } catch (e) {
-      err(`Module.instantiateWasm callback failed with error: ${e}`);
-      return false;
-    }
+    return new Promise((resolve, reject) => {
+      Module["instantiateWasm"](info, (mod, inst) => {
+        receiveInstance(mod, inst);
+        resolve(mod.exports);
+      });
+    });
   }
   wasmBinaryFile ??= findWasmBinary();
   var result = await instantiateAsync(wasmBinary, wasmBinaryFile, info);
@@ -505,7 +466,7 @@ async function createWasm() {
 
 // === Body ===
 var ASM_CONSTS = {
-  1948224: $0 => {
+  1948512: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -513,10 +474,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1948449: ($0, $1) => {
+  1948737: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1948506: () => {
+  1948794: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -524,7 +485,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1948653: () => {
+  1948941: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -532,7 +493,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1948887: $0 => {
+  1949175: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -554,11 +515,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1949380: () => {
+  1949668: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1949448: ($0, $1, $2, $3) => {
+  1949736: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -599,7 +560,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1951100: ($0, $1, $2, $3) => {
+  1951388: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -611,7 +572,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1951510: ($0, $1) => {
+  1951798: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -630,7 +591,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1952115: ($0, $1) => {
+  1952403: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -643,7 +604,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1952595: $0 => {
+  1952883: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -681,7 +642,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1953767: ($0, $1, $2) => {
+  1954055: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -752,7 +713,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1955236: ($0, $1, $2, $3, $4) => {
+  1955524: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -789,19 +750,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1956225: $0 => {
+  1956513: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1956308: () => {
+  1956596: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1956377: () => window.innerWidth,
-  1956407: () => window.innerHeight,
-  1956438: $0 => {
+  1956665: () => window.innerWidth,
+  1956695: () => window.innerHeight,
+  1956726: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
@@ -840,6 +801,14 @@ var callRuntimeCallbacks = callbacks => {
     callbacks.shift()(Module);
   }
 };
+
+var onPostRuns = [];
+
+var addOnPostRun = cb => onPostRuns.unshift(cb);
+
+var onPreRuns = [];
+
+var addOnPreRun = cb => onPreRuns.unshift(cb);
 
 var noExitRuntime = Module["noExitRuntime"] || true;
 
@@ -6283,6 +6252,7 @@ var Browser = {
   workers: [],
   preloadedImages: {},
   preloadedAudios: {},
+  getCanvas: () => Module["canvas"],
   init() {
     if (Browser.initted) return;
     Browser.initted = true;
@@ -6389,9 +6359,10 @@ var Browser = {
     preloadPlugins.push(audioPlugin);
     // Canvas event setup
     function pointerLockChange() {
-      Browser.pointerLock = document["pointerLockElement"] === Module["canvas"] || document["mozPointerLockElement"] === Module["canvas"] || document["webkitPointerLockElement"] === Module["canvas"] || document["msPointerLockElement"] === Module["canvas"];
+      var canvas = Browser.getCanvas();
+      Browser.pointerLock = document["pointerLockElement"] === canvas || document["mozPointerLockElement"] === canvas || document["webkitPointerLockElement"] === canvas || document["msPointerLockElement"] === canvas;
     }
-    var canvas = Module["canvas"];
+    var canvas = Browser.getCanvas();
     if (canvas) {
       // forced aspect ratio can be enabled by defining 'forcedAspectRatio' on Module
       // Module['forcedAspectRatio'] = 4 / 3;
@@ -6405,8 +6376,8 @@ var Browser = {
       document.addEventListener("mspointerlockchange", pointerLockChange, false);
       if (Module["elementPointerLock"]) {
         canvas.addEventListener("click", ev => {
-          if (!Browser.pointerLock && Module["canvas"].requestPointerLock) {
-            Module["canvas"].requestPointerLock();
+          if (!Browser.pointerLock && Browser.getCanvas().requestPointerLock) {
+            Browser.getCanvas().requestPointerLock();
             ev.preventDefault();
           }
         }, false);
@@ -6414,7 +6385,7 @@ var Browser = {
     }
   },
   createContext(/** @type {HTMLCanvasElement} */ canvas, useWebGL, setInModule, webGLContextAttributes) {
-    if (useWebGL && Module["ctx"] && canvas == Module["canvas"]) return Module["ctx"];
+    if (useWebGL && Module["ctx"] && canvas == Browser.getCanvas()) return Module["ctx"];
     // no need to recreate GL context if it's already been created for this canvas.
     var ctx;
     var contextHandle;
@@ -6460,7 +6431,7 @@ var Browser = {
     Browser.resizeCanvas = resizeCanvas;
     if (typeof Browser.lockPointer == "undefined") Browser.lockPointer = true;
     if (typeof Browser.resizeCanvas == "undefined") Browser.resizeCanvas = false;
-    var canvas = Module["canvas"];
+    var canvas = Browser.getCanvas();
     function fullscreenChange() {
       Browser.isFullscreen = false;
       var canvasContainer = canvas.parentNode;
@@ -6589,9 +6560,8 @@ var Browser = {
   calculateMouseCoords(pageX, pageY) {
     // Calculate the movement based on the changes
     // in the coordinates.
-    var rect = Module["canvas"].getBoundingClientRect();
-    var cw = Module["canvas"].width;
-    var ch = Module["canvas"].height;
+    var canvas = Browser.getCanvas();
+    var rect = canvas.getBoundingClientRect();
     // Neither .scrollX or .pageXOffset are defined in a spec, but
     // we prefer .scrollX because it is currently in a spec draft.
     // (see: http://www.w3.org/TR/2013/WD-cssom-view-20131217/)
@@ -6602,8 +6572,8 @@ var Browser = {
     // the canvas might be CSS-scaled compared to its backbuffer;
     // SDL-using content will want mouse coordinates in terms
     // of backbuffer units.
-    adjustedX = adjustedX * (cw / rect.width);
-    adjustedY = adjustedY * (ch / rect.height);
+    adjustedX = adjustedX * (canvas.width / rect.width);
+    adjustedY = adjustedY * (canvas.height / rect.height);
     return {
       x: adjustedX,
       y: adjustedY
@@ -6654,11 +6624,11 @@ var Browser = {
   },
   resizeListeners: [],
   updateResizeListeners() {
-    var canvas = Module["canvas"];
+    var canvas = Browser.getCanvas();
     Browser.resizeListeners.forEach(listener => listener(canvas.width, canvas.height));
   },
   setCanvasSize(width, height, noUpdates) {
-    var canvas = Module["canvas"];
+    var canvas = Browser.getCanvas();
     Browser.updateCanvasDimensions(canvas, width, height);
     if (!noUpdates) Browser.updateResizeListeners();
   },
@@ -6672,7 +6642,7 @@ var Browser = {
       // set SDL_FULLSCREEN flag
       HEAP32[((SDL.screen) >> 2)] = flags;
     }
-    Browser.updateCanvasDimensions(Module["canvas"]);
+    Browser.updateCanvasDimensions(Browser.getCanvas());
     Browser.updateResizeListeners();
   },
   setWindowedCanvasSize() {
@@ -6683,7 +6653,7 @@ var Browser = {
       // clear SDL_FULLSCREEN flag
       HEAP32[((SDL.screen) >> 2)] = flags;
     }
-    Browser.updateCanvasDimensions(Module["canvas"]);
+    Browser.updateCanvasDimensions(Browser.getCanvas());
     Browser.updateResizeListeners();
   },
   updateCanvasDimensions(canvas, wNative, hNative) {
@@ -6869,6 +6839,11 @@ var GL = {
     var ret = GL.counter++;
     for (var i = table.length; i < ret; i++) {
       table[i] = null;
+    }
+    // Skip over any non-null elements that might have been created by
+    // glBindBuffer.
+    while (table[ret]) {
+      ret = GL.counter++;
     }
     return ret;
   },
@@ -7093,7 +7068,7 @@ var GL = {
     }
     // Make sure the canvas object no longer refers to the context object so
     // there are no GC surprises.
-    if (GL.contexts[contextHandle]?.GLctx?.canvas) {
+    if (GL.contexts[contextHandle]?.GLctx.canvas) {
       GL.contexts[contextHandle].GLctx.canvas.GLctxObject = undefined;
     }
     GL.contexts[contextHandle] = null;
@@ -7165,7 +7140,7 @@ var _eglCreateContext = (display, config, hmm, contextAttribs) => {
   EGL.contextAttributes.majorVersion = glesContextVersion - 1;
   // WebGL 1 is GLES 2, WebGL2 is GLES3
   EGL.contextAttributes.minorVersion = 0;
-  EGL.context = GL.createContext(Module["canvas"], EGL.contextAttributes);
+  EGL.context = GL.createContext(Browser.getCanvas(), EGL.contextAttributes);
   if (EGL.context != 0) {
     EGL.setErrorCode(12288);
     // Run callbacks so that GL emulation works
@@ -7807,6 +7782,8 @@ var runMainThreadEmAsm = (emAsmAddr, sigPtr, argbuf, sync) => {
 
 var _emscripten_asm_const_int_sync_on_main_thread = (emAsmAddr, sigPtr, argbuf) => runMainThreadEmAsm(emAsmAddr, sigPtr, argbuf, 1);
 
+var onExits = [];
+
 var JSEvents = {
   memcpy(target, src, size) {
     HEAP8.set(HEAP8.subarray(src, src + size), target);
@@ -8290,6 +8267,14 @@ var _emscripten_glBeginTransformFeedback = _glBeginTransformFeedback;
 var _emscripten_glBindAttribLocation = _glBindAttribLocation;
 
 /** @suppress {duplicate } */ var _glBindBuffer = (target, buffer) => {
+  // Calling glBindBuffer with an unknown buffer will implicitly create a
+  // new one.  Here we bypass `GL.counter` and directly using the ID passed
+  // in.
+  if (buffer && !GL.buffers[buffer]) {
+    var b = GLctx.createBuffer();
+    b.name = buffer;
+    GL.buffers[buffer] = b;
+  }
   if (target == 34962) {
     GLctx.currentArrayBufferBinding = buffer;
   } else if (target == 34963) {
