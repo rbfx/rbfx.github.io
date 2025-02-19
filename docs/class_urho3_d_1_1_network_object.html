@@ -102,6 +102,10 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#a117c6713af0580617352e54090a416aa">SetOwner</a> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *owner)</td></tr>
 <tr class="memdesc:a117c6713af0580617352e54090a416aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server-only: set owner connection which is allowed to send feedback for this object. <br /></td></tr>
 <tr class="separator:a117c6713af0580617352e54090a416aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e3a3e486afa7646c53317181f90de5"><td class="memItemLeft" align="right" valign="top"><a id="a44e3a3e486afa7646c53317181f90de5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#a44e3a3e486afa7646c53317181f90de5">SetParentNetworkObject</a> (NetworkId parentNetworkId)</td></tr>
+<tr class="memdesc:a44e3a3e486afa7646c53317181f90de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set another <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> as parent of this <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a>. <br /></td></tr>
+<tr class="separator:a44e3a3e486afa7646c53317181f90de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7195b9f6c02ee4c517dac54dc39e3c96"><td class="memItemLeft" align="right" valign="top"><a id="a7195b9f6c02ee4c517dac54dc39e3c96"></a>
 NetworkId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#a7195b9f6c02ee4c517dac54dc39e3c96">GetNetworkId</a> () const</td></tr>
 <tr class="memdesc:a7195b9f6c02ee4c517dac54dc39e3c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current or last NetworkId. Return NetworkId::None if not registered. <br /></td></tr>
@@ -658,9 +662,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7802bfd2bd4608241dd34c4c6b2be50e"><td class="memItemLeft" align="right" valign="top"><a id="a7802bfd2bd4608241dd34c4c6b2be50e"></a>
 <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetOtherNetworkObject</b> (NetworkId networkId) const</td></tr>
 <tr class="separator:a7802bfd2bd4608241dd34c4c6b2be50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44e3a3e486afa7646c53317181f90de5"><td class="memItemLeft" align="right" valign="top"><a id="a44e3a3e486afa7646c53317181f90de5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetParentNetworkObject</b> (NetworkId parentNetworkId)</td></tr>
-<tr class="separator:a44e3a3e486afa7646c53317181f90de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a57fe26f141cb89570490d28d6c93b49a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#a57fe26f141cb89570490d28d6c93b49a">OnNodeSet</a> (Node *previousNode, Node *currentNode) override</td></tr>
 <tr class="separator:a57fe26f141cb89570490d28d6c93b49a"><td class="memSeparator" colspan="2">&#160;</td></tr>

@@ -1,5 +1,11 @@
 var NAVTREEINDEX78 =
 {
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a7e373abcf2340e2137a01355192fcc27":[8,0,7,2],
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a8bb1ed3e6c09070638728a0f08f308d4":[8,0,7,12],
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a9bae00443b5bd44c47221750dbb6bc54":[8,0,7,13],
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#aacafd312aaa3ed17724f9b247a6b4911":[8,0,7,0],
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#acbbb307234fc199a4d56c1d0d2910dd0":[8,0,7,17],
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#ad35a1a6aeea497a7b40c5814a75b8cd0":[8,0,7,7],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#adc82e9d76c744ac32830580e81965b58":[8,0,7,11],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#af8ecda6472aa89fe948232a80d14d25e":[8,0,7,10],
 "struct___i_m_a_g_e___e_x_p_o_r_t___d_i_r_e_c_t_o_r_y.html":[8,0,8],
@@ -243,11 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#a1a03b1ce0f9da6123a49018c1682f2fb":[8,0,2,47,1,7],
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#a97a0c02fcae9123be0720662a4739c2f":[8,0,2,47,1,10],
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#a9a328345e6e6d6fcf0b5792235be8f07":[8,0,2,47,1,9],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#aa6fc824a508519ff98437221fd7a2bd0":[8,0,2,47,1,2],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#ada324a14d8c2b03220b1c5057a9f9083":[8,0,2,47,1,6],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#ae395d0980df6dd5c1eacedb629587480":[8,0,2,47,1,1],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#af9b53a1f5faa3fda21e8f69a9ebf7425":[8,0,2,47,1,8],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#afaa9459a2a53555815c1b93d8f873c6e":[8,0,2,47,1,5],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node_1_1_by_name.html":[8,0,2,47,1,0],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node_1_1_by_name.html#a0868f496b8f9efe144596f03c834efd9":[8,0,2,47,1,0,2]
+"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#aa6fc824a508519ff98437221fd7a2bd0":[8,0,2,47,1,2]
 };

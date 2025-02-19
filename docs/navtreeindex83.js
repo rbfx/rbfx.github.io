@@ -1,5 +1,11 @@
 var NAVTREEINDEX83 =
 {
+"struct_urho3_d_1_1_glyph_location.html#a6d17f5e562260b89d4723f671a054a1c":[8,0,2,264,1],
+"struct_urho3_d_1_1_glyph_location.html#ab6cbaec11f6614a9d533d71e5fdc86d0":[8,0,2,264,2],
+"struct_urho3_d_1_1_graphics_settings.html":[8,0,2,270],
+"struct_urho3_d_1_1_graphics_settings.html#a012343ccb510bf585ef58ccdc50da5b8":[8,0,2,270,4],
+"struct_urho3_d_1_1_graphics_settings.html#a460e212180ffcd002e311f34d89040e4":[8,0,2,270,5],
+"struct_urho3_d_1_1_graphics_settings.html#a7adbf03856bf2304ec966514eed46ff4":[8,0,2,270,3],
 "struct_urho3_d_1_1_graphics_settings.html#a7e398e18022c857c149c582a8cbe386f":[8,0,2,270,0],
 "struct_urho3_d_1_1_graphics_settings.html#a880b8cc25b30e82fcd6341701e24955a":[8,0,2,270,2],
 "struct_urho3_d_1_1_graphics_settings.html#a8815220dd8f1fa4ac1265008288131a7":[8,0,2,270,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX83 =
 "struct_urho3_d_1_1_light_geometry_query_result.html#a4fef0223c709c34c388cb401c7cecbf4":[8,0,2,348,2],
 "struct_urho3_d_1_1_light_geometry_query_result.html#a52e0032c0926ea7373e1f3b569efafed":[8,0,2,348,1],
 "struct_urho3_d_1_1_light_geometry_query_result.html#a829e6030a89e2e336ce57bd06deebd47":[8,0,2,348,0],
-"struct_urho3_d_1_1_light_probe.html":[8,0,2,364],
-"struct_urho3_d_1_1_light_probe.html#a640b621bb50eb4aa27457e5526e0a22a":[8,0,2,364,0],
-"struct_urho3_d_1_1_light_probe_collection.html":[8,0,2,365],
-"struct_urho3_d_1_1_light_probe_collection.html#a040878015437dd21867bcde29f587e98":[8,0,2,365,1],
-"struct_urho3_d_1_1_light_probe_collection.html#a1928ad28baf65d45f60fa60e1fdb60d3":[8,0,2,365,0],
-"struct_urho3_d_1_1_light_probe_collection.html#a2c220553a00acf3faa98bc6a0192d2de":[8,0,2,365,4],
-"struct_urho3_d_1_1_light_probe_collection.html#a56a2b0ac3b8e72374ab8a81f99d0be80":[8,0,2,365,8]
+"struct_urho3_d_1_1_light_probe.html":[8,0,2,364]
 };

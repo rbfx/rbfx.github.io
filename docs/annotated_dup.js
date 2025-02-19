@@ -766,6 +766,7 @@ var annotated_dup =
       [ "RenderPipelineView", "class_urho3_d_1_1_render_pipeline_view.html", "class_urho3_d_1_1_render_pipeline_view" ],
       [ "RenderSurface", "class_urho3_d_1_1_render_surface.html", "class_urho3_d_1_1_render_surface" ],
       [ "ReplicatedAnimation", "class_urho3_d_1_1_replicated_animation.html", "class_urho3_d_1_1_replicated_animation" ],
+      [ "ReplicatedParent", "class_urho3_d_1_1_replicated_parent.html", "class_urho3_d_1_1_replicated_parent" ],
       [ "ReplicatedTransform", "class_urho3_d_1_1_replicated_transform.html", "class_urho3_d_1_1_replicated_transform" ],
       [ "ReplicationManager", "class_urho3_d_1_1_replication_manager.html", "class_urho3_d_1_1_replication_manager" ],
       [ "Resource", "class_urho3_d_1_1_resource.html", "class_urho3_d_1_1_resource" ],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_d_d_pixel_format.html#a5b69c9efefdea11638e4dbb9af095d04":[8,0,2,177,2],
+"struct_urho3_d_1_1_d_d_pixel_format.html#a600cbc8762f3d2b878e1fc6233c96f0c":[8,0,2,177,27],
+"struct_urho3_d_1_1_d_d_pixel_format.html#a65b2c97c19b791ed921c1839965a6ea4":[8,0,2,177,21],
+"struct_urho3_d_1_1_d_d_pixel_format.html#a68b91233074ce143a1d272ef627358e3":[8,0,2,177,28],
+"struct_urho3_d_1_1_d_d_pixel_format.html#a6c557062f6bbe81bb6c5312aa4892e32":[8,0,2,177,11],
+"struct_urho3_d_1_1_d_d_pixel_format.html#a7296a32da78685c406c8aabdff4ff258":[8,0,2,177,15],
 "struct_urho3_d_1_1_d_d_pixel_format.html#a754548b1031fbf3b7c6737fa22aff129":[8,0,2,177,5],
 "struct_urho3_d_1_1_d_d_pixel_format.html#a75a85a9d147b0fb4a7ae5ddb9a317297":[8,0,2,177,31],
 "struct_urho3_d_1_1_d_d_pixel_format.html#a7e60c7f65e1a71e83f5aa4f5c2c8755d":[8,0,2,177,8],
@@ -243,11 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_direct_light_tracing_settings.html#a6dc2440fede7a2a9295ea03077cfa21d":[8,0,2,202,3],
 "struct_urho3_d_1_1_direct_light_tracing_settings.html#ae8c0d015354ae72471dc2efe8dafd84f":[8,0,2,202,2],
 "struct_urho3_d_1_1_direct_light_tracing_settings.html#aef7a24e8bbe64f945bb79584db932d30":[8,0,2,202,1],
-"struct_urho3_d_1_1_direction_aggregator_1_1_axis_state.html":[8,0,2,199,0],
-"struct_urho3_d_1_1_direction_aggregator_1_1_axis_state.html#a04a6fd1c7f715a2398cfecc41c47f4a6":[8,0,2,199,0,1],
-"struct_urho3_d_1_1_direction_aggregator_1_1_axis_state.html#a7e23af174aa3aeb939213d90c78684fa":[8,0,2,199,0,2],
-"struct_urho3_d_1_1_direction_aggregator_1_1_axis_state.html#ae49785c67305de4bd83d7a589742f87f":[8,0,2,199,0,0],
-"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html":[8,0,2,201,0],
-"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a0a9a4f87227df855f2e36786863cb1c9":[8,0,2,201,0,6],
-"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a2837b4576e8aa092fbdc230803640842":[8,0,2,201,0,7]
+"struct_urho3_d_1_1_direction_aggregator_1_1_axis_state.html":[8,0,2,199,0]
 };

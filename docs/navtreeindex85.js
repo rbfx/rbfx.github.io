@@ -1,5 +1,11 @@
 var NAVTREEINDEX85 =
 {
+"struct_urho3_d_1_1_nav_area_stub.html":[8,0,2,424],
+"struct_urho3_d_1_1_nav_area_stub.html#a4a568898e5ab6bef174895c34d5913af":[8,0,2,424,0],
+"struct_urho3_d_1_1_nav_area_stub.html#ae56b0e06bf15aa91376c9389638e4d85":[8,0,2,424,1],
+"struct_urho3_d_1_1_nav_build_data.html":[8,0,2,425],
+"struct_urho3_d_1_1_nav_build_data.html#a0060ad95246ad1bf3a11382dd2d477a2":[8,0,2,425,1],
+"struct_urho3_d_1_1_nav_build_data.html#a0738dcee7707b3fcdf0c86109351ef61":[8,0,2,425,7],
 "struct_urho3_d_1_1_nav_build_data.html#a084ea56a7b0ba1e1ca2d6cadafb303c4":[8,0,2,425,3],
 "struct_urho3_d_1_1_nav_build_data.html#a19bfebcafa5145ab0b0705bb3029faff":[8,0,2,425,8],
 "struct_urho3_d_1_1_nav_build_data.html#a304c7c939dd6299aee1cee3b3bc9633d":[8,0,2,425,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX85 =
 "struct_urho3_d_1_1_particle_graph_nodes_1_1_make_instance.html":[8,0,2,2,61],
 "struct_urho3_d_1_1_particle_graph_nodes_1_1_make_instance_3_01_value0_00_01_value1_00_01_value2_00_01_value3_01_4.html":[8,0,2,2,63],
 "struct_urho3_d_1_1_particle_graph_nodes_1_1_make_instance_3_01_value0_00_01_value1_00_01_value2_00_01_value3_01_4.html#aa5ae615f104a0daa0244acf043d69c00":[8,0,2,2,63,0],
-"struct_urho3_d_1_1_particle_graph_nodes_1_1_make_instance_3_01_value0_00_01_value1_00_01_value2_01_4.html":[8,0,2,2,62],
-"struct_urho3_d_1_1_particle_graph_nodes_1_1_make_instance_3_01_value0_00_01_value1_00_01_value2_01_4.html#aed46210e9a2903fa18da1623d25b8547":[8,0,2,2,62,0],
-"struct_urho3_d_1_1_particle_graph_nodes_1_1_multiply_instance.html":[8,0,2,2,67],
-"struct_urho3_d_1_1_particle_graph_nodes_1_1_multiply_instance.html#a1f65a0e59fa659956895a3160847c02c":[8,0,2,2,67,0],
-"struct_urho3_d_1_1_particle_graph_nodes_1_1_negate_instance.html":[8,0,2,2,69],
-"struct_urho3_d_1_1_particle_graph_nodes_1_1_negate_instance.html#a64aeea26e3a09b6eb718c87a2faec314":[8,0,2,2,69,0],
-"struct_urho3_d_1_1_particle_graph_nodes_1_1_node_pattern.html":[8,0,2,2,70]
+"struct_urho3_d_1_1_particle_graph_nodes_1_1_make_instance_3_01_value0_00_01_value1_00_01_value2_01_4.html":[8,0,2,2,62]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_direction_aggregator_1_1_axis_state.html#a04a6fd1c7f715a2398cfecc41c47f4a6":[8,0,2,199,0,1],
+"struct_urho3_d_1_1_direction_aggregator_1_1_axis_state.html#a7e23af174aa3aeb939213d90c78684fa":[8,0,2,199,0,2],
+"struct_urho3_d_1_1_direction_aggregator_1_1_axis_state.html#ae49785c67305de4bd83d7a589742f87f":[8,0,2,199,0,0],
+"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html":[8,0,2,201,0],
+"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a0a9a4f87227df855f2e36786863cb1c9":[8,0,2,201,0,6],
+"struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a2837b4576e8aa092fbdc230803640842":[8,0,2,201,0,7],
 "struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a3e47a1a3386d18f093ed1af64bc71eb3":[8,0,2,201,0,3],
 "struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a3ef23911724c4eb9a4788464984d169f":[8,0,2,201,0,2],
 "struct_urho3_d_1_1_directional_pad_adapter_1_1_aggregated_state.html#a6d8887f0c74f7e0e24c9b554df70ba33":[8,0,2,201,0,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_geometry_view.html#a9c9183b1d91ac4af6a9b70dc5fa3e39f":[8,0,2,258,1],
 "struct_urho3_d_1_1_glyph_location.html":[8,0,2,264],
 "struct_urho3_d_1_1_glyph_location.html#a1fdb67259eae90481d40c0221ff0baae":[8,0,2,264,3],
-"struct_urho3_d_1_1_glyph_location.html#a50560b8d5367d02a1bdade5ca5afd544":[8,0,2,264,0],
-"struct_urho3_d_1_1_glyph_location.html#a6d17f5e562260b89d4723f671a054a1c":[8,0,2,264,1],
-"struct_urho3_d_1_1_glyph_location.html#ab6cbaec11f6614a9d533d71e5fdc86d0":[8,0,2,264,2],
-"struct_urho3_d_1_1_graphics_settings.html":[8,0,2,270],
-"struct_urho3_d_1_1_graphics_settings.html#a012343ccb510bf585ef58ccdc50da5b8":[8,0,2,270,4],
-"struct_urho3_d_1_1_graphics_settings.html#a460e212180ffcd002e311f34d89040e4":[8,0,2,270,5],
-"struct_urho3_d_1_1_graphics_settings.html#a7adbf03856bf2304ec966514eed46ff4":[8,0,2,270,3]
+"struct_urho3_d_1_1_glyph_location.html#a50560b8d5367d02a1bdade5ca5afd544":[8,0,2,264,0]
 };
