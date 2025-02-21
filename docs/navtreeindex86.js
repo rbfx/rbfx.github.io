@@ -1,5 +1,6 @@
 var NAVTREEINDEX86 =
 {
+"struct_urho3_d_1_1_particle_graph_nodes_1_1_make_instance_3_01_value0_00_01_value1_00_01_value2_01_4.html":[8,0,2,2,62],
 "struct_urho3_d_1_1_particle_graph_nodes_1_1_make_instance_3_01_value0_00_01_value1_00_01_value2_01_4.html#aed46210e9a2903fa18da1623d25b8547":[8,0,2,2,62,0],
 "struct_urho3_d_1_1_particle_graph_nodes_1_1_multiply_instance.html":[8,0,2,2,67],
 "struct_urho3_d_1_1_particle_graph_nodes_1_1_multiply_instance.html#a1f65a0e59fa659956895a3160847c02c":[8,0,2,2,67,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX86 =
 "struct_urho3_d_1_1_render_pass_1_1_attributes.html":[8,0,2,578,0],
 "struct_urho3_d_1_1_render_pass_1_1_attributes.html#a1548973d95d1ae8f303c00d591fc6ac0":[8,0,2,578,0,1],
 "struct_urho3_d_1_1_render_pass_1_1_attributes.html#a221c4ac2d5bafa5a8491bcf86841ed59":[8,0,2,578,0,0],
-"struct_urho3_d_1_1_render_pass_1_1_attributes.html#a78bd34d37f6958064ba056d5aef3fee3":[8,0,2,578,0,2],
-"struct_urho3_d_1_1_render_pass_traits.html":[8,0,2,579]
+"struct_urho3_d_1_1_render_pass_1_1_attributes.html#a78bd34d37f6958064ba056d5aef3fee3":[8,0,2,578,0,2]
 };

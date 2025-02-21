@@ -1,5 +1,6 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#aa6fc824a508519ff98437221fd7a2bd0":[8,0,2,47,1,2],
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#ada324a14d8c2b03220b1c5057a9f9083":[8,0,2,47,1,6],
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#ae395d0980df6dd5c1eacedb629587480":[8,0,2,47,1,1],
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#af9b53a1f5faa3fda21e8f69a9ebf7425":[8,0,2,47,1,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_bone_view.html#ac3c0392b6099610166385ff30804f96a":[8,0,2,96,12],
 "struct_urho3_d_1_1_bone_view.html#ae7641ec5635dabf01d1b6dd31721c2b6":[8,0,2,96,1],
 "struct_urho3_d_1_1_bone_view.html#aeb7cde5f0f6161d84f958bf5a6898776":[8,0,2,96,14],
-"struct_urho3_d_1_1_button_command.html":[8,0,2,102],
-"struct_urho3_d_1_1_button_command.html#a1119c9ba7f2272c06d1cfa57ad746825":[8,0,2,102,3]
+"struct_urho3_d_1_1_button_command.html":[8,0,2,102]
 };

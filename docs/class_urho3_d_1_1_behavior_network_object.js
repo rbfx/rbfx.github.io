@@ -3,6 +3,7 @@ var class_urho3_d_1_1_behavior_network_object =
     [ "ConnectedNetworkBehavior", "struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior.html", "struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior" ],
     [ "BehaviorNetworkObject", "class_urho3_d_1_1_behavior_network_object.html#aaba4891cd380eb33ac4210499585a117", null ],
     [ "~BehaviorNetworkObject", "class_urho3_d_1_1_behavior_network_object.html#a3050d1a63a92bcee4dc5c07fe5dacf6e", null ],
+    [ "CreateBehaviors", "class_urho3_d_1_1_behavior_network_object.html#ad64797558136332160402b600f750c58", null ],
     [ "GetNetworkBehavior", "class_urho3_d_1_1_behavior_network_object.html#a64dc1bd5b41e6259ec8276b2c2e34b7d", null ],
     [ "GetNetworkBehavior", "class_urho3_d_1_1_behavior_network_object.html#afad67b8f04077df7f8ffe72227b50e65", null ],
     [ "GetRelevanceForClient", "class_urho3_d_1_1_behavior_network_object.html#a542b813b0fe0d3b7ad683660e6ab15bd", null ],

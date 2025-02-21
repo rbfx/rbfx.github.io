@@ -1,5 +1,6 @@
 var NAVTREEINDEX78 =
 {
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a7acda39747cdcf1a5909f50b5eb51b1e":[8,0,7,18],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a7e373abcf2340e2137a01355192fcc27":[8,0,7,2],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a8bb1ed3e6c09070638728a0f08f308d4":[8,0,7,12],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a9bae00443b5bd44c47221750dbb6bc54":[8,0,7,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#a181f978a37eddca012af99ad56d96487":[8,0,2,47,1,4],
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#a1a03b1ce0f9da6123a49018c1682f2fb":[8,0,2,47,1,7],
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#a97a0c02fcae9123be0720662a4739c2f":[8,0,2,47,1,10],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#a9a328345e6e6d6fcf0b5792235be8f07":[8,0,2,47,1,9],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#aa6fc824a508519ff98437221fd7a2bd0":[8,0,2,47,1,2]
+"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#a9a328345e6e6d6fcf0b5792235be8f07":[8,0,2,47,1,9]
 };

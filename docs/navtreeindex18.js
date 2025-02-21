@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"class_urho3_d_1_1_connection.html#a2e782ccfd2918b3d3d7ee04ef70348b4":[8,0,2,139,81],
 "class_urho3_d_1_1_connection.html#a2f61142b04baea010e221dec51e7794d":[8,0,2,139,13],
 "class_urho3_d_1_1_connection.html#a3261101dbf2f0671d7f121276848ccdd":[8,0,2,139,54],
 "class_urho3_d_1_1_connection.html#a3302e230fcbc7ef965e8701a564f548f":[8,0,2,139,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "class_urho3_d_1_1_constraint_friction2_d.html#acacbc0a4e303b2c48f96286420c7742b":[8,0,2,144,7],
 "class_urho3_d_1_1_constraint_friction2_d.html#ad50d35365aa0a5820a2a43bcf89c6001":[8,0,2,144,3],
 "class_urho3_d_1_1_constraint_friction2_d.html#ad7849b6e37aafd96996fc26196e855b5":[8,0,2,144,4],
-"class_urho3_d_1_1_constraint_friction2_d.html#ae3fb1ab37ec71a912604f258916649df":[8,0,2,144,6],
-"class_urho3_d_1_1_constraint_friction2_d.html#afb9d2a70b4c1b97aa0c37ee3154a4fc0":[8,0,2,144,12]
+"class_urho3_d_1_1_constraint_friction2_d.html#ae3fb1ab37ec71a912604f258916649df":[8,0,2,144,6]
 };
