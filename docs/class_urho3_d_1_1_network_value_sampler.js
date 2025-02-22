@@ -11,6 +11,7 @@ var class_urho3_d_1_1_network_value_sampler =
     [ "UpdateAndSample", "class_urho3_d_1_1_network_value_sampler.html#a0a9633c42e296be5bc38a84ff86036a2", null ],
     [ "UpdateCache", "class_urho3_d_1_1_network_value_sampler.html#a014c61db93b7542552e854f699f75879", null ],
     [ "UpdateCorrection", "class_urho3_d_1_1_network_value_sampler.html#acbd5d99bf0288ddc05bb24691b6bd58d", null ],
+    [ "UpdatePreviousValue", "class_urho3_d_1_1_network_value_sampler.html#afee43f07d7ad744281e57ea3cc4d0ce1", null ],
     [ "extrapolationFrame_", "class_urho3_d_1_1_network_value_sampler.html#a16346f71bc191a415b4d452fff4fbb0e", null ],
     [ "interpolationCache_", "class_urho3_d_1_1_network_value_sampler.html#abdda6761a817634f33e60d0dba7a4ca2", null ],
     [ "maxExtrapolation_", "class_urho3_d_1_1_network_value_sampler.html#a86cd327daadac0a4d25c619e6b38cb8e", null ],

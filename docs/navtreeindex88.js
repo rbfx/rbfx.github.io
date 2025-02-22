@@ -1,5 +1,8 @@
 var NAVTREEINDEX88 =
 {
+"struct_urho3_d_1_1_source_batch.html#a5d150c24a6b666f7723a28984ab73cb7":[8,0,2,672,2],
+"struct_urho3_d_1_1_source_batch.html#a66334833752999657071a41182d777bf":[8,0,2,672,9],
+"struct_urho3_d_1_1_source_batch.html#ab196d2e4fae74fc65fd1f227b7910c59":[8,0,2,672,0],
 "struct_urho3_d_1_1_source_batch.html#ab41eb9c90f866ef23c0f7180f2758226":[8,0,2,672,5],
 "struct_urho3_d_1_1_source_batch.html#abc20b1bc7af25dcf4527431cdbb5b777":[8,0,2,672,3],
 "struct_urho3_d_1_1_source_batch.html#ac51c099c9ea666e815fff8600970e331":[8,0,2,672,13],
@@ -246,8 +249,5 @@ var NAVTREEINDEX88 =
 "struct_urho3_d_1_1_static_model_geometry_data.html#af88b93d2fb4f5de74f6bd56382cd50b2":[8,0,2,702,1],
 "struct_urho3_d_1_1_static_pipeline_state_cache_1_1_per_output_cache.html":[8,0,2,705,0],
 "struct_urho3_d_1_1_static_pipeline_state_cache_1_1_per_output_cache.html#a87d77e73205f03236e004107ad29c6c4":[8,0,2,705,0,0],
-"struct_urho3_d_1_1_static_pipeline_state_cache_1_1_per_output_cache.html#aa55c20d33dd08be63709c8487f031281":[8,0,2,705,0,1],
-"struct_urho3_d_1_1_stored_log_message.html":[8,0,2,710],
-"struct_urho3_d_1_1_stored_log_message.html#a41ea306038129a56f14b1214566316cc":[8,0,2,710,3],
-"struct_urho3_d_1_1_stored_log_message.html#a536fad5a733e5df90c9c08491e5a701c":[8,0,2,710,5]
+"struct_urho3_d_1_1_static_pipeline_state_cache_1_1_per_output_cache.html#aa55c20d33dd08be63709c8487f031281":[8,0,2,705,0,1]
 };

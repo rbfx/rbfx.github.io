@@ -98,6 +98,8 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_value_sampler.html#af0a3dce7ed891775c74470f2a3477f84">Setup</a> (unsigned maxExtrapolation, float smoothingConstant, float snapThreshold)</td></tr>
 <tr class="memdesc:af0a3dce7ed891775c74470f2a3477f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update sampler settings. <br /></td></tr>
 <tr class="separator:af0a3dce7ed891775c74470f2a3477f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afee43f07d7ad744281e57ea3cc4d0ce1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_value_sampler.html#afee43f07d7ad744281e57ea3cc4d0ce1">UpdatePreviousValue</a> (const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;time, const ReturnType &amp;value)</td></tr>
+<tr class="separator:afee43f07d7ad744281e57ea3cc4d0ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a9633c42e296be5bc38a84ff86036a2"><td class="memItemLeft" align="right" valign="top"><a id="a0a9633c42e296be5bc38a84ff86036a2"></a>
 ea::optional&lt; ReturnType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_value_sampler.html#a0a9633c42e296be5bc38a84ff86036a2">UpdateAndSample</a> (const <a class="el" href="class_urho3_d_1_1_network_value.html">NetworkValueType</a> &amp;value, const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;time, float timeStep)</td></tr>
 <tr class="memdesc:a0a9633c42e296be5bc38a84ff86036a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update sampler state for new time and return current value. <br /></td></tr>
@@ -147,7 +149,47 @@ ReturnType&#160;</td><td class="memItemRight" valign="bottom"><b>valueCorrection
 class Urho3D::NetworkValueSampler&lt; T, Traits &gt;</h3>
 
 <p>Helper class that manages continuous sampling of <a class="el" href="class_urho3_d_1_1_network_value.html">NetworkValue</a> on the client side. Performs extrapolation and error smoothing. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afee43f07d7ad744281e57ea3cc4d0ce1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afee43f07d7ad744281e57ea3cc4d0ce1">&#9670;&nbsp;</a></span>UpdatePreviousValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Traits  = NetworkValueTraits&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_urho3_d_1_1_network_value_sampler.html">Urho3D::NetworkValueSampler</a>&lt; T, Traits &gt;::UpdatePreviousValue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ReturnType &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reset previous value to different value. Useful for smooth fade-in when sampler was disabled for a while and value was updated externally. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>Urho3D/Replica/<a class="el" href="_network_value_8h.html">NetworkValue.h</a></li>
 </ul>
 </div><!-- contents -->

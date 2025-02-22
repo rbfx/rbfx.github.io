@@ -1,5 +1,6 @@
 var NAVTREEINDEX82 =
 {
+"struct_urho3_d_1_1_direct_light_tracing_settings.html#aef7a24e8bbe64f945bb79584db932d30":[8,0,2,202,1],
 "struct_urho3_d_1_1_direction_aggregator_1_1_axis_state.html":[8,0,2,199,0],
 "struct_urho3_d_1_1_direction_aggregator_1_1_axis_state.html#a04a6fd1c7f715a2398cfecc41c47f4a6":[8,0,2,199,0,1],
 "struct_urho3_d_1_1_direction_aggregator_1_1_axis_state.html#a7e23af174aa3aeb939213d90c78684fa":[8,0,2,199,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX82 =
 "struct_urho3_d_1_1_geometry_view.html#a2d72f8fd04232133e2188895b1d1216b":[8,0,2,258,0],
 "struct_urho3_d_1_1_geometry_view.html#a7b2c89bc7ff1248c642d18677ba842b4":[8,0,2,258,2],
 "struct_urho3_d_1_1_geometry_view.html#a9c9183b1d91ac4af6a9b70dc5fa3e39f":[8,0,2,258,1],
-"struct_urho3_d_1_1_glyph_location.html":[8,0,2,264],
-"struct_urho3_d_1_1_glyph_location.html#a1fdb67259eae90481d40c0221ff0baae":[8,0,2,264,3]
+"struct_urho3_d_1_1_glyph_location.html":[8,0,2,264]
 };
