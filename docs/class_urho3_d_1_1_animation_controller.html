@@ -120,10 +120,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_controller.html#a4883f39485a8da9bf5488101c3a99875">Update</a> (float timeStep)</td></tr>
 <tr class="memdesc:a4883f39485a8da9bf5488101c3a99875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the animations. Is called from <a class="el" href="class_urho3_d_1_1_animation_controller.html#abe3fe1fb76d6500d50c5c58af6048a9c" title="Handle scene post-update event.">HandleScenePostUpdate()</a>. <br /></td></tr>
 <tr class="separator:a4883f39485a8da9bf5488101c3a99875"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8ed5e129bc102d54dcab2dc95095254"><td class="memItemLeft" align="right" valign="top"><a id="aa8ed5e129bc102d54dcab2dc95095254"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_controller.html#aa8ed5e129bc102d54dcab2dc95095254">ReplaceAnimations</a> (ea::span&lt; const <a class="el" href="class_urho3_d_1_1_animation_parameters.html">AnimationParameters</a> &gt; newAnimations, float elapsedTime, float fadeTime)</td></tr>
-<tr class="memdesc:aa8ed5e129bc102d54dcab2dc95095254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smoothly replace existing animations with animations from external source. <br /></td></tr>
-<tr class="separator:aa8ed5e129bc102d54dcab2dc95095254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17f5ed95833ddfaddeb6e29dc9cee942"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_controller.html#a17f5ed95833ddfaddeb6e29dc9cee942">ReplaceAnimations</a> (ea::span&lt; const <a class="el" href="class_urho3_d_1_1_animation_parameters.html">AnimationParameters</a> &gt; newAnimations, float elapsedTime, float fadeTime, ea::span&lt; const unsigned &gt; layers={})</td></tr>
+<tr class="separator:a17f5ed95833ddfaddeb6e29dc9cee942"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa94cbadd68a00f25e9912e720af89152"><td class="memItemLeft" align="right" valign="top"><a id="aa94cbadd68a00f25e9912e720af89152"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsSkeletonReset</b> () const</td></tr>
 <tr class="separator:aa94cbadd68a00f25e9912e720af89152"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -966,6 +964,47 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 </div><div class="memdoc">
 <p>Register object factory. </p>
+
+</div>
+</div>
+<a id="a17f5ed95833ddfaddeb6e29dc9cee942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17f5ed95833ddfaddeb6e29dc9cee942">&#9670;&nbsp;</a></span>ReplaceAnimations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::AnimationController::ReplaceAnimations </td>
+          <td>(</td>
+          <td class="paramtype">ea::span&lt; const <a class="el" href="class_urho3_d_1_1_animation_parameters.html">AnimationParameters</a> &gt;&#160;</td>
+          <td class="paramname"><em>newAnimations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>elapsedTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fadeTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ea::span&lt; const unsigned &gt;&#160;</td>
+          <td class="paramname"><em>layers</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Smoothly replace existing animations with animations from external source. If layers are specified, only these layers will be affected. </p>
 
 </div>
 </div>

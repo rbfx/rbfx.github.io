@@ -1,5 +1,9 @@
 var NAVTREEINDEX78 =
 {
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a312ecc94100cc5ed35c021c4b8b0461e":[8,0,7,1],
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a3308c5ffb2b39c3594eb3ae90cc0511c":[8,0,7,15],
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a39e0dca0197e456ddc101bfead17f7d6":[8,0,7,9],
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a3be219cb903b170c6098a31edeb5f5ee":[8,0,7,5],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a5e6204214cddc09a13f6628ef596f838":[8,0,7,3],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a7acda39747cdcf1a5909f50b5eb51b1e":[8,0,7,18],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a7e373abcf2340e2137a01355192fcc27":[8,0,7,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_dependency_graph_node.html#a5dd3e213729a7b3367030a6be410f79d":[8,0,2,47,0,1],
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_dependency_graph_node.html#aa19bf88a2f2a8a7443dfb5fca8cf646b":[8,0,2,47,0,2],
 "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_dependency_graph_node.html#ae384ab7da2aa3b259d02f99758812f23":[8,0,2,47,0,0],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html":[8,0,2,47,1],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#a00475e76f28a01ed7a2eafe614a686ed":[8,0,2,47,1,3],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#a181f978a37eddca012af99ad56d96487":[8,0,2,47,1,4],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#a1a03b1ce0f9da6123a49018c1682f2fb":[8,0,2,47,1,7],
-"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html#a97a0c02fcae9123be0720662a4739c2f":[8,0,2,47,1,10]
+"struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html":[8,0,2,47,1]
 };

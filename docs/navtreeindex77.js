@@ -1,5 +1,9 @@
 var NAVTREEINDEX77 =
 {
+"class_urho3_d_1_1_zone.html#a71b42f179c191d8577b78d8501e9a882":[8,0,2,844,41],
+"class_urho3_d_1_1_zone.html#a74ba6596a17a4cd58f0d2f8b73d48c8d":[8,0,2,844,4],
+"class_urho3_d_1_1_zone.html#a77bf82702c1c0e5728863fe46a74ebd2":[8,0,2,844,1],
+"class_urho3_d_1_1_zone.html#a7ccacfcdafdec86719bfd084d6643e56":[8,0,2,844,28],
 "class_urho3_d_1_1_zone.html#a7cfe4accbca78647bb904c5feb96e95f":[8,0,2,844,42],
 "class_urho3_d_1_1_zone.html#a841f9a2663aaff3096288f8b7c9c7326":[8,0,2,844,11],
 "class_urho3_d_1_1_zone.html#a859af470a234207443bb86e3b50eba1f":[8,0,2,844,33],
@@ -175,8 +179,8 @@ var NAVTREEINDEX77 =
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html":[2],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html":[5],
 "multiplayer-and-networking.html":[0,0,2,2],
-"namespace_urho3_d_1_1_actions.html":[8,0,2,0],
 "namespace_urho3_d_1_1_actions.html":[7,0,0,0],
+"namespace_urho3_d_1_1_actions.html":[8,0,2,0],
 "namespace_urho3_d_1_1_attribute_metadata.html":[7,0,0,1],
 "namespace_urho3_d_1_1_linked_plugins.html":[7,0,0,2],
 "namespace_urho3_d_1_1_network_settings.html":[7,0,0,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX77 =
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a18eeda16c8786572197d26f1e52aab55":[8,0,7,16],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a21cb2887d99a40844ded9887d49d7af0":[8,0,7,14],
 "struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a24e81120bfe3a768fcabfb1a272cc2b1":[8,0,7,6],
-"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a2e312c84639319b327a10687fed205b7":[8,0,7,8],
-"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a312ecc94100cc5ed35c021c4b8b0461e":[8,0,7,1],
-"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a3308c5ffb2b39c3594eb3ae90cc0511c":[8,0,7,15],
-"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a39e0dca0197e456ddc101bfead17f7d6":[8,0,7,9],
-"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a3be219cb903b170c6098a31edeb5f5ee":[8,0,7,5]
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a2e312c84639319b327a10687fed205b7":[8,0,7,8]
 };

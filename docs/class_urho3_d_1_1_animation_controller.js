@@ -44,7 +44,7 @@ var class_urho3_d_1_1_animation_controller =
     [ "PlayNewExclusive", "class_urho3_d_1_1_animation_controller.html#a138f1482fa0b674fe5775d0b089b39c9", null ],
     [ "RegisterObject", "class_urho3_d_1_1_animation_controller.html#ab2f8aa461c4a24f1b8b9fb7b79083383", null ],
     [ "RemoveAnimation", "class_urho3_d_1_1_animation_controller.html#a436d0a15f00a884b8a657a53adc51c11", null ],
-    [ "ReplaceAnimations", "class_urho3_d_1_1_animation_controller.html#aa8ed5e129bc102d54dcab2dc95095254", null ],
+    [ "ReplaceAnimations", "class_urho3_d_1_1_animation_controller.html#a17f5ed95833ddfaddeb6e29dc9cee942", null ],
     [ "SendTriggerEvents", "class_urho3_d_1_1_animation_controller.html#acf46a2ce83a52e2f5ada3c07e235b6cc", null ],
     [ "SetAnimationsAttr", "class_urho3_d_1_1_animation_controller.html#a0d36ecbe01b8b2b05c44b1baaae50cde", null ],
     [ "SetSkeletonReset", "class_urho3_d_1_1_animation_controller.html#af73ffa00a91c8cda37539dc06c9cb252", null ],

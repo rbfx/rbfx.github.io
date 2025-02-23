@@ -1,6 +1,5 @@
 var NAVTREEINDEX13 =
 {
-"class_urho3_d_1_1_auto_exposure_pass.html#aa835d1d39b7e39a2e32c1fbb010510a1":[8,0,2,59,16],
 "class_urho3_d_1_1_auto_exposure_pass.html#abf23a75b15aa97fb899847bc03ca6d99":[8,0,2,59,15],
 "class_urho3_d_1_1_auto_exposure_pass.html#ae64cc2a244db56c3178d8a29008cf4da":[8,0,2,59,3],
 "class_urho3_d_1_1_axis_adapter.html":[8,0,2,60],
@@ -249,5 +248,6 @@ var NAVTREEINDEX13 =
 "class_urho3_d_1_1_billboard_set.html#a4b30a3fd8481053e8a045db4db0b513a":[8,0,2,87,46],
 "class_urho3_d_1_1_billboard_set.html#a4e856139d71c0cadccd2bdf77f316ab9":[8,0,2,87,15],
 "class_urho3_d_1_1_billboard_set.html#a5129c9447a235510d41c2a8423705bb1":[8,0,2,87,8],
-"class_urho3_d_1_1_billboard_set.html#a5136d3a8eaacfc1a39a8a949f7a6ac0e":[8,0,2,87,43]
+"class_urho3_d_1_1_billboard_set.html#a5136d3a8eaacfc1a39a8a949f7a6ac0e":[8,0,2,87,43],
+"class_urho3_d_1_1_billboard_set.html#a51c4b6a240a21a5b9052aad1b6d4d81a":[8,0,2,87,22]
 };

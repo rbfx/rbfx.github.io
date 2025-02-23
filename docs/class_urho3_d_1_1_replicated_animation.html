@@ -73,6 +73,9 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_replicated_animation
 </div><!--header-->
 <div class="contents">
 
+<p>Behavior that replicates animation over network.  
+ <a href="class_urho3_d_1_1_replicated_animation.html#details">More...</a></p>
+
 <p><code>#include &lt;Urho3D/Replica/ReplicatedAnimation.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Urho3D::ReplicatedAnimation:</div>
@@ -121,6 +124,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSmoothingTime</b> 
 <tr class="memitem:a747f300f56065d2725904233f47d8ec7"><td class="memItemLeft" align="right" valign="top"><a id="a747f300f56065d2725904233f47d8ec7"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>GetSmoothingTime</b> () const</td></tr>
 <tr class="separator:a747f300f56065d2725904233f47d8ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82edff718b3a805eabf483b7724e3bcc"><td class="memItemLeft" align="right" valign="top"><a id="a82edff718b3a805eabf483b7724e3bcc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLayers</b> (const ea::vector&lt; unsigned &gt; &amp;layers)</td></tr>
+<tr class="separator:a82edff718b3a805eabf483b7724e3bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e51d5b4ce955b19adba6f531e410616"><td class="memItemLeft" align="right" valign="top"><a id="a5e51d5b4ce955b19adba6f531e410616"></a>
+const ea::vector&lt; unsigned &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetLayers</b> () const</td></tr>
+<tr class="separator:a5e51d5b4ce955b19adba6f531e410616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac256c57d803e7f32dd25974690edf58b"><td class="memItemLeft" align="right" valign="top"><a id="ac256c57d803e7f32dd25974690edf58b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLayersAttr</b> (const <a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a> &amp;layers)</td></tr>
+<tr class="separator:ac256c57d803e7f32dd25974690edf58b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d418c5fb3a5240b43cb819ca550b53"><td class="memItemLeft" align="right" valign="top"><a id="a06d418c5fb3a5240b43cb819ca550b53"></a>
+const <a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetLayersAttr</b> () const</td></tr>
+<tr class="separator:a06d418c5fb3a5240b43cb819ca550b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26f975f646b639d8f451283012b7051a"><td class="memItemLeft" align="right" valign="top"><a id="a26f975f646b639d8f451283012b7051a"></a>
 const StringMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetAnimationLookup</b> () const</td></tr>
 <tr class="separator:a26f975f646b639d8f451283012b7051a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -692,6 +707,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>replicateOwner_</b> {
 <tr class="memitem:a6fd7d6d4524f893864efd0b810c4c6c7"><td class="memItemLeft" align="right" valign="top"><a id="a6fd7d6d4524f893864efd0b810c4c6c7"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>smoothingTime_</b> {DefaultSmoothingTime}</td></tr>
 <tr class="separator:a6fd7d6d4524f893864efd0b810c4c6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accfccb48debbeb6f76407ab14c0ed800"><td class="memItemLeft" align="right" valign="top"><a id="accfccb48debbeb6f76407ab14c0ed800"></a>
+ea::vector&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>layers_</b></td></tr>
+<tr class="separator:accfccb48debbeb6f76407ab14c0ed800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -762,7 +780,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Behavior that replicates animation over network. TODO: This behavior doesn't really replicate any animation now, it only does essential setup on the server. </p>
+<div class="textblock"><p>Behavior that replicates animation over network. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6871c60e8ca70800c6aed50a18005b40"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6871c60e8ca70800c6aed50a18005b40">&#9670;&nbsp;</a></span>InitializeStandalone()</h2>
@@ -812,8 +830,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">        NetworkCallbackMask::ReliableDelta | NetworkCallbackMask::UnreliableDelta | NetworkCallbackMask::InterpolateState | NetworkCallbackMask::Update</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= NetworkCallbackMask::ReliableDelta</div>
+<div class="line">        | NetworkCallbackMask::UnreliableDelta | NetworkCallbackMask::InterpolateState | NetworkCallbackMask::Update</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -841,7 +859,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/Replica/<a class="el" href="_replicated_animation_8h.html">ReplicatedAnimation.h</a></li>
+<li>Urho3D/Replica/ReplicatedAnimation.h</li>
 <li>Urho3D/Replica/ReplicatedAnimation.cpp</li>
 </ul>
 </div><!-- contents -->

@@ -24,11 +24,6 @@ var dir_8a65c0f2772aac66424a8efb5dfdca3e =
     ] ],
     [ "NetworkValue.h", "_network_value_8h.html", "_network_value_8h" ],
     [ "PredictedKinematicController.h", "_predicted_kinematic_controller_8h.html", null ],
-    [ "ReplicatedAnimation.h", "_replicated_animation_8h.html", [
-      [ "ReplicatedAnimation", "class_urho3_d_1_1_replicated_animation.html", "class_urho3_d_1_1_replicated_animation" ],
-      [ "ServerData", "struct_urho3_d_1_1_replicated_animation_1_1_server_data.html", "struct_urho3_d_1_1_replicated_animation_1_1_server_data" ],
-      [ "ClientData", "struct_urho3_d_1_1_replicated_animation_1_1_client_data.html", "struct_urho3_d_1_1_replicated_animation_1_1_client_data" ]
-    ] ],
     [ "ReplicatedTransform.h", "_replicated_transform_8h.html", "_replicated_transform_8h" ],
     [ "ReplicationManager.h", "_replication_manager_8h.html", "_replication_manager_8h" ],
     [ "ServerReplicator.h", "_server_replicator_8h.html", [
