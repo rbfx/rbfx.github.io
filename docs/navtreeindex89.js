@@ -1,5 +1,10 @@
 var NAVTREEINDEX89 =
 {
+"struct_urho3_d_1_1_state_manager_1_1_queue_item.html#af5fb5d0e9d6044c69e529e394e5fc472":[8,0,2,698,0,2],
+"struct_urho3_d_1_1_static_caster.html":[8,0,2,699],
+"struct_urho3_d_1_1_static_caster.html#a7373bc34f0f8e9ab6ebf9cbbb7f61eed":[8,0,2,699,0],
+"struct_urho3_d_1_1_static_model_geometry_data.html":[8,0,2,702],
+"struct_urho3_d_1_1_static_model_geometry_data.html#a13b2f326c4f238feb495e92a7663cd1a":[8,0,2,702,0],
 "struct_urho3_d_1_1_static_model_geometry_data.html#af88b93d2fb4f5de74f6bd56382cd50b2":[8,0,2,702,1],
 "struct_urho3_d_1_1_static_pipeline_state_cache_1_1_per_output_cache.html":[8,0,2,705,0],
 "struct_urho3_d_1_1_static_pipeline_state_cache_1_1_per_output_cache.html#a87d77e73205f03236e004107ad29c6c4":[8,0,2,705,0,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX89 =
 "struct_urho3_d_1_1_vertex_buffer_morph.html#a2abfcea565f9e414c559825580b52751":[8,0,2,811,0],
 "struct_urho3_d_1_1_vertex_buffer_morph.html#a46d6de9ef807eed3d0ab82c420f346e3":[8,0,2,811,1],
 "struct_urho3_d_1_1_vertex_buffer_morph.html#a55c96f4c973469d676bd45f1bf1ea846":[8,0,2,811,2],
-"struct_urho3_d_1_1_vertex_buffer_morph.html#af2dd64322a122bb210dc620bb4d903e9":[8,0,2,811,3],
-"struct_urho3_d_1_1_vertex_element.html":[8,0,2,812],
-"struct_urho3_d_1_1_vertex_element.html#a0ef2367495a06a1973309beba0da2b51":[8,0,2,812,3],
-"struct_urho3_d_1_1_vertex_element.html#a22ccfd76bdcec0423b8b6957f0523c1f":[8,0,2,812,5],
-"struct_urho3_d_1_1_vertex_element.html#a371f63709e37725849c799a4a6552506":[8,0,2,812,2],
-"struct_urho3_d_1_1_vertex_element.html#a3dd05f543e8309269479297d00f87e75":[8,0,2,812,0]
+"struct_urho3_d_1_1_vertex_buffer_morph.html#af2dd64322a122bb210dc620bb4d903e9":[8,0,2,811,3]
 };

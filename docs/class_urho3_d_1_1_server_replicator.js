@@ -15,7 +15,7 @@ var class_urho3_d_1_1_server_replicator =
     [ "OnInputReady", "class_urho3_d_1_1_server_replicator.html#a27be36952bff752b6d904879ef4cae05", null ],
     [ "OnNetworkUpdate", "class_urho3_d_1_1_server_replicator.html#a5ce02bbc41a97a6b1fb49cbf1539b3bb", null ],
     [ "ProcessMessage", "class_urho3_d_1_1_server_replicator.html#a1559c540e80a9d0084e27c7bde9159e7", null ],
-    [ "ProcessSceneUpdate", "class_urho3_d_1_1_server_replicator.html#ab61be24d50a98a4a7cadb5168c67c922", null ],
+    [ "ProcessSceneUpdate", "class_urho3_d_1_1_server_replicator.html#a86fb5209933a9ab46d48a4eef0d6429b", null ],
     [ "RemoveConnection", "class_urho3_d_1_1_server_replicator.html#adac53d98915f1a447e77fb51949b73d8", null ],
     [ "ReportInputLoss", "class_urho3_d_1_1_server_replicator.html#a8755a5fd151211288e1f3d5e1a36c49c", null ],
     [ "SetCurrentFrame", "class_urho3_d_1_1_server_replicator.html#a2a0821874be50aff1df6e1656e049eed", null ],

@@ -1,5 +1,10 @@
 var NAVTREEINDEX77 =
 {
+"class_urho3_d_1_1_zone.html#a640c96e66c389e25d3c98fda58f0391a":[8,0,2,844,9],
+"class_urho3_d_1_1_zone.html#a65c40c118a023a143f0ed53ac3bab5ab":[8,0,2,844,29],
+"class_urho3_d_1_1_zone.html#a66a355b59bdd806a11cc9f7ed58a7841":[8,0,2,844,61],
+"class_urho3_d_1_1_zone.html#a6ac940b6762502ed09cf9bd4549bf561":[8,0,2,844,59],
+"class_urho3_d_1_1_zone.html#a6c92c15c40080776d405946a08529b21":[8,0,2,844,7],
 "class_urho3_d_1_1_zone.html#a71b42f179c191d8577b78d8501e9a882":[8,0,2,844,41],
 "class_urho3_d_1_1_zone.html#a74ba6596a17a4cd58f0d2f8b73d48c8d":[8,0,2,844,4],
 "class_urho3_d_1_1_zone.html#a77bf82702c1c0e5728863fe46a74ebd2":[8,0,2,844,1],
@@ -134,8 +139,8 @@ var NAVTREEINDEX77 =
 "functions_type.html":[8,3,3],
 "functions_u.html":[8,3,0,21],
 "functions_v.html":[8,3,0,22],
-"functions_vars.html":[8,3,2,0],
 "functions_vars.html":[8,3,2],
+"functions_vars.html":[8,3,2,0],
 "functions_vars_a.html":[8,3,2,1],
 "functions_vars_b.html":[8,3,2,2],
 "functions_vars_c.html":[8,3,2,3],
@@ -179,8 +184,8 @@ var NAVTREEINDEX77 =
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html":[2],
 "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html":[5],
 "multiplayer-and-networking.html":[0,0,2,2],
-"namespace_urho3_d_1_1_actions.html":[7,0,0,0],
 "namespace_urho3_d_1_1_actions.html":[8,0,2,0],
+"namespace_urho3_d_1_1_actions.html":[7,0,0,0],
 "namespace_urho3_d_1_1_attribute_metadata.html":[7,0,0,1],
 "namespace_urho3_d_1_1_linked_plugins.html":[7,0,0,2],
 "namespace_urho3_d_1_1_network_settings.html":[7,0,0,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX77 =
 "struct___i_m_a_g_e___d_e_b_u_g___d_i_r_e_c_t_o_r_y.html#ad9628d8b387721910775a8e086eb01f4":[8,0,6,2],
 "struct___i_m_a_g_e___d_e_b_u_g___d_i_r_e_c_t_o_r_y.html#ae70521020611d79ce2c32bc34cb4d183":[8,0,6,5],
 "struct___i_m_a_g_e___d_e_b_u_g___d_i_r_e_c_t_o_r_y.html#aeb7c489e3ecf8ab115cecae63f9b3fb2":[8,0,6,0],
-"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html":[8,0,7],
-"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a0db2a12121e1688eecfb89c6a179a1fc":[8,0,7,4],
-"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a18eeda16c8786572197d26f1e52aab55":[8,0,7,16],
-"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a21cb2887d99a40844ded9887d49d7af0":[8,0,7,14],
-"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a24e81120bfe3a768fcabfb1a272cc2b1":[8,0,7,6],
-"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html#a2e312c84639319b327a10687fed205b7":[8,0,7,8]
+"struct___i_m_a_g_e___d_o_s___h_e_a_d_e_r.html":[8,0,7]
 };

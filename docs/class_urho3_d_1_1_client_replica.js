@@ -14,7 +14,7 @@ var class_urho3_d_1_1_client_replica =
     [ "ProcessMessage", "class_urho3_d_1_1_client_replica.html#a517ead417a901ecf9af08a12aeeea7a2", null ],
     [ "ProcessRemoveObjects", "class_urho3_d_1_1_client_replica.html#a7f0484fe23a2928d9bff7a30c8dc67cd", null ],
     [ "ProcessSceneClock", "class_urho3_d_1_1_client_replica.html#a1800531bebbffceb01e8ff0002015af1", null ],
-    [ "ProcessSceneUpdate", "class_urho3_d_1_1_client_replica.html#a90348f38861cc4d77ce7368db693c813", null ],
+    [ "ProcessSceneUpdate", "class_urho3_d_1_1_client_replica.html#a13053d8a44a93fe65ba90ae16228db21", null ],
     [ "ProcessUpdateObjectsReliable", "class_urho3_d_1_1_client_replica.html#a35f99472f95d0687c331ab23e3148b54", null ],
     [ "ProcessUpdateObjectsUnreliable", "class_urho3_d_1_1_client_replica.html#ae4b1691001bc9146fe77b4c57a48e949", null ],
     [ "RemoveNetworkObject", "class_urho3_d_1_1_client_replica.html#ae7ab0b4792675448d541598f51b5cfc5", null ],

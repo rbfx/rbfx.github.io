@@ -13,6 +13,7 @@ var class_urho3_d_1_1_behavior_network_object =
     [ "InitializeStandalone", "class_urho3_d_1_1_behavior_network_object.html#a88d495837c0b185ca5bad5997cf2c337", null ],
     [ "InterpolateState", "class_urho3_d_1_1_behavior_network_object.html#af2b49fff55a019860606e0df448adfcf", null ],
     [ "InvalidateBehaviors", "class_urho3_d_1_1_behavior_network_object.html#af4ac345d79a3a2f2019aa5a9a7ecbe5d", null ],
+    [ "PostUpdate", "class_urho3_d_1_1_behavior_network_object.html#afa09016b238294b44f5c637d5346fa2b", null ],
     [ "PrepareReliableDelta", "class_urho3_d_1_1_behavior_network_object.html#a4563873969df774f74e4e09fbe2a1a06", null ],
     [ "PrepareToRemove", "class_urho3_d_1_1_behavior_network_object.html#aaf66aa714ae81d6e31bb108bc97bdd17", null ],
     [ "PrepareUnreliableDelta", "class_urho3_d_1_1_behavior_network_object.html#a3d11b905b7a585df2f12e5e321d9d7f6", null ],

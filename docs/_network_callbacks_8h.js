@@ -12,7 +12,8 @@ var _network_callbacks_8h =
       [ "ReliableDelta", "_network_callbacks_8h.html#a1b506e31c58f6d321cce6e68ef09eaadab93cac38ed68834950d3aa704ddd5344", null ],
       [ "UnreliableDelta", "_network_callbacks_8h.html#a1b506e31c58f6d321cce6e68ef09eaada44e39f57bca1f67fe30c9199140d33d1", null ],
       [ "UnreliableFeedback", "_network_callbacks_8h.html#a1b506e31c58f6d321cce6e68ef09eaadacd2448a3331ed1ad52f6fd6d7942929f", null ],
-      [ "Update", "_network_callbacks_8h.html#a1b506e31c58f6d321cce6e68ef09eaada06933067aafd48425d67bcb01bba5cb6", null ]
+      [ "Update", "_network_callbacks_8h.html#a1b506e31c58f6d321cce6e68ef09eaada06933067aafd48425d67bcb01bba5cb6", null ],
+      [ "PostUpdate", "_network_callbacks_8h.html#a1b506e31c58f6d321cce6e68ef09eaadad1265336b66d91a1fc4f5904e34591f4", null ]
     ] ],
     [ "URHO3D_FLAGSET", "_network_callbacks_8h.html#a2ebf4a90f4a472e2b0f367d79e5ee1ae", null ]
 ];
