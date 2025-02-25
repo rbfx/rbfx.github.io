@@ -18,6 +18,7 @@ var class_urho3_d_1_1_replicated_animation =
     [ "InitializeOnServer", "class_urho3_d_1_1_replicated_animation.html#a8a2668c8314357190de94205d236bada", null ],
     [ "InitializeStandalone", "class_urho3_d_1_1_replicated_animation.html#a6871c60e8ca70800c6aed50a18005b40", null ],
     [ "InterpolateState", "class_urho3_d_1_1_replicated_animation.html#a6466ab5aadbd321e5a409f380d41ed78", null ],
+    [ "IsAnimationReplicated", "class_urho3_d_1_1_replicated_animation.html#af999d421ae9f50b74d4b364c57e5b2d4", null ],
     [ "OnServerFrameEnd", "class_urho3_d_1_1_replicated_animation.html#aa4ce1e8ef9cf5c0e17e9ed111bbdc23f", null ],
     [ "PostUpdate", "class_urho3_d_1_1_replicated_animation.html#a40a2561958cdc2c06ac04f7598722a55", null ],
     [ "PrepareReliableDelta", "class_urho3_d_1_1_replicated_animation.html#a471e81bcdf1e96edab7137c34fe161bb", null ],

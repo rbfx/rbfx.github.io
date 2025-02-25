@@ -1,5 +1,6 @@
 var NAVTREEINDEX84 =
 {
+"struct_urho3_d_1_1_light_data_for_accumulator.html#a4debb269c236b6618f6ac47228369f01":[8,0,2,347,8],
 "struct_urho3_d_1_1_light_data_for_accumulator.html#a7332f7c5241941b7fab40f1da8190135":[8,0,2,347,6],
 "struct_urho3_d_1_1_light_data_for_accumulator.html#a7cb4b264c66d2436a4ed445e680f2ad1":[8,0,2,347,9],
 "struct_urho3_d_1_1_light_data_for_accumulator.html#a88e9605f57e272506dc9e48ecaa9a036":[8,0,2,347,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX84 =
 "struct_urho3_d_1_1_msg_configure.html#a492e79ca8c5ee0cf3ec3826f264a1f3f":[8,0,2,413,0],
 "struct_urho3_d_1_1_msg_configure.html#a7984f8342272f892c18cfc049fc19220":[8,0,2,413,1],
 "struct_urho3_d_1_1_msg_configure.html#aa08cc2670a48ea35afe3b8dd0a406ddb":[8,0,2,413,2],
-"struct_urho3_d_1_1_msg_scene_clock.html":[8,0,2,414],
-"struct_urho3_d_1_1_msg_scene_clock.html#a4170b38250c5c64a1602295aedc3f173":[8,0,2,414,0]
+"struct_urho3_d_1_1_msg_scene_clock.html":[8,0,2,414]
 };
