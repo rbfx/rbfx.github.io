@@ -1,5 +1,7 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_bone_view.html#a2c910a5a669fc6b3e6ddbb23f0a0a10b":[8,0,2,96,7],
+"struct_urho3_d_1_1_bone_view.html#a4114a234dc079d24cece12726165d31c":[8,0,2,96,0],
 "struct_urho3_d_1_1_bone_view.html#a41b8dc249af2a57f87fbd22f938a6f87":[8,0,2,96,4],
 "struct_urho3_d_1_1_bone_view.html#a6487b50aafa40c57f00dfb4c6437a749":[8,0,2,96,3],
 "struct_urho3_d_1_1_bone_view.html#a6c7264041971439cb512cba1d4eb4002":[8,0,2,96,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_custom_variant_value_traits_3_01ea_1_1unique__ptr_3_01_t_01_4_01_4.html#ad558dfc8893ac588739ac742547a8579":[8,0,2,173,4],
 "struct_urho3_d_1_1_custom_variant_value_traits_3_01ea_1_1unique__ptr_3_01_t_01_4_01_4.html#afd01c5f9a78f8d62b6e4dca04c230de6":[8,0,2,173,2],
 "struct_urho3_d_1_1_d_d_color_key.html":[8,0,2,176],
-"struct_urho3_d_1_1_d_d_color_key.html#a18592c8209f310bb0d8f5d1e998b9123":[8,0,2,176,1],
-"struct_urho3_d_1_1_d_d_color_key.html#a93be326448524fa6802e49cdc033ead9":[8,0,2,176,0],
-"struct_urho3_d_1_1_d_d_pixel_format.html":[8,0,2,177]
+"struct_urho3_d_1_1_d_d_color_key.html#a18592c8209f310bb0d8f5d1e998b9123":[8,0,2,176,1]
 };

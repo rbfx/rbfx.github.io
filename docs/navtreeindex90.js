@@ -1,5 +1,7 @@
 var NAVTREEINDEX90 =
 {
+"struct_urho3_d_1_1_vertex_buffer_morph.html#a55c96f4c973469d676bd45f1bf1ea846":[8,0,2,811,2],
+"struct_urho3_d_1_1_vertex_buffer_morph.html#af2dd64322a122bb210dc620bb4d903e9":[8,0,2,811,3],
 "struct_urho3_d_1_1_vertex_element.html":[8,0,2,812],
 "struct_urho3_d_1_1_vertex_element.html#a0ef2367495a06a1973309beba0da2b51":[8,0,2,812,3],
 "struct_urho3_d_1_1_vertex_element.html#a22ccfd76bdcec0423b8b6957f0523c1f":[8,0,2,812,5],
