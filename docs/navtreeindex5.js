@@ -127,7 +127,6 @@ var NAVTREEINDEX5 =
 "_physics_utils_8h.html#a50d4877338cf8ca1d20faf276bdf8bfc":[9,0,0,9,2,0],
 "_physics_utils_8h.html#ae76649df231a53648887516c2189f2e7":[9,0,0,9,2,2],
 "_porting_notes.html":[0,1,40],
-"_predicted_kinematic_controller_8h.html":[9,0,0,11,9],
 "_raytracer_scene_8h.html":[9,0,0,2,17],
 "_raytracer_scene_8h.html#a5559613bc379f4c73b9f4701e3336ff7":[9,0,0,2,17,3],
 "_raytracer_scene_8h.html#afe21cd849e286cf395a68fb6bff0eebd":[9,0,0,2,17,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX5 =
 "_rendering.html#Rendering_Further":[0,1,16,7],
 "_rendering.html#Rendering_GPUResourceLoss":[0,1,16,5],
 "_rendering.html#Rendering_Graphics":[0,1,16,0],
-"_rendering.html#Rendering_Optimizations":[0,1,16,3]
+"_rendering.html#Rendering_Optimizations":[0,1,16,3],
+"_rendering.html#Rendering_Renderer":[0,1,16,1]
 };

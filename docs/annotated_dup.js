@@ -250,6 +250,7 @@ var annotated_dup =
       [ "BakedSceneCollector", "class_urho3_d_1_1_baked_scene_collector.html", "class_urho3_d_1_1_baked_scene_collector" ],
       [ "Base64InputArchive", "class_urho3_d_1_1_base64_input_archive.html", "class_urho3_d_1_1_base64_input_archive" ],
       [ "Base64OutputArchive", "class_urho3_d_1_1_base64_output_archive.html", "class_urho3_d_1_1_base64_output_archive" ],
+      [ "BaseFeedbackBehavior", "class_urho3_d_1_1_base_feedback_behavior.html", "class_urho3_d_1_1_base_feedback_behavior" ],
       [ "BaseWidget", "class_urho3_d_1_1_base_widget.html", "class_urho3_d_1_1_base_widget" ],
       [ "BatchCompositor", "class_urho3_d_1_1_batch_compositor.html", "class_urho3_d_1_1_batch_compositor" ],
       [ "BatchCompositorPass", "class_urho3_d_1_1_batch_compositor_pass.html", "class_urho3_d_1_1_batch_compositor_pass" ],

@@ -23,7 +23,6 @@ var dir_8a65c0f2772aac66424a8efb5dfdca3e =
       [ "SoftNetworkTime", "class_urho3_d_1_1_soft_network_time.html", "class_urho3_d_1_1_soft_network_time" ]
     ] ],
     [ "NetworkValue.h", "_network_value_8h.html", "_network_value_8h" ],
-    [ "PredictedKinematicController.h", "_predicted_kinematic_controller_8h.html", null ],
     [ "ReplicatedTransform.h", "_replicated_transform_8h.html", "_replicated_transform_8h" ],
     [ "ReplicationManager.h", "_replication_manager_8h.html", "_replication_manager_8h" ],
     [ "ServerReplicator.h", "_server_replicator_8h.html", [
