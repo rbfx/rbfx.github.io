@@ -414,6 +414,7 @@ var annotated_dup =
       [ "FileSystemReflection", "class_urho3_d_1_1_file_system_reflection.html", "class_urho3_d_1_1_file_system_reflection" ],
       [ "FileWatcher", "class_urho3_d_1_1_file_watcher.html", "class_urho3_d_1_1_file_watcher" ],
       [ "FilteredByDistance", "class_urho3_d_1_1_filtered_by_distance.html", "class_urho3_d_1_1_filtered_by_distance" ],
+      [ "FilteredByOwner", "class_urho3_d_1_1_filtered_by_owner.html", "class_urho3_d_1_1_filtered_by_owner" ],
       [ "FilteredUint", "class_urho3_d_1_1_filtered_uint.html", "class_urho3_d_1_1_filtered_uint" ],
       [ "FlagSet", "class_urho3_d_1_1_flag_set.html", "class_urho3_d_1_1_flag_set" ],
       [ "FocusParameters", "struct_urho3_d_1_1_focus_parameters.html", "struct_urho3_d_1_1_focus_parameters" ],

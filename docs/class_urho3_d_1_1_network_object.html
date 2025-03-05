@@ -102,6 +102,8 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#a117c6713af0580617352e54090a416aa">SetOwner</a> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *owner)</td></tr>
 <tr class="memdesc:a117c6713af0580617352e54090a416aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server-only: set owner connection which is allowed to send feedback for this object. <br /></td></tr>
 <tr class="separator:a117c6713af0580617352e54090a416aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afede8c61568bf3816e05214fefd6111d"><td class="memItemLeft" align="right" valign="top">virtual ea::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#afede8c61568bf3816e05214fefd6111d">CalculateDistanceForFiltering</a> (<a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> *otherNetworkObject)</td></tr>
+<tr class="separator:afede8c61568bf3816e05214fefd6111d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44e3a3e486afa7646c53317181f90de5"><td class="memItemLeft" align="right" valign="top"><a id="a44e3a3e486afa7646c53317181f90de5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#a44e3a3e486afa7646c53317181f90de5">SetParentNetworkObject</a> (NetworkId parentNetworkId)</td></tr>
 <tr class="memdesc:a44e3a3e486afa7646c53317181f90de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set another <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> as parent of this <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a>. <br /></td></tr>
@@ -774,6 +776,35 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Each <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> has ID unique within the owner <a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a>. Derive from <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> to have custom network logic. Don't create more than one <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> per Node.</p>
 <p>Hierarchy is updated after <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> node is dirtied. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afede8c61568bf3816e05214fefd6111d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afede8c61568bf3816e05214fefd6111d">&#9670;&nbsp;</a></span>CalculateDistanceForFiltering()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ea::optional&lt; float &gt; Urho3D::NetworkObject::CalculateDistanceForFiltering </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> *&#160;</td>
+          <td class="paramname"><em>otherNetworkObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculate distance to another network object, for the purpose of per-connection object filtering. Return null if this network object cannot be used to evaluate filtering distance. </p>
+
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_static_network_object.html#afba70cc4d53f8e9dd463920e27ebb210">Urho3D::StaticNetworkObject</a>.</p>
+
+</div>
+</div>
 <a id="a59f39b25796906c63529c4cafdb1eb3b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a59f39b25796906c63529c4cafdb1eb3b">&#9670;&nbsp;</a></span>GetNetworkMode()</h2>
 

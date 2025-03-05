@@ -1,5 +1,17 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_billboard.html#a1df6e784e7e9f6e8c4858d311c43362f":[8,0,2,87,2],
+"struct_urho3_d_1_1_billboard.html#a36d1a79bd71b85366657b0713d18c406":[8,0,2,87,5],
+"struct_urho3_d_1_1_billboard.html#a4ed773c34ac26fd437766516fa70a200":[8,0,2,87,6],
+"struct_urho3_d_1_1_billboard.html#a5a7d3440eaccc295f0a8de5161363691":[8,0,2,87,7],
+"struct_urho3_d_1_1_billboard.html#a67ab68e30781f391c495589a47f2cc10":[8,0,2,87,4],
+"struct_urho3_d_1_1_billboard.html#a7149155e52988df7fc2ae9955f213a38":[8,0,2,87,0],
+"struct_urho3_d_1_1_billboard.html#ab1bc4b5b70c58bc55b04ec8a5e0e5b38":[8,0,2,87,1],
+"struct_urho3_d_1_1_billboard.html#ab6349a8e25ec5026637595b07bea97d3":[8,0,2,87,3],
+"struct_urho3_d_1_1_billboard.html#ac9a895e24df50a5d89a8dd6650a7f29c":[8,0,2,87,8],
+"struct_urho3_d_1_1_bloom_pass_1_1_parameters.html":[8,0,2,95,0],
+"struct_urho3_d_1_1_bloom_pass_1_1_parameters.html#a000d7621a321b42d0ac5432aecf1b1a2":[8,0,2,95,0,7],
+"struct_urho3_d_1_1_bloom_pass_1_1_parameters.html#a03f2e175cdac949412b2ba316fcbd9fc":[8,0,2,95,0,6],
 "struct_urho3_d_1_1_bloom_pass_1_1_parameters.html#a07d79965177d45919364d70106ed07fe":[8,0,2,95,0,3],
 "struct_urho3_d_1_1_bloom_pass_1_1_parameters.html#a2161467c1797c825ac22466d3f46c9f1":[8,0,2,95,0,5],
 "struct_urho3_d_1_1_bloom_pass_1_1_parameters.html#a27991a9e635d0db8f0e0c9d601f4ec8e":[8,0,2,95,0,4],
@@ -237,17 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_cubemap_rendering_settings.html#a4e3f4e74af1d21a9d6627397e08c4aac":[8,0,2,163,7],
 "struct_urho3_d_1_1_cubemap_rendering_settings.html#a6729247982f031411bdf1973eedbf99c":[8,0,2,163,1],
 "struct_urho3_d_1_1_cubemap_rendering_settings.html#a8473f07d8df7df3d98d304f59343c43a":[8,0,2,163,9],
-"struct_urho3_d_1_1_cubemap_rendering_settings.html#a8828da69e758c9e89abf5a495da84cf8":[8,0,2,163,5],
-"struct_urho3_d_1_1_cubemap_rendering_settings.html#a8d06deebb674aec76681522b5cad2d0c":[8,0,2,163,0],
-"struct_urho3_d_1_1_cubemap_rendering_settings.html#a8fd1e84bffcea318b70daa0f4870fe61":[8,0,2,163,2],
-"struct_urho3_d_1_1_cubemap_rendering_settings.html#a98d5ebf428d47c274e0a4054879b46c1":[8,0,2,163,4],
-"struct_urho3_d_1_1_cubemap_rendering_settings.html#ab1e2ae67d4db14aa299a239fcbc0591f":[8,0,2,163,3],
-"struct_urho3_d_1_1_cubemap_update_parameters.html":[8,0,2,164],
-"struct_urho3_d_1_1_cubemap_update_parameters.html#a05b56a66d716d60b67933e9cf11ecac3":[8,0,2,164,1],
-"struct_urho3_d_1_1_cubemap_update_parameters.html#a14bf0218d0e9c4d8ad7c546966029c24":[8,0,2,164,0],
-"struct_urho3_d_1_1_cubemap_update_parameters.html#a3fbe7dc1cab7757d429b40b7faf9d1dc":[8,0,2,164,3],
-"struct_urho3_d_1_1_cubemap_update_parameters.html#ab79128dfe0de6da3aec0b01dce56e940":[8,0,2,164,5],
-"struct_urho3_d_1_1_cubemap_update_parameters.html#ae8e6b5767580dfaf45e21a5006e2cb6c":[8,0,2,164,4],
-"struct_urho3_d_1_1_cubemap_update_parameters.html#afb0b92be8af04376d45ca7d35ffb34da":[8,0,2,164,2],
-"struct_urho3_d_1_1_cubemap_update_result.html":[8,0,2,165]
+"struct_urho3_d_1_1_cubemap_rendering_settings.html#a8828da69e758c9e89abf5a495da84cf8":[8,0,2,163,5]
 };

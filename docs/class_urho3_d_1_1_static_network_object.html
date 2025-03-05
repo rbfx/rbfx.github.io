@@ -99,10 +99,20 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>StaticNetworkObject</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
 <tr class="separator:a7357dad5556b2724b311a713d44131a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a01b309aec835986b871088702debe22b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_network_object.html#a01b309aec835986b871088702debe22b">IsOriginForDistanceFiltering</a> () const</td></tr>
+<tr class="separator:a01b309aec835986b871088702debe22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a367ae3bed3f280d5e8b231b7198287"><td class="memItemLeft" align="right" valign="top"><a id="a4a367ae3bed3f280d5e8b231b7198287"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOriginForDistanceFiltering</b> (bool isOrigin)</td></tr>
+<tr class="separator:a4a367ae3bed3f280d5e8b231b7198287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a8d48a689ec014dadfdd10028b402acfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_network_object.html#a8d48a689ec014dadfdd10028b402acfc">SetClientPrefab</a> (<a class="el" href="class_urho3_d_1_1_prefab_resource.html">PrefabResource</a> *prefab)</td></tr>
 <tr class="separator:a8d48a689ec014dadfdd10028b402acfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:af4351b8611808e9c760a1d199832d027"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_network_object.html#af4351b8611808e9c760a1d199832d027">WriteSnapshot</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) override</td></tr>
+<tr class="memitem:afba70cc4d53f8e9dd463920e27ebb210"><td class="memItemLeft" align="right" valign="top">ea::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_network_object.html#afba70cc4d53f8e9dd463920e27ebb210">CalculateDistanceForFiltering</a> (<a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> *otherNetworkObject) override</td></tr>
+<tr class="separator:afba70cc4d53f8e9dd463920e27ebb210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4351b8611808e9c760a1d199832d027"><td class="memItemLeft" align="right" valign="top"><a id="af4351b8611808e9c760a1d199832d027"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_network_object.html#af4351b8611808e9c760a1d199832d027">WriteSnapshot</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) override</td></tr>
+<tr class="memdesc:af4351b8611808e9c760a1d199832d027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write full snapshot. <br /></td></tr>
 <tr class="separator:af4351b8611808e9c760a1d199832d027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8811827e61ff7da7b551522300bbc63"><td class="memItemLeft" align="right" valign="top"><a id="ad8811827e61ff7da7b551522300bbc63"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_network_object.html#ad8811827e61ff7da7b551522300bbc63">InitializeFromSnapshot</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src, bool isOwned) override</td></tr>
@@ -722,6 +732,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a48d7d978dc7c7aab14d8676ed7c22af0"><td class="memItemLeft" align="right" valign="top"><a id="a48d7d978dc7c7aab14d8676ed7c22af0"></a>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_prefab_resource.html">PrefabResource</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>clientPrefab_</b></td></tr>
 <tr class="separator:a48d7d978dc7c7aab14d8676ed7c22af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac224b58ecbe1acf697a32a00555c66af"><td class="memItemLeft" align="right" valign="top"><a id="ac224b58ecbe1acf697a32a00555c66af"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isOriginForDistanceFiltering_</b> {true}</td></tr>
+<tr class="separator:ac224b58ecbe1acf697a32a00555c66af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -767,6 +780,61 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> that is replicated on the client from prefab and is not updated afterwards. Note: object position in the hierarchy of NetworkObject-s is still maintained. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afba70cc4d53f8e9dd463920e27ebb210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afba70cc4d53f8e9dd463920e27ebb210">&#9670;&nbsp;</a></span>CalculateDistanceForFiltering()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ea::optional&lt; float &gt; Urho3D::StaticNetworkObject::CalculateDistanceForFiltering </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> *&#160;</td>
+          <td class="paramname"><em>otherNetworkObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Implement <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_network_object.html#afede8c61568bf3816e05214fefd6111d">Urho3D::NetworkObject</a>.</p>
+
+</div>
+</div>
+<a id="a01b309aec835986b871088702debe22b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01b309aec835986b871088702debe22b">&#9670;&nbsp;</a></span>IsOriginForDistanceFiltering()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Urho3D::StaticNetworkObject::IsOriginForDistanceFiltering </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Server-only attributes. </p>
+
+</div>
+</div>
 <a id="a8d48a689ec014dadfdd10028b402acfc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d48a689ec014dadfdd10028b402acfc">&#9670;&nbsp;</a></span>SetClientPrefab()</h2>
 
@@ -783,45 +851,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div><div class="memdoc">
 <p>Attribute modification. Don't do that after replication! </p>
-
-</div>
-</div>
-<a id="af4351b8611808e9c760a1d199832d027"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4351b8611808e9c760a1d199832d027">&#9670;&nbsp;</a></span>WriteSnapshot()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::StaticNetworkObject::WriteSnapshot </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
-          <td class="paramname"><em>frame</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;&#160;</td>
-          <td class="paramname"><em>dest</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Implement <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> </p>
-
-<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_server_network_callback.html#a985e081ea19c90ca62ee540beefab032">Urho3D::ServerNetworkCallback</a>.</p>
 
 </div>
 </div>

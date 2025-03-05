@@ -1,5 +1,17 @@
 var NAVTREEINDEX81 =
 {
+"struct_urho3_d_1_1_cubemap_rendering_settings.html#a8d06deebb674aec76681522b5cad2d0c":[8,0,2,163,0],
+"struct_urho3_d_1_1_cubemap_rendering_settings.html#a8fd1e84bffcea318b70daa0f4870fe61":[8,0,2,163,2],
+"struct_urho3_d_1_1_cubemap_rendering_settings.html#a98d5ebf428d47c274e0a4054879b46c1":[8,0,2,163,4],
+"struct_urho3_d_1_1_cubemap_rendering_settings.html#ab1e2ae67d4db14aa299a239fcbc0591f":[8,0,2,163,3],
+"struct_urho3_d_1_1_cubemap_update_parameters.html":[8,0,2,164],
+"struct_urho3_d_1_1_cubemap_update_parameters.html#a05b56a66d716d60b67933e9cf11ecac3":[8,0,2,164,1],
+"struct_urho3_d_1_1_cubemap_update_parameters.html#a14bf0218d0e9c4d8ad7c546966029c24":[8,0,2,164,0],
+"struct_urho3_d_1_1_cubemap_update_parameters.html#a3fbe7dc1cab7757d429b40b7faf9d1dc":[8,0,2,164,3],
+"struct_urho3_d_1_1_cubemap_update_parameters.html#ab79128dfe0de6da3aec0b01dce56e940":[8,0,2,164,5],
+"struct_urho3_d_1_1_cubemap_update_parameters.html#ae8e6b5767580dfaf45e21a5006e2cb6c":[8,0,2,164,4],
+"struct_urho3_d_1_1_cubemap_update_parameters.html#afb0b92be8af04376d45ca7d35ffb34da":[8,0,2,164,2],
+"struct_urho3_d_1_1_cubemap_update_result.html":[8,0,2,165],
 "struct_urho3_d_1_1_cubemap_update_result.html#a412e22ab6cf7766b145eccc766727572":[8,0,2,165,0],
 "struct_urho3_d_1_1_cubemap_update_result.html#a7c3ccef5ffa1a9bc14b16a674e43ebd9":[8,0,2,165,1],
 "struct_urho3_d_1_1_cursor_shape_info.html":[8,0,2,167],
@@ -237,17 +249,5 @@ var NAVTREEINDEX81 =
 "struct_urho3_d_1_1_detail_1_1_enum_string_caster.html#afdfc80bf4ba7d06c1df9a90c2b8062a1":[8,0,2,1,7,0],
 "struct_urho3_d_1_1_detail_1_1_enum_string_caster_3_01unsigned_01_4.html":[8,0,2,1,8],
 "struct_urho3_d_1_1_detail_1_1_enum_string_caster_3_01unsigned_01_4.html#a0b01b8f62af5e9f99602d9aea0ceb4b5":[8,0,2,1,8,2],
-"struct_urho3_d_1_1_detail_1_1_enum_string_caster_3_01unsigned_01_4.html#a1ad6299e377ac3383dede946018d95bf":[8,0,2,1,8,0],
-"struct_urho3_d_1_1_detail_1_1_enum_string_caster_3_01unsigned_01_4.html#aa434cfed00d8449b17fa43f7b7c2e8d3":[8,0,2,1,8,1],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html":[8,0,2,1,9],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html#a17e358e6e78741ee627f6d59f4c8c107":[8,0,2,1,9,0],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html#a4e89abaa06c82c2a3b395eae2bbbd99d":[8,0,2,1,9,1],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html#a57e5ea40f05db9d48bc9906251508775":[8,0,2,1,9,2],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html#aa9f69e6254c4dafdcac698c9105ce76d":[8,0,2,1,9,3],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster_3_01unsigned_01_4.html":[8,0,2,1,10],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster_3_01unsigned_01_4.html#a3c6bbf332348109198831b8f57e5abf1":[8,0,2,1,10,1],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster_3_01unsigned_01_4.html#a9960952bf4149a7368298aaf0f2f7211":[8,0,2,1,10,0],
-"struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster_3_01unsigned_01_4.html#ac11acf0c3e3c3e41b16c02e3f0800946":[8,0,2,1,10,2],
-"struct_urho3_d_1_1_detail_1_1_keyboard_key_mapping.html":[8,0,2,1,12],
-"struct_urho3_d_1_1_detail_1_1_keyboard_key_mapping.html#a15ae038132a23fe87cbc7df8d8c2849a":[8,0,2,1,12,1]
+"struct_urho3_d_1_1_detail_1_1_enum_string_caster_3_01unsigned_01_4.html#a1ad6299e377ac3383dede946018d95bf":[8,0,2,1,8,0]
 };

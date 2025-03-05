@@ -3,6 +3,7 @@ var class_urho3_d_1_1_network_object =
     [ "NetworkObject", "class_urho3_d_1_1_network_object.html#a74c0df8b24d8d602f65ba96fe22021ee", null ],
     [ "~NetworkObject", "class_urho3_d_1_1_network_object.html#a194620e3b799991243384a51a036b56c", null ],
     [ "AddChildNetworkObject", "class_urho3_d_1_1_network_object.html#ad6ed19f26281e5352417405a8d6f92e1", null ],
+    [ "CalculateDistanceForFiltering", "class_urho3_d_1_1_network_object.html#afede8c61568bf3816e05214fefd6111d", null ],
     [ "FindParentNetworkObject", "class_urho3_d_1_1_network_object.html#a8b6eadc301cd8a8aa7155817556bf41d", null ],
     [ "GetChildrenNetworkObjects", "class_urho3_d_1_1_network_object.html#a7dda02e1080c81210f1ed8167ced8364", null ],
     [ "GetNetworkId", "class_urho3_d_1_1_network_object.html#a7195b9f6c02ee4c517dac54dc39e3c96", null ],
