@@ -1,5 +1,9 @@
 var NAVTREEINDEX77 =
 {
+"class_urho3_d_1_1_x_r_binding.html#af382501d784c390ec693e192bf35af08":[8,0,2,844,20],
+"class_urho3_d_1_1_xr_object_shared_ptr.html":[8,0,2,845],
+"class_urho3_d_1_1_xr_object_shared_ptr.html#a1f7c9efff432f37367ab6b6d8e493053":[8,0,2,845,0],
+"class_urho3_d_1_1_xr_object_shared_ptr.html#a56c940e2208e7e9eaab5b935c0a06889":[8,0,2,845,3],
 "class_urho3_d_1_1_xr_object_shared_ptr.html#aa36a1d810d45e0720edd2d8ade5f9288":[8,0,2,845,4],
 "class_urho3_d_1_1_xr_object_shared_ptr.html#abdb9bad2f715f05dc704d478d10fbe13":[8,0,2,845,2],
 "class_urho3_d_1_1_xr_object_shared_ptr.html#ac0ab9ec9bab6e81cb8bd89b3a49d141e":[8,0,2,845,1],
@@ -130,8 +134,8 @@ var NAVTREEINDEX77 =
 "functions_e.html":[8,3,0,5],
 "functions_enum.html":[8,3,4],
 "functions_f.html":[8,3,0,6],
-"functions_func.html":[8,3,1,0],
 "functions_func.html":[8,3,1],
+"functions_func.html":[8,3,1,0],
 "functions_func_b.html":[8,3,1,1],
 "functions_func_c.html":[8,3,1,2],
 "functions_func_d.html":[8,3,1,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX77 =
 "rendering-lights.html":[0,0,2,1,3,2],
 "rendering-low-level-api.html":[0,0,2,1,0],
 "rendering-materials.html":[0,0,2,1,4,1],
-"rendering-models.html":[0,0,2,1,4,0],
-"rendering-pbr.html":[0,0,2,1,2],
-"rendering-pipeline.html":[0,0,2,1,1],
-"rendering-reflection-probes.html":[0,0,2,1,3,5],
-"rendering-resources.html":[0,0,2,1,4]
+"rendering-models.html":[0,0,2,1,4,0]
 };

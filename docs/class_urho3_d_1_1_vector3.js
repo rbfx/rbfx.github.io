@@ -42,6 +42,7 @@ var class_urho3_d_1_1_vector3 =
     [ "Orthogonalize", "class_urho3_d_1_1_vector3.html#a549f4a4d85f4cd0f7818ea165cdeb067", null ],
     [ "ProjectOntoAxis", "class_urho3_d_1_1_vector3.html#a28e4c0e530d23d7d6009b3c4e89fd9a2", null ],
     [ "ProjectOntoLine", "class_urho3_d_1_1_vector3.html#a4161d0adf8675873cd5045f5c9369ddc", null ],
+    [ "ProjectOntoLineScalar", "class_urho3_d_1_1_vector3.html#afc6a97828d03466244fdd5ed43661cf6", null ],
     [ "ProjectOntoPlane", "class_urho3_d_1_1_vector3.html#a63c4ebaea19e5d752030bc5ecbf5f7d2", null ],
     [ "ReNormalized", "class_urho3_d_1_1_vector3.html#ab62d2594d5424af1b64ac536d53dff76", null ],
     [ "SignedAngle", "class_urho3_d_1_1_vector3.html#a20c88dfcf5d4f2aca1141424b3c94bdc", null ],

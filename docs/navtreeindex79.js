@@ -1,5 +1,9 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_animation_controller_1_1_animation_instance.html":[8,0,2,21,0],
+"struct_urho3_d_1_1_animation_controller_1_1_animation_instance.html#a371bb2e67698aa8be469354cafb1b5bd":[8,0,2,21,0,1],
+"struct_urho3_d_1_1_animation_controller_1_1_animation_instance.html#a8782767d30a830a38731ffc3b725e3d2":[8,0,2,21,0,0],
+"struct_urho3_d_1_1_animation_key_frame.html":[8,0,2,23],
 "struct_urho3_d_1_1_animation_key_frame.html#a420725c50447c000d9adcea97cfd83f5":[8,0,2,23,1],
 "struct_urho3_d_1_1_animation_key_frame.html#ae09a36e5739e0ca73934843edf9999c0":[8,0,2,23,2],
 "struct_urho3_d_1_1_animation_key_frame.html#af7afd1d81392c686f7e1403fa6b1397e":[8,0,2,23,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_bias_parameters.html":[8,0,2,86],
 "struct_urho3_d_1_1_bias_parameters.html#a6141ca0eee08e4153dfab8cc7dfdd93e":[8,0,2,86,2],
 "struct_urho3_d_1_1_bias_parameters.html#a8af712dfc6adcc0871fc958a88da040d":[8,0,2,86,1],
-"struct_urho3_d_1_1_bias_parameters.html#a9615444d83dadbc171d0dc15d416900b":[8,0,2,86,4],
-"struct_urho3_d_1_1_bias_parameters.html#a9c38767856c7fcc2d6db91f24d87f9f3":[8,0,2,86,0],
-"struct_urho3_d_1_1_bias_parameters.html#af20c7211a2598a75aa9cf2ebcdf58897":[8,0,2,86,3],
-"struct_urho3_d_1_1_bias_parameters.html#afaebb5818bfbfe65301d0d5369cbe9ad":[8,0,2,86,5],
-"struct_urho3_d_1_1_billboard.html":[8,0,2,87]
+"struct_urho3_d_1_1_bias_parameters.html#a9615444d83dadbc171d0dc15d416900b":[8,0,2,86,4]
 };
