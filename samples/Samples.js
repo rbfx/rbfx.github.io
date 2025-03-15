@@ -46,7 +46,9 @@ Module["preRun"].push(function() {
 // we collect those properties and reapply _after_ we configure
 // the current environment's defaults to avoid having to be so
 // defensive during initialization.
-var moduleOverrides = Object.assign({}, Module);
+var moduleOverrides = {
+  ...Module
+};
 
 var arguments_ = [];
 
@@ -464,329 +466,8 @@ async function createWasm() {
   return exports;
 }
 
-// === Body ===
-var ASM_CONSTS = {
-  1949760: $0 => {
-    var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
-    var reply = window.prompt(str, "i");
-    if (reply === null) {
-      reply = "i";
-    }
-    return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
-  },
-  1949985: ($0, $1) => {
-    alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
-  },
-  1950042: () => {
-    if (typeof (AudioContext) !== "undefined") {
-      return true;
-    } else if (typeof (webkitAudioContext) !== "undefined") {
-      return true;
-    }
-    return false;
-  },
-  1950189: () => {
-    if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
-      return true;
-    } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
-      return true;
-    }
-    return false;
-  },
-  1950423: $0 => {
-    if (typeof (Module["SDL2"]) === "undefined") {
-      Module["SDL2"] = {};
-    }
-    var SDL2 = Module["SDL2"];
-    if (!$0) {
-      SDL2.audio = {};
-    } else {
-      SDL2.capture = {};
-    }
-    if (!SDL2.audioContext) {
-      if (typeof (AudioContext) !== "undefined") {
-        SDL2.audioContext = new AudioContext;
-      } else if (typeof (webkitAudioContext) !== "undefined") {
-        SDL2.audioContext = new webkitAudioContext;
-      }
-      if (SDL2.audioContext) {
-        autoResumeAudioContext(SDL2.audioContext);
-      }
-    }
-    return SDL2.audioContext === undefined ? -1 : 0;
-  },
-  1950916: () => {
-    var SDL2 = Module["SDL2"];
-    return SDL2.audioContext.sampleRate;
-  },
-  1950984: ($0, $1, $2, $3) => {
-    var SDL2 = Module["SDL2"];
-    var have_microphone = function(stream) {
-      if (SDL2.capture.silenceTimer !== undefined) {
-        clearTimeout(SDL2.capture.silenceTimer);
-        SDL2.capture.silenceTimer = undefined;
-      }
-      SDL2.capture.mediaStreamNode = SDL2.audioContext.createMediaStreamSource(stream);
-      SDL2.capture.scriptProcessorNode = SDL2.audioContext.createScriptProcessor($1, $0, 1);
-      SDL2.capture.scriptProcessorNode.onaudioprocess = function(audioProcessingEvent) {
-        if ((SDL2 === undefined) || (SDL2.capture === undefined)) {
-          return;
-        }
-        audioProcessingEvent.outputBuffer.getChannelData(0).fill(0);
-        SDL2.capture.currentCaptureBuffer = audioProcessingEvent.inputBuffer;
-        dynCall("vi", $2, [ $3 ]);
-      };
-      SDL2.capture.mediaStreamNode.connect(SDL2.capture.scriptProcessorNode);
-      SDL2.capture.scriptProcessorNode.connect(SDL2.audioContext.destination);
-      SDL2.capture.stream = stream;
-    };
-    var no_microphone = function(error) {};
-    SDL2.capture.silenceBuffer = SDL2.audioContext.createBuffer($0, $1, SDL2.audioContext.sampleRate);
-    SDL2.capture.silenceBuffer.getChannelData(0).fill(0);
-    var silence_callback = function() {
-      SDL2.capture.currentCaptureBuffer = SDL2.capture.silenceBuffer;
-      dynCall("vi", $2, [ $3 ]);
-    };
-    SDL2.capture.silenceTimer = setTimeout(silence_callback, ($1 / SDL2.audioContext.sampleRate) * 1e3);
-    if ((navigator.mediaDevices !== undefined) && (navigator.mediaDevices.getUserMedia !== undefined)) {
-      navigator.mediaDevices.getUserMedia({
-        audio: true,
-        video: false
-      }).then(have_microphone).catch(no_microphone);
-    } else if (navigator.webkitGetUserMedia !== undefined) {
-      navigator.webkitGetUserMedia({
-        audio: true,
-        video: false
-      }, have_microphone, no_microphone);
-    }
-  },
-  1952636: ($0, $1, $2, $3) => {
-    var SDL2 = Module["SDL2"];
-    SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
-    SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
-      if ((SDL2 === undefined) || (SDL2.audio === undefined)) {
-        return;
-      }
-      SDL2.audio.currentOutputBuffer = e["outputBuffer"];
-      dynCall("vi", $2, [ $3 ]);
-    };
-    SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
-  },
-  1953046: ($0, $1) => {
-    var SDL2 = Module["SDL2"];
-    var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
-    for (var c = 0; c < numChannels; ++c) {
-      var channelData = SDL2.capture.currentCaptureBuffer.getChannelData(c);
-      if (channelData.length != $1) {
-        throw "Web Audio capture buffer length mismatch! Destination size: " + channelData.length + " samples vs expected " + $1 + " samples!";
-      }
-      if (numChannels == 1) {
-        for (var j = 0; j < $1; ++j) {
-          setValue($0 + (j * 4), channelData[j], "float");
-        }
-      } else {
-        for (var j = 0; j < $1; ++j) {
-          setValue($0 + (((j * numChannels) + c) * 4), channelData[j], "float");
-        }
-      }
-    }
-  },
-  1953651: ($0, $1) => {
-    var SDL2 = Module["SDL2"];
-    var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
-    for (var c = 0; c < numChannels; ++c) {
-      var channelData = SDL2.audio.currentOutputBuffer["getChannelData"](c);
-      if (channelData.length != $1) {
-        throw "Web Audio output buffer length mismatch! Destination size: " + channelData.length + " samples vs expected " + $1 + " samples!";
-      }
-      for (var j = 0; j < $1; ++j) {
-        channelData[j] = HEAPF32[$0 + ((j * numChannels + c) << 2) >> 2];
-      }
-    }
-  },
-  1954131: $0 => {
-    var SDL2 = Module["SDL2"];
-    if ($0) {
-      if (SDL2.capture.silenceTimer !== undefined) {
-        clearTimeout(SDL2.capture.silenceTimer);
-      }
-      if (SDL2.capture.stream !== undefined) {
-        var tracks = SDL2.capture.stream.getAudioTracks();
-        for (var i = 0; i < tracks.length; i++) {
-          SDL2.capture.stream.removeTrack(tracks[i]);
-        }
-        SDL2.capture.stream = undefined;
-      }
-      if (SDL2.capture.scriptProcessorNode !== undefined) {
-        SDL2.capture.scriptProcessorNode.onaudioprocess = function(audioProcessingEvent) {};
-        SDL2.capture.scriptProcessorNode.disconnect();
-        SDL2.capture.scriptProcessorNode = undefined;
-      }
-      if (SDL2.capture.mediaStreamNode !== undefined) {
-        SDL2.capture.mediaStreamNode.disconnect();
-        SDL2.capture.mediaStreamNode = undefined;
-      }
-      if (SDL2.capture.silenceBuffer !== undefined) {
-        SDL2.capture.silenceBuffer = undefined;
-      }
-      SDL2.capture = undefined;
-    } else {
-      if (SDL2.audio.scriptProcessorNode != undefined) {
-        SDL2.audio.scriptProcessorNode.disconnect();
-        SDL2.audio.scriptProcessorNode = undefined;
-      }
-      SDL2.audio = undefined;
-    }
-    if ((SDL2.audioContext !== undefined) && (SDL2.audio === undefined) && (SDL2.capture === undefined)) {
-      SDL2.audioContext.close();
-      SDL2.audioContext = undefined;
-    }
-  },
-  1955303: ($0, $1, $2) => {
-    var w = $0;
-    var h = $1;
-    var pixels = $2;
-    if (!Module["SDL2"]) Module["SDL2"] = {};
-    var SDL2 = Module["SDL2"];
-    if (SDL2.ctxCanvas !== Module["canvas"]) {
-      SDL2.ctx = Module["createContext"](Module["canvas"], false, true);
-      SDL2.ctxCanvas = Module["canvas"];
-    }
-    if (SDL2.w !== w || SDL2.h !== h || SDL2.imageCtx !== SDL2.ctx) {
-      SDL2.image = SDL2.ctx.createImageData(w, h);
-      SDL2.w = w;
-      SDL2.h = h;
-      SDL2.imageCtx = SDL2.ctx;
-    }
-    var data = SDL2.image.data;
-    var src = pixels >> 2;
-    var dst = 0;
-    var num;
-    if (typeof CanvasPixelArray !== "undefined" && data instanceof CanvasPixelArray) {
-      num = data.length;
-      while (dst < num) {
-        var val = HEAP32[src];
-        data[dst] = val & 255;
-        data[dst + 1] = (val >> 8) & 255;
-        data[dst + 2] = (val >> 16) & 255;
-        data[dst + 3] = 255;
-        src++;
-        dst += 4;
-      }
-    } else {
-      if (SDL2.data32Data !== data) {
-        SDL2.data32 = new Int32Array(data.buffer);
-        SDL2.data8 = new Uint8Array(data.buffer);
-        SDL2.data32Data = data;
-      }
-      var data32 = SDL2.data32;
-      num = data32.length;
-      data32.set(HEAP32.subarray(src, src + num));
-      var data8 = SDL2.data8;
-      var i = 3;
-      var j = i + 4 * num;
-      if (num % 8 == 0) {
-        while (i < j) {
-          data8[i] = 255;
-          i = i + 4 | 0;
-          data8[i] = 255;
-          i = i + 4 | 0;
-          data8[i] = 255;
-          i = i + 4 | 0;
-          data8[i] = 255;
-          i = i + 4 | 0;
-          data8[i] = 255;
-          i = i + 4 | 0;
-          data8[i] = 255;
-          i = i + 4 | 0;
-          data8[i] = 255;
-          i = i + 4 | 0;
-          data8[i] = 255;
-          i = i + 4 | 0;
-        }
-      } else {
-        while (i < j) {
-          data8[i] = 255;
-          i = i + 4 | 0;
-        }
-      }
-    }
-    SDL2.ctx.putImageData(SDL2.image, 0, 0);
-  },
-  1956772: ($0, $1, $2, $3, $4) => {
-    var w = $0;
-    var h = $1;
-    var hot_x = $2;
-    var hot_y = $3;
-    var pixels = $4;
-    var canvas = document.createElement("canvas");
-    canvas.width = w;
-    canvas.height = h;
-    var ctx = canvas.getContext("2d");
-    var image = ctx.createImageData(w, h);
-    var data = image.data;
-    var src = pixels >> 2;
-    var dst = 0;
-    var num;
-    if (typeof CanvasPixelArray !== "undefined" && data instanceof CanvasPixelArray) {
-      num = data.length;
-      while (dst < num) {
-        var val = HEAP32[src];
-        data[dst] = val & 255;
-        data[dst + 1] = (val >> 8) & 255;
-        data[dst + 2] = (val >> 16) & 255;
-        data[dst + 3] = (val >> 24) & 255;
-        src++;
-        dst += 4;
-      }
-    } else {
-      var data32 = new Int32Array(data.buffer);
-      num = data32.length;
-      data32.set(HEAP32.subarray(src, src + num));
-    }
-    ctx.putImageData(image, 0, 0);
-    var url = hot_x === 0 && hot_y === 0 ? "url(" + canvas.toDataURL() + "), auto" : "url(" + canvas.toDataURL() + ") " + hot_x + " " + hot_y + ", auto";
-    var urlBuf = _malloc(url.length + 1);
-    stringToUTF8(url, urlBuf, url.length + 1);
-    return urlBuf;
-  },
-  1957761: $0 => {
-    if (Module["canvas"]) {
-      Module["canvas"].style["cursor"] = UTF8ToString($0);
-    }
-  },
-  1957844: () => {
-    if (Module["canvas"]) {
-      Module["canvas"].style["cursor"] = "none";
-    }
-  },
-  1957913: () => window.innerWidth,
-  1957943: () => window.innerHeight,
-  1957974: $0 => {
-    try {
-      const context = GL.getContext($0);
-      if (!context) {
-        console.error("Failed to get gl context from handle");
-        return;
-      }
-      const epv = context.GLctx.getExtension("WEBGL_provoking_vertex");
-      if (epv) {
-        epv.provokingVertexWEBGL(epv.FIRST_VERTEX_CONVENTION_WEBGL);
-      } else {
-        console.warn("WEBGL_provoking_vertex is not supported. Using flat shading may result in catastrophic performance degradation.");
-      }
-    } catch (error) {
-      console.error("An unexpected error occurred while setting the first vertex convention: ", error, "\nUsing flat shading may result in catastrophic performance degradation.");
-    }
-  }
-};
-
-function ImGui_ImplSDL2_EmscriptenOpenURL(url) {
-  url = url ? UTF8ToString(url) : null;
-  if (url) window.open(url, "_blank");
-}
-
 // end include: preamble.js
+// Begin JS library code
 class ExitStatus {
   name="ExitStatus";
   constructor(status) {
@@ -1344,9 +1025,7 @@ var TTY = {
   }
 };
 
-var zeroMemory = (address, size) => {
-  HEAPU8.fill(0, address, address + size);
-};
+var zeroMemory = (ptr, size) => HEAPU8.fill(0, ptr, ptr + size);
 
 var alignMemory = (size, alignment) => Math.ceil(size / alignment) * alignment;
 
@@ -1390,7 +1069,6 @@ var MEMFS = {
           llseek: MEMFS.stream_ops.llseek,
           read: MEMFS.stream_ops.read,
           write: MEMFS.stream_ops.write,
-          allocate: MEMFS.stream_ops.allocate,
           mmap: MEMFS.stream_ops.mmap,
           msync: MEMFS.stream_ops.msync
         }
@@ -1638,10 +1316,6 @@ var MEMFS = {
       }
       return position;
     },
-    allocate(stream, offset, length) {
-      MEMFS.expandFileStorage(stream.node, offset + length);
-      stream.node.usedBytes = Math.max(stream.node.usedBytes, offset + length);
-    },
     mmap(stream, length, position, prot, flags) {
       if (!FS.isFile(stream.node.mode)) {
         throw new FS.ErrnoError(43);
@@ -1808,7 +1482,9 @@ var IDBFS = {
       mnt.idbPersistState = 0;
       // IndexedDB sync starts in idle state
       var memfs_node_ops = mnt.node_ops;
-      mnt.node_ops = Object.assign({}, mnt.node_ops);
+      mnt.node_ops = {
+        ...mnt.node_ops
+      };
       // Clone node_ops to inject write tracking
       mnt.node_ops.mknod = (parent, name, mode, dev) => {
         var node = memfs_node_ops.mknod(parent, name, mode, dev);
@@ -1819,7 +1495,9 @@ var IDBFS = {
         // Remember original MEMFS stream_ops for this node
         node.memfs_stream_ops = node.stream_ops;
         // Clone stream_ops to inject write tracking
-        node.stream_ops = Object.assign({}, node.stream_ops);
+        node.stream_ops = {
+          ...node.stream_ops
+        };
         // Track all file writes
         node.stream_ops.write = (stream, buffer, offset, length, position, canOwn) => {
           // This file has been modified, we must persist IndexedDB when this file closes
@@ -2695,9 +2373,9 @@ var FS = {
   mkdirTree(path, mode) {
     var dirs = path.split("/");
     var d = "";
-    for (var i = 0; i < dirs.length; ++i) {
-      if (!dirs[i]) continue;
-      d += "/" + dirs[i];
+    for (var dir of dirs) {
+      if (!dir) continue;
+      d += "/" + dir;
       try {
         FS.mkdir(d, mode);
       } catch (e) {
@@ -3190,24 +2868,6 @@ var FS = {
     if (!seeking) stream.position += bytesWritten;
     return bytesWritten;
   },
-  allocate(stream, offset, length) {
-    if (FS.isClosed(stream)) {
-      throw new FS.ErrnoError(8);
-    }
-    if (offset < 0 || length <= 0) {
-      throw new FS.ErrnoError(28);
-    }
-    if ((stream.flags & 2097155) === 0) {
-      throw new FS.ErrnoError(8);
-    }
-    if (!FS.isFile(stream.node.mode) && !FS.isDir(stream.node.mode)) {
-      throw new FS.ErrnoError(43);
-    }
-    if (!stream.stream_ops.allocate) {
-      throw new FS.ErrnoError(138);
-    }
-    stream.stream_ops.allocate(stream, offset, length);
-  },
   mmap(stream, length, position, prot, flags) {
     // User requests writing to file (prot & PROT_WRITE != 0).
     // Checking if we have permissions to write to the file unless
@@ -3420,12 +3080,10 @@ var FS = {
     FS.initialized = false;
     // force-flush all streams, so we get musl std streams printed out
     // close all of our streams
-    for (var i = 0; i < FS.streams.length; i++) {
-      var stream = FS.streams[i];
-      if (!stream) {
-        continue;
+    for (var stream of FS.streams) {
+      if (stream) {
+        FS.close(stream);
       }
-      FS.close(stream);
     }
   },
   findObject(path, dontResolveLastLink) {
@@ -4088,9 +3746,7 @@ var SOCKFS = {
         sock.server = null;
       }
       // close any peer connections
-      var peers = Object.keys(sock.peers);
-      for (var i = 0; i < peers.length; i++) {
-        var peer = sock.peers[peers[i]];
+      for (var peer of Object.values(sock.peers)) {
         try {
           peer.socket.close();
         } catch (e) {}
@@ -4469,8 +4125,6 @@ var inetPton4 = str => {
   return (b[0] | (b[1] << 8) | (b[2] << 16) | (b[3] << 24)) >>> 0;
 };
 
-/** @suppress {checkTypes} */ var jstoi_q = str => parseInt(str);
-
 var inetPton6 = str => {
   var words;
   var w, offset, z;
@@ -4492,8 +4146,8 @@ var inetPton6 = str => {
     // parse IPv4 embedded stress
     str = str.replace(new RegExp("[.]", "g"), ":");
     words = str.split(":");
-    words[words.length - 4] = jstoi_q(words[words.length - 4]) + jstoi_q(words[words.length - 3]) * 256;
-    words[words.length - 3] = jstoi_q(words[words.length - 2]) + jstoi_q(words[words.length - 1]) * 256;
+    words[words.length - 4] = Number(words[words.length - 4]) + Number(words[words.length - 3]) * 256;
+    words[words.length - 3] = Number(words[words.length - 2]) + Number(words[words.length - 1]) * 256;
     words = words.slice(0, words.length - 2);
   } else {
     words = str.split(":");
@@ -5142,13 +4796,23 @@ var registeredTypes = {};
 
 var typeDependencies = {};
 
-var BindingError;
+var BindingError = Module["BindingError"] = class BindingError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "BindingError";
+  }
+};
 
 var throwBindingError = message => {
   throw new BindingError(message);
 };
 
-var InternalError;
+var InternalError = Module["InternalError"] = class InternalError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "InternalError";
+  }
+};
 
 var throwInternalError = message => {
   throw new InternalError(message);
@@ -5581,7 +5245,6 @@ var wasmTableMirror = [];
 var getWasmTableEntry = funcPtr => {
   var func = wasmTableMirror[funcPtr];
   if (!func) {
-    if (funcPtr >= wasmTableMirror.length) wasmTableMirror.length = funcPtr + 1;
     /** @suppress {checkTypes} */ wasmTableMirror[funcPtr] = func = wasmTable.get(funcPtr);
   }
   return func;
@@ -5620,7 +5283,7 @@ var extendError = (baseErrorType, errorName) => {
   return errorClass;
 };
 
-var UnboundTypeError;
+var UnboundTypeError = Module["UnboundTypeError"] = extendError(Error, "UnboundTypeError");
 
 var getTypeName = type => {
   var ptr = ___getTypeName(type);
@@ -5773,7 +5436,8 @@ var __embind_register_std_string = (rawType, name) => {
       }
       var length;
       var valueIsOfTypeString = (typeof value == "string");
-      if (!(valueIsOfTypeString || value instanceof Uint8Array || value instanceof Uint8ClampedArray || value instanceof Int8Array)) {
+      // We accept `string` or array views with single byte elements
+      if (!(valueIsOfTypeString || (ArrayBuffer.isView(value) && value.BYTES_PER_ELEMENT == 1))) {
         throwBindingError("Cannot pass non-string to std::string");
       }
       if (stdStringIsUTF8 && valueIsOfTypeString) {
@@ -5785,10 +5449,10 @@ var __embind_register_std_string = (rawType, name) => {
       var base = _malloc(4 + length + 1);
       var ptr = base + 4;
       HEAPU32[((base) >> 2)] = length;
-      if (stdStringIsUTF8 && valueIsOfTypeString) {
-        stringToUTF8(value, ptr, length + 1);
-      } else {
-        if (valueIsOfTypeString) {
+      if (valueIsOfTypeString) {
+        if (stdStringIsUTF8) {
+          stringToUTF8(value, ptr, length + 1);
+        } else {
           for (var i = 0; i < length; ++i) {
             var charCode = value.charCodeAt(i);
             if (charCode > 255) {
@@ -5797,11 +5461,9 @@ var __embind_register_std_string = (rawType, name) => {
             }
             HEAPU8[ptr + i] = charCode;
           }
-        } else {
-          for (var i = 0; i < length; ++i) {
-            HEAPU8[ptr + i] = value[i];
-          }
         }
+      } else {
+        HEAPU8.set(value, ptr);
       }
       if (destructors !== null) {
         destructors.push(_free, base);
@@ -10076,6 +9738,8 @@ var _emscripten_glGetUniformBlockIndex = _glGetUniformBlockIndex;
 
 var _emscripten_glGetUniformIndices = _glGetUniformIndices;
 
+/** @suppress {checkTypes} */ var jstoi_q = str => parseInt(str);
+
 /** @noinline */ var webglGetLeftBracePos = name => name.slice(-1) == "]" && name.lastIndexOf("[");
 
 var webglPrepareUniformLocationsBeforeFirstUse = program => {
@@ -12943,23 +12607,7 @@ MEMFS.doesNotExistError = new FS.ErrnoError(44);
 
 embind_init_charCodes();
 
-BindingError = Module["BindingError"] = class BindingError extends Error {
-  constructor(message) {
-    super(message);
-    this.name = "BindingError";
-  }
-};
-
-InternalError = Module["InternalError"] = class InternalError extends Error {
-  constructor(message) {
-    super(message);
-    this.name = "InternalError";
-  }
-};
-
 init_emval();
-
-UnboundTypeError = Module["UnboundTypeError"] = extendError(Error, "UnboundTypeError");
 
 // exports
 Module["requestFullscreen"] = Browser.requestFullscreen;
@@ -12982,9 +12630,331 @@ Module["resumeMainLoop"] = MainLoop.resume;
 
 MainLoop.init();
 
-for (var i = 0; i < 32; ++i) tempFixedLengthArray.push(new Array(i));
+for (let i = 0; i < 32; ++i) tempFixedLengthArray.push(new Array(i));
 
 Fetch.init();
+
+// End JS library code
+var ASM_CONSTS = {
+  1949760: $0 => {
+    var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
+    var reply = window.prompt(str, "i");
+    if (reply === null) {
+      reply = "i";
+    }
+    return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
+  },
+  1949985: ($0, $1) => {
+    alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
+  },
+  1950042: () => {
+    if (typeof (AudioContext) !== "undefined") {
+      return true;
+    } else if (typeof (webkitAudioContext) !== "undefined") {
+      return true;
+    }
+    return false;
+  },
+  1950189: () => {
+    if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
+      return true;
+    } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
+      return true;
+    }
+    return false;
+  },
+  1950423: $0 => {
+    if (typeof (Module["SDL2"]) === "undefined") {
+      Module["SDL2"] = {};
+    }
+    var SDL2 = Module["SDL2"];
+    if (!$0) {
+      SDL2.audio = {};
+    } else {
+      SDL2.capture = {};
+    }
+    if (!SDL2.audioContext) {
+      if (typeof (AudioContext) !== "undefined") {
+        SDL2.audioContext = new AudioContext;
+      } else if (typeof (webkitAudioContext) !== "undefined") {
+        SDL2.audioContext = new webkitAudioContext;
+      }
+      if (SDL2.audioContext) {
+        autoResumeAudioContext(SDL2.audioContext);
+      }
+    }
+    return SDL2.audioContext === undefined ? -1 : 0;
+  },
+  1950916: () => {
+    var SDL2 = Module["SDL2"];
+    return SDL2.audioContext.sampleRate;
+  },
+  1950984: ($0, $1, $2, $3) => {
+    var SDL2 = Module["SDL2"];
+    var have_microphone = function(stream) {
+      if (SDL2.capture.silenceTimer !== undefined) {
+        clearTimeout(SDL2.capture.silenceTimer);
+        SDL2.capture.silenceTimer = undefined;
+      }
+      SDL2.capture.mediaStreamNode = SDL2.audioContext.createMediaStreamSource(stream);
+      SDL2.capture.scriptProcessorNode = SDL2.audioContext.createScriptProcessor($1, $0, 1);
+      SDL2.capture.scriptProcessorNode.onaudioprocess = function(audioProcessingEvent) {
+        if ((SDL2 === undefined) || (SDL2.capture === undefined)) {
+          return;
+        }
+        audioProcessingEvent.outputBuffer.getChannelData(0).fill(0);
+        SDL2.capture.currentCaptureBuffer = audioProcessingEvent.inputBuffer;
+        dynCall("vi", $2, [ $3 ]);
+      };
+      SDL2.capture.mediaStreamNode.connect(SDL2.capture.scriptProcessorNode);
+      SDL2.capture.scriptProcessorNode.connect(SDL2.audioContext.destination);
+      SDL2.capture.stream = stream;
+    };
+    var no_microphone = function(error) {};
+    SDL2.capture.silenceBuffer = SDL2.audioContext.createBuffer($0, $1, SDL2.audioContext.sampleRate);
+    SDL2.capture.silenceBuffer.getChannelData(0).fill(0);
+    var silence_callback = function() {
+      SDL2.capture.currentCaptureBuffer = SDL2.capture.silenceBuffer;
+      dynCall("vi", $2, [ $3 ]);
+    };
+    SDL2.capture.silenceTimer = setTimeout(silence_callback, ($1 / SDL2.audioContext.sampleRate) * 1e3);
+    if ((navigator.mediaDevices !== undefined) && (navigator.mediaDevices.getUserMedia !== undefined)) {
+      navigator.mediaDevices.getUserMedia({
+        audio: true,
+        video: false
+      }).then(have_microphone).catch(no_microphone);
+    } else if (navigator.webkitGetUserMedia !== undefined) {
+      navigator.webkitGetUserMedia({
+        audio: true,
+        video: false
+      }, have_microphone, no_microphone);
+    }
+  },
+  1952636: ($0, $1, $2, $3) => {
+    var SDL2 = Module["SDL2"];
+    SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
+    SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
+      if ((SDL2 === undefined) || (SDL2.audio === undefined)) {
+        return;
+      }
+      SDL2.audio.currentOutputBuffer = e["outputBuffer"];
+      dynCall("vi", $2, [ $3 ]);
+    };
+    SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
+  },
+  1953046: ($0, $1) => {
+    var SDL2 = Module["SDL2"];
+    var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
+    for (var c = 0; c < numChannels; ++c) {
+      var channelData = SDL2.capture.currentCaptureBuffer.getChannelData(c);
+      if (channelData.length != $1) {
+        throw "Web Audio capture buffer length mismatch! Destination size: " + channelData.length + " samples vs expected " + $1 + " samples!";
+      }
+      if (numChannels == 1) {
+        for (var j = 0; j < $1; ++j) {
+          setValue($0 + (j * 4), channelData[j], "float");
+        }
+      } else {
+        for (var j = 0; j < $1; ++j) {
+          setValue($0 + (((j * numChannels) + c) * 4), channelData[j], "float");
+        }
+      }
+    }
+  },
+  1953651: ($0, $1) => {
+    var SDL2 = Module["SDL2"];
+    var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
+    for (var c = 0; c < numChannels; ++c) {
+      var channelData = SDL2.audio.currentOutputBuffer["getChannelData"](c);
+      if (channelData.length != $1) {
+        throw "Web Audio output buffer length mismatch! Destination size: " + channelData.length + " samples vs expected " + $1 + " samples!";
+      }
+      for (var j = 0; j < $1; ++j) {
+        channelData[j] = HEAPF32[$0 + ((j * numChannels + c) << 2) >> 2];
+      }
+    }
+  },
+  1954131: $0 => {
+    var SDL2 = Module["SDL2"];
+    if ($0) {
+      if (SDL2.capture.silenceTimer !== undefined) {
+        clearTimeout(SDL2.capture.silenceTimer);
+      }
+      if (SDL2.capture.stream !== undefined) {
+        var tracks = SDL2.capture.stream.getAudioTracks();
+        for (var i = 0; i < tracks.length; i++) {
+          SDL2.capture.stream.removeTrack(tracks[i]);
+        }
+        SDL2.capture.stream = undefined;
+      }
+      if (SDL2.capture.scriptProcessorNode !== undefined) {
+        SDL2.capture.scriptProcessorNode.onaudioprocess = function(audioProcessingEvent) {};
+        SDL2.capture.scriptProcessorNode.disconnect();
+        SDL2.capture.scriptProcessorNode = undefined;
+      }
+      if (SDL2.capture.mediaStreamNode !== undefined) {
+        SDL2.capture.mediaStreamNode.disconnect();
+        SDL2.capture.mediaStreamNode = undefined;
+      }
+      if (SDL2.capture.silenceBuffer !== undefined) {
+        SDL2.capture.silenceBuffer = undefined;
+      }
+      SDL2.capture = undefined;
+    } else {
+      if (SDL2.audio.scriptProcessorNode != undefined) {
+        SDL2.audio.scriptProcessorNode.disconnect();
+        SDL2.audio.scriptProcessorNode = undefined;
+      }
+      SDL2.audio = undefined;
+    }
+    if ((SDL2.audioContext !== undefined) && (SDL2.audio === undefined) && (SDL2.capture === undefined)) {
+      SDL2.audioContext.close();
+      SDL2.audioContext = undefined;
+    }
+  },
+  1955303: ($0, $1, $2) => {
+    var w = $0;
+    var h = $1;
+    var pixels = $2;
+    if (!Module["SDL2"]) Module["SDL2"] = {};
+    var SDL2 = Module["SDL2"];
+    if (SDL2.ctxCanvas !== Module["canvas"]) {
+      SDL2.ctx = Module["createContext"](Module["canvas"], false, true);
+      SDL2.ctxCanvas = Module["canvas"];
+    }
+    if (SDL2.w !== w || SDL2.h !== h || SDL2.imageCtx !== SDL2.ctx) {
+      SDL2.image = SDL2.ctx.createImageData(w, h);
+      SDL2.w = w;
+      SDL2.h = h;
+      SDL2.imageCtx = SDL2.ctx;
+    }
+    var data = SDL2.image.data;
+    var src = pixels >> 2;
+    var dst = 0;
+    var num;
+    if (typeof CanvasPixelArray !== "undefined" && data instanceof CanvasPixelArray) {
+      num = data.length;
+      while (dst < num) {
+        var val = HEAP32[src];
+        data[dst] = val & 255;
+        data[dst + 1] = (val >> 8) & 255;
+        data[dst + 2] = (val >> 16) & 255;
+        data[dst + 3] = 255;
+        src++;
+        dst += 4;
+      }
+    } else {
+      if (SDL2.data32Data !== data) {
+        SDL2.data32 = new Int32Array(data.buffer);
+        SDL2.data8 = new Uint8Array(data.buffer);
+        SDL2.data32Data = data;
+      }
+      var data32 = SDL2.data32;
+      num = data32.length;
+      data32.set(HEAP32.subarray(src, src + num));
+      var data8 = SDL2.data8;
+      var i = 3;
+      var j = i + 4 * num;
+      if (num % 8 == 0) {
+        while (i < j) {
+          data8[i] = 255;
+          i = i + 4 | 0;
+          data8[i] = 255;
+          i = i + 4 | 0;
+          data8[i] = 255;
+          i = i + 4 | 0;
+          data8[i] = 255;
+          i = i + 4 | 0;
+          data8[i] = 255;
+          i = i + 4 | 0;
+          data8[i] = 255;
+          i = i + 4 | 0;
+          data8[i] = 255;
+          i = i + 4 | 0;
+          data8[i] = 255;
+          i = i + 4 | 0;
+        }
+      } else {
+        while (i < j) {
+          data8[i] = 255;
+          i = i + 4 | 0;
+        }
+      }
+    }
+    SDL2.ctx.putImageData(SDL2.image, 0, 0);
+  },
+  1956772: ($0, $1, $2, $3, $4) => {
+    var w = $0;
+    var h = $1;
+    var hot_x = $2;
+    var hot_y = $3;
+    var pixels = $4;
+    var canvas = document.createElement("canvas");
+    canvas.width = w;
+    canvas.height = h;
+    var ctx = canvas.getContext("2d");
+    var image = ctx.createImageData(w, h);
+    var data = image.data;
+    var src = pixels >> 2;
+    var dst = 0;
+    var num;
+    if (typeof CanvasPixelArray !== "undefined" && data instanceof CanvasPixelArray) {
+      num = data.length;
+      while (dst < num) {
+        var val = HEAP32[src];
+        data[dst] = val & 255;
+        data[dst + 1] = (val >> 8) & 255;
+        data[dst + 2] = (val >> 16) & 255;
+        data[dst + 3] = (val >> 24) & 255;
+        src++;
+        dst += 4;
+      }
+    } else {
+      var data32 = new Int32Array(data.buffer);
+      num = data32.length;
+      data32.set(HEAP32.subarray(src, src + num));
+    }
+    ctx.putImageData(image, 0, 0);
+    var url = hot_x === 0 && hot_y === 0 ? "url(" + canvas.toDataURL() + "), auto" : "url(" + canvas.toDataURL() + ") " + hot_x + " " + hot_y + ", auto";
+    var urlBuf = _malloc(url.length + 1);
+    stringToUTF8(url, urlBuf, url.length + 1);
+    return urlBuf;
+  },
+  1957761: $0 => {
+    if (Module["canvas"]) {
+      Module["canvas"].style["cursor"] = UTF8ToString($0);
+    }
+  },
+  1957844: () => {
+    if (Module["canvas"]) {
+      Module["canvas"].style["cursor"] = "none";
+    }
+  },
+  1957913: () => window.innerWidth,
+  1957943: () => window.innerHeight,
+  1957974: $0 => {
+    try {
+      const context = GL.getContext($0);
+      if (!context) {
+        console.error("Failed to get gl context from handle");
+        return;
+      }
+      const epv = context.GLctx.getExtension("WEBGL_provoking_vertex");
+      if (epv) {
+        epv.provokingVertexWEBGL(epv.FIRST_VERTEX_CONVENTION_WEBGL);
+      } else {
+        console.warn("WEBGL_provoking_vertex is not supported. Using flat shading may result in catastrophic performance degradation.");
+      }
+    } catch (error) {
+      console.error("An unexpected error occurred while setting the first vertex convention: ", error, "\nUsing flat shading may result in catastrophic performance degradation.");
+    }
+  }
+};
+
+function ImGui_ImplSDL2_EmscriptenOpenURL(url) {
+  url = url ? UTF8ToString(url) : null;
+  if (url) window.open(url, "_blank");
+}
 
 var wasmImports = {
   /** @export */ ImGui_ImplSDL2_EmscriptenOpenURL,
