@@ -1,5 +1,9 @@
 var NAVTREEINDEX78 =
 {
+"rendering-lights.html":[0,0,2,1,3,2],
+"rendering-low-level-api.html":[0,0,2,1,0],
+"rendering-materials.html":[0,0,2,1,4,1],
+"rendering-models.html":[0,0,2,1,4,0],
 "rendering-pbr.html":[0,0,2,1,2],
 "rendering-pipeline.html":[0,0,2,1,1],
 "rendering-reflection-probes.html":[0,0,2,1,3,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_animated_attribute_reference.html#a0b1a5ef5af297479d31a24cc25605ce5":[8,0,2,17,6],
 "struct_urho3_d_1_1_animated_attribute_reference.html#a1a235db558950e3ee4d2260e22824032":[8,0,2,17,1],
 "struct_urho3_d_1_1_animated_attribute_reference.html#a6302d5089d876d951329909ac6717eaf":[8,0,2,17,5],
-"struct_urho3_d_1_1_animated_attribute_reference.html#a6b28d282898e9be11fca26156d23e049":[8,0,2,17,3],
-"struct_urho3_d_1_1_animated_attribute_reference.html#a76d63b086a266031f8cdcb8007b06c57":[8,0,2,17,2],
-"struct_urho3_d_1_1_animated_attribute_reference.html#a98bee5f116eeb5f3945a935aba37edf0":[8,0,2,17,4],
-"struct_urho3_d_1_1_animated_attribute_reference.html#a9a35831e68c0f2169b6c61cfca2bb71d":[8,0,2,17,0],
-"struct_urho3_d_1_1_animated_attribute_reference.html#ad8fa8017b02e12b6c26cf946208865d6":[8,0,2,17,7]
+"struct_urho3_d_1_1_animated_attribute_reference.html#a6b28d282898e9be11fca26156d23e049":[8,0,2,17,3]
 };

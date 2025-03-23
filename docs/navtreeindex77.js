@@ -1,5 +1,9 @@
 var NAVTREEINDEX77 =
 {
+"class_urho3_d_1_1_x_r_binding.html#adb1f0fd045873486d076ff9404dbf012":[8,0,2,844,6],
+"class_urho3_d_1_1_x_r_binding.html#addf28b59c1d89b33f40c8c6a5774318c":[8,0,2,844,28],
+"class_urho3_d_1_1_x_r_binding.html#ae3ac1f2ab89cfd8a91f9967d12b39967":[8,0,2,844,33],
+"class_urho3_d_1_1_x_r_binding.html#ae8bf7523703fc793efaa6fb05c80224f":[8,0,2,844,3],
 "class_urho3_d_1_1_x_r_binding.html#af382501d784c390ec693e192bf35af08":[8,0,2,844,20],
 "class_urho3_d_1_1_xr_object_shared_ptr.html":[8,0,2,845],
 "class_urho3_d_1_1_xr_object_shared_ptr.html#a1f7c9efff432f37367ab6b6d8e493053":[8,0,2,845,0],
@@ -134,8 +138,8 @@ var NAVTREEINDEX77 =
 "functions_e.html":[8,3,0,5],
 "functions_enum.html":[8,3,4],
 "functions_f.html":[8,3,0,6],
-"functions_func.html":[8,3,1],
 "functions_func.html":[8,3,1,0],
+"functions_func.html":[8,3,1],
 "functions_func_b.html":[8,3,1,1],
 "functions_func_c.html":[8,3,1,2],
 "functions_func_d.html":[8,3,1,3],
@@ -180,8 +184,8 @@ var NAVTREEINDEX77 =
 "functions_type.html":[8,3,3],
 "functions_u.html":[8,3,0,21],
 "functions_v.html":[8,3,0,22],
-"functions_vars.html":[8,3,2],
 "functions_vars.html":[8,3,2,0],
+"functions_vars.html":[8,3,2],
 "functions_vars_a.html":[8,3,2,1],
 "functions_vars_b.html":[8,3,2,2],
 "functions_vars_c.html":[8,3,2,3],
@@ -215,8 +219,8 @@ var NAVTREEINDEX77 =
 "functions_~.html":[8,3,0,27],
 "graphics-and-rendering.html":[0,0,2,1],
 "hierarchy.html":[8,2],
-"index.html":[],
 "index.html":[0],
+"index.html":[],
 "input.html":[0,0,2,5],
 "inverse-kinematics.html":[0,0,2,6],
 "low-level-transport.html":[0,0,2,2,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX77 =
 "project-goals.html":[0,0,3],
 "rendering-components.html":[0,0,2,1,3],
 "rendering-geometries.html":[0,0,2,1,3,1],
-"rendering-light-probes.html":[0,0,2,1,3,4],
-"rendering-lights.html":[0,0,2,1,3,2],
-"rendering-low-level-api.html":[0,0,2,1,0],
-"rendering-materials.html":[0,0,2,1,4,1],
-"rendering-models.html":[0,0,2,1,4,0]
+"rendering-light-probes.html":[0,0,2,1,3,4]
 };

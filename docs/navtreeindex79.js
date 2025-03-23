@@ -1,5 +1,9 @@
 var NAVTREEINDEX79 =
 {
+"struct_urho3_d_1_1_animated_attribute_reference.html#a76d63b086a266031f8cdcb8007b06c57":[8,0,2,17,2],
+"struct_urho3_d_1_1_animated_attribute_reference.html#a98bee5f116eeb5f3945a935aba37edf0":[8,0,2,17,4],
+"struct_urho3_d_1_1_animated_attribute_reference.html#a9a35831e68c0f2169b6c61cfca2bb71d":[8,0,2,17,0],
+"struct_urho3_d_1_1_animated_attribute_reference.html#ad8fa8017b02e12b6c26cf946208865d6":[8,0,2,17,7],
 "struct_urho3_d_1_1_animation_controller_1_1_animation_instance.html":[8,0,2,21,0],
 "struct_urho3_d_1_1_animation_controller_1_1_animation_instance.html#a371bb2e67698aa8be469354cafb1b5bd":[8,0,2,21,0,1],
 "struct_urho3_d_1_1_animation_controller_1_1_animation_instance.html#a8782767d30a830a38731ffc3b725e3d2":[8,0,2,21,0,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX79 =
 "struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior.html":[8,0,2,85,0],
 "struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior.html#a0bd449d65306f200de66836c74a2d432":[8,0,2,85,0,0],
 "struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior.html#a645889659c92f20f85b6de654052722c":[8,0,2,85,0,2],
-"struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior.html#ac2905d320ec0b1c0d57c9a0973dfa495":[8,0,2,85,0,1],
-"struct_urho3_d_1_1_bias_parameters.html":[8,0,2,86],
-"struct_urho3_d_1_1_bias_parameters.html#a6141ca0eee08e4153dfab8cc7dfdd93e":[8,0,2,86,2],
-"struct_urho3_d_1_1_bias_parameters.html#a8af712dfc6adcc0871fc958a88da040d":[8,0,2,86,1],
-"struct_urho3_d_1_1_bias_parameters.html#a9615444d83dadbc171d0dc15d416900b":[8,0,2,86,4]
+"struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior.html#ac2905d320ec0b1c0d57c9a0973dfa495":[8,0,2,85,0,1]
 };
