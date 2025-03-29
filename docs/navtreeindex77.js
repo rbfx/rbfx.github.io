@@ -1,5 +1,10 @@
 var NAVTREEINDEX77 =
 {
+"class_urho3_d_1_1_x_r_binding.html#ac8529142d06b5f14e533a91e51caa70f":[8,0,2,844,35],
+"class_urho3_d_1_1_x_r_binding.html#ac9bf52321900ca560941ab21d42b724e":[8,0,2,844,23],
+"class_urho3_d_1_1_x_r_binding.html#acd1b30d3c22481f4f00cbcb64ebeec3c":[8,0,2,844,7],
+"class_urho3_d_1_1_x_r_binding.html#acdc801973ed84b7864eb88c126da1ae6":[8,0,2,844,18],
+"class_urho3_d_1_1_x_r_binding.html#ad48f4fec3b5c620a25e4a9612fa38d0b":[8,0,2,844,15],
 "class_urho3_d_1_1_x_r_binding.html#adb1f0fd045873486d076ff9404dbf012":[8,0,2,844,6],
 "class_urho3_d_1_1_x_r_binding.html#addf28b59c1d89b33f40c8c6a5774318c":[8,0,2,844,28],
 "class_urho3_d_1_1_x_r_binding.html#ae3ac1f2ab89cfd8a91f9967d12b39967":[8,0,2,844,33],
@@ -138,8 +143,8 @@ var NAVTREEINDEX77 =
 "functions_e.html":[8,3,0,5],
 "functions_enum.html":[8,3,4],
 "functions_f.html":[8,3,0,6],
-"functions_func.html":[8,3,1,0],
 "functions_func.html":[8,3,1],
+"functions_func.html":[8,3,1,0],
 "functions_func_b.html":[8,3,1,1],
 "functions_func_c.html":[8,3,1,2],
 "functions_func_d.html":[8,3,1,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX77 =
 "outdated-feature-overview.html":[0,0,4],
 "outdated-profiling.html":[0,0,7],
 "outdated-third-party.html":[0,0,5],
-"outdated-using-as-sdk.html":[0,0,6],
-"pages.html":[],
-"project-goals.html":[0,0,3],
-"rendering-components.html":[0,0,2,1,3],
-"rendering-geometries.html":[0,0,2,1,3,1],
-"rendering-light-probes.html":[0,0,2,1,3,4]
+"outdated-using-as-sdk.html":[0,0,6]
 };

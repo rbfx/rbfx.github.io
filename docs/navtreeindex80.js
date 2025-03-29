@@ -1,5 +1,10 @@
 var NAVTREEINDEX80 =
 {
+"struct_urho3_d_1_1_batch_state_lookup_key.html#afc11b525c902c4a38609d17d9cfc34b2":[8,0,2,84,0],
+"struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior.html":[8,0,2,85,0],
+"struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior.html#a0bd449d65306f200de66836c74a2d432":[8,0,2,85,0,0],
+"struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior.html#a645889659c92f20f85b6de654052722c":[8,0,2,85,0,2],
+"struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior.html#ac2905d320ec0b1c0d57c9a0973dfa495":[8,0,2,85,0,1],
 "struct_urho3_d_1_1_bias_parameters.html":[8,0,2,86],
 "struct_urho3_d_1_1_bias_parameters.html#a6141ca0eee08e4153dfab8cc7dfdd93e":[8,0,2,86,2],
 "struct_urho3_d_1_1_bias_parameters.html#a8af712dfc6adcc0871fc958a88da040d":[8,0,2,86,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX80 =
 "struct_urho3_d_1_1_crowd_obstacle_avoidance_params.html#a4ba652680445c225b1fd6fd368d806d1":[8,0,2,161,8],
 "struct_urho3_d_1_1_crowd_obstacle_avoidance_params.html#a57272c96e6288a0422b3ddabbe0eaab5":[8,0,2,161,1],
 "struct_urho3_d_1_1_crowd_obstacle_avoidance_params.html#a641163ec89d477a5470da320a4908cf1":[8,0,2,161,0],
-"struct_urho3_d_1_1_crowd_obstacle_avoidance_params.html#a94a3f3139ebf72652a9a2629b8a346dd":[8,0,2,161,3],
-"struct_urho3_d_1_1_crowd_obstacle_avoidance_params.html#a9c1d0fa69e368edfae5d64ec85ee7b1b":[8,0,2,161,7],
-"struct_urho3_d_1_1_crowd_obstacle_avoidance_params.html#aa81a9a34c3df951f3377281e04341f5c":[8,0,2,161,9],
-"struct_urho3_d_1_1_crowd_obstacle_avoidance_params.html#ab158f8be8853938c5f3dc9d8d3407154":[8,0,2,161,5],
-"struct_urho3_d_1_1_cubemap_renderer_1_1_cached_pipeline_states.html":[8,0,2,162,0],
-"struct_urho3_d_1_1_cubemap_renderer_1_1_cached_pipeline_states.html#a03486d98223d36bc8299918201a84739":[8,0,2,162,0,1]
+"struct_urho3_d_1_1_crowd_obstacle_avoidance_params.html#a94a3f3139ebf72652a9a2629b8a346dd":[8,0,2,161,3]
 };

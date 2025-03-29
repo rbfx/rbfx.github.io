@@ -1,5 +1,10 @@
 var NAVTREEINDEX87 =
 {
+"struct_urho3_d_1_1_raytracing_geometry_material.html#ac9fb02e86756124dcbbe1e9519993ac9":[8,0,2,561,3],
+"struct_urho3_d_1_1_raytracing_geometry_material.html#ac9fdb6c015bc4b5b4b402dad2512ea39":[8,0,2,561,11],
+"struct_urho3_d_1_1_raytracing_geometry_material.html#af08cce642020da324d737d837de06ed5":[8,0,2,561,8],
+"struct_urho3_d_1_1_raytracing_geometry_material.html#af0c3cd9a487b31db0766913fa81e0d16":[8,0,2,561,5],
+"struct_urho3_d_1_1_ref_count.html":[8,0,2,563],
 "struct_urho3_d_1_1_ref_count.html#a062fda8669cb8739c5bfd6156d83b015":[8,0,2,563,4],
 "struct_urho3_d_1_1_ref_count.html#a08b3a37471704e640be73221c95c08e2":[8,0,2,563,5],
 "struct_urho3_d_1_1_ref_count.html#a5ed6a0539f369f3d80f64697887ee3fc":[8,0,2,563,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX87 =
 "struct_urho3_d_1_1_shader_parameter_desc.html#af1f3a23911f7909c254964b3f7a742f7":[8,0,2,645,1],
 "struct_urho3_d_1_1_shader_program_compositor_settings.html":[8,0,2,647],
 "struct_urho3_d_1_1_shader_program_compositor_settings.html#a0bbfe95b1c5e540fc069d99699116193":[8,0,2,647,0],
-"struct_urho3_d_1_1_shader_program_compositor_settings.html#a2ab07309d2027755dc5cb2d747ced96c":[8,0,2,647,3],
-"struct_urho3_d_1_1_shader_program_compositor_settings.html#a411a7c000b817785ce7dda4e7df8d080":[8,0,2,647,6],
-"struct_urho3_d_1_1_shader_program_compositor_settings.html#a41a42c8b4015d1f80c78f5d345aa76c9":[8,0,2,647,7],
-"struct_urho3_d_1_1_shader_program_compositor_settings.html#a65c83ff1b56082b747d032dcdf01f5e5":[8,0,2,647,2],
-"struct_urho3_d_1_1_shader_program_compositor_settings.html#aa7f883a6b8e58d24aa0e571826dec1f6":[8,0,2,647,1],
-"struct_urho3_d_1_1_shader_program_compositor_settings.html#ab0be4d1e836fb9216ea5a0ccad03922e":[8,0,2,647,5]
+"struct_urho3_d_1_1_shader_program_compositor_settings.html#a2ab07309d2027755dc5cb2d747ced96c":[8,0,2,647,3]
 };

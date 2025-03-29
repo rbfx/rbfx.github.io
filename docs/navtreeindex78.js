@@ -1,5 +1,10 @@
 var NAVTREEINDEX78 =
 {
+"pages.html":[],
+"project-goals.html":[0,0,3],
+"rendering-components.html":[0,0,2,1,3],
+"rendering-geometries.html":[0,0,2,1,3,1],
+"rendering-light-probes.html":[0,0,2,1,3,4],
 "rendering-lights.html":[0,0,2,1,3,2],
 "rendering-low-level-api.html":[0,0,2,1,0],
 "rendering-materials.html":[0,0,2,1,4,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX78 =
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_texture_cache.html":[8,0,2,15,2],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_texture_cache.html#a10a769e60ed28230af8bb46401bef763":[8,0,2,15,2,1],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_texture_cache.html#a7fc228d55d4f8bc3557746e2f980d6e3":[8,0,2,15,2,2],
-"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_texture_cache.html#abc1d628f6d516c6dc5efc4b9a28e9683":[8,0,2,15,2,0],
-"struct_urho3_d_1_1_animated_attribute_reference.html":[8,0,2,17],
-"struct_urho3_d_1_1_animated_attribute_reference.html#a0b1a5ef5af297479d31a24cc25605ce5":[8,0,2,17,6],
-"struct_urho3_d_1_1_animated_attribute_reference.html#a1a235db558950e3ee4d2260e22824032":[8,0,2,17,1],
-"struct_urho3_d_1_1_animated_attribute_reference.html#a6302d5089d876d951329909ac6717eaf":[8,0,2,17,5],
-"struct_urho3_d_1_1_animated_attribute_reference.html#a6b28d282898e9be11fca26156d23e049":[8,0,2,17,3]
+"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_texture_cache.html#abc1d628f6d516c6dc5efc4b9a28e9683":[8,0,2,15,2,0]
 };

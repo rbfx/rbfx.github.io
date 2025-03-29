@@ -1,5 +1,10 @@
 var class_urho3_d_1_1_multi_vector_1_1_base_iterator =
 [
+    [ "difference_type", "class_urho3_d_1_1_multi_vector_1_1_base_iterator.html#a0955f13fd6dd05d1fdb4a565cd0a0aa8", null ],
+    [ "iterator_category", "class_urho3_d_1_1_multi_vector_1_1_base_iterator.html#a197f17a24c7800d17e64355d2080b3d1", null ],
+    [ "pointer", "class_urho3_d_1_1_multi_vector_1_1_base_iterator.html#afb3c04b85cff2aa7d4c542e869b1adff", null ],
+    [ "reference", "class_urho3_d_1_1_multi_vector_1_1_base_iterator.html#ae24af8cdd826d5e91fab7c1f41c387cd", null ],
+    [ "value_type", "class_urho3_d_1_1_multi_vector_1_1_base_iterator.html#a204c6c9e8a4e5fcfe7321ecd1729680e", null ],
     [ "BaseIterator", "class_urho3_d_1_1_multi_vector_1_1_base_iterator.html#a2be01a21fd8204044e67342c0729cc8a", null ],
     [ "BaseIterator", "class_urho3_d_1_1_multi_vector_1_1_base_iterator.html#a27d8b7b2349492adb8502ac5c3fbc1e6", null ],
     [ "fixInnerIterator", "class_urho3_d_1_1_multi_vector_1_1_base_iterator.html#acd7bb01e542e108cb6d0b9493e1c3a39", null ],
