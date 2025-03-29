@@ -1025,10 +1025,6 @@ var TTY = {
   }
 };
 
-var zeroMemory = (ptr, size) => HEAPU8.fill(0, ptr, ptr + size);
-
-var alignMemory = (size, alignment) => Math.ceil(size / alignment) * alignment;
-
 var mmapAlloc = size => {
   abort();
 };
@@ -2375,7 +2371,8 @@ var FS = {
     var d = "";
     for (var dir of dirs) {
       if (!dir) continue;
-      d += "/" + dir;
+      if (d || PATH.isAbs(path)) d += "/";
+      d += dir;
       try {
         FS.mkdir(d, mode);
       } catch (e) {
@@ -4642,6 +4639,8 @@ function ___syscall_openat(dirfd, path, flags, varargs) {
   }
 }
 
+var zeroMemory = (ptr, size) => HEAPU8.fill(0, ptr, ptr + size);
+
 /** @param {number=} addrlen */ var writeSockaddr = (sa, family, addr, port, addrlen) => {
   switch (family) {
    case 2:
@@ -4807,53 +4806,6 @@ var throwBindingError = message => {
   throw new BindingError(message);
 };
 
-var InternalError = Module["InternalError"] = class InternalError extends Error {
-  constructor(message) {
-    super(message);
-    this.name = "InternalError";
-  }
-};
-
-var throwInternalError = message => {
-  throw new InternalError(message);
-};
-
-var whenDependentTypesAreResolved = (myTypes, dependentTypes, getTypeConverters) => {
-  myTypes.forEach(type => typeDependencies[type] = dependentTypes);
-  function onComplete(typeConverters) {
-    var myTypeConverters = getTypeConverters(typeConverters);
-    if (myTypeConverters.length !== myTypes.length) {
-      throwInternalError("Mismatched type converter count");
-    }
-    for (var i = 0; i < myTypes.length; ++i) {
-      registerType(myTypes[i], myTypeConverters[i]);
-    }
-  }
-  var typeConverters = new Array(dependentTypes.length);
-  var unregisteredTypes = [];
-  var registered = 0;
-  dependentTypes.forEach((dt, i) => {
-    if (registeredTypes.hasOwnProperty(dt)) {
-      typeConverters[i] = registeredTypes[dt];
-    } else {
-      unregisteredTypes.push(dt);
-      if (!awaitingDependencies.hasOwnProperty(dt)) {
-        awaitingDependencies[dt] = [];
-      }
-      awaitingDependencies[dt].push(() => {
-        typeConverters[i] = registeredTypes[dt];
-        ++registered;
-        if (registered === unregisteredTypes.length) {
-          onComplete(typeConverters);
-        }
-      });
-    }
-  });
-  if (0 === unregisteredTypes.length) {
-    onComplete(typeConverters);
-  }
-};
-
 /** @param {Object=} options */ function sharedRegisterType(rawType, registeredInstance, options = {}) {
   var name = registeredInstance.name;
   if (!rawType) {
@@ -4968,7 +4920,7 @@ var init_emval = () => {
 var Emval = {
   toValue: handle => {
     if (!handle) {
-      throwBindingError("Cannot use deleted val. handle = " + handle);
+      throwBindingError(`Cannot use deleted val. handle = ${handle}`);
     }
     return emval_handles[handle];
   },
@@ -5068,26 +5020,6 @@ function usesDestructorStack(argTypes) {
   return false;
 }
 
-function newFunc(constructor, argumentList) {
-  if (!(constructor instanceof Function)) {
-    throw new TypeError(`new_ called with constructor type ${typeof (constructor)} which is not a function`);
-  }
-  /*
-       * Previously, the following line was just:
-       *   function dummy() {};
-       * Unfortunately, Chrome was preserving 'dummy' as the object's name, even
-       * though at creation, the 'dummy' has the correct constructor name.  Thus,
-       * objects created with IMVU.new would show up in the debugger as 'dummy',
-       * which isn't very helpful.  Using IMVU.createNamedFunction addresses the
-       * issue.  Doubly-unfortunately, there's no way to write a test for this
-       * behavior.  -NRD 2013.02.22
-       */ var dummy = createNamedFunction(constructor.name || "unknownFunctionName", function() {});
-  dummy.prototype = constructor.prototype;
-  var obj = new dummy;
-  var r = constructor.apply(obj, argumentList);
-  return (r instanceof Object) ? r : obj;
-}
-
 function createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync) {
   var needsDestructorStack = usesDestructorStack(argTypes);
   var argCount = argTypes.length - 2;
@@ -5166,16 +5098,15 @@ function craftInvokerFunction(humanName, argTypes, classType, cppInvokerFunc, cp
     closureArgs.push(argTypes[i + 2]);
   }
   if (!needsDestructorStack) {
+    // Skip return value at index 0 - it's not deleted here. Also skip class type if not a method.
     for (var i = isClassMethodFunc ? 1 : 2; i < argTypes.length; ++i) {
-      // Skip return value at index 0 - it's not deleted here. Also skip class type if not a method.
       if (argTypes[i].destructorFunction !== null) {
         closureArgs.push(argTypes[i].destructorFunction);
       }
     }
   }
   let [args, invokerFnBody] = createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync);
-  args.push(invokerFnBody);
-  var invokerFn = newFunc(Function, args)(...closureArgs);
+  var invokerFn = new Function(...args, invokerFnBody)(...closureArgs);
   return createNamedFunction(humanName, invokerFn);
 }
 
@@ -5225,6 +5156,17 @@ var heap32VectorToArray = (count, firstElement) => {
   return array;
 };
 
+var InternalError = Module["InternalError"] = class InternalError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "InternalError";
+  }
+};
+
+var throwInternalError = message => {
+  throw new InternalError(message);
+};
+
 /** @param {number=} numArguments */ var replacePublicSymbol = (name, value, numArguments) => {
   if (!Module.hasOwnProperty(name)) {
     throwInternalError("Replacing nonexistent public symbol");
@@ -5250,10 +5192,11 @@ var getWasmTableEntry = funcPtr => {
   return func;
 };
 
-var embind__requireFunction = (signature, rawFunction) => {
+var embind__requireFunction = (signature, rawFunction, isAsync = false) => {
   signature = readLatin1String(signature);
   function makeDynCaller() {
-    return getWasmTableEntry(rawFunction);
+    var rtn = getWasmTableEntry(rawFunction);
+    return rtn;
   }
   var fp = makeDynCaller();
   if (typeof fp != "function") {
@@ -5262,28 +5205,7 @@ var embind__requireFunction = (signature, rawFunction) => {
   return fp;
 };
 
-var extendError = (baseErrorType, errorName) => {
-  var errorClass = createNamedFunction(errorName, function(message) {
-    this.name = errorName;
-    this.message = message;
-    var stack = (new Error(message)).stack;
-    if (stack !== undefined) {
-      this.stack = this.toString() + "\n" + stack.replace(/^Error(:[^\n]*)?\n/, "");
-    }
-  });
-  errorClass.prototype = Object.create(baseErrorType.prototype);
-  errorClass.prototype.constructor = errorClass;
-  errorClass.prototype.toString = function() {
-    if (this.message === undefined) {
-      return this.name;
-    } else {
-      return `${this.name}: ${this.message}`;
-    }
-  };
-  return errorClass;
-};
-
-var UnboundTypeError = Module["UnboundTypeError"] = extendError(Error, "UnboundTypeError");
+class UnboundTypeError extends Error {}
 
 var getTypeName = type => {
   var ptr = ___getTypeName(type);
@@ -5313,6 +5235,42 @@ var throwUnboundTypeError = (message, types) => {
   throw new UnboundTypeError(`${message}: ` + unboundTypes.map(getTypeName).join([ ", " ]));
 };
 
+var whenDependentTypesAreResolved = (myTypes, dependentTypes, getTypeConverters) => {
+  myTypes.forEach(type => typeDependencies[type] = dependentTypes);
+  function onComplete(typeConverters) {
+    var myTypeConverters = getTypeConverters(typeConverters);
+    if (myTypeConverters.length !== myTypes.length) {
+      throwInternalError("Mismatched type converter count");
+    }
+    for (var i = 0; i < myTypes.length; ++i) {
+      registerType(myTypes[i], myTypeConverters[i]);
+    }
+  }
+  var typeConverters = new Array(dependentTypes.length);
+  var unregisteredTypes = [];
+  var registered = 0;
+  dependentTypes.forEach((dt, i) => {
+    if (registeredTypes.hasOwnProperty(dt)) {
+      typeConverters[i] = registeredTypes[dt];
+    } else {
+      unregisteredTypes.push(dt);
+      if (!awaitingDependencies.hasOwnProperty(dt)) {
+        awaitingDependencies[dt] = [];
+      }
+      awaitingDependencies[dt].push(() => {
+        typeConverters[i] = registeredTypes[dt];
+        ++registered;
+        if (registered === unregisteredTypes.length) {
+          onComplete(typeConverters);
+        }
+      });
+    }
+  });
+  if (0 === unregisteredTypes.length) {
+    onComplete(typeConverters);
+  }
+};
+
 var getFunctionName = signature => {
   signature = signature.trim();
   const argsIndex = signature.indexOf("(");
@@ -5324,7 +5282,7 @@ var __embind_register_function = (name, argCount, rawArgTypesAddr, signature, ra
   var argTypes = heap32VectorToArray(argCount, rawArgTypesAddr);
   name = readLatin1String(name);
   name = getFunctionName(name);
-  rawInvoker = embind__requireFunction(signature, rawInvoker);
+  rawInvoker = embind__requireFunction(signature, rawInvoker, isAsync);
   exposePublicSymbol(name, function() {
     throwUnboundTypeError(`Cannot call ${name} due to unbound types`, argTypes);
   }, argCount - 1);
@@ -7562,8 +7520,6 @@ var JSEvents = {
   }
 };
 
-var currentFullscreenStrategy = {};
-
 /** @type {Object} */ var specialHTMLTargets = [ 0, typeof document != "undefined" ? document : 0, typeof window != "undefined" ? window : 0 ];
 
 var findEventTarget = target => {
@@ -7635,6 +7591,8 @@ var setCanvasElementSize = (target, width, height) => {
     stackRestore(sp);
   }
 };
+
+var currentFullscreenStrategy = {};
 
 var registerRestoreOldStyle = canvas => {
   var canvasSize = getCanvasElementSize(canvas);
@@ -10207,39 +10165,6 @@ var _emscripten_glQueryCounterEXT = _glQueryCounterEXT;
 
 var _emscripten_glReadBuffer = _glReadBuffer;
 
-var computeUnpackAlignedImageSize = (width, height, sizePerPixel) => {
-  function roundedToNextMultipleOf(x, y) {
-    return (x + y - 1) & -y;
-  }
-  var plainRowSize = (GL.unpackRowLength || width) * sizePerPixel;
-  var alignedRowSize = roundedToNextMultipleOf(plainRowSize, GL.unpackAlignment);
-  return height * alignedRowSize;
-};
-
-var colorChannelsInGlTextureFormat = format => {
-  // Micro-optimizations for size: map format to size by subtracting smallest
-  // enum value (0x1902) from all values first.  Also omit the most common
-  // size value (1) from the list, which is assumed by formats not on the
-  // list.
-  var colorChannels = {
-    // 0x1902 /* GL_DEPTH_COMPONENT */ - 0x1902: 1,
-    // 0x1906 /* GL_ALPHA */ - 0x1902: 1,
-    5: 3,
-    6: 4,
-    // 0x1909 /* GL_LUMINANCE */ - 0x1902: 1,
-    8: 2,
-    29502: 3,
-    29504: 4,
-    // 0x1903 /* GL_RED */ - 0x1902: 1,
-    26917: 2,
-    26918: 2,
-    // 0x8D94 /* GL_RED_INTEGER */ - 0x1902: 1,
-    29846: 3,
-    29847: 4
-  };
-  return colorChannels[format - 6402] || 1;
-};
-
 var heapObjectForWebGLType = type => {
   // Micro-optimization for size: Subtract lowest GL enum number (0x1400/* GL_BYTE */) from type to compare
   // smaller values for the heap, for shorter generated code size.
@@ -10256,13 +10181,6 @@ var heapObjectForWebGLType = type => {
 };
 
 var toTypedArrayIndex = (pointer, heap) => pointer >>> (31 - Math.clz32(heap.BYTES_PER_ELEMENT));
-
-var emscriptenWebGLGetTexPixelData = (type, format, width, height, pixels, internalFormat) => {
-  var heap = heapObjectForWebGLType(type);
-  var sizePerPixel = colorChannelsInGlTextureFormat(format) * heap.BYTES_PER_ELEMENT;
-  var bytes = computeUnpackAlignedImageSize(width, height, sizePerPixel);
-  return heap.subarray(toTypedArrayIndex(pixels, heap), toTypedArrayIndex(pixels + bytes, heap));
-};
 
 /** @suppress {duplicate } */ var _glReadPixels = (x, y, width, height, format, type, pixels) => {
   if (true) {
@@ -10367,6 +10285,46 @@ var _emscripten_glStencilOp = _glStencilOp;
 /** @suppress {duplicate } */ var _glStencilOpSeparate = (x0, x1, x2, x3) => GLctx.stencilOpSeparate(x0, x1, x2, x3);
 
 var _emscripten_glStencilOpSeparate = _glStencilOpSeparate;
+
+var computeUnpackAlignedImageSize = (width, height, sizePerPixel) => {
+  function roundedToNextMultipleOf(x, y) {
+    return (x + y - 1) & -y;
+  }
+  var plainRowSize = (GL.unpackRowLength || width) * sizePerPixel;
+  var alignedRowSize = roundedToNextMultipleOf(plainRowSize, GL.unpackAlignment);
+  return height * alignedRowSize;
+};
+
+var colorChannelsInGlTextureFormat = format => {
+  // Micro-optimizations for size: map format to size by subtracting smallest
+  // enum value (0x1902) from all values first.  Also omit the most common
+  // size value (1) from the list, which is assumed by formats not on the
+  // list.
+  var colorChannels = {
+    // 0x1902 /* GL_DEPTH_COMPONENT */ - 0x1902: 1,
+    // 0x1906 /* GL_ALPHA */ - 0x1902: 1,
+    5: 3,
+    6: 4,
+    // 0x1909 /* GL_LUMINANCE */ - 0x1902: 1,
+    8: 2,
+    29502: 3,
+    29504: 4,
+    // 0x1903 /* GL_RED */ - 0x1902: 1,
+    26917: 2,
+    26918: 2,
+    // 0x8D94 /* GL_RED_INTEGER */ - 0x1902: 1,
+    29846: 3,
+    29847: 4
+  };
+  return colorChannels[format - 6402] || 1;
+};
+
+var emscriptenWebGLGetTexPixelData = (type, format, width, height, pixels, internalFormat) => {
+  var heap = heapObjectForWebGLType(type);
+  var sizePerPixel = colorChannelsInGlTextureFormat(format) * heap.BYTES_PER_ELEMENT;
+  var bytes = computeUnpackAlignedImageSize(width, height, sizePerPixel);
+  return heap.subarray(toTypedArrayIndex(pixels, heap), toTypedArrayIndex(pixels + bytes, heap));
+};
 
 /** @suppress {duplicate } */ var _glTexImage2D = (target, level, internalFormat, width, height, border, format, type, pixels) => {
   if (true) {
@@ -10910,6 +10868,8 @@ var getHeapMax = () => // Stay one Wasm page short of 4GB: while e.g. Chrome is 
 // for any code that deals with heap sizes, which would require special
 // casing all heap size related code to treat 0 specially.
 2147483648;
+
+var alignMemory = (size, alignment) => Math.ceil(size / alignment) * alignment;
 
 var growMemory = size => {
   var b = wasmMemory.buffer;
@@ -12636,7 +12596,7 @@ Fetch.init();
 
 // End JS library code
 var ASM_CONSTS = {
-  1949760: $0 => {
+  1951072: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -12644,10 +12604,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1949985: ($0, $1) => {
+  1951297: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1950042: () => {
+  1951354: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -12655,7 +12615,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1950189: () => {
+  1951501: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -12663,7 +12623,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1950423: $0 => {
+  1951735: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -12685,11 +12645,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1950916: () => {
+  1952228: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1950984: ($0, $1, $2, $3) => {
+  1952296: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -12730,7 +12690,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1952636: ($0, $1, $2, $3) => {
+  1953948: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -12742,7 +12702,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1953046: ($0, $1) => {
+  1954358: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -12761,7 +12721,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1953651: ($0, $1) => {
+  1954963: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -12774,7 +12734,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1954131: $0 => {
+  1955443: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -12812,7 +12772,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1955303: ($0, $1, $2) => {
+  1956615: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -12883,7 +12843,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1956772: ($0, $1, $2, $3, $4) => {
+  1958084: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -12920,19 +12880,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1957761: $0 => {
+  1959073: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1957844: () => {
+  1959156: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1957913: () => window.innerWidth,
-  1957943: () => window.innerHeight,
-  1957974: $0 => {
+  1959225: () => window.innerWidth,
+  1959255: () => window.innerHeight,
+  1959286: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
