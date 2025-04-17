@@ -41,15 +41,6 @@ Module["preRun"].push(function() {
 });
 
 // end include: /home/runner/work/rbfx/rbfx/cmake-build/Source/Samples/Resources.js.load.js
-// Sometimes an existing Module object exists with properties
-// meant to overwrite the default module functionality. Here
-// we collect those properties and reapply _after_ we configure
-// the current environment's defaults to avoid having to be so
-// defensive during initialization.
-var moduleOverrides = {
-  ...Module
-};
-
 var arguments_ = [];
 
 var thisProgram = "./this.program";
@@ -91,10 +82,11 @@ if (ENVIRONMENT_IS_NODE) {
     return ret;
   };
   // end include: node_shell_read.js
-  if (!Module["thisProgram"] && process.argv.length > 1) {
+  if (process.argv.length > 1) {
     thisProgram = process.argv[1].replace(/\\/g, "/");
   }
   arguments_ = process.argv.slice(2);
+  // MODULARIZE will export the module in the proper place outside, we don't need to export here
   if (typeof module != "undefined") {
     module["exports"] = Module;
   }
@@ -168,26 +160,10 @@ if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
   }
 } else {}
 
-var out = Module["print"] || console.log.bind(console);
+var out = console.log.bind(console);
 
-var err = Module["printErr"] || console.error.bind(console);
+var err = console.error.bind(console);
 
-// Merge back in the overrides
-Object.assign(Module, moduleOverrides);
-
-// Free the object hierarchy contained in the overrides, this lets the GC
-// reclaim data used.
-moduleOverrides = null;
-
-// Emit code to handle expected values on the Module object. This applies Module.x
-// to the proper local x. This has two benefits: first, we only emit it if it is
-// expected to arrive, and second, by using a local everywhere else that can be
-// minified.
-if (Module["arguments"]) arguments_ = Module["arguments"];
-
-if (Module["thisProgram"]) thisProgram = Module["thisProgram"];
-
-// perform assertions in shell.js after we set up out() and err(), as otherwise if an assertion fails it cannot print the message
 // end include: shell.js
 // include: preamble.js
 // === Preamble library stuff ===
@@ -198,7 +174,7 @@ if (Module["thisProgram"]) thisProgram = Module["thisProgram"];
 // You can also build docs locally as HTML or other formats in site/
 // An online HTML version (which may be of a different version of Emscripten)
 //    is up at http://kripken.github.io/emscripten-site/docs/api_reference/preamble.js.html
-var wasmBinary = Module["wasmBinary"];
+var wasmBinary;
 
 // Wasm globals
 var wasmMemory;
@@ -251,16 +227,16 @@ var runtimeInitialized = false;
 // end include: memoryprofiler.js
 function updateMemoryViews() {
   var b = wasmMemory.buffer;
-  Module["HEAP8"] = HEAP8 = new Int8Array(b);
-  Module["HEAP16"] = HEAP16 = new Int16Array(b);
-  Module["HEAPU8"] = HEAPU8 = new Uint8Array(b);
-  Module["HEAPU16"] = HEAPU16 = new Uint16Array(b);
-  Module["HEAP32"] = HEAP32 = new Int32Array(b);
-  Module["HEAPU32"] = HEAPU32 = new Uint32Array(b);
-  Module["HEAPF32"] = HEAPF32 = new Float32Array(b);
-  Module["HEAPF64"] = HEAPF64 = new Float64Array(b);
-  Module["HEAP64"] = HEAP64 = new BigInt64Array(b);
-  Module["HEAPU64"] = HEAPU64 = new BigUint64Array(b);
+  HEAP8 = new Int8Array(b);
+  HEAP16 = new Int16Array(b);
+  HEAPU8 = new Uint8Array(b);
+  HEAPU16 = new Uint16Array(b);
+  HEAP32 = new Int32Array(b);
+  HEAPU32 = new Uint32Array(b);
+  HEAPF32 = new Float32Array(b);
+  HEAPF64 = new Float64Array(b);
+  HEAP64 = new BigInt64Array(b);
+  HEAPU64 = new BigUint64Array(b);
 }
 
 // end include: runtime_shared.js
@@ -271,15 +247,19 @@ function preRun() {
       addOnPreRun(Module["preRun"].shift());
     }
   }
+  // Begin ATPRERUNS hooks
   callRuntimeCallbacks(onPreRuns);
 }
 
 function initRuntime() {
   runtimeInitialized = true;
+  // Begin ATINITS hooks
   SOCKFS.root = FS.mount(SOCKFS, {}, null);
   if (!Module["noFSInit"] && !FS.initialized) FS.init();
   TTY.init();
+  // End ATINITS hooks
   wasmExports["__wasm_call_ctors"]();
+  // Begin ATPOSTCTORS hooks
   FS.ignorePermissions = false;
 }
 
@@ -292,6 +272,7 @@ function postRun() {
       addOnPostRun(Module["postRun"].shift());
     }
   }
+  // Begin ATPOSTRUNS hooks
   callRuntimeCallbacks(onPostRuns);
 }
 
@@ -455,8 +436,7 @@ async function createWasm() {
   if (Module["instantiateWasm"]) {
     return new Promise((resolve, reject) => {
       Module["instantiateWasm"](info, (mod, inst) => {
-        receiveInstance(mod, inst);
-        resolve(mod.exports);
+        resolve(receiveInstance(mod, inst));
       });
     });
   }
@@ -485,13 +465,13 @@ var callRuntimeCallbacks = callbacks => {
 
 var onPostRuns = [];
 
-var addOnPostRun = cb => onPostRuns.unshift(cb);
+var addOnPostRun = cb => onPostRuns.push(cb);
 
 var onPreRuns = [];
 
-var addOnPreRun = cb => onPreRuns.unshift(cb);
+var addOnPreRun = cb => onPreRuns.push(cb);
 
-var noExitRuntime = Module["noExitRuntime"] || true;
+var noExitRuntime = true;
 
 /**
      * @param {number} ptr
@@ -1365,7 +1345,7 @@ var FS_createDataFile = (parent, name, fileData, canRead, canWrite, canOwn) => {
   FS.createDataFile(parent, name, fileData, canRead, canWrite, canOwn);
 };
 
-var preloadPlugins = Module["preloadPlugins"] || [];
+var preloadPlugins = [];
 
 var FS_handledByPreloadPlugin = (byteArray, fullname, finish, onerror) => {
   // Ensure plugins are ready.
@@ -1909,7 +1889,12 @@ var FS = {
         }
         if (parts[i] === "..") {
           current_path = PATH.dirname(current_path);
-          current = current.parent;
+          if (FS.isRoot(current)) {
+            path = current_path + "/" + parts.slice(i + 1).join("/");
+            continue linkloop;
+          } else {
+            current = current.parent;
+          }
           continue;
         }
         current_path = PATH.join2(current_path, parts[i]);
@@ -11911,22 +11896,15 @@ var getEnvStrings = () => {
   return getEnvStrings.strings;
 };
 
-var stringToAscii = (str, buffer) => {
-  for (var i = 0; i < str.length; ++i) {
-    HEAP8[buffer++] = str.charCodeAt(i);
-  }
-  // Null-terminate the string
-  HEAP8[buffer] = 0;
-};
-
 var _environ_get = (__environ, environ_buf) => {
   var bufSize = 0;
-  getEnvStrings().forEach((string, i) => {
+  var envp = 0;
+  for (var string of getEnvStrings()) {
     var ptr = environ_buf + bufSize;
-    HEAPU32[(((__environ) + (i * 4)) >> 2)] = ptr;
-    stringToAscii(string, ptr);
-    bufSize += string.length + 1;
-  });
+    HEAPU32[(((__environ) + (envp)) >> 2)] = ptr;
+    bufSize += stringToUTF8(string, ptr, Infinity) + 1;
+    envp += 4;
+  }
   return 0;
 };
 
@@ -11934,7 +11912,9 @@ var _environ_sizes_get = (penviron_count, penviron_buf_size) => {
   var strings = getEnvStrings();
   HEAPU32[((penviron_count) >> 2)] = strings.length;
   var bufSize = 0;
-  strings.forEach(string => bufSize += string.length + 1);
+  for (var string of strings) {
+    bufSize += lengthBytesUTF8(string) + 1;
+  }
   HEAPU32[((penviron_buf_size) >> 2)] = bufSize;
   return 0;
 };
@@ -12601,6 +12581,42 @@ for (let i = 0; i < 32; ++i) tempFixedLengthArray.push(new Array(i));
 Fetch.init();
 
 // End JS library code
+// include: postlibrary.js
+// This file is included after the automatically-generated JS library code
+// but before the wasm module is created.
+{
+  // Begin ATMODULES hooks
+  if (Module["noExitRuntime"]) noExitRuntime = Module["noExitRuntime"];
+  if (Module["preloadPlugins"]) preloadPlugins = Module["preloadPlugins"];
+  if (Module["print"]) out = Module["print"];
+  if (Module["printErr"]) err = Module["printErr"];
+  if (Module["wasmBinary"]) wasmBinary = Module["wasmBinary"];
+  // End ATMODULES hooks
+  if (Module["arguments"]) arguments_ = Module["arguments"];
+  if (Module["thisProgram"]) thisProgram = Module["thisProgram"];
+}
+
+// Begin runtime exports
+Module["addRunDependency"] = addRunDependency;
+
+Module["removeRunDependency"] = removeRunDependency;
+
+Module["FS_createPreloadedFile"] = FS_createPreloadedFile;
+
+Module["FS_unlink"] = FS_unlink;
+
+Module["FS_createPath"] = FS_createPath;
+
+Module["FS_createDevice"] = FS_createDevice;
+
+Module["FS_createDataFile"] = FS_createDataFile;
+
+Module["FS_createLazyFile"] = FS_createLazyFile;
+
+// End runtime exports
+// Begin JS library exports
+// End JS library exports
+// end include: postlibrary.js
 var ASM_CONSTS = {
   1951189: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
@@ -13552,22 +13568,6 @@ function invoke_vii(index, a1, a2) {
 
 // include: postamble.js
 // === Auto-generated postamble setup entry stuff ===
-Module["addRunDependency"] = addRunDependency;
-
-Module["removeRunDependency"] = removeRunDependency;
-
-Module["FS_createPreloadedFile"] = FS_createPreloadedFile;
-
-Module["FS_unlink"] = FS_unlink;
-
-Module["FS_createPath"] = FS_createPath;
-
-Module["FS_createDevice"] = FS_createDevice;
-
-Module["FS_createDataFile"] = FS_createDataFile;
-
-Module["FS_createLazyFile"] = FS_createLazyFile;
-
 function callMain(args = []) {
   var entryFunction = _main;
   args.unshift(thisProgram);
@@ -13608,7 +13608,7 @@ function run(args = arguments_) {
     initRuntime();
     preMain();
     Module["onRuntimeInitialized"]?.();
-    var noInitialRun = Module["noInitialRun"];
+    var noInitialRun = Module["noInitialRun"] || false;
     if (!noInitialRun) callMain(args);
     postRun();
   }
@@ -13623,11 +13623,15 @@ function run(args = arguments_) {
   }
 }
 
-if (Module["preInit"]) {
-  if (typeof Module["preInit"] == "function") Module["preInit"] = [ Module["preInit"] ];
-  while (Module["preInit"].length > 0) {
-    Module["preInit"].pop()();
+function preInit() {
+  if (Module["preInit"]) {
+    if (typeof Module["preInit"] == "function") Module["preInit"] = [ Module["preInit"] ];
+    while (Module["preInit"].length > 0) {
+      Module["preInit"].shift()();
+    }
   }
 }
+
+preInit();
 
 run();
