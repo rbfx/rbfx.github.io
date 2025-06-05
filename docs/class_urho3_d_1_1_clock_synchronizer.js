@@ -1,27 +1,12 @@
 var class_urho3_d_1_1_clock_synchronizer =
 [
-    [ "PendingPing", "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_ping.html", "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_ping" ],
-    [ "PendingPong", "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_pong.html", "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_pong" ],
-    [ "ClockSynchronizer", "class_urho3_d_1_1_clock_synchronizer.html#aa8bdcdce155ffc468c7e92a94945dda1", null ],
-    [ "CleanupExpiredPings", "class_urho3_d_1_1_clock_synchronizer.html#a1580a8c0b2e35cbc4bf5e73b4e84431f", null ],
-    [ "CreateNewPing", "class_urho3_d_1_1_clock_synchronizer.html#a85cd157c6b2ca6b39412321e979444e6", null ],
-    [ "CreateNewPong", "class_urho3_d_1_1_clock_synchronizer.html#a4a8e6f0892139be91b51ee0a246e2898", null ],
+    [ "PendingPing", "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_ping.html", null ],
+    [ "PendingPong", "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_pong.html", null ],
     [ "GetLocalTimeOfLatestRoundtrip", "class_urho3_d_1_1_clock_synchronizer.html#a2ba5583c3b444bf15cbce0303112c8e6", null ],
     [ "GetPing", "class_urho3_d_1_1_clock_synchronizer.html#a39ea1cd6173e9679054363d928a36620", null ],
-    [ "GetTimestamp", "class_urho3_d_1_1_clock_synchronizer.html#ad679514deb65781b58e716a59feae0ed", null ],
     [ "IsReady", "class_urho3_d_1_1_clock_synchronizer.html#a06f25caaa4a2a0d47194bd2380fd34e7", null ],
     [ "LocalToRemote", "class_urho3_d_1_1_clock_synchronizer.html#ae56c9890572e1707bc6fef06e9f77c0a", null ],
     [ "PollMessage", "class_urho3_d_1_1_clock_synchronizer.html#ae085fc89c06a463d3d34334c7c76152d", null ],
     [ "ProcessMessage", "class_urho3_d_1_1_clock_synchronizer.html#a250663d006b80b240bd48202d69f7b68", null ],
-    [ "RemoteToLocal", "class_urho3_d_1_1_clock_synchronizer.html#a91b28f18398e0bdd2f6843934ee03f80", null ],
-    [ "UpdateClocks", "class_urho3_d_1_1_clock_synchronizer.html#a03c339abe16253444ccc6e9e031d8b75", null ],
-    [ "getTimestamp_", "class_urho3_d_1_1_clock_synchronizer.html#a6f0cdd9aebad544c57b57723dc188b07", null ],
-    [ "latestProbeTimestamp_", "class_urho3_d_1_1_clock_synchronizer.html#aab1248a278e43dc116ef8312f191f2dc", null ],
-    [ "latestRoundtripTimestamp_", "class_urho3_d_1_1_clock_synchronizer.html#a46b4c95f1323d73f567843d6477ab099", null ],
-    [ "localToRemote_", "class_urho3_d_1_1_clock_synchronizer.html#aa645eb376829abd977f3bac4d383f7d9", null ],
-    [ "maxPingMs_", "class_urho3_d_1_1_clock_synchronizer.html#a1cc7e43863f76c587468b9218ce123ff", null ],
-    [ "pendingPings_", "class_urho3_d_1_1_clock_synchronizer.html#a96fe4d00001623b47fb3d9f4ddf2a012", null ],
-    [ "pendingPongs_", "class_urho3_d_1_1_clock_synchronizer.html#a982b6e092b31c91f30e901a584b61ba4", null ],
-    [ "pingIntervalMs_", "class_urho3_d_1_1_clock_synchronizer.html#a3b3471b7f2282cc81f8a2a46da2d5b1e", null ],
-    [ "roundTripDelay_", "class_urho3_d_1_1_clock_synchronizer.html#a9806b67c2963a3d9d232bb4bbee7f75d", null ]
+    [ "RemoteToLocal", "class_urho3_d_1_1_clock_synchronizer.html#a91b28f18398e0bdd2f6843934ee03f80", null ]
 ];

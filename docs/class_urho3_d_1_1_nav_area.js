@@ -9,7 +9,6 @@ var class_urho3_d_1_1_nav_area =
     [ "RegisterObject", "class_urho3_d_1_1_nav_area.html#ab1899c86543b81c76f5bbda90b0ff816", null ],
     [ "SetAreaID", "class_urho3_d_1_1_nav_area.html#a33dc315eea80d9d73256a6a99242c81d", null ],
     [ "SetBoundingBox", "class_urho3_d_1_1_nav_area.html#a794925fa4650847f0ab8b432e0036ddb", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_nav_area.html#a2795f4dd461b2c8024aef7fd87628ea8", null ],
     [ "areaID_", "class_urho3_d_1_1_nav_area.html#a6e956b64fb147ae2573cd2ecf00ff999", null ],
     [ "boundingBox_", "class_urho3_d_1_1_nav_area.html#a2beb9e0484e10151cc6115e8b0e88834", null ]
 ];

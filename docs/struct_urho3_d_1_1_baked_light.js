@@ -10,7 +10,6 @@ var struct_urho3_d_1_1_baked_light =
     [ "fov_", "struct_urho3_d_1_1_baked_light.html#a6f67ef39d7288d7585548b07614e7d38", null ],
     [ "halfAngleTan_", "struct_urho3_d_1_1_baked_light.html#acdfb9e4a6fdfd3be13396b287ada9cb3", null ],
     [ "indirectBrightness_", "struct_urho3_d_1_1_baked_light.html#a7853f59e52a8d77aa04ca1ee9089f701", null ],
-    [ "lightMask_", "struct_urho3_d_1_1_baked_light.html#ac8d13f38498b6b708850af50709747c7", null ],
     [ "lightMode_", "struct_urho3_d_1_1_baked_light.html#a0efef339d0b3bd1b440f92e60a711afe", null ],
     [ "lightType_", "struct_urho3_d_1_1_baked_light.html#a161e04deea951516cabf0c00e35632f0", null ],
     [ "position_", "struct_urho3_d_1_1_baked_light.html#a28bb5a13d9d8ddf4e375da37e251410b", null ],

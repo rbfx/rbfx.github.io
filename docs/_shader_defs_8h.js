@@ -1,7 +1,7 @@
 var _shader_defs_8h =
 [
-    [ "SpirVShader", "struct_urho3_d_1_1_spir_v_shader.html", "struct_urho3_d_1_1_spir_v_shader" ],
-    [ "ShaderDefineArray", "struct_urho3_d_1_1_shader_define_array.html", "struct_urho3_d_1_1_shader_define_array" ],
+    [ "Urho3D::SpirVShader", "struct_urho3_d_1_1_spir_v_shader.html", null ],
+    [ "Urho3D::ShaderDefineArray", "struct_urho3_d_1_1_shader_define_array.html", "struct_urho3_d_1_1_shader_define_array" ],
     [ "TargetShaderLanguage", "_shader_defs_8h.html#a9f60cbed4dff6fe7a4c22d120c2f98d5", [
       [ "GLSL_4_1", "_shader_defs_8h.html#a9f60cbed4dff6fe7a4c22d120c2f98d5a19634235243d0b76f88f1d1282f86b9e", null ],
       [ "GLSL_ES_3_0", "_shader_defs_8h.html#a9f60cbed4dff6fe7a4c22d120c2f98d5a9f2c630db471f0c61458a9552c57766f", null ],

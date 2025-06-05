@@ -7,7 +7,7 @@ var class_urho3_d_1_1_http_request =
     [ "GetState", "class_urho3_d_1_1_http_request.html#a687c17d7c33831e6f68ceddd643d7383", null ],
     [ "GetStatusCode", "class_urho3_d_1_1_http_request.html#ae7ce8d93ab77f7f9c6446e1178f8c510", null ],
     [ "GetURL", "class_urho3_d_1_1_http_request.html#a255360928dcd6a6e24e6a3424e0ea278", null ],
-    [ "GetVerb", "class_urho3_d_1_1_http_request.html#a0e95441c88e7d054c12005e4ee780fa9", null ],
+    [ "GetVerb", "class_urho3_d_1_1_http_request.html#a1e2ae4938c010e3a1bb265fc7a9d39af", null ],
     [ "IsEof", "class_urho3_d_1_1_http_request.html#a5b83ae3fd9b78b1de195bd9cd9103173", null ],
     [ "IsOpen", "class_urho3_d_1_1_http_request.html#ae1433fcc1ab5dd871e185b920674fe2d", null ],
     [ "Read", "class_urho3_d_1_1_http_request.html#ab9ed1dd50303836c3f3e1839dfe7efc7", null ],

@@ -6,7 +6,7 @@ var class_urho3_d_1_1_object_animation =
     [ "BeginLoad", "class_urho3_d_1_1_object_animation.html#a46f94474d9e82b864567c4c8665c0d76", null ],
     [ "GetAttributeAnimation", "class_urho3_d_1_1_object_animation.html#a4e1de225d30aada92d7024a4dc9ae2a7", null ],
     [ "GetAttributeAnimationInfo", "class_urho3_d_1_1_object_animation.html#a8e68f3384d41fd12fddc84fbe60ef554", null ],
-    [ "GetAttributeAnimationInfos", "class_urho3_d_1_1_object_animation.html#aa72046e84ffa262860a07c9b3d86f33b", null ],
+    [ "GetAttributeAnimationInfos", "class_urho3_d_1_1_object_animation.html#a14b8921a535bfa644e8e5914c310a362", null ],
     [ "GetAttributeAnimationSpeed", "class_urho3_d_1_1_object_animation.html#ac50c33555f35360c92b5cabe14229dd4", null ],
     [ "GetAttributeAnimationWrapMode", "class_urho3_d_1_1_object_animation.html#a798fcef98e55a0f824818e5322eb4bdd", null ],
     [ "LoadJSON", "class_urho3_d_1_1_object_animation.html#a6abe177f7630bc448bf4ffe7d0a0695c", null ],
@@ -19,6 +19,5 @@ var class_urho3_d_1_1_object_animation =
     [ "SaveXML", "class_urho3_d_1_1_object_animation.html#a52b207cefc63104d97287c011b8a94cd", null ],
     [ "SendAttributeAnimationAddedEvent", "class_urho3_d_1_1_object_animation.html#a80d57153db448d3e9039d88813d8a406", null ],
     [ "SendAttributeAnimationRemovedEvent", "class_urho3_d_1_1_object_animation.html#a793515af171a1ea82e6a0254b6e63ae5", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_object_animation.html#a266dbd9236fdc8c6ce22fafcecdbd015", null ],
     [ "attributeAnimationInfos_", "class_urho3_d_1_1_object_animation.html#a111445ff8f876116d69614e39dc4af97", null ]
 ];

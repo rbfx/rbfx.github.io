@@ -8,7 +8,6 @@ var class_urho3_d_1_1_tool_tip =
     [ "Reset", "class_urho3_d_1_1_tool_tip.html#a73a1d9518db0d686186655b07eab5cd2", null ],
     [ "SetDelay", "class_urho3_d_1_1_tool_tip.html#a6320fc168a13145f136336e4473af0e1", null ],
     [ "Update", "class_urho3_d_1_1_tool_tip.html#a1652f796b22acf7087e05e4929541104", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_tool_tip.html#a2b7d502603fd0fa5d066fb64c8548065", null ],
     [ "altTargets_", "class_urho3_d_1_1_tool_tip.html#af69f71ac8890b24798127349a1e6c8b3", null ],
     [ "delay_", "class_urho3_d_1_1_tool_tip.html#a5f6075a8a7cfb667d2dd47bec891a373", null ],
     [ "displayAt_", "class_urho3_d_1_1_tool_tip.html#a106b1e3e358cdc5542304bc3a60e28cd", null ],

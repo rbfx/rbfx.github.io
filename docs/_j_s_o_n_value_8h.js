@@ -1,6 +1,6 @@
 var _j_s_o_n_value_8h =
 [
-    [ "JSONValue", "class_urho3_d_1_1_j_s_o_n_value.html", "class_urho3_d_1_1_j_s_o_n_value" ],
+    [ "Urho3D::JSONValue", "class_urho3_d_1_1_j_s_o_n_value.html", "class_urho3_d_1_1_j_s_o_n_value" ],
     [ "ConstJSONObjectIterator", "_j_s_o_n_value_8h.html#aca16b4ee0156a91fc5d26602354b0bcd", null ],
     [ "JSONArray", "_j_s_o_n_value_8h.html#abba34e57c64ee04773e64b29665334f6", null ],
     [ "JSONObject", "_j_s_o_n_value_8h.html#abdd8536c954b4a734947183f3827bd34", null ],
@@ -18,9 +18,5 @@ var _j_s_o_n_value_8h =
       [ "JSON_STRING", "_j_s_o_n_value_8h.html#a84b4987d506f45d6a4e8e9d8372b1de7af9d9f5cc56ae0de28c3cfa30db41280c", null ],
       [ "JSON_ARRAY", "_j_s_o_n_value_8h.html#a84b4987d506f45d6a4e8e9d8372b1de7abba0fc6fac83f1302dfcf985f5899d22", null ],
       [ "JSON_OBJECT", "_j_s_o_n_value_8h.html#a84b4987d506f45d6a4e8e9d8372b1de7a83c93c6d0a89c898f2bcb6e01d04e4f8", null ]
-    ] ],
-    [ "begin", "_j_s_o_n_value_8h.html#ad986f86f3862d15a91c819497d35d16e", null ],
-    [ "begin", "_j_s_o_n_value_8h.html#a66c4db38785e688a0bfd845d41327ae0", null ],
-    [ "end", "_j_s_o_n_value_8h.html#ae322660870f044053bf85dc997f5a0a4", null ],
-    [ "end", "_j_s_o_n_value_8h.html#a06f18aa9d8cef6f9e3aa901d03a37376", null ]
+    ] ]
 ];

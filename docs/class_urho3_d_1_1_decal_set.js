@@ -44,7 +44,6 @@ var class_urho3_d_1_1_decal_set =
     [ "UpdateEventSubscription", "class_urho3_d_1_1_decal_set.html#ab57603264541b21bb532f47a9b3f9acc", null ],
     [ "UpdateGeometry", "class_urho3_d_1_1_decal_set.html#aa11dc91f436c433d4f14caa46c0e81af", null ],
     [ "UpdateSkinning", "class_urho3_d_1_1_decal_set.html#a524315fdadb6957a578663c3005d1118", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_decal_set.html#a4f1d4cae79cd189d96c7c19be0f9051b", null ],
     [ "assignBonesPending_", "class_urho3_d_1_1_decal_set.html#abd8fc3489cc1e154e32aea66130c1ce6", null ],
     [ "bones_", "class_urho3_d_1_1_decal_set.html#ada3fae0d5824134ea5fb6327f3b76cda", null ],
     [ "boundingBoxDirty_", "class_urho3_d_1_1_decal_set.html#a1122947a1e1e1028aebfd5236c3a32af", null ],

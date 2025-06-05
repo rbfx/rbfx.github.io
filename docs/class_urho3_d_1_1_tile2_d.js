@@ -8,7 +8,6 @@ var class_urho3_d_1_1_tile2_d =
     [ "GetSprite", "class_urho3_d_1_1_tile2_d.html#a10086cd6873e2ba4c2da06cabc1f3ecb", null ],
     [ "GetSwapXY", "class_urho3_d_1_1_tile2_d.html#adc192a6eedeaeccf1f07549df1ca8103", null ],
     [ "HasProperty", "class_urho3_d_1_1_tile2_d.html#a8a2c847dc499e4c7e31a4090b699660b", null ],
-    [ "TmxTileLayer2D", "class_urho3_d_1_1_tile2_d.html#a8af93fb4c23d5b4aba6a0d0ce01f7537", null ],
     [ "gid_", "class_urho3_d_1_1_tile2_d.html#afd6f5bafc239c4aef2ecd34a50d565cf", null ],
     [ "propertySet_", "class_urho3_d_1_1_tile2_d.html#a41e942d03aaa2b778f8e3247ad18c37b", null ],
     [ "sprite_", "class_urho3_d_1_1_tile2_d.html#a9c7c340b90cea5847abd8687870d9b09", null ]

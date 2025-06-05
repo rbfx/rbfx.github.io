@@ -33,7 +33,6 @@ var class_urho3_d_1_1_particle_graph_emitter =
     [ "effect_", "class_urho3_d_1_1_particle_graph_emitter.html#ab7480974ea3ce915bd8be7de0035b34e", null ],
     [ "emitting_", "class_urho3_d_1_1_particle_graph_emitter.html#a4e495a5d03c7e52ea59720203a2d162c", null ],
     [ "lastTimeStep_", "class_urho3_d_1_1_particle_graph_emitter.html#a10fa4de065d0909542cf8578c5febbf7", null ],
-    [ "layers_", "class_urho3_d_1_1_particle_graph_emitter.html#aa234c647111ae4dc66589a5e06cabd11", null ],
     [ "lightMask_", "class_urho3_d_1_1_particle_graph_emitter.html#ab7315b70f771b9d27d26fb24ae3e889e", null ],
     [ "shadowMask_", "class_urho3_d_1_1_particle_graph_emitter.html#a2d1a57e237a6aa1d7986d6ce9ec575be", null ],
     [ "viewMask_", "class_urho3_d_1_1_particle_graph_emitter.html#af66e818aff058da556d4b669f8847437", null ],

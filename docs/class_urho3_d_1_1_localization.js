@@ -14,7 +14,6 @@ var class_urho3_d_1_1_localization =
     [ "Reset", "class_urho3_d_1_1_localization.html#ad257e0df48b4ae6093e06f8581a835a2", null ],
     [ "SetLanguage", "class_urho3_d_1_1_localization.html#a3b68103270b123f79267237a56d1ec76", null ],
     [ "SetLanguage", "class_urho3_d_1_1_localization.html#a29625d008ee9e3eb9603ce58942dd01d", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_localization.html#a8a1f265ec4223882772e85c3c98ddb23", null ],
     [ "languageIndex_", "class_urho3_d_1_1_localization.html#abc42f26208e0b5cd6151758b16552c27", null ],
     [ "languages_", "class_urho3_d_1_1_localization.html#ad52348c6131b95e7d2da77980429b6bc", null ],
     [ "strings_", "class_urho3_d_1_1_localization.html#a685f3482d5a8d8493badf47d4104fc68", null ]

@@ -6,7 +6,7 @@ var class_urho3_d_1_1_tetrahedral_mesh =
     [ "BuildTetrahedrons", "class_urho3_d_1_1_tetrahedral_mesh.html#a697072b53db392a87b11165ad8a21f0a", null ],
     [ "CalculateHullNormals", "class_urho3_d_1_1_tetrahedral_mesh.html#ad54e9404ea48692839b663577b31d2f7", null ],
     [ "CalculateOuterMatrices", "class_urho3_d_1_1_tetrahedral_mesh.html#a5028044e5fd52e0ae27eab23992d5041", null ],
-    [ "CollectEdges", "class_urho3_d_1_1_tetrahedral_mesh.html#a8c9fa9c034141e378a7f44a5e3160db4", null ],
+    [ "CollectEdges", "class_urho3_d_1_1_tetrahedral_mesh.html#a0a64dd352b57b55c6fee59dee8f1cee2", null ],
     [ "Define", "class_urho3_d_1_1_tetrahedral_mesh.html#a64d4f09ecb361c2f560166a028b94418", null ],
     [ "DisconnectRemovedTetrahedrons", "class_urho3_d_1_1_tetrahedral_mesh.html#af43f09b3177ec11231cdc5a6fde87b68", null ],
     [ "DisconnectSuperMeshTetrahedrons", "class_urho3_d_1_1_tetrahedral_mesh.html#a6c7e587bda4ffd0066be88caf11144a6", null ],

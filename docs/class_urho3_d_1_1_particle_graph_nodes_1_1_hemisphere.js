@@ -15,11 +15,5 @@ var class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere =
     [ "SetRadiusThickness", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere.html#a73d80378643d2eab7f3ead2dcda07569", null ],
     [ "SetRotation", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere.html#afa6af715c274fe641b1c87feef6113ca", null ],
     [ "SetScale", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere.html#a6e9bda578acfb49e8b80ddba9c4b64cc", null ],
-    [ "SetTranslation", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere.html#a5169f189f93a73717867db737b2b9375", null ],
-    [ "from_", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere.html#ae533525755aaa5f71a6b18daa7bb20b2", null ],
-    [ "radius_", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere.html#acfd0ee97df7f04f90fedb57956a7bfa5", null ],
-    [ "radiusThickness_", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere.html#a2f59fbb0b4f57e394baf8f9d3c546467", null ],
-    [ "rotation_", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere.html#afa16f2687c8d9fba1325dd0a210d1168", null ],
-    [ "scale_", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere.html#aa67cf47fd0ac89d13a6b20d941eebd40", null ],
-    [ "translation_", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere.html#aa04f54f003399cb1f3d05cd5c601ce30", null ]
+    [ "SetTranslation", "class_urho3_d_1_1_particle_graph_nodes_1_1_hemisphere.html#a5169f189f93a73717867db737b2b9375", null ]
 ];

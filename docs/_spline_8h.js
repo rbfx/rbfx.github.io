@@ -1,6 +1,6 @@
 var _spline_8h =
 [
-    [ "Spline", "class_urho3_d_1_1_spline.html", "class_urho3_d_1_1_spline" ],
+    [ "Urho3D::Spline", "class_urho3_d_1_1_spline.html", "class_urho3_d_1_1_spline" ],
     [ "InterpolationMode", "_spline_8h.html#a8bed5108b7d05ea9d545e4ff121ae481", [
       [ "BEZIER_CURVE", "_spline_8h.html#a8bed5108b7d05ea9d545e4ff121ae481a366226a84d522333ccadac11b1a8ffcf", null ],
       [ "CATMULL_ROM_CURVE", "_spline_8h.html#a8bed5108b7d05ea9d545e4ff121ae481a5b3cc9e85ceb069f10f47cbbe4f4be61", null ],

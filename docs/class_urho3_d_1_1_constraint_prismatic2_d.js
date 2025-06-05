@@ -2,8 +2,8 @@ var class_urho3_d_1_1_constraint_prismatic2_d =
 [
     [ "ConstraintPrismatic2D", "class_urho3_d_1_1_constraint_prismatic2_d.html#a14e38d7ddc098e07f472bd88d9fbe892", null ],
     [ "~ConstraintPrismatic2D", "class_urho3_d_1_1_constraint_prismatic2_d.html#ab79983c4ee2e7278bacff5859e8147e2", null ],
-    [ "GetAnchor", "class_urho3_d_1_1_constraint_prismatic2_d.html#adb51328b99284a7c7224e24bc3557d6f", null ],
-    [ "GetAxis", "class_urho3_d_1_1_constraint_prismatic2_d.html#aaff8a0f31f77f370c4f83df66436708a", null ],
+    [ "GetAnchor", "class_urho3_d_1_1_constraint_prismatic2_d.html#a6eaf3b834a2b592cc6c09339025544a8", null ],
+    [ "GetAxis", "class_urho3_d_1_1_constraint_prismatic2_d.html#a394b80949d747446b05e8855afca1494", null ],
     [ "GetEnableLimit", "class_urho3_d_1_1_constraint_prismatic2_d.html#af0402f239c3fe3a36fa75eaae93d3d23", null ],
     [ "GetEnableMotor", "class_urho3_d_1_1_constraint_prismatic2_d.html#a18b79469784679a33aabca4fb0764fda", null ],
     [ "GetJointDef", "class_urho3_d_1_1_constraint_prismatic2_d.html#a71762394759744ed26ea05b16aaf1514", null ],
@@ -20,7 +20,6 @@ var class_urho3_d_1_1_constraint_prismatic2_d =
     [ "SetMaxMotorForce", "class_urho3_d_1_1_constraint_prismatic2_d.html#ade1b7541b3861b0d8111a65cd1caeacc", null ],
     [ "SetMotorSpeed", "class_urho3_d_1_1_constraint_prismatic2_d.html#a8715813b146b1bfa51a434cd74c3a03a", null ],
     [ "SetUpperTranslation", "class_urho3_d_1_1_constraint_prismatic2_d.html#ad28170b01d4ff8e08cffeeb9b3f93781", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_constraint_prismatic2_d.html#af288a2b40b30c1d8f69723e4832a4641", null ],
     [ "anchor_", "class_urho3_d_1_1_constraint_prismatic2_d.html#a2846f85568062ef93fd945a3419562e6", null ],
     [ "axis_", "class_urho3_d_1_1_constraint_prismatic2_d.html#a2e5bda2aa80a19d3ffb5d2e3375c0d1a", null ],
     [ "jointDef_", "class_urho3_d_1_1_constraint_prismatic2_d.html#ac96039571707359881f76e301b77fdd2", null ]

@@ -1,6 +1,5 @@
 var class_urho3_d_1_1_vertex_buffer =
 [
-    [ "VertexBuffer", "class_urho3_d_1_1_vertex_buffer.html#aeb2cc7697e30133cf9597777bce9f789", null ],
     [ "GetElement", "class_urho3_d_1_1_vertex_buffer.html#a31c19c8ff4da186ca6410e2d5d94c2b4", null ],
     [ "GetElement", "class_urho3_d_1_1_vertex_buffer.html#a29793b5ff363c8054095b7afbaa30197", null ],
     [ "GetElement", "class_urho3_d_1_1_vertex_buffer.html#a934de75e2d05d0cd5190176f7a0cf745", null ],
@@ -8,7 +7,7 @@ var class_urho3_d_1_1_vertex_buffer =
     [ "GetElementOffset", "class_urho3_d_1_1_vertex_buffer.html#ac07d631b7ce66f6d7e877efedf776a1e", null ],
     [ "GetElementOffset", "class_urho3_d_1_1_vertex_buffer.html#afdb3a120f19945f58c189cf76a00ee25", null ],
     [ "GetElementOffset", "class_urho3_d_1_1_vertex_buffer.html#abf4b1aa7ecd338f655491773665946ff", null ],
-    [ "GetElements", "class_urho3_d_1_1_vertex_buffer.html#abc34d1b135e9c23d248595fbdfd74bc0", null ],
+    [ "GetElements", "class_urho3_d_1_1_vertex_buffer.html#ac44385d118198591636b46f9af970878", null ],
     [ "GetElements", "class_urho3_d_1_1_vertex_buffer.html#a7d347c9102e3479e20362647e2404965", null ],
     [ "GetUnpackedData", "class_urho3_d_1_1_vertex_buffer.html#ab80ff00debf33956aaffd849b3f98d25", null ],
     [ "GetVertexCount", "class_urho3_d_1_1_vertex_buffer.html#a9ffb4421860e3421726f4a6b949766ee", null ],
@@ -29,7 +28,6 @@ var class_urho3_d_1_1_vertex_buffer =
     [ "UnpackVertexData", "class_urho3_d_1_1_vertex_buffer.html#a7ab1074c1579d005fecd31efe86cbef9", null ],
     [ "UpdateOffsets", "class_urho3_d_1_1_vertex_buffer.html#a913472a1f3817d473639ed6f5fb35ae1", null ],
     [ "UpdateOffsets", "class_urho3_d_1_1_vertex_buffer.html#a9e948d0ae9be03c2287c54af01eace67", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_vertex_buffer.html#af746e0b51d9ddcdf9deb3076d8a9734e", null ],
     [ "elementHash_", "class_urho3_d_1_1_vertex_buffer.html#a1269d0a2361e1017fe15fd00880ea842", null ],
     [ "elementMask_", "class_urho3_d_1_1_vertex_buffer.html#a30a37136fb846a0edfa581a923b1c6f0", null ],
     [ "elements_", "class_urho3_d_1_1_vertex_buffer.html#a0abc2dabdf3acb25b56041bf7adefd7b", null ],

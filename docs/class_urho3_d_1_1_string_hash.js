@@ -14,7 +14,7 @@ var class_urho3_d_1_1_string_hash =
     [ "Calculate", "class_urho3_d_1_1_string_hash.html#a121026215a0bb194e0b97a003f3024bf", null ],
     [ "GetGlobalStringHashRegister", "class_urho3_d_1_1_string_hash.html#a1d91c6e39f149f09018583a540a922d1", null ],
     [ "IsEmpty", "class_urho3_d_1_1_string_hash.html#a1ac8c5eac76242d2c23f7c8d6af3f7d9", null ],
-    [ "MutableValue", "class_urho3_d_1_1_string_hash.html#ae7ee245ab71020c84b7b3962b21adcbd", null ],
+    [ "MutableValue", "class_urho3_d_1_1_string_hash.html#a9b314ee84e5af3b2a665e4a91dcbcda3", null ],
     [ "operator bool", "class_urho3_d_1_1_string_hash.html#aab269e6d7411f6f0939b80d26034c33b", null ],
     [ "operator!=", "class_urho3_d_1_1_string_hash.html#afdd4d9e56720cfc3a0d42662ae31b3ec", null ],
     [ "operator<", "class_urho3_d_1_1_string_hash.html#a67d2cf3a96ed2734f1d06dbe94c3fffe", null ],
@@ -25,7 +25,6 @@ var class_urho3_d_1_1_string_hash =
     [ "ToHash", "class_urho3_d_1_1_string_hash.html#a77a31751969c501c3e2806791efddaec", null ],
     [ "ToString", "class_urho3_d_1_1_string_hash.html#af5019d1d6900462432ed291ee3419958", null ],
     [ "Value", "class_urho3_d_1_1_string_hash.html#a128b96d97b890372a0ca3b7f27355500", null ],
-    [ "Empty", "class_urho3_d_1_1_string_hash.html#ac7b672ec970e35cae390df43fae8e3f8", null ],
     [ "EmptyValue", "class_urho3_d_1_1_string_hash.html#a6d3c8dcfd41df8b94b8c3052e0bf57a1", null ],
     [ "value_", "class_urho3_d_1_1_string_hash.html#a128a5bc13b5660e969f1ee982d5f4c7e", null ]
 ];

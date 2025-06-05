@@ -1,13 +1,12 @@
 var _animation_state_8h =
 [
-    [ "NodeAnimationStateTrack", "struct_urho3_d_1_1_node_animation_state_track.html", "struct_urho3_d_1_1_node_animation_state_track" ],
-    [ "NodeAnimationOutput", "struct_urho3_d_1_1_node_animation_output.html", "struct_urho3_d_1_1_node_animation_output" ],
-    [ "ModelAnimationStateTrack", "struct_urho3_d_1_1_model_animation_state_track.html", "struct_urho3_d_1_1_model_animation_state_track" ],
-    [ "ModelAnimationOutput", "struct_urho3_d_1_1_model_animation_output.html", "struct_urho3_d_1_1_model_animation_output" ],
-    [ "AnimatedAttributeReference", "struct_urho3_d_1_1_animated_attribute_reference.html", "struct_urho3_d_1_1_animated_attribute_reference" ],
-    [ "AttributeAnimationStateTrack", "struct_urho3_d_1_1_attribute_animation_state_track.html", "struct_urho3_d_1_1_attribute_animation_state_track" ],
-    [ "AnimationState", "class_urho3_d_1_1_animation_state.html", "class_urho3_d_1_1_animation_state" ],
-    [ "AnimationStateVector", "_animation_state_8h.html#ab14161636901342c81fc869a12ff56e2", null ],
+    [ "Urho3D::NodeAnimationStateTrack", "struct_urho3_d_1_1_node_animation_state_track.html", null ],
+    [ "Urho3D::NodeAnimationOutput", "struct_urho3_d_1_1_node_animation_output.html", null ],
+    [ "Urho3D::ModelAnimationStateTrack", "struct_urho3_d_1_1_model_animation_state_track.html", null ],
+    [ "Urho3D::ModelAnimationOutput", "struct_urho3_d_1_1_model_animation_output.html", null ],
+    [ "Urho3D::AnimatedAttributeReference", "struct_urho3_d_1_1_animated_attribute_reference.html", "struct_urho3_d_1_1_animated_attribute_reference" ],
+    [ "Urho3D::AttributeAnimationStateTrack", "struct_urho3_d_1_1_attribute_animation_state_track.html", null ],
+    [ "Urho3D::AnimationState", "class_urho3_d_1_1_animation_state.html", "class_urho3_d_1_1_animation_state" ],
     [ "AnimatedAttributeType", "_animation_state_8h.html#a0187bc92801b611025a10f8b6cada67c", [
       [ "Default", "_animation_state_8h.html#a0187bc92801b611025a10f8b6cada67ca7a1920d61156abc05a60135aefe8bc67", null ],
       [ "NodeVariables", "_animation_state_8h.html#a0187bc92801b611025a10f8b6cada67ca67985e0f3281529b443842cbc0aa7312", null ],

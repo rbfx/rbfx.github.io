@@ -9,8 +9,5 @@ var class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer =
     [ "RegisterObject", "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer.html#a874210a287c83122554c780516130df2", null ],
     [ "SetCycles", "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer.html#a1b231e999c7de8d284d5e764824b0c26", null ],
     [ "SetDelay", "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer.html#a7a3adb20f481fd42842f5104a2935170", null ],
-    [ "SetInterval", "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer.html#a1c3466a54bd4bbe86823bda612090450", null ],
-    [ "cycles_", "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer.html#aa27cd98165bce2b62028a70643bbfcc1", null ],
-    [ "delay_", "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer.html#afcec2301141d06368dfe367db4433575", null ],
-    [ "interval_", "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer.html#af3b744b7e2524654ab1b2560dfe2657e", null ]
+    [ "SetInterval", "class_urho3_d_1_1_particle_graph_nodes_1_1_burst_timer.html#a1c3466a54bd4bbe86823bda612090450", null ]
 ];

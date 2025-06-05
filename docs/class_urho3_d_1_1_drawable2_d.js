@@ -14,7 +14,6 @@ var class_urho3_d_1_1_drawable2_d =
     [ "SetLayer", "class_urho3_d_1_1_drawable2_d.html#ac9f626566fe697b52a9a480124a9d17b", null ],
     [ "SetOrderInLayer", "class_urho3_d_1_1_drawable2_d.html#a69a05d67eda14a449c2b793f520d9d5b", null ],
     [ "UpdateSourceBatches", "class_urho3_d_1_1_drawable2_d.html#aaa3ee2dfe5f37c32ed8fd11a3b169e6e", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_drawable2_d.html#a5d2ad644688913ef16d006f5383c7fc1", null ],
     [ "layer_", "class_urho3_d_1_1_drawable2_d.html#af816480a7cbdf4185c27d8254fb52060", null ],
     [ "orderInLayer_", "class_urho3_d_1_1_drawable2_d.html#a3eb3b15fcc732c357a9339a0c5b83bb3", null ],
     [ "renderer_", "class_urho3_d_1_1_drawable2_d.html#ad2e1e2227674488f0a53e390ab64d042", null ],

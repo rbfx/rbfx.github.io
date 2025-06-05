@@ -4,6 +4,5 @@ var class_urho3_d_1_1_unknown_component =
     [ "Load", "class_urho3_d_1_1_unknown_component.html#a58f4aad3d342a0b815e132c8d61dabd8", null ],
     [ "LoadJSON", "class_urho3_d_1_1_unknown_component.html#a6677bd2b8630f99d8cf886258ca2b567", null ],
     [ "LoadXML", "class_urho3_d_1_1_unknown_component.html#ac9e20b702a0b50af348ace7b7605b415", null ],
-    [ "RegisterObject", "class_urho3_d_1_1_unknown_component.html#af5dc31902d78a0647188f16bbd8105c0", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_unknown_component.html#aa90526fd00d201cc452677f3aca15c97", null ]
+    [ "RegisterObject", "class_urho3_d_1_1_unknown_component.html#af5dc31902d78a0647188f16bbd8105c0", null ]
 ];

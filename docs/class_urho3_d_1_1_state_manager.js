@@ -1,25 +1,12 @@
 var class_urho3_d_1_1_state_manager =
 [
     [ "QueueItem", "struct_urho3_d_1_1_state_manager_1_1_queue_item.html", "struct_urho3_d_1_1_state_manager_1_1_queue_item" ],
-    [ "TransitionState", "class_urho3_d_1_1_state_manager.html#abae5860b84ebcb829ff35aba3b80313a", [
-      [ "Sustain", "class_urho3_d_1_1_state_manager.html#abae5860b84ebcb829ff35aba3b80313aac98a9f29cbf065cabb6867cbcb7c8ab9", null ],
-      [ "FadeOut", "class_urho3_d_1_1_state_manager.html#abae5860b84ebcb829ff35aba3b80313aaf8be2875b8fa26739660f6f090938475", null ],
-      [ "FadeIn", "class_urho3_d_1_1_state_manager.html#abae5860b84ebcb829ff35aba3b80313aa294f48edd972b58ced15c2284db56f82", null ],
-      [ "WaitToExit", "class_urho3_d_1_1_state_manager.html#abae5860b84ebcb829ff35aba3b80313aa35e6fc52557bc98bab10ff1a8aaa0d52", null ]
-    ] ],
     [ "StateManager", "class_urho3_d_1_1_state_manager.html#aa86db909cb772ca1a51b9e00008f9ef0", null ],
-    [ "~StateManager", "class_urho3_d_1_1_state_manager.html#a10b6a3397fc445ecfb26aa5d6055232d", null ],
     [ "CacheState", "class_urho3_d_1_1_state_manager.html#a117baa4284134f87d0739c8d638d3ac2", null ],
     [ "CompleteTransition", "class_urho3_d_1_1_state_manager.html#adfb39b85d80d447af18da83e543356a7", null ],
     [ "CreateNextState", "class_urho3_d_1_1_state_manager.html#abd028f601e5e1d6ea1364b6d9c346671", null ],
     [ "DeactivateState", "class_urho3_d_1_1_state_manager.html#af1b717d4dadebd63b966d71c2d804030", null ],
-    [ "EnqueueState", "class_urho3_d_1_1_state_manager.html#abe2e718d86266ee991b7a5c7425e178b", null ],
-    [ "EnqueueState", "class_urho3_d_1_1_state_manager.html#ac39623bcfc4a1156a5bed1991946ef87", null ],
     [ "EnqueueState", "class_urho3_d_1_1_state_manager.html#a3803e7e4e6b672fb9127447695177b45", null ],
-    [ "EnqueueState", "class_urho3_d_1_1_state_manager.html#aef26755bb07b99bfdb0e94c913e5ff6c", null ],
-    [ "EnqueueState", "class_urho3_d_1_1_state_manager.html#a70e4d6706d2a0a988fbe9ca17207316c", null ],
-    [ "EnqueueState", "class_urho3_d_1_1_state_manager.html#a98d30f2984199c1e91a28c7c1ce3e772", null ],
-    [ "GetCachedState", "class_urho3_d_1_1_state_manager.html#a1e7dc04a7c98ba8497f8cf128059b3ea", null ],
     [ "GetCachedState", "class_urho3_d_1_1_state_manager.html#a741e2d0ba97ff5b3e6e8e1f4f74b9a0f", null ],
     [ "GetFadeInDuration", "class_urho3_d_1_1_state_manager.html#a205a47c282cde79518176f5975443539", null ],
     [ "GetFadeOutDuration", "class_urho3_d_1_1_state_manager.html#a63b330721af8da0061c693ef719d3bce", null ],
@@ -36,7 +23,6 @@ var class_urho3_d_1_1_state_manager =
     [ "StartTransition", "class_urho3_d_1_1_state_manager.html#a14fded322de983adedecec2ae2c74569", null ],
     [ "Update", "class_urho3_d_1_1_state_manager.html#a2537b931a0a5f5d5b9d9781105154b05", null ],
     [ "UpdateFadeOverlay", "class_urho3_d_1_1_state_manager.html#a3922b9b7817c428538f0515b16ef6b1b", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_state_manager.html#a56f285e818e8702ca0032e940aa4dcf1", null ],
     [ "activeState_", "class_urho3_d_1_1_state_manager.html#a48c842d875b3b55ce5ad25d87eb20970", null ],
     [ "destinationState_", "class_urho3_d_1_1_state_manager.html#ad17549dc2ec5107b610db30b33092d78", null ],
     [ "fadeInDuration_", "class_urho3_d_1_1_state_manager.html#aab3ff3a3478d882714455ba3cd8e35ad", null ],

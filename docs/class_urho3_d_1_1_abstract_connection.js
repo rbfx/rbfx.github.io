@@ -1,31 +1,14 @@
 var class_urho3_d_1_1_abstract_connection =
 [
-    [ "AbstractConnection", "class_urho3_d_1_1_abstract_connection.html#ae88595578997390056147f29f9b784bd", null ],
-    [ "GetDebugInfoBuffer", "class_urho3_d_1_1_abstract_connection.html#af0f6dd84a70efe0ae3aa1c5ecee26945", null ],
-    [ "GetIncomingMessageBuffer", "class_urho3_d_1_1_abstract_connection.html#ac646da94164ec0d061d7e682090b9e9d", null ],
     [ "GetLocalTime", "class_urho3_d_1_1_abstract_connection.html#a3ae97490515ceb3f011b1e50a9555889", null ],
     [ "GetLocalTimeOfLatestRoundtrip", "class_urho3_d_1_1_abstract_connection.html#a5b9c99ab3223059ea329a78e5f7992c2", null ],
-    [ "GetMaxMessageSize", "class_urho3_d_1_1_abstract_connection.html#a26fd02c0d4cb8390858e3825feafe48d", null ],
     [ "GetMaxPacketSize", "class_urho3_d_1_1_abstract_connection.html#abe3cbae4c156eb8b299ff6e97fd65cb4", null ],
-    [ "GetMessageLogLevel", "class_urho3_d_1_1_abstract_connection.html#a8884ac2291eac855a6ead7231832962f", null ],
-    [ "GetOutgoingMessageBuffer", "class_urho3_d_1_1_abstract_connection.html#a0e6f4af22c8135a99e36ce9d84f351a1", null ],
     [ "GetPing", "class_urho3_d_1_1_abstract_connection.html#a142e84be5d439d495491214fb2a00983", null ],
     [ "IsClockSynchronized", "class_urho3_d_1_1_abstract_connection.html#a890fb534f826adb5f10202753688a74b", null ],
-    [ "IsLogAllMessages", "class_urho3_d_1_1_abstract_connection.html#a6d39c4f05fa6777a2e642bddca4ff69d", null ],
     [ "LocalToRemoteTime", "class_urho3_d_1_1_abstract_connection.html#a2dc0fca35f3997c723e18ac70fb4a4e6", null ],
-    [ "LogMessagePayload", "class_urho3_d_1_1_abstract_connection.html#aa0a3e228a58311f4530a6502cc9432ea", null ],
-    [ "LogMessagePayload", "class_urho3_d_1_1_abstract_connection.html#a3ec419ce2e8bf4e01e69104a6c537aee", null ],
     [ "RemoteToLocalTime", "class_urho3_d_1_1_abstract_connection.html#a99536ed82aa84e77f1ddc388472b4fd8", null ],
-    [ "SendMessage", "class_urho3_d_1_1_abstract_connection.html#a77d6e3d83b7038f6d4ce5f16ca1e5557", null ],
     [ "SendMessage", "class_urho3_d_1_1_abstract_connection.html#a58ac63827226d7484579383f61d1d1d9", null ],
     [ "SendMessageInternal", "class_urho3_d_1_1_abstract_connection.html#a988b4bb1ac2c78840ce5ab50fa989e06", null ],
-    [ "SetLogAllMessages", "class_urho3_d_1_1_abstract_connection.html#ae5c6bd24d4ede9bd746285486e4e6043", null ],
     [ "SetMaxPacketSize", "class_urho3_d_1_1_abstract_connection.html#aca38662b8421e22799dd396154d354d7", null ],
-    [ "ToString", "class_urho3_d_1_1_abstract_connection.html#afc9b26e421b9932293a7f73a9114162e", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_abstract_connection.html#a20e5852d061a8bf8b96a3dc94fe542aa", null ],
-    [ "debugInfoBuffer_", "class_urho3_d_1_1_abstract_connection.html#a5da2be2d9a2cabca9b40bab6f6be32df", null ],
-    [ "incomingMessageBuffer_", "class_urho3_d_1_1_abstract_connection.html#a325fe4d29297a08cc810c33a19a84157", null ],
-    [ "logAllMessages_", "class_urho3_d_1_1_abstract_connection.html#ae56bb07c221b2c6d10219169b650b4d6", null ],
-    [ "maxPacketSize_", "class_urho3_d_1_1_abstract_connection.html#aa9560e39978513c8f11a0d6835d922f5", null ],
-    [ "msg_", "class_urho3_d_1_1_abstract_connection.html#ab24c95c2a91f2c3b1a5d1c18c47a9998", null ]
+    [ "ToString", "class_urho3_d_1_1_abstract_connection.html#afc9b26e421b9932293a7f73a9114162e", null ]
 ];

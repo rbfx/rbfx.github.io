@@ -40,7 +40,6 @@ var class_urho3_d_1_1_file_system =
     [ "SystemRun", "class_urho3_d_1_1_file_system.html#a0d18fb2ffcb0b9c52f0d5082993f8907", null ],
     [ "SystemRunAsync", "class_urho3_d_1_1_file_system.html#a9871ed443cce15cbae5366676e950f10", null ],
     [ "SystemSpawn", "class_urho3_d_1_1_file_system.html#aae2aa237676520d5bad344bab6c23cbd", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_file_system.html#a853137f03255a18cca509fe8c8d6f6bd", null ],
     [ "allowedPaths_", "class_urho3_d_1_1_file_system.html#ab85b4d5e451101318a0db0c1f6c8140a", null ],
     [ "asyncExecQueue_", "class_urho3_d_1_1_file_system.html#a6000da7ce3e81d22904a9244d5a88e1f", null ],
     [ "executeConsoleCommands_", "class_urho3_d_1_1_file_system.html#a7e155c16dadc27181d74913643edb90a", null ],

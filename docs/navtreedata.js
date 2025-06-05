@@ -1,37 +1,39 @@
 /*
-@licstart  The following is the entire license notice for the
-JavaScript code in this file.
+ @licstart  The following is the entire license notice for the JavaScript code in this file.
 
-Copyright (C) 1997-2019 by Dimitri van Heesch
+ The MIT License (MIT)
 
-This program is free software; you can redistribute it and/or modify
-it under the terms of version 2 of the GNU General Public License as published by
-the Free Software Foundation
+ Copyright (C) 1997-2020 by Dimitri van Heesch
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ and associated documentation files (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge, publish, distribute,
+ sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ The above copyright notice and this permission notice shall be included in all copies or
+ substantial portions of the Software.
 
-@licend  The above is the entire license notice
-for the JavaScript code in this file
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var NAVTREE =
 [
   [ "Rebel Fork Framework", "index.html", [
     [ "Home", "index.html", "index" ],
-    [ "Quick Start for C++ developers", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_cpp-quick-start.html", null ],
-    [ "Quick Start for C# developers", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_csharp-quick-start.html", null ],
+    [ "Quick Start for C++ developers", "md__2home_2runner_2work_2rbfx-docs_2rbfx-docs_2pages_2documentation_2cpp-quick-start.html", null ],
+    [ "Quick Start for C# developers", "md__2home_2runner_2work_2rbfx-docs_2rbfx-docs_2pages_2documentation_2csharp-quick-start.html", null ],
     [ "Camera Operator", "camera-operator.html", null ],
     [ "Shake Component", "shake-component.html", null ],
-    [ "Math Cheatsheet", "md__home_runner_work_rbfx-docs_rbfx-docs_pages_documentation_math-cheatsheet.html", null ],
-    [ "Documentation for Rebel Fork Framework", "md__home_runner_work_rbfx-docs_rbfx-docs__r_e_a_d_m_e.html", null ],
+    [ "Math Cheatsheet", "md__2home_2runner_2work_2rbfx-docs_2rbfx-docs_2pages_2documentation_2math-cheatsheet.html", null ],
+    [ "Documentation for Rebel Fork Framework", "md__2home_2runner_2work_2rbfx-docs_2rbfx-docs_2_r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace List", "namespaces.html", null ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
         [ "Functions", "namespacemembers_func.html", null ]
@@ -47,7 +49,7 @@ var NAVTREE =
         [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
-        [ "Related Functions", "functions_rela.html", null ]
+        [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -58,97 +60,69 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-".html",
-"_file_formats.html",
-"_input_constants_8h.html#a024bc4d27ea4eb8d44c2c74c86448d5aadece46355998651030cde87687b17066",
-"_input_constants_8h.html#a8f2586f586dc5a263f361979b8c8d4d8ae4f2047783a1c23cdfe136a8938bc39d",
-"_input_constants_8h.html#a9ef1e93a80ac320fccb79e7c2a9d805eae93e5501c253635885429b492f2945b1",
-"_navigation.html#CrowdNavigation",
-"_rendering.html#Rendering_ReuseView",
-"_u_i_element_8h.html#aa3b7dfe2068db1d831f1d598317f4d26",
-"class_urho3_d_1_1_action_manager.html#a84f93b91f162c4b120c9755fdfa31b4d",
-"class_urho3_d_1_1_actions_1_1_finite_time_action_state.html#adb63ad7cdb458f578b7739cd5daf3b13",
-"class_urho3_d_1_1_animated_model.html#a66db3507b25a9fc4d35794e7a86ed531",
-"class_urho3_d_1_1_animation_parameters.html#a7654f6767db4fff1c99adc5b2eac9c3a",
-"class_urho3_d_1_1_archive_base_t.html#ac983763bbb821b39d782a39a13d8f573",
-"class_urho3_d_1_1_auto_exposure_pass.html#abf23a75b15aa97fb899847bc03ca6d99",
-"class_urho3_d_1_1_billboard_set.html#a168ef951efaa78e43c142f2e735d635c",
-"class_urho3_d_1_1_bounding_box.html#a969d7a5c8bc1a18368fd1fc481739cde",
-"class_urho3_d_1_1_camera_processor.html#adf78ad680e0ccbab93ab576702364871",
-"class_urho3_d_1_1_collision_shape.html#a03ddfc306e33f21ac8a9c68fe4d06829",
-"class_urho3_d_1_1_config_file.html#ac5d9d520cddfef13dd360909d03f2e85",
-"class_urho3_d_1_1_constraint_distance2_d.html#a7ee7231bfe8fd2c863e3e892c6a72a3c",
-"class_urho3_d_1_1_crowd_agent.html#a28fc6870bae1d8863067b68bda1c5783",
-"class_urho3_d_1_1_custom_variant_value.html#a60f6c51e4c92b57fac1f7ab75b26a5e3",
-"class_urho3_d_1_1_default_render_pipeline_view.html#a89051e8f0610b8f0fc5991cb5b4fedda",
-"class_urho3_d_1_1_direction_aggregator.html#a0e90844cb60f3abe3fbbf205ac68ca76",
-"class_urho3_d_1_1_drawable_processor.html#a4d135ab07fe1a0b864dba0148d371508",
-"class_urho3_d_1_1_engine.html#aa6943a1f7c599553ce1873bc93baf4a9",
-"class_urho3_d_1_1_filtered_by_distance.html#a36327e0b67bc14338b8c792aefa49a0a",
-"class_urho3_d_1_1_g_c_handle_ref.html#a6a15982282c050d4c9e7493122c61868",
-"class_urho3_d_1_1_graphics.html#a2a8a4736681e4bea1ebec140c8a272aa",
-"class_urho3_d_1_1_i_k_head_solver.html#acc78e06a41b6e979f94c73a46195f8d1",
-"class_urho3_d_1_1_i_k_solver_component.html#afc00f877d04f9cafa63860a6fe3f7c11",
-"class_urho3_d_1_1_image_cube.html#a321289884b1d936e551fa4936ffddeca",
-"class_urho3_d_1_1_instancing_buffer.html#ade3614eb120190d5f5afa10fb1114494",
-"class_urho3_d_1_1_j_s_o_n_value.html#a3d948e7d1271800c7ef95070baa42cf3",
-"class_urho3_d_1_1_light.html#a89cad1717f06add03ff26a127ff85d08",
-"class_urho3_d_1_1_line_edit.html#add16b13ffa1b32a49d7294ea059317d0",
-"class_urho3_d_1_1_material.html#ad587c70808216f6ff2bcac38dda26e15",
-"class_urho3_d_1_1_matrix4.html#ab745fafc11507de8756d41facda3297f",
-"class_urho3_d_1_1_mounted_alias_root.html#a1baf34a5ce8acded66a2e6ce9c44966d",
-"class_urho3_d_1_1_navigable.html#a133311a27cfa15278d7f5cb90e8f886b",
-"class_urho3_d_1_1_network_object.html#a8b6eadc301cd8a8aa7155817556bf41d",
-"class_urho3_d_1_1_object_reflection.html#a3ca742a09afb1e97d0d5aa1cb32b05a8",
-"class_urho3_d_1_1_off_mesh_connection.html#a9236dce1d406a44028265cb6d80f7f1c",
-"class_urho3_d_1_1_package_file.html#a48d649eec32e00d0c94145ebd4690c58",
-"class_urho3_d_1_1_particle_effect2_d.html#a560c786b0545f33fb3b4f72f69b9c931",
-"class_urho3_d_1_1_particle_graph_layer.html#a112ed66d409b05a51f61ded533ea2d9a",
-"class_urho3_d_1_1_particle_graph_nodes_1_1_cone_instance.html#ad34140ef4f49462537e0e071d2cfae4d",
-"class_urho3_d_1_1_particle_graph_nodes_1_1_random.html#a91e3921271d7b489e008a9de214fd794",
-"class_urho3_d_1_1_particle_graph_writer.html#ae952d5e1de786c6d9ab59e6e955cbbdf",
-"class_urho3_d_1_1_physics_world2_d.html#ace8fe5565205e498142555defda24d5d",
-"class_urho3_d_1_1_pointer_adapter.html#aa0d2a1472c463c90114637d2bcde4889",
-"class_urho3_d_1_1_quaternion.html#a244c45e0968a61b1b70ff0e94d531312",
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a97b786f5552f717e24ee60dec80d3bd3",
-"class_urho3_d_1_1_render_buffer.html#a1076db5079b5bae2bbafb90c4cc368eb",
-"class_urho3_d_1_1_render_surface.html#af6d87bf8a2f1b552ad0e703fb26814c3",
-"class_urho3_d_1_1_replication_manager.html#a7414f0456c894a66f06afbde63420868",
-"class_urho3_d_1_1_rigid_body.html#a0b55791227ba16251b0267293bf9408e",
-"class_urho3_d_1_1_rml_navigation_manager.html#a6592b068d87fcc6e13e22990388550b0",
-"class_urho3_d_1_1_scene.html#ab87df65af1dd40d2c07d9aaf54c35021",
-"class_urho3_d_1_1_scene_viewer_application.html#ab98a6f84def0826b30c2127c227e8f8c",
-"class_urho3_d_1_1_serializable_prefab.html#af987bb5593be0eafa2ed367d888dc0b7",
-"class_urho3_d_1_1_shake_component.html#a85d91c083db4b1d50a70b9d043b3493d",
-"class_urho3_d_1_1_sound_listener.html#aef4ec31d43ec45189bfbca306928ad27",
-"class_urho3_d_1_1_spline_path.html#a0c940eaebcacf000d99883f747d03b1d",
-"class_urho3_d_1_1_static_model.html#aa6ad0db999b4e06fb67c1673477a0ecb",
-"class_urho3_d_1_1_subsystem_cache.html#afce0d613fcb2fe959b79381596c41be5",
-"class_urho3_d_1_1_terrain_patch.html#a589e2426367b34b42eddebf89c94af07",
-"class_urho3_d_1_1_text3_d.html#af20746caaca8b0ab909c4b7e786cf872",
-"class_urho3_d_1_1_tile_map2_d.html#aa3a240722975d9d96828247a99870acb",
-"class_urho3_d_1_1_tracked_component_registry_base.html#a67086ffcd63089a4289da7588b8ee4e1",
-"class_urho3_d_1_1_u_i.html#abb4cf4dff13aae75d636812785d0fcd5",
-"class_urho3_d_1_1_u_i_element.html#a94b225bfb0e0ef1917bd640ae009d92d",
-"class_urho3_d_1_1_value_animation.html#af54548bd2522a3b8eee6d47e56c42b64",
-"class_urho3_d_1_1_variant.html#aaee4c9ee6f7a4731728cb8ff6d716afa",
-"class_urho3_d_1_1_vector4.html#a761a8e16ab6963c329c10f92b7d6c9a5",
-"class_urho3_d_1_1_virtual_reality.html#ab3a9b0eeb1ad48807576019d1e509056",
-"class_urho3_d_1_1_x_m_l_element.html#a66092979bcb41c696837ed076c608bc0",
-"class_urho3_d_1_1_x_r_binding.html#ac8529142d06b5f14e533a91e51caa70f",
-"pages.html",
-"struct_urho3_d_1_1_animated_attribute_reference.html",
-"struct_urho3_d_1_1_batch_state_lookup_key.html#afc11b525c902c4a38609d17d9cfc34b2",
-"struct_urho3_d_1_1_crowd_obstacle_avoidance_params.html#a9c1d0fa69e368edfae5d64ec85ee7b1b",
-"struct_urho3_d_1_1_detail_1_1_default_serializer.html",
-"struct_urho3_d_1_1_g_l_t_f_importer_settings.html#ab7fe0a4b38da95977cbb6c594b9fefc7",
-"struct_urho3_d_1_1_joystick_state.html#ae680d7db8a0bd70d3765a0d8ac2aca10",
-"struct_urho3_d_1_1_model_vertex.html#a3f9f49f6c5aaafcf53f9e5b3f7624b08",
-"struct_urho3_d_1_1_particle.html#ac9f8b5961b24ca56eb612f45ceb28417",
-"struct_urho3_d_1_1_raytracing_geometry_material.html#ac9fb02e86756124dcbbe1e9519993ac9",
-"struct_urho3_d_1_1_shader_program_compositor_settings.html#a411a7c000b817785ce7dda4e7df8d080",
-"struct_urho3_d_1_1_spriter_1_1_spatial_info.html#aeebd5a8a72189e2b81c4967722732d4a",
-"struct_urho3_d_1_1_v_anim_event_frame.html#af5c243d9ac5cbf35a03707da4cb54e01"
+"_a_p_i_differences.html",
+"_graphics_defs_8h.html#aef443f97b15d5c7ff39d3199a9a0c5c1aa50d51cbfc4a8d7eb59b055cd838fa0d",
+"_network_callbacks_8h.html#a1b506e31c58f6d321cce6e68ef09eaadad1265336b66d91a1fc4f5904e34591f4",
+"_shader_defs_8h.html#a347f324fdb12fee5069ca0b34775e0ac",
+"class_urho3_d_1_1_abstract_connection.html#a99536ed82aa84e77f1ddc388472b4fd8",
+"class_urho3_d_1_1_actions_1_1_ease_sine_out.html#aadbc66a3235a89b9a74f132eb2dacb6c",
+"class_urho3_d_1_1_animated_model.html#ac397967a5addc63e59a807e4d819d312",
+"class_urho3_d_1_1_application_state.html#ade11f54366da032229fe6a5d82c57eee",
+"class_urho3_d_1_1_background_loader.html#af99f5f09bec4c87259f37880704fd94c",
+"class_urho3_d_1_1_bounding_box.html#a00fe243d05516209a4ef6f83ff7179df",
+"class_urho3_d_1_1_camera_operator.html#ab99ce1a874e5a13d278e422f9028f437",
+"class_urho3_d_1_1_color.html#a1381f88fcf4a08177087610e94d6bb9c",
+"class_urho3_d_1_1_constraint.html",
+"class_urho3_d_1_1_constraint_rope2_d.html#af4459c2629fd61ff4566bd9e84fb26cc",
+"class_urho3_d_1_1_custom_geometry.html#a2cd220ba6014f4388a86d0d623a1c94d",
+"class_urho3_d_1_1_deserializer.html#a14bd90722793f19622fc989bf5e40163",
+"class_urho3_d_1_1_drawable.html#ac7871920deb048d9d675ad34c5874a00",
+"class_urho3_d_1_1_event_receiver_group.html#ace0387866c2680adff2db9f4b552e606",
+"class_urho3_d_1_1_font_face_bitmap.html",
+"class_urho3_d_1_1_graph_node.html#a9d0e3390bb98f03df4bababc6fea2097",
+"class_urho3_d_1_1_image.html#a29ced6372410c05dcc32cf9eb4f912fc",
+"class_urho3_d_1_1_input.html#afa0aedea65a9dc6459b993a344b742ec",
+"class_urho3_d_1_1_j_s_o_n_value.html#a58b84214503320e1e706327a99a64e55",
+"class_urho3_d_1_1_light_baker.html#af9a1896225d2ad8b2aab74fe23c950efa1c161d05b307593f95c48cf76cc4ce47",
+"class_urho3_d_1_1_logic_component.html#affb1f1c6d9a287e4217bcbf6e9f8b442",
+"class_urho3_d_1_1_matrix4.html#ab80c8e8c54f06a5661027a8c3713b72a",
+"class_urho3_d_1_1_move_and_orbit_component.html#ad7a2aa0144e172f81b44948dce50eeec",
+"class_urho3_d_1_1_network.html#a3eb4648bd5be907b85a1c6989d4a82d8",
+"class_urho3_d_1_1_occlusion_buffer.html#a3440309d52eb89894be7cacf1ee8b576",
+"class_urho3_d_1_1_p_list_value.html#ab5a0d3aeac2b06b229b1296dc2c3edc6",
+"class_urho3_d_1_1_particle_effect2_d.html#a6a948b5817a73d912ecab25c4007ba27",
+"class_urho3_d_1_1_particle_graph_layer.html#a5d48a3924fb62f2c838f1cf68a167997",
+"class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_scale.html#a829c249398a49f79b90fcac057acad2a",
+"class_urho3_d_1_1_particle_graph_pin.html",
+"class_urho3_d_1_1_physics_world2_d.html#a82879434125a10b53605e940b4c03943",
+"class_urho3_d_1_1_prefab_resource.html#acb0980418d500532b4bb49b8e82c4cec",
+"class_urho3_d_1_1_raycast_vehicle_wheel.html#a4961e2a112e37c124050c947dcebbd0b",
+"class_urho3_d_1_1_render_surface.html#abcb5de026714084afb4d8261a5d274f3",
+"class_urho3_d_1_1_resource_with_metadata.html#a2de4eb66ace94bcaefb3431c0bc93513",
+"class_urho3_d_1_1_rigid_body2_d.html#ac051bf44f2818559258bb7a3b4c11494",
+"class_urho3_d_1_1_scene_pass.html",
+"class_urho3_d_1_1_serializer.html#a3df14ec89889593e0171a8949fc398f4",
+"class_urho3_d_1_1_soft_network_time.html",
+"class_urho3_d_1_1_spline.html#a2ffc25f251bd8bc08e82f584cb8959cb",
+"class_urho3_d_1_1_static_model.html#a934ce91d3123ebed38229a8994d8d8b6",
+"class_urho3_d_1_1_technique.html#ab3466db5c6ddc0c88054c1de23d3e245",
+"class_urho3_d_1_1_text.html#a0a96e7573a4f3780b263a8f889871193",
+"class_urho3_d_1_1_texture2_d.html#a9c63bd040740d0529a6eb50789c52bd9",
+"class_urho3_d_1_1_tmx_layer2_d.html#a41b1c343c23111ee8fde756fd8cacb16",
+"class_urho3_d_1_1_u_i.html#ade4982e869bc50740a842cbee1a826a3",
+"class_urho3_d_1_1_u_i_element.html#aa3c311bb078ecc71ad6735adde570690",
+"class_urho3_d_1_1_variant.html#a3beb7698cde2160a82f5cdf86f126a30",
+"class_urho3_d_1_1_vector2.html#aea2c823f0b39b6a2141c3f7037b6ee2b",
+"class_urho3_d_1_1_virtual_file_system.html#a02667ab1ca16dd06c61ec0d22d37e90b",
+"class_urho3_d_1_1_x_m_l_element.html#a5dd6aba70686a6664cc0c1257a2cbd8f",
+"class_urho3_d_1_1_zone.html#a9f73749fea3519a2b7ebc0abbbf60ee5",
+"struct_urho3_d_1_1_application_flavor.html#ae0ac112893648a7421aefb5d6d0e6431",
+"struct_urho3_d_1_1_cooked_light_params.html#a3b0332390991f406f3b5d7db2bcc0640",
+"struct_urho3_d_1_1_geometry_buffer_preprocess_settings.html#a9a3e92903047c5b4b3b64f7f3b6a4d74",
+"struct_urho3_d_1_1_lightmap_charting_settings.html#a18ae8140c0874b69b2c1715d350ff4ec",
+"struct_urho3_d_1_1_particle_graph_nodes_1_1_multiply_instance.html",
+"struct_urho3_d_1_1_source_batch.html#ab41eb9c90f866ef23c0f7180f2758226",
+"struct_urho3_d_1_1_variant_curve_point.html#a00949b7d1eab7dfabc0c5845f7d33d17"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

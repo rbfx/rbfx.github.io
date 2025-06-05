@@ -1,6 +1,5 @@
 var class_urho3_d_1_1_index_buffer =
 [
-    [ "IndexBuffer", "class_urho3_d_1_1_index_buffer.html#a545acc6671a52cb2359b4342a1e0f6ae", null ],
     [ "GetIndexBufferType", "class_urho3_d_1_1_index_buffer.html#a039f7bd1e0d92f2d98b2a651cfe22659", null ],
     [ "GetIndexCount", "class_urho3_d_1_1_index_buffer.html#a34048ffaa4a972faa74ba12fa1d2f8ef", null ],
     [ "GetIndexSize", "class_urho3_d_1_1_index_buffer.html#ae3430ebfb295d9613eb13978511adef7", null ],
@@ -13,7 +12,6 @@ var class_urho3_d_1_1_index_buffer =
     [ "SetSize", "class_urho3_d_1_1_index_buffer.html#acad3ececff56c39f52703e514b730364", null ],
     [ "SetUnpackedData", "class_urho3_d_1_1_index_buffer.html#accd673ea22decb422233fc705527dfbe", null ],
     [ "UnpackIndexData", "class_urho3_d_1_1_index_buffer.html#a266ac767565995d8e2ddad87ae1761b0", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_index_buffer.html#acca17803e1472c148f47a860129b8b91", null ],
     [ "indexCount_", "class_urho3_d_1_1_index_buffer.html#a198fe3590a089cd09043c4a2ab6eb25c", null ],
     [ "indexSize_", "class_urho3_d_1_1_index_buffer.html#a05130917f4e71f58100209bb2118f48f", null ],
     [ "shadowedPending_", "class_urho3_d_1_1_index_buffer.html#a418c878f0ea315507e04cf2ed5a08c39", null ]

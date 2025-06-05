@@ -2,27 +2,7 @@ var struct_urho3_d_1_1_cooked_light_params =
 [
     [ "GetColor", "struct_urho3_d_1_1_cooked_light_params.html#a6a715e5b199798590f57ede08d697db2", null ],
     [ "direction_", "struct_urho3_d_1_1_cooked_light_params.html#a2d6ccec3d895a5629b5e849adb7afac9", null ],
-    [ "effectiveColorInGammaSpace_", "struct_urho3_d_1_1_cooked_light_params.html#a03ae1d91e13b02f22af17d014fabf2be", null ],
-    [ "effectiveColorInLinearSpace_", "struct_urho3_d_1_1_cooked_light_params.html#a3faaa7576bebcb44a53d46f10e3494a1", null ],
-    [ "effectiveSpecularIntensity_", "struct_urho3_d_1_1_cooked_light_params.html#adfe38fe4e31999d21bb3cddd6a664e5b", null ],
-    [ "inverseRange_", "struct_urho3_d_1_1_cooked_light_params.html#a7871ff343e0c596483793574b69f23d4", null ],
-    [ "inverseSpotCutoff_", "struct_urho3_d_1_1_cooked_light_params.html#ae584ce668a605dda4a43ed1712367dfe", null ],
     [ "lightMatrices_", "struct_urho3_d_1_1_cooked_light_params.html#a3500eb4c24b6a27edb5ab9865472a8b8", null ],
-    [ "lightRamp_", "struct_urho3_d_1_1_cooked_light_params.html#a427a47a2926c32fdbeec10dd938bf17d", null ],
-    [ "lightShape_", "struct_urho3_d_1_1_cooked_light_params.html#a6dd8248465b31d30238ac8357d5feaa4", null ],
     [ "lightShapeMatrix_", "struct_urho3_d_1_1_cooked_light_params.html#a969a1728a446a25cf7bd3444c4cab8fd", null ],
-    [ "numLightMatrices_", "struct_urho3_d_1_1_cooked_light_params.html#a1cf809f378ad948e42929b7d27ae3678", null ],
-    [ "position_", "struct_urho3_d_1_1_cooked_light_params.html#aeb1e2bb3bc2541b518f09a72737aa9af", null ],
-    [ "shadowCubeAdjust_", "struct_urho3_d_1_1_cooked_light_params.html#a3b0332390991f406f3b5d7db2bcc0640", null ],
-    [ "shadowCubeUVBias_", "struct_urho3_d_1_1_cooked_light_params.html#a48db01507edcf57b1cc405d6243bc40b", null ],
-    [ "shadowDepthBiasMultiplier_", "struct_urho3_d_1_1_cooked_light_params.html#a1b848000ab0949064d18cde67b9bd378", null ],
-    [ "shadowDepthFade_", "struct_urho3_d_1_1_cooked_light_params.html#aa5f0d843aa57cb4dc4a91f381c66eae5", null ],
-    [ "shadowIntensity_", "struct_urho3_d_1_1_cooked_light_params.html#a48b88843f3d2c0da0debbc7c1884560e", null ],
-    [ "shadowMap_", "struct_urho3_d_1_1_cooked_light_params.html#abeba2bd21b16d392fb3d26982a2f64a2", null ],
-    [ "shadowMapInvSize_", "struct_urho3_d_1_1_cooked_light_params.html#ac95fc18d76e81a2544dca99221e68af5", null ],
-    [ "shadowNormalBias_", "struct_urho3_d_1_1_cooked_light_params.html#ae3317511be2becacfe3549d912f27195", null ],
-    [ "shadowSplitDistances_", "struct_urho3_d_1_1_cooked_light_params.html#ab30329f29f5a3e92af9bd8e42c38a52d", null ],
-    [ "spotCutoff_", "struct_urho3_d_1_1_cooked_light_params.html#a901ffd164a44e63ace13d1ee6d198032", null ],
-    [ "volumetricLength_", "struct_urho3_d_1_1_cooked_light_params.html#aa3e80e310c702bcdafb937cd5378211c", null ],
-    [ "volumetricRadius_", "struct_urho3_d_1_1_cooked_light_params.html#a209596565bb1607a686a962dd6e6d451", null ]
+    [ "shadowCubeAdjust_", "struct_urho3_d_1_1_cooked_light_params.html#a3b0332390991f406f3b5d7db2bcc0640", null ]
 ];

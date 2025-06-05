@@ -13,10 +13,5 @@ var class_urho3_d_1_1_particle_graph_nodes_1_1_box =
     [ "SetFrom", "class_urho3_d_1_1_particle_graph_nodes_1_1_box.html#a491c2199a44092903fddcfb7f6c2ced8", null ],
     [ "SetRotation", "class_urho3_d_1_1_particle_graph_nodes_1_1_box.html#ada38eb5a657eb5693e5b35c212323aa1", null ],
     [ "SetScale", "class_urho3_d_1_1_particle_graph_nodes_1_1_box.html#a57ad019b691a2adfeb91b9c9d29c071a", null ],
-    [ "SetTranslation", "class_urho3_d_1_1_particle_graph_nodes_1_1_box.html#a65fb31abdaf457a71b3bab15afb7bea5", null ],
-    [ "boxThickness_", "class_urho3_d_1_1_particle_graph_nodes_1_1_box.html#a41aae2315cc6ad3c1e7606faa6710968", null ],
-    [ "from_", "class_urho3_d_1_1_particle_graph_nodes_1_1_box.html#aba5b19c945915a151d3146dd82e65644", null ],
-    [ "rotation_", "class_urho3_d_1_1_particle_graph_nodes_1_1_box.html#aa21bc1c2fdcd070096ae609768816db9", null ],
-    [ "scale_", "class_urho3_d_1_1_particle_graph_nodes_1_1_box.html#a1a97727307f02b02c0fd3fc15bee04aa", null ],
-    [ "translation_", "class_urho3_d_1_1_particle_graph_nodes_1_1_box.html#a379bb334aff5713d4eec361c8424c4da", null ]
+    [ "SetTranslation", "class_urho3_d_1_1_particle_graph_nodes_1_1_box.html#a65fb31abdaf457a71b3bab15afb7bea5", null ]
 ];

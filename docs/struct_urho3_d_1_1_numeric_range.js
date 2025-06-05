@@ -6,8 +6,8 @@ var struct_urho3_d_1_1_numeric_range =
     [ "ContainsInclusive", "struct_urho3_d_1_1_numeric_range.html#afdb194a4f30c965f53c6c6868bab51d1", null ],
     [ "Intersect", "struct_urho3_d_1_1_numeric_range.html#a840d3ca1e7a7934bf479a8b5becbf9f1", null ],
     [ "IsValid", "struct_urho3_d_1_1_numeric_range.html#ab3f025ceba4313d31732f7cbe5b20a00", null ],
-    [ "operator&", "struct_urho3_d_1_1_numeric_range.html#a638376fbd16291fe13a35ff8356e6fee", null ],
-    [ "operator&=", "struct_urho3_d_1_1_numeric_range.html#a38ea56fdc9ee3059dae001f61bd21d6f", null ],
-    [ "operator|", "struct_urho3_d_1_1_numeric_range.html#abde91a0e3d4b379d514904bfe7602c52", null ],
-    [ "operator|=", "struct_urho3_d_1_1_numeric_range.html#a3d62949c7425c69ce09f34425dd6174f", null ]
+    [ "operator&", "struct_urho3_d_1_1_numeric_range.html#aa22de3be35b3140ca5e9f28fa28bfa2e", null ],
+    [ "operator&=", "struct_urho3_d_1_1_numeric_range.html#a7f1a7531d489cdc0407962f1f9850389", null ],
+    [ "operator|", "struct_urho3_d_1_1_numeric_range.html#a6fad0fa4b5b1f06da09936e24a2270d0", null ],
+    [ "operator|=", "struct_urho3_d_1_1_numeric_range.html#a93591f1bf371cebf05227eedf42ec976", null ]
 ];

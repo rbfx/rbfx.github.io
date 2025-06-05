@@ -19,13 +19,5 @@ var class_urho3_d_1_1_particle_graph_nodes_1_1_cone =
     [ "SetRadiusThickness", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone.html#a6f2a8a6af0d8c95e1d8b8901b124ff91", null ],
     [ "SetRotation", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone.html#a721b2d338646e2b2648f6a2b99f85a68", null ],
     [ "SetScale", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone.html#a04facbda3bc43c10b724c0c7b1776d9b", null ],
-    [ "SetTranslation", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone.html#afa2a3fd66b0bb84b4e6abd7b2d9d15b2", null ],
-    [ "angle_", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone.html#a7dbb8c585966d576b68394fa68344c11", null ],
-    [ "from_", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone.html#a5724fa86833ab958a1241625819125cb", null ],
-    [ "length_", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone.html#ac391ce19cc7ae527dcdaee11a1babcd9", null ],
-    [ "radius_", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone.html#a1b117551c08230108b3bcc593d409bc3", null ],
-    [ "radiusThickness_", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone.html#a5b7786ed7e93805834a85b379af3f0dd", null ],
-    [ "rotation_", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone.html#a54d03008813f51c213eddc1030895d6e", null ],
-    [ "scale_", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone.html#a52a30175cfdf05aa31664265c3dd98b2", null ],
-    [ "translation_", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone.html#a9db6471de62414a4a4813e1585029143", null ]
+    [ "SetTranslation", "class_urho3_d_1_1_particle_graph_nodes_1_1_cone.html#afa2a3fd66b0bb84b4e6abd7b2d9d15b2", null ]
 ];

@@ -39,8 +39,8 @@ var class_urho3_d_1_1_bounding_box =
     [ "Merge", "class_urho3_d_1_1_bounding_box.html#af465aa2d20671f48bc7a79ff967595f4", null ],
     [ "Merged", "class_urho3_d_1_1_bounding_box.html#ac3293f1588e66df8c6ac1588d97183ad", null ],
     [ "operator!=", "class_urho3_d_1_1_bounding_box.html#a3712b109f1627a68123ab6514e09d012", null ],
-    [ "operator=", "class_urho3_d_1_1_bounding_box.html#af359bd95bb344e21381967806b22ba07", null ],
-    [ "operator=", "class_urho3_d_1_1_bounding_box.html#a16cb29d35f5821d168dea29a45b4c5ab", null ],
+    [ "operator=", "class_urho3_d_1_1_bounding_box.html#a655df5c184be59265bcd91ed694b2298", null ],
+    [ "operator=", "class_urho3_d_1_1_bounding_box.html#a9839bbf361dcde30cb0149cb31619e84", null ],
     [ "operator==", "class_urho3_d_1_1_bounding_box.html#aabbd2a53978025ee925742f8018ae8a1", null ],
     [ "Padded", "class_urho3_d_1_1_bounding_box.html#a6082b5aabf3ec24d6c6ded50bc6cd0ff", null ],
     [ "Padded", "class_urho3_d_1_1_bounding_box.html#af47c6edb9d7dc430f1be02665f789fef", null ],
@@ -54,8 +54,6 @@ var class_urho3_d_1_1_bounding_box =
     [ "Transformed", "class_urho3_d_1_1_bounding_box.html#a00fe243d05516209a4ef6f83ff7179df", null ],
     [ "Transformed", "class_urho3_d_1_1_bounding_box.html#a5ba8b6f96c6587ad5c70e8d01521ca28", null ],
     [ "Volume", "class_urho3_d_1_1_bounding_box.html#a969d7a5c8bc1a18368fd1fc481739cde", null ],
-    [ "dummyMax_", "class_urho3_d_1_1_bounding_box.html#abecd0048a4546ffa8a58825a8f7850c5", null ],
-    [ "dummyMin_", "class_urho3_d_1_1_bounding_box.html#a7e0c5f67939d8ab964cb06c6e763dc42", null ],
     [ "max_", "class_urho3_d_1_1_bounding_box.html#a4ea91e581483e751ee30971db82c9882", null ],
     [ "min_", "class_urho3_d_1_1_bounding_box.html#af142d9bcbfe4405976f664e0b9512fee", null ]
 ];

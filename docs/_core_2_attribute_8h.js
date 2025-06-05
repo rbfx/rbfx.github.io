@@ -1,8 +1,8 @@
 var _core_2_attribute_8h =
 [
-    [ "AttributeAccessor", "class_urho3_d_1_1_attribute_accessor.html", "class_urho3_d_1_1_attribute_accessor" ],
-    [ "AttributeInfo", "struct_urho3_d_1_1_attribute_info.html", "struct_urho3_d_1_1_attribute_info" ],
-    [ "AttributeHandle", "struct_urho3_d_1_1_attribute_handle.html", "struct_urho3_d_1_1_attribute_handle" ],
+    [ "Urho3D::AttributeAccessor", "class_urho3_d_1_1_attribute_accessor.html", "class_urho3_d_1_1_attribute_accessor" ],
+    [ "Urho3D::AttributeInfo", "struct_urho3_d_1_1_attribute_info.html", "struct_urho3_d_1_1_attribute_info" ],
+    [ "Urho3D::AttributeHandle", "struct_urho3_d_1_1_attribute_handle.html", null ],
     [ "AttributeMode", "_core_2_attribute_8h.html#a6f24824b813f367db7cc1cc8dc1ee443", [
       [ "AM_EDIT", "_core_2_attribute_8h.html#a6f24824b813f367db7cc1cc8dc1ee443aef8b4d80355728d07935bcc8866b9e47", null ],
       [ "AM_FILE", "_core_2_attribute_8h.html#a6f24824b813f367db7cc1cc8dc1ee443a1ace382b07662c652b22f8ecacff5f6e", null ],
@@ -20,6 +20,5 @@ var _core_2_attribute_8h =
       [ "Serializable", "_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a33909597338639745b2d76081beeb48b", null ],
       [ "Node", "_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f", null ],
       [ "Scene", "_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a9ead0d38e06ec253ca0ecbf6ea56e59b", null ]
-    ] ],
-    [ "URHO3D_FLAGSET", "_core_2_attribute_8h.html#ae64ad29d0b004f5b3b62dd5e5f714e38", null ]
+    ] ]
 ];

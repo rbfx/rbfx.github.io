@@ -8,7 +8,6 @@ var class_urho3_d_1_1_u_i_component =
     [ "OnNodeSet", "class_urho3_d_1_1_u_i_component.html#af03548de2d5ea246c9c9da574a757a38", null ],
     [ "RegisterObject", "class_urho3_d_1_1_u_i_component.html#aeb6318bd9e0540a64b9ea4a5f4a2ac8f", null ],
     [ "SetViewportIndex", "class_urho3_d_1_1_u_i_component.html#ab7d5d394d0f698b801754082ef61713f", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_u_i_component.html#a920d66d6fd624a29e81ebce6418ea23c", null ],
     [ "material_", "class_urho3_d_1_1_u_i_component.html#af8599ca94b0fc4b3a38a1bc3e0ef13ef", null ],
     [ "model_", "class_urho3_d_1_1_u_i_component.html#a0648bda84d19cdc0ed30b35832205daf", null ],
     [ "offScreenUI_", "class_urho3_d_1_1_u_i_component.html#ab7d4e802cd91bdec7b1b029d0467eac0", null ],

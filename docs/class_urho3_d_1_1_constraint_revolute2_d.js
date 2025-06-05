@@ -2,7 +2,7 @@ var class_urho3_d_1_1_constraint_revolute2_d =
 [
     [ "ConstraintRevolute2D", "class_urho3_d_1_1_constraint_revolute2_d.html#ae32fc7c07c419965a0ac12be9a73ba7a", null ],
     [ "~ConstraintRevolute2D", "class_urho3_d_1_1_constraint_revolute2_d.html#a7c56e799a14a0266ad8362f1fa588043", null ],
-    [ "GetAnchor", "class_urho3_d_1_1_constraint_revolute2_d.html#a267c907135b95dc554f8b8a4b6c9ef56", null ],
+    [ "GetAnchor", "class_urho3_d_1_1_constraint_revolute2_d.html#a4193e322dc244f64346f891b513537df", null ],
     [ "GetEnableLimit", "class_urho3_d_1_1_constraint_revolute2_d.html#a89d38d55afc32357cc729c24dadecde0", null ],
     [ "GetEnableMotor", "class_urho3_d_1_1_constraint_revolute2_d.html#a2e706c5cd6b930ad06f16b9322583f41", null ],
     [ "GetJointDef", "class_urho3_d_1_1_constraint_revolute2_d.html#a0e2e6daea3ee0ff6748fe19f0183a2b0", null ],
@@ -18,7 +18,6 @@ var class_urho3_d_1_1_constraint_revolute2_d =
     [ "SetMaxMotorTorque", "class_urho3_d_1_1_constraint_revolute2_d.html#a364ca82a6b67952fcf617a62bc1ae78c", null ],
     [ "SetMotorSpeed", "class_urho3_d_1_1_constraint_revolute2_d.html#a8bc948c4e2b6b987495f45e8319813ee", null ],
     [ "SetUpperAngle", "class_urho3_d_1_1_constraint_revolute2_d.html#a6bb389dfffa4c403770721f3fb508f6d", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_constraint_revolute2_d.html#ac377976d0373598c0def7d789200ec8a", null ],
     [ "anchor_", "class_urho3_d_1_1_constraint_revolute2_d.html#ad4b761575b27960ac7ec44a68d37e851", null ],
     [ "jointDef_", "class_urho3_d_1_1_constraint_revolute2_d.html#af59bb9db8fcf132680e468f6b1ea930e", null ]
 ];

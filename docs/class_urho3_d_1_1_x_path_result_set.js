@@ -6,7 +6,7 @@ var class_urho3_d_1_1_x_path_result_set =
     [ "~XPathResultSet", "class_urho3_d_1_1_x_path_result_set.html#a3f7787ae3cd282182f7d215055ef5cc2", null ],
     [ "Empty", "class_urho3_d_1_1_x_path_result_set.html#a3726232a7e557327103cbd56e5643cab", null ],
     [ "FirstResult", "class_urho3_d_1_1_x_path_result_set.html#a6b8f323c3876c64464624ef2737d462a", null ],
-    [ "GetXPathNodeSet", "class_urho3_d_1_1_x_path_result_set.html#afb0a7d4bf15520c2f7340dcc1d83e9ca", null ],
+    [ "GetXPathNodeSet", "class_urho3_d_1_1_x_path_result_set.html#a805e0047cbac8464c005c67632813289", null ],
     [ "operator=", "class_urho3_d_1_1_x_path_result_set.html#aa274e18a11b3b9c9a5cdab20fa8da807", null ],
     [ "operator[]", "class_urho3_d_1_1_x_path_result_set.html#a37ce22a7e0f84c8463c179c7eb4551b8", null ],
     [ "Size", "class_urho3_d_1_1_x_path_result_set.html#ac9f919edced3d1627360b6dad7a62b34", null ],

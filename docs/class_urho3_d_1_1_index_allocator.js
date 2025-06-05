@@ -1,6 +1,5 @@
 var class_urho3_d_1_1_index_allocator =
 [
-    [ "MutexType", "class_urho3_d_1_1_index_allocator.html#ad84c1d38c8ad9cf293467348c0d2b551", null ],
     [ "Allocate", "class_urho3_d_1_1_index_allocator.html#aee75488ccbbf8110d6214625500f5d8f", null ],
     [ "Clear", "class_urho3_d_1_1_index_allocator.html#a3aeb0cbbba3b024d2d4c478dca29f9d2", null ],
     [ "GetNextFreeIndex", "class_urho3_d_1_1_index_allocator.html#aaa92a6e86efb0a2e141d5ff976b603a7", null ],

@@ -9,7 +9,6 @@ var class_urho3_d_1_1_texture3_d =
     [ "SetData", "class_urho3_d_1_1_texture3_d.html#a7067c0114d3d675e124d36a25339a4b1", null ],
     [ "SetData", "class_urho3_d_1_1_texture3_d.html#a0b5c66551839c003ab2949fc67ca19ed", null ],
     [ "SetSize", "class_urho3_d_1_1_texture3_d.html#a5fcfce0b2d20d21cfdb0c5b55c638496", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_texture3_d.html#a8f61d379158f19df47d08eac19290bcc", null ],
     [ "loadImage_", "class_urho3_d_1_1_texture3_d.html#ac3159a39a0ca8edaa9662a96326caade", null ],
     [ "loadParameters_", "class_urho3_d_1_1_texture3_d.html#ab6f7e3e15573b7c0f8db9edb7a54a5b5", null ]
 ];

@@ -19,7 +19,6 @@ var class_urho3_d_1_1_static_model_group =
     [ "UpdateBatches", "class_urho3_d_1_1_static_model_group.html#a91aa25c17c0160a3673bb985190479af", null ],
     [ "UpdateNodeIDs", "class_urho3_d_1_1_static_model_group.html#a0d6da71443b7e0c60e6966e5f2090406", null ],
     [ "UpdateNumTransforms", "class_urho3_d_1_1_static_model_group.html#a3973085541a4b2361df05666e0a515a2", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_static_model_group.html#a9c17fec77cdd7fe75e057a98cc037cf5", null ],
     [ "instanceNodes_", "class_urho3_d_1_1_static_model_group.html#aef75f191fe973131685fd32bbc425535", null ],
     [ "nodeIDsAttr_", "class_urho3_d_1_1_static_model_group.html#a088a3b8d4389d33976f063994e3b5b17", null ],
     [ "nodeIDsDirty_", "class_urho3_d_1_1_static_model_group.html#a2baef0988423f309493f946ea7bae72b", null ],

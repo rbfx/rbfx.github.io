@@ -15,8 +15,6 @@ var class_urho3_d_1_1_axis_adapter =
     [ "SetSensitivity", "class_urho3_d_1_1_axis_adapter.html#ae69ee865f8c45862f643599baf20338c", null ],
     [ "Transform", "class_urho3_d_1_1_axis_adapter.html#a88444a8dc34b0c8faa36edf5205b7935", null ],
     [ "deadZone_", "class_urho3_d_1_1_axis_adapter.html#a6c752db66cf92f585435660d001837d7", null ],
-    [ "DefaultDeadZone", "class_urho3_d_1_1_axis_adapter.html#a1503aca326a81c1c6caf206f8241ca72", null ],
-    [ "Epsilon", "class_urho3_d_1_1_axis_adapter.html#ab483e916a052aec07a63d3bce1ff972f", null ],
     [ "inverted_", "class_urho3_d_1_1_axis_adapter.html#aee0922aa0e883cbf0f28034d84fc92f7", null ],
     [ "negSensitivity_", "class_urho3_d_1_1_axis_adapter.html#a1253bbd202239843222b1c175e32e89a", null ],
     [ "neutral_", "class_urho3_d_1_1_axis_adapter.html#a14b4e77cb81b46ad556781d22f7fb331", null ],

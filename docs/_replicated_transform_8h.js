@@ -1,8 +1,8 @@
 var _replicated_transform_8h =
 [
-    [ "ReplicatedTransform", "class_urho3_d_1_1_replicated_transform.html", "class_urho3_d_1_1_replicated_transform" ],
-    [ "ServerData", "struct_urho3_d_1_1_replicated_transform_1_1_server_data.html", "struct_urho3_d_1_1_replicated_transform_1_1_server_data" ],
-    [ "ClientData", "struct_urho3_d_1_1_replicated_transform_1_1_client_data.html", "struct_urho3_d_1_1_replicated_transform_1_1_client_data" ],
+    [ "Urho3D::ReplicatedTransform", "class_urho3_d_1_1_replicated_transform.html", "class_urho3_d_1_1_replicated_transform" ],
+    [ "Urho3D::ReplicatedTransform::ServerData", "struct_urho3_d_1_1_replicated_transform_1_1_server_data.html", null ],
+    [ "Urho3D::ReplicatedTransform::ClientData", "struct_urho3_d_1_1_replicated_transform_1_1_client_data.html", null ],
     [ "PositionAndVelocity", "_replicated_transform_8h.html#ab373fa37f1655db1276776252b9b0161", null ],
     [ "RotationAndVelocity", "_replicated_transform_8h.html#a59b66064e96625e1dfe772dd00479928", null ],
     [ "ReplicatedRotationMode", "_replicated_transform_8h.html#a6574a440129d32c696a2402a95c52b68", [

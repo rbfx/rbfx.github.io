@@ -16,7 +16,6 @@ var class_urho3_d_1_1_off_mesh_connection =
     [ "SetEndPoint", "class_urho3_d_1_1_off_mesh_connection.html#a3d487570a38f51ed495c6f2094506e22", null ],
     [ "SetMask", "class_urho3_d_1_1_off_mesh_connection.html#a562302a95741c6b89b62586ad0f85a54", null ],
     [ "SetRadius", "class_urho3_d_1_1_off_mesh_connection.html#a8fbb8d1c4f3e80d01f3f77ae4cdb5f14", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_off_mesh_connection.html#a9b63c5872d13a6d85b32a5f0d3b63176", null ],
     [ "areaId_", "class_urho3_d_1_1_off_mesh_connection.html#a9260e40ca03a87b5d0ad592e55f459d1", null ],
     [ "bidirectional_", "class_urho3_d_1_1_off_mesh_connection.html#ab5ca896a9e56b97af039f4e419aca6f5", null ],
     [ "endPoint_", "class_urho3_d_1_1_off_mesh_connection.html#a359ba138744517f6ec5c958dc8e415b2", null ],

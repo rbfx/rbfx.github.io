@@ -30,13 +30,11 @@ var class_urho3_d_1_1_serializable =
     [ "SaveJSON", "class_urho3_d_1_1_serializable.html#a7319eee017bad624295be2f2a6c351f1", null ],
     [ "SaveXML", "class_urho3_d_1_1_serializable.html#a3fbac3aa471adea86dea09bfa4b3960f", null ],
     [ "SerializeInBlock", "class_urho3_d_1_1_serializable.html#a123f394af3ff1f2002aa051252e0b9a2", null ],
-    [ "SerializeInBlock", "class_urho3_d_1_1_serializable.html#a57b7a9cdbe1f646195c712c8a0aa4d18", null ],
     [ "SetAttribute", "class_urho3_d_1_1_serializable.html#aa6b3fbb7dd7f51dcd2426ff42af57051", null ],
     [ "SetAttribute", "class_urho3_d_1_1_serializable.html#a52c377ff65bd3198a3c460c6a43dc008", null ],
     [ "SetInstanceDefault", "class_urho3_d_1_1_serializable.html#ae7c4c6b4aaa1375ac927e2c0fdb4537e", null ],
     [ "SetInstanceDefault", "class_urho3_d_1_1_serializable.html#adfdafa80730bc8a34fca96b97c874c57", null ],
     [ "SetTemporary", "class_urho3_d_1_1_serializable.html#aaa044160c22b374e032ae85c30520f89", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_serializable.html#a73a2199d301e2e6b3eba01f416a75695", null ],
     [ "instanceDefaultValues_", "class_urho3_d_1_1_serializable.html#ac6128cecfe8decc17084fe2aa7e6cf57", null ],
     [ "setInstanceDefault_", "class_urho3_d_1_1_serializable.html#accaf6b2938d392f127885f6673f6985e", null ],
     [ "temporary_", "class_urho3_d_1_1_serializable.html#a7e600cc84e1f680cc08714f733739c20", null ]

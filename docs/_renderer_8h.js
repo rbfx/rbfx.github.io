@@ -1,7 +1,7 @@
 var _renderer_8h =
 [
-    [ "FrameStatistics", "struct_urho3_d_1_1_frame_statistics.html", "struct_urho3_d_1_1_frame_statistics" ],
-    [ "Renderer", "class_urho3_d_1_1_renderer.html", "class_urho3_d_1_1_renderer" ],
+    [ "Urho3D::FrameStatistics", "struct_urho3_d_1_1_frame_statistics.html", null ],
+    [ "Urho3D::Renderer", "class_urho3_d_1_1_renderer.html", "class_urho3_d_1_1_renderer" ],
     [ "DeferredLightPSVariation", "_renderer_8h.html#a0e933fe0bdd1c0f81caf3593d12ed9ca", [
       [ "DLPS_NONE", "_renderer_8h.html#a0e933fe0bdd1c0f81caf3593d12ed9caafc17c35c5f996affdcb64b2abb7792fe", null ],
       [ "DLPS_SPOT", "_renderer_8h.html#a0e933fe0bdd1c0f81caf3593d12ed9caabf7cd1a7e5cf607ca7787df582fceb3c", null ],
@@ -103,7 +103,5 @@ var _renderer_8h =
       [ "VLVS_3LIGHTS", "_renderer_8h.html#a80332c536bd66cca2a847452f99565d3a5352171da9b9b1856d5c038e3c20fd86", null ],
       [ "VLVS_4LIGHTS", "_renderer_8h.html#a80332c536bd66cca2a847452f99565d3abbcc269245fb943a741f58719ccf554e", null ],
       [ "MAX_VERTEXLIGHT_VS_VARIATIONS", "_renderer_8h.html#a80332c536bd66cca2a847452f99565d3a21fbc5858aa91b157bf9f169159e3239", null ]
-    ] ],
-    [ "INSTANCING_BUFFER_DEFAULT_SIZE", "_renderer_8h.html#aa528130c8a022377b691427ac6a11af6", null ],
-    [ "SHADOW_MIN_PIXELS", "_renderer_8h.html#a782a14c4ab8635c9ec77f9ea7f069f9b", null ]
+    ] ]
 ];

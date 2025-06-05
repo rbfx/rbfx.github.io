@@ -16,7 +16,7 @@ var class_urho3_d_1_1_polyhedron =
     [ "Define", "class_urho3_d_1_1_polyhedron.html#aff72191999b8a1c6374b86ef4b7415bd", null ],
     [ "Define", "class_urho3_d_1_1_polyhedron.html#a71fd27e1ab1936331f5aceb9fa1f4fcd", null ],
     [ "Empty", "class_urho3_d_1_1_polyhedron.html#aaa368a212a71244d8dd6d08ace144a8f", null ],
-    [ "operator=", "class_urho3_d_1_1_polyhedron.html#a412237a8f023d19f5115343cf8b0c85f", null ],
+    [ "operator=", "class_urho3_d_1_1_polyhedron.html#a1942550fd7a5f026e1fe2e11696663a6", null ],
     [ "SetFace", "class_urho3_d_1_1_polyhedron.html#a6f87e5339d75e5dd3670a5a14e17cdef", null ],
     [ "SetFace", "class_urho3_d_1_1_polyhedron.html#adf856a5b5b7ac0e1f332f23a18bb504d", null ],
     [ "Transform", "class_urho3_d_1_1_polyhedron.html#a177c6652a4a183df4ead54b4657f0d6d", null ],

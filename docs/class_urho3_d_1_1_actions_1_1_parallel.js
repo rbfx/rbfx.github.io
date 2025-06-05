@@ -9,6 +9,5 @@ var class_urho3_d_1_1_actions_1_1_parallel =
     [ "SerializeInBlock", "class_urho3_d_1_1_actions_1_1_parallel.html#aa6b8e4283a964c5ad047929798d91c3c", null ],
     [ "SetAction", "class_urho3_d_1_1_actions_1_1_parallel.html#a8abd703eba3defce961d02650d67c4e0", null ],
     [ "SetNumActions", "class_urho3_d_1_1_actions_1_1_parallel.html#aeabcb33727c0bfc25ff6ebb416a39a17", null ],
-    [ "StartAction", "class_urho3_d_1_1_actions_1_1_parallel.html#ab4e8a6dd76e09ea48def0ba34caef149", null ],
-    [ "actions_", "class_urho3_d_1_1_actions_1_1_parallel.html#a7fc9938925138b25cc22a99c22af259e", null ]
+    [ "StartAction", "class_urho3_d_1_1_actions_1_1_parallel.html#ab4e8a6dd76e09ea48def0ba34caef149", null ]
 ];

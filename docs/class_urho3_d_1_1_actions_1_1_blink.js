@@ -4,6 +4,5 @@ var class_urho3_d_1_1_actions_1_1_blink =
     [ "GetNumOfBlinks", "class_urho3_d_1_1_actions_1_1_blink.html#ad1dfd93f9312c98f3757fa3e89767bd6", null ],
     [ "SerializeInBlock", "class_urho3_d_1_1_actions_1_1_blink.html#aeb2b9cbd6259c9971e04cf24fd58448a", null ],
     [ "SetNumOfBlinks", "class_urho3_d_1_1_actions_1_1_blink.html#a2af91f48a0d89806fd36a2297d79014d", null ],
-    [ "StartAction", "class_urho3_d_1_1_actions_1_1_blink.html#a7736ab39cd4a8d75a12b6533435faedb", null ],
-    [ "times_", "class_urho3_d_1_1_actions_1_1_blink.html#a48f54d2da5c1be38ac96995854a046dc", null ]
+    [ "StartAction", "class_urho3_d_1_1_actions_1_1_blink.html#a7736ab39cd4a8d75a12b6533435faedb", null ]
 ];

@@ -5,15 +5,12 @@ var class_urho3_d_1_1_simple_resource =
     [ "EndLoad", "class_urho3_d_1_1_simple_resource.html#a9c18e85e584b0591fa6c24d105f77844", null ],
     [ "GetBinaryMagic", "class_urho3_d_1_1_simple_resource.html#aa919e155de42950a99771c0c18a2fa80", null ],
     [ "GetDefaultInternalFormat", "class_urho3_d_1_1_simple_resource.html#adf77909adeddaaf4075271a699243576", null ],
-    [ "GetRootBlockName", "class_urho3_d_1_1_simple_resource.html#aa9e1a759a8b0fbf640559140eb7aa555", null ],
+    [ "GetRootBlockName", "class_urho3_d_1_1_simple_resource.html#ae2bf0a663e72d60b66fad889e321e2fa", null ],
     [ "LoadLegacyXML", "class_urho3_d_1_1_simple_resource.html#af0873613b6318b26cbf8ac5565b0c3fc", null ],
     [ "Save", "class_urho3_d_1_1_simple_resource.html#a9eab5413f2fd71e8c85dc7deffb80d65", null ],
     [ "Save", "class_urho3_d_1_1_simple_resource.html#a874fcc0009b06f763294e7d8e1d84979", null ],
     [ "SaveFile", "class_urho3_d_1_1_simple_resource.html#af76760959bfdfbbc9227c20fa80b26bd", null ],
     [ "SaveFile", "class_urho3_d_1_1_simple_resource.html#a792b62769d1f791c7243e065ce678d6a", null ],
     [ "SerializeInBlock", "class_urho3_d_1_1_simple_resource.html#af14304c741a3cb38b98721212e7ba353", null ],
-    [ "SetSaveFormatHint", "class_urho3_d_1_1_simple_resource.html#adb7ce6207c6fa44736b942593142d8bd", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_simple_resource.html#aa1f80fce3207a34a1132dc1040aa6960", null ],
-    [ "loadFormat_", "class_urho3_d_1_1_simple_resource.html#a00a261bb552cae9df4bd086e7291e7a6", null ],
-    [ "saveFormat_", "class_urho3_d_1_1_simple_resource.html#aa845cf97c8d7613769bb469697a70e22", null ]
+    [ "SetSaveFormatHint", "class_urho3_d_1_1_simple_resource.html#adb7ce6207c6fa44736b942593142d8bd", null ]
 ];

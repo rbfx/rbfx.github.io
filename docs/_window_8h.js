@@ -1,6 +1,6 @@
 var _window_8h =
 [
-    [ "Window", "class_urho3_d_1_1_window.html", "class_urho3_d_1_1_window" ],
+    [ "Urho3D::Window", "class_urho3_d_1_1_window.html", "class_urho3_d_1_1_window" ],
     [ "WindowDragMode", "_window_8h.html#a7e1144f19fbc47d33bd9b71dfe646560", [
       [ "DRAG_NONE", "_window_8h.html#a7e1144f19fbc47d33bd9b71dfe646560ade08c124e4ef6a3c16b493ba19941c48", null ],
       [ "DRAG_MOVE", "_window_8h.html#a7e1144f19fbc47d33bd9b71dfe646560ac5471db929af6c37409ee3446c694745", null ],

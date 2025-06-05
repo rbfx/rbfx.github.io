@@ -32,11 +32,5 @@ var class_urho3_d_1_1_p_list_value =
     [ "SetString", "class_urho3_d_1_1_p_list_value.html#a06eea8880a817718228b6a31931e4d90", null ],
     [ "SetValueMap", "class_urho3_d_1_1_p_list_value.html#aa245df0f9d49c6fb920e6b850635ee94", null ],
     [ "SetValueVector", "class_urho3_d_1_1_p_list_value.html#a049854db4b2437de0ad6a091bbdbede1", null ],
-    [ "bool_", "class_urho3_d_1_1_p_list_value.html#ad2c279af8c0882fafae62946fd2e357a", null ],
-    [ "float_", "class_urho3_d_1_1_p_list_value.html#a6b8a93d165202d63097c7a8bc1f1eee7", null ],
-    [ "int_", "class_urho3_d_1_1_p_list_value.html#a4d1428be05474f8d8d15908c5504312a", null ],
-    [ "string_", "class_urho3_d_1_1_p_list_value.html#acbcfe06cfbe6059691fcca118a7daa5e", null ],
-    [ "type_", "class_urho3_d_1_1_p_list_value.html#a0a6ba3340c305ed634742043bfaedd09", null ],
-    [ "valueMap_", "class_urho3_d_1_1_p_list_value.html#af5a0e8898ca1334dcd220c259d73b631", null ],
-    [ "valueVector_", "class_urho3_d_1_1_p_list_value.html#aac85e388333673a015cf632fbe2c0240", null ]
+    [ "type_", "class_urho3_d_1_1_p_list_value.html#a0a6ba3340c305ed634742043bfaedd09", null ]
 ];

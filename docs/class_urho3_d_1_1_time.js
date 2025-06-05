@@ -15,7 +15,6 @@ var class_urho3_d_1_1_time =
     [ "GetTimeStep", "class_urho3_d_1_1_time.html#ac6a0924508625bc06f0c1796a8565ad3", null ],
     [ "SetTimerPeriod", "class_urho3_d_1_1_time.html#a45e39c9b26006d0a5b5c022cf67ff786", null ],
     [ "Sleep", "class_urho3_d_1_1_time.html#af23f046cbb890e86fcfc9ee1e63f6935", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_time.html#a11702320d15059362b99ed926b872121", null ],
     [ "elapsedTime_", "class_urho3_d_1_1_time.html#a06c369527ceb29ce350283765fcb58e7", null ],
     [ "frameNumber_", "class_urho3_d_1_1_time.html#ab4401a63bced091ae256d16a571d7fae", null ],
     [ "timerPeriod_", "class_urho3_d_1_1_time.html#a712eed65b08cdca28e2b36618665e066", null ],

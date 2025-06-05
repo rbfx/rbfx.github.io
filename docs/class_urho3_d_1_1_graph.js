@@ -18,9 +18,6 @@ var class_urho3_d_1_1_graph =
     [ "RegisterObject", "class_urho3_d_1_1_graph.html#a606fd519e47361ae7f23bbcb7e3efce4", null ],
     [ "Remove", "class_urho3_d_1_1_graph.html#a0138c5d8b269f7a7362710fb8bdaa882", null ],
     [ "SerializeInBlock", "class_urho3_d_1_1_graph.html#adfe80141e6bb4e0dca1fa0b0645c54ec", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_graph.html#aae5b3b5b76e92d507c0b1ce7314d0717", null ],
-    [ "FIRST_ID", "class_urho3_d_1_1_graph.html#ac2371f37fed5d2b764960303488d691b", null ],
     [ "laskKnownNodeID_", "class_urho3_d_1_1_graph.html#a6d4d578bda9a7267e5b270c5f819e6af", null ],
-    [ "MAX_ID", "class_urho3_d_1_1_graph.html#ae91771f66014fd7ec764f3f2b1b608a0", null ],
     [ "nodes_", "class_urho3_d_1_1_graph.html#af494395d3a44da8b8b330cef5ab2b57e", null ]
 ];

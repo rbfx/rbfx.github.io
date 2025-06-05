@@ -7,7 +7,7 @@ var class_urho3_d_1_1_memory_buffer =
     [ "MemoryBuffer", "class_urho3_d_1_1_memory_buffer.html#a9f55bc86f6fb82aed4170f9ccb338e31", null ],
     [ "MemoryBuffer", "class_urho3_d_1_1_memory_buffer.html#a7b2228cdb1dbc598779f35a7c17d6add", null ],
     [ "MemoryBuffer", "class_urho3_d_1_1_memory_buffer.html#a222a5863a2e5de9702189d867e036afd", null ],
-    [ "GetData", "class_urho3_d_1_1_memory_buffer.html#a787cb6d64ad9a6e537e34b8e12c8ca6f", null ],
+    [ "GetData", "class_urho3_d_1_1_memory_buffer.html#a76a7b2246b9d7990dcbf1fba2b1554f5", null ],
     [ "IsReadOnly", "class_urho3_d_1_1_memory_buffer.html#ab435719b735e13e8b12602e3cee2c63a", null ],
     [ "Read", "class_urho3_d_1_1_memory_buffer.html#a2b08978bb93f51c3686245e40abcfb22", null ],
     [ "Seek", "class_urho3_d_1_1_memory_buffer.html#acb67539db6b8a88d186ebb47ce00c6ea", null ],

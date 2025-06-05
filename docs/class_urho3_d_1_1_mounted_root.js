@@ -1,6 +1,5 @@
 var class_urho3_d_1_1_mounted_root =
 [
-    [ "MountedRoot", "class_urho3_d_1_1_mounted_root.html#a463947776f71d5fceb181f3e5259277b", null ],
     [ "AcceptsScheme", "class_urho3_d_1_1_mounted_root.html#afae111e3b1844b0f14fcda35d64de815", null ],
     [ "Exists", "class_urho3_d_1_1_mounted_root.html#af6e388017ad457670fdda77376237613", null ],
     [ "GetAbsoluteNameFromIdentifier", "class_urho3_d_1_1_mounted_root.html#a62603961dcb889fec17b5191034141c3", null ],

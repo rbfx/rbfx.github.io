@@ -1,7 +1,7 @@
 var _p_list_file_8h =
 [
-    [ "PListValue", "class_urho3_d_1_1_p_list_value.html", "class_urho3_d_1_1_p_list_value" ],
-    [ "PListFile", "class_urho3_d_1_1_p_list_file.html", "class_urho3_d_1_1_p_list_file" ],
+    [ "Urho3D::PListValue", "class_urho3_d_1_1_p_list_value.html", "class_urho3_d_1_1_p_list_value" ],
+    [ "Urho3D::PListFile", "class_urho3_d_1_1_p_list_file.html", "class_urho3_d_1_1_p_list_file" ],
     [ "PListValueMap", "_p_list_file_8h.html#a117d012946c670e90243af523e2f1f22", null ],
     [ "PListValueVector", "_p_list_file_8h.html#ad4d785c2412693da85c3402e24974f57", null ],
     [ "PListValueType", "_p_list_file_8h.html#aace7886cad8faff30b9451a42eb612cb", [

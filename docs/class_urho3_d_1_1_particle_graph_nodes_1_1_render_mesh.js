@@ -9,8 +9,5 @@ var class_urho3_d_1_1_particle_graph_nodes_1_1_render_mesh =
     [ "RegisterObject", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_mesh.html#abb95fa188e4b0550be3fc88bcf9eba8c", null ],
     [ "SetIsWorldspace", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_mesh.html#ac50efbb494f624ff2cef3da8640ed88a", null ],
     [ "SetMaterial", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_mesh.html#a6ceea70da7f78bd412f93d90b97ac5a7", null ],
-    [ "SetModel", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_mesh.html#a4b467578b2a6e2a15a0d41bcf48f853c", null ],
-    [ "isWorldspace_", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_mesh.html#abf38cd288e1b746c7a16161c82534430", null ],
-    [ "material_", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_mesh.html#aa1808d1fcb6dde4eff3868067c874300", null ],
-    [ "model_", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_mesh.html#a9176fd22429d99280b25360f03ff6bd5", null ]
+    [ "SetModel", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_mesh.html#a4b467578b2a6e2a15a0d41bcf48f853c", null ]
 ];

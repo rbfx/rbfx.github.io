@@ -1,7 +1,6 @@
 var class_urho3_d_1_1_default_baked_scene_collector =
 [
     [ "ChunkData", "struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data.html", "struct_urho3_d_1_1_default_baked_scene_collector_1_1_chunk_data" ],
-    [ "DefaultBakedSceneCollector", "class_urho3_d_1_1_default_baked_scene_collector.html#ad336326b38bfa561b05b995540d3c8d2", null ],
     [ "CollectGeometriesFromDrawables", "class_urho3_d_1_1_default_baked_scene_collector.html#aa894e953d2d2133a98664181618b76d2", null ],
     [ "CommitGeometries", "class_urho3_d_1_1_default_baked_scene_collector.html#a4db62c4c04dbba582cab19a2f7516f74", null ],
     [ "GetBackgrounds", "class_urho3_d_1_1_default_baked_scene_collector.html#a5496b9c619b14438524b76a36a065200", null ],
@@ -22,9 +21,6 @@ var class_urho3_d_1_1_default_baked_scene_collector =
     [ "chunkGridDimension_", "class_urho3_d_1_1_default_baked_scene_collector.html#ac32b1e9da3b88f0beaa8832a4744800a", null ],
     [ "chunks_", "class_urho3_d_1_1_default_baked_scene_collector.html#af58d7cbd16e42b1b0c69724fdd461f46", null ],
     [ "chunkSize_", "class_urho3_d_1_1_default_baked_scene_collector.html#a0ac7b6217e4aa9be7eb504fc582d9fff", null ],
-    [ "lightProbeGroups_", "class_urho3_d_1_1_default_baked_scene_collector.html#acd8d7a5cf5b6968fdc083b52de535c67", null ],
     [ "octree_", "class_urho3_d_1_1_default_baked_scene_collector.html#a7afce714596ac1fbab7b7f99fb636e81", null ],
-    [ "scene_", "class_urho3_d_1_1_default_baked_scene_collector.html#a7e4f4400bd40edc24853b6c6bdf79821", null ],
-    [ "zones_", "class_urho3_d_1_1_default_baked_scene_collector.html#abb4d6954d69703d40546a9f7dfb8dd83", null ],
-    [ "zoneToBackgroundMap_", "class_urho3_d_1_1_default_baked_scene_collector.html#a68943120a6b79b7b0a12a814d15645d0", null ]
+    [ "scene_", "class_urho3_d_1_1_default_baked_scene_collector.html#a7e4f4400bd40edc24853b6c6bdf79821", null ]
 ];

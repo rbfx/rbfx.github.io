@@ -31,7 +31,7 @@ var class_urho3_d_1_1_sphere =
     [ "Merge", "class_urho3_d_1_1_sphere.html#a7b5d4b9d99b9b4b158ca504a4e7a5b93", null ],
     [ "Merge", "class_urho3_d_1_1_sphere.html#a486bfd22bdd03c4e3f2a32a82b7e1553", null ],
     [ "operator!=", "class_urho3_d_1_1_sphere.html#af969832ce892b89f5dd23dbb658e3bce", null ],
-    [ "operator=", "class_urho3_d_1_1_sphere.html#a0e26283dda775917acad0daf04c7d82d", null ],
+    [ "operator=", "class_urho3_d_1_1_sphere.html#a287bd706e20fc0eb15c2c9cea8fab0c5", null ],
     [ "operator==", "class_urho3_d_1_1_sphere.html#a97bc52f5276301bf63a2e3a36ea22469", null ],
     [ "center_", "class_urho3_d_1_1_sphere.html#ac5d5f99064023816b297780fcab85109", null ],
     [ "radius_", "class_urho3_d_1_1_sphere.html#a97194148abd15ecea37c417304c1173c", null ]

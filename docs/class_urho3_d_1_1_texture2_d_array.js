@@ -12,7 +12,6 @@ var class_urho3_d_1_1_texture2_d_array =
     [ "SetData", "class_urho3_d_1_1_texture2_d_array.html#a88cea1582887c4fa073ba60f07ae4ee8", null ],
     [ "SetLayers", "class_urho3_d_1_1_texture2_d_array.html#a1bd5785f318407847d93aaba973e6a38", null ],
     [ "SetSize", "class_urho3_d_1_1_texture2_d_array.html#a49a314c54fcba4cc3c156e21c6c68005", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_texture2_d_array.html#ab4b1b44994d8f50f0ddc0a9a92bedd5f", null ],
     [ "layers_", "class_urho3_d_1_1_texture2_d_array.html#a9281f95119392607172c4502116e904c", null ],
     [ "loadImages_", "class_urho3_d_1_1_texture2_d_array.html#a86d3b08906b665b3a2e555df1953a6f0", null ],
     [ "loadParameters_", "class_urho3_d_1_1_texture2_d_array.html#a61254bef1a7dc71be76bdf5b252c9bd6", null ]

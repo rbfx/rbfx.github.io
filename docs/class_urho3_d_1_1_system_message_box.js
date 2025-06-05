@@ -9,7 +9,6 @@ var class_urho3_d_1_1_system_message_box =
     [ "RenderFrame", "class_urho3_d_1_1_system_message_box.html#afb47af19561b90b5fa148689fb777d12", null ],
     [ "SetMessage", "class_urho3_d_1_1_system_message_box.html#a2dea663c167b4985b1aa5c304c0f9aee", null ],
     [ "SetTitle", "class_urho3_d_1_1_system_message_box.html#a490286ac5e4fb5077e6fd96651fec2d4", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_system_message_box.html#a9c08653773d7c0d6e474ebe17d1d4c3b", null ],
     [ "isOpen_", "class_urho3_d_1_1_system_message_box.html#ab635fce1709ee64c58e427a5c7094fa9", null ],
     [ "messageText_", "class_urho3_d_1_1_system_message_box.html#a91083ccc2040b8bd91c8d7cec9559ef0", null ],
     [ "titleText_", "class_urho3_d_1_1_system_message_box.html#ae205da118afd04d7ce38ce56a674ac0c", null ],

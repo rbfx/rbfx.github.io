@@ -2,8 +2,8 @@ var class_urho3_d_1_1_constraint_wheel2_d =
 [
     [ "ConstraintWheel2D", "class_urho3_d_1_1_constraint_wheel2_d.html#acac674df3695ad547a01fcbe60e98ff9", null ],
     [ "~ConstraintWheel2D", "class_urho3_d_1_1_constraint_wheel2_d.html#a93601fb8096b1105aaea6c674099ed48", null ],
-    [ "GetAnchor", "class_urho3_d_1_1_constraint_wheel2_d.html#a0c45b821f51595477d6065c1ea34a872", null ],
-    [ "GetAxis", "class_urho3_d_1_1_constraint_wheel2_d.html#a4b0f3ca4159a042366a9861c96d3f628", null ],
+    [ "GetAnchor", "class_urho3_d_1_1_constraint_wheel2_d.html#aba1eb16f01ba6c9afd1558f6793e3cc7", null ],
+    [ "GetAxis", "class_urho3_d_1_1_constraint_wheel2_d.html#a221dd6e16fd64a7d349509ba4ccc9f64", null ],
     [ "GetDampingRatio", "class_urho3_d_1_1_constraint_wheel2_d.html#a29ebe64d8d4d4cba0f0d1323433d2151", null ],
     [ "GetEnableMotor", "class_urho3_d_1_1_constraint_wheel2_d.html#ad1c1721e0e4533a5b209362d7444a8e9", null ],
     [ "GetFrequencyHz", "class_urho3_d_1_1_constraint_wheel2_d.html#ab5aa230e1748f12de15155f0ca87e35d", null ],
@@ -18,7 +18,6 @@ var class_urho3_d_1_1_constraint_wheel2_d =
     [ "SetFrequencyHz", "class_urho3_d_1_1_constraint_wheel2_d.html#a6a7526c6845d2127b12999db1c8e0865", null ],
     [ "SetMaxMotorTorque", "class_urho3_d_1_1_constraint_wheel2_d.html#a2a1097e3e31962449a00747a7e3adfa6", null ],
     [ "SetMotorSpeed", "class_urho3_d_1_1_constraint_wheel2_d.html#a8a7ce118389b447b2529358daefee790", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_constraint_wheel2_d.html#ae385694751c8affeaecc03343b508b24", null ],
     [ "anchor_", "class_urho3_d_1_1_constraint_wheel2_d.html#ac511342f7d12bf246c781659d28a7c1d", null ],
     [ "axis_", "class_urho3_d_1_1_constraint_wheel2_d.html#a885e351f8eedc01af9b532942b892ea8", null ],
     [ "jointDef_", "class_urho3_d_1_1_constraint_wheel2_d.html#ab7e7644833b6cccb17ab9911d25fbd6f", null ]

@@ -1,6 +1,6 @@
 var _u_i_element_8h =
 [
-    [ "UIElement", "class_urho3_d_1_1_u_i_element.html", "class_urho3_d_1_1_u_i_element" ],
+    [ "Urho3D::UIElement", "class_urho3_d_1_1_u_i_element.html", "class_urho3_d_1_1_u_i_element" ],
     [ "Corner", "_u_i_element_8h.html#a4e82c24fb243e4c1d090c6f9dfbfd6f9", [
       [ "C_TOPLEFT", "_u_i_element_8h.html#a4e82c24fb243e4c1d090c6f9dfbfd6f9ad6dd498209275fcee143e7578c4e68ec", null ],
       [ "C_TOPRIGHT", "_u_i_element_8h.html#a4e82c24fb243e4c1d090c6f9dfbfd6f9a1f9752b37c710b23eb58c2fc8d159a01", null ],
@@ -44,6 +44,5 @@ var _u_i_element_8h =
       [ "VA_CENTER", "_u_i_element_8h.html#ae02f2fc52eae637214262c2da3e1e93ca0ccc5f10057b139431db68016f8576bc", null ],
       [ "VA_BOTTOM", "_u_i_element_8h.html#ae02f2fc52eae637214262c2da3e1e93ca8abc086eddbb3233762d447f61e3addb", null ],
       [ "VA_CUSTOM", "_u_i_element_8h.html#ae02f2fc52eae637214262c2da3e1e93caa5d4e720231ada0322808649161d5002", null ]
-    ] ],
-    [ "URHO3D_FLAGSET", "_u_i_element_8h.html#aa3b7dfe2068db1d831f1d598317f4d26", null ]
+    ] ]
 ];

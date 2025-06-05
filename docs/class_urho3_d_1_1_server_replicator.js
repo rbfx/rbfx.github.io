@@ -1,32 +1,4 @@
 var class_urho3_d_1_1_server_replicator =
 [
-    [ "ServerReplicator", "class_urho3_d_1_1_server_replicator.html#a8b1df1d3dc7d2bd05b6a19674f57f9a5", null ],
-    [ "~ServerReplicator", "class_urho3_d_1_1_server_replicator.html#a237fc02c3543de0b5962d079b9b49421", null ],
-    [ "AddConnection", "class_urho3_d_1_1_server_replicator.html#a017dd2e770f085ed0b6d40db2a1ccea2", null ],
-    [ "GetClientState", "class_urho3_d_1_1_server_replicator.html#a4276e3253d33c8f512d71ba84267af75", null ],
-    [ "GetCurrentFrame", "class_urho3_d_1_1_server_replicator.html#a0d1998dc24d404d74e6d4bc88e23ae8d", null ],
-    [ "GetDebugInfo", "class_urho3_d_1_1_server_replicator.html#ab73c61094650eafa9f9f0d13d266d641", null ],
-    [ "GetFeedbackDelay", "class_urho3_d_1_1_server_replicator.html#a1a10df79296a7803d95beb441832d736", null ],
-    [ "GetNetworkObjectOwnedByConnection", "class_urho3_d_1_1_server_replicator.html#a796a2fc27ea4bf3a60d39d6ff998453d", null ],
-    [ "GetNetworkObjectsOwnedByConnection", "class_urho3_d_1_1_server_replicator.html#a15d952bfb2467771c4c284dd86afff51", null ],
-    [ "GetServerTime", "class_urho3_d_1_1_server_replicator.html#a6b47f0e542f8c8aa7b4fea5ab944d847", null ],
-    [ "GetSetting", "class_urho3_d_1_1_server_replicator.html#afde4b01a339abcc0fa47f76c4c7abc83", null ],
-    [ "GetUpdateFrequency", "class_urho3_d_1_1_server_replicator.html#a5197ef7799ec98133aea7b81ca0f31fa", null ],
-    [ "OnInputReady", "class_urho3_d_1_1_server_replicator.html#a27be36952bff752b6d904879ef4cae05", null ],
-    [ "OnNetworkUpdate", "class_urho3_d_1_1_server_replicator.html#a5ce02bbc41a97a6b1fb49cbf1539b3bb", null ],
-    [ "ProcessMessage", "class_urho3_d_1_1_server_replicator.html#a1559c540e80a9d0084e27c7bde9159e7", null ],
-    [ "ProcessSceneUpdate", "class_urho3_d_1_1_server_replicator.html#a86fb5209933a9ab46d48a4eef0d6429b", null ],
-    [ "RemoveConnection", "class_urho3_d_1_1_server_replicator.html#adac53d98915f1a447e77fb51949b73d8", null ],
-    [ "ReportInputLoss", "class_urho3_d_1_1_server_replicator.html#a8755a5fd151211288e1f3d5e1a36c49c", null ],
-    [ "SetCurrentFrame", "class_urho3_d_1_1_server_replicator.html#a2a0821874be50aff1df6e1656e049eed", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_server_replicator.html#ae60162ff512165e5cf21ef80cf204eda", null ],
-    [ "connections_", "class_urho3_d_1_1_server_replicator.html#acd5ddeabab6bb903e1715574bab41ba7", null ],
-    [ "currentFrame_", "class_urho3_d_1_1_server_replicator.html#a90091181ec742302a8b47edc61d8a089", null ],
-    [ "network_", "class_urho3_d_1_1_server_replicator.html#ae79c8c20f1afd31fda6e2c32e1f5ced8", null ],
-    [ "replicationManager_", "class_urho3_d_1_1_server_replicator.html#ab478b35e0efa1083df1ffb6f61c7f403", null ],
-    [ "scene_", "class_urho3_d_1_1_server_replicator.html#af7971a5e80ab377c4a48cba947f1eb5b", null ],
-    [ "settings_", "class_urho3_d_1_1_server_replicator.html#a177d5ff6f4a0a7006a155780dc6a6d34", null ],
-    [ "sharedState_", "class_urho3_d_1_1_server_replicator.html#ab351788ff580471fce9df53bf790e08a", null ],
-    [ "updateFrequency_", "class_urho3_d_1_1_server_replicator.html#a80f5a3348500e257ed3a96daa93bd0f5", null ],
-    [ "updateSync_", "class_urho3_d_1_1_server_replicator.html#ae94044537462613bdc96d7dfc989be91", null ]
+    [ "GetDebugInfo", "class_urho3_d_1_1_server_replicator.html#ab73c61094650eafa9f9f0d13d266d641", null ]
 ];

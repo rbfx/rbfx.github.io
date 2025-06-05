@@ -20,7 +20,6 @@ var class_urho3_d_1_1_logic_component =
     [ "Stop", "class_urho3_d_1_1_logic_component.html#abcf1b341a1f3d950a76f689ee4286dcc", null ],
     [ "Update", "class_urho3_d_1_1_logic_component.html#a5dafa887363d3d648ab45a14c80beb9b", null ],
     [ "UpdateEventSubscription", "class_urho3_d_1_1_logic_component.html#a7290eb9fff45aef56ae052ccc8e8b729", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_logic_component.html#abbd2d6906f67536f6d5366dd4df329c2", null ],
     [ "currentEventMask_", "class_urho3_d_1_1_logic_component.html#ac1962b4d957225d9b5656c3367fdfd70", null ],
     [ "delayedStartCalled_", "class_urho3_d_1_1_logic_component.html#affb1f1c6d9a287e4217bcbf6e9f8b442", null ],
     [ "updateEventMask_", "class_urho3_d_1_1_logic_component.html#a85740611e8c6ee14a3e1751d09855e77", null ]

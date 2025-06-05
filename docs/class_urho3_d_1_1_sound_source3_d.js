@@ -17,7 +17,6 @@ var class_urho3_d_1_1_sound_source3_d =
     [ "SetOuterAngle", "class_urho3_d_1_1_sound_source3_d.html#ac964c4ae2c80d65f36028f8722d8fb1b", null ],
     [ "SetRolloffFactor", "class_urho3_d_1_1_sound_source3_d.html#a55799b57b0ca91a78fe2f36f63376793", null ],
     [ "Update", "class_urho3_d_1_1_sound_source3_d.html#abef124913646c6691dba8411401769b3", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_sound_source3_d.html#ad24b4c9b8408c583fe2a9845c6e8abb8", null ],
     [ "farDistance_", "class_urho3_d_1_1_sound_source3_d.html#af7b41d440eddfce77b354bb026b4dc0a", null ],
     [ "innerAngle_", "class_urho3_d_1_1_sound_source3_d.html#a8b91dcd73ae7511c29c1344a64df0bd4", null ],
     [ "nearDistance_", "class_urho3_d_1_1_sound_source3_d.html#a0a49bb2bef193d3fc523b12d72b01a62", null ],

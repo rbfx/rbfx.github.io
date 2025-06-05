@@ -2,8 +2,7 @@ var class_urho3_d_1_1_script =
 [
     [ "Script", "class_urho3_d_1_1_script.html#a1e128f16268704424061342857cb363d", null ],
     [ "~Script", "class_urho3_d_1_1_script.html#a49afc207f857431057db240797d949df", null ],
-    [ "GetRuntimeApi", "class_urho3_d_1_1_script.html#aaeb4997b717f0f008440fc6c282e5d31", null ],
+    [ "GetRuntimeApi", "class_urho3_d_1_1_script.html#ae59b64955ad00ac62f038f6bcd40d447", null ],
     [ "SetRuntimeApi", "class_urho3_d_1_1_script.html#a3b6f4616a4975491d71650a30e293654", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_script.html#ab5fe3b1e9e4ca476a48cbeb023d3faa7", null ],
     [ "api_", "class_urho3_d_1_1_script.html#ab7c5b2aba1489cc4c093ca299ae7014b", null ]
 ];

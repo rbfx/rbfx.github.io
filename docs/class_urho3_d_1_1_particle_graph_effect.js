@@ -10,6 +10,5 @@ var class_urho3_d_1_1_particle_graph_effect =
     [ "Save", "class_urho3_d_1_1_particle_graph_effect.html#a9b013950112b9419ee969f1d2f7daea7", null ],
     [ "SerializeInBlock", "class_urho3_d_1_1_particle_graph_effect.html#a364a33356cc819a343093bd948717a5d", null ],
     [ "SetNumLayers", "class_urho3_d_1_1_particle_graph_effect.html#aff22ad139297577e120fbb694a690ed8", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_particle_graph_effect.html#a76c0b55cf6c2a059a2914567fa4998bc", null ],
     [ "layers_", "class_urho3_d_1_1_particle_graph_effect.html#a47961c0b84b113eeecc11f3a6d13b379", null ]
 ];

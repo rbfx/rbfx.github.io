@@ -1,9 +1,9 @@
 var _tile_map_defs2_d_8h =
 [
-    [ "TileMapInfo2D", "struct_urho3_d_1_1_tile_map_info2_d.html", "struct_urho3_d_1_1_tile_map_info2_d" ],
-    [ "PropertySet2D", "class_urho3_d_1_1_property_set2_d.html", "class_urho3_d_1_1_property_set2_d" ],
-    [ "Tile2D", "class_urho3_d_1_1_tile2_d.html", "class_urho3_d_1_1_tile2_d" ],
-    [ "TileMapObject2D", "class_urho3_d_1_1_tile_map_object2_d.html", "class_urho3_d_1_1_tile_map_object2_d" ],
+    [ "Urho3D::TileMapInfo2D", "struct_urho3_d_1_1_tile_map_info2_d.html", "struct_urho3_d_1_1_tile_map_info2_d" ],
+    [ "Urho3D::PropertySet2D", "class_urho3_d_1_1_property_set2_d.html", "class_urho3_d_1_1_property_set2_d" ],
+    [ "Urho3D::Tile2D", "class_urho3_d_1_1_tile2_d.html", "class_urho3_d_1_1_tile2_d" ],
+    [ "Urho3D::TileMapObject2D", "class_urho3_d_1_1_tile_map_object2_d.html", "class_urho3_d_1_1_tile_map_object2_d" ],
     [ "Orientation2D", "_tile_map_defs2_d_8h.html#ae84ffb31215a70d746919cf113e8f228", [
       [ "O_ORTHOGONAL", "_tile_map_defs2_d_8h.html#ae84ffb31215a70d746919cf113e8f228a231b6ae737138829be082439ef30207c", null ],
       [ "O_ISOMETRIC", "_tile_map_defs2_d_8h.html#ae84ffb31215a70d746919cf113e8f228a1516d792e6a2b4afdf1af01235f465fd", null ],
@@ -24,9 +24,5 @@ var _tile_map_defs2_d_8h =
       [ "OT_TILE", "_tile_map_defs2_d_8h.html#abb6749aa8486065e2ac111f6b266970ba8fb980b53ac29da13500a2740e3a5f7f", null ],
       [ "OT_INVALID", "_tile_map_defs2_d_8h.html#abb6749aa8486065e2ac111f6b266970babb2e31bcf271867ae4d5756100098da0", null ]
     ] ],
-    [ "FLIP_ALL", "_tile_map_defs2_d_8h.html#a68e6b9e02811d9668e7a2d2dabdb14ef", null ],
-    [ "FLIP_DIAGONAL", "_tile_map_defs2_d_8h.html#acd09e99fc7fc8e252fea0f3e6686f9ac", null ],
-    [ "FLIP_HORIZONTAL", "_tile_map_defs2_d_8h.html#af44564ebf2115142e5621f0fe6db04b3", null ],
-    [ "FLIP_RESERVED", "_tile_map_defs2_d_8h.html#a5c83636fb30c112614b321b74dad16e8", null ],
-    [ "FLIP_VERTICAL", "_tile_map_defs2_d_8h.html#af809b1a3c5933d404b581610497fba4d", null ]
+    [ "FLIP_HORIZONTAL", "_tile_map_defs2_d_8h.html#af44564ebf2115142e5621f0fe6db04b3", null ]
 ];

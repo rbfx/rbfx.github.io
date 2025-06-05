@@ -12,7 +12,6 @@ var class_urho3_d_1_1_text_renderer3_d =
     [ "RegisterObject", "class_urho3_d_1_1_text_renderer3_d.html#a89914a50bc69a4930b40a21673dfcf3a", null ],
     [ "SetDefaultFontAttr", "class_urho3_d_1_1_text_renderer3_d.html#a16f0fb40894b81b4ba560ed14fb311bf", null ],
     [ "SetDefaultFontSize", "class_urho3_d_1_1_text_renderer3_d.html#a6c4db267b599ce00ed66dd69a103cde4", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_text_renderer3_d.html#a2bb7bc28a6ce9feccbc45085432a787f", null ],
     [ "cachedTextNodes_", "class_urho3_d_1_1_text_renderer3_d.html#ab76dfab227f64e6f78da0b7b71b7b802", null ],
     [ "containerNode_", "class_urho3_d_1_1_text_renderer3_d.html#a0e32c2cd00c99697dff44b5705c53ba0", null ],
     [ "defaultFont_", "class_urho3_d_1_1_text_renderer3_d.html#a6ff594b135ae97a72235755d030ee292", null ],

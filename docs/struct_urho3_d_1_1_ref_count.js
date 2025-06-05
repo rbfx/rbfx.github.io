@@ -1,6 +1,5 @@
 var struct_urho3_d_1_1_ref_count =
 [
-    [ "Allocator", "struct_urho3_d_1_1_ref_count.html#a5ed6a0539f369f3d80f64697887ee3fc", null ],
     [ "RefCount", "struct_urho3_d_1_1_ref_count.html#a85244bf8dacf81a87451b23294ccd3cd", null ],
     [ "~RefCount", "struct_urho3_d_1_1_ref_count.html#a95993f5cb65b6c17ac2cde4a31724370", null ],
     [ "Allocate", "struct_urho3_d_1_1_ref_count.html#a7bb14e7c38c198e3bb1b0b5a0d618203", null ],

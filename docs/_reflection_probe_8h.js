@@ -1,12 +1,12 @@
 var _reflection_probe_8h =
 [
-    [ "InternalReflectionProbeData", "class_urho3_d_1_1_internal_reflection_probe_data.html", "class_urho3_d_1_1_internal_reflection_probe_data" ],
-    [ "ReflectionProbeBVH", "struct_urho3_d_1_1_reflection_probe_b_v_h.html", "struct_urho3_d_1_1_reflection_probe_b_v_h" ],
-    [ "ReflectionProbeManager", "class_urho3_d_1_1_reflection_probe_manager.html", "class_urho3_d_1_1_reflection_probe_manager" ],
-    [ "QueuedReflectionProbe", "struct_urho3_d_1_1_reflection_probe_manager_1_1_queued_reflection_probe.html", "struct_urho3_d_1_1_reflection_probe_manager_1_1_queued_reflection_probe" ],
-    [ "SpatialCache", "struct_urho3_d_1_1_reflection_probe_manager_1_1_spatial_cache.html", "struct_urho3_d_1_1_reflection_probe_manager_1_1_spatial_cache" ],
-    [ "AutoQueueCache", "struct_urho3_d_1_1_reflection_probe_manager_1_1_auto_queue_cache.html", "struct_urho3_d_1_1_reflection_probe_manager_1_1_auto_queue_cache" ],
-    [ "ReflectionProbe", "class_urho3_d_1_1_reflection_probe.html", "class_urho3_d_1_1_reflection_probe" ],
+    [ "Urho3D::InternalReflectionProbeData", "class_urho3_d_1_1_internal_reflection_probe_data.html", null ],
+    [ "Urho3D::ReflectionProbeBVH", "struct_urho3_d_1_1_reflection_probe_b_v_h.html", null ],
+    [ "Urho3D::ReflectionProbeManager", "class_urho3_d_1_1_reflection_probe_manager.html", "class_urho3_d_1_1_reflection_probe_manager" ],
+    [ "Urho3D::ReflectionProbeManager::QueuedReflectionProbe", "struct_urho3_d_1_1_reflection_probe_manager_1_1_queued_reflection_probe.html", null ],
+    [ "Urho3D::ReflectionProbeManager::SpatialCache", "struct_urho3_d_1_1_reflection_probe_manager_1_1_spatial_cache.html", null ],
+    [ "Urho3D::ReflectionProbeManager::AutoQueueCache", "struct_urho3_d_1_1_reflection_probe_manager_1_1_auto_queue_cache.html", null ],
+    [ "Urho3D::ReflectionProbe", "class_urho3_d_1_1_reflection_probe.html", "class_urho3_d_1_1_reflection_probe" ],
     [ "ReflectionProbeType", "_reflection_probe_8h.html#ab90dc1f978f6ae3d08ae563769609d2a", [
       [ "Baked", "_reflection_probe_8h.html#ab90dc1f978f6ae3d08ae563769609d2aa3b451d93dcdfb1d029eefcff097efe76", null ],
       [ "Mixed", "_reflection_probe_8h.html#ab90dc1f978f6ae3d08ae563769609d2aa699b4f79215d191584653efebf156e52", null ],

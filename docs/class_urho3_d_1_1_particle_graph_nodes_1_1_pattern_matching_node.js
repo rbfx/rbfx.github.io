@@ -9,7 +9,5 @@ var class_urho3_d_1_1_particle_graph_nodes_1_1_pattern_matching_node =
     [ "GetPin", "class_urho3_d_1_1_particle_graph_nodes_1_1_pattern_matching_node.html#a3b2399808d12db6212b151c2be016843", null ],
     [ "LoadInputPin", "class_urho3_d_1_1_particle_graph_nodes_1_1_pattern_matching_node.html#abcfb57d881d90b8f23fd6ae7d042ab14", null ],
     [ "LoadOutputPin", "class_urho3_d_1_1_particle_graph_nodes_1_1_pattern_matching_node.html#aef7ad59299680197f05cb76b625a8baf", null ],
-    [ "Update", "class_urho3_d_1_1_particle_graph_nodes_1_1_pattern_matching_node.html#a836843ece2b035a5c3c027dfa0e9e7a1", null ],
-    [ "patterns_", "class_urho3_d_1_1_particle_graph_nodes_1_1_pattern_matching_node.html#a26d6327ae3b8e9b7252c51014c772a98", null ],
-    [ "pins_", "class_urho3_d_1_1_particle_graph_nodes_1_1_pattern_matching_node.html#a5cebd734bac606027cf9a2a235e2bd25", null ]
+    [ "Update", "class_urho3_d_1_1_particle_graph_nodes_1_1_pattern_matching_node.html#a836843ece2b035a5c3c027dfa0e9e7a1", null ]
 ];

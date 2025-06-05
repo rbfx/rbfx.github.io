@@ -15,8 +15,6 @@ var class_urho3_d_1_1_obstacle =
     [ "RegisterObject", "class_urho3_d_1_1_obstacle.html#a709237eb5c9ddc9c3657715c9d3e05a9", null ],
     [ "SetHeight", "class_urho3_d_1_1_obstacle.html#ad9a64bbab67f032de0735396681d62c3", null ],
     [ "SetRadius", "class_urho3_d_1_1_obstacle.html#a971e6fffa3e9f5f11ae99bca290108b5", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_obstacle.html#ab89c7630d0de065e9cfa950f4224b209", null ],
-    [ "DynamicNavigationMesh", "class_urho3_d_1_1_obstacle.html#a84e4e5bf8a28b0998f80f5fdeda490fb", null ],
     [ "height_", "class_urho3_d_1_1_obstacle.html#aeda5477d1038e85015b3d3829952bc8c", null ],
     [ "obstacleId_", "class_urho3_d_1_1_obstacle.html#a2e45924edeaf73c66d367848ee2cf05b", null ],
     [ "ownerMesh_", "class_urho3_d_1_1_obstacle.html#acb12220c10f05712ab1242409fc2df4d", null ],

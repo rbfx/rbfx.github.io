@@ -17,7 +17,6 @@ var class_urho3_d_1_1_light_baker =
     [ "SetQuality", "class_urho3_d_1_1_light_baker.html#ac8bf82c924aee8c3e723cdb54438775c", null ],
     [ "Update", "class_urho3_d_1_1_light_baker.html#ab482e7a4b496b4ed1235f4ccb6eebc65", null ],
     [ "UpdateSettings", "class_urho3_d_1_1_light_baker.html#aec2502abbf8e0693048215fe4f341451", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_light_baker.html#abc1ff68b87094ee69ddd20e6b334e068", null ],
     [ "quality_", "class_urho3_d_1_1_light_baker.html#a073a94877c1a6fcc8af32812f64d7adf", null ],
     [ "settings_", "class_urho3_d_1_1_light_baker.html#aed1daf4294684fe8f0e698e41b78bc8d", null ],
     [ "state_", "class_urho3_d_1_1_light_baker.html#a9c5aa41cd1bfa71e66fa7295608a823e", null ],

@@ -6,7 +6,7 @@ var class_urho3_d_1_1_archive_block =
     [ "ArchiveBlock", "class_urho3_d_1_1_archive_block.html#a5203b300094d746c3ac12272416f8469", null ],
     [ "GetSizeHint", "class_urho3_d_1_1_archive_block.html#a34e6c393125200e5393577f8572b415b", null ],
     [ "operator bool", "class_urho3_d_1_1_archive_block.html#a5901c2d19d5f6991f354db019f9f57be", null ],
-    [ "operator=", "class_urho3_d_1_1_archive_block.html#a01eab27443b3834c87421d1332c8fe03", null ],
+    [ "operator=", "class_urho3_d_1_1_archive_block.html#a29a72d72457d2963fa4c684256a6c24c", null ],
     [ "Swap", "class_urho3_d_1_1_archive_block.html#a6d1dcb24970edfc2f811258044cab1ec", null ],
     [ "archive_", "class_urho3_d_1_1_archive_block.html#a6e254e42bf4ea26e418ac138ff47412d", null ],
     [ "sizeHint_", "class_urho3_d_1_1_archive_block.html#a4d4afe077d9c586eab3e76c6d23b023d", null ]

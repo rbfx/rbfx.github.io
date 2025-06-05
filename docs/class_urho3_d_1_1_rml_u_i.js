@@ -38,8 +38,6 @@ var class_urho3_d_1_1_rml_u_i =
     [ "SetRenderTarget", "class_urho3_d_1_1_rml_u_i.html#af3d86de072e281571117e052e5ad4929", null ],
     [ "SetScale", "class_urho3_d_1_1_rml_u_i.html#a1727f0b5c51499c0e56783e533283e3a", null ],
     [ "Update", "class_urho3_d_1_1_rml_u_i.html#ab7debbb3ad9b3e0504d8ded404caae45", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_rml_u_i.html#a49321a031cd7bee7e910154ba0bdb327", null ],
-    [ "Detail::RmlPlugin", "class_urho3_d_1_1_rml_u_i.html#a1f01a3ec885bab4d3a4e6c1d6342798e", null ],
     [ "canvasResizedEvent_", "class_urho3_d_1_1_rml_u_i.html#a7307e4e19efef6a43c961bb0546580f5", null ],
     [ "clearColor_", "class_urho3_d_1_1_rml_u_i.html#a1789dcf2243d507f63b9f48646c55f25", null ],
     [ "debuggerInitialized_", "class_urho3_d_1_1_rml_u_i.html#acfb639c9b8189bd7410f4d72c3cd9578", null ],

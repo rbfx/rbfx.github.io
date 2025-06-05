@@ -11,7 +11,7 @@ var class_urho3_d_1_1_thread =
     [ "SetPriority", "class_urho3_d_1_1_thread.html#a378bc8be68c5239553d836b6a073b28c", null ],
     [ "Stop", "class_urho3_d_1_1_thread.html#a8192e1dfca6363a4190d9162837cc3bd", null ],
     [ "ThreadFunction", "class_urho3_d_1_1_thread.html#a4cbd298c7f15b818d7d01ea6466acd29", null ],
-    [ "ThreadFunctionStatic", "class_urho3_d_1_1_thread.html#ab1efca62bef931aacfbffec130336d91", null ],
+    [ "ThreadFunctionStatic", "class_urho3_d_1_1_thread.html#aac677f13efd259cca7ee0627dd543494", null ],
     [ "handle_", "class_urho3_d_1_1_thread.html#a2cfb3d871653aeb2c750811e0a62f2e6", null ],
     [ "mainThreadID", "class_urho3_d_1_1_thread.html#ac2346434e8b953e5a33ca3c19f5cb3cc", null ],
     [ "name_", "class_urho3_d_1_1_thread.html#abb6d526cae424aad0e4f142c61c1241e", null ],

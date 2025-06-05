@@ -30,7 +30,6 @@ var class_urho3_d_1_1_particle_emitter =
     [ "SetParticlesAttr", "class_urho3_d_1_1_particle_emitter.html#a39dbcab78221c756786bf4f86b08f152", null ],
     [ "SetSerializeParticles", "class_urho3_d_1_1_particle_emitter.html#a9f10a06943f22e5ccaa4be0d74eaa162", null ],
     [ "Update", "class_urho3_d_1_1_particle_emitter.html#a482ed0bdc3327f8c7c5e856e4e39a812", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_particle_emitter.html#ae39d4ba7f21a5372fddcdb040a991eba", null ],
     [ "autoRemove_", "class_urho3_d_1_1_particle_emitter.html#ae679559f69c695e9aecd388862dd7ea2", null ],
     [ "effect_", "class_urho3_d_1_1_particle_emitter.html#addbfd376cf106301d7ec2912e6b0bc5d", null ],
     [ "emissionTimer_", "class_urho3_d_1_1_particle_emitter.html#a648e18d7ac36f6d2690636172c226b02", null ],

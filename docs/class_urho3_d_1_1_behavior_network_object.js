@@ -1,13 +1,9 @@
 var class_urho3_d_1_1_behavior_network_object =
 [
-    [ "ConnectedNetworkBehavior", "struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior.html", "struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior" ],
-    [ "BehaviorNetworkObject", "class_urho3_d_1_1_behavior_network_object.html#aaba4891cd380eb33ac4210499585a117", null ],
-    [ "~BehaviorNetworkObject", "class_urho3_d_1_1_behavior_network_object.html#a3050d1a63a92bcee4dc5c07fe5dacf6e", null ],
+    [ "ConnectedNetworkBehavior", "struct_urho3_d_1_1_behavior_network_object_1_1_connected_network_behavior.html", null ],
     [ "CreateBehaviors", "class_urho3_d_1_1_behavior_network_object.html#ad64797558136332160402b600f750c58", null ],
     [ "GetNetworkBehavior", "class_urho3_d_1_1_behavior_network_object.html#a64dc1bd5b41e6259ec8276b2c2e34b7d", null ],
-    [ "GetNetworkBehavior", "class_urho3_d_1_1_behavior_network_object.html#afad67b8f04077df7f8ffe72227b50e65", null ],
     [ "GetRelevanceForClient", "class_urho3_d_1_1_behavior_network_object.html#a542b813b0fe0d3b7ad683660e6ab15bd", null ],
-    [ "InitializeBehaviors", "class_urho3_d_1_1_behavior_network_object.html#acefadc253ca31226c3586c74a2f9bc3b", null ],
     [ "InitializeFromSnapshot", "class_urho3_d_1_1_behavior_network_object.html#ab828bed7e200db3cd8fe542967262153", null ],
     [ "InitializeOnServer", "class_urho3_d_1_1_behavior_network_object.html#a0187756060aa9f0f05657456757fe47e", null ],
     [ "InitializeStandalone", "class_urho3_d_1_1_behavior_network_object.html#a88d495837c0b185ca5bad5997cf2c337", null ],
@@ -21,18 +17,10 @@ var class_urho3_d_1_1_behavior_network_object =
     [ "ReadReliableDelta", "class_urho3_d_1_1_behavior_network_object.html#a8e8ce033f5b9220a1a3970929a1a39fd", null ],
     [ "ReadUnreliableDelta", "class_urho3_d_1_1_behavior_network_object.html#a369b3d1662a2cef34e93ecec6c22a647", null ],
     [ "ReadUnreliableFeedback", "class_urho3_d_1_1_behavior_network_object.html#ad0640093f2ca4437383015e294446da7", null ],
-    [ "RegisterObject", "class_urho3_d_1_1_behavior_network_object.html#ae156cb4f4829bd063eedcfbc8e0ed150", null ],
     [ "Update", "class_urho3_d_1_1_behavior_network_object.html#a3cbff7c93169d4f56ac364b5ad089c10", null ],
     [ "UpdateTransformOnServer", "class_urho3_d_1_1_behavior_network_object.html#aea890748bed9391dafeff99a7f22d06f", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_behavior_network_object.html#a7ce732cf4040d16775f87091b3751369", null ],
     [ "WriteReliableDelta", "class_urho3_d_1_1_behavior_network_object.html#ab4d94cc9c3295d76a9dcb1ee595cee98", null ],
     [ "WriteSnapshot", "class_urho3_d_1_1_behavior_network_object.html#abb8216b63b72f3851434b181bef79de8", null ],
     [ "WriteUnreliableDelta", "class_urho3_d_1_1_behavior_network_object.html#a00a1b696d2c5acadf0dac5763818f3c0", null ],
-    [ "WriteUnreliableFeedback", "class_urho3_d_1_1_behavior_network_object.html#a9a5795edf8f07d0df0d97d61210f01a9", null ],
-    [ "behaviors_", "class_urho3_d_1_1_behavior_network_object.html#ad3ed2c9a073a166247ef67bcd3e5d1c5", null ],
-    [ "callbackMask_", "class_urho3_d_1_1_behavior_network_object.html#ac3b775ec957a01558e80b7268e0be4c4", null ],
-    [ "MaxNumBehaviors", "class_urho3_d_1_1_behavior_network_object.html#a3b00f858b21d4c4e61559c7d966d97d0", null ],
-    [ "reliableUpdateMask_", "class_urho3_d_1_1_behavior_network_object.html#a7f0433a5574d9aa7c4ee29518b48558f", null ],
-    [ "unreliableFeedbackMask_", "class_urho3_d_1_1_behavior_network_object.html#a33eacb9c37958ac0c31dc886f10a58d3", null ],
-    [ "unreliableUpdateMask_", "class_urho3_d_1_1_behavior_network_object.html#a860d4e191cf90e4d98b3eb41b4b43cdc", null ]
+    [ "WriteUnreliableFeedback", "class_urho3_d_1_1_behavior_network_object.html#a9a5795edf8f07d0df0d97d61210f01a9", null ]
 ];

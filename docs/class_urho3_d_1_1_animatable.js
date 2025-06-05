@@ -34,7 +34,6 @@ var class_urho3_d_1_1_animatable =
     [ "SetObjectAnimationAttr", "class_urho3_d_1_1_animatable.html#afa9b7e0ab148a3d1a4eab44808a44c0f", null ],
     [ "SetObjectAttributeAnimation", "class_urho3_d_1_1_animatable.html#a30f9f583068dbe01aa95fce1d5fce3e8", null ],
     [ "UpdateAttributeAnimations", "class_urho3_d_1_1_animatable.html#a5df03d0160dbec915cb43193684ea971", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_animatable.html#ab3f7d794c72ba4cefac673dedf3258fb", null ],
     [ "animationEnabled_", "class_urho3_d_1_1_animatable.html#a6c0bcd5941cf1a915f9379bb0b1a28fa", null ],
     [ "attributeAnimationInfos_", "class_urho3_d_1_1_animatable.html#ac4823d0a9fb9f562927a25857f3da565", null ],
     [ "objectAnimation_", "class_urho3_d_1_1_animatable.html#abd68e049302374d4e1031bb4f1d92bda", null ]

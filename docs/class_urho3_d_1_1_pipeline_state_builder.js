@@ -1,29 +1,9 @@
 var class_urho3_d_1_1_pipeline_state_builder =
 [
-    [ "PipelineStateBuilder", "class_urho3_d_1_1_pipeline_state_builder.html#ab1bb2a4181cdd9a2869b1d8058aa4dd7", null ],
     [ "ClearState", "class_urho3_d_1_1_pipeline_state_builder.html#aa275cd4f53ff37fe9b86804278b7d544", null ],
     [ "CreateBatchPipelineState", "class_urho3_d_1_1_pipeline_state_builder.html#ae9b8996cebb22a2c05269deb5789ca63", null ],
     [ "CreateBatchPipelineStatePlaceholder", "class_urho3_d_1_1_pipeline_state_builder.html#a55f8606082e38bc5e4739c332bef2bfd", null ],
-    [ "GetShaderProgramCompositor", "class_urho3_d_1_1_pipeline_state_builder.html#a1b5bffea2161261b27f9b47edc20fb23", null ],
-    [ "SetSettings", "class_urho3_d_1_1_pipeline_state_builder.html#a15b05214e0c38c51b3a3bc7692e47790", null ],
-    [ "SetupGeometryBufferSamplers", "class_urho3_d_1_1_pipeline_state_builder.html#a376dd7db57650867f404a8f0c4f9f4db", null ],
     [ "SetupInputLayoutAndPrimitiveType", "class_urho3_d_1_1_pipeline_state_builder.html#a17022064ea799bc58cea965352b674db", null ],
-    [ "SetupLightSamplers", "class_urho3_d_1_1_pipeline_state_builder.html#a5a3040c90caf1d8ebf843687dd4d7980", null ],
-    [ "SetupLightVolumePassState", "class_urho3_d_1_1_pipeline_state_builder.html#ad99e5dd28f1fe5c8fc3520406450ab1c", null ],
-    [ "SetupSamplersForUserOrShadowPass", "class_urho3_d_1_1_pipeline_state_builder.html#afe7c666d289cf67504271bfe06ea9368", null ],
-    [ "SetupShaders", "class_urho3_d_1_1_pipeline_state_builder.html#a3a9fd0381d3eb2b7bba7c46e8343ff7f", null ],
-    [ "SetupShadowPassState", "class_urho3_d_1_1_pipeline_state_builder.html#ac64e2921d794bd7f095e3086f19f0bce", null ],
-    [ "SetupUserPassState", "class_urho3_d_1_1_pipeline_state_builder.html#ae5c597a870d2baa60b041becef9370b3", null ],
-    [ "UpdateFrameSettings", "class_urho3_d_1_1_pipeline_state_builder.html#ad1456477de480bc8e126838e85752bfb", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_pipeline_state_builder.html#aad217637b2481390ccbe7375de31a701", null ],
-    [ "cameraProcessor_", "class_urho3_d_1_1_pipeline_state_builder.html#a426728239586d028789a2fa124d810a5", null ],
-    [ "compositor_", "class_urho3_d_1_1_pipeline_state_builder.html#a1d9bd7b37e4c62246ffd8bc0ece6322a", null ],
-    [ "graphics_", "class_urho3_d_1_1_pipeline_state_builder.html#ab262ec05fae350a468327eb14ab333cc", null ],
-    [ "instancingBuffer_", "class_urho3_d_1_1_pipeline_state_builder.html#a3e6e742793f7836ea111b7c447450607", null ],
-    [ "pipelineStateCache_", "class_urho3_d_1_1_pipeline_state_builder.html#af535c8e2134d8d480d1f5868f5153966", null ],
     [ "pipelineStateDesc_", "class_urho3_d_1_1_pipeline_state_builder.html#a9754cd59f4c9e2b94d9f93d806ee6c5c", null ],
-    [ "renderDevice_", "class_urho3_d_1_1_pipeline_state_builder.html#a920dc96aee387b6afd89e7e04c2e7a78", null ],
-    [ "sceneProcessor_", "class_urho3_d_1_1_pipeline_state_builder.html#aa03c0d97cf32b620fd5641f771688f7d", null ],
-    [ "shaderProgramDesc_", "class_urho3_d_1_1_pipeline_state_builder.html#ac4a0223a0d5a262ef47c39adb168b363", null ],
-    [ "shadowMapAllocator_", "class_urho3_d_1_1_pipeline_state_builder.html#aee94c37eb83b5e84cddb7f439b7d1737", null ]
+    [ "sceneProcessor_", "class_urho3_d_1_1_pipeline_state_builder.html#aa03c0d97cf32b620fd5641f771688f7d", null ]
 ];

@@ -1,27 +1,10 @@
 var class_urho3_d_1_1_i_k_solver =
 [
-    [ "IKSolver", "class_urho3_d_1_1_i_k_solver.html#acec072f80435bb30c78fa98e3f13edcc", null ],
-    [ "~IKSolver", "class_urho3_d_1_1_i_k_solver.html#a9b79b4d91157fa508c985811ee56fd98", null ],
     [ "GetNodeData", "class_urho3_d_1_1_i_k_solver.html#a2986951e6053992e1725563e9820c352", null ],
     [ "GetPostUpdateEvent", "class_urho3_d_1_1_i_k_solver.html#a2e20c62b58de3a5ff99167e14a4dd42d", null ],
-    [ "IsChainTreeExpired", "class_urho3_d_1_1_i_k_solver.html#a0681510c977a8bcab84617d281e30b30", null ],
-    [ "IsContinuousRotation", "class_urho3_d_1_1_i_k_solver.html#a1cb8e2717ef1855cfabdf2027fe1e450", null ],
-    [ "IsSolveWhenPaused", "class_urho3_d_1_1_i_k_solver.html#a0fb561f563ee4d5a1c5857d14683e83b", null ],
     [ "MarkSolversDirty", "class_urho3_d_1_1_i_k_solver.html#a34be48d5bdda4eaeb40ccbd91987438f", null ],
     [ "OnNodeSet", "class_urho3_d_1_1_i_k_solver.html#a5a382c26c9459a46689444b5ff4216e7", null ],
     [ "PostUpdate", "class_urho3_d_1_1_i_k_solver.html#a79b2305b4f89b216880d9b53a1445d63", null ],
-    [ "RebuildSolvers", "class_urho3_d_1_1_i_k_solver.html#a18c7a3080524b59ea1f3884d19761e78", null ],
-    [ "RegisterObject", "class_urho3_d_1_1_i_k_solver.html#ad5339a36d93aab3d3302ed48ede3157e", null ],
-    [ "SendIKEvent", "class_urho3_d_1_1_i_k_solver.html#a227be7d24235115655fa8fe435e5b76c", null ],
-    [ "SetContinuousRotation", "class_urho3_d_1_1_i_k_solver.html#ab92b0fc59ec694e01fea9e1576d8d86d", null ],
-    [ "SetOriginalTransforms", "class_urho3_d_1_1_i_k_solver.html#aad8d1da6365f51931569b8d4a9b7fd21", null ],
     [ "SetSolveWhenPaused", "class_urho3_d_1_1_i_k_solver.html#a99580197ab9b6639267f9cfd10c4c702", null ],
-    [ "Solve", "class_urho3_d_1_1_i_k_solver.html#a8d64e51b5aaa9d991858b95b4fe2d2ef", null ],
-    [ "UpdateOriginalTransforms", "class_urho3_d_1_1_i_k_solver.html#ab4a7ec1479f1cd7078e7b2804e246d8f", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_i_k_solver.html#af07f1aa960fa850290190559e1f05626", null ],
-    [ "settings_", "class_urho3_d_1_1_i_k_solver.html#a33b4e38d776edb13c6dd541a3e57c2b0", null ],
-    [ "solverNodes_", "class_urho3_d_1_1_i_k_solver.html#ace176280659f582f461f0176c64c9fbb", null ],
-    [ "solvers_", "class_urho3_d_1_1_i_k_solver.html#ae502728907b8bfbfd33eb420ecd8e779", null ],
-    [ "solversDirty_", "class_urho3_d_1_1_i_k_solver.html#af7591f18adc85171b91c76d5def52e56", null ],
-    [ "solveWhenPaused_", "class_urho3_d_1_1_i_k_solver.html#a2bffb771f409682212c63735e608c5a6", null ]
+    [ "Solve", "class_urho3_d_1_1_i_k_solver.html#a8d64e51b5aaa9d991858b95b4fe2d2ef", null ]
 ];

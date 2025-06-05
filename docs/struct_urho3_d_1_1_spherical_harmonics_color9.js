@@ -8,8 +8,8 @@ var struct_urho3_d_1_1_spherical_harmonics_color9 =
     [ "Evaluate", "struct_urho3_d_1_1_spherical_harmonics_color9.html#a50a1337bcdd2842328032e072103c53c", null ],
     [ "EvaluateAverage", "struct_urho3_d_1_1_spherical_harmonics_color9.html#a622c7e9d74c041a06321e69ea46abadc", null ],
     [ "operator*", "struct_urho3_d_1_1_spherical_harmonics_color9.html#a0b90856983dcccab7b06c20cf39a2009", null ],
-    [ "operator*=", "struct_urho3_d_1_1_spherical_harmonics_color9.html#acaab3580965c16a9d9fdaf9f66f11d5f", null ],
-    [ "operator+=", "struct_urho3_d_1_1_spherical_harmonics_color9.html#a46ef476925ca503c9d18dfccd91a830e", null ],
+    [ "operator*=", "struct_urho3_d_1_1_spherical_harmonics_color9.html#a1620fdef88cc136499e0105331116ab3", null ],
+    [ "operator+=", "struct_urho3_d_1_1_spherical_harmonics_color9.html#a22fa08ac5d3ba4c8774776bdfd79e1bf", null ],
     [ "values_", "struct_urho3_d_1_1_spherical_harmonics_color9.html#a5e281074d74dc945e3a22ba6086646cf", null ],
     [ "ZERO", "struct_urho3_d_1_1_spherical_harmonics_color9.html#a4e2d341305ded298225466e95df0d889", null ]
 ];

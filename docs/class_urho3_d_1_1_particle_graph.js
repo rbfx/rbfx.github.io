@@ -8,7 +8,5 @@ var class_urho3_d_1_1_particle_graph =
     [ "LoadGraph", "class_urho3_d_1_1_particle_graph.html#a5a8d9bb9ca7bc7dfa94285c9fae9c898", null ],
     [ "SaveGraph", "class_urho3_d_1_1_particle_graph.html#a23c93d2d06173ff8bb74b117a3207492", null ],
     [ "SerializeInBlock", "class_urho3_d_1_1_particle_graph.html#aea18181b23ce6cbaaf635ddf3bb2a94b", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_particle_graph.html#a80e5ec6927bd97cc2ce9958b66fdee37", null ],
-    [ "INVALID_NODE_INDEX", "class_urho3_d_1_1_particle_graph.html#abf635887f7c3aee8ff1068661b834c9a", null ],
     [ "nodes_", "class_urho3_d_1_1_particle_graph.html#a3094622ce7613a8aa4be825b96b6fd6a", null ]
 ];

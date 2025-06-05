@@ -27,7 +27,6 @@ var class_urho3_d_1_1_particle_emitter2_d =
     [ "UpdateMaterial", "class_urho3_d_1_1_particle_emitter2_d.html#af5a3c4e68d6b4b66659626f4c1ef618e", null ],
     [ "UpdateParticle", "class_urho3_d_1_1_particle_emitter2_d.html#a10bb8346cda27c85c9da98084e8dcd77", null ],
     [ "UpdateSourceBatches", "class_urho3_d_1_1_particle_emitter2_d.html#ab6ce136d5aea89305429b83f8375faae", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_particle_emitter2_d.html#ac5e4fc98af03cdd6a307d2c9a371712d", null ],
     [ "blendMode_", "class_urho3_d_1_1_particle_emitter2_d.html#a9aecb3ad18fe64f625c8360decf8d11a", null ],
     [ "boundingBoxMaxPoint_", "class_urho3_d_1_1_particle_emitter2_d.html#aa59e9c14c70b5aab7573bc1a637b482a", null ],
     [ "boundingBoxMinPoint_", "class_urho3_d_1_1_particle_emitter2_d.html#a03a66d928e477ff6ce7fdb1ad1588d69", null ],

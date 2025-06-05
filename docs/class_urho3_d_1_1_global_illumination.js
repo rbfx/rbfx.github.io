@@ -14,7 +14,6 @@ var class_urho3_d_1_1_global_illumination =
     [ "SerializeData", "class_urho3_d_1_1_global_illumination.html#aa57169c2207c39e9249db5f9347dc985", null ],
     [ "SetEmissionBrightness", "class_urho3_d_1_1_global_illumination.html#a908bc99cf46de3cde837760e117820b0", null ],
     [ "SetFileRef", "class_urho3_d_1_1_global_illumination.html#a885a0f1abfe98b7aac647e57d6d6a352", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_global_illumination.html#a90720e52d36a64dd45a913109a3d54c1", null ],
     [ "emissionBrightness_", "class_urho3_d_1_1_global_illumination.html#a26b3e50f0fb3d35134a6c2a81097621f", null ],
     [ "fileRef_", "class_urho3_d_1_1_global_illumination.html#a7dc39e854251b41981a767823c59b405", null ],
     [ "lightProbesBakedData_", "class_urho3_d_1_1_global_illumination.html#aeaf6c11871f2ef5d43d83d790c2cb178", null ],

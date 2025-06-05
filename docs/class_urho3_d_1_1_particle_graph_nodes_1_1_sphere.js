@@ -15,11 +15,5 @@ var class_urho3_d_1_1_particle_graph_nodes_1_1_sphere =
     [ "SetRadiusThickness", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere.html#a0f76c448de6fa415ccf6c0043ee4ae0e", null ],
     [ "SetRotation", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere.html#a1bf36df37d3a787952f9b07b5c158110", null ],
     [ "SetScale", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere.html#a31ca28537d56d003f43af6997787d6b6", null ],
-    [ "SetTranslation", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere.html#aaefb01e47e97fcce500ea268cff73c93", null ],
-    [ "from_", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere.html#a1917c3b2dacb1a3aa039519e98a83f1a", null ],
-    [ "radius_", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere.html#ae3307443fe86415363f5ee3b03456b92", null ],
-    [ "radiusThickness_", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere.html#ac575084bf91ea842fcaab538f1f14473", null ],
-    [ "rotation_", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere.html#a3155c2fb62ed358fd80cc1b523f84b25", null ],
-    [ "scale_", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere.html#a808f622fd11ef9b2e75d186dcee1da69", null ],
-    [ "translation_", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere.html#ab32c402b0b688273232310df077d550f", null ]
+    [ "SetTranslation", "class_urho3_d_1_1_particle_graph_nodes_1_1_sphere.html#aaefb01e47e97fcce500ea268cff73c93", null ]
 ];

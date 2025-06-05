@@ -17,12 +17,5 @@ var class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard =
     [ "SetIsWorldspace", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard.html#a4497da111952eb23b43a2b89cc56d124", null ],
     [ "SetMaterial", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard.html#a76daa75cdf689844f849d2a5507e02ba", null ],
     [ "SetRows", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard.html#a960830258ed373a2c3188ab8da3321cb", null ],
-    [ "SetSortByDistance", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard.html#a9cfe90506b60ffd80642d1c2dde8d215", null ],
-    [ "columns_", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard.html#aea7a1b346d4659d6e745eee986a60e2c", null ],
-    [ "crop_", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard.html#a8f5085fd2c8360c6d03ef9c2b6efe7b1", null ],
-    [ "faceCameraMode_", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard.html#a638fb91b69715d58de6ae23f38b9c0e7", null ],
-    [ "isWorldspace_", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard.html#a2c5c19b56674a085a0c1f09d31e4973a", null ],
-    [ "material_", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard.html#ac37c2e1e0a04a3e96e5469abee07a242", null ],
-    [ "rows_", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard.html#a0ddcf0ea28b7ac799dbe84d6a506eef5", null ],
-    [ "sortByDistance_", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard.html#aaa63b577b518547ae5d6ea769c27c6bd", null ]
+    [ "SetSortByDistance", "class_urho3_d_1_1_particle_graph_nodes_1_1_render_billboard.html#a9cfe90506b60ffd80642d1c2dde8d215", null ]
 ];

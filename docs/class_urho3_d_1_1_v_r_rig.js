@@ -1,29 +1,5 @@
 var class_urho3_d_1_1_v_r_rig =
 [
-    [ "VRRig", "class_urho3_d_1_1_v_r_rig.html#a817a151f54ce59643219675b0439e9f7", null ],
-    [ "~VRRig", "class_urho3_d_1_1_v_r_rig.html#aaa7040311d5546ce3dfb97d8f80dc669", null ],
-    [ "Activate", "class_urho3_d_1_1_v_r_rig.html#ab96d3ccdfb6b18a7778e316cf58e71b3", null ],
-    [ "GetHead", "class_urho3_d_1_1_v_r_rig.html#af13025fb9567d5902b69bb1065a930bd", null ],
-    [ "GetLeftEye", "class_urho3_d_1_1_v_r_rig.html#a1a3abd70dd5273a589a55577563f450f", null ],
-    [ "GetLeftHandAim", "class_urho3_d_1_1_v_r_rig.html#a6460e8207b0af0c09dd63e05323b1fdf", null ],
-    [ "GetLeftHandController", "class_urho3_d_1_1_v_r_rig.html#af58c145c89a5de98258aa077b19a5950", null ],
-    [ "GetLeftHandPose", "class_urho3_d_1_1_v_r_rig.html#ab60bad4c69489075c1376cb4d00a4752", null ],
-    [ "GetRightEye", "class_urho3_d_1_1_v_r_rig.html#a9199b3d8a4f7163c0ceb37d02392734b", null ],
-    [ "GetRightHandAim", "class_urho3_d_1_1_v_r_rig.html#abe56d5c5bee65857bd2ddb61d2a9f9e3", null ],
-    [ "GetRightHandController", "class_urho3_d_1_1_v_r_rig.html#a439f36705af93bb9db02681f7dba77d4", null ],
-    [ "GetRightHandPose", "class_urho3_d_1_1_v_r_rig.html#ac57270483ac76064d3d2ce923cb33897", null ],
-    [ "OnNodeSet", "class_urho3_d_1_1_v_r_rig.html#acf52bdf4f7f993622c3667dce71064e5", null ],
-    [ "RegisterObject", "class_urho3_d_1_1_v_r_rig.html#ab0029e918d3a893124b88f86fc3faf8a", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_v_r_rig.html#a7a3db187b563bdee90c51ff02000a803", null ],
-    [ "headNode_", "class_urho3_d_1_1_v_r_rig.html#a1ba11cac2d6f72c24498b12079ddaf47", null ],
-    [ "leftEyeCamera_", "class_urho3_d_1_1_v_r_rig.html#a07b5ae148b5dcaa375e7583e657c16c3", null ],
-    [ "leftEyeNode_", "class_urho3_d_1_1_v_r_rig.html#af518f4136445086789a33ffbcf4316f6", null ],
-    [ "leftHandAimNode_", "class_urho3_d_1_1_v_r_rig.html#a3c852a75969ee1dc30883345864e74ed", null ],
-    [ "leftHandControllerNode_", "class_urho3_d_1_1_v_r_rig.html#abcb09546d284295d6465c89101ac633d", null ],
-    [ "leftHandPoseNode_", "class_urho3_d_1_1_v_r_rig.html#ad96c2088926e3c57e237a273416bd11b", null ],
-    [ "rightEyeCamera_", "class_urho3_d_1_1_v_r_rig.html#a1a0f2b8285e7abfd44d3143507ecdd76", null ],
-    [ "rightEyeNode_", "class_urho3_d_1_1_v_r_rig.html#a58b5ffe1cf59a57570352e6faeacc221", null ],
-    [ "rightHandAimNode_", "class_urho3_d_1_1_v_r_rig.html#a606a91de0b119b89a6a31772c07dab1e", null ],
-    [ "rightHandControllerNode_", "class_urho3_d_1_1_v_r_rig.html#af2f6a591062d32b8127090c41c91aefd", null ],
-    [ "rightHandPoseNode_", "class_urho3_d_1_1_v_r_rig.html#ae8ab73db3b3e27d7a9596e9063830002", null ]
+    [ "GetHead", "class_urho3_d_1_1_v_r_rig.html#af5ae2826c4ddf6bc7d557773e5b9b611", null ],
+    [ "OnNodeSet", "class_urho3_d_1_1_v_r_rig.html#acf52bdf4f7f993622c3667dce71064e5", null ]
 ];

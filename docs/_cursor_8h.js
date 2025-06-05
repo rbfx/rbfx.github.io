@@ -1,7 +1,7 @@
 var _cursor_8h =
 [
-    [ "CursorShapeInfo", "struct_urho3_d_1_1_cursor_shape_info.html", "struct_urho3_d_1_1_cursor_shape_info" ],
-    [ "Cursor", "class_urho3_d_1_1_cursor.html", "class_urho3_d_1_1_cursor" ],
+    [ "Urho3D::CursorShapeInfo", "struct_urho3_d_1_1_cursor_shape_info.html", "struct_urho3_d_1_1_cursor_shape_info" ],
+    [ "Urho3D::Cursor", "class_urho3_d_1_1_cursor.html", "class_urho3_d_1_1_cursor" ],
     [ "CursorShape", "_cursor_8h.html#a560423741ed1239c09a6eea787eed2aa", [
       [ "CS_NORMAL", "_cursor_8h.html#a560423741ed1239c09a6eea787eed2aaac764f8c9ce732776f4bfd4e57d0fadb2", null ],
       [ "CS_IBEAM", "_cursor_8h.html#a560423741ed1239c09a6eea787eed2aaab92a2ddeeb06145e60a850c0534cbe42", null ],

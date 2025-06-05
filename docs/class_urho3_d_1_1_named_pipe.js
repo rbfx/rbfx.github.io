@@ -11,9 +11,7 @@ var class_urho3_d_1_1_named_pipe =
     [ "Read", "class_urho3_d_1_1_named_pipe.html#af6572f98b7f7caa1ba181f490731ed84", null ],
     [ "Seek", "class_urho3_d_1_1_named_pipe.html#abfa9819e51c9cac9c35239ad0001fa1e", null ],
     [ "SetName", "class_urho3_d_1_1_named_pipe.html#a4b466fef3bb9f9feeb35c9764ff9d51b", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_named_pipe.html#ae32fbd3f457248a8d63026ffa03b8109", null ],
     [ "Write", "class_urho3_d_1_1_named_pipe.html#a3bcb08d891cfb916861ae30a464d8470", null ],
     [ "isServer_", "class_urho3_d_1_1_named_pipe.html#a336f90eda53afda980cc4254fa7d4338", null ],
-    [ "readHandle_", "class_urho3_d_1_1_named_pipe.html#ac0a1a098b8987fcb0668dc6452a89ef1", null ],
-    [ "writeHandle_", "class_urho3_d_1_1_named_pipe.html#a423e9d38eeedb016b845f92f6327cd19", null ]
+    [ "readHandle_", "class_urho3_d_1_1_named_pipe.html#ac0a1a098b8987fcb0668dc6452a89ef1", null ]
 ];

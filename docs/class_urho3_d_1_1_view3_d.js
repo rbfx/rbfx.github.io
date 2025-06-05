@@ -17,7 +17,6 @@ var class_urho3_d_1_1_view3_d =
     [ "SetAutoUpdate", "class_urho3_d_1_1_view3_d.html#aa9264b2d957319c70c8f933c5bb53942", null ],
     [ "SetFormat", "class_urho3_d_1_1_view3_d.html#a1274e28e32b4b2af5301644b5ecb1520", null ],
     [ "SetView", "class_urho3_d_1_1_view3_d.html#a4d36ddc63ab180ac825aae19bad7dfce", null ],
-    [ "URHO3D_OBJECT", "class_urho3_d_1_1_view3_d.html#a16015ad45284a6267e07e0f1faa9d8f3", null ],
     [ "autoUpdate_", "class_urho3_d_1_1_view3_d.html#a86ee2cdcfb1e943b57a2ff253c3de8bf", null ],
     [ "cameraNode_", "class_urho3_d_1_1_view3_d.html#a39b05d5b6ee4cba4e04cd32d96e53a11", null ],
     [ "depthTexture_", "class_urho3_d_1_1_view3_d.html#a0bca07889a9b69e6f6b2a35710912a28", null ],

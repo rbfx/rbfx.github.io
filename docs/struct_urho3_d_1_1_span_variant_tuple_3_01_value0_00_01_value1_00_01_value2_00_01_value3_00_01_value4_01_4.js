@@ -1,4 +1,0 @@
-var struct_urho3_d_1_1_span_variant_tuple_3_01_value0_00_01_value1_00_01_value2_00_01_value3_00_01_value4_01_4 =
-[
-    [ "Make", "struct_urho3_d_1_1_span_variant_tuple_3_01_value0_00_01_value1_00_01_value2_00_01_value3_00_01_value4_01_4.html#ab04dd58bb386fa7081f43524d3bcfa12", null ]
-];
