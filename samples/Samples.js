@@ -23,9 +23,7 @@ var ENVIRONMENT_IS_WORKER = typeof WorkerGlobalScope != "undefined";
 
 // N.b. Electron.js environment is simultaneously a NODE-environment, but
 // also a web environment.
-var ENVIRONMENT_IS_NODE = typeof process == "object" && typeof process.versions == "object" && typeof process.versions.node == "string" && process.type != "renderer";
-
-if (ENVIRONMENT_IS_NODE) {}
+var ENVIRONMENT_IS_NODE = typeof process == "object" && process.versions?.node && process.type != "renderer";
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
@@ -77,7 +75,6 @@ if (ENVIRONMENT_IS_NODE) {
   // These modules will usually be used on Node.js. Load them eagerly to avoid
   // the complexity of lazy-loading.
   var fs = require("fs");
-  var nodePath = require("path");
   scriptDirectory = __dirname + "/";
   // include: node_shell_read.js
   readBinary = filename => {
@@ -173,8 +170,6 @@ var err = console.error.bind(console);
 var wasmBinary;
 
 // Wasm globals
-var wasmMemory;
-
 //========================================
 // Runtime essentials
 //========================================
@@ -200,27 +195,29 @@ var EXITSTATUS;
   }
 }
 
-// Memory management
-var /** @type {!Int8Array} */ HEAP8, /** @type {!Uint8Array} */ HEAPU8, /** @type {!Int16Array} */ HEAP16, /** @type {!Uint16Array} */ HEAPU16, /** @type {!Int32Array} */ HEAP32, /** @type {!Uint32Array} */ HEAPU32, /** @type {!Float32Array} */ HEAPF32, /* BigInt64Array type is not correctly defined in closure
-/** not-@type {!BigInt64Array} */ HEAP64, /* BigUint64Array type is not correctly defined in closure
-/** not-t@type {!BigUint64Array} */ HEAPU64, /** @type {!Float64Array} */ HEAPF64;
-
-var runtimeInitialized = false;
-
 /**
  * Indicates whether filename is delivered via file protocol (as opposed to http/https)
  * @noinline
  */ var isFileURI = filename => filename.startsWith("file://");
 
-// include: runtime_shared.js
+// include: runtime_common.js
 // include: runtime_stack_check.js
 // end include: runtime_stack_check.js
 // include: runtime_exceptions.js
 // end include: runtime_exceptions.js
 // include: runtime_debug.js
 // end include: runtime_debug.js
-// include: memoryprofiler.js
-// end include: memoryprofiler.js
+// Memory management
+var wasmMemory;
+
+var /** @type {!Int8Array} */ HEAP8, /** @type {!Uint8Array} */ HEAPU8, /** @type {!Int16Array} */ HEAP16, /** @type {!Uint16Array} */ HEAPU16, /** @type {!Int32Array} */ HEAP32, /** @type {!Uint32Array} */ HEAPU32, /** @type {!Float32Array} */ HEAPF32, /** @type {!Float64Array} */ HEAPF64;
+
+// BigInt64Array type is not correctly defined in closure
+var /** not-@type {!BigInt64Array} */ HEAP64, /* BigUint64Array type is not correctly defined in closure
+/** not-@type {!BigUint64Array} */ HEAPU64;
+
+var runtimeInitialized = false;
+
 function updateMemoryViews() {
   var b = wasmMemory.buffer;
   HEAP8 = new Int8Array(b);
@@ -235,7 +232,9 @@ function updateMemoryViews() {
   HEAPU64 = new BigUint64Array(b);
 }
 
-// end include: runtime_shared.js
+// include: memoryprofiler.js
+// end include: memoryprofiler.js
+// end include: runtime_common.js
 function preRun() {
   if (Module["preRun"]) {
     if (typeof Module["preRun"] == "function") Module["preRun"] = [ Module["preRun"] ];
@@ -285,10 +284,6 @@ var runDependencies = 0;
 var dependenciesFulfilled = null;
 
 // overridden to take different actions when all run dependencies are fulfilled
-function getUniqueRunDependency(id) {
-  return id;
-}
-
 function addRunDependency(id) {
   runDependencies++;
   Module["monitorRunDependencies"]?.(runDependencies);
@@ -410,6 +405,7 @@ async function createWasm() {
     wasmMemory = wasmExports["memory"];
     updateMemoryViews();
     wasmTable = wasmExports["__indirect_function_table"];
+    assignWasmExports(wasmExports);
     removeRunDependency("wasm-instantiate");
     return wasmExports;
   }
@@ -721,6 +717,7 @@ var UTF8Decoder = typeof TextDecoder != "undefined" ? new TextDecoder : undefine
   // (As a tiny code save trick, compare endPtr against endIdx using a negation,
   // so that undefined/NaN means Infinity)
   while (heapOrArray[endPtr] && !(endPtr >= endIdx)) ++endPtr;
+  // When using conditional TextDecoder, skip it for short strings as the overhead of the native call is not worth it.
   if (endPtr - idx > 16 && heapOrArray.buffer && UTF8Decoder) {
     return UTF8Decoder.decode(heapOrArray.subarray(idx, endPtr));
   }
@@ -791,19 +788,10 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
   var endIdx = outIdx + maxBytesToWrite - 1;
   // -1 for string null terminator.
   for (var i = 0; i < str.length; ++i) {
-    // Gotcha: charCodeAt returns a 16-bit word that is a UTF-16 encoded code
-    // unit, not a Unicode code point of the character! So decode
-    // UTF16->UTF32->UTF8.
-    // See http://unicode.org/faq/utf_bom.html#utf16-3
     // For UTF8 byte structure, see http://en.wikipedia.org/wiki/UTF-8#Description
     // and https://www.ietf.org/rfc/rfc2279.txt
     // and https://tools.ietf.org/html/rfc3629
-    var u = str.charCodeAt(i);
-    // possibly a lead surrogate
-    if (u >= 55296 && u <= 57343) {
-      var u1 = str.charCodeAt(++i);
-      u = 65536 + ((u & 1023) << 10) | (u1 & 1023);
-    }
+    var u = str.codePointAt(i);
     if (u <= 127) {
       if (outIdx >= endIdx) break;
       heap[outIdx++] = u;
@@ -822,6 +810,9 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
       heap[outIdx++] = 128 | ((u >> 12) & 63);
       heap[outIdx++] = 128 | ((u >> 6) & 63);
       heap[outIdx++] = 128 | (u & 63);
+      // Gotcha: if codePoint is over 0xFFFF, it is represented as a surrogate pair in UTF-16.
+      // We need to manually skip over the second code unit for correct iteration.
+      i++;
     }
   }
   // Null-terminate the pointer to the buffer.
@@ -1339,6 +1330,8 @@ var asyncLoad = async url => {
 };
 
 var FS_createDataFile = (...args) => FS.createDataFile(...args);
+
+var getUniqueRunDependency = id => id;
 
 var preloadPlugins = [];
 
@@ -2884,28 +2877,24 @@ var FS = {
     if (opts.encoding !== "utf8" && opts.encoding !== "binary") {
       throw new Error(`Invalid encoding type "${opts.encoding}"`);
     }
-    var ret;
     var stream = FS.open(path, opts.flags);
     var stat = FS.stat(path);
     var length = stat.size;
     var buf = new Uint8Array(length);
     FS.read(stream, buf, 0, length, 0);
     if (opts.encoding === "utf8") {
-      ret = UTF8ArrayToString(buf);
-    } else if (opts.encoding === "binary") {
-      ret = buf;
+      buf = UTF8ArrayToString(buf);
     }
     FS.close(stream);
-    return ret;
+    return buf;
   },
   writeFile(path, data, opts = {}) {
     opts.flags = opts.flags || 577;
     var stream = FS.open(path, opts.flags, opts.mode);
     if (typeof data == "string") {
-      var buf = new Uint8Array(lengthBytesUTF8(data) + 1);
-      var actualNumBytes = stringToUTF8Array(data, buf, 0, buf.length);
-      FS.write(stream, buf, 0, actualNumBytes, undefined, opts.canOwn);
-    } else if (ArrayBuffer.isView(data)) {
+      data = new Uint8Array(intArrayFromString(data, true));
+    }
+    if (ArrayBuffer.isView(data)) {
       FS.write(stream, data, 0, data.byteLength, undefined, opts.canOwn);
     } else {
       throw new Error("Unsupported data type");
@@ -3411,8 +3400,16 @@ var SOCKFS = {
     return FS.createNode(null, "/", 16895, 0);
   },
   createSocket(family, type, protocol) {
+    // Emscripten only supports AF_INET
+    if (family != 2) {
+      throw new FS.ErrnoError(5);
+    }
     type &= ~526336;
     // Some applications may pass it; it makes no sense for a single process.
+    // Emscripten only supports SOCK_STREAM and SOCK_DGRAM
+    if (type != 1 && type != 2) {
+      throw new FS.ErrnoError(28);
+    }
     var streaming = type == 1;
     if (streaming && protocol && protocol != 6) {
       throw new FS.ErrnoError(66);
@@ -4722,12 +4719,12 @@ function ___syscall_unlinkat(dirfd, path, flags) {
   try {
     path = SYSCALLS.getStr(path);
     path = SYSCALLS.calculateAt(dirfd, path);
-    if (flags === 0) {
+    if (!flags) {
       FS.unlink(path);
     } else if (flags === 512) {
       FS.rmdir(path);
     } else {
-      abort("Invalid flags passed to unlinkat");
+      return -28;
     }
     return 0;
   } catch (e) {
@@ -4738,35 +4735,13 @@ function ___syscall_unlinkat(dirfd, path, flags) {
 
 var __abort_js = () => abort("");
 
-var embindRepr = v => {
-  if (v === null) {
-    return "null";
+var AsciiToString = ptr => {
+  var str = "";
+  while (1) {
+    var ch = HEAPU8[ptr++];
+    if (!ch) return str;
+    str += String.fromCharCode(ch);
   }
-  var t = typeof v;
-  if (t === "object" || t === "array" || t === "function") {
-    return v.toString();
-  } else {
-    return "" + v;
-  }
-};
-
-var embind_init_charCodes = () => {
-  var codes = new Array(256);
-  for (var i = 0; i < 256; ++i) {
-    codes[i] = String.fromCharCode(i);
-  }
-  embind_charCodes = codes;
-};
-
-var embind_charCodes;
-
-var readLatin1String = ptr => {
-  var ret = "";
-  var c = ptr;
-  while (HEAPU8[c]) {
-    ret += embind_charCodes[HEAPU8[c++]];
-  }
-  return ret;
 };
 
 var awaitingDependencies = {};
@@ -4775,7 +4750,7 @@ var registeredTypes = {};
 
 var typeDependencies = {};
 
-var BindingError = Module["BindingError"] = class BindingError extends Error {
+var BindingError = class BindingError extends Error {
   constructor(message) {
     super(message);
     this.name = "BindingError";
@@ -4832,19 +4807,19 @@ var integerReadValueFromPointer = (name, width, signed) => {
 };
 
 /** @suppress {globalThis} */ var __embind_register_bigint = (primitiveType, name, size, minRange, maxRange) => {
-  name = readLatin1String(name);
-  var isUnsignedType = (name.indexOf("u") != -1);
-  // maxRange comes through as -1 for uint64_t (see issue 13902). Work around that temporarily
+  name = AsciiToString(name);
+  const isUnsignedType = minRange === 0n;
+  let fromWireType = value => value;
   if (isUnsignedType) {
-    maxRange = (1n << 64n) - 1n;
+    // uint64 get converted to int64 in ABI, fix them up like we do for 32-bit integers.
+    const bitSize = size * 8;
+    fromWireType = value => BigInt.asUintN(bitSize, value);
+    maxRange = fromWireType(maxRange);
   }
   registerType(primitiveType, {
     name,
-    "fromWireType": value => value,
-    "toWireType": function(destructors, value) {
-      if (typeof value != "bigint" && typeof value != "number") {
-        throw new TypeError(`Cannot convert "${embindRepr(value)}" to ${this.name}`);
-      }
+    "fromWireType": fromWireType,
+    "toWireType": (destructors, value) => {
       if (typeof value == "number") {
         value = BigInt(value);
       }
@@ -4859,7 +4834,7 @@ var integerReadValueFromPointer = (name, width, signed) => {
 var GenericWireTypeSize = 8;
 
 /** @suppress {globalThis} */ var __embind_register_bool = (rawType, name, trueValue, falseValue) => {
-  name = readLatin1String(name);
+  name = AsciiToString(name);
   registerType(rawType, {
     name,
     "fromWireType": function(wt) {
@@ -4880,21 +4855,13 @@ var GenericWireTypeSize = 8;
 
 var emval_freelist = [];
 
-var emval_handles = [];
+var emval_handles = [ 0, 1, , 1, null, 1, true, 1, false, 1 ];
 
 var __emval_decref = handle => {
   if (handle > 9 && 0 === --emval_handles[handle + 1]) {
     emval_handles[handle] = undefined;
     emval_freelist.push(handle);
   }
-};
-
-var count_emval_handles = () => emval_handles.length / 2 - 5 - emval_freelist.length;
-
-var init_emval = () => {
-  // reserve 0 and some special values. These never get de-allocated.
-  emval_handles.push(0, 1, undefined, 1, null, 1, true, 1, false, 1);
-  Module["count_emval_handles"] = count_emval_handles;
 };
 
 var Emval = {
@@ -4966,7 +4933,7 @@ var floatReadValueFromPointer = (name, width) => {
 };
 
 var __embind_register_float = (rawType, name, size) => {
-  name = readLatin1String(name);
+  name = AsciiToString(name);
   registerType(rawType, {
     name,
     "fromWireType": value => value,
@@ -5136,7 +5103,7 @@ var heap32VectorToArray = (count, firstElement) => {
   return array;
 };
 
-var InternalError = Module["InternalError"] = class InternalError extends Error {
+var InternalError = class InternalError extends Error {
   constructor(message) {
     super(message);
     this.name = "InternalError";
@@ -5173,7 +5140,7 @@ var getWasmTableEntry = funcPtr => {
 };
 
 var embind__requireFunction = (signature, rawFunction, isAsync = false) => {
-  signature = readLatin1String(signature);
+  signature = AsciiToString(signature);
   function makeDynCaller() {
     var rtn = getWasmTableEntry(rawFunction);
     return rtn;
@@ -5189,7 +5156,7 @@ class UnboundTypeError extends Error {}
 
 var getTypeName = type => {
   var ptr = ___getTypeName(type);
-  var rv = readLatin1String(ptr);
+  var rv = AsciiToString(ptr);
   _free(ptr);
   return rv;
 };
@@ -5260,7 +5227,7 @@ var getFunctionName = signature => {
 
 var __embind_register_function = (name, argCount, rawArgTypesAddr, signature, rawInvoker, fn, isAsync, isNonnullReturn) => {
   var argTypes = heap32VectorToArray(argCount, rawArgTypesAddr);
-  name = readLatin1String(name);
+  name = AsciiToString(name);
   name = getFunctionName(name);
   rawInvoker = embind__requireFunction(signature, rawInvoker, isAsync);
   exposePublicSymbol(name, function() {
@@ -5274,37 +5241,18 @@ var __embind_register_function = (name, argCount, rawArgTypesAddr, signature, ra
 };
 
 /** @suppress {globalThis} */ var __embind_register_integer = (primitiveType, name, size, minRange, maxRange) => {
-  name = readLatin1String(name);
-  // LLVM doesn't have signed and unsigned 32-bit types, so u32 literals come
-  // out as 'i32 -1'. Always treat those as max u32.
-  if (maxRange === -1) {
-    maxRange = 4294967295;
-  }
-  var fromWireType = value => value;
-  if (minRange === 0) {
+  name = AsciiToString(name);
+  const isUnsignedType = minRange === 0;
+  let fromWireType = value => value;
+  if (isUnsignedType) {
     var bitshift = 32 - 8 * size;
     fromWireType = value => (value << bitshift) >>> bitshift;
-  }
-  var isUnsignedType = (name.includes("unsigned"));
-  var checkAssertions = (value, toTypeName) => {};
-  var toWireType;
-  if (isUnsignedType) {
-    toWireType = function(destructors, value) {
-      checkAssertions(value, this.name);
-      return value >>> 0;
-    };
-  } else {
-    toWireType = function(destructors, value) {
-      checkAssertions(value, this.name);
-      // The VM will perform JS to Wasm value conversion, according to the spec:
-      // https://www.w3.org/TR/wasm-js-api-1/#towebassemblyvalue
-      return value;
-    };
+    maxRange = fromWireType(maxRange);
   }
   registerType(primitiveType, {
     name,
     "fromWireType": fromWireType,
-    "toWireType": toWireType,
+    "toWireType": (destructors, value) => value,
     argPackAdvance: GenericWireTypeSize,
     "readValueFromPointer": integerReadValueFromPointer(name, size, minRange !== 0),
     destructorFunction: null
@@ -5319,7 +5267,7 @@ var __embind_register_memory_view = (rawType, dataTypeIndex, name) => {
     var data = HEAPU32[(((handle) + (4)) >> 2)];
     return new TA(HEAP8.buffer, data, size);
   }
-  name = readLatin1String(name);
+  name = AsciiToString(name);
   registerType(rawType, {
     name,
     "fromWireType": decodeMemoryView,
@@ -5331,7 +5279,7 @@ var __embind_register_memory_view = (rawType, dataTypeIndex, name) => {
 };
 
 var __embind_register_std_string = (rawType, name) => {
-  name = readLatin1String(name);
+  name = AsciiToString(name);
   var stdStringIsUTF8 = true;
   registerType(rawType, {
     name,
@@ -5419,25 +5367,24 @@ var __embind_register_std_string = (rawType, name) => {
 var UTF16Decoder = typeof TextDecoder != "undefined" ? new TextDecoder("utf-16le") : undefined;
 
 var UTF16ToString = (ptr, maxBytesToRead) => {
-  var endPtr = ptr;
+  var idx = ((ptr) >> 1);
+  var maxIdx = idx + maxBytesToRead / 2;
   // TextDecoder needs to know the byte length in advance, it doesn't stop on
   // null terminator by itself.
   // Also, use the length info to avoid running tiny strings through
   // TextDecoder, since .subarray() allocates garbage.
-  var idx = endPtr >> 1;
-  var maxIdx = idx + maxBytesToRead / 2;
+  var endIdx = idx;
   // If maxBytesToRead is not passed explicitly, it will be undefined, and this
   // will always evaluate to true. This saves on code size.
-  while (!(idx >= maxIdx) && HEAPU16[idx]) ++idx;
-  endPtr = idx << 1;
-  if (endPtr - ptr > 32 && UTF16Decoder) return UTF16Decoder.decode(HEAPU8.subarray(ptr, endPtr));
+  while (!(endIdx >= maxIdx) && HEAPU16[endIdx]) ++endIdx;
+  if (endIdx - idx > 16 && UTF16Decoder) return UTF16Decoder.decode(HEAPU16.subarray(idx, endIdx));
   // Fallback: decode without UTF16Decoder
   var str = "";
   // If maxBytesToRead is not passed explicitly, it will be undefined, and the
   // for-loop's condition will always evaluate to true. The loop is then
   // terminated on the first null char.
-  for (var i = 0; !(i >= maxBytesToRead / 2); ++i) {
-    var codeUnit = HEAP16[(((ptr) + (i * 2)) >> 1)];
+  for (var i = idx; !(i >= maxIdx); ++i) {
+    var codeUnit = HEAPU16[i];
     if (codeUnit == 0) break;
     // fromCharCode constructs a character from a UTF-16 code unit, so we can
     // pass the UTF16 string right through.
@@ -5469,22 +5416,13 @@ var stringToUTF16 = (str, outPtr, maxBytesToWrite) => {
 var lengthBytesUTF16 = str => str.length * 2;
 
 var UTF32ToString = (ptr, maxBytesToRead) => {
-  var i = 0;
   var str = "";
   // If maxBytesToRead is not passed explicitly, it will be undefined, and this
   // will always evaluate to true. This saves on code size.
-  while (!(i >= maxBytesToRead / 4)) {
+  for (var i = 0; !(i >= maxBytesToRead / 4); i++) {
     var utf32 = HEAP32[(((ptr) + (i * 4)) >> 2)];
-    if (utf32 == 0) break;
-    ++i;
-    // Gotcha: fromCharCode constructs a character from a UTF-16 encoded code (pair), not from a Unicode code point! So encode the code point to UTF-16 for constructing.
-    // See http://unicode.org/faq/utf_bom.html#utf16-3
-    if (utf32 >= 65536) {
-      var ch = utf32 - 65536;
-      str += String.fromCharCode(55296 | (ch >> 10), 56320 | (ch & 1023));
-    } else {
-      str += String.fromCharCode(utf32);
-    }
+    if (!utf32) break;
+    str += String.fromCodePoint(utf32);
   }
   return str;
 };
@@ -5496,15 +5434,13 @@ var stringToUTF32 = (str, outPtr, maxBytesToWrite) => {
   var startPtr = outPtr;
   var endPtr = startPtr + maxBytesToWrite - 4;
   for (var i = 0; i < str.length; ++i) {
-    // Gotcha: charCodeAt returns a 16-bit word that is a UTF-16 encoded code unit, not a Unicode code point of the character! We must decode the string to UTF-32 to the heap.
-    // See http://unicode.org/faq/utf_bom.html#utf16-3
-    var codeUnit = str.charCodeAt(i);
-    // possibly a lead surrogate
-    if (codeUnit >= 55296 && codeUnit <= 57343) {
-      var trailSurrogate = str.charCodeAt(++i);
-      codeUnit = 65536 + ((codeUnit & 1023) << 10) | (trailSurrogate & 1023);
+    var codePoint = str.codePointAt(i);
+    // Gotcha: if codePoint is over 0xFFFF, it is represented as a surrogate pair in UTF-16.
+    // We need to manually skip over the second code unit for correct iteration.
+    if (codePoint > 65535) {
+      i++;
     }
-    HEAP32[((outPtr) >> 2)] = codeUnit;
+    HEAP32[((outPtr) >> 2)] = codePoint;
     outPtr += 4;
     if (outPtr + 4 > endPtr) break;
   }
@@ -5516,18 +5452,19 @@ var stringToUTF32 = (str, outPtr, maxBytesToWrite) => {
 var lengthBytesUTF32 = str => {
   var len = 0;
   for (var i = 0; i < str.length; ++i) {
-    // Gotcha: charCodeAt returns a 16-bit word that is a UTF-16 encoded code unit, not a Unicode code point of the character! We must decode the string to UTF-32 to the heap.
-    // See http://unicode.org/faq/utf_bom.html#utf16-3
-    var codeUnit = str.charCodeAt(i);
-    if (codeUnit >= 55296 && codeUnit <= 57343) ++i;
-    // possibly a lead surrogate, so skip over the tail surrogate.
+    var codePoint = str.codePointAt(i);
+    // Gotcha: if codePoint is over 0xFFFF, it is represented as a surrogate pair in UTF-16.
+    // We need to manually skip over the second code unit for correct iteration.
+    if (codePoint > 65535) {
+      i++;
+    }
     len += 4;
   }
   return len;
 };
 
 var __embind_register_std_wstring = (rawType, charSize, name) => {
-  name = readLatin1String(name);
+  name = AsciiToString(name);
   var decodeString, encodeString, readCharAt, lengthBytesUTF;
   if (charSize === 2) {
     decodeString = UTF16ToString;
@@ -5588,7 +5525,7 @@ var __embind_register_std_wstring = (rawType, charSize, name) => {
 };
 
 var __embind_register_void = (rawType, name) => {
-  name = readLatin1String(name);
+  name = AsciiToString(name);
   registerType(rawType, {
     isVoid: true,
     // void return values can be optimized out sometimes
@@ -7763,11 +7700,8 @@ var requestPointerLock = target => {
 var _emscripten_exit_pointerlock = () => {
   // Make sure no queued up calls will fire after this.
   JSEvents.removeDeferredCalls(requestPointerLock);
-  if (document.exitPointerLock) {
-    document.exitPointerLock();
-  } else {
-    return -1;
-  }
+  if (!document.exitPointerLock) return -1;
+  document.exitPointerLock();
   return 0;
 };
 
@@ -11529,6 +11463,12 @@ function fetchXHR(fetch, onsuccess, onerror, onprogress, onreadystatechange) {
     HEAP16[(((fetch) + (40)) >> 1)] = xhr.readyState;
     HEAP16[(((fetch) + (42)) >> 1)] = xhr.status;
     if (xhr.statusText) stringToUTF8(xhr.statusText, fetch + 44, 64);
+    if (fetchAttrSynchronous) {
+      // The response url pointer malloc()ed here has the same lifetime as the emscripten_fetch_t structure itself has, and is
+      // freed when emscripten_fetch_close() is called.
+      var ruPtr = stringToNewUTF8(xhr.responseURL);
+      HEAPU32[(((fetch) + (200)) >> 2)] = ruPtr;
+    }
   }
   xhr.onload = e => {
     // check if xhr was aborted by user and don't try to call back
@@ -11579,9 +11519,7 @@ function fetchXHR(fetch, onsuccess, onerror, onprogress, onreadystatechange) {
     HEAP16[(((fetch) + (42)) >> 1)] = xhr.status;
     if (xhr.statusText) stringToUTF8(xhr.statusText, fetch + 44, 64);
     onprogress?.(fetch, xhr, e);
-    if (ptr) {
-      _free(ptr);
-    }
+    _free(ptr);
   };
   xhr.onreadystatechange = e => {
     // check if xhr was aborted by user and don't try to call back
@@ -11591,6 +11529,12 @@ function fetchXHR(fetch, onsuccess, onerror, onprogress, onreadystatechange) {
     HEAP16[(((fetch) + (40)) >> 1)] = xhr.readyState;
     if (xhr.readyState >= 2) {
       HEAP16[(((fetch) + (42)) >> 1)] = xhr.status;
+    }
+    if (!fetchAttrSynchronous && (xhr.readyState === 2 && xhr.responseURL.length > 0)) {
+      // The response url pointer malloc()ed here has the same lifetime as the emscripten_fetch_t structure itself has, and is
+      // freed when emscripten_fetch_close() is called.
+      var ruPtr = stringToNewUTF8(xhr.responseURL);
+      HEAPU32[(((fetch) + (200)) >> 2)] = ruPtr;
     }
     onreadystatechange?.(fetch, xhr, e);
   };
@@ -11865,7 +11809,7 @@ var getEnvStrings = () => {
   if (!getEnvStrings.strings) {
     // Default values.
     // Browser language detection #8751
-    var lang = ((typeof navigator == "object" && navigator.languages && navigator.languages[0]) || "C").replace("-", "_") + ".UTF-8";
+    var lang = ((typeof navigator == "object" && navigator.language) || "C").replace("-", "_") + ".UTF-8";
     var env = {
       "USER": "web_user",
       "LOGNAME": "web_user",
@@ -12490,21 +12434,17 @@ function _wsSetUserPointer(ws, ptr) {
   if (webSocket) webSocket.rtcUserPointer = ptr;
 }
 
-var listenOnce = (object, event, func) => object.addEventListener(event, func, {
-  "once": true
-});
-
 /** @param {Object=} elements */ var autoResumeAudioContext = (ctx, elements) => {
   if (!elements) {
     elements = [ document, document.getElementById("canvas") ];
   }
   [ "keydown", "mousedown", "touchstart" ].forEach(event => {
     elements.forEach(element => {
-      if (element) {
-        listenOnce(element, event, () => {
-          if (ctx.state === "suspended") ctx.resume();
-        });
-      }
+      element?.addEventListener(event, () => {
+        if (ctx.state === "suspended") ctx.resume();
+      }, {
+        "once": true
+      });
     });
   });
 };
@@ -12512,7 +12452,10 @@ var listenOnce = (object, event, func) => object.addEventListener(event, func, {
 var dynCall = (sig, ptr, args = [], promising = false) => {
   var func = getWasmTableEntry(ptr);
   var rtn = func(...args);
-  return rtn;
+  function convert(rtn) {
+    return rtn;
+  }
+  return convert(rtn);
 };
 
 var FS_createPath = (...args) => FS.createPath(...args);
@@ -12532,19 +12475,6 @@ FS.staticInit();
 MEMFS.doesNotExistError = new FS.ErrnoError(44);
 
 /** @suppress {checkTypes} */ MEMFS.doesNotExistError.stack = "<generic error, no stack>";
-
-embind_init_charCodes();
-
-init_emval();
-
-// exports
-Module["requestFullscreen"] = Browser.requestFullscreen;
-
-Module["setCanvasSize"] = Browser.setCanvasSize;
-
-Module["getUserMedia"] = Browser.getUserMedia;
-
-Module["createContext"] = Browser.createContext;
 
 // Signal GL rendering layer that processing of a new frame is about to
 // start. This helps it optimize VBO double-buffering and reduce GPU stalls.
@@ -12600,7 +12530,7 @@ Module["FS_createLazyFile"] = FS_createLazyFile;
 // End JS library exports
 // end include: postlibrary.js
 var ASM_CONSTS = {
-  1951557: $0 => {
+  1951637: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -12608,10 +12538,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1951782: ($0, $1) => {
+  1951862: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1951839: () => {
+  1951919: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -12619,7 +12549,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1951986: () => {
+  1952066: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -12627,7 +12557,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1952220: $0 => {
+  1952300: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -12649,11 +12579,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1952713: () => {
+  1952793: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1952781: ($0, $1, $2, $3) => {
+  1952861: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -12694,7 +12624,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1954433: ($0, $1, $2, $3) => {
+  1954513: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -12706,7 +12636,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1954843: ($0, $1) => {
+  1954923: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -12725,7 +12655,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1955448: ($0, $1) => {
+  1955528: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -12738,7 +12668,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1955928: $0 => {
+  1956008: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -12776,7 +12706,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1957100: ($0, $1, $2) => {
+  1957180: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -12847,7 +12777,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1958569: ($0, $1, $2, $3, $4) => {
+  1958649: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -12884,19 +12814,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1959558: $0 => {
+  1959638: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1959641: () => {
+  1959721: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1959710: () => window.innerWidth,
-  1959740: () => window.innerHeight,
-  1959771: $0 => {
+  1959790: () => window.innerWidth,
+  1959820: () => window.innerHeight,
+  1959851: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
@@ -12918,6 +12848,22 @@ var ASM_CONSTS = {
 function ImGui_ImplSDL2_EmscriptenOpenURL(url) {
   url = url ? UTF8ToString(url) : null;
   if (url) window.open(url, "_blank");
+}
+
+// Imports from the Wasm binary.
+var _main, _free, _malloc, _htons, _ntohs, ___getTypeName, _setThrew, __emscripten_stack_restore, __emscripten_stack_alloc, _emscripten_stack_get_current;
+
+function assignWasmExports(wasmExports) {
+  Module["_main"] = _main = wasmExports["__main_argc_argv"];
+  _free = wasmExports["free"];
+  _malloc = wasmExports["malloc"];
+  _htons = wasmExports["htons"];
+  _ntohs = wasmExports["ntohs"];
+  ___getTypeName = wasmExports["__getTypeName"];
+  _setThrew = wasmExports["setThrew"];
+  __emscripten_stack_restore = wasmExports["_emscripten_stack_restore"];
+  __emscripten_stack_alloc = wasmExports["_emscripten_stack_alloc"];
+  _emscripten_stack_get_current = wasmExports["emscripten_stack_get_current"];
 }
 
 var wasmImports = {
@@ -13470,28 +13416,6 @@ var wasmImports = {
 var wasmExports;
 
 createWasm();
-
-var ___wasm_call_ctors = () => (___wasm_call_ctors = wasmExports["__wasm_call_ctors"])();
-
-var _main = Module["_main"] = (a0, a1) => (_main = Module["_main"] = wasmExports["__main_argc_argv"])(a0, a1);
-
-var _free = a0 => (_free = wasmExports["free"])(a0);
-
-var _malloc = a0 => (_malloc = wasmExports["malloc"])(a0);
-
-var _htons = a0 => (_htons = wasmExports["htons"])(a0);
-
-var _ntohs = a0 => (_ntohs = wasmExports["ntohs"])(a0);
-
-var ___getTypeName = a0 => (___getTypeName = wasmExports["__getTypeName"])(a0);
-
-var _setThrew = (a0, a1) => (_setThrew = wasmExports["setThrew"])(a0, a1);
-
-var __emscripten_stack_restore = a0 => (__emscripten_stack_restore = wasmExports["_emscripten_stack_restore"])(a0);
-
-var __emscripten_stack_alloc = a0 => (__emscripten_stack_alloc = wasmExports["_emscripten_stack_alloc"])(a0);
-
-var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports["emscripten_stack_get_current"])();
 
 function invoke_viiii(index, a1, a2, a3, a4) {
   var sp = stackSave();
