@@ -141,13 +141,7 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
             if (isNode) {
               return errback();
             }
-          var indexedDB;
-          if (typeof window === 'object') {
-            indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-          } else if (typeof location !== 'undefined') {
-            // worker
-            indexedDB = self.indexedDB;
-          } else {
+          if (typeof indexedDB == 'undefined') {
             throw 'using IndexedDB to cache data can only be done on a web page or in a web worker';
           }
           try {

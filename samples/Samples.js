@@ -700,6 +700,17 @@ var PATH_FS = {
 
 var UTF8Decoder = typeof TextDecoder != "undefined" ? new TextDecoder : undefined;
 
+var findStringEnd = (heapOrArray, idx, maxBytesToRead, ignoreNul) => {
+  var maxIdx = idx + maxBytesToRead;
+  if (ignoreNul) return maxIdx;
+  // TextDecoder needs to know the byte length in advance, it doesn't stop on
+  // null terminator by itself.
+  // As a tiny code save trick, compare idx against maxIdx using a negation,
+  // so that maxBytesToRead=undefined/NaN means Infinity.
+  while (heapOrArray[idx] && !(idx >= maxIdx)) ++idx;
+  return idx;
+};
+
 /**
      * Given a pointer 'idx' to a null-terminated UTF8-encoded string in the given
      * array that contains uint8 values, returns a copy of that string as a
@@ -707,16 +718,10 @@ var UTF8Decoder = typeof TextDecoder != "undefined" ? new TextDecoder : undefine
      * heapOrArray is either a regular array, or a JavaScript typed array view.
      * @param {number=} idx
      * @param {number=} maxBytesToRead
+     * @param {boolean=} ignoreNul - If true, the function will not stop on a NUL character.
      * @return {string}
-     */ var UTF8ArrayToString = (heapOrArray, idx = 0, maxBytesToRead = NaN) => {
-  var endIdx = idx + maxBytesToRead;
-  var endPtr = idx;
-  // TextDecoder needs to know the byte length in advance, it doesn't stop on
-  // null terminator by itself.  Also, use the length info to avoid running tiny
-  // strings through TextDecoder, since .subarray() allocates garbage.
-  // (As a tiny code save trick, compare endPtr against endIdx using a negation,
-  // so that undefined/NaN means Infinity)
-  while (heapOrArray[endPtr] && !(endPtr >= endIdx)) ++endPtr;
+     */ var UTF8ArrayToString = (heapOrArray, idx = 0, maxBytesToRead, ignoreNul) => {
+  var endPtr = findStringEnd(heapOrArray, idx, maxBytesToRead, ignoreNul);
   // When using conditional TextDecoder, skip it for short strings as the overhead of the native call is not worth it.
   if (endPtr - idx > 16 && heapOrArray.buffer && UTF8Decoder) {
     return UTF8Decoder.decode(heapOrArray.subarray(idx, endPtr));
@@ -1160,6 +1165,12 @@ var MEMFS = {
       }
     },
     lookup(parent, name) {
+      // This error may happen quite a bit. To avoid overhead we reuse it (and
+      // suffer a lack of stack info).
+      if (!MEMFS.doesNotExistError) {
+        MEMFS.doesNotExistError = new FS.ErrnoError(44);
+        /** @suppress {checkTypes} */ MEMFS.doesNotExistError.stack = "<generic error, no stack>";
+      }
       throw MEMFS.doesNotExistError;
     },
     mknod(parent, name, mode, dev) {
@@ -1405,12 +1416,7 @@ var FS_getMode = (canRead, canWrite) => {
 
 var IDBFS = {
   dbs: {},
-  indexedDB: () => {
-    if (typeof indexedDB != "undefined") return indexedDB;
-    var ret = null;
-    if (typeof window == "object") ret = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-    return ret;
-  },
+  indexedDB: () => indexedDB,
   DB_VERSION: 21,
   DB_STORE_NAME: "FILE_DATA",
   queuePersist: mount => {
@@ -1879,6 +1885,9 @@ var FS = {
           current_path = PATH.dirname(current_path);
           if (FS.isRoot(current)) {
             path = current_path + "/" + parts.slice(i + 1).join("/");
+            // We're making progress here, don't let many consecutive ..'s
+            // lead to ELOOP
+            nlinks--;
             continue linkloop;
           } else {
             current = current.parent;
@@ -3707,6 +3716,15 @@ var SOCKFS = {
         HEAP32[((arg) >> 2)] = bytes;
         return 0;
 
+       case 21537:
+        var on = HEAP32[((arg) >> 2)];
+        if (on) {
+          sock.stream.flags |= 2048;
+        } else {
+          sock.stream.flags &= ~2048;
+        }
+        return 0;
+
        default:
         return 28;
       }
@@ -4222,12 +4240,10 @@ var syscallGetVarargP = syscallGetVarargI;
      *   maximum number of bytes to read. You can omit this parameter to scan the
      *   string until the first 0 byte. If maxBytesToRead is passed, and the string
      *   at [ptr, ptr+maxBytesToReadr[ contains a null byte in the middle, then the
-     *   string will cut short at that byte index (i.e. maxBytesToRead will not
-     *   produce a string of exact length [ptr, ptr+maxBytesToRead[) N.B. mixing
-     *   frequent uses of UTF8ToString() with and without maxBytesToRead may throw
-     *   JS JIT optimizations off, so it is worth to consider consistently using one
+     *   string will cut short at that byte index.
+     * @param {boolean=} ignoreNul - If true, the function will not stop on a NUL character.
      * @return {string}
-     */ var UTF8ToString = (ptr, maxBytesToRead) => ptr ? UTF8ArrayToString(HEAPU8, ptr, maxBytesToRead) : "";
+     */ var UTF8ToString = (ptr, maxBytesToRead, ignoreNul) => ptr ? UTF8ArrayToString(HEAPU8, ptr, maxBytesToRead, ignoreNul) : "";
 
 var SYSCALLS = {
   DEFAULT_POLLMASK: 5,
@@ -4523,6 +4539,7 @@ function ___syscall_ioctl(fd, op, varargs) {
         return -28;
       }
 
+     case 21537:
      case 21531:
       {
         var argp = syscallGetVarargP();
@@ -4818,36 +4835,32 @@ var integerReadValueFromPointer = (name, width, signed) => {
   }
   registerType(primitiveType, {
     name,
-    "fromWireType": fromWireType,
-    "toWireType": (destructors, value) => {
+    fromWireType,
+    toWireType: (destructors, value) => {
       if (typeof value == "number") {
         value = BigInt(value);
       }
       return value;
     },
-    argPackAdvance: GenericWireTypeSize,
-    "readValueFromPointer": integerReadValueFromPointer(name, size, !isUnsignedType),
+    readValueFromPointer: integerReadValueFromPointer(name, size, !isUnsignedType),
     destructorFunction: null
   });
 };
-
-var GenericWireTypeSize = 8;
 
 /** @suppress {globalThis} */ var __embind_register_bool = (rawType, name, trueValue, falseValue) => {
   name = AsciiToString(name);
   registerType(rawType, {
     name,
-    "fromWireType": function(wt) {
+    fromWireType: function(wt) {
       // ambiguous emscripten ABI: sometimes return values are
       // true or false, and sometimes integers (0 or 1)
       return !!wt;
     },
-    "toWireType": function(destructors, o) {
+    toWireType: function(destructors, o) {
       return o ? trueValue : falseValue;
     },
-    argPackAdvance: GenericWireTypeSize,
-    "readValueFromPointer": function(pointer) {
-      return this["fromWireType"](HEAPU8[pointer]);
+    readValueFromPointer: function(pointer) {
+      return this.fromWireType(HEAPU8[pointer]);
     },
     destructorFunction: null
   });
@@ -4897,19 +4910,18 @@ var Emval = {
 };
 
 /** @suppress {globalThis} */ function readPointer(pointer) {
-  return this["fromWireType"](HEAPU32[((pointer) >> 2)]);
+  return this.fromWireType(HEAPU32[((pointer) >> 2)]);
 }
 
 var EmValType = {
   name: "emscripten::val",
-  "fromWireType": handle => {
+  fromWireType: handle => {
     var rv = Emval.toValue(handle);
     __emval_decref(handle);
     return rv;
   },
-  "toWireType": (destructors, value) => Emval.toHandle(value),
-  argPackAdvance: GenericWireTypeSize,
-  "readValueFromPointer": readPointer,
+  toWireType: (destructors, value) => Emval.toHandle(value),
+  readValueFromPointer: readPointer,
   destructorFunction: null
 };
 
@@ -4919,12 +4931,12 @@ var floatReadValueFromPointer = (name, width) => {
   switch (width) {
    case 4:
     return function(pointer) {
-      return this["fromWireType"](HEAPF32[((pointer) >> 2)]);
+      return this.fromWireType(HEAPF32[((pointer) >> 2)]);
     };
 
    case 8:
     return function(pointer) {
-      return this["fromWireType"](HEAPF64[((pointer) >> 3)]);
+      return this.fromWireType(HEAPF64[((pointer) >> 3)]);
     };
 
    default:
@@ -4936,10 +4948,9 @@ var __embind_register_float = (rawType, name, size) => {
   name = AsciiToString(name);
   registerType(rawType, {
     name,
-    "fromWireType": value => value,
-    "toWireType": (destructors, value) => value,
-    argPackAdvance: GenericWireTypeSize,
-    "readValueFromPointer": floatReadValueFromPointer(name, size),
+    fromWireType: value => value,
+    toWireType: (destructors, value) => value,
+    readValueFromPointer: floatReadValueFromPointer(name, size),
     destructorFunction: null
   });
 };
@@ -4986,13 +4997,14 @@ function createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync) {
     invokerFnBody += "var destructors = [];\n";
   }
   var dtorStack = needsDestructorStack ? "destructors" : "null";
-  var args1 = [ "humanName", "throwBindingError", "invoker", "fn", "runDestructors", "retType", "classParam" ];
+  var args1 = [ "humanName", "throwBindingError", "invoker", "fn", "runDestructors", "fromRetWire", "toClassParamWire" ];
   if (isClassMethodFunc) {
-    invokerFnBody += `var thisWired = classParam['toWireType'](${dtorStack}, this);\n`;
+    invokerFnBody += `var thisWired = toClassParamWire(${dtorStack}, this);\n`;
   }
   for (var i = 0; i < argCount; ++i) {
-    invokerFnBody += `var arg${i}Wired = argType${i}['toWireType'](${dtorStack}, arg${i});\n`;
-    args1.push(`argType${i}`);
+    var argName = `toArg${i}Wire`;
+    invokerFnBody += `var arg${i}Wired = ${argName}(${dtorStack}, arg${i});\n`;
+    args1.push(argName);
   }
   invokerFnBody += (returns || isAsync ? "var rv = " : "") + `invoker(${argsListWired});\n`;
   if (needsDestructorStack) {
@@ -5008,10 +5020,10 @@ function createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync) {
     }
   }
   if (returns) {
-    invokerFnBody += "var ret = retType['fromWireType'](rv);\n" + "return ret;\n";
+    invokerFnBody += "var ret = fromRetWire(rv);\n" + "return ret;\n";
   } else {}
   invokerFnBody += "}\n";
-  return [ args1, invokerFnBody ];
+  return new Function(args1, invokerFnBody);
 }
 
 function craftInvokerFunction(humanName, argTypes, classType, cppInvokerFunc, cppTargetFunc, /** boolean= */ isAsync) {
@@ -5037,12 +5049,15 @@ function craftInvokerFunction(humanName, argTypes, classType, cppInvokerFunc, cp
   // Determine if we need to use a dynamic stack to store the destructors for the function parameters.
   // TODO: Remove this completely once all function invokers are being dynamically generated.
   var needsDestructorStack = usesDestructorStack(argTypes);
-  var returns = (argTypes[0].name !== "void");
+  var returns = !argTypes[0].isVoid;
   // Builld the arguments that will be passed into the closure around the invoker
   // function.
-  var closureArgs = [ humanName, throwBindingError, cppInvokerFunc, cppTargetFunc, runDestructors, argTypes[0], argTypes[1] ];
-  for (var i = 0; i < argCount - 2; ++i) {
-    closureArgs.push(argTypes[i + 2]);
+  var retType = argTypes[0];
+  var instType = argTypes[1];
+  var closureArgs = [ humanName, throwBindingError, cppInvokerFunc, cppTargetFunc, runDestructors, retType.fromWireType.bind(retType), instType?.toWireType.bind(instType) ];
+  for (var i = 2; i < argCount; ++i) {
+    var argType = argTypes[i];
+    closureArgs.push(argType.toWireType.bind(argType));
   }
   if (!needsDestructorStack) {
     // Skip return value at index 0 - it's not deleted here. Also skip class type if not a method.
@@ -5052,8 +5067,8 @@ function craftInvokerFunction(humanName, argTypes, classType, cppInvokerFunc, cp
       }
     }
   }
-  let [args, invokerFnBody] = createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync);
-  var invokerFn = new Function(...args, invokerFnBody)(...closureArgs);
+  let invokerFactory = createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync);
+  var invokerFn = invokerFactory(...closureArgs);
   return createNamedFunction(humanName, invokerFn);
 }
 
@@ -5251,10 +5266,9 @@ var __embind_register_function = (name, argCount, rawArgTypesAddr, signature, ra
   }
   registerType(primitiveType, {
     name,
-    "fromWireType": fromWireType,
-    "toWireType": (destructors, value) => value,
-    argPackAdvance: GenericWireTypeSize,
-    "readValueFromPointer": integerReadValueFromPointer(name, size, minRange !== 0),
+    fromWireType,
+    toWireType: (destructors, value) => value,
+    readValueFromPointer: integerReadValueFromPointer(name, size, minRange !== 0),
     destructorFunction: null
   });
 };
@@ -5270,9 +5284,8 @@ var __embind_register_memory_view = (rawType, dataTypeIndex, name) => {
   name = AsciiToString(name);
   registerType(rawType, {
     name,
-    "fromWireType": decodeMemoryView,
-    argPackAdvance: GenericWireTypeSize,
-    "readValueFromPointer": decodeMemoryView
+    fromWireType: decodeMemoryView,
+    readValueFromPointer: decodeMemoryView
   }, {
     ignoreDuplicateRegistrations: true
   });
@@ -5285,38 +5298,22 @@ var __embind_register_std_string = (rawType, name) => {
     name,
     // For some method names we use string keys here since they are part of
     // the public/external API and/or used by the runtime-generated code.
-    "fromWireType"(value) {
+    fromWireType(value) {
       var length = HEAPU32[((value) >> 2)];
       var payload = value + 4;
       var str;
       if (stdStringIsUTF8) {
-        var decodeStartPtr = payload;
-        // Looping here to support possible embedded '0' bytes
-        for (var i = 0; i <= length; ++i) {
-          var currentBytePtr = payload + i;
-          if (i == length || HEAPU8[currentBytePtr] == 0) {
-            var maxRead = currentBytePtr - decodeStartPtr;
-            var stringSegment = UTF8ToString(decodeStartPtr, maxRead);
-            if (str === undefined) {
-              str = stringSegment;
-            } else {
-              str += String.fromCharCode(0);
-              str += stringSegment;
-            }
-            decodeStartPtr = currentBytePtr + 1;
-          }
-        }
+        str = UTF8ToString(payload, length, true);
       } else {
-        var a = new Array(length);
+        str = "";
         for (var i = 0; i < length; ++i) {
-          a[i] = String.fromCharCode(HEAPU8[payload + i]);
+          str += String.fromCharCode(HEAPU8[payload + i]);
         }
-        str = a.join("");
       }
       _free(value);
       return str;
     },
-    "toWireType"(destructors, value) {
+    toWireType(destructors, value) {
       if (value instanceof ArrayBuffer) {
         value = new Uint8Array(value);
       }
@@ -5356,8 +5353,7 @@ var __embind_register_std_string = (rawType, name) => {
       }
       return base;
     },
-    argPackAdvance: GenericWireTypeSize,
-    "readValueFromPointer": readPointer,
+    readValueFromPointer: readPointer,
     destructorFunction(ptr) {
       _free(ptr);
     }
@@ -5366,26 +5362,20 @@ var __embind_register_std_string = (rawType, name) => {
 
 var UTF16Decoder = typeof TextDecoder != "undefined" ? new TextDecoder("utf-16le") : undefined;
 
-var UTF16ToString = (ptr, maxBytesToRead) => {
+var UTF16ToString = (ptr, maxBytesToRead, ignoreNul) => {
   var idx = ((ptr) >> 1);
-  var maxIdx = idx + maxBytesToRead / 2;
-  // TextDecoder needs to know the byte length in advance, it doesn't stop on
-  // null terminator by itself.
-  // Also, use the length info to avoid running tiny strings through
-  // TextDecoder, since .subarray() allocates garbage.
-  var endIdx = idx;
-  // If maxBytesToRead is not passed explicitly, it will be undefined, and this
-  // will always evaluate to true. This saves on code size.
-  while (!(endIdx >= maxIdx) && HEAPU16[endIdx]) ++endIdx;
+  var endIdx = findStringEnd(HEAPU16, idx, maxBytesToRead / 2, ignoreNul);
+  // When using conditional TextDecoder, skip it for short strings as the overhead of the native call is not worth it.
   if (endIdx - idx > 16 && UTF16Decoder) return UTF16Decoder.decode(HEAPU16.subarray(idx, endIdx));
   // Fallback: decode without UTF16Decoder
   var str = "";
   // If maxBytesToRead is not passed explicitly, it will be undefined, and the
   // for-loop's condition will always evaluate to true. The loop is then
   // terminated on the first null char.
-  for (var i = idx; !(i >= maxIdx); ++i) {
+  for (var i = idx; // If building with TextDecoder, we have already computed the string length
+  // above, so test loop end condition against that
+  i < endIdx; ++i) {
     var codeUnit = HEAPU16[i];
-    if (codeUnit == 0) break;
     // fromCharCode constructs a character from a UTF-16 code unit, so we can
     // pass the UTF16 string right through.
     str += String.fromCharCode(codeUnit);
@@ -5415,13 +5405,14 @@ var stringToUTF16 = (str, outPtr, maxBytesToWrite) => {
 
 var lengthBytesUTF16 = str => str.length * 2;
 
-var UTF32ToString = (ptr, maxBytesToRead) => {
+var UTF32ToString = (ptr, maxBytesToRead, ignoreNul) => {
   var str = "";
+  var startIdx = ((ptr) >> 2);
   // If maxBytesToRead is not passed explicitly, it will be undefined, and this
   // will always evaluate to true. This saves on code size.
   for (var i = 0; !(i >= maxBytesToRead / 4); i++) {
-    var utf32 = HEAP32[(((ptr) + (i * 4)) >> 2)];
-    if (!utf32) break;
+    var utf32 = HEAPU32[startIdx + i];
+    if (!utf32 && !ignoreNul) break;
     str += String.fromCodePoint(utf32);
   }
   return str;
@@ -5465,44 +5456,26 @@ var lengthBytesUTF32 = str => {
 
 var __embind_register_std_wstring = (rawType, charSize, name) => {
   name = AsciiToString(name);
-  var decodeString, encodeString, readCharAt, lengthBytesUTF;
+  var decodeString, encodeString, lengthBytesUTF;
   if (charSize === 2) {
     decodeString = UTF16ToString;
     encodeString = stringToUTF16;
     lengthBytesUTF = lengthBytesUTF16;
-    readCharAt = pointer => HEAPU16[((pointer) >> 1)];
-  } else if (charSize === 4) {
+  } else {
     decodeString = UTF32ToString;
     encodeString = stringToUTF32;
     lengthBytesUTF = lengthBytesUTF32;
-    readCharAt = pointer => HEAPU32[((pointer) >> 2)];
   }
   registerType(rawType, {
     name,
-    "fromWireType": value => {
+    fromWireType: value => {
       // Code mostly taken from _embind_register_std_string fromWireType
       var length = HEAPU32[((value) >> 2)];
-      var str;
-      var decodeStartPtr = value + 4;
-      // Looping here to support possible embedded '0' bytes
-      for (var i = 0; i <= length; ++i) {
-        var currentBytePtr = value + 4 + i * charSize;
-        if (i == length || readCharAt(currentBytePtr) == 0) {
-          var maxReadBytes = currentBytePtr - decodeStartPtr;
-          var stringSegment = decodeString(decodeStartPtr, maxReadBytes);
-          if (str === undefined) {
-            str = stringSegment;
-          } else {
-            str += String.fromCharCode(0);
-            str += stringSegment;
-          }
-          decodeStartPtr = currentBytePtr + charSize;
-        }
-      }
+      var str = decodeString(value + 4, length * charSize, true);
       _free(value);
       return str;
     },
-    "toWireType": (destructors, value) => {
+    toWireType: (destructors, value) => {
       if (!(typeof value == "string")) {
         throwBindingError(`Cannot pass non-string to C++ string type ${name}`);
       }
@@ -5516,8 +5489,7 @@ var __embind_register_std_wstring = (rawType, charSize, name) => {
       }
       return ptr;
     },
-    argPackAdvance: GenericWireTypeSize,
-    "readValueFromPointer": readPointer,
+    readValueFromPointer: readPointer,
     destructorFunction(ptr) {
       _free(ptr);
     }
@@ -5530,10 +5502,9 @@ var __embind_register_void = (rawType, name) => {
     isVoid: true,
     // void return values can be optimized out sometimes
     name,
-    argPackAdvance: 0,
-    "fromWireType": () => undefined,
+    fromWireType: () => undefined,
     // TODO: assert if anything else is given?
-    "toWireType": (destructors, o) => undefined
+    toWireType: (destructors, o) => undefined
   });
 };
 
@@ -5903,20 +5874,13 @@ var Browser = {
     // Canvas event setup
     function pointerLockChange() {
       var canvas = Browser.getCanvas();
-      Browser.pointerLock = document["pointerLockElement"] === canvas || document["mozPointerLockElement"] === canvas || document["webkitPointerLockElement"] === canvas || document["msPointerLockElement"] === canvas;
+      Browser.pointerLock = document.pointerLockElement === canvas;
     }
     var canvas = Browser.getCanvas();
     if (canvas) {
       // forced aspect ratio can be enabled by defining 'forcedAspectRatio' on Module
       // Module['forcedAspectRatio'] = 4 / 3;
-      canvas.requestPointerLock = canvas["requestPointerLock"] || canvas["mozRequestPointerLock"] || canvas["webkitRequestPointerLock"] || canvas["msRequestPointerLock"] || (() => {});
-      canvas.exitPointerLock = document["exitPointerLock"] || document["mozExitPointerLock"] || document["webkitExitPointerLock"] || document["msExitPointerLock"] || (() => {});
-      // no-op if function does not exist
-      canvas.exitPointerLock = canvas.exitPointerLock.bind(document);
       document.addEventListener("pointerlockchange", pointerLockChange, false);
-      document.addEventListener("mozpointerlockchange", pointerLockChange, false);
-      document.addEventListener("webkitpointerlockchange", pointerLockChange, false);
-      document.addEventListener("mspointerlockchange", pointerLockChange, false);
       if (Module["elementPointerLock"]) {
         canvas.addEventListener("click", ev => {
           if (!Browser.pointerLock && Browser.getCanvas().requestPointerLock) {
@@ -10786,8 +10750,8 @@ var getHeapMax = () => // Stay one Wasm page short of 4GB: while e.g. Chrome is 
 var alignMemory = (size, alignment) => Math.ceil(size / alignment) * alignment;
 
 var growMemory = size => {
-  var b = wasmMemory.buffer;
-  var pages = ((size - b.byteLength + 65535) / 65536) | 0;
+  var oldHeapSize = wasmMemory.buffer.byteLength;
+  var pages = ((size - oldHeapSize + 65535) / 65536) | 0;
   try {
     // round size grow request up to wasm page size (fixed 64KB per spec)
     wasmMemory.grow(pages);
@@ -11094,7 +11058,7 @@ var _emscripten_set_mousemove_callback_on_thread = (target, userData, useCapture
 var _emscripten_set_mouseup_callback_on_thread = (target, userData, useCapture, callbackfunc, targetThread) => registerMouseEventCallback(target, userData, useCapture, callbackfunc, 6, "mouseup", targetThread);
 
 var fillPointerlockChangeEventData = eventStruct => {
-  var pointerLockElement = document.pointerLockElement || document.mozPointerLockElement || document.webkitPointerLockElement || document.msPointerLockElement;
+  var pointerLockElement = document.pointerLockElement;
   var isPointerlocked = !!pointerLockElement;
   // Assigning a boolean to HEAP32 with expected type coercion.
   /** @suppress{checkTypes} */ HEAP8[eventStruct] = isPointerlocked;
@@ -11121,17 +11085,13 @@ var registerPointerlockChangeEventCallback = (target, userData, useCapture, call
   return JSEvents.registerOrRemoveHandler(eventHandler);
 };
 
-/** @suppress {missingProperties} */ var _emscripten_set_pointerlockchange_callback_on_thread = (target, userData, useCapture, callbackfunc, targetThread) => {
-  // TODO: Currently not supported in pthreads or in --proxy-to-worker mode. (In pthreads mode, document object is not defined)
-  if (!document || !document.body || (!document.body.requestPointerLock && !document.body.mozRequestPointerLock && !document.body.webkitRequestPointerLock && !document.body.msRequestPointerLock)) {
+var _emscripten_set_pointerlockchange_callback_on_thread = (target, userData, useCapture, callbackfunc, targetThread) => {
+  if (!document.body?.requestPointerLock) {
     return -1;
   }
   target = target ? findEventTarget(target) : specialHTMLTargets[1];
   // Pointer lock change events need to be captured from 'document' by default instead of 'window'
   if (!target) return -4;
-  registerPointerlockChangeEventCallback(target, userData, useCapture, callbackfunc, 20, "mozpointerlockchange", targetThread);
-  registerPointerlockChangeEventCallback(target, userData, useCapture, callbackfunc, 20, "webkitpointerlockchange", targetThread);
-  registerPointerlockChangeEventCallback(target, userData, useCapture, callbackfunc, 20, "mspointerlockchange", targetThread);
   return registerPointerlockChangeEventCallback(target, userData, useCapture, callbackfunc, 20, "pointerlockchange", targetThread);
 };
 
@@ -12470,12 +12430,6 @@ FS.createPreloadedFile = FS_createPreloadedFile;
 
 FS.staticInit();
 
-// This error may happen quite a bit. To avoid overhead we reuse it (and
-// suffer a lack of stack info).
-MEMFS.doesNotExistError = new FS.ErrnoError(44);
-
-/** @suppress {checkTypes} */ MEMFS.doesNotExistError.stack = "<generic error, no stack>";
-
 // Signal GL rendering layer that processing of a new frame is about to
 // start. This helps it optimize VBO double-buffering and reduce GPU stalls.
 registerPreMainLoop(() => GL.newRenderingFrameStarted());
@@ -12530,7 +12484,7 @@ Module["FS_createLazyFile"] = FS_createLazyFile;
 // End JS library exports
 // end include: postlibrary.js
 var ASM_CONSTS = {
-  1951637: $0 => {
+  1952181: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -12538,10 +12492,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1951862: ($0, $1) => {
+  1952406: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1951919: () => {
+  1952463: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -12549,7 +12503,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1952066: () => {
+  1952610: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -12557,7 +12511,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1952300: $0 => {
+  1952844: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -12579,11 +12533,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1952793: () => {
+  1953337: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1952861: ($0, $1, $2, $3) => {
+  1953405: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -12624,7 +12578,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1954513: ($0, $1, $2, $3) => {
+  1955057: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -12636,7 +12590,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1954923: ($0, $1) => {
+  1955467: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -12655,7 +12609,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1955528: ($0, $1) => {
+  1956072: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -12668,7 +12622,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1956008: $0 => {
+  1956552: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -12706,7 +12660,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1957180: ($0, $1, $2) => {
+  1957724: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -12777,7 +12731,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1958649: ($0, $1, $2, $3, $4) => {
+  1959193: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -12814,19 +12768,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1959638: $0 => {
+  1960182: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1959721: () => {
+  1960265: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1959790: () => window.innerWidth,
-  1959820: () => window.innerHeight,
-  1959851: $0 => {
+  1960334: () => window.innerWidth,
+  1960364: () => window.innerHeight,
+  1960395: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
