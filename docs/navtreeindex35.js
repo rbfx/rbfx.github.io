@@ -1,5 +1,12 @@
 var NAVTREEINDEX35 =
 {
+"class_urho3_d_1_1_prefab_reference.html#a9de8e3a60c2e2111cfca7b58a9589877":[8,0,2,543,3],
+"class_urho3_d_1_1_prefab_reference.html#aa60449de95822524a0215494abc9c51b":[8,0,2,543,6],
+"class_urho3_d_1_1_prefab_reference.html#ab9bd6b7993c8ceccf18b99139537b0a8":[8,0,2,543,2],
+"class_urho3_d_1_1_prefab_resource.html":[8,0,2,544],
+"class_urho3_d_1_1_prefab_resource.html#a2510cb6c85d5ff9c1396c02335635625":[8,0,2,544,0],
+"class_urho3_d_1_1_prefab_resource.html#a770d228252c5d9d33aa5c65e909ac1a2":[8,0,2,544,1],
+"class_urho3_d_1_1_prefab_resource.html#a8aff8945200fa01a3f0d365195a84549":[8,0,2,544,3],
 "class_urho3_d_1_1_prefab_resource.html#acb0980418d500532b4bb49b8e82c4cec":[8,0,2,544,2],
 "class_urho3_d_1_1_prefab_writer.html":[8,0,2,545],
 "class_urho3_d_1_1_prefab_writer_to_archive.html":[8,0,2,546],
@@ -242,12 +249,5 @@ var NAVTREEINDEX35 =
 "class_urho3_d_1_1_raycast_vehicle_wheel.html#a277dc057d4fddc8492d3e522e5aa4894":[8,0,2,556,59],
 "class_urho3_d_1_1_raycast_vehicle_wheel.html#a2f41b5c09fdec71ea08f6e5b90a52c4d":[8,0,2,556,14],
 "class_urho3_d_1_1_raycast_vehicle_wheel.html#a2f73c32822e08dfccfcc7eb3deff3da9":[8,0,2,556,20],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a32f80e6d18bef25a467cca4003c34abd":[8,0,2,556,69],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a331f4be1c3aa1a98c8f3d22617dc1f38":[8,0,2,556,13],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a38b896c70b11149977be3dd32ea0e3df":[8,0,2,556,31],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a3b23aff4cf4f2ffc8e0b1146c1757f7f":[8,0,2,556,64],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a40c904c0e98964cd17920fc2ae647ddf":[8,0,2,556,68],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a41522d062f731b69585d7127dfc24fd6":[8,0,2,556,5],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a41f03fff91728c4cdad3c9c72fb6094d":[8,0,2,556,41],
-"class_urho3_d_1_1_raycast_vehicle_wheel.html#a42b7e2534a519aa57fd5348c348cfd38":[8,0,2,556,37]
+"class_urho3_d_1_1_raycast_vehicle_wheel.html#a32f80e6d18bef25a467cca4003c34abd":[8,0,2,556,69]
 };

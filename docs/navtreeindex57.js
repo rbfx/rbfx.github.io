@@ -1,5 +1,12 @@
 var NAVTREEINDEX57 =
 {
+"struct_urho3_d_1_1_convex_data.html#a7a1da422644832612dc2b8c9d81ea402":[8,0,2,157,5],
+"struct_urho3_d_1_1_convex_data.html#a930ec22787a3309e011859e8699ceb84":[8,0,2,157,4],
+"struct_urho3_d_1_1_convex_data.html#a94123547d0117887b01db8a1bcd1e903":[8,0,2,157,0],
+"struct_urho3_d_1_1_convex_data.html#ab2515aed5145313d4c6314679cda1d04":[8,0,2,157,2],
+"struct_urho3_d_1_1_cooked_light_params.html":[8,0,2,158],
+"struct_urho3_d_1_1_cooked_light_params.html#a2d6ccec3d895a5629b5e849adb7afac9":[8,0,2,158,1],
+"struct_urho3_d_1_1_cooked_light_params.html#a3500eb4c24b6a27edb5ab9865472a8b8":[8,0,2,158,2],
 "struct_urho3_d_1_1_cooked_light_params.html#a3b0332390991f406f3b5d7db2bcc0640":[8,0,2,158,4],
 "struct_urho3_d_1_1_cooked_light_params.html#a6a715e5b199798590f57ede08d697db2":[8,0,2,158,0],
 "struct_urho3_d_1_1_cooked_light_params.html#a969a1728a446a25cf7bd3444c4cab8fd":[8,0,2,158,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX57 =
 "struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings.html":[8,0,2,265,0],
 "struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings.html#a0c65b90ab81bc554950cd3d0fe9e1d65":[8,0,2,265,0,2],
 "struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings.html#a69c477087282968fd84705283c4b0187":[8,0,2,265,0,1],
-"struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings.html#a92863f6a03ba6d7da41123fbb17c76d2":[8,0,2,265,0,0],
-"struct_urho3_d_1_1_geometry_batch.html":[8,0,2,254],
-"struct_urho3_d_1_1_geometry_batch.html#a56299c10e3bc298e7486f0ad09d9dc68":[8,0,2,254,2],
-"struct_urho3_d_1_1_geometry_batch.html#aa5d72bad3d7350577c11ae2941ebe02a":[8,0,2,254,3],
-"struct_urho3_d_1_1_geometry_batch.html#ae1dcd08d885a1fd2125b1f59d96c7acd":[8,0,2,254,0],
-"struct_urho3_d_1_1_geometry_batch.html#af3239ddb965e66170dc120326a89881a":[8,0,2,254,1],
-"struct_urho3_d_1_1_geometry_buffer_preprocess_settings.html":[8,0,2,255],
-"struct_urho3_d_1_1_geometry_buffer_preprocess_settings.html#a721f5933e127b46ceef48bf3b8e78966":[8,0,2,255,2]
+"struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings.html#a92863f6a03ba6d7da41123fbb17c76d2":[8,0,2,265,0,0]
 };

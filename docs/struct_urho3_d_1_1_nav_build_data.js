@@ -2,6 +2,7 @@ var struct_urho3_d_1_1_nav_build_data =
 [
     [ "NavBuildData", "struct_urho3_d_1_1_nav_build_data.html#a46bd9ab46b6d0d2c06d8d08301208907", null ],
     [ "~NavBuildData", "struct_urho3_d_1_1_nav_build_data.html#a0060ad95246ad1bf3a11382dd2d477a2", null ],
+    [ "areaIds_", "struct_urho3_d_1_1_nav_build_data.html#a1654e1f55e4d9fb7f2b706159f35bcf5", null ],
     [ "compactHeightField_", "struct_urho3_d_1_1_nav_build_data.html#a7c87fed9d9c1fbfd9b5011c2a70c315f", null ],
     [ "ctx_", "struct_urho3_d_1_1_nav_build_data.html#a084ea56a7b0ba1e1ca2d6cadafb303c4", null ],
     [ "heightField_", "struct_urho3_d_1_1_nav_build_data.html#a304c7c939dd6299aee1cee3b3bc9633d", null ],

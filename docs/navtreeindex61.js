@@ -1,5 +1,14 @@
 var NAVTREEINDEX61 =
 {
+"struct_urho3_d_1_1_source_batch.html":[8,0,2,674],
+"struct_urho3_d_1_1_source_batch.html#a0b6b4fefc523d70c450f16c4d7cd7745":[8,0,2,674,7],
+"struct_urho3_d_1_1_source_batch.html#a1a1ddd30c40d96d0b289f9f6044618e4":[8,0,2,674,10],
+"struct_urho3_d_1_1_source_batch.html#a4448b041153e5b78c14fca7ee7d23182":[8,0,2,674,8],
+"struct_urho3_d_1_1_source_batch.html#a4d65f33f8c219673f22e0fa31773a2e3":[8,0,2,674,6],
+"struct_urho3_d_1_1_source_batch.html#a532673bdf04ba2e943301a6e6ee287eb":[8,0,2,674,4],
+"struct_urho3_d_1_1_source_batch.html#a5d150c24a6b666f7723a28984ab73cb7":[8,0,2,674,2],
+"struct_urho3_d_1_1_source_batch.html#a66334833752999657071a41182d777bf":[8,0,2,674,9],
+"struct_urho3_d_1_1_source_batch.html#ab196d2e4fae74fc65fd1f227b7910c59":[8,0,2,674,0],
 "struct_urho3_d_1_1_source_batch.html#ab41eb9c90f866ef23c0f7180f2758226":[8,0,2,674,5],
 "struct_urho3_d_1_1_source_batch.html#abc20b1bc7af25dcf4527431cdbb5b777":[8,0,2,674,3],
 "struct_urho3_d_1_1_source_batch.html#ac51c099c9ea666e815fff8600970e331":[8,0,2,674,13],
@@ -240,14 +249,5 @@ var NAVTREEINDEX61 =
 "struct_urho3_d_1_1_v_anim_event_frame.html#ac7360a2b364b7363f99c5a12d86ad380":[8,0,2,797,2],
 "struct_urho3_d_1_1_v_anim_event_frame.html#af5c243d9ac5cbf35a03707da4cb54e01":[8,0,2,797,0],
 "struct_urho3_d_1_1_v_anim_key_frame.html":[8,0,2,798],
-"struct_urho3_d_1_1_v_anim_key_frame.html#a827dfae652c41dec8b5eaf6a43baa1de":[8,0,2,798,0],
-"struct_urho3_d_1_1_v_anim_key_frame.html#ae98c4cf3709aadd68e8be987719b064e":[8,0,2,798,1],
-"struct_urho3_d_1_1_v_r_rig_desc.html":[8,0,2,823],
-"struct_urho3_d_1_1_v_r_session_parameters.html":[8,0,2,824],
-"struct_urho3_d_1_1_value_with_derivative.html":[8,0,2,795],
-"struct_urho3_d_1_1_value_with_derivative_3_01_quaternion_01_4.html":[8,0,2,796],
-"struct_urho3_d_1_1_variant_animation_track.html":[8,0,2,800],
-"struct_urho3_d_1_1_variant_animation_track.html#a32958fad16904dd0fba89dd00de9bb83":[8,0,2,800,1],
-"struct_urho3_d_1_1_variant_animation_track.html#a570a4ffd797b9a6d0efd71488be7d967":[8,0,2,800,0],
-"struct_urho3_d_1_1_variant_curve_point.html":[8,0,2,803]
+"struct_urho3_d_1_1_v_anim_key_frame.html#a827dfae652c41dec8b5eaf6a43baa1de":[8,0,2,798,0]
 };

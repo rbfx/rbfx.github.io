@@ -1,5 +1,12 @@
 var NAVTREEINDEX58 =
 {
+"struct_urho3_d_1_1_geometry_batch.html":[8,0,2,254],
+"struct_urho3_d_1_1_geometry_batch.html#a56299c10e3bc298e7486f0ad09d9dc68":[8,0,2,254,2],
+"struct_urho3_d_1_1_geometry_batch.html#aa5d72bad3d7350577c11ae2941ebe02a":[8,0,2,254,3],
+"struct_urho3_d_1_1_geometry_batch.html#ae1dcd08d885a1fd2125b1f59d96c7acd":[8,0,2,254,0],
+"struct_urho3_d_1_1_geometry_batch.html#af3239ddb965e66170dc120326a89881a":[8,0,2,254,1],
+"struct_urho3_d_1_1_geometry_buffer_preprocess_settings.html":[8,0,2,255],
+"struct_urho3_d_1_1_geometry_buffer_preprocess_settings.html#a721f5933e127b46ceef48bf3b8e78966":[8,0,2,255,2],
 "struct_urho3_d_1_1_geometry_buffer_preprocess_settings.html#a9a3e92903047c5b4b3b64f7f3b6a4d74":[8,0,2,255,1],
 "struct_urho3_d_1_1_geometry_buffer_preprocess_settings.html#af77224ba3d50e6b56fa49e1a087c2355":[8,0,2,255,0],
 "struct_urho3_d_1_1_geometry_desc.html":[8,0,2,256],
@@ -242,12 +249,5 @@ var NAVTREEINDEX58 =
 "struct_urho3_d_1_1_lightmap_chart_region.html":[8,0,2,357],
 "struct_urho3_d_1_1_lightmap_chart_region.html#a22522fb2b472f5b232cf47d688e3a9c1":[8,0,2,357,4],
 "struct_urho3_d_1_1_lightmap_chart_region.html#a4b31037378d776798babe3fcd4cbfc3a":[8,0,2,357,6],
-"struct_urho3_d_1_1_lightmap_chart_region.html#a571ddafb364135bd2934bd1926a69d76":[8,0,2,357,7],
-"struct_urho3_d_1_1_lightmap_chart_region.html#a97fec1ade12dac21d278eb05d2dc3fcc":[8,0,2,357,5],
-"struct_urho3_d_1_1_lightmap_chart_region.html#a9d13d2d19c314a1819fa80760c9e4188":[8,0,2,357,2],
-"struct_urho3_d_1_1_lightmap_chart_region.html#aab0bd8d19e10156ba054c193c5b22826":[8,0,2,357,3],
-"struct_urho3_d_1_1_lightmap_chart_region.html#ace706979a06a0ed9570d67a7a938d73c":[8,0,2,357,0],
-"struct_urho3_d_1_1_lightmap_chart_region.html#ad41252bd80c90f53903d90461c7d6482":[8,0,2,357,1],
-"struct_urho3_d_1_1_lightmap_charting_settings.html":[8,0,2,356],
-"struct_urho3_d_1_1_lightmap_charting_settings.html#a14589fa883b068182c91d2155d1a0b39":[8,0,2,356,2]
+"struct_urho3_d_1_1_lightmap_chart_region.html#a571ddafb364135bd2934bd1926a69d76":[8,0,2,357,7]
 };

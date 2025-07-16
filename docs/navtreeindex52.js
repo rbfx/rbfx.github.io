@@ -1,5 +1,12 @@
 var NAVTREEINDEX52 =
 {
+"class_urho3_d_1_1_vector2.html#ad96c25e7a5739a1c69ff1dd8123691df":[8,0,2,805,28],
+"class_urho3_d_1_1_vector2.html#ada0966603dbd04e4166f53ea9ce30e0e":[8,0,2,805,31],
+"class_urho3_d_1_1_vector2.html#adbc0951c862d227091813c8cf5e5562d":[8,0,2,805,5],
+"class_urho3_d_1_1_vector2.html#adee7de104a8096071c161175ea176c5a":[8,0,2,805,48],
+"class_urho3_d_1_1_vector2.html#adf6c19f5a475ac406ff54256dd1f50ba":[8,0,2,805,26],
+"class_urho3_d_1_1_vector2.html#ae64e0283dbd6ccd7399b5ca27af09cd8":[8,0,2,805,45],
+"class_urho3_d_1_1_vector2.html#ae7cc35fbe001cf7c80ae58dd0559d7fd":[8,0,2,805,46],
 "class_urho3_d_1_1_vector2.html#aea2c823f0b39b6a2141c3f7037b6ee2b":[8,0,2,805,47],
 "class_urho3_d_1_1_vector2.html#aefe59343d24e71876af754c1bcc8e6cb":[8,0,2,805,54],
 "class_urho3_d_1_1_vector2.html#af06754add2b1443d7232d5b585e0cf77":[8,0,2,805,35],
@@ -242,12 +249,5 @@ var NAVTREEINDEX52 =
 "class_urho3_d_1_1_viewport_color_render_buffer.html#acc803fe70df4dfe399aab031ba7a16cf":[8,0,2,818,5],
 "class_urho3_d_1_1_viewport_color_render_buffer.html#af3604f331dbc7a879f16ed098fa2e30e":[8,0,2,818,4],
 "class_urho3_d_1_1_viewport_depth_stencil_render_buffer.html":[8,0,2,819],
-"class_urho3_d_1_1_viewport_depth_stencil_render_buffer.html#a4b08634f0b1038acb3c2f827c26eb950":[8,0,2,819,0],
-"class_urho3_d_1_1_viewport_depth_stencil_render_buffer.html#a62af73dadb93d261984d8618c6065210":[8,0,2,819,3],
-"class_urho3_d_1_1_viewport_depth_stencil_render_buffer.html#a6f3fa16a78ba54ed0c49426923cd662a":[8,0,2,819,1],
-"class_urho3_d_1_1_viewport_depth_stencil_render_buffer.html#a921d49798dcb4416ce64da1427dc1c17":[8,0,2,819,4],
-"class_urho3_d_1_1_viewport_depth_stencil_render_buffer.html#aa087232aa5d90d3289b8e8325725091d":[8,0,2,819,5],
-"class_urho3_d_1_1_viewport_depth_stencil_render_buffer.html#ae74fb54203f2af45664b3f08addd3b3b":[8,0,2,819,2],
-"class_urho3_d_1_1_virtual_file_system.html":[8,0,2,820],
-"class_urho3_d_1_1_virtual_file_system.html#a004260a8bb3347edefa90089697471c4":[8,0,2,820,27]
+"class_urho3_d_1_1_viewport_depth_stencil_render_buffer.html#a4b08634f0b1038acb3c2f827c26eb950":[8,0,2,819,0]
 };

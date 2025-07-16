@@ -1,5 +1,14 @@
 var NAVTREEINDEX62 =
 {
+"struct_urho3_d_1_1_v_anim_key_frame.html#ae98c4cf3709aadd68e8be987719b064e":[8,0,2,798,1],
+"struct_urho3_d_1_1_v_r_rig_desc.html":[8,0,2,823],
+"struct_urho3_d_1_1_v_r_session_parameters.html":[8,0,2,824],
+"struct_urho3_d_1_1_value_with_derivative.html":[8,0,2,795],
+"struct_urho3_d_1_1_value_with_derivative_3_01_quaternion_01_4.html":[8,0,2,796],
+"struct_urho3_d_1_1_variant_animation_track.html":[8,0,2,800],
+"struct_urho3_d_1_1_variant_animation_track.html#a32958fad16904dd0fba89dd00de9bb83":[8,0,2,800,1],
+"struct_urho3_d_1_1_variant_animation_track.html#a570a4ffd797b9a6d0efd71488be7d967":[8,0,2,800,0],
+"struct_urho3_d_1_1_variant_curve_point.html":[8,0,2,803],
 "struct_urho3_d_1_1_variant_curve_point.html#a00949b7d1eab7dfabc0c5845f7d33d17":[8,0,2,803,1],
 "struct_urho3_d_1_1_variant_curve_point.html#a3e05d460d73eb368e453aa15f449dc0f":[8,0,2,803,0],
 "struct_urho3_d_1_1_vertex2_d.html":[8,0,2,809],

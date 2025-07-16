@@ -1,5 +1,12 @@
 var NAVTREEINDEX32 =
 {
+"class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_rotation.html#ab1e45ffc276757a7f2ea3db73c93178f":[8,0,2,2,40,2],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_rotation.html#ad583ac76074e80fb075f9848712a3b30":[8,0,2,2,40,3],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_rotation.html#ad5c9b56869f8127083b80f74d4f6cd3f":[8,0,2,2,40,1],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_rotation_instance.html":[8,0,2,2,41],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_scale.html":[8,0,2,2,42],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_scale.html#a03f2d02e34e14e9016b1036f69847688":[8,0,2,2,42,2],
+"class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_scale.html#a54e9e79c73d8b8ea8df80942fbe4b14b":[8,0,2,2,42,3],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_scale.html#a829c249398a49f79b90fcac057acad2a":[8,0,2,2,42,0],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_scale.html#ab96927945dd0316ce774c3dd93917f34":[8,0,2,2,42,1],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_emitter_scale_instance.html":[8,0,2,2,43],
@@ -242,12 +249,5 @@ var NAVTREEINDEX32 =
 "class_urho3_d_1_1_particle_graph_nodes_1_1_uniform.html#a28774f5261b39710620b3d5b14239507":[8,0,2,2,98,1],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_uniform.html#a365c901b04622fc8f7bb714e13ade8eb":[8,0,2,2,98,3],
 "class_urho3_d_1_1_particle_graph_nodes_1_1_uniform.html#a915e8d1a0f85c60e730384a6c84de213":[8,0,2,2,98,2],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_uniform.html#acd2110257ecb8c1b1cc72d120ab5c94b":[8,0,2,2,98,0],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_uniform.html#ae92a422644e5b117c3e35ccfac4aa7b0":[8,0,2,2,98,4],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_world_to_local.html":[8,0,2,2,99],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_world_to_local.html#a395710c968ee978cec0d3420e99b022a":[8,0,2,2,99,2],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_world_to_local.html#a661f4f37b0676c33ed1a36d678059b6a":[8,0,2,2,99,1],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_world_to_local.html#a7c3adfabc9591517ae61fab287205888":[8,0,2,2,99,3],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_world_to_local.html#a819c10d1113f0ecd2657ecc9a9653357":[8,0,2,2,99,0],
-"class_urho3_d_1_1_particle_graph_nodes_1_1_world_to_local_instance.html":[8,0,2,2,100]
+"class_urho3_d_1_1_particle_graph_nodes_1_1_uniform.html#acd2110257ecb8c1b1cc72d120ab5c94b":[8,0,2,2,98,0]
 };
