@@ -1,17 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"_shader_defs_8h.html#a347f324fdb12fee5069ca0b34775e0ac":[9,0,0,15,0,3],
-"_shader_defs_8h.html#a9f60cbed4dff6fe7a4c22d120c2f98d5":[9,0,0,15,0,2],
-"_shader_defs_8h.html#a9f60cbed4dff6fe7a4c22d120c2f98d5a030ecd36ef7815937ea1d8dbaeed304f":[9,0,0,15,0,2,2],
-"_shader_defs_8h.html#a9f60cbed4dff6fe7a4c22d120c2f98d5a19634235243d0b76f88f1d1282f86b9e":[9,0,0,15,0,2,0],
-"_shader_defs_8h.html#a9f60cbed4dff6fe7a4c22d120c2f98d5a2db8b3a248ab8cd138aeaf5671cd14be":[9,0,0,15,0,2,3],
-"_shader_defs_8h.html#a9f60cbed4dff6fe7a4c22d120c2f98d5a9f2c630db471f0c61458a9552c57766f":[9,0,0,15,0,2,1],
-"_shader_defs_8h.html#ad8b8b648d382349f4b5eb31aab743dba":[9,0,0,15,0,4],
-"_shaders.html":[0,1,16,10],
-"_shaders.html#Shaders_API":[0,1,16,10,3],
-"_shaders.html#Shaders_InbuiltDefines":[0,1,16,10,0],
-"_shaders.html#Shaders_InbuiltUniforms":[0,1,16,10,1],
-"_shaders.html#Shaders_Precaching":[0,1,16,10,4],
 "_shaders.html#Shaders_Writing":[0,1,16,10,2],
 "_skeletal_animation.html":[0,1,16,13],
 "_skeletal_animation.html#SkeletalAnimation_Blending":[0,1,16,13,0],
@@ -249,5 +237,17 @@ var NAVTREEINDEX3 =
 "class_urho3_d_1_1_abstract_connection.html#a58ac63827226d7484579383f61d1d1d9":[8,0,2,5,7],
 "class_urho3_d_1_1_abstract_connection.html#a5b9c99ab3223059ea329a78e5f7992c2":[8,0,2,5,1],
 "class_urho3_d_1_1_abstract_connection.html#a890fb534f826adb5f10202753688a74b":[8,0,2,5,4],
-"class_urho3_d_1_1_abstract_connection.html#a988b4bb1ac2c78840ce5ab50fa989e06":[8,0,2,5,8]
+"class_urho3_d_1_1_abstract_connection.html#a988b4bb1ac2c78840ce5ab50fa989e06":[8,0,2,5,8],
+"class_urho3_d_1_1_abstract_connection.html#a99536ed82aa84e77f1ddc388472b4fd8":[8,0,2,5,6],
+"class_urho3_d_1_1_abstract_connection.html#abe3cbae4c156eb8b299ff6e97fd65cb4":[8,0,2,5,2],
+"class_urho3_d_1_1_abstract_connection.html#aca38662b8421e22799dd396154d354d7":[8,0,2,5,9],
+"class_urho3_d_1_1_abstract_connection.html#afc9b26e421b9932293a7f73a9114162e":[8,0,2,5,10],
+"class_urho3_d_1_1_abstract_file.html":[8,0,2,6],
+"class_urho3_d_1_1_abstract_file.html#a28782fb9e484a707ab29df8f50f2fe60":[8,0,2,6,5],
+"class_urho3_d_1_1_abstract_file.html#a3e9a90215abc326625ec6230baef4706":[8,0,2,6,6],
+"class_urho3_d_1_1_abstract_file.html#a8977b3028e12d3fe090bc9bf56a7ad58":[8,0,2,6,3],
+"class_urho3_d_1_1_abstract_file.html#a8d6fe17fdee4accd1276ccc8eff300fb":[8,0,2,6,7],
+"class_urho3_d_1_1_abstract_file.html#a9ee2e06721fcc4c842d6b41a59d508a1":[8,0,2,6,2],
+"class_urho3_d_1_1_abstract_file.html#aacb344a814c18f966f98fb085d837aa1":[8,0,2,6,0],
+"class_urho3_d_1_1_abstract_file.html#ab6ea4ffa2471e54e5f59f00230e9922a":[8,0,2,6,8]
 };

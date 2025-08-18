@@ -916,6 +916,7 @@ var hierarchy =
         [ "Urho3D::ClientReplicaClock", "class_urho3_d_1_1_client_replica_clock.html", [
           [ "Urho3D::ClientReplica", "class_urho3_d_1_1_client_replica.html", null ]
         ] ],
+        [ "Urho3D::CollisionGeometryDataCache", "class_urho3_d_1_1_collision_geometry_data_cache.html", null ],
         [ "Urho3D::ConfigFile", "class_urho3_d_1_1_config_file.html", null ],
         [ "Urho3D::Console", "class_urho3_d_1_1_console.html", null ],
         [ "Urho3D::CubemapRenderer", "class_urho3_d_1_1_cubemap_renderer.html", null ],
@@ -1560,6 +1561,7 @@ var hierarchy =
       [ "Urho3D::SharedPtr< Urho3D::BillboardSet >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::Octree >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::ParticleGraphNodes::RenderMeshDrawable >", "class_urho3_d_1_1_shared_ptr.html", null ],
+      [ "Urho3D::SharedPtr< Urho3D::CollisionGeometryDataCache >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::RigidBody2D >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::CollisionShape2D >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::ShaderProgramCompositor >", "class_urho3_d_1_1_shared_ptr.html", null ],
@@ -1644,6 +1646,7 @@ var hierarchy =
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::CameraProcessor, Urho3D::CameraProcessor >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::ClientReplica, Urho3D::ClientReplica >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::CollisionGeometryData, Urho3D::CollisionGeometryData >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
+    [ "Urho3D::Detail::SharedPtrBase< Urho3D::CollisionGeometryDataCache, Urho3D::CollisionGeometryDataCache >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::CollisionShape2D, Urho3D::CollisionShape2D >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::ConfigFile, Urho3D::ConfigFile >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::Connection, Urho3D::Connection >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
@@ -1978,6 +1981,7 @@ var hierarchy =
     [ "Urho3D::WeakPtr< Urho3D::TmxFile2D >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::UIElement >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::Viewport >", "class_urho3_d_1_1_weak_ptr.html", null ],
+    [ "Urho3D::WeakPtr< Urho3D::WorkQueue >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::XMLFile >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::Zone >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WrappedScalar< T >", "class_urho3_d_1_1_wrapped_scalar.html", null ],

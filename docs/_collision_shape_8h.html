@@ -61,22 +61,18 @@ $(document).ready(function(){initNavTree('_collision_shape_8h.html',''); initRes
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle"><div class="title">CollisionShape.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;EASTL/shared_array.h&gt;</code><br />
-<code>#include &quot;../Math/BoundingBox.h&quot;</code><br />
-<code>#include &quot;../Math/Quaternion.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="_component_8h.html">../Scene/Component.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;Urho3D/Math/BoundingBox.h&quot;</code><br />
+<code>#include &quot;Urho3D/Math/Quaternion.h&quot;</code><br />
+<code>#include &quot;Urho3D/Physics/CollisionGeometryDataCache.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_component_8h.html">Urho3D/Scene/Component.h</a>&quot;</code><br />
+<code>#include &lt;EASTL/shared_array.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_collision_geometry_data.html">Urho3D::CollisionGeometryData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for collision shape geometry data.  <a href="struct_urho3_d_1_1_collision_geometry_data.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_triangle_mesh_data.html">Urho3D::TriangleMeshData</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangle mesh geometry data.  <a href="struct_urho3_d_1_1_triangle_mesh_data.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -92,51 +88,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_collision_shape.html">Urho3D::CollisionShape</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Physics collision shape component.  <a href="class_urho3_d_1_1_collision_shape.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ab929f6ab00aab23131f22261c493c8b0" id="r_ab929f6ab00aab23131f22261c493c8b0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_collision_shape_8h.html#ab929f6ab00aab23131f22261c493c8b0">Urho3D::CollisionGeometryDataCache</a> = ea::unordered_map&lt; ea::pair&lt; <a class="el" href="class_urho3_d_1_1_model.html">Model</a> *, unsigned &gt;, <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="struct_urho3_d_1_1_collision_geometry_data.html">CollisionGeometryData</a> &gt; &gt;</td></tr>
-<tr class="memdesc:ab929f6ab00aab23131f22261c493c8b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache of collision geometry data.  <br /></td></tr>
-<tr class="separator:ab929f6ab00aab23131f22261c493c8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a9609ee2ddee43a27e14c482088af37b7" id="r_a9609ee2ddee43a27e14c482088af37b7"><td class="memItemLeft" align="right" valign="top"><a id="a9609ee2ddee43a27e14c482088af37b7" name="a9609ee2ddee43a27e14c482088af37b7"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_collision_shape_8h.html#a9609ee2ddee43a27e14c482088af37b7">Urho3D::ShapeType</a> { <br />
-&#160;&#160;<b>SHAPE_BOX</b> = 0
-, <b>SHAPE_SPHERE</b>
-, <b>SHAPE_STATICPLANE</b>
-, <b>SHAPE_CYLINDER</b>
-, <br />
-&#160;&#160;<b>SHAPE_CAPSULE</b>
-, <b>SHAPE_CONE</b>
-, <b>SHAPE_TRIANGLEMESH</b>
-, <b>SHAPE_CONVEXHULL</b>
-, <br />
-&#160;&#160;<b>SHAPE_TERRAIN</b>
-, <b>SHAPE_GIMPACTMESH</b>
-<br />
- }</td></tr>
-<tr class="memdesc:a9609ee2ddee43a27e14c482088af37b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collision shape type. <br /></td></tr>
-<tr class="separator:a9609ee2ddee43a27e14c482088af37b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="ab929f6ab00aab23131f22261c493c8b0" name="ab929f6ab00aab23131f22261c493c8b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab929f6ab00aab23131f22261c493c8b0">&#9670;&#160;</a></span>CollisionGeometryDataCache</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef ea::unordered_map&lt; ea::pair&lt; Model *, unsigned &gt;, SharedPtr&lt; CollisionGeometryData &gt; &gt; <a class="el" href="_collision_shape_8h.html#ab929f6ab00aab23131f22261c493c8b0">Urho3D::CollisionGeometryDataCache</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Cache of collision geometry data. </p>
-<p>Cache of collision geometry data.  </p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

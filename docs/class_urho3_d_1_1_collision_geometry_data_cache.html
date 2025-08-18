@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rebel Fork Framework: Urho3D::ModelView Class Reference</title>
+<title>Rebel Fork Framework: Urho3D::CollisionGeometryDataCache Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,122 +55,56 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('class_urho3_d_1_1_model_view.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('class_urho3_d_1_1_collision_geometry_data_cache.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="class_urho3_d_1_1_model_view-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Urho3D::ModelView Class Reference</div></div>
+<a href="class_urho3_d_1_1_collision_geometry_data_cache-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Urho3D::CollisionGeometryDataCache Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;Urho3D/Graphics/ModelView.h&gt;</code></p>
+<p>Cache of collision geometry data.  
+ <a href="class_urho3_d_1_1_collision_geometry_data_cache.html#details">More...</a></p>
+
+<p><code>#include &lt;Urho3D/Physics/CollisionGeometryDataCache.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::ModelView:</div>
+Inheritance diagram for Urho3D::CollisionGeometryDataCache:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_urho3_d_1_1_model_view.png" usemap="#Urho3D::ModelView_map" alt=""/>
-  <map id="Urho3D::ModelView_map" name="Urho3D::ModelView_map">
-<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="0,56,127,80"/>
-<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="0,0,127,24"/>
+  <img src="class_urho3_d_1_1_collision_geometry_data_cache.png" usemap="#Urho3D::CollisionGeometryDataCache_map" alt=""/>
+  <map id="Urho3D::CollisionGeometryDataCache_map" name="Urho3D::CollisionGeometryDataCache_map">
+<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="0,56,226,80"/>
+<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="0,0,226,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a83ac9c8a11a31ac400dc03f3a9aaadd0" id="r_a83ac9c8a11a31ac400dc03f3a9aaadd0"><td class="memItemLeft" align="right" valign="top"><a id="a83ac9c8a11a31ac400dc03f3a9aaadd0" name="a83ac9c8a11a31ac400dc03f3a9aaadd0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ModelView</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
-<tr class="separator:a83ac9c8a11a31ac400dc03f3a9aaadd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff55c856b41cb86443cd41c9825a3ffa" id="r_aff55c856b41cb86443cd41c9825a3ffa"><td class="memItemLeft" align="right" valign="top"><a id="aff55c856b41cb86443cd41c9825a3ffa" name="aff55c856b41cb86443cd41c9825a3ffa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Clear</b> ()</td></tr>
-<tr class="separator:aff55c856b41cb86443cd41c9825a3ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a815d84f93a44d01d5108096f1f10f55a" id="r_a815d84f93a44d01d5108096f1f10f55a"><td class="memItemLeft" align="right" valign="top"><a id="a815d84f93a44d01d5108096f1f10f55a" name="a815d84f93a44d01d5108096f1f10f55a"></a>
-<a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateBoundingBox</b> (bool exportedOnly=true) const</td></tr>
-<tr class="memdesc:a815d84f93a44d01d5108096f1f10f55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate bounding box. <br /></td></tr>
-<tr class="separator:a815d84f93a44d01d5108096f1f10f55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2db9b465c01d044724c169aa60b2497" id="r_ae2db9b465c01d044724c169aa60b2497"><td class="memItemLeft" align="right" valign="top"><a id="ae2db9b465c01d044724c169aa60b2497" name="ae2db9b465c01d044724c169aa60b2497"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Normalize</b> ()</td></tr>
-<tr class="memdesc:ae2db9b465c01d044724c169aa60b2497"><td class="mdescLeft">&#160;</td><td class="mdescRight">All equivalent views should be literally equal after normalization. <br /></td></tr>
-<tr class="separator:ae2db9b465c01d044724c169aa60b2497"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80886505a866e9678e70b03c03727de9" id="r_a80886505a866e9678e70b03c03727de9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_model_view.html#a80886505a866e9678e70b03c03727de9">MirrorGeometriesX</a> ()</td></tr>
-<tr class="separator:a80886505a866e9678e70b03c03727de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ebacff5da8515ad5b48d15af365e2f7" id="r_a8ebacff5da8515ad5b48d15af365e2f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_model_view.html#a8ebacff5da8515ad5b48d15af365e2f7">ScaleGeometries</a> (float scale)</td></tr>
-<tr class="separator:a8ebacff5da8515ad5b48d15af365e2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefccb5dfb9dc835d11fde42c491dc482" id="r_aefccb5dfb9dc835d11fde42c491dc482"><td class="memItemLeft" align="right" valign="top"><a id="aefccb5dfb9dc835d11fde42c491dc482" name="aefccb5dfb9dc835d11fde42c491dc482"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateMissingNormals</b> (bool flatNormals=false)</td></tr>
-<tr class="memdesc:aefccb5dfb9dc835d11fde42c491dc482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate normals for geometries without normals in vertex format. Resets tangents for affected geometries. <br /></td></tr>
-<tr class="separator:aefccb5dfb9dc835d11fde42c491dc482"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf130083579e597eb601db626c934907" id="r_adf130083579e597eb601db626c934907"><td class="memItemLeft" align="right" valign="top"><a id="adf130083579e597eb601db626c934907" name="adf130083579e597eb601db626c934907"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateMissingTangents</b> ()</td></tr>
-<tr class="memdesc:adf130083579e597eb601db626c934907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate tangents for geometries without tangents in vertex format. <br /></td></tr>
-<tr class="separator:adf130083579e597eb601db626c934907"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4624a03d2a023a0dbe05a3d66722c630" id="r_a4624a03d2a023a0dbe05a3d66722c630"><td class="memItemLeft" align="right" valign="top"><a id="a4624a03d2a023a0dbe05a3d66722c630" name="a4624a03d2a023a0dbe05a3d66722c630"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RepairBoneWeights</b> ()</td></tr>
-<tr class="memdesc:a4624a03d2a023a0dbe05a3d66722c630"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize bone weights and cleanup invalid bones. Ignored if there's no bones. <br /></td></tr>
-<tr class="separator:a4624a03d2a023a0dbe05a3d66722c630"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97caba720a1ba6c0f05db305114094c5" id="r_a97caba720a1ba6c0f05db305114094c5"><td class="memItemLeft" align="right" valign="top"><a id="a97caba720a1ba6c0f05db305114094c5" name="a97caba720a1ba6c0f05db305114094c5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RecalculateBoneBoundingBoxes</b> (bool exportedOnly=true)</td></tr>
-<tr class="memdesc:a97caba720a1ba6c0f05db305114094c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate bounding boxes for bones. <br /></td></tr>
-<tr class="separator:a97caba720a1ba6c0f05db305114094c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a4f5e9c5e0f0bcaa12e77d46fe4a698e0" id="r_a4f5e9c5e0f0bcaa12e77d46fe4a698e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_model_view.html#a4f5e9c5e0f0bcaa12e77d46fe4a698e0">ImportModel</a> (const <a class="el" href="class_urho3_d_1_1_model.html">Model</a> *model)</td></tr>
-<tr class="separator:a4f5e9c5e0f0bcaa12e77d46fe4a698e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c23e918a52f296cc029b0a0b7ad5ac3" id="r_a9c23e918a52f296cc029b0a0b7ad5ac3"><td class="memItemLeft" align="right" valign="top"><a id="a9c23e918a52f296cc029b0a0b7ad5ac3" name="a9c23e918a52f296cc029b0a0b7ad5ac3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ExportModel</b> (<a class="el" href="class_urho3_d_1_1_model.html">Model</a> *model, ModelViewExportFlags flags=ModelViewExportFlag::None) const</td></tr>
-<tr class="separator:a9c23e918a52f296cc029b0a0b7ad5ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb350dfb31e5dabb8bd0cefb7e109cda" id="r_abb350dfb31e5dabb8bd0cefb7e109cda"><td class="memItemLeft" align="right" valign="top"><a id="abb350dfb31e5dabb8bd0cefb7e109cda" name="abb350dfb31e5dabb8bd0cefb7e109cda"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_model.html">Model</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ExportModel</b> (ModelViewExportFlags flags=ModelViewExportFlag::None, const ea::string &amp;name=EMPTY_STRING) const</td></tr>
-<tr class="separator:abb350dfb31e5dabb8bd0cefb7e109cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9514add7b35669e0fa38a1a1bf979cc2" id="r_a9514add7b35669e0fa38a1a1bf979cc2"><td class="memItemLeft" align="right" valign="top"><a id="a9514add7b35669e0fa38a1a1bf979cc2" name="a9514add7b35669e0fa38a1a1bf979cc2"></a>
-<a class="el" href="struct_urho3_d_1_1_resource_ref_list.html">ResourceRefList</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ExportMaterialList</b> () const</td></tr>
-<tr class="separator:a9514add7b35669e0fa38a1a1bf979cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a8310b0d5b5d05af23bf0d4e32e62cc3c" id="r_a8310b0d5b5d05af23bf0d4e32e62cc3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_model_view.html#a8310b0d5b5d05af23bf0d4e32e62cc3c">SetName</a> (const ea::string &amp;name)</td></tr>
-<tr class="separator:a8310b0d5b5d05af23bf0d4e32e62cc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a149cf6df58f74b9847382a4d4de1d8f2" id="r_a149cf6df58f74b9847382a4d4de1d8f2"><td class="memItemLeft" align="right" valign="top"><a id="a149cf6df58f74b9847382a4d4de1d8f2" name="a149cf6df58f74b9847382a4d4de1d8f2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetGeometries</b> (ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_geometry_view.html">GeometryView</a> &gt; geometries)</td></tr>
-<tr class="separator:a149cf6df58f74b9847382a4d4de1d8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c3c5c1b95d99903a089151645a79107" id="r_a5c3c5c1b95d99903a089151645a79107"><td class="memItemLeft" align="right" valign="top"><a id="a5c3c5c1b95d99903a089151645a79107" name="a5c3c5c1b95d99903a089151645a79107"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBones</b> (ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_bone_view.html">BoneView</a> &gt; bones)</td></tr>
-<tr class="separator:a5c3c5c1b95d99903a089151645a79107"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13422cf96d5177ef477981ee50333f90" id="r_a13422cf96d5177ef477981ee50333f90"><td class="memItemLeft" align="right" valign="top"><a id="a13422cf96d5177ef477981ee50333f90" name="a13422cf96d5177ef477981ee50333f90"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMorphs</b> (ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_model_morph_view.html">ModelMorphView</a> &gt; morphs)</td></tr>
-<tr class="separator:a13422cf96d5177ef477981ee50333f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3921df7f8b2ca90210361d7acb446b8b" id="r_a3921df7f8b2ca90210361d7acb446b8b"><td class="memItemLeft" align="right" valign="top"><a id="a3921df7f8b2ca90210361d7acb446b8b" name="a3921df7f8b2ca90210361d7acb446b8b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMorph</b> (unsigned index, const <a class="el" href="struct_urho3_d_1_1_model_morph_view.html">ModelMorphView</a> &amp;morph)</td></tr>
-<tr class="separator:a3921df7f8b2ca90210361d7acb446b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9207a295752bec904f2921157ae487fc" id="r_a9207a295752bec904f2921157ae487fc"><td class="memItemLeft" align="right" valign="top"><a id="a9207a295752bec904f2921157ae487fc" name="a9207a295752bec904f2921157ae487fc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddMetadata</b> (const ea::string &amp;key, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;variant)</td></tr>
-<tr class="separator:a9207a295752bec904f2921157ae487fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:abfd240915bdc1d9b32eec34ce985322e" id="r_abfd240915bdc1d9b32eec34ce985322e"><td class="memItemLeft" align="right" valign="top">const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_model_view.html#abfd240915bdc1d9b32eec34ce985322e">GetName</a> () const</td></tr>
-<tr class="separator:abfd240915bdc1d9b32eec34ce985322e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6a139130e66df8050980e44c662f529" id="r_ae6a139130e66df8050980e44c662f529"><td class="memItemLeft" align="right" valign="top"><a id="ae6a139130e66df8050980e44c662f529" name="ae6a139130e66df8050980e44c662f529"></a>
-const ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_geometry_view.html">GeometryView</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetGeometries</b> () const</td></tr>
-<tr class="separator:ae6a139130e66df8050980e44c662f529"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9920c329c18981c914b88dce4646700" id="r_ae9920c329c18981c914b88dce4646700"><td class="memItemLeft" align="right" valign="top"><a id="ae9920c329c18981c914b88dce4646700" name="ae9920c329c18981c914b88dce4646700"></a>
-ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_geometry_view.html">GeometryView</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetGeometries</b> ()</td></tr>
-<tr class="separator:ae9920c329c18981c914b88dce4646700"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e8852cbf818899d03f8946519dd6f63" id="r_a4e8852cbf818899d03f8946519dd6f63"><td class="memItemLeft" align="right" valign="top"><a id="a4e8852cbf818899d03f8946519dd6f63" name="a4e8852cbf818899d03f8946519dd6f63"></a>
-const ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_bone_view.html">BoneView</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetBones</b> () const</td></tr>
-<tr class="separator:a4e8852cbf818899d03f8946519dd6f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fc12392df6aefc11a4e972d969809de" id="r_a2fc12392df6aefc11a4e972d969809de"><td class="memItemLeft" align="right" valign="top"><a id="a2fc12392df6aefc11a4e972d969809de" name="a2fc12392df6aefc11a4e972d969809de"></a>
-ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_bone_view.html">BoneView</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetBones</b> ()</td></tr>
-<tr class="separator:a2fc12392df6aefc11a4e972d969809de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8f56d71eaf6ef5df62f0808d8818413" id="r_af8f56d71eaf6ef5df62f0808d8818413"><td class="memItemLeft" align="right" valign="top"><a id="af8f56d71eaf6ef5df62f0808d8818413" name="af8f56d71eaf6ef5df62f0808d8818413"></a>
-const ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_model_morph_view.html">ModelMorphView</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetMorphs</b> () const</td></tr>
-<tr class="separator:af8f56d71eaf6ef5df62f0808d8818413"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e82e7c9b03db535104db0118d9b5dfa" id="r_a5e82e7c9b03db535104db0118d9b5dfa"><td class="memItemLeft" align="right" valign="top"><a id="a5e82e7c9b03db535104db0118d9b5dfa" name="a5e82e7c9b03db535104db0118d9b5dfa"></a>
-ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_model_morph_view.html">ModelMorphView</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetMorphs</b> ()</td></tr>
-<tr class="separator:a5e82e7c9b03db535104db0118d9b5dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a0c2ea6540078053d69904bf7b11fef" id="r_a6a0c2ea6540078053d69904bf7b11fef"><td class="memItemLeft" align="right" valign="top"><a id="a6a0c2ea6540078053d69904bf7b11fef" name="a6a0c2ea6540078053d69904bf7b11fef"></a>
-const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetMetadata</b> (const ea::string &amp;key) const</td></tr>
-<tr class="separator:a6a0c2ea6540078053d69904bf7b11fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31fdab2695bd062c8eb4e789492e579c" id="r_a31fdab2695bd062c8eb4e789492e579c"><td class="memItemLeft" align="right" valign="top"><a id="a31fdab2695bd062c8eb4e789492e579c" name="a31fdab2695bd062c8eb4e789492e579c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CollisionGeometryDataCache</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context, ShapeType shapeType)</td></tr>
+<tr class="separator:a31fdab2695bd062c8eb4e789492e579c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30ce627d6ac2e72703adee1317547487" id="r_a30ce627d6ac2e72703adee1317547487"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="struct_urho3_d_1_1_collision_geometry_data.html">CollisionGeometryData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_collision_geometry_data_cache.html#a30ce627d6ac2e72703adee1317547487">GetOrCreateGeometry</a> (<a class="el" href="class_urho3_d_1_1_model.html">Model</a> *model, unsigned lodLevel)</td></tr>
+<tr class="separator:a30ce627d6ac2e72703adee1317547487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c33708ae4b80960e8d90cf62a481158" id="r_a8c33708ae4b80960e8d90cf62a481158"><td class="memItemLeft" align="right" valign="top"><a id="a8c33708ae4b80960e8d90cf62a481158" name="a8c33708ae4b80960e8d90cf62a481158"></a>
+<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="struct_urho3_d_1_1_collision_geometry_data.html">CollisionGeometryData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetCachedGeometry</b> (<a class="el" href="class_urho3_d_1_1_model.html">Model</a> *model, unsigned lodLevel) const</td></tr>
+<tr class="memdesc:a8c33708ae4b80960e8d90cf62a481158"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return cached geometry. Does not create new geometry. Thread-safe. <br /></td></tr>
+<tr class="separator:a8c33708ae4b80960e8d90cf62a481158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b2ada1466408da019b819420cf911b" id="r_a74b2ada1466408da019b819420cf911b"><td class="memItemLeft" align="right" valign="top"><a id="a74b2ada1466408da019b819420cf911b" name="a74b2ada1466408da019b819420cf911b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ReleaseCachedGeometry</b> (<a class="el" href="class_urho3_d_1_1_model.html">Model</a> *model)</td></tr>
+<tr class="memdesc:a74b2ada1466408da019b819420cf911b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release cache entry for model. <br /></td></tr>
+<tr class="separator:a74b2ada1466408da019b819420cf911b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a0b6e2fc5969530e1d0d3917f031b2b" id="r_a2a0b6e2fc5969530e1d0d3917f031b2b"><td class="memItemLeft" align="right" valign="top"><a id="a2a0b6e2fc5969530e1d0d3917f031b2b" name="a2a0b6e2fc5969530e1d0d3917f031b2b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Prune</b> ()</td></tr>
+<tr class="memdesc:a2a0b6e2fc5969530e1d0d3917f031b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prune cache of dead entries. <br /></td></tr>
+<tr class="separator:a2a0b6e2fc5969530e1d0d3917f031b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object" id="r_a95a6cd1c5c12a458fda4b38f873a334d"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>Object</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -364,29 +298,50 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsScriptStrongRef</b>
 <tr class="memdesc:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if script reference is strong. <br /></td></tr>
 <tr class="separator:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:af62d9e3fefdfa64f07482cfec0542cfb" id="r_af62d9e3fefdfa64f07482cfec0542cfb"><td class="memItemLeft" align="right" valign="top"><a id="af62d9e3fefdfa64f07482cfec0542cfb" name="af62d9e3fefdfa64f07482cfec0542cfb"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>LodVector</b> = ea::fixed_vector&lt; <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="struct_urho3_d_1_1_collision_geometry_data.html">CollisionGeometryData</a> &gt;, 8 &gt;</td></tr>
+<tr class="separator:af62d9e3fefdfa64f07482cfec0542cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf9f3092b69b2efd5764fe07f7588e9" id="r_aadf9f3092b69b2efd5764fe07f7588e9"><td class="memItemLeft" align="right" valign="top"><a id="aadf9f3092b69b2efd5764fe07f7588e9" name="aadf9f3092b69b2efd5764fe07f7588e9"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>CacheMap</b> = ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_model.html">Model</a> &gt;, LodVector &gt;</td></tr>
+<tr class="separator:aadf9f3092b69b2efd5764fe07f7588e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a5b1719c8622398200b3fa3bdf0e606a7" id="r_a5b1719c8622398200b3fa3bdf0e606a7"><td class="memItemLeft" align="right" valign="top"><a id="a5b1719c8622398200b3fa3bdf0e606a7" name="a5b1719c8622398200b3fa3bdf0e606a7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_model_view.html">ModelView</a>, <a class="el" href="class_urho3_d_1_1_object.html">Object</a>)</td></tr>
-<tr class="separator:a5b1719c8622398200b3fa3bdf0e606a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ace8377089be070886db785cd908224" id="r_a1ace8377089be070886db785cd908224"><td class="memItemLeft" align="right" valign="top"><a id="a1ace8377089be070886db785cd908224" name="a1ace8377089be070886db785cd908224"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_collision_geometry_data_cache.html">CollisionGeometryDataCache</a>, <a class="el" href="class_urho3_d_1_1_object.html">Object</a>)</td></tr>
+<tr class="separator:a1ace8377089be070886db785cd908224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af67fe918a7f4ad126f7b56874f214fed" id="r_af67fe918a7f4ad126f7b56874f214fed"><td class="memItemLeft" align="right" valign="top"><a id="af67fe918a7f4ad126f7b56874f214fed" name="af67fe918a7f4ad126f7b56874f214fed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>StoreCachedGeometry</b> (<a class="el" href="class_urho3_d_1_1_model.html">Model</a> *model, unsigned lodLevel, const <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="struct_urho3_d_1_1_collision_geometry_data.html">CollisionGeometryData</a> &gt; &amp;geometry)</td></tr>
+<tr class="separator:af67fe918a7f4ad126f7b56874f214fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8d5943503142a31495335a0ac19efce" id="r_ab8d5943503142a31495335a0ac19efce"><td class="memItemLeft" align="right" valign="top"><a id="ab8d5943503142a31495335a0ac19efce" name="ab8d5943503142a31495335a0ac19efce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SubscribeToReload</b> (<a class="el" href="class_urho3_d_1_1_model.html">Model</a> *model)</td></tr>
+<tr class="separator:ab8d5943503142a31495335a0ac19efce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1de6e9fab5af03e6685fc1872bb49f4" id="r_ab1de6e9fab5af03e6685fc1872bb49f4"><td class="memItemLeft" align="right" valign="top"><a id="ab1de6e9fab5af03e6685fc1872bb49f4" name="ab1de6e9fab5af03e6685fc1872bb49f4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleReloadFinished</b> ()</td></tr>
+<tr class="separator:ab1de6e9fab5af03e6685fc1872bb49f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a094a160f3bbc5437b91eac77c5583ba6" id="r_a094a160f3bbc5437b91eac77c5583ba6"><td class="memItemLeft" align="right" valign="top"><a id="a094a160f3bbc5437b91eac77c5583ba6" name="a094a160f3bbc5437b91eac77c5583ba6"></a>
+static <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="struct_urho3_d_1_1_collision_geometry_data.html">CollisionGeometryData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CreateCollisionGeometryData</b> (ShapeType shapeType, <a class="el" href="class_urho3_d_1_1_model.html">Model</a> *model, unsigned lodLevel)</td></tr>
+<tr class="separator:a094a160f3bbc5437b91eac77c5583ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:afaf4f5cd17e19c9877ad0270bf03aa13" id="r_afaf4f5cd17e19c9877ad0270bf03aa13"><td class="memItemLeft" align="right" valign="top"><a id="afaf4f5cd17e19c9877ad0270bf03aa13" name="afaf4f5cd17e19c9877ad0270bf03aa13"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>name_</b></td></tr>
-<tr class="separator:afaf4f5cd17e19c9877ad0270bf03aa13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1810bbf1b52ef18fc98a73fd3a89b6b" id="r_af1810bbf1b52ef18fc98a73fd3a89b6b"><td class="memItemLeft" align="right" valign="top"><a id="af1810bbf1b52ef18fc98a73fd3a89b6b" name="af1810bbf1b52ef18fc98a73fd3a89b6b"></a>
-ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_geometry_view.html">GeometryView</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>geometries_</b></td></tr>
-<tr class="separator:af1810bbf1b52ef18fc98a73fd3a89b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a205566834530efa7181e4351c677a740" id="r_a205566834530efa7181e4351c677a740"><td class="memItemLeft" align="right" valign="top"><a id="a205566834530efa7181e4351c677a740" name="a205566834530efa7181e4351c677a740"></a>
-ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_bone_view.html">BoneView</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>bones_</b></td></tr>
-<tr class="separator:a205566834530efa7181e4351c677a740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a83ae94477dfa51ee75bb250b030d77" id="r_a7a83ae94477dfa51ee75bb250b030d77"><td class="memItemLeft" align="right" valign="top"><a id="a7a83ae94477dfa51ee75bb250b030d77" name="a7a83ae94477dfa51ee75bb250b030d77"></a>
-ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_model_morph_view.html">ModelMorphView</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>morphs_</b></td></tr>
-<tr class="separator:a7a83ae94477dfa51ee75bb250b030d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a726fd53e415a0b0a2365390c490f20c4" id="r_a726fd53e415a0b0a2365390c490f20c4"><td class="memItemLeft" align="right" valign="top"><a id="a726fd53e415a0b0a2365390c490f20c4" name="a726fd53e415a0b0a2365390c490f20c4"></a>
-<a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>metadata_</b></td></tr>
-<tr class="separator:a726fd53e415a0b0a2365390c490f20c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eee50c0aa6c014069aa32bd4f8626c5" id="r_a1eee50c0aa6c014069aa32bd4f8626c5"><td class="memItemLeft" align="right" valign="top"><a id="a1eee50c0aa6c014069aa32bd4f8626c5" name="a1eee50c0aa6c014069aa32bd4f8626c5"></a>
+<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_work_queue.html">WorkQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>workQueue_</b></td></tr>
+<tr class="separator:a1eee50c0aa6c014069aa32bd4f8626c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88ae73897d4cc4c9f061778f88514909" id="r_a88ae73897d4cc4c9f061778f88514909"><td class="memItemLeft" align="right" valign="top"><a id="a88ae73897d4cc4c9f061778f88514909" name="a88ae73897d4cc4c9f061778f88514909"></a>
+ShapeType&#160;</td><td class="memItemRight" valign="bottom"><b>shapeType_</b> {}</td></tr>
+<tr class="separator:a88ae73897d4cc4c9f061778f88514909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a7162f90824f71794d02dac191ac1d" id="r_a50a7162f90824f71794d02dac191ac1d"><td class="memItemLeft" align="right" valign="top"><a id="a50a7162f90824f71794d02dac191ac1d" name="a50a7162f90824f71794d02dac191ac1d"></a>
+<a class="el" href="class_urho3_d_1_1_spin_lock_mutex.html">SpinLockMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mutex_</b></td></tr>
+<tr class="separator:a50a7162f90824f71794d02dac191ac1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459de557907027febcca16c085690cd3" id="r_a459de557907027febcca16c085690cd3"><td class="memItemLeft" align="right" valign="top"><a id="a459de557907027febcca16c085690cd3" name="a459de557907027febcca16c085690cd3"></a>
+CacheMap&#160;</td><td class="memItemRight" valign="bottom"><b>cache_</b></td></tr>
+<tr class="separator:a459de557907027febcca16c085690cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -405,131 +360,48 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <tr class="separator:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents <a class="el" href="class_urho3_d_1_1_model.html" title="3D model resource.">Model</a> in editable form. Some features are not supported for sake of API simplicity:</p><ul>
-<li>Multiple vertex and index buffers;</li>
-<li>Vertex and index buffer reuse for different geometries and LODs;</li>
-<li>Multiple root bones for skinned models. </li>
-</ul>
+<div class="textblock"><p>Cache of collision geometry data. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="abfd240915bdc1d9b32eec34ce985322e" name="abfd240915bdc1d9b32eec34ce985322e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfd240915bdc1d9b32eec34ce985322e">&#9670;&#160;</a></span>GetName()</h2>
+<a id="a30ce627d6ac2e72703adee1317547487" name="a30ce627d6ac2e72703adee1317547487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30ce627d6ac2e72703adee1317547487">&#9670;&#160;</a></span>GetOrCreateGeometry()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const ea::string &amp; Urho3D::ModelView::GetName </td>
+          <td class="memname"><a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="struct_urho3_d_1_1_collision_geometry_data.html">CollisionGeometryData</a> &gt; Urho3D::CollisionGeometryDataCache::GetOrCreateGeometry </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_model.html">Model</a> *&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return contents </p>
-
-</div>
-</div>
-<a id="a4f5e9c5e0f0bcaa12e77d46fe4a698e0" name="a4f5e9c5e0f0bcaa12e77d46fe4a698e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f5e9c5e0f0bcaa12e77d46fe4a698e0">&#9670;&#160;</a></span>ImportModel()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">bool Urho3D::ModelView::ImportModel </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_model.html">Model</a> *&#160;</td>
-          <td class="paramname"><em>model</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>lodLevel</em>&#160;</td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<p>Import and export from/to native <a class="el" href="class_urho3_d_1_1_model.html" title="3D model resource.">Model</a>. </p>
-
-</div>
-</div>
-<a id="a80886505a866e9678e70b03c03727de9" name="a80886505a866e9678e70b03c03727de9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80886505a866e9678e70b03c03727de9">&#9670;&#160;</a></span>MirrorGeometriesX()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void Urho3D::ModelView::MirrorGeometriesX </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
           <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Mirror geometries along X axis. Useful for conversion between left-handed and right-handed systems. Note: Does not affect bones! </p>
-
-</div>
-</div>
-<a id="a8ebacff5da8515ad5b48d15af365e2f7" name="a8ebacff5da8515ad5b48d15af365e2f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ebacff5da8515ad5b48d15af365e2f7">&#9670;&#160;</a></span>ScaleGeometries()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::ModelView::ScaleGeometries </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>scale</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Scale geometries. Useful for conversion between units. Note: Does not affect bones! </p>
-
-</div>
-</div>
-<a id="a8310b0d5b5d05af23bf0d4e32e62cc3c" name="a8310b0d5b5d05af23bf0d4e32e62cc3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8310b0d5b5d05af23bf0d4e32e62cc3c">&#9670;&#160;</a></span>SetName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Urho3D::ModelView::SetName </td>
-          <td>(</td>
-          <td class="paramtype">const ea::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Set contents </p>
+<p>Return existing or create new collision geometry. Cached if applicable. Thread-safe as long as the <a class="el" href="class_urho3_d_1_1_model.html" title="3D model resource.">Model</a> is not being reloaded or modified. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/Graphics/<b>ModelView.h</b></li>
-<li>Urho3D/Graphics/<b>ModelView.cpp</b></li>
+<li>Urho3D/Physics/<b>CollisionGeometryDataCache.h</b></li>
+<li>Urho3D/Physics/<b>CollisionGeometryDataCache.cpp</b></li>
+<li>Urho3D/Physics/<b>CollisionShape.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
     <ul>
-        <li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="class_urho3_d_1_1_model_view.html">ModelView</a></li>
+        <li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="class_urho3_d_1_1_collision_geometry_data_cache.html">CollisionGeometryDataCache</a></li>
     </ul>
 </div>
 </body>

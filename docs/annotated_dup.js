@@ -360,6 +360,7 @@ var annotated_dup =
       [ "CollisionCircle2D", "class_urho3_d_1_1_collision_circle2_d.html", "class_urho3_d_1_1_collision_circle2_d" ],
       [ "CollisionEdge2D", "class_urho3_d_1_1_collision_edge2_d.html", "class_urho3_d_1_1_collision_edge2_d" ],
       [ "CollisionGeometryData", "struct_urho3_d_1_1_collision_geometry_data.html", null ],
+      [ "CollisionGeometryDataCache", "class_urho3_d_1_1_collision_geometry_data_cache.html", "class_urho3_d_1_1_collision_geometry_data_cache" ],
       [ "CollisionPolygon2D", "class_urho3_d_1_1_collision_polygon2_d.html", "class_urho3_d_1_1_collision_polygon2_d" ],
       [ "CollisionShape", "class_urho3_d_1_1_collision_shape.html", "class_urho3_d_1_1_collision_shape" ],
       [ "CollisionShape2D", "class_urho3_d_1_1_collision_shape2_d.html", "class_urho3_d_1_1_collision_shape2_d" ],
