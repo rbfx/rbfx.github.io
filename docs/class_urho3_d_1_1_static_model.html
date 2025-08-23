@@ -135,6 +135,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessCustomRayQuery
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ApplyMaterialList</b> (const ea::string &amp;fileName=EMPTY_STRING)</td></tr>
 <tr class="memdesc:a60a5fb03ac834c59c3e9ee269c572a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply default materials from a material list file. If filename is empty (default), the model's resource name with extension .txt will be used. <br /></td></tr>
 <tr class="separator:a60a5fb03ac834c59c3e9ee269c572a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3494b599cde3fc49e4e9a8f0b9239aca" id="r_a3494b599cde3fc49e4e9a8f0b9239aca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_model.html#a3494b599cde3fc49e4e9a8f0b9239aca">SetBoundingBox</a> (const <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a> &amp;box)</td></tr>
+<tr class="separator:a3494b599cde3fc49e4e9a8f0b9239aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8a54f9e53ee7deb02f75db96fb4c662" id="r_af8a54f9e53ee7deb02f75db96fb4c662"><td class="memItemLeft" align="right" valign="top"><a id="af8a54f9e53ee7deb02f75db96fb4c662" name="af8a54f9e53ee7deb02f75db96fb4c662"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetLodLevels</b> ()</td></tr>
+<tr class="memdesc:af8a54f9e53ee7deb02f75db96fb4c662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset cached LOD levels and associated geometries. <br /></td></tr>
+<tr class="separator:af8a54f9e53ee7deb02f75db96fb4c662"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6aed0994d2d0eb2a5d0fbdf7a7dd8b1" id="r_aa6aed0994d2d0eb2a5d0fbdf7a7dd8b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_model.html">Model</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_model.html#aa6aed0994d2d0eb2a5d0fbdf7a7dd8b1">GetModel</a> () const</td></tr>
 <tr class="separator:aa6aed0994d2d0eb2a5d0fbdf7a7dd8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a928efd177a8a09047de193186f8d5e48" id="r_a928efd177a8a09047de193186f8d5e48"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_model.html#a928efd177a8a09047de193186f8d5e48">GetNumGeometries</a> () const</td></tr>
@@ -783,18 +789,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a6995f2d4053f4551d4862ca4a23f59c0" id="r_a6995f2d4053f4551d4862ca4a23f59c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_model.html#a6995f2d4053f4551d4862ca4a23f59c0">OnWorldBoundingBoxUpdate</a> () override</td></tr>
 <tr class="memdesc:a6995f2d4053f4551d4862ca4a23f59c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate the world-space bounding box.  <br /></td></tr>
 <tr class="separator:a6995f2d4053f4551d4862ca4a23f59c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3494b599cde3fc49e4e9a8f0b9239aca" id="r_a3494b599cde3fc49e4e9a8f0b9239aca"><td class="memItemLeft" align="right" valign="top"><a id="a3494b599cde3fc49e4e9a8f0b9239aca" name="a3494b599cde3fc49e4e9a8f0b9239aca"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBoundingBox</b> (const <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a> &amp;box)</td></tr>
-<tr class="memdesc:a3494b599cde3fc49e4e9a8f0b9239aca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set local-space bounding box. <br /></td></tr>
-<tr class="separator:a3494b599cde3fc49e4e9a8f0b9239aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a023f70da6e3ec54602c69a363ecf040a" id="r_a023f70da6e3ec54602c69a363ecf040a"><td class="memItemLeft" align="right" valign="top"><a id="a023f70da6e3ec54602c69a363ecf040a" name="a023f70da6e3ec54602c69a363ecf040a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetNumGeometries</b> (unsigned num)</td></tr>
 <tr class="memdesc:a023f70da6e3ec54602c69a363ecf040a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of geometries. <br /></td></tr>
 <tr class="separator:a023f70da6e3ec54602c69a363ecf040a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8a54f9e53ee7deb02f75db96fb4c662" id="r_af8a54f9e53ee7deb02f75db96fb4c662"><td class="memItemLeft" align="right" valign="top"><a id="af8a54f9e53ee7deb02f75db96fb4c662" name="af8a54f9e53ee7deb02f75db96fb4c662"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetLodLevels</b> ()</td></tr>
-<tr class="memdesc:af8a54f9e53ee7deb02f75db96fb4c662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset LOD levels. <br /></td></tr>
-<tr class="separator:af8a54f9e53ee7deb02f75db96fb4c662"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5725ee05897fb730dbc0794b78eee3d7" id="r_a5725ee05897fb730dbc0794b78eee3d7"><td class="memItemLeft" align="right" valign="top"><a id="a5725ee05897fb730dbc0794b78eee3d7" name="a5725ee05897fb730dbc0794b78eee3d7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateLodLevels</b> ()</td></tr>
 <tr class="memdesc:a5725ee05897fb730dbc0794b78eee3d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose LOD levels based on distance. <br /></td></tr>
@@ -1417,6 +1415,25 @@ static <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> *&#160;
 </table>
 </div><div class="memdoc">
 <p>Register object factory. <a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a> must be registered first. </p>
+
+</div>
+</div>
+<a id="a3494b599cde3fc49e4e9a8f0b9239aca" name="a3494b599cde3fc49e4e9a8f0b9239aca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3494b599cde3fc49e4e9a8f0b9239aca">&#9670;&#160;</a></span>SetBoundingBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::StaticModel::SetBoundingBox </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a> &amp;&#160;</td>
+          <td class="paramname"><em>box</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set local-space bounding box. </p><dl class="section note"><dt>Note</dt><dd>Setting or reloading <a class="el" href="class_urho3_d_1_1_model.html" title="3D model resource.">Model</a> will overwrite bounding box. </dd></dl>
 
 </div>
 </div>

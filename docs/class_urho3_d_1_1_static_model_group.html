@@ -168,6 +168,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessCustomRayQuery
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ApplyMaterialList</b> (const ea::string &amp;fileName=EMPTY_STRING)</td></tr>
 <tr class="memdesc:a60a5fb03ac834c59c3e9ee269c572a95 inherit pub_methods_class_urho3_d_1_1_static_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply default materials from a material list file. If filename is empty (default), the model's resource name with extension .txt will be used. <br /></td></tr>
 <tr class="separator:a60a5fb03ac834c59c3e9ee269c572a95 inherit pub_methods_class_urho3_d_1_1_static_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3494b599cde3fc49e4e9a8f0b9239aca inherit pub_methods_class_urho3_d_1_1_static_model" id="r_a3494b599cde3fc49e4e9a8f0b9239aca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_model.html#a3494b599cde3fc49e4e9a8f0b9239aca">SetBoundingBox</a> (const <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a> &amp;box)</td></tr>
+<tr class="separator:a3494b599cde3fc49e4e9a8f0b9239aca inherit pub_methods_class_urho3_d_1_1_static_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8a54f9e53ee7deb02f75db96fb4c662 inherit pub_methods_class_urho3_d_1_1_static_model" id="r_af8a54f9e53ee7deb02f75db96fb4c662"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetLodLevels</b> ()</td></tr>
+<tr class="memdesc:af8a54f9e53ee7deb02f75db96fb4c662 inherit pub_methods_class_urho3_d_1_1_static_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset cached LOD levels and associated geometries. <br /></td></tr>
+<tr class="separator:af8a54f9e53ee7deb02f75db96fb4c662 inherit pub_methods_class_urho3_d_1_1_static_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6aed0994d2d0eb2a5d0fbdf7a7dd8b1 inherit pub_methods_class_urho3_d_1_1_static_model" id="r_aa6aed0994d2d0eb2a5d0fbdf7a7dd8b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_model.html">Model</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_model.html#aa6aed0994d2d0eb2a5d0fbdf7a7dd8b1">GetModel</a> () const</td></tr>
 <tr class="separator:aa6aed0994d2d0eb2a5d0fbdf7a7dd8b1 inherit pub_methods_class_urho3_d_1_1_static_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a928efd177a8a09047de193186f8d5e48 inherit pub_methods_class_urho3_d_1_1_static_model" id="r_a928efd177a8a09047de193186f8d5e48"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_model.html#a928efd177a8a09047de193186f8d5e48">GetNumGeometries</a> () const</td></tr>
@@ -820,18 +826,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:ae9a4e2a83ebc08833d0e646d10db0136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate the world-space bounding box.  <br /></td></tr>
 <tr class="separator:ae9a4e2a83ebc08833d0e646d10db0136"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_urho3_d_1_1_static_model"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_static_model')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_static_model.html">Urho3D::StaticModel</a></td></tr>
-<tr class="memitem:a3494b599cde3fc49e4e9a8f0b9239aca inherit pro_methods_class_urho3_d_1_1_static_model" id="r_a3494b599cde3fc49e4e9a8f0b9239aca"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBoundingBox</b> (const <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a> &amp;box)</td></tr>
-<tr class="memdesc:a3494b599cde3fc49e4e9a8f0b9239aca inherit pro_methods_class_urho3_d_1_1_static_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set local-space bounding box. <br /></td></tr>
-<tr class="separator:a3494b599cde3fc49e4e9a8f0b9239aca inherit pro_methods_class_urho3_d_1_1_static_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a023f70da6e3ec54602c69a363ecf040a inherit pro_methods_class_urho3_d_1_1_static_model" id="r_a023f70da6e3ec54602c69a363ecf040a"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetNumGeometries</b> (unsigned num)</td></tr>
 <tr class="memdesc:a023f70da6e3ec54602c69a363ecf040a inherit pro_methods_class_urho3_d_1_1_static_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of geometries. <br /></td></tr>
 <tr class="separator:a023f70da6e3ec54602c69a363ecf040a inherit pro_methods_class_urho3_d_1_1_static_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8a54f9e53ee7deb02f75db96fb4c662 inherit pro_methods_class_urho3_d_1_1_static_model" id="r_af8a54f9e53ee7deb02f75db96fb4c662"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetLodLevels</b> ()</td></tr>
-<tr class="memdesc:af8a54f9e53ee7deb02f75db96fb4c662 inherit pro_methods_class_urho3_d_1_1_static_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset LOD levels. <br /></td></tr>
-<tr class="separator:af8a54f9e53ee7deb02f75db96fb4c662 inherit pro_methods_class_urho3_d_1_1_static_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5725ee05897fb730dbc0794b78eee3d7 inherit pro_methods_class_urho3_d_1_1_static_model" id="r_a5725ee05897fb730dbc0794b78eee3d7"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateLodLevels</b> ()</td></tr>
 <tr class="memdesc:a5725ee05897fb730dbc0794b78eee3d7 inherit pro_methods_class_urho3_d_1_1_static_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose LOD levels based on distance. <br /></td></tr>
