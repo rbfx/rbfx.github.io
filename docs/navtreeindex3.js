@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"_shaders.html#Shaders_InbuiltUniforms":[0,1,16,10,1],
+"_shaders.html#Shaders_Precaching":[0,1,16,10,4],
 "_shaders.html#Shaders_Writing":[0,1,16,10,2],
 "_skeletal_animation.html":[0,1,16,13],
 "_skeletal_animation.html#SkeletalAnimation_Blending":[0,1,16,13,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "class_urho3_d_1_1_abstract_file.html#a3e9a90215abc326625ec6230baef4706":[8,0,2,6,6],
 "class_urho3_d_1_1_abstract_file.html#a8977b3028e12d3fe090bc9bf56a7ad58":[8,0,2,6,3],
 "class_urho3_d_1_1_abstract_file.html#a8d6fe17fdee4accd1276ccc8eff300fb":[8,0,2,6,7],
-"class_urho3_d_1_1_abstract_file.html#a9ee2e06721fcc4c842d6b41a59d508a1":[8,0,2,6,2],
-"class_urho3_d_1_1_abstract_file.html#aacb344a814c18f966f98fb085d837aa1":[8,0,2,6,0],
-"class_urho3_d_1_1_abstract_file.html#ab6ea4ffa2471e54e5f59f00230e9922a":[8,0,2,6,8]
+"class_urho3_d_1_1_abstract_file.html#a9ee2e06721fcc4c842d6b41a59d508a1":[8,0,2,6,2]
 };

@@ -64,5 +64,7 @@ var _math_defs_8h =
     [ "ToRadians", "_math_defs_8h.html#a3f7584e4a99a1086de4901416de02166", null ],
     [ "VectorClamp", "_math_defs_8h.html#a481e7c409f623f63514525c5a6319157", null ],
     [ "Wrap", "_math_defs_8h.html#a70f90d1c465a9a38b2e66d2ed5c24dc8", null ],
+    [ "ZigzagDecode", "_math_defs_8h.html#aae332159c0283ebbe419d23546fe372f", null ],
+    [ "ZigzagEncode", "_math_defs_8h.html#a1d810167882e54cf065e4d3e84193619", null ],
     [ "MaxVariableLengthBytes", "_math_defs_8h.html#a6375f89143d9743bbfad84fd12f658a8", null ]
 ];

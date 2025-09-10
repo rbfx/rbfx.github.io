@@ -1,5 +1,7 @@
 var NAVTREEINDEX57 =
 {
+"struct_urho3_d_1_1_convex_data.html#a3a47bbdabba70765bb7ea38733dff87c":[8,0,2,158,6],
+"struct_urho3_d_1_1_convex_data.html#a7a1da422644832612dc2b8c9d81ea402":[8,0,2,158,5],
 "struct_urho3_d_1_1_convex_data.html#a930ec22787a3309e011859e8699ceb84":[8,0,2,158,4],
 "struct_urho3_d_1_1_convex_data.html#a94123547d0117887b01db8a1bcd1e903":[8,0,2,158,0],
 "struct_urho3_d_1_1_convex_data.html#ab2515aed5145313d4c6314679cda1d04":[8,0,2,158,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX57 =
 "struct_urho3_d_1_1_g_l_t_f_importer_settings.html":[8,0,2,266],
 "struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings.html":[8,0,2,266,0],
 "struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings.html#a0c65b90ab81bc554950cd3d0fe9e1d65":[8,0,2,266,0,2],
-"struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings.html#a69c477087282968fd84705283c4b0187":[8,0,2,266,0,1],
-"struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings.html#a92863f6a03ba6d7da41123fbb17c76d2":[8,0,2,266,0,0],
-"struct_urho3_d_1_1_geometry_batch.html":[8,0,2,255]
+"struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings.html#a69c477087282968fd84705283c4b0187":[8,0,2,266,0,1]
 };
