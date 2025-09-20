@@ -34,10 +34,10 @@ var index =
         ] ],
         [ "Scene and Animation", "scene-and-animation.html", [
           [ "Component Life Cycle", "component-lifecycle.html", null ],
-          [ "Scene Animation", "scene-animation.html", null ]
+          [ "Scene Animation", "scene-animation.html", null ],
+          [ "Camera Operator", "camera-operator.html", null ],
+          [ "Shake Component", "shake-component.html", null ]
         ] ],
-        [ "Camera Operator", "camera-operator.html", null ],
-        [ "Shake Component", "shake-component.html", null ],
         [ "Serialization and Resources", "serialization-and-resources.html", [
           [ "Archive", "archive.html", null ],
           [ "SerializableResource", "serializable-resource.html", null ]
@@ -46,7 +46,6 @@ var index =
         [ "Inverse Kinematics", "inverse-kinematics.html", null ],
         [ "UI Overview", "ui-overview.html", null ]
       ] ],
-      [ "Shake Component", "shake-component.html", null ],
       [ "Project Goals", "project-goals.html", null ],
       [ "Feature Overview", "outdated-feature-overview.html", null ],
       [ "Used Third Party Libraries", "outdated-third-party.html", null ],

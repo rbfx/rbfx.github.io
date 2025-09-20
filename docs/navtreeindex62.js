@@ -1,6 +1,5 @@
 var NAVTREEINDEX62 =
 {
-"struct_urho3_d_1_1_v_anim_event_frame.html#af5c243d9ac5cbf35a03707da4cb54e01":[6,0,2,798,0],
 "struct_urho3_d_1_1_v_anim_key_frame.html":[6,0,2,799],
 "struct_urho3_d_1_1_v_anim_key_frame.html#a827dfae652c41dec8b5eaf6a43baa1de":[6,0,2,799,0],
 "struct_urho3_d_1_1_v_anim_key_frame.html#ae98c4cf3709aadd68e8be987719b064e":[6,0,2,799,1],
@@ -96,7 +95,7 @@ var NAVTREEINDEX62 =
 "structfmt_1_1formatter_3_01_urho3_d_1_1_file_identifier_01_4.html":[6,0,1,3],
 "structfmt_1_1formatter_3_01ea_1_1string_01_4.html":[6,0,1,0],
 "structfmt_1_1formatter_3_01ea_1_1string__view_01_4.html":[6,0,1,1],
-"ui-overview.html":[0,0,2,9],
+"ui-overview.html":[0,0,2,7],
 "union_urho3_d_1_1_variant_value.html":[6,0,2,805],
 "union_urho3_d_1_1_variant_value.html#a03798cc14fab8e4e4d8b1b13d487439f":[6,0,2,805,4],
 "union_urho3_d_1_1_variant_value.html#a0951c7d67a775ad2d1f0574cc93dae99":[6,0,2,805,3],
