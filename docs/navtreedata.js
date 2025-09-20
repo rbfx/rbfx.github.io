@@ -28,8 +28,6 @@ var NAVTREE =
     [ "Home", "index.html", "index" ],
     [ "Quick Start for C++ developers", "md__2home_2runner_2work_2rbfx-docs_2rbfx-docs_2pages_2documentation_2cpp-quick-start.html", null ],
     [ "Quick Start for C# developers", "md__2home_2runner_2work_2rbfx-docs_2rbfx-docs_2pages_2documentation_2csharp-quick-start.html", null ],
-    [ "Camera Operator", "camera-operator.html", null ],
-    [ "Shake Component", "shake-component.html", null ],
     [ "Math Cheatsheet", "md__2home_2runner_2work_2rbfx-docs_2rbfx-docs_2pages_2documentation_2math-cheatsheet.html", null ],
     [ "Documentation for Rebel Fork Framework", "md__2home_2runner_2work_2rbfx-docs_2rbfx-docs_2_r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
@@ -116,13 +114,13 @@ var NAVTREEINDEX =
 "class_urho3_d_1_1_viewport_depth_stencil_render_buffer.html#a4b08634f0b1038acb3c2f827c26eb950",
 "class_urho3_d_1_1_x_m_l_element.html#a49f0b7c1cec40b16581bc24d86ee5e25",
 "class_urho3_d_1_1_zone.html#a7ccacfcdafdec86719bfd084d6643e56",
-"struct_urho3_d_1_1_animation_trigger_point.html#a2122535dd432d8624e2cc895d520ff41",
-"struct_urho3_d_1_1_convex_data.html#a3a47bbdabba70765bb7ea38733dff87c",
-"struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings.html#a92863f6a03ba6d7da41123fbb17c76d2",
-"struct_urho3_d_1_1_lightmap_chart_region.html#a4b31037378d776798babe3fcd4cbfc3a",
-"struct_urho3_d_1_1_particle_graph_nodes_1_1_cast_instance.html",
-"struct_urho3_d_1_1_simple_nav_build_data.html#af2523a3f10d25d0a348f8030a025d446",
-"struct_urho3_d_1_1_v_anim_key_frame.html"
+"struct_urho3_d_1_1_animation_trigger_point.html",
+"struct_urho3_d_1_1_convex_data.html#a1ee60b51276a890986abb94846b0b892",
+"struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings.html#a69c477087282968fd84705283c4b0187",
+"struct_urho3_d_1_1_lightmap_chart_region.html#a22522fb2b472f5b232cf47d688e3a9c1",
+"struct_urho3_d_1_1_particle_graph_nodes_1_1_break_instance_3_01_vector3_00_01float_00_01float_00_01float_01_4.html",
+"struct_urho3_d_1_1_simple_nav_build_data.html#ad282a072840ef6e8e4cf7ac949d1c551",
+"struct_urho3_d_1_1_v_anim_event_frame.html#af5c243d9ac5cbf35a03707da4cb54e01"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
