@@ -10,7 +10,7 @@ var class_urho3_d_1_1_camera_operator =
     [ "GetTrackedNode", "class_urho3_d_1_1_camera_operator.html#a54b08d888ffe5a32545807d7cc9bb9db", null ],
     [ "IsBoundingBoxTrackingEnabled", "class_urho3_d_1_1_camera_operator.html#a50f79bdc7ea0a18feaf54337d703e0d7", null ],
     [ "MoveCamera", "class_urho3_d_1_1_camera_operator.html#ab99ce1a874e5a13d278e422f9028f437", null ],
-    [ "OnNodeSet", "class_urho3_d_1_1_camera_operator.html#a91ff0f29bbfd17a0f59b247651cc1933", null ],
+    [ "OnNodeSet", "class_urho3_d_1_1_camera_operator.html#a8ccc239be3fe2c09b12d6550d88d4f67", null ],
     [ "OnSceneSet", "class_urho3_d_1_1_camera_operator.html#a726b33d79a6e3abdb446985c7082170e", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_camera_operator.html#a98dcf571e59fc0ab24337a896444a127", null ],
     [ "RegisterObject", "class_urho3_d_1_1_camera_operator.html#a4cfeebdd42ea66549f7cc914369f1885", null ],
