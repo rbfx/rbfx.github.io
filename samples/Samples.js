@@ -47,15 +47,17 @@ if (ENVIRONMENT_IS_NODE) {
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
 // include: /home/runner/work/rbfx/rbfx/cmake-build/Source/Samples/Resources.js.load.js
-Module["preRun"].push(function() {
-  Module["addRunDependency"]("Resources.js.loader");
-  var s = document.createElement("script");
-  s.src = "Resources.js";
-  document.body.appendChild(s);
-  s.onload = function() {
-    Module["removeRunDependency"]("Resources.js.loader");
-  };
-});
+if (!ENVIRONMENT_IS_WORKER) {
+  Module["preRun"].push(function() {
+    Module["addRunDependency"]("Resources.js.loader");
+    var s = document.createElement("script");
+    s.src = "Resources.js";
+    document.body.appendChild(s);
+    s.onload = function() {
+      Module["removeRunDependency"]("Resources.js.loader");
+    };
+  });
+}
 
 // end include: /home/runner/work/rbfx/rbfx/cmake-build/Source/Samples/Resources.js.load.js
 var arguments_ = [];
@@ -1186,6 +1188,50 @@ var ___cxa_throw = (ptr, type, destructor) => {
   exceptionLast = ptr;
   uncaughtExceptionCount++;
   throw exceptionLast;
+};
+
+function pthreadCreateProxied(pthread_ptr, attr, startRoutine, arg) {
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(2, 0, 1, pthread_ptr, attr, startRoutine, arg);
+  return ___pthread_create_js(pthread_ptr, attr, startRoutine, arg);
+}
+
+var _emscripten_has_threading_support = () => !!globalThis.SharedArrayBuffer;
+
+var ___pthread_create_js = (pthread_ptr, attr, startRoutine, arg) => {
+  if (!_emscripten_has_threading_support()) {
+    return 6;
+  }
+  // List of JS objects that will transfer ownership to the Worker hosting the thread
+  var transferList = [];
+  var error = 0;
+  // Synchronously proxy the thread creation to main thread if possible. If we
+  // need to transfer ownership of objects, then proxy asynchronously via
+  // postMessage.
+  if (ENVIRONMENT_IS_PTHREAD && (transferList.length === 0 || error)) {
+    return pthreadCreateProxied(pthread_ptr, attr, startRoutine, arg);
+  }
+  // If on the main thread, and accessing Canvas/OffscreenCanvas failed, abort
+  // with the detected error.
+  if (error) return error;
+  var threadParams = {
+    startRoutine,
+    pthread_ptr,
+    arg,
+    transferList
+  };
+  if (ENVIRONMENT_IS_PTHREAD) {
+    // The prepopulated pool of web workers that can host pthreads is stored
+    // in the main JS thread. Therefore if a pthread is attempting to spawn a
+    // new thread, the thread creation must be deferred to the main JS thread.
+    threadParams.cmd = "spawnThread";
+    postMessage(threadParams, transferList);
+    // When we defer thread creation this way, we have no way to detect thread
+    // creation synchronously today, so we have to assume success and return 0.
+    return 0;
+  }
+  // We are the main thread, so we have the pthread warmup pool in this
+  // thread and can fire off JS thread creation directly ourselves.
+  return spawnThread(threadParams);
 };
 
 var initRandomFill = () => {
@@ -4764,7 +4810,7 @@ var getSocketAddress = (addrp, addrlen) => {
 };
 
 function ___syscall_bind(fd, addr, addrlen, d1, d2, d3) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(2, 0, 1, fd, addr, addrlen, d1, d2, d3);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(3, 0, 1, fd, addr, addrlen, d1, d2, d3);
   try {
     var sock = getSocketFromFD(fd);
     var info = getSocketAddress(addr, addrlen);
@@ -4865,7 +4911,7 @@ var SYSCALLS = {
 };
 
 function ___syscall_fcntl64(fd, cmd, varargs) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(3, 0, 1, fd, cmd, varargs);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(4, 0, 1, fd, cmd, varargs);
   SYSCALLS.varargs = varargs;
   try {
     var stream = SYSCALLS.getStreamFromFD(fd);
@@ -4924,7 +4970,7 @@ function ___syscall_fcntl64(fd, cmd, varargs) {
 }
 
 function ___syscall_fstat64(fd, buf) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(4, 0, 1, fd, buf);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(5, 0, 1, fd, buf);
   try {
     return SYSCALLS.writeStat(buf, FS.fstat(fd));
   } catch (e) {
@@ -4937,7 +4983,7 @@ var stringToUTF8 = (str, outPtr, maxBytesToWrite) => stringToUTF8Array(str, (gro
 HEAPU8), outPtr, maxBytesToWrite);
 
 function ___syscall_getcwd(buf, size) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(5, 0, 1, buf, size);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(6, 0, 1, buf, size);
   try {
     if (size === 0) return -28;
     var cwd = FS.cwd();
@@ -4952,7 +4998,7 @@ function ___syscall_getcwd(buf, size) {
 }
 
 function ___syscall_getdents64(fd, dirp, count) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(6, 0, 1, fd, dirp, count);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(7, 0, 1, fd, dirp, count);
   try {
     var stream = SYSCALLS.getStreamFromFD(fd);
     stream.getdents ||= FS.readdir(stream.path);
@@ -5008,7 +5054,7 @@ function ___syscall_getdents64(fd, dirp, count) {
 }
 
 function ___syscall_ioctl(fd, op, varargs) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(7, 0, 1, fd, op, varargs);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(8, 0, 1, fd, op, varargs);
   SYSCALLS.varargs = varargs;
   try {
     var stream = SYSCALLS.getStreamFromFD(fd);
@@ -5131,7 +5177,7 @@ function ___syscall_ioctl(fd, op, varargs) {
 }
 
 function ___syscall_lstat64(path, buf) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(8, 0, 1, path, buf);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(9, 0, 1, path, buf);
   try {
     path = SYSCALLS.getStr(path);
     return SYSCALLS.writeStat(buf, FS.lstat(path));
@@ -5142,7 +5188,7 @@ function ___syscall_lstat64(path, buf) {
 }
 
 function ___syscall_mkdirat(dirfd, path, mode) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(9, 0, 1, dirfd, path, mode);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(10, 0, 1, dirfd, path, mode);
   try {
     path = SYSCALLS.getStr(path);
     path = SYSCALLS.calculateAt(dirfd, path);
@@ -5155,7 +5201,7 @@ function ___syscall_mkdirat(dirfd, path, mode) {
 }
 
 function ___syscall_newfstatat(dirfd, path, buf, flags) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(10, 0, 1, dirfd, path, buf, flags);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(11, 0, 1, dirfd, path, buf, flags);
   try {
     path = SYSCALLS.getStr(path);
     var nofollow = flags & 256;
@@ -5170,7 +5216,7 @@ function ___syscall_newfstatat(dirfd, path, buf, flags) {
 }
 
 function ___syscall_openat(dirfd, path, flags, varargs) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(11, 0, 1, dirfd, path, flags, varargs);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(12, 0, 1, dirfd, path, flags, varargs);
   SYSCALLS.varargs = varargs;
   try {
     path = SYSCALLS.getStr(path);
@@ -5219,7 +5265,7 @@ var zeroMemory = (ptr, size) => (growMemViews(), HEAPU8).fill(0, ptr, ptr + size
 };
 
 function ___syscall_recvfrom(fd, buf, len, flags, addr, addrlen) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(12, 0, 1, fd, buf, len, flags, addr, addrlen);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(13, 0, 1, fd, buf, len, flags, addr, addrlen);
   try {
     var sock = getSocketFromFD(fd);
     var msg = sock.sock_ops.recvmsg(sock, len);
@@ -5237,7 +5283,7 @@ function ___syscall_recvfrom(fd, buf, len, flags, addr, addrlen) {
 }
 
 function ___syscall_rmdir(path) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(13, 0, 1, path);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(14, 0, 1, path);
   try {
     path = SYSCALLS.getStr(path);
     FS.rmdir(path);
@@ -5249,7 +5295,7 @@ function ___syscall_rmdir(path) {
 }
 
 function ___syscall_sendto(fd, message, length, flags, addr, addr_len) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(14, 0, 1, fd, message, length, flags, addr, addr_len);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(15, 0, 1, fd, message, length, flags, addr, addr_len);
   try {
     var sock = getSocketFromFD(fd);
     if (!addr) {
@@ -5266,7 +5312,7 @@ function ___syscall_sendto(fd, message, length, flags, addr, addr_len) {
 }
 
 function ___syscall_socket(domain, type, protocol) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(15, 0, 1, domain, type, protocol);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(16, 0, 1, domain, type, protocol);
   try {
     var sock = SOCKFS.createSocket(domain, type, protocol);
     return sock.stream.fd;
@@ -5277,7 +5323,7 @@ function ___syscall_socket(domain, type, protocol) {
 }
 
 function ___syscall_stat64(path, buf) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(16, 0, 1, path, buf);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(17, 0, 1, path, buf);
   try {
     path = SYSCALLS.getStr(path);
     return SYSCALLS.writeStat(buf, FS.stat(path));
@@ -5288,7 +5334,7 @@ function ___syscall_stat64(path, buf) {
 }
 
 function ___syscall_unlinkat(dirfd, path, flags) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(17, 0, 1, dirfd, path, flags);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(18, 0, 1, dirfd, path, flags);
   try {
     path = SYSCALLS.getStr(path);
     path = SYSCALLS.calculateAt(dirfd, path);
@@ -6262,6 +6308,126 @@ var __emscripten_throw_longjmp = () => {
   throw Infinity;
 };
 
+var emval_methodCallers = [];
+
+var emval_addMethodCaller = caller => {
+  var id = emval_methodCallers.length;
+  emval_methodCallers.push(caller);
+  return id;
+};
+
+var requireRegisteredType = (rawType, humanName) => {
+  var impl = registeredTypes[rawType];
+  if (undefined === impl) {
+    throwBindingError(`${humanName} has unknown type ${getTypeName(rawType)}`);
+  }
+  return impl;
+};
+
+var emval_lookupTypes = (argCount, argTypes) => {
+  var a = new Array(argCount);
+  for (var i = 0; i < argCount; ++i) {
+    a[i] = requireRegisteredType((growMemViews(), HEAPU32)[(((argTypes) + (i * 4)) >> 2)], `parameter ${i}`);
+  }
+  return a;
+};
+
+var emval_returnValue = (toReturnWire, destructorsRef, handle) => {
+  var destructors = [];
+  var result = toReturnWire(destructors, handle);
+  if (destructors.length) {
+    // void, primitives and any other types w/o destructors don't need to allocate a handle
+    (growMemViews(), HEAPU32)[((destructorsRef) >> 2)] = Emval.toHandle(destructors);
+  }
+  return result;
+};
+
+var emval_symbols = {};
+
+var getStringOrSymbol = address => {
+  var symbol = emval_symbols[address];
+  if (symbol === undefined) {
+    return AsciiToString(address);
+  }
+  return symbol;
+};
+
+var __emval_create_invoker = (argCount, argTypesPtr, kind) => {
+  var GenericWireTypeSize = 8;
+  var [retType, ...argTypes] = emval_lookupTypes(argCount, argTypesPtr);
+  var toReturnWire = retType.toWireType.bind(retType);
+  var argFromPtr = argTypes.map(type => type.readValueFromPointer.bind(type));
+  argCount--;
+  // remove the extracted return type
+  var captures = {
+    "toValue": Emval.toValue
+  };
+  var args = argFromPtr.map((argFromPtr, i) => {
+    var captureName = `argFromPtr${i}`;
+    captures[captureName] = argFromPtr;
+    return `${captureName}(args${i ? "+" + i * GenericWireTypeSize : ""})`;
+  });
+  var functionBody;
+  switch (kind) {
+   case 0:
+    functionBody = "toValue(handle)";
+    break;
+
+   case 2:
+    functionBody = "new (toValue(handle))";
+    break;
+
+   case 3:
+    functionBody = "";
+    break;
+
+   case 1:
+    captures["getStringOrSymbol"] = getStringOrSymbol;
+    functionBody = "toValue(handle)[getStringOrSymbol(methodName)]";
+    break;
+  }
+  functionBody += `(${args})`;
+  if (!retType.isVoid) {
+    captures["toReturnWire"] = toReturnWire;
+    captures["emval_returnValue"] = emval_returnValue;
+    functionBody = `return emval_returnValue(toReturnWire, destructorsRef, ${functionBody})`;
+  }
+  functionBody = `return function (handle, methodName, destructorsRef, args) {\n  ${functionBody}\n  }`;
+  var invokerFunction = new Function(Object.keys(captures), functionBody)(...Object.values(captures));
+  var functionName = `methodCaller<(${argTypes.map(t => t.name)}) => ${retType.name}>`;
+  return emval_addMethodCaller(createNamedFunction(functionName, invokerFunction));
+};
+
+var __emval_get_global = name => {
+  if (!name) {
+    return Emval.toHandle(globalThis);
+  }
+  name = getStringOrSymbol(name);
+  return Emval.toHandle(globalThis[name]);
+};
+
+var __emval_get_property = (handle, key) => {
+  handle = Emval.toValue(handle);
+  key = Emval.toValue(key);
+  return Emval.toHandle(handle[key]);
+};
+
+var __emval_incref = handle => {
+  if (handle > 9) {
+    emval_handles[handle + 1] += 1;
+  }
+};
+
+var __emval_invoke = (caller, handle, methodName, destructorsRef, args) => emval_methodCallers[caller](handle, methodName, destructorsRef, args);
+
+var __emval_new_cstring = v => Emval.toHandle(getStringOrSymbol(v));
+
+var __emval_run_destructors = handle => {
+  var destructors = Emval.toValue(handle);
+  runDestructors(destructors);
+  __emval_decref(handle);
+};
+
 var INT53_MAX = 9007199254740992;
 
 var INT53_MIN = -9007199254740992;
@@ -6936,7 +7102,7 @@ var EGL = {
 };
 
 function _eglBindAPI(api) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(18, 0, 1, api);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(19, 0, 1, api);
   if (api == 12448) {
     EGL.setErrorCode(12288);
     return 1;
@@ -6947,7 +7113,7 @@ function _eglBindAPI(api) {
 }
 
 function _eglChooseConfig(display, attrib_list, configs, config_size, numConfigs) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(19, 0, 1, display, attrib_list, configs, config_size, numConfigs);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(20, 0, 1, display, attrib_list, configs, config_size, numConfigs);
   return EGL.chooseConfig(display, attrib_list, configs, config_size, numConfigs);
 }
 
@@ -7292,7 +7458,7 @@ var GL = {
 };
 
 function _eglCreateContext(display, config, hmm, contextAttribs) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(20, 0, 1, display, config, hmm, contextAttribs);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(21, 0, 1, display, config, hmm, contextAttribs);
   if (display != 62e3) {
     EGL.setErrorCode(12296);
     return 0;
@@ -7337,7 +7503,7 @@ function _eglCreateContext(display, config, hmm, contextAttribs) {
 }
 
 function _eglCreateWindowSurface(display, config, win, attrib_list) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(21, 0, 1, display, config, win, attrib_list);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(22, 0, 1, display, config, win, attrib_list);
   if (display != 62e3) {
     EGL.setErrorCode(12296);
     return 0;
@@ -7355,7 +7521,7 @@ function _eglCreateWindowSurface(display, config, win, attrib_list) {
 }
 
 function _eglDestroyContext(display, context) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(22, 0, 1, display, context);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(23, 0, 1, display, context);
   if (display != 62e3) {
     EGL.setErrorCode(12296);
     return 0;
@@ -7373,7 +7539,7 @@ function _eglDestroyContext(display, context) {
 }
 
 function _eglDestroySurface(display, surface) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(23, 0, 1, display, surface);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(24, 0, 1, display, surface);
   if (display != 62e3) {
     EGL.setErrorCode(12296);
     return 0;
@@ -7393,7 +7559,7 @@ function _eglDestroySurface(display, surface) {
 }
 
 function _eglGetConfigAttrib(display, config, attribute, value) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(24, 0, 1, display, config, attribute, value);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(25, 0, 1, display, config, attribute, value);
   if (display != 62e3) {
     EGL.setErrorCode(12296);
     return 0;
@@ -7569,7 +7735,7 @@ function _eglGetConfigAttrib(display, config, attribute, value) {
 }
 
 function _eglGetDisplay(nativeDisplayType) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(25, 0, 1, nativeDisplayType);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(26, 0, 1, nativeDisplayType);
   EGL.setErrorCode(12288);
   // Emscripten EGL implementation "emulates" X11, and eglGetDisplay is
   // expected to accept/receive a pointer to an X11 Display object (or
@@ -7581,12 +7747,12 @@ function _eglGetDisplay(nativeDisplayType) {
 }
 
 function _eglGetError() {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(26, 0, 1);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(27, 0, 1);
   return EGL.errorCode;
 }
 
 function _eglInitialize(display, majorVersion, minorVersion) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(27, 0, 1, display, majorVersion, minorVersion);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(28, 0, 1, display, majorVersion, minorVersion);
   if (display != 62e3) {
     EGL.setErrorCode(12296);
     return 0;
@@ -7603,7 +7769,7 @@ function _eglInitialize(display, majorVersion, minorVersion) {
 }
 
 function _eglMakeCurrent(display, draw, read, context) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(28, 0, 1, display, draw, read, context);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(29, 0, 1, display, draw, read, context);
   if (display != 62e3) {
     EGL.setErrorCode(12296);
     return 0;
@@ -7633,7 +7799,7 @@ var stringToNewUTF8 = str => {
 };
 
 function _eglQueryString(display, name) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(29, 0, 1, display, name);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(30, 0, 1, display, name);
   if (display != 62e3) {
     EGL.setErrorCode(12296);
     return 0;
@@ -7669,7 +7835,7 @@ function _eglQueryString(display, name) {
 }
 
 function _eglSwapBuffers(dpy, surface) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(30, 0, 1, dpy, surface);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(31, 0, 1, dpy, surface);
   if (!EGL.defaultDisplayInitialized) {
     EGL.setErrorCode(12289);
   } else if (!GLctx) {
@@ -7906,7 +8072,7 @@ var _emscripten_set_main_loop_timing = (mode, value) => {
 };
 
 function _eglSwapInterval(display, interval) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(31, 0, 1, display, interval);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(32, 0, 1, display, interval);
   if (display != 62e3) {
     EGL.setErrorCode(12296);
     return 0;
@@ -7917,7 +8083,7 @@ function _eglSwapInterval(display, interval) {
 }
 
 function _eglTerminate(display) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(32, 0, 1, display);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(33, 0, 1, display);
   if (display != 62e3) {
     EGL.setErrorCode(12296);
     return 0;
@@ -7931,7 +8097,7 @@ function _eglTerminate(display) {
 }
 
 function _eglWaitClient() {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(33, 0, 1);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(34, 0, 1);
   EGL.setErrorCode(12288);
   return 1;
 }
@@ -7939,7 +8105,7 @@ function _eglWaitClient() {
 var _eglWaitGL = _eglWaitClient;
 
 function _eglWaitNative(nativeEngineId) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(34, 0, 1, nativeEngineId);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(35, 0, 1, nativeEngineId);
   EGL.setErrorCode(12288);
   return 1;
 }
@@ -8163,7 +8329,7 @@ var getCanvasSizeCallingThread = (target, width, height) => {
 };
 
 function getCanvasSizeMainThread(target, width, height) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(36, 0, 1, target, width, height);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(37, 0, 1, target, width, height);
   return getCanvasSizeCallingThread(target, width, height);
 }
 
@@ -8217,7 +8383,7 @@ var setCanvasElementSizeCallingThread = (target, width, height) => {
 };
 
 function setCanvasElementSizeMainThread(target, width, height) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(37, 0, 1, target, width, height);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(38, 0, 1, target, width, height);
   return setCanvasElementSizeCallingThread(target, width, height);
 }
 
@@ -8400,7 +8566,7 @@ var JSEvents_requestFullscreen = (target, strategy) => {
 };
 
 function _emscripten_exit_fullscreen() {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(35, 0, 1);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(36, 0, 1);
   if (!JSEvents.fullscreenEnabled()) return -1;
   // Make sure no queued up calls will fire after this.
   JSEvents.removeDeferredCalls(JSEvents_requestFullscreen);
@@ -8430,7 +8596,7 @@ var requestPointerLock = target => {
 };
 
 function _emscripten_exit_pointerlock() {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(38, 0, 1);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(39, 0, 1);
   // Make sure no queued up calls will fire after this.
   JSEvents.removeDeferredCalls(requestPointerLock);
   if (!document.exitPointerLock) return -1;
@@ -8455,12 +8621,12 @@ function _emscripten_fetch_free(id) {
 }
 
 function _emscripten_get_device_pixel_ratio() {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(39, 0, 1);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(40, 0, 1);
   return (typeof devicePixelRatio == "number" && devicePixelRatio) || 1;
 }
 
 function _emscripten_get_element_css_size(target, width, height) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(40, 0, 1, target, width, height);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(41, 0, 1, target, width, height);
   target = target ? findEventTarget(target) : Module["canvas"];
   if (!target) return -4;
   var rect = getBoundingClientRect(target);
@@ -8498,7 +8664,7 @@ var fillGamepadEventData = (eventStruct, e) => {
 };
 
 function _emscripten_get_gamepad_status(index, gamepadState) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(41, 0, 1, index, gamepadState);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(42, 0, 1, index, gamepadState);
   // INVALID_PARAM is returned on a Gamepad index that never was there.
   if (index < 0 || index >= JSEvents.lastGamepadState.length) return -5;
   // NO_DATA is returned on a Gamepad index that was removed.
@@ -8510,15 +8676,23 @@ function _emscripten_get_gamepad_status(index, gamepadState) {
   return 0;
 }
 
+var getHeapMax = () => // Stay one Wasm page short of 4GB: while e.g. Chrome is able to allocate
+// full 4GB Wasm memories, the size will wrap back to 0 bytes in Wasm side
+// for any code that deals with heap sizes, which would require special
+// casing all heap size related code to treat 0 specially.
+2147483648;
+
+var _emscripten_get_heap_max = () => getHeapMax();
+
 function _emscripten_get_num_gamepads() {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(42, 0, 1);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(43, 0, 1);
   // N.B. Do not call emscripten_get_num_gamepads() unless having first called emscripten_sample_gamepad_data(), and that has returned EMSCRIPTEN_RESULT_SUCCESS.
   // Otherwise the following line will throw an exception.
   return JSEvents.lastGamepadState.length;
 }
 
 function _emscripten_get_screen_size(width, height) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(43, 0, 1, width, height);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(44, 0, 1, width, height);
   (growMemViews(), HEAP32)[((width) >> 2)] = screen.width;
   (growMemViews(), HEAP32)[((height) >> 2)] = screen.height;
 }
@@ -10939,6 +11113,8 @@ var _emscripten_glWaitSync = (sync, flags, timeout) => {
 
 var _emscripten_has_asyncify = () => 0;
 
+var _emscripten_num_logical_cores = () => ENVIRONMENT_IS_NODE ? require("os").cpus().length : navigator["hardwareConcurrency"];
+
 var doRequestFullscreen = (target, strategy) => {
   if (!JSEvents.fullscreenEnabled()) return -1;
   target ||= "#canvas";
@@ -10960,7 +11136,7 @@ var doRequestFullscreen = (target, strategy) => {
 };
 
 function _emscripten_request_fullscreen_strategy(target, deferUntilInEventHandler, fullscreenStrategy) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(44, 0, 1, target, deferUntilInEventHandler, fullscreenStrategy);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(45, 0, 1, target, deferUntilInEventHandler, fullscreenStrategy);
   var strategy = {
     scaleMode: (growMemViews(), HEAP32)[((fullscreenStrategy) >> 2)],
     canvasResolutionScaleMode: (growMemViews(), HEAP32)[(((fullscreenStrategy) + (4)) >> 2)],
@@ -10974,7 +11150,7 @@ function _emscripten_request_fullscreen_strategy(target, deferUntilInEventHandle
 }
 
 function _emscripten_request_pointerlock(target, deferUntilInEventHandler) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(45, 0, 1, target, deferUntilInEventHandler);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(46, 0, 1, target, deferUntilInEventHandler);
   target ||= "#canvas";
   target = findEventTarget(target);
   if (!target) return -4;
@@ -10992,12 +11168,6 @@ function _emscripten_request_pointerlock(target, deferUntilInEventHandler) {
   }
   return requestPointerLock(target);
 }
-
-var getHeapMax = () => // Stay one Wasm page short of 4GB: while e.g. Chrome is able to allocate
-// full 4GB Wasm memories, the size will wrap back to 0 bytes in Wasm side
-// for any code that deals with heap sizes, which would require special
-// casing all heap size related code to treat 0 specially.
-2147483648;
 
 var alignMemory = (size, alignment) => Math.ceil(size / alignment) * alignment;
 
@@ -11062,7 +11232,7 @@ var _emscripten_resize_heap = requestedSize => {
 };
 
 /** @suppress {checkTypes} */ function _emscripten_sample_gamepad_data() {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(46, 0, 1);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(47, 0, 1);
   try {
     if (navigator.getGamepads) return (JSEvents.lastGamepadState = navigator.getGamepads()) ? 0 : -1;
   } catch (e) {
@@ -11095,7 +11265,7 @@ var registerBeforeUnloadEventCallback = (target, userData, useCapture, callbackf
 };
 
 function _emscripten_set_beforeunload_callback_on_thread(userData, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(47, 0, 1, userData, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(48, 0, 1, userData, callbackfunc, targetThread);
   if (typeof onbeforeunload == "undefined") return -1;
   // beforeunload callback can only be registered on the main browser thread, because the page will go away immediately after returning from the handler,
   // and there is no time to start proxying it anywhere.
@@ -11125,12 +11295,12 @@ var registerFocusEventCallback = (target, userData, useCapture, callbackfunc, ev
 };
 
 function _emscripten_set_blur_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(48, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(49, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerFocusEventCallback(target, userData, useCapture, callbackfunc, 12, "blur", targetThread);
 }
 
 function _emscripten_set_element_css_size(target, width, height) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(49, 0, 1, target, width, height);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(50, 0, 1, target, width, height);
   target = target ? findEventTarget(target) : Module["canvas"];
   if (!target) return -4;
   target.style.width = width + "px";
@@ -11139,7 +11309,7 @@ function _emscripten_set_element_css_size(target, width, height) {
 }
 
 function _emscripten_set_focus_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(50, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(51, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerFocusEventCallback(target, userData, useCapture, callbackfunc, 13, "focus", targetThread);
 }
 
@@ -11184,7 +11354,7 @@ var registerFullscreenChangeEventCallback = (target, userData, useCapture, callb
 };
 
 function _emscripten_set_fullscreenchange_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(51, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(52, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   if (!JSEvents.fullscreenEnabled()) return -1;
   target = target ? findEventTarget(target) : specialHTMLTargets[1];
   if (!target) return -4;
@@ -11213,13 +11383,13 @@ var registerGamepadEventCallback = (target, userData, useCapture, callbackfunc, 
 };
 
 function _emscripten_set_gamepadconnected_callback_on_thread(userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(52, 0, 1, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(53, 0, 1, userData, useCapture, callbackfunc, targetThread);
   if (_emscripten_sample_gamepad_data()) return -1;
   return registerGamepadEventCallback(2, userData, useCapture, callbackfunc, 26, "gamepadconnected", targetThread);
 }
 
 function _emscripten_set_gamepaddisconnected_callback_on_thread(userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(53, 0, 1, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(54, 0, 1, userData, useCapture, callbackfunc, targetThread);
   if (_emscripten_sample_gamepad_data()) return -1;
   return registerGamepadEventCallback(2, userData, useCapture, callbackfunc, 27, "gamepaddisconnected", targetThread);
 }
@@ -11258,17 +11428,17 @@ var registerKeyEventCallback = (target, userData, useCapture, callbackfunc, even
 };
 
 function _emscripten_set_keydown_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(54, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(55, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerKeyEventCallback(target, userData, useCapture, callbackfunc, 2, "keydown", targetThread);
 }
 
 function _emscripten_set_keypress_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(55, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(56, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerKeyEventCallback(target, userData, useCapture, callbackfunc, 1, "keypress", targetThread);
 }
 
 function _emscripten_set_keyup_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(56, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(57, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerKeyEventCallback(target, userData, useCapture, callbackfunc, 3, "keyup", targetThread);
 }
 
@@ -11334,27 +11504,27 @@ var registerMouseEventCallback = (target, userData, useCapture, callbackfunc, ev
 };
 
 function _emscripten_set_mousedown_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(57, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(58, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerMouseEventCallback(target, userData, useCapture, callbackfunc, 5, "mousedown", targetThread);
 }
 
 function _emscripten_set_mouseenter_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(58, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(59, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerMouseEventCallback(target, userData, useCapture, callbackfunc, 33, "mouseenter", targetThread);
 }
 
 function _emscripten_set_mouseleave_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(59, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(60, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerMouseEventCallback(target, userData, useCapture, callbackfunc, 34, "mouseleave", targetThread);
 }
 
 function _emscripten_set_mousemove_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(60, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(61, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerMouseEventCallback(target, userData, useCapture, callbackfunc, 8, "mousemove", targetThread);
 }
 
 function _emscripten_set_mouseup_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(61, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(62, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerMouseEventCallback(target, userData, useCapture, callbackfunc, 6, "mouseup", targetThread);
 }
 
@@ -11388,7 +11558,7 @@ var registerPointerlockChangeEventCallback = (target, userData, useCapture, call
 };
 
 function _emscripten_set_pointerlockchange_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(62, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(63, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   if (!document.body?.requestPointerLock) {
     return -1;
   }
@@ -11445,7 +11615,7 @@ var registerUiEventCallback = (target, userData, useCapture, callbackfunc, event
 };
 
 function _emscripten_set_resize_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(63, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(64, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerUiEventCallback(target, userData, useCapture, callbackfunc, 10, "resize", targetThread);
 }
 
@@ -11519,22 +11689,22 @@ var registerTouchEventCallback = (target, userData, useCapture, callbackfunc, ev
 };
 
 function _emscripten_set_touchcancel_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(64, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(65, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerTouchEventCallback(target, userData, useCapture, callbackfunc, 25, "touchcancel", targetThread);
 }
 
 function _emscripten_set_touchend_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(65, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(66, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerTouchEventCallback(target, userData, useCapture, callbackfunc, 23, "touchend", targetThread);
 }
 
 function _emscripten_set_touchmove_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(66, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(67, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerTouchEventCallback(target, userData, useCapture, callbackfunc, 24, "touchmove", targetThread);
 }
 
 function _emscripten_set_touchstart_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(67, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(68, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   return registerTouchEventCallback(target, userData, useCapture, callbackfunc, 22, "touchstart", targetThread);
 }
 
@@ -11565,7 +11735,7 @@ var registerVisibilityChangeEventCallback = (target, userData, useCapture, callb
 };
 
 function _emscripten_set_visibilitychange_callback_on_thread(userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(68, 0, 1, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(69, 0, 1, userData, useCapture, callbackfunc, targetThread);
   if (!specialHTMLTargets[1]) {
     return -4;
   }
@@ -11598,7 +11768,7 @@ var registerWheelEventCallback = (target, userData, useCapture, callbackfunc, ev
 };
 
 function _emscripten_set_wheel_callback_on_thread(target, userData, useCapture, callbackfunc, targetThread) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(69, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(70, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   target = findEventTarget(target);
   if (!target) return -4;
   if (typeof target.onwheel != "undefined") {
@@ -11609,7 +11779,7 @@ function _emscripten_set_wheel_callback_on_thread(target, userData, useCapture, 
 }
 
 function _emscripten_set_window_title(title) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(70, 0, 1, title);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(71, 0, 1, title);
   return document.title = UTF8ToString(title);
 }
 
@@ -12133,7 +12303,7 @@ var getEnvStrings = () => {
 };
 
 function _environ_get(__environ, environ_buf) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(71, 0, 1, __environ, environ_buf);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(72, 0, 1, __environ, environ_buf);
   var bufSize = 0;
   var envp = 0;
   for (var string of getEnvStrings()) {
@@ -12146,7 +12316,7 @@ function _environ_get(__environ, environ_buf) {
 }
 
 function _environ_sizes_get(penviron_count, penviron_buf_size) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(72, 0, 1, penviron_count, penviron_buf_size);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(73, 0, 1, penviron_count, penviron_buf_size);
   var strings = getEnvStrings();
   (growMemViews(), HEAPU32)[((penviron_count) >> 2)] = strings.length;
   var bufSize = 0;
@@ -12158,7 +12328,7 @@ function _environ_sizes_get(penviron_count, penviron_buf_size) {
 }
 
 function _fd_close(fd) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(73, 0, 1, fd);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(74, 0, 1, fd);
   try {
     var stream = SYSCALLS.getStreamFromFD(fd);
     FS.close(stream);
@@ -12188,7 +12358,7 @@ function _fd_close(fd) {
 };
 
 function _fd_read(fd, iov, iovcnt, pnum) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(74, 0, 1, fd, iov, iovcnt, pnum);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(75, 0, 1, fd, iov, iovcnt, pnum);
   try {
     var stream = SYSCALLS.getStreamFromFD(fd);
     var num = doReadv(stream, iov, iovcnt);
@@ -12201,7 +12371,7 @@ function _fd_read(fd, iov, iovcnt, pnum) {
 }
 
 function _fd_seek(fd, offset, whence, newOffset) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(75, 0, 1, fd, offset, whence, newOffset);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(76, 0, 1, fd, offset, whence, newOffset);
   offset = bigintToI53Checked(offset);
   try {
     if (isNaN(offset)) return 61;
@@ -12238,7 +12408,7 @@ function _fd_seek(fd, offset, whence, newOffset) {
 };
 
 function _fd_write(fd, iov, iovcnt, pnum) {
-  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(76, 0, 1, fd, iov, iovcnt, pnum);
+  if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(77, 0, 1, fd, iov, iovcnt, pnum);
   try {
     var stream = SYSCALLS.getStreamFromFD(fd);
     var num = doWritev(stream, iov, iovcnt);
@@ -13083,10 +13253,10 @@ Module["FS_createLazyFile"] = FS_createLazyFile;
 // either synchronously or asynchronously from other threads in postMessage()d
 // or internally queued events. This way a pthread in a Worker can synchronously
 // access e.g. the DOM on the main thread.
-var proxiedFunctionTable = [ _proc_exit, exitOnMainThread, ___syscall_bind, ___syscall_fcntl64, ___syscall_fstat64, ___syscall_getcwd, ___syscall_getdents64, ___syscall_ioctl, ___syscall_lstat64, ___syscall_mkdirat, ___syscall_newfstatat, ___syscall_openat, ___syscall_recvfrom, ___syscall_rmdir, ___syscall_sendto, ___syscall_socket, ___syscall_stat64, ___syscall_unlinkat, _eglBindAPI, _eglChooseConfig, _eglCreateContext, _eglCreateWindowSurface, _eglDestroyContext, _eglDestroySurface, _eglGetConfigAttrib, _eglGetDisplay, _eglGetError, _eglInitialize, _eglMakeCurrent, _eglQueryString, _eglSwapBuffers, _eglSwapInterval, _eglTerminate, _eglWaitClient, _eglWaitNative, _emscripten_exit_fullscreen, getCanvasSizeMainThread, setCanvasElementSizeMainThread, _emscripten_exit_pointerlock, _emscripten_get_device_pixel_ratio, _emscripten_get_element_css_size, _emscripten_get_gamepad_status, _emscripten_get_num_gamepads, _emscripten_get_screen_size, _emscripten_request_fullscreen_strategy, _emscripten_request_pointerlock, _emscripten_sample_gamepad_data, _emscripten_set_beforeunload_callback_on_thread, _emscripten_set_blur_callback_on_thread, _emscripten_set_element_css_size, _emscripten_set_focus_callback_on_thread, _emscripten_set_fullscreenchange_callback_on_thread, _emscripten_set_gamepadconnected_callback_on_thread, _emscripten_set_gamepaddisconnected_callback_on_thread, _emscripten_set_keydown_callback_on_thread, _emscripten_set_keypress_callback_on_thread, _emscripten_set_keyup_callback_on_thread, _emscripten_set_mousedown_callback_on_thread, _emscripten_set_mouseenter_callback_on_thread, _emscripten_set_mouseleave_callback_on_thread, _emscripten_set_mousemove_callback_on_thread, _emscripten_set_mouseup_callback_on_thread, _emscripten_set_pointerlockchange_callback_on_thread, _emscripten_set_resize_callback_on_thread, _emscripten_set_touchcancel_callback_on_thread, _emscripten_set_touchend_callback_on_thread, _emscripten_set_touchmove_callback_on_thread, _emscripten_set_touchstart_callback_on_thread, _emscripten_set_visibilitychange_callback_on_thread, _emscripten_set_wheel_callback_on_thread, _emscripten_set_window_title, _environ_get, _environ_sizes_get, _fd_close, _fd_read, _fd_seek, _fd_write ];
+var proxiedFunctionTable = [ _proc_exit, exitOnMainThread, pthreadCreateProxied, ___syscall_bind, ___syscall_fcntl64, ___syscall_fstat64, ___syscall_getcwd, ___syscall_getdents64, ___syscall_ioctl, ___syscall_lstat64, ___syscall_mkdirat, ___syscall_newfstatat, ___syscall_openat, ___syscall_recvfrom, ___syscall_rmdir, ___syscall_sendto, ___syscall_socket, ___syscall_stat64, ___syscall_unlinkat, _eglBindAPI, _eglChooseConfig, _eglCreateContext, _eglCreateWindowSurface, _eglDestroyContext, _eglDestroySurface, _eglGetConfigAttrib, _eglGetDisplay, _eglGetError, _eglInitialize, _eglMakeCurrent, _eglQueryString, _eglSwapBuffers, _eglSwapInterval, _eglTerminate, _eglWaitClient, _eglWaitNative, _emscripten_exit_fullscreen, getCanvasSizeMainThread, setCanvasElementSizeMainThread, _emscripten_exit_pointerlock, _emscripten_get_device_pixel_ratio, _emscripten_get_element_css_size, _emscripten_get_gamepad_status, _emscripten_get_num_gamepads, _emscripten_get_screen_size, _emscripten_request_fullscreen_strategy, _emscripten_request_pointerlock, _emscripten_sample_gamepad_data, _emscripten_set_beforeunload_callback_on_thread, _emscripten_set_blur_callback_on_thread, _emscripten_set_element_css_size, _emscripten_set_focus_callback_on_thread, _emscripten_set_fullscreenchange_callback_on_thread, _emscripten_set_gamepadconnected_callback_on_thread, _emscripten_set_gamepaddisconnected_callback_on_thread, _emscripten_set_keydown_callback_on_thread, _emscripten_set_keypress_callback_on_thread, _emscripten_set_keyup_callback_on_thread, _emscripten_set_mousedown_callback_on_thread, _emscripten_set_mouseenter_callback_on_thread, _emscripten_set_mouseleave_callback_on_thread, _emscripten_set_mousemove_callback_on_thread, _emscripten_set_mouseup_callback_on_thread, _emscripten_set_pointerlockchange_callback_on_thread, _emscripten_set_resize_callback_on_thread, _emscripten_set_touchcancel_callback_on_thread, _emscripten_set_touchend_callback_on_thread, _emscripten_set_touchmove_callback_on_thread, _emscripten_set_touchstart_callback_on_thread, _emscripten_set_visibilitychange_callback_on_thread, _emscripten_set_wheel_callback_on_thread, _emscripten_set_window_title, _environ_get, _environ_sizes_get, _fd_close, _fd_read, _fd_seek, _fd_write ];
 
 var ASM_CONSTS = {
-  1952117: $0 => {
+  1953677: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -13094,10 +13264,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1952342: ($0, $1) => {
+  1953902: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1952399: () => {
+  1953959: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -13105,7 +13275,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1952546: () => {
+  1954106: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -13113,7 +13283,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1952780: $0 => {
+  1954340: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -13135,11 +13305,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1953273: () => {
+  1954833: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1953341: ($0, $1, $2, $3) => {
+  1954901: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13180,7 +13350,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1954993: ($0, $1, $2, $3) => {
+  1956553: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -13192,7 +13362,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1955403: ($0, $1) => {
+  1956963: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -13211,7 +13381,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1956008: ($0, $1) => {
+  1957568: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -13224,7 +13394,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1956488: $0 => {
+  1958048: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13262,7 +13432,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1957660: ($0, $1, $2) => {
+  1959220: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -13333,7 +13503,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1959129: ($0, $1, $2, $3, $4) => {
+  1960689: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -13370,19 +13540,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1960118: $0 => {
+  1961678: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1960201: () => {
+  1961761: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1960270: () => window.innerWidth,
-  1960300: () => window.innerHeight,
-  1960331: $0 => {
+  1961830: () => window.innerWidth,
+  1961860: () => window.innerHeight,
+  1961891: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
@@ -13441,6 +13611,7 @@ function assignWasmImports() {
     /** @export */ ImGui_ImplSDL2_EmscriptenOpenURL,
     /** @export */ __assert_fail: ___assert_fail,
     /** @export */ __cxa_throw: ___cxa_throw,
+    /** @export */ __pthread_create_js: ___pthread_create_js,
     /** @export */ __syscall_bind: ___syscall_bind,
     /** @export */ __syscall_fcntl64: ___syscall_fcntl64,
     /** @export */ __syscall_fstat64: ___syscall_fstat64,
@@ -13476,6 +13647,14 @@ function assignWasmImports() {
     /** @export */ _emscripten_thread_mailbox_await: __emscripten_thread_mailbox_await,
     /** @export */ _emscripten_thread_set_strongref: __emscripten_thread_set_strongref,
     /** @export */ _emscripten_throw_longjmp: __emscripten_throw_longjmp,
+    /** @export */ _emval_create_invoker: __emval_create_invoker,
+    /** @export */ _emval_decref: __emval_decref,
+    /** @export */ _emval_get_global: __emval_get_global,
+    /** @export */ _emval_get_property: __emval_get_property,
+    /** @export */ _emval_incref: __emval_incref,
+    /** @export */ _emval_invoke: __emval_invoke,
+    /** @export */ _emval_new_cstring: __emval_new_cstring,
+    /** @export */ _emval_run_destructors: __emval_run_destructors,
     /** @export */ _gmtime_js: __gmtime_js,
     /** @export */ _localtime_js: __localtime_js,
     /** @export */ _tzset_js: __tzset_js,
@@ -13509,6 +13688,7 @@ function assignWasmImports() {
     /** @export */ emscripten_get_device_pixel_ratio: _emscripten_get_device_pixel_ratio,
     /** @export */ emscripten_get_element_css_size: _emscripten_get_element_css_size,
     /** @export */ emscripten_get_gamepad_status: _emscripten_get_gamepad_status,
+    /** @export */ emscripten_get_heap_max: _emscripten_get_heap_max,
     /** @export */ emscripten_get_now: _emscripten_get_now,
     /** @export */ emscripten_get_num_gamepads: _emscripten_get_num_gamepads,
     /** @export */ emscripten_get_screen_size: _emscripten_get_screen_size,
@@ -13791,6 +13971,7 @@ function assignWasmImports() {
     /** @export */ emscripten_glViewport: _emscripten_glViewport,
     /** @export */ emscripten_glWaitSync: _emscripten_glWaitSync,
     /** @export */ emscripten_has_asyncify: _emscripten_has_asyncify,
+    /** @export */ emscripten_num_logical_cores: _emscripten_num_logical_cores,
     /** @export */ emscripten_request_fullscreen_strategy: _emscripten_request_fullscreen_strategy,
     /** @export */ emscripten_request_pointerlock: _emscripten_request_pointerlock,
     /** @export */ emscripten_resize_heap: _emscripten_resize_heap,
