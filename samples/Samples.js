@@ -2052,7 +2052,9 @@ var IDBFS = {
     });
   },
   quit: () => {
-    Object.values(IDBFS.dbs).forEach(value => value.close());
+    for (var value of Object.values(IDBFS.dbs)) {
+      value.close();
+    }
     IDBFS.dbs = {};
   },
   getDB: (name, callback) => {
@@ -2246,21 +2248,20 @@ var IDBFS = {
   reconcile: (src, dst, callback) => {
     var total = 0;
     var create = [];
-    Object.keys(src.entries).forEach(key => {
-      var e = src.entries[key];
+    for (var [key, e] of Object.entries(src.entries)) {
       var e2 = dst.entries[key];
       if (!e2 || e["timestamp"].getTime() != e2["timestamp"].getTime()) {
         create.push(key);
         total++;
       }
-    });
+    }
     var remove = [];
-    Object.keys(dst.entries).forEach(key => {
+    for (var key of Object.keys(dst.entries)) {
       if (!src.entries[key]) {
         remove.push(key);
         total++;
       }
-    });
+    }
     if (!total) {
       return callback(null);
     }
@@ -2286,7 +2287,7 @@ var IDBFS = {
     };
     // sort paths in ascending order so directory entries are created
     // before the files inside them
-    create.sort().forEach(path => {
+    for (const path of create.sort()) {
       if (dst.type === "local") {
         IDBFS.loadRemoteEntry(store, path, (err, entry) => {
           if (err) return done(err);
@@ -2298,16 +2299,16 @@ var IDBFS = {
           IDBFS.storeRemoteEntry(store, path, entry, done);
         });
       }
-    });
+    }
     // sort paths in descending order so files are deleted before their
     // parent directories
-    remove.sort().reverse().forEach(path => {
+    for (var path of remove.sort().reverse()) {
       if (dst.type === "local") {
         IDBFS.removeLocalEntry(path, done);
       } else {
         IDBFS.removeRemoteEntry(store, path, done);
       }
-    });
+    }
   }
 };
 
@@ -2802,12 +2803,13 @@ var FS = {
       }
     }
     // sync all mounts
-    mounts.forEach(mount => {
-      if (!mount.type.syncfs) {
-        return done(null);
+    for (var mount of mounts) {
+      if (mount.type.syncfs) {
+        mount.type.syncfs(mount, populate, done);
+      } else {
+        done(null);
       }
-      mount.type.syncfs(mount, populate, done);
-    });
+    }
   },
   mount(type, opts, mountpoint) {
     var root = mountpoint === "/";
@@ -2862,8 +2864,7 @@ var FS = {
     var node = lookup.node;
     var mount = node.mounted;
     var mounts = FS.getMounts(mount);
-    Object.keys(FS.nameTable).forEach(hash => {
-      var current = FS.nameTable[hash];
+    for (var [hash, current] of Object.entries(FS.nameTable)) {
       while (current) {
         var next = current.name_next;
         if (mounts.includes(current.mount)) {
@@ -2871,7 +2872,7 @@ var FS = {
         }
         current = next;
       }
-    });
+    }
     // no longer a mountpoint
     node.mounted = null;
     // remove this mount from the child mounts
@@ -3936,14 +3937,12 @@ var FS = {
     });
     // override each stream op with one that tries to force load the lazy file first
     var stream_ops = {};
-    var keys = Object.keys(node.stream_ops);
-    keys.forEach(key => {
-      var fn = node.stream_ops[key];
+    for (const [key, fn] of Object.entries(node.stream_ops)) {
       stream_ops[key] = (...args) => {
         FS.forceLoadFile(node);
         return fn(...args);
       };
-    });
+    }
     function writeChunks(stream, buffer, offset, length, position) {
       var contents = stream.node.contents;
       if (position >= contents.length) return 0;
@@ -5805,7 +5804,7 @@ var whenDependentTypesAreResolved = (myTypes, dependentTypes, getTypeConverters)
   var typeConverters = new Array(dependentTypes.length);
   var unregisteredTypes = [];
   var registered = 0;
-  dependentTypes.forEach((dt, i) => {
+  for (let [i, dt] of dependentTypes.entries()) {
     if (registeredTypes.hasOwnProperty(dt)) {
       typeConverters[i] = registeredTypes[dt];
     } else {
@@ -5821,7 +5820,7 @@ var whenDependentTypesAreResolved = (myTypes, dependentTypes, getTypeConverters)
         }
       });
     }
-  });
+  }
   if (0 === unregisteredTypes.length) {
     onComplete(typeConverters);
   }
@@ -5961,7 +5960,6 @@ var UTF16ToString = (ptr, maxBytesToRead, ignoreNul) => {
   var endIdx = findStringEnd((growMemViews(), HEAPU16), idx, maxBytesToRead / 2, ignoreNul);
   // When using conditional TextDecoder, skip it for short strings as the overhead of the native call is not worth it.
   if (endIdx - idx > 16 && UTF16Decoder) return UTF16Decoder.decode((growMemViews(), 
-  HEAPU16).buffer instanceof ArrayBuffer ? (growMemViews(), HEAPU16).subarray(idx, endIdx) : (growMemViews(), 
   HEAPU16).slice(idx, endIdx));
   // Fallback: decode without UTF16Decoder
   var str = "";
@@ -7446,14 +7444,14 @@ var GL = {
     if (context.version < 2 || !GLctx.disjointTimerQueryExt) {
       GLctx.disjointTimerQueryExt = GLctx.getExtension("EXT_disjoint_timer_query");
     }
-    getEmscriptenSupportedExtensions(GLctx).forEach(ext => {
+    for (var ext of getEmscriptenSupportedExtensions(GLctx)) {
       // WEBGL_lose_context, WEBGL_debug_renderer_info and WEBGL_debug_shaders
       // are not enabled by default.
       if (!ext.includes("lose_context") && !ext.includes("debug")) {
         // Call .getExtension() to enable that extension permanently.
         GLctx.getExtension(ext);
       }
-    });
+    }
   }
 };
 
@@ -13147,19 +13145,16 @@ function _wsSetUserPointer(ws, ptr) {
   if (webSocket) webSocket.rtcUserPointer = ptr;
 }
 
-/** @param {Object=} elements */ var autoResumeAudioContext = (ctx, elements) => {
-  if (!elements) {
-    elements = [ document, document.getElementById("canvas") ];
-  }
-  [ "keydown", "mousedown", "touchstart" ].forEach(event => {
-    elements.forEach(element => {
+var autoResumeAudioContext = ctx => {
+  for (var event of [ "keydown", "mousedown", "touchstart" ]) {
+    for (var element of [ document, document.getElementById("canvas") ]) {
       element?.addEventListener(event, () => {
         if (ctx.state === "suspended") ctx.resume();
       }, {
         "once": true
       });
-    });
-  });
+    }
+  }
 };
 
 var dynCall = (sig, ptr, args = [], promising = false) => {
@@ -13256,7 +13251,7 @@ Module["FS_createLazyFile"] = FS_createLazyFile;
 var proxiedFunctionTable = [ _proc_exit, exitOnMainThread, pthreadCreateProxied, ___syscall_bind, ___syscall_fcntl64, ___syscall_fstat64, ___syscall_getcwd, ___syscall_getdents64, ___syscall_ioctl, ___syscall_lstat64, ___syscall_mkdirat, ___syscall_newfstatat, ___syscall_openat, ___syscall_recvfrom, ___syscall_rmdir, ___syscall_sendto, ___syscall_socket, ___syscall_stat64, ___syscall_unlinkat, _eglBindAPI, _eglChooseConfig, _eglCreateContext, _eglCreateWindowSurface, _eglDestroyContext, _eglDestroySurface, _eglGetConfigAttrib, _eglGetDisplay, _eglGetError, _eglInitialize, _eglMakeCurrent, _eglQueryString, _eglSwapBuffers, _eglSwapInterval, _eglTerminate, _eglWaitClient, _eglWaitNative, _emscripten_exit_fullscreen, getCanvasSizeMainThread, setCanvasElementSizeMainThread, _emscripten_exit_pointerlock, _emscripten_get_device_pixel_ratio, _emscripten_get_element_css_size, _emscripten_get_gamepad_status, _emscripten_get_num_gamepads, _emscripten_get_screen_size, _emscripten_request_fullscreen_strategy, _emscripten_request_pointerlock, _emscripten_sample_gamepad_data, _emscripten_set_beforeunload_callback_on_thread, _emscripten_set_blur_callback_on_thread, _emscripten_set_element_css_size, _emscripten_set_focus_callback_on_thread, _emscripten_set_fullscreenchange_callback_on_thread, _emscripten_set_gamepadconnected_callback_on_thread, _emscripten_set_gamepaddisconnected_callback_on_thread, _emscripten_set_keydown_callback_on_thread, _emscripten_set_keypress_callback_on_thread, _emscripten_set_keyup_callback_on_thread, _emscripten_set_mousedown_callback_on_thread, _emscripten_set_mouseenter_callback_on_thread, _emscripten_set_mouseleave_callback_on_thread, _emscripten_set_mousemove_callback_on_thread, _emscripten_set_mouseup_callback_on_thread, _emscripten_set_pointerlockchange_callback_on_thread, _emscripten_set_resize_callback_on_thread, _emscripten_set_touchcancel_callback_on_thread, _emscripten_set_touchend_callback_on_thread, _emscripten_set_touchmove_callback_on_thread, _emscripten_set_touchstart_callback_on_thread, _emscripten_set_visibilitychange_callback_on_thread, _emscripten_set_wheel_callback_on_thread, _emscripten_set_window_title, _environ_get, _environ_sizes_get, _fd_close, _fd_read, _fd_seek, _fd_write ];
 
 var ASM_CONSTS = {
-  1953677: $0 => {
+  1953645: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -13264,10 +13259,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1953902: ($0, $1) => {
+  1953870: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1953959: () => {
+  1953927: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -13275,7 +13270,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1954106: () => {
+  1954074: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -13283,7 +13278,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1954340: $0 => {
+  1954308: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -13305,11 +13300,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1954833: () => {
+  1954801: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1954901: ($0, $1, $2, $3) => {
+  1954869: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13350,7 +13345,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1956553: ($0, $1, $2, $3) => {
+  1956521: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -13362,7 +13357,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1956963: ($0, $1) => {
+  1956931: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -13381,7 +13376,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1957568: ($0, $1) => {
+  1957536: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -13394,7 +13389,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1958048: $0 => {
+  1958016: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13432,7 +13427,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1959220: ($0, $1, $2) => {
+  1959188: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -13503,7 +13498,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1960689: ($0, $1, $2, $3, $4) => {
+  1960657: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -13540,19 +13535,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1961678: $0 => {
+  1961646: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1961761: () => {
+  1961729: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1961830: () => window.innerWidth,
-  1961860: () => window.innerHeight,
-  1961891: $0 => {
+  1961798: () => window.innerWidth,
+  1961828: () => window.innerHeight,
+  1961859: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
@@ -14238,10 +14233,10 @@ function callMain(args = []) {
   var argc = args.length;
   var argv = stackAlloc((argc + 1) * 4);
   var argv_ptr = argv;
-  args.forEach(arg => {
+  for (var arg of args) {
     (growMemViews(), HEAPU32)[((argv_ptr) >> 2)] = stringToUTF8OnStack(arg);
     argv_ptr += 4;
-  });
+  }
   (growMemViews(), HEAPU32)[((argv_ptr) >> 2)] = 0;
   try {
     var ret = entryFunction(argc, argv);
