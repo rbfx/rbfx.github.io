@@ -124,8 +124,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsUnloading</b> () co
 <tr class="memitem:a8256fe4906a97e3572ef72a9f1928a6e" id="r_a8256fe4906a97e3572ef72a9f1928a6e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin.html#a8256fe4906a97e3572ef72a9f1928a6e">IsOutOfDate</a> () const</td></tr>
 <tr class="memdesc:a8256fe4906a97e3572ef72a9f1928a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if plugin was modified on the disk and should be reloaded.  <br /></td></tr>
 <tr class="separator:a8256fe4906a97e3572ef72a9f1928a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a484987a6a57ebe9acf9944970aa73875" id="r_a484987a6a57ebe9acf9944970aa73875"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin.html#a484987a6a57ebe9acf9944970aa73875">WaitForCompleteFile</a> (unsigned timeoutMs) const</td></tr>
-<tr class="separator:a484987a6a57ebe9acf9944970aa73875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a366eb1c7fe55a9fc9bba0f926a9f3edb" id="r_a366eb1c7fe55a9fc9bba0f926a9f3edb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin.html#a366eb1c7fe55a9fc9bba0f926a9f3edb">IsReadyToReload</a> () const</td></tr>
+<tr class="memdesc:a366eb1c7fe55a9fc9bba0f926a9f3edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if plugin file is ready to reload.  <br /></td></tr>
+<tr class="separator:a366eb1c7fe55a9fc9bba0f926a9f3edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1824d1464a13546f1c3279deb94d8fb0" id="r_a1824d1464a13546f1c3279deb94d8fb0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin.html#a1824d1464a13546f1c3279deb94d8fb0">PerformUnload</a> ()</td></tr>
 <tr class="memdesc:a1824d1464a13546f1c3279deb94d8fb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actually unloads the module. Called by PluginManager at the end of frame when IsUnloading is true.  <br /></td></tr>
 <tr class="separator:a1824d1464a13546f1c3279deb94d8fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -422,6 +423,35 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 
 </div>
 </div>
+<a id="a366eb1c7fe55a9fc9bba0f926a9f3edb" name="a366eb1c7fe55a9fc9bba0f926a9f3edb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a366eb1c7fe55a9fc9bba0f926a9f3edb">&#9670;&#160;</a></span>IsReadyToReload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Urho3D::Plugin::IsReadyToReload </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if plugin file is ready to reload. </p>
+
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_module_plugin.html#a1830a09b346aead73b7a5b368d5710e4">Urho3D::ModulePlugin</a>.</p>
+
+</div>
+</div>
 <a id="a335e55c0fc0df31c002a17652708adea" name="a335e55c0fc0df31c002a17652708adea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a335e55c0fc0df31c002a17652708adea">&#9670;&#160;</a></span>Load()</h2>
 
@@ -477,35 +507,6 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <p>Actually unloads the module. Called by PluginManager at the end of frame when IsUnloading is true. </p>
 
 <p>Reimplemented in <a class="el" href="class_urho3_d_1_1_module_plugin.html#a722d642b3cb553c4d2aa81fc98f42c69">Urho3D::ModulePlugin</a>, and <a class="el" href="class_urho3_d_1_1_script_bundle_plugin.html#a1bb90e4908941246aba881dc67322889">Urho3D::ScriptBundlePlugin</a>.</p>
-
-</div>
-</div>
-<a id="a484987a6a57ebe9acf9944970aa73875" name="a484987a6a57ebe9acf9944970aa73875"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a484987a6a57ebe9acf9944970aa73875">&#9670;&#160;</a></span>WaitForCompleteFile()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool Urho3D::Plugin::WaitForCompleteFile </td>
-          <td>(</td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>timeoutMs</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This function will block until plugin file is complete and ready to be loaded. Returns false if timeout exceeded, but file is still incomplete. </p>
-
-<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_module_plugin.html#a3be75aa8c8830177ad1d00289eac9d8e">Urho3D::ModulePlugin</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,7 @@
 var NAVTREEINDEX62 =
 {
+"struct_urho3_d_1_1_v_anim_event_frame.html#ac7360a2b364b7363f99c5a12d86ad380":[6,0,2,798,2],
+"struct_urho3_d_1_1_v_anim_event_frame.html#af5c243d9ac5cbf35a03707da4cb54e01":[6,0,2,798,0],
 "struct_urho3_d_1_1_v_anim_key_frame.html":[6,0,2,799],
 "struct_urho3_d_1_1_v_anim_key_frame.html#a827dfae652c41dec8b5eaf6a43baa1de":[6,0,2,799,0],
 "struct_urho3_d_1_1_v_anim_key_frame.html#ae98c4cf3709aadd68e8be987719b064e":[6,0,2,799,1],

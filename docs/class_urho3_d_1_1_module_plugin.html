@@ -62,6 +62,7 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_module_plugin.html',
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
@@ -100,8 +101,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a411c662c75c03fe0cedde8e9d93feed2" id="r_a411c662c75c03fe0cedde8e9d93feed2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_module_plugin.html#a411c662c75c03fe0cedde8e9d93feed2">IsOutOfDate</a> () const override</td></tr>
 <tr class="memdesc:a411c662c75c03fe0cedde8e9d93feed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if plugin was modified on the disk and should be reloaded.  <br /></td></tr>
 <tr class="separator:a411c662c75c03fe0cedde8e9d93feed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3be75aa8c8830177ad1d00289eac9d8e" id="r_a3be75aa8c8830177ad1d00289eac9d8e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_module_plugin.html#a3be75aa8c8830177ad1d00289eac9d8e">WaitForCompleteFile</a> (unsigned timeoutMs) const override</td></tr>
-<tr class="separator:a3be75aa8c8830177ad1d00289eac9d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1830a09b346aead73b7a5b368d5710e4" id="r_a1830a09b346aead73b7a5b368d5710e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_module_plugin.html#a1830a09b346aead73b7a5b368d5710e4">IsReadyToReload</a> () const override</td></tr>
+<tr class="memdesc:a1830a09b346aead73b7a5b368d5710e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if plugin file is ready to reload.  <br /></td></tr>
+<tr class="separator:a1830a09b346aead73b7a5b368d5710e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a722d642b3cb553c4d2aa81fc98f42c69" id="r_a722d642b3cb553c4d2aa81fc98f42c69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_module_plugin.html#a722d642b3cb553c4d2aa81fc98f42c69">PerformUnload</a> () override</td></tr>
 <tr class="memdesc:a722d642b3cb553c4d2aa81fc98f42c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actually unloads the module. Called by PluginManager at the end of frame when IsUnloading is true.  <br /></td></tr>
 <tr class="separator:a722d642b3cb553c4d2aa81fc98f42c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -326,31 +328,44 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsScriptStrongRef</b>
 <tr class="memdesc:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if script reference is strong. <br /></td></tr>
 <tr class="separator:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:abf88a12f02185871d49f4a58851ba4d0" id="r_abf88a12f02185871d49f4a58851ba4d0"><td class="memItemLeft" align="right" valign="top"><a id="abf88a12f02185871d49f4a58851ba4d0" name="abf88a12f02185871d49f4a58851ba4d0"></a>
+static ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetTemporaryPdbName</b> (const ea::string &amp;fileName)</td></tr>
+<tr class="separator:abf88a12f02185871d49f4a58851ba4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
+<tr class="memitem:a96b9229f1241a330bf2ea431b7018b05 inherit pub_static_methods_class_urho3_d_1_1_object" id="r_a96b9229f1241a330bf2ea431b7018b05"><td class="memItemLeft" align="right" valign="top">
+static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetTypeInfoStatic</b> ()</td></tr>
+<tr class="memdesc:a96b9229f1241a330bf2ea431b7018b05 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type info static. <br /></td></tr>
+<tr class="separator:a96b9229f1241a330bf2ea431b7018b05 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a35e734353144c2ef8c52b90b7527f694" id="r_a35e734353144c2ef8c52b90b7527f694"><td class="memItemLeft" align="right" valign="top"><a id="a35e734353144c2ef8c52b90b7527f694" name="a35e734353144c2ef8c52b90b7527f694"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>NameToPath</b> (const ea::string &amp;name) const</td></tr>
-<tr class="memdesc:a35e734353144c2ef8c52b90b7527f694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts name to a full plugin file path. Returns empty string on error. <br /></td></tr>
-<tr class="separator:a35e734353144c2ef8c52b90b7527f694"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01d195757ccc74b10e6d98d7143d888d" id="r_a01d195757ccc74b10e6d98d7143d888d"><td class="memItemLeft" align="right" valign="top"><a id="a01d195757ccc74b10e6d98d7143d888d" name="a01d195757ccc74b10e6d98d7143d888d"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetVersionModulePath</b> (const ea::string &amp;path)</td></tr>
-<tr class="memdesc:a01d195757ccc74b10e6d98d7143d888d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return path to the current version of the module. <br /></td></tr>
-<tr class="separator:a01d195757ccc74b10e6d98d7143d888d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70f6308f5a45be1a0fb55f02914a0b5b" id="r_a70f6308f5a45be1a0fb55f02914a0b5b"><td class="memItemLeft" align="right" valign="top"><a id="a70f6308f5a45be1a0fb55f02914a0b5b" name="a70f6308f5a45be1a0fb55f02914a0b5b"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetAbsoluteFileName</b> (const ea::string &amp;name, bool original) const</td></tr>
+<tr class="separator:a70f6308f5a45be1a0fb55f02914a0b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c12d89f0d1f51e1549bfa29819d5789" id="r_a6c12d89f0d1f51e1549bfa29819d5789"><td class="memItemLeft" align="right" valign="top"><a id="a6c12d89f0d1f51e1549bfa29819d5789" name="a6c12d89f0d1f51e1549bfa29819d5789"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PatchTemporaryBinary</b> (const ea::string &amp;fileName)</td></tr>
+<tr class="separator:a6c12d89f0d1f51e1549bfa29819d5789"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a1cf5e052d813380a6cb8fd1e954f28d9" id="r_a1cf5e052d813380a6cb8fd1e954f28d9"><td class="memItemLeft" align="right" valign="top"><a id="a1cf5e052d813380a6cb8fd1e954f28d9" name="a1cf5e052d813380a6cb8fd1e954f28d9"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>path_</b></td></tr>
-<tr class="memdesc:a1cf5e052d813380a6cb8fd1e954f28d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unversioned plugin module path. <br /></td></tr>
-<tr class="separator:a1cf5e052d813380a6cb8fd1e954f28d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36039934f5aed9baf26fdff234479f7f" id="r_a36039934f5aed9baf26fdff234479f7f"><td class="memItemLeft" align="right" valign="top"><a id="a36039934f5aed9baf26fdff234479f7f" name="a36039934f5aed9baf26fdff234479f7f"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>originalFileName_</b></td></tr>
+<tr class="memdesc:a36039934f5aed9baf26fdff234479f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute file name of original plugin. <br /></td></tr>
+<tr class="separator:a36039934f5aed9baf26fdff234479f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace4bf3335df9f3fc1dbb114530b2d257" id="r_ace4bf3335df9f3fc1dbb114530b2d257"><td class="memItemLeft" align="right" valign="top"><a id="ace4bf3335df9f3fc1dbb114530b2d257" name="ace4bf3335df9f3fc1dbb114530b2d257"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>temporaryFileName_</b></td></tr>
+<tr class="memdesc:ace4bf3335df9f3fc1dbb114530b2d257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute file name of temporary copy. <br /></td></tr>
+<tr class="separator:ace4bf3335df9f3fc1dbb114530b2d257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f36811db19ffb1c7cc00606523c7a52" id="r_a9f36811db19ffb1c7cc00606523c7a52"><td class="memItemLeft" align="right" valign="top"><a id="a9f36811db19ffb1c7cc00606523c7a52" name="a9f36811db19ffb1c7cc00606523c7a52"></a>
 <a class="el" href="class_urho3_d_1_1_dynamic_module.html">DynamicModule</a>&#160;</td><td class="memItemRight" valign="bottom"><b>module_</b> {<a class="el" href="class_urho3_d_1_1_object.html#aecf686841d86be7e4a2c0092b60d31ad">context_</a>}</td></tr>
 <tr class="memdesc:a9f36811db19ffb1c7cc00606523c7a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Native module of this plugin. <br /></td></tr>
 <tr class="separator:a9f36811db19ffb1c7cc00606523c7a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac04db7842d34bd446902321d44d814ed" id="r_ac04db7842d34bd446902321d44d814ed"><td class="memItemLeft" align="right" valign="top"><a id="ac04db7842d34bd446902321d44d814ed" name="ac04db7842d34bd446902321d44d814ed"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mtime_</b> {}</td></tr>
-<tr class="memdesc:ac04db7842d34bd446902321d44d814ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last modification time. <br /></td></tr>
-<tr class="separator:ac04db7842d34bd446902321d44d814ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75a2a26e51ee663a4f0cab49bc1c821b" id="r_a75a2a26e51ee663a4f0cab49bc1c821b"><td class="memItemLeft" align="right" valign="top"><a id="a75a2a26e51ee663a4f0cab49bc1c821b" name="a75a2a26e51ee663a4f0cab49bc1c821b"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>lastModificationTime_</b> {}</td></tr>
+<tr class="memdesc:a75a2a26e51ee663a4f0cab49bc1c821b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last modification time. <br /></td></tr>
+<tr class="separator:a75a2a26e51ee663a4f0cab49bc1c821b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31086a0546ad1d52e2c744e00da22ce0" id="r_a31086a0546ad1d52e2c744e00da22ce0"><td class="memItemLeft" align="right" valign="top"><a id="a31086a0546ad1d52e2c744e00da22ce0" name="a31086a0546ad1d52e2c744e00da22ce0"></a>
 ModuleType&#160;</td><td class="memItemRight" valign="bottom"><b>lastModuleType_</b> {}</td></tr>
 <tr class="memdesc:a31086a0546ad1d52e2c744e00da22ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last loaded module type. <br /></td></tr>
@@ -384,11 +399,6 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
-<tr class="memitem:a96b9229f1241a330bf2ea431b7018b05 inherit pub_static_methods_class_urho3_d_1_1_object" id="r_a96b9229f1241a330bf2ea431b7018b05"><td class="memItemLeft" align="right" valign="top">
-static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetTypeInfoStatic</b> ()</td></tr>
-<tr class="memdesc:a96b9229f1241a330bf2ea431b7018b05 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type info static. <br /></td></tr>
-<tr class="separator:a96b9229f1241a330bf2ea431b7018b05 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object" id="r_a745a18b8e99bf855379e72aac5d544ab"><td class="memItemLeft" align="right" valign="top">static constexpr ea::array&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a745a18b8e99bf855379e72aac5d544ab">TypeHierarchy</a> {}</td></tr>
 <tr class="separator:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -454,6 +464,35 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 
 </div>
 </div>
+<a id="a1830a09b346aead73b7a5b368d5710e4" name="a1830a09b346aead73b7a5b368d5710e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1830a09b346aead73b7a5b368d5710e4">&#9670;&#160;</a></span>IsReadyToReload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Urho3D::ModulePlugin::IsReadyToReload </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if plugin file is ready to reload. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_plugin.html#a366eb1c7fe55a9fc9bba0f926a9f3edb">Urho3D::Plugin</a>.</p>
+
+</div>
+</div>
 <a id="abd17953c2e0f8815d1960c5717896953" name="abd17953c2e0f8815d1960c5717896953"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd17953c2e0f8815d1960c5717896953">&#9670;&#160;</a></span>Load()</h2>
 
@@ -508,35 +547,6 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <p>Actually unloads the module. Called by PluginManager at the end of frame when IsUnloading is true. </p>
 
 <p>Reimplemented from <a class="el" href="class_urho3_d_1_1_plugin.html#a1824d1464a13546f1c3279deb94d8fb0">Urho3D::Plugin</a>.</p>
-
-</div>
-</div>
-<a id="a3be75aa8c8830177ad1d00289eac9d8e" name="a3be75aa8c8830177ad1d00289eac9d8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3be75aa8c8830177ad1d00289eac9d8e">&#9670;&#160;</a></span>WaitForCompleteFile()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::ModulePlugin::WaitForCompleteFile </td>
-          <td>(</td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>timeoutMs</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>This function will block until plugin file is complete and ready to be loaded. Returns false if timeout exceeded, but file is still incomplete. </p>
-
-<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_plugin.html#a484987a6a57ebe9acf9944970aa73875">Urho3D::Plugin</a>.</p>
 
 </div>
 </div>

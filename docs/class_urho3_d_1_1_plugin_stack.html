@@ -92,9 +92,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3aa6586fb24bc2242282c6babbdd2f53" id="r_a3aa6586fb24bc2242282c6babbdd2f53"><td class="memItemLeft" align="right" valign="top"><a id="a3aa6586fb24bc2242282c6babbdd2f53" name="a3aa6586fb24bc2242282c6babbdd2f53"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PluginStack</b> (<a class="el" href="class_urho3_d_1_1_plugin_manager.html">PluginManager</a> *manager, const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;plugins)</td></tr>
-<tr class="separator:a3aa6586fb24bc2242282c6babbdd2f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66bb102da427b82199d076bd34782122" id="r_a66bb102da427b82199d076bd34782122"><td class="memItemLeft" align="right" valign="top"><a id="a66bb102da427b82199d076bd34782122" name="a66bb102da427b82199d076bd34782122"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>PluginStack</b> (<a class="el" href="class_urho3_d_1_1_plugin_manager.html">PluginManager</a> *manager, const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;plugins, const ea::string &amp;binaryDirectory, const ea::string &amp;temporaryDirectory, unsigned version)</td></tr>
+<tr class="separator:a66bb102da427b82199d076bd34782122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca8ea5e580614c87c2548415eca9d25f" id="r_aca8ea5e580614c87c2548415eca9d25f"><td class="memItemLeft" align="right" valign="top"><a id="aca8ea5e580614c87c2548415eca9d25f" name="aca8ea5e580614c87c2548415eca9d25f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>StartApplication</b> (const ea::string &amp;mainPlugin)</td></tr>
 <tr class="memdesc:aca8ea5e580614c87c2548415eca9d25f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start application for all plugins in the stack. <br /></td></tr>
@@ -321,6 +321,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a4b8d7c5c39badfaa5ddd8c116cb9fe6c" id="r_a4b8d7c5c39badfaa5ddd8c116cb9fe6c"><td class="memItemLeft" align="right" valign="top"><a id="a4b8d7c5c39badfaa5ddd8c116cb9fe6c" name="a4b8d7c5c39badfaa5ddd8c116cb9fe6c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_plugin_stack.html">PluginStack</a>, <a class="el" href="class_urho3_d_1_1_object.html">Object</a>)</td></tr>
 <tr class="separator:a4b8d7c5c39badfaa5ddd8c116cb9fe6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73a0f3ff29614f4726123d34642fa89c" id="r_a73a0f3ff29614f4726123d34642fa89c"><td class="memItemLeft" align="right" valign="top"><a id="a73a0f3ff29614f4726123d34642fa89c" name="a73a0f3ff29614f4726123d34642fa89c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CopyBinariesToTemporaryDirectory</b> ()</td></tr>
+<tr class="separator:a73a0f3ff29614f4726123d34642fa89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a291e7d0d609ce72db733a00d5a1b869c" id="r_a291e7d0d609ce72db733a00d5a1b869c"><td class="memItemLeft" align="right" valign="top"><a id="a291e7d0d609ce72db733a00d5a1b869c" name="a291e7d0d609ce72db733a00d5a1b869c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadPlugins</b> ()</td></tr>
 <tr class="separator:a291e7d0d609ce72db733a00d5a1b869c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -333,6 +336,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UnloadPlugins</b> ()<
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a5ee9a1add831761bffb9501a2b1c6642" id="r_a5ee9a1add831761bffb9501a2b1c6642"><td class="memItemLeft" align="right" valign="top"><a id="a5ee9a1add831761bffb9501a2b1c6642" name="a5ee9a1add831761bffb9501a2b1c6642"></a>
+const ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>binaryDirectory_</b></td></tr>
+<tr class="separator:a5ee9a1add831761bffb9501a2b1c6642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6620a4f6ded059dca563878654e19ca" id="r_ab6620a4f6ded059dca563878654e19ca"><td class="memItemLeft" align="right" valign="top"><a id="ab6620a4f6ded059dca563878654e19ca" name="ab6620a4f6ded059dca563878654e19ca"></a>
+const ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>temporaryDirectory_</b></td></tr>
+<tr class="separator:ab6620a4f6ded059dca563878654e19ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5b58c32e6f1a25261becc969e852f81" id="r_ae5b58c32e6f1a25261becc969e852f81"><td class="memItemLeft" align="right" valign="top"><a id="ae5b58c32e6f1a25261becc969e852f81" name="ae5b58c32e6f1a25261becc969e852f81"></a>
+const unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>version_</b></td></tr>
+<tr class="separator:ae5b58c32e6f1a25261becc969e852f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6df158d885314255ac1d268ededde948" id="r_a6df158d885314255ac1d268ededde948"><td class="memItemLeft" align="right" valign="top"><a id="a6df158d885314255ac1d268ededde948" name="a6df158d885314255ac1d268ededde948"></a>
 ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html">PluginInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>applications_</b></td></tr>
 <tr class="separator:a6df158d885314255ac1d268ededde948"><td class="memSeparator" colspan="2">&#160;</td></tr>

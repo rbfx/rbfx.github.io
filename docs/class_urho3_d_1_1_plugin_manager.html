@@ -129,10 +129,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetQuitApplicationCal
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsStarted</b> () const</td></tr>
 <tr class="memdesc:a875b03a80a88ac67638a9e402d091ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the application is started now. <br /></td></tr>
 <tr class="separator:a875b03a80a88ac67638a9e402d091ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3c3c61e586aeb467bbb5f07bcc8c698" id="r_ab3c3c61e586aeb467bbb5f07bcc8c698"><td class="memItemLeft" align="right" valign="top"><a id="ab3c3c61e586aeb467bbb5f07bcc8c698" name="ab3c3c61e586aeb467bbb5f07bcc8c698"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ArePluginsRenamed</b> () const</td></tr>
-<tr class="memdesc:ab3c3c61e586aeb467bbb5f07bcc8c698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the plugins are renamed on load. <br /></td></tr>
-<tr class="separator:ab3c3c61e586aeb467bbb5f07bcc8c698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae89321a89bb72c3ad4feec4ed9804576" id="r_ae89321a89bb72c3ad4feec4ed9804576"><td class="memItemLeft" align="right" valign="top"><a id="ae89321a89bb72c3ad4feec4ed9804576" name="ae89321a89bb72c3ad4feec4ed9804576"></a>
+const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetOriginalBinaryDirectory</b> () const</td></tr>
+<tr class="memdesc:ae89321a89bb72c3ad4feec4ed9804576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return original binary directory. <br /></td></tr>
+<tr class="separator:ae89321a89bb72c3ad4feec4ed9804576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec718beeae77da8cd5a1c0f58bbc89e5" id="r_aec718beeae77da8cd5a1c0f58bbc89e5"><td class="memItemLeft" align="right" valign="top"><a id="aec718beeae77da8cd5a1c0f58bbc89e5" name="aec718beeae77da8cd5a1c0f58bbc89e5"></a>
+const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetTemporaryBinaryDirectory</b> () const</td></tr>
+<tr class="memdesc:aec718beeae77da8cd5a1c0f58bbc89e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return temporary binary directory, or main binary directory if temporary copies are disabled. <br /></td></tr>
+<tr class="separator:aec718beeae77da8cd5a1c0f58bbc89e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab903d2fc460578f672dff2d1020ad7bb" id="r_ab903d2fc460578f672dff2d1020ad7bb"><td class="memItemLeft" align="right" valign="top"><a id="ab903d2fc460578f672dff2d1020ad7bb" name="ab903d2fc460578f672dff2d1020ad7bb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPluginsLoaded</b> (const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;plugins)</td></tr>
 <tr class="memdesc:ab903d2fc460578f672dff2d1020ad7bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set loaded plugins. Order is preserved. <br /></td></tr>
@@ -145,14 +149,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsPluginLoaded</b> (c
 const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetLoadedPlugins</b> () const</td></tr>
 <tr class="memdesc:a54095a55c7261ea8e48b7caeda4f5a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return loaded plugins. <br /></td></tr>
 <tr class="separator:a54095a55c7261ea8e48b7caeda4f5a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06451636bef46015a8d92c877d7d8278" id="r_a06451636bef46015a8d92c877d7d8278"><td class="memItemLeft" align="right" valign="top"><a id="a06451636bef46015a8d92c877d7d8278" name="a06451636bef46015a8d92c877d7d8278"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetRevision</b> () const</td></tr>
-<tr class="memdesc:a06451636bef46015a8d92c877d7d8278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return revision of loaded plugins. <br /></td></tr>
-<tr class="separator:a06451636bef46015a8d92c877d7d8278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88ae90f0641fd138a7e1a89d6c721c42" id="r_a88ae90f0641fd138a7e1a89d6c721c42"><td class="memItemLeft" align="right" valign="top"><a id="a88ae90f0641fd138a7e1a89d6c721c42" name="a88ae90f0641fd138a7e1a89d6c721c42"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetPluginListRevision</b> () const</td></tr>
+<tr class="memdesc:a88ae90f0641fd138a7e1a89d6c721c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return revision of loaded plugins. <br /></td></tr>
+<tr class="separator:a88ae90f0641fd138a7e1a89d6c721c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e79cd07530dd04ededac5120c880e05" id="r_a9e79cd07530dd04ededac5120c880e05"><td class="memItemLeft" align="right" valign="top"><a id="a9e79cd07530dd04ededac5120c880e05" name="a9e79cd07530dd04ededac5120c880e05"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsReloadPending</b> () const</td></tr>
 <tr class="memdesc:a9e79cd07530dd04ededac5120c880e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the load is pending at the end of the frame. <br /></td></tr>
 <tr class="separator:a9e79cd07530dd04ededac5120c880e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a965f3d6a30ce722877f0e25bf246ce01" id="r_a965f3d6a30ce722877f0e25bf246ce01"><td class="memItemLeft" align="right" valign="top"><a id="a965f3d6a30ce722877f0e25bf246ce01" name="a965f3d6a30ce722877f0e25bf246ce01"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>AreLoadedPluginsOutOfDate</b> () const</td></tr>
+<tr class="memdesc:a965f3d6a30ce722877f0e25bf246ce01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether loaded plugins are out of date. <br /></td></tr>
+<tr class="separator:a965f3d6a30ce722877f0e25bf246ce01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34140f48e0c17a7bee9c273b4568cee2" id="r_a34140f48e0c17a7bee9c273b4568cee2"><td class="memItemLeft" align="right" valign="top"><a id="a34140f48e0c17a7bee9c273b4568cee2" name="a34140f48e0c17a7bee9c273b4568cee2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>AddDynamicPlugin</b> (<a class="el" href="class_urho3_d_1_1_plugin.html">Plugin</a> *plugin)</td></tr>
 <tr class="memdesc:a34140f48e0c17a7bee9c273b4568cee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually add new plugin with dynamic reloading. <br /></td></tr>
@@ -165,10 +173,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>AddStaticPlugin</b> (
 <a class="el" href="class_urho3_d_1_1_plugin.html">Plugin</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetDynamicPlugin</b> (const ea::string &amp;name, bool ignoreUnloaded)</td></tr>
 <tr class="memdesc:a0b3e3dd3da4f7dfd4c51117b4e09154c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find or load dynamic plugin by name. <br /></td></tr>
 <tr class="separator:a0b3e3dd3da4f7dfd4c51117b4e09154c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e87fd11e22981f0b681970026bbab39" id="r_a2e87fd11e22981f0b681970026bbab39"><td class="memItemLeft" align="right" valign="top"><a id="a2e87fd11e22981f0b681970026bbab39" name="a2e87fd11e22981f0b681970026bbab39"></a>
-<a class="el" href="class_urho3_d_1_1_plugin_application.html">PluginApplication</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetPluginApplication</b> (const ea::string &amp;name, bool ignoreUnloaded, unsigned *version=nullptr)</td></tr>
-<tr class="memdesc:a2e87fd11e22981f0b681970026bbab39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find or load plugin application by name. <br /></td></tr>
-<tr class="separator:a2e87fd11e22981f0b681970026bbab39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a345054503e226986bfa87ced7eef30eb" id="r_a345054503e226986bfa87ced7eef30eb"><td class="memItemLeft" align="right" valign="top"><a id="a345054503e226986bfa87ced7eef30eb" name="a345054503e226986bfa87ced7eef30eb"></a>
+<a class="el" href="class_urho3_d_1_1_plugin_application.html">PluginApplication</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetPluginApplication</b> (const ea::string &amp;name, bool ignoreUnloaded)</td></tr>
+<tr class="memdesc:a345054503e226986bfa87ced7eef30eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find or load plugin application by name. <br /></td></tr>
+<tr class="separator:a345054503e226986bfa87ced7eef30eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca282eee038444337fdc009ae36fdd7d" id="r_aca282eee038444337fdc009ae36fdd7d"><td class="memItemLeft" align="right" valign="top"><a id="aca282eee038444337fdc009ae36fdd7d" name="aca282eee038444337fdc009ae36fdd7d"></a>
 <a class="el" href="class_urho3_d_1_1_plugin_application.html">PluginApplication</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetMainPlugin</b> () const</td></tr>
 <tr class="memdesc:aca282eee038444337fdc009ae36fdd7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return main plugin. The result is valid after plugin application started. <br /></td></tr>
@@ -181,6 +189,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>AddStaticPlugin</b> (
 <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>EnumerateLoadedModules</b> ()</td></tr>
 <tr class="memdesc:a6aec06babbffe0a16becbbd84e54e9db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate already loaded dynamic modules and static plugins. <br /></td></tr>
 <tr class="separator:a6aec06babbffe0a16becbbd84e54e9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d46d82b8314ab9f5a0b46e13907505" id="r_a00d46d82b8314ab9f5a0b46e13907505"><td class="memItemLeft" align="right" valign="top"><a id="a00d46d82b8314ab9f5a0b46e13907505" name="a00d46d82b8314ab9f5a0b46e13907505"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsReloadBlocked</b> (ea::string *reason=nullptr) const</td></tr>
+<tr class="memdesc:a00d46d82b8314ab9f5a0b46e13907505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether reload is blocked for external reasons. <br /></td></tr>
+<tr class="separator:a00d46d82b8314ab9f5a0b46e13907505"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object" id="r_a95a6cd1c5c12a458fda4b38f873a334d"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>Object</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -397,15 +409,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>RestoreStack</b> ()</
 <tr class="memitem:ab7102eca7d78380e49024a0a7af5b044" id="r_ab7102eca7d78380e49024a0a7af5b044"><td class="memItemLeft" align="right" valign="top"><a id="ab7102eca7d78380e49024a0a7af5b044" name="ab7102eca7d78380e49024a0a7af5b044"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (bool exiting)</td></tr>
 <tr class="separator:ab7102eca7d78380e49024a0a7af5b044"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bf9d87bb81c464b49330392cf96f73f" id="r_a2bf9d87bb81c464b49330392cf96f73f"><td class="memItemLeft" align="right" valign="top"><a id="a2bf9d87bb81c464b49330392cf96f73f" name="a2bf9d87bb81c464b49330392cf96f73f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdatePlugin</b> (<a class="el" href="class_urho3_d_1_1_plugin.html">Plugin</a> *plugin, bool checkOutOfDate)</td></tr>
-<tr class="separator:a2bf9d87bb81c464b49330392cf96f73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb70174e204f2156d1cdf1b55d2e718" id="r_adfb70174e204f2156d1cdf1b55d2e718"><td class="memItemLeft" align="right" valign="top"><a id="adfb70174e204f2156d1cdf1b55d2e718" name="adfb70174e204f2156d1cdf1b55d2e718"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CheckOutOfDatePlugins</b> ()</td></tr>
+<tr class="separator:adfb70174e204f2156d1cdf1b55d2e718"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdea6dd3d4342169c48540b6c695e515" id="r_abdea6dd3d4342169c48540b6c695e515"><td class="memItemLeft" align="right" valign="top"><a id="abdea6dd3d4342169c48540b6c695e515" name="abdea6dd3d4342169c48540b6c695e515"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>PerformPluginUnload</b> (<a class="el" href="class_urho3_d_1_1_plugin.html">Plugin</a> *plugin)</td></tr>
 <tr class="separator:abdea6dd3d4342169c48540b6c695e515"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcd09c27ab8136c1c2117096463963e3" id="r_abcd09c27ab8136c1c2117096463963e3"><td class="memItemLeft" align="right" valign="top"><a id="abcd09c27ab8136c1c2117096463963e3" name="abcd09c27ab8136c1c2117096463963e3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>TryReloadPlugin</b> (<a class="el" href="class_urho3_d_1_1_plugin.html">Plugin</a> *plugin)</td></tr>
-<tr class="separator:abcd09c27ab8136c1c2117096463963e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d1b117aa063b78512c3eea4863020f6" id="r_a7d1b117aa063b78512c3eea4863020f6"><td class="memItemLeft" align="right" valign="top"><a id="a7d1b117aa063b78512c3eea4863020f6" name="a7d1b117aa063b78512c3eea4863020f6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>CheckAndRemoveUnloadedPlugin</b> (<a class="el" href="class_urho3_d_1_1_plugin.html">Plugin</a> *plugin)</td></tr>
 <tr class="separator:a7d1b117aa063b78512c3eea4863020f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -422,21 +431,27 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>startPending_</b> {}<
 <tr class="memitem:a7bb367a9d33a78e05373c1cd789f6952" id="r_a7bb367a9d33a78e05373c1cd789f6952"><td class="memItemLeft" align="right" valign="top"><a id="a7bb367a9d33a78e05373c1cd789f6952" name="a7bb367a9d33a78e05373c1cd789f6952"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>stopPending_</b> {}</td></tr>
 <tr class="separator:a7bb367a9d33a78e05373c1cd789f6952"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e36d04249521e3ce584db4c49a0712b" id="r_a1e36d04249521e3ce584db4c49a0712b"><td class="memItemLeft" align="right" valign="top"><a id="a1e36d04249521e3ce584db4c49a0712b" name="a1e36d04249521e3ce584db4c49a0712b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>stackReloadPending_</b> {}</td></tr>
-<tr class="separator:a1e36d04249521e3ce584db4c49a0712b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c040f7af77d4b8aadf1b7e73f6423dd" id="r_a7c040f7af77d4b8aadf1b7e73f6423dd"><td class="memItemLeft" align="right" valign="top"><a id="a7c040f7af77d4b8aadf1b7e73f6423dd" name="a7c040f7af77d4b8aadf1b7e73f6423dd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>reloadPending_</b> {}</td></tr>
+<tr class="separator:a7c040f7af77d4b8aadf1b7e73f6423dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b33c89d5b980ba8a37aed1d562779e2" id="r_a1b33c89d5b980ba8a37aed1d562779e2"><td class="memItemLeft" align="right" valign="top"><a id="a1b33c89d5b980ba8a37aed1d562779e2" name="a1b33c89d5b980ba8a37aed1d562779e2"></a>
 <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>loadedPlugins_</b></td></tr>
 <tr class="separator:a1b33c89d5b980ba8a37aed1d562779e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72bfe6d2fd1d6c03435897ad5d32db5b" id="r_a72bfe6d2fd1d6c03435897ad5d32db5b"><td class="memItemLeft" align="right" valign="top"><a id="a72bfe6d2fd1d6c03435897ad5d32db5b" name="a72bfe6d2fd1d6c03435897ad5d32db5b"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>revision_</b> {}</td></tr>
-<tr class="separator:a72bfe6d2fd1d6c03435897ad5d32db5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32fd8f271c0c0a2d52e5be4d3da77b2e" id="r_a32fd8f271c0c0a2d52e5be4d3da77b2e"><td class="memItemLeft" align="right" valign="top"><a id="a32fd8f271c0c0a2d52e5be4d3da77b2e" name="a32fd8f271c0c0a2d52e5be4d3da77b2e"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>listRevision_</b> {}</td></tr>
+<tr class="separator:a32fd8f271c0c0a2d52e5be4d3da77b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f1839bb76a85ff26c8e3228a731aba6" id="r_a5f1839bb76a85ff26c8e3228a731aba6"><td class="memItemLeft" align="right" valign="top"><a id="a5f1839bb76a85ff26c8e3228a731aba6" name="a5f1839bb76a85ff26c8e3228a731aba6"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>temporaryDirectory_</b></td></tr>
+<tr class="separator:a5f1839bb76a85ff26c8e3228a731aba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af908367e728b00d238d85409c5e547a2" id="r_af908367e728b00d238d85409c5e547a2"><td class="memItemLeft" align="right" valign="top"><a id="af908367e728b00d238d85409c5e547a2" name="af908367e728b00d238d85409c5e547a2"></a>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_plugin_stack.html">PluginStack</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pluginStack_</b></td></tr>
 <tr class="separator:af908367e728b00d238d85409c5e547a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae25dba9738427d390547adb1d424f941" id="r_ae25dba9738427d390547adb1d424f941"><td class="memItemLeft" align="right" valign="top"><a id="ae25dba9738427d390547adb1d424f941" name="ae25dba9738427d390547adb1d424f941"></a>
 <a class="el" href="class_urho3_d_1_1_plugin_manager.html#a0f52730f1532fd126aaf1de21828566d">QuitApplicationCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><b>quitApplication_</b></td></tr>
 <tr class="separator:ae25dba9738427d390547adb1d424f941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb65b6030ebb722ba76f98c6a3acb3e1" id="r_afb65b6030ebb722ba76f98c6a3acb3e1"><td class="memItemLeft" align="right" valign="top"><a id="afb65b6030ebb722ba76f98c6a3acb3e1" name="afb65b6030ebb722ba76f98c6a3acb3e1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>pluginsOutOfDate_</b> {}</td></tr>
+<tr class="separator:afb65b6030ebb722ba76f98c6a3acb3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cdd8032b41165c95fefe8fd41bc2743" id="r_a6cdd8032b41165c95fefe8fd41bc2743"><td class="memItemLeft" align="right" valign="top"><a id="a6cdd8032b41165c95fefe8fd41bc2743" name="a6cdd8032b41165c95fefe8fd41bc2743"></a>
 SerializedPlugins&#160;</td><td class="memItemRight" valign="bottom"><b>restoreBuffer_</b></td></tr>
 <tr class="separator:a6cdd8032b41165c95fefe8fd41bc2743"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -447,8 +462,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>wasStarted_</b> {}</t
 ea::unordered_map&lt; ea::string, <a class="el" href="struct_urho3_d_1_1_plugin_manager_1_1_dynamic_library_info.html">DynamicLibraryInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pluginInfoCache_</b></td></tr>
 <tr class="separator:a4386b6406b63be91f6b02ef16b962968"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a3b286eaf69a8a300c78879369e2cda3f" id="r_a3b286eaf69a8a300c78879369e2cda3f"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#a3b286eaf69a8a300c78879369e2cda3f">renamePluginBinaries_</a> {}</td></tr>
-<tr class="separator:a3b286eaf69a8a300c78879369e2cda3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae85fb60b7112e1ff1f7b500308b37889" id="r_ae85fb60b7112e1ff1f7b500308b37889"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#ae85fb60b7112e1ff1f7b500308b37889">enableAutoReload_</a> {}</td></tr>
+<tr class="separator:ae85fb60b7112e1ff1f7b500308b37889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed43fc27f0edc64cc57e7ddb2acf0de8" id="r_aed43fc27f0edc64cc57e7ddb2acf0de8"><td class="memItemLeft" align="right" valign="top"><a id="aed43fc27f0edc64cc57e7ddb2acf0de8" name="aed43fc27f0edc64cc57e7ddb2acf0de8"></a>
+const ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>binaryDirectory_</b></td></tr>
+<tr class="separator:aed43fc27f0edc64cc57e7ddb2acf0de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a111b38d69921fe5ab7f5ac899aecbd04" id="r_a111b38d69921fe5ab7f5ac899aecbd04"><td class="memItemLeft" align="right" valign="top"><a id="a111b38d69921fe5ab7f5ac899aecbd04" name="a111b38d69921fe5ab7f5ac899aecbd04"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>temporaryDirectoryBase_</b></td></tr>
+<tr class="separator:a111b38d69921fe5ab7f5ac899aecbd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd4d3c5303850ead692fd84f44c89eb6" id="r_abd4d3c5303850ead692fd84f44c89eb6"><td class="memItemLeft" align="right" valign="top"><a id="abd4d3c5303850ead692fd84f44c89eb6" name="abd4d3c5303850ead692fd84f44c89eb6"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>reloadIntervalMs_</b> {1000}</td></tr>
 <tr class="separator:abd4d3c5303850ead692fd84f44c89eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -462,13 +483,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>reloadTimeoutMs_<
 ea::unordered_map&lt; ea::string, <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_plugin_application.html">PluginApplication</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>staticPlugins_</b></td></tr>
 <tr class="separator:a8de067bb07fd6b9871f84df74167db76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a5ea428d6fd7f2442799892a98d133292" id="r_a5ea428d6fd7f2442799892a98d133292"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#a5ea428d6fd7f2442799892a98d133292">forceReload_</a> {}</td></tr>
-<tr class="separator:a5ea428d6fd7f2442799892a98d133292"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6df7a6cce5270a055fd47262ac00193f" id="r_a6df7a6cce5270a055fd47262ac00193f"><td class="memItemLeft" align="right" valign="top"><a id="a6df7a6cce5270a055fd47262ac00193f" name="a6df7a6cce5270a055fd47262ac00193f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>enableAutoReload_</b> {}</td></tr>
-<tr class="separator:a6df7a6cce5270a055fd47262ac00193f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d6a43e6ea783fd89125c513ae51caf0" id="r_a2d6a43e6ea783fd89125c513ae51caf0"><td class="memItemLeft" align="right" valign="top"><a id="a2d6a43e6ea783fd89125c513ae51caf0" name="a2d6a43e6ea783fd89125c513ae51caf0"></a>
-<a class="el" href="class_urho3_d_1_1_timer.html">Timer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>reloadTimer_</b></td></tr>
+<tr class="memitem:a2d6a43e6ea783fd89125c513ae51caf0" id="r_a2d6a43e6ea783fd89125c513ae51caf0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_timer.html">Timer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_manager.html#a2d6a43e6ea783fd89125c513ae51caf0">reloadTimer_</a></td></tr>
 <tr class="separator:a2d6a43e6ea783fd89125c513ae51caf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -575,8 +590,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a5ea428d6fd7f2442799892a98d133292" name="a5ea428d6fd7f2442799892a98d133292"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ea428d6fd7f2442799892a98d133292">&#9670;&#160;</a></span>forceReload_</h2>
+<a id="ae85fb60b7112e1ff1f7b500308b37889" name="ae85fb60b7112e1ff1f7b500308b37889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae85fb60b7112e1ff1f7b500308b37889">&#9670;&#160;</a></span>enableAutoReload_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -585,30 +600,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Urho3D::PluginManager::forceReload_ {}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Auto-reloading of dynamic plugins </p>
-
-</div>
-</div>
-<a id="a3b286eaf69a8a300c78879369e2cda3f" name="a3b286eaf69a8a300c78879369e2cda3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b286eaf69a8a300c78879369e2cda3f">&#9670;&#160;</a></span>renamePluginBinaries_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const bool Urho3D::PluginManager::renamePluginBinaries_ {}</td>
+          <td class="memname">const bool Urho3D::PluginManager::enableAutoReload_ {}</td>
         </tr>
       </table>
   </td>
@@ -618,6 +610,29 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Parameters </p>
+
+</div>
+</div>
+<a id="a2d6a43e6ea783fd89125c513ae51caf0" name="a2d6a43e6ea783fd89125c513ae51caf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d6a43e6ea783fd89125c513ae51caf0">&#9670;&#160;</a></span>reloadTimer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_urho3_d_1_1_timer.html">Timer</a> Urho3D::PluginManager::reloadTimer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Auto-reloading of dynamic plugins </p>
 
 </div>
 </div>
