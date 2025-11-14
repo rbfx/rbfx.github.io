@@ -243,11 +243,11 @@ var NAVTREEINDEX25 =
 "class_urho3_d_1_1_movable_non_copyable.html":[6,0,2,413],
 "class_urho3_d_1_1_movable_non_copyable.html#a4c34ea7f62cf2f3173e0dcc460024768":[6,0,2,413,0],
 "class_urho3_d_1_1_move_and_orbit_component.html":[6,0,2,414],
-"class_urho3_d_1_1_move_and_orbit_component.html#a039670396f4ce92f81912ce9f26f093d":[6,0,2,414,2],
-"class_urho3_d_1_1_move_and_orbit_component.html#a09bf795722cf2a10ddfa556e978d356c":[6,0,2,414,4],
-"class_urho3_d_1_1_move_and_orbit_component.html#a30d8d8ee604876d32a28620d9c854883":[6,0,2,414,3],
+"class_urho3_d_1_1_move_and_orbit_component.html#a039670396f4ce92f81912ce9f26f093d":[6,0,2,414,4],
+"class_urho3_d_1_1_move_and_orbit_component.html#a09bf795722cf2a10ddfa556e978d356c":[6,0,2,414,6],
+"class_urho3_d_1_1_move_and_orbit_component.html#a24a78c802fadf6ddb5c4c1122c8cd5ca":[6,0,2,414,9],
+"class_urho3_d_1_1_move_and_orbit_component.html#a30d8d8ee604876d32a28620d9c854883":[6,0,2,414,5],
+"class_urho3_d_1_1_move_and_orbit_component.html#a7f275b3cadf26277cfc27de9f605eda0":[6,0,2,414,7],
 "class_urho3_d_1_1_move_and_orbit_component.html#a86bb483db8cc6c96a5e541faaf64c24b":[6,0,2,414,0],
-"class_urho3_d_1_1_move_and_orbit_component.html#a8c7b1a8ea927d13fb4cd7da50a222b29":[6,0,2,414,6],
-"class_urho3_d_1_1_move_and_orbit_component.html#a9b3ad39bb6df19f0858ea473816e2dab":[6,0,2,414,7],
-"class_urho3_d_1_1_move_and_orbit_component.html#ac57030c993a0eb4dbfd927dbfb3a36d3":[6,0,2,414,8]
+"class_urho3_d_1_1_move_and_orbit_component.html#a8c7b1a8ea927d13fb4cd7da50a222b29":[6,0,2,414,10]
 };

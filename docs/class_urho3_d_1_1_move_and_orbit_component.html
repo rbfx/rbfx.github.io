@@ -89,6 +89,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MoveAndOrbitComponent</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
 <tr class="memdesc:a86bb483db8cc6c96a5e541faaf64c24b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct. <br /></td></tr>
 <tr class="separator:a86bb483db8cc6c96a5e541faaf64c24b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f275b3cadf26277cfc27de9f605eda0" id="r_a7f275b3cadf26277cfc27de9f605eda0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_move_and_orbit_component.html#a7f275b3cadf26277cfc27de9f605eda0">OnNodeSet</a> (Node *previousNode, Node *currentNode) override</td></tr>
+<tr class="memdesc:a7f275b3cadf26277cfc27de9f605eda0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node being assigned at creation.  <br /></td></tr>
+<tr class="separator:a7f275b3cadf26277cfc27de9f605eda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b3ad39bb6df19f0858ea473816e2dab" id="r_a9b3ad39bb6df19f0858ea473816e2dab"><td class="memItemLeft" align="right" valign="top"><a id="a9b3ad39bb6df19f0858ea473816e2dab" name="a9b3ad39bb6df19f0858ea473816e2dab"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetVelocity</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;velocity)</td></tr>
 <tr class="memdesc:a9b3ad39bb6df19f0858ea473816e2dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set movement velocity in node's local space. <br /></td></tr>
@@ -101,6 +104,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetYaw</b> (f
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPitch</b> (float pitch)</td></tr>
 <tr class="memdesc:a8c7b1a8ea927d13fb4cd7da50a222b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pitch angle in degrees. <br /></td></tr>
 <tr class="separator:a8c7b1a8ea927d13fb4cd7da50a222b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24a78c802fadf6ddb5c4c1122c8cd5ca" id="r_a24a78c802fadf6ddb5c4c1122c8cd5ca"><td class="memItemLeft" align="right" valign="top"><a id="a24a78c802fadf6ddb5c4c1122c8cd5ca" name="a24a78c802fadf6ddb5c4c1122c8cd5ca"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDistanceLimits</b> (float minDistance, float maxDistance)</td></tr>
+<tr class="memdesc:a24a78c802fadf6ddb5c4c1122c8cd5ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set distance limits. <br /></td></tr>
+<tr class="separator:a24a78c802fadf6ddb5c4c1122c8cd5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a039670396f4ce92f81912ce9f26f093d" id="r_a039670396f4ce92f81912ce9f26f093d"><td class="memItemLeft" align="right" valign="top"><a id="a039670396f4ce92f81912ce9f26f093d" name="a039670396f4ce92f81912ce9f26f093d"></a>
 const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetVelocity</b> () const</td></tr>
 <tr class="memdesc:a039670396f4ce92f81912ce9f26f093d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get movement velocity in node's local space. <br /></td></tr>
@@ -113,6 +120,14 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>GetYaw</b> () const<
 float&#160;</td><td class="memItemRight" valign="bottom"><b>GetPitch</b> () const</td></tr>
 <tr class="memdesc:ad5cec7042a6906b2d94a102215d30de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pitch angle in degrees. <br /></td></tr>
 <tr class="separator:ad5cec7042a6906b2d94a102215d30de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e1d8c58e4ae7344c57e6843d76ca0bc" id="r_a9e1d8c58e4ae7344c57e6843d76ca0bc"><td class="memItemLeft" align="right" valign="top"><a id="a9e1d8c58e4ae7344c57e6843d76ca0bc" name="a9e1d8c58e4ae7344c57e6843d76ca0bc"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>GetMinDistance</b> () const</td></tr>
+<tr class="memdesc:a9e1d8c58e4ae7344c57e6843d76ca0bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get min distance. <br /></td></tr>
+<tr class="separator:a9e1d8c58e4ae7344c57e6843d76ca0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ac5f6ecb6cff79259e369d380ba8209" id="r_a9ac5f6ecb6cff79259e369d380ba8209"><td class="memItemLeft" align="right" valign="top"><a id="a9ac5f6ecb6cff79259e369d380ba8209" name="a9ac5f6ecb6cff79259e369d380ba8209"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>GetMaxDistance</b> () const</td></tr>
+<tr class="memdesc:a9ac5f6ecb6cff79259e369d380ba8209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get max distance. <br /></td></tr>
+<tr class="separator:a9ac5f6ecb6cff79259e369d380ba8209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09bf795722cf2a10ddfa556e978d356c" id="r_a09bf795722cf2a10ddfa556e978d356c"><td class="memItemLeft" align="right" valign="top"><a id="a09bf795722cf2a10ddfa556e978d356c" name="a09bf795722cf2a10ddfa556e978d356c"></a>
 <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetYawPitchRotation</b> () const</td></tr>
 <tr class="memdesc:a09bf795722cf2a10ddfa556e978d356c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get yaw and pitch rotation. <br /></td></tr>
@@ -569,6 +584,12 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>yaw_</b> {}</td></tr
 <tr class="memitem:a2fba468007364e7ba1ef13f54af73f82" id="r_a2fba468007364e7ba1ef13f54af73f82"><td class="memItemLeft" align="right" valign="top"><a id="a2fba468007364e7ba1ef13f54af73f82" name="a2fba468007364e7ba1ef13f54af73f82"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>pitch_</b> {}</td></tr>
 <tr class="separator:a2fba468007364e7ba1ef13f54af73f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a225426c3ed3bdad88acfdf341d1de16f" id="r_a225426c3ed3bdad88acfdf341d1de16f"><td class="memItemLeft" align="right" valign="top"><a id="a225426c3ed3bdad88acfdf341d1de16f" name="a225426c3ed3bdad88acfdf341d1de16f"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>minDistance_</b> {0.5f}</td></tr>
+<tr class="separator:a225426c3ed3bdad88acfdf341d1de16f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c8f5a3e9314489d8a350f08e7c3541" id="r_a94c8f5a3e9314489d8a350f08e7c3541"><td class="memItemLeft" align="right" valign="top"><a id="a94c8f5a3e9314489d8a350f08e7c3541" name="a94c8f5a3e9314489d8a350f08e7c3541"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>maxDistance_</b> {100.0f}</td></tr>
+<tr class="separator:a94c8f5a3e9314489d8a350f08e7c3541"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -576,9 +597,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object" id="r_a745a18b8e99bf855379e72aac5d544ab"><td class="memItemLeft" align="right" valign="top">static constexpr ea::array&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a745a18b8e99bf855379e72aac5d544ab">TypeHierarchy</a> {}</td></tr>
 <tr class="separator:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_urho3_d_1_1_logic_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_logic_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_logic_component.html">Urho3D::LogicComponent</a></td></tr>
-<tr class="memitem:aaeead90990d9c3a8837f9b359300f681 inherit pro_methods_class_urho3_d_1_1_logic_component" id="r_aaeead90990d9c3a8837f9b359300f681"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#aaeead90990d9c3a8837f9b359300f681">OnNodeSet</a> (Node *previousNode, Node *currentNode) override</td></tr>
-<tr class="memdesc:aaeead90990d9c3a8837f9b359300f681 inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node being assigned at creation.  <br /></td></tr>
-<tr class="separator:aaeead90990d9c3a8837f9b359300f681 inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ad52db1fa2d4d400bbd7d96c9726964 inherit pro_methods_class_urho3_d_1_1_logic_component" id="r_a6ad52db1fa2d4d400bbd7d96c9726964"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#a6ad52db1fa2d4d400bbd7d96c9726964">OnSceneSet</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *previousScene, <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene) override</td></tr>
 <tr class="memdesc:a6ad52db1fa2d4d400bbd7d96c9726964 inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene being assigned.  <br /></td></tr>
 <tr class="separator:a6ad52db1fa2d4d400bbd7d96c9726964 inherit pro_methods_class_urho3_d_1_1_logic_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -639,6 +657,47 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 <tr class="memdesc:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution context. <br /></td></tr>
 <tr class="separator:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7f275b3cadf26277cfc27de9f605eda0" name="a7f275b3cadf26277cfc27de9f605eda0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f275b3cadf26277cfc27de9f605eda0">&#9670;&#160;</a></span>OnNodeSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::MoveAndOrbitComponent::OnNodeSet </td>
+          <td>(</td>
+          <td class="paramtype">Node *&#160;</td>
+          <td class="paramname"><em>previousNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Node *&#160;</td>
+          <td class="paramname"><em>currentNode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handle scene node being assigned at creation. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_logic_component.html#aaeead90990d9c3a8837f9b359300f681">Urho3D::LogicComponent</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Urho3D/Input/<b>MoveAndOrbitComponent.h</b></li>
 <li>Urho3D/Input/<b>MoveAndOrbitComponent.cpp</b></li>

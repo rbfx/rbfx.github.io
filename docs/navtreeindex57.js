@@ -1,5 +1,9 @@
 var NAVTREEINDEX57 =
 {
+"struct_urho3_d_1_1_console_1_1_log_entry.html#a39bd6aaa5d462d53aa2a8030ad8425e7":[6,0,2,142,0,3],
+"struct_urho3_d_1_1_console_1_1_log_entry.html#a67a0c39b65ba6d8be93d3fd0614d0f1c":[6,0,2,142,0,0],
+"struct_urho3_d_1_1_console_1_1_log_entry.html#a8d534c1eb9e12bc4524029ec13910e8c":[6,0,2,142,0,1],
+"struct_urho3_d_1_1_convex_data.html":[6,0,2,158],
 "struct_urho3_d_1_1_convex_data.html#a0ade8c2989d4189790de63a12b61e60f":[6,0,2,158,1],
 "struct_urho3_d_1_1_convex_data.html#a1ee60b51276a890986abb94846b0b892":[6,0,2,158,3],
 "struct_urho3_d_1_1_convex_data.html#a3a47bbdabba70765bb7ea38733dff87c":[6,0,2,158,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX57 =
 "struct_urho3_d_1_1_full_screen_shader_pass_1_1_attributes.html":[6,0,2,252,0],
 "struct_urho3_d_1_1_full_screen_shader_pass_1_1_cache.html":[6,0,2,252,1],
 "struct_urho3_d_1_1_g_impact_mesh_data.html":[6,0,2,262],
-"struct_urho3_d_1_1_g_impact_mesh_data.html#a549ba2bc20724244400b3a1215d1c73d":[6,0,2,262,1],
-"struct_urho3_d_1_1_g_impact_mesh_data.html#aead97a47f45b89b87fcb1c6f42916bf9":[6,0,2,262,2],
-"struct_urho3_d_1_1_g_impact_mesh_data.html#af7b7d8cf82b53ecb6f3dc2b16b962d01":[6,0,2,262,0],
-"struct_urho3_d_1_1_g_l_t_f_importer_settings.html":[6,0,2,266],
-"struct_urho3_d_1_1_g_l_t_f_importer_settings_1_1_preview_settings.html":[6,0,2,266,0]
+"struct_urho3_d_1_1_g_impact_mesh_data.html#a549ba2bc20724244400b3a1215d1c73d":[6,0,2,262,1]
 };

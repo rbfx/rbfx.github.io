@@ -1,5 +1,9 @@
 var NAVTREEINDEX42 =
 {
+"class_urho3_d_1_1_slider.html#abdc26dff7a5f58c1dd00460f205f62c4":[6,0,2,666,11],
+"class_urho3_d_1_1_slider.html#ac027feff92e3d0aac90bb9af878c9118":[6,0,2,666,1],
+"class_urho3_d_1_1_slider.html#ac50feb7f1a8eceb107f84ed645b60a72":[6,0,2,666,18],
+"class_urho3_d_1_1_slider.html#ac9a6d43630412d4845b0d60bf2fb2618":[6,0,2,666,6],
 "class_urho3_d_1_1_slider.html#ad0fdefd7e0e9d166ae99aceb40c42933":[6,0,2,666,3],
 "class_urho3_d_1_1_slider.html#ad4afadf9247b3c7dbe860db982de0f28":[6,0,2,666,30],
 "class_urho3_d_1_1_slider.html#adc94c390a85b493b31ed6e4e6bbf1d2f":[6,0,2,666,8],
@@ -245,9 +249,5 @@ var NAVTREEINDEX42 =
 "class_urho3_d_1_1_spherical_harmonics_generator.html":[6,0,2,691],
 "class_urho3_d_1_1_spin_lock_mutex.html":[6,0,2,692],
 "class_urho3_d_1_1_spin_lock_mutex.html#a2279319a800f2c399bf135e036aeaf21":[6,0,2,692,2],
-"class_urho3_d_1_1_spin_lock_mutex.html#a2557f530fac04bc7abf4f33f39bfe488":[6,0,2,692,0],
-"class_urho3_d_1_1_spin_lock_mutex.html#a6d3a373963320f95015f2112ebcbbb5e":[6,0,2,692,3],
-"class_urho3_d_1_1_spin_lock_mutex.html#ae8f7678b0e0f2ee7c7275c56fd1ae8c0":[6,0,2,692,1],
-"class_urho3_d_1_1_splash_screen.html":[6,0,2,694],
-"class_urho3_d_1_1_splash_screen.html#a1154eeda540865d3549d63334d1482ec":[6,0,2,694,7]
+"class_urho3_d_1_1_spin_lock_mutex.html#a2557f530fac04bc7abf4f33f39bfe488":[6,0,2,692,0]
 };
