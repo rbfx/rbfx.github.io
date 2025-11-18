@@ -8161,9 +8161,6 @@ var _emscripten_check_blocking_allowed = () => {};
 var onExits = [];
 
 var JSEvents = {
-  memcpy(target, src, size) {
-    (growMemViews(), HEAP8).set((growMemViews(), HEAP8).subarray(src, src + size), target);
-  },
   removeAllEventListeners() {
     while (JSEvents.eventHandlers.length) {
       JSEvents._removeHandler(JSEvents.eventHandlers.length - 1);
@@ -8258,6 +8255,15 @@ var JSEvents = {
       }
     }
     return 0;
+  },
+  removeSingleHandler(eventHandler) {
+    for (var [i, handler] of JSEvents.eventHandlers.entries()) {
+      if (handler.target === eventHandler.target && handler.eventTypeId === eventHandler.eventTypeId && handler.callbackfunc === eventHandler.callbackfunc && handler.userData === eventHandler.userData) {
+        JSEvents._removeHandler(i);
+        return 0;
+      }
+    }
+    return -5;
   },
   getTargetThreadForEventCallback(targetThread) {
     switch (targetThread) {
@@ -11255,6 +11261,8 @@ var registerBeforeUnloadEventCallback = (target, userData, useCapture, callbackf
   var eventHandler = {
     target: findEventTarget(target),
     eventTypeString,
+    eventTypeId,
+    userData,
     callbackfunc,
     handlerFunc: beforeUnloadEventHandlerFunc,
     useCapture
@@ -11273,18 +11281,21 @@ function _emscripten_set_beforeunload_callback_on_thread(userData, callbackfunc,
 
 var registerFocusEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  JSEvents.focusEvent ||= _malloc(256);
+  var eventSize = 256;
+  JSEvents.focusEvent ||= _malloc(eventSize);
   var focusEventHandlerFunc = (e = event) => {
     var nodeName = JSEvents.getNodeNameForTarget(e.target);
     var id = e.target.id ? e.target.id : "";
-    var focusEvent = targetThread ? _malloc(256) : JSEvents.focusEvent;
+    var focusEvent = JSEvents.focusEvent;
     stringToUTF8(nodeName, focusEvent + 0, 128);
     stringToUTF8(id, focusEvent + 128, 128);
-    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, focusEvent, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, focusEvent, userData)) e.preventDefault();
+    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, focusEvent, eventSize, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, focusEvent, userData)) e.preventDefault();
   };
   var eventHandler = {
     target: findEventTarget(target),
     eventTypeString,
+    eventTypeId,
+    userData,
     callbackfunc,
     handlerFunc: focusEventHandlerFunc,
     useCapture
@@ -11335,15 +11346,18 @@ var fillFullscreenChangeEventData = eventStruct => {
 
 var registerFullscreenChangeEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  JSEvents.fullscreenChangeEvent ||= _malloc(276);
+  var eventSize = 276;
+  JSEvents.fullscreenChangeEvent ||= _malloc(eventSize);
   var fullscreenChangeEventhandlerFunc = (e = event) => {
-    var fullscreenChangeEvent = targetThread ? _malloc(276) : JSEvents.fullscreenChangeEvent;
+    var fullscreenChangeEvent = JSEvents.fullscreenChangeEvent;
     fillFullscreenChangeEventData(fullscreenChangeEvent);
-    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, fullscreenChangeEvent, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, fullscreenChangeEvent, userData)) e.preventDefault();
+    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, fullscreenChangeEvent, eventSize, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, fullscreenChangeEvent, userData)) e.preventDefault();
   };
   var eventHandler = {
     target,
     eventTypeString,
+    eventTypeId,
+    userData,
     callbackfunc,
     handlerFunc: fullscreenChangeEventhandlerFunc,
     useCapture
@@ -11363,16 +11377,19 @@ function _emscripten_set_fullscreenchange_callback_on_thread(target, userData, u
 
 var registerGamepadEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  JSEvents.gamepadEvent ||= _malloc(1240);
+  var eventSize = 1240;
+  JSEvents.gamepadEvent ||= _malloc(eventSize);
   var gamepadEventHandlerFunc = (e = event) => {
-    var gamepadEvent = targetThread ? _malloc(1240) : JSEvents.gamepadEvent;
+    var gamepadEvent = JSEvents.gamepadEvent;
     fillGamepadEventData(gamepadEvent, e["gamepad"]);
-    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, gamepadEvent, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, gamepadEvent, userData)) e.preventDefault();
+    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, gamepadEvent, eventSize, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, gamepadEvent, userData)) e.preventDefault();
   };
   var eventHandler = {
     target: findEventTarget(target),
     allowsDeferredCalls: true,
     eventTypeString,
+    eventTypeId,
+    userData,
     callbackfunc,
     handlerFunc: gamepadEventHandlerFunc,
     useCapture
@@ -11394,10 +11411,10 @@ function _emscripten_set_gamepaddisconnected_callback_on_thread(userData, useCap
 
 var registerKeyEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  JSEvents.keyEvent ||= _malloc(160);
+  var eventSize = 160;
+  JSEvents.keyEvent ||= _malloc(eventSize);
   var keyEventHandlerFunc = e => {
-    var keyEventData = targetThread ? _malloc(160) : JSEvents.keyEvent;
-    // This allocated block is passed as satellite data to the proxied function call, so the call frees up the data block when done.
+    var keyEventData = JSEvents.keyEvent;
     (growMemViews(), HEAPF64)[((keyEventData) >> 3)] = e.timeStamp;
     var idx = ((keyEventData) >> 2);
     (growMemViews(), HEAP32)[idx + 2] = e.location;
@@ -11413,11 +11430,13 @@ var registerKeyEventCallback = (target, userData, useCapture, callbackfunc, even
     stringToUTF8(e.code || "", keyEventData + 64, 32);
     stringToUTF8(e.char || "", keyEventData + 96, 32);
     stringToUTF8(e.locale || "", keyEventData + 128, 32);
-    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, keyEventData, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, keyEventData, userData)) e.preventDefault();
+    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, keyEventData, eventSize, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, keyEventData, userData)) e.preventDefault();
   };
   var eventHandler = {
     target: findEventTarget(target),
     eventTypeString,
+    eventTypeId,
+    userData,
     callbackfunc,
     handlerFunc: keyEventHandlerFunc,
     useCapture
@@ -11477,16 +11496,14 @@ var fillMouseEventData = (eventStruct, e, target) => {
 
 var registerMouseEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  JSEvents.mouseEvent ||= _malloc(64);
+  var eventSize = 64;
+  JSEvents.mouseEvent ||= _malloc(eventSize);
   target = findEventTarget(target);
   var mouseEventHandlerFunc = (e = event) => {
     // TODO: Make this access thread safe, or this could update live while app is reading it.
     fillMouseEventData(JSEvents.mouseEvent, e, target);
     if (targetThread) {
-      var mouseEventData = _malloc(64);
-      // This allocated block is passed as satellite data to the proxied function call, so the call frees up the data block when done.
-      fillMouseEventData(mouseEventData, e, target);
-      __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, mouseEventData, userData);
+      __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, JSEvents.mouseEvent, eventSize, userData);
     } else if (getWasmTableEntry(callbackfunc)(eventTypeId, JSEvents.mouseEvent, userData)) e.preventDefault();
   };
   var eventHandler = {
@@ -11494,6 +11511,8 @@ var registerMouseEventCallback = (target, userData, useCapture, callbackfunc, ev
     allowsDeferredCalls: eventTypeString != "mousemove" && eventTypeString != "mouseenter" && eventTypeString != "mouseleave",
     // Mouse move events do not allow fullscreen/pointer lock requests to be handled in them!
     eventTypeString,
+    eventTypeId,
+    userData,
     callbackfunc,
     handlerFunc: mouseEventHandlerFunc,
     useCapture
@@ -11539,15 +11558,18 @@ var fillPointerlockChangeEventData = eventStruct => {
 
 var registerPointerlockChangeEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  JSEvents.pointerlockChangeEvent ||= _malloc(257);
+  var eventSize = 257;
+  JSEvents.pointerlockChangeEvent ||= _malloc(eventSize);
   var pointerlockChangeEventHandlerFunc = (e = event) => {
-    var pointerlockChangeEvent = targetThread ? _malloc(257) : JSEvents.pointerlockChangeEvent;
+    var pointerlockChangeEvent = JSEvents.pointerlockChangeEvent;
     fillPointerlockChangeEventData(pointerlockChangeEvent);
-    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, pointerlockChangeEvent, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, pointerlockChangeEvent, userData)) e.preventDefault();
+    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, pointerlockChangeEvent, eventSize, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, pointerlockChangeEvent, userData)) e.preventDefault();
   };
   var eventHandler = {
     target,
     eventTypeString,
+    eventTypeId,
+    userData,
     callbackfunc,
     handlerFunc: pointerlockChangeEventHandlerFunc,
     useCapture
@@ -11568,7 +11590,8 @@ function _emscripten_set_pointerlockchange_callback_on_thread(target, userData, 
 
 var registerUiEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  JSEvents.uiEvent ||= _malloc(36);
+  var eventSize = 36;
+  JSEvents.uiEvent ||= _malloc(eventSize);
   if (eventTypeId == 11 && !target) {
     target = document;
   } else {
@@ -11588,7 +11611,7 @@ var registerUiEventCallback = (target, userData, useCapture, callbackfunc, event
       // During a page unload 'body' can be null, with "Cannot read property 'clientWidth' of null" being thrown
       return;
     }
-    var uiEvent = targetThread ? _malloc(36) : JSEvents.uiEvent;
+    var uiEvent = JSEvents.uiEvent;
     (growMemViews(), HEAP32)[((uiEvent) >> 2)] = 0;
     // always zero for resize and scroll
     (growMemViews(), HEAP32)[(((uiEvent) + (4)) >> 2)] = b.clientWidth;
@@ -11600,11 +11623,13 @@ var registerUiEventCallback = (target, userData, useCapture, callbackfunc, event
     (growMemViews(), HEAP32)[(((uiEvent) + (28)) >> 2)] = pageXOffset | 0;
     // scroll offsets are float
     (growMemViews(), HEAP32)[(((uiEvent) + (32)) >> 2)] = pageYOffset | 0;
-    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, uiEvent, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, uiEvent, userData)) e.preventDefault();
+    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, uiEvent, eventSize, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, uiEvent, userData)) e.preventDefault();
   };
   var eventHandler = {
     target,
     eventTypeString,
+    eventTypeId,
+    userData,
     callbackfunc,
     handlerFunc: uiEventHandlerFunc,
     useCapture
@@ -11619,7 +11644,8 @@ function _emscripten_set_resize_callback_on_thread(target, userData, useCapture,
 
 var registerTouchEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  JSEvents.touchEvent ||= _malloc(1552);
+  var eventSize = 1552;
+  JSEvents.touchEvent ||= _malloc(eventSize);
   target = findEventTarget(target);
   var touchEventHandlerFunc = e => {
     var t, touches = {}, et = e.touches;
@@ -11641,7 +11667,7 @@ var registerTouchEventCallback = (target, userData, useCapture, callbackfunc, ev
     for (let t of e.targetTouches) {
       touches[t.identifier].onTarget = 1;
     }
-    var touchEvent = targetThread ? _malloc(1552) : JSEvents.touchEvent;
+    var touchEvent = JSEvents.touchEvent;
     (growMemViews(), HEAPF64)[((touchEvent) >> 3)] = e.timeStamp;
     (growMemViews(), HEAP8)[touchEvent + 12] = e.ctrlKey;
     (growMemViews(), HEAP8)[touchEvent + 13] = e.shiftKey;
@@ -11673,12 +11699,14 @@ var registerTouchEventCallback = (target, userData, useCapture, callbackfunc, ev
       }
     }
     (growMemViews(), HEAP32)[(((touchEvent) + (8)) >> 2)] = numTouches;
-    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, touchEvent, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, touchEvent, userData)) e.preventDefault();
+    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, touchEvent, eventSize, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, touchEvent, userData)) e.preventDefault();
   };
   var eventHandler = {
     target,
     allowsDeferredCalls: eventTypeString == "touchstart" || eventTypeString == "touchend",
     eventTypeString,
+    eventTypeId,
+    userData,
     callbackfunc,
     handlerFunc: touchEventHandlerFunc,
     useCapture
@@ -11716,15 +11744,18 @@ var fillVisibilityChangeEventData = eventStruct => {
 
 var registerVisibilityChangeEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  JSEvents.visibilityChangeEvent ||= _malloc(8);
+  var eventSize = 8;
+  JSEvents.visibilityChangeEvent ||= _malloc(eventSize);
   var visibilityChangeEventHandlerFunc = (e = event) => {
-    var visibilityChangeEvent = targetThread ? _malloc(8) : JSEvents.visibilityChangeEvent;
+    var visibilityChangeEvent = JSEvents.visibilityChangeEvent;
     fillVisibilityChangeEventData(visibilityChangeEvent);
-    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, visibilityChangeEvent, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, visibilityChangeEvent, userData)) e.preventDefault();
+    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, visibilityChangeEvent, eventSize, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, visibilityChangeEvent, userData)) e.preventDefault();
   };
   var eventHandler = {
     target,
     eventTypeString,
+    eventTypeId,
+    userData,
     callbackfunc,
     handlerFunc: visibilityChangeEventHandlerFunc,
     useCapture
@@ -11742,22 +11773,24 @@ function _emscripten_set_visibilitychange_callback_on_thread(userData, useCaptur
 
 var registerWheelEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  JSEvents.wheelEvent ||= _malloc(96);
+  var eventSize = 96;
+  JSEvents.wheelEvent ||= _malloc(eventSize);
   // The DOM Level 3 events spec event 'wheel'
   var wheelHandlerFunc = (e = event) => {
-    var wheelEvent = targetThread ? _malloc(96) : JSEvents.wheelEvent;
-    // This allocated block is passed as satellite data to the proxied function call, so the call frees up the data block when done.
+    var wheelEvent = JSEvents.wheelEvent;
     fillMouseEventData(wheelEvent, e, target);
     (growMemViews(), HEAPF64)[(((wheelEvent) + (64)) >> 3)] = e["deltaX"];
     (growMemViews(), HEAPF64)[(((wheelEvent) + (72)) >> 3)] = e["deltaY"];
     (growMemViews(), HEAPF64)[(((wheelEvent) + (80)) >> 3)] = e["deltaZ"];
     (growMemViews(), HEAP32)[(((wheelEvent) + (88)) >> 2)] = e["deltaMode"];
-    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, wheelEvent, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, wheelEvent, userData)) e.preventDefault();
+    if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, wheelEvent, eventSize, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, wheelEvent, userData)) e.preventDefault();
   };
   var eventHandler = {
     target,
     allowsDeferredCalls: true,
     eventTypeString,
+    eventTypeId,
+    userData,
     callbackfunc,
     handlerFunc: wheelHandlerFunc,
     useCapture

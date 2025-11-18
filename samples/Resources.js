@@ -79,10 +79,10 @@
         if (!check) throw new Error(msg);
       }
 
-      for (var file of metadata['files']) {
-        var name = file['filename']
-        Module['addRunDependency'](`fp ${name}`);
-      }
+    for (var file of metadata['files']) {
+      var name = file['filename']
+      Module['addRunDependency'](`fp ${name}`);
+    }
 
         var PACKAGE_UUID = metadata['package_uuid'];
         var IDB_RO = "readonly";
@@ -244,8 +244,8 @@
             var name = file['filename'];
             var data = byteArray.subarray(file['start'], file['end']);
             // canOwn this data in the filesystem, it is a slice into the heap that will never change
-          Module['FS_createDataFile'](name, null, data, true, true, true);
-          Module['removeRunDependency'](`fp ${name}`);
+        Module['FS_createDataFile'](name, null, data, true, true, true);
+        Module['removeRunDependency'](`fp ${name}`);
           }
           Module['removeRunDependency']('datafile_/home/runner/work/rbfx/rbfx/cmake-build/bin/Resources.js.data');
       }
