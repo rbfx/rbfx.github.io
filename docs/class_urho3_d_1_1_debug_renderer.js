@@ -4,7 +4,7 @@ var class_urho3_d_1_1_debug_renderer =
     [ "~DebugRenderer", "class_urho3_d_1_1_debug_renderer.html#abd91e53892dc5df1692185b00e4a097b", null ],
     [ "AddBoundingBox", "class_urho3_d_1_1_debug_renderer.html#a6755ab0e0b3feef19e558a5dcb8c0e4f", null ],
     [ "AddBoundingBox", "class_urho3_d_1_1_debug_renderer.html#a434e19c74f5f45ffab08b3ccdd78ef21", null ],
-    [ "AddCircle", "class_urho3_d_1_1_debug_renderer.html#a59fa78db5b0c709091ae4ba6eae4f815", null ],
+    [ "AddCircle", "class_urho3_d_1_1_debug_renderer.html#a106cada15d13df3dd7db76052e5e7f1e", null ],
     [ "AddCross", "class_urho3_d_1_1_debug_renderer.html#adc99c9b438bad47a3100e837af126fe0", null ],
     [ "AddCylinder", "class_urho3_d_1_1_debug_renderer.html#a0d99abb43932492c162c983954086ef9", null ],
     [ "AddFrame", "class_urho3_d_1_1_debug_renderer.html#a5ab0efcdd4d046e4944b0e126191ee96", null ],
