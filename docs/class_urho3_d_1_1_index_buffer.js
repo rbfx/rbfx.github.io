@@ -6,7 +6,7 @@ var class_urho3_d_1_1_index_buffer =
     [ "GetUnpackedData", "class_urho3_d_1_1_index_buffer.html#af73fdab2f98bfddfacf0702e8e31519f", null ],
     [ "GetUsedVertexRange", "class_urho3_d_1_1_index_buffer.html#a5aa0d6a4d89ca4f3d79deedc7286042f", null ],
     [ "IsDynamic", "class_urho3_d_1_1_index_buffer.html#ac00353887921f9d7a0007ae24797f5a5", null ],
-    [ "PackIndexData", "class_urho3_d_1_1_index_buffer.html#ab0614f66adb15ea6f73ce6dae27f6931", null ],
+    [ "PackIndexData", "class_urho3_d_1_1_index_buffer.html#ad81a3a505e9455a7fcaa1f62a2f9fa5a", null ],
     [ "RecalculatePipelineStateHash", "class_urho3_d_1_1_index_buffer.html#ad8afe18adeb82209f8112f7bf65a5717", null ],
     [ "SetShadowed", "class_urho3_d_1_1_index_buffer.html#a842d2d57d5ebe98fa42e53065708682a", null ],
     [ "SetSize", "class_urho3_d_1_1_index_buffer.html#acad3ececff56c39f52703e514b730364", null ],

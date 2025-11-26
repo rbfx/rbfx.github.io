@@ -1,5 +1,6 @@
 var NAVTREEINDEX60 =
 {
+"struct_urho3_d_1_1_particle_graph_layer_1_1_attribute_buffer_layout.html#af9a02d7b433c6c39e6782420b35a18a2":[6,0,2,503,0,5],
 "struct_urho3_d_1_1_particle_graph_nodes_1_1_add_instance.html":[6,0,2,2,1],
 "struct_urho3_d_1_1_particle_graph_nodes_1_1_break_instance.html":[6,0,2,2,10],
 "struct_urho3_d_1_1_particle_graph_nodes_1_1_break_instance_3_01_quaternion_00_01_vector3_00_01float_01_4.html":[6,0,2,2,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX60 =
 "struct_urho3_d_1_1_shadow_map_allocator_settings.html#a4cd5b53835323d6e3716e14e1eea7000":[6,0,2,653,0],
 "struct_urho3_d_1_1_shadow_map_region.html":[6,0,2,654],
 "struct_urho3_d_1_1_shadow_map_region.html#a37c0d8be6d3c38121f6e75af2dc2ad0c":[6,0,2,654,1],
-"struct_urho3_d_1_1_shadow_map_region.html#a683066c4db22f7f97106db783049b17e":[6,0,2,654,0],
-"struct_urho3_d_1_1_shared_render_pass_state.html":[6,0,2,658]
+"struct_urho3_d_1_1_shadow_map_region.html#a683066c4db22f7f97106db783049b17e":[6,0,2,654,0]
 };

@@ -118,9 +118,9 @@ var NAVTREEINDEX =
 "struct_urho3_d_1_1_console_1_1_log_entry.html#a39bd6aaa5d462d53aa2a8030ad8425e7",
 "struct_urho3_d_1_1_g_impact_mesh_data.html#aead97a47f45b89b87fcb1c6f42916bf9",
 "struct_urho3_d_1_1_lightmap_chart_geometry_buffer.html#a3bf9981a9195f0351ee94a294073cce2",
-"struct_urho3_d_1_1_particle_graph_nodes_1_1_add_instance.html",
-"struct_urho3_d_1_1_shared_replication_state_1_1_delta_buffer_span.html",
-"struct_urho3_d_1_1_update_context.html#a52d6f54bc28c26a481e39d4ccf77e877"
+"struct_urho3_d_1_1_particle_graph_layer_1_1_attribute_buffer_layout.html#af9a02d7b433c6c39e6782420b35a18a2",
+"struct_urho3_d_1_1_shared_render_pass_state.html",
+"struct_urho3_d_1_1_update_context.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

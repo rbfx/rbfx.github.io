@@ -1,5 +1,6 @@
 var struct_urho3_d_1_1_model_vertex =
 [
+    [ "Data", "struct_urho3_d_1_1_model_vertex.html#a2592096f17c59355564b02e681268ac7", null ],
     [ "GetBlendIndicesAndWeights", "struct_urho3_d_1_1_model_vertex.html#a10d542721719ab9fd92ec527e40ee9eb", null ],
     [ "GetColor", "struct_urho3_d_1_1_model_vertex.html#a0375b15126f44daec433af12f6f82080", null ],
     [ "GetNormal", "struct_urho3_d_1_1_model_vertex.html#aaa71dbf11c4822aa30ada135ef73129c", null ],
