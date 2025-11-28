@@ -56,6 +56,7 @@ var class_urho3_d_1_1_crowd_agent =
     [ "SetUpdateNodePosition", "class_urho3_d_1_1_crowd_agent.html#a5975f317bdc1d689a945408e3e049083", null ],
     [ "SetVelocityCallback", "class_urho3_d_1_1_crowd_agent.html#a2d60375f98034be930c084677d87eb8c", null ],
     [ "UpdateParameters", "class_urho3_d_1_1_crowd_agent.html#af7bd90820dbf00df2aa763f606663f38", null ],
+    [ "actualVelocity_", "class_urho3_d_1_1_crowd_agent.html#a2340ac0cf0fac0772f15a4a7a7266916", null ],
     [ "agentCrowdId_", "class_urho3_d_1_1_crowd_agent.html#a89016d267e63ac135a17cabf3ba81390", null ],
     [ "crowdManager_", "class_urho3_d_1_1_crowd_agent.html#a28fc6870bae1d8863067b68bda1c5783", null ],
     [ "height_", "class_urho3_d_1_1_crowd_agent.html#ac0002d9b40abc9b0b3ac481b966370cf", null ],

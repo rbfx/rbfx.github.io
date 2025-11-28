@@ -78,28 +78,57 @@ Inheritance diagram for Urho3D::NavBuildData:</div>
  <div class="center">
   <img src="struct_urho3_d_1_1_nav_build_data.png" usemap="#Urho3D::NavBuildData_map" alt=""/>
   <map id="Urho3D::NavBuildData_map" name="Urho3D::NavBuildData_map">
-<area href="struct_urho3_d_1_1_dynamic_nav_build_data.html" alt="Urho3D::DynamicNavBuildData" shape="rect" coords="0,56,187,80"/>
-<area href="struct_urho3_d_1_1_simple_nav_build_data.html" alt="Urho3D::SimpleNavBuildData" shape="rect" coords="197,56,384,80"/>
+<area href="class_urho3_d_1_1_non_copyable.html" title="Helper to declare non-copyable and non-movable class." alt="Urho3D::NonCopyable" shape="rect" coords="98,0,285,24"/>
+<area href="struct_urho3_d_1_1_dynamic_nav_build_data.html" alt="Urho3D::DynamicNavBuildData" shape="rect" coords="0,112,187,136"/>
+<area href="struct_urho3_d_1_1_simple_nav_build_data.html" alt="Urho3D::SimpleNavBuildData" shape="rect" coords="197,112,384,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a46bd9ab46b6d0d2c06d8d08301208907" id="r_a46bd9ab46b6d0d2c06d8d08301208907"><td class="memItemLeft" align="right" valign="top"><a id="a46bd9ab46b6d0d2c06d8d08301208907" name="a46bd9ab46b6d0d2c06d8d08301208907"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>NavBuildData</b> ()</td></tr>
-<tr class="memdesc:a46bd9ab46b6d0d2c06d8d08301208907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
-<tr class="separator:a46bd9ab46b6d0d2c06d8d08301208907"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0060ad95246ad1bf3a11382dd2d477a2" id="r_a0060ad95246ad1bf3a11382dd2d477a2"><td class="memItemLeft" align="right" valign="top"><a id="a0060ad95246ad1bf3a11382dd2d477a2" name="a0060ad95246ad1bf3a11382dd2d477a2"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~NavBuildData</b> ()</td></tr>
-<tr class="memdesc:a0060ad95246ad1bf3a11382dd2d477a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
-<tr class="separator:a0060ad95246ad1bf3a11382dd2d477a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61e249497eb8ffb6c0a896884e3a21f3" id="r_a61e249497eb8ffb6c0a896884e3a21f3"><td class="memItemLeft" align="right" valign="top"><a id="a61e249497eb8ffb6c0a896884e3a21f3" name="a61e249497eb8ffb6c0a896884e3a21f3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsEmpty</b> () const</td></tr>
+<tr class="memdesc:a61e249497eb8ffb6c0a896884e3a21f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the tile is empty and there is nothing to build. <br /></td></tr>
+<tr class="separator:a61e249497eb8ffb6c0a896884e3a21f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aac2b65e18c6cbe27a24d5553b4439f44" id="r_aac2b65e18c6cbe27a24d5553b4439f44"><td class="memItemLeft" align="right" valign="top"><a id="aac2b65e18c6cbe27a24d5553b4439f44" name="aac2b65e18c6cbe27a24d5553b4439f44"></a>
-<a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><b>worldBoundingBox_</b></td></tr>
-<tr class="memdesc:aac2b65e18c6cbe27a24d5553b4439f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">World-space bounding box of the navigation mesh tile. <br /></td></tr>
-<tr class="separator:aac2b65e18c6cbe27a24d5553b4439f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f703e06a31c79edfe39aaa8c647aeba" id="r_a1f703e06a31c79edfe39aaa8c647aeba"><td class="memItemLeft" align="right" valign="top"><a id="a1f703e06a31c79edfe39aaa8c647aeba" name="a1f703e06a31c79edfe39aaa8c647aeba"></a>
+<a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tileIndex_</b></td></tr>
+<tr class="memdesc:a1f703e06a31c79edfe39aaa8c647aeba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tile index. <br /></td></tr>
+<tr class="separator:a1f703e06a31c79edfe39aaa8c647aeba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67a7b15fcc2ac8627dc5c2db1fc81f4" id="r_ae67a7b15fcc2ac8627dc5c2db1fc81f4"><td class="memItemLeft" align="right" valign="top"><a id="ae67a7b15fcc2ac8627dc5c2db1fc81f4" name="ae67a7b15fcc2ac8627dc5c2db1fc81f4"></a>
+<a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tileColumn_</b></td></tr>
+<tr class="memdesc:ae67a7b15fcc2ac8627dc5c2db1fc81f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Volume of the tile, ignoring geometry. <br /></td></tr>
+<tr class="separator:ae67a7b15fcc2ac8627dc5c2db1fc81f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0631ff916616a07ff2b0765aa71ddc7" id="r_ab0631ff916616a07ff2b0765aa71ddc7"><td class="memItemLeft" align="right" valign="top"><a id="ab0631ff916616a07ff2b0765aa71ddc7" name="ab0631ff916616a07ff2b0765aa71ddc7"></a>
+<a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tileBoundingBox_</b></td></tr>
+<tr class="memdesc:ab0631ff916616a07ff2b0765aa71ddc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounding box containing all geometry in the tile. <br /></td></tr>
+<tr class="separator:ab0631ff916616a07ff2b0765aa71ddc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae11320ff7741468cf8d9a72c3e77dac8" id="r_ae11320ff7741468cf8d9a72c3e77dac8"><td class="memItemLeft" align="right" valign="top"><a id="ae11320ff7741468cf8d9a72c3e77dac8" name="ae11320ff7741468cf8d9a72c3e77dac8"></a>
+<a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><b>collectGeometryBoundingBox_</b></td></tr>
+<tr class="memdesc:ae11320ff7741468cf8d9a72c3e77dac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended bounding box containing all geometry important for tile building. <br /></td></tr>
+<tr class="separator:ae11320ff7741468cf8d9a72c3e77dac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c062a74f1d98601ab7987885a82f6f6" id="r_a0c062a74f1d98601ab7987885a82f6f6"><td class="memItemLeft" align="right" valign="top"><a id="a0c062a74f1d98601ab7987885a82f6f6" name="a0c062a74f1d98601ab7987885a82f6f6"></a>
+NavmeshPartitionType&#160;</td><td class="memItemRight" valign="bottom"><b>partitionType_</b> {}</td></tr>
+<tr class="memdesc:a0c062a74f1d98601ab7987885a82f6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partition type. <br /></td></tr>
+<tr class="separator:a0c062a74f1d98601ab7987885a82f6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785b124138e8725ff779c5fa3b741c30" id="r_a785b124138e8725ff779c5fa3b741c30"><td class="memItemLeft" align="right" valign="top"><a id="a785b124138e8725ff779c5fa3b741c30" name="a785b124138e8725ff779c5fa3b741c30"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>agentHeight_</b> {}</td></tr>
+<tr class="memdesc:a785b124138e8725ff779c5fa3b741c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Navigation agent height. <br /></td></tr>
+<tr class="separator:a785b124138e8725ff779c5fa3b741c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc9a62f40468fc266667c2f48eaf5927" id="r_acc9a62f40468fc266667c2f48eaf5927"><td class="memItemLeft" align="right" valign="top"><a id="acc9a62f40468fc266667c2f48eaf5927" name="acc9a62f40468fc266667c2f48eaf5927"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>agentRadius_</b> {}</td></tr>
+<tr class="memdesc:acc9a62f40468fc266667c2f48eaf5927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Navigation agent radius. <br /></td></tr>
+<tr class="separator:acc9a62f40468fc266667c2f48eaf5927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d2a388439e6eb72e66133f250fea23" id="r_ac9d2a388439e6eb72e66133f250fea23"><td class="memItemLeft" align="right" valign="top"><a id="ac9d2a388439e6eb72e66133f250fea23" name="ac9d2a388439e6eb72e66133f250fea23"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>agentMaxClimb_</b> {}</td></tr>
+<tr class="memdesc:ac9d2a388439e6eb72e66133f250fea23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Navigation agent max vertical climb. <br /></td></tr>
+<tr class="separator:ac9d2a388439e6eb72e66133f250fea23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2a310ab8e63782cbaf4f75b5131a38" id="r_a1d2a310ab8e63782cbaf4f75b5131a38"><td class="memItemLeft" align="right" valign="top"><a id="a1d2a310ab8e63782cbaf4f75b5131a38" name="a1d2a310ab8e63782cbaf4f75b5131a38"></a>
+rcConfig&#160;</td><td class="memItemRight" valign="bottom"><b>recastConfig_</b> {}</td></tr>
+<tr class="memdesc:a1d2a310ab8e63782cbaf4f75b5131a38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recast configuration for building. <br /></td></tr>
+<tr class="separator:a1d2a310ab8e63782cbaf4f75b5131a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a313c6a68b5d2d54a7a3f1cfb2fc8ea58" id="r_a313c6a68b5d2d54a7a3f1cfb2fc8ea58"><td class="memItemLeft" align="right" valign="top"><a id="a313c6a68b5d2d54a7a3f1cfb2fc8ea58" name="a313c6a68b5d2d54a7a3f1cfb2fc8ea58"></a>
 ea::vector&lt; <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vertices_</b></td></tr>
 <tr class="memdesc:a313c6a68b5d2d54a7a3f1cfb2fc8ea58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertices from geometries. <br /></td></tr>
@@ -148,6 +177,21 @@ rcCompactHeightfield *&#160;</td><td class="memItemRight" valign="bottom"><b>com
 ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_nav_area_stub.html">NavAreaStub</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>navAreas_</b></td></tr>
 <tr class="memdesc:adb1b37dc2eb8a24c9d2cd1e49349d395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pretransformed navigation areas, no correlation to the geometry above. <br /></td></tr>
 <tr class="separator:adb1b37dc2eb8a24c9d2cd1e49349d395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_class_urho3_d_1_1_non_copyable"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_non_copyable')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_non_copyable.html">Urho3D::NonCopyable</a></td></tr>
+<tr class="memitem:a88af3fc0a1d772f2fc2337d791b16c47 inherit pro_methods_class_urho3_d_1_1_non_copyable" id="r_a88af3fc0a1d772f2fc2337d791b16c47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_non_copyable.html#a88af3fc0a1d772f2fc2337d791b16c47">NonCopyable</a> (const <a class="el" href="class_urho3_d_1_1_non_copyable.html">NonCopyable</a> &amp;other)=delete</td></tr>
+<tr class="separator:a88af3fc0a1d772f2fc2337d791b16c47 inherit pro_methods_class_urho3_d_1_1_non_copyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dcda624b84b1c377e4283f7e2bdfc77 inherit pro_methods_class_urho3_d_1_1_non_copyable" id="r_a4dcda624b84b1c377e4283f7e2bdfc77"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>NonCopyable</b> (<a class="el" href="class_urho3_d_1_1_non_copyable.html">NonCopyable</a> &amp;&amp;other)=delete</td></tr>
+<tr class="separator:a4dcda624b84b1c377e4283f7e2bdfc77 inherit pro_methods_class_urho3_d_1_1_non_copyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac188e831634509c0d9145e41a8ff9698 inherit pro_methods_class_urho3_d_1_1_non_copyable" id="r_ac188e831634509c0d9145e41a8ff9698"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_urho3_d_1_1_non_copyable.html">NonCopyable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_urho3_d_1_1_non_copyable.html">NonCopyable</a> &amp;other)=delete</td></tr>
+<tr class="separator:ac188e831634509c0d9145e41a8ff9698 inherit pro_methods_class_urho3_d_1_1_non_copyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd49ca47465729f9e14c7a83d71ee7c inherit pro_methods_class_urho3_d_1_1_non_copyable" id="r_a0dd49ca47465729f9e14c7a83d71ee7c"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_urho3_d_1_1_non_copyable.html">NonCopyable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="class_urho3_d_1_1_non_copyable.html">NonCopyable</a> &amp;&amp;other)=delete</td></tr>
+<tr class="separator:a0dd49ca47465729f9e14c7a83d71ee7c inherit pro_methods_class_urho3_d_1_1_non_copyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Navigation build data. </p>

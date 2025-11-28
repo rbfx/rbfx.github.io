@@ -665,6 +665,7 @@ var annotated_dup =
       [ "NavigationGeometryInfo", "struct_urho3_d_1_1_navigation_geometry_info.html", "struct_urho3_d_1_1_navigation_geometry_info" ],
       [ "NavigationMesh", "class_urho3_d_1_1_navigation_mesh.html", "class_urho3_d_1_1_navigation_mesh" ],
       [ "NavigationPathPoint", "struct_urho3_d_1_1_navigation_path_point.html", "struct_urho3_d_1_1_navigation_path_point" ],
+      [ "NavTileData", "struct_urho3_d_1_1_nav_tile_data.html", "struct_urho3_d_1_1_nav_tile_data" ],
       [ "Network", "class_urho3_d_1_1_network.html", "class_urho3_d_1_1_network" ],
       [ "NetworkBehavior", "class_urho3_d_1_1_network_behavior.html", "class_urho3_d_1_1_network_behavior" ],
       [ "NetworkCallback", "class_urho3_d_1_1_network_callback.html", "class_urho3_d_1_1_network_callback" ],

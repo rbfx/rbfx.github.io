@@ -1,8 +1,11 @@
 var struct_urho3_d_1_1_nav_build_data =
 [
-    [ "NavBuildData", "struct_urho3_d_1_1_nav_build_data.html#a46bd9ab46b6d0d2c06d8d08301208907", null ],
-    [ "~NavBuildData", "struct_urho3_d_1_1_nav_build_data.html#a0060ad95246ad1bf3a11382dd2d477a2", null ],
+    [ "IsEmpty", "struct_urho3_d_1_1_nav_build_data.html#a61e249497eb8ffb6c0a896884e3a21f3", null ],
+    [ "agentHeight_", "struct_urho3_d_1_1_nav_build_data.html#a785b124138e8725ff779c5fa3b741c30", null ],
+    [ "agentMaxClimb_", "struct_urho3_d_1_1_nav_build_data.html#ac9d2a388439e6eb72e66133f250fea23", null ],
+    [ "agentRadius_", "struct_urho3_d_1_1_nav_build_data.html#acc9a62f40468fc266667c2f48eaf5927", null ],
     [ "areaIds_", "struct_urho3_d_1_1_nav_build_data.html#a1654e1f55e4d9fb7f2b706159f35bcf5", null ],
+    [ "collectGeometryBoundingBox_", "struct_urho3_d_1_1_nav_build_data.html#ae11320ff7741468cf8d9a72c3e77dac8", null ],
     [ "compactHeightField_", "struct_urho3_d_1_1_nav_build_data.html#a7c87fed9d9c1fbfd9b5011c2a70c315f", null ],
     [ "ctx_", "struct_urho3_d_1_1_nav_build_data.html#a084ea56a7b0ba1e1ca2d6cadafb303c4", null ],
     [ "heightField_", "struct_urho3_d_1_1_nav_build_data.html#a304c7c939dd6299aee1cee3b3bc9633d", null ],
@@ -13,6 +16,10 @@ var struct_urho3_d_1_1_nav_build_data =
     [ "offMeshFlags_", "struct_urho3_d_1_1_nav_build_data.html#a8a4ef2051f865b4e6c77704648316c9d", null ],
     [ "offMeshRadii_", "struct_urho3_d_1_1_nav_build_data.html#af20f0bb9b527efe066b8ad5134bbe115", null ],
     [ "offMeshVertices_", "struct_urho3_d_1_1_nav_build_data.html#a9272c66d97ad0e416793bdf3d6a9eb9a", null ],
-    [ "vertices_", "struct_urho3_d_1_1_nav_build_data.html#a313c6a68b5d2d54a7a3f1cfb2fc8ea58", null ],
-    [ "worldBoundingBox_", "struct_urho3_d_1_1_nav_build_data.html#aac2b65e18c6cbe27a24d5553b4439f44", null ]
+    [ "partitionType_", "struct_urho3_d_1_1_nav_build_data.html#a0c062a74f1d98601ab7987885a82f6f6", null ],
+    [ "recastConfig_", "struct_urho3_d_1_1_nav_build_data.html#a1d2a310ab8e63782cbaf4f75b5131a38", null ],
+    [ "tileBoundingBox_", "struct_urho3_d_1_1_nav_build_data.html#ab0631ff916616a07ff2b0765aa71ddc7", null ],
+    [ "tileColumn_", "struct_urho3_d_1_1_nav_build_data.html#ae67a7b15fcc2ac8627dc5c2db1fc81f4", null ],
+    [ "tileIndex_", "struct_urho3_d_1_1_nav_build_data.html#a1f703e06a31c79edfe39aaa8c647aeba", null ],
+    [ "vertices_", "struct_urho3_d_1_1_nav_build_data.html#a313c6a68b5d2d54a7a3f1cfb2fc8ea58", null ]
 ];

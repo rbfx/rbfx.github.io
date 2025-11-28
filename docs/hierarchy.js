@@ -619,10 +619,6 @@ var hierarchy =
     [ "Urho3D::MultiVector< Urho3D::PipelineBatchDesc >", "class_urho3_d_1_1_multi_vector.html", null ],
     [ "Urho3D::Mutex", "class_urho3_d_1_1_mutex.html", null ],
     [ "Urho3D::NavAreaStub", "struct_urho3_d_1_1_nav_area_stub.html", null ],
-    [ "Urho3D::NavBuildData", "struct_urho3_d_1_1_nav_build_data.html", [
-      [ "Urho3D::DynamicNavBuildData", "struct_urho3_d_1_1_dynamic_nav_build_data.html", null ],
-      [ "Urho3D::SimpleNavBuildData", "struct_urho3_d_1_1_simple_nav_build_data.html", null ]
-    ] ],
     [ "Urho3D::NavigationGeometryInfo", "struct_urho3_d_1_1_navigation_geometry_info.html", null ],
     [ "Urho3D::NavigationPathPoint", "struct_urho3_d_1_1_navigation_path_point.html", null ],
     [ "Urho3D::RmlNavigationManager::NavigationStackFrame", "struct_urho3_d_1_1_rml_navigation_manager_1_1_navigation_stack_frame.html", null ],
@@ -671,6 +667,11 @@ var hierarchy =
       [ "Urho3D::LightProcessor", "class_urho3_d_1_1_light_processor.html", null ],
       [ "Urho3D::LightProcessorCache", "class_urho3_d_1_1_light_processor_cache.html", null ],
       [ "Urho3D::MutexLock< T >", "class_urho3_d_1_1_mutex_lock.html", null ],
+      [ "Urho3D::NavBuildData", "struct_urho3_d_1_1_nav_build_data.html", [
+        [ "Urho3D::DynamicNavBuildData", "struct_urho3_d_1_1_dynamic_nav_build_data.html", null ],
+        [ "Urho3D::SimpleNavBuildData", "struct_urho3_d_1_1_simple_nav_build_data.html", null ]
+      ] ],
+      [ "Urho3D::NavTileData", "struct_urho3_d_1_1_nav_tile_data.html", null ],
       [ "Urho3D::OctreeQuery", "class_urho3_d_1_1_octree_query.html", [
         [ "Urho3D::AllContentOctreeQuery", "class_urho3_d_1_1_all_content_octree_query.html", null ],
         [ "Urho3D::BoxOctreeQuery", "class_urho3_d_1_1_box_octree_query.html", null ],
