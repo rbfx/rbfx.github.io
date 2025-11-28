@@ -1,5 +1,9 @@
 var NAVTREEINDEX57 =
 {
+"struct_urho3_d_1_1_color_frame.html#ab34d7a94b3c35eca59ab37dba18ba60a":[6,0,2,133,0],
+"struct_urho3_d_1_1_common_frame_info.html":[6,0,2,135],
+"struct_urho3_d_1_1_compressed_level.html":[6,0,2,137],
+"struct_urho3_d_1_1_compressed_level.html#a0d065edbabdb9bb221c8e16e46e2d364":[6,0,2,137,6],
 "struct_urho3_d_1_1_compressed_level.html#a123ea45edf2b4d555a0361d2e9f02d5a":[6,0,2,137,5],
 "struct_urho3_d_1_1_compressed_level.html#a327349487e73833d87f4eebc26e2e738":[6,0,2,137,4],
 "struct_urho3_d_1_1_compressed_level.html#a8009d0316a5ce58caf36ec4b64a13994":[6,0,2,137,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX57 =
 "struct_urho3_d_1_1_font_glyph.html#ab2f1932d312c54d199d0ccf8acbe6152":[6,0,2,246,10],
 "struct_urho3_d_1_1_font_glyph.html#abaa1d3fb928effb534dc5b60773db068":[6,0,2,246,4],
 "struct_urho3_d_1_1_font_glyph.html#ac1d7c8a9301c119ba190a004294b156f":[6,0,2,246,5],
-"struct_urho3_d_1_1_font_glyph.html#ad07be324501ae922bd13b3338c92a87f":[6,0,2,246,0],
-"struct_urho3_d_1_1_font_glyph.html#ad7f094df2c37d914ec1ad8fa2c9f2275":[6,0,2,246,2],
-"struct_urho3_d_1_1_frame_info.html":[6,0,2,247],
-"struct_urho3_d_1_1_frame_info.html#a31eb4a2f65d4db972a6095060d4507b0":[6,0,2,247,3],
-"struct_urho3_d_1_1_frame_info.html#a52d8357ec2dcce4a6fbdd0d52622a0b8":[6,0,2,247,6]
+"struct_urho3_d_1_1_font_glyph.html#ad07be324501ae922bd13b3338c92a87f":[6,0,2,246,0]
 };

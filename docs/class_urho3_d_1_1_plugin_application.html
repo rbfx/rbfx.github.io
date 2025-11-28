@@ -99,6 +99,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPluginName</b> (co
 <tr class="memitem:af60b9546dcaa8f25880048a5655dc67b" id="r_af60b9546dcaa8f25880048a5655dc67b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_application.html#af60b9546dcaa8f25880048a5655dc67b">IsMain</a> () const</td></tr>
 <tr class="memdesc:af60b9546dcaa8f25880048a5655dc67b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the plugin can act as main entry point.  <br /></td></tr>
 <tr class="separator:af60b9546dcaa8f25880048a5655dc67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4914cdaf75bcbaae10a6677f3e5c9d1b" id="r_a4914cdaf75bcbaae10a6677f3e5c9d1b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_application.html#a4914cdaf75bcbaae10a6677f3e5c9d1b">IsSuspendSupported</a> () const</td></tr>
+<tr class="memdesc:a4914cdaf75bcbaae10a6677f3e5c9d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether suspend/resume is supported by this plugin.  <br /></td></tr>
+<tr class="separator:a4914cdaf75bcbaae10a6677f3e5c9d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aced8302559c04b73a768ac5c38f8fb3e" id="r_aced8302559c04b73a768ac5c38f8fb3e"><td class="memItemLeft" align="right" valign="top"><a id="aced8302559c04b73a768ac5c38f8fb3e" name="aced8302559c04b73a768ac5c38f8fb3e"></a>
 virtual ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetDefaultCategory</b> () const</td></tr>
 <tr class="memdesc:aced8302559c04b73a768ac5c38f8fb3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return default object category for the plugin. <br /></td></tr>
@@ -452,6 +455,35 @@ Additional Inherited Members</h2></td></tr>
 <p>Return whether the plugin can act as main entry point. </p>
 
 <p>Reimplemented in <a class="el" href="class_urho3_d_1_1_main_plugin_application.html#adc05d5c536c75eee32e29fd1d9fc0146">Urho3D::MainPluginApplication</a>.</p>
+
+</div>
+</div>
+<a id="a4914cdaf75bcbaae10a6677f3e5c9d1b" name="a4914cdaf75bcbaae10a6677f3e5c9d1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4914cdaf75bcbaae10a6677f3e5c9d1b">&#9670;&#160;</a></span>IsSuspendSupported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Urho3D::PluginApplication::IsSuspendSupported </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return whether suspend/resume is supported by this plugin. </p>
+
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_main_plugin_application.html#ad57338e032617ce3f1467c195c6ade72">Urho3D::MainPluginApplication</a>, and <a class="el" href="class_urho3_d_1_1_scene_viewer_application.html#a83c739fa01c6a06f854097883d36c84c">Urho3D::SceneViewerApplication</a>.</p>
 
 </div>
 </div>

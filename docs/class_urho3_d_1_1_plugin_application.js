@@ -7,6 +7,7 @@ var class_urho3_d_1_1_plugin_application =
     [ "IsLoaded", "class_urho3_d_1_1_plugin_application.html#a344fcc1838d80eb180c9cbd3f52154cd", null ],
     [ "IsMain", "class_urho3_d_1_1_plugin_application.html#af60b9546dcaa8f25880048a5655dc67b", null ],
     [ "IsStarted", "class_urho3_d_1_1_plugin_application.html#a975b01c27af6bb6c3e324aea56cc47bd", null ],
+    [ "IsSuspendSupported", "class_urho3_d_1_1_plugin_application.html#a4914cdaf75bcbaae10a6677f3e5c9d1b", null ],
     [ "Load", "class_urho3_d_1_1_plugin_application.html#ad87532dd75d03d4da3a6216de312444c", null ],
     [ "LoadPlugin", "class_urho3_d_1_1_plugin_application.html#aae94a72d8c05e461f35b3e855dd06332", null ],
     [ "RegisterObject", "class_urho3_d_1_1_plugin_application.html#af681c08ed54d7a0081d0a15525053a29", null ],
