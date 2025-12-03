@@ -29,7 +29,7 @@ var ENVIRONMENT_IS_NODE = globalThis.process?.versions?.node && globalThis.proce
 
 // Three configurations we can be running in:
 // 1) We could be the application main() thread running in the main JS UI thread. (ENVIRONMENT_IS_WORKER == false and ENVIRONMENT_IS_PTHREAD == false)
-// 2) We could be the application main() thread proxied to worker. (with Emscripten -sPROXY_TO_WORKER) (ENVIRONMENT_IS_WORKER == true, ENVIRONMENT_IS_PTHREAD == false)
+// 2) We could be the application main() running directly in a worker. (ENVIRONMENT_IS_WORKER == true, ENVIRONMENT_IS_PTHREAD == false)
 // 3) We could be an application pthread running in a worker. (ENVIRONMENT_IS_WORKER == true and ENVIRONMENT_IS_PTHREAD == true)
 // The way we signal to a worker that it is hosting a pthread is to construct
 // it with a specific name.
@@ -6149,8 +6149,10 @@ var callUserCallback = func => {
   }
 };
 
+var waitAsyncPolyfilled = (!Atomics.waitAsync || (globalThis.navigator?.userAgent && Number((navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./) || [])[2]) < 91));
+
 var __emscripten_thread_mailbox_await = pthread_ptr => {
-  if (Atomics.waitAsync) {
+  if (!waitAsyncPolyfilled) {
     // Wait on the pthread's initial self-pointer field because it is easy and
     // safe to access from sending threads that need to notify the waiting
     // thread.
@@ -8257,13 +8259,16 @@ var JSEvents = {
     return 0;
   },
   removeSingleHandler(eventHandler) {
-    for (var [i, handler] of JSEvents.eventHandlers.entries()) {
+    let success = false;
+    for (let i = 0; i < JSEvents.eventHandlers.length; ++i) {
+      const handler = JSEvents.eventHandlers[i];
       if (handler.target === eventHandler.target && handler.eventTypeId === eventHandler.eventTypeId && handler.callbackfunc === eventHandler.callbackfunc && handler.userData === eventHandler.userData) {
-        JSEvents._removeHandler(i);
-        return 0;
+        // in some very rare cases (ex: Safari / fullscreen events), there is more than 1 handler (eventTypeString is different)
+        JSEvents._removeHandler(i--);
+        success = true;
       }
     }
-    return -5;
+    return success ? 0 : -5;
   },
   getTargetThreadForEventCallback(targetThread) {
     switch (targetThread) {
@@ -8297,7 +8302,7 @@ var JSEvents = {
   }
 };
 
-/** @type {Object} */ var specialHTMLTargets = [ 0, typeof document != "undefined" ? document : 0, typeof window != "undefined" ? window : 0 ];
+/** @type {Object} */ var specialHTMLTargets = [ 0, globalThis.document ?? 0, globalThis.window ?? 0 ];
 
 var findEventTarget = target => {
   // The sensible "default" target varies between events, but use window as the default
@@ -8305,18 +8310,18 @@ var findEventTarget = target => {
   // override their own defaults.
   if (!target) return window;
   if (typeof target == "number") target = specialHTMLTargets[target] || UTF8ToString(target);
-  if (target === "#window") return window; else if (target === "#document") return document; else if (target === "#screen") return screen; else if (target === "#canvas") return Module["canvas"]; else if (typeof target == "string") return (typeof document != "undefined") ? document.getElementById(target) : null;
+  if (target === "#window") return window; else if (target === "#document") return document; else if (target === "#screen") return screen; else if (target === "#canvas") return Module["canvas"]; else if (typeof target == "string") return globalThis.document?.getElementById(target);
   return target;
 };
 
 var findCanvasEventTarget = target => {
   if (typeof target == "number") target = UTF8ToString(target);
   if (!target || target === "#canvas") {
-    if (typeof GL != "undefined" && GL.offscreenCanvases["canvas"]) return GL.offscreenCanvases["canvas"];
+    if (globalThis.GL?.offscreenCanvases["canvas"]) return GL.offscreenCanvases["canvas"];
     // TODO: Remove this line, target '#canvas' should refer only to Module['canvas'], not to GL.offscreenCanvases['canvas'] - but need stricter tests to be able to remove this line.
     return Module["canvas"];
   }
-  if (typeof GL != "undefined" && GL.offscreenCanvases[target]) return GL.offscreenCanvases[target];
+  if (globalThis.GL?.offscreenCanvases[target]) return GL.offscreenCanvases[target];
   return findEventTarget(target);
 };
 
@@ -8626,7 +8631,7 @@ function _emscripten_fetch_free(id) {
 
 function _emscripten_get_device_pixel_ratio() {
   if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(40, 0, 1);
-  return (typeof devicePixelRatio == "number" && devicePixelRatio) || 1;
+  return globalThis.devicePixelRatio ?? 1;
 }
 
 function _emscripten_get_element_css_size(target, width, height) {
@@ -10230,7 +10235,7 @@ var _emscripten_glGetUniformIndices = (program, uniformCount, uniformNames, unif
   program = GL.programs[program];
   var names = [];
   for (var i = 0; i < uniformCount; i++) names.push(UTF8ToString((growMemViews(), 
-  HEAP32)[(((uniformNames) + (i * 4)) >> 2)]));
+  HEAPU32)[(((uniformNames) + (i * 4)) >> 2)]));
   var result = GLctx.getUniformIndices(program, names);
   if (!result) return;
   // GL spec: If an error is generated, nothing is written out to uniformIndices.
@@ -10833,7 +10838,7 @@ var _emscripten_glTexSubImage3D = (target, level, xoffset, yoffset, zoffset, wid
 var _emscripten_glTransformFeedbackVaryings = (program, count, varyings, bufferMode) => {
   program = GL.programs[program];
   var vars = [];
-  for (var i = 0; i < count; i++) vars.push(UTF8ToString((growMemViews(), HEAP32)[(((varyings) + (i * 4)) >> 2)]));
+  for (var i = 0; i < count; i++) vars.push(UTF8ToString((growMemViews(), HEAPU32)[(((varyings) + (i * 4)) >> 2)]));
   GLctx.transformFeedbackVaryings(program, vars, bufferMode);
 };
 
@@ -11246,7 +11251,7 @@ var _emscripten_resize_heap = requestedSize => {
 }
 
 var registerBeforeUnloadEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString) => {
-  var beforeUnloadEventHandlerFunc = (e = event) => {
+  var beforeUnloadEventHandlerFunc = e => {
     // Note: This is always called on the main browser thread, since it needs synchronously return a value!
     var confirmationMessage = getWasmTableEntry(callbackfunc)(eventTypeId, 0, userData);
     if (confirmationMessage) {
@@ -11283,7 +11288,7 @@ var registerFocusEventCallback = (target, userData, useCapture, callbackfunc, ev
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
   var eventSize = 256;
   JSEvents.focusEvent ||= _malloc(eventSize);
-  var focusEventHandlerFunc = (e = event) => {
+  var focusEventHandlerFunc = e => {
     var nodeName = JSEvents.getNodeNameForTarget(e.target);
     var id = e.target.id ? e.target.id : "";
     var focusEvent = JSEvents.focusEvent;
@@ -11348,7 +11353,7 @@ var registerFullscreenChangeEventCallback = (target, userData, useCapture, callb
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
   var eventSize = 276;
   JSEvents.fullscreenChangeEvent ||= _malloc(eventSize);
-  var fullscreenChangeEventhandlerFunc = (e = event) => {
+  var fullscreenChangeEventhandlerFunc = e => {
     var fullscreenChangeEvent = JSEvents.fullscreenChangeEvent;
     fillFullscreenChangeEventData(fullscreenChangeEvent);
     if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, fullscreenChangeEvent, eventSize, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, fullscreenChangeEvent, userData)) e.preventDefault();
@@ -11371,6 +11376,7 @@ function _emscripten_set_fullscreenchange_callback_on_thread(target, userData, u
   target = target ? findEventTarget(target) : specialHTMLTargets[1];
   if (!target) return -4;
   // As of Safari 13.0.3 on macOS Catalina 10.15.1 still ships with prefixed webkitfullscreenchange. TODO: revisit this check once Safari ships unprefixed version.
+  // TODO: When this block is removed, also change test/test_html5_remove_event_listener.c test expectation on emscripten_set_fullscreenchange_callback().
   registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "webkitfullscreenchange", targetThread);
   return registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "fullscreenchange", targetThread);
 }
@@ -11379,7 +11385,7 @@ var registerGamepadEventCallback = (target, userData, useCapture, callbackfunc, 
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
   var eventSize = 1240;
   JSEvents.gamepadEvent ||= _malloc(eventSize);
-  var gamepadEventHandlerFunc = (e = event) => {
+  var gamepadEventHandlerFunc = e => {
     var gamepadEvent = JSEvents.gamepadEvent;
     fillGamepadEventData(gamepadEvent, e["gamepad"]);
     if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, gamepadEvent, eventSize, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, gamepadEvent, userData)) e.preventDefault();
@@ -11499,7 +11505,7 @@ var registerMouseEventCallback = (target, userData, useCapture, callbackfunc, ev
   var eventSize = 64;
   JSEvents.mouseEvent ||= _malloc(eventSize);
   target = findEventTarget(target);
-  var mouseEventHandlerFunc = (e = event) => {
+  var mouseEventHandlerFunc = e => {
     // TODO: Make this access thread safe, or this could update live while app is reading it.
     fillMouseEventData(JSEvents.mouseEvent, e, target);
     if (targetThread) {
@@ -11560,7 +11566,7 @@ var registerPointerlockChangeEventCallback = (target, userData, useCapture, call
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
   var eventSize = 257;
   JSEvents.pointerlockChangeEvent ||= _malloc(eventSize);
-  var pointerlockChangeEventHandlerFunc = (e = event) => {
+  var pointerlockChangeEventHandlerFunc = e => {
     var pointerlockChangeEvent = JSEvents.pointerlockChangeEvent;
     fillPointerlockChangeEventData(pointerlockChangeEvent);
     if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, pointerlockChangeEvent, eventSize, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, pointerlockChangeEvent, userData)) e.preventDefault();
@@ -11597,7 +11603,7 @@ var registerUiEventCallback = (target, userData, useCapture, callbackfunc, event
   } else {
     target = findEventTarget(target);
   }
-  var uiEventHandlerFunc = (e = event) => {
+  var uiEventHandlerFunc = e => {
     if (e.target != target) {
       // Never take ui events such as scroll via a 'bubbled' route, but always from the direct element that
       // was targeted. Otherwise e.g. if app logs a message in response to a page scroll, the Emscripten log
@@ -11746,7 +11752,7 @@ var registerVisibilityChangeEventCallback = (target, userData, useCapture, callb
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
   var eventSize = 8;
   JSEvents.visibilityChangeEvent ||= _malloc(eventSize);
-  var visibilityChangeEventHandlerFunc = (e = event) => {
+  var visibilityChangeEventHandlerFunc = e => {
     var visibilityChangeEvent = JSEvents.visibilityChangeEvent;
     fillVisibilityChangeEventData(visibilityChangeEvent);
     if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, visibilityChangeEvent, eventSize, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, visibilityChangeEvent, userData)) e.preventDefault();
@@ -11776,7 +11782,7 @@ var registerWheelEventCallback = (target, userData, useCapture, callbackfunc, ev
   var eventSize = 96;
   JSEvents.wheelEvent ||= _malloc(eventSize);
   // The DOM Level 3 events spec event 'wheel'
-  var wheelHandlerFunc = (e = event) => {
+  var wheelHandlerFunc = e => {
     var wheelEvent = JSEvents.wheelEvent;
     fillMouseEventData(wheelEvent, e, target);
     (growMemViews(), HEAPF64)[(((wheelEvent) + (64)) >> 3)] = e["deltaX"];
@@ -11938,7 +11944,7 @@ function fetchXHR(fetch, onsuccess, onerror, onprogress, onreadystatechange) {
     if (ptrLen > 0) {
       // The data pointer malloc()ed here has the same lifetime as the emscripten_fetch_t structure itself has, and is
       // freed when emscripten_fetch_close() is called.
-      ptr = _malloc(ptrLen);
+      ptr = _realloc((growMemViews(), HEAPU32)[(((fetch) + (12)) >> 2)], ptrLen);
       (growMemViews(), HEAPU8).set(new Uint8Array(/** @type{Array<number>} */ (xhr.response)), ptr);
     }
     (growMemViews(), HEAPU32)[(((fetch) + (12)) >> 2)] = ptr;
@@ -11996,8 +12002,9 @@ function fetchXHR(fetch, onsuccess, onerror, onprogress, onreadystatechange) {
     var ptrLen = (fetchAttrLoadToMemory && fetchAttrStreamData && xhr.response) ? xhr.response.byteLength : 0;
     var ptr = 0;
     if (ptrLen > 0 && fetchAttrLoadToMemory && fetchAttrStreamData) {
-      // Allocate byte data in Emscripten heap for the streamed memory block (freed immediately after onprogress call)
-      ptr = _malloc(ptrLen);
+      // The data pointer malloc()ed here has the same lifetime as the emscripten_fetch_t structure itself has, and is
+      // freed when emscripten_fetch_close() is called.
+      ptr = _realloc((growMemViews(), HEAPU32)[(((fetch) + (12)) >> 2)], ptrLen);
       (growMemViews(), HEAPU8).set(new Uint8Array(/** @type{Array<number>} */ (xhr.response)), ptr);
     }
     (growMemViews(), HEAPU32)[(((fetch) + (12)) >> 2)] = ptr;
@@ -12011,7 +12018,6 @@ function fetchXHR(fetch, onsuccess, onerror, onprogress, onreadystatechange) {
     (growMemViews(), HEAP16)[(((fetch) + (42)) >> 1)] = status;
     if (xhr.statusText) stringToUTF8(xhr.statusText, fetch + 44, 64);
     onprogress(fetch, e);
-    _free(ptr);
   };
   xhr.onreadystatechange = e => {
     // check if xhr was aborted by user and don't try to call back
@@ -12307,7 +12313,7 @@ var getEnvStrings = () => {
   if (!getEnvStrings.strings) {
     // Default values.
     // Browser language detection #8751
-    var lang = ((typeof navigator == "object" && navigator.language) || "C").replace("-", "_") + ".UTF-8";
+    var lang = (globalThis.navigator?.language ?? "C").replace("-", "_") + ".UTF-8";
     var env = {
       "USER": "web_user",
       "LOGNAME": "web_user",
@@ -13605,13 +13611,14 @@ function ImGui_ImplSDL2_EmscriptenOpenURL(url) {
 }
 
 // Imports from the Wasm binary.
-var _main, _pthread_self, _free, _malloc, _htons, _ntohs, ___getTypeName, __embind_initialize_bindings, __emscripten_tls_init, __emscripten_run_callback_on_thread, __emscripten_thread_init, __emscripten_thread_crashed, __emscripten_run_js_on_main_thread, __emscripten_thread_free_data, __emscripten_thread_exit, __emscripten_check_mailbox, _setThrew, _emscripten_stack_set_limits, __emscripten_stack_restore, __emscripten_stack_alloc, _emscripten_stack_get_current, __indirect_function_table, wasmTable;
+var _main, _pthread_self, _free, _malloc, _realloc, _htons, _ntohs, ___getTypeName, __embind_initialize_bindings, __emscripten_tls_init, __emscripten_run_callback_on_thread, __emscripten_thread_init, __emscripten_thread_crashed, __emscripten_run_js_on_main_thread, __emscripten_thread_free_data, __emscripten_thread_exit, __emscripten_check_mailbox, _setThrew, _emscripten_stack_set_limits, __emscripten_stack_restore, __emscripten_stack_alloc, _emscripten_stack_get_current, __indirect_function_table, wasmTable;
 
 function assignWasmExports(wasmExports) {
   _main = Module["_main"] = wasmExports["__main_argc_argv"];
   _pthread_self = wasmExports["pthread_self"];
   _free = wasmExports["free"];
   _malloc = wasmExports["malloc"];
+  _realloc = wasmExports["realloc"];
   _htons = wasmExports["htons"];
   _ntohs = wasmExports["ntohs"];
   ___getTypeName = wasmExports["__getTypeName"];
