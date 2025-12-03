@@ -497,7 +497,7 @@ var annotated_dup =
       [ "GImpactMeshData", "struct_urho3_d_1_1_g_impact_mesh_data.html", "struct_urho3_d_1_1_g_impact_mesh_data" ],
       [ "GlobalIllumination", "class_urho3_d_1_1_global_illumination.html", "class_urho3_d_1_1_global_illumination" ],
       [ "GLTFImporter", "class_urho3_d_1_1_g_l_t_f_importer.html", "class_urho3_d_1_1_g_l_t_f_importer" ],
-      [ "GLTFImporterCallback", "class_urho3_d_1_1_g_l_t_f_importer_callback.html", null ],
+      [ "GLTFImporterCallback", "class_urho3_d_1_1_g_l_t_f_importer_callback.html", "class_urho3_d_1_1_g_l_t_f_importer_callback" ],
       [ "GLTFImporterSettings", "struct_urho3_d_1_1_g_l_t_f_importer_settings.html", "struct_urho3_d_1_1_g_l_t_f_importer_settings" ],
       [ "GlyphLocation", "struct_urho3_d_1_1_glyph_location.html", "struct_urho3_d_1_1_glyph_location" ],
       [ "Graph", "class_urho3_d_1_1_graph.html", "class_urho3_d_1_1_graph" ],

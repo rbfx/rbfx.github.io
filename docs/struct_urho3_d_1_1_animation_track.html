@@ -89,6 +89,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Sample</b> (float tim
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsLooped</b> (float positionThreshold=0.001f, float rotationThreshold=0.001f, float scaleThreshold=0.001f) const</td></tr>
 <tr class="memdesc:a602c2d20309dcd737bfbf6522dec7e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the track is looped, i.e. the first and the last keyframes have the same value. <br /></td></tr>
 <tr class="separator:a602c2d20309dcd737bfbf6522dec7e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a758d74761eefad1fe0d1dd386600c" id="r_a39a758d74761eefad1fe0d1dd386600c"><td class="memItemLeft" align="right" valign="top"><a id="a39a758d74761eefad1fe0d1dd386600c" name="a39a758d74761eefad1fe0d1dd386600c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CreateMerged</b> (AnimationChannelFlags channels, ea::span&lt; const ea::pair&lt; float, <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &gt; &gt; positionTrack, ea::span&lt; const ea::pair&lt; float, <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &gt; &gt; rotationTrack, ea::span&lt; const ea::pair&lt; float, <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &gt; &gt; scaleTrack, float epsilon)</td></tr>
+<tr class="memdesc:a39a758d74761eefad1fe0d1dd386600c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create track from separate position, rotation and scale tracks. Keyframe times are merged within epsilon. <br /></td></tr>
+<tr class="separator:a39a758d74761eefad1fe0d1dd386600c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_struct_urho3_d_1_1_key_frame_set"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_struct_urho3_d_1_1_key_frame_set')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="struct_urho3_d_1_1_key_frame_set.html">Urho3D::KeyFrameSet&lt; AnimationKeyFrame &gt;</a></td></tr>
 <tr class="memitem:a474ff1e6f2f377527165ef03725eecc2 inherit pub_methods_struct_urho3_d_1_1_key_frame_set" id="r_a474ff1e6f2f377527165ef03725eecc2"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SortKeyFrames</b> ()</td></tr>
@@ -110,8 +114,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveAllKeyFrames</b
 <a class="el" href="struct_urho3_d_1_1_animation_key_frame.html">KeyFrame</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetKeyFrame</b> (unsigned index)</td></tr>
 <tr class="memdesc:a73ae6b65408865ac64185be7e1a347f3 inherit pub_methods_struct_urho3_d_1_1_key_frame_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return keyframe at index, or null if not found. <br /></td></tr>
 <tr class="separator:a73ae6b65408865ac64185be7e1a347f3 inherit pub_methods_struct_urho3_d_1_1_key_frame_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f21d34dd46d6aaf17a9b0ecc1072a8e inherit pub_methods_struct_urho3_d_1_1_key_frame_set" id="r_a2f21d34dd46d6aaf17a9b0ecc1072a8e"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_key_frame_set.html#a2f21d34dd46d6aaf17a9b0ecc1072a8e">GetNumKeyFrames</a> () const</td></tr>
+<tr class="memitem:a2f21d34dd46d6aaf17a9b0ecc1072a8e inherit pub_methods_struct_urho3_d_1_1_key_frame_set" id="r_a2f21d34dd46d6aaf17a9b0ecc1072a8e"><td class="memItemLeft" align="right" valign="top">
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetNumKeyFrames</b> () const</td></tr>
+<tr class="memdesc:a2f21d34dd46d6aaf17a9b0ecc1072a8e inherit pub_methods_struct_urho3_d_1_1_key_frame_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of keyframes. <br /></td></tr>
 <tr class="separator:a2f21d34dd46d6aaf17a9b0ecc1072a8e inherit pub_methods_struct_urho3_d_1_1_key_frame_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a366f4f72f5598ceb5a5241c79adeb10b inherit pub_methods_struct_urho3_d_1_1_key_frame_set" id="r_a366f4f72f5598ceb5a5241c79adeb10b"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsEmpty</b> () const</td></tr>
+<tr class="memdesc:a366f4f72f5598ceb5a5241c79adeb10b inherit pub_methods_struct_urho3_d_1_1_key_frame_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the set is empty. <br /></td></tr>
+<tr class="separator:a366f4f72f5598ceb5a5241c79adeb10b inherit pub_methods_struct_urho3_d_1_1_key_frame_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84b5d96f407f5b74c17396325f833028 inherit pub_methods_struct_urho3_d_1_1_key_frame_set" id="r_a84b5d96f407f5b74c17396325f833028"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>GetKeyFrames</b> (float time, float duration, bool isLooped, unsigned &amp;frameIndex, unsigned &amp;nextFrameIndex, float &amp;blendFactor) const</td></tr>
 <tr class="memdesc:a84b5d96f407f5b74c17396325f833028 inherit pub_methods_struct_urho3_d_1_1_key_frame_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return keyframes for interpolation. <br /></td></tr>
@@ -162,7 +172,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>KeyFrame</b> = <a cl
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Skeletal animation track, stores keyframes of a single bone. </p>
 </div><hr/>The documentation for this struct was generated from the following files:<ul>
-<li>Urho3D/Graphics/<a class="el" href="_animation_track_8h.html">AnimationTrack.h</a></li>
+<li>Urho3D/Graphics/<b>AnimationTrack.h</b></li>
 <li>Urho3D/Graphics/<b>AnimationTrack.cpp</b></li>
 </ul>
 </div><!-- contents -->

@@ -2,7 +2,6 @@ var dir_4332035370c4a6be719a0163e1872ef4 =
 [
     [ "Animation.h", "_animation_8h.html", "_animation_8h" ],
     [ "AnimationState.h", "_animation_state_8h.html", "_animation_state_8h" ],
-    [ "AnimationTrack.h", "_animation_track_8h.html", "_animation_track_8h" ],
     [ "Camera.h", "_camera_8h.html", "_camera_8h" ],
     [ "CameraOperator.h", "_camera_operator_8h.html", "_camera_operator_8h" ],
     [ "CubemapRenderer.h", "_cubemap_renderer_8h.html", "_cubemap_renderer_8h" ],

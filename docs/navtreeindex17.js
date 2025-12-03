@@ -1,8 +1,5 @@
 var NAVTREEINDEX17 =
 {
-"class_urho3_d_1_1_file.html":[6,0,2,228],
-"class_urho3_d_1_1_file.html#a0ae5e3a16edf63c7ae3c01e555c2f3ae":[6,0,2,228,20],
-"class_urho3_d_1_1_file.html#a0e788d888f2df19bdc272cbb73b66008":[6,0,2,228,3],
 "class_urho3_d_1_1_file.html#a1891fec8e174772ae50e671ba9e03a55":[6,0,2,228,28],
 "class_urho3_d_1_1_file.html#a22ff8bb1f694f05fc6c0fb3050270b49":[6,0,2,228,23],
 "class_urho3_d_1_1_file.html#a26b1a955d33b665bf9a31366619e70d3":[6,0,2,228,10],
@@ -249,5 +246,8 @@ var NAVTREEINDEX17 =
 "class_urho3_d_1_1_font_face.html#ab9a4629b0c91208accf6fc71647ceefb":[6,0,2,243,17],
 "class_urho3_d_1_1_font_face.html#abb2c54779d7c016d65626eb93935ec9c":[6,0,2,243,12],
 "class_urho3_d_1_1_font_face.html#ae59fc16eae4472d4f14533ed34f92bbd":[6,0,2,243,14],
-"class_urho3_d_1_1_font_face.html#ae8882a162d9328cb5cdc088267443923":[6,0,2,243,9]
+"class_urho3_d_1_1_font_face.html#ae8882a162d9328cb5cdc088267443923":[6,0,2,243,9],
+"class_urho3_d_1_1_font_face.html#ae8ca1f635e5dcc8d56c7103ac3798d37":[6,0,2,243,0],
+"class_urho3_d_1_1_font_face.html#afb950b2511c55edc016075a0d9bf71f0":[6,0,2,243,5],
+"class_urho3_d_1_1_font_face_bitmap.html":[6,0,2,244]
 };

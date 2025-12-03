@@ -99,8 +99,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveAllKeyFrames</b
 KeyFrame *&#160;</td><td class="memItemRight" valign="bottom"><b>GetKeyFrame</b> (unsigned index)</td></tr>
 <tr class="memdesc:a73ae6b65408865ac64185be7e1a347f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return keyframe at index, or null if not found. <br /></td></tr>
 <tr class="separator:a73ae6b65408865ac64185be7e1a347f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f21d34dd46d6aaf17a9b0ecc1072a8e" id="r_a2f21d34dd46d6aaf17a9b0ecc1072a8e"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_key_frame_set.html#a2f21d34dd46d6aaf17a9b0ecc1072a8e">GetNumKeyFrames</a> () const</td></tr>
+<tr class="memitem:a2f21d34dd46d6aaf17a9b0ecc1072a8e" id="r_a2f21d34dd46d6aaf17a9b0ecc1072a8e"><td class="memItemLeft" align="right" valign="top"><a id="a2f21d34dd46d6aaf17a9b0ecc1072a8e" name="a2f21d34dd46d6aaf17a9b0ecc1072a8e"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetNumKeyFrames</b> () const</td></tr>
+<tr class="memdesc:a2f21d34dd46d6aaf17a9b0ecc1072a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of keyframes. <br /></td></tr>
 <tr class="separator:a2f21d34dd46d6aaf17a9b0ecc1072a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a366f4f72f5598ceb5a5241c79adeb10b" id="r_a366f4f72f5598ceb5a5241c79adeb10b"><td class="memItemLeft" align="right" valign="top"><a id="a366f4f72f5598ceb5a5241c79adeb10b" name="a366f4f72f5598ceb5a5241c79adeb10b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsEmpty</b> () const</td></tr>
+<tr class="memdesc:a366f4f72f5598ceb5a5241c79adeb10b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the set is empty. <br /></td></tr>
+<tr class="separator:a366f4f72f5598ceb5a5241c79adeb10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84b5d96f407f5b74c17396325f833028" id="r_a84b5d96f407f5b74c17396325f833028"><td class="memItemLeft" align="right" valign="top"><a id="a84b5d96f407f5b74c17396325f833028" name="a84b5d96f407f5b74c17396325f833028"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>GetKeyFrames</b> (float time, float duration, bool isLooped, unsigned &amp;frameIndex, unsigned &amp;nextFrameIndex, float &amp;blendFactor) const</td></tr>
 <tr class="memdesc:a84b5d96f407f5b74c17396325f833028"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return keyframes for interpolation. <br /></td></tr>
@@ -118,37 +124,8 @@ ea::vector&lt; KeyFrame &gt;&#160;</td><td class="memItemRight" valign="bottom">
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
-struct Urho3D::KeyFrameSet&lt; T &gt;</div><p>Sorted array of keyframes. T: must be structure with member <code>float time_</code> which is used for ordering. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2f21d34dd46d6aaf17a9b0ecc1072a8e" name="a2f21d34dd46d6aaf17a9b0ecc1072a8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f21d34dd46d6aaf17a9b0ecc1072a8e">&#9670;&#160;</a></span>GetNumKeyFrames()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned <a class="el" href="struct_urho3_d_1_1_key_frame_set.html">Urho3D::KeyFrameSet</a>&lt; T &gt;::GetNumKeyFrames </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Return number of keyframes. </p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+struct Urho3D::KeyFrameSet&lt; T &gt;</div><p>Sorted array of keyframes. T: GetKeyFrameTime(T) must return <code>float</code> time to be used for ordering. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>Urho3D/Container/<b>KeyFrameSet.h</b></li>
 </ul>
 </div><!-- contents -->

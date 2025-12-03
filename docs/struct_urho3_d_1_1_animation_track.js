@@ -1,5 +1,6 @@
 var struct_urho3_d_1_1_animation_track =
 [
+    [ "CreateMerged", "struct_urho3_d_1_1_animation_track.html#a39a758d74761eefad1fe0d1dd386600c", null ],
     [ "IsLooped", "struct_urho3_d_1_1_animation_track.html#a602c2d20309dcd737bfbf6522dec7e2d", null ],
     [ "Sample", "struct_urho3_d_1_1_animation_track.html#a771c16ffe93a555c70b2d3cad7e19e3e", null ],
     [ "channelMask_", "struct_urho3_d_1_1_animation_track.html#a8908add3b8fef1c89e52e58af79e0a45", null ],
