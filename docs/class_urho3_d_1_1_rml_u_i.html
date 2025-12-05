@@ -96,8 +96,8 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~RmlUI</b> () override</td></tr>
 <tr class="memdesc:aa3e75612686f8ccde5da83eaf800931b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
 <tr class="separator:aa3e75612686f8ccde5da83eaf800931b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1154ff0c2125946d025209379851d201" id="r_a1154ff0c2125946d025209379851d201"><td class="memItemLeft" align="right" valign="top">Rml::ElementDocument *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i.html#a1154ff0c2125946d025209379851d201">LoadDocument</a> (const ea::string &amp;path)</td></tr>
-<tr class="separator:a1154ff0c2125946d025209379851d201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af65245df8421b2cbc14827f1b7edc45d" id="r_af65245df8421b2cbc14827f1b7edc45d"><td class="memItemLeft" align="right" valign="top">Rml::ElementDocument *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i.html#af65245df8421b2cbc14827f1b7edc45d">LoadDocument</a> (const ea::string &amp;path, void *placeholderContext=nullptr)</td></tr>
+<tr class="separator:af65245df8421b2cbc14827f1b7edc45d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ab1becdb6a6f31e6847bb5e15f3ecd7" id="r_a6ab1becdb6a6f31e6847bb5e15f3ecd7"><td class="memItemLeft" align="right" valign="top"><a id="a6ab1becdb6a6f31e6847bb5e15f3ecd7" name="a6ab1becdb6a6f31e6847bb5e15f3ecd7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDebuggerVisible</b> (bool visible)</td></tr>
 <tr class="memdesc:a6ab1becdb6a6f31e6847bb5e15f3ecd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show or hide RmlUi debugger. <br /></td></tr>
@@ -510,8 +510,8 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>UI subsystem. Manages the graphical user interface. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1154ff0c2125946d025209379851d201" name="a1154ff0c2125946d025209379851d201"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1154ff0c2125946d025209379851d201">&#9670;&#160;</a></span>LoadDocument()</h2>
+<a id="af65245df8421b2cbc14827f1b7edc45d" name="af65245df8421b2cbc14827f1b7edc45d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af65245df8421b2cbc14827f1b7edc45d">&#9670;&#160;</a></span>LoadDocument()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -520,12 +520,28 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
           <td class="memname">Rml::ElementDocument * Urho3D::RmlUI::LoadDocument </td>
           <td>(</td>
           <td class="paramtype">const ea::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>placeholderContext</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Load a specified rml document. When resource reloader is active, returned pointer will be invalidated when associated resource change triggers reloading a document. In such cases it is important to subscribe to documentReloaded_ signal and update handle change of document pointer. </p>
+<p>Load a specified rml document. When resource reloader is active, returned pointer will be invalidated when associated resource change triggers reloading a document. In such cases it is important to subscribe to documentReloaded_ signal and update handle change of document pointer. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td><a class="el" href="class_urho3_d_1_1_resource.html">Resource</a> path to the .rml file. </td></tr>
+    <tr><td class="paramname">placeholderContext</td><td>Optional context pointer for placeholder substitution (e.g., <a class="el" href="class_urho3_d_1_1_rml_u_i_component.html" title="Adds a single window to game screen.">RmlUIComponent</a> instance). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

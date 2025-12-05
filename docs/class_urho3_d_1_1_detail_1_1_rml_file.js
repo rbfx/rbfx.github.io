@@ -1,6 +1,7 @@
 var class_urho3_d_1_1_detail_1_1_rml_file =
 [
     [ "RmlFile", "class_urho3_d_1_1_detail_1_1_rml_file.html#a4f69ae615d577c191c3ec7a860f60d8e", null ],
+    [ "AddResourceLoaded", "class_urho3_d_1_1_detail_1_1_rml_file.html#a3bd8dac8b7325e5a4229e51f5499a4b7", null ],
     [ "ClearLoadedResources", "class_urho3_d_1_1_detail_1_1_rml_file.html#a47b809075b0b50a5388e775ceefc6cb8", null ],
     [ "Close", "class_urho3_d_1_1_detail_1_1_rml_file.html#a9b299cd8a808584cbdf23eac0a76e746", null ],
     [ "IsResourceLoaded", "class_urho3_d_1_1_detail_1_1_rml_file.html#aeea98762762fa29fe016a25f712abd4a", null ],

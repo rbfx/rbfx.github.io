@@ -25,7 +25,7 @@ var class_urho3_d_1_1_rml_u_i =
     [ "IsInputCaptured", "class_urho3_d_1_1_rml_u_i.html#ad7ea546434aced37c9cee93290193cfa", null ],
     [ "IsInputCapturedInternal", "class_urho3_d_1_1_rml_u_i.html#a2932b8bd9f5b820eb73ad871689e2a02", null ],
     [ "IsRendering", "class_urho3_d_1_1_rml_u_i.html#afe8acf712100ebb0cd2462f4e0acc950", null ],
-    [ "LoadDocument", "class_urho3_d_1_1_rml_u_i.html#a1154ff0c2125946d025209379851d201", null ],
+    [ "LoadDocument", "class_urho3_d_1_1_rml_u_i.html#af65245df8421b2cbc14827f1b7edc45d", null ],
     [ "LoadFont", "class_urho3_d_1_1_rml_u_i.html#a3e01ec72c5ed98589426016a0b12a09e", null ],
     [ "OnDocumentUnload", "class_urho3_d_1_1_rml_u_i.html#aa9166063c9776110f5037d2db512602c", null ],
     [ "ReloadDocument", "class_urho3_d_1_1_rml_u_i.html#a52e0a068be085f6f21d36e22b9790e53", null ],

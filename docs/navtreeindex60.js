@@ -1,5 +1,6 @@
 var NAVTREEINDEX60 =
 {
+"struct_urho3_d_1_1_particle2_d.html#a8b8448b118139e6e43969b6b8c67a910":[6,0,2,494,3],
 "struct_urho3_d_1_1_particle2_d.html#a916504f5c3af373d0450527cc52b07a2":[6,0,2,494,1],
 "struct_urho3_d_1_1_particle2_d.html#ab16f05c27f3a36e147ee4172a9dc2640":[6,0,2,494,5],
 "struct_urho3_d_1_1_particle2_d.html#ace6fdce878c7545fe1d029491c341c84":[6,0,2,494,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX60 =
 "struct_urho3_d_1_1_rml_navigation_manager_1_1_navigation_stack_frame.html":[6,0,2,613,0],
 "struct_urho3_d_1_1_scene_hierarchy_settings.html":[6,0,2,620],
 "struct_urho3_d_1_1_scene_hierarchy_widget_1_1_node_search.html":[6,0,2,621,0],
-"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html":[6,0,2,621,1],
-"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection_request.html":[6,0,2,621,2]
+"struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html":[6,0,2,621,1]
 };
