@@ -632,13 +632,11 @@ template&lt;class T &gt; </td></tr>
 Rml::DataModelConstructor *&#160;</td><td class="memItemRight" valign="bottom"><b>GetDataModelConstructor</b> () const</td></tr>
 <tr class="memdesc:a4f5d8d053642b492d5fbb67d8078268d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get data model constructor. Only available in OnDataModelInitialized method. <br /></td></tr>
 <tr class="separator:a4f5d8d053642b492d5fbb67d8078268d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94a67c3e753fd60ec587f25ac77877c7" id="r_a94a67c3e753fd60ec587f25ac77877c7"><td class="memItemLeft" align="right" valign="top"><a id="a94a67c3e753fd60ec587f25ac77877c7" name="a94a67c3e753fd60ec587f25ac77877c7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RestoreFocus</b> ()</td></tr>
-<tr class="memdesc:a94a67c3e753fd60ec587f25ac77877c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">If current focus is invalid, focus on the first valid navigable element. <br /></td></tr>
-<tr class="separator:a94a67c3e753fd60ec587f25ac77877c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f3c8f834fe434a64a90ba5c5874a458" id="r_a6f3c8f834fe434a64a90ba5c5874a458"><td class="memItemLeft" align="right" valign="top"><a id="a6f3c8f834fe434a64a90ba5c5874a458" name="a6f3c8f834fe434a64a90ba5c5874a458"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ScheduleFocusById</b> (const ea::string &amp;elementId)</td></tr>
-<tr class="memdesc:a6f3c8f834fe434a64a90ba5c5874a458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedule element focus by ID on next update. This is useful when focus-ability is not updated yet. <br /></td></tr>
+<tr class="memitem:a8e883ea7bdc5e62fa67ba052acf959de" id="r_a8e883ea7bdc5e62fa67ba052acf959de"><td class="memItemLeft" align="right" valign="top"><a id="a8e883ea7bdc5e62fa67ba052acf959de" name="a8e883ea7bdc5e62fa67ba052acf959de"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>RestoreFocus</b> ()</td></tr>
+<tr class="memdesc:a8e883ea7bdc5e62fa67ba052acf959de"><td class="mdescLeft">&#160;</td><td class="mdescRight">If current focus is invalid, focus on the first valid navigable element. <br /></td></tr>
+<tr class="separator:a8e883ea7bdc5e62fa67ba052acf959de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f3c8f834fe434a64a90ba5c5874a458" id="r_a6f3c8f834fe434a64a90ba5c5874a458"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a6f3c8f834fe434a64a90ba5c5874a458">ScheduleFocusById</a> (const ea::string &amp;elementId)</td></tr>
 <tr class="separator:a6f3c8f834fe434a64a90ba5c5874a458"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ad52c26e379a0f236d26d281094e37512" id="r_ad52c26e379a0f236d26d281094e37512"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#ad52c26e379a0f236d26d281094e37512">IsVariableDirty</a> (const ea::string &amp;variableName)</td></tr>
@@ -667,6 +665,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDocumentPre
 <tr class="memitem:a3109decc3c7613337b00c5c2932a18d2" id="r_a3109decc3c7613337b00c5c2932a18d2"><td class="memItemLeft" align="right" valign="top"><a id="a3109decc3c7613337b00c5c2932a18d2" name="a3109decc3c7613337b00c5c2932a18d2"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDocumentPostUnload</b> ()</td></tr>
 <tr class="separator:a3109decc3c7613337b00c5c2932a18d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade0758bee7b132f833bb5f1b49a5fad2" id="r_ade0758bee7b132f833bb5f1b49a5fad2"><td class="memItemLeft" align="right" valign="top"><a id="ade0758bee7b132f833bb5f1b49a5fad2" name="ade0758bee7b132f833bb5f1b49a5fad2"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDocumentUpdated</b> ()</td></tr>
+<tr class="memdesc:ade0758bee7b132f833bb5f1b49a5fad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after all pending changes are processed by <a class="el" href="class_urho3_d_1_1_rml_u_i.html" title="UI subsystem. Manages the graphical user interface.">RmlUI</a>. <br /></td></tr>
+<tr class="separator:ade0758bee7b132f833bb5f1b49a5fad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:aabc86b3e561fc6685ce7d6b4e8839963" id="r_aabc86b3e561fc6685ce7d6b4e8839963"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#aabc86b3e561fc6685ce7d6b4e8839963">OnSetEnabled</a> () override</td></tr>
 <tr class="separator:aabc86b3e561fc6685ce7d6b4e8839963"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -803,7 +805,7 @@ ea::optional&lt; ea::string &gt;&#160;</td><td class="memItemRight" valign="bott
 <tr class="separator:a6e4f45475aab36a442d83826cc05bde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae7022a89e219e3a4bd297a5a0870bdc" id="r_aae7022a89e219e3a4bd297a5a0870bdc"><td class="memItemLeft" align="right" valign="top"><a id="aae7022a89e219e3a4bd297a5a0870bdc" name="aae7022a89e219e3a4bd297a5a0870bdc"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>suppressRestoreFocus_</b> {}</td></tr>
-<tr class="memdesc:aae7022a89e219e3a4bd297a5a0870bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to suppress next call to <a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a94a67c3e753fd60ec587f25ac77877c7" title="If current focus is invalid, focus on the first valid navigable element.">RestoreFocus()</a>. <br /></td></tr>
+<tr class="memdesc:aae7022a89e219e3a4bd297a5a0870bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to suppress next call to <a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a8e883ea7bdc5e62fa67ba052acf959de" title="If current focus is invalid, focus on the first valid navigable element.">RestoreFocus()</a>. <br /></td></tr>
 <tr class="separator:aae7022a89e219e3a4bd297a5a0870bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a88f3aed2c26cd270157d0755bf9636b0" id="r_a88f3aed2c26cd270157d0755bf9636b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#a88f3aed2c26cd270157d0755bf9636b0">resource_</a></td></tr>
@@ -1013,6 +1015,33 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 <p>Implement <a class="el" href="class_urho3_d_1_1_component.html">Component</a> </p>
 
 <p>Reimplemented from <a class="el" href="class_urho3_d_1_1_logic_component.html#ae52c84212a7e10c717157a76adcb096e">Urho3D::LogicComponent</a>.</p>
+
+</div>
+</div>
+<a id="a6f3c8f834fe434a64a90ba5c5874a458" name="a6f3c8f834fe434a64a90ba5c5874a458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f3c8f834fe434a64a90ba5c5874a458">&#9670;&#160;</a></span>ScheduleFocusById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::RmlUIComponent::ScheduleFocusById </td>
+          <td>(</td>
+          <td class="paramtype">const ea::string &amp;&#160;</td>
+          <td class="paramname"><em>elementId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Schedule element focus by ID on next update. This is useful when focus-ability is not updated yet. Empty id focuses on any focusable element. </p>
 
 </div>
 </div>
