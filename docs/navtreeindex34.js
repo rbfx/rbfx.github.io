@@ -1,9 +1,5 @@
 var NAVTREEINDEX34 =
 {
-"class_urho3_d_1_1_physics_world2_d.html#a1e4cfb42416dcf1505b9a8233e3713c8":[6,0,2,520,20],
-"class_urho3_d_1_1_physics_world2_d.html#a253bdb8d9b37dda76dbc829af6876ba6":[6,0,2,520,40],
-"class_urho3_d_1_1_physics_world2_d.html#a28f05401892d69770ed6a699af558238":[6,0,2,520,59],
-"class_urho3_d_1_1_physics_world2_d.html#a2908fb004101e03c3e772ff886b50778":[6,0,2,520,13],
 "class_urho3_d_1_1_physics_world2_d.html#a2c2341c2edbefd590ff04a971790b69b":[6,0,2,520,1],
 "class_urho3_d_1_1_physics_world2_d.html#a2dd5a326a820daa8e81d9c45595fd340":[6,0,2,520,52],
 "class_urho3_d_1_1_physics_world2_d.html#a2e3e613d48b2d2bec40762d90c36faeb":[6,0,2,520,42],
@@ -249,5 +245,9 @@ var NAVTREEINDEX34 =
 "class_urho3_d_1_1_polyhedron.html#a77e89256e8063fc592d380fff0801754":[6,0,2,540,7],
 "class_urho3_d_1_1_polyhedron.html#a77fd85d824b550492fa8e8269001c7a1":[6,0,2,540,11],
 "class_urho3_d_1_1_polyhedron.html#a819f56e9eefb4fdb69700872bb2a1f64":[6,0,2,540,23],
-"class_urho3_d_1_1_polyhedron.html#a84499d869c13b01d0191f1a4eed70338":[6,0,2,540,0]
+"class_urho3_d_1_1_polyhedron.html#a84499d869c13b01d0191f1a4eed70338":[6,0,2,540,0],
+"class_urho3_d_1_1_polyhedron.html#a8c03b29aab800b7930d224a54a2141c5":[6,0,2,540,20],
+"class_urho3_d_1_1_polyhedron.html#a9d2caf0834bea897fd71b75a5b5342da":[6,0,2,540,5],
+"class_urho3_d_1_1_polyhedron.html#aaa368a212a71244d8dd6d08ace144a8f":[6,0,2,540,15],
+"class_urho3_d_1_1_polyhedron.html#aad454fa12c237493d672fe432a31bf9c":[6,0,2,540,4]
 };
