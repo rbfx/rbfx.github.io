@@ -134,6 +134,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReloadResource</b> (<
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ReloadResourceWithDependencies</b> (const ea::string &amp;fileName)</td></tr>
 <tr class="memdesc:a640e0465bd37f2de77560ee2fc205c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload a resource based on filename. Causes also reload of dependent resources if necessary. <br /></td></tr>
 <tr class="separator:a640e0465bd37f2de77560ee2fc205c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d6917650fada9c4761f3c1e79d8906d" id="r_a7d6917650fada9c4761f3c1e79d8906d"><td class="memItemLeft" align="right" valign="top"><a id="a7d6917650fada9c4761f3c1e79d8906d" name="a7d6917650fada9c4761f3c1e79d8906d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetResourceReloadSuspended</b> (bool suspended)</td></tr>
+<tr class="memdesc:a7d6917650fada9c4761f3c1e79d8906d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend or resume resource reloading. Changed resources will be reloaded on resume. <br /></td></tr>
+<tr class="separator:a7d6917650fada9c4761f3c1e79d8906d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1210f3bd5a5c88d09c6b7081b1bf20a0" id="r_a1210f3bd5a5c88d09c6b7081b1bf20a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a1210f3bd5a5c88d09c6b7081b1bf20a0">SetMemoryBudget</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type, unsigned long long budget)</td></tr>
 <tr class="separator:a1210f3bd5a5c88d09c6b7081b1bf20a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73f74689d1714ebdca92913da3f4ce39" id="r_a73f74689d1714ebdca92913da3f4ce39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_resource_cache.html#a73f74689d1714ebdca92913da3f4ce39">SetReturnFailedResources</a> (bool enable)</td></tr>
@@ -547,6 +551,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>finishBackgroundResour
 ea::vector&lt; ea::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ignoreResourceAutoReload_</b></td></tr>
 <tr class="memdesc:a9fbadabb5f8788cb96df9766b25881c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of resources that will not be auto-reloaded if reloading event triggers. <br /></td></tr>
 <tr class="separator:a9fbadabb5f8788cb96df9766b25881c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8175c3d49c1ecb5444077628c027ac" id="r_adb8175c3d49c1ecb5444077628c027ac"><td class="memItemLeft" align="right" valign="top"><a id="adb8175c3d49c1ecb5444077628c027ac" name="adb8175c3d49c1ecb5444077628c027ac"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>resourceReloadSuspended_</b> {}</td></tr>
+<tr class="memdesc:adb8175c3d49c1ecb5444077628c027ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether resource reloading is suspended. <br /></td></tr>
+<tr class="separator:adb8175c3d49c1ecb5444077628c027ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad18cbf0c90c776dd7944befe75607c7f" id="r_ad18cbf0c90c776dd7944befe75607c7f"><td class="memItemLeft" align="right" valign="top"><a id="ad18cbf0c90c776dd7944befe75607c7f" name="ad18cbf0c90c776dd7944befe75607c7f"></a>
+ea::unordered_set&lt; ea::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pendingResourceReloads_</b></td></tr>
+<tr class="memdesc:ad18cbf0c90c776dd7944befe75607c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of resources that will be reloaded when reloading is un-suspended. <br /></td></tr>
+<tr class="separator:ad18cbf0c90c776dd7944befe75607c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

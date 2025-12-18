@@ -78,11 +78,12 @@ Inheritance diagram for Urho3D::AssetTransformer:</div>
  <div class="center">
   <img src="class_urho3_d_1_1_asset_transformer.png" usemap="#Urho3D::AssetTransformer_map" alt=""/>
   <map id="Urho3D::AssetTransformer_map" name="Urho3D::AssetTransformer_map">
-<area href="class_urho3_d_1_1_serializable.html" title="Base class for objects with automatic serialization through attributes." alt="Urho3D::Serializable" shape="rect" coords="111,112,324,136"/>
-<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="111,56,324,80"/>
-<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="111,0,324,24"/>
-<area href="class_urho3_d_1_1_animation_velocity_extractor.html" title="Asset transformer that extracts velocity from movement animations." alt="Urho3D::AnimationVelocityExtractor" shape="rect" coords="0,224,213,248"/>
-<area href="class_urho3_d_1_1_i_k_target_extractor.html" title="Asset transformer that extracts IK targets from the animation." alt="Urho3D::IKTargetExtractor" shape="rect" coords="223,224,436,248"/>
+<area href="class_urho3_d_1_1_serializable.html" title="Base class for objects with automatic serialization through attributes." alt="Urho3D::Serializable" shape="rect" coords="248,112,486,136"/>
+<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="248,56,486,80"/>
+<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="248,0,486,24"/>
+<area href="class_urho3_d_1_1_animation_velocity_extractor.html" title="Asset transformer that extracts velocity from movement animations." alt="Urho3D::AnimationVelocityExtractor" shape="rect" coords="0,224,238,248"/>
+<area href="class_urho3_d_1_1_i_k_target_extractor.html" title="Asset transformer that extracts IK targets from the animation." alt="Urho3D::IKTargetExtractor" shape="rect" coords="248,224,486,248"/>
+<area href="class_urho3_d_1_1_retarget_animations_transformer.html" title="Asset transformer that re-targets animation from one model to another." alt="Urho3D::RetargetAnimationsTransformer" shape="rect" coords="496,224,734,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -104,6 +105,9 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsSingleInsta
 <tr class="memitem:aad237cb0679137db5bea30d54a2c0226" id="r_aad237cb0679137db5bea30d54a2c0226"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_asset_transformer.html#aad237cb0679137db5bea30d54a2c0226">IsExecutedOnOutput</a> ()</td></tr>
 <tr class="memdesc:aad237cb0679137db5bea30d54a2c0226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether to execute this transformer on the output of the other transformer.  <br /></td></tr>
 <tr class="separator:aad237cb0679137db5bea30d54a2c0226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562ad8802d2b9e6e3d4b8c598127731c" id="r_a562ad8802d2b9e6e3d4b8c598127731c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_asset_transformer.html#a562ad8802d2b9e6e3d4b8c598127731c">IsPostTransform</a> ()</td></tr>
+<tr class="memdesc:a562ad8802d2b9e6e3d4b8c598127731c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether this transformer should be executed in post-processing pass.  <br /></td></tr>
+<tr class="separator:a562ad8802d2b9e6e3d4b8c598127731c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:aeedc4118801183619c84c17f9738555f" id="r_aeedc4118801183619c84c17f9738555f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_asset_transformer.html#aeedc4118801183619c84c17f9738555f">SetFlavor</a> (const <a class="el" href="struct_urho3_d_1_1_application_flavor_pattern.html">ApplicationFlavorPattern</a> &amp;value)</td></tr>
 <tr class="separator:aeedc4118801183619c84c17f9738555f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -425,9 +429,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsScriptStrongRef</b>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a725fbca219d5cf68ee11b9147170ddd2" id="r_a725fbca219d5cf68ee11b9147170ddd2"><td class="memItemLeft" align="right" valign="top"><a id="a725fbca219d5cf68ee11b9147170ddd2" name="a725fbca219d5cf68ee11b9147170ddd2"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsApplicable</b> (const <a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html">AssetTransformerInput</a> &amp;input, const AssetTransformerVector &amp;transformers)</td></tr>
-<tr class="memdesc:a725fbca219d5cf68ee11b9147170ddd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the transformer array is applied to the given asset in any way. <br /></td></tr>
+<tr class="memitem:a725fbca219d5cf68ee11b9147170ddd2" id="r_a725fbca219d5cf68ee11b9147170ddd2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_asset_transformer.html#a725fbca219d5cf68ee11b9147170ddd2">IsApplicable</a> (const <a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html">AssetTransformerInput</a> &amp;input, const AssetTransformerVector &amp;transformers)</td></tr>
 <tr class="separator:a725fbca219d5cf68ee11b9147170ddd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95041a12aa08639ba4c52fd4744bb50c" id="r_a95041a12aa08639ba4c52fd4744bb50c"><td class="memItemLeft" align="right" valign="top"><a id="a95041a12aa08639ba4c52fd4744bb50c" name="a95041a12aa08639ba4c52fd4744bb50c"></a>
 static bool&#160;</td><td class="memItemRight" valign="bottom"><b>ExecuteTransformers</b> (const <a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html">AssetTransformerInput</a> &amp;input, <a class="el" href="struct_urho3_d_1_1_asset_transformer_output.html">AssetTransformerOutput</a> &amp;output, const AssetTransformerVector &amp;transformers, bool isNestedExecution)</td></tr>
@@ -531,12 +533,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 
 <p>Execute this transformer on the asset. Return true if any action was performed. </p>
 
-<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_i_k_target_extractor.html#a8971b2d4c602d9025a34f9e577818957">Urho3D::IKTargetExtractor</a>, and <a class="el" href="class_urho3_d_1_1_animation_velocity_extractor.html#a7732f65f49f1588f4bd4d4c722e169c8">Urho3D::AnimationVelocityExtractor</a>.</p>
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_i_k_target_extractor.html#a8971b2d4c602d9025a34f9e577818957">Urho3D::IKTargetExtractor</a>, <a class="el" href="class_urho3_d_1_1_animation_velocity_extractor.html#a7732f65f49f1588f4bd4d4c722e169c8">Urho3D::AnimationVelocityExtractor</a>, and <a class="el" href="class_urho3_d_1_1_retarget_animations_transformer.html#a838aea09c8c7281f2d1faa7d45e6395f">Urho3D::RetargetAnimationsTransformer</a>.</p>
 
 </div>
 </div>
 <a id="ac84c3040ac92bb83a2eabe86d0681c7d" name="ac84c3040ac92bb83a2eabe86d0681c7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac84c3040ac92bb83a2eabe86d0681c7d">&#9670;&#160;</a></span>IsApplicable()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac84c3040ac92bb83a2eabe86d0681c7d">&#9670;&#160;</a></span>IsApplicable() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -561,7 +563,44 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 
 <p>Return whether the transformer can be applied to the given asset. Should be as fast as possible. </p>
 
-<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_i_k_target_extractor.html#a2f57dfd2a6878a3f79aa61a4aaa07acd">Urho3D::IKTargetExtractor</a>, and <a class="el" href="class_urho3_d_1_1_animation_velocity_extractor.html#a84cd330c13472cb02b6001f6b13c5a4a">Urho3D::AnimationVelocityExtractor</a>.</p>
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_i_k_target_extractor.html#a2f57dfd2a6878a3f79aa61a4aaa07acd">Urho3D::IKTargetExtractor</a>, <a class="el" href="class_urho3_d_1_1_animation_velocity_extractor.html#a84cd330c13472cb02b6001f6b13c5a4a">Urho3D::AnimationVelocityExtractor</a>, and <a class="el" href="class_urho3_d_1_1_retarget_animations_transformer.html#ab5a9235dca5d72ccfccc740d273d09cc">Urho3D::RetargetAnimationsTransformer</a>.</p>
+
+</div>
+</div>
+<a id="a725fbca219d5cf68ee11b9147170ddd2" name="a725fbca219d5cf68ee11b9147170ddd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a725fbca219d5cf68ee11b9147170ddd2">&#9670;&#160;</a></span>IsApplicable() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Urho3D::AssetTransformer::IsApplicable </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html">AssetTransformerInput</a> &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const AssetTransformerVector &amp;&#160;</td>
+          <td class="paramname"><em>transformers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return whether the transformer array is applied to the given asset in any way. It's not checked whether transformers are part of post-transform pass. </p>
 
 </div>
 </div>
@@ -591,6 +630,35 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 <p>Return whether to execute this transformer on the output of the other transformer. </p>
 
 <p>Reimplemented in <a class="el" href="class_urho3_d_1_1_i_k_target_extractor.html#acab5a21eb2150f4f4980142dcaf5eea2">Urho3D::IKTargetExtractor</a>, and <a class="el" href="class_urho3_d_1_1_animation_velocity_extractor.html#ae5ca5ce682aa889abd9b2620b71a0e83">Urho3D::AnimationVelocityExtractor</a>.</p>
+
+</div>
+</div>
+<a id="a562ad8802d2b9e6e3d4b8c598127731c" name="a562ad8802d2b9e6e3d4b8c598127731c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a562ad8802d2b9e6e3d4b8c598127731c">&#9670;&#160;</a></span>IsPostTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Urho3D::AssetTransformer::IsPostTransform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return whether this transformer should be executed in post-processing pass. </p>
+
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_retarget_animations_transformer.html#a6ad5d14b4c552211b856eb6a8c37328c">Urho3D::RetargetAnimationsTransformer</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"class_urho3_d_1_1_file.html#a26b1a955d33b665bf9a31366619e70d3":[6,0,2,228,10],
 "class_urho3_d_1_1_file.html#a2ac255879e4ea901c77c9255a81e8755":[6,0,2,228,36],
 "class_urho3_d_1_1_file.html#a2c5c1fb3356546d7c8c59abb1a4abd5d":[6,0,2,228,7],
 "class_urho3_d_1_1_file.html#a32beada117a1d9ec373cc52ae2fd4a51":[6,0,2,228,32],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "class_urho3_d_1_1_font_face.html#afb950b2511c55edc016075a0d9bf71f0":[6,0,2,243,5],
 "class_urho3_d_1_1_font_face_bitmap.html":[6,0,2,244],
 "class_urho3_d_1_1_font_face_bitmap.html#a22466db124ed637989633f670036af8f":[6,0,2,244,5],
-"class_urho3_d_1_1_font_face_bitmap.html#a2505a210672d122fe1042c13e0cd8817":[6,0,2,244,7],
-"class_urho3_d_1_1_font_face_bitmap.html#a49dbe3262494a04180ebe005d15241cc":[6,0,2,244,3]
+"class_urho3_d_1_1_font_face_bitmap.html#a2505a210672d122fe1042c13e0cd8817":[6,0,2,244,7]
 };

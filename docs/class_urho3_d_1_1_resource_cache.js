@@ -56,6 +56,7 @@ var class_urho3_d_1_1_resource_cache =
     [ "Scan", "class_urho3_d_1_1_resource_cache.html#a467cf9e9a1696037186eed80435a41bd", null ],
     [ "SetFinishBackgroundResourcesMs", "class_urho3_d_1_1_resource_cache.html#a06423b2b66b8f5537a8ae5f8fca30049", null ],
     [ "SetMemoryBudget", "class_urho3_d_1_1_resource_cache.html#a1210f3bd5a5c88d09c6b7081b1bf20a0", null ],
+    [ "SetResourceReloadSuspended", "class_urho3_d_1_1_resource_cache.html#a7d6917650fada9c4761f3c1e79d8906d", null ],
     [ "SetReturnFailedResources", "class_urho3_d_1_1_resource_cache.html#a73f74689d1714ebdca92913da3f4ce39", null ],
     [ "SetSearchPackagesFirst", "class_urho3_d_1_1_resource_cache.html#aa04ba54e17fbc01455c76bb1a5720b62", null ],
     [ "StoreResourceDependency", "class_urho3_d_1_1_resource_cache.html#a892dfbb8ca08221436ac2b0f4ba32cbb", null ],
@@ -64,8 +65,10 @@ var class_urho3_d_1_1_resource_cache =
     [ "dependentResources_", "class_urho3_d_1_1_resource_cache.html#aaeb8e9e2fd012eee5b18099ccfc76428", null ],
     [ "finishBackgroundResourcesMs_", "class_urho3_d_1_1_resource_cache.html#a1e0fc9fc5a62ecc0f0cfb6f1f09200ea", null ],
     [ "ignoreResourceAutoReload_", "class_urho3_d_1_1_resource_cache.html#a9fbadabb5f8788cb96df9766b25881c6", null ],
+    [ "pendingResourceReloads_", "class_urho3_d_1_1_resource_cache.html#ad18cbf0c90c776dd7944befe75607c7f", null ],
     [ "resourceGroups_", "class_urho3_d_1_1_resource_cache.html#a68dd7be43f6a091023afc5db88565dc1", null ],
     [ "resourceMutex_", "class_urho3_d_1_1_resource_cache.html#a4a71c415f8d9cc386f83c625cfcbfb5e", null ],
+    [ "resourceReloadSuspended_", "class_urho3_d_1_1_resource_cache.html#adb8175c3d49c1ecb5444077628c027ac", null ],
     [ "resourceRouters_", "class_urho3_d_1_1_resource_cache.html#a82a2bf141b8c88ad0ea5d7bb08f5e3dd", null ],
     [ "returnFailedResources_", "class_urho3_d_1_1_resource_cache.html#a1396e2b0a006c67c61cbc47a529fddba", null ],
     [ "searchPackagesFirst_", "class_urho3_d_1_1_resource_cache.html#a5bf69cbb17aa18a4b17a3c28f41b3580", null ]

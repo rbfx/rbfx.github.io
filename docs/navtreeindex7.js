@@ -116,13 +116,14 @@ var NAVTREEINDEX7 =
 "class_urho3_d_1_1_asset_transformer.html":[6,0,2,45],
 "class_urho3_d_1_1_asset_transformer.html#a1bdba4d72f2f7f6275b850020df11257":[6,0,2,45,1],
 "class_urho3_d_1_1_asset_transformer.html#a2a057cfd693a3b2fec9d7c44d1818325":[6,0,2,45,0],
-"class_urho3_d_1_1_asset_transformer.html#a4682d395472ac18f7b9b28ea74d4179e":[6,0,2,45,7],
+"class_urho3_d_1_1_asset_transformer.html#a4682d395472ac18f7b9b28ea74d4179e":[6,0,2,45,8],
+"class_urho3_d_1_1_asset_transformer.html#a562ad8802d2b9e6e3d4b8c598127731c":[6,0,2,45,7],
 "class_urho3_d_1_1_asset_transformer.html#a725fbca219d5cf68ee11b9147170ddd2":[6,0,2,45,5],
 "class_urho3_d_1_1_asset_transformer.html#a8f9fd6eae728bca7be0e7292e58236e9":[6,0,2,45,3],
 "class_urho3_d_1_1_asset_transformer.html#a95041a12aa08639ba4c52fd4744bb50c":[6,0,2,45,2],
 "class_urho3_d_1_1_asset_transformer.html#aad237cb0679137db5bea30d54a2c0226":[6,0,2,45,6],
 "class_urho3_d_1_1_asset_transformer.html#ac84c3040ac92bb83a2eabe86d0681c7d":[6,0,2,45,4],
-"class_urho3_d_1_1_asset_transformer.html#aeedc4118801183619c84c17f9738555f":[6,0,2,45,8],
+"class_urho3_d_1_1_asset_transformer.html#aeedc4118801183619c84c17f9738555f":[6,0,2,45,9],
 "class_urho3_d_1_1_asset_transformer_hierarchy.html":[6,0,2,47],
 "class_urho3_d_1_1_asset_transformer_hierarchy.html#a14d8584f24fdfcff12debface1f592d2":[6,0,2,47,5],
 "class_urho3_d_1_1_asset_transformer_hierarchy.html#a56f5ba869f68f0984b69600278d5feab":[6,0,2,47,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "class_urho3_d_1_1_baked_light_cache.html#aabc0af833b7078c46054e60b985b7366":[6,0,2,65,5],
 "class_urho3_d_1_1_baked_light_cache.html#aec40a676aa77de6e5bf34d7c21d5b57b":[6,0,2,65,2],
 "class_urho3_d_1_1_baked_light_memory_cache.html":[6,0,2,67],
-"class_urho3_d_1_1_baked_light_memory_cache.html#a1c08b2bb6c76e3a899f8fed91386d49a":[6,0,2,67,4],
-"class_urho3_d_1_1_baked_light_memory_cache.html#a27e56ba593fcb297a47ce82e07ac9d1f":[6,0,2,67,1]
+"class_urho3_d_1_1_baked_light_memory_cache.html#a1c08b2bb6c76e3a899f8fed91386d49a":[6,0,2,67,4]
 };

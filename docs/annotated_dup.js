@@ -836,6 +836,8 @@ var annotated_dup =
       [ "ResourceRefList", "struct_urho3_d_1_1_resource_ref_list.html", "struct_urho3_d_1_1_resource_ref_list" ],
       [ "ResourceRouter", "class_urho3_d_1_1_resource_router.html", "class_urho3_d_1_1_resource_router" ],
       [ "ResourceWithMetadata", "class_urho3_d_1_1_resource_with_metadata.html", "class_urho3_d_1_1_resource_with_metadata" ],
+      [ "RetargetAnimationsTransformer", "class_urho3_d_1_1_retarget_animations_transformer.html", "class_urho3_d_1_1_retarget_animations_transformer" ],
+      [ "RetargetAnimationTask", "struct_urho3_d_1_1_retarget_animation_task.html", null ],
       [ "RibbonTrail", "class_urho3_d_1_1_ribbon_trail.html", "class_urho3_d_1_1_ribbon_trail" ],
       [ "RigidBody", "class_urho3_d_1_1_rigid_body.html", "class_urho3_d_1_1_rigid_body" ],
       [ "RigidBody2D", "class_urho3_d_1_1_rigid_body2_d.html", "class_urho3_d_1_1_rigid_body2_d" ],

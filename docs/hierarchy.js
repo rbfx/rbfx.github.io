@@ -1127,7 +1127,8 @@ var hierarchy =
           ] ],
           [ "Urho3D::AssetTransformer", "class_urho3_d_1_1_asset_transformer.html", [
             [ "Urho3D::AnimationVelocityExtractor", "class_urho3_d_1_1_animation_velocity_extractor.html", null ],
-            [ "Urho3D::IKTargetExtractor", "class_urho3_d_1_1_i_k_target_extractor.html", null ]
+            [ "Urho3D::IKTargetExtractor", "class_urho3_d_1_1_i_k_target_extractor.html", null ],
+            [ "Urho3D::RetargetAnimationsTransformer", "class_urho3_d_1_1_retarget_animations_transformer.html", null ]
           ] ],
           [ "Urho3D::Component", "class_urho3_d_1_1_component.html", [
             [ "Urho3D::AnimationStateSource", "class_urho3_d_1_1_animation_state_source.html", [
@@ -1433,6 +1434,7 @@ var hierarchy =
     [ "Urho3D::ResourceGroup", "struct_urho3_d_1_1_resource_group.html", null ],
     [ "Urho3D::ResourceRef", "struct_urho3_d_1_1_resource_ref.html", null ],
     [ "Urho3D::ResourceRefList", "struct_urho3_d_1_1_resource_ref_list.html", null ],
+    [ "Urho3D::RetargetAnimationTask", "struct_urho3_d_1_1_retarget_animation_task.html", null ],
     [ "Urho3D::RmlCanvasResizedArgs", "struct_urho3_d_1_1_rml_canvas_resized_args.html", null ],
     [ "Urho3D::RmlDocumentReloadedArgs", "struct_urho3_d_1_1_rml_document_reloaded_args.html", null ],
     [ "Urho3D::RWOpsWrapper< T >", "class_urho3_d_1_1_r_w_ops_wrapper.html", null ],
@@ -1812,6 +1814,7 @@ var hierarchy =
     ] ],
     [ "Urho3D::IKStickTargets::TargetInfo", "struct_urho3_d_1_1_i_k_stick_targets_1_1_target_info.html", null ],
     [ "Urho3D::TargetShader", "struct_urho3_d_1_1_target_shader.html", null ],
+    [ "Urho3D::RetargetAnimationsTransformer::TaskDescription", "struct_urho3_d_1_1_retarget_animations_transformer_1_1_task_description.html", null ],
     [ "Urho3D::MaterialInspectorWidget::TechniqueDesc", "struct_urho3_d_1_1_material_inspector_widget_1_1_technique_desc.html", null ],
     [ "Urho3D::TechniqueEntry", "struct_urho3_d_1_1_technique_entry.html", null ],
     [ "Urho3D::OpenXR::TemporaryStorage", "struct_urho3_d_1_1_open_x_r_1_1_temporary_storage.html", null ],
@@ -1858,6 +1861,7 @@ var hierarchy =
       [ "Urho3D::AnimationKeyFrame", "struct_urho3_d_1_1_animation_key_frame.html", null ]
     ] ],
     [ "Urho3D::TransformedSpan< SourceType, DestinationType, Function >", "class_urho3_d_1_1_transformed_span.html", null ],
+    [ "Urho3D::RetargetAnimationsTransformer::TransformerParams", "struct_urho3_d_1_1_retarget_animations_transformer_1_1_transformer_params.html", null ],
     [ "Urho3D::TransformGizmo", "class_urho3_d_1_1_transform_gizmo.html", null ],
     [ "Urho3D::TransformNodesGizmo", "class_urho3_d_1_1_transform_nodes_gizmo.html", null ],
     [ "Urho3D::AssetTransformerHierarchy::TreeNode", "struct_urho3_d_1_1_asset_transformer_hierarchy_1_1_tree_node.html", null ],
