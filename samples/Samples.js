@@ -8792,7 +8792,9 @@ var _emscripten_glBindVertexArray = vao => {
   GLctx.currentElementArrayBufferBinding = ibo ? (ibo.name | 0) : 0;
 };
 
-var _emscripten_glBindVertexArrayOES = _emscripten_glBindVertexArray;
+var _glBindVertexArray = _emscripten_glBindVertexArray;
+
+var _emscripten_glBindVertexArrayOES = _glBindVertexArray;
 
 var _emscripten_glBlendColor = (x0, x1, x2, x3) => GLctx.blendColor(x0, x1, x2, x3);
 
@@ -9096,7 +9098,9 @@ var _emscripten_glDeleteVertexArrays = (n, vaos) => {
   }
 };
 
-var _emscripten_glDeleteVertexArraysOES = _emscripten_glDeleteVertexArrays;
+var _glDeleteVertexArrays = _emscripten_glDeleteVertexArrays;
+
+var _emscripten_glDeleteVertexArraysOES = _glDeleteVertexArrays;
 
 var _emscripten_glDepthFunc = x0 => GLctx.depthFunc(x0);
 
@@ -9129,13 +9133,15 @@ var _emscripten_glDrawArraysInstanced = (mode, first, count, primcount) => {
   GLctx.drawArraysInstanced(mode, first, count, primcount);
 };
 
-var _emscripten_glDrawArraysInstancedANGLE = _emscripten_glDrawArraysInstanced;
+var _glDrawArraysInstanced = _emscripten_glDrawArraysInstanced;
 
-var _emscripten_glDrawArraysInstancedARB = _emscripten_glDrawArraysInstanced;
+var _emscripten_glDrawArraysInstancedANGLE = _glDrawArraysInstanced;
 
-var _emscripten_glDrawArraysInstancedEXT = _emscripten_glDrawArraysInstanced;
+var _emscripten_glDrawArraysInstancedARB = _glDrawArraysInstanced;
 
-var _emscripten_glDrawArraysInstancedNV = _emscripten_glDrawArraysInstanced;
+var _emscripten_glDrawArraysInstancedEXT = _glDrawArraysInstanced;
+
+var _emscripten_glDrawArraysInstancedNV = _glDrawArraysInstanced;
 
 var tempFixedLengthArray = [];
 
@@ -9147,9 +9153,11 @@ var _emscripten_glDrawBuffers = (n, bufs) => {
   GLctx.drawBuffers(bufArray);
 };
 
-var _emscripten_glDrawBuffersEXT = _emscripten_glDrawBuffers;
+var _glDrawBuffers = _emscripten_glDrawBuffers;
 
-var _emscripten_glDrawBuffersWEBGL = _emscripten_glDrawBuffers;
+var _emscripten_glDrawBuffersEXT = _glDrawBuffers;
+
+var _emscripten_glDrawBuffersWEBGL = _glDrawBuffers;
 
 var _emscripten_glDrawElements = (mode, count, type, indices) => {
   var buf;
@@ -9203,13 +9211,15 @@ var _emscripten_glDrawElementsInstanced = (mode, count, type, indices, primcount
   GLctx.drawElementsInstanced(mode, count, type, indices, primcount);
 };
 
-var _emscripten_glDrawElementsInstancedANGLE = _emscripten_glDrawElementsInstanced;
+var _glDrawElementsInstanced = _emscripten_glDrawElementsInstanced;
 
-var _emscripten_glDrawElementsInstancedARB = _emscripten_glDrawElementsInstanced;
+var _emscripten_glDrawElementsInstancedANGLE = _glDrawElementsInstanced;
 
-var _emscripten_glDrawElementsInstancedEXT = _emscripten_glDrawElementsInstanced;
+var _emscripten_glDrawElementsInstancedARB = _glDrawElementsInstanced;
 
-var _emscripten_glDrawElementsInstancedNV = _emscripten_glDrawElementsInstanced;
+var _emscripten_glDrawElementsInstancedEXT = _glDrawElementsInstanced;
+
+var _emscripten_glDrawElementsInstancedNV = _glDrawElementsInstanced;
 
 var _glDrawElements = _emscripten_glDrawElements;
 
@@ -9403,7 +9413,9 @@ var _emscripten_glGenVertexArrays = (n, arrays) => {
   GL.genObject(n, arrays, "createVertexArray", GL.vaos);
 };
 
-var _emscripten_glGenVertexArraysOES = _emscripten_glGenVertexArrays;
+var _glGenVertexArrays = _emscripten_glGenVertexArrays;
+
+var _emscripten_glGenVertexArraysOES = _glGenVertexArrays;
 
 var _emscripten_glGenerateMipmap = x0 => GLctx.generateMipmap(x0);
 
@@ -9960,7 +9972,9 @@ var _emscripten_glGetQueryObjectivEXT = (id, pname, params) => {
   (growMemViews(), HEAP32)[((params) >> 2)] = ret;
 };
 
-var _emscripten_glGetQueryObjectui64vEXT = _emscripten_glGetQueryObjecti64vEXT;
+var _glGetQueryObjecti64vEXT = _emscripten_glGetQueryObjecti64vEXT;
+
+var _emscripten_glGetQueryObjectui64vEXT = _glGetQueryObjecti64vEXT;
 
 var _emscripten_glGetQueryObjectuiv = (id, pname, params) => {
   if (!params) {
@@ -9980,7 +9994,9 @@ var _emscripten_glGetQueryObjectuiv = (id, pname, params) => {
   (growMemViews(), HEAP32)[((params) >> 2)] = ret;
 };
 
-var _emscripten_glGetQueryObjectuivEXT = _emscripten_glGetQueryObjectivEXT;
+var _glGetQueryObjectivEXT = _emscripten_glGetQueryObjectivEXT;
+
+var _emscripten_glGetQueryObjectuivEXT = _glGetQueryObjectivEXT;
 
 var _emscripten_glGetQueryiv = (target, pname, params) => {
   if (!params) {
@@ -10448,7 +10464,9 @@ var _emscripten_glGetVertexAttribIiv = (index, pname, params) => {
   emscriptenWebGLGetVertexAttrib(index, pname, params, 0);
 };
 
-var _emscripten_glGetVertexAttribIuiv = _emscripten_glGetVertexAttribIiv;
+var _glGetVertexAttribIiv = _emscripten_glGetVertexAttribIiv;
+
+var _emscripten_glGetVertexAttribIuiv = _glGetVertexAttribIiv;
 
 var _emscripten_glGetVertexAttribPointerv = (index, pname, pointer) => {
   if (!pointer) {
@@ -10562,7 +10580,9 @@ var _emscripten_glIsVertexArray = array => {
   return GLctx.isVertexArray(vao);
 };
 
-var _emscripten_glIsVertexArrayOES = _emscripten_glIsVertexArray;
+var _glIsVertexArray = _emscripten_glIsVertexArray;
+
+var _emscripten_glIsVertexArrayOES = _glIsVertexArray;
 
 var _emscripten_glLineWidth = x0 => GLctx.lineWidth(x0);
 
@@ -11054,13 +11074,15 @@ var _emscripten_glVertexAttribDivisor = (index, divisor) => {
   GLctx.vertexAttribDivisor(index, divisor);
 };
 
-var _emscripten_glVertexAttribDivisorANGLE = _emscripten_glVertexAttribDivisor;
+var _glVertexAttribDivisor = _emscripten_glVertexAttribDivisor;
 
-var _emscripten_glVertexAttribDivisorARB = _emscripten_glVertexAttribDivisor;
+var _emscripten_glVertexAttribDivisorANGLE = _glVertexAttribDivisor;
 
-var _emscripten_glVertexAttribDivisorEXT = _emscripten_glVertexAttribDivisor;
+var _emscripten_glVertexAttribDivisorARB = _glVertexAttribDivisor;
 
-var _emscripten_glVertexAttribDivisorNV = _emscripten_glVertexAttribDivisor;
+var _emscripten_glVertexAttribDivisorEXT = _glVertexAttribDivisor;
+
+var _emscripten_glVertexAttribDivisorNV = _glVertexAttribDivisor;
 
 var _emscripten_glVertexAttribI4i = (x0, x1, x2, x3, x4) => GLctx.vertexAttribI4i(x0, x1, x2, x3, x4);
 
@@ -12613,8 +12635,6 @@ var _glBindSampler = _emscripten_glBindSampler;
 
 var _glBindTexture = _emscripten_glBindTexture;
 
-var _glBindVertexArray = _emscripten_glBindVertexArray;
-
 var _glBlendColor = _emscripten_glBlendColor;
 
 var _glBlendEquationSeparate = _emscripten_glBlendEquationSeparate;
@@ -12679,8 +12699,6 @@ var _glDeleteSync = _emscripten_glDeleteSync;
 
 var _glDeleteTextures = _emscripten_glDeleteTextures;
 
-var _glDeleteVertexArrays = _emscripten_glDeleteVertexArrays;
-
 var _glDepthFunc = _emscripten_glDepthFunc;
 
 var _glDepthMask = _emscripten_glDepthMask;
@@ -12693,17 +12711,11 @@ var _glDisable = _emscripten_glDisable;
 
 var _glDrawArrays = _emscripten_glDrawArrays;
 
-var _glDrawArraysInstanced = _emscripten_glDrawArraysInstanced;
-
 var _emscripten_glDrawArraysInstancedBaseInstanceWEBGL = (mode, first, count, instanceCount, baseInstance) => {
   GLctx.dibvbi["drawArraysInstancedBaseInstanceWEBGL"](mode, first, count, instanceCount, baseInstance);
 };
 
 var _glDrawArraysInstancedBaseInstanceWEBGL = _emscripten_glDrawArraysInstancedBaseInstanceWEBGL;
-
-var _glDrawBuffers = _emscripten_glDrawBuffers;
-
-var _glDrawElementsInstanced = _emscripten_glDrawElementsInstanced;
 
 var _emscripten_glDrawElementsInstancedBaseVertexBaseInstanceWEBGL = (mode, count, type, offset, instanceCount, baseVertex, baseinstance) => {
   GLctx.dibvbi["drawElementsInstancedBaseVertexBaseInstanceWEBGL"](mode, count, type, offset, instanceCount, baseVertex, baseinstance);
@@ -12738,8 +12750,6 @@ var _glGenQueries = _emscripten_glGenQueries;
 var _glGenSamplers = _emscripten_glGenSamplers;
 
 var _glGenTextures = _emscripten_glGenTextures;
-
-var _glGenVertexArrays = _emscripten_glGenVertexArrays;
 
 var _glGenerateMipmap = _emscripten_glGenerateMipmap;
 
@@ -12850,8 +12860,6 @@ var _glUniform1i = _emscripten_glUniform1i;
 var _glUniformBlockBinding = _emscripten_glUniformBlockBinding;
 
 var _glUseProgram = _emscripten_glUseProgram;
-
-var _glVertexAttribDivisor = _emscripten_glVertexAttribDivisor;
 
 var _glVertexAttribIPointer = _emscripten_glVertexAttribIPointer;
 
@@ -13290,7 +13298,7 @@ Module["FS_createLazyFile"] = FS_createLazyFile;
 var proxiedFunctionTable = [ _proc_exit, exitOnMainThread, pthreadCreateProxied, ___syscall_bind, ___syscall_fcntl64, ___syscall_fstat64, ___syscall_getcwd, ___syscall_getdents64, ___syscall_ioctl, ___syscall_lstat64, ___syscall_mkdirat, ___syscall_newfstatat, ___syscall_openat, ___syscall_recvfrom, ___syscall_rmdir, ___syscall_sendto, ___syscall_socket, ___syscall_stat64, ___syscall_unlinkat, _eglBindAPI, _eglChooseConfig, _eglCreateContext, _eglCreateWindowSurface, _eglDestroyContext, _eglDestroySurface, _eglGetConfigAttrib, _eglGetDisplay, _eglGetError, _eglInitialize, _eglMakeCurrent, _eglQueryString, _eglSwapBuffers, _eglSwapInterval, _eglTerminate, _eglWaitClient, _eglWaitNative, _emscripten_exit_fullscreen, getCanvasSizeMainThread, setCanvasElementSizeMainThread, _emscripten_exit_pointerlock, _emscripten_get_device_pixel_ratio, _emscripten_get_element_css_size, _emscripten_get_gamepad_status, _emscripten_get_num_gamepads, _emscripten_get_screen_size, _emscripten_request_fullscreen_strategy, _emscripten_request_pointerlock, _emscripten_sample_gamepad_data, _emscripten_set_beforeunload_callback_on_thread, _emscripten_set_blur_callback_on_thread, _emscripten_set_element_css_size, _emscripten_set_focus_callback_on_thread, _emscripten_set_fullscreenchange_callback_on_thread, _emscripten_set_gamepadconnected_callback_on_thread, _emscripten_set_gamepaddisconnected_callback_on_thread, _emscripten_set_keydown_callback_on_thread, _emscripten_set_keypress_callback_on_thread, _emscripten_set_keyup_callback_on_thread, _emscripten_set_mousedown_callback_on_thread, _emscripten_set_mouseenter_callback_on_thread, _emscripten_set_mouseleave_callback_on_thread, _emscripten_set_mousemove_callback_on_thread, _emscripten_set_mouseup_callback_on_thread, _emscripten_set_pointerlockchange_callback_on_thread, _emscripten_set_resize_callback_on_thread, _emscripten_set_touchcancel_callback_on_thread, _emscripten_set_touchend_callback_on_thread, _emscripten_set_touchmove_callback_on_thread, _emscripten_set_touchstart_callback_on_thread, _emscripten_set_visibilitychange_callback_on_thread, _emscripten_set_wheel_callback_on_thread, _emscripten_set_window_title, _environ_get, _environ_sizes_get, _fd_close, _fd_read, _fd_seek, _fd_write ];
 
 var ASM_CONSTS = {
-  1953597: $0 => {
+  1954509: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -13298,10 +13306,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1953822: ($0, $1) => {
+  1954734: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1953879: () => {
+  1954791: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -13309,7 +13317,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1954026: () => {
+  1954938: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -13317,7 +13325,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1954260: $0 => {
+  1955172: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -13339,11 +13347,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1954753: () => {
+  1955665: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1954821: ($0, $1, $2, $3) => {
+  1955733: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13384,7 +13392,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1956473: ($0, $1, $2, $3) => {
+  1957385: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -13396,7 +13404,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1956883: ($0, $1) => {
+  1957795: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -13415,7 +13423,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1957488: ($0, $1) => {
+  1958400: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -13428,7 +13436,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1957968: $0 => {
+  1958880: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13466,7 +13474,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1959140: ($0, $1, $2) => {
+  1960052: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -13537,7 +13545,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1960609: ($0, $1, $2, $3, $4) => {
+  1961521: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -13574,19 +13582,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1961598: $0 => {
+  1962510: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1961681: () => {
+  1962593: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1961750: () => window.innerWidth,
-  1961780: () => window.innerHeight,
-  1961811: $0 => {
+  1962662: () => window.innerWidth,
+  1962692: () => window.innerHeight,
+  1962723: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
