@@ -70,6 +70,7 @@ var class_urho3_d_1_1_j_s_o_n_value =
     [ "operator[]", "class_urho3_d_1_1_j_s_o_n_value.html#ad94fc99b7d23c01aeffe0b37ef997be4", null ],
     [ "Pop", "class_urho3_d_1_1_j_s_o_n_value.html#ac3ea500b15c728aea30078a1a5d75b6a", null ],
     [ "Push", "class_urho3_d_1_1_j_s_o_n_value.html#a05a607c60d090aec83db50153dcfde24", null ],
+    [ "ReplaceRecursively", "class_urho3_d_1_1_j_s_o_n_value.html#a4655ed48956c8624c22324f4386a5397", null ],
     [ "Resize", "class_urho3_d_1_1_j_s_o_n_value.html#a2ebc810578b6792c7af450fb56725f21", null ],
     [ "Set", "class_urho3_d_1_1_j_s_o_n_value.html#a7968ce7e258786cd6ea36e29578bde77", null ],
     [ "SetStringVariantMap", "class_urho3_d_1_1_j_s_o_n_value.html#ac404887f4ded8d1cf99481fe6fb54bc3", null ],

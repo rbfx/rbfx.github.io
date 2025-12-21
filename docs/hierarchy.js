@@ -176,6 +176,10 @@ var hierarchy =
     [ "Urho3D::AutoExposurePass::CachedTextures", "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html", null ],
     [ "Urho3D::CachedUIBatchState", "struct_urho3_d_1_1_cached_u_i_batch_state.html", null ],
     [ "Urho3D::Camera::CachedViewProj", "struct_urho3_d_1_1_camera_1_1_cached_view_proj.html", null ],
+    [ "Urho3D::CalculateAnimationVelocityParams", "struct_urho3_d_1_1_calculate_animation_velocity_params.html", [
+      [ "Urho3D::CalculateAnimationVelocityTransformer::TaskDescription", "struct_urho3_d_1_1_calculate_animation_velocity_transformer_1_1_task_description.html", null ]
+    ] ],
+    [ "Urho3D::CalculateAnimationVelocityTask", "struct_urho3_d_1_1_calculate_animation_velocity_task.html", null ],
     [ "Urho3D::CascadeParameters", "struct_urho3_d_1_1_cascade_parameters.html", null ],
     [ "Urho3D::ParticleGraphNodes::CastInstance< Value0, Value1 >", "struct_urho3_d_1_1_particle_graph_nodes_1_1_cast_instance.html", null ],
     [ "Urho3D::Color::ChannelMask", "struct_urho3_d_1_1_color_1_1_channel_mask.html", null ],
@@ -306,7 +310,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "Urho3D::OpenXR::ExtensionFeatures", "struct_urho3_d_1_1_open_x_r_1_1_extension_features.html", null ],
-    [ "Urho3D::AnimationVelocityExtractor::ExtractedTrackSet", "struct_urho3_d_1_1_animation_velocity_extractor_1_1_extracted_track_set.html", null ],
     [ "ea::false_type", null, [
       [ "Urho3D::TupleHasType< T, ea::tuple<> >", "struct_urho3_d_1_1_tuple_has_type_3_01_t_00_01ea_1_1tuple_3_4_01_4.html", null ]
     ] ],
@@ -336,6 +339,10 @@ var hierarchy =
     [ "Urho3D::FrameStatistics", "struct_urho3_d_1_1_frame_statistics.html", null ],
     [ "Urho3D::Frustum", "class_urho3_d_1_1_frustum.html", null ],
     [ "Urho3D::GCHandleRef", "class_urho3_d_1_1_g_c_handle_ref.html", null ],
+    [ "Urho3D::GenerateWorldSpaceTracksParams", "struct_urho3_d_1_1_generate_world_space_tracks_params.html", [
+      [ "Urho3D::GenerateWorldSpaceTracksTransformer::TaskDescription", "struct_urho3_d_1_1_generate_world_space_tracks_transformer_1_1_task_description.html", null ]
+    ] ],
+    [ "Urho3D::GenerateWorldSpaceTracksTask", "struct_urho3_d_1_1_generate_world_space_tracks_task.html", null ],
     [ "Urho3D::GeometryBatch", "struct_urho3_d_1_1_geometry_batch.html", null ],
     [ "Urho3D::GeometryBufferPreprocessSettings", "struct_urho3_d_1_1_geometry_buffer_preprocess_settings.html", null ],
     [ "Urho3D::GeometryDesc", "struct_urho3_d_1_1_geometry_desc.html", null ],
@@ -746,6 +753,7 @@ var hierarchy =
     [ "Urho3D::ParticleGraphReader", "class_urho3_d_1_1_particle_graph_reader.html", null ],
     [ "Urho3D::ParticleGraphSpan", "struct_urho3_d_1_1_particle_graph_span.html", null ],
     [ "Urho3D::ParticleGraphWriter", "class_urho3_d_1_1_particle_graph_writer.html", null ],
+    [ "Urho3D::BaseAssetPostTransformer::PatternMatch", "struct_urho3_d_1_1_base_asset_post_transformer_1_1_pattern_match.html", null ],
     [ "Urho3D::ClockSynchronizer::PendingPing", "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_ping.html", null ],
     [ "Urho3D::ClockSynchronizer::PendingPong", "struct_urho3_d_1_1_clock_synchronizer_1_1_pending_pong.html", null ],
     [ "Urho3D::PerlinNoise", "class_urho3_d_1_1_perlin_noise.html", null ],
@@ -1126,9 +1134,11 @@ var hierarchy =
             ] ]
           ] ],
           [ "Urho3D::AssetTransformer", "class_urho3_d_1_1_asset_transformer.html", [
-            [ "Urho3D::AnimationVelocityExtractor", "class_urho3_d_1_1_animation_velocity_extractor.html", null ],
-            [ "Urho3D::IKTargetExtractor", "class_urho3_d_1_1_i_k_target_extractor.html", null ],
-            [ "Urho3D::RetargetAnimationsTransformer", "class_urho3_d_1_1_retarget_animations_transformer.html", null ]
+            [ "Urho3D::BaseAssetPostTransformer", "class_urho3_d_1_1_base_asset_post_transformer.html", [
+              [ "Urho3D::CalculateAnimationVelocityTransformer", "class_urho3_d_1_1_calculate_animation_velocity_transformer.html", null ],
+              [ "Urho3D::GenerateWorldSpaceTracksTransformer", "class_urho3_d_1_1_generate_world_space_tracks_transformer.html", null ],
+              [ "Urho3D::RetargetAnimationsTransformer", "class_urho3_d_1_1_retarget_animations_transformer.html", null ]
+            ] ]
           ] ],
           [ "Urho3D::Component", "class_urho3_d_1_1_component.html", [
             [ "Urho3D::AnimationStateSource", "class_urho3_d_1_1_animation_state_source.html", [
@@ -1495,8 +1505,8 @@ var hierarchy =
       [ "Urho3D::SharedPtr< Urho3D::IndexBuffer >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::Texture >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< PipelineState >", "class_urho3_d_1_1_shared_ptr.html", null ],
-      [ "Urho3D::SharedPtr< Urho3D::SceneUpdateSynchronizer >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::Model >", "class_urho3_d_1_1_shared_ptr.html", null ],
+      [ "Urho3D::SharedPtr< Urho3D::SceneUpdateSynchronizer >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::CollisionGeometryData >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::NetworkConnection >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::RenderPipeline >", "class_urho3_d_1_1_shared_ptr.html", null ],
@@ -1861,6 +1871,8 @@ var hierarchy =
       [ "Urho3D::AnimationKeyFrame", "struct_urho3_d_1_1_animation_key_frame.html", null ]
     ] ],
     [ "Urho3D::TransformedSpan< SourceType, DestinationType, Function >", "class_urho3_d_1_1_transformed_span.html", null ],
+    [ "Urho3D::CalculateAnimationVelocityTransformer::TransformerParams", "struct_urho3_d_1_1_calculate_animation_velocity_transformer_1_1_transformer_params.html", null ],
+    [ "Urho3D::GenerateWorldSpaceTracksTransformer::TransformerParams", "struct_urho3_d_1_1_generate_world_space_tracks_transformer_1_1_transformer_params.html", null ],
     [ "Urho3D::RetargetAnimationsTransformer::TransformerParams", "struct_urho3_d_1_1_retarget_animations_transformer_1_1_transformer_params.html", null ],
     [ "Urho3D::TransformGizmo", "class_urho3_d_1_1_transform_gizmo.html", null ],
     [ "Urho3D::TransformNodesGizmo", "class_urho3_d_1_1_transform_nodes_gizmo.html", null ],

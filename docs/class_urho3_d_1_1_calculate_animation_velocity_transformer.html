@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rebel Fork Framework: Urho3D::IKTargetExtractor Class Reference</title>
+<title>Rebel Fork Framework: Urho3D::CalculateAnimationVelocityTransformer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,53 +55,70 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('class_urho3_d_1_1_i_k_target_extractor.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('class_urho3_d_1_1_calculate_animation_velocity_transformer.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="class_urho3_d_1_1_i_k_target_extractor-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Urho3D::IKTargetExtractor Class Reference</div></div>
+<a href="class_urho3_d_1_1_calculate_animation_velocity_transformer-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Urho3D::CalculateAnimationVelocityTransformer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Asset transformer that extracts IK targets from the animation.  
- <a href="class_urho3_d_1_1_i_k_target_extractor.html#details">More...</a></p>
+<p>Asset transformer that extracts velocity from movement animations.  
+ <a href="class_urho3_d_1_1_calculate_animation_velocity_transformer.html#details">More...</a></p>
 
-<p><code>#include &lt;Urho3D/IK/IKTargetExtractor.h&gt;</code></p>
+<p><code>#include &lt;Urho3D/Utility/CalculateAnimationVelocityTransformer.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::IKTargetExtractor:</div>
+Inheritance diagram for Urho3D::CalculateAnimationVelocityTransformer:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_urho3_d_1_1_i_k_target_extractor.png" usemap="#Urho3D::IKTargetExtractor_map" alt=""/>
-  <map id="Urho3D::IKTargetExtractor_map" name="Urho3D::IKTargetExtractor_map">
-<area href="class_urho3_d_1_1_asset_transformer.html" alt="Urho3D::AssetTransformer" shape="rect" coords="0,168,161,192"/>
-<area href="class_urho3_d_1_1_serializable.html" title="Base class for objects with automatic serialization through attributes." alt="Urho3D::Serializable" shape="rect" coords="0,112,161,136"/>
-<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="0,56,161,80"/>
-<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="0,0,161,24"/>
+  <img src="class_urho3_d_1_1_calculate_animation_velocity_transformer.png" usemap="#Urho3D::CalculateAnimationVelocityTransformer_map" alt=""/>
+  <map id="Urho3D::CalculateAnimationVelocityTransformer_map" name="Urho3D::CalculateAnimationVelocityTransformer_map">
+<area href="class_urho3_d_1_1_base_asset_post_transformer.html" title="Base class for post-transformers." alt="Urho3D::BaseAssetPostTransformer" shape="rect" coords="0,224,284,248"/>
+<area href="class_urho3_d_1_1_asset_transformer.html" alt="Urho3D::AssetTransformer" shape="rect" coords="0,168,284,192"/>
+<area href="class_urho3_d_1_1_serializable.html" title="Base class for objects with automatic serialization through attributes." alt="Urho3D::Serializable" shape="rect" coords="0,112,284,136"/>
+<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="0,56,284,80"/>
+<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="0,0,284,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_calculate_animation_velocity_transformer_1_1_task_description.html">TaskDescription</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_calculate_animation_velocity_transformer_1_1_transformer_params.html">TransformerParams</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab7fe47dd403f0a67027492f991a11998" id="r_ab7fe47dd403f0a67027492f991a11998"><td class="memItemLeft" align="right" valign="top"><a id="ab7fe47dd403f0a67027492f991a11998" name="ab7fe47dd403f0a67027492f991a11998"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>IKTargetExtractor</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
-<tr class="separator:ab7fe47dd403f0a67027492f991a11998"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f57dfd2a6878a3f79aa61a4aaa07acd" id="r_a2f57dfd2a6878a3f79aa61a4aaa07acd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_k_target_extractor.html#a2f57dfd2a6878a3f79aa61a4aaa07acd">IsApplicable</a> (const <a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html">AssetTransformerInput</a> &amp;input) override</td></tr>
-<tr class="memdesc:a2f57dfd2a6878a3f79aa61a4aaa07acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the transformer can be applied to the given asset. Should be as fast as possible.  <br /></td></tr>
-<tr class="separator:a2f57dfd2a6878a3f79aa61a4aaa07acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8971b2d4c602d9025a34f9e577818957" id="r_a8971b2d4c602d9025a34f9e577818957"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_k_target_extractor.html#a8971b2d4c602d9025a34f9e577818957">Execute</a> (const <a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html">AssetTransformerInput</a> &amp;input, <a class="el" href="struct_urho3_d_1_1_asset_transformer_output.html">AssetTransformerOutput</a> &amp;output, const AssetTransformerVector &amp;transformers) override</td></tr>
-<tr class="memdesc:a8971b2d4c602d9025a34f9e577818957"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute this transformer on the asset. Return true if any action was performed.  <br /></td></tr>
-<tr class="separator:a8971b2d4c602d9025a34f9e577818957"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acab5a21eb2150f4f4980142dcaf5eea2" id="r_acab5a21eb2150f4f4980142dcaf5eea2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_k_target_extractor.html#acab5a21eb2150f4f4980142dcaf5eea2">IsExecutedOnOutput</a> () override</td></tr>
-<tr class="memdesc:acab5a21eb2150f4f4980142dcaf5eea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether to execute this transformer on the output of the other transformer.  <br /></td></tr>
-<tr class="separator:acab5a21eb2150f4f4980142dcaf5eea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb6133d5d907b23e1f21caa08cdc5d5b" id="r_acb6133d5d907b23e1f21caa08cdc5d5b"><td class="memItemLeft" align="right" valign="top"><a id="acb6133d5d907b23e1f21caa08cdc5d5b" name="acb6133d5d907b23e1f21caa08cdc5d5b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateAnimationVelocityTransformer</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
+<tr class="separator:acb6133d5d907b23e1f21caa08cdc5d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af022af49da5e131f594412f5e58e9eaf" id="r_af022af49da5e131f594412f5e58e9eaf"><td class="memItemLeft" align="right" valign="top"><a id="af022af49da5e131f594412f5e58e9eaf" name="af022af49da5e131f594412f5e58e9eaf"></a>
+ea::optional&lt; <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateVelocity</b> (const <a class="el" href="struct_urho3_d_1_1_calculate_animation_velocity_task.html">CalculateAnimationVelocityTask</a> &amp;task) const</td></tr>
+<tr class="separator:af022af49da5e131f594412f5e58e9eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:afeee1684073bdd5a523e2ff57fc527ac" id="r_afeee1684073bdd5a523e2ff57fc527ac"><td class="memItemLeft" align="right" valign="top">ea::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_calculate_animation_velocity_transformer.html#afeee1684073bdd5a523e2ff57fc527ac">GetParametersFileName</a> () const override</td></tr>
+<tr class="separator:afeee1684073bdd5a523e2ff57fc527ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ad28ed819fdf09f6da32a2833cb195" id="r_ad6ad28ed819fdf09f6da32a2833cb195"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_calculate_animation_velocity_transformer.html#ad6ad28ed819fdf09f6da32a2833cb195">Execute</a> (const <a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html">AssetTransformerInput</a> &amp;input, <a class="el" href="struct_urho3_d_1_1_asset_transformer_output.html">AssetTransformerOutput</a> &amp;output, const AssetTransformerVector &amp;transformers) override</td></tr>
+<tr class="memdesc:ad6ad28ed819fdf09f6da32a2833cb195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute this transformer on the asset. Return true if any action was performed.  <br /></td></tr>
+<tr class="separator:ad6ad28ed819fdf09f6da32a2833cb195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_urho3_d_1_1_base_asset_post_transformer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_base_asset_post_transformer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_base_asset_post_transformer.html">Urho3D::BaseAssetPostTransformer</a></td></tr>
+<tr class="memitem:aa4a75ae130fcc6d1b1654bbb6df3e7b7 inherit pub_methods_class_urho3_d_1_1_base_asset_post_transformer" id="r_aa4a75ae130fcc6d1b1654bbb6df3e7b7"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>AssetTransformer</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
+<tr class="separator:aa4a75ae130fcc6d1b1654bbb6df3e7b7 inherit pub_methods_class_urho3_d_1_1_base_asset_post_transformer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaf555c2e583cf81b5e7e72b5d586c51 inherit pub_methods_class_urho3_d_1_1_base_asset_post_transformer" id="r_aaaf555c2e583cf81b5e7e72b5d586c51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_base_asset_post_transformer.html#aaaf555c2e583cf81b5e7e72b5d586c51">IsApplicable</a> (const <a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html">AssetTransformerInput</a> &amp;input) override</td></tr>
+<tr class="separator:aaaf555c2e583cf81b5e7e72b5d586c51 inherit pub_methods_class_urho3_d_1_1_base_asset_post_transformer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4f195960a1533d670b8d8e501795e1 inherit pub_methods_class_urho3_d_1_1_base_asset_post_transformer" id="r_aef4f195960a1533d670b8d8e501795e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_base_asset_post_transformer.html#aef4f195960a1533d670b8d8e501795e1">IsPostTransform</a> () override</td></tr>
+<tr class="memdesc:aef4f195960a1533d670b8d8e501795e1 inherit pub_methods_class_urho3_d_1_1_base_asset_post_transformer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether this transformer should be executed in post-processing pass.  <br /></td></tr>
+<tr class="separator:aef4f195960a1533d670b8d8e501795e1 inherit pub_methods_class_urho3_d_1_1_base_asset_post_transformer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_asset_transformer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_asset_transformer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_asset_transformer.html">Urho3D::AssetTransformer</a></td></tr>
 <tr class="memitem:aa4a75ae130fcc6d1b1654bbb6df3e7b7 inherit pub_methods_class_urho3_d_1_1_asset_transformer" id="r_aa4a75ae130fcc6d1b1654bbb6df3e7b7"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>AssetTransformer</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -110,9 +127,10 @@ Public Member Functions</h2></td></tr>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsSingleInstanced</b> ()</td></tr>
 <tr class="memdesc:a4682d395472ac18f7b9b28ea74d4179e inherit pub_methods_class_urho3_d_1_1_asset_transformer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the importer of this type should be invoked at most once. <br /></td></tr>
 <tr class="separator:a4682d395472ac18f7b9b28ea74d4179e inherit pub_methods_class_urho3_d_1_1_asset_transformer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a562ad8802d2b9e6e3d4b8c598127731c inherit pub_methods_class_urho3_d_1_1_asset_transformer" id="r_a562ad8802d2b9e6e3d4b8c598127731c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_asset_transformer.html#a562ad8802d2b9e6e3d4b8c598127731c">IsPostTransform</a> ()</td></tr>
-<tr class="memdesc:a562ad8802d2b9e6e3d4b8c598127731c inherit pub_methods_class_urho3_d_1_1_asset_transformer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether this transformer should be executed in post-processing pass.  <br /></td></tr>
-<tr class="separator:a562ad8802d2b9e6e3d4b8c598127731c inherit pub_methods_class_urho3_d_1_1_asset_transformer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad237cb0679137db5bea30d54a2c0226 inherit pub_methods_class_urho3_d_1_1_asset_transformer" id="r_aad237cb0679137db5bea30d54a2c0226"><td class="memItemLeft" align="right" valign="top">
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsExecutedOnOutput</b> ()</td></tr>
+<tr class="memdesc:aad237cb0679137db5bea30d54a2c0226 inherit pub_methods_class_urho3_d_1_1_asset_transformer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether to execute this transformer on the output of the other transformer. <br /></td></tr>
+<tr class="separator:aad237cb0679137db5bea30d54a2c0226 inherit pub_methods_class_urho3_d_1_1_asset_transformer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeedc4118801183619c84c17f9738555f inherit pub_methods_class_urho3_d_1_1_asset_transformer" id="r_aeedc4118801183619c84c17f9738555f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_asset_transformer.html#aeedc4118801183619c84c17f9738555f">SetFlavor</a> (const <a class="el" href="struct_urho3_d_1_1_application_flavor_pattern.html">ApplicationFlavorPattern</a> &amp;value)</td></tr>
 <tr class="separator:aeedc4118801183619c84c17f9738555f inherit pub_methods_class_urho3_d_1_1_asset_transformer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0de4c7bd940376c82369daa23d6d008 inherit pub_methods_class_urho3_d_1_1_asset_transformer" id="r_ac0de4c7bd940376c82369daa23d6d008"><td class="memItemLeft" align="right" valign="top">
@@ -433,9 +451,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsScriptStrongRef</b>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a373d20c6698303e62a9cba752fbde4b8" id="r_a373d20c6698303e62a9cba752fbde4b8"><td class="memItemLeft" align="right" valign="top"><a id="a373d20c6698303e62a9cba752fbde4b8" name="a373d20c6698303e62a9cba752fbde4b8"></a>
+<tr class="memitem:a49b5fda767a8cf5edebfdfa7357b2988" id="r_a49b5fda767a8cf5edebfdfa7357b2988"><td class="memItemLeft" align="right" valign="top"><a id="a49b5fda767a8cf5edebfdfa7357b2988" name="a49b5fda767a8cf5edebfdfa7357b2988"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterObject</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
-<tr class="separator:a373d20c6698303e62a9cba752fbde4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a49b5fda767a8cf5edebfdfa7357b2988"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_urho3_d_1_1_asset_transformer"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_urho3_d_1_1_asset_transformer')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_asset_transformer.html">Urho3D::AssetTransformer</a></td></tr>
 <tr class="memitem:a725fbca219d5cf68ee11b9147170ddd2 inherit pub_static_methods_class_urho3_d_1_1_asset_transformer" id="r_a725fbca219d5cf68ee11b9147170ddd2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_asset_transformer.html#a725fbca219d5cf68ee11b9147170ddd2">IsApplicable</a> (const <a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html">AssetTransformerInput</a> &amp;input, const AssetTransformerVector &amp;transformers)</td></tr>
 <tr class="separator:a725fbca219d5cf68ee11b9147170ddd2 inherit pub_static_methods_class_urho3_d_1_1_asset_transformer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -455,54 +473,35 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a756907629f5e40f5c688c4e98121d3a5" id="r_a756907629f5e40f5c688c4e98121d3a5"><td class="memItemLeft" align="right" valign="top"><a id="a756907629f5e40f5c688c4e98121d3a5" name="a756907629f5e40f5c688c4e98121d3a5"></a>
-static const ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>DefaultNewFileName</b> = &quot;*_Targets.ani&quot;</td></tr>
-<tr class="separator:a756907629f5e40f5c688c4e98121d3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad083f9ba83e03f6216f98c6ebfcd7685" id="r_ad083f9ba83e03f6216f98c6ebfcd7685"><td class="memItemLeft" align="right" valign="top"><a id="ad083f9ba83e03f6216f98c6ebfcd7685" name="ad083f9ba83e03f6216f98c6ebfcd7685"></a>
+static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><b>DefaultThreshold</b> = 0.005f</td></tr>
+<tr class="separator:ad083f9ba83e03f6216f98c6ebfcd7685"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object" id="r_a745a18b8e99bf855379e72aac5d544ab"><td class="memItemLeft" align="right" valign="top">static constexpr ea::array&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a745a18b8e99bf855379e72aac5d544ab">TypeHierarchy</a> {}</td></tr>
 <tr class="separator:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a4ae35c0534b957bd3de939ae6a479eb8" id="r_a4ae35c0534b957bd3de939ae6a479eb8"><td class="memItemLeft" align="right" valign="top"><a id="a4ae35c0534b957bd3de939ae6a479eb8" name="a4ae35c0534b957bd3de939ae6a479eb8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_i_k_target_extractor.html">IKTargetExtractor</a>, <a class="el" href="class_urho3_d_1_1_asset_transformer.html">AssetTransformer</a>)</td></tr>
-<tr class="separator:a4ae35c0534b957bd3de939ae6a479eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0512e19d3a178978c917ac7060a0ddd9" id="r_a0512e19d3a178978c917ac7060a0ddd9"><td class="memItemLeft" align="right" valign="top"><a id="a0512e19d3a178978c917ac7060a0ddd9" name="a0512e19d3a178978c917ac7060a0ddd9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ExtractAnimation</b> (<a class="el" href="class_urho3_d_1_1_animation.html">Animation</a> *sourceAnimation, <a class="el" href="class_urho3_d_1_1_animation.html">Animation</a> *destAnimation, <a class="el" href="class_urho3_d_1_1_model.html">Model</a> *model) const</td></tr>
-<tr class="separator:a0512e19d3a178978c917ac7060a0ddd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e853ca8fbf32f0ed7f0272fb0412460" id="r_a9e853ca8fbf32f0ed7f0272fb0412460"><td class="memItemLeft" align="right" valign="top"><a id="a9e853ca8fbf32f0ed7f0272fb0412460" name="a9e853ca8fbf32f0ed7f0272fb0412460"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetNewFileName</b> (const ea::string &amp;fileName) const</td></tr>
-<tr class="separator:a9e853ca8fbf32f0ed7f0272fb0412460"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a2e846660447fd0f269298899df04d9" id="r_a2a2e846660447fd0f269298899df04d9"><td class="memItemLeft" align="right" valign="top"><a id="a2a2e846660447fd0f269298899df04d9" name="a2a2e846660447fd0f269298899df04d9"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetModelName</b> (<a class="el" href="class_urho3_d_1_1_animation.html">Animation</a> *sourceAnimation) const</td></tr>
-<tr class="separator:a2a2e846660447fd0f269298899df04d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a5aa33a385df9034894f6d2c03d7910e3" id="r_a5aa33a385df9034894f6d2c03d7910e3"><td class="memItemLeft" align="right" valign="top"><a id="a5aa33a385df9034894f6d2c03d7910e3" name="a5aa33a385df9034894f6d2c03d7910e3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>extractRotations_</b> {true}</td></tr>
-<tr class="separator:a5aa33a385df9034894f6d2c03d7910e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0e3e3ef50a7ffa0ba3a62dcb825cf83" id="r_ae0e3e3ef50a7ffa0ba3a62dcb825cf83"><td class="memItemLeft" align="right" valign="top"><a id="ae0e3e3ef50a7ffa0ba3a62dcb825cf83" name="ae0e3e3ef50a7ffa0ba3a62dcb825cf83"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>sampleRate_</b> {0.0f}</td></tr>
-<tr class="separator:ae0e3e3ef50a7ffa0ba3a62dcb825cf83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab436328a1119c7e980af496215983caf" id="r_ab436328a1119c7e980af496215983caf"><td class="memItemLeft" align="right" valign="top"><a id="ab436328a1119c7e980af496215983caf" name="ab436328a1119c7e980af496215983caf"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>extractToExistingFile_</b> {true}</td></tr>
-<tr class="separator:ab436328a1119c7e980af496215983caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bc57547f9925f4df4305838b642ae18" id="r_a9bc57547f9925f4df4305838b642ae18"><td class="memItemLeft" align="right" valign="top"><a id="a9bc57547f9925f4df4305838b642ae18" name="a9bc57547f9925f4df4305838b642ae18"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>extractToNewFile_</b> {true}</td></tr>
-<tr class="separator:a9bc57547f9925f4df4305838b642ae18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab00e48a3337b76beeb8a1d4926aeece8" id="r_ab00e48a3337b76beeb8a1d4926aeece8"><td class="memItemLeft" align="right" valign="top"><a id="ab00e48a3337b76beeb8a1d4926aeece8" name="ab00e48a3337b76beeb8a1d4926aeece8"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>newFileName_</b> {DefaultNewFileName}</td></tr>
-<tr class="separator:ab00e48a3337b76beeb8a1d4926aeece8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a847abcf01f2ea293c7e306fc52179dc4" id="r_a847abcf01f2ea293c7e306fc52179dc4"><td class="memItemLeft" align="right" valign="top"><a id="a847abcf01f2ea293c7e306fc52179dc4" name="a847abcf01f2ea293c7e306fc52179dc4"></a>
-<a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>skeletonModel_</b> {Model::GetTypeStatic()}</td></tr>
-<tr class="separator:a847abcf01f2ea293c7e306fc52179dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67a4ad26039f05eeed4b331b6f2d98f6" id="r_a67a4ad26039f05eeed4b331b6f2d98f6"><td class="memItemLeft" align="right" valign="top"><a id="a67a4ad26039f05eeed4b331b6f2d98f6" name="a67a4ad26039f05eeed4b331b6f2d98f6"></a>
-<a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bendTargets_</b></td></tr>
-<tr class="separator:a67a4ad26039f05eeed4b331b6f2d98f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71944f6d07a3736da1feb87adc8fa276" id="r_a71944f6d07a3736da1feb87adc8fa276"><td class="memItemLeft" align="right" valign="top"><a id="a71944f6d07a3736da1feb87adc8fa276" name="a71944f6d07a3736da1feb87adc8fa276"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_calculate_animation_velocity_transformer.html">CalculateAnimationVelocityTransformer</a>, <a class="el" href="class_urho3_d_1_1_base_asset_post_transformer.html">BaseAssetPostTransformer</a>)</td></tr>
+<tr class="separator:a71944f6d07a3736da1feb87adc8fa276"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_class_urho3_d_1_1_base_asset_post_transformer"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_base_asset_post_transformer')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_base_asset_post_transformer.html">Urho3D::BaseAssetPostTransformer</a></td></tr>
+<tr class="memitem:ac2a838d76e89314a7dea200374ae4340 inherit pro_methods_class_urho3_d_1_1_base_asset_post_transformer" id="r_ac2a838d76e89314a7dea200374ae4340"><td class="memTemplParams" colspan="2">
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ac2a838d76e89314a7dea200374ae4340 inherit pro_methods_class_urho3_d_1_1_base_asset_post_transformer"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>LoadParameters</b> (const ea::string &amp;fileName) const</td></tr>
+<tr class="memdesc:ac2a838d76e89314a7dea200374ae4340 inherit pro_methods_class_urho3_d_1_1_base_asset_post_transformer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load parameters from file. <br /></td></tr>
+<tr class="separator:ac2a838d76e89314a7dea200374ae4340 inherit pro_methods_class_urho3_d_1_1_base_asset_post_transformer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8658e143acd2e8e29da5a99911de82e3 inherit pro_methods_class_urho3_d_1_1_base_asset_post_transformer" id="r_a8658e143acd2e8e29da5a99911de82e3"><td class="memItemLeft" align="right" valign="top">
+ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_base_asset_post_transformer_1_1_pattern_match.html">PatternMatch</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetResourcesByPattern</b> (const ea::string &amp;baseResourceName, const ea::string &amp;fileNamePattern) const</td></tr>
+<tr class="memdesc:a8658e143acd2e8e29da5a99911de82e3 inherit pro_methods_class_urho3_d_1_1_base_asset_post_transformer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return files in resource directory that match the template. <br /></td></tr>
+<tr class="separator:a8658e143acd2e8e29da5a99911de82e3 inherit pro_methods_class_urho3_d_1_1_base_asset_post_transformer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a863362c7870b27d463c0ce7f184cb003 inherit pro_methods_class_urho3_d_1_1_base_asset_post_transformer" id="r_a863362c7870b27d463c0ce7f184cb003"><td class="memItemLeft" align="right" valign="top">
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetMatchFileName</b> (const ea::string &amp;fileNameTemplate, const <a class="el" href="struct_urho3_d_1_1_base_asset_post_transformer_1_1_pattern_match.html">PatternMatch</a> &amp;match) const</td></tr>
+<tr class="memdesc:a863362c7870b27d463c0ce7f184cb003 inherit pro_methods_class_urho3_d_1_1_base_asset_post_transformer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return file name for template match. <br /></td></tr>
+<tr class="separator:a863362c7870b27d463c0ce7f184cb003 inherit pro_methods_class_urho3_d_1_1_base_asset_post_transformer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_urho3_d_1_1_asset_transformer"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_asset_transformer')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_asset_transformer.html">Urho3D::AssetTransformer</a></td></tr>
 <tr class="memitem:a2a057cfd693a3b2fec9d7c44d1818325 inherit pro_methods_class_urho3_d_1_1_asset_transformer" id="r_a2a057cfd693a3b2fec9d7c44d1818325"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>AddDependency</b> (const <a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html">AssetTransformerInput</a> &amp;input, <a class="el" href="struct_urho3_d_1_1_asset_transformer_output.html">AssetTransformerOutput</a> &amp;output, const ea::string &amp;fileName) const</td></tr>
@@ -528,10 +527,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 <tr class="separator:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Asset transformer that extracts IK targets from the animation. </p>
+<div class="textblock"><p>Asset transformer that extracts velocity from movement animations. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8971b2d4c602d9025a34f9e577818957" name="a8971b2d4c602d9025a34f9e577818957"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8971b2d4c602d9025a34f9e577818957">&#9670;&#160;</a></span>Execute()</h2>
+<a id="ad6ad28ed819fdf09f6da32a2833cb195" name="ad6ad28ed819fdf09f6da32a2833cb195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ad28ed819fdf09f6da32a2833cb195">&#9670;&#160;</a></span>Execute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -540,7 +539,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Urho3D::IKTargetExtractor::Execute </td>
+          <td class="memname">bool Urho3D::CalculateAnimationVelocityTransformer::Execute </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html">AssetTransformerInput</a> &amp;&#160;</td>
           <td class="paramname"><em>input</em>, </td>
@@ -576,8 +575,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 
 </div>
 </div>
-<a id="a2f57dfd2a6878a3f79aa61a4aaa07acd" name="a2f57dfd2a6878a3f79aa61a4aaa07acd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f57dfd2a6878a3f79aa61a4aaa07acd">&#9670;&#160;</a></span>IsApplicable()</h2>
+<a id="afeee1684073bdd5a523e2ff57fc527ac" name="afeee1684073bdd5a523e2ff57fc527ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeee1684073bdd5a523e2ff57fc527ac">&#9670;&#160;</a></span>GetParametersFileName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -586,40 +585,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Urho3D::IKTargetExtractor::IsApplicable </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_asset_transformer_input.html">AssetTransformerInput</a> &amp;&#160;</td>
-          <td class="paramname"><em>input</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return whether the transformer can be applied to the given asset. Should be as fast as possible. </p>
-
-<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_asset_transformer.html#ac84c3040ac92bb83a2eabe86d0681c7d">Urho3D::AssetTransformer</a>.</p>
-
-</div>
-</div>
-<a id="acab5a21eb2150f4f4980142dcaf5eea2" name="acab5a21eb2150f4f4980142dcaf5eea2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acab5a21eb2150f4f4980142dcaf5eea2">&#9670;&#160;</a></span>IsExecutedOnOutput()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Urho3D::IKTargetExtractor::IsExecutedOnOutput </td>
+          <td class="memname">ea::string_view Urho3D::CalculateAnimationVelocityTransformer::GetParametersFileName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -628,23 +597,22 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Implement <a class="el" href="class_urho3_d_1_1_base_asset_post_transformer.html" title="Base class for post-transformers.">BaseAssetPostTransformer</a>. </p>
 
-<p>Return whether to execute this transformer on the output of the other transformer. </p>
-
-<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_asset_transformer.html#aad237cb0679137db5bea30d54a2c0226">Urho3D::AssetTransformer</a>.</p>
+<p>Implements <a class="el" href="class_urho3_d_1_1_base_asset_post_transformer.html#a5cb64ab659dfa8bd2bdd7b91aa3093b4">Urho3D::BaseAssetPostTransformer</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/IK/<b>IKTargetExtractor.h</b></li>
-<li>Urho3D/IK/<b>IKTargetExtractor.cpp</b></li>
+<li>Urho3D/Utility/<b>CalculateAnimationVelocityTransformer.h</b></li>
+<li>Urho3D/Utility/<b>CalculateAnimationVelocityTransformer.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
     <ul>
-        <li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="class_urho3_d_1_1_i_k_target_extractor.html">IKTargetExtractor</a></li>
+        <li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="class_urho3_d_1_1_calculate_animation_velocity_transformer.html">CalculateAnimationVelocityTransformer</a></li>
     </ul>
 </div>
 </body>
