@@ -1,5 +1,6 @@
 var NAVTREEINDEX61 =
 {
+"struct_urho3_d_1_1_rml_document_reloaded_args.html":[6,0,2,618],
 "struct_urho3_d_1_1_rml_document_reloaded_args.html#a7f2b571a9f800172807ee47efbfe1bcc":[6,0,2,618,0],
 "struct_urho3_d_1_1_rml_document_reloaded_args.html#aea296395c9b345125a6ca458c1caca3f":[6,0,2,618,1],
 "struct_urho3_d_1_1_scene_hierarchy_settings.html":[6,0,2,625],
@@ -248,6 +249,5 @@ var NAVTREEINDEX61 =
 "struct_urho3_d_1_1_trail_point.html#a1b8a2a7ff2a4d4c59390c04f785454f7":[6,0,2,774,8],
 "struct_urho3_d_1_1_trail_point.html#a2606bccf616806e521131b985669cb02":[6,0,2,774,5],
 "struct_urho3_d_1_1_trail_point.html#a2a2dda4b1491ce02a5136e8681fab202":[6,0,2,774,6],
-"struct_urho3_d_1_1_trail_point.html#a45c50a15c9196c61c548ecf185f00d3e":[6,0,2,774,2],
-"struct_urho3_d_1_1_trail_point.html#a551178a3d99e15f9bc4bbf507d0e6cd4":[6,0,2,774,3]
+"struct_urho3_d_1_1_trail_point.html#a45c50a15c9196c61c548ecf185f00d3e":[6,0,2,774,2]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX56 =
 {
+"struct_urho3_d_1_1_always_serialize.html":[6,0,2,14],
+"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_parameters.html":[6,0,2,15,0],
+"struct_urho3_d_1_1_ambient_occlusion_pass_1_1_parameters.html#aacb1567670f9d7e41dd17903e256bb8f":[6,0,2,15,0,0],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_pipeline_state_cache.html":[6,0,2,15,1],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_texture_cache.html":[6,0,2,15,2],
 "struct_urho3_d_1_1_animated_attribute_reference.html":[6,0,2,17],
@@ -211,14 +214,12 @@ var NAVTREEINDEX56 =
 "struct_urho3_d_1_1_calculate_animation_velocity_task.html":[6,0,2,109],
 "struct_urho3_d_1_1_calculate_animation_velocity_transformer_1_1_task_description.html":[6,0,2,110,0],
 "struct_urho3_d_1_1_calculate_animation_velocity_transformer_1_1_transformer_params.html":[6,0,2,110,1],
-"struct_urho3_d_1_1_camera_1_1_cached_projection.html":[6,0,2,111,0],
-"struct_urho3_d_1_1_camera_1_1_cached_projection.html#a0a546f7972d747b03be1532312df70b3":[6,0,2,111,0,1],
-"struct_urho3_d_1_1_camera_1_1_cached_projection.html#a1e7ca0a4c0185583edb7e6e9b717e6d9":[6,0,2,111,0,3],
-"struct_urho3_d_1_1_camera_1_1_cached_projection.html#aa8131a980b681978b0514b3aa06b5d8b":[6,0,2,111,0,0],
-"struct_urho3_d_1_1_camera_1_1_cached_projection.html#afcfd772931ab2e1aa381873badb97e7d":[6,0,2,111,0,2],
-"struct_urho3_d_1_1_camera_1_1_cached_view_proj.html":[6,0,2,111,1],
-"struct_urho3_d_1_1_camera_1_1_cached_view_proj.html#a26b133f4e3f308d24490003d7d11d397":[6,0,2,111,1,0],
-"struct_urho3_d_1_1_camera_1_1_cached_view_proj.html#a7578667a9658a05f8894f0da83e270f2":[6,0,2,111,1,1],
+"struct_urho3_d_1_1_camera_1_1_cached_inverse.html":[6,0,2,111,0],
+"struct_urho3_d_1_1_camera_1_1_cached_projection.html":[6,0,2,111,1],
+"struct_urho3_d_1_1_camera_1_1_cached_projection.html#a1e7ca0a4c0185583edb7e6e9b717e6d9":[6,0,2,111,1,3],
+"struct_urho3_d_1_1_camera_1_1_cached_projection.html#a7c8924c5651e6e90aa7e52a01d566f9c":[6,0,2,111,1,1],
+"struct_urho3_d_1_1_camera_1_1_cached_projection.html#aa8131a980b681978b0514b3aa06b5d8b":[6,0,2,111,1,0],
+"struct_urho3_d_1_1_camera_1_1_cached_projection.html#afcfd772931ab2e1aa381873badb97e7d":[6,0,2,111,1,2],
 "struct_urho3_d_1_1_cascade_parameters.html":[6,0,2,114],
 "struct_urho3_d_1_1_cascade_parameters.html#a0f8ffa3dd3f6f9213fab6b0f9477a46f":[6,0,2,114,4],
 "struct_urho3_d_1_1_cascade_parameters.html#a16f5cbad809217cbe07d366c89819aff":[6,0,2,114,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX56 =
 "struct_urho3_d_1_1_color_frame.html#a26c8b15020e9b9a3a1e1f144b8868d53":[6,0,2,136,1],
 "struct_urho3_d_1_1_color_frame.html#a41ef68e9dd336a0f6bcce4ae281b992b":[6,0,2,136,3],
 "struct_urho3_d_1_1_color_frame.html#a42c2a6850b1c33711d03a881c8bb0737":[6,0,2,136,4],
-"struct_urho3_d_1_1_color_frame.html#a9d4fede3ee02a39180d14afbb4d1bb46":[6,0,2,136,2],
-"struct_urho3_d_1_1_color_frame.html#aa3a2c5d1db34bebaf7ae9de73abc534b":[6,0,2,136,5]
+"struct_urho3_d_1_1_color_frame.html#a9d4fede3ee02a39180d14afbb4d1bb46":[6,0,2,136,2]
 };

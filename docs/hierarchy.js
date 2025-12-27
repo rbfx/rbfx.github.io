@@ -168,6 +168,9 @@ var hierarchy =
     [ "Urho3D::CachedBatchState", "struct_urho3_d_1_1_cached_batch_state.html", null ],
     [ "Urho3D::CachedDrawableReflection", "struct_urho3_d_1_1_cached_drawable_reflection.html", null ],
     [ "Urho3D::CachedDrawableZone", "struct_urho3_d_1_1_cached_drawable_zone.html", null ],
+    [ "Urho3D::Camera::CachedInverse< T >", "struct_urho3_d_1_1_camera_1_1_cached_inverse.html", null ],
+    [ "Urho3D::Camera::CachedInverse< Urho3D::Matrix3x4 >", "struct_urho3_d_1_1_camera_1_1_cached_inverse.html", null ],
+    [ "Urho3D::Camera::CachedInverse< Urho3D::Matrix4 >", "struct_urho3_d_1_1_camera_1_1_cached_inverse.html", null ],
     [ "Urho3D::LightProcessorCache::CachedLightProcessor", "struct_urho3_d_1_1_light_processor_cache_1_1_cached_light_processor.html", null ],
     [ "Urho3D::CubemapRenderer::CachedPipelineStates", "struct_urho3_d_1_1_cubemap_renderer_1_1_cached_pipeline_states.html", null ],
     [ "Urho3D::Camera::CachedProjection", "struct_urho3_d_1_1_camera_1_1_cached_projection.html", null ],
@@ -175,7 +178,6 @@ var hierarchy =
     [ "Urho3D::TextRenderer3D::CachedTextElement", "struct_urho3_d_1_1_text_renderer3_d_1_1_cached_text_element.html", null ],
     [ "Urho3D::AutoExposurePass::CachedTextures", "struct_urho3_d_1_1_auto_exposure_pass_1_1_cached_textures.html", null ],
     [ "Urho3D::CachedUIBatchState", "struct_urho3_d_1_1_cached_u_i_batch_state.html", null ],
-    [ "Urho3D::Camera::CachedViewProj", "struct_urho3_d_1_1_camera_1_1_cached_view_proj.html", null ],
     [ "Urho3D::CalculateAnimationVelocityParams", "struct_urho3_d_1_1_calculate_animation_velocity_params.html", [
       [ "Urho3D::CalculateAnimationVelocityTransformer::TaskDescription", "struct_urho3_d_1_1_calculate_animation_velocity_transformer_1_1_task_description.html", null ]
     ] ],
@@ -1844,10 +1846,10 @@ var hierarchy =
       [ "Urho3D::HttpRequest", "class_urho3_d_1_1_http_request.html", null ]
     ] ],
     [ "Urho3D::ThreadSafeCache< T >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
+    [ "Urho3D::ThreadSafeCache< Urho3D::Camera::CachedInverse< Urho3D::Matrix3x4 > >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
+    [ "Urho3D::ThreadSafeCache< Urho3D::Camera::CachedInverse< Urho3D::Matrix4 > >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
     [ "Urho3D::ThreadSafeCache< Urho3D::Camera::CachedProjection >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
-    [ "Urho3D::ThreadSafeCache< Urho3D::Camera::CachedViewProj >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
     [ "Urho3D::ThreadSafeCache< Urho3D::Frustum >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
-    [ "Urho3D::ThreadSafeCache< Urho3D::Matrix3x4 >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
     [ "Urho3D::ThreadSafeCache< Urho3D::ReflectionProbeData >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
     [ "Urho3D::ThreadSafeCache< Urho3D::SphericalHarmonicsDot9 >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
     [ "Urho3D::ThreadSafeCache< Urho3D::Vector3 >", "class_urho3_d_1_1_thread_safe_cache.html", null ],

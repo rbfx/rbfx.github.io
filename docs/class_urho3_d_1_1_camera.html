@@ -91,11 +91,10 @@ Inheritance diagram for Urho3D::Camera:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_camera_1_1_cached_inverse.html">CachedInverse</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_camera_1_1_cached_projection.html">CachedProjection</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached projection data.  <a href="struct_urho3_d_1_1_camera_1_1_cached_projection.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_urho3_d_1_1_camera_1_1_cached_view_proj.html">CachedViewProj</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached view-projection matrix.  <a href="struct_urho3_d_1_1_camera_1_1_cached_view_proj.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -225,16 +224,26 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetDrawDebugGeometry<
 <tr class="separator:abe4a8e57bae0588702c7a51637c12b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1edcc9f8a61ae07bd15bba96ee079d32" id="r_a1edcc9f8a61ae07bd15bba96ee079d32"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_frustum.html">Frustum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_camera.html#a1edcc9f8a61ae07bd15bba96ee079d32">GetFrustum</a> () const</td></tr>
 <tr class="separator:a1edcc9f8a61ae07bd15bba96ee079d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70a0f278e6633054921678ded58642bb" id="r_a70a0f278e6633054921678ded58642bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_camera.html#a70a0f278e6633054921678ded58642bb">GetProjection</a> (bool ignoreFlip=false) const</td></tr>
-<tr class="separator:a70a0f278e6633054921678ded58642bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2601f77e74f97da4587a5f3db26f3d78" id="r_a2601f77e74f97da4587a5f3db26f3d78"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_camera.html#a2601f77e74f97da4587a5f3db26f3d78">GetProjection</a> (bool ignoreFlip=false) const</td></tr>
+<tr class="separator:a2601f77e74f97da4587a5f3db26f3d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45fc185829ee4a3793d1dd178d6f2737" id="r_a45fc185829ee4a3793d1dd178d6f2737"><td class="memItemLeft" align="right" valign="top"><a id="a45fc185829ee4a3793d1dd178d6f2737" name="a45fc185829ee4a3793d1dd178d6f2737"></a>
+const <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetInverseProjection</b> (bool ignoreFlip=false) const</td></tr>
+<tr class="memdesc:a45fc185829ee4a3793d1dd178d6f2737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return inverse projection matrix. <br /></td></tr>
+<tr class="separator:a45fc185829ee4a3793d1dd178d6f2737"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ac9c1f019a00c1e9bd7ed39e7db136b" id="r_a7ac9c1f019a00c1e9bd7ed39e7db136b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_camera.html#a7ac9c1f019a00c1e9bd7ed39e7db136b">GetGPUProjection</a> (bool ignoreFlip=false) const</td></tr>
 <tr class="separator:a7ac9c1f019a00c1e9bd7ed39e7db136b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af13c472cae8590e6499aa67dd161bf45" id="r_af13c472cae8590e6499aa67dd161bf45"><td class="memItemLeft" align="right" valign="top"><a id="af13c472cae8590e6499aa67dd161bf45" name="af13c472cae8590e6499aa67dd161bf45"></a>
 <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetEffectiveGPUViewProjection</b> (float constantDepthBias) const</td></tr>
 <tr class="memdesc:af13c472cae8590e6499aa67dd161bf45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return effective view-projection matrix with optionally applied depth bias. <br /></td></tr>
 <tr class="separator:af13c472cae8590e6499aa67dd161bf45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86a2e6d78d0ac6c20e043ada2f573401" id="r_a86a2e6d78d0ac6c20e043ada2f573401"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_camera.html#a86a2e6d78d0ac6c20e043ada2f573401">GetView</a> () const</td></tr>
+<tr class="memitem:a86a2e6d78d0ac6c20e043ada2f573401" id="r_a86a2e6d78d0ac6c20e043ada2f573401"><td class="memItemLeft" align="right" valign="top"><a id="a86a2e6d78d0ac6c20e043ada2f573401" name="a86a2e6d78d0ac6c20e043ada2f573401"></a>
+const <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetView</b> () const</td></tr>
+<tr class="memdesc:a86a2e6d78d0ac6c20e043ada2f573401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return view matrix. <br /></td></tr>
 <tr class="separator:a86a2e6d78d0ac6c20e043ada2f573401"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ab97094db58977e2b17befd150ada2" id="r_a73ab97094db58977e2b17befd150ada2"><td class="memItemLeft" align="right" valign="top"><a id="a73ab97094db58977e2b17befd150ada2" name="a73ab97094db58977e2b17befd150ada2"></a>
+const <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetInverseView</b> () const</td></tr>
+<tr class="memdesc:a73ab97094db58977e2b17befd150ada2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return inverted view matrix. <br /></td></tr>
+<tr class="separator:a73ab97094db58977e2b17befd150ada2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64241ed1704c0e0bf153cc249d88aa66" id="r_a64241ed1704c0e0bf153cc249d88aa66"><td class="memItemLeft" align="right" valign="top"><a id="a64241ed1704c0e0bf153cc249d88aa66" name="a64241ed1704c0e0bf153cc249d88aa66"></a>
 const <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetViewProj</b> () const</td></tr>
 <tr class="memdesc:a64241ed1704c0e0bf153cc249d88aa66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return view-projection matrix. <br /></td></tr>
@@ -785,6 +794,10 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:ac08d817306776d53a75011f01315c5e3" id="r_ac08d817306776d53a75011f01315c5e3"><td class="memItemLeft" align="right" valign="top"><a id="ac08d817306776d53a75011f01315c5e3" name="ac08d817306776d53a75011f01315c5e3"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_camera.html">Camera</a>, <a class="el" href="class_urho3_d_1_1_component.html">Component</a>)</td></tr>
 <tr class="separator:ac08d817306776d53a75011f01315c5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52c432bfe7669ce65612cb3003a615c2" id="r_a52c432bfe7669ce65612cb3003a615c2"><td class="memItemLeft" align="right" valign="top"><a id="a52c432bfe7669ce65612cb3003a615c2" name="a52c432bfe7669ce65612cb3003a615c2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateView</b> () const</td></tr>
+<tr class="memdesc:a52c432bfe7669ce65612cb3003a615c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate view matrix. <br /></td></tr>
+<tr class="separator:a52c432bfe7669ce65612cb3003a615c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2ca83a0c0ffdede12922e6ed72b69b6" id="r_aa2ca83a0c0ffdede12922e6ed72b69b6"><td class="memItemLeft" align="right" valign="top"><a id="aa2ca83a0c0ffdede12922e6ed72b69b6" name="aa2ca83a0c0ffdede12922e6ed72b69b6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateProjection</b> () const</td></tr>
 <tr class="memdesc:aa2ca83a0c0ffdede12922e6ed72b69b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate projection matrix. <br /></td></tr>
@@ -796,18 +809,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateViewProjectionM
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:adb945ba828c86b506efe62066618416c" id="r_adb945ba828c86b506efe62066618416c"><td class="memItemLeft" align="right" valign="top"><a id="adb945ba828c86b506efe62066618416c" name="adb945ba828c86b506efe62066618416c"></a>
-<a class="el" href="class_urho3_d_1_1_thread_safe_cache.html">ThreadSafeCache</a>&lt; <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cachedView_</b></td></tr>
-<tr class="memdesc:adb945ba828c86b506efe62066618416c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached view matrix. <br /></td></tr>
-<tr class="separator:adb945ba828c86b506efe62066618416c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90473fd2c3f5c838aff9769e2a159455" id="r_a90473fd2c3f5c838aff9769e2a159455"><td class="memItemLeft" align="right" valign="top"><a id="a90473fd2c3f5c838aff9769e2a159455" name="a90473fd2c3f5c838aff9769e2a159455"></a>
+<a class="el" href="class_urho3_d_1_1_thread_safe_cache.html">ThreadSafeCache</a>&lt; <a class="el" href="struct_urho3_d_1_1_camera_1_1_cached_inverse.html">CachedInverse</a>&lt; <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cachedView_</b></td></tr>
+<tr class="memdesc:a90473fd2c3f5c838aff9769e2a159455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached view matrix. <br /></td></tr>
+<tr class="separator:a90473fd2c3f5c838aff9769e2a159455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44d60ea89d864468723f3f75f044c958" id="r_a44d60ea89d864468723f3f75f044c958"><td class="memItemLeft" align="right" valign="top"><a id="a44d60ea89d864468723f3f75f044c958" name="a44d60ea89d864468723f3f75f044c958"></a>
 <a class="el" href="class_urho3_d_1_1_thread_safe_cache.html">ThreadSafeCache</a>&lt; <a class="el" href="struct_urho3_d_1_1_camera_1_1_cached_projection.html">CachedProjection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cachedProjection_</b></td></tr>
 <tr class="memdesc:a44d60ea89d864468723f3f75f044c958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached projection data. <br /></td></tr>
 <tr class="separator:a44d60ea89d864468723f3f75f044c958"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa0bb8b44ba2bae3c5115402135e5aa3" id="r_afa0bb8b44ba2bae3c5115402135e5aa3"><td class="memItemLeft" align="right" valign="top"><a id="afa0bb8b44ba2bae3c5115402135e5aa3" name="afa0bb8b44ba2bae3c5115402135e5aa3"></a>
-<a class="el" href="class_urho3_d_1_1_thread_safe_cache.html">ThreadSafeCache</a>&lt; <a class="el" href="struct_urho3_d_1_1_camera_1_1_cached_view_proj.html">CachedViewProj</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cachedViewProj_</b></td></tr>
-<tr class="memdesc:afa0bb8b44ba2bae3c5115402135e5aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached view-projection matrices. <br /></td></tr>
-<tr class="separator:afa0bb8b44ba2bae3c5115402135e5aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22d94e086559538fc6f902d877edc57" id="r_af22d94e086559538fc6f902d877edc57"><td class="memItemLeft" align="right" valign="top"><a id="af22d94e086559538fc6f902d877edc57" name="af22d94e086559538fc6f902d877edc57"></a>
+<a class="el" href="class_urho3_d_1_1_thread_safe_cache.html">ThreadSafeCache</a>&lt; <a class="el" href="struct_urho3_d_1_1_camera_1_1_cached_inverse.html">CachedInverse</a>&lt; <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cachedViewProj_</b></td></tr>
+<tr class="memdesc:af22d94e086559538fc6f902d877edc57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached view-projection matrices. <br /></td></tr>
+<tr class="separator:af22d94e086559538fc6f902d877edc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a874c9a64925b1c51a981836d7032957a" id="r_a874c9a64925b1c51a981836d7032957a"><td class="memItemLeft" align="right" valign="top"><a id="a874c9a64925b1c51a981836d7032957a" name="a874c9a64925b1c51a981836d7032957a"></a>
 <a class="el" href="class_urho3_d_1_1_thread_safe_cache.html">ThreadSafeCache</a>&lt; <a class="el" href="class_urho3_d_1_1_frustum.html">Frustum</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cachedFrustum_</b></td></tr>
 <tr class="memdesc:a874c9a64925b1c51a981836d7032957a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached world space frustum. <br /></td></tr>
@@ -1317,14 +1330,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 
 </div>
 </div>
-<a id="a70a0f278e6633054921678ded58642bb" name="a70a0f278e6633054921678ded58642bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70a0f278e6633054921678ded58642bb">&#9670;&#160;</a></span>GetProjection()</h2>
+<a id="a2601f77e74f97da4587a5f3db26f3d78" name="a2601f77e74f97da4587a5f3db26f3d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2601f77e74f97da4587a5f3db26f3d78">&#9670;&#160;</a></span>GetProjection()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> Urho3D::Camera::GetProjection </td>
+          <td class="memname">const <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> &amp; Urho3D::Camera::GetProjection </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>ignoreFlip</em> = <code>false</code></td><td>)</td>
@@ -1437,24 +1450,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 </table>
 </div><div class="memdoc">
 <p>Return whether is using reflection. </p>
-
-</div>
-</div>
-<a id="a86a2e6d78d0ac6c20e043ada2f573401" name="a86a2e6d78d0ac6c20e043ada2f573401"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86a2e6d78d0ac6c20e043ada2f573401">&#9670;&#160;</a></span>GetView()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &amp; Urho3D::Camera::GetView </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Return view matrix. </p>
 
 </div>
 </div>
