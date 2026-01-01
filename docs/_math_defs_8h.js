@@ -58,6 +58,7 @@ var _math_defs_8h =
     [ "SnapCeil", "_math_defs_8h.html#a5c1bf7502e3e7595a7b0ebb239bb65d1", null ],
     [ "SnapFloor", "_math_defs_8h.html#aff47495e5417aaaa2e3381b2e7272f8a", null ],
     [ "SnapRound", "_math_defs_8h.html#ae9a889fa010b83d894071cf699d9c148", null ],
+    [ "SnapTo", "_math_defs_8h.html#aadceb0146ea74db649999f5dd05ec53b", null ],
     [ "Sqrt", "_math_defs_8h.html#a5cba0374723cae00759052bcebc3960e", null ],
     [ "Tan", "_math_defs_8h.html#a0a246d98041285ef1f63d75fc65567ce", null ],
     [ "ToDegrees", "_math_defs_8h.html#a04a959b897316512f115db6f6849e34e", null ],

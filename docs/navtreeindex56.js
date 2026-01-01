@@ -1,5 +1,6 @@
 var NAVTREEINDEX56 =
 {
+"struct_urho3_d_1_1_allocator_node.html#adf65d06968f7cfe906b70cc485b93b30":[6,0,2,13,0],
 "struct_urho3_d_1_1_always_serialize.html":[6,0,2,14],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_parameters.html":[6,0,2,15,0],
 "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_parameters.html#aacb1567670f9d7e41dd17903e256bb8f":[6,0,2,15,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX56 =
 "struct_urho3_d_1_1_color_frame.html":[6,0,2,136],
 "struct_urho3_d_1_1_color_frame.html#a26c8b15020e9b9a3a1e1f144b8868d53":[6,0,2,136,1],
 "struct_urho3_d_1_1_color_frame.html#a41ef68e9dd336a0f6bcce4ae281b992b":[6,0,2,136,3],
-"struct_urho3_d_1_1_color_frame.html#a42c2a6850b1c33711d03a881c8bb0737":[6,0,2,136,4],
-"struct_urho3_d_1_1_color_frame.html#a9d4fede3ee02a39180d14afbb4d1bb46":[6,0,2,136,2]
+"struct_urho3_d_1_1_color_frame.html#a42c2a6850b1c33711d03a881c8bb0737":[6,0,2,136,4]
 };

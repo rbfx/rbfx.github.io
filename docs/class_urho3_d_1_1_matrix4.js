@@ -9,6 +9,7 @@ var class_urho3_d_1_1_matrix4 =
     [ "Column", "class_urho3_d_1_1_matrix4.html#a19653752d59421eaa1080cc535494812", null ],
     [ "Data", "class_urho3_d_1_1_matrix4.html#ab80c8e8c54f06a5661027a8c3713b72a", null ],
     [ "Decompose", "class_urho3_d_1_1_matrix4.html#a490dca89e50e6cd34226327ded931336", null ],
+    [ "Determinant", "class_urho3_d_1_1_matrix4.html#aae7dc7e2418b9c134636422e48883ca3", null ],
     [ "Element", "class_urho3_d_1_1_matrix4.html#a19eb35b855fb27bcedec096efe0abfb8", null ],
     [ "Equals", "class_urho3_d_1_1_matrix4.html#a818d26d4e3e19c80333beeb75f9abe90", null ],
     [ "Inverse", "class_urho3_d_1_1_matrix4.html#a35ede77322d1cf699d35a87030cb6f8f", null ],

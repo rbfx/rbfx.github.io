@@ -122,10 +122,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ReleaseResources</b> 
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ReleaseAllResources</b> (bool force=false)</td></tr>
 <tr class="memdesc:a7ea584bf640ad59e61923c234b04e3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release all resources. When called with the force flag false, releases all currently unused resources. <br /></td></tr>
 <tr class="separator:a7ea584bf640ad59e61923c234b04e3f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8614257a407707e80431ced19139f960" id="r_a8614257a407707e80431ced19139f960"><td class="memItemLeft" align="right" valign="top"><a id="a8614257a407707e80431ced19139f960" name="a8614257a407707e80431ced19139f960"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReloadResource</b> (const ea::string_view resourceName)</td></tr>
-<tr class="memdesc:a8614257a407707e80431ced19139f960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload a resource. Return true on success. The resource will not be removed from the cache in case of failure. <br /></td></tr>
-<tr class="separator:a8614257a407707e80431ced19139f960"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95d38fca7d46be128efaa865acad0ec3" id="r_a95d38fca7d46be128efaa865acad0ec3"><td class="memItemLeft" align="right" valign="top"><a id="a95d38fca7d46be128efaa865acad0ec3" name="a95d38fca7d46be128efaa865acad0ec3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReloadResource</b> (<a class="el" href="class_urho3_d_1_1_resource.html">Resource</a> *resource)</td></tr>
 <tr class="memdesc:a95d38fca7d46be128efaa865acad0ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload a resource. Return true on success. The resource will not be removed from the cache in case of failure. <br /></td></tr>
@@ -484,14 +480,14 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:ad773318c0b309c2eae1544b191d5a54a" id="r_ad773318c0b309c2eae1544b191d5a54a"><td class="memItemLeft" align="right" valign="top"><a id="ad773318c0b309c2eae1544b191d5a54a" name="ad773318c0b309c2eae1544b191d5a54a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_resource_cache.html">ResourceCache</a>, <a class="el" href="class_urho3_d_1_1_object.html">Object</a>)</td></tr>
 <tr class="separator:ad773318c0b309c2eae1544b191d5a54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0a8e0e3e308b6ccae0cfc1ca4fa9e84" id="r_ad0a8e0e3e308b6ccae0cfc1ca4fa9e84"><td class="memItemLeft" align="right" valign="top"><a id="ad0a8e0e3e308b6ccae0cfc1ca4fa9e84" name="ad0a8e0e3e308b6ccae0cfc1ca4fa9e84"></a>
-const <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_resource.html">Resource</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>FindResource</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> nameHash)</td></tr>
-<tr class="memdesc:ad0a8e0e3e308b6ccae0cfc1ca4fa9e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a resource. <br /></td></tr>
-<tr class="separator:ad0a8e0e3e308b6ccae0cfc1ca4fa9e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9212f32e5c2afcd6dff1058baba3604e" id="r_a9212f32e5c2afcd6dff1058baba3604e"><td class="memItemLeft" align="right" valign="top"><a id="a9212f32e5c2afcd6dff1058baba3604e" name="a9212f32e5c2afcd6dff1058baba3604e"></a>
-const <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_resource.html">Resource</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>FindResource</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> nameHash)</td></tr>
-<tr class="memdesc:a9212f32e5c2afcd6dff1058baba3604e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a resource by name only. Searches all type groups. <br /></td></tr>
-<tr class="separator:a9212f32e5c2afcd6dff1058baba3604e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aa26fdfa04367fe099d1db7b93f9368" id="r_a2aa26fdfa04367fe099d1db7b93f9368"><td class="memItemLeft" align="right" valign="top"><a id="a2aa26fdfa04367fe099d1db7b93f9368" name="a2aa26fdfa04367fe099d1db7b93f9368"></a>
+const <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_resource.html">Resource</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>FindSpecificResource</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> type, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> nameHash)</td></tr>
+<tr class="memdesc:a2aa26fdfa04367fe099d1db7b93f9368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a resource. <br /></td></tr>
+<tr class="separator:a2aa26fdfa04367fe099d1db7b93f9368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48a2d145ac48fd92fd910831064c16ed" id="r_a48a2d145ac48fd92fd910831064c16ed"><td class="memItemLeft" align="right" valign="top"><a id="a48a2d145ac48fd92fd910831064c16ed" name="a48a2d145ac48fd92fd910831064c16ed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>FindMatchingResources</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> nameHash, ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_resource.html">Resource</a> &gt; &gt; &amp;resources)</td></tr>
+<tr class="memdesc:a48a2d145ac48fd92fd910831064c16ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a resource by name only. Searches all type groups. <br /></td></tr>
+<tr class="separator:a48a2d145ac48fd92fd910831064c16ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc0895ca46642d39017dcfbd4981d6b9" id="r_acc0895ca46642d39017dcfbd4981d6b9"><td class="memItemLeft" align="right" valign="top"><a id="acc0895ca46642d39017dcfbd4981d6b9" name="acc0895ca46642d39017dcfbd4981d6b9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ReleasePackageResources</b> (<a class="el" href="class_urho3_d_1_1_package_file.html">PackageFile</a> *package, bool force=false)</td></tr>
 <tr class="memdesc:acc0895ca46642d39017dcfbd4981d6b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release resources loaded from a package file. <br /></td></tr>
