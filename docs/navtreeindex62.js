@@ -1,8 +1,5 @@
 var NAVTREEINDEX62 =
 {
-"struct_urho3_d_1_1_trail_point.html#a45c50a15c9196c61c548ecf185f00d3e":[6,0,2,774,2],
-"struct_urho3_d_1_1_trail_point.html#a551178a3d99e15f9bc4bbf507d0e6cd4":[6,0,2,774,3],
-"struct_urho3_d_1_1_trail_point.html#aa67e206a46fea660efcde38d86f6530f":[6,0,2,774,7],
 "struct_urho3_d_1_1_trail_point.html#abe81f96a3545340fb38bf50a94a66da5":[6,0,2,774,1],
 "struct_urho3_d_1_1_trail_point.html#ac362885a85a629926e0e9f0db9b91bcb":[6,0,2,774,4],
 "struct_urho3_d_1_1_trail_point.html#ae1404584a19cb8ce836db5fbbfa58945":[6,0,2,774,0],
