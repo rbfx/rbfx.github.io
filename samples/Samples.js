@@ -221,7 +221,7 @@ var wasmModule;
 var ABORT = false;
 
 // set by exit() and abort().  Passed to 'onExit' handler.
-// NOTE: This is also used as the process return code code in shell environments
+// NOTE: This is also used as the process return code in shell environments
 // but only when noExitRuntime is false.
 var EXITSTATUS;
 
@@ -313,7 +313,7 @@ if (ENVIRONMENT_IS_PTHREAD) {
         // Use `const` here to ensure that the variable is scoped only to
         // that iteration, allowing safe reference from a closure.
         for (const handler of msgData.handlers) {
-          // The the main module has a handler for a certain even, but no
+          // If the main module has a handler for a certain event, but no
           // handler exists on the pthread worker, then proxy that handler
           // back to the main thread.
           if (!Module[handler] || Module[handler].proxy) {
@@ -516,7 +516,7 @@ function getBinarySync(file) {
   if (readBinary) {
     return readBinary(file);
   }
-  // Throwing a plain string here, even though it not normally adviables since
+  // Throwing a plain string here, even though it not normally advisable since
   // this gets turning into an `abort` in instantiateArrayBuffer.
   throw "both async and sync fetching of the wasm failed";
 }
@@ -610,7 +610,7 @@ async function createWasm() {
     });
   }
   if ((ENVIRONMENT_IS_PTHREAD)) {
-    // Instantiate from the module that was recieved via postMessage from
+    // Instantiate from the module that was received via postMessage from
     // the main thread. We can just use sync instantiation in the worker.
     var instance = new WebAssembly.Instance(wasmModule, getWasmImports());
     return receiveInstance(instance, wasmModule);
@@ -635,9 +635,9 @@ var terminateWorker = worker => {
   worker.terminate();
   // terminate() can be asynchronous, so in theory the worker can continue
   // to run for some amount of time after termination.  However from our POV
-  // the worker now dead and we don't want to hear from it again, so we stub
+  // the worker is now dead and we don't want to hear from it again, so we stub
   // out its message handler here.  This avoids having to check in each of
-  // the onmessage handlers if the message was coming from valid worker.
+  // the onmessage handlers if the message was coming from a valid worker.
   worker.onmessage = e => {};
 };
 
@@ -712,23 +712,22 @@ var stackAlloc = sz => __emscripten_stack_alloc(sz);
   // type info here). To do that, add a "prefix" before each value that
   // indicates if it is a BigInt, which effectively doubles the number of
   // values we serialize for proxying. TODO: pack this?
-  var serializedNumCallArgs = callArgs.length * 2;
+  var bufSize = 8 * callArgs.length * 2;
   var sp = stackSave();
-  var args = stackAlloc(serializedNumCallArgs * 8);
+  var args = stackAlloc(bufSize);
   var b = ((args) >> 3);
-  for (var i = 0; i < callArgs.length; i++) {
-    var arg = callArgs[i];
+  for (var arg of callArgs) {
     if (typeof arg == "bigint") {
       // The prefix is non-zero to indicate a bigint.
-      (growMemViews(), HEAP64)[b + 2 * i] = 1n;
-      (growMemViews(), HEAP64)[b + 2 * i + 1] = arg;
+      (growMemViews(), HEAP64)[b++] = 1n;
+      (growMemViews(), HEAP64)[b++] = arg;
     } else {
       // The prefix is zero to indicate a JS Number.
-      (growMemViews(), HEAP64)[b + 2 * i] = 0n;
-      (growMemViews(), HEAPF64)[b + 2 * i + 1] = arg;
+      (growMemViews(), HEAP64)[b++] = 0n;
+      (growMemViews(), HEAPF64)[b++] = arg;
     }
   }
-  var rtn = __emscripten_run_js_on_main_thread(funcIndex, emAsmAddr, serializedNumCallArgs, args, sync);
+  var rtn = __emscripten_run_js_on_main_thread(funcIndex, emAsmAddr, bufSize, args, sync);
   stackRestore(sp);
   return rtn;
 };
@@ -779,7 +778,7 @@ var PThread = {
   terminateAllThreads: () => {
     // Attempt to kill all workers.  Sadly (at least on the web) there is no
     // way to terminate a worker synchronously, or to be notified when a
-    // worker in actually terminated.  This means there is some risk that
+    // worker is actually terminated.  This means there is some risk that
     // pthreads will continue to be executing after `worker.terminate` has
     // returned.  For this reason, we don't call `returnWorkerToPool` here or
     // free the underlying pthread data structures.
@@ -798,7 +797,7 @@ var PThread = {
     // some operations that leave the worker queue in an invalid state until
     // we are completely done (it would be bad if free() ends up calling a
     // queued pthread_create which looks at the global data structures we are
-    // modifying). To achieve that, defer the free() til the very end, when
+    // modifying). To achieve that, defer the free() until the very end, when
     // we are all done.
     var pthread_ptr = worker.pthread_ptr;
     delete PThread.pthreads[pthread_ptr];
@@ -1610,7 +1609,7 @@ var MEMFS = {
   },
   createNode(parent, name, mode, dev) {
     if (FS.isBlkdev(mode) || FS.isFIFO(mode)) {
-      // no supported
+      // not supported
       throw new FS.ErrnoError(63);
     }
     MEMFS.ops_table ||= {
@@ -1841,7 +1840,7 @@ var MEMFS = {
       // If the buffer is located in main memory (HEAP), and if
       // memory can grow, we can't hold on to references of the
       // memory buffer, as they may get invalidated. That means we
-      // need to do copy its contents.
+      // need to copy its contents.
       if (buffer.buffer === (growMemViews(), HEAP8).buffer) {
         canOwn = false;
       }
@@ -2331,7 +2330,7 @@ var FS_handledByPreloadPlugin = async (byteArray, fullname) => {
       return plugin["handle"](byteArray, fullname);
     }
   }
-  // In no plugin handled this file then return the original/unmodified
+  // If no plugin handled this file then return the original/unmodified
   // byteArray.
   return byteArray;
 };
@@ -3295,7 +3294,7 @@ var FS = {
       } else {
         // node doesn't exist, try to create it
         // Ignore the permission bits here to ensure we can `open` this new
-        // file below. We use chmod below the apply the permissions once the
+        // file below. We use chmod below to apply the permissions once the
         // file is open.
         node = FS.mknod(path, mode | 511, 0);
         created = true;
@@ -3993,8 +3992,8 @@ var SOCKFS = {
     SOCKFS.callbacks[event]?.(param);
   },
   mount(mount) {
-    // The incomming Module['websocket'] can be used for configuring 
-    // configuring subprotocol/url, etc
+    // The incoming Module['websocket'] can be used for configuring 
+    // subprotocol/url, etc
     SOCKFS.websocketArgs = Module["websocket"] || {};
     // Add the Event registration mechanism to the exported websocket configuration
     // object so we can register network callbacks from native JavaScript too.
@@ -4138,7 +4137,7 @@ var SOCKFS = {
             url = url + parts[0] + ":" + port + "/" + parts.slice(1).join("/");
           }
           if (subProtocols !== "null") {
-            // The regex trims the string (removes spaces at the beginning and end, then splits the string by
+            // The regex trims the string (removes spaces at the beginning and end), then splits the string by
             // <any space>,<any space> into an Array. Whitespace removal is important for Websockify and ws.
             subProtocols = subProtocols.replace(/^ +| +$/g, "").split(/ *, */);
             opts = subProtocols;
@@ -4216,7 +4215,7 @@ var SOCKFS = {
         var wasfirst = first;
         first = false;
         if (wasfirst && data.length === 10 && data[0] === 255 && data[1] === 255 && data[2] === 255 && data[3] === 255 && data[4] === "p".charCodeAt(0) && data[5] === "o".charCodeAt(0) && data[6] === "r".charCodeAt(0) && data[7] === "t".charCodeAt(0)) {
-          // update the peer's port and it's key in the peer map
+          // update the peer's port and its key in the peer map
           var newport = ((data[8] << 8) | data[9]);
           SOCKFS.websocket_sock_ops.removePeer(sock, peer);
           peer.port = newport;
@@ -4501,7 +4500,7 @@ var SOCKFS = {
       }
       var data = buffer.slice(offset, offset + length);
       // WebSockets .send() does not allow passing a SharedArrayBuffer, so
-      // clone the the SharedArrayBuffer as regular ArrayBuffer before
+      // clone the SharedArrayBuffer as regular ArrayBuffer before
       // sending.
       if (data instanceof SharedArrayBuffer) {
         data = new Uint8Array(new Uint8Array(data)).buffer;
@@ -4625,7 +4624,7 @@ var inetNtop6 = ints => {
     // IPv4-compatible IPv6 address if 16-bit value (bytes 11 and 12) == 0x0000 (6th word)
     if (parts[5] === 0) {
       str = "::";
-      //special case IPv6 addresses
+      // special case IPv6 addresses
       if (v4part === "0.0.0.0") v4part = "";
       // any/unspecified address
       if (v4part === "0.0.0.1") v4part = "1";
@@ -4734,7 +4733,7 @@ var inetPton6 = str => {
     str = str.replace("::", ":Z:");
   }
   if (str.indexOf(".") > 0) {
-    // parse IPv4 embedded stress
+    // parse IPv4 embedded address
     str = str.replace(new RegExp("[.]", "g"), ":");
     words = str.split(":");
     words[words.length - 4] = Number(words[words.length - 4]) + Number(words[words.length - 3]) * 256;
@@ -4754,7 +4753,7 @@ var inetPton6 = str => {
         }
         offset = z - 1;
       } else {
-        // parse hex to field to 16-bit value and write it in network byte-order
+        // parse hex field to 16-bit value and write it in network byte-order
         parts[w + offset] = _htons(parseInt(words[w], 16));
       }
     } else {
@@ -4831,7 +4830,6 @@ var syscallGetVarargI = () => {
 var syscallGetVarargP = syscallGetVarargI;
 
 var SYSCALLS = {
-  DEFAULT_POLLMASK: 5,
   calculateAt(dirfd, path, allowEmpty) {
     if (PATH.isAbs(path)) {
       return path;
@@ -5655,7 +5653,7 @@ function craftInvokerFunction(humanName, argTypes, classType, cppInvokerFunc, cp
   // TODO: Remove this completely once all function invokers are being dynamically generated.
   var needsDestructorStack = usesDestructorStack(argTypes);
   var returns = !argTypes[0].isVoid;
-  // Builld the arguments that will be passed into the closure around the invoker
+  // Build the arguments that will be passed into the closure around the invoker
   // function.
   var retType = argTypes[0];
   var instType = argTypes[1];
@@ -6101,7 +6099,7 @@ var __embind_register_void = (rawType, name) => {
 };
 
 var __emscripten_init_main_thread_js = tb => {
-  // Pass the thread address to the native code where they stored in wasm
+  // Pass the thread address to the native code where they are stored in wasm
   // globals which act as a form of TLS. Global constructors trying
   // to access this value will read the wrong value, but that is UB anyway.
   __emscripten_thread_init(tb, /*is_main=*/ !ENVIRONMENT_IS_WORKER, /*is_runtime=*/ 1, /*can_block=*/ !ENVIRONMENT_IS_WEB, /*default_stacksize=*/ 65536, /*start_profiling=*/ false);
@@ -6203,22 +6201,24 @@ var __emscripten_notify_mailbox_postmessage = (targetThread, currThreadId) => {
 
 var proxiedJSCallArgs = [];
 
-var __emscripten_receive_on_main_thread_js = (funcIndex, emAsmAddr, callingThread, numCallArgs, args) => {
+var __emscripten_receive_on_main_thread_js = (funcIndex, emAsmAddr, callingThread, bufSize, args) => {
   // Sometimes we need to backproxy events to the calling thread (e.g.
   // HTML5 DOM events handlers such as
   // emscripten_set_mousemove_callback()), so keep track in a globally
   // accessible variable about the thread that initiated the proxying.
-  numCallArgs /= 2;
-  proxiedJSCallArgs.length = numCallArgs;
+  proxiedJSCallArgs.length = 0;
   var b = ((args) >> 3);
-  for (var i = 0; i < numCallArgs; i++) {
-    if ((growMemViews(), HEAP64)[b + 2 * i]) {
+  var end = ((args + bufSize) >> 3);
+  while (b < end) {
+    var arg;
+    if ((growMemViews(), HEAP64)[b++]) {
       // It's a BigInt.
-      proxiedJSCallArgs[i] = (growMemViews(), HEAP64)[b + 2 * i + 1];
+      arg = (growMemViews(), HEAP64)[b++];
     } else {
       // It's a Number.
-      proxiedJSCallArgs[i] = (growMemViews(), HEAPF64)[b + 2 * i + 1];
+      arg = (growMemViews(), HEAPF64)[b++];
     }
+    proxiedJSCallArgs.push(arg);
   }
   // Proxied JS library funcs use funcIndex and EM_ASM functions use emAsmAddr
   var func = emAsmAddr ? ASM_CONSTS[emAsmAddr] : proxiedFunctionTable[funcIndex];
@@ -6297,7 +6297,7 @@ var __emscripten_thread_set_strongref = thread => {
   // Called when a thread needs to be strongly referenced.
   // Currently only used for:
   // - keeping the "main" thread alive in PROXY_TO_PTHREAD mode;
-  // - crashed threads that needs to propagate the uncaught exception
+  // - crashed threads that need to propagate the uncaught exception
   //   back to the main thread.
   if (ENVIRONMENT_IS_NODE) {
     PThread.pthreads[thread].ref();
@@ -7424,7 +7424,7 @@ var GL = {
     if (context.initExtensionsDone) return;
     context.initExtensionsDone = true;
     var GLctx = context.GLctx;
-    // Detect the presence of a few extensions manually, ction GL interop
+    // Detect the presence of a few extensions manually, since the GL interop
     // layer itself will need to know if they exist.
     // Extensions that are available in both WebGL 1 and WebGL 2
     webgl_enable_WEBGL_multi_draw(GLctx);
@@ -7869,10 +7869,10 @@ function _eglSwapBuffers(dpy, surface) {
     return true;
   }
   // We create the loop runner here but it is not actually running until
-  // _emscripten_set_main_loop_timing is called (which might happen a
+  // _emscripten_set_main_loop_timing is called (which might happen at a
   // later time).  This member signifies that the current runner has not
   // yet been started so that we can call runtimeKeepalivePush when it
-  // gets it timing set for the first time.
+  // gets its timing set for the first time.
   MainLoop.running = false;
   MainLoop.runner = function MainLoop_runner() {
     if (ABORT) return;
@@ -8148,7 +8148,7 @@ var runMainThreadEmAsm = (emAsmAddr, sigPtr, argbuf, sync) => {
     // is a stack allocation that LLVM made, which may go away before the main
     // thread gets the message. For that reason we handle proxying *after* the
     // call to readEmAsmArgs, and therefore we do that manually here instead
-    // of using __proxy. (And dor simplicity, do the same in the sync
+    // of using __proxy. (And for simplicity, do the same in the sync
     // case as well, even though it's not strictly necessary, to keep the two
     // code paths as similar as possible on both sides.)
     return proxyToMainThread(0, emAsmAddr, sync, ...args);
@@ -8876,7 +8876,7 @@ var _emscripten_glCompileShader = shader => {
 };
 
 var _emscripten_glCompressedTexImage2D = (target, level, internalFormat, width, height, border, imageSize, data) => {
-  // `data` may be null here, which means "allocate uniniitalized space but
+  // `data` may be null here, which means "allocate uninitialized space but
   // don't upload" in GLES parlance, but `compressedTexImage2D` requires the
   // final data parameter, so we simply pass a heap view starting at zero
   // effectively uploading whatever happens to be near address zero.  See
@@ -9224,7 +9224,7 @@ var _emscripten_glDrawElementsInstancedNV = _glDrawElementsInstanced;
 var _glDrawElements = _emscripten_glDrawElements;
 
 var _emscripten_glDrawRangeElements = (mode, start, end, count, type, indices) => {
-  // TODO: This should be a trivial pass-though function registered at the bottom of this page as
+  // TODO: This should be a trivial pass-through function registered at the bottom of this page as
   // glFuncs[6][1] += ' drawRangeElements';
   // but due to https://bugzil.la/1202427,
   // we work around by ignoring the range.
@@ -9564,7 +9564,7 @@ var emscriptenWebGLGet = (name_, p, type) => {
     // WebGL doesn't have GL_NUM_COMPRESSED_TEXTURE_FORMATS (it's obsolete
     // since GL_COMPRESSED_TEXTURE_FORMATS returns a JS array that can be
     // queried for length), so implement it ourselves to allow C++ GLES2
-    // code get the length.
+    // code to get the length.
     var formats = GLctx.getParameter(34467);
     ret = formats ? formats.length : 0;
     break;
@@ -10328,7 +10328,7 @@ var _emscripten_glGetUniformLocation = (program, name) => {
     // Have we cached the location of this uniform before?
     // A pair [array length, GLint of the uniform location]
     var sizeAndId = program.uniformSizeAndIdsByName[uniformBaseName];
-    // If an uniform with this name exists, and if its index is within the
+    // If a uniform with this name exists, and if its index is within the
     // array limits (if it's even an array), query the WebGLlocation, or
     // return an existing cached location.
     if (sizeAndId && arrayIndex < sizeAndId[0]) {
@@ -11375,7 +11375,7 @@ var registerFullscreenChangeEventCallback = (target, userData, useCapture, callb
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
   var eventSize = 276;
   JSEvents.fullscreenChangeEvent ||= _malloc(eventSize);
-  var fullscreenChangeEventhandlerFunc = e => {
+  var fullscreenChangeEventHandlerFunc = e => {
     var fullscreenChangeEvent = JSEvents.fullscreenChangeEvent;
     fillFullscreenChangeEventData(fullscreenChangeEvent);
     if (targetThread) __emscripten_run_callback_on_thread(targetThread, callbackfunc, eventTypeId, fullscreenChangeEvent, eventSize, userData); else if (getWasmTableEntry(callbackfunc)(eventTypeId, fullscreenChangeEvent, userData)) e.preventDefault();
@@ -11386,7 +11386,7 @@ var registerFullscreenChangeEventCallback = (target, userData, useCapture, callb
     eventTypeId,
     userData,
     callbackfunc,
-    handlerFunc: fullscreenChangeEventhandlerFunc,
+    handlerFunc: fullscreenChangeEventHandlerFunc,
     useCapture
   };
   return JSEvents.registerOrRemoveHandler(eventHandler);
@@ -11927,6 +11927,7 @@ function fetchXHR(fetch, onsuccess, onerror, onprogress, onreadystatechange) {
   var passwordStr = password ? UTF8ToString(password) : undefined;
   var xhr = new XMLHttpRequest;
   xhr.withCredentials = !!(growMemViews(), HEAPU8)[(fetch_attr) + (60)];
+  xhr._streamData = fetchAttrStreamData;
   xhr.open(requestMethod, url_, !fetchAttrSynchronous, userNameStr, passwordStr);
   if (!fetchAttrSynchronous) xhr.timeout = timeoutMsecs;
   // XHR timeout field is only accessible in async XHRs, and must be set after .open() but before .send().
