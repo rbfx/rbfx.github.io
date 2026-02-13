@@ -108,7 +108,8 @@ var annotated_dup =
         [ "SignalBase", "class_urho3_d_1_1_detail_1_1_signal_base.html", "class_urho3_d_1_1_detail_1_1_signal_base" ],
         [ "SignalSubscription", "struct_urho3_d_1_1_detail_1_1_signal_subscription.html", "struct_urho3_d_1_1_detail_1_1_signal_subscription" ],
         [ "SoundEventListener", "class_urho3_d_1_1_detail_1_1_sound_event_listener.html", "class_urho3_d_1_1_detail_1_1_sound_event_listener" ],
-        [ "StringHashCaster", "struct_urho3_d_1_1_detail_1_1_string_hash_caster.html", null ]
+        [ "StringHashCaster", "struct_urho3_d_1_1_detail_1_1_string_hash_caster.html", null ],
+        [ "VectorTraits", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", "struct_urho3_d_1_1_detail_1_1_vector_traits" ]
       ] ],
       [ "ParticleGraphNodes", null, [
         [ "Add", "class_urho3_d_1_1_particle_graph_nodes_1_1_add.html", "class_urho3_d_1_1_particle_graph_nodes_1_1_add" ],
@@ -304,6 +305,8 @@ var annotated_dup =
       [ "Base64OutputArchive", "class_urho3_d_1_1_base64_output_archive.html", "class_urho3_d_1_1_base64_output_archive" ],
       [ "BaseAssetPostTransformer", "class_urho3_d_1_1_base_asset_post_transformer.html", "class_urho3_d_1_1_base_asset_post_transformer" ],
       [ "BaseFeedbackBehavior", "class_urho3_d_1_1_base_feedback_behavior.html", "class_urho3_d_1_1_base_feedback_behavior" ],
+      [ "BaseIntegerVector3", "class_urho3_d_1_1_base_integer_vector3.html", "class_urho3_d_1_1_base_integer_vector3" ],
+      [ "BaseVector3", "class_urho3_d_1_1_base_vector3.html", "class_urho3_d_1_1_base_vector3" ],
       [ "BaseWidget", "class_urho3_d_1_1_base_widget.html", null ],
       [ "BatchCompositor", "class_urho3_d_1_1_batch_compositor.html", "class_urho3_d_1_1_batch_compositor" ],
       [ "BatchCompositorPass", "class_urho3_d_1_1_batch_compositor_pass.html", "class_urho3_d_1_1_batch_compositor_pass" ],
@@ -518,7 +521,6 @@ var annotated_dup =
       [ "GraphPinRef", "class_urho3_d_1_1_graph_pin_ref.html", null ],
       [ "HeightfieldData", "struct_urho3_d_1_1_heightfield_data.html", "struct_urho3_d_1_1_heightfield_data" ],
       [ "HighPrecisionSphere", "struct_urho3_d_1_1_high_precision_sphere.html", "struct_urho3_d_1_1_high_precision_sphere" ],
-      [ "HighPrecisionVector3", "struct_urho3_d_1_1_high_precision_vector3.html", "struct_urho3_d_1_1_high_precision_vector3" ],
       [ "HiresTimer", "class_urho3_d_1_1_hires_timer.html", "class_urho3_d_1_1_hires_timer" ],
       [ "HttpRequest", "class_urho3_d_1_1_http_request.html", "class_urho3_d_1_1_http_request" ],
       [ "IDFamily", "class_urho3_d_1_1_i_d_family.html", "class_urho3_d_1_1_i_d_family" ],
@@ -564,7 +566,6 @@ var annotated_dup =
       [ "IntRect", "class_urho3_d_1_1_int_rect.html", "class_urho3_d_1_1_int_rect" ],
       [ "IntRectIterator", "class_urho3_d_1_1_int_rect_iterator.html", "class_urho3_d_1_1_int_rect_iterator" ],
       [ "IntVector2", "class_urho3_d_1_1_int_vector2.html", "class_urho3_d_1_1_int_vector2" ],
-      [ "IntVector3", "class_urho3_d_1_1_int_vector3.html", "class_urho3_d_1_1_int_vector3" ],
       [ "IteratorRange", "struct_urho3_d_1_1_iterator_range.html", "struct_urho3_d_1_1_iterator_range" ],
       [ "JoystickState", "struct_urho3_d_1_1_joystick_state.html", "struct_urho3_d_1_1_joystick_state" ],
       [ "JSONArchiveBase", "class_urho3_d_1_1_j_s_o_n_archive_base.html", "class_urho3_d_1_1_j_s_o_n_archive_base" ],
@@ -1043,7 +1044,6 @@ var annotated_dup =
       [ "VariantCurvePoint", "struct_urho3_d_1_1_variant_curve_point.html", "struct_urho3_d_1_1_variant_curve_point" ],
       [ "VariantValue", "union_urho3_d_1_1_variant_value.html", "union_urho3_d_1_1_variant_value" ],
       [ "Vector2", "class_urho3_d_1_1_vector2.html", "class_urho3_d_1_1_vector2" ],
-      [ "Vector3", "class_urho3_d_1_1_vector3.html", "class_urho3_d_1_1_vector3" ],
       [ "Vector4", "class_urho3_d_1_1_vector4.html", "class_urho3_d_1_1_vector4" ],
       [ "VectorBuffer", "class_urho3_d_1_1_vector_buffer.html", "class_urho3_d_1_1_vector_buffer" ],
       [ "Vertex2D", "struct_urho3_d_1_1_vertex2_d.html", "struct_urho3_d_1_1_vertex2_d" ],

@@ -124,7 +124,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetIndexBuffers</b> (
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetGeometry</b> (unsigned index, unsigned lodLevel, <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> *geometry)</td></tr>
 <tr class="memdesc:ae27f254e9b6ccbe04f235e91e0e12fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set geometry. <br /></td></tr>
 <tr class="separator:ae27f254e9b6ccbe04f235e91e0e12fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a862dd6d4b61ada45fdfbae7fe6c1d888" id="r_a862dd6d4b61ada45fdfbae7fe6c1d888"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_model.html#a862dd6d4b61ada45fdfbae7fe6c1d888">SetGeometryCenter</a> (unsigned index, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;center)</td></tr>
+<tr class="memitem:a862dd6d4b61ada45fdfbae7fe6c1d888" id="r_a862dd6d4b61ada45fdfbae7fe6c1d888"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_model.html#a862dd6d4b61ada45fdfbae7fe6c1d888">SetGeometryCenter</a> (unsigned index, const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;center)</td></tr>
 <tr class="separator:a862dd6d4b61ada45fdfbae7fe6c1d888"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71541a3dfdafd1f0494d1edfaa2d4e25" id="r_a71541a3dfdafd1f0494d1edfaa2d4e25"><td class="memItemLeft" align="right" valign="top"><a id="a71541a3dfdafd1f0494d1edfaa2d4e25" name="a71541a3dfdafd1f0494d1edfaa2d4e25"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSkeleton</b> (const <a class="el" href="class_urho3_d_1_1_skeleton.html">Skeleton</a> &amp;skeleton)</td></tr>
@@ -167,14 +167,14 @@ const ea::vector&lt; ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared
 <tr class="memdesc:a7493d12f677021ab9ab29f9d4f79b99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return geometry pointers. <br /></td></tr>
 <tr class="separator:a7493d12f677021ab9ab29f9d4f79b99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0ab927b8f9c2fbe73fa4f7ca9f4d72b" id="r_aa0ab927b8f9c2fbe73fa4f7ca9f4d72b"><td class="memItemLeft" align="right" valign="top"><a id="aa0ab927b8f9c2fbe73fa4f7ca9f4d72b" name="aa0ab927b8f9c2fbe73fa4f7ca9f4d72b"></a>
-const ea::vector&lt; <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetGeometryCenters</b> () const</td></tr>
+const ea::vector&lt; <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetGeometryCenters</b> () const</td></tr>
 <tr class="memdesc:aa0ab927b8f9c2fbe73fa4f7ca9f4d72b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return geometry center points. <br /></td></tr>
 <tr class="separator:aa0ab927b8f9c2fbe73fa4f7ca9f4d72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a950fd42a902c2301b71848c6b9e0cb22" id="r_a950fd42a902c2301b71848c6b9e0cb22"><td class="memItemLeft" align="right" valign="top"><a id="a950fd42a902c2301b71848c6b9e0cb22" name="a950fd42a902c2301b71848c6b9e0cb22"></a>
 <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetGeometry</b> (unsigned index, unsigned lodLevel) const</td></tr>
 <tr class="memdesc:a950fd42a902c2301b71848c6b9e0cb22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return geometry by index and LOD level. The LOD level is clamped if out of range. <br /></td></tr>
 <tr class="separator:a950fd42a902c2301b71848c6b9e0cb22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a581e6c2856a09519ff8566f3bcf3c06d" id="r_a581e6c2856a09519ff8566f3bcf3c06d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_model.html#a581e6c2856a09519ff8566f3bcf3c06d">GetGeometryCenter</a> (unsigned index) const</td></tr>
+<tr class="memitem:a581e6c2856a09519ff8566f3bcf3c06d" id="r_a581e6c2856a09519ff8566f3bcf3c06d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_model.html#a581e6c2856a09519ff8566f3bcf3c06d">GetGeometryCenter</a> (unsigned index) const</td></tr>
 <tr class="separator:a581e6c2856a09519ff8566f3bcf3c06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa89fb8dfb2406c22d4a8992825e69f34" id="r_aa89fb8dfb2406c22d4a8992825e69f34"><td class="memItemLeft" align="right" valign="top"><a id="aa89fb8dfb2406c22d4a8992825e69f34" name="aa89fb8dfb2406c22d4a8992825e69f34"></a>
 const ea::vector&lt; ea::vector&lt; unsigned &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetGeometryBoneMappings</b> () const</td></tr>
@@ -534,7 +534,7 @@ ea::vector&lt; ea::vector&lt; unsigned &gt; &gt;&#160;</td><td class="memItemRig
 <tr class="memdesc:a6fcf04a1403a1a0768e477dd10b9a143"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_geometry.html" title="Defines one or more vertex buffers, an index buffer and a draw range.">Geometry</a> bone mappings. <br /></td></tr>
 <tr class="separator:a6fcf04a1403a1a0768e477dd10b9a143"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f90911186e0e64b635bdee263c066a4" id="r_a1f90911186e0e64b635bdee263c066a4"><td class="memItemLeft" align="right" valign="top"><a id="a1f90911186e0e64b635bdee263c066a4" name="a1f90911186e0e64b635bdee263c066a4"></a>
-ea::vector&lt; <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>geometryCenters_</b></td></tr>
+ea::vector&lt; <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>geometryCenters_</b></td></tr>
 <tr class="memdesc:a1f90911186e0e64b635bdee263c066a4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_geometry.html" title="Defines one or more vertex buffers, an index buffer and a draw range.">Geometry</a> centers. <br /></td></tr>
 <tr class="separator:a1f90911186e0e64b635bdee263c066a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a1284ec1220e8ebf7bf2ec9a5f3c938" id="r_a9a1284ec1220e8ebf7bf2ec9a5f3c938"><td class="memItemLeft" align="right" valign="top"><a id="a9a1284ec1220e8ebf7bf2ec9a5f3c938" name="a9a1284ec1220e8ebf7bf2ec9a5f3c938"></a>
@@ -696,7 +696,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SaveMetadataToXML</b>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp; Urho3D::Model::GetGeometryCenter </td>
+          <td class="memname">const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp; Urho3D::Model::GetGeometryCenter </td>
           <td>(</td>
           <td class="paramtype">unsigned&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -901,7 +901,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SaveMetadataToXML</b>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;&#160;</td>
           <td class="paramname"><em>center</em>&#160;</td>
         </tr>
         <tr>

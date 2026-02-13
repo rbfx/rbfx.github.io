@@ -149,7 +149,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateCollisions</b> 
 <tr class="separator:a7301bf7355ad0be5080fa441f952213d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34fd73b93bf6a8f6a8ba24c7fb8e52a6" id="r_a34fd73b93bf6a8f6a8ba24c7fb8e52a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a34fd73b93bf6a8f6a8ba24c7fb8e52a6">SetFps</a> (int fps)</td></tr>
 <tr class="separator:a34fd73b93bf6a8f6a8ba24c7fb8e52a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4de247dd2476854b2739e1739aaa8a16" id="r_a4de247dd2476854b2739e1739aaa8a16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a4de247dd2476854b2739e1739aaa8a16">SetGravity</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;gravity)</td></tr>
+<tr class="memitem:a4de247dd2476854b2739e1739aaa8a16" id="r_a4de247dd2476854b2739e1739aaa8a16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a4de247dd2476854b2739e1739aaa8a16">SetGravity</a> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;gravity)</td></tr>
 <tr class="separator:a4de247dd2476854b2739e1739aaa8a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d5c83640cf870a7b81a7bc7bb77bf0e" id="r_a1d5c83640cf870a7b81a7bc7bb77bf0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a1d5c83640cf870a7b81a7bc7bb77bf0e">SetMaxSubSteps</a> (int num)</td></tr>
 <tr class="separator:a1d5c83640cf870a7b81a7bc7bb77bf0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,11 +182,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SphereCast</b> (<a cl
 <tr class="memdesc:a9625022dc308a9b18750c969bbd72963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a physics world swept sphere test and return the closest hit. <br /></td></tr>
 <tr class="separator:a9625022dc308a9b18750c969bbd72963"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ab7f0188c08871f864e9b2df37e1692" id="r_a7ab7f0188c08871f864e9b2df37e1692"><td class="memItemLeft" align="right" valign="top"><a id="a7ab7f0188c08871f864e9b2df37e1692" name="a7ab7f0188c08871f864e9b2df37e1692"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ConvexCast</b> (<a class="el" href="struct_urho3_d_1_1_physics_raycast_result.html">PhysicsRaycastResult</a> &amp;result, <a class="el" href="class_urho3_d_1_1_collision_shape.html">CollisionShape</a> *shape, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;startPos, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;startRot, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;endPos, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;endRot, unsigned collisionMask=M_MAX_UNSIGNED)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ConvexCast</b> (<a class="el" href="struct_urho3_d_1_1_physics_raycast_result.html">PhysicsRaycastResult</a> &amp;result, <a class="el" href="class_urho3_d_1_1_collision_shape.html">CollisionShape</a> *shape, const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;startPos, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;startRot, const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;endPos, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;endRot, unsigned collisionMask=M_MAX_UNSIGNED)</td></tr>
 <tr class="memdesc:a7ab7f0188c08871f864e9b2df37e1692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a physics world swept convex test using a user-supplied collision shape and return the first hit. <br /></td></tr>
 <tr class="separator:a7ab7f0188c08871f864e9b2df37e1692"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13f714a651d47509f50e0b16fa0f2649" id="r_a13f714a651d47509f50e0b16fa0f2649"><td class="memItemLeft" align="right" valign="top"><a id="a13f714a651d47509f50e0b16fa0f2649" name="a13f714a651d47509f50e0b16fa0f2649"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ConvexCast</b> (<a class="el" href="struct_urho3_d_1_1_physics_raycast_result.html">PhysicsRaycastResult</a> &amp;result, btCollisionShape *shape, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;startPos, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;startRot, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;endPos, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;endRot, unsigned collisionMask=M_MAX_UNSIGNED)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ConvexCast</b> (<a class="el" href="struct_urho3_d_1_1_physics_raycast_result.html">PhysicsRaycastResult</a> &amp;result, btCollisionShape *shape, const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;startPos, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;startRot, const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;endPos, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;endRot, unsigned collisionMask=M_MAX_UNSIGNED)</td></tr>
 <tr class="memdesc:a13f714a651d47509f50e0b16fa0f2649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a physics world swept convex test using a user-supplied Bullet collision shape and return the first hit. <br /></td></tr>
 <tr class="separator:a13f714a651d47509f50e0b16fa0f2649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9528fd5f629ab19cbbad35c7421b3a0f" id="r_a9528fd5f629ab19cbbad35c7421b3a0f"><td class="memItemLeft" align="right" valign="top"><a id="a9528fd5f629ab19cbbad35c7421b3a0f" name="a9528fd5f629ab19cbbad35c7421b3a0f"></a>
@@ -209,7 +209,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>GetRigidBodies</b> (e
 void&#160;</td><td class="memItemRight" valign="bottom"><b>GetCollidingBodies</b> (ea::vector&lt; <a class="el" href="class_urho3_d_1_1_rigid_body.html">RigidBody</a> * &gt; &amp;result, const <a class="el" href="class_urho3_d_1_1_rigid_body.html">RigidBody</a> *body)</td></tr>
 <tr class="memdesc:a542eb893eacdb23d505f88a19f154b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return rigid bodies that have been in collision with the specified body on the last simulation step. Only returns collisions that were sent as events (depends on collision event mode) and excludes e.g. static-static collisions. <br /></td></tr>
 <tr class="separator:a542eb893eacdb23d505f88a19f154b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34ae07cd26ca6e2948231b10a3fedc96" id="r_a34ae07cd26ca6e2948231b10a3fedc96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a34ae07cd26ca6e2948231b10a3fedc96">GetGravity</a> () const</td></tr>
+<tr class="memitem:a34ae07cd26ca6e2948231b10a3fedc96" id="r_a34ae07cd26ca6e2948231b10a3fedc96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a34ae07cd26ca6e2948231b10a3fedc96">GetGravity</a> () const</td></tr>
 <tr class="separator:a34ae07cd26ca6e2948231b10a3fedc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a7763576fb638104d782515b08b1f58" id="r_a9a7763576fb638104d782515b08b1f58"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world.html#a9a7763576fb638104d782515b08b1f58">GetMaxSubSteps</a> () const</td></tr>
 <tr class="separator:a9a7763576fb638104d782515b08b1f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1009,7 +1009,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> Urho3D::PhysicsWorld::GetGravity </td>
+          <td class="memname"><a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> Urho3D::PhysicsWorld::GetGravity </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1308,7 +1308,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">void Urho3D::PhysicsWorld::SetGravity </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;&#160;</td>
           <td class="paramname"><em>gravity</em></td><td>)</td>
           <td></td>
         </tr>

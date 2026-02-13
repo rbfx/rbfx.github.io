@@ -376,7 +376,6 @@ var hierarchy =
     [ "eastl::hash< vector< T, Allocator > >", "structeastl_1_1hash_3_01vector_3_01_t_00_01_allocator_01_4_01_4.html", null ],
     [ "Urho3D::ActionManager::HashElement", "struct_urho3_d_1_1_action_manager_1_1_hash_element.html", null ],
     [ "Urho3D::HighPrecisionSphere", "struct_urho3_d_1_1_high_precision_sphere.html", null ],
-    [ "Urho3D::HighPrecisionVector3", "struct_urho3_d_1_1_high_precision_vector3.html", null ],
     [ "Urho3D::HiresTimer", "class_urho3_d_1_1_hires_timer.html", null ],
     [ "Urho3D::IDFamily< T >", "class_urho3_d_1_1_i_d_family.html", null ],
     [ "Urho3D::IDFamily< AbstractConnection >", "class_urho3_d_1_1_i_d_family.html", [
@@ -509,8 +508,6 @@ var hierarchy =
     [ "ea::intrusive_list_node", null, [
       [ "Urho3D::EventHandler", "class_urho3_d_1_1_event_handler.html", null ]
     ] ],
-    [ "Urho3D::IntVector2", "class_urho3_d_1_1_int_vector2.html", null ],
-    [ "Urho3D::IntVector3", "class_urho3_d_1_1_int_vector3.html", null ],
     [ "Urho3D::TransformedSpan< SourceType, DestinationType, Function >::Iterator", "class_urho3_d_1_1_transformed_span_1_1_iterator.html", null ],
     [ "Urho3D::JoystickState", "struct_urho3_d_1_1_joystick_state.html", null ],
     [ "Urho3D::JSONValue", "class_urho3_d_1_1_j_s_o_n_value.html", null ],
@@ -630,7 +627,7 @@ var hierarchy =
       [ "Urho3D::NetworkValue< Urho3D::ValueWithDerivative< Quaternion > >", "class_urho3_d_1_1_network_value.html", null ],
       [ "Urho3D::NetworkValue< Urho3D::Matrix3x4 >", "class_urho3_d_1_1_network_value.html", null ],
       [ "Urho3D::NetworkValue< Urho3D::BoundingBox >", "class_urho3_d_1_1_network_value.html", null ],
-      [ "Urho3D::NetworkValueVector< Urho3D::Vector3 >", "class_urho3_d_1_1_network_value_vector.html", null ],
+      [ "Urho3D::NetworkValueVector< Urho3D::BaseVector3 >", "class_urho3_d_1_1_network_value_vector.html", null ],
       [ "Urho3D::NetworkValueVector< Urho3D::Quaternion >", "class_urho3_d_1_1_network_value_vector.html", null ],
       [ "Urho3D::NetworkValue< T, Traits >", "class_urho3_d_1_1_network_value.html", null ],
       [ "Urho3D::NetworkValueVector< T, Traits >", "class_urho3_d_1_1_network_value_vector.html", null ]
@@ -1846,13 +1843,13 @@ var hierarchy =
       [ "Urho3D::HttpRequest", "class_urho3_d_1_1_http_request.html", null ]
     ] ],
     [ "Urho3D::ThreadSafeCache< T >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
+    [ "Urho3D::ThreadSafeCache< Urho3D::BaseVector3 >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
     [ "Urho3D::ThreadSafeCache< Urho3D::Camera::CachedInverse< Urho3D::Matrix3x4 > >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
     [ "Urho3D::ThreadSafeCache< Urho3D::Camera::CachedInverse< Urho3D::Matrix4 > >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
     [ "Urho3D::ThreadSafeCache< Urho3D::Camera::CachedProjection >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
     [ "Urho3D::ThreadSafeCache< Urho3D::Frustum >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
     [ "Urho3D::ThreadSafeCache< Urho3D::ReflectionProbeData >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
     [ "Urho3D::ThreadSafeCache< Urho3D::SphericalHarmonicsDot9 >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
-    [ "Urho3D::ThreadSafeCache< Urho3D::Vector3 >", "class_urho3_d_1_1_thread_safe_cache.html", null ],
     [ "Urho3D::TickSynchronizer", "class_urho3_d_1_1_tick_synchronizer.html", null ],
     [ "Urho3D::TileMapInfo2D", "struct_urho3_d_1_1_tile_map_info2_d.html", null ],
     [ "Urho3D::NetworkValueSampler< T, Traits >::TimeAndValue", "struct_urho3_d_1_1_network_value_sampler_1_1_time_and_value.html", null ],
@@ -1906,9 +1903,27 @@ var hierarchy =
     [ "Urho3D::Variant", "class_urho3_d_1_1_variant.html", null ],
     [ "Urho3D::VariantCurvePoint", "struct_urho3_d_1_1_variant_curve_point.html", null ],
     [ "Urho3D::VariantValue", "union_urho3_d_1_1_variant_value.html", null ],
-    [ "Urho3D::Vector2", "class_urho3_d_1_1_vector2.html", null ],
-    [ "Urho3D::Vector3", "class_urho3_d_1_1_vector3.html", null ],
-    [ "Urho3D::Vector4", "class_urho3_d_1_1_vector4.html", null ],
+    [ "Urho3D::Detail::VectorTraits< T, N >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", [
+      [ "Urho3D::BaseIntegerVector3< int >", "class_urho3_d_1_1_base_integer_vector3.html", null ],
+      [ "Urho3D::BaseVector3< float >", "class_urho3_d_1_1_base_vector3.html", null ],
+      [ "Urho3D::BaseVector3< double >", "class_urho3_d_1_1_base_vector3.html", null ]
+    ] ],
+    [ "Urho3D::Detail::VectorTraits< double, 3 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", null ],
+    [ "Urho3D::Detail::VectorTraits< float, 2 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", [
+      [ "Urho3D::Vector2", "class_urho3_d_1_1_vector2.html", null ]
+    ] ],
+    [ "Urho3D::Detail::VectorTraits< float, 3 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", null ],
+    [ "Urho3D::Detail::VectorTraits< float, 4 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", [
+      [ "Urho3D::Vector4", "class_urho3_d_1_1_vector4.html", null ]
+    ] ],
+    [ "Urho3D::Detail::VectorTraits< int, 2 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", [
+      [ "Urho3D::IntVector2", "class_urho3_d_1_1_int_vector2.html", null ]
+    ] ],
+    [ "Urho3D::Detail::VectorTraits< int, 3 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", null ],
+    [ "Urho3D::Detail::VectorTraits< T, 3 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", [
+      [ "Urho3D::BaseIntegerVector3< T >", "class_urho3_d_1_1_base_integer_vector3.html", null ],
+      [ "Urho3D::BaseVector3< T >", "class_urho3_d_1_1_base_vector3.html", null ]
+    ] ],
     [ "Urho3D::Vertex2D", "struct_urho3_d_1_1_vertex2_d.html", null ],
     [ "Urho3D::VertexBufferAnimationData", "struct_urho3_d_1_1_vertex_buffer_animation_data.html", null ],
     [ "Urho3D::VertexBufferDesc", "struct_urho3_d_1_1_vertex_buffer_desc.html", null ],

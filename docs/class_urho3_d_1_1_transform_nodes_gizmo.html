@@ -85,7 +85,7 @@ template&lt;class Iter &gt; </td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TransformNodesGizmo</b> (<a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *activeNode)</td></tr>
 <tr class="separator:a36a469a3b9c99e9773879bcf05a551a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17157b237b7aaa7e50e542f54f0723d4" id="r_a17157b237b7aaa7e50e542f54f0723d4"><td class="memItemLeft" align="right" valign="top"><a id="a17157b237b7aaa7e50e542f54f0723d4" name="a17157b237b7aaa7e50e542f54f0723d4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Manipulate</b> (const <a class="el" href="class_urho3_d_1_1_transform_gizmo.html">TransformGizmo</a> &amp;gizmo, TransformGizmoOperation op, TransformGizmoAxes axes, bool local, bool pivoted, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;snap)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Manipulate</b> (const <a class="el" href="class_urho3_d_1_1_transform_gizmo.html">TransformGizmo</a> &amp;gizmo, TransformGizmoOperation op, TransformGizmoAxes axes, bool local, bool pivoted, const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;snap)</td></tr>
 <tr class="memdesc:a17157b237b7aaa7e50e542f54f0723d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manipulate nodes. <br /></td></tr>
 <tr class="separator:a17157b237b7aaa7e50e542f54f0723d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -101,13 +101,13 @@ Private Member Functions</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetGizmoTransform</b> (bool pivoted) const</td></tr>
 <tr class="separator:a830296ce3562c91efdcc9ebe91aa6bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a332eae36a87284ed5494512d7e527a26" id="r_a332eae36a87284ed5494512d7e527a26"><td class="memItemLeft" align="right" valign="top"><a id="a332eae36a87284ed5494512d7e527a26" name="a332eae36a87284ed5494512d7e527a26"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ManipulatePosition</b> (const <a class="el" href="class_urho3_d_1_1_transform_gizmo.html">TransformGizmo</a> &amp;gizmo, TransformGizmoAxes axes, bool local, bool pivoted, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;snap)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ManipulatePosition</b> (const <a class="el" href="class_urho3_d_1_1_transform_gizmo.html">TransformGizmo</a> &amp;gizmo, TransformGizmoAxes axes, bool local, bool pivoted, const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;snap)</td></tr>
 <tr class="separator:a332eae36a87284ed5494512d7e527a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef18e2ad8a85fddee3306545bdb34893" id="r_aef18e2ad8a85fddee3306545bdb34893"><td class="memItemLeft" align="right" valign="top"><a id="aef18e2ad8a85fddee3306545bdb34893" name="aef18e2ad8a85fddee3306545bdb34893"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ManipulateRotation</b> (const <a class="el" href="class_urho3_d_1_1_transform_gizmo.html">TransformGizmo</a> &amp;gizmo, TransformGizmoAxes axes, bool local, bool pivoted, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;snap)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ManipulateRotation</b> (const <a class="el" href="class_urho3_d_1_1_transform_gizmo.html">TransformGizmo</a> &amp;gizmo, TransformGizmoAxes axes, bool local, bool pivoted, const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;snap)</td></tr>
 <tr class="separator:aef18e2ad8a85fddee3306545bdb34893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57ac1d0004eaabd06ca7dbc54536239b" id="r_a57ac1d0004eaabd06ca7dbc54536239b"><td class="memItemLeft" align="right" valign="top"><a id="a57ac1d0004eaabd06ca7dbc54536239b" name="a57ac1d0004eaabd06ca7dbc54536239b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ManipulateScale</b> (const <a class="el" href="class_urho3_d_1_1_transform_gizmo.html">TransformGizmo</a> &amp;gizmo, TransformGizmoAxes axes, bool local, bool pivoted, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;snap)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ManipulateScale</b> (const <a class="el" href="class_urho3_d_1_1_transform_gizmo.html">TransformGizmo</a> &amp;gizmo, TransformGizmoAxes axes, bool local, bool pivoted, const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;snap)</td></tr>
 <tr class="separator:a57ac1d0004eaabd06ca7dbc54536239b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>

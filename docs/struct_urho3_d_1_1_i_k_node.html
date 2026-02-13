@@ -73,16 +73,16 @@ $(document).ready(function(){initNavTree('struct_urho3_d_1_1_i_k_node.html','');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af8cc1cffef0b131cd646c6b21b476fd1" id="r_af8cc1cffef0b131cd646c6b21b476fd1"><td class="memItemLeft" align="right" valign="top"><a id="af8cc1cffef0b131cd646c6b21b476fd1" name="af8cc1cffef0b131cd646c6b21b476fd1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>IKNode</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;position, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>IKNode</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;position, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation)</td></tr>
 <tr class="separator:af8cc1cffef0b131cd646c6b21b476fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58cc76f949db7f6b5e772c13b067e096" id="r_a58cc76f949db7f6b5e772c13b067e096"><td class="memItemLeft" align="right" valign="top"><a id="a58cc76f949db7f6b5e772c13b067e096" name="a58cc76f949db7f6b5e772c13b067e096"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOriginalTransform</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;position, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation, const <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &amp;inverseWorldTransform)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOriginalTransform</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;position, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation, const <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &amp;inverseWorldTransform)</td></tr>
 <tr class="separator:a58cc76f949db7f6b5e772c13b067e096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6be0115bfb29d1ecd3ea91172ff1c9c5" id="r_a6be0115bfb29d1ecd3ea91172ff1c9c5"><td class="memItemLeft" align="right" valign="top"><a id="a6be0115bfb29d1ecd3ea91172ff1c9c5" name="a6be0115bfb29d1ecd3ea91172ff1c9c5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateOriginalTransform</b> (const <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &amp;worldTransform)</td></tr>
 <tr class="separator:a6be0115bfb29d1ecd3ea91172ff1c9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c507d6956767906baab08c1d63c5e75" id="r_a9c507d6956767906baab08c1d63c5e75"><td class="memItemLeft" align="right" valign="top"><a id="a9c507d6956767906baab08c1d63c5e75" name="a9c507d6956767906baab08c1d63c5e75"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RotateAround</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;point, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RotateAround</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;point, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation)</td></tr>
 <tr class="separator:a9c507d6956767906baab08c1d63c5e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fd7f073175422e0116072e6c7707a00" id="r_a9fd7f073175422e0116072e6c7707a00"><td class="memItemLeft" align="right" valign="top"><a id="a9fd7f073175422e0116072e6c7707a00" name="a9fd7f073175422e0116072e6c7707a00"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetOriginalTransform</b> ()</td></tr>
@@ -100,25 +100,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>MarkRotationDirty</b>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a43d482180155b95d3c58457371770d01" id="r_a43d482180155b95d3c58457371770d01"><td class="memItemLeft" align="right" valign="top"><a id="a43d482180155b95d3c58457371770d01" name="a43d482180155b95d3c58457371770d01"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>localOriginalPosition_</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>localOriginalPosition_</b></td></tr>
 <tr class="separator:a43d482180155b95d3c58457371770d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae400c88f05cddc0a59dcb52cc25adc60" id="r_ae400c88f05cddc0a59dcb52cc25adc60"><td class="memItemLeft" align="right" valign="top"><a id="ae400c88f05cddc0a59dcb52cc25adc60" name="ae400c88f05cddc0a59dcb52cc25adc60"></a>
 <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>localOriginalRotation_</b></td></tr>
 <tr class="separator:ae400c88f05cddc0a59dcb52cc25adc60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab42ae35dd67e010fdfe467511a92ae61" id="r_ab42ae35dd67e010fdfe467511a92ae61"><td class="memItemLeft" align="right" valign="top"><a id="ab42ae35dd67e010fdfe467511a92ae61" name="ab42ae35dd67e010fdfe467511a92ae61"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>originalPosition_</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>originalPosition_</b></td></tr>
 <tr class="separator:ab42ae35dd67e010fdfe467511a92ae61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0283b6d7a89ee33b10dda3ffeef5093b" id="r_a0283b6d7a89ee33b10dda3ffeef5093b"><td class="memItemLeft" align="right" valign="top"><a id="a0283b6d7a89ee33b10dda3ffeef5093b" name="a0283b6d7a89ee33b10dda3ffeef5093b"></a>
 <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>originalRotation_</b></td></tr>
 <tr class="separator:a0283b6d7a89ee33b10dda3ffeef5093b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4c6268af1e98ba5f96f0290fba11766" id="r_ac4c6268af1e98ba5f96f0290fba11766"><td class="memItemLeft" align="right" valign="top"><a id="ac4c6268af1e98ba5f96f0290fba11766" name="ac4c6268af1e98ba5f96f0290fba11766"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>previousPosition_</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>previousPosition_</b></td></tr>
 <tr class="separator:ac4c6268af1e98ba5f96f0290fba11766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6d37a6b94fc905d45edcbd0e2a725e9" id="r_ab6d37a6b94fc905d45edcbd0e2a725e9"><td class="memItemLeft" align="right" valign="top"><a id="ab6d37a6b94fc905d45edcbd0e2a725e9" name="ab6d37a6b94fc905d45edcbd0e2a725e9"></a>
 <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>previousRotation_</b></td></tr>
 <tr class="separator:ab6d37a6b94fc905d45edcbd0e2a725e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a760c4a62d3a15e923c857366ea30ef2a" id="r_a760c4a62d3a15e923c857366ea30ef2a"><td class="memItemLeft" align="right" valign="top"><a id="a760c4a62d3a15e923c857366ea30ef2a" name="a760c4a62d3a15e923c857366ea30ef2a"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position_</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position_</b></td></tr>
 <tr class="separator:a760c4a62d3a15e923c857366ea30ef2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84bff9fffc28d2a646caaf30dc0d4b3a" id="r_a84bff9fffc28d2a646caaf30dc0d4b3a"><td class="memItemLeft" align="right" valign="top"><a id="a84bff9fffc28d2a646caaf30dc0d4b3a" name="a84bff9fffc28d2a646caaf30dc0d4b3a"></a>
 <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rotation_</b></td></tr>

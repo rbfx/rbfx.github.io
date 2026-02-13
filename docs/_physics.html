@@ -103,8 +103,8 @@ Reading collision events</h1>
 <p>A new or ongoing physics collision event will report the collided scene nodes and rigid bodies, whether either of the bodies is a trigger, and the list of contact points.</p>
 <p>The contact points are encoded in a byte buffer, which can be read using the <a class="el" href="class_urho3_d_1_1_vector_buffer.html" title="Dynamically sized buffer that can be read and written to as a stream.">VectorBuffer</a> or <a class="el" href="class_urho3_d_1_1_memory_buffer.html">MemoryBuffer</a> helper class. The following structure repeats for each contact:</p>
 <ul>
-<li>World-space position (<a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>)</li>
-<li>Normal vector (<a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>)</li>
+<li>World-space position (Vector3)</li>
+<li>Normal vector (Vector3)</li>
 <li>Distance, negative when interpenetrating (float)</li>
 <li>Impulse applied in collision (float)</li>
 </ul>

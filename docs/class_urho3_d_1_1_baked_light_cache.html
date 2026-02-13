@@ -87,10 +87,10 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedLightCache</b> ()</td></tr>
 <tr class="memdesc:a26d2f728646a102701fe25835eb4f162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
 <tr class="separator:a26d2f728646a102701fe25835eb4f162"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a484857340856a83d56c7af3779999102" id="r_a484857340856a83d56c7af3779999102"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_light_cache.html#a484857340856a83d56c7af3779999102">StoreBakedChunk</a> (const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;chunk, <a class="el" href="struct_urho3_d_1_1_baked_scene_chunk.html">BakedSceneChunk</a> bakedChunk)=0</td></tr>
+<tr class="memitem:a484857340856a83d56c7af3779999102" id="r_a484857340856a83d56c7af3779999102"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_light_cache.html#a484857340856a83d56c7af3779999102">StoreBakedChunk</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;chunk, <a class="el" href="struct_urho3_d_1_1_baked_scene_chunk.html">BakedSceneChunk</a> bakedChunk)=0</td></tr>
 <tr class="memdesc:a484857340856a83d56c7af3779999102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store baked scene chunk in the cache.  <br /></td></tr>
 <tr class="separator:a484857340856a83d56c7af3779999102"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87bbf5c73830dd2d9033e21c382a7613" id="r_a87bbf5c73830dd2d9033e21c382a7613"><td class="memItemLeft" align="right" valign="top">virtual ea::shared_ptr&lt; const <a class="el" href="struct_urho3_d_1_1_baked_scene_chunk.html">BakedSceneChunk</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_light_cache.html#a87bbf5c73830dd2d9033e21c382a7613">LoadBakedChunk</a> (const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;chunk)=0</td></tr>
+<tr class="memitem:a87bbf5c73830dd2d9033e21c382a7613" id="r_a87bbf5c73830dd2d9033e21c382a7613"><td class="memItemLeft" align="right" valign="top">virtual ea::shared_ptr&lt; const <a class="el" href="struct_urho3_d_1_1_baked_scene_chunk.html">BakedSceneChunk</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_light_cache.html#a87bbf5c73830dd2d9033e21c382a7613">LoadBakedChunk</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;chunk)=0</td></tr>
 <tr class="memdesc:a87bbf5c73830dd2d9033e21c382a7613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load baked scene chunk.  <br /></td></tr>
 <tr class="separator:a87bbf5c73830dd2d9033e21c382a7613"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabc0af833b7078c46054e60b985b7366" id="r_aabc0af833b7078c46054e60b985b7366"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_light_cache.html#aabc0af833b7078c46054e60b985b7366">StoreDirectLight</a> (unsigned lightmapIndex, <a class="el" href="struct_urho3_d_1_1_lightmap_chart_baked_direct.html">LightmapChartBakedDirect</a> bakedDirect)=0</td></tr>
@@ -121,7 +121,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedLightCache</
         <tr>
           <td class="memname">virtual ea::shared_ptr&lt; const <a class="el" href="struct_urho3_d_1_1_baked_scene_chunk.html">BakedSceneChunk</a> &gt; Urho3D::BakedLightCache::LoadBakedChunk </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
           <td class="paramname"><em>chunk</em></td><td>)</td>
           <td></td>
         </tr>
@@ -211,7 +211,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedLightCache</
         <tr>
           <td class="memname">virtual void Urho3D::BakedLightCache::StoreBakedChunk </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
           <td class="paramname"><em>chunk</em>, </td>
         </tr>
         <tr>

@@ -154,7 +154,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>GetMultiSample</b> () 
 <tr class="memitem:a6d18376d129b678a91fccd33675ed863" id="r_a6d18376d129b678a91fccd33675ed863"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_ray.html">Ray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_reality.html#a6d18376d129b678a91fccd33675ed863">GetHandAimRay</a> (VRHand hand) const =0</td></tr>
 <tr class="memdesc:a6d18376d129b678a91fccd33675ed863"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the aiming ray for a given hand.  <br /></td></tr>
 <tr class="separator:a6d18376d129b678a91fccd33675ed863"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d4e7cc83c24e9054764bfa41a784dce" id="r_a2d4e7cc83c24e9054764bfa41a784dce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_reality.html#a2d4e7cc83c24e9054764bfa41a784dce">GetHandVelocity</a> (VRHand hand, <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> *linear, <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> *angular) const =0</td></tr>
+<tr class="memitem:a2d4e7cc83c24e9054764bfa41a784dce" id="r_a2d4e7cc83c24e9054764bfa41a784dce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_reality.html#a2d4e7cc83c24e9054764bfa41a784dce">GetHandVelocity</a> (VRHand hand, <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> *linear, <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> *angular) const =0</td></tr>
 <tr class="memdesc:a2d4e7cc83c24e9054764bfa41a784dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return linear and/or angular velocity of a hand.  <br /></td></tr>
 <tr class="separator:a2d4e7cc83c24e9054764bfa41a784dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2069c491e1e691ffd5413500b86ee63" id="r_ab2069c491e1e691ffd5413500b86ee63"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_virtual_reality.html#ab2069c491e1e691ffd5413500b86ee63">GetHeadTransform</a> () const =0</td></tr>
@@ -633,13 +633,13 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> *&#160;</td>
           <td class="paramname"><em>linear</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> *&#160;</td>
           <td class="paramname"><em>angular</em>&#160;</td>
         </tr>
         <tr>

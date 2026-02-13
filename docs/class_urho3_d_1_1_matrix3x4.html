@@ -102,11 +102,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9b800068c5bf0ba10d2726b41eb76167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a float array. <br /></td></tr>
 <tr class="separator:a9b800068c5bf0ba10d2726b41eb76167"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0738087cf030b5cc23673c604652f16e" id="r_a0738087cf030b5cc23673c604652f16e"><td class="memItemLeft" align="right" valign="top"><a id="a0738087cf030b5cc23673c604652f16e" name="a0738087cf030b5cc23673c604652f16e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix3x4</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;translation, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation, float scale) noexcept</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix3x4</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;translation, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation, float scale) noexcept</td></tr>
 <tr class="memdesc:a0738087cf030b5cc23673c604652f16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from translation, rotation and uniform scale. <br /></td></tr>
 <tr class="separator:a0738087cf030b5cc23673c604652f16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae213cfd4c0a8167d5aad281096a5eda3" id="r_ae213cfd4c0a8167d5aad281096a5eda3"><td class="memItemLeft" align="right" valign="top"><a id="ae213cfd4c0a8167d5aad281096a5eda3" name="ae213cfd4c0a8167d5aad281096a5eda3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix3x4</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;translation, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;scale) noexcept</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix3x4</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;translation, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation, const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;scale) noexcept</td></tr>
 <tr class="memdesc:ae213cfd4c0a8167d5aad281096a5eda3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from translation, rotation and nonuniform scale. <br /></td></tr>
 <tr class="separator:ae213cfd4c0a8167d5aad281096a5eda3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a4100aed5fd9672f7326a30e7b3d4f4" id="r_a9a4100aed5fd9672f7326a30e7b3d4f4"><td class="memItemLeft" align="right" valign="top"><a id="a9a4100aed5fd9672f7326a30e7b3d4f4" name="a9a4100aed5fd9672f7326a30e7b3d4f4"></a>
@@ -130,11 +130,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 <tr class="memdesc:adff2f265a5b13db04bd875a9f09c27c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for inequality with another matrix without epsilon. <br /></td></tr>
 <tr class="separator:adff2f265a5b13db04bd875a9f09c27c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c27f27dc2db307685fca3517c81b586" id="r_a1c27f27dc2db307685fca3517c81b586"><td class="memItemLeft" align="right" valign="top"><a id="a1c27f27dc2db307685fca3517c81b586" name="a1c27f27dc2db307685fca3517c81b586"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;rhs) const</td></tr>
-<tr class="memdesc:a1c27f27dc2db307685fca3517c81b586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply a <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a> which is assumed to represent position. <br /></td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a1c27f27dc2db307685fca3517c81b586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply a Vector3 which is assumed to represent position. <br /></td></tr>
 <tr class="separator:a1c27f27dc2db307685fca3517c81b586"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0796807f48a64907191088d2c51b3435" id="r_a0796807f48a64907191088d2c51b3435"><td class="memItemLeft" align="right" valign="top"><a id="a0796807f48a64907191088d2c51b3435" name="a0796807f48a64907191088d2c51b3435"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a> &amp;rhs) const</td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a> &amp;rhs) const</td></tr>
 <tr class="memdesc:a0796807f48a64907191088d2c51b3435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply a <a class="el" href="class_urho3_d_1_1_vector4.html" title="Four-dimensional vector.">Vector4</a>. <br /></td></tr>
 <tr class="separator:a0796807f48a64907191088d2c51b3435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a917831fe1913b03279ca1a18984957c3" id="r_a917831fe1913b03279ca1a18984957c3"><td class="memItemLeft" align="right" valign="top"><a id="a917831fe1913b03279ca1a18984957c3" name="a917831fe1913b03279ca1a18984957c3"></a>
@@ -158,7 +158,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 <tr class="memdesc:a36705ed47495f5bb237cad2ac59a3a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply a 4x4 matrix. <br /></td></tr>
 <tr class="separator:a36705ed47495f5bb237cad2ac59a3a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a997c13dea4269829fee68ecb039fbe" id="r_a8a997c13dea4269829fee68ecb039fbe"><td class="memItemLeft" align="right" valign="top"><a id="a8a997c13dea4269829fee68ecb039fbe" name="a8a997c13dea4269829fee68ecb039fbe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTranslation</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;translation)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTranslation</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;translation)</td></tr>
 <tr class="memdesc:a8a997c13dea4269829fee68ecb039fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set translation elements. <br /></td></tr>
 <tr class="separator:a8a997c13dea4269829fee68ecb039fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcc6c1f6bfd5da711ba7df09e1cfbaf2" id="r_afcc6c1f6bfd5da711ba7df09e1cfbaf2"><td class="memItemLeft" align="right" valign="top"><a id="afcc6c1f6bfd5da711ba7df09e1cfbaf2" name="afcc6c1f6bfd5da711ba7df09e1cfbaf2"></a>
@@ -166,7 +166,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetRotation</b> (cons
 <tr class="memdesc:afcc6c1f6bfd5da711ba7df09e1cfbaf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rotation elements from a 3x3 matrix. <br /></td></tr>
 <tr class="separator:afcc6c1f6bfd5da711ba7df09e1cfbaf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae735fa44b013fbc187fda4829364d653" id="r_ae735fa44b013fbc187fda4829364d653"><td class="memItemLeft" align="right" valign="top"><a id="ae735fa44b013fbc187fda4829364d653" name="ae735fa44b013fbc187fda4829364d653"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetScale</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;scale)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetScale</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;scale)</td></tr>
 <tr class="memdesc:ae735fa44b013fbc187fda4829364d653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scaling elements. <br /></td></tr>
 <tr class="separator:ae735fa44b013fbc187fda4829364d653"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac11a503045831c3f45b2cdf4dd5a3141" id="r_ac11a503045831c3f45b2cdf4dd5a3141"><td class="memItemLeft" align="right" valign="top"><a id="ac11a503045831c3f45b2cdf4dd5a3141" name="ac11a503045831c3f45b2cdf4dd5a3141"></a>
@@ -186,7 +186,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetScale</b> (float s
 <tr class="memdesc:aed75a37964f03e3d0b49318fc906be04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the rotation matrix with scaling removed. <br /></td></tr>
 <tr class="separator:aed75a37964f03e3d0b49318fc906be04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30a35295a4d931ac923e4fc0bdb10502" id="r_a30a35295a4d931ac923e4fc0bdb10502"><td class="memItemLeft" align="right" valign="top"><a id="a30a35295a4d931ac923e4fc0bdb10502" name="a30a35295a4d931ac923e4fc0bdb10502"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Translation</b> () const</td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Translation</b> () const</td></tr>
 <tr class="memdesc:a30a35295a4d931ac923e4fc0bdb10502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the translation part. <br /></td></tr>
 <tr class="separator:a30a35295a4d931ac923e4fc0bdb10502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e420dc4d1429c92a437853fcf7bc5f8" id="r_a4e420dc4d1429c92a437853fcf7bc5f8"><td class="memItemLeft" align="right" valign="top"><a id="a4e420dc4d1429c92a437853fcf7bc5f8" name="a4e420dc4d1429c92a437853fcf7bc5f8"></a>
@@ -194,11 +194,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetScale</b> (float s
 <tr class="memdesc:a4e420dc4d1429c92a437853fcf7bc5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the rotation part. <br /></td></tr>
 <tr class="separator:a4e420dc4d1429c92a437853fcf7bc5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cdac780b2a7ea2077287c6b7a6ea631" id="r_a0cdac780b2a7ea2077287c6b7a6ea631"><td class="memItemLeft" align="right" valign="top"><a id="a0cdac780b2a7ea2077287c6b7a6ea631" name="a0cdac780b2a7ea2077287c6b7a6ea631"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Scale</b> () const</td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Scale</b> () const</td></tr>
 <tr class="memdesc:a0cdac780b2a7ea2077287c6b7a6ea631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the scaling part. <br /></td></tr>
 <tr class="separator:a0cdac780b2a7ea2077287c6b7a6ea631"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56f1e338bd39e384a53e2e006f79b24e" id="r_a56f1e338bd39e384a53e2e006f79b24e"><td class="memItemLeft" align="right" valign="top"><a id="a56f1e338bd39e384a53e2e006f79b24e" name="a56f1e338bd39e384a53e2e006f79b24e"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SignedScale</b> (const <a class="el" href="class_urho3_d_1_1_matrix3.html">Matrix3</a> &amp;rotation) const</td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SignedScale</b> (const <a class="el" href="class_urho3_d_1_1_matrix3.html">Matrix3</a> &amp;rotation) const</td></tr>
 <tr class="memdesc:a56f1e338bd39e384a53e2e006f79b24e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the scaling part with the sign. Reference rotation matrix is required to avoid ambiguity. <br /></td></tr>
 <tr class="separator:a56f1e338bd39e384a53e2e006f79b24e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1935129f31ba0b11b89eed6996792c35" id="r_a1935129f31ba0b11b89eed6996792c35"><td class="memItemLeft" align="right" valign="top"><a id="a1935129f31ba0b11b89eed6996792c35" name="a1935129f31ba0b11b89eed6996792c35"></a>
@@ -206,7 +206,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>Equals</b> (const <a 
 <tr class="memdesc:a1935129f31ba0b11b89eed6996792c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test for equality with another matrix with epsilon. <br /></td></tr>
 <tr class="separator:a1935129f31ba0b11b89eed6996792c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61f9a89527763f63e751c48e7a898647" id="r_a61f9a89527763f63e751c48e7a898647"><td class="memItemLeft" align="right" valign="top"><a id="a61f9a89527763f63e751c48e7a898647" name="a61f9a89527763f63e751c48e7a898647"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Decompose</b> (<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;translation, <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation, <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;scale) const</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Decompose</b> (<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;translation, <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation, <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;scale) const</td></tr>
 <tr class="memdesc:a61f9a89527763f63e751c48e7a898647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return decomposition to translation, rotation and scale. <br /></td></tr>
 <tr class="separator:a61f9a89527763f63e751c48e7a898647"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5b5a881edd603c76e043eae8a977829" id="r_ab5b5a881edd603c76e043eae8a977829"><td class="memItemLeft" align="right" valign="top"><a id="ab5b5a881edd603c76e043eae8a977829" name="ab5b5a881edd603c76e043eae8a977829"></a>
@@ -230,7 +230,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>Element</b> (unsigne
 <tr class="memdesc:a3fcfc2b179e5f2def1a0832478a180e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return matrix row. <br /></td></tr>
 <tr class="separator:a3fcfc2b179e5f2def1a0832478a180e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7adf5b64a3d597157c0d7d3755da532a" id="r_a7adf5b64a3d597157c0d7d3755da532a"><td class="memItemLeft" align="right" valign="top"><a id="a7adf5b64a3d597157c0d7d3755da532a" name="a7adf5b64a3d597157c0d7d3755da532a"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Column</b> (unsigned j) const</td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Column</b> (unsigned j) const</td></tr>
 <tr class="memdesc:a7adf5b64a3d597157c0d7d3755da532a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return matrix column. <br /></td></tr>
 <tr class="separator:a7adf5b64a3d597157c0d7d3755da532a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58070ab0d121a4d984cf50151552eb43" id="r_a58070ab0d121a4d984cf50151552eb43"><td class="memItemLeft" align="right" valign="top"><a id="a58070ab0d121a4d984cf50151552eb43" name="a58070ab0d121a4d984cf50151552eb43"></a>
@@ -253,7 +253,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>ToHash</b> () con
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9860fb14d9690a80d5c08c449c7887e4" id="r_a9860fb14d9690a80d5c08c449c7887e4"><td class="memItemLeft" align="right" valign="top"><a id="a9860fb14d9690a80d5c08c449c7887e4" name="a9860fb14d9690a80d5c08c449c7887e4"></a>
-static <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>FromTranslation</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;translation)</td></tr>
+static <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>FromTranslation</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;translation)</td></tr>
 <tr class="memdesc:a9860fb14d9690a80d5c08c449c7887e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from translation vector. <br /></td></tr>
 <tr class="separator:a9860fb14d9690a80d5c08c449c7887e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c6b8e543334de19ce01df4cc83a1f12" id="r_a9c6b8e543334de19ce01df4cc83a1f12"><td class="memItemLeft" align="right" valign="top"><a id="a9c6b8e543334de19ce01df4cc83a1f12" name="a9c6b8e543334de19ce01df4cc83a1f12"></a>
@@ -265,7 +265,7 @@ static <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;
 <tr class="memdesc:aea0414141e1313c64627afe406024c7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constuct from scalar scale. <br /></td></tr>
 <tr class="separator:aea0414141e1313c64627afe406024c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaee485d6ba5843d39cb3bf0023cf28c9" id="r_aaee485d6ba5843d39cb3bf0023cf28c9"><td class="memItemLeft" align="right" valign="top"><a id="aaee485d6ba5843d39cb3bf0023cf28c9" name="aaee485d6ba5843d39cb3bf0023cf28c9"></a>
-static <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>FromScale</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;scale)</td></tr>
+static <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>FromScale</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;scale)</td></tr>
 <tr class="memdesc:aaee485d6ba5843d39cb3bf0023cf28c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constuct from vector scale. <br /></td></tr>
 <tr class="separator:aaee485d6ba5843d39cb3bf0023cf28c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">

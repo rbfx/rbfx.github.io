@@ -114,7 +114,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0920fec8ad71887d0865184f030cad0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from 32-bit integer. Default format is 0xAABBGGRR. <br /></td></tr>
 <tr class="separator:a0920fec8ad71887d0865184f030cad0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a13a0b9a48313359a0d2c178285aedb" id="r_a8a13a0b9a48313359a0d2c178285aedb"><td class="memItemLeft" align="right" valign="top"><a id="a8a13a0b9a48313359a0d2c178285aedb" name="a8a13a0b9a48313359a0d2c178285aedb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Color</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;color)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Color</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;color)</td></tr>
 <tr class="memdesc:a8a13a0b9a48313359a0d2c178285aedb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from 3-vector. <br /></td></tr>
 <tr class="separator:a8a13a0b9a48313359a0d2c178285aedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1ad769af0188833f58185c7a38f8bc4" id="r_aa1ad769af0188833f58185c7a38f8bc4"><td class="memItemLeft" align="right" valign="top"><a id="aa1ad769af0188833f58185c7a38f8bc4" name="aa1ad769af0188833f58185c7a38f8bc4"></a>
@@ -170,12 +170,12 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>ToUIntMask</b> (c
 <tr class="memdesc:a7219b62964a242c52a86531658ba4713"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return color packed to a 32-bit integer with arbitrary channel mask. Components are clamped to [0, 1] range. <br /></td></tr>
 <tr class="separator:a7219b62964a242c52a86531658ba4713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada772e529628c588e6e080a8b9b2ddee" id="r_ada772e529628c588e6e080a8b9b2ddee"><td class="memItemLeft" align="right" valign="top"><a id="ada772e529628c588e6e080a8b9b2ddee" name="ada772e529628c588e6e080a8b9b2ddee"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ToHSL</b> () const</td></tr>
-<tr class="memdesc:ada772e529628c588e6e080a8b9b2ddee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return HSL color-space representation as a <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>; the RGB values are clipped before conversion but not changed in the process. <br /></td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ToHSL</b> () const</td></tr>
+<tr class="memdesc:ada772e529628c588e6e080a8b9b2ddee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return HSL color-space representation as a Vector3; the RGB values are clipped before conversion but not changed in the process. <br /></td></tr>
 <tr class="separator:ada772e529628c588e6e080a8b9b2ddee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7302d685e355c05c426499bfb40040ec" id="r_a7302d685e355c05c426499bfb40040ec"><td class="memItemLeft" align="right" valign="top"><a id="a7302d685e355c05c426499bfb40040ec" name="a7302d685e355c05c426499bfb40040ec"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ToHSV</b> () const</td></tr>
-<tr class="memdesc:a7302d685e355c05c426499bfb40040ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return HSV color-space representation as a <a class="el" href="class_urho3_d_1_1_vector3.html" title="Three-dimensional vector.">Vector3</a>; the RGB values are clipped before conversion but not changed in the process. <br /></td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ToHSV</b> () const</td></tr>
+<tr class="memdesc:a7302d685e355c05c426499bfb40040ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return HSV color-space representation as a Vector3; the RGB values are clipped before conversion but not changed in the process. <br /></td></tr>
 <tr class="separator:a7302d685e355c05c426499bfb40040ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb5866e1447fd157ebd5a8292e6a5b6c" id="r_acb5866e1447fd157ebd5a8292e6a5b6c"><td class="memItemLeft" align="right" valign="top"><a id="acb5866e1447fd157ebd5a8292e6a5b6c" name="acb5866e1447fd157ebd5a8292e6a5b6c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>FromUInt</b> (unsigned color)</td></tr>
@@ -193,7 +193,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>FromHSL</b> (float h,
 void&#160;</td><td class="memItemRight" valign="bottom"><b>FromHSV</b> (float h, float s, float v, float a=1.0f)</td></tr>
 <tr class="memdesc:aacd20970f79c30da1275d872cac9c583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set RGBA values from specified HSV values and alpha. <br /></td></tr>
 <tr class="separator:aacd20970f79c30da1275d872cac9c583"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19a577d7d7b1e6f1b0b42f297a09d7c0" id="r_a19a577d7d7b1e6f1b0b42f297a09d7c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a19a577d7d7b1e6f1b0b42f297a09d7c0">ToVector3</a> () const</td></tr>
+<tr class="memitem:a19a577d7d7b1e6f1b0b42f297a09d7c0" id="r_a19a577d7d7b1e6f1b0b42f297a09d7c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a19a577d7d7b1e6f1b0b42f297a09d7c0">ToVector3</a> () const</td></tr>
 <tr class="separator:a19a577d7d7b1e6f1b0b42f297a09d7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d0f175d3db7190d99793c3c2364c9d5" id="r_a1d0f175d3db7190d99793c3c2364c9d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_color.html#a1d0f175d3db7190d99793c3c2364c9d5">ToVector4</a> () const</td></tr>
 <tr class="separator:a1d0f175d3db7190d99793c3c2364c9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -415,7 +415,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>FromHCM</b> (float h,
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> Urho3D::Color::ToVector3 </td>
+          <td class="memname"><a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> Urho3D::Color::ToVector3 </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

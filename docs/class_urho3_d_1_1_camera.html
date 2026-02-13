@@ -252,7 +252,7 @@ const <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> &amp;&#160
 const <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetInverseViewProj</b> () const</td></tr>
 <tr class="memdesc:a3c9579449c8c312342c16aaa494e66e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return inverted view-projection matrix. <br /></td></tr>
 <tr class="separator:a3c9579449c8c312342c16aaa494e66e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06e3e08be4df0c03e024c21119728b6f" id="r_a06e3e08be4df0c03e024c21119728b6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_camera.html#a06e3e08be4df0c03e024c21119728b6f">GetFrustumSize</a> (<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;nearSize, <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;farSize) const</td></tr>
+<tr class="memitem:a06e3e08be4df0c03e024c21119728b6f" id="r_a06e3e08be4df0c03e024c21119728b6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_camera.html#a06e3e08be4df0c03e024c21119728b6f">GetFrustumSize</a> (<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;nearSize, <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;farSize) const</td></tr>
 <tr class="memdesc:a06e3e08be4df0c03e024c21119728b6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return frustum near and far sizes.  <br /></td></tr>
 <tr class="separator:a06e3e08be4df0c03e024c21119728b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fd32e1ea1548d47099dfa40e72653dc" id="r_a0fd32e1ea1548d47099dfa40e72653dc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_camera.html#a0fd32e1ea1548d47099dfa40e72653dc">GetHalfViewSize</a> () const</td></tr>
@@ -280,10 +280,10 @@ const <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> &amp;&#160
 <tr class="memdesc:a3e562c48b4efe1a30596283c8212e725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return ray corresponding to current mouse position, with origin on the near clip plane. <br /></td></tr>
 <tr class="separator:a3e562c48b4efe1a30596283c8212e725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11f8754c90c4d6aff4bd88d48ae3373d" id="r_a11f8754c90c4d6aff4bd88d48ae3373d"><td class="memItemLeft" align="right" valign="top"><a id="a11f8754c90c4d6aff4bd88d48ae3373d" name="a11f8754c90c4d6aff4bd88d48ae3373d"></a>
-<a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>WorldToScreenPoint</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;worldPos) const</td></tr>
+<a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>WorldToScreenPoint</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;worldPos) const</td></tr>
 <tr class="memdesc:a11f8754c90c4d6aff4bd88d48ae3373d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a world space point to normalized screen coordinates (0 - 1). <br /></td></tr>
 <tr class="separator:a11f8754c90c4d6aff4bd88d48ae3373d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d093c3479b71a707f3ec8887380396a" id="r_a8d093c3479b71a707f3ec8887380396a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_camera.html#a8d093c3479b71a707f3ec8887380396a">ScreenToWorldPoint</a> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;screenPos) const</td></tr>
+<tr class="memitem:a8d093c3479b71a707f3ec8887380396a" id="r_a8d093c3479b71a707f3ec8887380396a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_camera.html#a8d093c3479b71a707f3ec8887380396a">ScreenToWorldPoint</a> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;screenPos) const</td></tr>
 <tr class="memdesc:a8d093c3479b71a707f3ec8887380396a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert normalized screen coordinates (0 - 1) and distance along view Z axis (in Z coordinate) to a world space point. The distance can not be closer than the near clip plane.  <br /></td></tr>
 <tr class="separator:a8d093c3479b71a707f3ec8887380396a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ff2eccab90df4b3511d6c4ed7ffa64d" id="r_a5ff2eccab90df4b3511d6c4ed7ffa64d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_camera.html#a5ff2eccab90df4b3511d6c4ed7ffa64d">GetProjectionOffset</a> () const</td></tr>
@@ -305,11 +305,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetReverseCulling</b>
 <tr class="memdesc:a137286ffb1de51dd78754cd0681d1e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether to reverse culling; affected by vertical flipping and reflection. <br /></td></tr>
 <tr class="separator:a137286ffb1de51dd78754cd0681d1e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc14322198c5fd70f75ed8a739212e54" id="r_adc14322198c5fd70f75ed8a739212e54"><td class="memItemLeft" align="right" valign="top"><a id="adc14322198c5fd70f75ed8a739212e54" name="adc14322198c5fd70f75ed8a739212e54"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>GetDistance</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;worldPos) const</td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>GetDistance</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;worldPos) const</td></tr>
 <tr class="memdesc:adc14322198c5fd70f75ed8a739212e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return distance to position. In orthographic mode uses only Z coordinate. <br /></td></tr>
 <tr class="separator:adc14322198c5fd70f75ed8a739212e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68a03b28634de2c029279eb3105b5a3e" id="r_a68a03b28634de2c029279eb3105b5a3e"><td class="memItemLeft" align="right" valign="top"><a id="a68a03b28634de2c029279eb3105b5a3e" name="a68a03b28634de2c029279eb3105b5a3e"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>GetDistanceSquared</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;worldPos) const</td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>GetDistanceSquared</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;worldPos) const</td></tr>
 <tr class="memdesc:a68a03b28634de2c029279eb3105b5a3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return squared distance to position. In orthographic mode uses only Z coordinate. <br /></td></tr>
 <tr class="separator:a68a03b28634de2c029279eb3105b5a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a165a829d35ab50d0df4bfcd17b1a6255" id="r_a165a829d35ab50d0df4bfcd17b1a6255"><td class="memItemLeft" align="right" valign="top"><a id="a165a829d35ab50d0df4bfcd17b1a6255" name="a165a829d35ab50d0df4bfcd17b1a6255"></a>
@@ -317,7 +317,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>GetLodDistance</b> (
 <tr class="memdesc:a165a829d35ab50d0df4bfcd17b1a6255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a scene node's LOD scaled distance. <br /></td></tr>
 <tr class="separator:a165a829d35ab50d0df4bfcd17b1a6255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a550d2bdf61207a877e5ecf7bbb6e247e" id="r_a550d2bdf61207a877e5ecf7bbb6e247e"><td class="memItemLeft" align="right" valign="top"><a id="a550d2bdf61207a877e5ecf7bbb6e247e" name="a550d2bdf61207a877e5ecf7bbb6e247e"></a>
-<a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetFaceCameraRotation</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;position, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation, <a class="el" href="_graphics_defs_8h.html#aef443f97b15d5c7ff39d3199a9a0c5c1">FaceCameraMode</a> mode, float minAngle=0.0f)</td></tr>
+<a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetFaceCameraRotation</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;position, const <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &amp;rotation, <a class="el" href="_graphics_defs_8h.html#aef443f97b15d5c7ff39d3199a9a0c5c1">FaceCameraMode</a> mode, float minAngle=0.0f)</td></tr>
 <tr class="memdesc:a550d2bdf61207a877e5ecf7bbb6e247e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a world rotation for facing a camera on certain axes based on the existing world rotation. <br /></td></tr>
 <tr class="separator:a550d2bdf61207a877e5ecf7bbb6e247e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08d24e076d62c0b397817f2c9f92cc41" id="r_a08d24e076d62c0b397817f2c9f92cc41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_camera.html#a08d24e076d62c0b397817f2c9f92cc41">GetEffectiveWorldTransform</a> () const</td></tr>
@@ -1202,13 +1202,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">void Urho3D::Camera::GetFrustumSize </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;&#160;</td>
           <td class="paramname"><em>nearSize</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;&#160;</td>
           <td class="paramname"><em>farSize</em>&#160;</td>
         </tr>
         <tr>
@@ -1679,9 +1679,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> Urho3D::Camera::ScreenToWorldPoint </td>
+          <td class="memname"><a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> Urho3D::Camera::ScreenToWorldPoint </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;&#160;</td>
           <td class="paramname"><em>screenPos</em></td><td>)</td>
           <td> const</td>
         </tr>

@@ -84,43 +84,43 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedSceneCollector</b> ()</td></tr>
 <tr class="memdesc:a22bc3f19e4ce62921d2fa7988940d237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
 <tr class="separator:a22bc3f19e4ce62921d2fa7988940d237"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94143fbd37149d830cdac05be887edae" id="r_a94143fbd37149d830cdac05be887edae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a94143fbd37149d830cdac05be887edae">LockScene</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;chunkSize)=0</td></tr>
+<tr class="memitem:a94143fbd37149d830cdac05be887edae" id="r_a94143fbd37149d830cdac05be887edae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a94143fbd37149d830cdac05be887edae">LockScene</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene, const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;chunkSize)=0</td></tr>
 <tr class="memdesc:a94143fbd37149d830cdac05be887edae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called before everything else. <a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a> objects must stay unchanged after this call.  <br /></td></tr>
 <tr class="separator:a94143fbd37149d830cdac05be887edae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca4286d2fb8ebabc8ca5359975ad6bef" id="r_aca4286d2fb8ebabc8ca5359975ad6bef"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#aca4286d2fb8ebabc8ca5359975ad6bef">GetChunks</a> ()=0</td></tr>
+<tr class="memitem:aca4286d2fb8ebabc8ca5359975ad6bef" id="r_aca4286d2fb8ebabc8ca5359975ad6bef"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#aca4286d2fb8ebabc8ca5359975ad6bef">GetChunks</a> ()=0</td></tr>
 <tr class="memdesc:aca4286d2fb8ebabc8ca5359975ad6bef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all scene chunks.  <br /></td></tr>
 <tr class="separator:aca4286d2fb8ebabc8ca5359975ad6bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b024dbb4cc3801c1b22fc140566ea02" id="r_a2b024dbb4cc3801c1b22fc140566ea02"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_baked_scene_background_8h.html#a8a9519ddbac22b6ef51031f4d9d20f35">BakedSceneBackgroundArrayPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a2b024dbb4cc3801c1b22fc140566ea02">GetBackgrounds</a> ()=0</td></tr>
 <tr class="memdesc:a2b024dbb4cc3801c1b22fc140566ea02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all scene backgrounds. [0] is expected to be pitch-black background.  <br /></td></tr>
 <tr class="separator:a2b024dbb4cc3801c1b22fc140566ea02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a439e0adf585baaeb50faacb9b124cd39" id="r_a439e0adf585baaeb50faacb9b124cd39"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a439e0adf585baaeb50faacb9b124cd39">GetUniqueGeometries</a> (const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;chunkIndex)=0</td></tr>
+<tr class="memitem:a439e0adf585baaeb50faacb9b124cd39" id="r_a439e0adf585baaeb50faacb9b124cd39"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a439e0adf585baaeb50faacb9b124cd39">GetUniqueGeometries</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;chunkIndex)=0</td></tr>
 <tr class="memdesc:a439e0adf585baaeb50faacb9b124cd39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return unique geometries within chunk.  <br /></td></tr>
 <tr class="separator:a439e0adf585baaeb50faacb9b124cd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86a76dfc541cdd77e3393aeadf9a37de" id="r_a86a76dfc541cdd77e3393aeadf9a37de"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a86a76dfc541cdd77e3393aeadf9a37de">CommitGeometries</a> (const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;chunkIndex)=0</td></tr>
+<tr class="memitem:a86a76dfc541cdd77e3393aeadf9a37de" id="r_a86a76dfc541cdd77e3393aeadf9a37de"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a86a76dfc541cdd77e3393aeadf9a37de">CommitGeometries</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;chunkIndex)=0</td></tr>
 <tr class="memdesc:a86a76dfc541cdd77e3393aeadf9a37de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when geometries were changed externally.  <br /></td></tr>
 <tr class="separator:a86a76dfc541cdd77e3393aeadf9a37de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e9ac6268247fb173d527290b773cf7e" id="r_a1e9ac6268247fb173d527290b773cf7e"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_light_probe_group.html">LightProbeGroup</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a1e9ac6268247fb173d527290b773cf7e">GetUniqueLightProbeGroups</a> (const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;chunkIndex)=0</td></tr>
+<tr class="memitem:a1e9ac6268247fb173d527290b773cf7e" id="r_a1e9ac6268247fb173d527290b773cf7e"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_light_probe_group.html">LightProbeGroup</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a1e9ac6268247fb173d527290b773cf7e">GetUniqueLightProbeGroups</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;chunkIndex)=0</td></tr>
 <tr class="memdesc:a1e9ac6268247fb173d527290b773cf7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return unique light probe groups within chunk. Order of groups must stay the same for each call.  <br /></td></tr>
 <tr class="separator:a1e9ac6268247fb173d527290b773cf7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47988c3d4f5821a21037bb63f8bfe505" id="r_a47988c3d4f5821a21037bb63f8bfe505"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_zone.html">Zone</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a47988c3d4f5821a21037bb63f8bfe505">GetLightProbeGroupZone</a> (const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;chunkIndex, <a class="el" href="class_urho3_d_1_1_light_probe_group.html">LightProbeGroup</a> *lightProbeGroup)=0</td></tr>
+<tr class="memitem:a47988c3d4f5821a21037bb63f8bfe505" id="r_a47988c3d4f5821a21037bb63f8bfe505"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_zone.html">Zone</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a47988c3d4f5821a21037bb63f8bfe505">GetLightProbeGroupZone</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;chunkIndex, <a class="el" href="class_urho3_d_1_1_light_probe_group.html">LightProbeGroup</a> *lightProbeGroup)=0</td></tr>
 <tr class="memdesc:a47988c3d4f5821a21037bb63f8bfe505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return zone that corresponds to light probe group within chunk.  <br /></td></tr>
 <tr class="separator:a47988c3d4f5821a21037bb63f8bfe505"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac154c40f9837604193a09db20559e1f" id="r_aac154c40f9837604193a09db20559e1f"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#aac154c40f9837604193a09db20559e1f">GetZoneBackground</a> (const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;chunkIndex, <a class="el" href="class_urho3_d_1_1_zone.html">Zone</a> *zone)=0</td></tr>
+<tr class="memitem:aac154c40f9837604193a09db20559e1f" id="r_aac154c40f9837604193a09db20559e1f"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#aac154c40f9837604193a09db20559e1f">GetZoneBackground</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;chunkIndex, <a class="el" href="class_urho3_d_1_1_zone.html">Zone</a> *zone)=0</td></tr>
 <tr class="memdesc:aac154c40f9837604193a09db20559e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return background index for zone within chunk.  <br /></td></tr>
 <tr class="separator:aac154c40f9837604193a09db20559e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae64675c2049dcca6d1979614167a507e" id="r_ae64675c2049dcca6d1979614167a507e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#ae64675c2049dcca6d1979614167a507e">GetChunkBoundingBox</a> (const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;chunkIndex)=0</td></tr>
+<tr class="memitem:ae64675c2049dcca6d1979614167a507e" id="r_ae64675c2049dcca6d1979614167a507e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#ae64675c2049dcca6d1979614167a507e">GetChunkBoundingBox</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;chunkIndex)=0</td></tr>
 <tr class="memdesc:ae64675c2049dcca6d1979614167a507e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return bounding box of unique nodes of the chunk.  <br /></td></tr>
 <tr class="separator:ae64675c2049dcca6d1979614167a507e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99cb0ac92a8e278e404b42ef519c4024" id="r_a99cb0ac92a8e278e404b42ef519c4024"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_light.html">Light</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a99cb0ac92a8e278e404b42ef519c4024">GetLightsInBoundingBox</a> (const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;chunkIndex, const <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a> &amp;boundingBox)=0</td></tr>
+<tr class="memitem:a99cb0ac92a8e278e404b42ef519c4024" id="r_a99cb0ac92a8e278e404b42ef519c4024"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_light.html">Light</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a99cb0ac92a8e278e404b42ef519c4024">GetLightsInBoundingBox</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;chunkIndex, const <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a> &amp;boundingBox)=0</td></tr>
 <tr class="memdesc:a99cb0ac92a8e278e404b42ef519c4024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return lights intersecting given volume.  <br /></td></tr>
 <tr class="separator:a99cb0ac92a8e278e404b42ef519c4024"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19bc6168ca1d44d01c9cc51c7b974373" id="r_a19bc6168ca1d44d01c9cc51c7b974373"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a19bc6168ca1d44d01c9cc51c7b974373">GetGeometriesInBoundingBox</a> (const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;chunkIndex, const <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a> &amp;boundingBox)=0</td></tr>
+<tr class="memitem:a19bc6168ca1d44d01c9cc51c7b974373" id="r_a19bc6168ca1d44d01c9cc51c7b974373"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a19bc6168ca1d44d01c9cc51c7b974373">GetGeometriesInBoundingBox</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;chunkIndex, const <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a> &amp;boundingBox)=0</td></tr>
 <tr class="memdesc:a19bc6168ca1d44d01c9cc51c7b974373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return geometries intersecting given volume.  <br /></td></tr>
 <tr class="separator:a19bc6168ca1d44d01c9cc51c7b974373"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a977318747193f8adcb36e50f153beb06" id="r_a977318747193f8adcb36e50f153beb06"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_light_probe_group.html">LightProbeGroup</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a977318747193f8adcb36e50f153beb06">GetLightProbeGroupsInBoundingBox</a> (const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;chunkIndex, const <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a> &amp;boundingBox)=0</td></tr>
+<tr class="memitem:a977318747193f8adcb36e50f153beb06" id="r_a977318747193f8adcb36e50f153beb06"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_light_probe_group.html">LightProbeGroup</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a977318747193f8adcb36e50f153beb06">GetLightProbeGroupsInBoundingBox</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;chunkIndex, const <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a> &amp;boundingBox)=0</td></tr>
 <tr class="memdesc:a977318747193f8adcb36e50f153beb06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return light probe groups intersecting given volume.  <br /></td></tr>
 <tr class="separator:a977318747193f8adcb36e50f153beb06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a565a0ecc14a5600d02f625f97f132152" id="r_a565a0ecc14a5600d02f625f97f132152"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a565a0ecc14a5600d02f625f97f132152">GetGeometriesInFrustum</a> (const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;chunkIndex, const <a class="el" href="class_urho3_d_1_1_frustum.html">Frustum</a> &amp;frustum)=0</td></tr>
+<tr class="memitem:a565a0ecc14a5600d02f625f97f132152" id="r_a565a0ecc14a5600d02f625f97f132152"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a565a0ecc14a5600d02f625f97f132152">GetGeometriesInFrustum</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;chunkIndex, const <a class="el" href="class_urho3_d_1_1_frustum.html">Frustum</a> &amp;frustum)=0</td></tr>
 <tr class="memdesc:a565a0ecc14a5600d02f625f97f132152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return geometries intersecting given frustum. The frustum is guaranteed to contain specified chunk.  <br /></td></tr>
 <tr class="separator:a565a0ecc14a5600d02f625f97f132152"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a893c60bafd3ee395acb4a9d8cc4a3f5d" id="r_a893c60bafd3ee395acb4a9d8cc4a3f5d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_baked_scene_collector.html#a893c60bafd3ee395acb4a9d8cc4a3f5d">UnlockScene</a> ()=0</td></tr>
@@ -142,7 +142,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedSceneCollect
         <tr>
           <td class="memname">virtual void Urho3D::BakedSceneCollector::CommitGeometries </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
           <td class="paramname"><em>chunkIndex</em></td><td>)</td>
           <td></td>
         </tr>
@@ -201,7 +201,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedSceneCollect
         <tr>
           <td class="memname">virtual <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a> Urho3D::BakedSceneCollector::GetChunkBoundingBox </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
           <td class="paramname"><em>chunkIndex</em></td><td>)</td>
           <td></td>
         </tr>
@@ -229,7 +229,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedSceneCollect
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &gt; Urho3D::BakedSceneCollector::GetChunks </td>
+          <td class="memname">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &gt; Urho3D::BakedSceneCollector::GetChunks </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -260,7 +260,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedSceneCollect
         <tr>
           <td class="memname">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_component.html">Component</a> * &gt; Urho3D::BakedSceneCollector::GetGeometriesInBoundingBox </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
           <td class="paramname"><em>chunkIndex</em>, </td>
         </tr>
         <tr>
@@ -300,7 +300,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedSceneCollect
         <tr>
           <td class="memname">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_component.html">Component</a> * &gt; Urho3D::BakedSceneCollector::GetGeometriesInFrustum </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
           <td class="paramname"><em>chunkIndex</em>, </td>
         </tr>
         <tr>
@@ -340,7 +340,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedSceneCollect
         <tr>
           <td class="memname">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_light_probe_group.html">LightProbeGroup</a> * &gt; Urho3D::BakedSceneCollector::GetLightProbeGroupsInBoundingBox </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
           <td class="paramname"><em>chunkIndex</em>, </td>
         </tr>
         <tr>
@@ -380,7 +380,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedSceneCollect
         <tr>
           <td class="memname">virtual <a class="el" href="class_urho3_d_1_1_zone.html">Zone</a> * Urho3D::BakedSceneCollector::GetLightProbeGroupZone </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
           <td class="paramname"><em>chunkIndex</em>, </td>
         </tr>
         <tr>
@@ -420,7 +420,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedSceneCollect
         <tr>
           <td class="memname">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_light.html">Light</a> * &gt; Urho3D::BakedSceneCollector::GetLightsInBoundingBox </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
           <td class="paramname"><em>chunkIndex</em>, </td>
         </tr>
         <tr>
@@ -460,7 +460,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedSceneCollect
         <tr>
           <td class="memname">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_component.html">Component</a> * &gt; Urho3D::BakedSceneCollector::GetUniqueGeometries </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
           <td class="paramname"><em>chunkIndex</em></td><td>)</td>
           <td></td>
         </tr>
@@ -490,7 +490,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedSceneCollect
         <tr>
           <td class="memname">virtual ea::vector&lt; <a class="el" href="class_urho3_d_1_1_light_probe_group.html">LightProbeGroup</a> * &gt; Urho3D::BakedSceneCollector::GetUniqueLightProbeGroups </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
           <td class="paramname"><em>chunkIndex</em></td><td>)</td>
           <td></td>
         </tr>
@@ -520,7 +520,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedSceneCollect
         <tr>
           <td class="memname">virtual unsigned Urho3D::BakedSceneCollector::GetZoneBackground </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
           <td class="paramname"><em>chunkIndex</em>, </td>
         </tr>
         <tr>
@@ -566,7 +566,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~BakedSceneCollect
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;&#160;</td>
           <td class="paramname"><em>chunkSize</em>&#160;</td>
         </tr>
         <tr>

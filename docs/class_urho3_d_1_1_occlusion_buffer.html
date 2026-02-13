@@ -398,11 +398,11 @@ Private Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_occlusion_buffer.html">OcclusionBuffer</a>, <a class="el" href="class_urho3_d_1_1_object.html">Object</a>)</td></tr>
 <tr class="separator:ac8572d0338d92abbe23b696ead250028"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09565728fbc7928b30a7e6519a0b3caa" id="r_a09565728fbc7928b30a7e6519a0b3caa"><td class="memItemLeft" align="right" valign="top"><a id="a09565728fbc7928b30a7e6519a0b3caa" name="a09565728fbc7928b30a7e6519a0b3caa"></a>
-<a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ModelTransform</b> (const <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> &amp;transform, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;vertex) const</td></tr>
+<a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ModelTransform</b> (const <a class="el" href="class_urho3_d_1_1_matrix4.html">Matrix4</a> &amp;transform, const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;vertex) const</td></tr>
 <tr class="memdesc:a09565728fbc7928b30a7e6519a0b3caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply modelview transform to vertex. <br /></td></tr>
 <tr class="separator:a09565728fbc7928b30a7e6519a0b3caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e14ac28c9cb4a9268b94530738ef0e9" id="r_a0e14ac28c9cb4a9268b94530738ef0e9"><td class="memItemLeft" align="right" valign="top"><a id="a0e14ac28c9cb4a9268b94530738ef0e9" name="a0e14ac28c9cb4a9268b94530738ef0e9"></a>
-<a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ViewportTransform</b> (const <a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a> &amp;vertex) const</td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ViewportTransform</b> (const <a class="el" href="class_urho3_d_1_1_vector4.html">Vector4</a> &amp;vertex) const</td></tr>
 <tr class="memdesc:a0e14ac28c9cb4a9268b94530738ef0e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply projection and viewport transform to vertex. <br /></td></tr>
 <tr class="separator:a0e14ac28c9cb4a9268b94530738ef0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a247fe111a9fc9a57c552aca03293ee97" id="r_a247fe111a9fc9a57c552aca03293ee97"><td class="memItemLeft" align="right" valign="top"><a id="a247fe111a9fc9a57c552aca03293ee97" name="a247fe111a9fc9a57c552aca03293ee97"></a>
@@ -410,7 +410,7 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:a247fe111a9fc9a57c552aca03293ee97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clip an edge. <br /></td></tr>
 <tr class="separator:a247fe111a9fc9a57c552aca03293ee97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3d1aa1a0d8fbff5aa085001e86fdd1a" id="r_ad3d1aa1a0d8fbff5aa085001e86fdd1a"><td class="memItemLeft" align="right" valign="top"><a id="ad3d1aa1a0d8fbff5aa085001e86fdd1a" name="ad3d1aa1a0d8fbff5aa085001e86fdd1a"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>SignedArea</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;v0, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;v1, const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> &amp;v2) const</td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>SignedArea</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;v0, const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;v1, const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;v2) const</td></tr>
 <tr class="memdesc:ad3d1aa1a0d8fbff5aa085001e86fdd1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return signed area of a triangle. If negative, is clockwise. <br /></td></tr>
 <tr class="separator:ad3d1aa1a0d8fbff5aa085001e86fdd1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afabce4deed9f3a953f9d12af6dde9a19" id="r_afabce4deed9f3a953f9d12af6dde9a19"><td class="memItemLeft" align="right" valign="top"><a id="afabce4deed9f3a953f9d12af6dde9a19" name="afabce4deed9f3a953f9d12af6dde9a19"></a>
@@ -426,7 +426,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ClipVertices</b> (con
 <tr class="memdesc:a29a3fa095ddc419fa0f51a42b7537560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clip vertices against a plane. <br /></td></tr>
 <tr class="separator:a29a3fa095ddc419fa0f51a42b7537560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d3b28454264d832db67116570ec613d" id="r_a9d3b28454264d832db67116570ec613d"><td class="memItemLeft" align="right" valign="top"><a id="a9d3b28454264d832db67116570ec613d" name="a9d3b28454264d832db67116570ec613d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawTriangle2D</b> (const <a class="el" href="class_urho3_d_1_1_vector3.html">Vector3</a> *vertices, bool clockwise, unsigned threadIndex)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawTriangle2D</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> *vertices, bool clockwise, unsigned threadIndex)</td></tr>
 <tr class="memdesc:a9d3b28454264d832db67116570ec613d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a clipped triangle. <br /></td></tr>
 <tr class="separator:a9d3b28454264d832db67116570ec613d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e7bbdce8ae8719462f5674e0211170f" id="r_a8e7bbdce8ae8719462f5674e0211170f"><td class="memItemLeft" align="right" valign="top"><a id="a8e7bbdce8ae8719462f5674e0211170f" name="a8e7bbdce8ae8719462f5674e0211170f"></a>
