@@ -54,6 +54,7 @@ var class_urho3_d_1_1_rigid_body =
     [ "OnNodeSet", "class_urho3_d_1_1_rigid_body.html#afe6f7e5dd0d4f198c4a103e3ce6f9325", null ],
     [ "OnSceneSet", "class_urho3_d_1_1_rigid_body.html#a5dda38a0ce3a1b02647d7fe3839b8d16", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_rigid_body.html#a8dcd771562cd610ae04f1bd46772fd28", null ],
+    [ "PrepareToWorldOriginUpdate", "class_urho3_d_1_1_rigid_body.html#a0c58b49bc263195f68de0d027685a1e8", null ],
     [ "ReAddBodyToWorld", "class_urho3_d_1_1_rigid_body.html#ab383b16970f61b3d10f776ce6d616abf", null ],
     [ "RegisterObject", "class_urho3_d_1_1_rigid_body.html#a290f1f44cc003d8c7c5c419b3bfd4c3a", null ],
     [ "ReleaseBody", "class_urho3_d_1_1_rigid_body.html#af7bc2f5716d878c54eb6c6ac98083fe6", null ],

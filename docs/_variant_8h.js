@@ -21,6 +21,8 @@ var _variant_8h =
       [ "VAR_VECTOR2", "_variant_8h.html#a60cbc5c839756e3a58bb3ce6af2f7894a1102dc527551012131393668eaa15efc", null ],
       [ "VAR_VECTOR3", "_variant_8h.html#a60cbc5c839756e3a58bb3ce6af2f7894a88e3459f12027b00514e848b7d5af33e", null ],
       [ "VAR_VECTOR4", "_variant_8h.html#a60cbc5c839756e3a58bb3ce6af2f7894a5eff6b021da405f841b8aa934d8c2984", null ],
+      [ "VAR_DOUBLEVECTOR2", "_variant_8h.html#a60cbc5c839756e3a58bb3ce6af2f7894ad8c6a73bf37709809e8ee1eff293bd81", null ],
+      [ "VAR_DOUBLEVECTOR3", "_variant_8h.html#a60cbc5c839756e3a58bb3ce6af2f7894a2e3e3df7cf9489bc4313c1e8ace733e9", null ],
       [ "VAR_QUATERNION", "_variant_8h.html#a60cbc5c839756e3a58bb3ce6af2f7894a6687dbf50105fb0fe24daa862267ee18", null ],
       [ "VAR_COLOR", "_variant_8h.html#a60cbc5c839756e3a58bb3ce6af2f7894a24cb9ced20c2ad27ce9fce5579ee0ff9", null ],
       [ "VAR_STRING", "_variant_8h.html#a60cbc5c839756e3a58bb3ce6af2f7894a46628c2eba1dd6abd252ea07688fdffd", null ],

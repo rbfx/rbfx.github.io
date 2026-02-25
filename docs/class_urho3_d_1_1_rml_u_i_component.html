@@ -163,16 +163,16 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetUseNormalizedCoord
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetUseNormalizedCoordinates</b> (bool enable)</td></tr>
 <tr class="separator:a10eb5419af3a420d406c668840ee369a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1af3de1b4f7cb158c23be27e64e782f6" id="r_a1af3de1b4f7cb158c23be27e64e782f6"><td class="memItemLeft" align="right" valign="top"><a id="a1af3de1b4f7cb158c23be27e64e782f6" name="a1af3de1b4f7cb158c23be27e64e782f6"></a>
-<a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetPosition</b> () const</td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetPosition</b> () const</td></tr>
 <tr class="separator:a1af3de1b4f7cb158c23be27e64e782f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d5d45ec7e3734b55a831fcbde122290" id="r_a2d5d45ec7e3734b55a831fcbde122290"><td class="memItemLeft" align="right" valign="top"><a id="a2d5d45ec7e3734b55a831fcbde122290" name="a2d5d45ec7e3734b55a831fcbde122290"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPosition</b> (<a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> pos)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPosition</b> (<a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a> pos)</td></tr>
 <tr class="separator:a2d5d45ec7e3734b55a831fcbde122290"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62199136994d537bb1c250f4a517267a" id="r_a62199136994d537bb1c250f4a517267a"><td class="memItemLeft" align="right" valign="top"><a id="a62199136994d537bb1c250f4a517267a" name="a62199136994d537bb1c250f4a517267a"></a>
-<a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetSize</b> () const</td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetSize</b> () const</td></tr>
 <tr class="separator:a62199136994d537bb1c250f4a517267a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07767c11f2587f5534caac9309c0f4d3" id="r_a07767c11f2587f5534caac9309c0f4d3"><td class="memItemLeft" align="right" valign="top"><a id="a07767c11f2587f5534caac9309c0f4d3" name="a07767c11f2587f5534caac9309c0f4d3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSize</b> (<a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> size)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSize</b> (<a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a> size)</td></tr>
 <tr class="separator:a07767c11f2587f5534caac9309c0f4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a111aa4cc41d4f62d55b8c45194fdcd5a" id="r_a111aa4cc41d4f62d55b8c45194fdcd5a"><td class="memItemLeft" align="right" valign="top"><a id="a111aa4cc41d4f62d55b8c45194fdcd5a" name="a111aa4cc41d4f62d55b8c45194fdcd5a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAutoSize</b> (bool enable)</td></tr>
@@ -209,6 +209,13 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Stop</b> ()</
 <tr class="memitem:aa740607df08b5b43904e6c29993844a8 inherit pub_methods_class_urho3_d_1_1_logic_component" id="r_aa740607df08b5b43904e6c29993844a8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#aa740607df08b5b43904e6c29993844a8">FixedPostUpdate</a> (float timeStep)</td></tr>
 <tr class="memdesc:aa740607df08b5b43904e6c29993844a8 inherit pub_methods_class_urho3_d_1_1_logic_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on physics post-update, fixed timestep.  <br /></td></tr>
 <tr class="separator:aa740607df08b5b43904e6c29993844a8 inherit pub_methods_class_urho3_d_1_1_logic_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3594739f8444a3475b846762ba496093 inherit pub_methods_class_urho3_d_1_1_logic_component" id="r_a3594739f8444a3475b846762ba496093"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#a3594739f8444a3475b846762ba496093">UpdateWorldOrigin</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;oldOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;newOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;delta)</td></tr>
+<tr class="memdesc:a3594739f8444a3475b846762ba496093 inherit pub_methods_class_urho3_d_1_1_logic_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on world origin update.  <br /></td></tr>
+<tr class="separator:a3594739f8444a3475b846762ba496093 inherit pub_methods_class_urho3_d_1_1_logic_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ce7d7a65f4d7c643b73a70257673a08 inherit pub_methods_class_urho3_d_1_1_logic_component" id="r_a1ce7d7a65f4d7c643b73a70257673a08"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PostUpdateWorldOrigin</b> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;oldOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;newOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;delta)</td></tr>
+<tr class="memdesc:a1ce7d7a65f4d7c643b73a70257673a08 inherit pub_methods_class_urho3_d_1_1_logic_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on world origin post-update. <br /></td></tr>
+<tr class="separator:a1ce7d7a65f4d7c643b73a70257673a08 inherit pub_methods_class_urho3_d_1_1_logic_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30f3b4f9509a8e9854260811bd59e691 inherit pub_methods_class_urho3_d_1_1_logic_component" id="r_a30f3b4f9509a8e9854260811bd59e691"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#a30f3b4f9509a8e9854260811bd59e691">GetUpdateEvent</a> () const</td></tr>
 <tr class="separator:a30f3b4f9509a8e9854260811bd59e691 inherit pub_methods_class_urho3_d_1_1_logic_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c6842247f68dfa0b64c94cfbf01c69e inherit pub_methods_class_urho3_d_1_1_logic_component" id="r_a4c6842247f68dfa0b64c94cfbf01c69e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#a4c6842247f68dfa0b64c94cfbf01c69e">GetPostUpdateEvent</a> () const</td></tr>
@@ -797,10 +804,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>suppressRestoreFocus_
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>useNormalized_</b> = false</td></tr>
 <tr class="separator:ab94d8b970026333d80a07258f031f2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea674b6bacf220a8d6ff2000caf7c89f" id="r_aea674b6bacf220a8d6ff2000caf7c89f"><td class="memItemLeft" align="right" valign="top"><a id="aea674b6bacf220a8d6ff2000caf7c89f" name="aea674b6bacf220a8d6ff2000caf7c89f"></a>
-<a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>size_</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>size_</b></td></tr>
 <tr class="separator:aea674b6bacf220a8d6ff2000caf7c89f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeda7b0f836e5e51be4aa1f4dbaac777" id="r_afeda7b0f836e5e51be4aa1f4dbaac777"><td class="memItemLeft" align="right" valign="top"><a id="afeda7b0f836e5e51be4aa1f4dbaac777" name="afeda7b0f836e5e51be4aa1f4dbaac777"></a>
-<a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position_</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position_</b></td></tr>
 <tr class="separator:afeda7b0f836e5e51be4aa1f4dbaac777"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b2f79437b2058df534d8f0bfd2a173f" id="r_a4b2f79437b2058df534d8f0bfd2a173f"><td class="memItemLeft" align="right" valign="top"><a id="a4b2f79437b2058df534d8f0bfd2a173f" name="a4b2f79437b2058df534d8f0bfd2a173f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>autoSize_</b> = true</td></tr>

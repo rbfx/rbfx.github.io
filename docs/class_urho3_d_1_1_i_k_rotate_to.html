@@ -128,6 +128,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>NotifyPositionsReady<
 <tr class="memitem:ab78cbed65f4b2d4504165c8799222e7e inherit pub_methods_class_urho3_d_1_1_i_k_solver_component" id="r_ab78cbed65f4b2d4504165c8799222e7e"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Solve</b> (const <a class="el" href="struct_urho3_d_1_1_i_k_settings.html">IKSettings</a> &amp;settings, float timeStep)</td></tr>
 <tr class="separator:ab78cbed65f4b2d4504165c8799222e7e inherit pub_methods_class_urho3_d_1_1_i_k_solver_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe18d0c3bcc709633365ab94033cd702 inherit pub_methods_class_urho3_d_1_1_i_k_solver_component" id="r_afe18d0c3bcc709633365ab94033cd702"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateWorldOrigin</b> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;oldOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;newOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;delta)</td></tr>
+<tr class="separator:afe18d0c3bcc709633365ab94033cd702 inherit pub_methods_class_urho3_d_1_1_i_k_solver_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f662cd996b80fac8ef6e9640c08fe71 inherit pub_methods_class_urho3_d_1_1_i_k_solver_component" id="r_a1f662cd996b80fac8ef6e9640c08fe71"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnTreeDirty</b> ()</td></tr>
 <tr class="memdesc:a1f662cd996b80fac8ef6e9640c08fe71 inherit pub_methods_class_urho3_d_1_1_i_k_solver_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal. Marks chain tree as dirty. <br /></td></tr>
@@ -512,6 +515,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterObject
 <tr class="memitem:af8c950a76715424e99a0e1c504fd7552 inherit pub_static_methods_class_urho3_d_1_1_i_k_solver_component" id="r_af8c950a76715424e99a0e1c504fd7552"><td class="memItemLeft" align="right" valign="top">
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterObject</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
 <tr class="separator:af8c950a76715424e99a0e1c504fd7552 inherit pub_static_methods_class_urho3_d_1_1_i_k_solver_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab01c4e222cc3fdbe04f322e6b909912b inherit pub_static_methods_class_urho3_d_1_1_i_k_solver_component" id="r_ab01c4e222cc3fdbe04f322e6b909912b"><td class="memItemLeft" align="right" valign="top">
+static <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetParentTransform</b> (Node *node, Node *parent)</td></tr>
+<tr class="memdesc:ab01c4e222cc3fdbe04f322e6b909912b inherit pub_static_methods_class_urho3_d_1_1_i_k_solver_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility to calculate Node transform relative to parent Node without relying on world transforms. <br /></td></tr>
+<tr class="separator:ab01c4e222cc3fdbe04f322e6b909912b inherit pub_static_methods_class_urho3_d_1_1_i_k_solver_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a96b9229f1241a330bf2ea431b7018b05 inherit pub_static_methods_class_urho3_d_1_1_object" id="r_a96b9229f1241a330bf2ea431b7018b05"><td class="memItemLeft" align="right" valign="top">
 static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetTypeInfoStatic</b> ()</td></tr>
@@ -529,8 +536,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>EnsureInitialized</b>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a12fb8c0b54d1bf7adb0dc62b07e913a2" id="r_a12fb8c0b54d1bf7adb0dc62b07e913a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_k_rotate_to.html#a12fb8c0b54d1bf7adb0dc62b07e913a2">InitializeNodes</a> (IKNodeCache &amp;nodeCache) override</td></tr>
 <tr class="separator:a12fb8c0b54d1bf7adb0dc62b07e913a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac43a0858b98a47f7f062298c7cc2f533" id="r_ac43a0858b98a47f7f062298c7cc2f533"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_k_rotate_to.html#ac43a0858b98a47f7f062298c7cc2f533">UpdateChainLengths</a> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;inverseFrameOfReference) override</td></tr>
-<tr class="separator:ac43a0858b98a47f7f062298c7cc2f533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6edaa830947635dec1e4751bf80cdbf" id="r_ae6edaa830947635dec1e4751bf80cdbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_k_rotate_to.html#ae6edaa830947635dec1e4751bf80cdbf">UpdateChainLengths</a> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;inverseLocalFrameOfReference) override</td></tr>
+<tr class="separator:ae6edaa830947635dec1e4751bf80cdbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29c13306bc9fcfac150a0c814a203e34" id="r_a29c13306bc9fcfac150a0c814a203e34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_k_rotate_to.html#a29c13306bc9fcfac150a0c814a203e34">SolveInternal</a> (const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;frameOfReference, const <a class="el" href="struct_urho3_d_1_1_i_k_settings.html">IKSettings</a> &amp;settings, float timeStep) override</td></tr>
 <tr class="separator:a29c13306bc9fcfac150a0c814a203e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -564,6 +571,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object" id="r_a745a18b8e99bf855379e72aac5d544ab"><td class="memItemLeft" align="right" valign="top">static constexpr ea::array&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a745a18b8e99bf855379e72aac5d544ab">TypeHierarchy</a> {}</td></tr>
 <tr class="separator:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_urho3_d_1_1_i_k_solver_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_i_k_solver_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_i_k_solver_component.html">Urho3D::IKSolverComponent</a></td></tr>
+<tr class="memitem:a4124bc6f7e0ba140011d0fd1b1e6546f inherit pro_methods_class_urho3_d_1_1_i_k_solver_component" id="r_a4124bc6f7e0ba140011d0fd1b1e6546f"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateWorldOriginInternal</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;delta)</td></tr>
+<tr class="separator:a4124bc6f7e0ba140011d0fd1b1e6546f inherit pro_methods_class_urho3_d_1_1_i_k_solver_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab1e646e08ac73a59566472cdbc5252a inherit pro_methods_class_urho3_d_1_1_i_k_solver_component" id="r_aab1e646e08ac73a59566472cdbc5252a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_i_k_solver_component.html#aab1e646e08ac73a59566472cdbc5252a">OnNodeSet</a> (Node *previousNode, Node *currentNode) override</td></tr>
 <tr class="memdesc:aab1e646e08ac73a59566472cdbc5252a inherit pro_methods_class_urho3_d_1_1_i_k_solver_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node being assigned at creation.  <br /></td></tr>
 <tr class="separator:aab1e646e08ac73a59566472cdbc5252a inherit pro_methods_class_urho3_d_1_1_i_k_solver_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -817,8 +827,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 
 </div>
 </div>
-<a id="ac43a0858b98a47f7f062298c7cc2f533" name="ac43a0858b98a47f7f062298c7cc2f533"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac43a0858b98a47f7f062298c7cc2f533">&#9670;&#160;</a></span>UpdateChainLengths()</h2>
+<a id="ae6edaa830947635dec1e4751bf80cdbf" name="ae6edaa830947635dec1e4751bf80cdbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6edaa830947635dec1e4751bf80cdbf">&#9670;&#160;</a></span>UpdateChainLengths()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -830,7 +840,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
           <td class="memname">void Urho3D::IKRotateTo::UpdateChainLengths </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;&#160;</td>
-          <td class="paramname"><em>inverseFrameOfReference</em></td><td>)</td>
+          <td class="paramname"><em>inverseLocalFrameOfReference</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

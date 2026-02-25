@@ -8,6 +8,8 @@ var class_urho3_d_1_1_constraint_pulley2_d =
     [ "GetOwnerBodyAnchor", "class_urho3_d_1_1_constraint_pulley2_d.html#a41e4458618aca7c2b6259af7c48e2360", null ],
     [ "GetOwnerBodyGroundAnchor", "class_urho3_d_1_1_constraint_pulley2_d.html#a446bd39a1d604194e9f03daf9652e779", null ],
     [ "GetRatio", "class_urho3_d_1_1_constraint_pulley2_d.html#af23ae45241128b7a995d8c89485c9363", null ],
+    [ "HandleWorldOriginPostUpdate", "class_urho3_d_1_1_constraint_pulley2_d.html#a966c516dda49db24615109c8d404af38", null ],
+    [ "OnSceneSet", "class_urho3_d_1_1_constraint_pulley2_d.html#aa0db87f87ac31bd0998d515717ed4d07", null ],
     [ "RegisterObject", "class_urho3_d_1_1_constraint_pulley2_d.html#a14aaba905dcdabb813d2fe6816c76b80", null ],
     [ "SetOtherBodyAnchor", "class_urho3_d_1_1_constraint_pulley2_d.html#a2bfc986d0c9f42961883aeddb9f3f0a9", null ],
     [ "SetOtherBodyGroundAnchor", "class_urho3_d_1_1_constraint_pulley2_d.html#a1d97ed188d7fabba783d629a50d2bbe1", null ],

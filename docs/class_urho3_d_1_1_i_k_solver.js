@@ -6,5 +6,6 @@ var class_urho3_d_1_1_i_k_solver =
     [ "OnNodeSet", "class_urho3_d_1_1_i_k_solver.html#a5a382c26c9459a46689444b5ff4216e7", null ],
     [ "PostUpdate", "class_urho3_d_1_1_i_k_solver.html#a79b2305b4f89b216880d9b53a1445d63", null ],
     [ "SetSolveWhenPaused", "class_urho3_d_1_1_i_k_solver.html#a99580197ab9b6639267f9cfd10c4c702", null ],
-    [ "Solve", "class_urho3_d_1_1_i_k_solver.html#a8d64e51b5aaa9d991858b95b4fe2d2ef", null ]
+    [ "Solve", "class_urho3_d_1_1_i_k_solver.html#a8d64e51b5aaa9d991858b95b4fe2d2ef", null ],
+    [ "UpdateWorldOrigin", "class_urho3_d_1_1_i_k_solver.html#aa88753646ca2a259a20e5925871e4392", null ]
 ];

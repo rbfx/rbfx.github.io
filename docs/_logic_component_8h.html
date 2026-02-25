@@ -67,8 +67,8 @@ $(document).ready(function(){initNavTree('_logic_component_8h.html',''); initRes
   <div class="headertitle"><div class="title">LogicComponent.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;../Container/FlagSet.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="_component_8h.html">../Scene/Component.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;Urho3D/Container/FlagSet.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_component_8h.html">Urho3D/Scene/Component.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -85,6 +85,8 @@ Enumerations</h2></td></tr>
 , <a class="el" href="_logic_component_8h.html#ab0dff9d194ccff14588a232685de4d75af0b92021cbd372d27c7fc45d07240489">Urho3D::USE_FIXEDUPDATE</a> = 0x4
 , <br />
 &#160;&#160;<a class="el" href="_logic_component_8h.html#ab0dff9d194ccff14588a232685de4d75aee5459b8a760a93dbdd81aee205814f4">Urho3D::USE_FIXEDPOSTUPDATE</a> = 0x8
+, <a class="el" href="_logic_component_8h.html#ab0dff9d194ccff14588a232685de4d75ac7f3037a7a7cfac805dfadb588ee7ae6">Urho3D::USE_WORLDORIGINUPDATE</a> = 0x10
+, <a class="el" href="_logic_component_8h.html#ab0dff9d194ccff14588a232685de4d75ab43ce009780bf5219145395ca7c6efb7">Urho3D::USE_WORLDORIGINPOSTUPDATE</a> = 0x20
 <br />
  }</td></tr>
 <tr class="separator:ab0dff9d194ccff14588a232685de4d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,6 +119,10 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ab0dff9d194ccff14588a232685de4d75af0b92021cbd372d27c7fc45d07240489" name="ab0dff9d194ccff14588a232685de4d75af0b92021cbd372d27c7fc45d07240489"></a>USE_FIXEDUPDATE&#160;</td><td class="fielddoc"><p>Bitmask for using the physics update event. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ab0dff9d194ccff14588a232685de4d75aee5459b8a760a93dbdd81aee205814f4" name="ab0dff9d194ccff14588a232685de4d75aee5459b8a760a93dbdd81aee205814f4"></a>USE_FIXEDPOSTUPDATE&#160;</td><td class="fielddoc"><p>Bitmask for using the physics post-update event. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab0dff9d194ccff14588a232685de4d75ac7f3037a7a7cfac805dfadb588ee7ae6" name="ab0dff9d194ccff14588a232685de4d75ac7f3037a7a7cfac805dfadb588ee7ae6"></a>USE_WORLDORIGINUPDATE&#160;</td><td class="fielddoc"><p>Bitmask for using the world origin update event. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab0dff9d194ccff14588a232685de4d75ab43ce009780bf5219145395ca7c6efb7" name="ab0dff9d194ccff14588a232685de4d75ab43ce009780bf5219145395ca7c6efb7"></a>USE_WORLDORIGINPOSTUPDATE&#160;</td><td class="fielddoc"><p>Bitmask for using the post world origin update event. </p>
 </td></tr>
 </table>
 

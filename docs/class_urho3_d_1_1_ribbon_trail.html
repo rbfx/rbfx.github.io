@@ -122,6 +122,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9de3831b5f26ac77f6455d236b278121" id="r_a9de3831b5f26ac77f6455d236b278121"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_drawable_8h.html#affe9ba89cc323bc37aff22afec7ade35">UpdateGeometryType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_ribbon_trail.html#a9de3831b5f26ac77f6455d236b278121">GetUpdateGeometryType</a> () override</td></tr>
 <tr class="memdesc:a9de3831b5f26ac77f6455d236b278121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether a geometry update is necessary, and if it can happen in a worker thread.  <br /></td></tr>
 <tr class="separator:a9de3831b5f26ac77f6455d236b278121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01b23c2f67970b1753bbe36d850d5d99" id="r_a01b23c2f67970b1753bbe36d850d5d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_ribbon_trail.html#a01b23c2f67970b1753bbe36d850d5d99">PostUpdateWorldOrigin</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;oldOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;newOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;delta) override</td></tr>
+<tr class="memdesc:a01b23c2f67970b1753bbe36d850d5d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on world origin post-update.  <br /></td></tr>
+<tr class="separator:a01b23c2f67970b1753bbe36d850d5d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c32ccf5ff1ab68c0cb43347e2c42d8a" id="r_a8c32ccf5ff1ab68c0cb43347e2c42d8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_ribbon_trail.html#a8c32ccf5ff1ab68c0cb43347e2c42d8a">SetMaterial</a> (<a class="el" href="class_urho3_d_1_1_material.html">Material</a> *material)</td></tr>
 <tr class="separator:a8c32ccf5ff1ab68c0cb43347e2c42d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f8b5530703344e99ac05ca17e6ee8a3" id="r_a7f8b5530703344e99ac05ca17e6ee8a3"><td class="memItemLeft" align="right" valign="top"><a id="a7f8b5530703344e99ac05ca17e6ee8a3" name="a7f8b5530703344e99ac05ca17e6ee8a3"></a>
@@ -207,6 +210,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Commit</b> ()</td></t
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessCustomRayQuery</b> (const <a class="el" href="class_urho3_d_1_1_ray_octree_query.html">RayOctreeQuery</a> &amp;query, const <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a> &amp;worldBoundingBox, ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_ray_query_result.html">RayQueryResult</a> &gt; &amp;results)</td></tr>
 <tr class="memdesc:a55c10c8ddea2706add6a8816a81b5634 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process raycast with custom transform. <br /></td></tr>
 <tr class="separator:a55c10c8ddea2706add6a8816a81b5634 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae20b8257b6f63174cf4e37b694520e3c inherit pub_methods_class_urho3_d_1_1_drawable" id="r_ae20b8257b6f63174cf4e37b694520e3c"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateWorldOrigin</b> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;oldOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;newOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;delta)</td></tr>
+<tr class="memdesc:ae20b8257b6f63174cf4e37b694520e3c inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on world origin update. <br /></td></tr>
+<tr class="separator:ae20b8257b6f63174cf4e37b694520e3c inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a768f6f5b27f7cc4c085cbab7c61863e6 inherit pub_methods_class_urho3_d_1_1_drawable" id="r_a768f6f5b27f7cc4c085cbab7c61863e6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#a768f6f5b27f7cc4c085cbab7c61863e6">GetLodGeometry</a> (unsigned batchIndex, unsigned level)</td></tr>
 <tr class="memdesc:a768f6f5b27f7cc4c085cbab7c61863e6 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the geometry for a specific LOD level.  <br /></td></tr>
 <tr class="separator:a768f6f5b27f7cc4c085cbab7c61863e6 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1666,6 +1673,52 @@ static <a class="el" href="class_urho3_d_1_1_geometry.html">Geometry</a> *&#160;
 <p>Recalculate the world-space bounding box. </p>
 
 <p>Implements <a class="el" href="class_urho3_d_1_1_drawable.html#af146747caaf6fd85ab71fda4e364bde4">Urho3D::Drawable</a>.</p>
+
+</div>
+</div>
+<a id="a01b23c2f67970b1753bbe36d850d5d99" name="a01b23c2f67970b1753bbe36d850d5d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01b23c2f67970b1753bbe36d850d5d99">&#9670;&#160;</a></span>PostUpdateWorldOrigin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::RibbonTrail::PostUpdateWorldOrigin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>oldOrigin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>newOrigin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>delta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called on world origin post-update. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_drawable.html#ab6e65fadf96a7e8bd0f04f70b0a28c68">Urho3D::Drawable</a>.</p>
 
 </div>
 </div>

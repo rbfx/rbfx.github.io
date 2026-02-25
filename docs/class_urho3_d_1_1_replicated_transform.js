@@ -8,9 +8,11 @@ var class_urho3_d_1_1_replicated_transform =
     [ "PrepareUnreliableDelta", "class_urho3_d_1_1_replicated_transform.html#a280141159a155f7d3b69b0a647ef6f4c", null ],
     [ "ReadUnreliableDelta", "class_urho3_d_1_1_replicated_transform.html#a4c94d85eac229b3ddcafb60cae633fa2", null ],
     [ "SampleTemporalPosition", "class_urho3_d_1_1_replicated_transform.html#a96cb49a571fa92eddc4a075360bc28a5", null ],
+    [ "SetNumUploadAttempts", "class_urho3_d_1_1_replicated_transform.html#a2f767ef642e34e179d10416b537d6f6b", null ],
     [ "UpdateTransformOnServer", "class_urho3_d_1_1_replicated_transform.html#a13ac5a93f4558235d1a3deb8193d7eb4", null ],
     [ "WriteSnapshot", "class_urho3_d_1_1_replicated_transform.html#a814a857e90e5b91db9cd17cc9382539c", null ],
     [ "WriteUnreliableDelta", "class_urho3_d_1_1_replicated_transform.html#ad9993317581400a3c52c0488bcf1cee6", null ],
     [ "numUploadAttempts_", "class_urho3_d_1_1_replicated_transform.html#a0d8122a545f0b42c105be41376c8f464", null ],
+    [ "positionEncoding_", "class_urho3_d_1_1_replicated_transform.html#a0d2d2a700b53d23c7ea8cdafd38a7d06", null ],
     [ "synchronizePosition_", "class_urho3_d_1_1_replicated_transform.html#a639dc88fbad8b3c5c762bc6bad65af53", null ]
 ];

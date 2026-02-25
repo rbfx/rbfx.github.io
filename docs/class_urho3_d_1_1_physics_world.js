@@ -32,6 +32,7 @@ var class_urho3_d_1_1_physics_world =
     [ "GetTriMeshCache", "class_urho3_d_1_1_physics_world.html#a920c03dcac3dd649ef48f79e43961b8d", null ],
     [ "GetWorld", "class_urho3_d_1_1_physics_world.html#a10dbc75be8b8da189f08946737324ff4", null ],
     [ "HandleSceneSubsystemUpdate", "class_urho3_d_1_1_physics_world.html#ab0ca17f00837381a0866ec5a8ddbc758", null ],
+    [ "HandleWorldOriginUpdate", "class_urho3_d_1_1_physics_world.html#a766f077d55a61ec297d036d3b476dc7f", null ],
     [ "IsApplyingTransforms", "class_urho3_d_1_1_physics_world.html#a67df465a1fafaa79e3cfb0f15219eb42", null ],
     [ "IsSimulating", "class_urho3_d_1_1_physics_world.html#a50671c5f9d849ac3f8d479b2f5de1be7", null ],
     [ "IsUpdateEnabled", "class_urho3_d_1_1_physics_world.html#a0b6ec7c99e3ac48a06447a70d2440f05", null ],

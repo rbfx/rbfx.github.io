@@ -100,8 +100,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2036d011fc5ea05fe046164943c1ee6f" id="r_a2036d011fc5ea05fe046164943c1ee6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_tracked_animated_model.html#a2036d011fc5ea05fe046164943c1ee6f">InitializeOnServer</a> () override</td></tr>
 <tr class="separator:a2036d011fc5ea05fe046164943c1ee6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a63218bf3e10a711c8968a4cc36d966ec" id="r_a63218bf3e10a711c8968a4cc36d966ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_tracked_animated_model.html#a63218bf3e10a711c8968a4cc36d966ec">SampleTemporalBonePosition</a> (const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;time, unsigned index) const</td></tr>
-<tr class="separator:a63218bf3e10a711c8968a4cc36d966ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455f6d989591da3055fdc0d93af12da0" id="r_a455f6d989591da3055fdc0d93af12da0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_base_vector3.html">DoubleVector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_tracked_animated_model.html#a455f6d989591da3055fdc0d93af12da0">SampleTemporalBonePosition</a> (const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;time, unsigned index) const</td></tr>
+<tr class="separator:a455f6d989591da3055fdc0d93af12da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d12d5429af1c0f661562e055a21ceea" id="r_a4d12d5429af1c0f661562e055a21ceea"><td class="memItemLeft" align="right" valign="top"><a id="a4d12d5429af1c0f661562e055a21ceea" name="a4d12d5429af1c0f661562e055a21ceea"></a>
 <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SampleTemporalBoneRotation</b> (const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;time, unsigned index) const</td></tr>
 <tr class="separator:a4d12d5429af1c0f661562e055a21ceea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -587,18 +587,15 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a6ba4b97f1d718f2e941bfba8da631436" id="r_a6ba4b97f1d718f2e941bfba8da631436"><td class="memItemLeft" align="right" valign="top"><a id="a6ba4b97f1d718f2e941bfba8da631436" name="a6ba4b97f1d718f2e941bfba8da631436"></a>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_animated_model.html">AnimatedModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>animatedModel_</b></td></tr>
 <tr class="separator:a6ba4b97f1d718f2e941bfba8da631436"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc6721fb70d0731efa9dcdbf66732bfd" id="r_acc6721fb70d0731efa9dcdbf66732bfd"><td class="memItemLeft" align="right" valign="top"><a id="acc6721fb70d0731efa9dcdbf66732bfd" name="acc6721fb70d0731efa9dcdbf66732bfd"></a>
-<a class="el" href="class_urho3_d_1_1_network_value.html">NetworkValue</a>&lt; <a class="el" href="class_urho3_d_1_1_matrix3x4.html">Matrix3x4</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>transformTrace_</b></td></tr>
-<tr class="separator:acc6721fb70d0731efa9dcdbf66732bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f9c6295193d1ed60bd88aed66111e1" id="r_a39f9c6295193d1ed60bd88aed66111e1"><td class="memItemLeft" align="right" valign="top"><a id="a39f9c6295193d1ed60bd88aed66111e1" name="a39f9c6295193d1ed60bd88aed66111e1"></a>
+<a class="el" href="class_urho3_d_1_1_network_value.html">NetworkValue</a>&lt; <a class="el" href="struct_urho3_d_1_1_double_transform.html">DoubleTransform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>nodeTransformTrace_</b></td></tr>
+<tr class="separator:a39f9c6295193d1ed60bd88aed66111e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c7a58f943498cf8e11cdc9c1363f211" id="r_a1c7a58f943498cf8e11cdc9c1363f211"><td class="memItemLeft" align="right" valign="top"><a id="a1c7a58f943498cf8e11cdc9c1363f211" name="a1c7a58f943498cf8e11cdc9c1363f211"></a>
 <a class="el" href="class_urho3_d_1_1_network_value.html">NetworkValue</a>&lt; <a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>boundingBoxTrace_</b></td></tr>
 <tr class="separator:a1c7a58f943498cf8e11cdc9c1363f211"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f8d979b5d252c0b7fe8eef283405bb9" id="r_a9f8d979b5d252c0b7fe8eef283405bb9"><td class="memItemLeft" align="right" valign="top"><a id="a9f8d979b5d252c0b7fe8eef283405bb9" name="a9f8d979b5d252c0b7fe8eef283405bb9"></a>
-<a class="el" href="class_urho3_d_1_1_network_value_vector.html">NetworkValueVector</a>&lt; <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>bonePositionsTrace_</b></td></tr>
-<tr class="separator:a9f8d979b5d252c0b7fe8eef283405bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12edc0ab31bf7087eb1de9631524d0d4" id="r_a12edc0ab31bf7087eb1de9631524d0d4"><td class="memItemLeft" align="right" valign="top"><a id="a12edc0ab31bf7087eb1de9631524d0d4" name="a12edc0ab31bf7087eb1de9631524d0d4"></a>
-<a class="el" href="class_urho3_d_1_1_network_value_vector.html">NetworkValueVector</a>&lt; <a class="el" href="class_urho3_d_1_1_quaternion.html">Quaternion</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>boneRotationsTrace_</b></td></tr>
-<tr class="separator:a12edc0ab31bf7087eb1de9631524d0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03376e75e9e8a3c7f657c7fa30f7333f" id="r_a03376e75e9e8a3c7f657c7fa30f7333f"><td class="memItemLeft" align="right" valign="top"><a id="a03376e75e9e8a3c7f657c7fa30f7333f" name="a03376e75e9e8a3c7f657c7fa30f7333f"></a>
+<a class="el" href="class_urho3_d_1_1_network_value_vector.html">NetworkValueVector</a>&lt; <a class="el" href="struct_urho3_d_1_1_double_transform.html">DoubleTransform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>boneTransformsTrace_</b></td></tr>
+<tr class="separator:a03376e75e9e8a3c7f657c7fa30f7333f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a1f0640b8b5df4b37df91b9affdfda1dc" id="r_a1f0640b8b5df4b37df91b9affdfda1dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_tracked_animated_model.html#a1f0640b8b5df4b37df91b9affdfda1dc">trackOnClient_</a> {}</td></tr>
 <tr class="separator:a1f0640b8b5df4b37df91b9affdfda1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -702,14 +699,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 
 </div>
 </div>
-<a id="a63218bf3e10a711c8968a4cc36d966ec" name="a63218bf3e10a711c8968a4cc36d966ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63218bf3e10a711c8968a4cc36d966ec">&#9670;&#160;</a></span>SampleTemporalBonePosition()</h2>
+<a id="a455f6d989591da3055fdc0d93af12da0" name="a455f6d989591da3055fdc0d93af12da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a455f6d989591da3055fdc0d93af12da0">&#9670;&#160;</a></span>SampleTemporalBonePosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> Urho3D::TrackedAnimatedModel::SampleTemporalBonePosition </td>
+          <td class="memname"><a class="el" href="class_urho3_d_1_1_base_vector3.html">DoubleVector3</a> Urho3D::TrackedAnimatedModel::SampleTemporalBonePosition </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;&#160;</td>
           <td class="paramname"><em>time</em>, </td>

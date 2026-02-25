@@ -108,13 +108,13 @@ rcPolyMesh *&#160;</td><td class="memItemRight" valign="bottom"><b>polyMesh_</b>
 rcPolyMeshDetail *&#160;</td><td class="memItemRight" valign="bottom"><b>polyMeshDetail_</b></td></tr>
 <tr class="memdesc:ad282a072840ef6e8e4cf7ac949d1c551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recast detail poly mesh. <br /></td></tr>
 <tr class="separator:ad282a072840ef6e8e4cf7ac949d1c551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88c8eb1d88878ce097ed212129d99224" id="r_a88c8eb1d88878ce097ed212129d99224"><td class="memItemLeft" align="right" valign="top"><a id="a88c8eb1d88878ce097ed212129d99224" name="a88c8eb1d88878ce097ed212129d99224"></a>
-NavTileDataPtr&#160;</td><td class="memItemRight" valign="bottom"><b>tileData_</b></td></tr>
-<tr class="memdesc:a88c8eb1d88878ce097ed212129d99224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiled navigation mesh tile. <br /></td></tr>
-<tr class="separator:a88c8eb1d88878ce097ed212129d99224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15139ad4493b990015edf0dd977a50b3" id="r_a15139ad4493b990015edf0dd977a50b3"><td class="memItemLeft" align="right" valign="top"><a id="a15139ad4493b990015edf0dd977a50b3" name="a15139ad4493b990015edf0dd977a50b3"></a>
+<a class="el" href="struct_urho3_d_1_1_detour_allocation.html">DetourAllocation</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tileData_</b></td></tr>
+<tr class="memdesc:a15139ad4493b990015edf0dd977a50b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiled navigation mesh tile. <br /></td></tr>
+<tr class="separator:a15139ad4493b990015edf0dd977a50b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_struct_urho3_d_1_1_nav_build_data"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_struct_urho3_d_1_1_nav_build_data')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="struct_urho3_d_1_1_nav_build_data.html">Urho3D::NavBuildData</a></td></tr>
 <tr class="memitem:a1f703e06a31c79edfe39aaa8c647aeba inherit pub_attribs_struct_urho3_d_1_1_nav_build_data" id="r_a1f703e06a31c79edfe39aaa8c647aeba"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tileIndex_</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tileIndex_</b></td></tr>
 <tr class="memdesc:a1f703e06a31c79edfe39aaa8c647aeba inherit pub_attribs_struct_urho3_d_1_1_nav_build_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tile index. <br /></td></tr>
 <tr class="separator:a1f703e06a31c79edfe39aaa8c647aeba inherit pub_attribs_struct_urho3_d_1_1_nav_build_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae67a7b15fcc2ac8627dc5c2db1fc81f4 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data" id="r_ae67a7b15fcc2ac8627dc5c2db1fc81f4"><td class="memItemLeft" align="right" valign="top">
@@ -197,6 +197,13 @@ rcCompactHeightfield *&#160;</td><td class="memItemRight" valign="bottom"><b>com
 ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_nav_area_stub.html">NavAreaStub</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>navAreas_</b></td></tr>
 <tr class="memdesc:adb1b37dc2eb8a24c9d2cd1e49349d395 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pretransformed navigation areas, no correlation to the geometry above. <br /></td></tr>
 <tr class="separator:adb1b37dc2eb8a24c9d2cd1e49349d395 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abef8dfeb4a77aec68ca4d34e2682e0d4 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data" id="r_abef8dfeb4a77aec68ca4d34e2682e0d4"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pendingTileOffset_</b></td></tr>
+<tr class="memdesc:abef8dfeb4a77aec68ca4d34e2682e0d4 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset to be applied to the tile when it's done building. <br /></td></tr>
+<tr class="separator:abef8dfeb4a77aec68ca4d34e2682e0d4 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fa292e58dab73f06903c658196ff690 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data" id="r_a7fa292e58dab73f06903c658196ff690"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>pendingOffsetY_</b> {}</td></tr>
+<tr class="separator:a7fa292e58dab73f06903c658196ff690 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

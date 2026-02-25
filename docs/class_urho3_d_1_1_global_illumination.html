@@ -100,6 +100,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a20e4b04f126d8b3a09cec2eb60e26222" id="r_a20e4b04f126d8b3a09cec2eb60e26222"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_global_illumination.html#a20e4b04f126d8b3a09cec2eb60e26222">DrawDebugGeometry</a> (<a class="el" href="class_urho3_d_1_1_debug_renderer.html">DebugRenderer</a> *debug, bool depthTest) override</td></tr>
 <tr class="memdesc:a20e4b04f126d8b3a09cec2eb60e26222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visualize the component as debug geometry.  <br /></td></tr>
 <tr class="separator:a20e4b04f126d8b3a09cec2eb60e26222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172db5fe66a8eecf9829a8b964f35fe2" id="r_a172db5fe66a8eecf9829a8b964f35fe2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_global_illumination.html#a172db5fe66a8eecf9829a8b964f35fe2">OnSceneSet</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *previousScene, <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene) override</td></tr>
+<tr class="memdesc:a172db5fe66a8eecf9829a8b964f35fe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene set for event subscription.  <br /></td></tr>
+<tr class="separator:a172db5fe66a8eecf9829a8b964f35fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeae37d594e25ecb448a03d96ea0d0d9" id="r_aaeae37d594e25ecb448a03d96ea0d0d9"><td class="memItemLeft" align="right" valign="top"><a id="aaeae37d594e25ecb448a03d96ea0d0d9" name="aaeae37d594e25ecb448a03d96ea0d0d9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetLightProbes</b> ()</td></tr>
 <tr class="memdesc:aaeae37d594e25ecb448a03d96ea0d0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset light probes. <br /></td></tr>
@@ -132,6 +135,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetFileRef</b> (const
 <a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetFileRef</b> () const</td></tr>
 <tr class="memdesc:acb7f864b20e37b02907b7682a5e1cd18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reference on file with baked data. <br /></td></tr>
 <tr class="separator:acb7f864b20e37b02907b7682a5e1cd18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa89fc2c63bfd63ffa892385a35c88930" id="r_aa89fc2c63bfd63ffa892385a35c88930"><td class="memItemLeft" align="right" valign="top"><a id="aa89fc2c63bfd63ffa892385a35c88930" name="aa89fc2c63bfd63ffa892385a35c88930"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOffset</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;offset)</td></tr>
+<tr class="memdesc:aa89fc2c63bfd63ffa892385a35c88930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set offset. <br /></td></tr>
+<tr class="separator:aa89fc2c63bfd63ffa892385a35c88930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4298df2db4da08860f6d5481d8c87261" id="r_a4298df2db4da08860f6d5481d8c87261"><td class="memItemLeft" align="right" valign="top"><a id="a4298df2db4da08860f6d5481d8c87261" name="a4298df2db4da08860f6d5481d8c87261"></a>
+const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetOffset</b> () const</td></tr>
+<tr class="memdesc:a4298df2db4da08860f6d5481d8c87261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return offset. <br /></td></tr>
+<tr class="separator:a4298df2db4da08860f6d5481d8c87261"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa57169c2207c39e9249db5f9347dc985" id="r_aa57169c2207c39e9249db5f9347dc985"><td class="memItemLeft" align="right" valign="top"><a id="aa57169c2207c39e9249db5f9347dc985" name="aa57169c2207c39e9249db5f9347dc985"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SerializeData</b> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;archive)</td></tr>
 <tr class="memdesc:aa57169c2207c39e9249db5f9347dc985"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize GI data. May throw <a class="el" href="class_urho3_d_1_1_archive_exception.html">ArchiveException</a>. <br /></td></tr>
@@ -524,6 +535,10 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a90720e52d36a64dd45a913109a3d54c1" id="r_a90720e52d36a64dd45a913109a3d54c1"><td class="memItemLeft" align="right" valign="top"><a id="a90720e52d36a64dd45a913109a3d54c1" name="a90720e52d36a64dd45a913109a3d54c1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_global_illumination.html">GlobalIllumination</a>, <a class="el" href="class_urho3_d_1_1_component.html">Component</a>)</td></tr>
 <tr class="separator:a90720e52d36a64dd45a913109a3d54c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47771e1e1991dd6b2d347dfdcc9ef357" id="r_a47771e1e1991dd6b2d347dfdcc9ef357"><td class="memItemLeft" align="right" valign="top"><a id="a47771e1e1991dd6b2d347dfdcc9ef357" name="a47771e1e1991dd6b2d347dfdcc9ef357"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleWorldOriginPostUpdate</b> (<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:a47771e1e1991dd6b2d347dfdcc9ef357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle world origin post-update. <br /></td></tr>
+<tr class="separator:a47771e1e1991dd6b2d347dfdcc9ef357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bd26de613ba3ed87f379844aed2dfcf" id="r_a7bd26de613ba3ed87f379844aed2dfcf"><td class="memItemLeft" align="right" valign="top"><a id="a7bd26de613ba3ed87f379844aed2dfcf" name="a7bd26de613ba3ed87f379844aed2dfcf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ReloadData</b> ()</td></tr>
 <tr class="memdesc:a7bd26de613ba3ed87f379844aed2dfcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reload GI data. <br /></td></tr>
@@ -539,6 +554,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>emissionBrightness_<
 <a class="el" href="struct_urho3_d_1_1_resource_ref.html">ResourceRef</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fileRef_</b> { BinaryFile::GetTypeStatic() }</td></tr>
 <tr class="memdesc:a7dc39e854251b41981a767823c59b405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference on file with GI data. <br /></td></tr>
 <tr class="separator:a7dc39e854251b41981a767823c59b405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b78096fcd5bc46fd646ad50e8c76a2" id="r_ae1b78096fcd5bc46fd646ad50e8c76a2"><td class="memItemLeft" align="right" valign="top"><a id="ae1b78096fcd5bc46fd646ad50e8c76a2" name="ae1b78096fcd5bc46fd646ad50e8c76a2"></a>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>offset_</b></td></tr>
+<tr class="memdesc:ae1b78096fcd5bc46fd646ad50e8c76a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset. <br /></td></tr>
+<tr class="separator:ae1b78096fcd5bc46fd646ad50e8c76a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16e66d472d72067498cda7ea0cfa4a34" id="r_a16e66d472d72067498cda7ea0cfa4a34"><td class="memItemLeft" align="right" valign="top"><a id="a16e66d472d72067498cda7ea0cfa4a34" name="a16e66d472d72067498cda7ea0cfa4a34"></a>
 <a class="el" href="class_urho3_d_1_1_tetrahedral_mesh.html">TetrahedralMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lightProbesMesh_</b></td></tr>
 <tr class="memdesc:a16e66d472d72067498cda7ea0cfa4a34"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_light.html" title="Light component.">Light</a> probes mesh. <br /></td></tr>
@@ -557,9 +576,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:aa68563fbc08bf63ae120a36926282bff inherit pro_methods_class_urho3_d_1_1_component" id="r_aa68563fbc08bf63ae120a36926282bff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#aa68563fbc08bf63ae120a36926282bff">OnNodeSet</a> (Node *previousNode, Node *currentNode)</td></tr>
 <tr class="memdesc:aa68563fbc08bf63ae120a36926282bff inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node being assigned at creation.  <br /></td></tr>
 <tr class="separator:aa68563fbc08bf63ae120a36926282bff inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf51a61ab4b9c0406e04ed2d69a9cc98 inherit pro_methods_class_urho3_d_1_1_component" id="r_adf51a61ab4b9c0406e04ed2d69a9cc98"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#adf51a61ab4b9c0406e04ed2d69a9cc98">OnSceneSet</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *previousScene, <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene)</td></tr>
-<tr class="memdesc:adf51a61ab4b9c0406e04ed2d69a9cc98 inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene being assigned. This may happen several times during the component's lifetime. Scene-wide subsystems and events are subscribed to here.  <br /></td></tr>
-<tr class="separator:adf51a61ab4b9c0406e04ed2d69a9cc98 inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab49b4b66b2eb1601cf166972fe42e5ce inherit pro_methods_class_urho3_d_1_1_component" id="r_ab49b4b66b2eb1601cf166972fe42e5ce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#ab49b4b66b2eb1601cf166972fe42e5ce">OnMarkedDirty</a> (Node *node)</td></tr>
 <tr class="memdesc:ab49b4b66b2eb1601cf166972fe42e5ce inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node transform dirtied.  <br /></td></tr>
 <tr class="separator:ab49b4b66b2eb1601cf166972fe42e5ce inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -656,6 +672,46 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 <p>Visualize the component as debug geometry. </p>
 
 <p>Reimplemented from <a class="el" href="class_urho3_d_1_1_component.html#a219e412aa90aa36b9c05872abf0608dc">Urho3D::Component</a>.</p>
+
+</div>
+</div>
+<a id="a172db5fe66a8eecf9829a8b964f35fe2" name="a172db5fe66a8eecf9829a8b964f35fe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a172db5fe66a8eecf9829a8b964f35fe2">&#9670;&#160;</a></span>OnSceneSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::GlobalIllumination::OnSceneSet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>previousScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handle scene set for event subscription. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_component.html#adf51a61ab4b9c0406e04ed2d69a9cc98">Urho3D::Component</a>.</p>
 
 </div>
 </div>

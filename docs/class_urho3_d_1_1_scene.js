@@ -38,6 +38,7 @@ var class_urho3_d_1_1_scene =
     [ "GetRequiredPackageFiles", "class_urho3_d_1_1_scene.html#a99dc22e4ae0a857b2576741d5bbb58f8", null ],
     [ "GetTimeScale", "class_urho3_d_1_1_scene.html#ac86d58c3b2cae8506016bee6f2194478", null ],
     [ "GetUpdateEvents", "class_urho3_d_1_1_scene.html#a451a936f7f30bfe4798c5a12e3f55ed7", null ],
+    [ "GetWorldOrigin", "class_urho3_d_1_1_scene.html#a6c8cd5e052d65282000ada90300f6dd7", null ],
     [ "HandleResourceBackgroundLoaded", "class_urho3_d_1_1_scene.html#a0720f208fdde56993e2cf3f871386353", null ],
     [ "HandleUpdate", "class_urho3_d_1_1_scene.html#ad3307d7a01b61f9b6ded6cff9a44f857", null ],
     [ "Instantiate", "class_urho3_d_1_1_scene.html#a5e89169e48c519a1ab94db0447344dab", null ],
@@ -78,9 +79,15 @@ var class_urho3_d_1_1_scene =
     [ "SetTimeScale", "class_urho3_d_1_1_scene.html#ac8b0f11b63f431f1e605dd7379f39ede", null ],
     [ "SetUpdateEnabled", "class_urho3_d_1_1_scene.html#a44c46009d055c833246a44cfd95db635", null ],
     [ "SetUpdateEvents", "class_urho3_d_1_1_scene.html#a76799493029e2a36e0be7a607de13c28", null ],
+    [ "SetWorldOrigin", "class_urho3_d_1_1_scene.html#a928e2eba50d8417de411a76f79242882", null ],
     [ "StopAsyncLoading", "class_urho3_d_1_1_scene.html#a08f99dc8b2497499e581f2eb7ce1a082", null ],
+    [ "ToAbsoluteWorldPosition", "class_urho3_d_1_1_scene.html#a6a52d13deae0de47b5ab9e5656582260", null ],
+    [ "ToAbsoluteWorldTransform", "class_urho3_d_1_1_scene.html#a04b2ddc74b764322f1ec286ce2cce9fb", null ],
+    [ "ToRelativeWorldPosition", "class_urho3_d_1_1_scene.html#a1ecf2e66af7235704586451409c2ed39", null ],
+    [ "ToRelativeWorldTransform", "class_urho3_d_1_1_scene.html#a7643ef825f51037e794af00a7bdf224b", null ],
     [ "Update", "class_urho3_d_1_1_scene.html#afb949e0fedbb2becb9aa7a3dfb0ed7b2", null ],
     [ "UpdateAsyncLoading", "class_urho3_d_1_1_scene.html#a625934c3af5fb17f25a09767d4c0cc6b", null ],
+    [ "UpdateWorldOrigin", "class_urho3_d_1_1_scene.html#ab2f6314a4b55bd4a22b226697e127245", null ],
     [ "asyncLoading_", "class_urho3_d_1_1_scene.html#ab6e2fdf076ec13c238531524d378a537", null ],
     [ "asyncLoadingMs_", "class_urho3_d_1_1_scene.html#a88f485bc6542971251d153a702deb5f9", null ],
     [ "asyncProgress_", "class_urho3_d_1_1_scene.html#ac7c95999e6efd93a722ea7b225ad1313", null ],
@@ -105,5 +112,6 @@ var class_urho3_d_1_1_scene =
     [ "threadedUpdate_", "class_urho3_d_1_1_scene.html#a7227c5ff7062e69515996569c9ea8d7f", null ],
     [ "timeScale_", "class_urho3_d_1_1_scene.html#a8f4fef00ef1e08796f16fc799502d5ac", null ],
     [ "updateEnabled_", "class_urho3_d_1_1_scene.html#ab87df65af1dd40d2c07d9aaf54c35021", null ],
-    [ "updateEvents_", "class_urho3_d_1_1_scene.html#ab253f046e50a8cd54feb282bea747c1b", null ]
+    [ "updateEvents_", "class_urho3_d_1_1_scene.html#ab253f046e50a8cd54feb282bea747c1b", null ],
+    [ "worldOrigin_", "class_urho3_d_1_1_scene.html#ad465d545b990d5c18e918381641479d9", null ]
 ];

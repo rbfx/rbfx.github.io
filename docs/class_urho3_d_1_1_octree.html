@@ -174,6 +174,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>CancelUpdate</b> (<a 
 <tr class="separator:a0081cb34eb914aa9e87fb5f5630c048e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7bbc4d012390e80a0fbbc063a26584d" id="r_ae7bbc4d012390e80a0fbbc063a26584d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_octree.html#ae7bbc4d012390e80a0fbbc063a26584d">QueueNodeTransformUpdate</a> (Node *node, const <a class="el" href="struct_urho3_d_1_1_transform.html">Transform</a> &amp;transform)</td></tr>
 <tr class="separator:ae7bbc4d012390e80a0fbbc063a26584d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aa783b00b9e3783f8205c4253dc6f19" id="r_a6aa783b00b9e3783f8205c4253dc6f19"><td class="memItemLeft" align="right" valign="top"><a id="a6aa783b00b9e3783f8205c4253dc6f19" name="a6aa783b00b9e3783f8205c4253dc6f19"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLocked</b> (bool locked)</td></tr>
+<tr class="memdesc:a6aa783b00b9e3783f8205c4253dc6f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether <a class="el" href="class_urho3_d_1_1_octree.html" title="Octree component. Should be added only to the root scene node.">Octree</a> is locked for modification. <br /></td></tr>
+<tr class="separator:a6aa783b00b9e3783f8205c4253dc6f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aef089ce9cb4a15ed1a9cbbcefff7b7" id="r_a5aef089ce9cb4a15ed1a9cbbcefff7b7"><td class="memItemLeft" align="right" valign="top"><a id="a5aef089ce9cb4a15ed1a9cbbcefff7b7" name="a5aef089ce9cb4a15ed1a9cbbcefff7b7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawDebugGeometry</b> (bool depthTest)</td></tr>
 <tr class="memdesc:a5aef089ce9cb4a15ed1a9cbbcefff7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visualize the component as debug geometry. <br /></td></tr>
@@ -564,10 +568,21 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a19218568e8937ffa9f46600f68a77817" id="r_a19218568e8937ffa9f46600f68a77817"><td class="memItemLeft" align="right" valign="top"><a id="a19218568e8937ffa9f46600f68a77817" name="a19218568e8937ffa9f46600f68a77817"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_octree.html">Octree</a>, <a class="el" href="class_urho3_d_1_1_component.html">Component</a>)</td></tr>
 <tr class="separator:a19218568e8937ffa9f46600f68a77817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c045585b317280ca78da95f76380b86" id="r_a2c045585b317280ca78da95f76380b86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_octree.html#a2c045585b317280ca78da95f76380b86">OnSceneSet</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *previousScene, <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene) override</td></tr>
+<tr class="memdesc:a2c045585b317280ca78da95f76380b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene being assigned.  <br /></td></tr>
+<tr class="separator:a2c045585b317280ca78da95f76380b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8eb76b6cb6ec002fd1687a001668222" id="r_aa8eb76b6cb6ec002fd1687a001668222"><td class="memItemLeft" align="right" valign="top"><a id="aa8eb76b6cb6ec002fd1687a001668222" name="aa8eb76b6cb6ec002fd1687a001668222"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleRenderUpdate</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:aa8eb76b6cb6ec002fd1687a001668222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle render update in case of headless execution. <br /></td></tr>
 <tr class="separator:aa8eb76b6cb6ec002fd1687a001668222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26f4f6ca2b200682b855fb215977f1a1" id="r_a26f4f6ca2b200682b855fb215977f1a1"><td class="memItemLeft" align="right" valign="top"><a id="a26f4f6ca2b200682b855fb215977f1a1" name="a26f4f6ca2b200682b855fb215977f1a1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleWorldOriginUpdate</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:a26f4f6ca2b200682b855fb215977f1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle world origin update event. <br /></td></tr>
+<tr class="separator:a26f4f6ca2b200682b855fb215977f1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba43833dde43f5595cfc98d54355d171" id="r_aba43833dde43f5595cfc98d54355d171"><td class="memItemLeft" align="right" valign="top"><a id="aba43833dde43f5595cfc98d54355d171" name="aba43833dde43f5595cfc98d54355d171"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleWorldOriginPostUpdate</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:aba43833dde43f5595cfc98d54355d171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle world origin post-update event. <br /></td></tr>
+<tr class="separator:aba43833dde43f5595cfc98d54355d171"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5d1b8dd5d68768a3e401b2d605746be" id="r_ab5d1b8dd5d68768a3e401b2d605746be"><td class="memItemLeft" align="right" valign="top"><a id="ab5d1b8dd5d68768a3e401b2d605746be" name="ab5d1b8dd5d68768a3e401b2d605746be"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateOctreeSize</b> ()</td></tr>
 <tr class="memdesc:ab5d1b8dd5d68768a3e401b2d605746be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update octree size. <br /></td></tr>
@@ -615,6 +630,10 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>numLevels_</b></t
 <a class="el" href="class_urho3_d_1_1_zone_lookup_index.html">ZoneLookupIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>zones_</b></td></tr>
 <tr class="memdesc:aaea96020a1b3655b8ae0d46694ddea87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zones. <br /></td></tr>
 <tr class="separator:aaea96020a1b3655b8ae0d46694ddea87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af176b1e3e438b59e446403295b95a6c0" id="r_af176b1e3e438b59e446403295b95a6c0"><td class="memItemLeft" align="right" valign="top"><a id="af176b1e3e438b59e446403295b95a6c0" name="af176b1e3e438b59e446403295b95a6c0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>locked_</b> {}</td></tr>
+<tr class="memdesc:af176b1e3e438b59e446403295b95a6c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether <a class="el" href="class_urho3_d_1_1_octree.html" title="Octree component. Should be added only to the root scene node.">Octree</a> is locked for modification. <br /></td></tr>
+<tr class="separator:af176b1e3e438b59e446403295b95a6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -625,9 +644,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:aa68563fbc08bf63ae120a36926282bff inherit pro_methods_class_urho3_d_1_1_component" id="r_aa68563fbc08bf63ae120a36926282bff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#aa68563fbc08bf63ae120a36926282bff">OnNodeSet</a> (Node *previousNode, Node *currentNode)</td></tr>
 <tr class="memdesc:aa68563fbc08bf63ae120a36926282bff inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node being assigned at creation.  <br /></td></tr>
 <tr class="separator:aa68563fbc08bf63ae120a36926282bff inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf51a61ab4b9c0406e04ed2d69a9cc98 inherit pro_methods_class_urho3_d_1_1_component" id="r_adf51a61ab4b9c0406e04ed2d69a9cc98"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#adf51a61ab4b9c0406e04ed2d69a9cc98">OnSceneSet</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *previousScene, <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene)</td></tr>
-<tr class="memdesc:adf51a61ab4b9c0406e04ed2d69a9cc98 inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene being assigned. This may happen several times during the component's lifetime. Scene-wide subsystems and events are subscribed to here.  <br /></td></tr>
-<tr class="separator:adf51a61ab4b9c0406e04ed2d69a9cc98 inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab49b4b66b2eb1601cf166972fe42e5ce inherit pro_methods_class_urho3_d_1_1_component" id="r_ab49b4b66b2eb1601cf166972fe42e5ce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#ab49b4b66b2eb1601cf166972fe42e5ce">OnMarkedDirty</a> (Node *node)</td></tr>
 <tr class="memdesc:ab49b4b66b2eb1601cf166972fe42e5ce inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node transform dirtied.  <br /></td></tr>
 <tr class="separator:ab49b4b66b2eb1601cf166972fe42e5ce inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -769,6 +785,46 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 </table>
 </div><div class="memdoc">
 <p>Return subdivision levels. </p>
+
+</div>
+</div>
+<a id="a2c045585b317280ca78da95f76380b86" name="a2c045585b317280ca78da95f76380b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c045585b317280ca78da95f76380b86">&#9670;&#160;</a></span>OnSceneSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::Octree::OnSceneSet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>previousScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handle scene being assigned. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_component.html#adf51a61ab4b9c0406e04ed2d69a9cc98">Urho3D::Component</a>.</p>
 
 </div>
 </div>

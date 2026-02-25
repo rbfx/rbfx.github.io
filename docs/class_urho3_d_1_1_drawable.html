@@ -135,6 +135,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessCustomRayQuery
 <tr class="memitem:a00fb66b3ce06e1e9c9bb9ecf402c78b4" id="r_a00fb66b3ce06e1e9c9bb9ecf402c78b4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#a00fb66b3ce06e1e9c9bb9ecf402c78b4">UpdateGeometry</a> (const <a class="el" href="struct_urho3_d_1_1_frame_info.html">FrameInfo</a> &amp;frame)</td></tr>
 <tr class="memdesc:a00fb66b3ce06e1e9c9bb9ecf402c78b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare geometry for rendering.  <br /></td></tr>
 <tr class="separator:a00fb66b3ce06e1e9c9bb9ecf402c78b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae20b8257b6f63174cf4e37b694520e3c" id="r_ae20b8257b6f63174cf4e37b694520e3c"><td class="memItemLeft" align="right" valign="top"><a id="ae20b8257b6f63174cf4e37b694520e3c" name="ae20b8257b6f63174cf4e37b694520e3c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateWorldOrigin</b> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;oldOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;newOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;delta)</td></tr>
+<tr class="memdesc:ae20b8257b6f63174cf4e37b694520e3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on world origin update. <br /></td></tr>
+<tr class="separator:ae20b8257b6f63174cf4e37b694520e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6e65fadf96a7e8bd0f04f70b0a28c68" id="r_ab6e65fadf96a7e8bd0f04f70b0a28c68"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#ab6e65fadf96a7e8bd0f04f70b0a28c68">PostUpdateWorldOrigin</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;oldOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;newOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;delta)</td></tr>
+<tr class="memdesc:ab6e65fadf96a7e8bd0f04f70b0a28c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on world origin post-update.  <br /></td></tr>
+<tr class="separator:ab6e65fadf96a7e8bd0f04f70b0a28c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09d563527cd3485f21b485c778e26d7e" id="r_a09d563527cd3485f21b485c778e26d7e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_drawable_8h.html#affe9ba89cc323bc37aff22afec7ade35">UpdateGeometryType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#a09d563527cd3485f21b485c778e26d7e">GetUpdateGeometryType</a> ()</td></tr>
 <tr class="memdesc:a09d563527cd3485f21b485c778e26d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether a geometry update is necessary, and if it can happen in a worker thread.  <br /></td></tr>
 <tr class="separator:a09d563527cd3485f21b485c778e26d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1605,7 +1612,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_urho3_d_1_1_component.html#adf51a61ab4b9c0406e04ed2d69a9cc98">Urho3D::Component</a>.</p>
 
-<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_particle_emitter.html#a5b2280f5d01784e6bfefb85f6ed4e3db">Urho3D::ParticleEmitter</a>, <a class="el" href="class_urho3_d_1_1_ribbon_trail.html#ab88c9c2b8da9d947ea8f19cee405904f">Urho3D::RibbonTrail</a>, <a class="el" href="class_urho3_d_1_1_drawable2_d.html#a63cffc9c4c7fec0cb7837a46213fc1c9">Urho3D::Drawable2D</a>, <a class="el" href="class_urho3_d_1_1_particle_emitter2_d.html#acda9b40afc3dd37f69a588ccb760549e">Urho3D::ParticleEmitter2D</a>, and <a class="el" href="class_urho3_d_1_1_static_sprite2_d.html#a4bd2827dd4a00390fb08fd31b2faad60">Urho3D::StaticSprite2D</a>.</p>
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_particle_emitter.html#a5b2280f5d01784e6bfefb85f6ed4e3db">Urho3D::ParticleEmitter</a>, <a class="el" href="class_urho3_d_1_1_ribbon_trail.html#ab88c9c2b8da9d947ea8f19cee405904f">Urho3D::RibbonTrail</a>, <a class="el" href="class_urho3_d_1_1_drawable2_d.html#a63cffc9c4c7fec0cb7837a46213fc1c9">Urho3D::Drawable2D</a>, <a class="el" href="class_urho3_d_1_1_particle_emitter2_d.html#acda9b40afc3dd37f69a588ccb760549e">Urho3D::ParticleEmitter2D</a>, <a class="el" href="class_urho3_d_1_1_renderer2_d.html#a6eef1eb7a0ac994e5f14bc5d179d2369">Urho3D::Renderer2D</a>, and <a class="el" href="class_urho3_d_1_1_static_sprite2_d.html#a4bd2827dd4a00390fb08fd31b2faad60">Urho3D::StaticSprite2D</a>.</p>
 
 </div>
 </div>
@@ -1666,6 +1673,52 @@ Additional Inherited Members</h2></td></tr>
 <p>Recalculate the world-space bounding box. </p>
 
 <p>Implemented in <a class="el" href="class_urho3_d_1_1_static_model_for_lightmap.html#aa99f68b0422fbe540afc4fa362915b9f">Urho3D::StaticModelForLightmap</a>, <a class="el" href="class_urho3_d_1_1_animated_model.html#af60822b6afad9ae9e135e2b05fd13005">Urho3D::AnimatedModel</a>, <a class="el" href="class_urho3_d_1_1_billboard_set.html#a435de1b1d27ebda915eed2646fe7d254">Urho3D::BillboardSet</a>, <a class="el" href="class_urho3_d_1_1_custom_geometry.html#afde5bf1c2da1aeeb2897be0d98588333">Urho3D::CustomGeometry</a>, <a class="el" href="class_urho3_d_1_1_decal_set.html#a110f79ed9580101f15779fb5a81877b1">Urho3D::DecalSet</a>, <a class="el" href="class_urho3_d_1_1_light.html#a93aaa97d88de1e7e3fab305523d79c1c">Urho3D::Light</a>, <a class="el" href="class_urho3_d_1_1_ribbon_trail.html#a97c50efe75002f52792d02be1c9ec338">Urho3D::RibbonTrail</a>, <a class="el" href="class_urho3_d_1_1_skybox.html#a55b656d24edd515a658a3b80e6669287">Urho3D::Skybox</a>, <a class="el" href="class_urho3_d_1_1_static_model.html#a6995f2d4053f4551d4862ca4a23f59c0">Urho3D::StaticModel</a>, <a class="el" href="class_urho3_d_1_1_static_model_group.html#ae9a4e2a83ebc08833d0e646d10db0136">Urho3D::StaticModelGroup</a>, <a class="el" href="class_urho3_d_1_1_terrain_patch.html#a5e764d84310b1455e122652233746145">Urho3D::TerrainPatch</a>, <a class="el" href="class_urho3_d_1_1_zone.html#ae9da6bd97c23d5a295782c183a769751">Urho3D::Zone</a>, <a class="el" href="class_urho3_d_1_1_text3_d.html#a08bfb84e885535f73aeefb4181491e3d">Urho3D::Text3D</a>, <a class="el" href="class_urho3_d_1_1_particle_emitter2_d.html#a8c4cf85f0f4a7fc07fcfc7de6b963897">Urho3D::ParticleEmitter2D</a>, <a class="el" href="class_urho3_d_1_1_renderer2_d.html#aad85586bd195fa2137c588923d1af022">Urho3D::Renderer2D</a>, and <a class="el" href="class_urho3_d_1_1_static_sprite2_d.html#ab575c3117f1e436f04dd85d237def582">Urho3D::StaticSprite2D</a>.</p>
+
+</div>
+</div>
+<a id="ab6e65fadf96a7e8bd0f04f70b0a28c68" name="ab6e65fadf96a7e8bd0f04f70b0a28c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6e65fadf96a7e8bd0f04f70b0a28c68">&#9670;&#160;</a></span>PostUpdateWorldOrigin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Urho3D::Drawable::PostUpdateWorldOrigin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>oldOrigin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>newOrigin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>delta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called on world origin post-update. </p>
+
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_ribbon_trail.html#a01b23c2f67970b1753bbe36d850d5d99">Urho3D::RibbonTrail</a>, and <a class="el" href="class_urho3_d_1_1_particle_emitter2_d.html#a7c78fc62cf613cd27f425bff2affaed2">Urho3D::ParticleEmitter2D</a>.</p>
 
 </div>
 </div>

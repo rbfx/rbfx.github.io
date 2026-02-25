@@ -281,9 +281,12 @@ var hierarchy =
       ] ],
       [ "Urho3D::HttpRequest", "class_urho3_d_1_1_http_request.html", null ]
     ] ],
+    [ "Urho3D::DetourAllocation", "struct_urho3_d_1_1_detour_allocation.html", null ],
+    [ "Urho3D::DetourDeleter", "struct_urho3_d_1_1_detour_deleter.html", null ],
     [ "Urho3D::DirectLightTracingSettings", "struct_urho3_d_1_1_direct_light_tracing_settings.html", null ],
     [ "Urho3D::DistanceAndNormal", "struct_urho3_d_1_1_distance_and_normal.html", null ],
     [ "Urho3D::ParticleGraphNodes::DivideInstance< Value0, Value1, Value2 >", "struct_urho3_d_1_1_particle_graph_nodes_1_1_divide_instance.html", null ],
+    [ "Urho3D::DoubleTransform", "struct_urho3_d_1_1_double_transform.html", null ],
     [ "Urho3D::UI::DragData", "struct_urho3_d_1_1_u_i_1_1_drag_data.html", null ],
     [ "Urho3D::DrawableProcessorSettings", "struct_urho3_d_1_1_drawable_processor_settings.html", [
       [ "Urho3D::SceneProcessorSettings", "struct_urho3_d_1_1_scene_processor_settings.html", null ]
@@ -625,10 +628,9 @@ var hierarchy =
       [ "Urho3D::NetworkValue< AnimationSnapshot >", "class_urho3_d_1_1_network_value.html", null ],
       [ "Urho3D::NetworkValue< Urho3D::ValueWithDerivative >", "class_urho3_d_1_1_network_value.html", null ],
       [ "Urho3D::NetworkValue< Urho3D::ValueWithDerivative< Quaternion > >", "class_urho3_d_1_1_network_value.html", null ],
-      [ "Urho3D::NetworkValue< Urho3D::Matrix3x4 >", "class_urho3_d_1_1_network_value.html", null ],
+      [ "Urho3D::NetworkValue< Urho3D::DoubleTransform >", "class_urho3_d_1_1_network_value.html", null ],
       [ "Urho3D::NetworkValue< Urho3D::BoundingBox >", "class_urho3_d_1_1_network_value.html", null ],
-      [ "Urho3D::NetworkValueVector< Urho3D::BaseVector3 >", "class_urho3_d_1_1_network_value_vector.html", null ],
-      [ "Urho3D::NetworkValueVector< Urho3D::Quaternion >", "class_urho3_d_1_1_network_value_vector.html", null ],
+      [ "Urho3D::NetworkValueVector< Urho3D::DoubleTransform >", "class_urho3_d_1_1_network_value_vector.html", null ],
       [ "Urho3D::NetworkValue< T, Traits >", "class_urho3_d_1_1_network_value.html", null ],
       [ "Urho3D::NetworkValueVector< T, Traits >", "class_urho3_d_1_1_network_value_vector.html", null ]
     ] ],
@@ -664,7 +666,6 @@ var hierarchy =
         [ "Urho3D::DynamicNavBuildData", "struct_urho3_d_1_1_dynamic_nav_build_data.html", null ],
         [ "Urho3D::SimpleNavBuildData", "struct_urho3_d_1_1_simple_nav_build_data.html", null ]
       ] ],
-      [ "Urho3D::NavTileData", "struct_urho3_d_1_1_nav_tile_data.html", null ],
       [ "Urho3D::OctreeQuery", "class_urho3_d_1_1_octree_query.html", [
         [ "Urho3D::AllContentOctreeQuery", "class_urho3_d_1_1_all_content_octree_query.html", null ],
         [ "Urho3D::BoxOctreeQuery", "class_urho3_d_1_1_box_octree_query.html", null ],
@@ -713,6 +714,7 @@ var hierarchy =
     [ "Urho3D::ObjectRevisionTracker", "class_urho3_d_1_1_object_revision_tracker.html", [
       [ "Urho3D::Animation", "class_urho3_d_1_1_animation.html", null ]
     ] ],
+    [ "Urho3D::DynamicNavigationMesh::ObstacleUpdate", "struct_urho3_d_1_1_dynamic_navigation_mesh_1_1_obstacle_update.html", null ],
     [ "Urho3D::OcclusionBatch", "struct_urho3_d_1_1_occlusion_batch.html", null ],
     [ "Urho3D::OcclusionBufferData", "struct_urho3_d_1_1_occlusion_buffer_data.html", null ],
     [ "Urho3D::OcclusionBufferSettings", "struct_urho3_d_1_1_occlusion_buffer_settings.html", [
@@ -1197,7 +1199,8 @@ var hierarchy =
               ] ],
               [ "Urho3D::ShakeComponent", "class_urho3_d_1_1_shake_component.html", null ],
               [ "Urho3D::TextRenderer3D", "class_urho3_d_1_1_text_renderer3_d.html", null ],
-              [ "Urho3D::VRRig", "class_urho3_d_1_1_v_r_rig.html", null ]
+              [ "Urho3D::VRRig", "class_urho3_d_1_1_v_r_rig.html", null ],
+              [ "Urho3D::WorldOrigin", "class_urho3_d_1_1_world_origin.html", null ]
             ] ],
             [ "Urho3D::MoveAndOrbitController", "class_urho3_d_1_1_move_and_orbit_controller.html", null ],
             [ "Urho3D::NavArea", "class_urho3_d_1_1_nav_area.html", null ],
@@ -1760,9 +1763,9 @@ var hierarchy =
     [ "Urho3D::Signal< void(Node *node, unsigned oldIndex, unsigned newIndex)>", "class_urho3_d_1_1_signal.html", null ],
     [ "Urho3D::Signal< void(Node *parentNode, Node *childNode)>", "class_urho3_d_1_1_signal.html", null ],
     [ "Urho3D::Signal< void(Rml::ElementDocument *)>", "class_urho3_d_1_1_signal.html", null ],
+    [ "Urho3D::Signal< void(Urho3D::BaseIntegerVector2 &)>", "class_urho3_d_1_1_signal.html", null ],
     [ "Urho3D::Signal< void(Urho3D::Component *component)>", "class_urho3_d_1_1_signal.html", null ],
     [ "Urho3D::Signal< void(Urho3D::Component *component, unsigned oldIndex, unsigned newIndex)>", "class_urho3_d_1_1_signal.html", null ],
-    [ "Urho3D::Signal< void(Urho3D::IntVector2 &)>", "class_urho3_d_1_1_signal.html", null ],
     [ "Urho3D::Signal< void(Urho3D::NetworkObject *)>", "class_urho3_d_1_1_signal.html", null ],
     [ "Urho3D::Signal< void(Urho3D::ObjectReflection *), Urho3D::ObjectReflectionRegistry >", "class_urho3_d_1_1_signal.html", null ],
     [ "Urho3D::Signal< void(Urho3D::RenderPath *renderPath)>", "class_urho3_d_1_1_signal.html", null ],
@@ -1904,22 +1907,26 @@ var hierarchy =
     [ "Urho3D::VariantCurvePoint", "struct_urho3_d_1_1_variant_curve_point.html", null ],
     [ "Urho3D::VariantValue", "union_urho3_d_1_1_variant_value.html", null ],
     [ "Urho3D::Detail::VectorTraits< T, N >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", [
+      [ "Urho3D::BaseIntegerVector2< int >", "class_urho3_d_1_1_base_integer_vector2.html", null ],
       [ "Urho3D::BaseIntegerVector3< int >", "class_urho3_d_1_1_base_integer_vector3.html", null ],
+      [ "Urho3D::BaseVector2< float >", "class_urho3_d_1_1_base_vector2.html", null ],
+      [ "Urho3D::BaseVector2< double >", "class_urho3_d_1_1_base_vector2.html", null ],
       [ "Urho3D::BaseVector3< float >", "class_urho3_d_1_1_base_vector3.html", null ],
       [ "Urho3D::BaseVector3< double >", "class_urho3_d_1_1_base_vector3.html", null ]
     ] ],
+    [ "Urho3D::Detail::VectorTraits< double, 2 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", null ],
     [ "Urho3D::Detail::VectorTraits< double, 3 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", null ],
-    [ "Urho3D::Detail::VectorTraits< float, 2 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", [
-      [ "Urho3D::Vector2", "class_urho3_d_1_1_vector2.html", null ]
-    ] ],
+    [ "Urho3D::Detail::VectorTraits< float, 2 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", null ],
     [ "Urho3D::Detail::VectorTraits< float, 3 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", null ],
     [ "Urho3D::Detail::VectorTraits< float, 4 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", [
       [ "Urho3D::Vector4", "class_urho3_d_1_1_vector4.html", null ]
     ] ],
-    [ "Urho3D::Detail::VectorTraits< int, 2 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", [
-      [ "Urho3D::IntVector2", "class_urho3_d_1_1_int_vector2.html", null ]
-    ] ],
+    [ "Urho3D::Detail::VectorTraits< int, 2 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", null ],
     [ "Urho3D::Detail::VectorTraits< int, 3 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", null ],
+    [ "Urho3D::Detail::VectorTraits< T, 2 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", [
+      [ "Urho3D::BaseIntegerVector2< T >", "class_urho3_d_1_1_base_integer_vector2.html", null ],
+      [ "Urho3D::BaseVector2< T >", "class_urho3_d_1_1_base_vector2.html", null ]
+    ] ],
     [ "Urho3D::Detail::VectorTraits< T, 3 >", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", [
       [ "Urho3D::BaseIntegerVector3< T >", "class_urho3_d_1_1_base_integer_vector3.html", null ],
       [ "Urho3D::BaseVector3< T >", "class_urho3_d_1_1_base_vector3.html", null ]
@@ -1964,6 +1971,7 @@ var hierarchy =
     [ "Urho3D::WeakPtr< Urho3D::NetworkObject >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::NetworkObjectRegistry >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::Object >", "class_urho3_d_1_1_weak_ptr.html", null ],
+    [ "Urho3D::WeakPtr< Urho3D::Obstacle >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::PhysicsWorld >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::PhysicsWorld2D >", "class_urho3_d_1_1_weak_ptr.html", null ],
     [ "Urho3D::WeakPtr< Urho3D::PluginApplication >", "class_urho3_d_1_1_weak_ptr.html", null ],

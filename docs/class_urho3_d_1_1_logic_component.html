@@ -92,6 +92,7 @@ Inheritance diagram for Urho3D::LogicComponent:</div>
 <area href="class_urho3_d_1_1_shake_component.html" alt="Urho3D::ShakeComponent" shape="rect" coords="217,560,424,584"/>
 <area href="class_urho3_d_1_1_text_renderer3_d.html" alt="Urho3D::TextRenderer3D" shape="rect" coords="217,616,424,640"/>
 <area href="class_urho3_d_1_1_v_r_rig.html" alt="Urho3D::VRRig" shape="rect" coords="217,672,424,696"/>
+<area href="class_urho3_d_1_1_world_origin.html" title="Component that maintains world origin around the node." alt="Urho3D::WorldOrigin" shape="rect" coords="217,728,424,752"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -131,6 +132,13 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Stop</b> ()</
 <tr class="memitem:aa740607df08b5b43904e6c29993844a8" id="r_aa740607df08b5b43904e6c29993844a8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#aa740607df08b5b43904e6c29993844a8">FixedPostUpdate</a> (float timeStep)</td></tr>
 <tr class="memdesc:aa740607df08b5b43904e6c29993844a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on physics post-update, fixed timestep.  <br /></td></tr>
 <tr class="separator:aa740607df08b5b43904e6c29993844a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3594739f8444a3475b846762ba496093" id="r_a3594739f8444a3475b846762ba496093"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#a3594739f8444a3475b846762ba496093">UpdateWorldOrigin</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;oldOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;newOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;delta)</td></tr>
+<tr class="memdesc:a3594739f8444a3475b846762ba496093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on world origin update.  <br /></td></tr>
+<tr class="separator:a3594739f8444a3475b846762ba496093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ce7d7a65f4d7c643b73a70257673a08" id="r_a1ce7d7a65f4d7c643b73a70257673a08"><td class="memItemLeft" align="right" valign="top"><a id="a1ce7d7a65f4d7c643b73a70257673a08" name="a1ce7d7a65f4d7c643b73a70257673a08"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PostUpdateWorldOrigin</b> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;oldOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;newOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;delta)</td></tr>
+<tr class="memdesc:a1ce7d7a65f4d7c643b73a70257673a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on world origin post-update. <br /></td></tr>
+<tr class="separator:a1ce7d7a65f4d7c643b73a70257673a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30f3b4f9509a8e9854260811bd59e691" id="r_a30f3b4f9509a8e9854260811bd59e691"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#a30f3b4f9509a8e9854260811bd59e691">GetUpdateEvent</a> () const</td></tr>
 <tr class="separator:a30f3b4f9509a8e9854260811bd59e691"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c6842247f68dfa0b64c94cfbf01c69e" id="r_a4c6842247f68dfa0b64c94cfbf01c69e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_logic_component.html#a4c6842247f68dfa0b64c94cfbf01c69e">GetPostUpdateEvent</a> () const</td></tr>
@@ -566,6 +574,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleSceneUpdate</b>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleScenePostUpdate</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:a917286aa2813c0787a347622ebdf06d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene post-update event. <br /></td></tr>
 <tr class="separator:a917286aa2813c0787a347622ebdf06d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a426741f56fda5dd237918b2b8f3e9f4a" id="r_a426741f56fda5dd237918b2b8f3e9f4a"><td class="memItemLeft" align="right" valign="top"><a id="a426741f56fda5dd237918b2b8f3e9f4a" name="a426741f56fda5dd237918b2b8f3e9f4a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleWorldOriginUpdate</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:a426741f56fda5dd237918b2b8f3e9f4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle world origin update event. <br /></td></tr>
+<tr class="separator:a426741f56fda5dd237918b2b8f3e9f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab7c26e447e52315068d5442c48ce59" id="r_aeab7c26e447e52315068d5442c48ce59"><td class="memItemLeft" align="right" valign="top"><a id="aeab7c26e447e52315068d5442c48ce59" name="aeab7c26e447e52315068d5442c48ce59"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleWorldOriginPostUpdate</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:aeab7c26e447e52315068d5442c48ce59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle world origin post-update event. <br /></td></tr>
+<tr class="separator:aeab7c26e447e52315068d5442c48ce59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -944,7 +960,53 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 
 <p>Called on scene update, variable timestep. </p>
 
-<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_rml_serializable_inspector.html#a0767bff5240f458a357837b95dc6da18">Urho3D::RmlSerializableInspector</a>, <a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#abeaf30e644601a600477e400267e3d69">Urho3D::RmlUIComponent</a>, and <a class="el" href="class_urho3_d_1_1_shake_component.html#a1f8af1c104a90e226f4e1c9e49fe4221">Urho3D::ShakeComponent</a>.</p>
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_rml_serializable_inspector.html#a0767bff5240f458a357837b95dc6da18">Urho3D::RmlSerializableInspector</a>, <a class="el" href="class_urho3_d_1_1_rml_u_i_component.html#abeaf30e644601a600477e400267e3d69">Urho3D::RmlUIComponent</a>, <a class="el" href="class_urho3_d_1_1_shake_component.html#a1f8af1c104a90e226f4e1c9e49fe4221">Urho3D::ShakeComponent</a>, and <a class="el" href="class_urho3_d_1_1_world_origin.html#ab880ab411c56d8cf1585b4761cf1d1d7">Urho3D::WorldOrigin</a>.</p>
+
+</div>
+</div>
+<a id="a3594739f8444a3475b846762ba496093" name="a3594739f8444a3475b846762ba496093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3594739f8444a3475b846762ba496093">&#9670;&#160;</a></span>UpdateWorldOrigin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::LogicComponent::UpdateWorldOrigin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>oldOrigin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>newOrigin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>delta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called on world origin update. </p>
+
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_i_k_solver.html#aa88753646ca2a259a20e5925871e4392">Urho3D::IKSolver</a>.</p>
 
 </div>
 </div>

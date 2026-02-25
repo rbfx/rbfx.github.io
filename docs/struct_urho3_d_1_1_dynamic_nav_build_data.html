@@ -104,13 +104,13 @@ ea::shared_ptr&lt; dtTileCacheCompressor &gt;&#160;</td><td class="memItemRight"
 rcHeightfieldLayerSet *&#160;</td><td class="memItemRight" valign="bottom"><b>heightFieldLayers_</b> {}</td></tr>
 <tr class="memdesc:ab292c33c6cae192a99a345a9eaeb5cd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recast heightfield layer set. <br /></td></tr>
 <tr class="separator:ab292c33c6cae192a99a345a9eaeb5cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6984a556d1964148b590b812e3112837" id="r_a6984a556d1964148b590b812e3112837"><td class="memItemLeft" align="right" valign="top"><a id="a6984a556d1964148b590b812e3112837" name="a6984a556d1964148b590b812e3112837"></a>
-ea::vector&lt; NavTileDataPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tileData_</b></td></tr>
-<tr class="memdesc:a6984a556d1964148b590b812e3112837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiled navigation mesh tiles. <br /></td></tr>
-<tr class="separator:a6984a556d1964148b590b812e3112837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039bd92a3fc68fc690c9642ec4357ddf" id="r_a039bd92a3fc68fc690c9642ec4357ddf"><td class="memItemLeft" align="right" valign="top"><a id="a039bd92a3fc68fc690c9642ec4357ddf" name="a039bd92a3fc68fc690c9642ec4357ddf"></a>
+ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_detour_allocation.html">DetourAllocation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tileData_</b></td></tr>
+<tr class="memdesc:a039bd92a3fc68fc690c9642ec4357ddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiled navigation mesh tiles. <br /></td></tr>
+<tr class="separator:a039bd92a3fc68fc690c9642ec4357ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_struct_urho3_d_1_1_nav_build_data"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_struct_urho3_d_1_1_nav_build_data')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="struct_urho3_d_1_1_nav_build_data.html">Urho3D::NavBuildData</a></td></tr>
 <tr class="memitem:a1f703e06a31c79edfe39aaa8c647aeba inherit pub_attribs_struct_urho3_d_1_1_nav_build_data" id="r_a1f703e06a31c79edfe39aaa8c647aeba"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tileIndex_</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tileIndex_</b></td></tr>
 <tr class="memdesc:a1f703e06a31c79edfe39aaa8c647aeba inherit pub_attribs_struct_urho3_d_1_1_nav_build_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tile index. <br /></td></tr>
 <tr class="separator:a1f703e06a31c79edfe39aaa8c647aeba inherit pub_attribs_struct_urho3_d_1_1_nav_build_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae67a7b15fcc2ac8627dc5c2db1fc81f4 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data" id="r_ae67a7b15fcc2ac8627dc5c2db1fc81f4"><td class="memItemLeft" align="right" valign="top">
@@ -193,6 +193,13 @@ rcCompactHeightfield *&#160;</td><td class="memItemRight" valign="bottom"><b>com
 ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_nav_area_stub.html">NavAreaStub</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>navAreas_</b></td></tr>
 <tr class="memdesc:adb1b37dc2eb8a24c9d2cd1e49349d395 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pretransformed navigation areas, no correlation to the geometry above. <br /></td></tr>
 <tr class="separator:adb1b37dc2eb8a24c9d2cd1e49349d395 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abef8dfeb4a77aec68ca4d34e2682e0d4 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data" id="r_abef8dfeb4a77aec68ca4d34e2682e0d4"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pendingTileOffset_</b></td></tr>
+<tr class="memdesc:abef8dfeb4a77aec68ca4d34e2682e0d4 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset to be applied to the tile when it's done building. <br /></td></tr>
+<tr class="separator:abef8dfeb4a77aec68ca4d34e2682e0d4 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fa292e58dab73f06903c658196ff690 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data" id="r_a7fa292e58dab73f06903c658196ff690"><td class="memItemLeft" align="right" valign="top">
+int&#160;</td><td class="memItemRight" valign="bottom"><b>pendingOffsetY_</b> {}</td></tr>
+<tr class="separator:a7fa292e58dab73f06903c658196ff690 inherit pub_attribs_struct_urho3_d_1_1_nav_build_data"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

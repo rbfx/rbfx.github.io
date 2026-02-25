@@ -176,7 +176,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawDebugGeometry</b>
 <tr class="separator:af2e3e0c7362af65a35d8f53abec2b673"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3377c4b65e05ee928faad3c297385733" id="r_a3377c4b65e05ee928faad3c297385733"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world2_d.html#a3377c4b65e05ee928faad3c297385733">SetSubStepping</a> (bool enable)</td></tr>
 <tr class="separator:a3377c4b65e05ee928faad3c297385733"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f336eb9becff1d4a54ef18f0f8ae363" id="r_a5f336eb9becff1d4a54ef18f0f8ae363"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world2_d.html#a5f336eb9becff1d4a54ef18f0f8ae363">SetGravity</a> (const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;gravity)</td></tr>
+<tr class="memitem:a5f336eb9becff1d4a54ef18f0f8ae363" id="r_a5f336eb9becff1d4a54ef18f0f8ae363"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world2_d.html#a5f336eb9becff1d4a54ef18f0f8ae363">SetGravity</a> (const <a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a> &amp;gravity)</td></tr>
 <tr class="separator:a5f336eb9becff1d4a54ef18f0f8ae363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0d16afc0501af558d1c27db37d628ae" id="r_ab0d16afc0501af558d1c27db37d628ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world2_d.html#ab0d16afc0501af558d1c27db37d628ae">SetAutoClearForces</a> (bool enable)</td></tr>
 <tr class="separator:ab0d16afc0501af558d1c27db37d628ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,15 +197,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>AddDelayedWorldTransf
 <tr class="memdesc:ace8fe5565205e498142555defda24d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a delayed world transform assignment. Called by <a class="el" href="class_urho3_d_1_1_rigid_body2_d.html" title="2D rigid body component.">RigidBody2D</a>. <br /></td></tr>
 <tr class="separator:ace8fe5565205e498142555defda24d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab343abe8a9bdd7a5099ab6f97da4be6d" id="r_ab343abe8a9bdd7a5099ab6f97da4be6d"><td class="memItemLeft" align="right" valign="top"><a id="ab343abe8a9bdd7a5099ab6f97da4be6d" name="ab343abe8a9bdd7a5099ab6f97da4be6d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Raycast</b> (ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_physics_raycast_result2_d.html">PhysicsRaycastResult2D</a> &gt; &amp;results, const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;startPoint, const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;endPoint, unsigned collisionMask=M_MAX_UNSIGNED)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Raycast</b> (ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_physics_raycast_result2_d.html">PhysicsRaycastResult2D</a> &gt; &amp;results, const <a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a> &amp;startPoint, const <a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a> &amp;endPoint, unsigned collisionMask=M_MAX_UNSIGNED)</td></tr>
 <tr class="memdesc:ab343abe8a9bdd7a5099ab6f97da4be6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a physics world raycast and return all hits. <br /></td></tr>
 <tr class="separator:ab343abe8a9bdd7a5099ab6f97da4be6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a941235284b5d5ef127a24e0b4abebbdc" id="r_a941235284b5d5ef127a24e0b4abebbdc"><td class="memItemLeft" align="right" valign="top"><a id="a941235284b5d5ef127a24e0b4abebbdc" name="a941235284b5d5ef127a24e0b4abebbdc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RaycastSingle</b> (<a class="el" href="struct_urho3_d_1_1_physics_raycast_result2_d.html">PhysicsRaycastResult2D</a> &amp;result, const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;startPoint, const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;endPoint, unsigned collisionMask=M_MAX_UNSIGNED)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RaycastSingle</b> (<a class="el" href="struct_urho3_d_1_1_physics_raycast_result2_d.html">PhysicsRaycastResult2D</a> &amp;result, const <a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a> &amp;startPoint, const <a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a> &amp;endPoint, unsigned collisionMask=M_MAX_UNSIGNED)</td></tr>
 <tr class="memdesc:a941235284b5d5ef127a24e0b4abebbdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a physics world raycast and return the closest hit. <br /></td></tr>
 <tr class="separator:a941235284b5d5ef127a24e0b4abebbdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d0038b75e3dbbbea12895ef3c7ac3fc" id="r_a3d0038b75e3dbbbea12895ef3c7ac3fc"><td class="memItemLeft" align="right" valign="top"><a id="a3d0038b75e3dbbbea12895ef3c7ac3fc" name="a3d0038b75e3dbbbea12895ef3c7ac3fc"></a>
-<a class="el" href="class_urho3_d_1_1_rigid_body2_d.html">RigidBody2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetRigidBody</b> (const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;point, unsigned collisionMask=M_MAX_UNSIGNED)</td></tr>
+<a class="el" href="class_urho3_d_1_1_rigid_body2_d.html">RigidBody2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetRigidBody</b> (const <a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a> &amp;point, unsigned collisionMask=M_MAX_UNSIGNED)</td></tr>
 <tr class="memdesc:a3d0038b75e3dbbbea12895ef3c7ac3fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return rigid body at point. <br /></td></tr>
 <tr class="separator:a3d0038b75e3dbbbea12895ef3c7ac3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62dd3b57b471bdc68fc598886a923ec5" id="r_a62dd3b57b471bdc68fc598886a923ec5"><td class="memItemLeft" align="right" valign="top"><a id="a62dd3b57b471bdc68fc598886a923ec5" name="a62dd3b57b471bdc68fc598886a923ec5"></a>
@@ -238,7 +238,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>GetRigidBodies</b> (e
 <tr class="separator:a991eeaf09a45cdb8032d72c175b09a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a623b6b47d7a50aff2103210e92d3da81" id="r_a623b6b47d7a50aff2103210e92d3da81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world2_d.html#a623b6b47d7a50aff2103210e92d3da81">GetAutoClearForces</a> () const</td></tr>
 <tr class="separator:a623b6b47d7a50aff2103210e92d3da81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c189f599baf2b3265f527f8392ab1c4" id="r_a7c189f599baf2b3265f527f8392ab1c4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world2_d.html#a7c189f599baf2b3265f527f8392ab1c4">GetGravity</a> () const</td></tr>
+<tr class="memitem:a7c189f599baf2b3265f527f8392ab1c4" id="r_a7c189f599baf2b3265f527f8392ab1c4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world2_d.html#a7c189f599baf2b3265f527f8392ab1c4">GetGravity</a> () const</td></tr>
 <tr class="separator:a7c189f599baf2b3265f527f8392ab1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07eb0e2bb7185ccf0d9dce1ea1775114" id="r_a07eb0e2bb7185ccf0d9dce1ea1775114"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_physics_world2_d.html#a07eb0e2bb7185ccf0d9dce1ea1775114">GetVelocityIterations</a> () const</td></tr>
 <tr class="separator:a07eb0e2bb7185ccf0d9dce1ea1775114"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -686,7 +686,7 @@ ea::unique_ptr&lt; b2World &gt;&#160;</td><td class="memItemRight" valign="botto
 <tr class="memdesc:a72c49c2e894f26203d3a59f7f98455d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Box2D physics world. <br /></td></tr>
 <tr class="separator:a72c49c2e894f26203d3a59f7f98455d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe4b735a50d0e6c66a6ccfa502c322c1" id="r_afe4b735a50d0e6c66a6ccfa502c322c1"><td class="memItemLeft" align="right" valign="top"><a id="afe4b735a50d0e6c66a6ccfa502c322c1" name="afe4b735a50d0e6c66a6ccfa502c322c1"></a>
-<a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>gravity_</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>gravity_</b></td></tr>
 <tr class="memdesc:afe4b735a50d0e6c66a6ccfa502c322c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gravity. <br /></td></tr>
 <tr class="separator:afe4b735a50d0e6c66a6ccfa502c322c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac01ab9f324ffd5c30536773964d3128e" id="r_ac01ab9f324ffd5c30536773964d3128e"><td class="memItemLeft" align="right" valign="top"><a id="ac01ab9f324ffd5c30536773964d3128e" name="ac01ab9f324ffd5c30536773964d3128e"></a>
@@ -1026,7 +1026,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp; Urho3D::PhysicsWorld2D::GetGravity </td>
+          <td class="memname">const <a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a> &amp; Urho3D::PhysicsWorld2D::GetGravity </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1384,7 +1384,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void Urho3D::PhysicsWorld2D::SetGravity </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a> &amp;&#160;</td>
           <td class="paramname"><em>gravity</em></td><td>)</td>
           <td></td>
         </tr>

@@ -8,6 +8,7 @@ var class_urho3_d_1_1_i_k_solver_component =
     [ "DrawIKSegment", "class_urho3_d_1_1_i_k_solver_component.html#a7d2e7db6d5dfea4981a49c22031cccde", null ],
     [ "DrawIKTarget", "class_urho3_d_1_1_i_k_solver_component.html#af25ffc81a8f36005c6c50a290dd810d9", null ],
     [ "FindNode", "class_urho3_d_1_1_i_k_solver_component.html#a8eed8cbed3273c292f9e727a281f04df", null ],
+    [ "GetParentTransform", "class_urho3_d_1_1_i_k_solver_component.html#ab01c4e222cc3fdbe04f322e6b909912b", null ],
     [ "OnNodeSet", "class_urho3_d_1_1_i_k_solver_component.html#aab1e646e08ac73a59566472cdbc5252a", null ],
     [ "OnTreeDirty", "class_urho3_d_1_1_i_k_solver_component.html#a1f662cd996b80fac8ef6e9640c08fe71", null ],
     [ "SetFrameOfReference", "class_urho3_d_1_1_i_k_solver_component.html#a6092df48c87d22b8692dad7ec834a21c", null ],

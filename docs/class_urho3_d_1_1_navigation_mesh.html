@@ -97,7 +97,7 @@ Inheritance diagram for Urho3D::NavigationMesh:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a7b1278cb25cd643357c4231bf1a9bc0c" id="r_a7b1278cb25cd643357c4231bf1a9bc0c"><td class="memItemLeft" align="right" valign="top"><a id="a7b1278cb25cd643357c4231bf1a9bc0c" name="a7b1278cb25cd643357c4231bf1a9bc0c"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>OnAsyncTileBuildCompleted</b> = ea::function&lt; void(const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;tileIndex, bool success)&gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>OnAsyncTileBuildCompleted</b> = ea::function&lt; void(const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;tileIndex, bool success)&gt;</td></tr>
 <tr class="memdesc:a7b1278cb25cd643357c4231bf1a9bc0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback invoked when tile async build is completed, both success and failure. <br /></td></tr>
 <tr class="separator:a7b1278cb25cd643357c4231bf1a9bc0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -125,7 +125,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMaxTiles</b> (int 
 <tr class="memitem:a2894cc1c65d97547bccd5c21d63d30e6" id="r_a2894cc1c65d97547bccd5c21d63d30e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a2894cc1c65d97547bccd5c21d63d30e6">SetCellHeight</a> (float height)</td></tr>
 <tr class="separator:a2894cc1c65d97547bccd5c21d63d30e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c14b9a50c1536c642b59806a2feda99" id="r_a8c14b9a50c1536c642b59806a2feda99"><td class="memItemLeft" align="right" valign="top"><a id="a8c14b9a50c1536c642b59806a2feda99" name="a8c14b9a50c1536c642b59806a2feda99"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetHeightRange</b> (const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;range)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetHeightRange</b> (const <a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a> &amp;range)</td></tr>
 <tr class="memdesc:a8c14b9a50c1536c642b59806a2feda99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set min and max height of the navigation mesh, i.e. min and max Y value in world space. <br /></td></tr>
 <tr class="separator:a8c14b9a50c1536c642b59806a2feda99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3be7466752eb04a67bd9de880691dcea" id="r_a3be7466752eb04a67bd9de880691dcea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a3be7466752eb04a67bd9de880691dcea">SetAgentHeight</a> (float height)</td></tr>
@@ -167,45 +167,52 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>BuildTilesInRegion</b
 <tr class="memdesc:abda7f19ac6d568f03b50eaeafb866ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebuild part of the navigation mesh contained by the world-space bounding box. Return true if successful. <br /></td></tr>
 <tr class="separator:abda7f19ac6d568f03b50eaeafb866ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97f29be1321a1196baf17d5f9caf5e8e" id="r_a97f29be1321a1196baf17d5f9caf5e8e"><td class="memItemLeft" align="right" valign="top"><a id="a97f29be1321a1196baf17d5f9caf5e8e" name="a97f29be1321a1196baf17d5f9caf5e8e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>BuildTiles</b> (const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;from, const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;to)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>BuildTiles</b> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;from, const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;to)</td></tr>
 <tr class="memdesc:a97f29be1321a1196baf17d5f9caf5e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebuild part of the navigation mesh in the rectangular area. Return true if successful. <br /></td></tr>
 <tr class="separator:a97f29be1321a1196baf17d5f9caf5e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6925854668467bfec9b6c0ad9419a097" id="r_a6925854668467bfec9b6c0ad9419a097"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a6925854668467bfec9b6c0ad9419a097">BuildTilesAsync</a> (const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;from, const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;to, const <a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a7b1278cb25cd643357c4231bf1a9bc0c">OnAsyncTileBuildCompleted</a> &amp;callback={})</td></tr>
+<tr class="memitem:a6925854668467bfec9b6c0ad9419a097" id="r_a6925854668467bfec9b6c0ad9419a097"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a6925854668467bfec9b6c0ad9419a097">BuildTilesAsync</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;from, const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;to, const <a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a7b1278cb25cd643357c4231bf1a9bc0c">OnAsyncTileBuildCompleted</a> &amp;callback={})</td></tr>
 <tr class="separator:a6925854668467bfec9b6c0ad9419a097"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad842689968707f56e5b3edd30dd69ab0" id="r_ad842689968707f56e5b3edd30dd69ab0"><td class="memItemLeft" align="right" valign="top"><a id="ad842689968707f56e5b3edd30dd69ab0" name="ad842689968707f56e5b3edd30dd69ab0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>CancelTileBuild</b> (const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;tileIndex)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CancelTileBuild</b> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;tileIndex)</td></tr>
 <tr class="memdesc:ad842689968707f56e5b3edd30dd69ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel asynchronous tile build, if any. <br /></td></tr>
 <tr class="separator:ad842689968707f56e5b3edd30dd69ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbcd5120c1e004cd86a12e6d8264c01d" id="r_adbcd5120c1e004cd86a12e6d8264c01d"><td class="memItemLeft" align="right" valign="top"><a id="adbcd5120c1e004cd86a12e6d8264c01d" name="adbcd5120c1e004cd86a12e6d8264c01d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>Rebuild</b> ()</td></tr>
 <tr class="memdesc:adbcd5120c1e004cd86a12e6d8264c01d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rebuild the navigation mesh allocating sufficient maximum number of tiles. Return true if successful. <br /></td></tr>
 <tr class="separator:adbcd5120c1e004cd86a12e6d8264c01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d963fb20f1e5dbb51aae333253f269f" id="r_a0d963fb20f1e5dbb51aae333253f269f"><td class="memItemLeft" align="right" valign="top"><a id="a0d963fb20f1e5dbb51aae333253f269f" name="a0d963fb20f1e5dbb51aae333253f269f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OffsetMeshTile</b> (ByteSpan tileData, const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;tileOffset, int offsetY)</td></tr>
+<tr class="memdesc:a0d963fb20f1e5dbb51aae333253f269f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset internal mesh tile data (dtMeshTile) by tile offset and Y. <br /></td></tr>
+<tr class="separator:a0d963fb20f1e5dbb51aae333253f269f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e689d435bf5f2fbd2c0165e41d1153" id="r_ae8e689d435bf5f2fbd2c0165e41d1153"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#ae8e689d435bf5f2fbd2c0165e41d1153">OffsetTileData</a> (ByteSpan tileData, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;delta)</td></tr>
+<tr class="memdesc:ae8e689d435bf5f2fbd2c0165e41d1153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset serialized tile data.  <br /></td></tr>
+<tr class="separator:ae8e689d435bf5f2fbd2c0165e41d1153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08ff28c3ebe8d7ae55d4bd8895f36673" id="r_a08ff28c3ebe8d7ae55d4bd8895f36673"><td class="memItemLeft" align="right" valign="top"><a id="a08ff28c3ebe8d7ae55d4bd8895f36673" name="a08ff28c3ebe8d7ae55d4bd8895f36673"></a>
-ea::vector&lt; <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetAllTileIndices</b> () const</td></tr>
+ea::vector&lt; <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetAllTileIndices</b> () const</td></tr>
 <tr class="memdesc:a08ff28c3ebe8d7ae55d4bd8895f36673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerate all tiles. <br /></td></tr>
 <tr class="separator:a08ff28c3ebe8d7ae55d4bd8895f36673"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad95a2b9756b8bb17af17444c7ff8507c" id="r_ad95a2b9756b8bb17af17444c7ff8507c"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#ad95a2b9756b8bb17af17444c7ff8507c">GetTileData</a> (const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;tileIndex) const</td></tr>
+<tr class="memitem:ad95a2b9756b8bb17af17444c7ff8507c" id="r_ad95a2b9756b8bb17af17444c7ff8507c"><td class="memItemLeft" align="right" valign="top">virtual ea::vector&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#ad95a2b9756b8bb17af17444c7ff8507c">GetTileData</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;tileIndex) const</td></tr>
 <tr class="memdesc:ad95a2b9756b8bb17af17444c7ff8507c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return tile data.  <br /></td></tr>
 <tr class="separator:ad95a2b9756b8bb17af17444c7ff8507c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90bc2ec67e4c47384979e44523a27685" id="r_a90bc2ec67e4c47384979e44523a27685"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a90bc2ec67e4c47384979e44523a27685">AddTile</a> (const ea::vector&lt; unsigned char &gt; &amp;tileData)</td></tr>
 <tr class="memdesc:a90bc2ec67e4c47384979e44523a27685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add tile to navigation mesh.  <br /></td></tr>
 <tr class="separator:a90bc2ec67e4c47384979e44523a27685"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f8b6e8c1c9fed66e35ff1073ce9fd2d" id="r_a9f8b6e8c1c9fed66e35ff1073ce9fd2d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a9f8b6e8c1c9fed66e35ff1073ce9fd2d">RemoveTile</a> (const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;tileIndex)</td></tr>
+<tr class="memitem:a9f8b6e8c1c9fed66e35ff1073ce9fd2d" id="r_a9f8b6e8c1c9fed66e35ff1073ce9fd2d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a9f8b6e8c1c9fed66e35ff1073ce9fd2d">RemoveTile</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;tileIndex)</td></tr>
 <tr class="memdesc:a9f8b6e8c1c9fed66e35ff1073ce9fd2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove tile from navigation mesh.  <br /></td></tr>
 <tr class="separator:a9f8b6e8c1c9fed66e35ff1073ce9fd2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa02544d63d003eb643212ba96efc416a" id="r_aa02544d63d003eb643212ba96efc416a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#aa02544d63d003eb643212ba96efc416a">RemoveAllTiles</a> ()</td></tr>
 <tr class="memdesc:aa02544d63d003eb643212ba96efc416a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all tiles from navigation mesh.  <br /></td></tr>
 <tr class="separator:aa02544d63d003eb643212ba96efc416a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a796c4c5d0c50489d32eacd376b05631c" id="r_a796c4c5d0c50489d32eacd376b05631c"><td class="memItemLeft" align="right" valign="top"><a id="a796c4c5d0c50489d32eacd376b05631c" name="a796c4c5d0c50489d32eacd376b05631c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>HasTile</b> (const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;tileIndex) const</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>HasTile</b> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;tileIndex) const</td></tr>
 <tr class="memdesc:a796c4c5d0c50489d32eacd376b05631c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the navigation mesh has tile. <br /></td></tr>
 <tr class="separator:a796c4c5d0c50489d32eacd376b05631c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab81f216b32310404d5a5a9e7d2011700" id="r_ab81f216b32310404d5a5a9e7d2011700"><td class="memItemLeft" align="right" valign="top"><a id="ab81f216b32310404d5a5a9e7d2011700" name="ab81f216b32310404d5a5a9e7d2011700"></a>
-<a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetTileBoundingBoxColumn</b> (const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;tileIndex) const</td></tr>
+<a class="el" href="class_urho3_d_1_1_bounding_box.html">BoundingBox</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetTileBoundingBoxColumn</b> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;tileIndex) const</td></tr>
 <tr class="memdesc:ab81f216b32310404d5a5a9e7d2011700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return bounding box of the tile in the world space. Y coordinate spans from -infinity to infinity. <br /></td></tr>
 <tr class="separator:ab81f216b32310404d5a5a9e7d2011700"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a571d4bf92feb5b4e7cb344218f5d1cee" id="r_a571d4bf92feb5b4e7cb344218f5d1cee"><td class="memItemLeft" align="right" valign="top"><a id="a571d4bf92feb5b4e7cb344218f5d1cee" name="a571d4bf92feb5b4e7cb344218f5d1cee"></a>
-<a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetTileIndex</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;position) const</td></tr>
+<a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetTileIndex</b> (const <a class="el" href="class_urho3_d_1_1_base_vector3.html">Vector3</a> &amp;position) const</td></tr>
 <tr class="memdesc:a571d4bf92feb5b4e7cb344218f5d1cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return index of the tile at the position. <br /></td></tr>
 <tr class="separator:a571d4bf92feb5b4e7cb344218f5d1cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdc15f90748942e9836cb19e0e15ed81" id="r_acdc15f90748942e9836cb19e0e15ed81"><td class="memItemLeft" align="right" valign="top"><a id="acdc15f90748942e9836cb19e0e15ed81" name="acdc15f90748942e9836cb19e0e15ed81"></a>
@@ -263,7 +270,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>GetMaxTiles</b> () con
 <tr class="memitem:a953dcf0369a229207700d4958528c411" id="r_a953dcf0369a229207700d4958528c411"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a953dcf0369a229207700d4958528c411">GetCellHeight</a> () const</td></tr>
 <tr class="separator:a953dcf0369a229207700d4958528c411"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a977afdfa56056e3bc97d5846cee96518" id="r_a977afdfa56056e3bc97d5846cee96518"><td class="memItemLeft" align="right" valign="top"><a id="a977afdfa56056e3bc97d5846cee96518" name="a977afdfa56056e3bc97d5846cee96518"></a>
-const <a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetHeightRange</b> () const</td></tr>
+const <a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetHeightRange</b> () const</td></tr>
 <tr class="memdesc:a977afdfa56056e3bc97d5846cee96518"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return min and max height of the navigation mesh, i.e. min and max Y value in world space. <br /></td></tr>
 <tr class="separator:a977afdfa56056e3bc97d5846cee96518"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48930ade42764a142907851a673fa77e" id="r_a48930ade42764a142907851a673fa77e"><td class="memItemLeft" align="right" valign="top"><a id="a48930ade42764a142907851a673fa77e" name="a48930ade42764a142907851a673fa77e"></a>
@@ -700,7 +707,7 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:ab43780c36911e48b7d56fb3e540d0ea9" id="r_ab43780c36911e48b7d56fb3e540d0ea9"><td class="memItemLeft" align="right" valign="top"><a id="ab43780c36911e48b7d56fb3e540d0ea9" name="ab43780c36911e48b7d56fb3e540d0ea9"></a>
-static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>NavigationDataVersion</b> = 1</td></tr>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>NavigationDataVersion</b> = 2</td></tr>
 <tr class="memdesc:ab43780c36911e48b7d56fb3e540d0ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Version of compiled navigation data. Navigation data should be discarded and rebuilt on mismatch. <br /></td></tr>
 <tr class="separator:ab43780c36911e48b7d56fb3e540d0ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d4d3440a28d6f925de3571bd7324737" id="r_a5d4d3440a28d6f925de3571bd7324737"><td class="memItemLeft" align="right" valign="top"><a id="a5d4d3440a28d6f925de3571bd7324737" name="a5d4d3440a28d6f925de3571bd7324737"></a>
@@ -732,18 +739,21 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5bf25e4a36406be1bc0150735f104ea4" id="r_a5bf25e4a36406be1bc0150735f104ea4"><td class="memItemLeft" align="right" valign="top">virtual TileBuilderFunction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a5bf25e4a36406be1bc0150735f104ea4">GetTileBuilder</a> () const</td></tr>
 <tr class="memdesc:a5bf25e4a36406be1bc0150735f104ea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns functor that builds tile data. The functor may be called from worker thread.  <br /></td></tr>
 <tr class="separator:a5bf25e4a36406be1bc0150735f104ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9790918024f280f246fec768bc81ec7" id="r_ad9790918024f280f246fec768bc81ec7"><td class="memItemLeft" align="right" valign="top">virtual NavBuildDataPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#ad9790918024f280f246fec768bc81ec7">CreateTileBuildData</a> (const ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_navigation_geometry_info.html">NavigationGeometryInfo</a> &gt; &amp;geometryList, const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;tileIndex) const</td></tr>
+<tr class="memitem:ad9790918024f280f246fec768bc81ec7" id="r_ad9790918024f280f246fec768bc81ec7"><td class="memItemLeft" align="right" valign="top">virtual NavBuildDataPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#ad9790918024f280f246fec768bc81ec7">CreateTileBuildData</a> (const ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_navigation_geometry_info.html">NavigationGeometryInfo</a> &gt; &amp;geometryList, const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;tileIndex) const</td></tr>
 <tr class="memdesc:ad9790918024f280f246fec768bc81ec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collect data for tile building.  <br /></td></tr>
 <tr class="separator:ad9790918024f280f246fec768bc81ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44d470bd9c86f910239514496b7f1afa" id="r_a44d470bd9c86f910239514496b7f1afa"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a44d470bd9c86f910239514496b7f1afa">ReplaceTileData</a> (<a class="el" href="struct_urho3_d_1_1_nav_build_data.html">NavBuildData</a> &amp;build)</td></tr>
 <tr class="memdesc:a44d470bd9c86f910239514496b7f1afa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace tile data in navigation mesh.  <br /></td></tr>
 <tr class="separator:a44d470bd9c86f910239514496b7f1afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7fff37e227e402a94d3c226814799f5" id="r_ad7fff37e227e402a94d3c226814799f5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#ad7fff37e227e402a94d3c226814799f5">OffsetTilesGeometry</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;tileOffset, int offsetY)</td></tr>
+<tr class="memdesc:ad7fff37e227e402a94d3c226814799f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset geometry of all tiles by a given offset.  <br /></td></tr>
+<tr class="separator:ad7fff37e227e402a94d3c226814799f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff5b1128bb644a5897a252d819107284" id="r_aff5b1128bb644a5897a252d819107284"><td class="memItemLeft" align="right" valign="top"><a id="aff5b1128bb644a5897a252d819107284" name="aff5b1128bb644a5897a252d819107284"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>BuildTilesFromGeometry</b> (ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_navigation_geometry_info.html">NavigationGeometryInfo</a> &gt; &amp;geometryList, const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;from, const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;to)</td></tr>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>BuildTilesFromGeometry</b> (ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_navigation_geometry_info.html">NavigationGeometryInfo</a> &gt; &amp;geometryList, const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;from, const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;to)</td></tr>
 <tr class="memdesc:aff5b1128bb644a5897a252d819107284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build mesh tiles from the geometry data. Return number of tiles built. <br /></td></tr>
 <tr class="separator:aff5b1128bb644a5897a252d819107284"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7110414320a12c6f4813953f190cb6d" id="r_ab7110414320a12c6f4813953f190cb6d"><td class="memItemLeft" align="right" valign="top"><a id="ab7110414320a12c6f4813953f190cb6d" name="ab7110414320a12c6f4813953f190cb6d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>BuildTilesFromGeometryAsync</b> (ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_navigation_geometry_info.html">NavigationGeometryInfo</a> &gt; &amp;geometryList, const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;from, const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;to, const <a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a7b1278cb25cd643357c4231bf1a9bc0c">OnAsyncTileBuildCompleted</a> &amp;callback)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>BuildTilesFromGeometryAsync</b> (ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_navigation_geometry_info.html">NavigationGeometryInfo</a> &gt; &amp;geometryList, const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;from, const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;to, const <a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a7b1278cb25cd643357c4231bf1a9bc0c">OnAsyncTileBuildCompleted</a> &amp;callback)</td></tr>
 <tr class="memdesc:ab7110414320a12c6f4813953f190cb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedule mesh tile building. <br /></td></tr>
 <tr class="separator:ab7110414320a12c6f4813953f190cb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f4eb049a4ffcd370ec796528cc83ee2" id="r_a0f4eb049a4ffcd370ec796528cc83ee2"><td class="memItemLeft" align="right" valign="top"><a id="a0f4eb049a4ffcd370ec796528cc83ee2" name="a0f4eb049a4ffcd370ec796528cc83ee2"></a>
@@ -755,7 +765,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SendRebuildEvent</b> 
 <tr class="memdesc:ac59f40977745a8a2158b7eae13be569c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send rebuild event. <br /></td></tr>
 <tr class="separator:ac59f40977745a8a2158b7eae13be569c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1567478d624672f0e38b70448c7f24f2" id="r_a1567478d624672f0e38b70448c7f24f2"><td class="memItemLeft" align="right" valign="top"><a id="a1567478d624672f0e38b70448c7f24f2" name="a1567478d624672f0e38b70448c7f24f2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendTileAddedEvent</b> (const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;tileIndex)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendTileAddedEvent</b> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;tileIndex)</td></tr>
 <tr class="memdesc:a1567478d624672f0e38b70448c7f24f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send tile added event. <br /></td></tr>
 <tr class="separator:a1567478d624672f0e38b70448c7f24f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6526abda6d6d5fd32d13fe210c353a7c" id="r_a6526abda6d6d5fd32d13fe210c353a7c"><td class="memItemLeft" align="right" valign="top"><a id="a6526abda6d6d5fd32d13fe210c353a7c" name="a6526abda6d6d5fd32d13fe210c353a7c"></a>
@@ -766,7 +776,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>CollectGeometries</b>
 <tr class="memdesc:af3e42f1ff99d13013976ac2edb043705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visit nodes and collect navigable geometry.  <br /></td></tr>
 <tr class="separator:af3e42f1ff99d13013976ac2edb043705"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49ae1c7af0d9a6691d462de5efe57fc0" id="r_a49ae1c7af0d9a6691d462de5efe57fc0"><td class="memItemLeft" align="right" valign="top"><a id="a49ae1c7af0d9a6691d462de5efe57fc0" name="a49ae1c7af0d9a6691d462de5efe57fc0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeBuildData</b> (<a class="el" href="struct_urho3_d_1_1_nav_build_data.html">NavBuildData</a> &amp;build, const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;tileIndex, const ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_navigation_geometry_info.html">NavigationGeometryInfo</a> &gt; &amp;geometryList) const</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeBuildData</b> (<a class="el" href="struct_urho3_d_1_1_nav_build_data.html">NavBuildData</a> &amp;build, const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;tileIndex, const ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_navigation_geometry_info.html">NavigationGeometryInfo</a> &gt; &amp;geometryList) const</td></tr>
 <tr class="memdesc:a49ae1c7af0d9a6691d462de5efe57fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize navigation build data from component configuration. <br /></td></tr>
 <tr class="separator:a49ae1c7af0d9a6691d462de5efe57fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa50591668a60de1ec65c56aaeaed4f57" id="r_aa50591668a60de1ec65c56aaeaed4f57"><td class="memItemLeft" align="right" valign="top"><a id="aa50591668a60de1ec65c56aaeaed4f57" name="aa50591668a60de1ec65c56aaeaed4f57"></a>
@@ -780,13 +790,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeQuery</b> (
 void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawDebugTileGeometry</b> (<a class="el" href="class_urho3_d_1_1_debug_renderer.html">DebugRenderer</a> *debug, bool depthTest, int tileIndex)</td></tr>
 <tr class="memdesc:ae86b78ef8e66c98e02c09d589f6b3c0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw debug geometry for single tile. <br /></td></tr>
 <tr class="separator:ae86b78ef8e66c98e02c09d589f6b3c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a94ea1073bb3bda1d53105bb83543e1f0" id="r_a94ea1073bb3bda1d53105bb83543e1f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_navigation_mesh.html#a94ea1073bb3bda1d53105bb83543e1f0">OnSceneSet</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *previousScene, <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene) override</td></tr>
+<tr class="separator:a94ea1073bb3bda1d53105bb83543e1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_urho3_d_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_component.html">Urho3D::Component</a></td></tr>
 <tr class="memitem:aa68563fbc08bf63ae120a36926282bff inherit pro_methods_class_urho3_d_1_1_component" id="r_aa68563fbc08bf63ae120a36926282bff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#aa68563fbc08bf63ae120a36926282bff">OnNodeSet</a> (Node *previousNode, Node *currentNode)</td></tr>
 <tr class="memdesc:aa68563fbc08bf63ae120a36926282bff inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node being assigned at creation.  <br /></td></tr>
 <tr class="separator:aa68563fbc08bf63ae120a36926282bff inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf51a61ab4b9c0406e04ed2d69a9cc98 inherit pro_methods_class_urho3_d_1_1_component" id="r_adf51a61ab4b9c0406e04ed2d69a9cc98"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#adf51a61ab4b9c0406e04ed2d69a9cc98">OnSceneSet</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *previousScene, <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene)</td></tr>
-<tr class="memdesc:adf51a61ab4b9c0406e04ed2d69a9cc98 inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene being assigned. This may happen several times during the component's lifetime. Scene-wide subsystems and events are subscribed to here.  <br /></td></tr>
-<tr class="separator:adf51a61ab4b9c0406e04ed2d69a9cc98 inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab49b4b66b2eb1601cf166972fe42e5ce inherit pro_methods_class_urho3_d_1_1_component" id="r_ab49b4b66b2eb1601cf166972fe42e5ce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#ab49b4b66b2eb1601cf166972fe42e5ce">OnMarkedDirty</a> (Node *node)</td></tr>
 <tr class="memdesc:ab49b4b66b2eb1601cf166972fe42e5ce inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node transform dirtied.  <br /></td></tr>
 <tr class="separator:ab49b4b66b2eb1601cf166972fe42e5ce inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -865,7 +875,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>cellHeight_</b></td>
 <tr class="memdesc:acaf1d81b8acf0f471784499f7fc4bd7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cell height. <br /></td></tr>
 <tr class="separator:acaf1d81b8acf0f471784499f7fc4bd7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac457307bb235549fc6b09bd877aac96a" id="r_ac457307bb235549fc6b09bd877aac96a"><td class="memItemLeft" align="right" valign="top"><a id="ac457307bb235549fc6b09bd877aac96a" name="ac457307bb235549fc6b09bd877aac96a"></a>
-<a class="el" href="class_urho3_d_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>heightRange_</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_base_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>heightRange_</b></td></tr>
 <tr class="memdesc:ac457307bb235549fc6b09bd877aac96a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total height range of the navigation mesh, in world space. <br /></td></tr>
 <tr class="separator:ac457307bb235549fc6b09bd877aac96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ec19f4cd239f960d852edc8b4409dbb" id="r_a5ec19f4cd239f960d852edc8b4409dbb"><td class="memItemLeft" align="right" valign="top"><a id="a5ec19f4cd239f960d852edc8b4409dbb" name="a5ec19f4cd239f960d852edc8b4409dbb"></a>
@@ -933,7 +943,7 @@ ea::vector&lt; <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&
 <tr class="memdesc:a6d4f750c97a2f37860109ca55a119dfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">NavAreas for this NavMesh. <br /></td></tr>
 <tr class="separator:a6d4f750c97a2f37860109ca55a119dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b398f71ea80d5113c68339a7b28b89b" id="r_a9b398f71ea80d5113c68339a7b28b89b"><td class="memItemLeft" align="right" valign="top"><a id="a9b398f71ea80d5113c68339a7b28b89b" name="a9b398f71ea80d5113c68339a7b28b89b"></a>
-ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a>, NavBuildDataPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>asyncTileBuilds_</b></td></tr>
+ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a>, NavBuildDataPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>asyncTileBuilds_</b></td></tr>
 <tr class="memdesc:a9b398f71ea80d5113c68339a7b28b89b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current asynchronous tile build. <br /></td></tr>
 <tr class="separator:a9b398f71ea80d5113c68339a7b28b89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_component')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_component.html">Urho3D::Component</a></td></tr>
@@ -981,6 +991,10 @@ Private Member Functions</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReadTile</b> (<a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;source, bool silent)</td></tr>
 <tr class="memdesc:a11e69586bdbe9d9fd5de178023ade279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read tile data to the navigation mesh. <br /></td></tr>
 <tr class="separator:a11e69586bdbe9d9fd5de178023ade279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b2a5f275254b676705d80670fb61c23" id="r_a1b2a5f275254b676705d80670fb61c23"><td class="memItemLeft" align="right" valign="top"><a id="a1b2a5f275254b676705d80670fb61c23" name="a1b2a5f275254b676705d80670fb61c23"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleWorldOriginUpdate</b> (<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:a1b2a5f275254b676705d80670fb61c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle world origin update. <br /></td></tr>
+<tr class="separator:a1b2a5f275254b676705d80670fb61c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -1088,13 +1102,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CrowdManager</b></td
         <tr>
           <td class="memname">void Urho3D::NavigationMesh::BuildTilesAsync </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;&#160;</td>
           <td class="paramname"><em>from</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;&#160;</td>
           <td class="paramname"><em>to</em>, </td>
         </tr>
         <tr>
@@ -1188,7 +1202,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CrowdManager</b></td
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;&#160;</td>
           <td class="paramname"><em>tileIndex</em>&#160;</td>
         </tr>
         <tr>
@@ -1736,7 +1750,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CrowdManager</b></td
         <tr>
           <td class="memname">ea::vector&lt; unsigned char &gt; Urho3D::NavigationMesh::GetTileData </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;&#160;</td>
           <td class="paramname"><em>tileIndex</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -1803,6 +1817,125 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CrowdManager</b></td
 </table>
 </div><div class="memdoc">
 <p>Return whether has been initialized with valid navigation data. </p>
+
+</div>
+</div>
+<a id="ae8e689d435bf5f2fbd2c0165e41d1153" name="ae8e689d435bf5f2fbd2c0165e41d1153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8e689d435bf5f2fbd2c0165e41d1153">&#9670;&#160;</a></span>OffsetTileData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::NavigationMesh::OffsetTileData </td>
+          <td>(</td>
+          <td class="paramtype">ByteSpan&#160;</td>
+          <td class="paramname"><em>tileData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>delta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Offset serialized tile data. </p>
+
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_dynamic_navigation_mesh.html#a529213cd98a02121ec1c0cc6197874fb">Urho3D::DynamicNavigationMesh</a>.</p>
+
+</div>
+</div>
+<a id="ad7fff37e227e402a94d3c226814799f5" name="ad7fff37e227e402a94d3c226814799f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7fff37e227e402a94d3c226814799f5">&#9670;&#160;</a></span>OffsetTilesGeometry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::NavigationMesh::OffsetTilesGeometry </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;&#160;</td>
+          <td class="paramname"><em>tileOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offsetY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Offset geometry of all tiles by a given offset. </p>
+
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_dynamic_navigation_mesh.html#a7fef70c7a917de6b33652afeaf35acb3">Urho3D::DynamicNavigationMesh</a>.</p>
+
+</div>
+</div>
+<a id="a94ea1073bb3bda1d53105bb83543e1f0" name="a94ea1073bb3bda1d53105bb83543e1f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ea1073bb3bda1d53105bb83543e1f0">&#9670;&#160;</a></span>OnSceneSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::NavigationMesh::OnSceneSet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>previousScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Implement <a class="el" href="class_urho3_d_1_1_component.html">Component</a>. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_component.html#adf51a61ab4b9c0406e04ed2d69a9cc98">Urho3D::Component</a>.</p>
 
 </div>
 </div>
@@ -1932,7 +2065,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CrowdManager</b></td
         <tr>
           <td class="memname">void Urho3D::NavigationMesh::RemoveTile </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_int_vector2.html">IntVector2</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_urho3_d_1_1_base_integer_vector2.html">IntVector2</a> &amp;&#160;</td>
           <td class="paramname"><em>tileIndex</em></td><td>)</td>
           <td></td>
         </tr>

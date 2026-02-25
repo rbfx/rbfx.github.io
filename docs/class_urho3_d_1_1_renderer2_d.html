@@ -146,6 +146,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessCustomRayQuery
 <tr class="memitem:a00fb66b3ce06e1e9c9bb9ecf402c78b4 inherit pub_methods_class_urho3_d_1_1_drawable" id="r_a00fb66b3ce06e1e9c9bb9ecf402c78b4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#a00fb66b3ce06e1e9c9bb9ecf402c78b4">UpdateGeometry</a> (const <a class="el" href="struct_urho3_d_1_1_frame_info.html">FrameInfo</a> &amp;frame)</td></tr>
 <tr class="memdesc:a00fb66b3ce06e1e9c9bb9ecf402c78b4 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare geometry for rendering.  <br /></td></tr>
 <tr class="separator:a00fb66b3ce06e1e9c9bb9ecf402c78b4 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae20b8257b6f63174cf4e37b694520e3c inherit pub_methods_class_urho3_d_1_1_drawable" id="r_ae20b8257b6f63174cf4e37b694520e3c"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateWorldOrigin</b> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;oldOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;newOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;delta)</td></tr>
+<tr class="memdesc:ae20b8257b6f63174cf4e37b694520e3c inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on world origin update. <br /></td></tr>
+<tr class="separator:ae20b8257b6f63174cf4e37b694520e3c inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6e65fadf96a7e8bd0f04f70b0a28c68 inherit pub_methods_class_urho3_d_1_1_drawable" id="r_ab6e65fadf96a7e8bd0f04f70b0a28c68"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#ab6e65fadf96a7e8bd0f04f70b0a28c68">PostUpdateWorldOrigin</a> (const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;oldOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;newOrigin, const <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a> &amp;delta)</td></tr>
+<tr class="memdesc:ab6e65fadf96a7e8bd0f04f70b0a28c68 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on world origin post-update.  <br /></td></tr>
+<tr class="separator:ab6e65fadf96a7e8bd0f04f70b0a28c68 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09d563527cd3485f21b485c778e26d7e inherit pub_methods_class_urho3_d_1_1_drawable" id="r_a09d563527cd3485f21b485c778e26d7e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_drawable_8h.html#affe9ba89cc323bc37aff22afec7ade35">UpdateGeometryType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#a09d563527cd3485f21b485c778e26d7e">GetUpdateGeometryType</a> ()</td></tr>
 <tr class="memdesc:a09d563527cd3485f21b485c778e26d7e inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether a geometry update is necessary, and if it can happen in a worker thread.  <br /></td></tr>
 <tr class="separator:a09d563527cd3485f21b485c778e26d7e inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -708,6 +715,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a0b39716749cb4b2d78fb29ad6af1790c" id="r_a0b39716749cb4b2d78fb29ad6af1790c"><td class="memItemLeft" align="right" valign="top"><a id="a0b39716749cb4b2d78fb29ad6af1790c" name="a0b39716749cb4b2d78fb29ad6af1790c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_renderer2_d.html">Renderer2D</a>, <a class="el" href="class_urho3_d_1_1_drawable.html">Drawable</a>)</td></tr>
 <tr class="separator:a0b39716749cb4b2d78fb29ad6af1790c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eef1eb7a0ac994e5f14bc5d179d2369" id="r_a6eef1eb7a0ac994e5f14bc5d179d2369"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#a6eef1eb7a0ac994e5f14bc5d179d2369">OnSceneSet</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *previousScene, <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene) override</td></tr>
+<tr class="memdesc:a6eef1eb7a0ac994e5f14bc5d179d2369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene being assigned.  <br /></td></tr>
+<tr class="separator:a6eef1eb7a0ac994e5f14bc5d179d2369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad85586bd195fa2137c588923d1af022" id="r_aad85586bd195fa2137c588923d1af022"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_renderer2_d.html#aad85586bd195fa2137c588923d1af022">OnWorldBoundingBoxUpdate</a> () override</td></tr>
 <tr class="memdesc:aad85586bd195fa2137c588923d1af022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recalculate the world-space bounding box.  <br /></td></tr>
 <tr class="separator:aad85586bd195fa2137c588923d1af022"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -719,6 +729,14 @@ Private Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleBeginViewUpdate</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
 <tr class="memdesc:a6227f989f9ca9a00e5bbee52d04292e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle view update begin event. Determine <a class="el" href="class_urho3_d_1_1_drawable2_d.html" title="Base class for 2D visible components.">Drawable2D</a>'s and their batches here. <br /></td></tr>
 <tr class="separator:a6227f989f9ca9a00e5bbee52d04292e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b553dec123c6968d13a4ee39b8da8c7" id="r_a1b553dec123c6968d13a4ee39b8da8c7"><td class="memItemLeft" align="right" valign="top"><a id="a1b553dec123c6968d13a4ee39b8da8c7" name="a1b553dec123c6968d13a4ee39b8da8c7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleWorldOriginUpdate</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:a1b553dec123c6968d13a4ee39b8da8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle world origin update event. <br /></td></tr>
+<tr class="separator:a1b553dec123c6968d13a4ee39b8da8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc08b6b1f67163740b2b744153cd22d3" id="r_acc08b6b1f67163740b2b744153cd22d3"><td class="memItemLeft" align="right" valign="top"><a id="acc08b6b1f67163740b2b744153cd22d3" name="acc08b6b1f67163740b2b744153cd22d3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleWorldOriginPostUpdate</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+<tr class="memdesc:acc08b6b1f67163740b2b744153cd22d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle world origin post-update event. <br /></td></tr>
+<tr class="separator:acc08b6b1f67163740b2b744153cd22d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa686b592ea440f76991e92a31a03d521" id="r_aa686b592ea440f76991e92a31a03d521"><td class="memItemLeft" align="right" valign="top"><a id="aa686b592ea440f76991e92a31a03d521" name="aa686b592ea440f76991e92a31a03d521"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>GetDrawables</b> (ea::vector&lt; <a class="el" href="class_urho3_d_1_1_drawable2_d.html">Drawable2D</a> * &gt; &amp;drawables, Node *node)</td></tr>
 <tr class="memdesc:aa686b592ea440f76991e92a31a03d521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all drawables in node. <br /></td></tr>
@@ -783,9 +801,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ac7fc9ea5505fdeca995501caf8013684 inherit pro_methods_class_urho3_d_1_1_drawable" id="r_ac7fc9ea5505fdeca995501caf8013684"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#ac7fc9ea5505fdeca995501caf8013684">OnNodeSet</a> (Node *previousNode, Node *currentNode) override</td></tr>
 <tr class="memdesc:ac7fc9ea5505fdeca995501caf8013684 inherit pro_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle node being assigned.  <br /></td></tr>
 <tr class="separator:ac7fc9ea5505fdeca995501caf8013684 inherit pro_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9dd8d560ccfc97bf7855f943a7e2ba8 inherit pro_methods_class_urho3_d_1_1_drawable" id="r_ab9dd8d560ccfc97bf7855f943a7e2ba8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#ab9dd8d560ccfc97bf7855f943a7e2ba8">OnSceneSet</a> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *previousScene, <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene) override</td></tr>
-<tr class="memdesc:ab9dd8d560ccfc97bf7855f943a7e2ba8 inherit pro_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene being assigned.  <br /></td></tr>
-<tr class="separator:ab9dd8d560ccfc97bf7855f943a7e2ba8 inherit pro_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04a978441415a93f044721f6473df0e3 inherit pro_methods_class_urho3_d_1_1_drawable" id="r_a04a978441415a93f044721f6473df0e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#a04a978441415a93f044721f6473df0e3">OnMarkedDirty</a> (Node *node) override</td></tr>
 <tr class="memdesc:a04a978441415a93f044721f6473df0e3 inherit pro_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle node transform being dirtied.  <br /></td></tr>
 <tr class="separator:a04a978441415a93f044721f6473df0e3 inherit pro_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1004,6 +1019,46 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>2D renderer component. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6eef1eb7a0ac994e5f14bc5d179d2369" name="a6eef1eb7a0ac994e5f14bc5d179d2369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eef1eb7a0ac994e5f14bc5d179d2369">&#9670;&#160;</a></span>OnSceneSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::Renderer2D::OnSceneSet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>previousScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handle scene being assigned. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_drawable.html#ab9dd8d560ccfc97bf7855f943a7e2ba8">Urho3D::Drawable</a>.</p>
+
+</div>
+</div>
 <a id="aad85586bd195fa2137c588923d1af022" name="aad85586bd195fa2137c588923d1af022"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad85586bd195fa2137c588923d1af022">&#9670;&#160;</a></span>OnWorldBoundingBoxUpdate()</h2>
 

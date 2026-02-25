@@ -83,12 +83,11 @@ Inheritance diagram for Urho3D::Detail::NetworkValueBase:</div>
 <area href="class_urho3_d_1_1_network_value.html" alt="Urho3D::NetworkValue&lt; AnimationSnapshot &gt;" shape="rect" coords="453,112,896,136"/>
 <area href="class_urho3_d_1_1_network_value.html" alt="Urho3D::NetworkValue&lt; Urho3D::ValueWithDerivative &gt;" shape="rect" coords="453,168,896,192"/>
 <area href="class_urho3_d_1_1_network_value.html" alt="Urho3D::NetworkValue&lt; Urho3D::ValueWithDerivative&lt; Quaternion &gt; &gt;" shape="rect" coords="453,224,896,248"/>
-<area href="class_urho3_d_1_1_network_value.html" alt="Urho3D::NetworkValue&lt; Urho3D::Matrix3x4 &gt;" shape="rect" coords="453,280,896,304"/>
+<area href="class_urho3_d_1_1_network_value.html" alt="Urho3D::NetworkValue&lt; Urho3D::DoubleTransform &gt;" shape="rect" coords="453,280,896,304"/>
 <area href="class_urho3_d_1_1_network_value.html" alt="Urho3D::NetworkValue&lt; Urho3D::BoundingBox &gt;" shape="rect" coords="453,336,896,360"/>
-<area href="class_urho3_d_1_1_network_value_vector.html" alt="Urho3D::NetworkValueVector&lt; Urho3D::BaseVector3 &gt;" shape="rect" coords="453,392,896,416"/>
-<area href="class_urho3_d_1_1_network_value_vector.html" alt="Urho3D::NetworkValueVector&lt; Urho3D::Quaternion &gt;" shape="rect" coords="453,448,896,472"/>
-<area href="class_urho3_d_1_1_network_value.html" alt="Urho3D::NetworkValue&lt; T, Traits &gt;" shape="rect" coords="453,504,896,528"/>
-<area href="class_urho3_d_1_1_network_value_vector.html" title="Similar to NetworkValue, except each frame contains an array of elements." alt="Urho3D::NetworkValueVector&lt; T, Traits &gt;" shape="rect" coords="453,560,896,584"/>
+<area href="class_urho3_d_1_1_network_value_vector.html" alt="Urho3D::NetworkValueVector&lt; Urho3D::DoubleTransform &gt;" shape="rect" coords="453,392,896,416"/>
+<area href="class_urho3_d_1_1_network_value.html" alt="Urho3D::NetworkValue&lt; T, Traits &gt;" shape="rect" coords="453,448,896,472"/>
+<area href="class_urho3_d_1_1_network_value_vector.html" title="Similar to NetworkValue, except each frame contains an array of elements." alt="Urho3D::NetworkValueVector&lt; T, Traits &gt;" shape="rect" coords="453,504,896,528"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -123,9 +122,10 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>FrameToIndexUnche
 <tr class="memitem:a70ea4dafed4a207f2d6ca0f1b1ed9b59" id="r_a70ea4dafed4a207f2d6ca0f1b1ed9b59"><td class="memItemLeft" align="right" valign="top"><a id="a70ea4dafed4a207f2d6ca0f1b1ed9b59" name="a70ea4dafed4a207f2d6ca0f1b1ed9b59"></a>
 ea::optional&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>AllocatedFrameToIndex</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame) const</td></tr>
 <tr class="separator:a70ea4dafed4a207f2d6ca0f1b1ed9b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56d916129458574d70e7d4b36f44f543" id="r_a56d916129458574d70e7d4b36f44f543"><td class="memItemLeft" align="right" valign="top"><a id="a56d916129458574d70e7d4b36f44f543" name="a56d916129458574d70e7d4b36f44f543"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>AllocateFrame</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame)</td></tr>
-<tr class="separator:a56d916129458574d70e7d4b36f44f543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a972c2ffdbc95159ba849a5ebcca7fac7" id="r_a972c2ffdbc95159ba849a5ebcca7fac7"><td class="memTemplParams" colspan="2"><a id="a972c2ffdbc95159ba849a5ebcca7fac7" name="a972c2ffdbc95159ba849a5ebcca7fac7"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a972c2ffdbc95159ba849a5ebcca7fac7"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>AllocateFrame</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, const T &amp;compressCallback)</td></tr>
+<tr class="separator:a972c2ffdbc95159ba849a5ebcca7fac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e0ba5edfd04300145ddfbaf040e6cdb" id="r_a4e0ba5edfd04300145ddfbaf040e6cdb"><td class="memItemLeft" align="right" valign="top"><a id="a4e0ba5edfd04300145ddfbaf040e6cdb" name="a4e0ba5edfd04300145ddfbaf040e6cdb"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>HasFrame</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame) const</td></tr>
 <tr class="separator:a4e0ba5edfd04300145ddfbaf040e6cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>

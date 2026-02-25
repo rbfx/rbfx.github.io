@@ -25,6 +25,7 @@ var class_urho3_d_1_1_ribbon_trail =
     [ "OnSceneSet", "class_urho3_d_1_1_ribbon_trail.html#ab88c9c2b8da9d947ea8f19cee405904f", null ],
     [ "OnSetEnabled", "class_urho3_d_1_1_ribbon_trail.html#ad528c577d774550e285139ff929eb59f", null ],
     [ "OnWorldBoundingBoxUpdate", "class_urho3_d_1_1_ribbon_trail.html#a97c50efe75002f52792d02be1c9ec338", null ],
+    [ "PostUpdateWorldOrigin", "class_urho3_d_1_1_ribbon_trail.html#a01b23c2f67970b1753bbe36d850d5d99", null ],
     [ "ProcessRayQuery", "class_urho3_d_1_1_ribbon_trail.html#a65c987cd9a08745df753bf18ba98e643", null ],
     [ "RegisterObject", "class_urho3_d_1_1_ribbon_trail.html#ae7adb2667b25f01a8256c798f57a2db8", null ],
     [ "SetAnimationLodBias", "class_urho3_d_1_1_ribbon_trail.html#a7877c28e5d880f763b770cdf2662ac40", null ],

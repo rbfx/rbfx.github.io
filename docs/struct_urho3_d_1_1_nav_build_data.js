@@ -17,6 +17,7 @@ var struct_urho3_d_1_1_nav_build_data =
     [ "offMeshRadii_", "struct_urho3_d_1_1_nav_build_data.html#af20f0bb9b527efe066b8ad5134bbe115", null ],
     [ "offMeshVertices_", "struct_urho3_d_1_1_nav_build_data.html#a9272c66d97ad0e416793bdf3d6a9eb9a", null ],
     [ "partitionType_", "struct_urho3_d_1_1_nav_build_data.html#a0c062a74f1d98601ab7987885a82f6f6", null ],
+    [ "pendingTileOffset_", "struct_urho3_d_1_1_nav_build_data.html#abef8dfeb4a77aec68ca4d34e2682e0d4", null ],
     [ "recastConfig_", "struct_urho3_d_1_1_nav_build_data.html#a1d2a310ab8e63782cbaf4f75b5131a38", null ],
     [ "tileBoundingBox_", "struct_urho3_d_1_1_nav_build_data.html#ab0631ff916616a07ff2b0765aa71ddc7", null ],
     [ "tileColumn_", "struct_urho3_d_1_1_nav_build_data.html#ae67a7b15fcc2ac8627dc5c2db1fc81f4", null ],
