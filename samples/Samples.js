@@ -2377,7 +2377,6 @@ var FS = {
   ignorePermissions: true,
   filesystems: null,
   syncFSRequests: 0,
-  readFiles: {},
   ErrnoError: class {
     name="ErrnoError";
     // We set the `name` property to be able to identify `FS.ErrnoError`
@@ -2636,9 +2635,11 @@ var FS = {
     // return 0 if any user, group or owner bits are set.
     if (perms.includes("r") && !(node.mode & 292)) {
       return 2;
-    } else if (perms.includes("w") && !(node.mode & 146)) {
+    }
+    if (perms.includes("w") && !(node.mode & 146)) {
       return 2;
-    } else if (perms.includes("x") && !(node.mode & 73)) {
+    }
+    if (perms.includes("x") && !(node.mode & 73)) {
       return 2;
     }
     return 0;
@@ -2678,10 +2679,8 @@ var FS = {
       if (FS.isRoot(node) || FS.getPath(node) === FS.cwd()) {
         return 10;
       }
-    } else {
-      if (FS.isDir(node.mode)) {
-        return 31;
-      }
+    } else if (FS.isDir(node.mode)) {
+      return 31;
     }
     return 0;
   },
@@ -2691,13 +2690,16 @@ var FS = {
     }
     if (FS.isLink(node.mode)) {
       return 32;
-    } else if (FS.isDir(node.mode)) {
-      if (FS.flagsToPermissionString(flags) !== "r" || (flags & (512 | 64))) {
-        // TODO: check for O_SEARCH? (== search for dir only)
+    }
+    var mode = FS.flagsToPermissionString(flags);
+    if (FS.isDir(node.mode)) {
+      // opening for write
+      // TODO: check for O_SEARCH? (== search for dir only)
+      if (mode !== "r" || (flags & (512 | 64))) {
         return 31;
       }
     }
-    return FS.nodePermissions(node, FS.flagsToPermissionString(flags));
+    return FS.nodePermissions(node, mode);
   },
   checkOpExists(op, err) {
     if (!op) {
@@ -3349,11 +3351,6 @@ var FS = {
     }
     if (created) {
       FS.chmod(node, mode & 511);
-    }
-    if (Module["logReadFiles"] && !(flags & 1)) {
-      if (!(path in FS.readFiles)) {
-        FS.readFiles[path] = 1;
-      }
     }
     return stream;
   },
@@ -5034,9 +5031,9 @@ function ___syscall_getdents64(fd, dirp, count) {
           throw e;
         }
         id = child.id;
-        type = FS.isChrdev(child.mode) ? 2 : // DT_CHR, character device.
-        FS.isDir(child.mode) ? 4 : // DT_DIR, directory.
-        FS.isLink(child.mode) ? 10 : // DT_LNK, symbolic link.
+        type = FS.isChrdev(child.mode) ? 2 : // character device.
+        FS.isDir(child.mode) ? 4 : // directory
+        FS.isLink(child.mode) ? 10 : // symbolic link.
         8;
       }
       (growMemViews(), HEAP64)[((dirp + pos) >> 3)] = BigInt(id);
@@ -6611,10 +6608,8 @@ var Browser = {
     // (possibly modified) data. For example, a plugin might decompress a file, or it
     // might create some side data structure for use later (like an Image element, etc.).
     var imagePlugin = {};
-    imagePlugin["canHandle"] = function imagePlugin_canHandle(name) {
-      return !Module["noImageDecoding"] && /\.(jpg|jpeg|png|bmp|webp)$/i.test(name);
-    };
-    imagePlugin["handle"] = async function imagePlugin_handle(byteArray, name) {
+    imagePlugin["canHandle"] = name => !Module["noImageDecoding"] && /\.(jpg|jpeg|png|bmp|webp)$/i.test(name);
+    imagePlugin["handle"] = async (byteArray, name) => {
       var b = new Blob([ byteArray ], {
         type: Browser.getMimetype(name)
       });
@@ -6647,67 +6642,63 @@ var Browser = {
     };
     preloadPlugins.push(imagePlugin);
     var audioPlugin = {};
-    audioPlugin["canHandle"] = function audioPlugin_canHandle(name) {
-      return !Module["noAudioDecoding"] && name.slice(-4) in {
-        ".ogg": 1,
-        ".wav": 1,
-        ".mp3": 1
-      };
+    audioPlugin["canHandle"] = name => !Module["noAudioDecoding"] && name.slice(-4) in {
+      ".ogg": 1,
+      ".wav": 1,
+      ".mp3": 1
     };
-    audioPlugin["handle"] = async function audioPlugin_handle(byteArray, name) {
-      return new Promise((resolve, reject) => {
-        var done = false;
-        function finish(audio) {
-          if (done) return;
-          done = true;
-          Browser.preloadedAudios[name] = audio;
-          resolve(byteArray);
-        }
-        var b = new Blob([ byteArray ], {
-          type: Browser.getMimetype(name)
-        });
-        var url = URL.createObjectURL(b);
-        // XXX we never revoke this!
-        var audio = new Audio;
-        audio.addEventListener("canplaythrough", () => finish(audio), false);
-        // use addEventListener due to chromium bug 124926
-        audio.onerror = function audio_onerror(event) {
-          if (done) return;
-          err(`warning: browser could not fully decode audio ${name}, trying slower base64 approach`);
-          function encode64(data) {
-            var BASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-            var PAD = "=";
-            var ret = "";
-            var leftchar = 0;
-            var leftbits = 0;
-            for (var i = 0; i < data.length; i++) {
-              leftchar = (leftchar << 8) | data[i];
-              leftbits += 8;
-              while (leftbits >= 6) {
-                var curr = (leftchar >> (leftbits - 6)) & 63;
-                leftbits -= 6;
-                ret += BASE[curr];
-              }
-            }
-            if (leftbits == 2) {
-              ret += BASE[(leftchar & 3) << 4];
-              ret += PAD + PAD;
-            } else if (leftbits == 4) {
-              ret += BASE[(leftchar & 15) << 2];
-              ret += PAD;
-            }
-            return ret;
-          }
-          audio.src = "data:audio/x-" + name.slice(-3) + ";base64," + encode64(byteArray);
-          finish(audio);
-        };
-        audio.src = url;
-        // workaround for chrome bug 124926 - we do not always get oncanplaythrough or onerror
-        safeSetTimeout(() => {
-          finish(audio);
-        }, 1e4);
+    audioPlugin["handle"] = async (byteArray, name) => new Promise((resolve, reject) => {
+      var done = false;
+      function finish(audio) {
+        if (done) return;
+        done = true;
+        Browser.preloadedAudios[name] = audio;
+        resolve(byteArray);
+      }
+      var b = new Blob([ byteArray ], {
+        type: Browser.getMimetype(name)
       });
-    };
+      var url = URL.createObjectURL(b);
+      // XXX we never revoke this!
+      var audio = new Audio;
+      audio.addEventListener("canplaythrough", () => finish(audio), false);
+      // use addEventListener due to chromium bug 124926
+      audio.onerror = event => {
+        if (done) return;
+        err(`warning: browser could not fully decode audio ${name}, trying slower base64 approach`);
+        function encode64(data) {
+          var BASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+          var PAD = "=";
+          var ret = "";
+          var leftchar = 0;
+          var leftbits = 0;
+          for (var i = 0; i < data.length; i++) {
+            leftchar = (leftchar << 8) | data[i];
+            leftbits += 8;
+            while (leftbits >= 6) {
+              var curr = (leftchar >> (leftbits - 6)) & 63;
+              leftbits -= 6;
+              ret += BASE[curr];
+            }
+          }
+          if (leftbits == 2) {
+            ret += BASE[(leftchar & 3) << 4];
+            ret += PAD + PAD;
+          } else if (leftbits == 4) {
+            ret += BASE[(leftchar & 15) << 2];
+            ret += PAD;
+          }
+          return ret;
+        }
+        audio.src = "data:audio/x-" + name.slice(-3) + ";base64," + encode64(byteArray);
+        finish(audio);
+      };
+      audio.src = url;
+      // workaround for chrome bug 124926 - we do not always get oncanplaythrough or onerror
+      safeSetTimeout(() => {
+        finish(audio);
+      }, 1e4);
+    });
     preloadPlugins.push(audioPlugin);
     // Canvas event setup
     function pointerLockChange() {
@@ -7940,7 +7931,6 @@ function _eglSwapBuffers(dpy, surface) {
 var MainLoop = {
   running: false,
   scheduler: null,
-  method: "",
   currentlyRunningMainloop: 0,
   func: null,
   arg: 0,
@@ -8037,13 +8027,11 @@ var _emscripten_set_main_loop_timing = (mode, value) => {
       var timeUntilNextTick = Math.max(0, MainLoop.tickStartTime + value - _emscripten_get_now()) | 0;
       setTimeout(MainLoop.runner, timeUntilNextTick);
     };
-    MainLoop.method = "timeout";
   } else if (mode == 1) {
     MainLoop.scheduler = function MainLoop_scheduler_rAF() {
       MainLoop.requestAnimationFrame(MainLoop.runner);
     };
-    MainLoop.method = "rAF";
-  } else if (mode == 2) {
+  } else {
     if (!MainLoop.setImmediate) {
       if (globalThis.setImmediate) {
         MainLoop.setImmediate = setImmediate;
@@ -8075,7 +8063,6 @@ var _emscripten_set_main_loop_timing = (mode, value) => {
     MainLoop.scheduler = function MainLoop_scheduler_setImmediate() {
       MainLoop.setImmediate(MainLoop.runner);
     };
-    MainLoop.method = "immediate";
   }
   return 0;
 };
@@ -8326,11 +8313,11 @@ var findEventTarget = target => {
 var findCanvasEventTarget = target => {
   if (typeof target == "number") target = UTF8ToString(target);
   if (!target || target === "#canvas") {
-    if (globalThis.GL?.offscreenCanvases["canvas"]) return GL.offscreenCanvases["canvas"];
+    if (typeof GL != "undefined" && GL.offscreenCanvases["canvas"]) return GL.offscreenCanvases["canvas"];
     // TODO: Remove this line, target '#canvas' should refer only to Module['canvas'], not to GL.offscreenCanvases['canvas'] - but need stricter tests to be able to remove this line.
     return Module["canvas"];
   }
-  if (globalThis.GL?.offscreenCanvases[target]) return GL.offscreenCanvases[target];
+  if (typeof GL != "undefined" && GL.offscreenCanvases[target]) return GL.offscreenCanvases[target];
   return findEventTarget(target);
 };
 
@@ -13308,7 +13295,7 @@ Module["FS_createLazyFile"] = FS_createLazyFile;
 var proxiedFunctionTable = [ _proc_exit, exitOnMainThread, pthreadCreateProxied, ___syscall_bind, ___syscall_fcntl64, ___syscall_fstat64, ___syscall_getcwd, ___syscall_getdents64, ___syscall_ioctl, ___syscall_lstat64, ___syscall_mkdirat, ___syscall_newfstatat, ___syscall_openat, ___syscall_recvfrom, ___syscall_rmdir, ___syscall_sendto, ___syscall_socket, ___syscall_stat64, ___syscall_unlinkat, _eglBindAPI, _eglChooseConfig, _eglCreateContext, _eglCreateWindowSurface, _eglDestroyContext, _eglDestroySurface, _eglGetConfigAttrib, _eglGetDisplay, _eglGetError, _eglInitialize, _eglMakeCurrent, _eglQueryString, _eglSwapBuffers, _eglSwapInterval, _eglTerminate, _eglWaitClient, _eglWaitNative, _emscripten_exit_fullscreen, getCanvasSizeMainThread, setCanvasElementSizeMainThread, _emscripten_exit_pointerlock, _emscripten_get_device_pixel_ratio, _emscripten_get_element_css_size, _emscripten_get_gamepad_status, _emscripten_get_num_gamepads, _emscripten_get_screen_size, _emscripten_request_fullscreen_strategy, _emscripten_request_pointerlock, _emscripten_sample_gamepad_data, _emscripten_set_beforeunload_callback_on_thread, _emscripten_set_blur_callback_on_thread, _emscripten_set_element_css_size, _emscripten_set_focus_callback_on_thread, _emscripten_set_fullscreenchange_callback_on_thread, _emscripten_set_gamepadconnected_callback_on_thread, _emscripten_set_gamepaddisconnected_callback_on_thread, _emscripten_set_keydown_callback_on_thread, _emscripten_set_keypress_callback_on_thread, _emscripten_set_keyup_callback_on_thread, _emscripten_set_mousedown_callback_on_thread, _emscripten_set_mouseenter_callback_on_thread, _emscripten_set_mouseleave_callback_on_thread, _emscripten_set_mousemove_callback_on_thread, _emscripten_set_mouseup_callback_on_thread, _emscripten_set_pointerlockchange_callback_on_thread, _emscripten_set_resize_callback_on_thread, _emscripten_set_touchcancel_callback_on_thread, _emscripten_set_touchend_callback_on_thread, _emscripten_set_touchmove_callback_on_thread, _emscripten_set_touchstart_callback_on_thread, _emscripten_set_visibilitychange_callback_on_thread, _emscripten_set_wheel_callback_on_thread, _emscripten_set_window_title, _environ_get, _environ_sizes_get, _fd_close, _fd_read, _fd_seek, _fd_write ];
 
 var ASM_CONSTS = {
-  1951245: $0 => {
+  1954797: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -13316,10 +13303,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1951470: ($0, $1) => {
+  1955022: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1951527: () => {
+  1955079: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -13327,7 +13314,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1951674: () => {
+  1955226: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -13335,7 +13322,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1951908: $0 => {
+  1955460: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -13357,11 +13344,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1952401: () => {
+  1955953: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1952469: ($0, $1, $2, $3) => {
+  1956021: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13402,7 +13389,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1954121: ($0, $1, $2, $3) => {
+  1957673: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -13414,7 +13401,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1954531: ($0, $1) => {
+  1958083: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -13433,7 +13420,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1955136: ($0, $1) => {
+  1958688: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -13446,7 +13433,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1955616: $0 => {
+  1959168: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13484,7 +13471,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1956788: ($0, $1, $2) => {
+  1960340: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -13555,7 +13542,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1958257: ($0, $1, $2, $3, $4) => {
+  1961809: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -13592,19 +13579,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1959246: $0 => {
+  1962798: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1959329: () => {
+  1962881: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1959398: () => window.innerWidth,
-  1959428: () => window.innerHeight,
-  1959459: $0 => {
+  1962950: () => window.innerWidth,
+  1962980: () => window.innerHeight,
+  1963011: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
