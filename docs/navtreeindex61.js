@@ -1,5 +1,9 @@
 var NAVTREEINDEX61 =
 {
+"struct_urho3_d_1_1_render_buffer_manager_settings.html#a33fcf95cb254fc736c073db6fe5a78fa":[6,0,2,586,4],
+"struct_urho3_d_1_1_render_buffer_manager_settings.html#a79a44b636e3ba267a16a12d0d377d7f8":[6,0,2,586,6],
+"struct_urho3_d_1_1_render_buffer_manager_settings.html#a8cac9a516a581100102da9eb93488bf8":[6,0,2,586,3],
+"struct_urho3_d_1_1_render_buffer_manager_settings.html#ad0e8b186edab0e543ee745d6cd3d7c16":[6,0,2,586,1],
 "struct_urho3_d_1_1_render_buffer_manager_settings.html#ad1285cf7fb6f1da4acd7bf62deed3e08":[6,0,2,586,2],
 "struct_urho3_d_1_1_render_buffer_params.html":[6,0,2,587],
 "struct_urho3_d_1_1_render_pass_1_1_attributes.html":[6,0,2,590,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX61 =
 "struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#a4af676e784a5467e5ec0160def05a0b4":[6,0,2,738,6],
 "struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#a837a65e02216dac8b21ac17f086f5259":[6,0,2,738,2],
 "struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#a9ac777b153be4278171cc5eacac00611":[6,0,2,738,1],
-"struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#aac5a9d758fd3bda50aed782524accc6f":[6,0,2,738,3],
-"struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#ab5efe735b86e83c7ed221aa3f7711efa":[6,0,2,738,5],
-"struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#ac52698f103b94580bfe2c05ab94c103c":[6,0,2,738,7],
-"struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#ae2c67e16b45d7b3451d66320a289053a":[6,0,2,738,4],
-"struct_urho3_d_1_1_tetrahedron.html":[6,0,2,739]
+"struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#aac5a9d758fd3bda50aed782524accc6f":[6,0,2,738,3]
 };

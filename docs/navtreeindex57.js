@@ -1,5 +1,9 @@
 var NAVTREEINDEX57 =
 {
+"struct_urho3_d_1_1_bone_view.html#a6487b50aafa40c57f00dfb4c6437a749":[6,0,2,101,1],
+"struct_urho3_d_1_1_bone_view.html#a7bafe43ab26fa3417c0053d8b712bfad":[6,0,2,101,8],
+"struct_urho3_d_1_1_bone_view.html#aa3aa0e4bed8f4a23a0583e738e55667c":[6,0,2,101,6],
+"struct_urho3_d_1_1_bone_view.html#abd2fbacca53216fa2286381c43dab817":[6,0,2,101,5],
 "struct_urho3_d_1_1_bone_view.html#ac3c0392b6099610166385ff30804f96a":[6,0,2,101,7],
 "struct_urho3_d_1_1_button_command.html":[6,0,2,107],
 "struct_urho3_d_1_1_button_command.html#a1119c9ba7f2272c06d1cfa57ad746825":[6,0,2,107,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX57 =
 "struct_urho3_d_1_1_detail_1_1_signal_subscription.html":[6,0,2,1,29],
 "struct_urho3_d_1_1_detail_1_1_signal_subscription.html#a18d67c1d638ae9e51440c43a12391acf":[6,0,2,1,29,2],
 "struct_urho3_d_1_1_detail_1_1_signal_subscription.html#a4ed147797e455d59494fe5f83ddf8546":[6,0,2,1,29,1],
-"struct_urho3_d_1_1_detail_1_1_signal_subscription.html#ac0148ee8d84c330fab536b788b6e2f69":[6,0,2,1,29,0],
-"struct_urho3_d_1_1_detail_1_1_signal_subscription.html#aff83cb0a7f84f0624262f9f1d7abb5f4":[6,0,2,1,29,3],
-"struct_urho3_d_1_1_detail_1_1_string_hash_caster.html":[6,0,2,1,31],
-"struct_urho3_d_1_1_detail_1_1_vector_traits.html":[6,0,2,1,32],
-"struct_urho3_d_1_1_detail_1_1_vector_traits.html#a617d318220dd444de46f1c5c506f4783":[6,0,2,1,32,1]
+"struct_urho3_d_1_1_detail_1_1_signal_subscription.html#ac0148ee8d84c330fab536b788b6e2f69":[6,0,2,1,29,0]
 };
