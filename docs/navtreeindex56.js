@@ -1,5 +1,9 @@
 var NAVTREEINDEX56 =
 {
+"functions_x.html":[6,3,0,24],
+"functions_y.html":[6,3,0,25],
+"functions_z.html":[6,3,0,26],
+"functions_~.html":[6,3,0,27],
 "graphics-and-rendering.html":[0,0,2,1],
 "hierarchy.html":[6,2],
 "index.html":[0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX56 =
 "struct_urho3_d_1_1_bone.html#a81a1ce6f32473a71fe072911cc07e167":[6,0,2,100,1],
 "struct_urho3_d_1_1_bone.html#a99a28562709f72e4617e2206638c8ae4":[6,0,2,100,0],
 "struct_urho3_d_1_1_bone.html#af1e31fcdff163da6d3d4350a1afc3ac9":[6,0,2,100,10],
-"struct_urho3_d_1_1_bone_view.html":[6,0,2,101],
-"struct_urho3_d_1_1_bone_view.html#a1482b4c69cb8fd68b30eea446a6f6f11":[6,0,2,101,0],
-"struct_urho3_d_1_1_bone_view.html#a25c8a47ab7473aacd7581ae417bda25c":[6,0,2,101,4],
-"struct_urho3_d_1_1_bone_view.html#a280d06770296bf11584d0b323baf2653":[6,0,2,101,3],
-"struct_urho3_d_1_1_bone_view.html#a41b8dc249af2a57f87fbd22f938a6f87":[6,0,2,101,2]
+"struct_urho3_d_1_1_bone_view.html":[6,0,2,101]
 };
