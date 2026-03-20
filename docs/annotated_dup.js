@@ -467,6 +467,7 @@ var annotated_dup =
       [ "EmptySerializableObject", "struct_urho3_d_1_1_empty_serializable_object.html", null ],
       [ "Engine", "class_urho3_d_1_1_engine.html", "class_urho3_d_1_1_engine" ],
       [ "EnumArray", "class_urho3_d_1_1_enum_array.html", "class_urho3_d_1_1_enum_array" ],
+      [ "EnumIterator", "class_urho3_d_1_1_enum_iterator.html", null ],
       [ "EventHandler", "class_urho3_d_1_1_event_handler.html", "class_urho3_d_1_1_event_handler" ],
       [ "EventReceiverGroup", "class_urho3_d_1_1_event_receiver_group.html", "class_urho3_d_1_1_event_receiver_group" ],
       [ "File", "class_urho3_d_1_1_file.html", "class_urho3_d_1_1_file" ],

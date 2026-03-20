@@ -300,6 +300,7 @@ var hierarchy =
     [ "Urho3D::EmptyObject", "struct_urho3_d_1_1_empty_object.html", null ],
     [ "Urho3D::EmptySerializableObject", "struct_urho3_d_1_1_empty_serializable_object.html", null ],
     [ "Urho3D::Spriter::Entity", "struct_urho3_d_1_1_spriter_1_1_entity.html", null ],
+    [ "Urho3D::EnumIterator< T >", "class_urho3_d_1_1_enum_iterator.html", null ],
     [ "Urho3D::Detail::EnumStringCaster< T >", "struct_urho3_d_1_1_detail_1_1_enum_string_caster.html", null ],
     [ "Urho3D::Detail::EnumStringCaster< unsigned >", "struct_urho3_d_1_1_detail_1_1_enum_string_caster_3_01unsigned_01_4.html", null ],
     [ "Urho3D::Detail::EnumStringSafeCaster< T >", "struct_urho3_d_1_1_detail_1_1_enum_string_safe_caster.html", null ],
