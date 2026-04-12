@@ -234,6 +234,11 @@ var EXITSTATUS;
 // include: runtime_stack_check.js
 // end include: runtime_stack_check.js
 // include: runtime_exceptions.js
+// Base Emscripten EH error class
+class EmscriptenEH {}
+
+class EmscriptenSjLj extends EmscriptenEH {}
+
 // end include: runtime_exceptions.js
 // include: runtime_debug.js
 // end include: runtime_debug.js
@@ -386,12 +391,6 @@ if (ENVIRONMENT_IS_PTHREAD) {
 // ENVIRONMENT_IS_PTHREAD
 // end include: runtime_pthread.js
 // Memory management
-var /** @type {!Int8Array} */ HEAP8, /** @type {!Uint8Array} */ HEAPU8, /** @type {!Int16Array} */ HEAP16, /** @type {!Uint16Array} */ HEAPU16, /** @type {!Int32Array} */ HEAP32, /** @type {!Uint32Array} */ HEAPU32, /** @type {!Float32Array} */ HEAPF32, /** @type {!Float64Array} */ HEAPF64;
-
-// BigInt64Array type is not correctly defined in closure
-var /** not-@type {!BigInt64Array} */ HEAP64, /* BigUint64Array type is not correctly defined in closure
-/** not-@type {!BigUint64Array} */ HEAPU64;
-
 var runtimeInitialized = false;
 
 function updateMemoryViews() {
@@ -479,9 +478,12 @@ function postRun() {
   callRuntimeCallbacks(onPostRuns);
 }
 
-/** @param {string|number=} what */ function abort(what) {
+/**
+ * @param {string|number=} what
+ * @noreturn
+ */ function abort(what) {
   Module["onAbort"]?.(what);
-  what = "Aborted(" + what + ")";
+  what = `Aborted(${what})`;
   // TODO(sbc): Should we remove printing and leave it up to whoever
   // catches the exception?
   err(what);
@@ -634,6 +636,26 @@ class ExitStatus {
   }
 }
 
+/** @type {!Int16Array} */ var HEAP16;
+
+/** @type {!Int32Array} */ var HEAP32;
+
+/** not-@type {!BigInt64Array} */ var HEAP64;
+
+/** @type {!Int8Array} */ var HEAP8;
+
+/** @type {!Float32Array} */ var HEAPF32;
+
+/** @type {!Float64Array} */ var HEAPF64;
+
+/** @type {!Uint16Array} */ var HEAPU16;
+
+/** @type {!Uint32Array} */ var HEAPU32;
+
+/** not-@type {!BigUint64Array} */ var HEAPU64;
+
+/** @type {!Uint8Array} */ var HEAPU8;
+
 var terminateWorker = worker => {
   worker.terminate();
   // terminate() can be asynchronous, so in theory the worker can continue
@@ -736,7 +758,7 @@ var stackAlloc = sz => __emscripten_stack_alloc(sz);
   return rtn;
 };
 
-function _proc_exit(code) {
+/** @noreturn */ function _proc_exit(code) {
   if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(0, 0, 1, code);
   EXITSTATUS = code;
   if (!keepRuntimeAlive()) {
@@ -952,8 +974,8 @@ var addRunDependency = id => {
 };
 
 function establishStackSpace(pthread_ptr) {
-  var stackHigh = (growMemViews(), HEAPU32)[(((pthread_ptr) + (52)) >> 2)];
-  var stackSize = (growMemViews(), HEAPU32)[(((pthread_ptr) + (56)) >> 2)];
+  var stackHigh = (growMemViews(), HEAPU32)[(((pthread_ptr) + (48)) >> 2)];
+  var stackSize = (growMemViews(), HEAPU32)[(((pthread_ptr) + (52)) >> 2)];
   var stackLow = stackHigh - stackSize;
   // Set stack limits used by `emscripten/stack.h` function.  These limits are
   // cached in wasm-side globals to make checks as fast as possible.
@@ -1180,17 +1202,14 @@ class ExceptionInfo {
   }
 }
 
-var exceptionLast = 0;
-
 var uncaughtExceptionCount = 0;
 
 var ___cxa_throw = (ptr, type, destructor) => {
   var info = new ExceptionInfo(ptr);
   // Initialize ExceptionInfo content after it was allocated in __cxa_allocate_exception.
   info.init(type, destructor);
-  exceptionLast = ptr;
   uncaughtExceptionCount++;
-  throw exceptionLast;
+  abort();
 };
 
 function pthreadCreateProxied(pthread_ptr, attr, startRoutine, arg) {
@@ -1245,13 +1264,11 @@ var initRandomFill = () => {
   }
   // like with most Web APIs, we can't use Web Crypto API directly on shared memory,
   // so we need to create an intermediate buffer and copy it to the destination
-  return view => view.set(crypto.getRandomValues(new Uint8Array(view.byteLength)));
+  return view => (view.set(crypto.getRandomValues(new Uint8Array(view.byteLength))), 
+  0);
 };
 
-var randomFill = view => {
-  // Lazily init on the first invocation.
-  (randomFill = initRandomFill())(view);
-};
+var randomFill = view => (randomFill = initRandomFill())(view);
 
 var PATH = {
   isAbs: path => path.charAt(0) === "/",
@@ -5459,6 +5476,7 @@ var emval_handles = [ 0, 1, , 1, null, 1, true, 1, false, 1 ];
 
 var __emval_decref = handle => {
   if (handle > 9 && 0 === --emval_handles[handle + 1]) {
+    var value = emval_handles[handle];
     emval_handles[handle] = undefined;
     emval_freelist.push(handle);
   }
@@ -6132,17 +6150,19 @@ var callUserCallback = func => {
   }
 };
 
-var waitAsyncPolyfilled = (!Atomics.waitAsync || globalThis.Deno || (globalThis.navigator?.userAgent && Number((navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./) || [])[2]) < 91));
+var waitAsyncPolyfilled = (!Atomics.waitAsync || (globalThis.navigator?.userAgent && Number((navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./) || [])[2]) < 91));
 
 var __emscripten_thread_mailbox_await = pthread_ptr => {
   if (!waitAsyncPolyfilled) {
     // Wait on the pthread's initial self-pointer field because it is easy and
     // safe to access from sending threads that need to notify the waiting
     // thread.
-    // TODO: How to make this work with wasm64?
+    // Note: Under wasm64 only the low 32-bit of the pthread_ptr are
+    // read/compared here, but we don't actually care about the exact values
+    // here as long as they match.
     var wait = Atomics.waitAsync((growMemViews(), HEAP32), ((pthread_ptr) >> 2), pthread_ptr);
     wait.value.then(checkMailbox);
-    var waitingAsync = pthread_ptr + 128;
+    var waitingAsync = pthread_ptr + 120;
     Atomics.store((growMemViews(), HEAP32), ((waitingAsync) >> 2), 1);
   }
 };
@@ -6294,7 +6314,7 @@ var __emscripten_thread_set_strongref = thread => {
 };
 
 var __emscripten_throw_longjmp = () => {
-  throw Infinity;
+  throw new EmscriptenSjLj;
 };
 
 var emval_methodCallers = [];
@@ -8169,7 +8189,7 @@ var JSEvents = {
       precedence,
       argsList
     });
-    JSEvents.deferredCalls.sort((x, y) => x.precedence < y.precedence);
+    JSEvents.deferredCalls.sort((x, y) => x.precedence - y.precedence);
   },
   removeDeferredCalls(targetFunction) {
     JSEvents.deferredCalls = JSEvents.deferredCalls.filter(call => call.targetFunction != targetFunction);
@@ -14205,7 +14225,7 @@ function invoke_viiii(index, a1, a2, a3, a4) {
     getWasmTableEntry(index)(a1, a2, a3, a4);
   } catch (e) {
     stackRestore(sp);
-    if (e !== e + 0) throw e;
+    if (!(e instanceof EmscriptenEH)) throw e;
     _setThrew(1, 0);
   }
 }
@@ -14216,7 +14236,7 @@ function invoke_iii(index, a1, a2) {
     return getWasmTableEntry(index)(a1, a2);
   } catch (e) {
     stackRestore(sp);
-    if (e !== e + 0) throw e;
+    if (!(e instanceof EmscriptenEH)) throw e;
     _setThrew(1, 0);
   }
 }
@@ -14227,7 +14247,7 @@ function invoke_iiiii(index, a1, a2, a3, a4) {
     return getWasmTableEntry(index)(a1, a2, a3, a4);
   } catch (e) {
     stackRestore(sp);
-    if (e !== e + 0) throw e;
+    if (!(e instanceof EmscriptenEH)) throw e;
     _setThrew(1, 0);
   }
 }
@@ -14238,7 +14258,7 @@ function invoke_iiii(index, a1, a2, a3) {
     return getWasmTableEntry(index)(a1, a2, a3);
   } catch (e) {
     stackRestore(sp);
-    if (e !== e + 0) throw e;
+    if (!(e instanceof EmscriptenEH)) throw e;
     _setThrew(1, 0);
   }
 }
@@ -14249,7 +14269,7 @@ function invoke_vii(index, a1, a2) {
     getWasmTableEntry(index)(a1, a2);
   } catch (e) {
     stackRestore(sp);
-    if (e !== e + 0) throw e;
+    if (!(e instanceof EmscriptenEH)) throw e;
     _setThrew(1, 0);
   }
 }
