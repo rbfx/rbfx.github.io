@@ -37,7 +37,7 @@ var ENVIRONMENT_IS_PTHREAD = ENVIRONMENT_IS_WORKER && globalThis.name == "em-pth
 
 if (ENVIRONMENT_IS_NODE) {
   var worker_threads = require("node:worker_threads");
-  global.Worker = worker_threads.Worker;
+  globalThis.Worker = worker_threads.Worker;
   ENVIRONMENT_IS_WORKER = !worker_threads.isMainThread;
   // Under node we set `workerData` to `em-pthread` to signal that the worker
   // is hosting a pthread.
@@ -480,7 +480,6 @@ function postRun() {
 
 /**
  * @param {string|number=} what
- * @noreturn
  */ function abort(what) {
   Module["onAbort"]?.(what);
   what = `Aborted(${what})`;
@@ -758,7 +757,7 @@ var stackAlloc = sz => __emscripten_stack_alloc(sz);
   return rtn;
 };
 
-/** @noreturn */ function _proc_exit(code) {
+function _proc_exit(code) {
   if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(0, 0, 1, code);
   EXITSTATUS = code;
   if (!keepRuntimeAlive()) {
