@@ -789,6 +789,8 @@ function exitOnMainThread(returnCode) {
 
 var _exit = exitJS;
 
+var waitAsyncPolyfilled = (!Atomics.waitAsync || (globalThis.navigator?.userAgent && Number((navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./) || [])[2]) < 91));
+
 var PThread = {
   unusedWorkers: [],
   runningWorkers: [],
@@ -816,6 +818,17 @@ var PThread = {
     PThread.unusedWorkers = [];
     PThread.runningWorkers = [];
     PThread.pthreads = {};
+  },
+  terminateRuntime: () => {
+    PThread.terminateAllThreads();
+    var pthread_ptr = _pthread_self();
+    ___set_thread_state(0, 0, 0, 1);
+    if (!waitAsyncPolyfilled) {
+      // Break the waitAsync loop.  Note that checkMailbox will not
+      // re-register since the `___set_thread_state` above causes _pthread_self
+      // to return 0.
+      Atomics.notify((growMemViews(), HEAP32), ((pthread_ptr) >> 2));
+    }
   },
   returnWorkerToPool: worker => {
     // We don't want to run main thread queued calls here, since we are doing
@@ -854,7 +867,7 @@ var PThread = {
         if (targetWorker) {
           targetWorker.postMessage(d, d.transferList);
         } else {
-          err(`Internal error! Worker sent a message "${cmd}" to target pthread ${d.targetThread}, but that thread no longer exists!`);
+          err(`worker sent message (${cmd}) to pthread (${d.targetThread}) that no longer exists`);
         }
         return;
       }
@@ -2473,7 +2486,7 @@ var FS = {
     if (!PATH.isAbs(path)) {
       path = FS.cwd() + "/" + path;
     }
-    // limit max consecutive symlinks to 40 (SYMLOOP_MAX).
+    // limit max consecutive symlinks to SYMLOOP_MAX.
     linkloop: for (var nlinks = 0; nlinks < 40; nlinks++) {
       // split the absolute path
       var parts = path.split("/").filter(p => !!p);
@@ -2756,7 +2769,14 @@ var FS = {
     var arg = setattr ? stream : node;
     setattr ??= node.node_ops.setattr;
     FS.checkOpExists(setattr, 63);
-    setattr(arg, attr);
+    try {
+      setattr(arg, attr);
+    } catch (e) {
+      if (e instanceof RangeError) {
+        throw new FS.ErrnoError(22);
+      }
+      throw e;
+    }
   },
   chrdev_stream_ops: {
     open(stream) {
@@ -4182,7 +4202,7 @@ var SOCKFS = {
     },
     handlePeerEvents(sock, peer) {
       var first = true;
-      var handleOpen = function() {
+      function handleOpen() {
         sock.connecting = false;
         SOCKFS.emit("open", sock.stream.fd);
         try {
@@ -4196,7 +4216,7 @@ var SOCKFS = {
           // lied and said this data was sent. shut it down.
           peer.socket.close();
         }
-      };
+      }
       function handleMessage(data) {
         if (typeof data == "string") {
           var encoder = new TextEncoder;
@@ -4230,17 +4250,16 @@ var SOCKFS = {
         SOCKFS.emit("message", sock.stream.fd);
       }
       if (ENVIRONMENT_IS_NODE) {
+        // EventEmitter-style events use by ws library objects in Node.js).
         peer.socket.on("open", handleOpen);
-        peer.socket.on("message", function(data, isBinary) {
+        peer.socket.on("message", (data, isBinary) => {
           if (!isBinary) {
             return;
           }
           handleMessage((new Uint8Array(data)).buffer);
         });
-        peer.socket.on("close", function() {
-          SOCKFS.emit("close", sock.stream.fd);
-        });
-        peer.socket.on("error", function(error) {
+        peer.socket.on("close", () => SOCKFS.emit("close", sock.stream.fd));
+        peer.socket.on("error", error => {
           // Although the ws library may pass errors that may be more descriptive than
           // ECONNREFUSED they are not necessarily the expected error code e.g.
           // ENOTFOUND on getaddrinfo seems to be node.js specific, so using ECONNREFUSED
@@ -4249,22 +4268,18 @@ var SOCKFS = {
           // Used in getsockopt for SOL_SOCKET/SO_ERROR test.
           SOCKFS.emit("error", [ sock.stream.fd, sock.error, "ECONNREFUSED: Connection refused" ]);
         });
-      } else {
-        peer.socket.onopen = handleOpen;
-        peer.socket.onclose = function() {
-          SOCKFS.emit("close", sock.stream.fd);
-        };
-        peer.socket.onmessage = function peer_socket_onmessage(event) {
-          handleMessage(event.data);
-        };
-        peer.socket.onerror = function(error) {
-          // The WebSocket spec only allows a 'simple event' to be thrown on error,
-          // so we only really know as much as ECONNREFUSED.
-          sock.error = 14;
-          // Used in getsockopt for SOL_SOCKET/SO_ERROR test.
-          SOCKFS.emit("error", [ sock.stream.fd, sock.error, "ECONNREFUSED: Connection refused" ]);
-        };
+        return;
       }
+      peer.socket.onopen = handleOpen;
+      peer.socket.onclose = () => SOCKFS.emit("close", sock.stream.fd);
+      peer.socket.onmessage = event => handleMessage(event.data);
+      peer.socket.onerror = error => {
+        // The WebSocket spec only allows a 'simple event' to be thrown on error,
+        // so we only really know as much as ECONNREFUSED.
+        sock.error = 14;
+        // Used in getsockopt for SOL_SOCKET/SO_ERROR test.
+        SOCKFS.emit("error", [ sock.stream.fd, sock.error, "ECONNREFUSED: Connection refused" ]);
+      };
     },
     poll(sock) {
       if (sock.type === 1 && sock.server) {
@@ -4405,7 +4420,7 @@ var SOCKFS = {
       });
       SOCKFS.emit("listen", sock.stream.fd);
       // Send Event with listen fd.
-      sock.server.on("connection", function(ws) {
+      sock.server.on("connection", ws => {
         if (sock.type === 1) {
           var newsock = SOCKFS.createSocket(sock.family, sock.type, sock.protocol);
           // create a peer on the new socket
@@ -4423,11 +4438,11 @@ var SOCKFS = {
           SOCKFS.emit("connection", sock.stream.fd);
         }
       });
-      sock.server.on("close", function() {
+      sock.server.on("close", () => {
         SOCKFS.emit("close", sock.stream.fd);
         sock.server = null;
       });
-      sock.server.on("error", function(error) {
+      sock.server.on("error", error => {
         // Although the ws library may pass errors that may be more descriptive than
         // ECONNREFUSED they are not necessarily the expected error code e.g.
         // ENOTFOUND on getaddrinfo seems to be node.js specific, so using EHOSTUNREACH
@@ -4830,6 +4845,7 @@ var syscallGetVarargI = () => {
 var syscallGetVarargP = syscallGetVarargI;
 
 var SYSCALLS = {
+  currentUmask: 18,
   calculateAt(dirfd, path, allowEmpty) {
     if (PATH.isAbs(path)) {
       return path;
@@ -4938,7 +4954,8 @@ function ___syscall_fcntl64(fd, cmd, varargs) {
      case 4:
       {
         var arg = syscallGetVarargI();
-        stream.flags |= arg;
+        var mask = 289792;
+        stream.flags = (stream.flags & ~mask) | (arg & mask);
         return 0;
       }
 
@@ -5189,6 +5206,7 @@ function ___syscall_mkdirat(dirfd, path, mode) {
   try {
     path = SYSCALLS.getStr(path);
     path = SYSCALLS.calculateAt(dirfd, path);
+    mode &= ~SYSCALLS.currentUmask;
     FS.mkdir(path, mode, 0);
     return 0;
   } catch (e) {
@@ -5219,6 +5237,9 @@ function ___syscall_openat(dirfd, path, flags, varargs) {
     path = SYSCALLS.getStr(path);
     path = SYSCALLS.calculateAt(dirfd, path);
     var mode = varargs ? syscallGetVarargI() : 0;
+    if (flags & 64) {
+      mode &= ~SYSCALLS.currentUmask;
+    }
     return FS.open(path, flags, mode).fd;
   } catch (e) {
     if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
@@ -6149,8 +6170,6 @@ var callUserCallback = func => {
   }
 };
 
-var waitAsyncPolyfilled = (!Atomics.waitAsync || (globalThis.navigator?.userAgent && Number((navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./) || [])[2]) < 91));
-
 var __emscripten_thread_mailbox_await = pthread_ptr => {
   if (!waitAsyncPolyfilled) {
     // Wait on the pthread's initial self-pointer field because it is easy and
@@ -6166,23 +6185,23 @@ var __emscripten_thread_mailbox_await = pthread_ptr => {
   }
 };
 
-var checkMailbox = () => callUserCallback(() => {
-  // Only check the mailbox if we have a live pthread runtime. We implement
-  // pthread_self to return 0 if there is no live runtime.
-  // TODO(https://github.com/emscripten-core/emscripten/issues/25076):
-  // Is this check still needed?  `callUserCallback` is supposed to
-  // ensure the runtime is alive, and if `_pthread_self` is NULL then the
-  // runtime certainly is *not* alive, so this should be a redundant check.
+var checkMailbox = () => {
+  // checkMailbox can be called after the pthread has shut down. See
+  // Pthread.terminateRuntime().
+  // In this case we return silently without re-registering using waitAsync.
+  // Perhaps there is a more universal way we can detect runtime has exited.
+  // TODO(https://github.com/emscripten-core/emscripten/issues/25076)
   var pthread_ptr = _pthread_self();
-  if (pthread_ptr) {
+  if (!pthread_ptr) return;
+  callUserCallback(() => {
     // If we are using Atomics.waitAsync as our notification mechanism, wait
     // for a notification before processing the mailbox to avoid missing any
     // work that could otherwise arrive after we've finished processing the
     // mailbox and before we're ready for the next notification.
     __emscripten_thread_mailbox_await(pthread_ptr);
     __emscripten_check_mailbox();
-  }
-});
+  });
+};
 
 var __emscripten_notify_mailbox_postmessage = (targetThread, currThreadId) => {
   if (targetThread == currThreadId) {
@@ -6900,13 +6919,8 @@ var Browser = {
     // in the coordinates.
     var canvas = Browser.getCanvas();
     var rect = canvas.getBoundingClientRect();
-    // Neither .scrollX or .pageXOffset are defined in a spec, but
-    // we prefer .scrollX because it is currently in a spec draft.
-    // (see: http://www.w3.org/TR/2013/WD-cssom-view-20131217/)
-    var scrollX = ((typeof window.scrollX != "undefined") ? window.scrollX : window.pageXOffset);
-    var scrollY = ((typeof window.scrollY != "undefined") ? window.scrollY : window.pageYOffset);
-    var adjustedX = pageX - (scrollX + rect.left);
-    var adjustedY = pageY - (scrollY + rect.top);
+    var adjustedX = pageX - (window.scrollX + rect.left);
+    var adjustedY = pageY - (window.scrollY + rect.top);
     // the canvas might be CSS-scaled compared to its backbuffer;
     // SDL-using content will want mouse coordinates in terms
     // of backbuffer units.
@@ -12333,7 +12347,6 @@ var getExecutableName = () => thisProgram || "./this.program";
 var getEnvStrings = () => {
   if (!getEnvStrings.strings) {
     // Default values.
-    // Browser language detection #8751
     var lang = (globalThis.navigator?.language ?? "C").replace("-", "_") + ".UTF-8";
     var env = {
       "USER": "web_user",
@@ -12432,7 +12445,7 @@ function _fd_seek(fd, offset, whence, newOffset) {
   if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(76, 0, 1, fd, offset, whence, newOffset);
   offset = bigintToI53Checked(offset);
   try {
-    if (isNaN(offset)) return 61;
+    if (isNaN(offset)) return 22;
     var stream = SYSCALLS.getStreamFromFD(fd);
     FS.llseek(stream, offset, whence);
     (growMemViews(), HEAP64)[((newOffset) >> 3)] = BigInt(stream.position);
@@ -13297,7 +13310,7 @@ Module["FS_createLazyFile"] = FS_createLazyFile;
 var proxiedFunctionTable = [ _proc_exit, exitOnMainThread, pthreadCreateProxied, ___syscall_bind, ___syscall_fcntl64, ___syscall_fstat64, ___syscall_getcwd, ___syscall_getdents64, ___syscall_ioctl, ___syscall_lstat64, ___syscall_mkdirat, ___syscall_newfstatat, ___syscall_openat, ___syscall_recvfrom, ___syscall_rmdir, ___syscall_sendto, ___syscall_socket, ___syscall_stat64, ___syscall_unlinkat, _eglBindAPI, _eglChooseConfig, _eglCreateContext, _eglCreateWindowSurface, _eglDestroyContext, _eglDestroySurface, _eglGetConfigAttrib, _eglGetDisplay, _eglGetError, _eglInitialize, _eglMakeCurrent, _eglQueryString, _eglSwapBuffers, _eglSwapInterval, _eglTerminate, _eglWaitClient, _eglWaitNative, _emscripten_exit_fullscreen, getCanvasSizeMainThread, setCanvasElementSizeMainThread, _emscripten_exit_pointerlock, _emscripten_get_device_pixel_ratio, _emscripten_get_element_css_size, _emscripten_get_gamepad_status, _emscripten_get_num_gamepads, _emscripten_get_screen_size, _emscripten_request_fullscreen_strategy, _emscripten_request_pointerlock, _emscripten_sample_gamepad_data, _emscripten_set_beforeunload_callback_on_thread, _emscripten_set_blur_callback_on_thread, _emscripten_set_element_css_size, _emscripten_set_focus_callback_on_thread, _emscripten_set_fullscreenchange_callback_on_thread, _emscripten_set_gamepadconnected_callback_on_thread, _emscripten_set_gamepaddisconnected_callback_on_thread, _emscripten_set_keydown_callback_on_thread, _emscripten_set_keypress_callback_on_thread, _emscripten_set_keyup_callback_on_thread, _emscripten_set_mousedown_callback_on_thread, _emscripten_set_mouseenter_callback_on_thread, _emscripten_set_mouseleave_callback_on_thread, _emscripten_set_mousemove_callback_on_thread, _emscripten_set_mouseup_callback_on_thread, _emscripten_set_pointerlockchange_callback_on_thread, _emscripten_set_resize_callback_on_thread, _emscripten_set_touchcancel_callback_on_thread, _emscripten_set_touchend_callback_on_thread, _emscripten_set_touchmove_callback_on_thread, _emscripten_set_touchstart_callback_on_thread, _emscripten_set_visibilitychange_callback_on_thread, _emscripten_set_wheel_callback_on_thread, _emscripten_set_window_title, _environ_get, _environ_sizes_get, _fd_close, _fd_read, _fd_seek, _fd_write ];
 
 var ASM_CONSTS = {
-  1954893: $0 => {
+  1950653: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -13305,10 +13318,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1955118: ($0, $1) => {
+  1950878: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1955175: () => {
+  1950935: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -13316,7 +13329,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1955322: () => {
+  1951082: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -13324,7 +13337,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1955556: $0 => {
+  1951316: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -13346,11 +13359,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1956049: () => {
+  1951809: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1956117: ($0, $1, $2, $3) => {
+  1951877: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13391,7 +13404,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1957769: ($0, $1, $2, $3) => {
+  1953529: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -13403,7 +13416,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1958179: ($0, $1) => {
+  1953939: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -13422,7 +13435,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1958784: ($0, $1) => {
+  1954544: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -13435,7 +13448,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1959264: $0 => {
+  1955024: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13473,7 +13486,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1960436: ($0, $1, $2) => {
+  1956196: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -13544,7 +13557,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1961905: ($0, $1, $2, $3, $4) => {
+  1957665: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -13581,19 +13594,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1962894: $0 => {
+  1958654: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1962977: () => {
+  1958737: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1963046: () => window.innerWidth,
-  1963076: () => window.innerHeight,
-  1963107: $0 => {
+  1958806: () => window.innerWidth,
+  1958836: () => window.innerHeight,
+  1958867: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
@@ -13618,7 +13631,7 @@ function ImGui_ImplSDL2_EmscriptenOpenURL(url) {
 }
 
 // Imports from the Wasm binary.
-var _main, _pthread_self, _free, _malloc, _realloc, _htons, _ntohs, ___getTypeName, __embind_initialize_bindings, __emscripten_tls_init, __emscripten_run_callback_on_thread, __emscripten_thread_init, __emscripten_thread_crashed, __emscripten_run_js_on_main_thread_done, __emscripten_run_js_on_main_thread, __emscripten_thread_free_data, __emscripten_thread_exit, __emscripten_check_mailbox, _setThrew, _emscripten_stack_set_limits, __emscripten_stack_restore, __emscripten_stack_alloc, _emscripten_stack_get_current, __indirect_function_table, wasmTable;
+var _main, _pthread_self, _free, _malloc, _realloc, _htons, _ntohs, ___getTypeName, __embind_initialize_bindings, __emscripten_tls_init, __emscripten_run_callback_on_thread, __emscripten_thread_init, ___set_thread_state, __emscripten_thread_crashed, __emscripten_run_js_on_main_thread_done, __emscripten_run_js_on_main_thread, __emscripten_thread_free_data, __emscripten_thread_exit, __emscripten_check_mailbox, _setThrew, _emscripten_stack_set_limits, __emscripten_stack_restore, __emscripten_stack_alloc, _emscripten_stack_get_current, __indirect_function_table, wasmTable;
 
 function assignWasmExports(wasmExports) {
   _main = Module["_main"] = wasmExports["__main_argc_argv"];
@@ -13633,6 +13646,7 @@ function assignWasmExports(wasmExports) {
   __emscripten_tls_init = wasmExports["_emscripten_tls_init"];
   __emscripten_run_callback_on_thread = wasmExports["_emscripten_run_callback_on_thread"];
   __emscripten_thread_init = wasmExports["_emscripten_thread_init"];
+  ___set_thread_state = wasmExports["__set_thread_state"];
   __emscripten_thread_crashed = wasmExports["_emscripten_thread_crashed"];
   __emscripten_run_js_on_main_thread_done = wasmExports["_emscripten_run_js_on_main_thread_done"];
   __emscripten_run_js_on_main_thread = wasmExports["_emscripten_run_js_on_main_thread"];
