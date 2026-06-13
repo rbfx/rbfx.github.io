@@ -742,7 +742,6 @@ var hierarchy =
     [ "Urho3D::AutoExposurePass::Parameters", "struct_urho3_d_1_1_auto_exposure_pass_1_1_parameters.html", null ],
     [ "Urho3D::BloomPass::Parameters", "struct_urho3_d_1_1_bloom_pass_1_1_parameters.html", null ],
     [ "Urho3D::SceneUpdateSynchronizer::Params", "struct_urho3_d_1_1_scene_update_synchronizer_1_1_params.html", null ],
-    [ "Urho3D::ParicleGraphUniform", "class_urho3_d_1_1_paricle_graph_uniform.html", null ],
     [ "Urho3D::Particle", "struct_urho3_d_1_1_particle.html", null ],
     [ "Urho3D::Particle2D", "struct_urho3_d_1_1_particle2_d.html", null ],
     [ "Urho3D::ParticleGraphAttributeLayout", "class_urho3_d_1_1_particle_graph_attribute_layout.html", null ],

@@ -732,7 +732,6 @@ var annotated_dup =
       [ "PackedNodeData", "class_urho3_d_1_1_packed_node_data.html", "class_urho3_d_1_1_packed_node_data" ],
       [ "PackedSceneData", "class_urho3_d_1_1_packed_scene_data.html", "class_urho3_d_1_1_packed_scene_data" ],
       [ "PackedSceneSelection", "struct_urho3_d_1_1_packed_scene_selection.html", null ],
-      [ "ParicleGraphUniform", "class_urho3_d_1_1_paricle_graph_uniform.html", "class_urho3_d_1_1_paricle_graph_uniform" ],
       [ "Particle", "struct_urho3_d_1_1_particle.html", "struct_urho3_d_1_1_particle" ],
       [ "Particle2D", "struct_urho3_d_1_1_particle2_d.html", "struct_urho3_d_1_1_particle2_d" ],
       [ "ParticleEffect", "class_urho3_d_1_1_particle_effect.html", "class_urho3_d_1_1_particle_effect" ],

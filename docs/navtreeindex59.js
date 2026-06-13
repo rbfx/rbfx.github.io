@@ -1,13 +1,5 @@
 var NAVTREEINDEX59 =
 {
-"struct_urho3_d_1_1_key_frame_set.html#a366f4f72f5598ceb5a5241c79adeb10b":[6,0,2,349,5],
-"struct_urho3_d_1_1_key_frame_set.html#a3c93039e7f5c5cc785022b48a2c91bc2":[6,0,2,349,6],
-"struct_urho3_d_1_1_key_frame_set.html#a474ff1e6f2f377527165ef03725eecc2":[6,0,2,349,8],
-"struct_urho3_d_1_1_key_frame_set.html#a73ae6b65408865ac64185be7e1a347f3":[6,0,2,349,1],
-"struct_urho3_d_1_1_key_frame_set.html#a84b5d96f407f5b74c17396325f833028":[6,0,2,349,3],
-"struct_urho3_d_1_1_key_frame_set.html#ace9a6b8630d70d6b7edffe3529baf512":[6,0,2,349,2],
-"struct_urho3_d_1_1_light_accumulator.html":[6,0,2,355],
-"struct_urho3_d_1_1_light_accumulator.html#a0fe26a2d776145ecebc133e4e58ea62a":[6,0,2,355,2],
 "struct_urho3_d_1_1_light_accumulator.html#a118864508a029a1455097a746bf4b4bd":[6,0,2,355,5],
 "struct_urho3_d_1_1_light_accumulator.html#a1f32cd421d1c51f75dcb91a37d865cad":[6,0,2,355,4],
 "struct_urho3_d_1_1_light_accumulator.html#a4ee5ede99be4976a86fec065818732a0":[6,0,2,355,8],
@@ -249,5 +241,13 @@ var NAVTREEINDEX59 =
 "struct_urho3_d_1_1_navigation_path_point.html#a06946288e67c1990193f4637be138d8e":[6,0,2,442,2],
 "struct_urho3_d_1_1_navigation_path_point.html#a3c8d77ac8f9122158bcac0872627ec7e":[6,0,2,442,1],
 "struct_urho3_d_1_1_navigation_path_point.html#a401162867056b637ab62219d0b8f319d":[6,0,2,442,0],
-"struct_urho3_d_1_1_network_frame_sync.html":[6,0,2,447]
+"struct_urho3_d_1_1_network_frame_sync.html":[6,0,2,447],
+"struct_urho3_d_1_1_network_frame_sync.html#a4157c5f18ac1fbfe4f092fa389ce1a9f":[6,0,2,447,0],
+"struct_urho3_d_1_1_network_frame_sync.html#a91097de37e7c1a30acea081eb45876f3":[6,0,2,447,1],
+"struct_urho3_d_1_1_network_setting.html":[6,0,2,451],
+"struct_urho3_d_1_1_network_value_sampler_1_1_interpolation_cache.html":[6,0,2,454,0],
+"struct_urho3_d_1_1_network_value_sampler_1_1_time_and_value.html":[6,0,2,454,1],
+"struct_urho3_d_1_1_network_value_traits.html":[6,0,2,455],
+"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html":[6,0,2,456],
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_quaternion_01_4_01_4.html":[6,0,2,457]
 };
