@@ -629,6 +629,7 @@ var hierarchy =
       [ "Urho3D::NetworkValue< AnimationSnapshot >", "class_urho3_d_1_1_network_value.html", null ],
       [ "Urho3D::NetworkValue< Urho3D::ValueWithDerivative >", "class_urho3_d_1_1_network_value.html", null ],
       [ "Urho3D::NetworkValue< Urho3D::ValueWithDerivative< Quaternion > >", "class_urho3_d_1_1_network_value.html", null ],
+      [ "Urho3D::NetworkValue< float >", "class_urho3_d_1_1_network_value.html", null ],
       [ "Urho3D::NetworkValue< Urho3D::DoubleTransform >", "class_urho3_d_1_1_network_value.html", null ],
       [ "Urho3D::NetworkValue< Urho3D::BoundingBox >", "class_urho3_d_1_1_network_value.html", null ],
       [ "Urho3D::NetworkValueVector< Urho3D::DoubleTransform >", "class_urho3_d_1_1_network_value_vector.html", null ],
@@ -636,6 +637,7 @@ var hierarchy =
       [ "Urho3D::NetworkValueVector< T, Traits >", "class_urho3_d_1_1_network_value_vector.html", null ]
     ] ],
     [ "Urho3D::NetworkValueSampler< T, Traits >", "class_urho3_d_1_1_network_value_sampler.html", null ],
+    [ "Urho3D::NetworkValueSampler< float >", "class_urho3_d_1_1_network_value_sampler.html", null ],
     [ "Urho3D::NetworkValueSampler< Urho3D::ValueWithDerivative >", "class_urho3_d_1_1_network_value_sampler.html", null ],
     [ "Urho3D::NetworkValueSampler< Urho3D::ValueWithDerivative< Quaternion > >", "class_urho3_d_1_1_network_value_sampler.html", null ],
     [ "Urho3D::NetworkValueTraits< T >", "struct_urho3_d_1_1_network_value_traits.html", null ],
