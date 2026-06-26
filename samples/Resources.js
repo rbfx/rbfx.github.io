@@ -79,11 +79,6 @@
         if (!check) throw new Error(msg);
       }
 
-    for (var file of metadata['files']) {
-      var name = file['filename']
-      Module['addRunDependency'](`fp ${name}`);
-    }
-
         var PACKAGE_UUID = metadata['package_uuid'];
         var IDB_RO = "readonly";
         var IDB_RW = "readwrite";
@@ -245,7 +240,6 @@
             var data = byteArray.subarray(file['start'], file['end']);
             // canOwn this data in the filesystem, it is a slice into the heap that will never change
         Module['FS_createDataFile'](name, null, data, true, true, true);
-        Module['removeRunDependency'](`fp ${name}`);
           }
           Module['removeRunDependency']('datafile_/home/runner/work/rbfx/rbfx/cmake-build/bin/Resources.js.data');
       }
@@ -256,7 +250,7 @@
         async function preloadFallback(error) {
           console.error(error);
           console.error('falling back to default preload behavior');
-          processPackageData(await fetchRemotePackage(REMOTE_PACKAGE_NAME, REMOTE_PACKAGE_SIZE));
+          await processPackageData(await fetchRemotePackage(REMOTE_PACKAGE_NAME, REMOTE_PACKAGE_SIZE));
         }
 
         try {
@@ -265,14 +259,14 @@
           var useCached = !!pkgMetadata;
           Module['preloadResults'][PACKAGE_NAME] = {fromCache: useCached};
           if (useCached) {
-            processPackageData(await fetchCachedPackage(db, PACKAGE_PATH + PACKAGE_NAME, pkgMetadata));
+            await processPackageData(await fetchCachedPackage(db, PACKAGE_PATH + PACKAGE_NAME, pkgMetadata));
           } else {
             var packageData = await fetchRemotePackage(REMOTE_PACKAGE_NAME, REMOTE_PACKAGE_SIZE);
             try {
-              processPackageData(await cacheRemotePackage(db, PACKAGE_PATH + PACKAGE_NAME, packageData, {uuid:PACKAGE_UUID}))
+              await processPackageData(await cacheRemotePackage(db, PACKAGE_PATH + PACKAGE_NAME, packageData, {uuid:PACKAGE_UUID}))
             } catch (error) {
               console.error(error);
-              processPackageData(packageData);
+              await processPackageData(packageData);
             }
           }
         } catch(e) {
@@ -282,7 +276,8 @@
         Module['setStatus'] && Module['setStatus']('Downloading...');
 
     }
-    if (Module['calledRun']) {
+    // Detect whether the module JS file has already been loaded.
+    if (Module['FS_createPath']) {
       runWithFS(Module);
     } else {
       if (!Module['preRun']) Module['preRun'] = [];
