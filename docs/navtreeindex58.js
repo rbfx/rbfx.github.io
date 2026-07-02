@@ -1,5 +1,7 @@
 var NAVTREEINDEX58 =
 {
+"struct_urho3_d_1_1_detail_1_1_signal_subscription.html#a4ed147797e455d59494fe5f83ddf8546":[6,0,2,1,29,1],
+"struct_urho3_d_1_1_detail_1_1_signal_subscription.html#ac0148ee8d84c330fab536b788b6e2f69":[6,0,2,1,29,0],
 "struct_urho3_d_1_1_detail_1_1_signal_subscription.html#aff83cb0a7f84f0624262f9f1d7abb5f4":[6,0,2,1,29,3],
 "struct_urho3_d_1_1_detail_1_1_string_hash_caster.html":[6,0,2,1,31],
 "struct_urho3_d_1_1_detail_1_1_vector_traits.html":[6,0,2,1,32],
@@ -247,7 +249,5 @@ var NAVTREEINDEX58 =
 "struct_urho3_d_1_1_key_frame_set.html#a474ff1e6f2f377527165ef03725eecc2":[6,0,2,349,8],
 "struct_urho3_d_1_1_key_frame_set.html#a73ae6b65408865ac64185be7e1a347f3":[6,0,2,349,1],
 "struct_urho3_d_1_1_key_frame_set.html#a84b5d96f407f5b74c17396325f833028":[6,0,2,349,3],
-"struct_urho3_d_1_1_key_frame_set.html#ace9a6b8630d70d6b7edffe3529baf512":[6,0,2,349,2],
-"struct_urho3_d_1_1_light_accumulator.html":[6,0,2,355],
-"struct_urho3_d_1_1_light_accumulator.html#a0fe26a2d776145ecebc133e4e58ea62a":[6,0,2,355,2]
+"struct_urho3_d_1_1_key_frame_set.html#ace9a6b8630d70d6b7edffe3529baf512":[6,0,2,349,2]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX60 =
 {
+"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html":[6,0,2,456],
+"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_quaternion_01_4_01_4.html":[6,0,2,457],
 "struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_t_01_4_01_4.html":[6,0,2,458],
 "struct_urho3_d_1_1_node_animation_output.html":[6,0,2,460],
 "struct_urho3_d_1_1_node_animation_state_track.html":[6,0,2,461],
@@ -247,7 +249,5 @@ var NAVTREEINDEX60 =
 "struct_urho3_d_1_1_render_buffer_manager_frame_settings.html":[6,0,2,585],
 "struct_urho3_d_1_1_render_buffer_manager_frame_settings.html#a017ee17e01fd48a30c7476bc6de820e0":[6,0,2,585,1],
 "struct_urho3_d_1_1_render_buffer_manager_frame_settings.html#a7fd4678779e89ce939115fe4402bb95f":[6,0,2,585,0],
-"struct_urho3_d_1_1_render_buffer_manager_settings.html":[6,0,2,586],
-"struct_urho3_d_1_1_render_buffer_manager_settings.html#a1775fd0eeb69ce4e4a1bd671ee387b67":[6,0,2,586,5],
-"struct_urho3_d_1_1_render_buffer_manager_settings.html#a232738308cdec053f29ea54bc4f16ada":[6,0,2,586,7]
+"struct_urho3_d_1_1_render_buffer_manager_settings.html":[6,0,2,586]
 };

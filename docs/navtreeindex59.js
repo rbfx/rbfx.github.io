@@ -1,5 +1,7 @@
 var NAVTREEINDEX59 =
 {
+"struct_urho3_d_1_1_light_accumulator.html":[6,0,2,355],
+"struct_urho3_d_1_1_light_accumulator.html#a0fe26a2d776145ecebc133e4e58ea62a":[6,0,2,355,2],
 "struct_urho3_d_1_1_light_accumulator.html#a118864508a029a1455097a746bf4b4bd":[6,0,2,355,5],
 "struct_urho3_d_1_1_light_accumulator.html#a1f32cd421d1c51f75dcb91a37d865cad":[6,0,2,355,4],
 "struct_urho3_d_1_1_light_accumulator.html#a4ee5ede99be4976a86fec065818732a0":[6,0,2,355,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX59 =
 "struct_urho3_d_1_1_network_setting.html":[6,0,2,451],
 "struct_urho3_d_1_1_network_value_sampler_1_1_interpolation_cache.html":[6,0,2,454,0],
 "struct_urho3_d_1_1_network_value_sampler_1_1_time_and_value.html":[6,0,2,454,1],
-"struct_urho3_d_1_1_network_value_traits.html":[6,0,2,455],
-"struct_urho3_d_1_1_network_value_traits_3_01_quaternion_01_4.html":[6,0,2,456],
-"struct_urho3_d_1_1_network_value_traits_3_01_value_with_derivative_3_01_quaternion_01_4_01_4.html":[6,0,2,457]
+"struct_urho3_d_1_1_network_value_traits.html":[6,0,2,455]
 };

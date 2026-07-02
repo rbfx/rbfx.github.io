@@ -247,8 +247,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Clear</b> ()</td></tr
 <tr class="separator:a44c46009d055c833246a44cfd95db635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8b0f11b63f431f1e605dd7379f39ede" id="r_ac8b0f11b63f431f1e605dd7379f39ede"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#ac8b0f11b63f431f1e605dd7379f39ede">SetTimeScale</a> (float scale)</td></tr>
 <tr class="separator:ac8b0f11b63f431f1e605dd7379f39ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ea4268272c328699017abfd3407eb30" id="r_a1ea4268272c328699017abfd3407eb30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a1ea4268272c328699017abfd3407eb30">SetElapsedTime</a> (float time)</td></tr>
-<tr class="separator:a1ea4268272c328699017abfd3407eb30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22bb1b56e11a5a436bce441edbc06eaa" id="r_a22bb1b56e11a5a436bce441edbc06eaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a22bb1b56e11a5a436bce441edbc06eaa">SetElapsedTime</a> (double time)</td></tr>
+<tr class="separator:a22bb1b56e11a5a436bce441edbc06eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fd5ebce11f76099b794ceadc6117bf4" id="r_a3fd5ebce11f76099b794ceadc6117bf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a3fd5ebce11f76099b794ceadc6117bf4">SetAsyncLoadingMs</a> (int ms)</td></tr>
 <tr class="separator:a3fd5ebce11f76099b794ceadc6117bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb229515c3873cb6dbafe3ac58ab2053" id="r_adb229515c3873cb6dbafe3ac58ab2053"><td class="memItemLeft" align="right" valign="top"><a id="adb229515c3873cb6dbafe3ac58ab2053" name="adb229515c3873cb6dbafe3ac58ab2053"></a>
@@ -297,6 +297,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetNodesWithTag</b> (
 <tr class="separator:adfe1a3efbb6f2a1950e51376620cb1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15626a9ebb993c67fe50701f158626c7" id="r_a15626a9ebb993c67fe50701f158626c7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a15626a9ebb993c67fe50701f158626c7">GetElapsedTime</a> () const</td></tr>
 <tr class="separator:a15626a9ebb993c67fe50701f158626c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a540f3713d328600fab50764ddcb67d16" id="r_a540f3713d328600fab50764ddcb67d16"><td class="memItemLeft" align="right" valign="top"><a id="a540f3713d328600fab50764ddcb67d16" name="a540f3713d328600fab50764ddcb67d16"></a>
+const <a class="el" href="class_urho3_d_1_1_base_vector3.html">DoubleVector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetElapsedTimes</b> () const</td></tr>
+<tr class="memdesc:a540f3713d328600fab50764ddcb67d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return elapsed time in seconds, all accumulators. <br /></td></tr>
+<tr class="separator:a540f3713d328600fab50764ddcb67d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c8dd9d17bea315cfd11676df7d3d8c4" id="r_a2c8dd9d17bea315cfd11676df7d3d8c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a2c8dd9d17bea315cfd11676df7d3d8c4">GetAsyncLoadingMs</a> () const</td></tr>
 <tr class="separator:a2c8dd9d17bea315cfd11676df7d3d8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99dc22e4ae0a857b2576741d5bbb58f8" id="r_a99dc22e4ae0a857b2576741d5bbb58f8"><td class="memItemLeft" align="right" valign="top">const ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_package_file.html">PackageFile</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_scene.html#a99dc22e4ae0a857b2576741d5bbb58f8">GetRequiredPackageFiles</a> () const</td></tr>
@@ -488,10 +492,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>asyncLoadingMs_</b></t
 float&#160;</td><td class="memItemRight" valign="bottom"><b>timeScale_</b></td></tr>
 <tr class="memdesc:a8f4fef00ef1e08796f16fc799502d5ac"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_scene.html" title="Root scene node, represents the whole scene.">Scene</a> update time scale. <br /></td></tr>
 <tr class="separator:a8f4fef00ef1e08796f16fc799502d5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f751c7df7a64e8c0254c1790f4068cf" id="r_a6f751c7df7a64e8c0254c1790f4068cf"><td class="memItemLeft" align="right" valign="top"><a id="a6f751c7df7a64e8c0254c1790f4068cf" name="a6f751c7df7a64e8c0254c1790f4068cf"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>elapsedTime_</b></td></tr>
-<tr class="memdesc:a6f751c7df7a64e8c0254c1790f4068cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elapsed time accumulator. <br /></td></tr>
-<tr class="separator:a6f751c7df7a64e8c0254c1790f4068cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183e1df63b0dbf6137683eac0d0ec42a" id="r_a183e1df63b0dbf6137683eac0d0ec42a"><td class="memItemLeft" align="right" valign="top"><a id="a183e1df63b0dbf6137683eac0d0ec42a" name="a183e1df63b0dbf6137683eac0d0ec42a"></a>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">DoubleVector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>elapsedTime_</b></td></tr>
+<tr class="memdesc:a183e1df63b0dbf6137683eac0d0ec42a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elapsed time accumulator. <br /></td></tr>
+<tr class="separator:a183e1df63b0dbf6137683eac0d0ec42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab87df65af1dd40d2c07d9aaf54c35021" id="r_ab87df65af1dd40d2c07d9aaf54c35021"><td class="memItemLeft" align="right" valign="top"><a id="ab87df65af1dd40d2c07d9aaf54c35021" name="ab87df65af1dd40d2c07d9aaf54c35021"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>updateEnabled_</b></td></tr>
 <tr class="memdesc:ab87df65af1dd40d2c07d9aaf54c35021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update enabled flag. <br /></td></tr>
@@ -527,6 +531,10 @@ ea::vector&lt; ea::pair&lt; <a class="el" href="class_urho3_d_1_1_string_hash.ht
 <a class="el" href="class_urho3_d_1_1_base_integer_vector3.html">IntVector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>worldOrigin_</b></td></tr>
 <tr class="memdesc:ad465d545b990d5c18e918381641479d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">World origin. This is position that corresponds to zero world position. <br /></td></tr>
 <tr class="separator:ad465d545b990d5c18e918381641479d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a082051cd56c39b6a6a268ab5b6173af1" id="r_a082051cd56c39b6a6a268ab5b6173af1"><td class="memItemLeft" align="right" valign="top"><a id="a082051cd56c39b6a6a268ab5b6173af1" name="a082051cd56c39b6a6a268ab5b6173af1"></a>
+<a class="el" href="class_urho3_d_1_1_base_vector3.html">DoubleVector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>elapsedTimeWrap_</b></td></tr>
+<tr class="memdesc:a082051cd56c39b6a6a268ab5b6173af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elapsed time wrap points. <br /></td></tr>
+<tr class="separator:a082051cd56c39b6a6a268ab5b6173af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Root scene node, represents the whole scene. </p>
@@ -855,8 +863,8 @@ ea::vector&lt; ea::pair&lt; <a class="el" href="class_urho3_d_1_1_string_hash.ht
 
 </div>
 </div>
-<a id="a1ea4268272c328699017abfd3407eb30" name="a1ea4268272c328699017abfd3407eb30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ea4268272c328699017abfd3407eb30">&#9670;&#160;</a></span>SetElapsedTime()</h2>
+<a id="a22bb1b56e11a5a436bce441edbc06eaa" name="a22bb1b56e11a5a436bce441edbc06eaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22bb1b56e11a5a436bce441edbc06eaa">&#9670;&#160;</a></span>SetElapsedTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -864,7 +872,7 @@ ea::vector&lt; ea::pair&lt; <a class="el" href="class_urho3_d_1_1_string_hash.ht
         <tr>
           <td class="memname">void Urho3D::Scene::SetElapsedTime </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>time</em></td><td>)</td>
           <td></td>
         </tr>
