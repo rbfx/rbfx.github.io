@@ -1,5 +1,7 @@
 var NAVTREEINDEX61 =
 {
+"struct_urho3_d_1_1_render_buffer_manager_frame_settings.html#a7fd4678779e89ce939115fe4402bb95f":[6,0,2,585,0],
+"struct_urho3_d_1_1_render_buffer_manager_settings.html":[6,0,2,586],
 "struct_urho3_d_1_1_render_buffer_manager_settings.html#a1775fd0eeb69ce4e4a1bd671ee387b67":[6,0,2,586,5],
 "struct_urho3_d_1_1_render_buffer_manager_settings.html#a232738308cdec053f29ea54bc4f16ada":[6,0,2,586,7],
 "struct_urho3_d_1_1_render_buffer_manager_settings.html#a24c12fad0c8d2fda55b50be4377d822a":[6,0,2,586,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX61 =
 "struct_urho3_d_1_1_tetrahedral_mesh_surface_edge.html#a63a6eb34781995f5d8adf625dbb15283":[6,0,2,737,1],
 "struct_urho3_d_1_1_tetrahedral_mesh_surface_edge.html#a97ce18fd98183bb1408c8ddc05ebc340":[6,0,2,737,4],
 "struct_urho3_d_1_1_tetrahedral_mesh_surface_edge.html#ac41d4f7b1a65787cb6d511205f96c1b8":[6,0,2,737,2],
-"struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html":[6,0,2,738],
-"struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#a1dfd9cb2ae2cc27c4cd775338d5cb818":[6,0,2,738,0],
-"struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#a4af676e784a5467e5ec0160def05a0b4":[6,0,2,738,6]
+"struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html":[6,0,2,738]
 };

@@ -109,6 +109,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTimerPeriod</b> (u
 <tr class="separator:a45e39c9b26006d0a5b5c022cf67ff786"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac025d8e421e77106233e4eaf39e0d566" id="r_ac025d8e421e77106233e4eaf39e0d566"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_time.html#ac025d8e421e77106233e4eaf39e0d566">GetFrameNumber</a> () const</td></tr>
 <tr class="separator:ac025d8e421e77106233e4eaf39e0d566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ab35b2ada386f1b135175bdc736340" id="r_a76ab35b2ada386f1b135175bdc736340"><td class="memItemLeft" align="right" valign="top"><a id="a76ab35b2ada386f1b135175bdc736340" name="a76ab35b2ada386f1b135175bdc736340"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsFrameInProgress</b> () const</td></tr>
+<tr class="memdesc:a76ab35b2ada386f1b135175bdc736340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the main thread is currently between BeginFrame and EndFrame. <br /></td></tr>
+<tr class="separator:a76ab35b2ada386f1b135175bdc736340"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6a0924508625bc06f0c1796a8565ad3" id="r_ac6a0924508625bc06f0c1796a8565ad3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_time.html#ac6a0924508625bc06f0c1796a8565ad3">GetTimeStep</a> () const</td></tr>
 <tr class="separator:ac6a0924508625bc06f0c1796a8565ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a414368835e739280fa99c20d835488ad" id="r_a414368835e739280fa99c20d835488ad"><td class="memItemLeft" align="right" valign="top"><a id="a414368835e739280fa99c20d835488ad" name="a414368835e739280fa99c20d835488ad"></a>
@@ -353,15 +357,19 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a06c369527ceb29ce350283765fcb58e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elapsed time since program start. <br /></td></tr>
 <tr class="separator:a06c369527ceb29ce350283765fcb58e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4401a63bced091ae256d16a571d7fae" id="r_ab4401a63bced091ae256d16a571d7fae"><td class="memItemLeft" align="right" valign="top"><a id="ab4401a63bced091ae256d16a571d7fae" name="ab4401a63bced091ae256d16a571d7fae"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>frameNumber_</b></td></tr>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>frameNumber_</b> {}</td></tr>
 <tr class="memdesc:ab4401a63bced091ae256d16a571d7fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame number. <br /></td></tr>
 <tr class="separator:ab4401a63bced091ae256d16a571d7fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad151d735cbbdaa5cc75e33718721817e" id="r_ad151d735cbbdaa5cc75e33718721817e"><td class="memItemLeft" align="right" valign="top"><a id="ad151d735cbbdaa5cc75e33718721817e" name="ad151d735cbbdaa5cc75e33718721817e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFrameInProgress_</b> {}</td></tr>
+<tr class="memdesc:ad151d735cbbdaa5cc75e33718721817e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the main thread is currently between BeginFrame and EndFrame. <br /></td></tr>
+<tr class="separator:ad151d735cbbdaa5cc75e33718721817e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25c432c22c52d6226fdfd7a3f6e8ec62" id="r_a25c432c22c52d6226fdfd7a3f6e8ec62"><td class="memItemLeft" align="right" valign="top"><a id="a25c432c22c52d6226fdfd7a3f6e8ec62" name="a25c432c22c52d6226fdfd7a3f6e8ec62"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>timeStep_</b></td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>timeStep_</b> {}</td></tr>
 <tr class="memdesc:a25c432c22c52d6226fdfd7a3f6e8ec62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timestep in seconds. <br /></td></tr>
 <tr class="separator:a25c432c22c52d6226fdfd7a3f6e8ec62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a712eed65b08cdca28e2b36618665e066" id="r_a712eed65b08cdca28e2b36618665e066"><td class="memItemLeft" align="right" valign="top"><a id="a712eed65b08cdca28e2b36618665e066" name="a712eed65b08cdca28e2b36618665e066"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>timerPeriod_</b></td></tr>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>timerPeriod_</b> {}</td></tr>
 <tr class="memdesc:a712eed65b08cdca28e2b36618665e066"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low-resolution timer period. <br /></td></tr>
 <tr class="separator:a712eed65b08cdca28e2b36618665e066"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
