@@ -231,8 +231,6 @@ var EXITSTATUS;
  */ var isFileURI = filename => filename.startsWith("file://");
 
 // include: runtime_common.js
-// include: runtime_stack_check.js
-// end include: runtime_stack_check.js
 // include: runtime_exceptions.js
 // Base Emscripten EH error class
 class EmscriptenEH {}
@@ -342,6 +340,7 @@ if (ENVIRONMENT_IS_PTHREAD) {
         wasmModule = msgData.wasmModule;
         createWasm();
         run();
+        startWorker();
       } else if (cmd == 2) {
         // Call inside JS module to set up the stack frame for this pthread in JS module scope.
         // This needs to be the first thing that we do, as we cannot call to any C/C++ functions
@@ -396,17 +395,6 @@ var runtimeInitialized = false;
 // When ALLOW_MEMORY_GROWTH is enabled, the conversion from Wasm
 // memory to ArrayBuffer requires some additional logic.
 function getMemoryBuffer() {
-  // Deserializing a growable SharedArrayBuffer was broken until Firefox 154
-  // See: https://bugzilla.mozilla.org/show_bug.cgi?id=2021136
-  var firefoxMatch = globalThis.navigator?.userAgent?.match(/Firefox\/(\d+)/);
-  if (!firefoxMatch || Number(firefoxMatch[1]) >= 154) {
-    try {
-      // This method may be missing or could fail with `Memory must have a maximum`
-      var b = wasmMemory.toResizableBuffer();
-      growMemViews = () => {};
-      return b;
-    } catch {}
-  }
   return wasmMemory.buffer;
 }
 
@@ -467,7 +455,7 @@ function preRun() {
 
 function initRuntime() {
   runtimeInitialized = true;
-  if (ENVIRONMENT_IS_PTHREAD) return startWorker();
+  if (ENVIRONMENT_IS_PTHREAD) return;
   // Begin ATINITS hooks
   SOCKFS.root = FS.mount(SOCKFS, {}, null);
   if (!Module["noFSInit"] && !FS.initialized) FS.init();
@@ -2341,19 +2329,19 @@ var resolveRunDependencies = async () => dependenciesPromise;
 
 var runDependencies = 0;
 
+var dependenciesPromiseResolve = null;
+
 var removeRunDependency = id => {
   runDependencies--;
   Module["monitorRunDependencies"]?.(runDependencies);
   if (!runDependencies) {
-    dependenciesPromise.resolve();
+    dependenciesPromiseResolve();
   }
 };
 
 var addRunDependency = id => {
   if (!runDependencies) {
-    var resolve;
-    dependenciesPromise = new Promise(r => resolve = r);
-    dependenciesPromise.resolve = resolve;
+    dependenciesPromise = new Promise(resolve => dependenciesPromiseResolve = resolve);
   }
   runDependencies++;
   Module["monitorRunDependencies"]?.(runDependencies);
@@ -2489,6 +2477,53 @@ var FS = {
     }
     get isDevice() {
       return FS.isChrdev(this.mode);
+    }
+    // The per-inode readiness wait-queue. The node carries a Set of listener
+    // entries {cb}; producers (SOCKFS, PIPEFS) call notifyListeners on a
+    // readiness transition, and poll()/epoll consume it. It lives on the node
+    // (not the fd) so dup'd fds share one queue. Only nodes that derive real
+    // readiness (sockets, pipes, and an epoll's own node) ever use this -
+    // always-ready types (regular files, ttys) never register or notify.
+    addListener(cb, exclusive = false) {
+      var entry = {
+        cb,
+        exclusive
+      };
+      var listeners = (this.listeners ??= new Set);
+      listeners.add(entry);
+      return {
+        listeners,
+        entry
+      };
+    }
+    notifyListeners(flags) {
+      // Iterates the set without copying, which is safe ONLY under a
+      // load-bearing contract that every internal listener must honour:
+      //   1. A listener must not run user code synchronously (a poll waiter only
+      //      resolves a Promise; an epoll registration only re-lists +
+      //      re-notifies; the epoll callback only schedules a tick). User code
+      //      runs on a later tick, never inside this loop.
+      //   2. A listener may delete entries only from ITS OWN waiter, never from
+      //      a sibling node's set that may be mid-iteration. (Deleting an entry
+      //      of the set being iterated here is fine - a Set tolerates removal of
+      //      a not-yet-visited entry mid-iteration; mutating a *different* node's
+      //      set is fine because that set is not being iterated.)
+      // Violating either gives silently skipped wakeups that are near-impossible
+      // to reproduce. Any new producer/listener must preserve it.
+      if (!this.listeners) return;
+      // Fire every non-exclusive listener. Among EPOLLEXCLUSIVE registrations
+      // (one fd watched by several epolls) wake only one, rotating round-robin
+      // per node, to avoid a thundering herd. (Only epoll registrations are ever
+      // exclusive; poll waiters and a node's own consumers are not.)
+      var excl;
+      for (var entry of this.listeners) {
+        if (entry.exclusive) (excl ||= []).push(entry); else entry.cb(flags);
+      }
+      if (excl) {
+        var i = (this.exclTurn || 0) % excl.length;
+        this.exclTurn = i + 1;
+        excl[i].cb(flags);
+      }
     }
   },
   lookupPath(path, opts = {}) {
@@ -3035,6 +3070,27 @@ var FS = {
     }
     return parent.node_ops.symlink(parent, newname, oldpath);
   },
+  link(oldpath, newpath, flags) {
+    var lookup = FS.lookupPath(newpath, {
+      parent: true
+    });
+    var parent = lookup.node;
+    if (!parent) {
+      throw new FS.ErrnoError(44);
+    }
+    var newname = PATH.basename(newpath);
+    var errCode = FS.mayCreate(parent, newname);
+    if (errCode) {
+      throw new FS.ErrnoError(errCode);
+    }
+    // Hardlinks are only supported by filesystem backends that provide a
+    // `link` node op (e.g. NODERAWFS backed by the host). NODEFS omits it:
+    // a host hardlink cannot be confined to the mount root.
+    if (!parent.node_ops.link) {
+      throw new FS.ErrnoError(34);
+    }
+    return parent.node_ops.link(parent, newname, oldpath, flags);
+  },
   rename(old_path, new_path) {
     var old_dirname = PATH.dirname(old_path);
     var new_dirname = PATH.dirname(new_path);
@@ -3292,15 +3348,14 @@ var FS = {
     }
     FS.doTruncate(stream, stream.node, len);
   },
-  utime(path, atime, mtime) {
+  utime(path, atime, mtime, dontFollow) {
     var lookup = FS.lookupPath(path, {
-      follow: true
+      follow: !dontFollow
     });
-    var node = lookup.node;
-    var setattr = FS.checkOpExists(node.node_ops.setattr, 63);
-    setattr(node, {
+    FS.doSetAttr(null, lookup.node, {
       atime,
-      mtime
+      mtime,
+      dontFollow
     });
   },
   open(path, flags, mode = 438) {
@@ -3402,6 +3457,11 @@ var FS = {
     }
     if (stream.getdents) stream.getdents = null;
     // free readdir state
+    // The fd is going away: wake anything waiting on it (poll/epoll) with
+    // POLLNVAL so a blocking wait unblocks and an epoll registration is evicted
+    // on its next derive. Only sockets/pipes/epoll ever carry a wait-queue, so
+    // for every other stream (incl. nodeless noderawfs stdio) this is a no-op.
+    stream.node?.notifyListeners(32);
     try {
       if (stream.stream_ops.close) {
         stream.stream_ops.close(stream);
@@ -4023,6 +4083,18 @@ var SOCKFS = {
   },
   emit(event, param) {
     SOCKFS.callbacks[event]?.(param);
+    // Bridge socket readiness into the inode wait-queue (poll/epoll). The
+    // 'error' event carries [fd, ...]; the rest carry the fd directly.
+    var fd = event === "error" ? param[0] : param;
+    var flags = {
+      "message": 64 | 1,
+      "open": 4,
+      "connection": 64 | 1,
+      "close": 1 | 16,
+      "error": 8
+    }[event];
+    // 'listen' has no readiness mapping; skip it.
+    if (flags) FS.getStream(fd)?.node.notifyListeners(flags);
   },
   mount(mount) {
     // The incoming Module['websocket'] can be used for configuring 
@@ -4319,7 +4391,8 @@ var SOCKFS = {
         if (sock.connecting) {
           mask |= 4;
         } else {
-          mask |= 16;
+          // A closed peer is both a full hangup and a read-side hangup.
+          mask |= 16 | 8192;
         }
       }
       return mask;
@@ -4442,6 +4515,8 @@ var SOCKFS = {
           // push to queue for accept to pick up
           sock.pending.push(newsock);
           SOCKFS.emit("connection", newsock.stream.fd);
+          // A queued client makes the listening socket readable (POLLIN).
+          sock.stream.node.notifyListeners(64 | 1);
         } else {
           // create a peer on the listen socket so calling sendto
           // with the listen socket and an address will resolve
@@ -4553,13 +4628,16 @@ var SOCKFS = {
         throw new FS.ErrnoError(28);
       }
     },
-    recvmsg(sock, length) {
+    recvmsg(sock, length, flags) {
       // http://pubs.opengroup.org/onlinepubs/7908799/xns/recvmsg.html
       if (sock.type === 1 && sock.server) {
         // tcp servers should not be recv()'ing on the listen socket
         throw new FS.ErrnoError(53);
       }
-      var queued = sock.recv_queue.shift();
+      // MSG_PEEK returns the head of the queue without consuming it, so a
+      // later recv sees the same bytes and poll still reports it readable.
+      var peek = flags & 2;
+      var queued = sock.recv_queue[0];
       if (!queued) {
         if (sock.type === 1) {
           var dest = SOCKFS.websocket_sock_ops.getPeer(sock, sock.daddr, sock.dport);
@@ -4587,6 +4665,8 @@ var SOCKFS = {
         addr: queued.addr,
         port: queued.port
       };
+      if (peek) return res;
+      sock.recv_queue.shift();
       // push back any unread data for TCP connections
       if (sock.type === 1 && bytesRead < queuedLength) {
         var bytesRemaining = queuedLength - bytesRead;
@@ -5298,7 +5378,7 @@ function ___syscall_recvfrom(fd, buf, len, flags, addr, alen) {
   if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(13, 0, 1, fd, buf, len, flags, addr, alen);
   try {
     var sock = getSocketFromFD(fd);
-    var msg = sock.sock_ops.recvmsg(sock, len);
+    var msg = sock.sock_ops.recvmsg(sock, len, flags);
     if (!msg) return 0;
     // socket is closed
     if (addr) {
@@ -8463,7 +8543,13 @@ var setCanvasElementSize = (target, width, height) => {
   }
 };
 
-var currentFullscreenStrategy = {};
+var currentFullscreenStrategy = 0;
+
+var callCanvasResizedCallback = strategy => {
+  if (strategy.canvasResizedCallback) {
+    if (strategy.canvasResizedCallbackTargetThread) __emscripten_run_callback_on_thread(strategy.canvasResizedCallbackTargetThread, strategy.canvasResizedCallback, 37, 0, 0, strategy.canvasResizedCallbackUserData); else getWasmTableEntry(strategy.canvasResizedCallback)(37, 0, strategy.canvasResizedCallbackUserData);
+  }
+};
 
 var registerRestoreOldStyle = canvas => {
   var canvasSize = getCanvasElementSize(canvas);
@@ -8525,9 +8611,7 @@ var registerRestoreOldStyle = canvas => {
       // IE
       canvas.style.imageRendering = oldImageRendering;
       if (canvas.GLctxObject) canvas.GLctxObject.GLctx.viewport(0, 0, oldWidth, oldHeight);
-      if (currentFullscreenStrategy.canvasResizedCallback) {
-        if (currentFullscreenStrategy.canvasResizedCallbackTargetThread) __emscripten_run_callback_on_thread(currentFullscreenStrategy.canvasResizedCallbackTargetThread, currentFullscreenStrategy.canvasResizedCallback, 37, 0, currentFullscreenStrategy.canvasResizedCallbackUserData); else getWasmTableEntry(currentFullscreenStrategy.canvasResizedCallback)(37, 0, currentFullscreenStrategy.canvasResizedCallbackUserData);
-      }
+      callCanvasResizedCallback(currentFullscreenStrategy);
     }
   }
   document.addEventListener("fullscreenchange", restoreOldStyle);
@@ -8613,9 +8697,7 @@ var JSEvents_requestFullscreen = (target, strategy) => {
     return JSEvents.fullscreenEnabled() ? -3 : -1;
   }
   currentFullscreenStrategy = strategy;
-  if (strategy.canvasResizedCallback) {
-    if (strategy.canvasResizedCallbackTargetThread) __emscripten_run_callback_on_thread(strategy.canvasResizedCallbackTargetThread, strategy.canvasResizedCallback, 37, 0, strategy.canvasResizedCallbackUserData); else getWasmTableEntry(strategy.canvasResizedCallback)(37, 0, strategy.canvasResizedCallbackUserData);
-  }
+  callCanvasResizedCallback(strategy);
   return 0;
 };
 
@@ -11991,7 +12073,7 @@ function fetchXHR(fetch, onsuccess, onerror, onprogress, onreadystatechange) {
   }
   var id = Fetch.xhrs.allocate(xhr);
   (growMemViews(), HEAPU32)[((fetch) >> 2)] = id;
-  var data = (dataPtr && dataLength) ? (growMemViews(), HEAPU8).subarray(dataPtr, dataPtr + dataLength) : null;
+  var data = (dataPtr && dataLength) ? (growMemViews(), HEAPU8).slice(dataPtr, dataPtr + dataLength) : null;
   // TODO: Support specifying custom headers to the request.
   // Share the code to save the response, as we need to do so both on success
   // and on error (despite an error, there may be a response, like a 404 page).
@@ -12315,10 +12397,10 @@ function _emscripten_start_fetch(fetch, successcb, errorcb, progresscb, readysta
   var fetchAttrPersistFile = !!(fetchAttributes & 4);
   var fetchAttrNoDownload = !!(fetchAttributes & 32);
   if (requestMethod === "EM_IDB_STORE") {
-    // TODO(?): Here we perform a clone of the data, because storing shared typed arrays to IndexedDB does not seem to be allowed.
     var ptr = (growMemViews(), HEAPU32)[(((fetch_attr) + (84)) >> 2)];
     var size = (growMemViews(), HEAPU32)[(((fetch_attr) + (88)) >> 2)];
-    fetchCacheData(Fetch.dbInstance, fetch, (growMemViews(), HEAPU8).subarray(ptr, ptr + size), reportSuccess, reportError);
+    // Storing shared or resizable typed arrays to IndexedDB is not allowed, so use getHeapViewOrCopy.
+    fetchCacheData(Fetch.dbInstance, fetch, (growMemViews(), HEAPU8).slice(ptr, ptr + size), reportSuccess, reportError);
   } else if (requestMethod === "EM_IDB_DELETE") {
     fetchDeleteCachedData(Fetch.dbInstance, fetch, reportSuccess, reportError);
   } else if (!fetchAttrReplace) {
@@ -12457,7 +12539,17 @@ function _fd_close(fd) {
     var ptr = (growMemViews(), HEAPU32)[((iov) >> 2)];
     var len = (growMemViews(), HEAPU32)[(((iov) + (4)) >> 2)];
     iov += 8;
-    var curr = FS.read(stream, (growMemViews(), HEAP8), ptr, len, offset);
+    try {
+      var curr = FS.read(stream, (growMemViews(), HEAP8), ptr, len, offset);
+    } catch (e) {
+      // On a non-blocking stream a subsequent read may would-block after we
+      // already gathered data. POSIX readv is a single gather-read: return
+      // what we have rather than failing the whole call.
+      if (ret > 0 && e instanceof FS.ErrnoError && (e.errno == 6 || e.errno == 6)) {
+        break;
+      }
+      throw e;
+    }
     if (curr < 0) return -1;
     ret += curr;
     if (curr < len) break;
@@ -12500,23 +12592,28 @@ function _fd_seek(fd, offset, whence, newOffset) {
 }
 
 /** @param {number=} offset */ var doWritev = (stream, iov, iovcnt, offset) => {
-  var ret = 0;
-  for (var i = 0; i < iovcnt; i++) {
+  // Gather all iovecs into one contiguous buffer and issue a single
+  // FS.write, matching POSIX writev's single gather-write semantics (as
+  // __syscall_sendmsg already does). Per-iovec writes fragment a stream
+  // socket send into multiple segments, breaking stream byte semantics.
+  if (iovcnt == 1) {
+    // Single iovec: write directly from HEAP8, no gather buffer needed.
+    return FS.write(stream, (growMemViews(), HEAP8), (growMemViews(), HEAPU32)[((iov) >> 2)], (growMemViews(), 
+    HEAPU32)[(((iov) + (4)) >> 2)], offset);
+  }
+  var total = 0;
+  for (var i = 0, p = iov; i < iovcnt; i++, p += 8) {
+    total += (growMemViews(), HEAPU32)[(((p) + (4)) >> 2)];
+  }
+  var view = new Uint8Array(total);
+  var voff = 0;
+  for (var i = 0; i < iovcnt; i++, iov += 8) {
     var ptr = (growMemViews(), HEAPU32)[((iov) >> 2)];
     var len = (growMemViews(), HEAPU32)[(((iov) + (4)) >> 2)];
-    iov += 8;
-    var curr = FS.write(stream, (growMemViews(), HEAP8), ptr, len, offset);
-    if (curr < 0) return -1;
-    ret += curr;
-    if (curr < len) {
-      // No more space to write.
-      break;
-    }
-    if (typeof offset != "undefined") {
-      offset += curr;
-    }
+    view.set((growMemViews(), HEAPU8).subarray(ptr, ptr + len), voff);
+    voff += len;
   }
-  return ret;
+  return FS.write(stream, view, 0, total, offset);
 };
 
 function _fd_write(fd, iov, iovcnt, pnum) {
@@ -13352,7 +13449,7 @@ Module["FS_createLazyFile"] = FS_createLazyFile;
 var proxiedFunctionTable = [ _proc_exit, exitOnMainThread, pthreadCreateProxied, ___syscall_bind, ___syscall_fcntl64, ___syscall_fstat64, ___syscall_getcwd, ___syscall_getdents64, ___syscall_ioctl, ___syscall_lstat64, ___syscall_mkdirat, ___syscall_newfstatat, ___syscall_openat, ___syscall_recvfrom, ___syscall_rmdir, ___syscall_sendto, ___syscall_setsockopt, ___syscall_socket, ___syscall_stat64, ___syscall_unlinkat, _eglBindAPI, _eglChooseConfig, _eglCreateContext, _eglCreateWindowSurface, _eglDestroyContext, _eglDestroySurface, _eglGetConfigAttrib, _eglGetDisplay, _eglGetError, _eglInitialize, _eglMakeCurrent, _eglQueryString, _eglSwapBuffers, _eglSwapInterval, _eglTerminate, _eglWaitClient, _eglWaitNative, _emscripten_exit_fullscreen, getCanvasSizeMainThread, setCanvasElementSizeMainThread, _emscripten_exit_pointerlock, _emscripten_get_device_pixel_ratio, _emscripten_get_element_css_size, _emscripten_get_gamepad_status, _emscripten_get_num_gamepads, _emscripten_get_screen_size, _emscripten_request_fullscreen_strategy, _emscripten_request_pointerlock, _emscripten_sample_gamepad_data, _emscripten_set_beforeunload_callback_on_thread, _emscripten_set_blur_callback_on_thread, _emscripten_set_element_css_size, _emscripten_set_focus_callback_on_thread, _emscripten_set_fullscreenchange_callback_on_thread, _emscripten_set_gamepadconnected_callback_on_thread, _emscripten_set_gamepaddisconnected_callback_on_thread, _emscripten_set_keydown_callback_on_thread, _emscripten_set_keypress_callback_on_thread, _emscripten_set_keyup_callback_on_thread, _emscripten_set_mousedown_callback_on_thread, _emscripten_set_mouseenter_callback_on_thread, _emscripten_set_mouseleave_callback_on_thread, _emscripten_set_mousemove_callback_on_thread, _emscripten_set_mouseup_callback_on_thread, _emscripten_set_pointerlockchange_callback_on_thread, _emscripten_set_resize_callback_on_thread, _emscripten_set_touchcancel_callback_on_thread, _emscripten_set_touchend_callback_on_thread, _emscripten_set_touchmove_callback_on_thread, _emscripten_set_touchstart_callback_on_thread, _emscripten_set_visibilitychange_callback_on_thread, _emscripten_set_wheel_callback_on_thread, _emscripten_set_window_title, _environ_get, _environ_sizes_get, _fd_close, _fd_read, _fd_seek, _fd_write ];
 
 var ASM_CONSTS = {
-  1950045: $0 => {
+  1950101: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -13360,10 +13457,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1950270: ($0, $1) => {
+  1950326: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1950327: () => {
+  1950383: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -13371,7 +13468,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1950474: () => {
+  1950530: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -13379,7 +13476,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1950708: $0 => {
+  1950764: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -13401,11 +13498,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1951201: () => {
+  1951257: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1951269: ($0, $1, $2, $3) => {
+  1951325: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13446,7 +13543,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1952921: ($0, $1, $2, $3) => {
+  1952977: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -13458,7 +13555,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1953331: ($0, $1) => {
+  1953387: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -13477,7 +13574,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1953936: ($0, $1) => {
+  1953992: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -13490,7 +13587,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1954416: $0 => {
+  1954472: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13528,7 +13625,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1955588: ($0, $1, $2) => {
+  1955644: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -13599,7 +13696,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1957057: ($0, $1, $2, $3, $4) => {
+  1957113: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -13636,19 +13733,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1958046: $0 => {
+  1958102: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1958129: () => {
+  1958185: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1958198: () => window.innerWidth,
-  1958228: () => window.innerHeight,
-  1958259: $0 => {
+  1958254: () => window.innerWidth,
+  1958284: () => window.innerHeight,
+  1958315: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
