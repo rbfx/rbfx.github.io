@@ -9,7 +9,7 @@ var class_urho3_d_1_1_log =
     [ "GetOrCreateLogger", "class_urho3_d_1_1_log.html#aa98906785de52bbc4bfaa8d6e0482f76", null ],
     [ "HandleEndFrame", "class_urho3_d_1_1_log.html#aad49152cf23e131c9f53515616730834", null ],
     [ "IsQuiet", "class_urho3_d_1_1_log.html#a37b0b8afae0c5459ebb50e09126ed433", null ],
-    [ "Open", "class_urho3_d_1_1_log.html#a24faa15c9db47b97d3999134acaba13a", null ],
+    [ "Open", "class_urho3_d_1_1_log.html#a768aeef57608ccb469b6ebd3ae1179bf", null ],
     [ "SetLevel", "class_urho3_d_1_1_log.html#aaef6ba29af4e1ac311432c1035156d9b", null ],
     [ "SetLogFormat", "class_urho3_d_1_1_log.html#ac9689a85e5457d4027a9c054aa4fefc3", null ],
     [ "SetQuiet", "class_urho3_d_1_1_log.html#a93c01c97dcefeb8c14ae31af508adc67", null ],

@@ -118,9 +118,9 @@ var NAVTREEINDEX =
 "struct_urho3_d_1_1_bone_view.html#a1482b4c69cb8fd68b30eea446a6f6f11",
 "struct_urho3_d_1_1_detail_1_1_signal_subscription.html",
 "struct_urho3_d_1_1_key_frame_set.html#a84b5d96f407f5b74c17396325f833028",
-"struct_urho3_d_1_1_network_value_sampler_1_1_time_and_value.html",
-"struct_urho3_d_1_1_render_buffer_manager_frame_settings.html#a7fd4678779e89ce939115fe4402bb95f",
-"struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html#a1dfd9cb2ae2cc27c4cd775338d5cb818"
+"struct_urho3_d_1_1_network_value_sampler_1_1_interpolation_cache.html",
+"struct_urho3_d_1_1_render_buffer_manager_frame_settings.html#a017ee17e01fd48a30c7476bc6de820e0",
+"struct_urho3_d_1_1_tetrahedral_mesh_surface_triangle.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

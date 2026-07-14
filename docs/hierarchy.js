@@ -564,6 +564,7 @@ var hierarchy =
     [ "Urho3D::IKLimbSolver::LocalCache", "struct_urho3_d_1_1_i_k_limb_solver_1_1_local_cache.html", null ],
     [ "Urho3D::IKSpineSolver::LocalCache", "struct_urho3_d_1_1_i_k_spine_solver_1_1_local_cache.html", null ],
     [ "Urho3D::Console::LogEntry", "struct_urho3_d_1_1_console_1_1_log_entry.html", null ],
+    [ "Urho3D::LogFileParams", "struct_urho3_d_1_1_log_file_params.html", null ],
     [ "Urho3D::Logger", "class_urho3_d_1_1_logger.html", null ],
     [ "Urho3D::Spriter::MainlineKey", "struct_urho3_d_1_1_spriter_1_1_mainline_key.html", null ],
     [ "Urho3D::ParticleGraphNodes::MakeInstance< Values >", "struct_urho3_d_1_1_particle_graph_nodes_1_1_make_instance.html", null ],

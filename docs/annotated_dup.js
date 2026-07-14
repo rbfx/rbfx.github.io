@@ -621,6 +621,7 @@ var annotated_dup =
       [ "ListView", "class_urho3_d_1_1_list_view.html", "class_urho3_d_1_1_list_view" ],
       [ "Localization", "class_urho3_d_1_1_localization.html", "class_urho3_d_1_1_localization" ],
       [ "Log", "class_urho3_d_1_1_log.html", "class_urho3_d_1_1_log" ],
+      [ "LogFileParams", "struct_urho3_d_1_1_log_file_params.html", null ],
       [ "Logger", "class_urho3_d_1_1_logger.html", "class_urho3_d_1_1_logger" ],
       [ "LogicComponent", "class_urho3_d_1_1_logic_component.html", "class_urho3_d_1_1_logic_component" ],
       [ "MainPluginApplication", "class_urho3_d_1_1_main_plugin_application.html", "class_urho3_d_1_1_main_plugin_application" ],
