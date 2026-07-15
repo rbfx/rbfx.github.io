@@ -102,12 +102,14 @@ Public Member Functions</h2></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>GetLanguageIndex</b> (const ea::string &amp;language)</td></tr>
 <tr class="memdesc:a3d11e24a51a02bedb9691bcc7c3528ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the index number of language. The index is determined by the order of loading. <br /></td></tr>
 <tr class="separator:a3d11e24a51a02bedb9691bcc7c3528ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af69e8b7cf507fc462982568baf8c6e34" id="r_af69e8b7cf507fc462982568baf8c6e34"><td class="memItemLeft" align="right" valign="top">ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_localization.html#af69e8b7cf507fc462982568baf8c6e34">GetLanguage</a> ()</td></tr>
-<tr class="separator:af69e8b7cf507fc462982568baf8c6e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9fc94148b131b633dd194bfbf50cc07" id="r_ad9fc94148b131b633dd194bfbf50cc07"><td class="memItemLeft" align="right" valign="top"><a id="ad9fc94148b131b633dd194bfbf50cc07" name="ad9fc94148b131b633dd194bfbf50cc07"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetLanguage</b> (int index)</td></tr>
-<tr class="memdesc:ad9fc94148b131b633dd194bfbf50cc07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name of language. <br /></td></tr>
-<tr class="separator:ad9fc94148b131b633dd194bfbf50cc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255b8dcbb1d7503fdc4987e7e4b495ae" id="r_a255b8dcbb1d7503fdc4987e7e4b495ae"><td class="memItemLeft" align="right" valign="top">const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_localization.html#a255b8dcbb1d7503fdc4987e7e4b495ae">GetLanguage</a> ()</td></tr>
+<tr class="separator:a255b8dcbb1d7503fdc4987e7e4b495ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd8dc5897ca2eb9893529dc18147088" id="r_a1bd8dc5897ca2eb9893529dc18147088"><td class="memItemLeft" align="right" valign="top"><a id="a1bd8dc5897ca2eb9893529dc18147088" name="a1bd8dc5897ca2eb9893529dc18147088"></a>
+const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetLanguage</b> (int index)</td></tr>
+<tr class="memdesc:a1bd8dc5897ca2eb9893529dc18147088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name of language. <br /></td></tr>
+<tr class="separator:a1bd8dc5897ca2eb9893529dc18147088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23fd2325acd32d7225eb2a698a684651" id="r_a23fd2325acd32d7225eb2a698a684651"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_localization.html#a23fd2325acd32d7225eb2a698a684651">SetStringPattern</a> (const ea::string &amp;pattern)</td></tr>
+<tr class="separator:a23fd2325acd32d7225eb2a698a684651"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29625d008ee9e3eb9603ce58942dd01d" id="r_a29625d008ee9e3eb9603ce58942dd01d"><td class="memItemLeft" align="right" valign="top"><a id="a29625d008ee9e3eb9603ce58942dd01d" name="a29625d008ee9e3eb9603ce58942dd01d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLanguage</b> (int index)</td></tr>
 <tr class="memdesc:a29625d008ee9e3eb9603ce58942dd01d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current language. <br /></td></tr>
@@ -116,9 +118,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLanguage</b> (int 
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLanguage</b> (const ea::string &amp;language)</td></tr>
 <tr class="memdesc:a3b68103270b123f79267237a56d1ec76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current language. <br /></td></tr>
 <tr class="separator:a3b68103270b123f79267237a56d1ec76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4499a28fd3663d0e4dd3ced4e6b99ccb" id="r_a4499a28fd3663d0e4dd3ced4e6b99ccb"><td class="memItemLeft" align="right" valign="top"><a id="a4499a28fd3663d0e4dd3ced4e6b99ccb" name="a4499a28fd3663d0e4dd3ced4e6b99ccb"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>Get</b> (const ea::string &amp;id, int index=-1)</td></tr>
-<tr class="memdesc:a4499a28fd3663d0e4dd3ced4e6b99ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string in the current language. Returns EMPTY_STRING if id is empty. Returns id if translation is not found and logs a warning. <br /></td></tr>
+<tr class="memitem:a4499a28fd3663d0e4dd3ced4e6b99ccb" id="r_a4499a28fd3663d0e4dd3ced4e6b99ccb"><td class="memItemLeft" align="right" valign="top">ea::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_localization.html#a4499a28fd3663d0e4dd3ced4e6b99ccb">Get</a> (const ea::string &amp;id, int index=-1)</td></tr>
 <tr class="separator:a4499a28fd3663d0e4dd3ced4e6b99ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad257e0df48b4ae6093e06f8581a835a2" id="r_ad257e0df48b4ae6093e06f8581a835a2"><td class="memItemLeft" align="right" valign="top"><a id="ad257e0df48b4ae6093e06f8581a835a2" name="ad257e0df48b4ae6093e06f8581a835a2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr>
@@ -342,9 +342,13 @@ ea::vector&lt; ea::string &gt;&#160;</td><td class="memItemRight" valign="bottom
 <tr class="memdesc:ad52348c6131b95e7d2da77980429b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Language names. <br /></td></tr>
 <tr class="separator:ad52348c6131b95e7d2da77980429b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc42f26208e0b5cd6151758b16552c27" id="r_abc42f26208e0b5cd6151758b16552c27"><td class="memItemLeft" align="right" valign="top"><a id="abc42f26208e0b5cd6151758b16552c27" name="abc42f26208e0b5cd6151758b16552c27"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>languageIndex_</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>languageIndex_</b> {-1}</td></tr>
 <tr class="memdesc:abc42f26208e0b5cd6151758b16552c27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of current language. <br /></td></tr>
 <tr class="separator:abc42f26208e0b5cd6151758b16552c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07f2bb29bef8e34cd3ff7e825f36c5e3" id="r_a07f2bb29bef8e34cd3ff7e825f36c5e3"><td class="memItemLeft" align="right" valign="top"><a id="a07f2bb29bef8e34cd3ff7e825f36c5e3" name="a07f2bb29bef8e34cd3ff7e825f36c5e3"></a>
+ea::optional&lt; std::regex &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pattern_</b></td></tr>
+<tr class="memdesc:a07f2bb29bef8e34cd3ff7e825f36c5e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Localizable string pattern. <br /></td></tr>
+<tr class="separator:a07f2bb29bef8e34cd3ff7e825f36c5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a685f3482d5a8d8493badf47d4104fc68" id="r_a685f3482d5a8d8493badf47d4104fc68"><td class="memItemLeft" align="right" valign="top"><a id="a685f3482d5a8d8493badf47d4104fc68" name="a685f3482d5a8d8493badf47d4104fc68"></a>
 ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, ea::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>strings_</b></td></tr>
 <tr class="memdesc:a685f3482d5a8d8493badf47d4104fc68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Storage strings: &lt;Language &lt;StringId, Value&gt; &gt;. <br /></td></tr>
@@ -369,14 +373,43 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Localization subsystem. Stores all the strings in all languages. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="af69e8b7cf507fc462982568baf8c6e34" name="af69e8b7cf507fc462982568baf8c6e34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af69e8b7cf507fc462982568baf8c6e34">&#9670;&#160;</a></span>GetLanguage()</h2>
+<a id="a4499a28fd3663d0e4dd3ced4e6b99ccb" name="a4499a28fd3663d0e4dd3ced4e6b99ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4499a28fd3663d0e4dd3ced4e6b99ccb">&#9670;&#160;</a></span>Get()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ea::string Urho3D::Localization::GetLanguage </td>
+          <td class="memname">ea::string Urho3D::Localization::Get </td>
+          <td>(</td>
+          <td class="paramtype">const ea::string &amp;&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return a string in the current language. Returns EMPTY_STRING if id is empty. Returns id if translation is not found and logs a warning. </p>
+
+</div>
+</div>
+<a id="a255b8dcbb1d7503fdc4987e7e4b495ae" name="a255b8dcbb1d7503fdc4987e7e4b495ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255b8dcbb1d7503fdc4987e7e4b495ae">&#9670;&#160;</a></span>GetLanguage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ea::string &amp; Urho3D::Localization::GetLanguage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -436,6 +469,25 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </table>
 </div><div class="memdoc">
 <p>Return the number of languages. </p>
+
+</div>
+</div>
+<a id="a23fd2325acd32d7225eb2a698a684651" name="a23fd2325acd32d7225eb2a698a684651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23fd2325acd32d7225eb2a698a684651">&#9670;&#160;</a></span>SetStringPattern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::Localization::SetStringPattern </td>
+          <td>(</td>
+          <td class="paramtype">const ea::string &amp;&#160;</td>
+          <td class="paramname"><em>pattern</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set regex pattern for localizable strings. If empty, localization is attempted for all strings. If non-empty, localization is attempted only for strings that match regular expression pattern. </p>
 
 </div>
 </div>

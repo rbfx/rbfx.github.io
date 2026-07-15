@@ -1,5 +1,7 @@
 var NAVTREEINDEX56 =
 {
+"functions_vars_z.html":[6,3,2,26],
+"functions_w.html":[6,3,0,23],
 "functions_x.html":[6,3,0,24],
 "functions_y.html":[6,3,0,25],
 "functions_z.html":[6,3,0,26],
@@ -247,7 +249,5 @@ var NAVTREEINDEX56 =
 "struct_urho3_d_1_1_bone.html#a72c09159b4bfb37d47d2b65c63b6a8bc":[6,0,2,100,7],
 "struct_urho3_d_1_1_bone.html#a79cab97bf6f6d8d44ee9bf26237c540f":[6,0,2,100,2],
 "struct_urho3_d_1_1_bone.html#a81a1ce6f32473a71fe072911cc07e167":[6,0,2,100,1],
-"struct_urho3_d_1_1_bone.html#a99a28562709f72e4617e2206638c8ae4":[6,0,2,100,0],
-"struct_urho3_d_1_1_bone.html#af1e31fcdff163da6d3d4350a1afc3ac9":[6,0,2,100,10],
-"struct_urho3_d_1_1_bone_view.html":[6,0,2,101]
+"struct_urho3_d_1_1_bone.html#a99a28562709f72e4617e2206638c8ae4":[6,0,2,100,0]
 };

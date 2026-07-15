@@ -1,5 +1,7 @@
 var NAVTREEINDEX60 =
 {
+"struct_urho3_d_1_1_network_frame_sync.html#a91097de37e7c1a30acea081eb45876f3":[6,0,2,448,1],
+"struct_urho3_d_1_1_network_setting.html":[6,0,2,452],
 "struct_urho3_d_1_1_network_value_sampler_1_1_interpolation_cache.html":[6,0,2,455,0],
 "struct_urho3_d_1_1_network_value_sampler_1_1_time_and_value.html":[6,0,2,455,1],
 "struct_urho3_d_1_1_network_value_traits.html":[6,0,2,456],
@@ -247,7 +249,5 @@ var NAVTREEINDEX60 =
 "struct_urho3_d_1_1_reflection_probe_reference.html":[6,0,2,582],
 "struct_urho3_d_1_1_remote_event.html":[6,0,2,583],
 "struct_urho3_d_1_1_remote_event.html#a2a9bbdb6bf67228fc323f9361315b91f":[6,0,2,583,2],
-"struct_urho3_d_1_1_remote_event.html#a8d89fcbccb55239c75126dad5b476ea7":[6,0,2,583,0],
-"struct_urho3_d_1_1_remote_event.html#af1fb2b3970b481a0a1a0ee7a34d9cdd4":[6,0,2,583,1],
-"struct_urho3_d_1_1_render_buffer_manager_frame_settings.html":[6,0,2,586]
+"struct_urho3_d_1_1_remote_event.html#a8d89fcbccb55239c75126dad5b476ea7":[6,0,2,583,0]
 };

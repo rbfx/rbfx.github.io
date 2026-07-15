@@ -1,5 +1,7 @@
 var NAVTREEINDEX39 =
 {
+"class_urho3_d_1_1_ribbon_trail.html#a5a48e8ff35f800dcd45f9937796f6ab7":[6,0,2,617,54],
+"class_urho3_d_1_1_ribbon_trail.html#a5b19edc727d09e8e7441fbbc0bf7440e":[6,0,2,617,7],
 "class_urho3_d_1_1_ribbon_trail.html#a5b35ffdbfdcaf484dfbf08fc97e942c8":[6,0,2,617,47],
 "class_urho3_d_1_1_ribbon_trail.html#a5ec431d31aa8194c4d157fbbb5aa84fc":[6,0,2,617,66],
 "class_urho3_d_1_1_ribbon_trail.html#a5f823028ff522fe1df308457ec176542":[6,0,2,617,42],
@@ -247,7 +249,5 @@ var NAVTREEINDEX39 =
 "class_urho3_d_1_1_rml_canvas_component.html#adc6393d4288c53477f7882546ff9830a":[6,0,2,620,6],
 "class_urho3_d_1_1_rml_canvas_component.html#adf551cee768bb0fb992f5d9a61acf4b1":[6,0,2,620,3],
 "class_urho3_d_1_1_rml_canvas_component.html#ae7f4bebecf8c35a626d66b32c2bfe3ce":[6,0,2,620,13],
-"class_urho3_d_1_1_rml_canvas_component.html#af24f5a2f966b1e00b4bfb4dc053d9227":[6,0,2,620,18],
-"class_urho3_d_1_1_rml_serializable_inspector.html":[6,0,2,623],
-"class_urho3_d_1_1_rml_serializable_inspector.html#a0767bff5240f458a357837b95dc6da18":[6,0,2,623,1]
+"class_urho3_d_1_1_rml_canvas_component.html#af24f5a2f966b1e00b4bfb4dc053d9227":[6,0,2,620,18]
 };
