@@ -21,7 +21,7 @@ var class_urho3_d_1_1_work_queue =
     [ "SetNonThreadedWorkMs", "class_urho3_d_1_1_work_queue.html#a7f7e58daad2dc7d1962d5d8a2b48708f", null ],
     [ "Update", "class_urho3_d_1_1_work_queue.html#a6527da5f670c9548bf8d99dbc4974693", null ],
     [ "WrapTask", "class_urho3_d_1_1_work_queue.html#a5fd1aeffbf583d57c7ca7d0247032f1e", null ],
-    [ "fallbackTaskQueue_", "class_urho3_d_1_1_work_queue.html#aafe143481c2d2b919b26b4034d76dbdd", null ],
+    [ "fallbackTaskQueue_", "class_urho3_d_1_1_work_queue.html#a44650ad0285dccfddd6e0dd02249b3fd", null ],
     [ "mainThreadTasks_", "class_urho3_d_1_1_work_queue.html#a830a947e88e784bb3c974b1df1927130", null ],
     [ "maxNonThreadedWorkMs_", "class_urho3_d_1_1_work_queue.html#af92ac9e3dff9fbf74b3f0907d560929d", null ],
     [ "numProcessingThreads_", "class_urho3_d_1_1_work_queue.html#a2563ac06f61c0acbc7d1c40ae9a043e5", null ]
