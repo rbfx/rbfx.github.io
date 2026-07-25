@@ -627,25 +627,7 @@ class ExitStatus {
   }
 }
 
-/** @type {!Int16Array} */ var HEAP16;
-
-/** @type {!Int32Array} */ var HEAP32;
-
-/** not-@type {!BigInt64Array} */ var HEAP64;
-
 /** @type {!Int8Array} */ var HEAP8;
-
-/** @type {!Float32Array} */ var HEAPF32;
-
-/** @type {!Float64Array} */ var HEAPF64;
-
-/** @type {!Uint16Array} */ var HEAPU16;
-
-/** @type {!Uint32Array} */ var HEAPU32;
-
-/** not-@type {!BigUint64Array} */ var HEAPU64;
-
-/** @type {!Uint8Array} */ var HEAPU8;
 
 var terminateWorker = worker => {
   worker.terminate();
@@ -700,6 +682,10 @@ var stackSave = () => _emscripten_stack_get_current();
 var stackRestore = val => __emscripten_stack_restore(val);
 
 var stackAlloc = sz => __emscripten_stack_alloc(sz);
+
+/** @type {!Float64Array} */ var HEAPF64;
+
+/** not-@type {!BigInt64Array} */ var HEAP64;
 
 /** @type{function(number, (number|boolean), ...number)} */ var proxyToMainThread = (funcIndex, emAsmAddr, proxyMode, ...callArgs) => {
   // EM_ASM proxying is done by passing a pointer to the address of the EM_ASM
@@ -773,6 +759,8 @@ var _exit = exitJS;
 
 var waitAsyncPolyfilled = (!Atomics.waitAsync || (globalThis.navigator?.userAgent && Number((navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./) || [])[2]) < 91));
 
+/** @type {!Int32Array} */ var HEAP32;
+
 var PThread = {
   unusedWorkers: [],
   tlsInitFunctions: [],
@@ -842,7 +830,7 @@ var PThread = {
       // If this message is intended to a recipient that is not the main
       // thread, forward it to the target thread. This is currently only
       // used by `CMD_CHECK_MAILBOX`.
-      if (d.targetThread) {
+      if (d.targetThread && d.targetThread != _pthread_self()) {
         var targetWorker = PThread.pthreads[d.targetThread];
         targetWorker?.postMessage(d);
         return;
@@ -951,6 +939,8 @@ var PThread = {
 
 var onPostRuns = [];
 
+/** @type {!Uint32Array} */ var HEAPU32;
+
 function establishStackSpace(pthread_ptr) {
   var stackHigh = (growMemViews(), HEAPU32)[(((pthread_ptr) + (48)) >> 2)];
   var stackSize = (growMemViews(), HEAPU32)[(((pthread_ptr) + (52)) >> 2)];
@@ -1010,50 +1000,6 @@ var invokeEntryPoint = (ptr, arg) => {
 var noExitRuntime = true;
 
 var registerTLSInit = tlsInitFunc => PThread.tlsInitFunctions.push(tlsInitFunc);
-
-/**
-   * @param {number} ptr
-   * @param {number} value
-   * @param {string} type
-   */ function setValue(ptr, value, type = "i8") {
-  if (type.endsWith("*")) type = "*";
-  switch (type) {
-   case "i1":
-    (growMemViews(), HEAP8)[ptr] = value;
-    break;
-
-   case "i8":
-    (growMemViews(), HEAP8)[ptr] = value;
-    break;
-
-   case "i16":
-    (growMemViews(), HEAP16)[((ptr) >> 1)] = value;
-    break;
-
-   case "i32":
-    (growMemViews(), HEAP32)[((ptr) >> 2)] = value;
-    break;
-
-   case "i64":
-    (growMemViews(), HEAP64)[((ptr) >> 3)] = BigInt(value);
-    break;
-
-   case "float":
-    (growMemViews(), HEAPF32)[((ptr) >> 2)] = value;
-    break;
-
-   case "double":
-    (growMemViews(), HEAPF64)[((ptr) >> 3)] = value;
-    break;
-
-   case "*":
-    (growMemViews(), HEAPU32)[((ptr) >> 2)] = value;
-    break;
-
-   default:
-    abort(`invalid type for setValue: ${type}`);
-  }
-}
 
 var wasmMemory;
 
@@ -1122,6 +1068,8 @@ var UTF8Decoder = globalThis.TextDecoder && new TextDecoder;
   }
   return str;
 };
+
+/** @type {!Uint8Array} */ var HEAPU8;
 
 /**
    * Given a pointer 'ptr' to a null-terminated UTF8-encoded string in the
@@ -3930,7 +3878,7 @@ var FS = {
         var xhr = new XMLHttpRequest;
         xhr.open("HEAD", url, false);
         xhr.send(null);
-        if (!(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304)) abort("Couldn't load " + url + ". Status: " + xhr.status);
+        if (!(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304)) abort(`Couldn't load ${url}. Status: ${xhr.status}`);
         var datalength = Number(xhr.getResponseHeader("Content-length"));
         var header;
         var hasByteServing = (header = xhr.getResponseHeader("Accept-Ranges")) && header === "bytes";
@@ -3945,14 +3893,14 @@ var FS = {
           // TODO: Use mozResponseArrayBuffer, responseStream, etc. if available.
           var xhr = new XMLHttpRequest;
           xhr.open("GET", url, false);
-          if (datalength !== chunkSize) xhr.setRequestHeader("Range", "bytes=" + from + "-" + to);
+          if (datalength !== chunkSize) xhr.setRequestHeader("Range", `bytes=${from}-${to}`);
           // Some hints to the browser that we want binary data.
           xhr.responseType = "arraybuffer";
           if (xhr.overrideMimeType) {
             xhr.overrideMimeType("text/plain; charset=x-user-defined");
           }
           xhr.send(null);
-          if (!(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304)) abort("Couldn't load " + url + ". Status: " + xhr.status);
+          if (!(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304)) abort(`Couldn't load ${url}. Status: ${xhr.status}`);
           if (xhr.response !== undefined) {
             return new Uint8Array(/** @type{Array<number>} */ (xhr.response || []));
           }
@@ -4159,6 +4107,24 @@ var SOCKFS = {
     return stream.node.sock;
   },
   stream_ops: {
+    getattr(stream) {
+      var node = stream.node;
+      return {
+        dev: 1,
+        ino: node.id,
+        mode: 49152 | 511,
+        nlink: 1,
+        uid: 0,
+        gid: 0,
+        rdev: 0,
+        size: 0,
+        atime: new Date(0),
+        mtime: new Date(0),
+        ctime: new Date(0),
+        blksize: 4096,
+        blocks: 0
+      };
+    },
     poll(stream) {
       var sock = stream.node.sock;
       return sock.sock_ops.poll(sock);
@@ -4757,7 +4723,7 @@ var inetNtop6 = ints => {
   }
   for (word = 0; word < 8; word++) {
     if (longest > 1) {
-      // compress contiguous zeros - to produce "::"
+      // compress contiguous zeros - to produce '::'
       if (parts[word] === 0 && word >= zstart && word < (zstart + longest)) {
         if (word === zstart) {
           str += ":";
@@ -4772,6 +4738,10 @@ var inetNtop6 = ints => {
   }
   return str;
 };
+
+/** @type {!Int16Array} */ var HEAP16;
+
+/** @type {!Uint16Array} */ var HEAPU16;
 
 var readSockaddr = (sa, salen) => {
   // family / port offsets are common to both sockaddr_in and sockaddr_in6
@@ -4833,7 +4803,7 @@ var inetPton6 = str => {
   if (str === "::") {
     return [ 0, 0, 0, 0, 0, 0, 0, 0 ];
   }
-  // Z placeholder to keep track of zeros when splitting the string on ":"
+  // Z placeholder to keep track of zeros when splitting the string on ':'
   if (str.startsWith("::")) {
     str = str.replace("::", "Z:");
   } else {
@@ -5491,12 +5461,12 @@ var registeredTypes = {};
 
 var typeDependencies = {};
 
-var BindingError = class BindingError extends Error {
+class BindingError extends Error {
   constructor(message) {
     super(message);
     this.name = "BindingError";
   }
-};
+}
 
 var throwBindingError = message => {
   throw new BindingError(message);
@@ -5526,6 +5496,8 @@ var throwBindingError = message => {
 /** @param {Object=} options */ function registerType(rawType, registeredInstance, options = {}) {
   return sharedRegisterType(rawType, registeredInstance, options);
 }
+
+/** not-@type {!BigUint64Array} */ var HEAPU64;
 
 var integerReadValueFromPointer = (name, width, signed) => {
   // integers are quite common, so generate very specialized functions
@@ -5656,6 +5628,8 @@ var EmValType = {
 
 var __embind_register_emval = rawType => registerType(rawType, EmValType);
 
+/** @type {!Float32Array} */ var HEAPF32;
+
 var floatReadValueFromPointer = (name, width) => {
   switch (width) {
    case 4:
@@ -5741,7 +5715,7 @@ function createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync) {
   } else {
     for (var i = isClassMethodFunc ? 1 : 2; i < argTypes.length; ++i) {
       // Skip return value at index 0 - it's not deleted here. Also skip class type if not a method.
-      var paramName = (i === 1 ? "thisWired" : ("arg" + (i - 2) + "Wired"));
+      var paramName = (i === 1 ? "thisWired" : `arg${i - 2}Wired`);
       if (argTypes[i].destructorFunction !== null) {
         invokerFnBody += `${paramName}_dtor(${paramName});\n`;
         args1.push(`${paramName}_dtor`);
@@ -5767,12 +5741,12 @@ function craftInvokerFunction(humanName, argTypes, classType, cppInvokerFunc, cp
   // isAsync: Optional. If true, returns an async function. Async bindings are only supported with JSPI.
   var argCount = argTypes.length;
   if (argCount < 2) {
-    throwBindingError("argTypes array size mismatch! Must at least get return value and 'this' types!");
+    throwBindingError("argTypes array size mismatch! Must at least get return value and receiver (this) types!");
   }
   var isClassMethodFunc = (argTypes[1] !== null && classType !== null);
   // Free functions with signature "void function()" do not need an invoker that marshalls between wire types.
   // TODO: This omits argument count check - enable only at -O3 or similar.
-  //    if (ENABLE_UNSAFE_OPTS && argCount == 2 && argTypes[0].name == "void" && !isClassMethodFunc) {
+  //    if (ENABLE_UNSAFE_OPTS && argCount == 2 && argTypes[0].name == 'void' && !isClassMethodFunc) {
   //       return FUNCTION_TABLE[fn];
   //    }
   // Determine if we need to use a dynamic stack to store the destructors for the function parameters.
@@ -5847,12 +5821,12 @@ var heap32VectorToArray = (count, firstElement) => {
   return array;
 };
 
-var InternalError = class InternalError extends Error {
+class InternalError extends Error {
   constructor(message) {
     super(message);
     this.name = "InternalError";
   }
-};
+}
 
 var throwInternalError = message => {
   throw new InternalError(message);
@@ -6701,7 +6675,7 @@ function _clock_time_get(clk_id, ignored_precision, ptime) {
 }
 
 function getFullscreenElement() {
-  return document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.webkitCurrentFullScreenElement || document.msFullscreenElement;
+  return document.fullscreenElement ?? document.webkitFullscreenElement;
 }
 
 var runtimeKeepalivePush = () => {
@@ -6933,26 +6907,26 @@ var Browser = {
     if (!Browser.fullscreenHandlersInstalled) {
       Browser.fullscreenHandlersInstalled = true;
       document.addEventListener("fullscreenchange", fullscreenChange);
-      document.addEventListener("mozfullscreenchange", fullscreenChange);
       document.addEventListener("webkitfullscreenchange", fullscreenChange);
-      document.addEventListener("MSFullscreenChange", fullscreenChange);
     }
     // create a new parent to ensure the canvas has no siblings. this allows browsers to optimize full screen performance when its parent is the full screen root
     var canvasContainer = document.createElement("div");
     canvas.parentNode.insertBefore(canvasContainer, canvas);
     canvasContainer.appendChild(canvas);
     // use parent of canvas as full screen root to allow aspect ratio correction (Firefox stretches the root to screen size)
-    canvasContainer.requestFullscreen = canvasContainer["requestFullscreen"] || canvasContainer["mozRequestFullScreen"] || canvasContainer["msRequestFullscreen"] || (canvasContainer["webkitRequestFullscreen"] ? () => canvasContainer["webkitRequestFullscreen"](Element["ALLOW_KEYBOARD_INPUT"]) : null) || (canvasContainer["webkitRequestFullScreen"] ? () => canvasContainer["webkitRequestFullScreen"](Element["ALLOW_KEYBOARD_INPUT"]) : null);
+    // Safari didn't support Element.requestFullscreen until 16.4
+    // See: https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullscreen
+    /** @suppress {checkTypes} */ canvasContainer.requestFullscreen ??= (canvasContainer["webkitRequestFullscreen"] ? () => canvasContainer["webkitRequestFullscreen"](Element.ALLOW_KEYBOARD_INPUT) : null) ?? (canvasContainer["webkitRequestFullScreen"] ? () => canvasContainer["webkitRequestFullScreen"](Element.ALLOW_KEYBOARD_INPUT) : null);
     canvasContainer.requestFullscreen();
   },
   exitFullscreen() {
     // This is workaround for chrome. Trying to exit from fullscreen
-    // not in fullscreen state will cause "TypeError: Document not active"
+    // not in fullscreen state will cause 'TypeError: Document not active'
     // in chrome. See https://github.com/emscripten-core/emscripten/pull/8236
     if (!Browser.isFullscreen) {
       return false;
     }
-    var CFS = document["exitFullscreen"] || document["cancelFullScreen"] || document["mozCancelFullScreen"] || document["msExitFullscreen"] || document["webkitCancelFullScreen"] || (() => {});
+    var CFS = document.exitFullscreen ?? document["webkitCancelFullScreen"];
     CFS.apply(document, []);
     return true;
   },
@@ -6974,14 +6948,7 @@ var Browser = {
     }[name.slice(name.lastIndexOf(".") + 1)];
   },
   getUserMedia(func) {
-    window.getUserMedia ||= navigator["getUserMedia"] || navigator["mozGetUserMedia"];
-    window.getUserMedia(func);
-  },
-  getMovementX(event) {
-    return event["movementX"] || event["mozMovementX"] || event["webkitMovementX"] || 0;
-  },
-  getMovementY(event) {
-    return event["movementY"] || event["mozMovementY"] || event["webkitMovementY"] || 0;
+    return navigator.mediaDevices.getUserMedia(func);
   },
   getMouseWheelDelta(event) {
     var delta = 0;
@@ -7059,13 +7026,8 @@ var Browser = {
     if (Browser.pointerLock) {
       // When the pointer is locked, calculate the coordinates
       // based on the movement of the mouse.
-      // Workaround for Firefox bug 764498
-      if (event.type != "mousemove" && ("mozMovementX" in event)) {
-        Browser.mouseMovementX = Browser.mouseMovementY = 0;
-      } else {
-        Browser.mouseMovementX = Browser.getMovementX(event);
-        Browser.mouseMovementY = Browser.getMovementY(event);
-      }
+      Browser.mouseMovementX = event.movementX;
+      Browser.mouseMovementY = event.movementY;
       // add the mouse delta to the current absolute mouse position
       Browser.mouseX += Browser.mouseMovementX;
       Browser.mouseY += Browser.mouseMovementY;
@@ -8423,14 +8385,14 @@ var JSEvents = {
     return target?.nodeName ?? "";
   },
   fullscreenEnabled() {
-    return document.fullscreenEnabled || document.webkitFullscreenEnabled;
+    return document.fullscreenEnabled ?? document.webkitFullscreenEnabled;
   }
 };
 
 /** @type {Object} */ var specialHTMLTargets = [ 0, globalThis.document ?? 0, globalThis.window ?? 0 ];
 
 var findEventTarget = target => {
-  // The sensible "default" target varies between events, but use window as the default
+  // The sensible 'default' target varies between events, but use window as the default
   // since DOM events mostly can default to that. Specific callback registrations
   // override their own defaults.
   if (!target) return window;
@@ -8581,7 +8543,6 @@ var registerRestoreOldStyle = canvas => {
   function restoreOldStyle() {
     if (!getFullscreenElement()) {
       document.removeEventListener("fullscreenchange", restoreOldStyle);
-      // As of Safari 13.0.3 on macOS Catalina 10.15.1 still ships with prefixed webkitfullscreenchange. TODO: revisit this check once Safari ships unprefixed version.
       document.removeEventListener("webkitfullscreenchange", restoreOldStyle);
       setCanvasElementSize(canvas, oldWidth, oldHeight);
       canvas.style.width = oldCssWidth;
@@ -8615,7 +8576,6 @@ var registerRestoreOldStyle = canvas => {
     }
   }
   document.addEventListener("fullscreenchange", restoreOldStyle);
-  // As of Safari 13.0.3 on macOS Catalina 10.15.1 still ships with prefixed webkitfullscreenchange. TODO: revisit this check once Safari ships unprefixed version.
   document.addEventListener("webkitfullscreenchange", restoreOldStyle);
   return restoreOldStyle;
 };
@@ -8692,6 +8652,8 @@ var JSEvents_requestFullscreen = (target, strategy) => {
   if (target.requestFullscreen) {
     target.requestFullscreen();
   } else if (target.webkitRequestFullscreen) {
+    // Safari didn't Element.requestFullscreen support until 16.4
+    // See: https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullscreen
     target.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
   } else {
     return JSEvents.fullscreenEnabled() ? -3 : -1;
@@ -8777,19 +8739,8 @@ var fillGamepadEventData = (eventStruct, e) => {
     (growMemViews(), HEAPF64)[(((eventStruct + i * 8) + (16)) >> 3)] = e.axes[i];
   }
   for (var i = 0; i < e.buttons.length; ++i) {
-    if (typeof e.buttons[i] == "object") {
-      (growMemViews(), HEAPF64)[(((eventStruct + i * 8) + (528)) >> 3)] = e.buttons[i].value;
-    } else {
-      (growMemViews(), HEAPF64)[(((eventStruct + i * 8) + (528)) >> 3)] = e.buttons[i];
-    }
-  }
-  for (var i = 0; i < e.buttons.length; ++i) {
-    if (typeof e.buttons[i] == "object") {
-      (growMemViews(), HEAP8)[(eventStruct + i) + (1040)] = e.buttons[i].pressed;
-    } else {
-      // Assigning a boolean to HEAP32, that's ok, but Closure would like to warn about it:
-      /** @suppress {checkTypes} */ (growMemViews(), HEAP8)[(eventStruct + i) + (1040)] = e.buttons[i] == 1;
-    }
+    (growMemViews(), HEAP8)[(eventStruct + i) + (1040)] = e.buttons[i].pressed;
+    (growMemViews(), HEAPF64)[(((eventStruct + i * 8) + (528)) >> 3)] = e.buttons[i].value;
   }
   (growMemViews(), HEAP8)[(eventStruct) + (1104)] = e.connected;
   (growMemViews(), HEAP32)[(((eventStruct) + (1108)) >> 2)] = e.index;
@@ -11518,7 +11469,6 @@ function _emscripten_set_fullscreenchange_callback_on_thread(target, userData, u
   if (!JSEvents.fullscreenEnabled()) return -1;
   target = target ? findEventTarget(target) : specialHTMLTargets[1];
   if (!target) return -4;
-  // As of Safari 13.0.3 on macOS Catalina 10.15.1 still ships with prefixed webkitfullscreenchange. TODO: revisit this check once Safari ships unprefixed version.
   // TODO: When this block is removed, also change test/test_html5_remove_event_listener.c test expectation on emscripten_set_fullscreenchange_callback().
   registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "webkitfullscreenchange", targetThread);
   return registerFullscreenChangeEventCallback(target, userData, useCapture, callbackfunc, 19, "fullscreenchange", targetThread);
@@ -11626,8 +11576,8 @@ var fillMouseEventData = (eventStruct, e, target) => {
   (growMemViews(), HEAP8)[eventStruct + 27] = e.metaKey;
   (growMemViews(), HEAP16)[idx * 2 + 14] = e.button;
   (growMemViews(), HEAP16)[idx * 2 + 15] = e.buttons;
-  (growMemViews(), HEAP32)[idx + 8] = e["movementX"];
-  (growMemViews(), HEAP32)[idx + 9] = e["movementY"];
+  (growMemViews(), HEAP32)[idx + 8] = e.movementX;
+  (growMemViews(), HEAP32)[idx + 9] = e.movementY;
   if (Module["canvas"]) {
     var rect = getBoundingClientRect(Module["canvas"]);
     (growMemViews(), HEAP32)[idx + 12] = e.clientX - (rect.left | 0);
@@ -13362,6 +13312,50 @@ var dynCall = (sig, ptr, args = [], promising = false) => {
   }
   return convert(rtn);
 };
+
+/**
+   * @param {number} ptr
+   * @param {number} value
+   * @param {string} type
+   */ function setValue(ptr, value, type = "i8") {
+  if (type.endsWith("*")) type = "*";
+  switch (type) {
+   case "i1":
+    (growMemViews(), HEAP8)[ptr] = value;
+    break;
+
+   case "i8":
+    (growMemViews(), HEAP8)[ptr] = value;
+    break;
+
+   case "i16":
+    (growMemViews(), HEAP16)[((ptr) >> 1)] = value;
+    break;
+
+   case "i32":
+    (growMemViews(), HEAP32)[((ptr) >> 2)] = value;
+    break;
+
+   case "i64":
+    (growMemViews(), HEAP64)[((ptr) >> 3)] = BigInt(value);
+    break;
+
+   case "float":
+    (growMemViews(), HEAPF32)[((ptr) >> 2)] = value;
+    break;
+
+   case "double":
+    (growMemViews(), HEAPF64)[((ptr) >> 3)] = value;
+    break;
+
+   case "*":
+    (growMemViews(), HEAPU32)[((ptr) >> 2)] = value;
+    break;
+
+   default:
+    abort(`invalid type for setValue: ${type}`);
+  }
+}
 
 var FS_createPath = (...args) => FS.createPath(...args);
 
