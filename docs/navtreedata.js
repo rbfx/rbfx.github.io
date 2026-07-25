@@ -115,12 +115,12 @@ var NAVTREEINDEX =
 "class_urho3_d_1_1_window.html#a6b1bc0d6b435cc9fea0c0ed1fda015f3",
 "class_urho3_d_1_1_x_path_query.html#a50ea4d1f314b4508063ccd3913278c4b",
 "functions_vars_z.html",
-"struct_urho3_d_1_1_bone.html#af1e31fcdff163da6d3d4350a1afc3ac9",
-"struct_urho3_d_1_1_detail_1_1_screen_button_mapping.html",
-"struct_urho3_d_1_1_key_frame_set.html#a474ff1e6f2f377527165ef03725eecc2",
-"struct_urho3_d_1_1_network_frame_sync.html#a91097de37e7c1a30acea081eb45876f3",
-"struct_urho3_d_1_1_remote_event.html#af1fb2b3970b481a0a1a0ee7a34d9cdd4",
-"struct_urho3_d_1_1_tetrahedral_mesh_surface_edge.html#a97ce18fd98183bb1408c8ddc05ebc340"
+"struct_urho3_d_1_1_bone.html#a99a28562709f72e4617e2206638c8ae4",
+"struct_urho3_d_1_1_detail_1_1_priority_signal_subscription.html#aeb559fd07115ee77a2546b7f4be05e7e",
+"struct_urho3_d_1_1_key_frame_set.html#a3c93039e7f5c5cc785022b48a2c91bc2",
+"struct_urho3_d_1_1_network_frame_sync.html#a4157c5f18ac1fbfe4f092fa389ce1a9f",
+"struct_urho3_d_1_1_remote_event.html#a8d89fcbccb55239c75126dad5b476ea7",
+"struct_urho3_d_1_1_tetrahedral_mesh_surface_edge.html#a63a6eb34781995f5d8adf625dbb15283"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

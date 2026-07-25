@@ -8,8 +8,8 @@ var NAVTREEINDEX56 =
 "functions_~.html":[6,3,0,27],
 "graphics-and-rendering.html":[0,0,2,1],
 "hierarchy.html":[6,2],
-"index.html":[],
 "index.html":[0],
+"index.html":[],
 "input.html":[0,0,2,5],
 "inverse-kinematics.html":[0,0,2,6],
 "low-level-transport.html":[0,0,2,2,0],
@@ -126,10 +126,11 @@ var NAVTREEINDEX56 =
 "struct_urho3_d_1_1_asset_transformer_input.html#ace4880ef4a018bbfd3484dd152c51d2b":[6,0,2,47,2],
 "struct_urho3_d_1_1_asset_transformer_input.html#af954fead409b07424d8ff11973614c7b":[6,0,2,47,3],
 "struct_urho3_d_1_1_asset_transformer_output.html":[6,0,2,48],
+"struct_urho3_d_1_1_asset_transformer_output.html#a300b4642ca2550e832c757b3b9071cfe":[6,0,2,48,2],
 "struct_urho3_d_1_1_asset_transformer_output.html#a7ffc3037a26e6b4c0f26166fe96e56ba":[6,0,2,48,0],
 "struct_urho3_d_1_1_asset_transformer_output.html#a9604aa04042f82014a4e9b19fb288d97":[6,0,2,48,1],
-"struct_urho3_d_1_1_asset_transformer_output.html#ada1826533413d6d4ea78f22f7a800689":[6,0,2,48,3],
-"struct_urho3_d_1_1_asset_transformer_output.html#af35651d46c224ed7dfae84a21495f90b":[6,0,2,48,2],
+"struct_urho3_d_1_1_asset_transformer_output.html#ada1826533413d6d4ea78f22f7a800689":[6,0,2,48,4],
+"struct_urho3_d_1_1_asset_transformer_output.html#af35651d46c224ed7dfae84a21495f90b":[6,0,2,48,3],
 "struct_urho3_d_1_1_async_progress.html":[6,0,2,49],
 "struct_urho3_d_1_1_async_progress.html#a1039f5090bf35168547a465ece8a1ca0":[6,0,2,49,3],
 "struct_urho3_d_1_1_async_progress.html#a18248334617ad7d1975869836f20d425":[6,0,2,49,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX56 =
 "struct_urho3_d_1_1_bone.html#a721ee42d4668df4c9f4fcf6758d1f2be":[6,0,2,100,9],
 "struct_urho3_d_1_1_bone.html#a72c09159b4bfb37d47d2b65c63b6a8bc":[6,0,2,100,7],
 "struct_urho3_d_1_1_bone.html#a79cab97bf6f6d8d44ee9bf26237c540f":[6,0,2,100,2],
-"struct_urho3_d_1_1_bone.html#a81a1ce6f32473a71fe072911cc07e167":[6,0,2,100,1],
-"struct_urho3_d_1_1_bone.html#a99a28562709f72e4617e2206638c8ae4":[6,0,2,100,0]
+"struct_urho3_d_1_1_bone.html#a81a1ce6f32473a71fe072911cc07e167":[6,0,2,100,1]
 };
