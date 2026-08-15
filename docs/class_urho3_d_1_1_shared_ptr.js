@@ -1,6 +1,6 @@
 var class_urho3_d_1_1_shared_ptr =
 [
-    [ "SharedPtr", "class_urho3_d_1_1_shared_ptr.html#ac52da1b5470c12d1278ed8ebd0426a14", null ],
+    [ "SharedPtr", "class_urho3_d_1_1_shared_ptr.html#a5b90d52168639b22fa0beb25700d458c", null ],
     [ "SharedPtr", "class_urho3_d_1_1_shared_ptr.html#ae0d940336a0520ec7c38389b4805354a", null ],
     [ "SharedPtr", "class_urho3_d_1_1_shared_ptr.html#a0a51496b1d976b123b58b626654e0cf8", null ],
     [ "Detach", "class_urho3_d_1_1_shared_ptr.html#ab72712205a9886c12d77f06dc0155392", null ],
@@ -19,7 +19,8 @@ var class_urho3_d_1_1_shared_ptr =
     [ "operator==", "class_urho3_d_1_1_shared_ptr.html#a25a0a51b89a11076f8d75baccd7aad63", null ],
     [ "RefCountPtr", "class_urho3_d_1_1_shared_ptr.html#a944fef3b28397529152bd9fba6488a0b", null ],
     [ "Refs", "class_urho3_d_1_1_shared_ptr.html#ab4bc87d1c237e616279b514186bdf7f6", null ],
-    [ "Reset", "class_urho3_d_1_1_shared_ptr.html#a58967993143263cf2de43ea639f3da93", null ],
+    [ "Reset", "class_urho3_d_1_1_shared_ptr.html#ae30aa60a08f5c6ea25131363b5fa884c", null ],
+    [ "Reset", "class_urho3_d_1_1_shared_ptr.html#ae5832170889eb54cae47d03e723fd2ce", null ],
     [ "Reset", "class_urho3_d_1_1_shared_ptr.html#aec923ab06a632bdabd46a562387a1f9e", null ],
     [ "StaticCast", "class_urho3_d_1_1_shared_ptr.html#a8f2ec2111bbd25143a8a86301e1708b9", null ],
     [ "ToHash", "class_urho3_d_1_1_shared_ptr.html#aa00c8073a96805041e42de53b182d825", null ],

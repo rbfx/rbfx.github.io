@@ -76,24 +76,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abea299cb94c11f5707dde028dd7b84ad" id="r_abea299cb94c11f5707dde028dd7b84ad"><td class="memItemLeft" align="right" valign="top"><a id="abea299cb94c11f5707dde028dd7b84ad" name="abea299cb94c11f5707dde028dd7b84ad"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SharedPtrBase</b> (<a class="el" href="class_urho3_d_1_1_detail_1_1_shared_ptr_base.html">SharedPtrBase</a> &amp;&amp;rhs) noexcept</td></tr>
 <tr class="separator:abea299cb94c11f5707dde028dd7b84ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d53f2c645137646288cb50b420e197a" id="r_a0d53f2c645137646288cb50b420e197a"><td class="memItemLeft" align="right" valign="top"><a id="a0d53f2c645137646288cb50b420e197a" name="a0d53f2c645137646288cb50b420e197a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SharedPtrBase</b> (InterfaceType *ptr, <a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *refCounted) noexcept</td></tr>
-<tr class="separator:a0d53f2c645137646288cb50b420e197a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fd6b1bed561e951316148f9a676d3c7" id="r_a9fd6b1bed561e951316148f9a676d3c7"><td class="memItemLeft" align="right" valign="top"><a id="a9fd6b1bed561e951316148f9a676d3c7" name="a9fd6b1bed561e951316148f9a676d3c7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SharedPtrBase</b> (InterfaceType *ptr, const <a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *refCounted, bool addReference=true) noexcept</td></tr>
+<tr class="separator:a9fd6b1bed561e951316148f9a676d3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cc1455b1f9566ed5b15cc2276cd9247" id="r_a0cc1455b1f9566ed5b15cc2276cd9247"><td class="memItemLeft" align="right" valign="top"><a id="a0cc1455b1f9566ed5b15cc2276cd9247" name="a0cc1455b1f9566ed5b15cc2276cd9247"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Swap</b> (<a class="el" href="class_urho3_d_1_1_detail_1_1_shared_ptr_base.html">SharedPtrBase</a> &amp;rhs) noexcept</td></tr>
 <tr class="separator:a0cc1455b1f9566ed5b15cc2276cd9247"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6d9d67780dd66d61f1965bdbe5e80f1" id="r_ab6d9d67780dd66d61f1965bdbe5e80f1"><td class="memItemLeft" align="right" valign="top"><a id="ab6d9d67780dd66d61f1965bdbe5e80f1" name="ab6d9d67780dd66d61f1965bdbe5e80f1"></a>
-<a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetRefCounted</b> () const noexcept</td></tr>
-<tr class="separator:ab6d9d67780dd66d61f1965bdbe5e80f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a4fd409d42b37beb2e36aa604ba0186" id="r_a4a4fd409d42b37beb2e36aa604ba0186"><td class="memItemLeft" align="right" valign="top"><a id="a4a4fd409d42b37beb2e36aa604ba0186" name="a4a4fd409d42b37beb2e36aa604ba0186"></a>
+const <a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetRefCounted</b> () const noexcept</td></tr>
+<tr class="separator:a4a4fd409d42b37beb2e36aa604ba0186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f71f589b7c54d19e05d8170a3dc9b02" id="r_a9f71f589b7c54d19e05d8170a3dc9b02"><td class="memItemLeft" align="right" valign="top"><a id="a9f71f589b7c54d19e05d8170a3dc9b02" name="a9f71f589b7c54d19e05d8170a3dc9b02"></a>
+<a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetMutableRefCounted</b> () const noexcept</td></tr>
+<tr class="separator:a9f71f589b7c54d19e05d8170a3dc9b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1375a06745d0a02cee161500763df234" id="r_a1375a06745d0a02cee161500763df234"><td class="memItemLeft" align="right" valign="top"><a id="a1375a06745d0a02cee161500763df234" name="a1375a06745d0a02cee161500763df234"></a>
 InterfaceType *&#160;</td><td class="memItemRight" valign="bottom"><b>GetPointer</b> () const noexcept</td></tr>
 <tr class="separator:a1375a06745d0a02cee161500763df234"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a9f3e3bf504e21e2b910b35e7deff1447" id="r_a9f3e3bf504e21e2b910b35e7deff1447"><td class="memItemLeft" align="right" valign="top"><a id="a9f3e3bf504e21e2b910b35e7deff1447" name="a9f3e3bf504e21e2b910b35e7deff1447"></a>
-<a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>refCounted_</b> {}</td></tr>
-<tr class="separator:a9f3e3bf504e21e2b910b35e7deff1447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3618e902e94d0660a99996dac80bd076" id="r_a3618e902e94d0660a99996dac80bd076"><td class="memItemLeft" align="right" valign="top"><a id="a3618e902e94d0660a99996dac80bd076" name="a3618e902e94d0660a99996dac80bd076"></a>
+const <a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>refCounted_</b> {}</td></tr>
+<tr class="separator:a3618e902e94d0660a99996dac80bd076"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50b2cf8bb704eb642f3a2e445b6a1b2c" id="r_a50b2cf8bb704eb642f3a2e445b6a1b2c"><td class="memItemLeft" align="right" valign="top"><a id="a50b2cf8bb704eb642f3a2e445b6a1b2c" name="a50b2cf8bb704eb642f3a2e445b6a1b2c"></a>
 InterfaceType *&#160;</td><td class="memItemRight" valign="bottom"><b>ptr_</b> {}</td></tr>
 <tr class="separator:a50b2cf8bb704eb642f3a2e445b6a1b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>

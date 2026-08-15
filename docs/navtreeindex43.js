@@ -1,5 +1,14 @@
 var NAVTREEINDEX43 =
 {
+"class_urho3_d_1_1_software_model_animator.html#ae928e6d5b133e19f3fdd8cacc70b3bc2":[6,0,2,678,10],
+"class_urho3_d_1_1_sound.html":[6,0,2,680],
+"class_urho3_d_1_1_sound.html#a05f94c3eea78a3e333856bc6aa0a6bbf":[6,0,2,680,5],
+"class_urho3_d_1_1_sound.html#a08163e062b776dbadd324488b5a562b8":[6,0,2,680,31],
+"class_urho3_d_1_1_sound.html#a0c304c231a1afa27b531f500d250e467":[6,0,2,680,9],
+"class_urho3_d_1_1_sound.html#a0cf7afa055f07180e4a54c5469775374":[6,0,2,680,10],
+"class_urho3_d_1_1_sound.html#a0cffb726ad05a4aceb253bea58dfd732":[6,0,2,680,19],
+"class_urho3_d_1_1_sound.html#a0f62ee2cc6c11dc1a60826d9f924d218":[6,0,2,680,13],
+"class_urho3_d_1_1_sound.html#a1bedf7e6393391be6b1737c8aa1f3f10":[6,0,2,680,36],
 "class_urho3_d_1_1_sound.html#a2157297e7c7aa292e0ae92c2e5220708":[6,0,2,680,27],
 "class_urho3_d_1_1_sound.html#a3715d573723b77db787cd551392e8753":[6,0,2,680,2],
 "class_urho3_d_1_1_sound.html#a3d464fdd8674bd856ff05b09a16cf60a":[6,0,2,680,4],
@@ -240,14 +249,5 @@ var NAVTREEINDEX43 =
 "class_urho3_d_1_1_spline.html#afcdb84d33afd31139089a98079afe19d":[6,0,2,705,19],
 "class_urho3_d_1_1_spline_path.html":[6,0,2,706],
 "class_urho3_d_1_1_spline_path.html#a00d45d2c7265e402ffe4bd227a5e17f7":[6,0,2,706,31],
-"class_urho3_d_1_1_spline_path.html#a031b20cae996d5a4749432bc9a1c6e4c":[6,0,2,706,10],
-"class_urho3_d_1_1_spline_path.html#a050f0c34ef856d7794b007bb1bc6d5db":[6,0,2,706,3],
-"class_urho3_d_1_1_spline_path.html#a051c1e63ca5050fe0bbde8ef445c8390":[6,0,2,706,9],
-"class_urho3_d_1_1_spline_path.html#a08f9c12d8082aac787cd5f54eddd7648":[6,0,2,706,21],
-"class_urho3_d_1_1_spline_path.html#a0c940eaebcacf000d99883f747d03b1d":[6,0,2,706,19],
-"class_urho3_d_1_1_spline_path.html#a0f115ec8c2245008faf5687aca256a4e":[6,0,2,706,20],
-"class_urho3_d_1_1_spline_path.html#a165c2b395634f9a16e703be8210e8260":[6,0,2,706,0],
-"class_urho3_d_1_1_spline_path.html#a1787b12603686af3f61594477e66c20a":[6,0,2,706,13],
-"class_urho3_d_1_1_spline_path.html#a22a8527026eaa31a3cfe6088d5d249e3":[6,0,2,706,32],
-"class_urho3_d_1_1_spline_path.html#a2d992a829c82f184a356e029866d4b0e":[6,0,2,706,23]
+"class_urho3_d_1_1_spline_path.html#a031b20cae996d5a4749432bc9a1c6e4c":[6,0,2,706,10]
 };

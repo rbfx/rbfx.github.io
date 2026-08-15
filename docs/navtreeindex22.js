@@ -1,5 +1,13 @@
 var NAVTREEINDEX22 =
 {
+"class_urho3_d_1_1_input.html#afa54cd976f3a1f3c18cd26e154bb3723":[6,0,2,333,10],
+"class_urho3_d_1_1_input.html#afac78f422644d38e8f8c0108bb24496f":[6,0,2,333,7],
+"class_urho3_d_1_1_input.html#afc149a2445a4738786e5a5eb17bd1da2":[6,0,2,333,124],
+"class_urho3_d_1_1_input.html#afee26f2c5df67c89a3f48135fe86d6fe":[6,0,2,333,82],
+"class_urho3_d_1_1_input.html#aff433729003b493d2ce85d284c8d1773":[6,0,2,333,119],
+"class_urho3_d_1_1_input_map.html":[6,0,2,334],
+"class_urho3_d_1_1_input_map.html#a15a693ca113b3767911ebbbb7c5cb09a":[6,0,2,334,1],
+"class_urho3_d_1_1_input_map.html#a1f600eca510dfe8e0ae54edec92b23ab":[6,0,2,334,28],
 "class_urho3_d_1_1_input_map.html#a2aaccf89f4f4ecb21d16cacd3a440a36":[6,0,2,334,10],
 "class_urho3_d_1_1_input_map.html#a2d282ab02fef5a93681c9c97b49fd6b6":[6,0,2,334,32],
 "class_urho3_d_1_1_input_map.html#a2e3a6b65f9c89d76a5a7c0486c211739":[6,0,2,334,22],
@@ -241,13 +249,5 @@ var NAVTREEINDEX22 =
 "class_urho3_d_1_1_kinematic_character_controller.html#a5dc1f5404abc2ee949d9431737bfc375":[6,0,2,350,26],
 "class_urho3_d_1_1_kinematic_character_controller.html#a5dc7a9a294dc4285d90d92638d9d1803":[6,0,2,350,37],
 "class_urho3_d_1_1_kinematic_character_controller.html#a6a83cd0f1b75090ed504fc87147aef12":[6,0,2,350,27],
-"class_urho3_d_1_1_kinematic_character_controller.html#a70a02d90105b26100a7552cea0127f47":[6,0,2,350,49],
-"class_urho3_d_1_1_kinematic_character_controller.html#a712c220550224752da6da6969c13b5c4":[6,0,2,350,6],
-"class_urho3_d_1_1_kinematic_character_controller.html#a74a99c5f2516b1512db3595b0bcfbe20":[6,0,2,350,14],
-"class_urho3_d_1_1_kinematic_character_controller.html#a752e23152264f01edc46ff3fe4871523":[6,0,2,350,28],
-"class_urho3_d_1_1_kinematic_character_controller.html#a8ae4ba0ad6de303f22b0979b88d086ea":[6,0,2,350,18],
-"class_urho3_d_1_1_kinematic_character_controller.html#a8beff72cf3cda7818f7f357e98ca16f4":[6,0,2,350,33],
-"class_urho3_d_1_1_kinematic_character_controller.html#a8d127ed8923178466e77d6afa90a77a3":[6,0,2,350,11],
-"class_urho3_d_1_1_kinematic_character_controller.html#a9c70b9318c78df54322065f479892e2f":[6,0,2,350,45],
-"class_urho3_d_1_1_kinematic_character_controller.html#aa1a68c47e42e8e458444f7995f58f94c":[6,0,2,350,5]
+"class_urho3_d_1_1_kinematic_character_controller.html#a70a02d90105b26100a7552cea0127f47":[6,0,2,350,49]
 };

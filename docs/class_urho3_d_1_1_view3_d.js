@@ -20,9 +20,8 @@ var class_urho3_d_1_1_view3_d =
     [ "autoUpdate_", "class_urho3_d_1_1_view3_d.html#a86ee2cdcfb1e943b57a2ff253c3de8bf", null ],
     [ "cameraNode_", "class_urho3_d_1_1_view3_d.html#a39b05d5b6ee4cba4e04cd32d96e53a11", null ],
     [ "depthTexture_", "class_urho3_d_1_1_view3_d.html#a0bca07889a9b69e6f6b2a35710912a28", null ],
-    [ "ownScene_", "class_urho3_d_1_1_view3_d.html#ad1495d3721b479ffc54dbd1f147526d7", null ],
     [ "renderTexture_", "class_urho3_d_1_1_view3_d.html#a30b64f6c0b79d556a704f7e408862ff0", null ],
     [ "rttFormat_", "class_urho3_d_1_1_view3_d.html#a67f8e0b40c81dba847e2db2e7c657296", null ],
-    [ "scene_", "class_urho3_d_1_1_view3_d.html#ab297fa6628831011334e300ebecab208", null ],
+    [ "scene_", "class_urho3_d_1_1_view3_d.html#ae05c460146c839225032992f5d71fdc9", null ],
     [ "viewport_", "class_urho3_d_1_1_view3_d.html#ab92ddd0ba888db6b66ff175577b9a9b4", null ]
 ];

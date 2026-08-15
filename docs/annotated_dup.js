@@ -109,7 +109,11 @@ var annotated_dup =
         [ "SignalSubscription", "struct_urho3_d_1_1_detail_1_1_signal_subscription.html", "struct_urho3_d_1_1_detail_1_1_signal_subscription" ],
         [ "SoundEventListener", "class_urho3_d_1_1_detail_1_1_sound_event_listener.html", "class_urho3_d_1_1_detail_1_1_sound_event_listener" ],
         [ "StringHashCaster", "struct_urho3_d_1_1_detail_1_1_string_hash_caster.html", null ],
-        [ "VectorTraits", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", "struct_urho3_d_1_1_detail_1_1_vector_traits" ]
+        [ "VectorTraits", "struct_urho3_d_1_1_detail_1_1_vector_traits.html", "struct_urho3_d_1_1_detail_1_1_vector_traits" ],
+        [ "WeakPtrBase", "class_urho3_d_1_1_detail_1_1_weak_ptr_base.html", null ],
+        [ "WeakPtrBase< InterfaceType, InterfaceType, void >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base_3_01_interface_type_00_01_interface_type_00_01void_01_4.html", null ],
+        [ "WeakPtrBase< InterfaceType, RefCounted, ea::enable_if_t<!IsRefCountedType< InterfaceType > > >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base_3_01_interface_type_00_01_ref_counted_00_01ea_1_1enab9adf9b3fdafa57a93a2b585ed8407c26.html", null ],
+        [ "WeakPtrRefCountBase", "class_urho3_d_1_1_detail_1_1_weak_ptr_ref_count_base.html", "class_urho3_d_1_1_detail_1_1_weak_ptr_ref_count_base" ]
       ] ],
       [ "ParticleGraphNodes", null, [
         [ "Add", "class_urho3_d_1_1_particle_graph_nodes_1_1_add.html", "class_urho3_d_1_1_particle_graph_nodes_1_1_add" ],

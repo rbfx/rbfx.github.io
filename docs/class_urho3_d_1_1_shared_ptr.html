@@ -102,10 +102,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5dc8a28cd21e35f57f8dcdb8f756c1c3" id="r_a5dc8a28cd21e35f57f8dcdb8f756c1c3"><td class="memItemLeft" align="right" valign="top"><a id="a5dc8a28cd21e35f57f8dcdb8f756c1c3" name="a5dc8a28cd21e35f57f8dcdb8f756c1c3"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SharedPtr</b> (<a class="el" href="class_urho3_d_1_1_shared_ptr.html">ThisType</a> &amp;&amp;rhs) noexcept=default</td></tr>
 <tr class="separator:a5dc8a28cd21e35f57f8dcdb8f756c1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac52da1b5470c12d1278ed8ebd0426a14" id="r_ac52da1b5470c12d1278ed8ebd0426a14"><td class="memItemLeft" align="right" valign="top"><a id="ac52da1b5470c12d1278ed8ebd0426a14" name="ac52da1b5470c12d1278ed8ebd0426a14"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SharedPtr</b> (InterfaceType *ptr, <a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *refCounted) noexcept</td></tr>
-<tr class="memdesc:ac52da1b5470c12d1278ed8ebd0426a14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with explicit reference counter. <br /></td></tr>
-<tr class="separator:ac52da1b5470c12d1278ed8ebd0426a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b90d52168639b22fa0beb25700d458c" id="r_a5b90d52168639b22fa0beb25700d458c"><td class="memItemLeft" align="right" valign="top"><a id="a5b90d52168639b22fa0beb25700d458c" name="a5b90d52168639b22fa0beb25700d458c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SharedPtr</b> (InterfaceType *ptr, const <a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *refCounted, bool addReference=true) noexcept</td></tr>
+<tr class="memdesc:a5b90d52168639b22fa0beb25700d458c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with explicit reference counter. <br /></td></tr>
+<tr class="separator:a5b90d52168639b22fa0beb25700d458c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0d940336a0520ec7c38389b4805354a" id="r_ae0d940336a0520ec7c38389b4805354a"><td class="memTemplParams" colspan="2"><a id="ae0d940336a0520ec7c38389b4805354a" name="ae0d940336a0520ec7c38389b4805354a"></a>
 template&lt;class U1 , class U2 &gt; </td></tr>
 <tr class="memitem:ae0d940336a0520ec7c38389b4805354a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SharedPtr</b> (const <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; U1, U2 &gt; &amp;rhs) noexcept</td></tr>
@@ -168,16 +168,17 @@ template&lt;class U1 , class U2 &gt; </td></tr>
 <tr class="separator:a282d5a00d9929fb6d91be9f645126c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae30aa60a08f5c6ea25131363b5fa884c" id="r_ae30aa60a08f5c6ea25131363b5fa884c"><td class="memItemLeft" align="right" valign="top"><a id="ae30aa60a08f5c6ea25131363b5fa884c" name="ae30aa60a08f5c6ea25131363b5fa884c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> () noexcept</td></tr>
+<tr class="memdesc:ae30aa60a08f5c6ea25131363b5fa884c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset. <br /></td></tr>
 <tr class="separator:ae30aa60a08f5c6ea25131363b5fa884c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec923ab06a632bdabd46a562387a1f9e" id="r_aec923ab06a632bdabd46a562387a1f9e"><td class="memTemplParams" colspan="2"><a id="aec923ab06a632bdabd46a562387a1f9e" name="aec923ab06a632bdabd46a562387a1f9e"></a>
 template&lt;class U &gt; </td></tr>
 <tr class="memitem:aec923ab06a632bdabd46a562387a1f9e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Reset</b> (U *ptr) noexcept</td></tr>
 <tr class="memdesc:aec923ab06a632bdabd46a562387a1f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset with another pointer. <br /></td></tr>
 <tr class="separator:aec923ab06a632bdabd46a562387a1f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58967993143263cf2de43ea639f3da93" id="r_a58967993143263cf2de43ea639f3da93"><td class="memItemLeft" align="right" valign="top"><a id="a58967993143263cf2de43ea639f3da93" name="a58967993143263cf2de43ea639f3da93"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> (InterfaceType *ptr, <a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *refCounted) noexcept</td></tr>
-<tr class="memdesc:a58967993143263cf2de43ea639f3da93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset with another pointers. <br /></td></tr>
-<tr class="separator:a58967993143263cf2de43ea639f3da93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5832170889eb54cae47d03e723fd2ce" id="r_ae5832170889eb54cae47d03e723fd2ce"><td class="memItemLeft" align="right" valign="top"><a id="ae5832170889eb54cae47d03e723fd2ce" name="ae5832170889eb54cae47d03e723fd2ce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> (InterfaceType *ptr, const <a class="el" href="class_urho3_d_1_1_ref_counted.html">RefCounted</a> *refCounted) noexcept</td></tr>
+<tr class="memdesc:ae5832170889eb54cae47d03e723fd2ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset with another pointers. <br /></td></tr>
+<tr class="separator:ae5832170889eb54cae47d03e723fd2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab72712205a9886c12d77f06dc0155392" id="r_ab72712205a9886c12d77f06dc0155392"><td class="memItemLeft" align="right" valign="top"><a id="ab72712205a9886c12d77f06dc0155392" name="ab72712205a9886c12d77f06dc0155392"></a>
 InterfaceType *&#160;</td><td class="memItemRight" valign="bottom"><b>Detach</b> () noexcept</td></tr>
 <tr class="memdesc:ab72712205a9886c12d77f06dc0155392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detach without destroying the object even if the refcount goes zero. To be used for scripting language interoperation. <br /></td></tr>

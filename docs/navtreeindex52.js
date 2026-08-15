@@ -1,5 +1,14 @@
 var NAVTREEINDEX52 =
 {
+"class_urho3_d_1_1_variant.html#a4b86c3517d4a2b9e11d25c1349c1ad05":[6,0,2,810,21],
+"class_urho3_d_1_1_variant.html#a4b9e5d9c9e907c062be0a6ba07115a16":[6,0,2,810,138],
+"class_urho3_d_1_1_variant.html#a4be6d9a8bb8fe9cf9707d26de557b98d":[6,0,2,810,215],
+"class_urho3_d_1_1_variant.html#a4c25a635828bc615b6256d04ead83fe8":[6,0,2,810,38],
+"class_urho3_d_1_1_variant.html#a4f3a2804b3322924b1fa996fd7171e48":[6,0,2,810,87],
+"class_urho3_d_1_1_variant.html#a528d328c43d5e73a4345f70d6a9aa56b":[6,0,2,810,3],
+"class_urho3_d_1_1_variant.html#a53cc25f501f5768badb092e4ff5a5402":[6,0,2,810,37],
+"class_urho3_d_1_1_variant.html#a557bbe5b4e2670719178ba7e6eae67a5":[6,0,2,810,157],
+"class_urho3_d_1_1_variant.html#a55b4575b126ea44f9948222c1ebbdd85":[6,0,2,810,140],
 "class_urho3_d_1_1_variant.html#a57cced11b22cd128188f3ee8a5cafdcf":[6,0,2,810,159],
 "class_urho3_d_1_1_variant.html#a5832877eaff6bf20144cdb3081d2efce":[6,0,2,810,205],
 "class_urho3_d_1_1_variant.html#a5a24df754742e3175869388fd131c233":[6,0,2,810,84],
@@ -240,14 +249,5 @@ var NAVTREEINDEX52 =
 "class_urho3_d_1_1_vector_buffer.html#aa17c4b1dff931672067379005fed5f44":[6,0,2,817,10],
 "class_urho3_d_1_1_vector_buffer.html#ab58443aaa831ae9e7558c6df149c07d6":[6,0,2,817,0],
 "class_urho3_d_1_1_vector_buffer.html#aced7c0be64af4ebd5ecc8078a9821d93":[6,0,2,817,17],
-"class_urho3_d_1_1_vector_buffer.html#adb5bbf86f5e5ad3ff0ed0bc476bf7926":[6,0,2,817,6],
-"class_urho3_d_1_1_vector_buffer.html#adf9c373da31183bfead207febfcefa23":[6,0,2,817,12],
-"class_urho3_d_1_1_vertex_buffer.html":[6,0,2,819],
-"class_urho3_d_1_1_vertex_buffer.html#a0514909dcaf422686a4212ff75de324a":[6,0,2,819,23],
-"class_urho3_d_1_1_vertex_buffer.html#a0abc2dabdf3acb25b56041bf7adefd7b":[6,0,2,819,30],
-"class_urho3_d_1_1_vertex_buffer.html#a0d2ad39697b18237ead08ca754776e1d":[6,0,2,819,33],
-"class_urho3_d_1_1_vertex_buffer.html#a1269d0a2361e1017fe15fd00880ea842":[6,0,2,819,28],
-"class_urho3_d_1_1_vertex_buffer.html#a18cac8752ebe9c88af66244b95299e3e":[6,0,2,819,21],
-"class_urho3_d_1_1_vertex_buffer.html#a235b3de4089d0f09fed910672f4eb8fd":[6,0,2,819,15],
-"class_urho3_d_1_1_vertex_buffer.html#a29793b5ff363c8054095b7afbaa30197":[6,0,2,819,1]
+"class_urho3_d_1_1_vector_buffer.html#adb5bbf86f5e5ad3ff0ed0bc476bf7926":[6,0,2,817,6]
 };
