@@ -1161,7 +1161,7 @@ var ___pthread_create_js = (pthread_ptr, attr, startRoutine, arg) => {
   // Synchronously proxy the thread creation to main thread if possible. If we
   // need to transfer ownership of objects, then proxy asynchronously via
   // postMessage.
-  if (ENVIRONMENT_IS_PTHREAD && (transferList.length === 0 || error)) {
+  if (ENVIRONMENT_IS_PTHREAD && (!transferList.length || error)) {
     return pthreadCreateProxied(pthread_ptr, attr, startRoutine, arg);
   }
   // If on the main thread, and accessing Canvas/OffscreenCanvas failed, abort
@@ -1468,7 +1468,7 @@ var TTY = {
         } catch (e) {
           throw new FS.ErrnoError(29);
         }
-        if (result === undefined && bytesRead === 0) {
+        if (result === undefined && !bytesRead) {
           throw new FS.ErrnoError(6);
         }
         if (result === null || result === undefined) break;
@@ -1792,7 +1792,7 @@ var MEMFS = {
       if (canOwn) {
         node.contents = buffer.subarray(offset, offset + length);
         node.usedBytes = length;
-      } else if (node.usedBytes === 0 && position === 0) {
+      } else if (!node.usedBytes && !position) {
         // If this is a simple first write to an empty file, do a fast set since we don't need to care about old data.
         node.contents = buffer.slice(offset, offset + length);
         node.usedBytes = length;
@@ -3501,7 +3501,7 @@ var FS = {
     // to write to file opened in read-only mode with MAP_PRIVATE flag,
     // as all modifications will be visible only in the memory of
     // the current process.
-    if ((prot & 2) !== 0 && (flags & 2) === 0 && (stream.flags & 2097155) !== 2) {
+    if ((prot & 2) && !(flags & 2) && (stream.flags & 2097155) !== 2) {
       throw new FS.ErrnoError(2);
     }
     if ((stream.flags & 2097155) === 1) {
@@ -3594,7 +3594,7 @@ var FS = {
     // use a buffer to avoid overhead of individual crypto calls per byte
     var randomBuffer = new Uint8Array(1024), randomLeft = 0;
     var randomByte = () => {
-      if (randomLeft === 0) {
+      if (!randomLeft) {
         randomFill(randomBuffer);
         randomLeft = randomBuffer.byteLength;
       }
@@ -3814,7 +3814,7 @@ var FS = {
           } catch (e) {
             throw new FS.ErrnoError(29);
           }
-          if (result === undefined && bytesRead === 0) {
+          if (result === undefined && !bytesRead) {
             throw new FS.ErrnoError(6);
           }
           if (result === null || result === undefined) break;
@@ -4065,6 +4065,8 @@ var SOCKFS = {
       throw new FS.ErrnoError(28);
     }
     var streaming = type == 1;
+    // The IPPROTO_TCP protocol guard only applies to INET stream sockets; unix
+    // stream sockets use protocol 0.
     if (streaming && protocol && protocol != 6) {
       throw new FS.ErrnoError(66);
     }
@@ -4680,7 +4682,7 @@ var inetNtop6 = ints => {
   var v4part = "";
   // check if the 10 high-order bytes are all zeros (first 5 words)
   for (i = 0; i < 5; i++) {
-    if (parts[i] !== 0) {
+    if (parts[i]) {
       hasipv4 = false;
       break;
     }
@@ -4695,7 +4697,7 @@ var inetNtop6 = ints => {
       return str;
     }
     // IPv4-compatible IPv6 address if 16-bit value (bytes 11 and 12) == 0x0000 (6th word)
-    if (parts[5] === 0) {
+    if (!parts[5]) {
       str = "::";
       // special case IPv6 addresses
       if (v4part === "0.0.0.0") v4part = "";
@@ -4709,7 +4711,7 @@ var inetNtop6 = ints => {
   // Handle all other IPv6 addresses
   // first run to find the longest contiguous zero words
   for (word = 0; word < 8; word++) {
-    if (parts[word] === 0) {
+    if (!parts[word]) {
       if (word - lastzero > 1) {
         len = 0;
       }
@@ -4724,10 +4726,10 @@ var inetNtop6 = ints => {
   for (word = 0; word < 8; word++) {
     if (longest > 1) {
       // compress contiguous zeros - to produce '::'
-      if (parts[word] === 0 && word >= zstart && word < (zstart + longest)) {
+      if (!parts[word] && word >= zstart && word < (zstart + longest)) {
         if (word === zstart) {
           str += ":";
-          if (zstart === 0) str += ":";
+          if (!zstart) str += ":";
         }
         continue;
       }
@@ -5061,7 +5063,7 @@ HEAPU8), outPtr, maxBytesToWrite);
 function ___syscall_getcwd(buf, size) {
   if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(6, 0, 1, buf, size);
   try {
-    if (size === 0) return -28;
+    if (!size) return -28;
     var cwd = FS.cwd();
     var cwdLengthInBytes = lengthBytesUTF8(cwd) + 1;
     if (size < cwdLengthInBytes) return -68;
@@ -5314,7 +5316,10 @@ var zeroMemory = (ptr, size) => (growMemViews(), HEAPU8).fill(0, ptr, ptr + size
 /** @param {number=} addrlen */ var writeSockaddr = (sa, family, addr, port, addrlen) => {
   switch (family) {
    case 2:
-    addr = inetPton4(addr);
+    // The address may still be an unresolved hostname (e.g. a peer name
+    // recorded at connect time); map it to its (possibly fake) IP here so
+    // callers can pass names and IPs alike.
+    addr = inetPton4(DNS.lookup_name(addr));
     zeroMemory(sa, 16);
     if (addrlen) {
       (growMemViews(), HEAP32)[((addrlen) >> 2)] = 16;
@@ -5325,7 +5330,7 @@ var zeroMemory = (ptr, size) => (growMemViews(), HEAPU8).fill(0, ptr, ptr + size
     break;
 
    case 10:
-    addr = inetPton6(addr);
+    addr = inetPton6(DNS.lookup_name(addr));
     zeroMemory(sa, 28);
     if (addrlen) {
       (growMemViews(), HEAP32)[((addrlen) >> 2)] = 28;
@@ -5352,7 +5357,7 @@ function ___syscall_recvfrom(fd, buf, len, flags, addr, alen) {
     if (!msg) return 0;
     // socket is closed
     if (addr) {
-      var errno = writeSockaddr(addr, sock.family, DNS.lookup_name(msg.addr), msg.port, alen);
+      var errno = writeSockaddr(addr, sock.family, msg.addr, msg.port, alen);
     }
     (growMemViews(), HEAPU8).set(msg.buffer, buf);
     return msg.buffer.byteLength;
@@ -6785,8 +6790,8 @@ var Browser = {
           var ret = "";
           var leftchar = 0;
           var leftbits = 0;
-          for (var i = 0; i < data.length; i++) {
-            leftchar = (leftchar << 8) | data[i];
+          for (var byte of data) {
+            leftchar = (leftchar << 8) | byte;
             leftbits += 8;
             while (leftbits >= 6) {
               var curr = (leftchar >> (leftbits - 6)) & 63;
@@ -7296,7 +7301,7 @@ var GL = {
   },
   MAX_TEMP_BUFFER_SIZE: 2097152,
   numTempVertexBuffersPerSize: 64,
-  log2ceilLookup: i => 32 - Math.clz32(i === 0 ? 0 : i - 1),
+  log2ceilLookup: i => 32 - Math.clz32(i ? i - 1 : 0),
   generateTempBuffers: (quads, context) => {
     var largestIndex = GL.log2ceilLookup(GL.MAX_TEMP_BUFFER_SIZE);
     context.tempVertexBufferCounters1 = [];
@@ -8083,7 +8088,7 @@ var MainLoop = {
   fakeRequestAnimationFrame(func) {
     // try to keep 60fps between calls to here
     var now = Date.now();
-    if (MainLoop.nextRAF === 0) {
+    if (!MainLoop.nextRAF) {
       MainLoop.nextRAF = now + 1e3 / 60;
     } else {
       while (now + 2 >= MainLoop.nextRAF) {
@@ -8262,7 +8267,7 @@ var JSEvents = {
   deferCall(targetFunction, precedence, argsList) {
     function arraysHaveEqualContent(arrA, arrB) {
       if (arrA.length != arrB.length) return false;
-      for (var i in arrA) {
+      for (var i = 0; i < arrA.length; i++) {
         if (arrA[i] != arrB[i]) return false;
       }
       return true;
@@ -8463,7 +8468,7 @@ var setCanvasElementSizeCallingThread = (target, width, height) => {
     if (canvas.GLctxObject?.GLctx) {
       var prevViewport = canvas.GLctxObject.GLctx.getParameter(2978);
       // TODO: Perhaps autoResizeViewport should only be true if FBO 0 is currently active?
-      autoResizeViewport = (prevViewport[0] === 0 && prevViewport[1] === 0 && prevViewport[2] === canvas.width && prevViewport[3] === canvas.height);
+      autoResizeViewport = (!prevViewport[0] && !prevViewport[1] && prevViewport[2] === canvas.width && prevViewport[3] === canvas.height);
     }
     canvas.width = width;
     canvas.height = height;
@@ -12532,7 +12537,7 @@ function _fd_seek(fd, offset, whence, newOffset) {
     var stream = SYSCALLS.getStreamFromFD(fd);
     FS.llseek(stream, offset, whence);
     (growMemViews(), HEAP64)[((newOffset) >> 3)] = BigInt(stream.position);
-    if (stream.getdents && offset === 0 && whence === 0) stream.getdents = null;
+    if (stream.getdents && !offset && whence === 0) stream.getdents = null;
     // reset readdir state
     return 0;
   } catch (e) {
@@ -13443,7 +13448,7 @@ Module["FS_createLazyFile"] = FS_createLazyFile;
 var proxiedFunctionTable = [ _proc_exit, exitOnMainThread, pthreadCreateProxied, ___syscall_bind, ___syscall_fcntl64, ___syscall_fstat64, ___syscall_getcwd, ___syscall_getdents64, ___syscall_ioctl, ___syscall_lstat64, ___syscall_mkdirat, ___syscall_newfstatat, ___syscall_openat, ___syscall_recvfrom, ___syscall_rmdir, ___syscall_sendto, ___syscall_setsockopt, ___syscall_socket, ___syscall_stat64, ___syscall_unlinkat, _eglBindAPI, _eglChooseConfig, _eglCreateContext, _eglCreateWindowSurface, _eglDestroyContext, _eglDestroySurface, _eglGetConfigAttrib, _eglGetDisplay, _eglGetError, _eglInitialize, _eglMakeCurrent, _eglQueryString, _eglSwapBuffers, _eglSwapInterval, _eglTerminate, _eglWaitClient, _eglWaitNative, _emscripten_exit_fullscreen, getCanvasSizeMainThread, setCanvasElementSizeMainThread, _emscripten_exit_pointerlock, _emscripten_get_device_pixel_ratio, _emscripten_get_element_css_size, _emscripten_get_gamepad_status, _emscripten_get_num_gamepads, _emscripten_get_screen_size, _emscripten_request_fullscreen_strategy, _emscripten_request_pointerlock, _emscripten_sample_gamepad_data, _emscripten_set_beforeunload_callback_on_thread, _emscripten_set_blur_callback_on_thread, _emscripten_set_element_css_size, _emscripten_set_focus_callback_on_thread, _emscripten_set_fullscreenchange_callback_on_thread, _emscripten_set_gamepadconnected_callback_on_thread, _emscripten_set_gamepaddisconnected_callback_on_thread, _emscripten_set_keydown_callback_on_thread, _emscripten_set_keypress_callback_on_thread, _emscripten_set_keyup_callback_on_thread, _emscripten_set_mousedown_callback_on_thread, _emscripten_set_mouseenter_callback_on_thread, _emscripten_set_mouseleave_callback_on_thread, _emscripten_set_mousemove_callback_on_thread, _emscripten_set_mouseup_callback_on_thread, _emscripten_set_pointerlockchange_callback_on_thread, _emscripten_set_resize_callback_on_thread, _emscripten_set_touchcancel_callback_on_thread, _emscripten_set_touchend_callback_on_thread, _emscripten_set_touchmove_callback_on_thread, _emscripten_set_touchstart_callback_on_thread, _emscripten_set_visibilitychange_callback_on_thread, _emscripten_set_wheel_callback_on_thread, _emscripten_set_window_title, _environ_get, _environ_sizes_get, _fd_close, _fd_read, _fd_seek, _fd_write ];
 
 var ASM_CONSTS = {
-  1949925: $0 => {
+  1957861: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -13451,10 +13456,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1950150: ($0, $1) => {
+  1958086: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1950207: () => {
+  1958143: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -13462,7 +13467,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1950354: () => {
+  1958290: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -13470,7 +13475,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1950588: $0 => {
+  1958524: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -13492,11 +13497,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1951081: () => {
+  1959017: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1951149: ($0, $1, $2, $3) => {
+  1959085: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13537,7 +13542,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1952801: ($0, $1, $2, $3) => {
+  1960737: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -13549,7 +13554,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1953211: ($0, $1) => {
+  1961147: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -13568,7 +13573,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1953816: ($0, $1) => {
+  1961752: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -13581,7 +13586,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1954296: $0 => {
+  1962232: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13619,7 +13624,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1955468: ($0, $1, $2) => {
+  1963404: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -13690,7 +13695,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1956937: ($0, $1, $2, $3, $4) => {
+  1964873: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -13727,19 +13732,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1957926: $0 => {
+  1965862: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1958009: () => {
+  1965945: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1958078: () => window.innerWidth,
-  1958108: () => window.innerHeight,
-  1958139: $0 => {
+  1966014: () => window.innerWidth,
+  1966044: () => window.innerHeight,
+  1966075: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
