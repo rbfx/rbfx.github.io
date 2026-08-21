@@ -1,5 +1,8 @@
 var NAVTREEINDEX60 =
 {
+"struct_urho3_d_1_1_network_frame_sync.html":[6,0,2,448],
+"struct_urho3_d_1_1_network_frame_sync.html#a4157c5f18ac1fbfe4f092fa389ce1a9f":[6,0,2,448,0],
+"struct_urho3_d_1_1_network_frame_sync.html#a91097de37e7c1a30acea081eb45876f3":[6,0,2,448,1],
 "struct_urho3_d_1_1_network_setting.html":[6,0,2,452],
 "struct_urho3_d_1_1_network_value_sampler_1_1_interpolation_cache.html":[6,0,2,455,0],
 "struct_urho3_d_1_1_network_value_sampler_1_1_time_and_value.html":[6,0,2,455,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX60 =
 "struct_urho3_d_1_1_referenced_component_registry_base_1_1_registry_entry.html":[6,0,2,577,0],
 "struct_urho3_d_1_1_reflection_probe_b_v_h.html":[6,0,2,579],
 "struct_urho3_d_1_1_reflection_probe_data.html":[6,0,2,580],
-"struct_urho3_d_1_1_reflection_probe_data.html#a055ed14f776c0982c8371e497d876778":[6,0,2,580,0],
-"struct_urho3_d_1_1_reflection_probe_data.html#a4271bcb057a54b9dac792913d34d301f":[6,0,2,580,1],
-"struct_urho3_d_1_1_reflection_probe_data.html#aad0c31bca9d06b6af039baafe481f033":[6,0,2,580,3],
-"struct_urho3_d_1_1_reflection_probe_data.html#abd7d5ee92c7e15757d640cc0c83c72d7":[6,0,2,580,2]
+"struct_urho3_d_1_1_reflection_probe_data.html#a055ed14f776c0982c8371e497d876778":[6,0,2,580,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX44 =
 {
+"class_urho3_d_1_1_spline_path.html#a031b20cae996d5a4749432bc9a1c6e4c":[6,0,2,706,10],
 "class_urho3_d_1_1_spline_path.html#a050f0c34ef856d7794b007bb1bc6d5db":[6,0,2,706,3],
 "class_urho3_d_1_1_spline_path.html#a051c1e63ca5050fe0bbde8ef445c8390":[6,0,2,706,9],
 "class_urho3_d_1_1_spline_path.html#a08f9c12d8082aac787cd5f54eddd7648":[6,0,2,706,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX44 =
 "class_urho3_d_1_1_static_model.html#ae619629d50826ff99d6cf406f366d4c9":[6,0,2,713,29],
 "class_urho3_d_1_1_static_model.html#af8a54f9e53ee7deb02f75db96fb4c662":[6,0,2,713,26],
 "class_urho3_d_1_1_static_model.html#af9cd9185b9ddf464a6aea921f3d07f60":[6,0,2,713,44],
-"class_urho3_d_1_1_static_model.html#afc3208be64a6a9cedbbebf69950aa5bc":[6,0,2,713,23],
-"class_urho3_d_1_1_static_model_for_lightmap.html":[6,0,2,714]
+"class_urho3_d_1_1_static_model.html#afc3208be64a6a9cedbbebf69950aa5bc":[6,0,2,713,23]
 };

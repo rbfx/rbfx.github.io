@@ -10,6 +10,7 @@ var class_urho3_d_1_1_image_cube =
     [ "GetImages", "class_urho3_d_1_1_image_cube.html#a52e6e771eb1b18947eafe3a3e0d19f3d", null ],
     [ "GetOrCreateSphericalHarmonics", "class_urho3_d_1_1_image_cube.html#adec68a47097756f93379ca81a4573e3d", null ],
     [ "GetParametersXML", "class_urho3_d_1_1_image_cube.html#ac66b18ff43e0c394917c86e18886d7ff", null ],
+    [ "GetSphericalHarmonics", "class_urho3_d_1_1_image_cube.html#afee999caabef14ba50dee7ddac4b7b9b", null ],
     [ "GetSphericalHarmonicsMipLevel", "class_urho3_d_1_1_image_cube.html#a2310f924227e924013e82659eecee6b3", null ],
     [ "ProjectDirectionOnFace", "class_urho3_d_1_1_image_cube.html#a132f17a8cae62c9cc60311e57138f57d", null ],
     [ "ProjectDirectionOnFaceTexel", "class_urho3_d_1_1_image_cube.html#aa85bfb79ac62ae836890f68cc33eb07e", null ],
