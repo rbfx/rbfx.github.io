@@ -787,16 +787,16 @@ var PThread = {
     PThread.unusedWorkers = [];
     PThread.pthreads = {};
   },
+  clearMailboxAwait: pthread_ptr => {
+    if (!waitAsyncPolyfilled) {
+      Atomics.notify((growMemViews(), HEAP32), ((pthread_ptr) >> 2));
+    }
+  },
   terminateRuntime: () => {
     PThread.terminateAllThreads();
     var pthread_ptr = _pthread_self();
     ___set_thread_state(0, 0, 0, 1);
-    if (!waitAsyncPolyfilled) {
-      // Break the waitAsync loop.  Note that checkMailbox will not
-      // re-register since the `___set_thread_state` above causes _pthread_self
-      // to return 0.
-      Atomics.notify((growMemViews(), HEAP32), ((pthread_ptr) >> 2));
-    }
+    PThread.clearMailboxAwait(pthread_ptr);
   },
   returnWorkerToPool: worker => {
     // We don't want to run main thread queued calls here, since we are doing
@@ -814,6 +814,10 @@ var PThread = {
     // Detach the worker from the pthread object, and return it to the
     // worker pool as an unused worker.
     worker.pthread_ptr = 0;
+    // Clear any pending waitAsync waiter armed on this thread's struct
+    // BEFORE freeing the memory so that memory recycled by malloc in another
+    // thread will not have a window where a stale async waiter is still active.
+    PThread.clearMailboxAwait(pthread_ptr);
     // Finally, free the underlying (and now-unused) pthread structure in
     // linear memory.
     __emscripten_thread_free_data(pthread_ptr);
@@ -1136,12 +1140,16 @@ class ExceptionInfo {
 
 var uncaughtExceptionCount = 0;
 
+var __Unwind_RaiseException = ex => {
+  abort();
+};
+
 var ___cxa_throw = (ptr, type, destructor) => {
   var info = new ExceptionInfo(ptr);
   // Initialize ExceptionInfo content after it was allocated in __cxa_allocate_exception.
   info.init(type, destructor);
   uncaughtExceptionCount++;
-  abort();
+  __Unwind_RaiseException(ptr);
 };
 
 function pthreadCreateProxied(pthread_ptr, attr, startRoutine, arg) {
@@ -7961,7 +7969,6 @@ function _eglSwapBuffers(dpy, surface) {
   var thisMainLoopId = MainLoop.currentlyRunningMainloop;
   function checkIsRunning() {
     if (thisMainLoopId < MainLoop.currentlyRunningMainloop) {
-      runtimeKeepalivePop();
       maybeExit();
       return false;
     }
@@ -7969,10 +7976,7 @@ function _eglSwapBuffers(dpy, surface) {
   }
   // We create the loop runner here but it is not actually running until
   // _emscripten_set_main_loop_timing is called (which might happen at a
-  // later time).  This member signifies that the current runner has not
-  // yet been started so that we can call runtimeKeepalivePush when it
-  // gets its timing set for the first time.
-  MainLoop.running = false;
+  // later time).
   MainLoop.runner = function MainLoop_runner() {
     if (ABORT) return;
     if (MainLoop.queue.length > 0) {
@@ -8028,10 +8032,9 @@ function _eglSwapBuffers(dpy, surface) {
 };
 
 var MainLoop = {
-  running: false,
+  func: null,
   scheduler: null,
   currentlyRunningMainloop: 0,
-  func: null,
   arg: 0,
   timingMode: 0,
   timingValue: 0,
@@ -8040,9 +8043,12 @@ var MainLoop = {
   preMainLoop: [],
   postMainLoop: [],
   pause() {
-    MainLoop.scheduler = null;
-    // Incrementing this signals the previous main loop that it's now become old, and it must return.
-    MainLoop.currentlyRunningMainloop++;
+    if (MainLoop.scheduler) {
+      MainLoop.scheduler = null;
+      // Incrementing this signals the previous main loop that it's now become old, and it must return.
+      MainLoop.currentlyRunningMainloop++;
+      runtimeKeepalivePop();
+    }
   },
   resume() {
     MainLoop.currentlyRunningMainloop++;
@@ -8114,9 +8120,10 @@ var _emscripten_set_main_loop_timing = (mode, value) => {
   if (!MainLoop.func) {
     return 1;
   }
-  if (!MainLoop.running) {
+  // If there is no existing scheduler then we are transitioning from
+  // inactive to active and we add to runtime keepalive counter.
+  if (!MainLoop.scheduler) {
     runtimeKeepalivePush();
-    MainLoop.running = true;
   }
   if (mode == 0) {
     MainLoop.scheduler = function MainLoop_scheduler_setTimeout() {
@@ -13448,7 +13455,7 @@ Module["FS_createLazyFile"] = FS_createLazyFile;
 var proxiedFunctionTable = [ _proc_exit, exitOnMainThread, pthreadCreateProxied, ___syscall_bind, ___syscall_fcntl64, ___syscall_fstat64, ___syscall_getcwd, ___syscall_getdents64, ___syscall_ioctl, ___syscall_lstat64, ___syscall_mkdirat, ___syscall_newfstatat, ___syscall_openat, ___syscall_recvfrom, ___syscall_rmdir, ___syscall_sendto, ___syscall_setsockopt, ___syscall_socket, ___syscall_stat64, ___syscall_unlinkat, _eglBindAPI, _eglChooseConfig, _eglCreateContext, _eglCreateWindowSurface, _eglDestroyContext, _eglDestroySurface, _eglGetConfigAttrib, _eglGetDisplay, _eglGetError, _eglInitialize, _eglMakeCurrent, _eglQueryString, _eglSwapBuffers, _eglSwapInterval, _eglTerminate, _eglWaitClient, _eglWaitNative, _emscripten_exit_fullscreen, getCanvasSizeMainThread, setCanvasElementSizeMainThread, _emscripten_exit_pointerlock, _emscripten_get_device_pixel_ratio, _emscripten_get_element_css_size, _emscripten_get_gamepad_status, _emscripten_get_num_gamepads, _emscripten_get_screen_size, _emscripten_request_fullscreen_strategy, _emscripten_request_pointerlock, _emscripten_sample_gamepad_data, _emscripten_set_beforeunload_callback_on_thread, _emscripten_set_blur_callback_on_thread, _emscripten_set_element_css_size, _emscripten_set_focus_callback_on_thread, _emscripten_set_fullscreenchange_callback_on_thread, _emscripten_set_gamepadconnected_callback_on_thread, _emscripten_set_gamepaddisconnected_callback_on_thread, _emscripten_set_keydown_callback_on_thread, _emscripten_set_keypress_callback_on_thread, _emscripten_set_keyup_callback_on_thread, _emscripten_set_mousedown_callback_on_thread, _emscripten_set_mouseenter_callback_on_thread, _emscripten_set_mouseleave_callback_on_thread, _emscripten_set_mousemove_callback_on_thread, _emscripten_set_mouseup_callback_on_thread, _emscripten_set_pointerlockchange_callback_on_thread, _emscripten_set_resize_callback_on_thread, _emscripten_set_touchcancel_callback_on_thread, _emscripten_set_touchend_callback_on_thread, _emscripten_set_touchmove_callback_on_thread, _emscripten_set_touchstart_callback_on_thread, _emscripten_set_visibilitychange_callback_on_thread, _emscripten_set_wheel_callback_on_thread, _emscripten_set_window_title, _environ_get, _environ_sizes_get, _fd_close, _fd_read, _fd_seek, _fd_write ];
 
 var ASM_CONSTS = {
-  1957861: $0 => {
+  1957493: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -13456,10 +13463,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1958086: ($0, $1) => {
+  1957718: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1958143: () => {
+  1957775: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -13467,7 +13474,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1958290: () => {
+  1957922: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -13475,7 +13482,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1958524: $0 => {
+  1958156: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -13497,11 +13504,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1959017: () => {
+  1958649: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1959085: ($0, $1, $2, $3) => {
+  1958717: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13542,7 +13549,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1960737: ($0, $1, $2, $3) => {
+  1960369: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -13554,7 +13561,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1961147: ($0, $1) => {
+  1960779: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -13573,7 +13580,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1961752: ($0, $1) => {
+  1961384: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -13586,7 +13593,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1962232: $0 => {
+  1961864: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13624,7 +13631,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1963404: ($0, $1, $2) => {
+  1963036: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -13695,7 +13702,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1964873: ($0, $1, $2, $3, $4) => {
+  1964505: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -13732,19 +13739,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1965862: $0 => {
+  1965494: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1965945: () => {
+  1965577: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1966014: () => window.innerWidth,
-  1966044: () => window.innerHeight,
-  1966075: $0 => {
+  1965646: () => window.innerWidth,
+  1965676: () => window.innerHeight,
+  1965707: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
