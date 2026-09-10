@@ -1478,7 +1478,7 @@ var hierarchy =
     [ "Urho3D::ShadowMapAllocatorSettings", "struct_urho3_d_1_1_shadow_map_allocator_settings.html", null ],
     [ "Urho3D::ShadowMapRegion", "struct_urho3_d_1_1_shadow_map_region.html", null ],
     [ "Urho3D::ShadowSplitProcessor", "class_urho3_d_1_1_shadow_split_processor.html", null ],
-    [ "Urho3D::Detail::SharedPtrBase< InterfaceType, RefCountedType, Enabled >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
+    [ "Urho3D::Detail::SharedPtrBase< InterfaceType, RefCountedType, SameType >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", [
       [ "Urho3D::SharedPtr< Urho3D::Actions::FiniteTimeAction >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::Object >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::Actions::ActionState >", "class_urho3_d_1_1_shared_ptr.html", null ],
@@ -1618,8 +1618,8 @@ var hierarchy =
     [ "Urho3D::Detail::SharedPtrBase< DrawCommandQueue, DrawCommandQueue >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< FreeTypeLibrary, FreeTypeLibrary >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< InterfaceType, InterfaceType >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
-    [ "Urho3D::Detail::SharedPtrBase< InterfaceType, InterfaceType, void >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base_3_01_interface_type_00_01_interface_type_00_01void_01_4.html", null ],
-    [ "Urho3D::Detail::SharedPtrBase< InterfaceType, RefCounted, ea::enable_if_t<!IsRefCountedType< InterfaceType > > >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base_3_01_interface_type_00_01_ref_counted_00_01ea_1_1ene611038db1e046390d35fca3cd33fe08.html", null ],
+    [ "Urho3D::Detail::SharedPtrBase< InterfaceType, InterfaceType, true >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base_3_01_interface_type_00_01_interface_type_00_01true_01_4.html", null ],
+    [ "Urho3D::Detail::SharedPtrBase< InterfaceType, RefCountedType, false >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base_3_01_interface_type_00_01_ref_counted_type_00_01false_01_4.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< LogImpl, LogImpl >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< Node, Node >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< Object, Object >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
@@ -1942,7 +1942,7 @@ var hierarchy =
     [ "Urho3D::ViewBatchInfo2D", "struct_urho3_d_1_1_view_batch_info2_d.html", null ],
     [ "Urho3D::VRRigDesc", "struct_urho3_d_1_1_v_r_rig_desc.html", null ],
     [ "Urho3D::VRSessionParameters", "struct_urho3_d_1_1_v_r_session_parameters.html", null ],
-    [ "Urho3D::Detail::WeakPtrBase< InterfaceType, RefCountedType, Enabled >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base.html", [
+    [ "Urho3D::Detail::WeakPtrBase< InterfaceType, RefCountedType, SameType >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base.html", [
       [ "Urho3D::WeakPtr< NetworkObjectRegistry >", "class_urho3_d_1_1_weak_ptr.html", null ],
       [ "Urho3D::WeakPtr< ReflectionProbeManager >", "class_urho3_d_1_1_weak_ptr.html", null ],
       [ "Urho3D::WeakPtr< Urho3D::Object >", "class_urho3_d_1_1_weak_ptr.html", null ],
@@ -2081,8 +2081,8 @@ var hierarchy =
     [ "Urho3D::Detail::WeakPtrBase< Urho3D::XMLFile, Urho3D::XMLFile >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base.html", null ],
     [ "Urho3D::Detail::WeakPtrBase< Urho3D::Zone, Urho3D::Zone >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base.html", null ],
     [ "Urho3D::Detail::WeakPtrRefCountBase", "class_urho3_d_1_1_detail_1_1_weak_ptr_ref_count_base.html", [
-      [ "Urho3D::Detail::WeakPtrBase< InterfaceType, InterfaceType, void >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base_3_01_interface_type_00_01_interface_type_00_01void_01_4.html", null ],
-      [ "Urho3D::Detail::WeakPtrBase< InterfaceType, RefCounted, ea::enable_if_t<!IsRefCountedType< InterfaceType > > >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base_3_01_interface_type_00_01_ref_counted_00_01ea_1_1enab9adf9b3fdafa57a93a2b585ed8407c26.html", null ]
+      [ "Urho3D::Detail::WeakPtrBase< InterfaceType, InterfaceType, true >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base_3_01_interface_type_00_01_interface_type_00_01true_01_4.html", null ],
+      [ "Urho3D::Detail::WeakPtrBase< InterfaceType, RefCountedType, false >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base_3_01_interface_type_00_01_ref_counted_type_00_01false_01_4.html", null ]
     ] ],
     [ "Urho3D::WrappedScalar< T >", "class_urho3_d_1_1_wrapped_scalar.html", null ],
     [ "Urho3D::WrappedScalar< float >", "class_urho3_d_1_1_wrapped_scalar.html", null ],
