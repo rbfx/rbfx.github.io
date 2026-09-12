@@ -116,9 +116,9 @@ const ea::vector&lt; <a class="el" href="class_urho3_d_1_1_network_object.html">
 <tr class="memitem:a0ce154bcd7204111021e6311ad8511ee" id="r_a0ce154bcd7204111021e6311ad8511ee"><td class="memItemLeft" align="right" valign="top"><a id="a0ce154bcd7204111021e6311ad8511ee" name="a0ce154bcd7204111021e6311ad8511ee"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetIndexUpperBound</b> () const</td></tr>
 <tr class="separator:a0ce154bcd7204111021e6311ad8511ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33eac8cf4d87d7a51d1db82a5913b06c" id="r_a33eac8cf4d87d7a51d1db82a5913b06c"><td class="memItemLeft" align="right" valign="top"><a id="a33eac8cf4d87d7a51d1db82a5913b06c" name="a33eac8cf4d87d7a51d1db82a5913b06c"></a>
-const ea::unordered_set&lt; <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetOwnedObjectsByConnection</b> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection) const</td></tr>
-<tr class="separator:a33eac8cf4d87d7a51d1db82a5913b06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b7dcac99bb0c390a9ae7d6f3d7d3486" id="r_a0b7dcac99bb0c390a9ae7d6f3d7d3486"><td class="memItemLeft" align="right" valign="top"><a id="a0b7dcac99bb0c390a9ae7d6f3d7d3486" name="a0b7dcac99bb0c390a9ae7d6f3d7d3486"></a>
+const ea::unordered_set&lt; <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetOwnedObjectsByConnection</b> (<a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *connection) const</td></tr>
+<tr class="separator:a0b7dcac99bb0c390a9ae7d6f3d7d3486"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa113f5a5e23ac77a7d75e0b44d49dead" id="r_aa113f5a5e23ac77a7d75e0b44d49dead"><td class="memItemLeft" align="right" valign="top"><a id="aa113f5a5e23ac77a7d75e0b44d49dead" name="aa113f5a5e23ac77a7d75e0b44d49dead"></a>
 ea::optional&lt; ConstByteSpan &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetReliableUpdateByIndex</b> (unsigned index) const</td></tr>
 <tr class="separator:aa113f5a5e23ac77a7d75e0b44d49dead"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,9 +213,9 @@ ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_shared_replication_state_1
 <tr class="memitem:a1d5aa88dd5796144e1994c6db350d6e3" id="r_a1d5aa88dd5796144e1994c6db350d6e3"><td class="memItemLeft" align="right" valign="top"><a id="a1d5aa88dd5796144e1994c6db350d6e3" name="a1d5aa88dd5796144e1994c6db350d6e3"></a>
 ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_shared_replication_state_1_1_delta_buffer_span.html">DeltaBufferSpan</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>unreliableDeltaUpdateData_</b></td></tr>
 <tr class="separator:a1d5aa88dd5796144e1994c6db350d6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f9a127c65e703b33333c9698384db74" id="r_a6f9a127c65e703b33333c9698384db74"><td class="memItemLeft" align="right" valign="top"><a id="a6f9a127c65e703b33333c9698384db74" name="a6f9a127c65e703b33333c9698384db74"></a>
-ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *, ea::unordered_set&lt; <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ownedObjectsByConnection_</b></td></tr>
-<tr class="separator:a6f9a127c65e703b33333c9698384db74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af072051deb250b57e7aca6f2087a1102" id="r_af072051deb250b57e7aca6f2087a1102"><td class="memItemLeft" align="right" valign="top"><a id="af072051deb250b57e7aca6f2087a1102" name="af072051deb250b57e7aca6f2087a1102"></a>
+ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *, ea::unordered_set&lt; <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ownedObjectsByConnection_</b></td></tr>
+<tr class="separator:af072051deb250b57e7aca6f2087a1102"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Replication state shared between all clients. </p>

@@ -86,9 +86,9 @@ Inheritance diagram for Urho3D::ClientReplicaClock:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0d904bb46fb2caca2fbfa4e2c38ac3d7" id="r_a0d904bb46fb2caca2fbfa4e2c38ac3d7"><td class="memItemLeft" align="right" valign="top"><a id="a0d904bb46fb2caca2fbfa4e2c38ac3d7" name="a0d904bb46fb2caca2fbfa4e2c38ac3d7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ClientReplicaClock</b> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene, <a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection, const <a class="el" href="struct_urho3_d_1_1_msg_scene_clock.html">MsgSceneClock</a> &amp;initialClock, const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;serverSettings)</td></tr>
-<tr class="separator:a0d904bb46fb2caca2fbfa4e2c38ac3d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbcb53100c3c7f278515cccbc1c7b552" id="r_acbcb53100c3c7f278515cccbc1c7b552"><td class="memItemLeft" align="right" valign="top"><a id="acbcb53100c3c7f278515cccbc1c7b552" name="acbcb53100c3c7f278515cccbc1c7b552"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ClientReplicaClock</b> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene, <a class="el" href="class_urho3_d_1_1_weak_ptr.html">ReplicatedPeerWeakPtr</a> connection, const <a class="el" href="struct_urho3_d_1_1_msg_scene_clock.html">MsgSceneClock</a> &amp;initialClock, const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;serverSettings)</td></tr>
+<tr class="separator:acbcb53100c3c7f278515cccbc1c7b552"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80e654afda069ef3d2d88c424d20eab2" id="r_a80e654afda069ef3d2d88c424d20eab2"><td class="memItemLeft" align="right" valign="top"><a id="a80e654afda069ef3d2d88c424d20eab2" name="a80e654afda069ef3d2d88c424d20eab2"></a>
 <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetServerTime</b> () const</td></tr>
 <tr class="memdesc:a80e654afda069ef3d2d88c424d20eab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return prediced exact server time. <br /></td></tr>
@@ -112,9 +112,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsNewInputFrame</b> (
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:ae7022fd5aacac9eb92e4248e7b19f231" id="r_ae7022fd5aacac9eb92e4248e7b19f231"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_client_replica_clock.html#ae7022fd5aacac9eb92e4248e7b19f231">GetScene</a> () const</td></tr>
 <tr class="separator:ae7022fd5aacac9eb92e4248e7b19f231"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ccca02b5b83c08f57dcc1c0192215a8" id="r_a7ccca02b5b83c08f57dcc1c0192215a8"><td class="memItemLeft" align="right" valign="top"><a id="a7ccca02b5b83c08f57dcc1c0192215a8" name="a7ccca02b5b83c08f57dcc1c0192215a8"></a>
-<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetConnection</b> () const</td></tr>
-<tr class="separator:a7ccca02b5b83c08f57dcc1c0192215a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a41eda4c7e3effaaf920a916d9de31" id="r_a99a41eda4c7e3effaaf920a916d9de31"><td class="memItemLeft" align="right" valign="top"><a id="a99a41eda4c7e3effaaf920a916d9de31" name="a99a41eda4c7e3effaaf920a916d9de31"></a>
+<a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetConnection</b> () const</td></tr>
+<tr class="separator:a99a41eda4c7e3effaaf920a916d9de31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58e504c044a9b19ff90e72dc0bbb5da6" id="r_a58e504c044a9b19ff90e72dc0bbb5da6"><td class="memItemLeft" align="right" valign="top"><a id="a58e504c044a9b19ff90e72dc0bbb5da6" name="a58e504c044a9b19ff90e72dc0bbb5da6"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetConnectionId</b> () const</td></tr>
 <tr class="separator:a58e504c044a9b19ff90e72dc0bbb5da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -333,9 +333,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a826db704d74dd8891c7d83bc1a90321a" id="r_a826db704d74dd8891c7d83bc1a90321a"><td class="memItemLeft" align="right" valign="top"><a id="a826db704d74dd8891c7d83bc1a90321a" name="a826db704d74dd8891c7d83bc1a90321a"></a>
 const <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>scene_</b></td></tr>
 <tr class="separator:a826db704d74dd8891c7d83bc1a90321a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31022763d113ad9fdc5c07e811012532" id="r_a31022763d113ad9fdc5c07e811012532"><td class="memItemLeft" align="right" valign="top"><a id="a31022763d113ad9fdc5c07e811012532" name="a31022763d113ad9fdc5c07e811012532"></a>
-const <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>connection_</b></td></tr>
-<tr class="separator:a31022763d113ad9fdc5c07e811012532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa48d51be2dc480cc8217880ed6461a11" id="r_aa48d51be2dc480cc8217880ed6461a11"><td class="memItemLeft" align="right" valign="top"><a id="aa48d51be2dc480cc8217880ed6461a11" name="aa48d51be2dc480cc8217880ed6461a11"></a>
+const <a class="el" href="class_urho3_d_1_1_weak_ptr.html">ReplicatedPeerWeakPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>peer_</b></td></tr>
+<tr class="separator:aa48d51be2dc480cc8217880ed6461a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object" id="r_aecf686841d86be7e4a2c0092b60d31ad"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>context_</b></td></tr>

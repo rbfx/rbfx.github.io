@@ -89,9 +89,9 @@ Inheritance diagram for Urho3D::ClientSynchronizationState:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a30cbd6e6d1482f3eee4890d6c70270f1" id="r_a30cbd6e6d1482f3eee4890d6c70270f1"><td class="memItemLeft" align="right" valign="top"><a id="a30cbd6e6d1482f3eee4890d6c70270f1" name="a30cbd6e6d1482f3eee4890d6c70270f1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ClientSynchronizationState</b> (<a class="el" href="class_urho3_d_1_1_network_object_registry.html">NetworkObjectRegistry</a> *objectRegistry, <a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection, const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;settings)</td></tr>
-<tr class="separator:a30cbd6e6d1482f3eee4890d6c70270f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec2640d9784b335ce25e0bb2b8854f2" id="r_a0ec2640d9784b335ce25e0bb2b8854f2"><td class="memItemLeft" align="right" valign="top"><a id="a0ec2640d9784b335ce25e0bb2b8854f2" name="a0ec2640d9784b335ce25e0bb2b8854f2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ClientSynchronizationState</b> (<a class="el" href="class_urho3_d_1_1_network_object_registry.html">NetworkObjectRegistry</a> *objectRegistry, <a class="el" href="class_urho3_d_1_1_shared_ptr.html">ReplicatedPeerPtr</a> connection, const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;settings)</td></tr>
+<tr class="separator:a0ec2640d9784b335ce25e0bb2b8854f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc4c1d7f13e5c41dcd011b3d2d3d13e1" id="r_adc4c1d7f13e5c41dcd011b3d2d3d13e1"><td class="memItemLeft" align="right" valign="top"><a id="adc4c1d7f13e5c41dcd011b3d2d3d13e1" name="adc4c1d7f13e5c41dcd011b3d2d3d13e1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>BeginNetworkFrame</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> currentFrame, float overtime)</td></tr>
 <tr class="memdesc:adc4c1d7f13e5c41dcd011b3d2d3d13e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin network frame. Overtime indicates how much time has passed since actual frame start time. <br /></td></tr>
@@ -169,9 +169,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a288fa06a5dbb6ec573fa49486b0e5eb4" id="r_a288fa06a5dbb6ec573fa49486b0e5eb4"><td class="memItemLeft" align="right" valign="top"><a id="a288fa06a5dbb6ec573fa49486b0e5eb4" name="a288fa06a5dbb6ec573fa49486b0e5eb4"></a>
 const <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_network_object_registry.html">NetworkObjectRegistry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>objectRegistry_</b></td></tr>
 <tr class="separator:a288fa06a5dbb6ec573fa49486b0e5eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab15810d16dc1c570fd795d993a1d98a5" id="r_ab15810d16dc1c570fd795d993a1d98a5"><td class="memItemLeft" align="right" valign="top"><a id="ab15810d16dc1c570fd795d993a1d98a5" name="ab15810d16dc1c570fd795d993a1d98a5"></a>
-const <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>connection_</b></td></tr>
-<tr class="separator:ab15810d16dc1c570fd795d993a1d98a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2407583834e9060b1a237cf5599875b1" id="r_a2407583834e9060b1a237cf5599875b1"><td class="memItemLeft" align="right" valign="top"><a id="a2407583834e9060b1a237cf5599875b1" name="a2407583834e9060b1a237cf5599875b1"></a>
+const <a class="el" href="class_urho3_d_1_1_weak_ptr.html">ReplicatedPeerWeakPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>peer_</b></td></tr>
+<tr class="separator:a2407583834e9060b1a237cf5599875b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8d454b0d5b413003d5fd243df2f1165" id="r_ae8d454b0d5b413003d5fd243df2f1165"><td class="memItemLeft" align="right" valign="top"><a id="ae8d454b0d5b413003d5fd243df2f1165" name="ae8d454b0d5b413003d5fd243df2f1165"></a>
 <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>settings_</b></td></tr>
 <tr class="separator:ae8d454b0d5b413003d5fd243df2f1165"><td class="memSeparator" colspan="2">&#160;</td></tr>

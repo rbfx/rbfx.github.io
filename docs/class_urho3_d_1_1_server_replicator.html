@@ -89,21 +89,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8b1df1d3dc7d2bd05b6a19674f57f9a5" id="r_a8b1df1d3dc7d2bd05b6a19674f57f9a5"><td class="memItemLeft" align="right" valign="top"><a id="a8b1df1d3dc7d2bd05b6a19674f57f9a5" name="a8b1df1d3dc7d2bd05b6a19674f57f9a5"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ServerReplicator</b> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene)</td></tr>
 <tr class="separator:a8b1df1d3dc7d2bd05b6a19674f57f9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a017dd2e770f085ed0b6d40db2a1ccea2" id="r_a017dd2e770f085ed0b6d40db2a1ccea2"><td class="memItemLeft" align="right" valign="top"><a id="a017dd2e770f085ed0b6d40db2a1ccea2" name="a017dd2e770f085ed0b6d40db2a1ccea2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddConnection</b> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection)</td></tr>
-<tr class="separator:a017dd2e770f085ed0b6d40db2a1ccea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adac53d98915f1a447e77fb51949b73d8" id="r_adac53d98915f1a447e77fb51949b73d8"><td class="memItemLeft" align="right" valign="top"><a id="adac53d98915f1a447e77fb51949b73d8" name="adac53d98915f1a447e77fb51949b73d8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveConnection</b> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection)</td></tr>
-<tr class="separator:adac53d98915f1a447e77fb51949b73d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1559c540e80a9d0084e27c7bde9159e7" id="r_a1559c540e80a9d0084e27c7bde9159e7"><td class="memItemLeft" align="right" valign="top"><a id="a1559c540e80a9d0084e27c7bde9159e7" name="a1559c540e80a9d0084e27c7bde9159e7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessMessage</b> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection, NetworkMessageId messageId, <a class="el" href="class_urho3_d_1_1_memory_buffer.html">MemoryBuffer</a> &amp;messageData)</td></tr>
-<tr class="separator:a1559c540e80a9d0084e27c7bde9159e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecff10e43a7ee13b7d222869dfa567d5" id="r_aecff10e43a7ee13b7d222869dfa567d5"><td class="memItemLeft" align="right" valign="top"><a id="aecff10e43a7ee13b7d222869dfa567d5" name="aecff10e43a7ee13b7d222869dfa567d5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddConnection</b> (<a class="el" href="class_urho3_d_1_1_shared_ptr.html">ReplicatedPeerPtr</a> connection)</td></tr>
+<tr class="separator:aecff10e43a7ee13b7d222869dfa567d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c2c04fbe5b9d062281a0f64eae19ddc" id="r_a6c2c04fbe5b9d062281a0f64eae19ddc"><td class="memItemLeft" align="right" valign="top"><a id="a6c2c04fbe5b9d062281a0f64eae19ddc" name="a6c2c04fbe5b9d062281a0f64eae19ddc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveConnection</b> (<a class="el" href="class_urho3_d_1_1_shared_ptr.html">ReplicatedPeerPtr</a> connection)</td></tr>
+<tr class="separator:a6c2c04fbe5b9d062281a0f64eae19ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16bfa6980136a76b98fd1089049ab27c" id="r_a16bfa6980136a76b98fd1089049ab27c"><td class="memItemLeft" align="right" valign="top"><a id="a16bfa6980136a76b98fd1089049ab27c" name="a16bfa6980136a76b98fd1089049ab27c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessMessage</b> (<a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *connection, NetworkMessageId messageId, <a class="el" href="class_urho3_d_1_1_memory_buffer.html">MemoryBuffer</a> &amp;messageData)</td></tr>
+<tr class="separator:a16bfa6980136a76b98fd1089049ab27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86fb5209933a9ab46d48a4eef0d6429b" id="r_a86fb5209933a9ab46d48a4eef0d6429b"><td class="memItemLeft" align="right" valign="top"><a id="a86fb5209933a9ab46d48a4eef0d6429b" name="a86fb5209933a9ab46d48a4eef0d6429b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessSceneUpdate</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType)</td></tr>
 <tr class="separator:a86fb5209933a9ab46d48a4eef0d6429b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8755a5fd151211288e1f3d5e1a36c49c" id="r_a8755a5fd151211288e1f3d5e1a36c49c"><td class="memItemLeft" align="right" valign="top"><a id="a8755a5fd151211288e1f3d5e1a36c49c" name="a8755a5fd151211288e1f3d5e1a36c49c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ReportInputLoss</b> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection, float percentLoss)</td></tr>
-<tr class="separator:a8755a5fd151211288e1f3d5e1a36c49c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12daa24b8ab02a04ba7b878b07089548" id="r_a12daa24b8ab02a04ba7b878b07089548"><td class="memItemLeft" align="right" valign="top"><a id="a12daa24b8ab02a04ba7b878b07089548" name="a12daa24b8ab02a04ba7b878b07089548"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ReportInputLoss</b> (<a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *connection, float percentLoss)</td></tr>
+<tr class="separator:a12daa24b8ab02a04ba7b878b07089548"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a0821874be50aff1df6e1656e049eed" id="r_a2a0821874be50aff1df6e1656e049eed"><td class="memItemLeft" align="right" valign="top"><a id="a2a0821874be50aff1df6e1656e049eed" name="a2a0821874be50aff1df6e1656e049eed"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetCurrentFrame</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame)</td></tr>
 <tr class="separator:a2a0821874be50aff1df6e1656e049eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,15 +113,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetCurrentFrame</b> (
 <tr class="memitem:afde4b01a339abcc0fa47f76c4c7abc83" id="r_afde4b01a339abcc0fa47f76c4c7abc83"><td class="memItemLeft" align="right" valign="top"><a id="afde4b01a339abcc0fa47f76c4c7abc83" name="afde4b01a339abcc0fa47f76c4c7abc83"></a>
 const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSetting</b> (const <a class="el" href="struct_urho3_d_1_1_network_setting.html">NetworkSetting</a> &amp;setting) const</td></tr>
 <tr class="separator:afde4b01a339abcc0fa47f76c4c7abc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a10df79296a7803d95beb441832d736" id="r_a1a10df79296a7803d95beb441832d736"><td class="memItemLeft" align="right" valign="top"><a id="a1a10df79296a7803d95beb441832d736" name="a1a10df79296a7803d95beb441832d736"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetFeedbackDelay</b> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection) const</td></tr>
-<tr class="separator:a1a10df79296a7803d95beb441832d736"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15d952bfb2467771c4c284dd86afff51" id="r_a15d952bfb2467771c4c284dd86afff51"><td class="memItemLeft" align="right" valign="top"><a id="a15d952bfb2467771c4c284dd86afff51" name="a15d952bfb2467771c4c284dd86afff51"></a>
-const ea::unordered_set&lt; <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetNetworkObjectsOwnedByConnection</b> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection) const</td></tr>
-<tr class="separator:a15d952bfb2467771c4c284dd86afff51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a796a2fc27ea4bf3a60d39d6ff998453d" id="r_a796a2fc27ea4bf3a60d39d6ff998453d"><td class="memItemLeft" align="right" valign="top"><a id="a796a2fc27ea4bf3a60d39d6ff998453d" name="a796a2fc27ea4bf3a60d39d6ff998453d"></a>
-<a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetNetworkObjectOwnedByConnection</b> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection) const</td></tr>
-<tr class="separator:a796a2fc27ea4bf3a60d39d6ff998453d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad418b9bd88488cf197f46a62960a5555" id="r_ad418b9bd88488cf197f46a62960a5555"><td class="memItemLeft" align="right" valign="top"><a id="ad418b9bd88488cf197f46a62960a5555" name="ad418b9bd88488cf197f46a62960a5555"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetFeedbackDelay</b> (<a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *connection) const</td></tr>
+<tr class="separator:ad418b9bd88488cf197f46a62960a5555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a64f622d1c564a7c49e85cb84b2cd2" id="r_a39a64f622d1c564a7c49e85cb84b2cd2"><td class="memItemLeft" align="right" valign="top"><a id="a39a64f622d1c564a7c49e85cb84b2cd2" name="a39a64f622d1c564a7c49e85cb84b2cd2"></a>
+const ea::unordered_set&lt; <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetNetworkObjectsOwnedByConnection</b> (<a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *connection) const</td></tr>
+<tr class="separator:a39a64f622d1c564a7c49e85cb84b2cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32e0b0a1f02f86c29158f1ceb8862d20" id="r_a32e0b0a1f02f86c29158f1ceb8862d20"><td class="memItemLeft" align="right" valign="top"><a id="a32e0b0a1f02f86c29158f1ceb8862d20" name="a32e0b0a1f02f86c29158f1ceb8862d20"></a>
+<a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetNetworkObjectOwnedByConnection</b> (<a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *connection) const</td></tr>
+<tr class="separator:a32e0b0a1f02f86c29158f1ceb8862d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b47f0e542f8c8aa7b4fea5ab944d847" id="r_a6b47f0e542f8c8aa7b4fea5ab944d847"><td class="memItemLeft" align="right" valign="top"><a id="a6b47f0e542f8c8aa7b4fea5ab944d847" name="a6b47f0e542f8c8aa7b4fea5ab944d847"></a>
 <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetServerTime</b> () const</td></tr>
 <tr class="separator:a6b47f0e542f8c8aa7b4fea5ab944d847"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -335,9 +335,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>OnInputReady</b> (flo
 <tr class="memitem:a5ce02bbc41a97a6b1fb49cbf1539b3bb" id="r_a5ce02bbc41a97a6b1fb49cbf1539b3bb"><td class="memItemLeft" align="right" valign="top"><a id="a5ce02bbc41a97a6b1fb49cbf1539b3bb" name="a5ce02bbc41a97a6b1fb49cbf1539b3bb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnNetworkUpdate</b> ()</td></tr>
 <tr class="separator:a5ce02bbc41a97a6b1fb49cbf1539b3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4276e3253d33c8f512d71ba84267af75" id="r_a4276e3253d33c8f512d71ba84267af75"><td class="memItemLeft" align="right" valign="top"><a id="a4276e3253d33c8f512d71ba84267af75" name="a4276e3253d33c8f512d71ba84267af75"></a>
-<a class="el" href="struct_urho3_d_1_1_client_replication_state.html">ClientReplicationState</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetClientState</b> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection) const</td></tr>
-<tr class="separator:a4276e3253d33c8f512d71ba84267af75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3fd982d6761074b65429560f65050fa" id="r_af3fd982d6761074b65429560f65050fa"><td class="memItemLeft" align="right" valign="top"><a id="af3fd982d6761074b65429560f65050fa" name="af3fd982d6761074b65429560f65050fa"></a>
+<a class="el" href="struct_urho3_d_1_1_client_replication_state.html">ClientReplicationState</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetClientState</b> (<a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *connection) const</td></tr>
+<tr class="separator:af3fd982d6761074b65429560f65050fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -365,9 +365,9 @@ const unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>updateFrequ
 <tr class="memitem:ab351788ff580471fce9df53bf790e08a" id="r_ab351788ff580471fce9df53bf790e08a"><td class="memItemLeft" align="right" valign="top"><a id="ab351788ff580471fce9df53bf790e08a" name="ab351788ff580471fce9df53bf790e08a"></a>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_shared_replication_state.html">SharedReplicationState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sharedState_</b></td></tr>
 <tr class="separator:ab351788ff580471fce9df53bf790e08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd5ddeabab6bb903e1715574bab41ba7" id="r_acd5ddeabab6bb903e1715574bab41ba7"><td class="memItemLeft" align="right" valign="top"><a id="acd5ddeabab6bb903e1715574bab41ba7" name="acd5ddeabab6bb903e1715574bab41ba7"></a>
-ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *, <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="struct_urho3_d_1_1_client_replication_state.html">ClientReplicationState</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>connections_</b></td></tr>
-<tr class="separator:acd5ddeabab6bb903e1715574bab41ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa554cbab92e61a4952ed5aae07f990bd" id="r_aa554cbab92e61a4952ed5aae07f990bd"><td class="memItemLeft" align="right" valign="top"><a id="aa554cbab92e61a4952ed5aae07f990bd" name="aa554cbab92e61a4952ed5aae07f990bd"></a>
+ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *, <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="struct_urho3_d_1_1_client_replication_state.html">ClientReplicationState</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>connections_</b></td></tr>
+<tr class="separator:aa554cbab92e61a4952ed5aae07f990bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

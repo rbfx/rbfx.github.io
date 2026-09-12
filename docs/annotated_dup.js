@@ -17,7 +17,8 @@ var annotated_dup =
       [ "formatter< ea::string >", "structfmt_1_1formatter_3_01ea_1_1string_01_4.html", null ],
       [ "formatter< ea::string_view >", "structfmt_1_1formatter_3_01ea_1_1string__view_01_4.html", null ],
       [ "formatter< T, char, ea::enable_if_t< ea::is_enum_v< T > > >", "structfmt_1_1formatter_3_01_t_00_01char_00_01ea_1_1enable__if__t_3_01ea_1_1is__enum__v_3_01_t_01_4_01_4_01_4.html", null ],
-      [ "formatter< Urho3D::FileIdentifier >", "structfmt_1_1formatter_3_01_urho3_d_1_1_file_identifier_01_4.html", null ]
+      [ "formatter< Urho3D::FileIdentifier >", "structfmt_1_1formatter_3_01_urho3_d_1_1_file_identifier_01_4.html", null ],
+      [ "formatter< Urho3D::Variant >", "structfmt_1_1formatter_3_01_urho3_d_1_1_variant_01_4.html", null ]
     ] ],
     [ "Urho3D", null, [
       [ "Actions", "namespace_urho3_d_1_1_actions.html", [
@@ -240,7 +241,6 @@ var annotated_dup =
         [ "EditVariantOptions", "struct_urho3_d_1_1_widgets_1_1_edit_variant_options.html", "struct_urho3_d_1_1_widgets_1_1_edit_variant_options" ],
         [ "ItemLabelScopeGuard", "struct_urho3_d_1_1_widgets_1_1_item_label_scope_guard.html", null ]
       ] ],
-      [ "AbstractConnection", "class_urho3_d_1_1_abstract_connection.html", "class_urho3_d_1_1_abstract_connection" ],
       [ "AbstractFile", "class_urho3_d_1_1_abstract_file.html", "class_urho3_d_1_1_abstract_file" ],
       [ "ActionBuilder", "class_urho3_d_1_1_action_builder.html", "class_urho3_d_1_1_action_builder" ],
       [ "ActionManager", "class_urho3_d_1_1_action_manager.html", "class_urho3_d_1_1_action_manager" ],
@@ -362,6 +362,7 @@ var annotated_dup =
       [ "ClientReplica", "class_urho3_d_1_1_client_replica.html", null ],
       [ "ClientReplicaClock", "class_urho3_d_1_1_client_replica_clock.html", "class_urho3_d_1_1_client_replica_clock" ],
       [ "ClientReplicationState", "struct_urho3_d_1_1_client_replication_state.html", "struct_urho3_d_1_1_client_replication_state" ],
+      [ "ClientSceneLoader", "class_urho3_d_1_1_client_scene_loader.html", "class_urho3_d_1_1_client_scene_loader" ],
       [ "ClientSynchronizationState", "class_urho3_d_1_1_client_synchronization_state.html", "class_urho3_d_1_1_client_synchronization_state" ],
       [ "ClockSynchronizer", "class_urho3_d_1_1_clock_synchronizer.html", "class_urho3_d_1_1_clock_synchronizer" ],
       [ "ClockSynchronizerMessage", "struct_urho3_d_1_1_clock_synchronizer_message.html", null ],
@@ -383,7 +384,6 @@ var annotated_dup =
       [ "Condition", "class_urho3_d_1_1_condition.html", "class_urho3_d_1_1_condition" ],
       [ "ConfigFile", "class_urho3_d_1_1_config_file.html", "class_urho3_d_1_1_config_file" ],
       [ "ConfigVariableDefinition", "struct_urho3_d_1_1_config_variable_definition.html", "struct_urho3_d_1_1_config_variable_definition" ],
-      [ "Connection", "class_urho3_d_1_1_connection.html", "class_urho3_d_1_1_connection" ],
       [ "Console", "class_urho3_d_1_1_console.html", "class_urho3_d_1_1_console" ],
       [ "Constraint", "class_urho3_d_1_1_constraint.html", "class_urho3_d_1_1_constraint" ],
       [ "Constraint2D", "class_urho3_d_1_1_constraint2_d.html", "class_urho3_d_1_1_constraint2_d" ],
@@ -684,10 +684,13 @@ var annotated_dup =
       [ "NetworkCallback", "class_urho3_d_1_1_network_callback.html", "class_urho3_d_1_1_network_callback" ],
       [ "NetworkConnection", "class_urho3_d_1_1_network_connection.html", "class_urho3_d_1_1_network_connection" ],
       [ "NetworkFrameSync", "struct_urho3_d_1_1_network_frame_sync.html", "struct_urho3_d_1_1_network_frame_sync" ],
+      [ "NetworkMessageLogger", "class_urho3_d_1_1_network_message_logger.html", "class_urho3_d_1_1_network_message_logger" ],
       [ "NetworkObject", "class_urho3_d_1_1_network_object.html", "class_urho3_d_1_1_network_object" ],
       [ "NetworkObjectRegistry", "class_urho3_d_1_1_network_object_registry.html", "class_urho3_d_1_1_network_object_registry" ],
       [ "NetworkServer", "class_urho3_d_1_1_network_server.html", "class_urho3_d_1_1_network_server" ],
       [ "NetworkSetting", "struct_urho3_d_1_1_network_setting.html", null ],
+      [ "NetworkStatisticsCounter", "class_urho3_d_1_1_network_statistics_counter.html", "class_urho3_d_1_1_network_statistics_counter" ],
+      [ "NetworkStatisticsSnapshot", "struct_urho3_d_1_1_network_statistics_snapshot.html", null ],
       [ "NetworkTime", "class_urho3_d_1_1_network_time.html", null ],
       [ "NetworkValue", "class_urho3_d_1_1_network_value.html", "class_urho3_d_1_1_network_value" ],
       [ "NetworkValueSampler", "class_urho3_d_1_1_network_value_sampler.html", "class_urho3_d_1_1_network_value_sampler" ],
@@ -728,10 +731,8 @@ var annotated_dup =
       [ "OutlineGroup", "class_urho3_d_1_1_outline_group.html", "class_urho3_d_1_1_outline_group" ],
       [ "OutlineRenderPass", "class_urho3_d_1_1_outline_render_pass.html", "class_urho3_d_1_1_outline_render_pass" ],
       [ "OutlineScenePass", "class_urho3_d_1_1_outline_scene_pass.html", "class_urho3_d_1_1_outline_scene_pass" ],
-      [ "PackageDownload", "struct_urho3_d_1_1_package_download.html", "struct_urho3_d_1_1_package_download" ],
       [ "PackageEntry", "struct_urho3_d_1_1_package_entry.html", "struct_urho3_d_1_1_package_entry" ],
       [ "PackageFile", "class_urho3_d_1_1_package_file.html", "class_urho3_d_1_1_package_file" ],
-      [ "PackageUpload", "struct_urho3_d_1_1_package_upload.html", "struct_urho3_d_1_1_package_upload" ],
       [ "PackedComponentData", "class_urho3_d_1_1_packed_component_data.html", "class_urho3_d_1_1_packed_component_data" ],
       [ "PackedNodeComponentData", "class_urho3_d_1_1_packed_node_component_data.html", "class_urho3_d_1_1_packed_node_component_data" ],
       [ "PackedNodeData", "class_urho3_d_1_1_packed_node_data.html", "class_urho3_d_1_1_packed_node_data" ],
@@ -818,7 +819,6 @@ var annotated_dup =
       [ "ReflectionProbeData", "struct_urho3_d_1_1_reflection_probe_data.html", "struct_urho3_d_1_1_reflection_probe_data" ],
       [ "ReflectionProbeManager", "class_urho3_d_1_1_reflection_probe_manager.html", "class_urho3_d_1_1_reflection_probe_manager" ],
       [ "ReflectionProbeReference", "struct_urho3_d_1_1_reflection_probe_reference.html", null ],
-      [ "RemoteEvent", "struct_urho3_d_1_1_remote_event.html", "struct_urho3_d_1_1_remote_event" ],
       [ "RenderBuffer", "class_urho3_d_1_1_render_buffer.html", "class_urho3_d_1_1_render_buffer" ],
       [ "RenderBufferManager", "class_urho3_d_1_1_render_buffer_manager.html", "class_urho3_d_1_1_render_buffer_manager" ],
       [ "RenderBufferManagerFrameSettings", "struct_urho3_d_1_1_render_buffer_manager_frame_settings.html", "struct_urho3_d_1_1_render_buffer_manager_frame_settings" ],
@@ -838,6 +838,8 @@ var annotated_dup =
       [ "RenderSurface", "class_urho3_d_1_1_render_surface.html", "class_urho3_d_1_1_render_surface" ],
       [ "ReplicatedAnimation", "class_urho3_d_1_1_replicated_animation.html", "class_urho3_d_1_1_replicated_animation" ],
       [ "ReplicatedParent", "class_urho3_d_1_1_replicated_parent.html", "class_urho3_d_1_1_replicated_parent" ],
+      [ "ReplicatedPeer", "class_urho3_d_1_1_replicated_peer.html", "class_urho3_d_1_1_replicated_peer" ],
+      [ "ReplicatedPeerSettings", "struct_urho3_d_1_1_replicated_peer_settings.html", null ],
       [ "ReplicatedTransform", "class_urho3_d_1_1_replicated_transform.html", "class_urho3_d_1_1_replicated_transform" ],
       [ "ReplicationManager", "class_urho3_d_1_1_replication_manager.html", "class_urho3_d_1_1_replication_manager" ],
       [ "Resource", "class_urho3_d_1_1_resource.html", "class_urho3_d_1_1_resource" ],
@@ -888,6 +890,7 @@ var annotated_dup =
       [ "Serializer", "class_urho3_d_1_1_serializer.html", "class_urho3_d_1_1_serializer" ],
       [ "ServerNetworkCallback", "class_urho3_d_1_1_server_network_callback.html", "class_urho3_d_1_1_server_network_callback" ],
       [ "ServerReplicator", "class_urho3_d_1_1_server_replicator.html", "class_urho3_d_1_1_server_replicator" ],
+      [ "ServerSceneLoader", "class_urho3_d_1_1_server_scene_loader.html", "class_urho3_d_1_1_server_scene_loader" ],
       [ "Shader", "class_urho3_d_1_1_shader.html", "class_urho3_d_1_1_shader" ],
       [ "ShaderDefineArray", "struct_urho3_d_1_1_shader_define_array.html", "struct_urho3_d_1_1_shader_define_array" ],
       [ "ShaderParameterAnimationInfo", "class_urho3_d_1_1_shader_parameter_animation_info.html", "class_urho3_d_1_1_shader_parameter_animation_info" ],
@@ -1111,5 +1114,6 @@ var annotated_dup =
     [ "_IMAGE_ROM_HEADERS", "struct___i_m_a_g_e___r_o_m___h_e_a_d_e_r_s.html", null ],
     [ "_IMAGE_ROM_OPTIONAL_HEADER", "struct___i_m_a_g_e___r_o_m___o_p_t_i_o_n_a_l___h_e_a_d_e_r.html", null ],
     [ "_IMAGE_SECTION_HEADER", "struct___i_m_a_g_e___s_e_c_t_i_o_n___h_e_a_d_e_r.html", null ],
-    [ "_IMAGE_THUNK_DATA", "struct___i_m_a_g_e___t_h_u_n_k___d_a_t_a.html", null ]
+    [ "_IMAGE_THUNK_DATA", "struct___i_m_a_g_e___t_h_u_n_k___d_a_t_a.html", null ],
+    [ "PtrPair", "struct_ptr_pair.html", "struct_ptr_pair" ]
 ];

@@ -47,6 +47,7 @@ var class_urho3_d_1_1_engine =
     [ "audioPaused_", "class_urho3_d_1_1_engine.html#a9503c4134c2ecdf68105177c2d6c8fbe", null ],
     [ "autoExit_", "class_urho3_d_1_1_engine.html#a63516c9c5bdfc251fc34f7f551660f90", null ],
     [ "engineParameters_", "class_urho3_d_1_1_engine.html#a6be03f20f48603555838315cf180a87f", null ],
+    [ "exitDelayTimer_", "class_urho3_d_1_1_engine.html#ae1ae2c18e6058ed4ff0e3bbc4b840c21", null ],
     [ "exiting_", "class_urho3_d_1_1_engine.html#a07e4afce2f22eaf86c9c5e6e9563601d", null ],
     [ "exitRequired_", "class_urho3_d_1_1_engine.html#a4c766fa33c6befe15171d875bba555cd", null ],
     [ "frameTimer_", "class_urho3_d_1_1_engine.html#ab0cb390e63841b4944e4d24842874c0d", null ],

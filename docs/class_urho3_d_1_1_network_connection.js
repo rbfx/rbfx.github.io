@@ -1,20 +1,27 @@
 var class_urho3_d_1_1_network_connection =
 [
-    [ "State", "class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33c", [
-      [ "Disconnected", "class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33caef70e46fd3bbc21e3e1f0b6815e750c0", null ],
-      [ "Connecting", "class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33cae321c53b354930ba96f0243e652df458", null ],
-      [ "Connected", "class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33ca2ec0d16e4ca169baedb9b2d50ec5c6d7", null ],
-      [ "Disconnecting", "class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33ca10b0501000c144cb2a7424bd45e1bcde", null ]
-    ] ],
     [ "Connect", "class_urho3_d_1_1_network_connection.html#abc50a78c09548c59d59e5e14c2121b20", null ],
-    [ "Disconnect", "class_urho3_d_1_1_network_connection.html#a4fe60485d70feb42ec228959fe7fb5f3", null ],
-    [ "GetAddress", "class_urho3_d_1_1_network_connection.html#a250775e4a6ecf5938ada084b8537c798", null ],
-    [ "GetMaxMessageSize", "class_urho3_d_1_1_network_connection.html#a95e79e4289b5fd9dc7e0686539920c74", null ],
+    [ "Disconnect", "class_urho3_d_1_1_network_connection.html#a61b6880e1565f24ce69dfe2e2d6b16c6", null ],
+    [ "DispatchConnected", "class_urho3_d_1_1_network_connection.html#aa3d6bc4555df8ef36944755ac42362ee", null ],
+    [ "DispatchDataReceived", "class_urho3_d_1_1_network_connection.html#a3b73afa08086db4a0a28ad5c43c4105f", null ],
+    [ "DispatchDisconnected", "class_urho3_d_1_1_network_connection.html#a443e3261de50b2db190a7f609785f63e", null ],
+    [ "DispatchMessageReceived", "class_urho3_d_1_1_network_connection.html#a833c4cf02c6baa7f02269f3b3823d46a", null ],
+    [ "GetAddress", "class_urho3_d_1_1_network_connection.html#ab234c17da5244295e58bd3aa3f72df95", null ],
+    [ "GetMaxMessageSize", "class_urho3_d_1_1_network_connection.html#a3cf37152e361bdd34d280173410db2d5", null ],
+    [ "GetMaxPayloadSize", "class_urho3_d_1_1_network_connection.html#aa7f25ca79f800f6ebb951a3b5a71039e", null ],
     [ "GetPort", "class_urho3_d_1_1_network_connection.html#ab2a055f5eccdb3bdb94a21dbc5f630e8", null ],
-    [ "GetState", "class_urho3_d_1_1_network_connection.html#ab5e7ffe8a1eb0d369854cf982ef3095d", null ],
-    [ "SendMessage", "class_urho3_d_1_1_network_connection.html#a1ea3e000b0d786ae9b1d0117d4628522", null ],
-    [ "onConnected_", "class_urho3_d_1_1_network_connection.html#a3cb488caf87c4af45316dfed096c92ae", null ],
-    [ "onDisconnected_", "class_urho3_d_1_1_network_connection.html#ac2bfaf601ee4bd86ff508e930dea32ed", null ],
-    [ "onError_", "class_urho3_d_1_1_network_connection.html#a568dcb0c118dedc8dbf36825e14bdbff", null ],
-    [ "onMessage_", "class_urho3_d_1_1_network_connection.html#a30dfc14492652baf490cffcc0b923478", null ]
+    [ "GetProcessDataOnMainThread", "class_urho3_d_1_1_network_connection.html#a3588b4c787a949b4d27abc26335943ad", null ],
+    [ "GetServer", "class_urho3_d_1_1_network_connection.html#a722404ef21585c65dd3b11aad0b3ee8c", null ],
+    [ "GetState", "class_urho3_d_1_1_network_connection.html#a35dcc3a36476f170e54589225660a204", null ],
+    [ "HandleConnected", "class_urho3_d_1_1_network_connection.html#ae8c6a10c1e24b3f4c3522444d4fa6522", null ],
+    [ "HandleDataReceived", "class_urho3_d_1_1_network_connection.html#a3fea2c36c6eb70d144f300f5f14b44ff", null ],
+    [ "HandleDisconnected", "class_urho3_d_1_1_network_connection.html#a2c46218476b342d76090a1044edd7009", null ],
+    [ "HandleMessageReceived", "class_urho3_d_1_1_network_connection.html#a14cce7ab9b704e8a72dedcc219ceb651", null ],
+    [ "IsConnected", "class_urho3_d_1_1_network_connection.html#a1b2cddd3202d3c6a654b50442ccc6e22", null ],
+    [ "IsDisconnected", "class_urho3_d_1_1_network_connection.html#a046144525991a5b578ef7b34973f0fd2", null ],
+    [ "NotifyDisconnecting", "class_urho3_d_1_1_network_connection.html#ab860669057002a755215defb74e29375", null ],
+    [ "SendData", "class_urho3_d_1_1_network_connection.html#a9ad51ca5ab1c3164b65b94589b3cc953", null ],
+    [ "SendMessage", "class_urho3_d_1_1_network_connection.html#a3402c2c6c6e42027d178f21b34a37666", null ],
+    [ "SetProcessDataOnMainThread", "class_urho3_d_1_1_network_connection.html#a17c389961a9ac75de403ceab1e30a52d", null ],
+    [ "SetServer", "class_urho3_d_1_1_network_connection.html#abcabe6c88d63795708bb12909eab6309", null ]
 ];

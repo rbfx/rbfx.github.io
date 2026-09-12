@@ -92,30 +92,73 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7413d872df20266476eddea288af6a64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Address may be a full <a class="el" href="class_urho3_d_1_1_u_r_l.html">URL</a> and port may be set to 0. Otherwise, port is appended to address.  <br /></td></tr>
 <tr class="separator:a7413d872df20266476eddea288af6a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad58a270b3768afab3e7804006ac52cbf" id="r_ad58a270b3768afab3e7804006ac52cbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_data_channel_connection.html#ad58a270b3768afab3e7804006ac52cbf">Disconnect</a> () override</td></tr>
-<tr class="memdesc:ad58a270b3768afab3e7804006ac52cbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a disconnection. <a class="el" href="class_urho3_d_1_1_connection.html" title="Connection to a remote network host.">Connection</a> is no longer usable when this method returns, even though it may still remain connected for a short while.  <br /></td></tr>
 <tr class="separator:ad58a270b3768afab3e7804006ac52cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad37a6ca2e37bc6fa7159757fda46d7c7" id="r_ad37a6ca2e37bc6fa7159757fda46d7c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_data_channel_connection.html#ad37a6ca2e37bc6fa7159757fda46d7c7">SendMessage</a> (ea::string_view data, PacketTypeFlags type=PacketType::ReliableOrdered) override</td></tr>
-<tr class="memdesc:ad37a6ca2e37bc6fa7159757fda46d7c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data and queues it for sending.  <br /></td></tr>
-<tr class="separator:ad37a6ca2e37bc6fa7159757fda46d7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbaef48f1270da605e1853ed8d86e747" id="r_afbaef48f1270da605e1853ed8d86e747"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_data_channel_connection.html#afbaef48f1270da605e1853ed8d86e747">SendData</a> (ConstByteSpan data, PacketTypeFlags type=PacketType::ReliableOrdered) override</td></tr>
+<tr class="memdesc:afbaef48f1270da605e1853ed8d86e747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends data as-is via underlying transport. Data may be copied and sent asynchronously.  <br /></td></tr>
+<tr class="separator:afbaef48f1270da605e1853ed8d86e747"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed6bac50a6d66d6d666f1085096de7c4" id="r_aed6bac50a6d66d6d666f1085096de7c4"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_data_channel_connection.html#aed6bac50a6d66d6d666f1085096de7c4">GetMaxMessageSize</a> () const override</td></tr>
-<tr class="memdesc:aed6bac50a6d66d6d666f1085096de7c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return maximum size of network message.  <br /></td></tr>
+<tr class="memdesc:aed6bac50a6d66d6d666f1085096de7c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return maximum size of raw network message.  <br /></td></tr>
 <tr class="separator:aed6bac50a6d66d6d666f1085096de7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace95214acb4396f9997bd4c4c66382dd" id="r_ace95214acb4396f9997bd4c4c66382dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_data_channel_connection.html#ace95214acb4396f9997bd4c4c66382dd">SetIceServers</a> (const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;servers)</td></tr>
+<tr class="separator:ace95214acb4396f9997bd4c4c66382dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ee92413030f7bb04745f1dba64a8bea" id="r_a6ee92413030f7bb04745f1dba64a8bea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_data_channel_connection.html#a6ee92413030f7bb04745f1dba64a8bea">SetPortRange</a> (unsigned begin, unsigned end)</td></tr>
+<tr class="separator:a6ee92413030f7bb04745f1dba64a8bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb1016c2de23ad66936fe8c7f351999c" id="r_afb1016c2de23ad66936fe8c7f351999c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_data_channel_connection.html#afb1016c2de23ad66936fe8c7f351999c">SetIceUdpMux</a> (bool enable)</td></tr>
+<tr class="separator:afb1016c2de23ad66936fe8c7f351999c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82b7e6a1fad59f7236981c2ba33c7e88" id="r_a82b7e6a1fad59f7236981c2ba33c7e88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_data_channel_connection.html#a82b7e6a1fad59f7236981c2ba33c7e88">SetIceTransportPolicy</a> (rtc::TransportPolicy policy)</td></tr>
+<tr class="separator:a82b7e6a1fad59f7236981c2ba33c7e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71cd3680d106495bc083d3c0aee1db9e" id="r_a71cd3680d106495bc083d3c0aee1db9e"><td class="memItemLeft" align="right" valign="top"><a id="a71cd3680d106495bc083d3c0aee1db9e" name="a71cd3680d106495bc083d3c0aee1db9e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBindAddress</b> (ea::string_view address)</td></tr>
+<tr class="memdesc:a71cd3680d106495bc083d3c0aee1db9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind to a specific local address (multi-homed servers with multiple NICs). <br /></td></tr>
+<tr class="separator:a71cd3680d106495bc083d3c0aee1db9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b61b4062ed75bbf5ee3709ea00a21eb" id="r_a5b61b4062ed75bbf5ee3709ea00a21eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_data_channel_connection.html#a5b61b4062ed75bbf5ee3709ea00a21eb">SetMtu</a> (unsigned mtu)</td></tr>
+<tr class="separator:a5b61b4062ed75bbf5ee3709ea00a21eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69da61587362c68f4914dbc4305132b2" id="r_a69da61587362c68f4914dbc4305132b2"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; rtc::PeerConnection &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_data_channel_connection.html#a69da61587362c68f4914dbc4305132b2">GetPeer</a> () const</td></tr>
+<tr class="separator:a69da61587362c68f4914dbc4305132b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0236bd03193e7ef6b0b09f79cfe453c" id="r_ab0236bd03193e7ef6b0b09f79cfe453c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_data_channel_connection.html#ab0236bd03193e7ef6b0b09f79cfe453c">InitializeWithWebSocket</a> (std::shared_ptr&lt; rtc::WebSocket &gt; ws, <a class="el" href="class_urho3_d_1_1_data_channel_server.html">DataChannelServer</a> *server=nullptr)</td></tr>
+<tr class="separator:ab0236bd03193e7ef6b0b09f79cfe453c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_network_connection"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_network_connection')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_network_connection.html">Urho3D::NetworkConnection</a></td></tr>
 <tr class="memitem:a54af55aac6441535d8f5a55169aa966a inherit pub_methods_class_urho3_d_1_1_network_connection" id="r_a54af55aac6441535d8f5a55169aa966a"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>NetworkConnection</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
 <tr class="separator:a54af55aac6441535d8f5a55169aa966a inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a250775e4a6ecf5938ada084b8537c798 inherit pub_methods_class_urho3_d_1_1_network_connection" id="r_a250775e4a6ecf5938ada084b8537c798"><td class="memItemLeft" align="right" valign="top">
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetAddress</b> () const</td></tr>
-<tr class="memdesc:a250775e4a6ecf5938ada084b8537c798 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result may be empty, when connection is not State::Connected. <br /></td></tr>
-<tr class="separator:a250775e4a6ecf5938ada084b8537c798 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2a055f5eccdb3bdb94a21dbc5f630e8 inherit pub_methods_class_urho3_d_1_1_network_connection" id="r_ab2a055f5eccdb3bdb94a21dbc5f630e8"><td class="memItemLeft" align="right" valign="top">
-unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>GetPort</b> () const</td></tr>
-<tr class="memdesc:ab2a055f5eccdb3bdb94a21dbc5f630e8 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result may be 0, when connection is not State::Connected or when result is not applicable to the underlying transport. <br /></td></tr>
+<tr class="memitem:a3402c2c6c6e42027d178f21b34a37666 inherit pub_methods_class_urho3_d_1_1_network_connection" id="r_a3402c2c6c6e42027d178f21b34a37666"><td class="memItemLeft" align="right" valign="top">
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessage</b> (NetworkMessageId messageId, ConstByteSpan data, PacketTypeFlags type=PacketType::ReliableOrdered, ea::string_view debugInfo={})</td></tr>
+<tr class="memdesc:a3402c2c6c6e42027d178f21b34a37666 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends network message. Data may be copied and sent asynchronously. <br /></td></tr>
+<tr class="separator:a3402c2c6c6e42027d178f21b34a37666 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f25ca79f800f6ebb951a3b5a71039e inherit pub_methods_class_urho3_d_1_1_network_connection" id="r_aa7f25ca79f800f6ebb951a3b5a71039e"><td class="memItemLeft" align="right" valign="top">
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetMaxPayloadSize</b> () const</td></tr>
+<tr class="memdesc:aa7f25ca79f800f6ebb951a3b5a71039e inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return maximum size of network message payload. <br /></td></tr>
+<tr class="separator:aa7f25ca79f800f6ebb951a3b5a71039e inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab234c17da5244295e58bd3aa3f72df95 inherit pub_methods_class_urho3_d_1_1_network_connection" id="r_ab234c17da5244295e58bd3aa3f72df95"><td class="memItemLeft" align="right" valign="top">
+const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetAddress</b> () const</td></tr>
+<tr class="memdesc:ab234c17da5244295e58bd3aa3f72df95 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Result may be empty, when connection is not NetworkConnectionState::Connected. <br /></td></tr>
+<tr class="separator:ab234c17da5244295e58bd3aa3f72df95 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a055f5eccdb3bdb94a21dbc5f630e8 inherit pub_methods_class_urho3_d_1_1_network_connection" id="r_ab2a055f5eccdb3bdb94a21dbc5f630e8"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_connection.html#ab2a055f5eccdb3bdb94a21dbc5f630e8">GetPort</a> () const</td></tr>
 <tr class="separator:ab2a055f5eccdb3bdb94a21dbc5f630e8 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5e7ffe8a1eb0d369854cf982ef3095d inherit pub_methods_class_urho3_d_1_1_network_connection" id="r_ab5e7ffe8a1eb0d369854cf982ef3095d"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33c">State</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetState</b> () const</td></tr>
-<tr class="memdesc:ab5e7ffe8a1eb0d369854cf982ef3095d inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current state of the connection. <br /></td></tr>
-<tr class="separator:ab5e7ffe8a1eb0d369854cf982ef3095d inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35dcc3a36476f170e54589225660a204 inherit pub_methods_class_urho3_d_1_1_network_connection" id="r_a35dcc3a36476f170e54589225660a204"><td class="memItemLeft" align="right" valign="top">
+NetworkConnectionState&#160;</td><td class="memItemRight" valign="bottom"><b>GetState</b> () const</td></tr>
+<tr class="memdesc:a35dcc3a36476f170e54589225660a204 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current state of the connection. <br /></td></tr>
+<tr class="separator:a35dcc3a36476f170e54589225660a204 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b2cddd3202d3c6a654b50442ccc6e22 inherit pub_methods_class_urho3_d_1_1_network_connection" id="r_a1b2cddd3202d3c6a654b50442ccc6e22"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsConnected</b> () const</td></tr>
+<tr class="memdesc:a1b2cddd3202d3c6a654b50442ccc6e22 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the connection is currently connected. <br /></td></tr>
+<tr class="separator:a1b2cddd3202d3c6a654b50442ccc6e22 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a046144525991a5b578ef7b34973f0fd2 inherit pub_methods_class_urho3_d_1_1_network_connection" id="r_a046144525991a5b578ef7b34973f0fd2"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsDisconnected</b> () const</td></tr>
+<tr class="memdesc:a046144525991a5b578ef7b34973f0fd2 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the connection is currently disconnected. <br /></td></tr>
+<tr class="separator:a046144525991a5b578ef7b34973f0fd2 inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3588b4c787a949b4d27abc26335943ad inherit pub_methods_class_urho3_d_1_1_network_connection" id="r_a3588b4c787a949b4d27abc26335943ad"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetProcessDataOnMainThread</b> () const</td></tr>
+<tr class="memdesc:a3588b4c787a949b4d27abc26335943ad inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether callbacks are invoked on the main thread. <br /></td></tr>
+<tr class="separator:a3588b4c787a949b4d27abc26335943ad inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c389961a9ac75de403ceab1e30a52d inherit pub_methods_class_urho3_d_1_1_network_connection" id="r_a17c389961a9ac75de403ceab1e30a52d"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetProcessDataOnMainThread</b> (bool enable)</td></tr>
+<tr class="memdesc:a17c389961a9ac75de403ceab1e30a52d inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether callbacks are invoked on the main thread. <br /></td></tr>
+<tr class="separator:a17c389961a9ac75de403ceab1e30a52d inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a722404ef21585c65dd3b11aad0b3ee8c inherit pub_methods_class_urho3_d_1_1_network_connection" id="r_a722404ef21585c65dd3b11aad0b3ee8c"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_urho3_d_1_1_network_server.html">NetworkServer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetServer</b> () const</td></tr>
+<tr class="memdesc:a722404ef21585c65dd3b11aad0b3ee8c inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return server that owns this connection, if any. <br /></td></tr>
+<tr class="separator:a722404ef21585c65dd3b11aad0b3ee8c inherit pub_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object" id="r_a95a6cd1c5c12a458fda4b38f873a334d"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>Object</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -328,40 +371,85 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeFromSocket<
 <tr class="memitem:a2acfea577cf30181341e9ab127b0c023" id="r_a2acfea577cf30181341e9ab127b0c023"><td class="memItemLeft" align="right" valign="top"><a id="a2acfea577cf30181341e9ab127b0c023" name="a2acfea577cf30181341e9ab127b0c023"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDataChannelConnected</b> (int index)</td></tr>
 <tr class="separator:a2acfea577cf30181341e9ab127b0c023"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a182799f78e8f98b98a1c892f4bdd6d35" id="r_a182799f78e8f98b98a1c892f4bdd6d35"><td class="memItemLeft" align="right" valign="top"><a id="a182799f78e8f98b98a1c892f4bdd6d35" name="a182799f78e8f98b98a1c892f4bdd6d35"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDataChannelDisconnected</b> (int index)</td></tr>
-<tr class="separator:a182799f78e8f98b98a1c892f4bdd6d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a234b8c1f8be6ce3d163c637c4f5eccb5" id="r_a234b8c1f8be6ce3d163c637c4f5eccb5"><td class="memItemLeft" align="right" valign="top"><a id="a234b8c1f8be6ce3d163c637c4f5eccb5" name="a234b8c1f8be6ce3d163c637c4f5eccb5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDataChannelDisconnected</b> (int index, bool notifyCallbacks=true)</td></tr>
+<tr class="separator:a234b8c1f8be6ce3d163c637c4f5eccb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_urho3_d_1_1_network_connection"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_network_connection')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_network_connection.html">Urho3D::NetworkConnection</a></td></tr>
+<tr class="memitem:ab860669057002a755215defb74e29375 inherit pro_methods_class_urho3_d_1_1_network_connection" id="r_ab860669057002a755215defb74e29375"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>NotifyDisconnecting</b> ()</td></tr>
+<tr class="memdesc:ab860669057002a755215defb74e29375 inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify <a class="el" href="class_urho3_d_1_1_network.html" title="Network subsystem. Provides network update scheduling and replication events.">Network</a> subsystem that teardown has started. <br /></td></tr>
+<tr class="separator:ab860669057002a755215defb74e29375 inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcabe6c88d63795708bb12909eab6309 inherit pro_methods_class_urho3_d_1_1_network_connection" id="r_abcabe6c88d63795708bb12909eab6309"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetServer</b> (<a class="el" href="class_urho3_d_1_1_network_server.html">NetworkServer</a> *server)</td></tr>
+<tr class="memdesc:abcabe6c88d63795708bb12909eab6309 inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set server that owns this connection. <br /></td></tr>
+<tr class="separator:abcabe6c88d63795708bb12909eab6309 inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c6a10c1e24b3f4c3522444d4fa6522 inherit pro_methods_class_urho3_d_1_1_network_connection" id="r_ae8c6a10c1e24b3f4c3522444d4fa6522"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_connection.html#ae8c6a10c1e24b3f4c3522444d4fa6522">HandleConnected</a> ()</td></tr>
+<tr class="separator:ae8c6a10c1e24b3f4c3522444d4fa6522 inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c46218476b342d76090a1044edd7009 inherit pro_methods_class_urho3_d_1_1_network_connection" id="r_a2c46218476b342d76090a1044edd7009"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_connection.html#a2c46218476b342d76090a1044edd7009">HandleDisconnected</a> ()</td></tr>
+<tr class="separator:a2c46218476b342d76090a1044edd7009 inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fea2c36c6eb70d144f300f5f14b44ff inherit pro_methods_class_urho3_d_1_1_network_connection" id="r_a3fea2c36c6eb70d144f300f5f14b44ff"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_connection.html#a3fea2c36c6eb70d144f300f5f14b44ff">HandleDataReceived</a> (ConstByteSpan message)</td></tr>
+<tr class="separator:a3fea2c36c6eb70d144f300f5f14b44ff inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14cce7ab9b704e8a72dedcc219ceb651 inherit pro_methods_class_urho3_d_1_1_network_connection" id="r_a14cce7ab9b704e8a72dedcc219ceb651"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_connection.html#a14cce7ab9b704e8a72dedcc219ceb651">HandleMessageReceived</a> (NetworkMessageId messageId, ConstByteSpan message)</td></tr>
+<tr class="separator:a14cce7ab9b704e8a72dedcc219ceb651 inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3d6bc4555df8ef36944755ac42362ee inherit pro_methods_class_urho3_d_1_1_network_connection" id="r_aa3d6bc4555df8ef36944755ac42362ee"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchConnected</b> ()</td></tr>
+<tr class="memdesc:aa3d6bc4555df8ef36944755ac42362ee inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatch connection callback from transport implementation. <br /></td></tr>
+<tr class="separator:aa3d6bc4555df8ef36944755ac42362ee inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a443e3261de50b2db190a7f609785f63e inherit pro_methods_class_urho3_d_1_1_network_connection" id="r_a443e3261de50b2db190a7f609785f63e"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchDisconnected</b> ()</td></tr>
+<tr class="memdesc:a443e3261de50b2db190a7f609785f63e inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatch disconnection callback from transport implementation. <br /></td></tr>
+<tr class="separator:a443e3261de50b2db190a7f609785f63e inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b73afa08086db4a0a28ad5c43c4105f inherit pro_methods_class_urho3_d_1_1_network_connection" id="r_a3b73afa08086db4a0a28ad5c43c4105f"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchDataReceived</b> (ConstByteSpan message)</td></tr>
+<tr class="memdesc:a3b73afa08086db4a0a28ad5c43c4105f inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatch data callback from transport implementation. <br /></td></tr>
+<tr class="separator:a3b73afa08086db4a0a28ad5c43c4105f inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a833c4cf02c6baa7f02269f3b3823d46a inherit pro_methods_class_urho3_d_1_1_network_connection" id="r_a833c4cf02c6baa7f02269f3b3823d46a"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchMessageReceived</b> (NetworkMessageId messageId, ConstByteSpan message)</td></tr>
+<tr class="memdesc:a833c4cf02c6baa7f02269f3b3823d46a inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispatch message callback from transport implementation. <br /></td></tr>
+<tr class="separator:a833c4cf02c6baa7f02269f3b3823d46a inherit pro_methods_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:aa6800d3db703c87368e11268382f7560" id="r_aa6800d3db703c87368e11268382f7560"><td class="memItemLeft" align="right" valign="top"><a id="aa6800d3db703c87368e11268382f7560" name="aa6800d3db703c87368e11268382f7560"></a>
-<a class="el" href="class_urho3_d_1_1_mutex.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mutex_</b></td></tr>
-<tr class="separator:aa6800d3db703c87368e11268382f7560"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a088d8a24a309ad1f0ed23ec2fd09bb3c" id="r_a088d8a24a309ad1f0ed23ec2fd09bb3c"><td class="memItemLeft" align="right" valign="top"><a id="a088d8a24a309ad1f0ed23ec2fd09bb3c" name="a088d8a24a309ad1f0ed23ec2fd09bb3c"></a>
-<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_data_channel_server.html">DataChannelServer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>server_</b> = {}</td></tr>
-<tr class="separator:a088d8a24a309ad1f0ed23ec2fd09bb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a736dbc872a3402fc546fc0a63dfe2a8e" id="r_a736dbc872a3402fc546fc0a63dfe2a8e"><td class="memItemLeft" align="right" valign="top"><a id="a736dbc872a3402fc546fc0a63dfe2a8e" name="a736dbc872a3402fc546fc0a63dfe2a8e"></a>
-std::shared_ptr&lt; rtc::WebSocket &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>websocket_</b> = {}</td></tr>
+std::shared_ptr&lt; rtc::WebSocket &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>websocket_</b></td></tr>
 <tr class="separator:a736dbc872a3402fc546fc0a63dfe2a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad1bfc2b6565c6ed31aa3e186748952a" id="r_aad1bfc2b6565c6ed31aa3e186748952a"><td class="memItemLeft" align="right" valign="top"><a id="aad1bfc2b6565c6ed31aa3e186748952a" name="aad1bfc2b6565c6ed31aa3e186748952a"></a>
-std::shared_ptr&lt; rtc::PeerConnection &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>peer_</b> = {}</td></tr>
+std::shared_ptr&lt; rtc::PeerConnection &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>peer_</b></td></tr>
 <tr class="separator:aad1bfc2b6565c6ed31aa3e186748952a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a470c73007b55505c183da54a56eb79bf" id="r_a470c73007b55505c183da54a56eb79bf"><td class="memItemLeft" align="right" valign="top"><a id="a470c73007b55505c183da54a56eb79bf" name="a470c73007b55505c183da54a56eb79bf"></a>
-std::shared_ptr&lt; rtc::DataChannel &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dataChannels_</b> [4] = {}</td></tr>
+std::shared_ptr&lt; rtc::DataChannel &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dataChannels_</b> [4]</td></tr>
 <tr class="separator:a470c73007b55505c183da54a56eb79bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f077599262e95cbd2be94e4bce71616" id="r_a5f077599262e95cbd2be94e4bce71616"><td class="memItemLeft" align="right" valign="top"><a id="a5f077599262e95cbd2be94e4bce71616" name="a5f077599262e95cbd2be94e4bce71616"></a>
 <a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_</b></td></tr>
 <tr class="separator:a5f077599262e95cbd2be94e4bce71616"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f9adf22979498d004e77e9d18525a92" id="r_a6f9adf22979498d004e77e9d18525a92"><td class="memItemLeft" align="right" valign="top"><a id="a6f9adf22979498d004e77e9d18525a92" name="a6f9adf22979498d004e77e9d18525a92"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>websocketWasOpened_</b> = false</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>websocketWasOpened_</b> {}</td></tr>
 <tr class="separator:a6f9adf22979498d004e77e9d18525a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91a604f97dcb3defb76c0f8a4be3da72" id="r_a91a604f97dcb3defb76c0f8a4be3da72"><td class="memItemLeft" align="right" valign="top"><a id="a91a604f97dcb3defb76c0f8a4be3da72" name="a91a604f97dcb3defb76c0f8a4be3da72"></a>
-<a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_data_channel_connection.html">DataChannelConnection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>selfHolder_</b></td></tr>
-<tr class="separator:a91a604f97dcb3defb76c0f8a4be3da72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0993dd91e256a37de5e1fc54c0386fdc" id="r_a0993dd91e256a37de5e1fc54c0386fdc"><td class="memItemLeft" align="right" valign="top"><a id="a0993dd91e256a37de5e1fc54c0386fdc" name="a0993dd91e256a37de5e1fc54c0386fdc"></a>
+<a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>iceServers_</b></td></tr>
+<tr class="separator:a0993dd91e256a37de5e1fc54c0386fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4500b33d0642678df8db90f0eca567a2" id="r_a4500b33d0642678df8db90f0eca567a2"><td class="memItemLeft" align="right" valign="top"><a id="a4500b33d0642678df8db90f0eca567a2" name="a4500b33d0642678df8db90f0eca567a2"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>portRangeBegin_</b> = 1024</td></tr>
+<tr class="separator:a4500b33d0642678df8db90f0eca567a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4752e3f72a5ea615e6f79f87a9e6053" id="r_ad4752e3f72a5ea615e6f79f87a9e6053"><td class="memItemLeft" align="right" valign="top"><a id="ad4752e3f72a5ea615e6f79f87a9e6053" name="ad4752e3f72a5ea615e6f79f87a9e6053"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>portRangeEnd_</b> = 65535</td></tr>
+<tr class="separator:ad4752e3f72a5ea615e6f79f87a9e6053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52f0b59011e28b7603dec8d6168be66c" id="r_a52f0b59011e28b7603dec8d6168be66c"><td class="memItemLeft" align="right" valign="top"><a id="a52f0b59011e28b7603dec8d6168be66c" name="a52f0b59011e28b7603dec8d6168be66c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>enableIceUdpMux_</b> {}</td></tr>
+<tr class="separator:a52f0b59011e28b7603dec8d6168be66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab779f01e8b5c390f87a52d3210f2b57f" id="r_ab779f01e8b5c390f87a52d3210f2b57f"><td class="memItemLeft" align="right" valign="top"><a id="ab779f01e8b5c390f87a52d3210f2b57f" name="ab779f01e8b5c390f87a52d3210f2b57f"></a>
+rtc::TransportPolicy&#160;</td><td class="memItemRight" valign="bottom"><b>iceTransportPolicy_</b> {}</td></tr>
+<tr class="separator:ab779f01e8b5c390f87a52d3210f2b57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb32438b73a7c45e422dc6fa337100e3" id="r_afb32438b73a7c45e422dc6fa337100e3"><td class="memItemLeft" align="right" valign="top"><a id="afb32438b73a7c45e422dc6fa337100e3" name="afb32438b73a7c45e422dc6fa337100e3"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>bindAddress_</b></td></tr>
+<tr class="separator:afb32438b73a7c45e422dc6fa337100e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10f262764fc0909bfbeaab793f133acc" id="r_a10f262764fc0909bfbeaab793f133acc"><td class="memItemLeft" align="right" valign="top"><a id="a10f262764fc0909bfbeaab793f133acc" name="a10f262764fc0909bfbeaab793f133acc"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mtu_</b> {}</td></tr>
+<tr class="separator:a10f262764fc0909bfbeaab793f133acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_network_connection"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_network_connection')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_network_connection.html">Urho3D::NetworkConnection</a></td></tr>
-<tr class="memitem:adcb8cf8ea7e33587faa3c2944760d416 inherit pro_attribs_class_urho3_d_1_1_network_connection" id="r_adcb8cf8ea7e33587faa3c2944760d416"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33c">State</a>&#160;</td><td class="memItemRight" valign="bottom"><b>state_</b> = <a class="el" href="class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33caef70e46fd3bbc21e3e1f0b6815e750c0">State::Disconnected</a></td></tr>
-<tr class="separator:adcb8cf8ea7e33587faa3c2944760d416 inherit pro_attribs_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd1de40447c69bca33767d0568d459c inherit pro_attribs_class_urho3_d_1_1_network_connection" id="r_a3bd1de40447c69bca33767d0568d459c"><td class="memItemLeft" align="right" valign="top">
+NetworkConnectionState&#160;</td><td class="memItemRight" valign="bottom"><b>state_</b> = NetworkConnectionState::Disconnected</td></tr>
+<tr class="separator:a3bd1de40447c69bca33767d0568d459c inherit pro_attribs_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad514ce1720e538a68879c022a3039d8c inherit pro_attribs_class_urho3_d_1_1_network_connection" id="r_ad514ce1720e538a68879c022a3039d8c"><td class="memItemLeft" align="right" valign="top">
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>address_</b> = &quot;&quot;</td></tr>
 <tr class="separator:ad514ce1720e538a68879c022a3039d8c inherit pro_attribs_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -388,30 +476,25 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DataChannelServer</b
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_class_urho3_d_1_1_network_connection"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_urho3_d_1_1_network_connection')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_urho3_d_1_1_network_connection.html">Urho3D::NetworkConnection</a></td></tr>
-<tr class="memitem:aa5081150ccdf6eab85f208110aa6c33c inherit pub_types_class_urho3_d_1_1_network_connection" id="r_aa5081150ccdf6eab85f208110aa6c33c"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33c">State</a> { <a class="el" href="class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33caef70e46fd3bbc21e3e1f0b6815e750c0">Disconnected</a>
-, <a class="el" href="class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33cae321c53b354930ba96f0243e652df458">Connecting</a>
-, <a class="el" href="class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33ca2ec0d16e4ca169baedb9b2d50ec5c6d7">Connected</a>
-, <a class="el" href="class_urho3_d_1_1_network_connection.html#aa5081150ccdf6eab85f208110aa6c33ca10b0501000c144cb2a7424bd45e1bcde">Disconnecting</a>
- }</td></tr>
-<tr class="separator:aa5081150ccdf6eab85f208110aa6c33c inherit pub_types_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_urho3_d_1_1_network_connection"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_urho3_d_1_1_network_connection')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_urho3_d_1_1_network_connection.html">Urho3D::NetworkConnection</a></td></tr>
-<tr class="memitem:a3cb488caf87c4af45316dfed096c92ae inherit pub_attribs_class_urho3_d_1_1_network_connection" id="r_a3cb488caf87c4af45316dfed096c92ae"><td class="memItemLeft" align="right" valign="top">
-ea::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onConnected_</b></td></tr>
-<tr class="memdesc:a3cb488caf87c4af45316dfed096c92ae inherit pub_attribs_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called once, when connection is fully set up and data is ready to be sent and received. May be called from non-main thread. <br /></td></tr>
-<tr class="separator:a3cb488caf87c4af45316dfed096c92ae inherit pub_attribs_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2bfaf601ee4bd86ff508e930dea32ed inherit pub_attribs_class_urho3_d_1_1_network_connection" id="r_ac2bfaf601ee4bd86ff508e930dea32ed"><td class="memItemLeft" align="right" valign="top">
-ea::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onDisconnected_</b></td></tr>
-<tr class="memdesc:ac2bfaf601ee4bd86ff508e930dea32ed inherit pub_attribs_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called once, when connection disconnect was initiated (only if onConnected_ was also called). May be called from non-main thread. <br /></td></tr>
-<tr class="separator:ac2bfaf601ee4bd86ff508e930dea32ed inherit pub_attribs_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a568dcb0c118dedc8dbf36825e14bdbff inherit pub_attribs_class_urho3_d_1_1_network_connection" id="r_a568dcb0c118dedc8dbf36825e14bdbff"><td class="memItemLeft" align="right" valign="top">
-ea::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onError_</b></td></tr>
-<tr class="memdesc:a568dcb0c118dedc8dbf36825e14bdbff inherit pub_attribs_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called once, if connection fails to connect (only if onConnected_ was never called). May be called from non-main thread. <br /></td></tr>
-<tr class="separator:a568dcb0c118dedc8dbf36825e14bdbff inherit pub_attribs_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30dfc14492652baf490cffcc0b923478 inherit pub_attribs_class_urho3_d_1_1_network_connection" id="r_a30dfc14492652baf490cffcc0b923478"><td class="memItemLeft" align="right" valign="top">
-ea::function&lt; void(ea::string_view)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>onMessage_</b></td></tr>
-<tr class="memdesc:a30dfc14492652baf490cffcc0b923478 inherit pub_attribs_class_urho3_d_1_1_network_connection"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a new network message is received. May be called from non-main thread. <br /></td></tr>
-<tr class="separator:a30dfc14492652baf490cffcc0b923478 inherit pub_attribs_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acab5ea74941ba54b4f52f2ca8947be40 inherit pub_attribs_class_urho3_d_1_1_network_connection" id="r_acab5ea74941ba54b4f52f2ca8947be40"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_urho3_d_1_1_signal.html">Signal</a>&lt; void(), <a class="el" href="class_urho3_d_1_1_network_connection.html">NetworkConnection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnConnected</b></td></tr>
+<tr class="separator:acab5ea74941ba54b4f52f2ca8947be40 inherit pub_attribs_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5960f0ab8450e93a647834d6149cbf32 inherit pub_attribs_class_urho3_d_1_1_network_connection" id="r_a5960f0ab8450e93a647834d6149cbf32"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_urho3_d_1_1_signal.html">Signal</a>&lt; void(), <a class="el" href="class_urho3_d_1_1_network_connection.html">NetworkConnection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnDisconnected</b></td></tr>
+<tr class="separator:a5960f0ab8450e93a647834d6149cbf32 inherit pub_attribs_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af680cd5ced773c7815b863c9cea3e2e6 inherit pub_attribs_class_urho3_d_1_1_network_connection" id="r_af680cd5ced773c7815b863c9cea3e2e6"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_urho3_d_1_1_signal.html">Signal</a>&lt; void(ConstByteSpan data, bool &amp;isHandled), <a class="el" href="class_urho3_d_1_1_network_connection.html">NetworkConnection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnDataReceived</b></td></tr>
+<tr class="separator:af680cd5ced773c7815b863c9cea3e2e6 inherit pub_attribs_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af375219f5d67088a943d34553cc8de06 inherit pub_attribs_class_urho3_d_1_1_network_connection" id="r_af375219f5d67088a943d34553cc8de06"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_urho3_d_1_1_signal.html">Signal</a>&lt; void(NetworkMessageId messageId, ConstByteSpan messagePayload, bool &amp;isHandled), <a class="el" href="class_urho3_d_1_1_network_connection.html">NetworkConnection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnMessageReceived</b></td></tr>
+<tr class="separator:af375219f5d67088a943d34553cc8de06 inherit pub_attribs_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d9dd69a1d80fcc5693af768ec7fe419 inherit pub_attribs_class_urho3_d_1_1_network_connection" id="r_a4d9dd69a1d80fcc5693af768ec7fe419"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_urho3_d_1_1_signal.html">Signal</a>&lt; void(ConstByteSpan data, PacketTypeFlags, bool &amp;isHandled), <a class="el" href="class_urho3_d_1_1_network_connection.html">NetworkConnection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnSendData</b></td></tr>
+<tr class="separator:a4d9dd69a1d80fcc5693af768ec7fe419 inherit pub_attribs_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb6cb447c03035ad8d53f147f78fd4a inherit pub_attribs_class_urho3_d_1_1_network_connection" id="r_abbb6cb447c03035ad8d53f147f78fd4a"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_urho3_d_1_1_signal.html">Signal</a>&lt; void(NetworkMessageId messageId, ConstByteSpan messagePayload, PacketTypeFlags, ea::string_view debugInfo, bool &amp;isHandled), <a class="el" href="class_urho3_d_1_1_network_connection.html">NetworkConnection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnSendMessage</b></td></tr>
+<tr class="separator:abbb6cb447c03035ad8d53f147f78fd4a inherit pub_attribs_class_urho3_d_1_1_network_connection"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object" id="r_a745a18b8e99bf855379e72aac5d544ab"><td class="memItemLeft" align="right" valign="top">static constexpr ea::array&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a745a18b8e99bf855379e72aac5d544ab">TypeHierarchy</a> {}</td></tr>
 <tr class="separator:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -469,10 +552,9 @@ ea::function&lt; void(ea::string_view)&gt;&#160;</td><td class="memItemRight" va
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Initializes a disconnection. Connection is no longer usable when this method returns, even though it may still remain connected for a short while. </p>
 
-<p>Initializes a disconnection. <a class="el" href="class_urho3_d_1_1_connection.html" title="Connection to a remote network host.">Connection</a> is no longer usable when this method returns, even though it may still remain connected for a short while. </p>
-
-<p>Implements <a class="el" href="class_urho3_d_1_1_network_connection.html#a4fe60485d70feb42ec228959fe7fb5f3">Urho3D::NetworkConnection</a>.</p>
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_network_connection.html#a61b6880e1565f24ce69dfe2e2d6b16c6">Urho3D::NetworkConnection</a>.</p>
 
 </div>
 </div>
@@ -499,14 +581,14 @@ ea::function&lt; void(ea::string_view)&gt;&#160;</td><td class="memItemRight" va
 </table>
 </div><div class="memdoc">
 
-<p>Return maximum size of network message. </p>
+<p>Return maximum size of raw network message. </p>
 
-<p>Implements <a class="el" href="class_urho3_d_1_1_network_connection.html#a95e79e4289b5fd9dc7e0686539920c74">Urho3D::NetworkConnection</a>.</p>
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_network_connection.html#a3cf37152e361bdd34d280173410db2d5">Urho3D::NetworkConnection</a>.</p>
 
 </div>
 </div>
-<a id="ad37a6ca2e37bc6fa7159757fda46d7c7" name="ad37a6ca2e37bc6fa7159757fda46d7c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad37a6ca2e37bc6fa7159757fda46d7c7">&#9670;&#160;</a></span>SendMessage()</h2>
+<a id="a69da61587362c68f4914dbc4305132b2" name="a69da61587362c68f4914dbc4305132b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69da61587362c68f4914dbc4305132b2">&#9670;&#160;</a></span>GetPeer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -515,9 +597,64 @@ ea::function&lt; void(ea::string_view)&gt;&#160;</td><td class="memItemRight" va
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Urho3D::DataChannelConnection::SendMessage </td>
+          <td class="memname">std::shared_ptr&lt; rtc::PeerConnection &gt; Urho3D::DataChannelConnection::GetPeer </td>
           <td>(</td>
-          <td class="paramtype">ea::string_view&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Access the underlying PeerConnection for advanced usage (ICE state, candidates, etc.). Requires knowledge of the rtc:: library. See WebRTC documentation for PeerConnection API. </p>
+
+</div>
+</div>
+<a id="ab0236bd03193e7ef6b0b09f79cfe453c" name="ab0236bd03193e7ef6b0b09f79cfe453c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0236bd03193e7ef6b0b09f79cfe453c">&#9670;&#160;</a></span>InitializeWithWebSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::DataChannelConnection::InitializeWithWebSocket </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; rtc::WebSocket &gt;&#160;</td>
+          <td class="paramname"><em>ws</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_data_channel_server.html">DataChannelServer</a> *&#160;</td>
+          <td class="paramname"><em>server</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize with a pre-connected WebSocket (for relay/custom signaling). Allows using external signaling servers instead of direct WebSocket connections. </p>
+
+</div>
+</div>
+<a id="afbaef48f1270da605e1853ed8d86e747" name="afbaef48f1270da605e1853ed8d86e747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbaef48f1270da605e1853ed8d86e747">&#9670;&#160;</a></span>SendData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Urho3D::DataChannelConnection::SendData </td>
+          <td>(</td>
+          <td class="paramtype">ConstByteSpan&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
@@ -539,15 +676,152 @@ ea::function&lt; void(ea::string_view)&gt;&#160;</td><td class="memItemRight" va
 </table>
 </div><div class="memdoc">
 
-<p>Copies data and queues it for sending. </p>
+<p>Sends data as-is via underlying transport. Data may be copied and sent asynchronously. </p>
 
-<p>Implements <a class="el" href="class_urho3_d_1_1_network_connection.html#a1ea3e000b0d786ae9b1d0117d4628522">Urho3D::NetworkConnection</a>.</p>
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_network_connection.html#a9ad51ca5ab1c3164b65b94589b3cc953">Urho3D::NetworkConnection</a>.</p>
+
+</div>
+</div>
+<a id="ace95214acb4396f9997bd4c4c66382dd" name="ace95214acb4396f9997bd4c4c66382dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace95214acb4396f9997bd4c4c66382dd">&#9670;&#160;</a></span>SetIceServers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::DataChannelConnection::SetIceServers </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>servers</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Configure ICE servers (STUN/TURN) for NAT traversal. Format: "stun:server:port" or "turn:user:pass@server:port" </p>
+
+</div>
+</div>
+<a id="a82b7e6a1fad59f7236981c2ba33c7e88" name="a82b7e6a1fad59f7236981c2ba33c7e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82b7e6a1fad59f7236981c2ba33c7e88">&#9670;&#160;</a></span>SetIceTransportPolicy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::DataChannelConnection::SetIceTransportPolicy </td>
+          <td>(</td>
+          <td class="paramtype">rtc::TransportPolicy&#160;</td>
+          <td class="paramname"><em>policy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Force TURN-relay-only mode for strict firewalls where direct connections are impossible. When enabled, all media traffic goes through the TURN server. </p>
+
+</div>
+</div>
+<a id="afb1016c2de23ad66936fe8c7f351999c" name="afb1016c2de23ad66936fe8c7f351999c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb1016c2de23ad66936fe8c7f351999c">&#9670;&#160;</a></span>SetIceUdpMux()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::DataChannelConnection::SetIceUdpMux </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Multiplex all peer connections onto a single UDP port (libjuice only). The clean solution for dedicated servers — only one port to forward. </p>
+
+</div>
+</div>
+<a id="a5b61b4062ed75bbf5ee3709ea00a21eb" name="a5b61b4062ed75bbf5ee3709ea00a21eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b61b4062ed75bbf5ee3709ea00a21eb">&#9670;&#160;</a></span>SetMtu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::DataChannelConnection::SetMtu </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mtu</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Override network MTU for WebRTC data channels (0 = use default). Useful for VPNs or tunnels with reduced path MTU to avoid UDP fragmentation. </p>
+
+</div>
+</div>
+<a id="a6ee92413030f7bb04745f1dba64a8bea" name="a6ee92413030f7bb04745f1dba64a8bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ee92413030f7bb04745f1dba64a8bea">&#9670;&#160;</a></span>SetPortRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Urho3D::DataChannelConnection::SetPortRange </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Restrict WebRTC to a specific UDP port range (default: 1024-65535). Useful for port-forwarded direct connections where predictable ports are needed. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/Network/Transport/DataChannel/<b>DataChannelConnection.h</b></li>
-<li>Urho3D/Network/Transport/DataChannel/<b>DataChannelConnection.cpp</b></li>
+<li>Urho3D/Network/DataChannel/<b>DataChannelConnection.h</b></li>
+<li>Urho3D/Network/DataChannel/<b>DataChannelConnection.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

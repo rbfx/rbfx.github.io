@@ -111,18 +111,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>StartStandalone</b> (
 void&#160;</td><td class="memItemRight" valign="bottom"><b>StartServer</b> ()</td></tr>
 <tr class="memdesc:a4aa0b375b98d265af768661bd4b5d212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start new server from current state. <br /></td></tr>
 <tr class="separator:a4aa0b375b98d265af768661bd4b5d212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2c4723283ade47459a3db848af0c62e" id="r_af2c4723283ade47459a3db848af0c62e"><td class="memItemLeft" align="right" valign="top"><a id="af2c4723283ade47459a3db848af0c62e" name="af2c4723283ade47459a3db848af0c62e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>StartClient</b> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connectionToServer)</td></tr>
-<tr class="memdesc:af2c4723283ade47459a3db848af0c62e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start new client from specified connection. Removes all existing objects. <br /></td></tr>
-<tr class="separator:af2c4723283ade47459a3db848af0c62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac07b81a1a588278831286686638491e" id="r_aac07b81a1a588278831286686638491e"><td class="memItemLeft" align="right" valign="top"><a id="aac07b81a1a588278831286686638491e" name="aac07b81a1a588278831286686638491e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessMessage</b> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection, NetworkMessageId messageId, <a class="el" href="class_urho3_d_1_1_memory_buffer.html">MemoryBuffer</a> &amp;messageData)</td></tr>
-<tr class="memdesc:aac07b81a1a588278831286686638491e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process network message either as client or as server. <br /></td></tr>
-<tr class="separator:aac07b81a1a588278831286686638491e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78ac48472049d7153f545a9b3b44dd1b" id="r_a78ac48472049d7153f545a9b3b44dd1b"><td class="memItemLeft" align="right" valign="top"><a id="a78ac48472049d7153f545a9b3b44dd1b" name="a78ac48472049d7153f545a9b3b44dd1b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DropConnection</b> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection)</td></tr>
-<tr class="memdesc:a78ac48472049d7153f545a9b3b44dd1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process connection dropped. Removes client connection for server, converts scene to standalone for client. <br /></td></tr>
-<tr class="separator:a78ac48472049d7153f545a9b3b44dd1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0a5b7d3685f95df97c1e36da6174c5" id="r_a5f0a5b7d3685f95df97c1e36da6174c5"><td class="memItemLeft" align="right" valign="top"><a id="a5f0a5b7d3685f95df97c1e36da6174c5" name="a5f0a5b7d3685f95df97c1e36da6174c5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>StartClient</b> (<a class="el" href="class_urho3_d_1_1_shared_ptr.html">ReplicatedPeerPtr</a> connectionToServer)</td></tr>
+<tr class="memdesc:a5f0a5b7d3685f95df97c1e36da6174c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start new client from specified connection. Removes all existing objects. <br /></td></tr>
+<tr class="separator:a5f0a5b7d3685f95df97c1e36da6174c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef63f69aae844c7c27fb8a75470e28e9" id="r_aef63f69aae844c7c27fb8a75470e28e9"><td class="memItemLeft" align="right" valign="top"><a id="aef63f69aae844c7c27fb8a75470e28e9" name="aef63f69aae844c7c27fb8a75470e28e9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessMessage</b> (<a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *connection, NetworkMessageId messageId, <a class="el" href="class_urho3_d_1_1_memory_buffer.html">MemoryBuffer</a> &amp;messageData)</td></tr>
+<tr class="memdesc:aef63f69aae844c7c27fb8a75470e28e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process network message either as client or as server. <br /></td></tr>
+<tr class="separator:aef63f69aae844c7c27fb8a75470e28e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabefb4deafe539daa93c8836f7c7ca84" id="r_aabefb4deafe539daa93c8836f7c7ca84"><td class="memItemLeft" align="right" valign="top"><a id="aabefb4deafe539daa93c8836f7c7ca84" name="aabefb4deafe539daa93c8836f7c7ca84"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DropConnection</b> (<a class="el" href="class_urho3_d_1_1_shared_ptr.html">ReplicatedPeerPtr</a> connection)</td></tr>
+<tr class="memdesc:aabefb4deafe539daa93c8836f7c7ca84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process connection dropped. Removes client connection for server, converts scene to standalone for client. <br /></td></tr>
+<tr class="separator:aabefb4deafe539daa93c8836f7c7ca84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:a3b8d34a5af078f90c5dd63d003a2d1b6" id="r_a3b8d34a5af078f90c5dd63d003a2d1b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_replication_manager.html#a3b8d34a5af078f90c5dd63d003a2d1b6">IsFixedUpdateServer</a> () const</td></tr>
 <tr class="separator:a3b8d34a5af078f90c5dd63d003a2d1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -679,9 +679,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeObjectsStan
 <tr class="memitem:aea663a9be9b61e7293ecb94e429e5689" id="r_aea663a9be9b61e7293ecb94e429e5689"><td class="memItemLeft" align="right" valign="top"><a id="aea663a9be9b61e7293ecb94e429e5689" name="aea663a9be9b61e7293ecb94e429e5689"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Stop</b> ()</td></tr>
 <tr class="separator:aea663a9be9b61e7293ecb94e429e5689"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26abeab3772b06b4fc0b14971195a860" id="r_a26abeab3772b06b4fc0b14971195a860"><td class="memItemLeft" align="right" valign="top"><a id="a26abeab3772b06b4fc0b14971195a860" name="a26abeab3772b06b4fc0b14971195a860"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessMessageOnUninitializedClient</b> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection, NetworkMessageId messageId, <a class="el" href="class_urho3_d_1_1_memory_buffer.html">MemoryBuffer</a> &amp;messageData)</td></tr>
-<tr class="separator:a26abeab3772b06b4fc0b14971195a860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d3a81365b91fd019ddec142ea29a534" id="r_a0d3a81365b91fd019ddec142ea29a534"><td class="memItemLeft" align="right" valign="top"><a id="a0d3a81365b91fd019ddec142ea29a534" name="a0d3a81365b91fd019ddec142ea29a534"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessMessageOnUninitializedClient</b> (<a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *connection, NetworkMessageId messageId, <a class="el" href="class_urho3_d_1_1_memory_buffer.html">MemoryBuffer</a> &amp;messageData)</td></tr>
+<tr class="separator:a0d3a81365b91fd019ddec142ea29a534"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4be99be1fc9de0cfcfdeeb09b8cab256" id="r_a4be99be1fc9de0cfcfdeeb09b8cab256"><td class="memItemLeft" align="right" valign="top"><a id="a4be99be1fc9de0cfcfdeeb09b8cab256" name="a4be99be1fc9de0cfcfdeeb09b8cab256"></a>
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetUninitializedClientDebugInfo</b> () const</td></tr>
 <tr class="separator:a4be99be1fc9de0cfcfdeeb09b8cab256"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -735,7 +735,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>id_</b></td></tr>
 <tr class="separator:ad6192723cff1edc0cc7a96902e35f701 inherit pro_attribs_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47628d705616dd6b54ec22defd638265 inherit pro_attribs_class_urho3_d_1_1_component" id="r_a47628d705616dd6b54ec22defd638265"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>networkUpdate_</b></td></tr>
-<tr class="memdesc:a47628d705616dd6b54ec22defd638265 inherit pro_attribs_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_network.html" title="Network subsystem. Manages client-server communications using the UDP protocol.">Network</a> update queued flag. <br /></td></tr>
+<tr class="memdesc:a47628d705616dd6b54ec22defd638265 inherit pro_attribs_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_network.html" title="Network subsystem. Provides network update scheduling and replication events.">Network</a> update queued flag. <br /></td></tr>
 <tr class="separator:a47628d705616dd6b54ec22defd638265 inherit pro_attribs_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae52f352027bee0fa8d538591364b554a inherit pro_attribs_class_urho3_d_1_1_component" id="r_ae52f352027bee0fa8d538591364b554a"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>enabled_</b></td></tr>

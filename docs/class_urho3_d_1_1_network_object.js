@@ -6,7 +6,7 @@ var class_urho3_d_1_1_network_object =
     [ "OnMarkedDirty", "class_urho3_d_1_1_network_object.html#a64befd8ee81a213b9f8af538b7de75b0", null ],
     [ "OnNodeSet", "class_urho3_d_1_1_network_object.html#a57fe26f141cb89570490d28d6c93b49a", null ],
     [ "PrepareToRemove", "class_urho3_d_1_1_network_object.html#a304db265a5b81726ddfeebb05b15fc71", null ],
-    [ "SetOwner", "class_urho3_d_1_1_network_object.html#a117c6713af0580617352e54090a416aa", null ],
+    [ "SetOwner", "class_urho3_d_1_1_network_object.html#ad46fae886fbd62418a3a587f0e6e68be", null ],
     [ "SetParentNetworkObject", "class_urho3_d_1_1_network_object.html#a44e3a3e486afa7646c53317181f90de5", null ],
     [ "UpdateObjectHierarchy", "class_urho3_d_1_1_network_object.html#aab2b4f81df70668ae07373f4a94ae97e", null ],
     [ "networkMode_", "class_urho3_d_1_1_network_object.html#ac3165e27b452c92da861e1168acc7b2d", null ],

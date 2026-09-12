@@ -8,6 +8,7 @@ var _variant_8h =
     [ "Urho3D::CustomVariantValueImpl< T >", "class_urho3_d_1_1_custom_variant_value_impl.html", "class_urho3_d_1_1_custom_variant_value_impl" ],
     [ "Urho3D::VariantValue", "union_urho3_d_1_1_variant_value.html", "union_urho3_d_1_1_variant_value" ],
     [ "Urho3D::Variant", "class_urho3_d_1_1_variant.html", "class_urho3_d_1_1_variant" ],
+    [ "fmt::formatter< Urho3D::Variant >", "structfmt_1_1formatter_3_01_urho3_d_1_1_variant_01_4.html", null ],
     [ "StringVariantMap", "_variant_8h.html#a60649b0680d555a0c0b15e1585669e89", null ],
     [ "StringVector", "_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5", null ],
     [ "VariantBuffer", "_variant_8h.html#aa52d33cc56888f12bdfcbe86ea3f7884", null ],

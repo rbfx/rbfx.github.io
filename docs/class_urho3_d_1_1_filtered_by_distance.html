@@ -113,8 +113,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDistance</b> (floa
 float&#160;</td><td class="memItemRight" valign="bottom"><b>GetDistance</b> () const</td></tr>
 <tr class="separator:a88b217c3a05f2178b1fdfc34959a2e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a7bda3bd21ebfa7880cc3410a4797efc7" id="r_a7bda3bd21ebfa7880cc3410a4797efc7"><td class="memItemLeft" align="right" valign="top">ea::optional&lt; <a class="el" href="_network_id_8h.html#aedf0efeacce549efd66fb72d96516dba">NetworkObjectRelevance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_filtered_by_distance.html#a7bda3bd21ebfa7880cc3410a4797efc7">GetRelevanceForClient</a> (<a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *connection) override</td></tr>
-<tr class="separator:a7bda3bd21ebfa7880cc3410a4797efc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa300042058c111f66154b48962fcd53f" id="r_aa300042058c111f66154b48962fcd53f"><td class="memItemLeft" align="right" valign="top">ea::optional&lt; <a class="el" href="_network_id_8h.html#aedf0efeacce549efd66fb72d96516dba">NetworkObjectRelevance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_filtered_by_distance.html#aa300042058c111f66154b48962fcd53f">GetRelevanceForClient</a> (<a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *connection) override</td></tr>
+<tr class="separator:aa300042058c111f66154b48962fcd53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_network_behavior"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_network_behavior')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_network_behavior.html">Urho3D::NetworkBehavior</a></td></tr>
 <tr class="memitem:ad75c3f4e166f27e7c13fec838a59654e inherit pub_methods_class_urho3_d_1_1_network_behavior" id="r_ad75c3f4e166f27e7c13fec838a59654e"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>NetworkBehavior</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context, NetworkCallbackFlags callbackMask)</td></tr>
@@ -651,7 +651,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>id_</b></td></tr>
 <tr class="separator:ad6192723cff1edc0cc7a96902e35f701 inherit pro_attribs_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47628d705616dd6b54ec22defd638265 inherit pro_attribs_class_urho3_d_1_1_component" id="r_a47628d705616dd6b54ec22defd638265"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>networkUpdate_</b></td></tr>
-<tr class="memdesc:a47628d705616dd6b54ec22defd638265 inherit pro_attribs_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_network.html" title="Network subsystem. Manages client-server communications using the UDP protocol.">Network</a> update queued flag. <br /></td></tr>
+<tr class="memdesc:a47628d705616dd6b54ec22defd638265 inherit pro_attribs_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_network.html" title="Network subsystem. Provides network update scheduling and replication events.">Network</a> update queued flag. <br /></td></tr>
 <tr class="separator:a47628d705616dd6b54ec22defd638265 inherit pro_attribs_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae52f352027bee0fa8d538591364b554a inherit pro_attribs_class_urho3_d_1_1_component" id="r_ae52f352027bee0fa8d538591364b554a"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>enabled_</b></td></tr>
@@ -679,8 +679,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Behavior that filters <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> by the minimum distance to the client. If the distance is less than the threshold, no relevance is reported. If the distance is greater than the threshold, specified relevance or irrelevance is reported. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7bda3bd21ebfa7880cc3410a4797efc7" name="a7bda3bd21ebfa7880cc3410a4797efc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bda3bd21ebfa7880cc3410a4797efc7">&#9670;&#160;</a></span>GetRelevanceForClient()</h2>
+<a id="aa300042058c111f66154b48962fcd53f" name="aa300042058c111f66154b48962fcd53f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa300042058c111f66154b48962fcd53f">&#9670;&#160;</a></span>GetRelevanceForClient()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -691,7 +691,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">ea::optional&lt; <a class="el" href="_network_id_8h.html#aedf0efeacce549efd66fb72d96516dba">NetworkObjectRelevance</a> &gt; Urho3D::FilteredByDistance::GetRelevanceForClient </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_abstract_connection.html">AbstractConnection</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *&#160;</td>
           <td class="paramname"><em>connection</em></td><td>)</td>
           <td></td>
         </tr>
@@ -704,7 +704,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 </div><div class="memdoc">
 <p>Implement <a class="el" href="class_urho3_d_1_1_network_behavior.html">NetworkBehavior</a>. </p>
 
-<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_server_network_callback.html#abe3edd66e64fb5eeb8a5648b5f00f65e">Urho3D::ServerNetworkCallback</a>.</p>
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_server_network_callback.html#ae69feaad1589efc20a7ab05993ff51cf">Urho3D::ServerNetworkCallback</a>.</p>
 
 </div>
 </div>

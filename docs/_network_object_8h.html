@@ -68,7 +68,8 @@ $(document).ready(function(){initNavTree('_network_object_8h.html',''); initResi
 <div class="contents">
 <div class="textblock"><code>#include &lt;Urho3D/Container/FlagSet.h&gt;</code><br />
 <code>#include &lt;Urho3D/Core/Assert.h&gt;</code><br />
-<code>#include &lt;Urho3D/Network/AbstractConnection.h&gt;</code><br />
+<code>#include &lt;Urho3D/Network/NetworkDefs.h&gt;</code><br />
+<code>#include &lt;Urho3D/Network/ReplicatedPeer.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="_network_callbacks_8h.html">Urho3D/Replica/NetworkCallbacks.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_replication_manager_8h.html">Urho3D/Replica/ReplicationManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_component_8h.html">Urho3D/Scene/Component.h</a>&gt;</code><br />
@@ -110,7 +111,7 @@ Enumerations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad2e91f744aae8950867008e25d173336a5c80f101108a356211fcb26b3f83eabb" name="ad2e91f744aae8950867008e25d173336a5c80f101108a356211fcb26b3f83eabb"></a>Standalone&#160;</td><td class="fielddoc"><p>Default state of <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a>. If scene is not replicated from/to, <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> in such scene stays Standalone. If scene is replicated, <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> is Standalone until it's processed by <a class="el" href="class_urho3_d_1_1_network.html" title="Network subsystem. Manages client-server communications using the UDP protocol.">Network</a> subsystem. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad2e91f744aae8950867008e25d173336a5c80f101108a356211fcb26b3f83eabb" name="ad2e91f744aae8950867008e25d173336a5c80f101108a356211fcb26b3f83eabb"></a>Standalone&#160;</td><td class="fielddoc"><p>Default state of <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a>. If scene is not replicated from/to, <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> in such scene stays Standalone. If scene is replicated, <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> is Standalone until it's processed by <a class="el" href="class_urho3_d_1_1_network.html" title="Network subsystem. Provides network update scheduling and replication events.">Network</a> subsystem. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad2e91f744aae8950867008e25d173336a9aa1b03934893d7134a660af4204f2a9" name="ad2e91f744aae8950867008e25d173336a9aa1b03934893d7134a660af4204f2a9"></a>Server&#160;</td><td class="fielddoc"><p><a class="el" href="class_urho3_d_1_1_object.html">Object</a> is on server and is replicated to clients. </p>
 </td></tr>

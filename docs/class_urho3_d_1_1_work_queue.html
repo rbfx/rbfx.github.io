@@ -117,6 +117,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>PostTaskForMainThread
 void&#160;</td><td class="memItemRight" valign="bottom"><b>PostDelayedTaskForMainThread</b> (TaskFunction &amp;&amp;task)</td></tr>
 <tr class="memdesc:a2ebb9831344122fe5309ac0ca01dcae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post delayed task for main thread. It is guaranteed to be invoked between frames. <br /></td></tr>
 <tr class="separator:a2ebb9831344122fe5309ac0ca01dcae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8737a5f187cb51af2e4df9819467bdb" id="r_ab8737a5f187cb51af2e4df9819467bdb"><td class="memItemLeft" align="right" valign="top"><a id="ab8737a5f187cb51af2e4df9819467bdb" name="ab8737a5f187cb51af2e4df9819467bdb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RunTaskOnMainThread</b> (TaskFunction &amp;&amp;task)</td></tr>
+<tr class="memdesc:ab8737a5f187cb51af2e4df9819467bdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure task is executed on main thread. If called from main thread, task is executed immediately. Otherwise, it runs between frames on main thread. <br /></td></tr>
+<tr class="separator:ab8737a5f187cb51af2e4df9819467bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bb353d1a85e587ee0cb543176e16103" id="r_a1bb353d1a85e587ee0cb543176e16103"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_work_queue.html#a1bb353d1a85e587ee0cb543176e16103">CompleteImmediateForThisThread</a> ()</td></tr>
 <tr class="separator:a1bb353d1a85e587ee0cb543176e16103"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c2a0fd2c80cdd461b4ecda2a429c1b0" id="r_a6c2a0fd2c80cdd461b4ecda2a429c1b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_work_queue.html#a6c2a0fd2c80cdd461b4ecda2a429c1b0">CompleteAll</a> ()</td></tr>
@@ -438,6 +442,10 @@ template&lt;class T &gt; </td></tr>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a896f116b586136c2ca9212b93dfb9799"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>PostDelayedTaskForMainThread</b> (T task)</td></tr>
 <tr class="separator:a896f116b586136c2ca9212b93dfb9799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac9dec0ad9aadeb5721b2e8aee05eed1" id="r_aac9dec0ad9aadeb5721b2e8aee05eed1"><td class="memTemplParams" colspan="2"><a id="aac9dec0ad9aadeb5721b2e8aee05eed1" name="aac9dec0ad9aadeb5721b2e8aee05eed1"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:aac9dec0ad9aadeb5721b2e8aee05eed1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RunTaskOnMainThread</b> (T task)</td></tr>
+<tr class="separator:aac9dec0ad9aadeb5721b2e8aee05eed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fd1aeffbf583d57c7ca7d0247032f1e" id="r_a5fd1aeffbf583d57c7ca7d0247032f1e"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5fd1aeffbf583d57c7ca7d0247032f1e"><td class="memTemplItemLeft" align="right" valign="top">static TaskFunction&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_work_queue.html#a5fd1aeffbf583d57c7ca7d0247032f1e">WrapTask</a> (T &amp;&amp;task)</td></tr>
 <tr class="separator:a5fd1aeffbf583d57c7ca7d0247032f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>

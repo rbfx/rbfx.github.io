@@ -91,10 +91,18 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MemoryBuffer</b> (const void *data, unsigned size)</td></tr>
 <tr class="memdesc:a05cfdfeb571b335131d1e749c6d20fc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct as read-only with a pointer and size. <br /></td></tr>
 <tr class="separator:a05cfdfeb571b335131d1e749c6d20fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b35be79330376bdb6407fffdca3399" id="r_a65b35be79330376bdb6407fffdca3399"><td class="memItemLeft" align="right" valign="top"><a id="a65b35be79330376bdb6407fffdca3399" name="a65b35be79330376bdb6407fffdca3399"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MemoryBuffer</b> (const char *text)</td></tr>
+<tr class="memdesc:a65b35be79330376bdb6407fffdca3399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct as read-only from string. <br /></td></tr>
+<tr class="separator:a65b35be79330376bdb6407fffdca3399"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba99c671e29ac410126f963f18e31fc6" id="r_aba99c671e29ac410126f963f18e31fc6"><td class="memItemLeft" align="right" valign="top"><a id="aba99c671e29ac410126f963f18e31fc6" name="aba99c671e29ac410126f963f18e31fc6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MemoryBuffer</b> (ea::string_view text)</td></tr>
 <tr class="memdesc:aba99c671e29ac410126f963f18e31fc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct as read-only from string. <br /></td></tr>
 <tr class="separator:aba99c671e29ac410126f963f18e31fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac13c15a24daf34f19b2842f956e7da63" id="r_ac13c15a24daf34f19b2842f956e7da63"><td class="memItemLeft" align="right" valign="top"><a id="ac13c15a24daf34f19b2842f956e7da63" name="ac13c15a24daf34f19b2842f956e7da63"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MemoryBuffer</b> (const ea::string &amp;text)</td></tr>
+<tr class="memdesc:ac13c15a24daf34f19b2842f956e7da63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct as read-only from string. <br /></td></tr>
+<tr class="separator:ac13c15a24daf34f19b2842f956e7da63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d0a27e7a4e1e55ca916d2a0eddb236d" id="r_a7d0a27e7a4e1e55ca916d2a0eddb236d"><td class="memItemLeft" align="right" valign="top"><a id="a7d0a27e7a4e1e55ca916d2a0eddb236d" name="a7d0a27e7a4e1e55ca916d2a0eddb236d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MemoryBuffer</b> (ByteVector &amp;data)</td></tr>
 <tr class="memdesc:a7d0a27e7a4e1e55ca916d2a0eddb236d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a vector, which must not go out of scope before <a class="el" href="class_urho3_d_1_1_memory_buffer.html">MemoryBuffer</a>. <br /></td></tr>
@@ -111,6 +119,14 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MemoryBuffer</b> (const <a class="el" href="class_urho3_d_1_1_vector_buffer.html">VectorBuffer</a> &amp;data)</td></tr>
 <tr class="memdesc:a222a5863a2e5de9702189d867e036afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a read-only vector buffer, which must not go out of scope before <a class="el" href="class_urho3_d_1_1_memory_buffer.html">MemoryBuffer</a>. <br /></td></tr>
 <tr class="separator:a222a5863a2e5de9702189d867e036afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb20c7c77b4022d7248caa9cad0c348" id="r_afdb20c7c77b4022d7248caa9cad0c348"><td class="memItemLeft" align="right" valign="top"><a id="afdb20c7c77b4022d7248caa9cad0c348" name="afdb20c7c77b4022d7248caa9cad0c348"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MemoryBuffer</b> (ea::span&lt; unsigned char &gt; data)</td></tr>
+<tr class="memdesc:afdb20c7c77b4022d7248caa9cad0c348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct as read-only from a span. <br /></td></tr>
+<tr class="separator:afdb20c7c77b4022d7248caa9cad0c348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1616784803b0ceea7f4dc81fb83728" id="r_a4f1616784803b0ceea7f4dc81fb83728"><td class="memItemLeft" align="right" valign="top"><a id="a4f1616784803b0ceea7f4dc81fb83728" name="a4f1616784803b0ceea7f4dc81fb83728"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MemoryBuffer</b> (ea::span&lt; const unsigned char &gt; data)</td></tr>
+<tr class="memdesc:a4f1616784803b0ceea7f4dc81fb83728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct as read-only from a span. <br /></td></tr>
+<tr class="separator:a4f1616784803b0ceea7f4dc81fb83728"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b08978bb93f51c3686245e40abcfb22" id="r_a2b08978bb93f51c3686245e40abcfb22"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_memory_buffer.html#a2b08978bb93f51c3686245e40abcfb22">Read</a> (void *dest, unsigned size) override</td></tr>
 <tr class="memdesc:a2b08978bb93f51c3686245e40abcfb22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read bytes from the memory area. Return number of bytes actually read.  <br /></td></tr>
 <tr class="separator:a2b08978bb93f51c3686245e40abcfb22"><td class="memSeparator" colspan="2">&#160;</td></tr>
