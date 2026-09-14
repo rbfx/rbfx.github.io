@@ -81,11 +81,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac53bf81997466016d00ed1e94500c4ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
 <tr class="separator:ac53bf81997466016d00ed1e94500c4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6713729fcc73642aa7ad7e7433e18c0" id="r_ad6713729fcc73642aa7ad7e7433e18c0"><td class="memItemLeft" align="right" valign="top"><a id="ad6713729fcc73642aa7ad7e7433e18c0" name="ad6713729fcc73642aa7ad7e7433e18c0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Spline</b> (<a class="el" href="_spline_8h.html#a8bed5108b7d05ea9d545e4ff121ae481">InterpolationMode</a> mode)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Spline</b> (InterpolationMode mode)</td></tr>
 <tr class="memdesc:ad6713729fcc73642aa7ad7e7433e18c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor setting interpolation mode. <br /></td></tr>
 <tr class="separator:ad6713729fcc73642aa7ad7e7433e18c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b6f75a64088d8505be608fc52c123ee" id="r_a5b6f75a64088d8505be608fc52c123ee"><td class="memItemLeft" align="right" valign="top"><a id="a5b6f75a64088d8505be608fc52c123ee" name="a5b6f75a64088d8505be608fc52c123ee"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Spline</b> (const ea::vector&lt; <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &gt; &amp;knots, <a class="el" href="_spline_8h.html#a8bed5108b7d05ea9d545e4ff121ae481">InterpolationMode</a> mode=<a class="el" href="_spline_8h.html#a8bed5108b7d05ea9d545e4ff121ae481a366226a84d522333ccadac11b1a8ffcf">BEZIER_CURVE</a>)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Spline</b> (const ea::vector&lt; <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &gt; &amp;knots, InterpolationMode mode=BEZIER_CURVE)</td></tr>
 <tr class="memdesc:a5b6f75a64088d8505be608fc52c123ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor setting knots and interpolation mode. <br /></td></tr>
 <tr class="separator:a5b6f75a64088d8505be608fc52c123ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accdd6a748bf9099b0de2c02d8dd8772c" id="r_accdd6a748bf9099b0de2c02d8dd8772c"><td class="memItemLeft" align="right" valign="top"><a id="accdd6a748bf9099b0de2c02d8dd8772c" name="accdd6a748bf9099b0de2c02d8dd8772c"></a>
@@ -104,10 +104,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="class_urho3_d_1_1_spline.html">Spline</a> &amp;rhs) const</td></tr>
 <tr class="memdesc:a890398da208c07f8d45b8ba94ebb1d62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inequality operator. <br /></td></tr>
 <tr class="separator:a890398da208c07f8d45b8ba94ebb1d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7376431ff3b9e47e3269d50406371e0" id="r_ac7376431ff3b9e47e3269d50406371e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_spline_8h.html#a8bed5108b7d05ea9d545e4ff121ae481">InterpolationMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_spline.html#ac7376431ff3b9e47e3269d50406371e0">GetInterpolationMode</a> () const</td></tr>
+<tr class="memitem:ac7376431ff3b9e47e3269d50406371e0" id="r_ac7376431ff3b9e47e3269d50406371e0"><td class="memItemLeft" align="right" valign="top">InterpolationMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_spline.html#ac7376431ff3b9e47e3269d50406371e0">GetInterpolationMode</a> () const</td></tr>
 <tr class="separator:ac7376431ff3b9e47e3269d50406371e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68cab3618c4adc0e1fff58573522d2d1" id="r_a68cab3618c4adc0e1fff58573522d2d1"><td class="memItemLeft" align="right" valign="top"><a id="a68cab3618c4adc0e1fff58573522d2d1" name="a68cab3618c4adc0e1fff58573522d2d1"></a>
-const <a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetKnots</b> () const</td></tr>
+const VariantVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetKnots</b> () const</td></tr>
 <tr class="memdesc:a68cab3618c4adc0e1fff58573522d2d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the knots of the spline. <br /></td></tr>
 <tr class="separator:a68cab3618c4adc0e1fff58573522d2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec9352d328c39b7fc0a6e3b007cbb5e8" id="r_aec9352d328c39b7fc0a6e3b007cbb5e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_variant.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_spline.html#aec9352d328c39b7fc0a6e3b007cbb5e8">GetKnot</a> (unsigned index) const</td></tr>
@@ -115,7 +115,7 @@ const <a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">Va
 <tr class="memitem:a7ece7665efcb2fb858921e5798cdb3ea" id="r_a7ece7665efcb2fb858921e5798cdb3ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_variant.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_spline.html#a7ece7665efcb2fb858921e5798cdb3ea">GetPoint</a> (float f) const</td></tr>
 <tr class="memdesc:a7ece7665efcb2fb858921e5798cdb3ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the T of the point of the spline at f from 0.f - 1.f.  <br /></td></tr>
 <tr class="separator:a7ece7665efcb2fb858921e5798cdb3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54065e0455f38df16ca0e4d965bc978a" id="r_a54065e0455f38df16ca0e4d965bc978a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_spline.html#a54065e0455f38df16ca0e4d965bc978a">SetInterpolationMode</a> (<a class="el" href="_spline_8h.html#a8bed5108b7d05ea9d545e4ff121ae481">InterpolationMode</a> interpolationMode)</td></tr>
+<tr class="memitem:a54065e0455f38df16ca0e4d965bc978a" id="r_a54065e0455f38df16ca0e4d965bc978a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_spline.html#a54065e0455f38df16ca0e4d965bc978a">SetInterpolationMode</a> (InterpolationMode interpolationMode)</td></tr>
 <tr class="separator:a54065e0455f38df16ca0e4d965bc978a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ffc25f251bd8bc08e82f584cb8959cb" id="r_a2ffc25f251bd8bc08e82f584cb8959cb"><td class="memItemLeft" align="right" valign="top"><a id="a2ffc25f251bd8bc08e82f584cb8959cb" name="a2ffc25f251bd8bc08e82f584cb8959cb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetKnots</b> (const ea::vector&lt; <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &gt; &amp;knots)</td></tr>
@@ -167,11 +167,11 @@ Private Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a42093a07b9949bcd1c402621e1dad080" id="r_a42093a07b9949bcd1c402621e1dad080"><td class="memItemLeft" align="right" valign="top"><a id="a42093a07b9949bcd1c402621e1dad080" name="a42093a07b9949bcd1c402621e1dad080"></a>
-<a class="el" href="_spline_8h.html#a8bed5108b7d05ea9d545e4ff121ae481">InterpolationMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>interpolationMode_</b></td></tr>
+InterpolationMode&#160;</td><td class="memItemRight" valign="bottom"><b>interpolationMode_</b></td></tr>
 <tr class="memdesc:a42093a07b9949bcd1c402621e1dad080"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolation mode. <br /></td></tr>
 <tr class="separator:a42093a07b9949bcd1c402621e1dad080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cdddea8ecb5db6129aeccb11ddfb72f" id="r_a6cdddea8ecb5db6129aeccb11ddfb72f"><td class="memItemLeft" align="right" valign="top"><a id="a6cdddea8ecb5db6129aeccb11ddfb72f" name="a6cdddea8ecb5db6129aeccb11ddfb72f"></a>
-<a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>knots_</b></td></tr>
+VariantVector&#160;</td><td class="memItemRight" valign="bottom"><b>knots_</b></td></tr>
 <tr class="memdesc:a6cdddea8ecb5db6129aeccb11ddfb72f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Knots on the spline. <br /></td></tr>
 <tr class="separator:a6cdddea8ecb5db6129aeccb11ddfb72f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -226,7 +226,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_spline_8h.html#a8bed5108b7d05ea9d545e4ff121ae481">InterpolationMode</a> Urho3D::Spline::GetInterpolationMode </td>
+          <td class="memname">InterpolationMode Urho3D::Spline::GetInterpolationMode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -301,7 +301,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Urho3D::Spline::SetInterpolationMode </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_spline_8h.html#a8bed5108b7d05ea9d545e4ff121ae481">InterpolationMode</a>&#160;</td>
+          <td class="paramtype">InterpolationMode&#160;</td>
           <td class="paramname"><em>interpolationMode</em></td><td>)</td>
           <td></td>
         </tr>
@@ -317,7 +317,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/Core/<a class="el" href="_spline_8h.html">Spline.h</a></li>
+<li>Urho3D/Core/<b>Spline.h</b></li>
 <li>Urho3D/Core/<b>Spline.cpp</b></li>
 </ul>
 </div><!-- contents -->

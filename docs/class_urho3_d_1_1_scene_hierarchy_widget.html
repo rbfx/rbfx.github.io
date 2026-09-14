@@ -136,7 +136,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsInstanceOf<
 <tr class="memdesc:a26c296bb4de9e175308a26c723d5dc7e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether current instance implements specified type. <br /></td></tr>
 <tr class="separator:a26c296bb4de9e175308a26c723d5dc7e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object" id="r_ad0ce1699ce5bd9d4033e5800bbb8c15b"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEvent</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEvent</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle event. <br /></td></tr>
 <tr class="separator:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13f38914b4398c60eb0b12fb12d73765 inherit pub_methods_class_urho3_d_1_1_object" id="r_a13f38914b4398c60eb0b12fb12d73765"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a13f38914b4398c60eb0b12fb12d73765">SerializeInBlock</a> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;archive)</td></tr>
@@ -204,11 +204,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a cla
 <tr class="memdesc:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event to all subscribers. <br /></td></tr>
 <tr class="separator:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object" id="r_af8f8bd3f7e2f51ecca7199e737f53364"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers. <br /></td></tr>
 <tr class="separator:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object" id="r_a69af51cfa67f9626273b35a6d501e03e"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> () const</td></tr>
+VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> () const</td></tr>
 <tr class="memdesc:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a preallocated map for event data. Used for optimization to avoid constant re-allocation of event data maps. <br /></td></tr>
 <tr class="separator:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5e3591133331ebd3d9e12c95c46aed inherit pub_methods_class_urho3_d_1_1_object" id="r_aca5e3591133331ebd3d9e12c95c46aed"><td class="memTemplParams" colspan="2">
@@ -222,7 +222,7 @@ template&lt;typename... Args&gt; </td></tr>
 <tr class="separator:a8bd9b32c8a56c2f6d618d8afe8091eb7 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd4506c4bdb10232305ef69ebbb78a83 inherit pub_methods_class_urho3_d_1_1_object" id="r_acd4506c4bdb10232305ef69ebbb78a83"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#acd4506c4bdb10232305ef69ebbb78a83">GetGlobalVar</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> key) const</td></tr>
 <tr class="separator:acd4506c4bdb10232305ef69ebbb78a83 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object" id="r_a27b36184a862d9343604f31d85d9bc24"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a27b36184a862d9343604f31d85d9bc24">GetGlobalVars</a> () const</td></tr>
+<tr class="memitem:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object" id="r_a27b36184a862d9343604f31d85d9bc24"><td class="memItemLeft" align="right" valign="top">const VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a27b36184a862d9343604f31d85d9bc24">GetGlobalVars</a> () const</td></tr>
 <tr class="separator:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43d25cc580737c9dc3b973d6c1230d9e inherit pub_methods_class_urho3_d_1_1_object" id="r_a43d25cc580737c9dc3b973d6c1230d9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a43d25cc580737c9dc3b973d6c1230d9e">SetGlobalVar</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> key, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;value)</td></tr>
 <tr class="separator:a43d25cc580737c9dc3b973d6c1230d9e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -258,7 +258,7 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a1ac1fa57e9eb18f91efc30b29b0861c1 inherit pub_methods_class_urho3_d_1_1_object" id="r_a1ac1fa57e9eb18f91efc30b29b0861c1"><td class="memItemLeft" align="right" valign="top">const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a1ac1fa57e9eb18f91efc30b29b0861c1">GetCategory</a> () const</td></tr>
 <tr class="separator:a1ac1fa57e9eb18f91efc30b29b0861c1 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object" id="r_ad7c6e6d74d0ad90811fb3f04bd813a7e"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, const VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers. <br /></td></tr>
 <tr class="separator:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd72cab3f338ef6ca76da511bcd941dc inherit pub_methods_class_urho3_d_1_1_object" id="r_abd72cab3f338ef6ca76da511bcd941dc"><td class="memItemLeft" align="right" valign="top">
@@ -313,13 +313,13 @@ Public Attributes</h2></td></tr>
 <a class="el" href="class_urho3_d_1_1_signal.html">Signal</a>&lt; void(<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene, <a class="el" href="class_urho3_d_1_1_scene_selection.html">SceneSelection</a> &amp;selection)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnContextMenu</b></td></tr>
 <tr class="separator:afba942797f8a359450a84d54ab08094e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8e0b9e264bd7b3a3009b95c46c63d7c" id="r_ae8e0b9e264bd7b3a3009b95c46c63d7c"><td class="memItemLeft" align="right" valign="top"><a id="ae8e0b9e264bd7b3a3009b95c46c63d7c" name="ae8e0b9e264bd7b3a3009b95c46c63d7c"></a>
-<a class="el" href="class_urho3_d_1_1_signal.html">Signal</a>&lt; void(<a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *node, unsigned oldIndex, unsigned newIndex)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnNodeReordered</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_signal.html">Signal</a>&lt; void(Node *node, unsigned oldIndex, unsigned newIndex)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnNodeReordered</b></td></tr>
 <tr class="separator:ae8e0b9e264bd7b3a3009b95c46c63d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a123b9c1cb7444ff73fea4e08b6c1dec2" id="r_a123b9c1cb7444ff73fea4e08b6c1dec2"><td class="memItemLeft" align="right" valign="top"><a id="a123b9c1cb7444ff73fea4e08b6c1dec2" name="a123b9c1cb7444ff73fea4e08b6c1dec2"></a>
 <a class="el" href="class_urho3_d_1_1_signal.html">Signal</a>&lt; void(<a class="el" href="class_urho3_d_1_1_component.html">Component</a> *component, unsigned oldIndex, unsigned newIndex)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnComponentReordered</b></td></tr>
 <tr class="separator:a123b9c1cb7444ff73fea4e08b6c1dec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0059929b2cf03e056fc12df463631162" id="r_a0059929b2cf03e056fc12df463631162"><td class="memItemLeft" align="right" valign="top"><a id="a0059929b2cf03e056fc12df463631162" name="a0059929b2cf03e056fc12df463631162"></a>
-<a class="el" href="class_urho3_d_1_1_signal.html">Signal</a>&lt; void(<a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *parentNode, <a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *childNode)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnNodeReparented</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_signal.html">Signal</a>&lt; void(Node *parentNode, Node *childNode)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnNodeReparented</b></td></tr>
 <tr class="separator:a0059929b2cf03e056fc12df463631162"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
@@ -331,7 +331,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>OptionalReorderInfo<
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:aae0d828193d66b6bd99084349ce68a44" id="r_aae0d828193d66b6bd99084349ce68a44"><td class="memItemLeft" align="right" valign="top"><a id="aae0d828193d66b6bd99084349ce68a44" name="aae0d828193d66b6bd99084349ce68a44"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderNode</b> (<a class="el" href="class_urho3_d_1_1_scene_selection.html">SceneSelection</a> &amp;selection, <a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *node)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderNode</b> (<a class="el" href="class_urho3_d_1_1_scene_selection.html">SceneSelection</a> &amp;selection, Node *node)</td></tr>
 <tr class="separator:aae0d828193d66b6bd99084349ce68a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22cbe5fd2bb3cc739fa0b7e56f9e2ce4" id="r_a22cbe5fd2bb3cc739fa0b7e56f9e2ce4"><td class="memItemLeft" align="right" valign="top"><a id="a22cbe5fd2bb3cc739fa0b7e56f9e2ce4" name="a22cbe5fd2bb3cc739fa0b7e56f9e2ce4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderComponent</b> (<a class="el" href="class_urho3_d_1_1_scene_selection.html">SceneSelection</a> &amp;selection, <a class="el" href="class_urho3_d_1_1_component.html">Component</a> *component)</td></tr>
@@ -370,11 +370,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderContextMenu</b>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>BeginSelectionDrag</b> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene, <a class="el" href="class_urho3_d_1_1_scene_selection.html">SceneSelection</a> &amp;selection)</td></tr>
 <tr class="separator:a5512c252204aa107972928d24eafb2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa96209bf576d0db266ddc92ff0b5057" id="r_afa96209bf576d0db266ddc92ff0b5057"><td class="memItemLeft" align="right" valign="top"><a id="afa96209bf576d0db266ddc92ff0b5057" name="afa96209bf576d0db266ddc92ff0b5057"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DropPayloadToNode</b> (<a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *parentNode)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DropPayloadToNode</b> (Node *parentNode)</td></tr>
 <tr class="separator:afa96209bf576d0db266ddc92ff0b5057"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aceb3ffdeeda14586dc94c1ddc0497575" id="r_aceb3ffdeeda14586dc94c1ddc0497575"><td class="memTemplParams" colspan="2"><a id="aceb3ffdeeda14586dc94c1ddc0497575" name="aceb3ffdeeda14586dc94c1ddc0497575"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:aceb3ffdeeda14586dc94c1ddc0497575"><td class="memTemplItemLeft" align="right" valign="top">OptionalReorderInfo&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RenderObjectReorder</b> (OptionalReorderInfo &amp;info, T *object, <a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *parentNode, const char *hint)</td></tr>
+<tr class="memitem:aceb3ffdeeda14586dc94c1ddc0497575"><td class="memTemplItemLeft" align="right" valign="top">OptionalReorderInfo&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RenderObjectReorder</b> (OptionalReorderInfo &amp;info, T *object, Node *parentNode, const char *hint)</td></tr>
 <tr class="separator:aceb3ffdeeda14586dc94c1ddc0497575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -398,7 +398,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>scrollToActiveObject_
 <a class="el" href="class_urho3_d_1_1_object.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>lastActiveObject_</b> {}</td></tr>
 <tr class="separator:aab928950916547f2d6b1073e07722990"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87596c1fd7ecd2709450e8bd6ba5e35c" id="r_a87596c1fd7ecd2709450e8bd6ba5e35c"><td class="memItemLeft" align="right" valign="top"><a id="a87596c1fd7ecd2709450e8bd6ba5e35c" name="a87596c1fd7ecd2709450e8bd6ba5e35c"></a>
-ea::vector&lt; <a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pathToActiveObject_</b></td></tr>
+ea::vector&lt; Node * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pathToActiveObject_</b></td></tr>
 <tr class="separator:a87596c1fd7ecd2709450e8bd6ba5e35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77a61c8a4185f477de4dc8bc425533ac" id="r_a77a61c8a4185f477de4dc8bc425533ac"><td class="memItemLeft" align="right" valign="top"><a id="a77a61c8a4185f477de4dc8bc425533ac" name="a77a61c8a4185f477de4dc8bc425533ac"></a>
 struct <a class="el" href="struct_urho3_d_1_1_scene_hierarchy_widget_1_1_range_selection.html">Urho3D::SceneHierarchyWidget::RangeSelection</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rangeSelection_</b></td></tr>

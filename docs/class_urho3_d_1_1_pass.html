@@ -119,10 +119,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a911588a07bffc5ff56d3a7c2a47d1811" id="r_a911588a07bffc5ff56d3a7c2a47d1811"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_pass.html#a911588a07bffc5ff56d3a7c2a47d1811">SetPixelShaderDefineExcludes</a> (const ea::string &amp;excludes)</td></tr>
 <tr class="separator:a911588a07bffc5ff56d3a7c2a47d1811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d153f82fdafa7ecdc02b2e0b3dd0966" id="r_a7d153f82fdafa7ecdc02b2e0b3dd0966"><td class="memItemLeft" align="right" valign="top"><a id="a7d153f82fdafa7ecdc02b2e0b3dd0966" name="a7d153f82fdafa7ecdc02b2e0b3dd0966"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetVertexTextureDefines</b> (const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;textures)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetVertexTextureDefines</b> (const StringVector &amp;textures)</td></tr>
 <tr class="separator:a7d153f82fdafa7ecdc02b2e0b3dd0966"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f819d81bff381784f34a1ab159f8f20" id="r_a4f819d81bff381784f34a1ab159f8f20"><td class="memItemLeft" align="right" valign="top"><a id="a4f819d81bff381784f34a1ab159f8f20" name="a4f819d81bff381784f34a1ab159f8f20"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPixelTextureDefines</b> (const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;textures)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPixelTextureDefines</b> (const StringVector &amp;textures)</td></tr>
 <tr class="separator:a4f819d81bff381784f34a1ab159f8f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88670623f66ba1b156900449f6da9a3a" id="r_a88670623f66ba1b156900449f6da9a3a"><td class="memItemLeft" align="right" valign="top"><a id="a88670623f66ba1b156900449f6da9a3a" name="a88670623f66ba1b156900449f6da9a3a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ReleaseShaders</b> ()</td></tr>
@@ -181,11 +181,11 @@ ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr<
 <tr class="memdesc:a6d1bc2affa7f7d6eb65e80a7eb86d679"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pixel shaders. <br /></td></tr>
 <tr class="separator:a6d1bc2affa7f7d6eb65e80a7eb86d679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8246207840b4f6f75fe02b5e72ce73c4" id="r_a8246207840b4f6f75fe02b5e72ce73c4"><td class="memItemLeft" align="right" valign="top"><a id="a8246207840b4f6f75fe02b5e72ce73c4" name="a8246207840b4f6f75fe02b5e72ce73c4"></a>
-const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetVertexTextureDefines</b> () const</td></tr>
+const StringVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetVertexTextureDefines</b> () const</td></tr>
 <tr class="memdesc:a8246207840b4f6f75fe02b5e72ce73c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return names of textures to be reported as defines in vertex shader code. <br /></td></tr>
 <tr class="separator:a8246207840b4f6f75fe02b5e72ce73c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a112806d5cb55a429d86b3198dd69db4d" id="r_a112806d5cb55a429d86b3198dd69db4d"><td class="memItemLeft" align="right" valign="top"><a id="a112806d5cb55a429d86b3198dd69db4d" name="a112806d5cb55a429d86b3198dd69db4d"></a>
-const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetPixelTextureDefines</b> () const</td></tr>
+const StringVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetPixelTextureDefines</b> () const</td></tr>
 <tr class="memdesc:a112806d5cb55a429d86b3198dd69db4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return names of textures to be reported as defines in pixel shader code. <br /></td></tr>
 <tr class="separator:a112806d5cb55a429d86b3198dd69db4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acab19510897f7640373829184a4c16af" id="r_acab19510897f7640373829184a4c16af"><td class="memItemLeft" align="right" valign="top"><a id="acab19510897f7640373829184a4c16af" name="acab19510897f7640373829184a4c16af"></a>
@@ -340,10 +340,10 @@ ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">St
 <tr class="memdesc:a58e81f05656f8943002f34d305ac9d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel shaders with extra defines from the renderpath. <br /></td></tr>
 <tr class="separator:a58e81f05656f8943002f34d305ac9d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2160a05983757e761e2edbc43f6555d1" id="r_a2160a05983757e761e2edbc43f6555d1"><td class="memItemLeft" align="right" valign="top"><a id="a2160a05983757e761e2edbc43f6555d1" name="a2160a05983757e761e2edbc43f6555d1"></a>
-<a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vertexTextureDefines_</b></td></tr>
+StringVector&#160;</td><td class="memItemRight" valign="bottom"><b>vertexTextureDefines_</b></td></tr>
 <tr class="separator:a2160a05983757e761e2edbc43f6555d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a686713ba4d9f5711b85bc8aaf45714a5" id="r_a686713ba4d9f5711b85bc8aaf45714a5"><td class="memItemLeft" align="right" valign="top"><a id="a686713ba4d9f5711b85bc8aaf45714a5" name="a686713ba4d9f5711b85bc8aaf45714a5"></a>
-<a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pixelTextureDefines_</b></td></tr>
+StringVector&#160;</td><td class="memItemRight" valign="bottom"><b>pixelTextureDefines_</b></td></tr>
 <tr class="separator:a686713ba4d9f5711b85bc8aaf45714a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac26d39b24d85c0fa04ccbb9553152ad3" id="r_ac26d39b24d85c0fa04ccbb9553152ad3"><td class="memItemLeft" align="right" valign="top"><a id="ac26d39b24d85c0fa04ccbb9553152ad3" name="ac26d39b24d85c0fa04ccbb9553152ad3"></a>
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>name_</b></td></tr>
@@ -939,7 +939,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSubscriberRefer
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/Graphics/<a class="el" href="_technique_8h.html">Technique.h</a></li>
+<li>Urho3D/Graphics/<b>Technique.h</b></li>
 <li>Urho3D/Graphics/<b>Technique.cpp</b></li>
 </ul>
 </div><!-- contents -->

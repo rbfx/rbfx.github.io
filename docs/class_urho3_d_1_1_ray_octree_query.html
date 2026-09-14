@@ -83,11 +83,11 @@ Inheritance diagram for Urho3D::RayOctreeQuery:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3eee725d391c7d05eb6b90a96d853c2d" id="r_a3eee725d391c7d05eb6b90a96d853c2d"><td class="memItemLeft" align="right" valign="top"><a id="a3eee725d391c7d05eb6b90a96d853c2d" name="a3eee725d391c7d05eb6b90a96d853c2d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RayOctreeQuery</b> (ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_ray_query_result.html">RayQueryResult</a> &gt; &amp;result, const <a class="el" href="class_urho3_d_1_1_ray.html">Ray</a> &amp;ray, <a class="el" href="_octree_query_8h.html#a87b77f7eab5a2ec750d2541c90e6eae8">RayQueryLevel</a> level=RAY_TRIANGLE, float maxDistance=M_INFINITY, DrawableFlags drawableFlags=DRAWABLE_ANY, unsigned viewMask=DEFAULT_VIEWMASK)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RayOctreeQuery</b> (ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_ray_query_result.html">RayQueryResult</a> &gt; &amp;result, const <a class="el" href="class_urho3_d_1_1_ray.html">Ray</a> &amp;ray, RayQueryLevel level=RAY_TRIANGLE, float maxDistance=M_INFINITY, DrawableFlags drawableFlags=DRAWABLE_ANY, unsigned viewMask=DEFAULT_VIEWMASK)</td></tr>
 <tr class="memdesc:a3eee725d391c7d05eb6b90a96d853c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with ray and query parameters. <br /></td></tr>
 <tr class="separator:a3eee725d391c7d05eb6b90a96d853c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70338e5220f7b10fbc788f94191986eb" id="r_a70338e5220f7b10fbc788f94191986eb"><td class="memItemLeft" align="right" valign="top"><a id="a70338e5220f7b10fbc788f94191986eb" name="a70338e5220f7b10fbc788f94191986eb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RayOctreeQuery</b> (const <a class="el" href="class_urho3_d_1_1_ray.html">Ray</a> &amp;ray, <a class="el" href="_octree_query_8h.html#a87b77f7eab5a2ec750d2541c90e6eae8">RayQueryLevel</a> level=RAY_TRIANGLE, float maxDistance=M_INFINITY, DrawableFlags drawableFlags=DRAWABLE_ANY, unsigned viewMask=DEFAULT_VIEWMASK)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RayOctreeQuery</b> (const <a class="el" href="class_urho3_d_1_1_ray.html">Ray</a> &amp;ray, RayQueryLevel level=RAY_TRIANGLE, float maxDistance=M_INFINITY, DrawableFlags drawableFlags=DRAWABLE_ANY, unsigned viewMask=DEFAULT_VIEWMASK)</td></tr>
 <tr class="memdesc:a70338e5220f7b10fbc788f94191986eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with ray and query parameters and use builtin storage for results. <br /></td></tr>
 <tr class="separator:a70338e5220f7b10fbc788f94191986eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -114,7 +114,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>maxDistance_</b></td
 <tr class="memdesc:afa4a7c030a345dc79ee04d44f3561302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum ray distance. <br /></td></tr>
 <tr class="separator:afa4a7c030a345dc79ee04d44f3561302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46e82454603d2d2c15f5a06923419a37" id="r_a46e82454603d2d2c15f5a06923419a37"><td class="memItemLeft" align="right" valign="top"><a id="a46e82454603d2d2c15f5a06923419a37" name="a46e82454603d2d2c15f5a06923419a37"></a>
-<a class="el" href="_octree_query_8h.html#a87b77f7eab5a2ec750d2541c90e6eae8">RayQueryLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>level_</b></td></tr>
+RayQueryLevel&#160;</td><td class="memItemRight" valign="bottom"><b>level_</b></td></tr>
 <tr class="memdesc:a46e82454603d2d2c15f5a06923419a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raycast detail level. <br /></td></tr>
 <tr class="separator:a46e82454603d2d2c15f5a06923419a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -143,7 +143,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Raycast octree query. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>Urho3D/Graphics/<a class="el" href="_octree_query_8h.html">OctreeQuery.h</a></li>
+<li>Urho3D/Graphics/<b>OctreeQuery.h</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

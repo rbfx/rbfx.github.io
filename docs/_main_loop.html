@@ -148,7 +148,7 @@ Main loop and the application activation state</h1>
 <h1><a class="anchor" id="MainLoop_ApplicationFramework"></a>
 Application framework</h1>
 <p>The <a class="el" href="class_urho3_d_1_1_application.html" title="Base class for creating applications which initialize the Urho3D engine and run a main loop until exi...">Application</a> class provides a minimal framework for a Urho3D C++ application with a main loop. It has virtual functions Setup(), Start() and Stop() which can be defined by the application subclass. The header file also provides a macro for defining a program entry point, which will instantiate the <a class="el" href="class_urho3_d_1_1_context.html" title="Urho3D execution context. Provides access to subsystems, object factories and attributes,...">Context</a> object and then the user-specified application class. A minimal example, which would just display a blank rendering window and exit by pressing ESC:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_application_8h.html">Urho3D/Engine/Application.h</a>&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;Urho3D/Engine/Application.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;Urho3D/Engine/Engine.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;Urho3D/Input/InputEvents.h&gt;</span></div>
 <div class="line"> </div>
@@ -178,7 +178,7 @@ Application framework</h1>
 <div class="line">        <span class="comment">// Perform optional cleanup after main loop has terminated</span></div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> HandleKeyDown(<a class="code hl_class" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="code hl_typedef" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a>&amp; eventData)</div>
+<div class="line">    <span class="keywordtype">void</span> HandleKeyDown(<a class="code hl_class" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap&amp; eventData)</div>
 <div class="line">    {</div>
 <div class="line">        <span class="keyword">using namespace </span>KeyDown;</div>
 <div class="line"> </div>
@@ -190,10 +190,8 @@ Application framework</h1>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line">URHO3D_DEFINE_APPLICATION_MAIN(MyApp)</div>
-<div class="ttc" id="a_application_8h_html"><div class="ttname"><a href="_application_8h.html">Application.h</a></div></div>
-<div class="ttc" id="a_variant_8h_html_ad2c613c8f2d32d4994503b4c5c496e68"><div class="ttname"><a href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">Urho3D::VariantMap</a></div><div class="ttdeci">ea::unordered_map&lt; StringHash, Variant &gt; VariantMap</div><div class="ttdoc">Map of variants.</div><div class="ttdef"><b>Definition</b> Variant.h:106</div></div>
-<div class="ttc" id="aclass_urho3_d_1_1_application_html"><div class="ttname"><a href="class_urho3_d_1_1_application.html">Urho3D::Application</a></div><div class="ttdoc">Base class for creating applications which initialize the Urho3D engine and run a main loop until exi...</div><div class="ttdef"><b>Definition</b> Application.h:42</div></div>
-<div class="ttc" id="aclass_urho3_d_1_1_context_html"><div class="ttname"><a href="class_urho3_d_1_1_context.html">Urho3D::Context</a></div><div class="ttdoc">Urho3D execution context. Provides access to subsystems, object factories and attributes,...</div><div class="ttdef"><b>Definition</b> Context.h:71</div></div>
+<div class="ttc" id="aclass_urho3_d_1_1_application_html"><div class="ttname"><a href="class_urho3_d_1_1_application.html">Urho3D::Application</a></div><div class="ttdoc">Base class for creating applications which initialize the Urho3D engine and run a main loop until exi...</div><div class="ttdef"><b>Definition</b> Application.h:24</div></div>
+<div class="ttc" id="aclass_urho3_d_1_1_context_html"><div class="ttname"><a href="class_urho3_d_1_1_context.html">Urho3D::Context</a></div><div class="ttdoc">Urho3D execution context. Provides access to subsystems, object factories and attributes,...</div><div class="ttdef"><b>Definition</b> Context.h:54</div></div>
 <div class="ttc" id="aclass_urho3_d_1_1_string_hash_html"><div class="ttname"><a href="class_urho3_d_1_1_string_hash.html">Urho3D::StringHash</a></div><div class="ttdoc">32-bit hash value for a string.</div><div class="ttdef"><b>Definition</b> StringHash.h:38</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->

@@ -80,7 +80,7 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ClientInputStatistics</b> (unsigned windowSize, unsigned maxInputLoss)</td></tr>
 <tr class="separator:aaa5345cb4190599e30a50bae0975037b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe8532808fee1e2221f1b5ff84b3d862" id="r_abe8532808fee1e2221f1b5ff84b3d862"><td class="memItemLeft" align="right" valign="top"><a id="abe8532808fee1e2221f1b5ff84b3d862" name="abe8532808fee1e2221f1b5ff84b3d862"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnInputReceived</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnInputReceived</b> (NetworkFrame frame)</td></tr>
 <tr class="memdesc:abe8532808fee1e2221f1b5ff84b3d862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify that the input was received for given frame. <br /></td></tr>
 <tr class="separator:abe8532808fee1e2221f1b5ff84b3d862"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab22ee7b2569a4ceac970ad099bb18724" id="r_ab22ee7b2569a4ceac970ad099bb18724"><td class="memItemLeft" align="right" valign="top"><a id="ab22ee7b2569a4ceac970ad099bb18724" name="ab22ee7b2569a4ceac970ad099bb18724"></a>
@@ -102,7 +102,7 @@ Private Attributes</h2></td></tr>
 const int&#160;</td><td class="memItemRight" valign="bottom"><b>maxInputLoss_</b></td></tr>
 <tr class="separator:a687278c43ce01a731db3a8ee8be2ab43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a000db84e59eaf1e6d25b282abe4bceba" id="r_a000db84e59eaf1e6d25b282abe4bceba"><td class="memItemLeft" align="right" valign="top"><a id="a000db84e59eaf1e6d25b282abe4bceba" name="a000db84e59eaf1e6d25b282abe4bceba"></a>
-ea::optional&lt; <a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>latestInputFrame_</b> {}</td></tr>
+ea::optional&lt; NetworkFrame &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>latestInputFrame_</b> {}</td></tr>
 <tr class="separator:a000db84e59eaf1e6d25b282abe4bceba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b747d2ad45705cdff3cbfa13e702994" id="r_a5b747d2ad45705cdff3cbfa13e702994"><td class="memItemLeft" align="right" valign="top"><a id="a5b747d2ad45705cdff3cbfa13e702994" name="a5b747d2ad45705cdff3cbfa13e702994"></a>
 ea::ring_buffer&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>numLostFrames_</b></td></tr>
@@ -117,7 +117,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>bufferSize_</b> {
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Utility to evaluate client input quality and preferred input buffering. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/Replica/<a class="el" href="_client_input_statistics_8h.html">ClientInputStatistics.h</a></li>
+<li>Urho3D/Replica/<b>ClientInputStatistics.h</b></li>
 <li>Urho3D/Replica/<b>ClientInputStatistics.cpp</b></li>
 </ul>
 </div><!-- contents -->

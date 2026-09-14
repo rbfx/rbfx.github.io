@@ -87,7 +87,7 @@ Inheritance diagram for Urho3D::ClientReplicationState:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aeaa790c08b6e480f45a96a3aa54e8bf2" id="r_aeaa790c08b6e480f45a96a3aa54e8bf2"><td class="memItemLeft" align="right" valign="top"><a id="aeaa790c08b6e480f45a96a3aa54e8bf2" name="aeaa790c08b6e480f45a96a3aa54e8bf2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ClientReplicationState</b> (<a class="el" href="class_urho3_d_1_1_network_object_registry.html">NetworkObjectRegistry</a> *objectRegistry, <a class="el" href="class_urho3_d_1_1_shared_ptr.html">ReplicatedPeerPtr</a> connection, const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;settings)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ClientReplicationState</b> (<a class="el" href="class_urho3_d_1_1_network_object_registry.html">NetworkObjectRegistry</a> *objectRegistry, <a class="el" href="class_urho3_d_1_1_shared_ptr.html">ReplicatedPeerPtr</a> connection, const VariantMap &amp;settings)</td></tr>
 <tr class="separator:aeaa790c08b6e480f45a96a3aa54e8bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec3320956ae3f252453f0d9cdaa97740" id="r_aec3320956ae3f252453f0d9cdaa97740"><td class="memItemLeft" align="right" valign="top"><a id="aec3320956ae3f252453f0d9cdaa97740" name="aec3320956ae3f252453f0d9cdaa97740"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateNetworkObjects</b> (<a class="el" href="class_urho3_d_1_1_shared_replication_state.html">SharedReplicationState</a> &amp;sharedState)</td></tr>
@@ -98,7 +98,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessMessage</b> (N
 <tr class="memdesc:a47d13ffab55ded59ceef96451faaadf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process messages for this client. <br /></td></tr>
 <tr class="separator:a47d13ffab55ded59ceef96451faaadf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3efb6b978fad7816b4bf813bd7f4a510" id="r_a3efb6b978fad7816b4bf813bd7f4a510"><td class="memItemLeft" align="right" valign="top"><a id="a3efb6b978fad7816b4bf813bd7f4a510" name="a3efb6b978fad7816b4bf813bd7f4a510"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessages</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> currentFrame, const <a class="el" href="class_urho3_d_1_1_shared_replication_state.html">SharedReplicationState</a> &amp;sharedState)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendMessages</b> (NetworkFrame currentFrame, const <a class="el" href="class_urho3_d_1_1_shared_replication_state.html">SharedReplicationState</a> &amp;sharedState)</td></tr>
 <tr class="memdesc:a3efb6b978fad7816b4bf813bd7f4a510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send messages to connection for current frame. <br /></td></tr>
 <tr class="separator:a3efb6b978fad7816b4bf813bd7f4a510"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
@@ -109,10 +109,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>GetReportedInputLoss
 <tr class="separator:a1715d89c9256e4b9a4d1f025c3444479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_client_synchronization_state"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_client_synchronization_state')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_client_synchronization_state.html">Urho3D::ClientSynchronizationState</a></td></tr>
 <tr class="memitem:a0ec2640d9784b335ce25e0bb2b8854f2 inherit pub_methods_class_urho3_d_1_1_client_synchronization_state" id="r_a0ec2640d9784b335ce25e0bb2b8854f2"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>ClientSynchronizationState</b> (<a class="el" href="class_urho3_d_1_1_network_object_registry.html">NetworkObjectRegistry</a> *objectRegistry, <a class="el" href="class_urho3_d_1_1_shared_ptr.html">ReplicatedPeerPtr</a> connection, const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;settings)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ClientSynchronizationState</b> (<a class="el" href="class_urho3_d_1_1_network_object_registry.html">NetworkObjectRegistry</a> *objectRegistry, <a class="el" href="class_urho3_d_1_1_shared_ptr.html">ReplicatedPeerPtr</a> connection, const VariantMap &amp;settings)</td></tr>
 <tr class="separator:a0ec2640d9784b335ce25e0bb2b8854f2 inherit pub_methods_class_urho3_d_1_1_client_synchronization_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc4c1d7f13e5c41dcd011b3d2d3d13e1 inherit pub_methods_class_urho3_d_1_1_client_synchronization_state" id="r_adc4c1d7f13e5c41dcd011b3d2d3d13e1"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>BeginNetworkFrame</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> currentFrame, float overtime)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>BeginNetworkFrame</b> (NetworkFrame currentFrame, float overtime)</td></tr>
 <tr class="memdesc:adc4c1d7f13e5c41dcd011b3d2d3d13e1 inherit pub_methods_class_urho3_d_1_1_client_synchronization_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin network frame. Overtime indicates how much time has passed since actual frame start time. <br /></td></tr>
 <tr class="separator:adc4c1d7f13e5c41dcd011b3d2d3d13e1 inherit pub_methods_class_urho3_d_1_1_client_synchronization_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbf5da3650e3272a284f36a0fa1dc5a2 inherit pub_methods_class_urho3_d_1_1_client_synchronization_state" id="r_abbf5da3650e3272a284f36a0fa1dc5a2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_client_synchronization_state.html#abbf5da3650e3272a284f36a0fa1dc5a2">GetSetting</a> (const <a class="el" href="struct_urho3_d_1_1_network_setting.html">NetworkSetting</a> &amp;setting) const</td></tr>
@@ -121,7 +121,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>BeginNetworkFrame</b>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsSynchronized</b> () const</td></tr>
 <tr class="separator:a4d3e1763784128c2376729611976a551 inherit pub_methods_class_urho3_d_1_1_client_synchronization_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a7b93ae6ba380326deb2349d8c243f7 inherit pub_methods_class_urho3_d_1_1_client_synchronization_state" id="r_a1a7b93ae6ba380326deb2349d8c243f7"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentFrame</b> () const</td></tr>
+NetworkFrame&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentFrame</b> () const</td></tr>
 <tr class="separator:a1a7b93ae6ba380326deb2349d8c243f7 inherit pub_methods_class_urho3_d_1_1_client_synchronization_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a506834c1b5f78fa365e23f906e6ad9 inherit pub_methods_class_urho3_d_1_1_client_synchronization_state" id="r_a9a506834c1b5f78fa365e23f906e6ad9"><td class="memItemLeft" align="right" valign="top">
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetInputDelay</b> () const</td></tr>
@@ -182,19 +182,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SendAddObjects</b> ()
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SendUpdateObjectsReliable</b> (const <a class="el" href="class_urho3_d_1_1_shared_replication_state.html">SharedReplicationState</a> &amp;sharedState)</td></tr>
 <tr class="separator:ad6c9aa0acbc0bddb057ea31e703fd3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb8c79c5ba299ab9bf2cdf8553b21631" id="r_adb8c79c5ba299ab9bf2cdf8553b21631"><td class="memItemLeft" align="right" valign="top"><a id="adb8c79c5ba299ab9bf2cdf8553b21631" name="adb8c79c5ba299ab9bf2cdf8553b21631"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendUpdateObjectsUnreliable</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> currentFrame, const <a class="el" href="class_urho3_d_1_1_shared_replication_state.html">SharedReplicationState</a> &amp;sharedState)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendUpdateObjectsUnreliable</b> (NetworkFrame currentFrame, const <a class="el" href="class_urho3_d_1_1_shared_replication_state.html">SharedReplicationState</a> &amp;sharedState)</td></tr>
 <tr class="separator:adb8c79c5ba299ab9bf2cdf8553b21631"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a168585e00bc980920e39ae9168feb3d4" id="r_a168585e00bc980920e39ae9168feb3d4"><td class="memItemLeft" align="right" valign="top"><a id="a168585e00bc980920e39ae9168feb3d4" name="a168585e00bc980920e39ae9168feb3d4"></a>
-ea::vector&lt; <a class="el" href="_network_id_8h.html#aedf0efeacce549efd66fb72d96516dba">NetworkObjectRelevance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>objectsRelevance_</b></td></tr>
+ea::vector&lt; NetworkObjectRelevance &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>objectsRelevance_</b></td></tr>
 <tr class="separator:a168585e00bc980920e39ae9168feb3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a219c8a91d7d88a949a16df8df849fccc" id="r_a219c8a91d7d88a949a16df8df849fccc"><td class="memItemLeft" align="right" valign="top"><a id="a219c8a91d7d88a949a16df8df849fccc" name="a219c8a91d7d88a949a16df8df849fccc"></a>
 ea::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>objectsRelevanceTimeouts_</b></td></tr>
 <tr class="separator:a219c8a91d7d88a949a16df8df849fccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47b72169c9a93db8c47d787aeac7dd2f" id="r_a47b72169c9a93db8c47d787aeac7dd2f"><td class="memItemLeft" align="right" valign="top"><a id="a47b72169c9a93db8c47d787aeac7dd2f" name="a47b72169c9a93db8c47d787aeac7dd2f"></a>
-ea::vector&lt; <a class="el" href="_network_id_8h.html#abdf13fca35c18bb01515f2224b08b23e">NetworkId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pendingRemovedObjects_</b></td></tr>
+ea::vector&lt; NetworkId &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pendingRemovedObjects_</b></td></tr>
 <tr class="separator:a47b72169c9a93db8c47d787aeac7dd2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a9e89e63a25e3567ed3974b739a7af6" id="r_a5a9e89e63a25e3567ed3974b739a7af6"><td class="memItemLeft" align="right" valign="top"><a id="a5a9e89e63a25e3567ed3974b739a7af6" name="a5a9e89e63a25e3567ed3974b739a7af6"></a>
 ea::vector&lt; ea::pair&lt; <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> *, bool &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pendingUpdatedObjects_</b></td></tr>
@@ -224,7 +224,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessMessage</b> (N
 <tr class="memdesc:a1303f2bfdb4862b4b08ac7dbf3806bb6 inherit pro_methods_class_urho3_d_1_1_client_synchronization_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process messages for this client. <br /></td></tr>
 <tr class="separator:a1303f2bfdb4862b4b08ac7dbf3806bb6 inherit pro_methods_class_urho3_d_1_1_client_synchronization_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9f5d36680847b87c1cb2c801103aff8 inherit pro_methods_class_urho3_d_1_1_client_synchronization_state" id="r_aa9f5d36680847b87c1cb2c801103aff8"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnInputReceived</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> inputFrame)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnInputReceived</b> (NetworkFrame inputFrame)</td></tr>
 <tr class="memdesc:aa9f5d36680847b87c1cb2c801103aff8 inherit pro_methods_class_urho3_d_1_1_client_synchronization_state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify statistics aggregator that user input has received for specified frame. <br /></td></tr>
 <tr class="separator:aa9f5d36680847b87c1cb2c801103aff8 inherit pro_methods_class_urho3_d_1_1_client_synchronization_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_client_synchronization_state"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_client_synchronization_state')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_client_synchronization_state.html">Urho3D::ClientSynchronizationState</a></td></tr>
@@ -235,7 +235,7 @@ const <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a cl
 const <a class="el" href="class_urho3_d_1_1_weak_ptr.html">ReplicatedPeerWeakPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>peer_</b></td></tr>
 <tr class="separator:a2407583834e9060b1a237cf5599875b1 inherit pro_attribs_class_urho3_d_1_1_client_synchronization_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8d454b0d5b413003d5fd243df2f1165 inherit pro_attribs_class_urho3_d_1_1_client_synchronization_state" id="r_ae8d454b0d5b413003d5fd243df2f1165"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>settings_</b></td></tr>
+VariantMap&#160;</td><td class="memItemRight" valign="bottom"><b>settings_</b></td></tr>
 <tr class="separator:ae8d454b0d5b413003d5fd243df2f1165 inherit pro_attribs_class_urho3_d_1_1_client_synchronization_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2e351d1a21511417ce4c8423963a608 inherit pro_attribs_class_urho3_d_1_1_client_synchronization_state" id="r_ad2e351d1a21511417ce4c8423963a608"><td class="memItemLeft" align="right" valign="top">
 const unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>updateFrequency_</b> {}</td></tr>
@@ -272,7 +272,7 @@ const unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>updateFrequ
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>Urho3D/Replica/<a class="el" href="_server_replicator_8h.html">ServerReplicator.h</a></li>
+<li>Urho3D/Replica/<b>ServerReplicator.h</b></li>
 <li>Urho3D/Replica/<b>ServerReplicator.cpp</b></li>
 </ul>
 </div><!-- contents -->

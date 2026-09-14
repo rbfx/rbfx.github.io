@@ -104,11 +104,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>QueueDeltaUpdate</b> 
 <tr class="memdesc:a797d06fdc51514b7874495b1e6a5a320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request delta update to be prepared for specified object. <br /></td></tr>
 <tr class="separator:a797d06fdc51514b7874495b1e6a5a320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa80cb1599dbc5cf06171e396aaacce83" id="r_aa80cb1599dbc5cf06171e396aaacce83"><td class="memItemLeft" align="right" valign="top"><a id="aa80cb1599dbc5cf06171e396aaacce83" name="aa80cb1599dbc5cf06171e396aaacce83"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>CookDeltaUpdates</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> currentFrame)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CookDeltaUpdates</b> (NetworkFrame currentFrame)</td></tr>
 <tr class="memdesc:aa80cb1599dbc5cf06171e396aaacce83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cook all requested delta updates. <br /></td></tr>
 <tr class="separator:aa80cb1599dbc5cf06171e396aaacce83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a63fb0a049688e238cee521ec0000fc00" id="r_a63fb0a049688e238cee521ec0000fc00"><td class="memItemLeft" align="right" valign="top">const ea::unordered_set&lt; <a class="el" href="_network_id_8h.html#abdf13fca35c18bb01515f2224b08b23e">NetworkId</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shared_replication_state.html#a63fb0a049688e238cee521ec0000fc00">GetRecentlyRemovedObjects</a> () const</td></tr>
+<tr class="memitem:a63fb0a049688e238cee521ec0000fc00" id="r_a63fb0a049688e238cee521ec0000fc00"><td class="memItemLeft" align="right" valign="top">const ea::unordered_set&lt; NetworkId &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_shared_replication_state.html#a63fb0a049688e238cee521ec0000fc00">GetRecentlyRemovedObjects</a> () const</td></tr>
 <tr class="separator:a63fb0a049688e238cee521ec0000fc00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6be442f788601b6d3eb0de1cdfa93fd" id="r_ab6be442f788601b6d3eb0de1cdfa93fd"><td class="memItemLeft" align="right" valign="top"><a id="ab6be442f788601b6d3eb0de1cdfa93fd" name="ab6be442f788601b6d3eb0de1cdfa93fd"></a>
 const ea::vector&lt; <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSortedObjects</b> () const</td></tr>
@@ -187,10 +187,10 @@ Private Attributes</h2></td></tr>
 const <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_network_object_registry.html">NetworkObjectRegistry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>objectRegistry_</b> {}</td></tr>
 <tr class="separator:ab4bff29ff1a5b500026e559afe64bb63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae524c146186a8269374b0247203f8d18" id="r_ae524c146186a8269374b0247203f8d18"><td class="memItemLeft" align="right" valign="top"><a id="ae524c146186a8269374b0247203f8d18" name="ae524c146186a8269374b0247203f8d18"></a>
-ea::unordered_set&lt; <a class="el" href="_network_id_8h.html#abdf13fca35c18bb01515f2224b08b23e">NetworkId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>recentlyRemovedObjects_</b></td></tr>
+ea::unordered_set&lt; NetworkId &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>recentlyRemovedObjects_</b></td></tr>
 <tr class="separator:ae524c146186a8269374b0247203f8d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1289099f22bce32271e12fb4f43e47bf" id="r_a1289099f22bce32271e12fb4f43e47bf"><td class="memItemLeft" align="right" valign="top"><a id="a1289099f22bce32271e12fb4f43e47bf" name="a1289099f22bce32271e12fb4f43e47bf"></a>
-ea::unordered_set&lt; <a class="el" href="_network_id_8h.html#abdf13fca35c18bb01515f2224b08b23e">NetworkId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>recentlyAddedObjects_</b></td></tr>
+ea::unordered_set&lt; NetworkId &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>recentlyAddedObjects_</b></td></tr>
 <tr class="separator:a1289099f22bce32271e12fb4f43e47bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafb59f90dc516fc964b81124dcf259a5" id="r_aafb59f90dc516fc964b81124dcf259a5"><td class="memItemLeft" align="right" valign="top"><a id="aafb59f90dc516fc964b81124dcf259a5" name="aafb59f90dc516fc964b81124dcf259a5"></a>
 ea::vector&lt; <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sortedNetworkObjects_</b></td></tr>
@@ -230,7 +230,7 @@ ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_replicated_peer.html
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const ea::unordered_set&lt; <a class="el" href="_network_id_8h.html#abdf13fca35c18bb01515f2224b08b23e">NetworkId</a> &gt; &amp; Urho3D::SharedReplicationState::GetRecentlyRemovedObjects </td>
+          <td class="memname">const ea::unordered_set&lt; NetworkId &gt; &amp; Urho3D::SharedReplicationState::GetRecentlyRemovedObjects </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -247,7 +247,7 @@ ea::unordered_map&lt; <a class="el" href="class_urho3_d_1_1_replicated_peer.html
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/Replica/<a class="el" href="_server_replicator_8h.html">ServerReplicator.h</a></li>
+<li>Urho3D/Replica/<b>ServerReplicator.h</b></li>
 <li>Urho3D/Replica/<b>ServerReplicator.cpp</b></li>
 </ul>
 </div><!-- contents -->

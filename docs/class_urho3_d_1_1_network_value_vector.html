@@ -103,19 +103,19 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>Size</b> () const
 <tr class="memdesc:a567a49817e79fe076f24b4a38b691150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return dynamic size of the vector. <br /></td></tr>
 <tr class="separator:a567a49817e79fe076f24b4a38b691150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6a364425c7897072d9712cfb91bc6a8" id="r_ab6a364425c7897072d9712cfb91bc6a8"><td class="memItemLeft" align="right" valign="top"><a id="ab6a364425c7897072d9712cfb91bc6a8" name="ab6a364425c7897072d9712cfb91bc6a8"></a>
-ea::span&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>SetUninitialized</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame)</td></tr>
+ea::span&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>SetUninitialized</b> (NetworkFrame frame)</td></tr>
 <tr class="memdesc:ab6a364425c7897072d9712cfb91bc6a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value and return uninitialized buffer to be filled. <br /></td></tr>
 <tr class="separator:ab6a364425c7897072d9712cfb91bc6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10db38cee7e1ca92e53239a35c72cf2e" id="r_a10db38cee7e1ca92e53239a35c72cf2e"><td class="memItemLeft" align="right" valign="top"><a id="a10db38cee7e1ca92e53239a35c72cf2e" name="a10db38cee7e1ca92e53239a35c72cf2e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Set</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, ValueSpan value)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Set</b> (NetworkFrame frame, ValueSpan value)</td></tr>
 <tr class="memdesc:a10db38cee7e1ca92e53239a35c72cf2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value for given frame if possible. <br /></td></tr>
 <tr class="separator:a10db38cee7e1ca92e53239a35c72cf2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09c933c8e14dda6616fc88ab5c20ccd5" id="r_a09c933c8e14dda6616fc88ab5c20ccd5"><td class="memItemLeft" align="right" valign="top"><a id="a09c933c8e14dda6616fc88ab5c20ccd5" name="a09c933c8e14dda6616fc88ab5c20ccd5"></a>
-ea::optional&lt; ValueSpan &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetRaw</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame) const</td></tr>
+ea::optional&lt; ValueSpan &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetRaw</b> (NetworkFrame frame) const</td></tr>
 <tr class="memdesc:a09c933c8e14dda6616fc88ab5c20ccd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return raw value at given frame. <br /></td></tr>
 <tr class="separator:a09c933c8e14dda6616fc88ab5c20ccd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a912c8b0eb4dd11128e7baa68b955cf3e" id="r_a912c8b0eb4dd11128e7baa68b955cf3e"><td class="memItemLeft" align="right" valign="top"><a id="a912c8b0eb4dd11128e7baa68b955cf3e" name="a912c8b0eb4dd11128e7baa68b955cf3e"></a>
-ValueSpan&#160;</td><td class="memItemRight" valign="bottom"><b>GetClosestRaw</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame) const</td></tr>
+ValueSpan&#160;</td><td class="memItemRight" valign="bottom"><b>GetClosestRaw</b> (NetworkFrame frame) const</td></tr>
 <tr class="memdesc:a912c8b0eb4dd11128e7baa68b955cf3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return closest valid raw value, if possible. Prior values take precedence. <br /></td></tr>
 <tr class="separator:a912c8b0eb4dd11128e7baa68b955cf3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9676dc2b709b3ca4961aa1d5415eea1a" id="r_a9676dc2b709b3ca4961aa1d5415eea1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_detail_1_1_interpolated_const_span.html">InterpolatedValueSpan</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_value_vector.html#a9676dc2b709b3ca4961aa1d5415eea1a">SampleValid</a> (const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;time, float snapThreshold=M_LARGE_VALUE) const</td></tr>
@@ -134,35 +134,35 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsInitialized</b> () 
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetCapacity</b> () const</td></tr>
 <tr class="separator:aae47a995a1f2c911a8905060a476f977 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c1d7a0daebfaed13bf1171a498100a7 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base" id="r_a3c1d7a0daebfaed13bf1171a498100a7"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetFirstFrame</b> () const</td></tr>
+NetworkFrame&#160;</td><td class="memItemRight" valign="bottom"><b>GetFirstFrame</b> () const</td></tr>
 <tr class="separator:a3c1d7a0daebfaed13bf1171a498100a7 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ee38f45cf56ebff9449519b21b95853 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base" id="r_a2ee38f45cf56ebff9449519b21b95853"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetLastFrame</b> () const</td></tr>
+NetworkFrame&#160;</td><td class="memItemRight" valign="bottom"><b>GetLastFrame</b> () const</td></tr>
 <tr class="separator:a2ee38f45cf56ebff9449519b21b95853 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d3facffec2d44dc951dfb2db9c9482e inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base" id="r_a7d3facffec2d44dc951dfb2db9c9482e"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Resize</b> (unsigned capacity)</td></tr>
 <tr class="separator:a7d3facffec2d44dc951dfb2db9c9482e inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e32f150ee8d056679f9e0366c6474b4 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base" id="r_a2e32f150ee8d056679f9e0366c6474b4"><td class="memItemLeft" align="right" valign="top">
-ea::optional&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>FrameToIndex</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame) const</td></tr>
+ea::optional&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>FrameToIndex</b> (NetworkFrame frame) const</td></tr>
 <tr class="separator:a2e32f150ee8d056679f9e0366c6474b4 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a370f0be0ab316a6bd7d11330b58d8855 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base" id="r_a370f0be0ab316a6bd7d11330b58d8855"><td class="memItemLeft" align="right" valign="top">
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>FrameToIndexUnchecked</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame) const</td></tr>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>FrameToIndexUnchecked</b> (NetworkFrame frame) const</td></tr>
 <tr class="separator:a370f0be0ab316a6bd7d11330b58d8855 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70ea4dafed4a207f2d6ca0f1b1ed9b59 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base" id="r_a70ea4dafed4a207f2d6ca0f1b1ed9b59"><td class="memItemLeft" align="right" valign="top">
-ea::optional&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>AllocatedFrameToIndex</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame) const</td></tr>
+ea::optional&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>AllocatedFrameToIndex</b> (NetworkFrame frame) const</td></tr>
 <tr class="separator:a70ea4dafed4a207f2d6ca0f1b1ed9b59 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a972c2ffdbc95159ba849a5ebcca7fac7 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base" id="r_a972c2ffdbc95159ba849a5ebcca7fac7"><td class="memTemplParams" colspan="2">
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:a972c2ffdbc95159ba849a5ebcca7fac7 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>AllocateFrame</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, const T &amp;compressCallback)</td></tr>
+<tr class="memitem:a972c2ffdbc95159ba849a5ebcca7fac7 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>AllocateFrame</b> (NetworkFrame frame, const T &amp;compressCallback)</td></tr>
 <tr class="separator:a972c2ffdbc95159ba849a5ebcca7fac7 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e0ba5edfd04300145ddfbaf040e6cdb inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base" id="r_a4e0ba5edfd04300145ddfbaf040e6cdb"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>HasFrame</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame) const</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>HasFrame</b> (NetworkFrame frame) const</td></tr>
 <tr class="separator:a4e0ba5edfd04300145ddfbaf040e6cdb inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf2e17772e44c7bd8acfe4656b3b8460 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base" id="r_abf2e17772e44c7bd8acfe4656b3b8460"><td class="memItemLeft" align="right" valign="top">
-ea::optional&lt; <a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>FindClosestAllocatedFrame</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, bool searchPast, bool searchFuture) const</td></tr>
+ea::optional&lt; NetworkFrame &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>FindClosestAllocatedFrame</b> (NetworkFrame frame, bool searchPast, bool searchFuture) const</td></tr>
 <tr class="separator:abf2e17772e44c7bd8acfe4656b3b8460 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeab48afebc2719ed7a83fd4b66d03923 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base" id="r_aeab48afebc2719ed7a83fd4b66d03923"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetClosestAllocatedFrame</b> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame) const</td></tr>
+NetworkFrame&#160;</td><td class="memItemRight" valign="bottom"><b>GetClosestAllocatedFrame</b> (NetworkFrame frame) const</td></tr>
 <tr class="separator:aeab48afebc2719ed7a83fd4b66d03923 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a544decdb6e3f9906f71284967dc565f1 inherit pub_methods_class_urho3_d_1_1_detail_1_1_network_value_base" id="r_a544decdb6e3f9906f71284967dc565f1"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="struct_urho3_d_1_1_detail_1_1_network_value_base_1_1_interpolation_base.html">InterpolationBase</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetValidFrameInterpolation</b> (const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;time) const</td></tr>
@@ -224,7 +224,7 @@ template&lt;class T , class Traits  = NetworkValueTraits&lt;T&gt;&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Urho3D/Replica/<a class="el" href="_network_value_8h.html">NetworkValue.h</a></li>
+<li>Urho3D/Replica/<b>NetworkValue.h</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

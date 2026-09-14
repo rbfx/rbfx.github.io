@@ -123,13 +123,13 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a0187756060aa9f0f05657456757fe47e" id="r_a0187756060aa9f0f05657456757fe47e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a0187756060aa9f0f05657456757fe47e">InitializeOnServer</a> () override</td></tr>
 <tr class="memdesc:a0187756060aa9f0f05657456757fe47e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform initialization. Called once.  <br /></td></tr>
 <tr class="separator:a0187756060aa9f0f05657456757fe47e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb8216b63b72f3851434b181bef79de8" id="r_abb8216b63b72f3851434b181bef79de8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#abb8216b63b72f3851434b181bef79de8">WriteSnapshot</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) override</td></tr>
+<tr class="memitem:abb8216b63b72f3851434b181bef79de8" id="r_abb8216b63b72f3851434b181bef79de8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#abb8216b63b72f3851434b181bef79de8">WriteSnapshot</a> (NetworkFrame frame, <a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) override</td></tr>
 <tr class="memdesc:abb8216b63b72f3851434b181bef79de8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write full snapshot.  <br /></td></tr>
 <tr class="separator:abb8216b63b72f3851434b181bef79de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab828bed7e200db3cd8fe542967262153" id="r_ab828bed7e200db3cd8fe542967262153"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#ab828bed7e200db3cd8fe542967262153">InitializeFromSnapshot</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src, bool isOwned) override</td></tr>
+<tr class="memitem:ab828bed7e200db3cd8fe542967262153" id="r_ab828bed7e200db3cd8fe542967262153"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#ab828bed7e200db3cd8fe542967262153">InitializeFromSnapshot</a> (NetworkFrame frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src, bool isOwned) override</td></tr>
 <tr class="memdesc:ab828bed7e200db3cd8fe542967262153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read full snapshot and initialize object. Called once.  <br /></td></tr>
 <tr class="separator:ab828bed7e200db3cd8fe542967262153"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3aa6810b1e0b0e95df3c6de44bee558" id="r_ae3aa6810b1e0b0e95df3c6de44bee558"><td class="memItemLeft" align="right" valign="top">ea::optional&lt; <a class="el" href="_network_id_8h.html#aedf0efeacce549efd66fb72d96516dba">NetworkObjectRelevance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#ae3aa6810b1e0b0e95df3c6de44bee558">GetRelevanceForClient</a> (<a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *connection) override</td></tr>
+<tr class="memitem:ae3aa6810b1e0b0e95df3c6de44bee558" id="r_ae3aa6810b1e0b0e95df3c6de44bee558"><td class="memItemLeft" align="right" valign="top">ea::optional&lt; NetworkObjectRelevance &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#ae3aa6810b1e0b0e95df3c6de44bee558">GetRelevanceForClient</a> (<a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *connection) override</td></tr>
 <tr class="separator:ae3aa6810b1e0b0e95df3c6de44bee558"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea890748bed9391dafeff99a7f22d06f" id="r_aea890748bed9391dafeff99a7f22d06f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#aea890748bed9391dafeff99a7f22d06f">UpdateTransformOnServer</a> () override</td></tr>
 <tr class="memdesc:aea890748bed9391dafeff99a7f22d06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when world transform or parent of the object is updated in Server mode.  <br /></td></tr>
@@ -137,31 +137,31 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:af2b49fff55a019860606e0df448adfcf" id="r_af2b49fff55a019860606e0df448adfcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#af2b49fff55a019860606e0df448adfcf">InterpolateState</a> (float replicaTimeStep, float inputTimeStep, const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;replicaTime, const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;inputTime) override</td></tr>
 <tr class="memdesc:af2b49fff55a019860606e0df448adfcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate replicated state.  <br /></td></tr>
 <tr class="separator:af2b49fff55a019860606e0df448adfcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4563873969df774f74e4e09fbe2a1a06" id="r_a4563873969df774f74e4e09fbe2a1a06"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a4563873969df774f74e4e09fbe2a1a06">PrepareReliableDelta</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame) override</td></tr>
+<tr class="memitem:a4563873969df774f74e4e09fbe2a1a06" id="r_a4563873969df774f74e4e09fbe2a1a06"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a4563873969df774f74e4e09fbe2a1a06">PrepareReliableDelta</a> (NetworkFrame frame) override</td></tr>
 <tr class="memdesc:a4563873969df774f74e4e09fbe2a1a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare for reliable delta update and return update mask. If mask is zero, reliable delta update is skipped.  <br /></td></tr>
 <tr class="separator:a4563873969df774f74e4e09fbe2a1a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4d94cc9c3295d76a9dcb1ee595cee98" id="r_ab4d94cc9c3295d76a9dcb1ee595cee98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#ab4d94cc9c3295d76a9dcb1ee595cee98">WriteReliableDelta</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) override</td></tr>
+<tr class="memitem:ab4d94cc9c3295d76a9dcb1ee595cee98" id="r_ab4d94cc9c3295d76a9dcb1ee595cee98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#ab4d94cc9c3295d76a9dcb1ee595cee98">WriteReliableDelta</a> (NetworkFrame frame, <a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) override</td></tr>
 <tr class="memdesc:ab4d94cc9c3295d76a9dcb1ee595cee98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write reliable delta update. Delta is applied to previous delta or snapshot.  <br /></td></tr>
 <tr class="separator:ab4d94cc9c3295d76a9dcb1ee595cee98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e8ce033f5b9220a1a3970929a1a39fd" id="r_a8e8ce033f5b9220a1a3970929a1a39fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a8e8ce033f5b9220a1a3970929a1a39fd">ReadReliableDelta</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src) override</td></tr>
+<tr class="memitem:a8e8ce033f5b9220a1a3970929a1a39fd" id="r_a8e8ce033f5b9220a1a3970929a1a39fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a8e8ce033f5b9220a1a3970929a1a39fd">ReadReliableDelta</a> (NetworkFrame frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src) override</td></tr>
 <tr class="memdesc:a8e8ce033f5b9220a1a3970929a1a39fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read reliable delta update. Delta is applied to previous reliable delta or snapshot message.  <br /></td></tr>
 <tr class="separator:a8e8ce033f5b9220a1a3970929a1a39fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d11b905b7a585df2f12e5e321d9d7f6" id="r_a3d11b905b7a585df2f12e5e321d9d7f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a3d11b905b7a585df2f12e5e321d9d7f6">PrepareUnreliableDelta</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame) override</td></tr>
+<tr class="memitem:a3d11b905b7a585df2f12e5e321d9d7f6" id="r_a3d11b905b7a585df2f12e5e321d9d7f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a3d11b905b7a585df2f12e5e321d9d7f6">PrepareUnreliableDelta</a> (NetworkFrame frame) override</td></tr>
 <tr class="memdesc:a3d11b905b7a585df2f12e5e321d9d7f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare for unreliable delta update and return update mask. If mask is zero, unreliable delta update is skipped.  <br /></td></tr>
 <tr class="separator:a3d11b905b7a585df2f12e5e321d9d7f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00a1b696d2c5acadf0dac5763818f3c0" id="r_a00a1b696d2c5acadf0dac5763818f3c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a00a1b696d2c5acadf0dac5763818f3c0">WriteUnreliableDelta</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) override</td></tr>
+<tr class="memitem:a00a1b696d2c5acadf0dac5763818f3c0" id="r_a00a1b696d2c5acadf0dac5763818f3c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a00a1b696d2c5acadf0dac5763818f3c0">WriteUnreliableDelta</a> (NetworkFrame frame, <a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) override</td></tr>
 <tr class="memdesc:a00a1b696d2c5acadf0dac5763818f3c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write unreliable delta update.  <br /></td></tr>
 <tr class="separator:a00a1b696d2c5acadf0dac5763818f3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a369b3d1662a2cef34e93ecec6c22a647" id="r_a369b3d1662a2cef34e93ecec6c22a647"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a369b3d1662a2cef34e93ecec6c22a647">ReadUnreliableDelta</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src) override</td></tr>
+<tr class="memitem:a369b3d1662a2cef34e93ecec6c22a647" id="r_a369b3d1662a2cef34e93ecec6c22a647"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a369b3d1662a2cef34e93ecec6c22a647">ReadUnreliableDelta</a> (NetworkFrame frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src) override</td></tr>
 <tr class="memdesc:a369b3d1662a2cef34e93ecec6c22a647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read unreliable delta update.  <br /></td></tr>
 <tr class="separator:a369b3d1662a2cef34e93ecec6c22a647"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a358b4816f28a019f61f898f44f5c1a05" id="r_a358b4816f28a019f61f898f44f5c1a05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a358b4816f28a019f61f898f44f5c1a05">PrepareUnreliableFeedback</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame) override</td></tr>
+<tr class="memitem:a358b4816f28a019f61f898f44f5c1a05" id="r_a358b4816f28a019f61f898f44f5c1a05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a358b4816f28a019f61f898f44f5c1a05">PrepareUnreliableFeedback</a> (NetworkFrame frame) override</td></tr>
 <tr class="memdesc:a358b4816f28a019f61f898f44f5c1a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare for unreliable feedback and return feedback mask. If mask is zero, unreliable feedback is skipped.  <br /></td></tr>
 <tr class="separator:a358b4816f28a019f61f898f44f5c1a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a5795edf8f07d0df0d97d61210f01a9" id="r_a9a5795edf8f07d0df0d97d61210f01a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a9a5795edf8f07d0df0d97d61210f01a9">WriteUnreliableFeedback</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) override</td></tr>
+<tr class="memitem:a9a5795edf8f07d0df0d97d61210f01a9" id="r_a9a5795edf8f07d0df0d97d61210f01a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a9a5795edf8f07d0df0d97d61210f01a9">WriteUnreliableFeedback</a> (NetworkFrame frame, <a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) override</td></tr>
 <tr class="memdesc:a9a5795edf8f07d0df0d97d61210f01a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write unreliable feedback from client.  <br /></td></tr>
 <tr class="separator:a9a5795edf8f07d0df0d97d61210f01a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0640093f2ca4437383015e294446da7" id="r_ad0640093f2ca4437383015e294446da7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#ad0640093f2ca4437383015e294446da7">ReadUnreliableFeedback</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> feedbackFrame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src) override</td></tr>
+<tr class="memitem:ad0640093f2ca4437383015e294446da7" id="r_ad0640093f2ca4437383015e294446da7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#ad0640093f2ca4437383015e294446da7">ReadUnreliableFeedback</a> (NetworkFrame feedbackFrame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src) override</td></tr>
 <tr class="memdesc:ad0640093f2ca4437383015e294446da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read unreliable feedback from client.  <br /></td></tr>
 <tr class="separator:ad0640093f2ca4437383015e294446da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cbff7c93169d4f56ac364b5ad089c10" id="r_a3cbff7c93169d4f56ac364b5ad089c10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_behavior_network_object.html#a3cbff7c93169d4f56ac364b5ad089c10">Update</a> (float replicaTimeStep, float inputTimeStep) override</td></tr>
@@ -189,10 +189,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOriginForDistanceF
 <tr class="separator:ac67b3817c7bc70497749b47129805dce inherit pub_methods_class_urho3_d_1_1_static_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afba70cc4d53f8e9dd463920e27ebb210 inherit pub_methods_class_urho3_d_1_1_static_network_object" id="r_afba70cc4d53f8e9dd463920e27ebb210"><td class="memItemLeft" align="right" valign="top">ea::optional&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_network_object.html#afba70cc4d53f8e9dd463920e27ebb210">CalculateDistanceForFiltering</a> (<a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> *otherNetworkObject) override</td></tr>
 <tr class="separator:afba70cc4d53f8e9dd463920e27ebb210 inherit pub_methods_class_urho3_d_1_1_static_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4351b8611808e9c760a1d199832d027 inherit pub_methods_class_urho3_d_1_1_static_network_object" id="r_af4351b8611808e9c760a1d199832d027"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_network_object.html#af4351b8611808e9c760a1d199832d027">WriteSnapshot</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) override</td></tr>
+<tr class="memitem:af4351b8611808e9c760a1d199832d027 inherit pub_methods_class_urho3_d_1_1_static_network_object" id="r_af4351b8611808e9c760a1d199832d027"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_network_object.html#af4351b8611808e9c760a1d199832d027">WriteSnapshot</a> (NetworkFrame frame, <a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) override</td></tr>
 <tr class="memdesc:af4351b8611808e9c760a1d199832d027 inherit pub_methods_class_urho3_d_1_1_static_network_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write full snapshot.  <br /></td></tr>
 <tr class="separator:af4351b8611808e9c760a1d199832d027 inherit pub_methods_class_urho3_d_1_1_static_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8811827e61ff7da7b551522300bbc63 inherit pub_methods_class_urho3_d_1_1_static_network_object" id="r_ad8811827e61ff7da7b551522300bbc63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_network_object.html#ad8811827e61ff7da7b551522300bbc63">InitializeFromSnapshot</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src, bool isOwned) override</td></tr>
+<tr class="memitem:ad8811827e61ff7da7b551522300bbc63 inherit pub_methods_class_urho3_d_1_1_static_network_object" id="r_ad8811827e61ff7da7b551522300bbc63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_static_network_object.html#ad8811827e61ff7da7b551522300bbc63">InitializeFromSnapshot</a> (NetworkFrame frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src, bool isOwned) override</td></tr>
 <tr class="memdesc:ad8811827e61ff7da7b551522300bbc63 inherit pub_methods_class_urho3_d_1_1_static_network_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read full snapshot and initialize object. Called once.  <br /></td></tr>
 <tr class="separator:ad8811827e61ff7da7b551522300bbc63 inherit pub_methods_class_urho3_d_1_1_static_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_network_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_network_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_network_object.html">Urho3D::NetworkObject</a></td></tr>
@@ -204,18 +204,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOwner</b> (<a clas
 <tr class="memdesc:ad46fae886fbd62418a3a587f0e6e68be inherit pub_methods_class_urho3_d_1_1_network_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server-only: set owner connection which is allowed to send feedback for this object. <br /></td></tr>
 <tr class="separator:ad46fae886fbd62418a3a587f0e6e68be inherit pub_methods_class_urho3_d_1_1_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44e3a3e486afa7646c53317181f90de5 inherit pub_methods_class_urho3_d_1_1_network_object" id="r_a44e3a3e486afa7646c53317181f90de5"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetParentNetworkObject</b> (<a class="el" href="_network_id_8h.html#abdf13fca35c18bb01515f2224b08b23e">NetworkId</a> parentNetworkId)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetParentNetworkObject</b> (NetworkId parentNetworkId)</td></tr>
 <tr class="memdesc:a44e3a3e486afa7646c53317181f90de5 inherit pub_methods_class_urho3_d_1_1_network_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set another <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> as parent of this <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a>. <br /></td></tr>
 <tr class="separator:a44e3a3e486afa7646c53317181f90de5 inherit pub_methods_class_urho3_d_1_1_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7195b9f6c02ee4c517dac54dc39e3c96 inherit pub_methods_class_urho3_d_1_1_network_object" id="r_a7195b9f6c02ee4c517dac54dc39e3c96"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_network_id_8h.html#abdf13fca35c18bb01515f2224b08b23e">NetworkId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetNetworkId</b> () const</td></tr>
+NetworkId&#160;</td><td class="memItemRight" valign="bottom"><b>GetNetworkId</b> () const</td></tr>
 <tr class="memdesc:a7195b9f6c02ee4c517dac54dc39e3c96 inherit pub_methods_class_urho3_d_1_1_network_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current or last NetworkId. Return NetworkId::None if not registered. <br /></td></tr>
 <tr class="separator:a7195b9f6c02ee4c517dac54dc39e3c96 inherit pub_methods_class_urho3_d_1_1_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ca5bf61609c8e4ca47f2880a38b11d4 inherit pub_methods_class_urho3_d_1_1_network_object" id="r_a9ca5bf61609c8e4ca47f2880a38b11d4"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="class_urho3_d_1_1_replication_manager.html">ReplicationManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetReplicationManager</b> () const</td></tr>
 <tr class="separator:a9ca5bf61609c8e4ca47f2880a38b11d4 inherit pub_methods_class_urho3_d_1_1_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af53dde1e8e4eb8517866a65f840ed028 inherit pub_methods_class_urho3_d_1_1_network_object" id="r_af53dde1e8e4eb8517866a65f840ed028"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_network_id_8h.html#abdf13fca35c18bb01515f2224b08b23e">NetworkId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetParentNetworkId</b> () const</td></tr>
+NetworkId&#160;</td><td class="memItemRight" valign="bottom"><b>GetParentNetworkId</b> () const</td></tr>
 <tr class="separator:af53dde1e8e4eb8517866a65f840ed028 inherit pub_methods_class_urho3_d_1_1_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e0ca3319511d28e865ffc149e23b92 inherit pub_methods_class_urho3_d_1_1_network_object" id="r_a36e0ca3319511d28e865ffc149e23b92"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetParentNetworkObject</b> () const</td></tr>
@@ -229,7 +229,7 @@ const ea::vector&lt; <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPt
 <tr class="memitem:a63d0b20f4ce8f3a753e304d3c57d4371 inherit pub_methods_class_urho3_d_1_1_network_object" id="r_a63d0b20f4ce8f3a753e304d3c57d4371"><td class="memItemLeft" align="right" valign="top">
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetOwnerConnectionId</b> () const</td></tr>
 <tr class="separator:a63d0b20f4ce8f3a753e304d3c57d4371 inherit pub_methods_class_urho3_d_1_1_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59f39b25796906c63529c4cafdb1eb3b inherit pub_methods_class_urho3_d_1_1_network_object" id="r_a59f39b25796906c63529c4cafdb1eb3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_network_object_8h.html#ad2e91f744aae8950867008e25d173336">NetworkObjectMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#a59f39b25796906c63529c4cafdb1eb3b">GetNetworkMode</a> () const</td></tr>
+<tr class="memitem:a59f39b25796906c63529c4cafdb1eb3b inherit pub_methods_class_urho3_d_1_1_network_object" id="r_a59f39b25796906c63529c4cafdb1eb3b"><td class="memItemLeft" align="right" valign="top">NetworkObjectMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#a59f39b25796906c63529c4cafdb1eb3b">GetNetworkMode</a> () const</td></tr>
 <tr class="separator:a59f39b25796906c63529c4cafdb1eb3b inherit pub_methods_class_urho3_d_1_1_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7973e3800f68a7fc0eee010ba8942480 inherit pub_methods_class_urho3_d_1_1_network_object" id="r_a7973e3800f68a7fc0eee010ba8942480"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsStandalone</b> () const</td></tr>
@@ -246,10 +246,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsReplicatedClient</b
 <tr class="memitem:aab2b4f81df70668ae07373f4a94ae97e inherit pub_methods_class_urho3_d_1_1_network_object" id="r_aab2b4f81df70668ae07373f4a94ae97e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#aab2b4f81df70668ae07373f4a94ae97e">UpdateObjectHierarchy</a> ()</td></tr>
 <tr class="separator:aab2b4f81df70668ae07373f4a94ae97e inherit pub_methods_class_urho3_d_1_1_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdcc026f8835f6465874e148afc1c0fd inherit pub_methods_class_urho3_d_1_1_network_object" id="r_afdcc026f8835f6465874e148afc1c0fd"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetNetworkId</b> (<a class="el" href="_network_id_8h.html#abdf13fca35c18bb01515f2224b08b23e">NetworkId</a> networkId)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetNetworkId</b> (NetworkId networkId)</td></tr>
 <tr class="separator:afdcc026f8835f6465874e148afc1c0fd inherit pub_methods_class_urho3_d_1_1_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18945702f851a22dd88d55dba6eb263c inherit pub_methods_class_urho3_d_1_1_network_object" id="r_a18945702f851a22dd88d55dba6eb263c"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetNetworkMode</b> (<a class="el" href="_network_object_8h.html#ad2e91f744aae8950867008e25d173336">NetworkObjectMode</a> mode)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetNetworkMode</b> (NetworkObjectMode mode)</td></tr>
 <tr class="separator:a18945702f851a22dd88d55dba6eb263c inherit pub_methods_class_urho3_d_1_1_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a304db265a5b81726ddfeebb05b15fc71 inherit pub_methods_class_urho3_d_1_1_network_object" id="r_a304db265a5b81726ddfeebb05b15fc71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#a304db265a5b81726ddfeebb05b15fc71">PrepareToRemove</a> () override</td></tr>
 <tr class="separator:a304db265a5b81726ddfeebb05b15fc71 inherit pub_methods_class_urho3_d_1_1_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,7 +296,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsTrackedInRegistry</
 &#160;</td><td class="memItemRight" valign="bottom"><b>~Component</b> () override</td></tr>
 <tr class="memdesc:addaa40ac5aaa94e2e60e1d8043706aca inherit pub_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
 <tr class="separator:addaa40ac5aaa94e2e60e1d8043706aca inherit pub_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ea2cf1795fa0b638ea704a9017fb0d0 inherit pub_methods_class_urho3_d_1_1_component" id="r_a5ea2cf1795fa0b638ea704a9017fb0d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58">AttributeScopeHint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a5ea2cf1795fa0b638ea704a9017fb0d0">GetEffectiveScopeHint</a> () const</td></tr>
+<tr class="memitem:a5ea2cf1795fa0b638ea704a9017fb0d0 inherit pub_methods_class_urho3_d_1_1_component" id="r_a5ea2cf1795fa0b638ea704a9017fb0d0"><td class="memItemLeft" align="right" valign="top">AttributeScopeHint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a5ea2cf1795fa0b638ea704a9017fb0d0">GetEffectiveScopeHint</a> () const</td></tr>
 <tr class="separator:a5ea2cf1795fa0b638ea704a9017fb0d0 inherit pub_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753c0051bc1080efc07b5ba1e12ee74b inherit pub_methods_class_urho3_d_1_1_component" id="r_a753c0051bc1080efc07b5ba1e12ee74b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a753c0051bc1080efc07b5ba1e12ee74b">Save</a> (<a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) const override</td></tr>
 <tr class="memdesc:a753c0051bc1080efc07b5ba1e12ee74b inherit pub_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save as binary data. Return true if successful.  <br /></td></tr>
@@ -490,7 +490,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsInstanceOf<
 <tr class="memdesc:a26c296bb4de9e175308a26c723d5dc7e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether current instance implements specified type. <br /></td></tr>
 <tr class="separator:a26c296bb4de9e175308a26c723d5dc7e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object" id="r_ad0ce1699ce5bd9d4033e5800bbb8c15b"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEvent</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEvent</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle event. <br /></td></tr>
 <tr class="separator:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17376e0a319ae50dca17ad91c5b1a55b inherit pub_methods_class_urho3_d_1_1_object" id="r_a17376e0a319ae50dca17ad91c5b1a55b"><td class="memTemplParams" colspan="2">
@@ -555,11 +555,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a cla
 <tr class="memdesc:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event to all subscribers. <br /></td></tr>
 <tr class="separator:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object" id="r_af8f8bd3f7e2f51ecca7199e737f53364"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers. <br /></td></tr>
 <tr class="separator:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object" id="r_a69af51cfa67f9626273b35a6d501e03e"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> () const</td></tr>
+VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> () const</td></tr>
 <tr class="memdesc:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a preallocated map for event data. Used for optimization to avoid constant re-allocation of event data maps. <br /></td></tr>
 <tr class="separator:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5e3591133331ebd3d9e12c95c46aed inherit pub_methods_class_urho3_d_1_1_object" id="r_aca5e3591133331ebd3d9e12c95c46aed"><td class="memTemplParams" colspan="2">
@@ -573,7 +573,7 @@ template&lt;typename... Args&gt; </td></tr>
 <tr class="separator:a8bd9b32c8a56c2f6d618d8afe8091eb7 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd4506c4bdb10232305ef69ebbb78a83 inherit pub_methods_class_urho3_d_1_1_object" id="r_acd4506c4bdb10232305ef69ebbb78a83"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#acd4506c4bdb10232305ef69ebbb78a83">GetGlobalVar</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> key) const</td></tr>
 <tr class="separator:acd4506c4bdb10232305ef69ebbb78a83 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object" id="r_a27b36184a862d9343604f31d85d9bc24"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a27b36184a862d9343604f31d85d9bc24">GetGlobalVars</a> () const</td></tr>
+<tr class="memitem:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object" id="r_a27b36184a862d9343604f31d85d9bc24"><td class="memItemLeft" align="right" valign="top">const VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a27b36184a862d9343604f31d85d9bc24">GetGlobalVars</a> () const</td></tr>
 <tr class="separator:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43d25cc580737c9dc3b973d6c1230d9e inherit pub_methods_class_urho3_d_1_1_object" id="r_a43d25cc580737c9dc3b973d6c1230d9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a43d25cc580737c9dc3b973d6c1230d9e">SetGlobalVar</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> key, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;value)</td></tr>
 <tr class="separator:a43d25cc580737c9dc3b973d6c1230d9e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -609,7 +609,7 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a1ac1fa57e9eb18f91efc30b29b0861c1 inherit pub_methods_class_urho3_d_1_1_object" id="r_a1ac1fa57e9eb18f91efc30b29b0861c1"><td class="memItemLeft" align="right" valign="top">const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a1ac1fa57e9eb18f91efc30b29b0861c1">GetCategory</a> () const</td></tr>
 <tr class="separator:a1ac1fa57e9eb18f91efc30b29b0861c1 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object" id="r_ad7c6e6d74d0ad90811fb3f04bd813a7e"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, const VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers. <br /></td></tr>
 <tr class="separator:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd72cab3f338ef6ca76da511bcd941dc inherit pub_methods_class_urho3_d_1_1_object" id="r_abd72cab3f338ef6ca76da511bcd941dc"><td class="memItemLeft" align="right" valign="top">
@@ -696,11 +696,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetClientPrefabAttr</
 <tr class="separator:ac3a5b238f2ff41dd6c1154d1c31670e9 inherit pro_methods_class_urho3_d_1_1_static_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_urho3_d_1_1_network_object"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_network_object')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_network_object.html">Urho3D::NetworkObject</a></td></tr>
 <tr class="memitem:a7802bfd2bd4608241dd34c4c6b2be50e inherit pro_methods_class_urho3_d_1_1_network_object" id="r_a7802bfd2bd4608241dd34c4c6b2be50e"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetOtherNetworkObject</b> (<a class="el" href="_network_id_8h.html#abdf13fca35c18bb01515f2224b08b23e">NetworkId</a> networkId) const</td></tr>
+<a class="el" href="class_urho3_d_1_1_network_object.html">NetworkObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetOtherNetworkObject</b> (NetworkId networkId) const</td></tr>
 <tr class="separator:a7802bfd2bd4608241dd34c4c6b2be50e inherit pro_methods_class_urho3_d_1_1_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57fe26f141cb89570490d28d6c93b49a inherit pro_methods_class_urho3_d_1_1_network_object" id="r_a57fe26f141cb89570490d28d6c93b49a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#a57fe26f141cb89570490d28d6c93b49a">OnNodeSet</a> (<a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *previousNode, <a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *currentNode) override</td></tr>
+<tr class="memitem:a57fe26f141cb89570490d28d6c93b49a inherit pro_methods_class_urho3_d_1_1_network_object" id="r_a57fe26f141cb89570490d28d6c93b49a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#a57fe26f141cb89570490d28d6c93b49a">OnNodeSet</a> (Node *previousNode, Node *currentNode) override</td></tr>
 <tr class="separator:a57fe26f141cb89570490d28d6c93b49a inherit pro_methods_class_urho3_d_1_1_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64befd8ee81a213b9f8af538b7de75b0 inherit pro_methods_class_urho3_d_1_1_network_object" id="r_a64befd8ee81a213b9f8af538b7de75b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#a64befd8ee81a213b9f8af538b7de75b0">OnMarkedDirty</a> (<a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *node) override</td></tr>
+<tr class="memitem:a64befd8ee81a213b9f8af538b7de75b0 inherit pro_methods_class_urho3_d_1_1_network_object" id="r_a64befd8ee81a213b9f8af538b7de75b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_network_object.html#a64befd8ee81a213b9f8af538b7de75b0">OnMarkedDirty</a> (Node *node) override</td></tr>
 <tr class="memdesc:a64befd8ee81a213b9f8af538b7de75b0 inherit pro_methods_class_urho3_d_1_1_network_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scene node transform dirtied.  <br /></td></tr>
 <tr class="separator:a64befd8ee81a213b9f8af538b7de75b0 inherit pro_methods_class_urho3_d_1_1_network_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_urho3_d_1_1_tracked_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_tracked_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_tracked_component.html">Urho3D::TrackedComponent&lt; ReferencedComponentBase, NetworkObjectRegistry &gt;</a></td></tr>
@@ -721,7 +721,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetNode</b> (Node *no
 <tr class="memdesc:a75922f91ae1ee7376aaf1b2e0c0cc84c inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a component from the scene root that sends out fixed update events (either <a class="el" href="class_urho3_d_1_1_physics_world.html" title="Physics simulation world component. Should be added only to the root scene node.">PhysicsWorld</a> or <a class="el" href="class_urho3_d_1_1_physics_world2_d.html" title="2D physics simulation world component. Should be added only to the root scene node.">PhysicsWorld2D</a>). Return null if neither exists. <br /></td></tr>
 <tr class="separator:a75922f91ae1ee7376aaf1b2e0c0cc84c inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component" id="r_af908546af61d16a0ac497fdad2ed42f2"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DoAutoRemove</b> (<a class="el" href="_component_8h.html#a01a03fff19daa9f54c2519fcdd737ce4">AutoRemoveMode</a> mode)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DoAutoRemove</b> (AutoRemoveMode mode)</td></tr>
 <tr class="memdesc:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform autoremove. Called by subclasses. Caller should keep a weak pointer to itself to check whether was actually removed, and return immediately without further member operations in that case. <br /></td></tr>
 <tr class="separator:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -776,7 +776,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>enabled_</b></td></tr
 <tr class="separator:ae52f352027bee0fa8d538591364b554a inherit pro_attribs_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_serializable"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_serializable')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_serializable.html">Urho3D::Serializable</a></td></tr>
 <tr class="memitem:ac6128cecfe8decc17084fe2aa7e6cf57 inherit pro_attribs_class_urho3_d_1_1_serializable" id="r_ac6128cecfe8decc17084fe2aa7e6cf57"><td class="memItemLeft" align="right" valign="top">
-ea::unique_ptr&lt; <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>instanceDefaultValues_</b></td></tr>
+ea::unique_ptr&lt; VariantMap &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>instanceDefaultValues_</b></td></tr>
 <tr class="memdesc:ac6128cecfe8decc17084fe2aa7e6cf57 inherit pro_attribs_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribute default value at each instance level. <br /></td></tr>
 <tr class="separator:ac6128cecfe8decc17084fe2aa7e6cf57 inherit pro_attribs_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accaf6b2938d392f127885f6673f6985e inherit pro_attribs_class_urho3_d_1_1_serializable" id="r_accaf6b2938d392f127885f6673f6985e"><td class="memItemLeft" align="right" valign="top">
@@ -832,7 +832,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ea::optional&lt; <a class="el" href="_network_id_8h.html#aedf0efeacce549efd66fb72d96516dba">NetworkObjectRelevance</a> &gt; Urho3D::BehaviorNetworkObject::GetRelevanceForClient </td>
+          <td class="memname">ea::optional&lt; NetworkObjectRelevance &gt; Urho3D::BehaviorNetworkObject::GetRelevanceForClient </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_urho3_d_1_1_replicated_peer.html">ReplicatedPeer</a> *&#160;</td>
           <td class="paramname"><em>connection</em></td><td>)</td>
@@ -863,7 +863,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">void Urho3D::BehaviorNetworkObject::InitializeFromSnapshot </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
@@ -1058,7 +1058,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">bool Urho3D::BehaviorNetworkObject::PrepareReliableDelta </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1117,7 +1117,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">bool Urho3D::BehaviorNetworkObject::PrepareUnreliableDelta </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1147,7 +1147,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">bool Urho3D::BehaviorNetworkObject::PrepareUnreliableFeedback </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1177,7 +1177,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">void Urho3D::BehaviorNetworkObject::ReadReliableDelta </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
@@ -1217,7 +1217,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">void Urho3D::BehaviorNetworkObject::ReadUnreliableDelta </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
@@ -1257,7 +1257,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">void Urho3D::BehaviorNetworkObject::ReadUnreliableFeedback </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>feedbackFrame</em>, </td>
         </tr>
         <tr>
@@ -1366,7 +1366,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">void Urho3D::BehaviorNetworkObject::WriteReliableDelta </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
@@ -1406,7 +1406,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">void Urho3D::BehaviorNetworkObject::WriteSnapshot </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
@@ -1446,7 +1446,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">void Urho3D::BehaviorNetworkObject::WriteUnreliableDelta </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
@@ -1486,7 +1486,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">void Urho3D::BehaviorNetworkObject::WriteUnreliableFeedback </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
@@ -1515,7 +1515,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/Replica/<a class="el" href="_behavior_network_object_8h.html">BehaviorNetworkObject.h</a></li>
+<li>Urho3D/Replica/<b>BehaviorNetworkObject.h</b></li>
 <li>Urho3D/Replica/<b>BehaviorNetworkObject.cpp</b></li>
 </ul>
 </div><!-- contents -->

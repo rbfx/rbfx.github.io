@@ -98,7 +98,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ConnectToAnimatedMode
 <tr class="memdesc:a6286609e13c0881230f1a6c39a39281c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect to <a class="el" href="class_urho3_d_1_1_animated_model.html" title="Animated model component.">AnimatedModel</a>. <br /></td></tr>
 <tr class="separator:a6286609e13c0881230f1a6c39a39281c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92d7f0b425579868c1ef5c4cc00215ea" id="r_a92d7f0b425579868c1ef5c4cc00215ea"><td class="memItemLeft" align="right" valign="top"><a id="a92d7f0b425579868c1ef5c4cc00215ea" name="a92d7f0b425579868c1ef5c4cc00215ea"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (<a class="el" href="class_urho3_d_1_1_animation.html">Animation</a> *animation, const ea::string &amp;startBone, <a class="el" href="_animation_state_8h.html#a6e7f73b4fa3656f65388c305b73f2e32">AnimationBlendMode</a> blendMode)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (<a class="el" href="class_urho3_d_1_1_animation.html">Animation</a> *animation, const ea::string &amp;startBone, AnimationBlendMode blendMode)</td></tr>
 <tr class="memdesc:a92d7f0b425579868c1ef5c4cc00215ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize static properties of the state and dirty tracks if changed. <br /></td></tr>
 <tr class="separator:a92d7f0b425579868c1ef5c4cc00215ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17aabe5ee3492735fb3a6aa8f52e469a" id="r_a17aabe5ee3492735fb3a6aa8f52e469a"><td class="memItemLeft" align="right" valign="top"><a id="a17aabe5ee3492735fb3a6aa8f52e469a" name="a17aabe5ee3492735fb3a6aa8f52e469a"></a>
@@ -127,7 +127,7 @@ const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Get
 <tr class="separator:a17237854b026d01be8df8b0f2d2a3c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3418074b845e542074341c2a5e8da9e" id="r_aa3418074b845e542074341c2a5e8da9e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_state.html#aa3418074b845e542074341c2a5e8da9e">GetWeight</a> () const</td></tr>
 <tr class="separator:aa3418074b845e542074341c2a5e8da9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab266ab3f7cf13998b6540c66b62b7127" id="r_ab266ab3f7cf13998b6540c66b62b7127"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_animation_state_8h.html#a6e7f73b4fa3656f65388c305b73f2e32">AnimationBlendMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_state.html#ab266ab3f7cf13998b6540c66b62b7127">GetBlendMode</a> () const</td></tr>
+<tr class="memitem:ab266ab3f7cf13998b6540c66b62b7127" id="r_ab266ab3f7cf13998b6540c66b62b7127"><td class="memItemLeft" align="right" valign="top">AnimationBlendMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_state.html#ab266ab3f7cf13998b6540c66b62b7127">GetBlendMode</a> () const</td></tr>
 <tr class="separator:ab266ab3f7cf13998b6540c66b62b7127"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f496b0b2a5ccbef5145c65ba4970685" id="r_a4f496b0b2a5ccbef5145c65ba4970685"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animation_state.html#a4f496b0b2a5ccbef5145c65ba4970685">GetTime</a> () const</td></tr>
 <tr class="separator:a4f496b0b2a5ccbef5145c65ba4970685"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,7 +138,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateModelTracks<
 <tr class="memdesc:a268f1985361c6fb8e1a3cbb312faf88d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate animation for the model skeleton. <br /></td></tr>
 <tr class="separator:a268f1985361c6fb8e1a3cbb312faf88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af05925d7fa94d4d27c88b04c2d0d586b" id="r_af05925d7fa94d4d27c88b04c2d0d586b"><td class="memItemLeft" align="right" valign="top"><a id="af05925d7fa94d4d27c88b04c2d0d586b" name="af05925d7fa94d4d27c88b04c2d0d586b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateNodeTracks</b> (ea::unordered_map&lt; <a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *, <a class="el" href="struct_urho3_d_1_1_node_animation_output.html">NodeAnimationOutput</a> &gt; &amp;output) const</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateNodeTracks</b> (ea::unordered_map&lt; Node *, <a class="el" href="struct_urho3_d_1_1_node_animation_output.html">NodeAnimationOutput</a> &gt; &amp;output) const</td></tr>
 <tr class="memdesc:af05925d7fa94d4d27c88b04c2d0d586b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply animation to a scene node hierarchy. <br /></td></tr>
 <tr class="separator:af05925d7fa94d4d27c88b04c2d0d586b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a276c32873f5dd058e7db5a0d628f77b2" id="r_a276c32873f5dd058e7db5a0d628f77b2"><td class="memItemLeft" align="right" valign="top"><a id="a276c32873f5dd058e7db5a0d628f77b2" name="a276c32873f5dd058e7db5a0d628f77b2"></a>
@@ -247,7 +247,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>weight_</b> {}</td><
 float&#160;</td><td class="memItemRight" valign="bottom"><b>time_</b> {}</td></tr>
 <tr class="separator:a910dbae742e18513a310db3859ad9fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc74776d465a72d7b6e14c81d9ae5742" id="r_adc74776d465a72d7b6e14c81d9ae5742"><td class="memItemLeft" align="right" valign="top"><a id="adc74776d465a72d7b6e14c81d9ae5742" name="adc74776d465a72d7b6e14c81d9ae5742"></a>
-<a class="el" href="_animation_state_8h.html#a6e7f73b4fa3656f65388c305b73f2e32">AnimationBlendMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>blendingMode_</b> {}</td></tr>
+AnimationBlendMode&#160;</td><td class="memItemRight" valign="bottom"><b>blendingMode_</b> {}</td></tr>
 <tr class="separator:adc74776d465a72d7b6e14c81d9ae5742"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96b2b08109c3a6d144c67bd9b52e0e38" id="r_a96b2b08109c3a6d144c67bd9b52e0e38"><td class="memItemLeft" align="right" valign="top"><a id="a96b2b08109c3a6d144c67bd9b52e0e38" name="a96b2b08109c3a6d144c67bd9b52e0e38"></a>
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>startBone_</b></td></tr>
@@ -319,7 +319,7 @@ ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_attribute_animation_state_
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_animation_state_8h.html#a6e7f73b4fa3656f65388c305b73f2e32">AnimationBlendMode</a> Urho3D::AnimationState::GetBlendMode </td>
+          <td class="memname">AnimationBlendMode Urho3D::AnimationState::GetBlendMode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -562,7 +562,7 @@ ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_attribute_animation_state_
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/Graphics/<a class="el" href="_animation_state_8h.html">AnimationState.h</a></li>
+<li>Urho3D/Graphics/<b>AnimationState.h</b></li>
 <li>Urho3D/Graphics/<b>AnimationState.cpp</b></li>
 </ul>
 </div><!-- contents -->

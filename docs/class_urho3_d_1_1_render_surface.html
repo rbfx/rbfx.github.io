@@ -99,7 +99,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Invalidate</b> ()</td
 <tr class="separator:ab69877abb64fe59e8f6e02e4be2518be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8504f3ef00cfd935f567a038d4d05e1e" id="r_a8504f3ef00cfd935f567a038d4d05e1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_surface.html#a8504f3ef00cfd935f567a038d4d05e1e">SetViewport</a> (unsigned index, <a class="el" href="class_urho3_d_1_1_viewport.html">Viewport</a> *viewport)</td></tr>
 <tr class="separator:a8504f3ef00cfd935f567a038d4d05e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa8b8b42c265bab6f407a9c47b7ec379" id="r_afa8b8b42c265bab6f407a9c47b7ec379"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_surface.html#afa8b8b42c265bab6f407a9c47b7ec379">SetUpdateMode</a> (<a class="el" href="_graphics_defs_8h.html#a7368cb47bde9e8bb1ce7b0020708b530">RenderSurfaceUpdateMode</a> mode)</td></tr>
+<tr class="memitem:afa8b8b42c265bab6f407a9c47b7ec379" id="r_afa8b8b42c265bab6f407a9c47b7ec379"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_surface.html#afa8b8b42c265bab6f407a9c47b7ec379">SetUpdateMode</a> (RenderSurfaceUpdateMode mode)</td></tr>
 <tr class="separator:afa8b8b42c265bab6f407a9c47b7ec379"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e57e2809475d96aa6d1c0a076a8ae26" id="r_a4e57e2809475d96aa6d1c0a076a8ae26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_surface.html#a4e57e2809475d96aa6d1c0a076a8ae26">SetLinkedRenderTarget</a> (<a class="el" href="class_urho3_d_1_1_render_surface.html">RenderSurface</a> *renderTarget)</td></tr>
 <tr class="separator:a4e57e2809475d96aa6d1c0a076a8ae26"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,7 +129,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetAutoResolve</b> ()
 <tr class="separator:a129d86667919a3c795068c839afe58af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac80f494aa6acb33ebd996276e2ca6598" id="r_ac80f494aa6acb33ebd996276e2ca6598"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_viewport.html">Viewport</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_surface.html#ac80f494aa6acb33ebd996276e2ca6598">GetViewport</a> (unsigned index) const</td></tr>
 <tr class="separator:ac80f494aa6acb33ebd996276e2ca6598"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac9cb5b3381b441cda29e6fe1d7c50a8" id="r_aac9cb5b3381b441cda29e6fe1d7c50a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_graphics_defs_8h.html#a7368cb47bde9e8bb1ce7b0020708b530">RenderSurfaceUpdateMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_surface.html#aac9cb5b3381b441cda29e6fe1d7c50a8">GetUpdateMode</a> () const</td></tr>
+<tr class="memitem:aac9cb5b3381b441cda29e6fe1d7c50a8" id="r_aac9cb5b3381b441cda29e6fe1d7c50a8"><td class="memItemLeft" align="right" valign="top">RenderSurfaceUpdateMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_surface.html#aac9cb5b3381b441cda29e6fe1d7c50a8">GetUpdateMode</a> () const</td></tr>
 <tr class="separator:aac9cb5b3381b441cda29e6fe1d7c50a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e1b98bdbe9f0672d729f3d218b42008" id="r_a0e1b98bdbe9f0672d729f3d218b42008"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_render_surface.html">RenderSurface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_render_surface.html#a0e1b98bdbe9f0672d729f3d218b42008">GetLinkedRenderTarget</a> () const</td></tr>
 <tr class="separator:a0e1b98bdbe9f0672d729f3d218b42008"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,7 +253,7 @@ ea::vector&lt; <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr<
 <tr class="memdesc:a925a051f2ad4b1276149c601c4c18fcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linked depth buffer. <br /></td></tr>
 <tr class="separator:a925a051f2ad4b1276149c601c4c18fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69d88fa679226b731d6581db0ad42f80" id="r_a69d88fa679226b731d6581db0ad42f80"><td class="memItemLeft" align="right" valign="top"><a id="a69d88fa679226b731d6581db0ad42f80" name="a69d88fa679226b731d6581db0ad42f80"></a>
-<a class="el" href="_graphics_defs_8h.html#a7368cb47bde9e8bb1ce7b0020708b530">RenderSurfaceUpdateMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>updateMode_</b> {SURFACE_UPDATEVISIBLE}</td></tr>
+RenderSurfaceUpdateMode&#160;</td><td class="memItemRight" valign="bottom"><b>updateMode_</b> {SURFACE_UPDATEVISIBLE}</td></tr>
 <tr class="memdesc:a69d88fa679226b731d6581db0ad42f80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update mode for viewports. <br /></td></tr>
 <tr class="separator:a69d88fa679226b731d6581db0ad42f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcb5de026714084afb4d8261a5d274f3" id="r_abcb5de026714084afb4d8261a5d274f3"><td class="memItemLeft" align="right" valign="top"><a id="abcb5de026714084afb4d8261a5d274f3" name="abcb5de026714084afb4d8261a5d274f3"></a>
@@ -437,7 +437,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>resolveDirty_</b> {}<
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_graphics_defs_8h.html#a7368cb47bde9e8bb1ce7b0020708b530">RenderSurfaceUpdateMode</a> Urho3D::RenderSurface::GetUpdateMode </td>
+          <td class="memname">RenderSurfaceUpdateMode Urho3D::RenderSurface::GetUpdateMode </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -582,7 +582,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>resolveDirty_</b> {}<
         <tr>
           <td class="memname">void Urho3D::RenderSurface::SetUpdateMode </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_graphics_defs_8h.html#a7368cb47bde9e8bb1ce7b0020708b530">RenderSurfaceUpdateMode</a>&#160;</td>
+          <td class="paramtype">RenderSurfaceUpdateMode&#160;</td>
           <td class="paramname"><em>mode</em></td><td>)</td>
           <td></td>
         </tr>

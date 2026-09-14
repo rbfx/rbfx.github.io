@@ -186,7 +186,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsInstanceOf<
 <tr class="memdesc:a26c296bb4de9e175308a26c723d5dc7e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether current instance implements specified type. <br /></td></tr>
 <tr class="separator:a26c296bb4de9e175308a26c723d5dc7e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object" id="r_ad0ce1699ce5bd9d4033e5800bbb8c15b"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEvent</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEvent</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle event. <br /></td></tr>
 <tr class="separator:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13f38914b4398c60eb0b12fb12d73765 inherit pub_methods_class_urho3_d_1_1_object" id="r_a13f38914b4398c60eb0b12fb12d73765"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a13f38914b4398c60eb0b12fb12d73765">SerializeInBlock</a> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;archive)</td></tr>
@@ -254,11 +254,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a cla
 <tr class="memdesc:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event to all subscribers. <br /></td></tr>
 <tr class="separator:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object" id="r_af8f8bd3f7e2f51ecca7199e737f53364"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers. <br /></td></tr>
 <tr class="separator:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object" id="r_a69af51cfa67f9626273b35a6d501e03e"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> () const</td></tr>
+VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> () const</td></tr>
 <tr class="memdesc:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a preallocated map for event data. Used for optimization to avoid constant re-allocation of event data maps. <br /></td></tr>
 <tr class="separator:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5e3591133331ebd3d9e12c95c46aed inherit pub_methods_class_urho3_d_1_1_object" id="r_aca5e3591133331ebd3d9e12c95c46aed"><td class="memTemplParams" colspan="2">
@@ -272,7 +272,7 @@ template&lt;typename... Args&gt; </td></tr>
 <tr class="separator:a8bd9b32c8a56c2f6d618d8afe8091eb7 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd4506c4bdb10232305ef69ebbb78a83 inherit pub_methods_class_urho3_d_1_1_object" id="r_acd4506c4bdb10232305ef69ebbb78a83"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#acd4506c4bdb10232305ef69ebbb78a83">GetGlobalVar</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> key) const</td></tr>
 <tr class="separator:acd4506c4bdb10232305ef69ebbb78a83 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object" id="r_a27b36184a862d9343604f31d85d9bc24"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a27b36184a862d9343604f31d85d9bc24">GetGlobalVars</a> () const</td></tr>
+<tr class="memitem:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object" id="r_a27b36184a862d9343604f31d85d9bc24"><td class="memItemLeft" align="right" valign="top">const VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a27b36184a862d9343604f31d85d9bc24">GetGlobalVars</a> () const</td></tr>
 <tr class="separator:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43d25cc580737c9dc3b973d6c1230d9e inherit pub_methods_class_urho3_d_1_1_object" id="r_a43d25cc580737c9dc3b973d6c1230d9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a43d25cc580737c9dc3b973d6c1230d9e">SetGlobalVar</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> key, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;value)</td></tr>
 <tr class="separator:a43d25cc580737c9dc3b973d6c1230d9e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -308,7 +308,7 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a1ac1fa57e9eb18f91efc30b29b0861c1 inherit pub_methods_class_urho3_d_1_1_object" id="r_a1ac1fa57e9eb18f91efc30b29b0861c1"><td class="memItemLeft" align="right" valign="top">const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a1ac1fa57e9eb18f91efc30b29b0861c1">GetCategory</a> () const</td></tr>
 <tr class="separator:a1ac1fa57e9eb18f91efc30b29b0861c1 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object" id="r_ad7c6e6d74d0ad90811fb3f04bd813a7e"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, const VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers. <br /></td></tr>
 <tr class="separator:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd72cab3f338ef6ca76da511bcd941dc inherit pub_methods_class_urho3_d_1_1_object" id="r_abd72cab3f338ef6ca76da511bcd941dc"><td class="memItemLeft" align="right" valign="top">
@@ -398,63 +398,63 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDocumentUnload</b> 
 <tr class="memdesc:aa9166063c9776110f5037d2db512602c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_signal.html" title="Signal with specified or default sender type.">Signal</a> that document belonging to this subsystem was closed. <br /></td></tr>
 <tr class="separator:aa9166063c9776110f5037d2db512602c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38360a2bb59395749a1d6d9a42196680" id="r_a38360a2bb59395749a1d6d9a42196680"><td class="memItemLeft" align="right" valign="top"><a id="a38360a2bb59395749a1d6d9a42196680" name="a38360a2bb59395749a1d6d9a42196680"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleScreenMode</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleScreenMode</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:a38360a2bb59395749a1d6d9a42196680"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle screen mode event. <br /></td></tr>
 <tr class="separator:a38360a2bb59395749a1d6d9a42196680"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3451beb1cc66ef14b803e16952c88d7" id="r_ad3451beb1cc66ef14b803e16952c88d7"><td class="memItemLeft" align="right" valign="top"><a id="ad3451beb1cc66ef14b803e16952c88d7" name="ad3451beb1cc66ef14b803e16952c88d7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleMouseButtonDown</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleMouseButtonDown</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad3451beb1cc66ef14b803e16952c88d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle mouse button down event. <br /></td></tr>
 <tr class="separator:ad3451beb1cc66ef14b803e16952c88d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb57d899173d9d79f071564a64e66d6a" id="r_afb57d899173d9d79f071564a64e66d6a"><td class="memItemLeft" align="right" valign="top"><a id="afb57d899173d9d79f071564a64e66d6a" name="afb57d899173d9d79f071564a64e66d6a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleMouseButtonUp</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleMouseButtonUp</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:afb57d899173d9d79f071564a64e66d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle mouse button up event. <br /></td></tr>
 <tr class="separator:afb57d899173d9d79f071564a64e66d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a781d9308d40a095574a496fff5936d0b" id="r_a781d9308d40a095574a496fff5936d0b"><td class="memItemLeft" align="right" valign="top"><a id="a781d9308d40a095574a496fff5936d0b" name="a781d9308d40a095574a496fff5936d0b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleMouseMove</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleMouseMove</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:a781d9308d40a095574a496fff5936d0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle mouse move event. <br /></td></tr>
 <tr class="separator:a781d9308d40a095574a496fff5936d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8c54101836b220147bd3e10f5e127e5" id="r_ad8c54101836b220147bd3e10f5e127e5"><td class="memItemLeft" align="right" valign="top"><a id="ad8c54101836b220147bd3e10f5e127e5" name="ad8c54101836b220147bd3e10f5e127e5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleMouseWheel</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleMouseWheel</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad8c54101836b220147bd3e10f5e127e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle mouse wheel event. <br /></td></tr>
 <tr class="separator:ad8c54101836b220147bd3e10f5e127e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4c072dc2b8736d64f84981437b33db7" id="r_ac4c072dc2b8736d64f84981437b33db7"><td class="memItemLeft" align="right" valign="top"><a id="ac4c072dc2b8736d64f84981437b33db7" name="ac4c072dc2b8736d64f84981437b33db7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleTouchBegin</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleTouchBegin</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ac4c072dc2b8736d64f84981437b33db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle touch begin event. <br /></td></tr>
 <tr class="separator:ac4c072dc2b8736d64f84981437b33db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f3d70a568dc59973d2d2c9288d23286" id="r_a7f3d70a568dc59973d2d2c9288d23286"><td class="memItemLeft" align="right" valign="top"><a id="a7f3d70a568dc59973d2d2c9288d23286" name="a7f3d70a568dc59973d2d2c9288d23286"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleTouchEnd</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleTouchEnd</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:a7f3d70a568dc59973d2d2c9288d23286"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle touch end event. <br /></td></tr>
 <tr class="separator:a7f3d70a568dc59973d2d2c9288d23286"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e69a0bb8d741f344913c4d77801cd60" id="r_a6e69a0bb8d741f344913c4d77801cd60"><td class="memItemLeft" align="right" valign="top"><a id="a6e69a0bb8d741f344913c4d77801cd60" name="a6e69a0bb8d741f344913c4d77801cd60"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleTouchMove</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleTouchMove</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:a6e69a0bb8d741f344913c4d77801cd60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle touch move event. <br /></td></tr>
 <tr class="separator:a6e69a0bb8d741f344913c4d77801cd60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34bac2c2eccc7267218168e120ecfdd1" id="r_a34bac2c2eccc7267218168e120ecfdd1"><td class="memItemLeft" align="right" valign="top"><a id="a34bac2c2eccc7267218168e120ecfdd1" name="a34bac2c2eccc7267218168e120ecfdd1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleKeyDown</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleKeyDown</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:a34bac2c2eccc7267218168e120ecfdd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle press event. <br /></td></tr>
 <tr class="separator:a34bac2c2eccc7267218168e120ecfdd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbc1f192d885b8b1c654b3b20b09eda3" id="r_adbc1f192d885b8b1c654b3b20b09eda3"><td class="memItemLeft" align="right" valign="top"><a id="adbc1f192d885b8b1c654b3b20b09eda3" name="adbc1f192d885b8b1c654b3b20b09eda3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleKeyUp</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleKeyUp</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:adbc1f192d885b8b1c654b3b20b09eda3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle release event. <br /></td></tr>
 <tr class="separator:adbc1f192d885b8b1c654b3b20b09eda3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8ee62cbf41e79380864a0977bcbaa81" id="r_ae8ee62cbf41e79380864a0977bcbaa81"><td class="memItemLeft" align="right" valign="top"><a id="ae8ee62cbf41e79380864a0977bcbaa81" name="ae8ee62cbf41e79380864a0977bcbaa81"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleTextInput</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleTextInput</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ae8ee62cbf41e79380864a0977bcbaa81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle text input event. <br /></td></tr>
 <tr class="separator:ae8ee62cbf41e79380864a0977bcbaa81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0faabefcf83ea60a18d953e65acb0ab" id="r_ab0faabefcf83ea60a18d953e65acb0ab"><td class="memItemLeft" align="right" valign="top"><a id="ab0faabefcf83ea60a18d953e65acb0ab" name="ab0faabefcf83ea60a18d953e65acb0ab"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandlePostUpdate</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandlePostUpdate</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ab0faabefcf83ea60a18d953e65acb0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle logic post-update event. <br /></td></tr>
 <tr class="separator:ab0faabefcf83ea60a18d953e65acb0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f115fddd6019504f2e1fbe76e566a1e" id="r_a2f115fddd6019504f2e1fbe76e566a1e"><td class="memItemLeft" align="right" valign="top"><a id="a2f115fddd6019504f2e1fbe76e566a1e" name="a2f115fddd6019504f2e1fbe76e566a1e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleDropFile</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleDropFile</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:a2f115fddd6019504f2e1fbe76e566a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a file being drag-dropped into the application window. <br /></td></tr>
 <tr class="separator:a2f115fddd6019504f2e1fbe76e566a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac44baae86b5df0a894558b2d6aa538b0" id="r_ac44baae86b5df0a894558b2d6aa538b0"><td class="memItemLeft" align="right" valign="top"><a id="ac44baae86b5df0a894558b2d6aa538b0" name="ac44baae86b5df0a894558b2d6aa538b0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleEndAllViewsRender</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleEndAllViewsRender</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ac44baae86b5df0a894558b2d6aa538b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle rendering to a texture. <br /></td></tr>
 <tr class="separator:ac44baae86b5df0a894558b2d6aa538b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb1fa6835b1a65b91d5ffb928af0c59b" id="r_adb1fa6835b1a65b91d5ffb928af0c59b"><td class="memItemLeft" align="right" valign="top"><a id="adb1fa6835b1a65b91d5ffb928af0c59b" name="adb1fa6835b1a65b91d5ffb928af0c59b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleResourceReloaded</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleResourceReloaded</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:adb1fa6835b1a65b91d5ffb928af0c59b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle resource reloading. <br /></td></tr>
 <tr class="separator:adb1fa6835b1a65b91d5ffb928af0c59b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -579,7 +579,7 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/RmlUI/<a class="el" href="_rml_u_i_8h.html">RmlUI.h</a></li>
+<li>Urho3D/RmlUI/<b>RmlUI.h</b></li>
 <li>Urho3D/RmlUI/<b>RmlUI.cpp</b></li>
 </ul>
 </div><!-- contents -->

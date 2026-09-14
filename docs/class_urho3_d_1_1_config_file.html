@@ -110,11 +110,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1ed1c7a449be2ee79f9fd18f181317e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define variable supported by the config. <br /></td></tr>
 <tr class="separator:a1ed1c7a449be2ee79f9fd18f181317e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5e89ef44841c644e2d3b821977e6582" id="r_ad5e89ef44841c644e2d3b821977e6582"><td class="memItemLeft" align="right" valign="top"><a id="ad5e89ef44841c644e2d3b821977e6582" name="ad5e89ef44841c644e2d3b821977e6582"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DefineVariables</b> (const <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;defaults)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DefineVariables</b> (const StringVariantMap &amp;defaults)</td></tr>
 <tr class="memdesc:ad5e89ef44841c644e2d3b821977e6582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define new variables or update defaults for existing ones. <br /></td></tr>
 <tr class="separator:ad5e89ef44841c644e2d3b821977e6582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ffd7c07858e4f2b7b402d4a2f23754b" id="r_a2ffd7c07858e4f2b7b402d4a2f23754b"><td class="memItemLeft" align="right" valign="top"><a id="a2ffd7c07858e4f2b7b402d4a2f23754b" name="a2ffd7c07858e4f2b7b402d4a2f23754b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdatePriorityVariables</b> (const <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;defaults)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdatePriorityVariables</b> (const StringVariantMap &amp;defaults)</td></tr>
 <tr class="memdesc:a2ffd7c07858e4f2b7b402d4a2f23754b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update values for priority variables. <br /></td></tr>
 <tr class="separator:a2ffd7c07858e4f2b7b402d4a2f23754b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaaadb22f789c929b7cd1737215d6e35" id="r_abaaadb22f789c929b7cd1737215d6e35"><td class="memItemLeft" align="right" valign="top"><a id="abaaadb22f789c929b7cd1737215d6e35" name="abaaadb22f789c929b7cd1737215d6e35"></a>
@@ -148,10 +148,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>LoadOverrides</b> (co
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>SaveOverrides</b> (const ea::string &amp;fileName, const <a class="el" href="struct_urho3_d_1_1_application_flavor.html">ApplicationFlavor</a> &amp;flavor) const</td></tr>
 <tr class="memdesc:a78a2e39de630d3bda82afce87516c740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save variable overrides to file. <br /></td></tr>
 <tr class="separator:a78a2e39de630d3bda82afce87516c740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac603fa973df32da7ae57f15ba14a3077" id="r_ac603fa973df32da7ae57f15ba14a3077"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_config_file.html#ac603fa973df32da7ae57f15ba14a3077">GetFlavorVariables</a> (const <a class="el" href="struct_urho3_d_1_1_application_flavor.html">ApplicationFlavor</a> &amp;flavor) const</td></tr>
+<tr class="memitem:ac603fa973df32da7ae57f15ba14a3077" id="r_ac603fa973df32da7ae57f15ba14a3077"><td class="memItemLeft" align="right" valign="top">StringVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_config_file.html#ac603fa973df32da7ae57f15ba14a3077">GetFlavorVariables</a> (const <a class="el" href="struct_urho3_d_1_1_application_flavor.html">ApplicationFlavor</a> &amp;flavor) const</td></tr>
 <tr class="separator:ac603fa973df32da7ae57f15ba14a3077"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eca9ea11fc487fbd5401541281269ed" id="r_a5eca9ea11fc487fbd5401541281269ed"><td class="memItemLeft" align="right" valign="top"><a id="a5eca9ea11fc487fbd5401541281269ed" name="a5eca9ea11fc487fbd5401541281269ed"></a>
-<a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetChangedVariables</b> (const <a class="el" href="struct_urho3_d_1_1_application_flavor.html">ApplicationFlavor</a> &amp;flavor) const</td></tr>
+StringVariantMap&#160;</td><td class="memItemRight" valign="bottom"><b>GetChangedVariables</b> (const <a class="el" href="struct_urho3_d_1_1_application_flavor.html">ApplicationFlavor</a> &amp;flavor) const</td></tr>
 <tr class="memdesc:a5eca9ea11fc487fbd5401541281269ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate variables that are changed compared to flavor and global defaults. <br /></td></tr>
 <tr class="separator:a5eca9ea11fc487fbd5401541281269ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
@@ -167,10 +167,10 @@ ConfigVariableDefinitionMap &amp;&#160;</td><td class="memItemRight" valign="bot
 const ConfigVariableDefinitionMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetVariableDefinitions</b> () const</td></tr>
 <tr class="separator:a6388a119e3098ec90fd8125400146800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac818013ae3ce5004a71a36234631e66d" id="r_ac818013ae3ce5004a71a36234631e66d"><td class="memItemLeft" align="right" valign="top"><a id="ac818013ae3ce5004a71a36234631e66d" name="ac818013ae3ce5004a71a36234631e66d"></a>
-<a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetVariables</b> ()</td></tr>
+StringVariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetVariables</b> ()</td></tr>
 <tr class="separator:ac818013ae3ce5004a71a36234631e66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5c164cc58c07966dfd212ee2e075c8b" id="r_ac5c164cc58c07966dfd212ee2e075c8b"><td class="memItemLeft" align="right" valign="top"><a id="ac5c164cc58c07966dfd212ee2e075c8b" name="ac5c164cc58c07966dfd212ee2e075c8b"></a>
-const <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetVariables</b> () const</td></tr>
+const StringVariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetVariables</b> () const</td></tr>
 <tr class="separator:ac5c164cc58c07966dfd212ee2e075c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object" id="r_a95a6cd1c5c12a458fda4b38f873a334d"><td class="memItemLeft" align="right" valign="top">
@@ -194,7 +194,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsInstanceOf<
 <tr class="memdesc:a26c296bb4de9e175308a26c723d5dc7e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether current instance implements specified type. <br /></td></tr>
 <tr class="separator:a26c296bb4de9e175308a26c723d5dc7e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object" id="r_ad0ce1699ce5bd9d4033e5800bbb8c15b"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEvent</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEvent</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle event. <br /></td></tr>
 <tr class="separator:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17376e0a319ae50dca17ad91c5b1a55b inherit pub_methods_class_urho3_d_1_1_object" id="r_a17376e0a319ae50dca17ad91c5b1a55b"><td class="memTemplParams" colspan="2">
@@ -259,11 +259,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a cla
 <tr class="memdesc:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event to all subscribers. <br /></td></tr>
 <tr class="separator:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object" id="r_af8f8bd3f7e2f51ecca7199e737f53364"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers. <br /></td></tr>
 <tr class="separator:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object" id="r_a69af51cfa67f9626273b35a6d501e03e"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> () const</td></tr>
+VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> () const</td></tr>
 <tr class="memdesc:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a preallocated map for event data. Used for optimization to avoid constant re-allocation of event data maps. <br /></td></tr>
 <tr class="separator:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5e3591133331ebd3d9e12c95c46aed inherit pub_methods_class_urho3_d_1_1_object" id="r_aca5e3591133331ebd3d9e12c95c46aed"><td class="memTemplParams" colspan="2">
@@ -277,7 +277,7 @@ template&lt;typename... Args&gt; </td></tr>
 <tr class="separator:a8bd9b32c8a56c2f6d618d8afe8091eb7 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd4506c4bdb10232305ef69ebbb78a83 inherit pub_methods_class_urho3_d_1_1_object" id="r_acd4506c4bdb10232305ef69ebbb78a83"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#acd4506c4bdb10232305ef69ebbb78a83">GetGlobalVar</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> key) const</td></tr>
 <tr class="separator:acd4506c4bdb10232305ef69ebbb78a83 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object" id="r_a27b36184a862d9343604f31d85d9bc24"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a27b36184a862d9343604f31d85d9bc24">GetGlobalVars</a> () const</td></tr>
+<tr class="memitem:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object" id="r_a27b36184a862d9343604f31d85d9bc24"><td class="memItemLeft" align="right" valign="top">const VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a27b36184a862d9343604f31d85d9bc24">GetGlobalVars</a> () const</td></tr>
 <tr class="separator:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43d25cc580737c9dc3b973d6c1230d9e inherit pub_methods_class_urho3_d_1_1_object" id="r_a43d25cc580737c9dc3b973d6c1230d9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a43d25cc580737c9dc3b973d6c1230d9e">SetGlobalVar</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> key, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;value)</td></tr>
 <tr class="separator:a43d25cc580737c9dc3b973d6c1230d9e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -313,7 +313,7 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a1ac1fa57e9eb18f91efc30b29b0861c1 inherit pub_methods_class_urho3_d_1_1_object" id="r_a1ac1fa57e9eb18f91efc30b29b0861c1"><td class="memItemLeft" align="right" valign="top">const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a1ac1fa57e9eb18f91efc30b29b0861c1">GetCategory</a> () const</td></tr>
 <tr class="separator:a1ac1fa57e9eb18f91efc30b29b0861c1 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object" id="r_ad7c6e6d74d0ad90811fb3f04bd813a7e"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, const VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers. <br /></td></tr>
 <tr class="separator:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd72cab3f338ef6ca76da511bcd941dc inherit pub_methods_class_urho3_d_1_1_object" id="r_abd72cab3f338ef6ca76da511bcd941dc"><td class="memItemLeft" align="right" valign="top">
@@ -379,7 +379,7 @@ ConfigVariableDefinitionMap&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memdesc:ac5d9d520cddfef13dd360909d03f2e85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definitions of supported variables with metadata and default values. <br /></td></tr>
 <tr class="separator:ac5d9d520cddfef13dd360909d03f2e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82dcb9f6bf81180d42f8183ebf22896a" id="r_a82dcb9f6bf81180d42f8183ebf22896a"><td class="memItemLeft" align="right" valign="top"><a id="a82dcb9f6bf81180d42f8183ebf22896a" name="a82dcb9f6bf81180d42f8183ebf22896a"></a>
-<a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>variables_</b></td></tr>
+StringVariantMap&#160;</td><td class="memItemRight" valign="bottom"><b>variables_</b></td></tr>
 <tr class="memdesc:a82dcb9f6bf81180d42f8183ebf22896a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current state of variables. <br /></td></tr>
 <tr class="separator:a82dcb9f6bf81180d42f8183ebf22896a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -409,7 +409,7 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> Urho3D::ConfigFile::GetFlavorVariables </td>
+          <td class="memname">StringVariantMap Urho3D::ConfigFile::GetFlavorVariables </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_urho3_d_1_1_application_flavor.html">ApplicationFlavor</a> &amp;&#160;</td>
           <td class="paramname"><em>flavor</em></td><td>)</td>

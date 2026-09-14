@@ -121,7 +121,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessCustomRayQuery
 <tr class="memitem:aa95a74690909b8503056f917d1101a93" id="r_aa95a74690909b8503056f917d1101a93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#aa95a74690909b8503056f917d1101a93">UpdateGeometry</a> (const <a class="el" href="struct_urho3_d_1_1_frame_info.html">FrameInfo</a> &amp;frame) override</td></tr>
 <tr class="memdesc:aa95a74690909b8503056f917d1101a93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare geometry for rendering. Called from a worker thread if possible (no GPU update).  <br /></td></tr>
 <tr class="separator:aa95a74690909b8503056f917d1101a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61c9793130dc616a086357b612ff8573" id="r_a61c9793130dc616a086357b612ff8573"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_drawable_8h.html#affe9ba89cc323bc37aff22afec7ade35">UpdateGeometryType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a61c9793130dc616a086357b612ff8573">GetUpdateGeometryType</a> () override</td></tr>
+<tr class="memitem:a61c9793130dc616a086357b612ff8573" id="r_a61c9793130dc616a086357b612ff8573"><td class="memItemLeft" align="right" valign="top">UpdateGeometryType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a61c9793130dc616a086357b612ff8573">GetUpdateGeometryType</a> () override</td></tr>
 <tr class="memdesc:a61c9793130dc616a086357b612ff8573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether a geometry update is necessary, and if it can happen in a worker thread.  <br /></td></tr>
 <tr class="separator:a61c9793130dc616a086357b612ff8573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74dd843c8bb432dd21f96e0765b6350c" id="r_a74dd843c8bb432dd21f96e0765b6350c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a74dd843c8bb432dd21f96e0765b6350c">DrawDebugGeometry</a> (<a class="el" href="class_urho3_d_1_1_debug_renderer.html">DebugRenderer</a> *debug, bool depthTest) override</td></tr>
@@ -199,7 +199,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetModelAttr</b> (con
 <tr class="memdesc:a4bcb1159367b1b112ba751b0b5747f59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set model attribute. <br /></td></tr>
 <tr class="separator:a4bcb1159367b1b112ba751b0b5747f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9467eac1ed9253a1fc53a077f395b591" id="r_a9467eac1ed9253a1fc53a077f395b591"><td class="memItemLeft" align="right" valign="top"><a id="a9467eac1ed9253a1fc53a077f395b591" name="a9467eac1ed9253a1fc53a077f395b591"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBonesEnabledAttr</b> (const <a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a> &amp;value)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetBonesEnabledAttr</b> (const VariantVector &amp;value)</td></tr>
 <tr class="memdesc:a9467eac1ed9253a1fc53a077f395b591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set bones' animation enabled attribute. <br /></td></tr>
 <tr class="separator:a9467eac1ed9253a1fc53a077f395b591"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34e2683831b070e294a1f7eb46858ca7" id="r_a34e2683831b070e294a1f7eb46858ca7"><td class="memItemLeft" align="right" valign="top"><a id="a34e2683831b070e294a1f7eb46858ca7" name="a34e2683831b070e294a1f7eb46858ca7"></a>
@@ -211,7 +211,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMorphsAttr</b> (co
 <tr class="memdesc:a633d564e3ddce582a89a4ae97d59ce9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return model attribute. <br /></td></tr>
 <tr class="separator:a633d564e3ddce582a89a4ae97d59ce9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d770e83d25a4f6933f175f3cf9faa88" id="r_a9d770e83d25a4f6933f175f3cf9faa88"><td class="memItemLeft" align="right" valign="top"><a id="a9d770e83d25a4f6933f175f3cf9faa88" name="a9d770e83d25a4f6933f175f3cf9faa88"></a>
-<a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetBonesEnabledAttr</b> () const</td></tr>
+VariantVector&#160;</td><td class="memItemRight" valign="bottom"><b>GetBonesEnabledAttr</b> () const</td></tr>
 <tr class="memdesc:a9d770e83d25a4f6933f175f3cf9faa88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return bones' animation enabled attribute. <br /></td></tr>
 <tr class="separator:a9d770e83d25a4f6933f175f3cf9faa88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a838e6930810041658b43fb9e8c4fa31a" id="r_a838e6930810041658b43fb9e8c4fa31a"><td class="memItemLeft" align="right" valign="top"><a id="a838e6930810041658b43fb9e8c4fa31a" name="a838e6930810041658b43fb9e8c4fa31a"></a>
@@ -394,11 +394,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateWorldOr
 <tr class="memitem:aa1e97bbb2427a3626a5b6816dfc888d6 inherit pub_methods_class_urho3_d_1_1_drawable" id="r_aa1e97bbb2427a3626a5b6816dfc888d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#aa1e97bbb2427a3626a5b6816dfc888d6">SetOccludee</a> (bool enable)</td></tr>
 <tr class="separator:aa1e97bbb2427a3626a5b6816dfc888d6 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73c80830d5093096d355a8c850257d75 inherit pub_methods_class_urho3_d_1_1_drawable" id="r_a73c80830d5093096d355a8c850257d75"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetGlobalIlluminationType</b> (<a class="el" href="_drawable_8h.html#a4f9d95e4c61fc63dda7a4b06f28dece4">GlobalIlluminationType</a> type)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetGlobalIlluminationType</b> (GlobalIlluminationType type)</td></tr>
 <tr class="memdesc:a73c80830d5093096d355a8c850257d75 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set GI type. <br /></td></tr>
 <tr class="separator:a73c80830d5093096d355a8c850257d75 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a949a94d1dab118e09783d4da1804bf47 inherit pub_methods_class_urho3_d_1_1_drawable" id="r_a949a94d1dab118e09783d4da1804bf47"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetReflectionMode</b> (<a class="el" href="_drawable_8h.html#abd6e79ada6bb21600133d788f402defd">ReflectionMode</a> mode)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetReflectionMode</b> (ReflectionMode mode)</td></tr>
 <tr class="memdesc:a949a94d1dab118e09783d4da1804bf47 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set reflection mode. <br /></td></tr>
 <tr class="separator:a949a94d1dab118e09783d4da1804bf47 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87d6de3a8a7895228665ef79ad331510 inherit pub_methods_class_urho3_d_1_1_drawable" id="r_a87d6de3a8a7895228665ef79ad331510"><td class="memItemLeft" align="right" valign="top">
@@ -434,11 +434,11 @@ DrawableFlags&#160;</td><td class="memItemRight" valign="bottom"><b>GetDrawableF
 <tr class="memitem:aabd4960e08a707a45f9720fcb30dfa39 inherit pub_methods_class_urho3_d_1_1_drawable" id="r_aabd4960e08a707a45f9720fcb30dfa39"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#aabd4960e08a707a45f9720fcb30dfa39">IsOccludee</a> () const</td></tr>
 <tr class="separator:aabd4960e08a707a45f9720fcb30dfa39 inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade1fb2797e883ee41082fe9dc6e03d8a inherit pub_methods_class_urho3_d_1_1_drawable" id="r_ade1fb2797e883ee41082fe9dc6e03d8a"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_drawable_8h.html#a4f9d95e4c61fc63dda7a4b06f28dece4">GlobalIlluminationType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalIlluminationType</b> () const</td></tr>
+GlobalIlluminationType&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalIlluminationType</b> () const</td></tr>
 <tr class="memdesc:ade1fb2797e883ee41082fe9dc6e03d8a inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return global illumination type. <br /></td></tr>
 <tr class="separator:ade1fb2797e883ee41082fe9dc6e03d8a inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2ee5a3c924f10c37835110faf5fa4fa inherit pub_methods_class_urho3_d_1_1_drawable" id="r_ac2ee5a3c924f10c37835110faf5fa4fa"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_drawable_8h.html#abd6e79ada6bb21600133d788f402defd">ReflectionMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetReflectionMode</b> () const</td></tr>
+ReflectionMode&#160;</td><td class="memItemRight" valign="bottom"><b>GetReflectionMode</b> () const</td></tr>
 <tr class="memdesc:ac2ee5a3c924f10c37835110faf5fa4fa inherit pub_methods_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return reflection mode. <br /></td></tr>
 <tr class="separator:ac2ee5a3c924f10c37835110faf5fa4fa inherit pub_methods_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dd313eab9c863711b8e84d7ce30fc11 inherit pub_methods_class_urho3_d_1_1_drawable" id="r_a4dd313eab9c863711b8e84d7ce30fc11"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_drawable.html#a4dd313eab9c863711b8e84d7ce30fc11">IsInView</a> () const</td></tr>
@@ -530,7 +530,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetShadowMaskInZo
 &#160;</td><td class="memItemRight" valign="bottom"><b>~Component</b> () override</td></tr>
 <tr class="memdesc:addaa40ac5aaa94e2e60e1d8043706aca inherit pub_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruct. <br /></td></tr>
 <tr class="separator:addaa40ac5aaa94e2e60e1d8043706aca inherit pub_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ea2cf1795fa0b638ea704a9017fb0d0 inherit pub_methods_class_urho3_d_1_1_component" id="r_a5ea2cf1795fa0b638ea704a9017fb0d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58">AttributeScopeHint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a5ea2cf1795fa0b638ea704a9017fb0d0">GetEffectiveScopeHint</a> () const</td></tr>
+<tr class="memitem:a5ea2cf1795fa0b638ea704a9017fb0d0 inherit pub_methods_class_urho3_d_1_1_component" id="r_a5ea2cf1795fa0b638ea704a9017fb0d0"><td class="memItemLeft" align="right" valign="top">AttributeScopeHint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a5ea2cf1795fa0b638ea704a9017fb0d0">GetEffectiveScopeHint</a> () const</td></tr>
 <tr class="separator:a5ea2cf1795fa0b638ea704a9017fb0d0 inherit pub_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753c0051bc1080efc07b5ba1e12ee74b inherit pub_methods_class_urho3_d_1_1_component" id="r_a753c0051bc1080efc07b5ba1e12ee74b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_component.html#a753c0051bc1080efc07b5ba1e12ee74b">Save</a> (<a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest) const override</td></tr>
 <tr class="memdesc:a753c0051bc1080efc07b5ba1e12ee74b inherit pub_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save as binary data. Return true if successful.  <br /></td></tr>
@@ -718,7 +718,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsInstanceOf<
 <tr class="memdesc:a26c296bb4de9e175308a26c723d5dc7e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether current instance implements specified type. <br /></td></tr>
 <tr class="separator:a26c296bb4de9e175308a26c723d5dc7e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object" id="r_ad0ce1699ce5bd9d4033e5800bbb8c15b"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEvent</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEvent</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle event. <br /></td></tr>
 <tr class="separator:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17376e0a319ae50dca17ad91c5b1a55b inherit pub_methods_class_urho3_d_1_1_object" id="r_a17376e0a319ae50dca17ad91c5b1a55b"><td class="memTemplParams" colspan="2">
@@ -783,11 +783,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a cla
 <tr class="memdesc:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event to all subscribers. <br /></td></tr>
 <tr class="separator:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object" id="r_af8f8bd3f7e2f51ecca7199e737f53364"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers. <br /></td></tr>
 <tr class="separator:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object" id="r_a69af51cfa67f9626273b35a6d501e03e"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> () const</td></tr>
+VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> () const</td></tr>
 <tr class="memdesc:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a preallocated map for event data. Used for optimization to avoid constant re-allocation of event data maps. <br /></td></tr>
 <tr class="separator:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5e3591133331ebd3d9e12c95c46aed inherit pub_methods_class_urho3_d_1_1_object" id="r_aca5e3591133331ebd3d9e12c95c46aed"><td class="memTemplParams" colspan="2">
@@ -801,7 +801,7 @@ template&lt;typename... Args&gt; </td></tr>
 <tr class="separator:a8bd9b32c8a56c2f6d618d8afe8091eb7 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd4506c4bdb10232305ef69ebbb78a83 inherit pub_methods_class_urho3_d_1_1_object" id="r_acd4506c4bdb10232305ef69ebbb78a83"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#acd4506c4bdb10232305ef69ebbb78a83">GetGlobalVar</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> key) const</td></tr>
 <tr class="separator:acd4506c4bdb10232305ef69ebbb78a83 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object" id="r_a27b36184a862d9343604f31d85d9bc24"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a27b36184a862d9343604f31d85d9bc24">GetGlobalVars</a> () const</td></tr>
+<tr class="memitem:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object" id="r_a27b36184a862d9343604f31d85d9bc24"><td class="memItemLeft" align="right" valign="top">const VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a27b36184a862d9343604f31d85d9bc24">GetGlobalVars</a> () const</td></tr>
 <tr class="separator:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43d25cc580737c9dc3b973d6c1230d9e inherit pub_methods_class_urho3_d_1_1_object" id="r_a43d25cc580737c9dc3b973d6c1230d9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a43d25cc580737c9dc3b973d6c1230d9e">SetGlobalVar</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> key, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;value)</td></tr>
 <tr class="separator:a43d25cc580737c9dc3b973d6c1230d9e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -837,7 +837,7 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a1ac1fa57e9eb18f91efc30b29b0861c1 inherit pub_methods_class_urho3_d_1_1_object" id="r_a1ac1fa57e9eb18f91efc30b29b0861c1"><td class="memItemLeft" align="right" valign="top">const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a1ac1fa57e9eb18f91efc30b29b0861c1">GetCategory</a> () const</td></tr>
 <tr class="separator:a1ac1fa57e9eb18f91efc30b29b0861c1 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object" id="r_ad7c6e6d74d0ad90811fb3f04bd813a7e"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, const VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers. <br /></td></tr>
 <tr class="separator:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd72cab3f338ef6ca76da511bcd941dc inherit pub_methods_class_urho3_d_1_1_object" id="r_abd72cab3f338ef6ca76da511bcd941dc"><td class="memItemLeft" align="right" valign="top">
@@ -917,10 +917,10 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:acd696693994ca3b8e057c23ae2004707" id="r_acd696693994ca3b8e057c23ae2004707"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#acd696693994ca3b8e057c23ae2004707">OnNodeSet</a> (<a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *previousNode, <a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *currentNode) override</td></tr>
+<tr class="memitem:acd696693994ca3b8e057c23ae2004707" id="r_acd696693994ca3b8e057c23ae2004707"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#acd696693994ca3b8e057c23ae2004707">OnNodeSet</a> (Node *previousNode, Node *currentNode) override</td></tr>
 <tr class="memdesc:acd696693994ca3b8e057c23ae2004707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle node being assigned.  <br /></td></tr>
 <tr class="separator:acd696693994ca3b8e057c23ae2004707"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a8f8a073acd87e16d3d87558ae74d7d" id="r_a8a8f8a073acd87e16d3d87558ae74d7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a8a8f8a073acd87e16d3d87558ae74d7d">OnMarkedDirty</a> (<a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *node) override</td></tr>
+<tr class="memitem:a8a8f8a073acd87e16d3d87558ae74d7d" id="r_a8a8f8a073acd87e16d3d87558ae74d7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#a8a8f8a073acd87e16d3d87558ae74d7d">OnMarkedDirty</a> (Node *node) override</td></tr>
 <tr class="memdesc:a8a8f8a073acd87e16d3d87558ae74d7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle node transform being dirtied.  <br /></td></tr>
 <tr class="separator:a8a8f8a073acd87e16d3d87558ae74d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af60822b6afad9ae9e135e2b05fd13005" id="r_af60822b6afad9ae9e135e2b05fd13005"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_animated_model.html#af60822b6afad9ae9e135e2b05fd13005">OnWorldBoundingBoxUpdate</a> () override</td></tr>
@@ -993,7 +993,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetNode</b> (Node *no
 <tr class="memdesc:a75922f91ae1ee7376aaf1b2e0c0cc84c inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a component from the scene root that sends out fixed update events (either <a class="el" href="class_urho3_d_1_1_physics_world.html" title="Physics simulation world component. Should be added only to the root scene node.">PhysicsWorld</a> or <a class="el" href="class_urho3_d_1_1_physics_world2_d.html" title="2D physics simulation world component. Should be added only to the root scene node.">PhysicsWorld2D</a>). Return null if neither exists. <br /></td></tr>
 <tr class="separator:a75922f91ae1ee7376aaf1b2e0c0cc84c inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component" id="r_af908546af61d16a0ac497fdad2ed42f2"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DoAutoRemove</b> (<a class="el" href="_component_8h.html#a01a03fff19daa9f54c2519fcdd737ce4">AutoRemoveMode</a> mode)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DoAutoRemove</b> (AutoRemoveMode mode)</td></tr>
 <tr class="memdesc:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform autoremove. Called by subclasses. Caller should keep a weak pointer to itself to check whether was actually removed, and return immediately without further member operations in that case. <br /></td></tr>
 <tr class="separator:af908546af61d16a0ac497fdad2ed42f2 inherit pro_methods_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_urho3_d_1_1_pipeline_state_tracker"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_pipeline_state_tracker')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_pipeline_state_tracker.html">Urho3D::PipelineStateTracker</a></td></tr>
@@ -1048,7 +1048,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>CloneGeometries</b> (
 <tr class="memdesc:a1cee08d3a1d69d8d41397c0a99006369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone geometries for vertex morphing. <br /></td></tr>
 <tr class="separator:a1cee08d3a1d69d8d41397c0a99006369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6af95070304f3ecca53d9dee1ce63ad" id="r_af6af95070304f3ecca53d9dee1ce63ad"><td class="memItemLeft" align="right" valign="top"><a id="af6af95070304f3ecca53d9dee1ce63ad" name="af6af95070304f3ecca53d9dee1ce63ad"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleModelReloadFinished</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleModelReloadFinished</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:af6af95070304f3ecca53d9dee1ce63ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle model reload finished. <br /></td></tr>
 <tr class="separator:af6af95070304f3ecca53d9dee1ce63ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a576199cb4adddf59849c1c94697dcb1d" id="r_a576199cb4adddf59849c1c94697dcb1d"><td class="memItemLeft" align="right" valign="top"><a id="a576199cb4adddf59849c1c94697dcb1d" name="a576199cb4adddf59849c1c94697dcb1d"></a>
@@ -1252,11 +1252,11 @@ DrawableFlags&#160;</td><td class="memItemRight" valign="bottom"><b>drawableFlag
 <tr class="memdesc:a007d7d28daeb7eb9fb83ceec6e854c5c inherit pro_attribs_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_drawable.html" title="Base class for visible components.">Drawable</a> flags. <br /></td></tr>
 <tr class="separator:a007d7d28daeb7eb9fb83ceec6e854c5c inherit pro_attribs_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a769c382836399e060f37ca94677061a4 inherit pro_attribs_class_urho3_d_1_1_drawable" id="r_a769c382836399e060f37ca94677061a4"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_drawable_8h.html#a4f9d95e4c61fc63dda7a4b06f28dece4">GlobalIlluminationType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>giType_</b> {}</td></tr>
+GlobalIlluminationType&#160;</td><td class="memItemRight" valign="bottom"><b>giType_</b> {}</td></tr>
 <tr class="memdesc:a769c382836399e060f37ca94677061a4 inherit pro_attribs_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global illumination type. <br /></td></tr>
 <tr class="separator:a769c382836399e060f37ca94677061a4 inherit pro_attribs_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83f5c509fd547197740401997b088736 inherit pro_attribs_class_urho3_d_1_1_drawable" id="r_a83f5c509fd547197740401997b088736"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_drawable_8h.html#abd6e79ada6bb21600133d788f402defd">ReflectionMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>reflectionMode_</b> {ReflectionMode::BlendProbesAndZone}</td></tr>
+ReflectionMode&#160;</td><td class="memItemRight" valign="bottom"><b>reflectionMode_</b> {ReflectionMode::BlendProbesAndZone}</td></tr>
 <tr class="memdesc:a83f5c509fd547197740401997b088736 inherit pro_attribs_class_urho3_d_1_1_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reflection mode. <br /></td></tr>
 <tr class="separator:a83f5c509fd547197740401997b088736 inherit pro_attribs_class_urho3_d_1_1_drawable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23281f9ff7eeaa73c147b86fc29f1f9d inherit pro_attribs_class_urho3_d_1_1_drawable" id="r_a23281f9ff7eeaa73c147b86fc29f1f9d"><td class="memItemLeft" align="right" valign="top">
@@ -1370,7 +1370,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>enabled_</b></td></tr
 <tr class="separator:ae52f352027bee0fa8d538591364b554a inherit pro_attribs_class_urho3_d_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_serializable"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_serializable')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_serializable.html">Urho3D::Serializable</a></td></tr>
 <tr class="memitem:ac6128cecfe8decc17084fe2aa7e6cf57 inherit pro_attribs_class_urho3_d_1_1_serializable" id="r_ac6128cecfe8decc17084fe2aa7e6cf57"><td class="memItemLeft" align="right" valign="top">
-ea::unique_ptr&lt; <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>instanceDefaultValues_</b></td></tr>
+ea::unique_ptr&lt; VariantMap &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>instanceDefaultValues_</b></td></tr>
 <tr class="memdesc:ac6128cecfe8decc17084fe2aa7e6cf57 inherit pro_attribs_class_urho3_d_1_1_serializable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attribute default value at each instance level. <br /></td></tr>
 <tr class="separator:ac6128cecfe8decc17084fe2aa7e6cf57 inherit pro_attribs_class_urho3_d_1_1_serializable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accaf6b2938d392f127885f6673f6985e inherit pro_attribs_class_urho3_d_1_1_serializable" id="r_accaf6b2938d392f127885f6673f6985e"><td class="memItemLeft" align="right" valign="top">
@@ -1591,7 +1591,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_drawable_8h.html#affe9ba89cc323bc37aff22afec7ade35">UpdateGeometryType</a> Urho3D::AnimatedModel::GetUpdateGeometryType </td>
+          <td class="memname">UpdateGeometryType Urho3D::AnimatedModel::GetUpdateGeometryType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1648,7 +1648,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">void Urho3D::AnimatedModel::OnMarkedDirty </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *&#160;</td>
+          <td class="paramtype">Node *&#160;</td>
           <td class="paramname"><em>node</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1678,13 +1678,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>temporary_</b></td></
         <tr>
           <td class="memname">void Urho3D::AnimatedModel::OnNodeSet </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *&#160;</td>
+          <td class="paramtype">Node *&#160;</td>
           <td class="paramname"><em>previousNode</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *&#160;</td>
+          <td class="paramtype">Node *&#160;</td>
           <td class="paramname"><em>currentNode</em>&#160;</td>
         </tr>
         <tr>

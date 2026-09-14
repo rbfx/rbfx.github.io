@@ -90,7 +90,7 @@ Inheritance diagram for Urho3D::ClientNetworkCallback:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaab57be8bd61f4249f77c39237f3139f" id="r_aaab57be8bd61f4249f77c39237f3139f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_client_network_callback.html#aaab57be8bd61f4249f77c39237f3139f">InitializeFromSnapshot</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src, bool isOwned)</td></tr>
+<tr class="memitem:aaab57be8bd61f4249f77c39237f3139f" id="r_aaab57be8bd61f4249f77c39237f3139f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_client_network_callback.html#aaab57be8bd61f4249f77c39237f3139f">InitializeFromSnapshot</a> (NetworkFrame frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src, bool isOwned)</td></tr>
 <tr class="memdesc:aaab57be8bd61f4249f77c39237f3139f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read full snapshot and initialize object. Called once.  <br /></td></tr>
 <tr class="separator:aaab57be8bd61f4249f77c39237f3139f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4847ad562d4515dcf18447f8013868e9" id="r_a4847ad562d4515dcf18447f8013868e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_client_network_callback.html#a4847ad562d4515dcf18447f8013868e9">PrepareToRemove</a> ()</td></tr>
@@ -99,16 +99,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af76e2c8556f0fd2646abc0903498a8ea" id="r_af76e2c8556f0fd2646abc0903498a8ea"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_client_network_callback.html#af76e2c8556f0fd2646abc0903498a8ea">InterpolateState</a> (float replicaTimeStep, float inputTimeStep, const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;replicaTime, const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;inputTime)</td></tr>
 <tr class="memdesc:af76e2c8556f0fd2646abc0903498a8ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate replicated state.  <br /></td></tr>
 <tr class="separator:af76e2c8556f0fd2646abc0903498a8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d69f12fc71167dd4ff539d038dae004" id="r_a9d69f12fc71167dd4ff539d038dae004"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_client_network_callback.html#a9d69f12fc71167dd4ff539d038dae004">ReadReliableDelta</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src)</td></tr>
+<tr class="memitem:a9d69f12fc71167dd4ff539d038dae004" id="r_a9d69f12fc71167dd4ff539d038dae004"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_client_network_callback.html#a9d69f12fc71167dd4ff539d038dae004">ReadReliableDelta</a> (NetworkFrame frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src)</td></tr>
 <tr class="memdesc:a9d69f12fc71167dd4ff539d038dae004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read reliable delta update. Delta is applied to previous reliable delta or snapshot message.  <br /></td></tr>
 <tr class="separator:a9d69f12fc71167dd4ff539d038dae004"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5a77535ee409308e93646ad0e054753" id="r_aa5a77535ee409308e93646ad0e054753"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_client_network_callback.html#aa5a77535ee409308e93646ad0e054753">ReadUnreliableDelta</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src)</td></tr>
+<tr class="memitem:aa5a77535ee409308e93646ad0e054753" id="r_aa5a77535ee409308e93646ad0e054753"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_client_network_callback.html#aa5a77535ee409308e93646ad0e054753">ReadUnreliableDelta</a> (NetworkFrame frame, <a class="el" href="class_urho3_d_1_1_deserializer.html">Deserializer</a> &amp;src)</td></tr>
 <tr class="memdesc:aa5a77535ee409308e93646ad0e054753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read unreliable delta update.  <br /></td></tr>
 <tr class="separator:aa5a77535ee409308e93646ad0e054753"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae32d9009a03ea8d55c751813b20519a" id="r_aae32d9009a03ea8d55c751813b20519a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_client_network_callback.html#aae32d9009a03ea8d55c751813b20519a">PrepareUnreliableFeedback</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame)</td></tr>
+<tr class="memitem:aae32d9009a03ea8d55c751813b20519a" id="r_aae32d9009a03ea8d55c751813b20519a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_client_network_callback.html#aae32d9009a03ea8d55c751813b20519a">PrepareUnreliableFeedback</a> (NetworkFrame frame)</td></tr>
 <tr class="memdesc:aae32d9009a03ea8d55c751813b20519a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare for unreliable feedback and return feedback mask. If mask is zero, unreliable feedback is skipped.  <br /></td></tr>
 <tr class="separator:aae32d9009a03ea8d55c751813b20519a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee1b679e0054e7858ebbc7281bb9f1c3" id="r_aee1b679e0054e7858ebbc7281bb9f1c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_client_network_callback.html#aee1b679e0054e7858ebbc7281bb9f1c3">WriteUnreliableFeedback</a> (<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame, <a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest)</td></tr>
+<tr class="memitem:aee1b679e0054e7858ebbc7281bb9f1c3" id="r_aee1b679e0054e7858ebbc7281bb9f1c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_client_network_callback.html#aee1b679e0054e7858ebbc7281bb9f1c3">WriteUnreliableFeedback</a> (NetworkFrame frame, <a class="el" href="class_urho3_d_1_1_serializer.html">Serializer</a> &amp;dest)</td></tr>
 <tr class="memdesc:aee1b679e0054e7858ebbc7281bb9f1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write unreliable feedback from client.  <br /></td></tr>
 <tr class="separator:aee1b679e0054e7858ebbc7281bb9f1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -127,7 +127,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void Urho3D::ClientNetworkCallback::InitializeFromSnapshot </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
@@ -254,7 +254,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool Urho3D::ClientNetworkCallback::PrepareUnreliableFeedback </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em></td><td>)</td>
           <td></td>
         </tr>
@@ -284,7 +284,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void Urho3D::ClientNetworkCallback::ReadReliableDelta </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
@@ -324,7 +324,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void Urho3D::ClientNetworkCallback::ReadUnreliableDelta </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
@@ -364,7 +364,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void Urho3D::ClientNetworkCallback::WriteUnreliableFeedback </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td>
+          <td class="paramtype">NetworkFrame&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
@@ -393,7 +393,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Urho3D/Replica/<a class="el" href="_network_callbacks_8h.html">NetworkCallbacks.h</a></li>
+<li>Urho3D/Replica/<b>NetworkCallbacks.h</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

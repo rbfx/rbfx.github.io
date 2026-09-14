@@ -79,7 +79,7 @@ $(document).ready(function(){initNavTree('class_urho3_d_1_1_scene_selection.html
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a203dff7a67f327d8e570d767e732956c" id="r_a203dff7a67f327d8e570d767e732956c"><td class="memItemLeft" align="right" valign="top"><a id="a203dff7a67f327d8e570d767e732956c" name="a203dff7a67f327d8e570d767e732956c"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>WeakNodeSet</b> = ea::unordered_set&lt; <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> &gt; &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>WeakNodeSet</b> = ea::unordered_set&lt; <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; Node &gt; &gt;</td></tr>
 <tr class="separator:a203dff7a67f327d8e570d767e732956c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e0104675327daad488c4de6cfe6f0dc" id="r_a2e0104675327daad488c4de6cfe6f0dc"><td class="memItemLeft" align="right" valign="top"><a id="a2e0104675327daad488c4de6cfe6f0dc" name="a2e0104675327daad488c4de6cfe6f0dc"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>WeakComponentSet</b> = ea::unordered_set&lt; <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_component.html">Component</a> &gt; &gt;</td></tr>
@@ -119,7 +119,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSelected</b> (<a c
 <tr class="memdesc:a143f097f208a0684b134af3c6bb6e6e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the component is selected. <br /></td></tr>
 <tr class="separator:a143f097f208a0684b134af3c6bb6e6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d94bb354c68f0022a56c4652dc89a3d" id="r_a6d94bb354c68f0022a56c4652dc89a3d"><td class="memItemLeft" align="right" valign="top"><a id="a6d94bb354c68f0022a56c4652dc89a3d" name="a6d94bb354c68f0022a56c4652dc89a3d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSelected</b> (<a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *node, bool selected, bool activated=true)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSelected</b> (Node *node, bool selected, bool activated=true)</td></tr>
 <tr class="memdesc:a6d94bb354c68f0022a56c4652dc89a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the node is selected. <br /></td></tr>
 <tr class="separator:a6d94bb354c68f0022a56c4652dc89a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28c8d40a51b13edd280be31bd66fcd61" id="r_a28c8d40a51b13edd280be31bd66fcd61"><td class="memItemLeft" align="right" valign="top"><a id="a28c8d40a51b13edd280be31bd66fcd61" name="a28c8d40a51b13edd280be31bd66fcd61"></a>
@@ -136,16 +136,16 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsEmpty</b> () const<
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsSelected</b> (<a class="el" href="class_urho3_d_1_1_component.html">Component</a> *component) const</td></tr>
 <tr class="separator:a4ee8432af7d42ba759218af09a915b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb5a60fbbed39365f156e9b12838bdd9" id="r_adb5a60fbbed39365f156e9b12838bdd9"><td class="memItemLeft" align="right" valign="top"><a id="adb5a60fbbed39365f156e9b12838bdd9" name="adb5a60fbbed39365f156e9b12838bdd9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsSelected</b> (<a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *node, bool effectively=false) const</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsSelected</b> (Node *node, bool effectively=false) const</td></tr>
 <tr class="separator:adb5a60fbbed39365f156e9b12838bdd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57a842c7f799d16683f0eb7e65360377" id="r_a57a842c7f799d16683f0eb7e65360377"><td class="memItemLeft" align="right" valign="top"><a id="a57a842c7f799d16683f0eb7e65360377" name="a57a842c7f799d16683f0eb7e65360377"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsSelected</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *object) const</td></tr>
 <tr class="separator:a57a842c7f799d16683f0eb7e65360377"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8a71c8bb1859e2de8b2fae9e888b471" id="r_ad8a71c8bb1859e2de8b2fae9e888b471"><td class="memItemLeft" align="right" valign="top"><a id="ad8a71c8bb1859e2de8b2fae9e888b471" name="ad8a71c8bb1859e2de8b2fae9e888b471"></a>
-<a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetActiveNodeOrScene</b> () const</td></tr>
+Node *&#160;</td><td class="memItemRight" valign="bottom"><b>GetActiveNodeOrScene</b> () const</td></tr>
 <tr class="separator:ad8a71c8bb1859e2de8b2fae9e888b471"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5b848e5f9f20453420c0873a3c91f6f" id="r_ab5b848e5f9f20453420c0873a3c91f6f"><td class="memItemLeft" align="right" valign="top"><a id="ab5b848e5f9f20453420c0873a3c91f6f" name="ab5b848e5f9f20453420c0873a3c91f6f"></a>
-<a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetActiveNode</b> () const</td></tr>
+Node *&#160;</td><td class="memItemRight" valign="bottom"><b>GetActiveNode</b> () const</td></tr>
 <tr class="separator:ab5b848e5f9f20453420c0873a3c91f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1791a7a65d188424a8cb8af44d860a67" id="r_a1791a7a65d188424a8cb8af44d860a67"><td class="memItemLeft" align="right" valign="top"><a id="a1791a7a65d188424a8cb8af44d860a67" name="a1791a7a65d188424a8cb8af44d860a67"></a>
 <a class="el" href="class_urho3_d_1_1_object.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetActiveObject</b> () const</td></tr>
@@ -184,7 +184,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearInternal</b> ()<
 void&#160;</td><td class="memItemRight" valign="bottom"><b>NotifyChanged</b> ()</td></tr>
 <tr class="separator:a5662bc60bed7a7ac2964d08101e0dc95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d5b24d12b8e53e072a2143d05a122c1" id="r_a8d5b24d12b8e53e072a2143d05a122c1"><td class="memItemLeft" align="right" valign="top"><a id="a8d5b24d12b8e53e072a2143d05a122c1" name="a8d5b24d12b8e53e072a2143d05a122c1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateActiveObject</b> (const <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> &gt; &amp;node, const <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_component.html">Component</a> &gt; &amp;component, bool forceUpdate)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateActiveObject</b> (const <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; Node &gt; &amp;node, const <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_component.html">Component</a> &gt; &amp;component, bool forceUpdate)</td></tr>
 <tr class="separator:a8d5b24d12b8e53e072a2143d05a122c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5ea5a32984f378c7abedca82877b9ac" id="r_ab5ea5a32984f378c7abedca82877b9ac"><td class="memItemLeft" align="right" valign="top"><a id="ab5ea5a32984f378c7abedca82877b9ac" name="ab5ea5a32984f378c7abedca82877b9ac"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateEffectiveNodes</b> ()</td></tr>
@@ -205,10 +205,10 @@ WeakNodeSet&#160;</td><td class="memItemRight" valign="bottom"><b>nodes_</b></td
 WeakComponentSet&#160;</td><td class="memItemRight" valign="bottom"><b>components_</b></td></tr>
 <tr class="separator:a735eaa67a15a0191ec384fc76d285885"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a393116bb93d3630264bcb7d4a6d40157" id="r_a393116bb93d3630264bcb7d4a6d40157"><td class="memItemLeft" align="right" valign="top"><a id="a393116bb93d3630264bcb7d4a6d40157" name="a393116bb93d3630264bcb7d4a6d40157"></a>
-<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>activeNodeOrScene_</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>activeNodeOrScene_</b></td></tr>
 <tr class="separator:a393116bb93d3630264bcb7d4a6d40157"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dc89e99bea438b6ead66969515d1ea5" id="r_a3dc89e99bea438b6ead66969515d1ea5"><td class="memItemLeft" align="right" valign="top"><a id="a3dc89e99bea438b6ead66969515d1ea5" name="a3dc89e99bea438b6ead66969515d1ea5"></a>
-<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="_core_2_attribute_8h.html#adb72d12a5add0583580d331313083d58a6c3a6944a808a7c0bbb6788dbec54a9f">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>activeNode_</b></td></tr>
+<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>activeNode_</b></td></tr>
 <tr class="separator:a3dc89e99bea438b6ead66969515d1ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a0138a9124022789b39d359acef1c14" id="r_a7a0138a9124022789b39d359acef1c14"><td class="memItemLeft" align="right" valign="top"><a id="a7a0138a9124022789b39d359acef1c14" name="a7a0138a9124022789b39d359acef1c14"></a>
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_object.html">Object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>activeObject_</b></td></tr>

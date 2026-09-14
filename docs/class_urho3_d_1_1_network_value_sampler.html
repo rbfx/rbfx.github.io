@@ -108,13 +108,13 @@ ea::optional&lt; ReturnType &gt;&#160;</td><td class="memItemRight" valign="bott
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a58be2414141beb439013f98b9d3e5eb6" id="r_a58be2414141beb439013f98b9d3e5eb6"><td class="memItemLeft" align="right" valign="top"><a id="a58be2414141beb439013f98b9d3e5eb6" name="a58be2414141beb439013f98b9d3e5eb6"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>GetExtrapolationFactor</b> (const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;time, <a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> baseFrame, unsigned maxExtrapolation) const</td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>GetExtrapolationFactor</b> (const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;time, NetworkFrame baseFrame, unsigned maxExtrapolation) const</td></tr>
 <tr class="separator:a58be2414141beb439013f98b9d3e5eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbd5d99bf0288ddc05bb24691b6bd58d" id="r_acbd5d99bf0288ddc05bb24691b6bd58d"><td class="memItemLeft" align="right" valign="top"><a id="acbd5d99bf0288ddc05bb24691b6bd58d" name="acbd5d99bf0288ddc05bb24691b6bd58d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateCorrection</b> (const <a class="el" href="class_urho3_d_1_1_network_value.html">NetworkValueType</a> &amp;value, float timeStep)</td></tr>
 <tr class="separator:acbd5d99bf0288ddc05bb24691b6bd58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a014c61db93b7542552e854f699f75879" id="r_a014c61db93b7542552e854f699f75879"><td class="memItemLeft" align="right" valign="top"><a id="a014c61db93b7542552e854f699f75879" name="a014c61db93b7542552e854f699f75879"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateCache</b> (const <a class="el" href="class_urho3_d_1_1_network_value.html">NetworkValueType</a> &amp;value, <a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> frame)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateCache</b> (const <a class="el" href="class_urho3_d_1_1_network_value.html">NetworkValueType</a> &amp;value, NetworkFrame frame)</td></tr>
 <tr class="separator:a014c61db93b7542552e854f699f75879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2e047991a9f9682247b75807657ec35" id="r_ad2e047991a9f9682247b75807657ec35"><td class="memItemLeft" align="right" valign="top"><a id="ad2e047991a9f9682247b75807657ec35" name="ad2e047991a9f9682247b75807657ec35"></a>
 ReturnType&#160;</td><td class="memItemRight" valign="bottom"><b>CalculateValueFromCache</b> (const <a class="el" href="class_urho3_d_1_1_network_value.html">NetworkValueType</a> &amp;value, const <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a> &amp;time) const</td></tr>
@@ -138,7 +138,7 @@ ea::optional&lt; <a class="el" href="struct_urho3_d_1_1_network_value_sampler_1_
 ea::optional&lt; <a class="el" href="struct_urho3_d_1_1_network_value_sampler_1_1_time_and_value.html">TimeAndValue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>previousValue_</b></td></tr>
 <tr class="separator:a99155d8b8eafb3331156c30834eba90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16346f71bc191a415b4d452fff4fbb0e" id="r_a16346f71bc191a415b4d452fff4fbb0e"><td class="memItemLeft" align="right" valign="top"><a id="a16346f71bc191a415b4d452fff4fbb0e" name="a16346f71bc191a415b4d452fff4fbb0e"></a>
-ea::optional&lt; <a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>extrapolationFrame_</b></td></tr>
+ea::optional&lt; NetworkFrame &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>extrapolationFrame_</b></td></tr>
 <tr class="separator:a16346f71bc191a415b4d452fff4fbb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8816989e534347ba9aded9f50475f873" id="r_a8816989e534347ba9aded9f50475f873"><td class="memItemLeft" align="right" valign="top"><a id="a8816989e534347ba9aded9f50475f873" name="a8816989e534347ba9aded9f50475f873"></a>
 ReturnType&#160;</td><td class="memItemRight" valign="bottom"><b>valueCorrection_</b> {}</td></tr>
@@ -188,7 +188,7 @@ template&lt;class T , class Traits  = NetworkValueTraits&lt;T&gt;&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Urho3D/Replica/<a class="el" href="_network_value_8h.html">NetworkValue.h</a></li>
+<li>Urho3D/Replica/<b>NetworkValue.h</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -87,7 +87,7 @@ Inheritance diagram for Urho3D::ClientReplicaClock:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acbcb53100c3c7f278515cccbc1c7b552" id="r_acbcb53100c3c7f278515cccbc1c7b552"><td class="memItemLeft" align="right" valign="top"><a id="acbcb53100c3c7f278515cccbc1c7b552" name="acbcb53100c3c7f278515cccbc1c7b552"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ClientReplicaClock</b> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene, <a class="el" href="class_urho3_d_1_1_weak_ptr.html">ReplicatedPeerWeakPtr</a> connection, const <a class="el" href="struct_urho3_d_1_1_msg_scene_clock.html">MsgSceneClock</a> &amp;initialClock, const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;serverSettings)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ClientReplicaClock</b> (<a class="el" href="class_urho3_d_1_1_scene.html">Scene</a> *scene, <a class="el" href="class_urho3_d_1_1_weak_ptr.html">ReplicatedPeerWeakPtr</a> connection, const <a class="el" href="struct_urho3_d_1_1_msg_scene_clock.html">MsgSceneClock</a> &amp;initialClock, const VariantMap &amp;serverSettings)</td></tr>
 <tr class="separator:acbcb53100c3c7f278515cccbc1c7b552"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80e654afda069ef3d2d88c424d20eab2" id="r_a80e654afda069ef3d2d88c424d20eab2"><td class="memItemLeft" align="right" valign="top"><a id="a80e654afda069ef3d2d88c424d20eab2" name="a80e654afda069ef3d2d88c424d20eab2"></a>
 <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetServerTime</b> () const</td></tr>
@@ -152,7 +152,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsInstanceOf<
 <tr class="memdesc:a26c296bb4de9e175308a26c723d5dc7e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether current instance implements specified type. <br /></td></tr>
 <tr class="separator:a26c296bb4de9e175308a26c723d5dc7e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object" id="r_ad0ce1699ce5bd9d4033e5800bbb8c15b"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEvent</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEvent</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle event. <br /></td></tr>
 <tr class="separator:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13f38914b4398c60eb0b12fb12d73765 inherit pub_methods_class_urho3_d_1_1_object" id="r_a13f38914b4398c60eb0b12fb12d73765"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a13f38914b4398c60eb0b12fb12d73765">SerializeInBlock</a> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;archive)</td></tr>
@@ -220,11 +220,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a cla
 <tr class="memdesc:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event to all subscribers. <br /></td></tr>
 <tr class="separator:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object" id="r_af8f8bd3f7e2f51ecca7199e737f53364"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers. <br /></td></tr>
 <tr class="separator:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object" id="r_a69af51cfa67f9626273b35a6d501e03e"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> () const</td></tr>
+VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> () const</td></tr>
 <tr class="memdesc:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a preallocated map for event data. Used for optimization to avoid constant re-allocation of event data maps. <br /></td></tr>
 <tr class="separator:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5e3591133331ebd3d9e12c95c46aed inherit pub_methods_class_urho3_d_1_1_object" id="r_aca5e3591133331ebd3d9e12c95c46aed"><td class="memTemplParams" colspan="2">
@@ -238,7 +238,7 @@ template&lt;typename... Args&gt; </td></tr>
 <tr class="separator:a8bd9b32c8a56c2f6d618d8afe8091eb7 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd4506c4bdb10232305ef69ebbb78a83 inherit pub_methods_class_urho3_d_1_1_object" id="r_acd4506c4bdb10232305ef69ebbb78a83"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#acd4506c4bdb10232305ef69ebbb78a83">GetGlobalVar</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> key) const</td></tr>
 <tr class="separator:acd4506c4bdb10232305ef69ebbb78a83 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object" id="r_a27b36184a862d9343604f31d85d9bc24"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a27b36184a862d9343604f31d85d9bc24">GetGlobalVars</a> () const</td></tr>
+<tr class="memitem:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object" id="r_a27b36184a862d9343604f31d85d9bc24"><td class="memItemLeft" align="right" valign="top">const VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a27b36184a862d9343604f31d85d9bc24">GetGlobalVars</a> () const</td></tr>
 <tr class="separator:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43d25cc580737c9dc3b973d6c1230d9e inherit pub_methods_class_urho3_d_1_1_object" id="r_a43d25cc580737c9dc3b973d6c1230d9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a43d25cc580737c9dc3b973d6c1230d9e">SetGlobalVar</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> key, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;value)</td></tr>
 <tr class="separator:a43d25cc580737c9dc3b973d6c1230d9e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -274,7 +274,7 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a1ac1fa57e9eb18f91efc30b29b0861c1 inherit pub_methods_class_urho3_d_1_1_object" id="r_a1ac1fa57e9eb18f91efc30b29b0861c1"><td class="memItemLeft" align="right" valign="top">const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a1ac1fa57e9eb18f91efc30b29b0861c1">GetCategory</a> () const</td></tr>
 <tr class="separator:a1ac1fa57e9eb18f91efc30b29b0861c1 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object" id="r_ad7c6e6d74d0ad90811fb3f04bd813a7e"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, const VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers. <br /></td></tr>
 <tr class="separator:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd72cab3f338ef6ca76da511bcd941dc inherit pub_methods_class_urho3_d_1_1_object" id="r_abd72cab3f338ef6ca76da511bcd941dc"><td class="memItemLeft" align="right" valign="top">
@@ -360,7 +360,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateServerTime</b> 
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a1089b94c41c969ec4c76e98c0224a7ad" id="r_a1089b94c41c969ec4c76e98c0224a7ad"><td class="memItemLeft" align="right" valign="top"><a id="a1089b94c41c969ec4c76e98c0224a7ad" name="a1089b94c41c969ec4c76e98c0224a7ad"></a>
-const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>serverSettings_</b></td></tr>
+const VariantMap&#160;</td><td class="memItemRight" valign="bottom"><b>serverSettings_</b></td></tr>
 <tr class="separator:a1089b94c41c969ec4c76e98c0224a7ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7db023866dc7fd3585f48956a68febd2" id="r_a7db023866dc7fd3585f48956a68febd2"><td class="memItemLeft" align="right" valign="top"><a id="a7db023866dc7fd3585f48956a68febd2" name="a7db023866dc7fd3585f48956a68febd2"></a>
 const unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>thisConnectionId_</b> {}</td></tr>
@@ -375,7 +375,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>inputDelay_</b> {
 <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a>&#160;</td><td class="memItemRight" valign="bottom"><b>serverTime_</b></td></tr>
 <tr class="separator:a25cec6e019a12a43392e54d28093998f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a231d7ad18319de137685a8f9a8ec9eb7" id="r_a231d7ad18319de137685a8f9a8ec9eb7"><td class="memItemLeft" align="right" valign="top"><a id="a231d7ad18319de137685a8f9a8ec9eb7" name="a231d7ad18319de137685a8f9a8ec9eb7"></a>
-<a class="el" href="_network_id_8h.html#a6c75215b5732511b6252265cf74a363b">NetworkFrame</a>&#160;</td><td class="memItemRight" valign="bottom"><b>latestServerFrame_</b> {}</td></tr>
+NetworkFrame&#160;</td><td class="memItemRight" valign="bottom"><b>latestServerFrame_</b> {}</td></tr>
 <tr class="separator:a231d7ad18319de137685a8f9a8ec9eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8ac9b298a7a2927991f7301da278002" id="r_ad8ac9b298a7a2927991f7301da278002"><td class="memItemLeft" align="right" valign="top"><a id="ad8ac9b298a7a2927991f7301da278002" name="ad8ac9b298a7a2927991f7301da278002"></a>
 <a class="el" href="class_urho3_d_1_1_network_time.html">NetworkTime</a>&#160;</td><td class="memItemRight" valign="bottom"><b>latestScaledInputTime_</b> {}</td></tr>
@@ -555,7 +555,7 @@ static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/Replica/<a class="el" href="_client_replica_8h.html">ClientReplica.h</a></li>
+<li>Urho3D/Replica/<b>ClientReplica.h</b></li>
 <li>Urho3D/Replica/<b>ClientReplica.cpp</b></li>
 </ul>
 </div><!-- contents -->

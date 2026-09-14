@@ -149,7 +149,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsInstanceOf<
 <tr class="memdesc:a26c296bb4de9e175308a26c723d5dc7e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether current instance implements specified type. <br /></td></tr>
 <tr class="separator:a26c296bb4de9e175308a26c723d5dc7e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object" id="r_ad0ce1699ce5bd9d4033e5800bbb8c15b"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEvent</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnEvent</b> (<a class="el" href="class_urho3_d_1_1_object.html">Object</a> *sender, <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle event. <br /></td></tr>
 <tr class="separator:ad0ce1699ce5bd9d4033e5800bbb8c15b inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13f38914b4398c60eb0b12fb12d73765 inherit pub_methods_class_urho3_d_1_1_object" id="r_a13f38914b4398c60eb0b12fb12d73765"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a13f38914b4398c60eb0b12fb12d73765">SerializeInBlock</a> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;archive)</td></tr>
@@ -217,11 +217,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a cla
 <tr class="memdesc:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event to all subscribers. <br /></td></tr>
 <tr class="separator:a32020dbf77c196b9777eca479e8abb36 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object" id="r_af8f8bd3f7e2f51ecca7199e737f53364"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers. <br /></td></tr>
 <tr class="separator:af8f8bd3f7e2f51ecca7199e737f53364 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object" id="r_a69af51cfa67f9626273b35a6d501e03e"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> () const</td></tr>
+VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> () const</td></tr>
 <tr class="memdesc:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a preallocated map for event data. Used for optimization to avoid constant re-allocation of event data maps. <br /></td></tr>
 <tr class="separator:a69af51cfa67f9626273b35a6d501e03e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5e3591133331ebd3d9e12c95c46aed inherit pub_methods_class_urho3_d_1_1_object" id="r_aca5e3591133331ebd3d9e12c95c46aed"><td class="memTemplParams" colspan="2">
@@ -235,7 +235,7 @@ template&lt;typename... Args&gt; </td></tr>
 <tr class="separator:a8bd9b32c8a56c2f6d618d8afe8091eb7 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd4506c4bdb10232305ef69ebbb78a83 inherit pub_methods_class_urho3_d_1_1_object" id="r_acd4506c4bdb10232305ef69ebbb78a83"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#acd4506c4bdb10232305ef69ebbb78a83">GetGlobalVar</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> key) const</td></tr>
 <tr class="separator:acd4506c4bdb10232305ef69ebbb78a83 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object" id="r_a27b36184a862d9343604f31d85d9bc24"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a27b36184a862d9343604f31d85d9bc24">GetGlobalVars</a> () const</td></tr>
+<tr class="memitem:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object" id="r_a27b36184a862d9343604f31d85d9bc24"><td class="memItemLeft" align="right" valign="top">const VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a27b36184a862d9343604f31d85d9bc24">GetGlobalVars</a> () const</td></tr>
 <tr class="separator:a27b36184a862d9343604f31d85d9bc24 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43d25cc580737c9dc3b973d6c1230d9e inherit pub_methods_class_urho3_d_1_1_object" id="r_a43d25cc580737c9dc3b973d6c1230d9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a43d25cc580737c9dc3b973d6c1230d9e">SetGlobalVar</a> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> key, const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;value)</td></tr>
 <tr class="separator:a43d25cc580737c9dc3b973d6c1230d9e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -271,7 +271,7 @@ template&lt;class T &gt; </td></tr>
 <tr class="memitem:a1ac1fa57e9eb18f91efc30b29b0861c1 inherit pub_methods_class_urho3_d_1_1_object" id="r_a1ac1fa57e9eb18f91efc30b29b0861c1"><td class="memItemLeft" align="right" valign="top">const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a1ac1fa57e9eb18f91efc30b29b0861c1">GetCategory</a> () const</td></tr>
 <tr class="separator:a1ac1fa57e9eb18f91efc30b29b0861c1 inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object" id="r_ad7c6e6d74d0ad90811fb3f04bd813a7e"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;eventData)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendEvent</b> (<a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a> eventType, const VariantMap &amp;eventData)</td></tr>
 <tr class="memdesc:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send event with parameters to all subscribers. <br /></td></tr>
 <tr class="separator:ad7c6e6d74d0ad90811fb3f04bd813a7e inherit pub_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd72cab3f338ef6ca76da511bcd941dc inherit pub_methods_class_urho3_d_1_1_object" id="r_abd72cab3f338ef6ca76da511bcd941dc"><td class="memItemLeft" align="right" valign="top">
@@ -501,23 +501,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ReadBuffer</b> (ByteV
 <tr class="memdesc:a4f7070a0dd21b4627e5603e1557efb0a inherit pub_methods_class_urho3_d_1_1_deserializer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a variant. <br /></td></tr>
 <tr class="separator:a4f7070a0dd21b4627e5603e1557efb0a inherit pub_methods_class_urho3_d_1_1_deserializer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0eda9cd9050947e0f9f3c184abcf7a37 inherit pub_methods_class_urho3_d_1_1_deserializer" id="r_a0eda9cd9050947e0f9f3c184abcf7a37"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="class_urho3_d_1_1_variant.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ReadVariant</b> (<a class="el" href="_variant_8h.html#a60cbc5c839756e3a58bb3ce6af2f7894">VariantType</a> type, <a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context=nullptr)</td></tr>
+<a class="el" href="class_urho3_d_1_1_variant.html">Variant</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ReadVariant</b> (VariantType type, <a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context=nullptr)</td></tr>
 <tr class="memdesc:a0eda9cd9050947e0f9f3c184abcf7a37 inherit pub_methods_class_urho3_d_1_1_deserializer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a variant whose type is already known. <a class="el" href="class_urho3_d_1_1_context.html" title="Urho3D execution context. Provides access to subsystems, object factories and attributes,...">Context</a> is required for SharedPtr&lt;Serializable&gt;. <br /></td></tr>
 <tr class="separator:a0eda9cd9050947e0f9f3c184abcf7a37 inherit pub_methods_class_urho3_d_1_1_deserializer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a488959558d58eb39e88d240071c1f4e3 inherit pub_methods_class_urho3_d_1_1_deserializer" id="r_a488959558d58eb39e88d240071c1f4e3"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ReadVariantVector</b> ()</td></tr>
+VariantVector&#160;</td><td class="memItemRight" valign="bottom"><b>ReadVariantVector</b> ()</td></tr>
 <tr class="memdesc:a488959558d58eb39e88d240071c1f4e3 inherit pub_methods_class_urho3_d_1_1_deserializer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a variant vector. <br /></td></tr>
 <tr class="separator:a488959558d58eb39e88d240071c1f4e3 inherit pub_methods_class_urho3_d_1_1_deserializer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d0304784fb92fd0334b5d9a6b402d94 inherit pub_methods_class_urho3_d_1_1_deserializer" id="r_a3d0304784fb92fd0334b5d9a6b402d94"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ReadStringVector</b> ()</td></tr>
+StringVector&#160;</td><td class="memItemRight" valign="bottom"><b>ReadStringVector</b> ()</td></tr>
 <tr class="memdesc:a3d0304784fb92fd0334b5d9a6b402d94 inherit pub_methods_class_urho3_d_1_1_deserializer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a string vector. <br /></td></tr>
 <tr class="separator:a3d0304784fb92fd0334b5d9a6b402d94 inherit pub_methods_class_urho3_d_1_1_deserializer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bbcf0ebe55be7554b6eefbe83b5b47c inherit pub_methods_class_urho3_d_1_1_deserializer" id="r_a2bbcf0ebe55be7554b6eefbe83b5b47c"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ReadVariantMap</b> ()</td></tr>
+VariantMap&#160;</td><td class="memItemRight" valign="bottom"><b>ReadVariantMap</b> ()</td></tr>
 <tr class="memdesc:a2bbcf0ebe55be7554b6eefbe83b5b47c inherit pub_methods_class_urho3_d_1_1_deserializer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a variant map. <br /></td></tr>
 <tr class="separator:a2bbcf0ebe55be7554b6eefbe83b5b47c inherit pub_methods_class_urho3_d_1_1_deserializer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71ce4735f979021a3b17cc6374c76428 inherit pub_methods_class_urho3_d_1_1_deserializer" id="r_a71ce4735f979021a3b17cc6374c76428"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ReadStringVariantMap</b> ()</td></tr>
+StringVariantMap&#160;</td><td class="memItemRight" valign="bottom"><b>ReadStringVariantMap</b> ()</td></tr>
 <tr class="memdesc:a71ce4735f979021a3b17cc6374c76428 inherit pub_methods_class_urho3_d_1_1_deserializer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a string variant map. <br /></td></tr>
 <tr class="separator:a71ce4735f979021a3b17cc6374c76428 inherit pub_methods_class_urho3_d_1_1_deserializer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1798cf3925097557803752554b7b519f inherit pub_methods_class_urho3_d_1_1_deserializer" id="r_a1798cf3925097557803752554b7b519f"><td class="memItemLeft" align="right" valign="top">
@@ -676,19 +676,19 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>WriteVariantData</b> 
 <tr class="memdesc:a33ad05e0f6b05140fe8941ebee14cc15 inherit pub_methods_class_urho3_d_1_1_serializer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a variant without the type information. <br /></td></tr>
 <tr class="separator:a33ad05e0f6b05140fe8941ebee14cc15 inherit pub_methods_class_urho3_d_1_1_serializer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafa0871855a21d84adbc84f180c3c41e inherit pub_methods_class_urho3_d_1_1_serializer" id="r_aafa0871855a21d84adbc84f180c3c41e"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>WriteVariantVector</b> (const <a class="el" href="_variant_8h.html#a36c5b2745637105871c5e0f686fbafee">VariantVector</a> &amp;value)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>WriteVariantVector</b> (const VariantVector &amp;value)</td></tr>
 <tr class="memdesc:aafa0871855a21d84adbc84f180c3c41e inherit pub_methods_class_urho3_d_1_1_serializer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a variant vector. <br /></td></tr>
 <tr class="separator:aafa0871855a21d84adbc84f180c3c41e inherit pub_methods_class_urho3_d_1_1_serializer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0ff771e589cb61086bb1452bdd189c2 inherit pub_methods_class_urho3_d_1_1_serializer" id="r_af0ff771e589cb61086bb1452bdd189c2"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>WriteStringVector</b> (const <a class="el" href="_variant_8h.html#a1c85e5d9f4e81b8b2687f54b6256aab5">StringVector</a> &amp;value)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>WriteStringVector</b> (const StringVector &amp;value)</td></tr>
 <tr class="memdesc:af0ff771e589cb61086bb1452bdd189c2 inherit pub_methods_class_urho3_d_1_1_serializer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a variant vector. <br /></td></tr>
 <tr class="separator:af0ff771e589cb61086bb1452bdd189c2 inherit pub_methods_class_urho3_d_1_1_serializer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5837d72917b6819d89cb63c093e31e0 inherit pub_methods_class_urho3_d_1_1_serializer" id="r_ad5837d72917b6819d89cb63c093e31e0"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>WriteVariantMap</b> (const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;value)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>WriteVariantMap</b> (const VariantMap &amp;value)</td></tr>
 <tr class="memdesc:ad5837d72917b6819d89cb63c093e31e0 inherit pub_methods_class_urho3_d_1_1_serializer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a variant map. <br /></td></tr>
 <tr class="separator:ad5837d72917b6819d89cb63c093e31e0 inherit pub_methods_class_urho3_d_1_1_serializer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a917e60b33682a595711eb00b023de096 inherit pub_methods_class_urho3_d_1_1_serializer" id="r_a917e60b33682a595711eb00b023de096"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>WriteStringVariantMap</b> (const <a class="el" href="_variant_8h.html#a60649b0680d555a0c0b15e1585669e89">StringVariantMap</a> &amp;value)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>WriteStringVariantMap</b> (const StringVariantMap &amp;value)</td></tr>
 <tr class="memdesc:a917e60b33682a595711eb00b023de096 inherit pub_methods_class_urho3_d_1_1_serializer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a string variant map. <br /></td></tr>
 <tr class="separator:a917e60b33682a595711eb00b023de096 inherit pub_methods_class_urho3_d_1_1_serializer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4429a6ec1f94508037c2d21430d2124 inherit pub_methods_class_urho3_d_1_1_serializer" id="r_ae4429a6ec1f94508037c2d21430d2124"><td class="memItemLeft" align="right" valign="top">

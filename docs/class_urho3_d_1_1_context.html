@@ -108,7 +108,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSubsystem</b> (
 <tr class="memdesc:ac7a83577e0a76a0f04ac62e50b55a83e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a subsystem. <br /></td></tr>
 <tr class="separator:ac7a83577e0a76a0f04ac62e50b55a83e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb628095602a49ade116c4761ab44004" id="r_acb628095602a49ade116c4761ab44004"><td class="memItemLeft" align="right" valign="top"><a id="acb628095602a49ade116c4761ab44004" name="acb628095602a49ade116c4761ab44004"></a>
-<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> ()</td></tr>
+VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEventDataMap</b> ()</td></tr>
 <tr class="memdesc:acb628095602a49ade116c4761ab44004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a preallocated map for event data. Used for optimization to avoid constant re-allocation of event data maps. <br /></td></tr>
 <tr class="separator:acb628095602a49ade116c4761ab44004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07f129c25cb7934168f07b14fcd4247a" id="r_a07f129c25cb7934168f07b14fcd4247a"><td class="memItemLeft" align="right" valign="top"><a id="a07f129c25cb7934168f07b14fcd4247a" name="a07f129c25cb7934168f07b14fcd4247a"></a>
@@ -143,7 +143,7 @@ const <a class="el" href="class_urho3_d_1_1_variant.html">Variant</a> &amp;&#160
 <tr class="memdesc:a8856236257d604dac81d7085f231fc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return global variable based on key. <br /></td></tr>
 <tr class="separator:a8856236257d604dac81d7085f231fc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab772d60fe632dea620be1c4fa12f8f1e" id="r_ab772d60fe632dea620be1c4fa12f8f1e"><td class="memItemLeft" align="right" valign="top"><a id="ab772d60fe632dea620be1c4fa12f8f1e" name="ab772d60fe632dea620be1c4fa12f8f1e"></a>
-const <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalVars</b> () const</td></tr>
+const VariantMap &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetGlobalVars</b> () const</td></tr>
 <tr class="memdesc:ab772d60fe632dea620be1c4fa12f8f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return all global variables. <br /></td></tr>
 <tr class="separator:ab772d60fe632dea620be1c4fa12f8f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4f1f1e7c6f680d890a595b91c054dc4" id="r_ac4f1f1e7c6f680d890a595b91c054dc4"><td class="memItemLeft" align="right" valign="top"><a id="ac4f1f1e7c6f680d890a595b91c054dc4" name="ac4f1f1e7c6f680d890a595b91c054dc4"></a>
@@ -377,7 +377,7 @@ ea::vector&lt; <a class="el" href="class_urho3_d_1_1_object.html">Object</a> * &
 <tr class="memdesc:a77ca63091f670ba3606a8787635f6385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event sender stack. <br /></td></tr>
 <tr class="separator:a77ca63091f670ba3606a8787635f6385"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f27f9bb05cc24df3bbcf5af4058ff8e" id="r_a1f27f9bb05cc24df3bbcf5af4058ff8e"><td class="memItemLeft" align="right" valign="top"><a id="a1f27f9bb05cc24df3bbcf5af4058ff8e" name="a1f27f9bb05cc24df3bbcf5af4058ff8e"></a>
-ea::vector&lt; <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>eventDataMaps_</b></td></tr>
+ea::vector&lt; VariantMap * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>eventDataMaps_</b></td></tr>
 <tr class="memdesc:a1f27f9bb05cc24df3bbcf5af4058ff8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event data stack. <br /></td></tr>
 <tr class="separator:a1f27f9bb05cc24df3bbcf5af4058ff8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac10172b791c6a9a137db49e6f905b752" id="r_ac10172b791c6a9a137db49e6f905b752"><td class="memItemLeft" align="right" valign="top"><a id="ac10172b791c6a9a137db49e6f905b752" name="ac10172b791c6a9a137db49e6f905b752"></a>
@@ -385,7 +385,7 @@ ea::vector&lt; <a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c4
 <tr class="memdesc:ac10172b791c6a9a137db49e6f905b752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Active event handler. Not stored in a stack for performance reasons; is needed only in esoteric cases. <br /></td></tr>
 <tr class="separator:ac10172b791c6a9a137db49e6f905b752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54a5415ff1bee93b50d6841fa88b3800" id="r_a54a5415ff1bee93b50d6841fa88b3800"><td class="memItemLeft" align="right" valign="top"><a id="a54a5415ff1bee93b50d6841fa88b3800" name="a54a5415ff1bee93b50d6841fa88b3800"></a>
-<a class="el" href="_variant_8h.html#ad2c613c8f2d32d4994503b4c5c496e68">VariantMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>globalVars_</b></td></tr>
+VariantMap&#160;</td><td class="memItemRight" valign="bottom"><b>globalVars_</b></td></tr>
 <tr class="memdesc:a54a5415ff1bee93b50d6841fa88b3800"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_urho3_d_1_1_variant.html" title="Variable that supports a fixed set of types.">Variant</a> map for global variables that can persist throughout application execution. <br /></td></tr>
 <tr class="separator:a54a5415ff1bee93b50d6841fa88b3800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
