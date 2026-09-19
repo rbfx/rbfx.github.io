@@ -18,8 +18,8 @@
         // web worker
         PACKAGE_PATH = encodeURIComponent(location.pathname.substring(0, location.pathname.lastIndexOf('/')) + '/');
       }
-      var PACKAGE_NAME = '/home/runner/work/rbfx/rbfx/cmake-build/bin/Resources.js.data';
-      var REMOTE_PACKAGE_BASE = 'Resources.js.data';
+      var PACKAGE_NAME = '/home/runner/work/rbfx/rbfx/rbfx-build/web-emscripten-wasm-lib/bin/SampleResources.js.data';
+      var REMOTE_PACKAGE_BASE = 'SampleResources.js.data';
       var REMOTE_PACKAGE_NAME = Module['locateFile'] ? Module['locateFile'](REMOTE_PACKAGE_BASE, '') : REMOTE_PACKAGE_BASE;
       var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
 
@@ -241,9 +241,9 @@
             // canOwn this data in the filesystem, it is a slice into the heap that will never change
         Module['FS_createDataFile'](name, null, data, true, true, true);
           }
-          Module['removeRunDependency']('datafile_/home/runner/work/rbfx/rbfx/cmake-build/bin/Resources.js.data');
+          Module['removeRunDependency']('datafile_/home/runner/work/rbfx/rbfx/rbfx-build/web-emscripten-wasm-lib/bin/SampleResources.js.data');
       }
-      Module['addRunDependency']('datafile_/home/runner/work/rbfx/rbfx/cmake-build/bin/Resources.js.data');
+      Module['addRunDependency']('datafile_/home/runner/work/rbfx/rbfx/rbfx-build/web-emscripten-wasm-lib/bin/SampleResources.js.data');
 
       if (!Module['preloadResults']) Module['preloadResults'] = {};
 
