@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rebel Fork Framework: Urho3D::ScriptBundlePlugin Class Reference</title>
+<title>Rebel Fork Framework: Urho3D::DynamicLibraryPluginInstance Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,79 +55,86 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('class_urho3_d_1_1_script_bundle_plugin.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('class_urho3_d_1_1_dynamic_library_plugin_instance.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="class_urho3_d_1_1_script_bundle_plugin-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Urho3D::ScriptBundlePlugin Class Reference</div></div>
+<a href="class_urho3_d_1_1_dynamic_library_plugin_instance-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Urho3D::DynamicLibraryPluginInstance Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_urho3_d_1_1_plugin.html" title="Base class for creating dynamically linked plugins.">Plugin</a> that is loaded from a native or managed dynamic library.  
+ <a href="class_urho3_d_1_1_dynamic_library_plugin_instance.html#details">More...</a></p>
+
+<p><code>#include &lt;Urho3D/Plugins/DynamicLibraryPluginInstance.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::ScriptBundlePlugin:</div>
+Inheritance diagram for Urho3D::DynamicLibraryPluginInstance:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_urho3_d_1_1_script_bundle_plugin.png" usemap="#Urho3D::ScriptBundlePlugin_map" alt=""/>
-  <map id="Urho3D::ScriptBundlePlugin_map" name="Urho3D::ScriptBundlePlugin_map">
-<area href="class_urho3_d_1_1_plugin.html" title="A base class for plugins of all kinds. It only provides a common plugin interface." alt="Urho3D::Plugin" shape="rect" coords="0,112,168,136"/>
-<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="0,56,168,80"/>
-<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="0,0,168,24"/>
+  <img src="class_urho3_d_1_1_dynamic_library_plugin_instance.png" usemap="#Urho3D::DynamicLibraryPluginInstance_map" alt=""/>
+  <map id="Urho3D::DynamicLibraryPluginInstance_map" name="Urho3D::DynamicLibraryPluginInstance_map">
+<area href="class_urho3_d_1_1_plugin_instance.html" title="Wrapper that manages dynamic plugin loading and unloading." alt="Urho3D::PluginInstance" shape="rect" coords="0,112,233,136"/>
+<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="0,56,233,80"/>
+<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="0,0,233,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0eb1947d7152c4747b30e115b5fe60aa" id="r_a0eb1947d7152c4747b30e115b5fe60aa"><td class="memItemLeft" align="right" valign="top"><a id="a0eb1947d7152c4747b30e115b5fe60aa" name="a0eb1947d7152c4747b30e115b5fe60aa"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ScriptBundlePlugin</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
-<tr class="separator:a0eb1947d7152c4747b30e115b5fe60aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54246d2c76e0f5cb99775823bd1f0470" id="r_a54246d2c76e0f5cb99775823bd1f0470"><td class="memItemLeft" align="right" valign="top"><a id="a54246d2c76e0f5cb99775823bd1f0470" name="a54246d2c76e0f5cb99775823bd1f0470"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DynamicLibraryPluginInstance</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
+<tr class="separator:a54246d2c76e0f5cb99775823bd1f0470"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ad561c4402779efa11d70e2b74e66a21e" id="r_ad561c4402779efa11d70e2b74e66a21e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_script_bundle_plugin.html#ad561c4402779efa11d70e2b74e66a21e">Load</a> () override</td></tr>
-<tr class="separator:ad561c4402779efa11d70e2b74e66a21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d4907aaa04a605b23499f547d1d2151" id="r_a8d4907aaa04a605b23499f547d1d2151"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_script_bundle_plugin.html#a8d4907aaa04a605b23499f547d1d2151">IsLoaded</a> () const override</td></tr>
-<tr class="memdesc:a8d4907aaa04a605b23499f547d1d2151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if plugin is loaded and functional.  <br /></td></tr>
-<tr class="separator:a8d4907aaa04a605b23499f547d1d2151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8659c6f85e97bbd2c2b2dfdfd66c0b6" id="r_ab8659c6f85e97bbd2c2b2dfdfd66c0b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_script_bundle_plugin.html#ab8659c6f85e97bbd2c2b2dfdfd66c0b6">IsOutOfDate</a> () const override</td></tr>
-<tr class="memdesc:ab8659c6f85e97bbd2c2b2dfdfd66c0b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if plugin was modified on the disk and should be reloaded.  <br /></td></tr>
-<tr class="separator:ab8659c6f85e97bbd2c2b2dfdfd66c0b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bb90e4908941246aba881dc67322889" id="r_a1bb90e4908941246aba881dc67322889"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_script_bundle_plugin.html#a1bb90e4908941246aba881dc67322889">PerformUnload</a> () override</td></tr>
-<tr class="memdesc:a1bb90e4908941246aba881dc67322889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actually unloads the module. Called by PluginManager at the end of frame when IsUnloading is true.  <br /></td></tr>
-<tr class="separator:a1bb90e4908941246aba881dc67322889"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_urho3_d_1_1_plugin"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_plugin')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_plugin.html">Urho3D::Plugin</a></td></tr>
-<tr class="memitem:ac7bf9d6b10f3fcee1c0b0d340c250745 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_ac7bf9d6b10f3fcee1c0b0d340c250745"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>Plugin</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
-<tr class="separator:ac7bf9d6b10f3fcee1c0b0d340c250745 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0aa7062d263cf0c4d83cd22a7b64f627 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_a0aa7062d263cf0c4d83cd22a7b64f627"><td class="memItemLeft" align="right" valign="top">
+<tr class="memitem:aaa8abe29d2da84f735bce5593de5aaba" id="r_aaa8abe29d2da84f735bce5593de5aaba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_dynamic_library_plugin_instance.html#aaa8abe29d2da84f735bce5593de5aaba">Load</a> () override</td></tr>
+<tr class="separator:aaa8abe29d2da84f735bce5593de5aaba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2016bdaabb5311985e9d51b7213b8fd0" id="r_a2016bdaabb5311985e9d51b7213b8fd0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_dynamic_library_plugin_instance.html#a2016bdaabb5311985e9d51b7213b8fd0">IsLoaded</a> () const override</td></tr>
+<tr class="memdesc:a2016bdaabb5311985e9d51b7213b8fd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if plugin is loaded and functional.  <br /></td></tr>
+<tr class="separator:a2016bdaabb5311985e9d51b7213b8fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab120f88b07935c61b12f7a2ebba9b860" id="r_ab120f88b07935c61b12f7a2ebba9b860"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_dynamic_library_plugin_instance.html#ab120f88b07935c61b12f7a2ebba9b860">IsOutOfDate</a> () const override</td></tr>
+<tr class="memdesc:ab120f88b07935c61b12f7a2ebba9b860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if plugin was modified on the disk and should be reloaded.  <br /></td></tr>
+<tr class="separator:ab120f88b07935c61b12f7a2ebba9b860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08ad0988d24320da535ab7c4e81ce2ad" id="r_a08ad0988d24320da535ab7c4e81ce2ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_dynamic_library_plugin_instance.html#a08ad0988d24320da535ab7c4e81ce2ad">IsReadyToReload</a> () const override</td></tr>
+<tr class="memdesc:a08ad0988d24320da535ab7c4e81ce2ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if plugin file is ready to reload.  <br /></td></tr>
+<tr class="separator:a08ad0988d24320da535ab7c4e81ce2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68e6b5cc18f47d31722b7c426cd9babc" id="r_a68e6b5cc18f47d31722b7c426cd9babc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_dynamic_library_plugin_instance.html#a68e6b5cc18f47d31722b7c426cd9babc">PerformUnload</a> () override</td></tr>
+<tr class="memdesc:a68e6b5cc18f47d31722b7c426cd9babc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actually unloads the module. Called by PluginManager at the end of frame when IsUnloading is true.  <br /></td></tr>
+<tr class="separator:a68e6b5cc18f47d31722b7c426cd9babc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_urho3_d_1_1_plugin_instance"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_plugin_instance')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_plugin_instance.html">Urho3D::PluginInstance</a></td></tr>
+<tr class="memitem:aeedb4ff21d4683a0a7377174e98bfeec inherit pub_methods_class_urho3_d_1_1_plugin_instance" id="r_aeedb4ff21d4683a0a7377174e98bfeec"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>PluginInstance</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
+<tr class="separator:aeedb4ff21d4683a0a7377174e98bfeec inherit pub_methods_class_urho3_d_1_1_plugin_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72a33f7ab65dceed27d2cb1297b148dd inherit pub_methods_class_urho3_d_1_1_plugin_instance" id="r_a72a33f7ab65dceed27d2cb1297b148dd"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetName</b> (const ea::string &amp;name)</td></tr>
-<tr class="memdesc:a0aa7062d263cf0c4d83cd22a7b64f627 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name must be set right after creating a plugin object. <br /></td></tr>
-<tr class="separator:a0aa7062d263cf0c4d83cd22a7b64f627 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d679c5ba86e9a0d6a65d292b40a7611 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_a0d679c5ba86e9a0d6a65d292b40a7611"><td class="memItemLeft" align="right" valign="top">
+<tr class="memdesc:a72a33f7ab65dceed27d2cb1297b148dd inherit pub_methods_class_urho3_d_1_1_plugin_instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name must be set right after creating a plugin object. <br /></td></tr>
+<tr class="separator:a72a33f7ab65dceed27d2cb1297b148dd inherit pub_methods_class_urho3_d_1_1_plugin_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a136d438e1070529e9ac7a4ed6df968d5 inherit pub_methods_class_urho3_d_1_1_plugin_instance" id="r_a136d438e1070529e9ac7a4ed6df968d5"><td class="memItemLeft" align="right" valign="top">
 const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> () const</td></tr>
-<tr class="memdesc:a0d679c5ba86e9a0d6a65d292b40a7611 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a name of the plugin. Name is usually a base name of plugin file. <br /></td></tr>
-<tr class="separator:a0d679c5ba86e9a0d6a65d292b40a7611 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af72f5b08104e7a88bba6e4d16a1c0e7b inherit pub_methods_class_urho3_d_1_1_plugin" id="r_af72f5b08104e7a88bba6e4d16a1c0e7b"><td class="memItemLeft" align="right" valign="top">
+<tr class="memdesc:a136d438e1070529e9ac7a4ed6df968d5 inherit pub_methods_class_urho3_d_1_1_plugin_instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a name of the plugin. Name is usually a base name of plugin file. <br /></td></tr>
+<tr class="separator:a136d438e1070529e9ac7a4ed6df968d5 inherit pub_methods_class_urho3_d_1_1_plugin_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e5eebe6264377a62f2f204d9849eaa inherit pub_methods_class_urho3_d_1_1_plugin_instance" id="r_a44e5eebe6264377a62f2f204d9849eaa"><td class="memItemLeft" align="right" valign="top">
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetVersion</b> () const</td></tr>
-<tr class="memdesc:af72f5b08104e7a88bba6e4d16a1c0e7b inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current version of the plugin. <br /></td></tr>
-<tr class="separator:af72f5b08104e7a88bba6e4d16a1c0e7b inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff8298a54afb4e55c00ad04c63cafed9 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_aff8298a54afb4e55c00ad04c63cafed9"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="class_urho3_d_1_1_plugin_application.html">PluginApplication</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetApplication</b> () const</td></tr>
-<tr class="memdesc:aff8298a54afb4e55c00ad04c63cafed9 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return plugin application, if available. <br /></td></tr>
-<tr class="separator:aff8298a54afb4e55c00ad04c63cafed9 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ed385bb7686f857b57007a0d9bf9627 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_a7ed385bb7686f857b57007a0d9bf9627"><td class="memItemLeft" align="right" valign="top">
+<tr class="memdesc:a44e5eebe6264377a62f2f204d9849eaa inherit pub_methods_class_urho3_d_1_1_plugin_instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return current version of the plugin. <br /></td></tr>
+<tr class="separator:a44e5eebe6264377a62f2f204d9849eaa inherit pub_methods_class_urho3_d_1_1_plugin_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9297bbe91516d2a8f80e200a6840189 inherit pub_methods_class_urho3_d_1_1_plugin_instance" id="r_ac9297bbe91516d2a8f80e200a6840189"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_urho3_d_1_1_plugin.html">Plugin</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetPlugin</b> () const</td></tr>
+<tr class="memdesc:ac9297bbe91516d2a8f80e200a6840189 inherit pub_methods_class_urho3_d_1_1_plugin_instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return plugin, if available. <br /></td></tr>
+<tr class="separator:ac9297bbe91516d2a8f80e200a6840189 inherit pub_methods_class_urho3_d_1_1_plugin_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dbc72f52bf9d89efd9e0005f6341b9a inherit pub_methods_class_urho3_d_1_1_plugin_instance" id="r_a4dbc72f52bf9d89efd9e0005f6341b9a"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Unload</b> ()</td></tr>
-<tr class="memdesc:a7ed385bb7686f857b57007a0d9bf9627 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark plugin for unloading. <a class="el" href="class_urho3_d_1_1_plugin.html" title="A base class for plugins of all kinds. It only provides a common plugin interface.">Plugin</a> will be unloaded at the end of current frame. <br /></td></tr>
-<tr class="separator:a7ed385bb7686f857b57007a0d9bf9627 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca3de417c375bec5f1244c83e4a6ce87 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_aca3de417c375bec5f1244c83e4a6ce87"><td class="memItemLeft" align="right" valign="top">
+<tr class="memdesc:a4dbc72f52bf9d89efd9e0005f6341b9a inherit pub_methods_class_urho3_d_1_1_plugin_instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark plugin for unloading. <a class="el" href="class_urho3_d_1_1_plugin.html" title="Base class for creating dynamically linked plugins.">Plugin</a> will be unloaded at the end of current frame. <br /></td></tr>
+<tr class="separator:a4dbc72f52bf9d89efd9e0005f6341b9a inherit pub_methods_class_urho3_d_1_1_plugin_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11f9b677c721560aec6c348fafdcb9ea inherit pub_methods_class_urho3_d_1_1_plugin_instance" id="r_a11f9b677c721560aec6c348fafdcb9ea"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsUnloading</b> () const</td></tr>
-<tr class="memdesc:aca3de417c375bec5f1244c83e4a6ce87 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the plugin is about to be unloaded. <br /></td></tr>
-<tr class="separator:aca3de417c375bec5f1244c83e4a6ce87 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a366eb1c7fe55a9fc9bba0f926a9f3edb inherit pub_methods_class_urho3_d_1_1_plugin" id="r_a366eb1c7fe55a9fc9bba0f926a9f3edb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin.html#a366eb1c7fe55a9fc9bba0f926a9f3edb">IsReadyToReload</a> () const</td></tr>
-<tr class="memdesc:a366eb1c7fe55a9fc9bba0f926a9f3edb inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if plugin file is ready to reload.  <br /></td></tr>
-<tr class="separator:a366eb1c7fe55a9fc9bba0f926a9f3edb inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a11f9b677c721560aec6c348fafdcb9ea inherit pub_methods_class_urho3_d_1_1_plugin_instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the plugin is about to be unloaded. <br /></td></tr>
+<tr class="separator:a11f9b677c721560aec6c348fafdcb9ea inherit pub_methods_class_urho3_d_1_1_plugin_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object" id="r_a95a6cd1c5c12a458fda4b38f873a334d"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>Object</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -321,55 +328,86 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsScriptStrongRef</b>
 <tr class="memdesc:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if script reference is strong. <br /></td></tr>
 <tr class="separator:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a94391f147457ed70e8457257f6d72768" id="r_a94391f147457ed70e8457257f6d72768"><td class="memItemLeft" align="right" valign="top"><a id="a94391f147457ed70e8457257f6d72768" name="a94391f147457ed70e8457257f6d72768"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_script_bundle_plugin.html">ScriptBundlePlugin</a>, <a class="el" href="class_urho3_d_1_1_plugin.html">Plugin</a>)</td></tr>
-<tr class="separator:a94391f147457ed70e8457257f6d72768"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e3a8d9d4dd68ab556692cecf8fc1c73" id="r_a7e3a8d9d4dd68ab556692cecf8fc1c73"><td class="memItemLeft" align="right" valign="top"><a id="a7e3a8d9d4dd68ab556692cecf8fc1c73" name="a7e3a8d9d4dd68ab556692cecf8fc1c73"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnFileChanged</b> (const ea::string &amp;name)</td></tr>
-<tr class="separator:a7e3a8d9d4dd68ab556692cecf8fc1c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a0d1ab13f19ce67031ecbc19dae05629c" id="r_a0d1ab13f19ce67031ecbc19dae05629c"><td class="memItemLeft" align="right" valign="top"><a id="a0d1ab13f19ce67031ecbc19dae05629c" name="a0d1ab13f19ce67031ecbc19dae05629c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>outOfDate_</b> {}</td></tr>
-<tr class="separator:a0d1ab13f19ce67031ecbc19dae05629c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a1a0d330d2e690c293dbe37869f3ea912" id="r_a1a0d330d2e690c293dbe37869f3ea912"><td class="memItemLeft" align="right" valign="top"><a id="a1a0d330d2e690c293dbe37869f3ea912" name="a1a0d330d2e690c293dbe37869f3ea912"></a>
+static ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetTemporaryPdbName</b> (const ea::string &amp;fileName)</td></tr>
+<tr class="separator:a1a0d330d2e690c293dbe37869f3ea912"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a96b9229f1241a330bf2ea431b7018b05 inherit pub_static_methods_class_urho3_d_1_1_object" id="r_a96b9229f1241a330bf2ea431b7018b05"><td class="memItemLeft" align="right" valign="top">
 static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetTypeInfoStatic</b> ()</td></tr>
 <tr class="memdesc:a96b9229f1241a330bf2ea431b7018b05 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type info static. <br /></td></tr>
 <tr class="separator:a96b9229f1241a330bf2ea431b7018b05 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
-<tr class="memitem:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object" id="r_a745a18b8e99bf855379e72aac5d544ab"><td class="memItemLeft" align="right" valign="top">static constexpr ea::array&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a745a18b8e99bf855379e72aac5d544ab">TypeHierarchy</a> {}</td></tr>
-<tr class="separator:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_urho3_d_1_1_plugin"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_plugin')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_plugin.html">Urho3D::Plugin</a></td></tr>
-<tr class="memitem:a90c8a356ae484686d26961252b20384c inherit pro_attribs_class_urho3_d_1_1_plugin" id="r_a90c8a356ae484686d26961252b20384c"><td class="memItemLeft" align="right" valign="top">
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a1db96e707b5494c44a221cb94178ee87" id="r_a1db96e707b5494c44a221cb94178ee87"><td class="memItemLeft" align="right" valign="top"><a id="a1db96e707b5494c44a221cb94178ee87" name="a1db96e707b5494c44a221cb94178ee87"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetAbsoluteFileName</b> (const ea::string &amp;name, bool original) const</td></tr>
+<tr class="separator:a1db96e707b5494c44a221cb94178ee87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047c0912c1905c7b4811ab4228dbbddf" id="r_a047c0912c1905c7b4811ab4228dbbddf"><td class="memItemLeft" align="right" valign="top"><a id="a047c0912c1905c7b4811ab4228dbbddf" name="a047c0912c1905c7b4811ab4228dbbddf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>PatchTemporaryBinary</b> (const ea::string &amp;fileName)</td></tr>
+<tr class="separator:a047c0912c1905c7b4811ab4228dbbddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ac47bec411a01f6471c0c49ec93357980" id="r_ac47bec411a01f6471c0c49ec93357980"><td class="memItemLeft" align="right" valign="top"><a id="ac47bec411a01f6471c0c49ec93357980" name="ac47bec411a01f6471c0c49ec93357980"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>originalFileName_</b></td></tr>
+<tr class="memdesc:ac47bec411a01f6471c0c49ec93357980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute file name of original plugin. <br /></td></tr>
+<tr class="separator:ac47bec411a01f6471c0c49ec93357980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3852feb8a8f04e1921a0b679c4cf7204" id="r_a3852feb8a8f04e1921a0b679c4cf7204"><td class="memItemLeft" align="right" valign="top"><a id="a3852feb8a8f04e1921a0b679c4cf7204" name="a3852feb8a8f04e1921a0b679c4cf7204"></a>
+ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>temporaryFileName_</b></td></tr>
+<tr class="memdesc:a3852feb8a8f04e1921a0b679c4cf7204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute file name of temporary copy. <br /></td></tr>
+<tr class="separator:a3852feb8a8f04e1921a0b679c4cf7204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35997dd645066c1fdef8c132f071b18e" id="r_a35997dd645066c1fdef8c132f071b18e"><td class="memItemLeft" align="right" valign="top"><a id="a35997dd645066c1fdef8c132f071b18e" name="a35997dd645066c1fdef8c132f071b18e"></a>
+<a class="el" href="class_urho3_d_1_1_dynamic_library.html">DynamicLibrary</a>&#160;</td><td class="memItemRight" valign="bottom"><b>module_</b> {<a class="el" href="class_urho3_d_1_1_object.html#aecf686841d86be7e4a2c0092b60d31ad">context_</a>}</td></tr>
+<tr class="memdesc:a35997dd645066c1fdef8c132f071b18e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Native module of this plugin. <br /></td></tr>
+<tr class="separator:a35997dd645066c1fdef8c132f071b18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa527ef0f7b05846607ad250199ad4d65" id="r_aa527ef0f7b05846607ad250199ad4d65"><td class="memItemLeft" align="right" valign="top"><a id="aa527ef0f7b05846607ad250199ad4d65" name="aa527ef0f7b05846607ad250199ad4d65"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>lastModificationTime_</b> {}</td></tr>
+<tr class="memdesc:aa527ef0f7b05846607ad250199ad4d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last modification time. <br /></td></tr>
+<tr class="separator:aa527ef0f7b05846607ad250199ad4d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27ce9f30cba8e430e75a93cc4e3404cb" id="r_a27ce9f30cba8e430e75a93cc4e3404cb"><td class="memItemLeft" align="right" valign="top"><a id="a27ce9f30cba8e430e75a93cc4e3404cb" name="a27ce9f30cba8e430e75a93cc4e3404cb"></a>
+ModuleType&#160;</td><td class="memItemRight" valign="bottom"><b>lastModuleType_</b> {}</td></tr>
+<tr class="memdesc:a27ce9f30cba8e430e75a93cc4e3404cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last loaded module type. <br /></td></tr>
+<tr class="separator:a27ce9f30cba8e430e75a93cc4e3404cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_urho3_d_1_1_plugin_instance"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_plugin_instance')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_plugin_instance.html">Urho3D::PluginInstance</a></td></tr>
+<tr class="memitem:aaf4ef8f3efeb2ca4677a6f716d08fbf7 inherit pro_attribs_class_urho3_d_1_1_plugin_instance" id="r_aaf4ef8f3efeb2ca4677a6f716d08fbf7"><td class="memItemLeft" align="right" valign="top">
 ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>name_</b></td></tr>
-<tr class="memdesc:a90c8a356ae484686d26961252b20384c inherit pro_attribs_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base plugin file name. <br /></td></tr>
-<tr class="separator:a90c8a356ae484686d26961252b20384c inherit pro_attribs_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a258a4113bf2786d77c0657bcf0ed3ebb inherit pro_attribs_class_urho3_d_1_1_plugin" id="r_a258a4113bf2786d77c0657bcf0ed3ebb"><td class="memItemLeft" align="right" valign="top">
+<tr class="memdesc:aaf4ef8f3efeb2ca4677a6f716d08fbf7 inherit pro_attribs_class_urho3_d_1_1_plugin_instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base plugin file name. <br /></td></tr>
+<tr class="separator:aaf4ef8f3efeb2ca4677a6f716d08fbf7 inherit pro_attribs_class_urho3_d_1_1_plugin_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13fa46db6c76e05bcc8e80ba8e37d7be inherit pro_attribs_class_urho3_d_1_1_plugin_instance" id="r_a13fa46db6c76e05bcc8e80ba8e37d7be"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>unloading_</b> {}</td></tr>
-<tr class="memdesc:a258a4113bf2786d77c0657bcf0ed3ebb inherit pro_attribs_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that plugin should unload on the end of the frame. <br /></td></tr>
-<tr class="separator:a258a4113bf2786d77c0657bcf0ed3ebb inherit pro_attribs_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fd2913c0bf2107a83aaedcef2f94c17 inherit pro_attribs_class_urho3_d_1_1_plugin" id="r_a2fd2913c0bf2107a83aaedcef2f94c17"><td class="memItemLeft" align="right" valign="top">
+<tr class="memdesc:a13fa46db6c76e05bcc8e80ba8e37d7be inherit pro_attribs_class_urho3_d_1_1_plugin_instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that plugin should unload on the end of the frame. <br /></td></tr>
+<tr class="separator:a13fa46db6c76e05bcc8e80ba8e37d7be inherit pro_attribs_class_urho3_d_1_1_plugin_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7efd1da038297933f7fb25d72e5acd54 inherit pro_attribs_class_urho3_d_1_1_plugin_instance" id="r_a7efd1da038297933f7fb25d72e5acd54"><td class="memItemLeft" align="right" valign="top">
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>version_</b> {}</td></tr>
-<tr class="memdesc:a2fd2913c0bf2107a83aaedcef2f94c17 inherit pro_attribs_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current plugin version. <br /></td></tr>
-<tr class="separator:a2fd2913c0bf2107a83aaedcef2f94c17 inherit pro_attribs_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e675b1c54e7c0bdba4532e9eaaa6a49 inherit pro_attribs_class_urho3_d_1_1_plugin" id="r_a5e675b1c54e7c0bdba4532e9eaaa6a49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_plugin_application.html">PluginApplication</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin.html#a5e675b1c54e7c0bdba4532e9eaaa6a49">application_</a></td></tr>
-<tr class="separator:a5e675b1c54e7c0bdba4532e9eaaa6a49 inherit pro_attribs_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a7efd1da038297933f7fb25d72e5acd54 inherit pro_attribs_class_urho3_d_1_1_plugin_instance"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current plugin version. <br /></td></tr>
+<tr class="separator:a7efd1da038297933f7fb25d72e5acd54 inherit pro_attribs_class_urho3_d_1_1_plugin_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1293423d069ec7c75a8c925adca96b7e inherit pro_attribs_class_urho3_d_1_1_plugin_instance" id="r_a1293423d069ec7c75a8c925adca96b7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_plugin.html">Plugin</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin_instance.html#a1293423d069ec7c75a8c925adca96b7e">plugin_</a></td></tr>
+<tr class="separator:a1293423d069ec7c75a8c925adca96b7e inherit pro_attribs_class_urho3_d_1_1_plugin_instance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object" id="r_aecf686841d86be7e4a2c0092b60d31ad"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>context_</b></td></tr>
 <tr class="memdesc:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution context. <br /></td></tr>
 <tr class="separator:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aeac29e128670f6e37f30d0aa2c63f92d" id="r_aeac29e128670f6e37f30d0aa2c63f92d"><td class="memItemLeft" align="right" valign="top"><a id="aeac29e128670f6e37f30d0aa2c63f92d" name="aeac29e128670f6e37f30d0aa2c63f92d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_dynamic_library_plugin_instance.html">DynamicLibraryPluginInstance</a>, <a class="el" href="class_urho3_d_1_1_plugin_instance.html">PluginInstance</a>)</td></tr>
+<tr class="separator:aeac29e128670f6e37f30d0aa2c63f92d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
+<tr class="memitem:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object" id="r_a745a18b8e99bf855379e72aac5d544ab"><td class="memItemLeft" align="right" valign="top">static constexpr ea::array&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a745a18b8e99bf855379e72aac5d544ab">TypeHierarchy</a> {}</td></tr>
+<tr class="separator:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8d4907aaa04a605b23499f547d1d2151" name="a8d4907aaa04a605b23499f547d1d2151"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d4907aaa04a605b23499f547d1d2151">&#9670;&#160;</a></span>IsLoaded()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_urho3_d_1_1_plugin.html" title="Base class for creating dynamically linked plugins.">Plugin</a> that is loaded from a native or managed dynamic library. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2016bdaabb5311985e9d51b7213b8fd0" name="a2016bdaabb5311985e9d51b7213b8fd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2016bdaabb5311985e9d51b7213b8fd0">&#9670;&#160;</a></span>IsLoaded()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -378,7 +416,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>version_</b> {}</
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Urho3D::ScriptBundlePlugin::IsLoaded </td>
+          <td class="memname">bool Urho3D::DynamicLibraryPluginInstance::IsLoaded </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -386,19 +424,19 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>version_</b> {}</
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Returns true if plugin is loaded and functional. </p>
 
-<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_plugin.html#a9f136d481f8bdef870f0caf9a096daf0">Urho3D::Plugin</a>.</p>
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_plugin_instance.html#a276816df955586ca0a68f29d8fc66024">Urho3D::PluginInstance</a>.</p>
 
 </div>
 </div>
-<a id="ab8659c6f85e97bbd2c2b2dfdfd66c0b6" name="ab8659c6f85e97bbd2c2b2dfdfd66c0b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8659c6f85e97bbd2c2b2dfdfd66c0b6">&#9670;&#160;</a></span>IsOutOfDate()</h2>
+<a id="ab120f88b07935c61b12f7a2ebba9b860" name="ab120f88b07935c61b12f7a2ebba9b860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab120f88b07935c61b12f7a2ebba9b860">&#9670;&#160;</a></span>IsOutOfDate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -407,7 +445,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>version_</b> {}</
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Urho3D::ScriptBundlePlugin::IsOutOfDate </td>
+          <td class="memname">bool Urho3D::DynamicLibraryPluginInstance::IsOutOfDate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -415,19 +453,19 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>version_</b> {}</
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Returns true if plugin was modified on the disk and should be reloaded. </p>
 
-<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_plugin.html#a8256fe4906a97e3572ef72a9f1928a6e">Urho3D::Plugin</a>.</p>
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_plugin_instance.html#a88d4520ed99b2e6ea36ab18c654046ee">Urho3D::PluginInstance</a>.</p>
 
 </div>
 </div>
-<a id="ad561c4402779efa11d70e2b74e66a21e" name="ad561c4402779efa11d70e2b74e66a21e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad561c4402779efa11d70e2b74e66a21e">&#9670;&#160;</a></span>Load()</h2>
+<a id="a08ad0988d24320da535ab7c4e81ce2ad" name="a08ad0988d24320da535ab7c4e81ce2ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08ad0988d24320da535ab7c4e81ce2ad">&#9670;&#160;</a></span>IsReadyToReload()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -436,7 +474,36 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>version_</b> {}</
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Urho3D::ScriptBundlePlugin::Load </td>
+          <td class="memname">bool Urho3D::DynamicLibraryPluginInstance::IsReadyToReload </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if plugin file is ready to reload. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_plugin_instance.html#ad9626751024fd1ad5b0b811809764c82">Urho3D::PluginInstance</a>.</p>
+
+</div>
+</div>
+<a id="aaa8abe29d2da84f735bce5593de5aaba" name="aaa8abe29d2da84f735bce5593de5aaba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa8abe29d2da84f735bce5593de5aaba">&#9670;&#160;</a></span>Load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Urho3D::DynamicLibraryPluginInstance::Load </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -448,14 +515,14 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>version_</b> {}</
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Implement <a class="el" href="class_urho3_d_1_1_plugin.html" title="A base class for plugins of all kinds. It only provides a common plugin interface.">Plugin</a> </p>
+<p>Implement <a class="el" href="class_urho3_d_1_1_plugin_instance.html" title="Wrapper that manages dynamic plugin loading and unloading.">PluginInstance</a> </p>
 
-<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_plugin.html#a335e55c0fc0df31c002a17652708adea">Urho3D::Plugin</a>.</p>
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_plugin_instance.html#a16f05ea40ed809c75b279bfe8d9b91e8">Urho3D::PluginInstance</a>.</p>
 
 </div>
 </div>
-<a id="a1bb90e4908941246aba881dc67322889" name="a1bb90e4908941246aba881dc67322889"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bb90e4908941246aba881dc67322889">&#9670;&#160;</a></span>PerformUnload()</h2>
+<a id="a68e6b5cc18f47d31722b7c426cd9babc" name="a68e6b5cc18f47d31722b7c426cd9babc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68e6b5cc18f47d31722b7c426cd9babc">&#9670;&#160;</a></span>PerformUnload()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -464,7 +531,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>version_</b> {}</
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Urho3D::ScriptBundlePlugin::PerformUnload </td>
+          <td class="memname">bool Urho3D::DynamicLibraryPluginInstance::PerformUnload </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -479,20 +546,20 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>version_</b> {}</
 
 <p>Actually unloads the module. Called by PluginManager at the end of frame when IsUnloading is true. </p>
 
-<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_plugin.html#a1824d1464a13546f1c3279deb94d8fb0">Urho3D::Plugin</a>.</p>
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_plugin_instance.html#a49a1bd36fafe5b0390d3ad8b63dda685">Urho3D::PluginInstance</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/Plugins/<b>ScriptBundlePlugin.h</b></li>
-<li>Urho3D/Plugins/<b>ScriptBundlePlugin.cpp</b></li>
+<li>Urho3D/Plugins/<b>DynamicLibraryPluginInstance.h</b></li>
+<li>Urho3D/Plugins/<b>DynamicLibraryPluginInstance.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
     <ul>
-        <li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="class_urho3_d_1_1_script_bundle_plugin.html">ScriptBundlePlugin</a></li>
+        <li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="class_urho3_d_1_1_dynamic_library_plugin_instance.html">DynamicLibraryPluginInstance</a></li>
     </ul>
 </div>
 </body>

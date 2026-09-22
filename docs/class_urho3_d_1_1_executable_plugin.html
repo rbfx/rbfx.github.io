@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rebel Fork Framework: Urho3D::DynamicModule Class Reference</title>
+<title>Rebel Fork Framework: Urho3D::ExecutablePlugin Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,65 +55,112 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('class_urho3_d_1_1_dynamic_module.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('class_urho3_d_1_1_executable_plugin.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="class_urho3_d_1_1_dynamic_module-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Urho3D::DynamicModule Class Reference</div></div>
+<a href="class_urho3_d_1_1_executable_plugin-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">Urho3D::ExecutablePlugin Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>A class managing lifetime of dynamically loaded library module.  
- <a href="class_urho3_d_1_1_dynamic_module.html#details">More...</a></p>
+<p>Similar to <a class="el" href="class_urho3_d_1_1_plugin.html" title="Base class for creating dynamically linked plugins.">Plugin</a>, but can act as executable entry point.  
+ <a href="class_urho3_d_1_1_executable_plugin.html#details">More...</a></p>
 
-<p><code>#include &lt;Urho3D/Plugins/DynamicModule.h&gt;</code></p>
+<p><code>#include &lt;Urho3D/Plugins/Plugin.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Urho3D::DynamicModule:</div>
+Inheritance diagram for Urho3D::ExecutablePlugin:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_urho3_d_1_1_dynamic_module.png" usemap="#Urho3D::DynamicModule_map" alt=""/>
-  <map id="Urho3D::DynamicModule_map" name="Urho3D::DynamicModule_map">
-<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="0,56,152,80"/>
-<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="0,0,152,24"/>
+  <img src="class_urho3_d_1_1_executable_plugin.png" usemap="#Urho3D::ExecutablePlugin_map" alt=""/>
+  <map id="Urho3D::ExecutablePlugin_map" name="Urho3D::ExecutablePlugin_map">
+<area href="class_urho3_d_1_1_plugin.html" title="Base class for creating dynamically linked plugins." alt="Urho3D::Plugin" shape="rect" coords="0,112,200,136"/>
+<area href="class_urho3_d_1_1_object.html" alt="Urho3D::Object" shape="rect" coords="0,56,200,80"/>
+<area href="class_urho3_d_1_1_ref_counted.html" title="Base class for intrusively reference-counted objects. These are noncopyable and non-assignable." alt="Urho3D::RefCounted" shape="rect" coords="0,0,200,24"/>
+<area href="class_urho3_d_1_1_scene_viewer_application.html" title="Simple application to show scene with free-fly camera." alt="Urho3D::SceneViewerApplication" shape="rect" coords="0,224,200,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a938b598f6a1be2097f8d05970922e92e" id="r_a938b598f6a1be2097f8d05970922e92e"><td class="memItemLeft" align="right" valign="top"><a id="a938b598f6a1be2097f8d05970922e92e" name="a938b598f6a1be2097f8d05970922e92e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DynamicModule</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
-<tr class="separator:a938b598f6a1be2097f8d05970922e92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5328fd78ad013e9fae7a101e4e59d07b" id="r_a5328fd78ad013e9fae7a101e4e59d07b"><td class="memItemLeft" align="right" valign="top"><a id="a5328fd78ad013e9fae7a101e4e59d07b" name="a5328fd78ad013e9fae7a101e4e59d07b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Load</b> (const ea::string &amp;path)</td></tr>
-<tr class="memdesc:a5328fd78ad013e9fae7a101e4e59d07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a specified dynamic library and return true on success. <br /></td></tr>
-<tr class="separator:a5328fd78ad013e9fae7a101e4e59d07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b871cc50d8fcabc6bbbe6e8a5334d04" id="r_a0b871cc50d8fcabc6bbbe6e8a5334d04"><td class="memItemLeft" align="right" valign="top"><a id="a0b871cc50d8fcabc6bbbe6e8a5334d04" name="a0b871cc50d8fcabc6bbbe6e8a5334d04"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Unload</b> ()</td></tr>
-<tr class="memdesc:a0b871cc50d8fcabc6bbbe6e8a5334d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload currently loaded dynamic library. Returns true only if library was previously loaded and unloading succeeded. <br /></td></tr>
-<tr class="separator:a0b871cc50d8fcabc6bbbe6e8a5334d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d91651fbee5d5fec4b97e041eef3200" id="r_a8d91651fbee5d5fec4b97e041eef3200"><td class="memItemLeft" align="right" valign="top"><a id="a8d91651fbee5d5fec4b97e041eef3200" name="a8d91651fbee5d5fec4b97e041eef3200"></a>
-<a class="el" href="class_urho3_d_1_1_plugin_application.html">PluginApplication</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>InstantiatePlugin</b> ()</td></tr>
-<tr class="memdesc:a8d91651fbee5d5fec4b97e041eef3200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate plugin interface from DLL. <br /></td></tr>
-<tr class="separator:a8d91651fbee5d5fec4b97e041eef3200"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19eab2a78c2d4cf251a4eec45395db2c" id="r_a19eab2a78c2d4cf251a4eec45395db2c"><td class="memItemLeft" align="right" valign="top"><a id="a19eab2a78c2d4cf251a4eec45395db2c" name="a19eab2a78c2d4cf251a4eec45395db2c"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>GetSymbol</b> (const ea::string &amp;symbol)</td></tr>
-<tr class="memdesc:a19eab2a78c2d4cf251a4eec45395db2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks up exported symbol in current loaded dynamic library and returns it. Works only for native modules. <br /></td></tr>
-<tr class="separator:a19eab2a78c2d4cf251a4eec45395db2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91ca2fa436ff1f1fad42f36e143b7d8d" id="r_a91ca2fa436ff1f1fad42f36e143b7d8d"><td class="memItemLeft" align="right" valign="top"><a id="a91ca2fa436ff1f1fad42f36e143b7d8d" name="a91ca2fa436ff1f1fad42f36e143b7d8d"></a>
-ModuleType&#160;</td><td class="memItemRight" valign="bottom"><b>GetModuleType</b> () const</td></tr>
-<tr class="memdesc:a91ca2fa436ff1f1fad42f36e143b7d8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a type of current loaded module. <br /></td></tr>
-<tr class="separator:a91ca2fa436ff1f1fad42f36e143b7d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7ed717334ecc8338cde69a3b5826575" id="r_ad7ed717334ecc8338cde69a3b5826575"><td class="memItemLeft" align="right" valign="top"><a id="ad7ed717334ecc8338cde69a3b5826575" name="ad7ed717334ecc8338cde69a3b5826575"></a>
-const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetPath</b> () const</td></tr>
-<tr class="memdesc:ad7ed717334ecc8338cde69a3b5826575"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a path to loaded module. <br /></td></tr>
-<tr class="separator:ad7ed717334ecc8338cde69a3b5826575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c60820b4853545d46c0b6b88c91857" id="r_ae8c60820b4853545d46c0b6b88c91857"><td class="memItemLeft" align="right" valign="top"><a id="ae8c60820b4853545d46c0b6b88c91857" name="ae8c60820b4853545d46c0b6b88c91857"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ExecutablePlugin</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
+<tr class="separator:ae8c60820b4853545d46c0b6b88c91857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ae7206b5047c7b006a46f7d7ef72d7bd2" id="r_ae7206b5047c7b006a46f7d7ef72d7bd2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_executable_plugin.html#ae7206b5047c7b006a46f7d7ef72d7bd2">IsExecutable</a> () const final</td></tr>
+<tr class="separator:ae7206b5047c7b006a46f7d7ef72d7bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa52912f4805d606231d2bcdf348c3329" id="r_aa52912f4805d606231d2bcdf348c3329"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_executable_plugin.html#aa52912f4805d606231d2bcdf348c3329">IsSuspendSupported</a> () const override</td></tr>
+<tr class="memdesc:aa52912f4805d606231d2bcdf348c3329"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether suspend/resume is supported by this plugin.  <br /></td></tr>
+<tr class="separator:aa52912f4805d606231d2bcdf348c3329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_urho3_d_1_1_plugin"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_plugin')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_plugin.html">Urho3D::Plugin</a></td></tr>
+<tr class="memitem:ac7bf9d6b10f3fcee1c0b0d340c250745 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_ac7bf9d6b10f3fcee1c0b0d340c250745"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>Plugin</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
+<tr class="separator:ac7bf9d6b10f3fcee1c0b0d340c250745 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a47fdceb385e05e75533a6cdc00c8c3 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_a2a47fdceb385e05e75533a6cdc00c8c3"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPluginName</b> (const ea::string &amp;name)</td></tr>
+<tr class="separator:a2a47fdceb385e05e75533a6cdc00c8c3 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad87e13bf3499d162ecd92ea91a9150c3 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_ad87e13bf3499d162ecd92ea91a9150c3"><td class="memItemLeft" align="right" valign="top">
+virtual ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetDefaultCategory</b> () const</td></tr>
+<tr class="memdesc:ad87e13bf3499d162ecd92ea91a9150c3 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return default object category for the plugin. <br /></td></tr>
+<tr class="separator:ad87e13bf3499d162ecd92ea91a9150c3 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae275a5faee77b00a4ffd2a3e963ed072 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_ae275a5faee77b00a4ffd2a3e963ed072"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Dispose</b> ()</td></tr>
+<tr class="memdesc:ae275a5faee77b00a4ffd2a3e963ed072 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare object for destruction. <br /></td></tr>
+<tr class="separator:ae275a5faee77b00a4ffd2a3e963ed072 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af488bdbedab0a824b675c9e37a4442ec inherit pub_methods_class_urho3_d_1_1_plugin" id="r_af488bdbedab0a824b675c9e37a4442ec"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadPlugin</b> ()</td></tr>
+<tr class="memdesc:af488bdbedab0a824b675c9e37a4442ec inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load plugin into the context and the engine subsystems. <br /></td></tr>
+<tr class="separator:af488bdbedab0a824b675c9e37a4442ec inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c4b14e157eb10f34c0682d0b019b4ec inherit pub_methods_class_urho3_d_1_1_plugin" id="r_a8c4b14e157eb10f34c0682d0b019b4ec"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UnloadPlugin</b> ()</td></tr>
+<tr class="memdesc:a8c4b14e157eb10f34c0682d0b019b4ec inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload plugin from the context and the engine subsystems. <br /></td></tr>
+<tr class="separator:a8c4b14e157eb10f34c0682d0b019b4ec inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e6fcebb8d7d06767cb080361e13caf inherit pub_methods_class_urho3_d_1_1_plugin" id="r_a50e6fcebb8d7d06767cb080361e13caf"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>StartApplication</b> (bool isMain)</td></tr>
+<tr class="memdesc:a50e6fcebb8d7d06767cb080361e13caf inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start application. <br /></td></tr>
+<tr class="separator:a50e6fcebb8d7d06767cb080361e13caf inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d80577bc6306bb79e288675c48cda18 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_a2d80577bc6306bb79e288675c48cda18"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>StopApplication</b> ()</td></tr>
+<tr class="memdesc:a2d80577bc6306bb79e288675c48cda18 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop application. <br /></td></tr>
+<tr class="separator:a2d80577bc6306bb79e288675c48cda18 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab24dea4066621ef18af6e86e48eccd0e inherit pub_methods_class_urho3_d_1_1_plugin" id="r_ab24dea4066621ef18af6e86e48eccd0e"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SuspendApplication</b> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;output, unsigned version)</td></tr>
+<tr class="memdesc:ab24dea4066621ef18af6e86e48eccd0e inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend application. It's highly recommended to release all plugin-related objects here. <br /></td></tr>
+<tr class="separator:ab24dea4066621ef18af6e86e48eccd0e inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02b6719a2d5b80eed7c1dc874c862a10 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_a02b6719a2d5b80eed7c1dc874c862a10"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResumeApplication</b> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> *input, unsigned version)</td></tr>
+<tr class="memdesc:a02b6719a2d5b80eed7c1dc874c862a10 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume application. <a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> may be null if it wasn't serialized before. <br /></td></tr>
+<tr class="separator:a02b6719a2d5b80eed7c1dc874c862a10 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b599a90f7619f0115d9e709d5c5654 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_a54b599a90f7619f0115d9e709d5c5654"><td class="memItemLeft" align="right" valign="top">
+const ea::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetPluginName</b> ()</td></tr>
+<tr class="memdesc:a54b599a90f7619f0115d9e709d5c5654 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return plugin name. Should be the same as dynamic library name when plugin is linked dynamically. <br /></td></tr>
+<tr class="separator:a54b599a90f7619f0115d9e709d5c5654 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a697a59adf9c037cf3b503f40621b42af inherit pub_methods_class_urho3_d_1_1_plugin" id="r_a697a59adf9c037cf3b503f40621b42af"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsLoaded</b> () const</td></tr>
+<tr class="memdesc:a697a59adf9c037cf3b503f40621b42af inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the plugin is loaded. <br /></td></tr>
+<tr class="separator:a697a59adf9c037cf3b503f40621b42af inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca95f17941e473bc5a8b240350749266 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_aca95f17941e473bc5a8b240350749266"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsStarted</b> () const</td></tr>
+<tr class="memdesc:aca95f17941e473bc5a8b240350749266 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the application is started. <br /></td></tr>
+<tr class="separator:aca95f17941e473bc5a8b240350749266 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac2c64f9ac27ff9ac06cd66361d68f64 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_aac2c64f9ac27ff9ac06cd66361d68f64"><td class="memTemplParams" colspan="2">
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aac2c64f9ac27ff9ac06cd66361d68f64 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_object_reflection.html">ObjectReflection</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>AddFactoryReflection</b> ()</td></tr>
+<tr class="memdesc:aac2c64f9ac27ff9ac06cd66361d68f64 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a factory for an object type that would be automatically unregistered on unload. <br /></td></tr>
+<tr class="separator:aac2c64f9ac27ff9ac06cd66361d68f64 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30f355d4f834ade5c9e85870c518aa87 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_a30f355d4f834ade5c9e85870c518aa87"><td class="memTemplParams" colspan="2">
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a30f355d4f834ade5c9e85870c518aa87 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_urho3_d_1_1_object_reflection.html">ObjectReflection</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>AddFactoryReflection</b> (ea::string_view category)</td></tr>
+<tr class="separator:a30f355d4f834ade5c9e85870c518aa87 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00cee910983cb2d6f600c7c9f8da0b12 inherit pub_methods_class_urho3_d_1_1_plugin" id="r_a00cee910983cb2d6f600c7c9f8da0b12"><td class="memTemplParams" colspan="2">
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a00cee910983cb2d6f600c7c9f8da0b12 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RegisterObject</b> ()</td></tr>
+<tr class="memdesc:a00cee910983cb2d6f600c7c9f8da0b12 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register an object that would be automatically unregistered on unload. <br /></td></tr>
+<tr class="separator:a00cee910983cb2d6f600c7c9f8da0b12 inherit pub_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object" id="r_a95a6cd1c5c12a458fda4b38f873a334d"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>Object</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -307,44 +354,54 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsScriptStrongRef</b>
 <tr class="memdesc:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if script reference is strong. <br /></td></tr>
 <tr class="separator:a99cdc62c2d95adb6fe79aa1f6e301b79 inherit pub_methods_class_urho3_d_1_1_ref_counted"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6aaa9daa5aa37c4e4f73f0ee604113c3" id="r_a6aaa9daa5aa37c4e4f73f0ee604113c3"><td class="memItemLeft" align="right" valign="top"><a id="a6aaa9daa5aa37c4e4f73f0ee604113c3" name="a6aaa9daa5aa37c4e4f73f0ee604113c3"></a>
-static ModuleType&#160;</td><td class="memItemRight" valign="bottom"><b>ReadModuleInformation</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context, const ea::string &amp;path, unsigned *pdbPathOffset=nullptr, unsigned *pdbPathLength=nullptr)</td></tr>
-<tr class="memdesc:a6aaa9daa5aa37c4e4f73f0ee604113c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspects a specified file and detects it's type. <br /></td></tr>
-<tr class="separator:a6aaa9daa5aa37c4e4f73f0ee604113c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4bccebc2800e607d7b6f733f526d23c4" id="r_a4bccebc2800e607d7b6f733f526d23c4"><td class="memItemLeft" align="right" valign="top"><a id="a4bccebc2800e607d7b6f733f526d23c4" name="a4bccebc2800e607d7b6f733f526d23c4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_executable_plugin.html">ExecutablePlugin</a>, <a class="el" href="class_urho3_d_1_1_plugin.html">Plugin</a>)</td></tr>
+<tr class="separator:a4bccebc2800e607d7b6f733f526d23c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_class_urho3_d_1_1_plugin"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_urho3_d_1_1_plugin')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_plugin.html">Urho3D::Plugin</a></td></tr>
+<tr class="memitem:a1aefd963b8b4e8b2f930eaa17a24b34f inherit pub_static_methods_class_urho3_d_1_1_plugin" id="r_a1aefd963b8b4e8b2f930eaa17a24b34f"><td class="memItemLeft" align="right" valign="top">
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterPlugin</b> (const ea::string &amp;name, <a class="el" href="class_urho3_d_1_1_shared_ptr.html">PluginFactory</a> factory)</td></tr>
+<tr class="memdesc:a1aefd963b8b4e8b2f930eaa17a24b34f inherit pub_static_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register plugin class to be visible in all future instances of <a class="el" href="class_urho3_d_1_1_plugin_manager.html">PluginManager</a>. <br /></td></tr>
+<tr class="separator:a1aefd963b8b4e8b2f930eaa17a24b34f inherit pub_static_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8aa15f515a5e51d5defa44277de0d9 inherit pub_static_methods_class_urho3_d_1_1_plugin" id="r_adb8aa15f515a5e51d5defa44277de0d9"><td class="memTemplParams" colspan="2">
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:adb8aa15f515a5e51d5defa44277de0d9 inherit pub_static_methods_class_urho3_d_1_1_plugin"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RegisterPlugin</b> (const ea::string &amp;name)</td></tr>
+<tr class="separator:adb8aa15f515a5e51d5defa44277de0d9 inherit pub_static_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f80a0fa3fb145a5aeb4d63cf3112d12 inherit pub_static_methods_class_urho3_d_1_1_plugin" id="r_a8f80a0fa3fb145a5aeb4d63cf3112d12"><td class="memTemplParams" colspan="2">
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a8f80a0fa3fb145a5aeb4d63cf3112d12 inherit pub_static_methods_class_urho3_d_1_1_plugin"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RegisterPlugin</b> ()</td></tr>
+<tr class="separator:a8f80a0fa3fb145a5aeb4d63cf3112d12 inherit pub_static_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a96b9229f1241a330bf2ea431b7018b05 inherit pub_static_methods_class_urho3_d_1_1_object" id="r_a96b9229f1241a330bf2ea431b7018b05"><td class="memItemLeft" align="right" valign="top">
 static const <a class="el" href="class_urho3_d_1_1_type_info.html">TypeInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetTypeInfoStatic</b> ()</td></tr>
 <tr class="memdesc:a96b9229f1241a330bf2ea431b7018b05 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type info static. <br /></td></tr>
 <tr class="separator:a96b9229f1241a330bf2ea431b7018b05 inherit pub_static_methods_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a9707e5cabb7358bac7d87c03b245bf89" id="r_a9707e5cabb7358bac7d87c03b245bf89"><td class="memItemLeft" align="right" valign="top"><a id="a9707e5cabb7358bac7d87c03b245bf89" name="a9707e5cabb7358bac7d87c03b245bf89"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>URHO3D_OBJECT</b> (<a class="el" href="class_urho3_d_1_1_dynamic_module.html">DynamicModule</a>, <a class="el" href="class_urho3_d_1_1_object.html">Object</a>)</td></tr>
-<tr class="separator:a9707e5cabb7358bac7d87c03b245bf89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:accd4bec66b826eef63aa52931385572e" id="r_accd4bec66b826eef63aa52931385572e"><td class="memItemLeft" align="right" valign="top"><a id="accd4bec66b826eef63aa52931385572e" name="accd4bec66b826eef63aa52931385572e"></a>
-ea::string&#160;</td><td class="memItemRight" valign="bottom"><b>path_</b></td></tr>
-<tr class="memdesc:accd4bec66b826eef63aa52931385572e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A path of current loaded module. <br /></td></tr>
-<tr class="separator:accd4bec66b826eef63aa52931385572e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a389773fc58ab7848708d0c3998888498" id="r_a389773fc58ab7848708d0c3998888498"><td class="memItemLeft" align="right" valign="top"><a id="a389773fc58ab7848708d0c3998888498" name="a389773fc58ab7848708d0c3998888498"></a>
-uintptr_t&#160;</td><td class="memItemRight" valign="bottom"><b>handle_</b> = 0</td></tr>
-<tr class="memdesc:a389773fc58ab7848708d0c3998888498"><td class="mdescLeft">&#160;</td><td class="mdescRight">A platform-specific handle to current loaded module. <br /></td></tr>
-<tr class="separator:a389773fc58ab7848708d0c3998888498"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58663fbe64a194bf2c5a72abedac78b0" id="r_a58663fbe64a194bf2c5a72abedac78b0"><td class="memItemLeft" align="right" valign="top"><a id="a58663fbe64a194bf2c5a72abedac78b0" name="a58663fbe64a194bf2c5a72abedac78b0"></a>
-ModuleType&#160;</td><td class="memItemRight" valign="bottom"><b>moduleType_</b> = MODULE_INVALID</td></tr>
-<tr class="memdesc:a58663fbe64a194bf2c5a72abedac78b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A type of current loaded module. <br /></td></tr>
-<tr class="separator:a58663fbe64a194bf2c5a72abedac78b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object" id="r_a745a18b8e99bf855379e72aac5d544ab"><td class="memItemLeft" align="right" valign="top">static constexpr ea::array&lt; <a class="el" href="class_urho3_d_1_1_string_hash.html">StringHash</a>, 0 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_object.html#a745a18b8e99bf855379e72aac5d544ab">TypeHierarchy</a> {}</td></tr>
 <tr class="separator:a745a18b8e99bf855379e72aac5d544ab inherit pub_static_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_urho3_d_1_1_plugin"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_urho3_d_1_1_plugin')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_urho3_d_1_1_plugin.html">Urho3D::Plugin</a></td></tr>
+<tr class="memitem:a516c6677449a8d14fdc7690b815f5c22 inherit pro_methods_class_urho3_d_1_1_plugin" id="r_a516c6677449a8d14fdc7690b815f5c22"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin.html#a516c6677449a8d14fdc7690b815f5c22">Load</a> ()</td></tr>
+<tr class="memdesc:a516c6677449a8d14fdc7690b815f5c22 inherit pro_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on <a class="el" href="class_urho3_d_1_1_plugin.html#af488bdbedab0a824b675c9e37a4442ec" title="Load plugin into the context and the engine subsystems.">LoadPlugin()</a>.  <br /></td></tr>
+<tr class="separator:a516c6677449a8d14fdc7690b815f5c22 inherit pro_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acff52d5097dbb86fdb4df5f0f6f49f3d inherit pro_methods_class_urho3_d_1_1_plugin" id="r_acff52d5097dbb86fdb4df5f0f6f49f3d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin.html#acff52d5097dbb86fdb4df5f0f6f49f3d">Unload</a> ()</td></tr>
+<tr class="memdesc:acff52d5097dbb86fdb4df5f0f6f49f3d inherit pro_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on <a class="el" href="class_urho3_d_1_1_plugin.html#a8c4b14e157eb10f34c0682d0b019b4ec" title="Unload plugin from the context and the engine subsystems.">UnloadPlugin()</a>.  <br /></td></tr>
+<tr class="separator:acff52d5097dbb86fdb4df5f0f6f49f3d inherit pro_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50abf851462357e067e9c446c6866a20 inherit pro_methods_class_urho3_d_1_1_plugin" id="r_a50abf851462357e067e9c446c6866a20"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin.html#a50abf851462357e067e9c446c6866a20">Start</a> (bool isMain)</td></tr>
+<tr class="memdesc:a50abf851462357e067e9c446c6866a20 inherit pro_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on <a class="el" href="class_urho3_d_1_1_plugin.html#a50e6fcebb8d7d06767cb080361e13caf" title="Start application.">StartApplication()</a>.  <br /></td></tr>
+<tr class="separator:a50abf851462357e067e9c446c6866a20 inherit pro_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40b784ded39a4ee91fbab26a18a795ee inherit pro_methods_class_urho3_d_1_1_plugin" id="r_a40b784ded39a4ee91fbab26a18a795ee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin.html#a40b784ded39a4ee91fbab26a18a795ee">Stop</a> ()</td></tr>
+<tr class="memdesc:a40b784ded39a4ee91fbab26a18a795ee inherit pro_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on <a class="el" href="class_urho3_d_1_1_plugin.html#a2d80577bc6306bb79e288675c48cda18" title="Stop application.">StopApplication()</a>.  <br /></td></tr>
+<tr class="separator:a40b784ded39a4ee91fbab26a18a795ee inherit pro_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78c523596b89c9382db1d5533bb284e9 inherit pro_methods_class_urho3_d_1_1_plugin" id="r_a78c523596b89c9382db1d5533bb284e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin.html#a78c523596b89c9382db1d5533bb284e9">Suspend</a> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> &amp;output)</td></tr>
+<tr class="memdesc:a78c523596b89c9382db1d5533bb284e9 inherit pro_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on <a class="el" href="class_urho3_d_1_1_plugin.html#ab24dea4066621ef18af6e86e48eccd0e" title="Suspend application. It&#39;s highly recommended to release all plugin-related objects here.">SuspendApplication()</a>.  <br /></td></tr>
+<tr class="separator:a78c523596b89c9382db1d5533bb284e9 inherit pro_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e324be5cee8f2d1ff6a0d6697ef753 inherit pro_methods_class_urho3_d_1_1_plugin" id="r_a71e324be5cee8f2d1ff6a0d6697ef753"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_plugin.html#a71e324be5cee8f2d1ff6a0d6697ef753">Resume</a> (<a class="el" href="class_urho3_d_1_1_archive.html">Archive</a> *input, bool differentVersion)</td></tr>
+<tr class="memdesc:a71e324be5cee8f2d1ff6a0d6697ef753 inherit pro_methods_class_urho3_d_1_1_plugin"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on <a class="el" href="class_urho3_d_1_1_plugin.html#a02b6719a2d5b80eed7c1dc874c862a10" title="Resume application. Archive may be null if it wasn&#39;t serialized before.">ResumeApplication()</a>.  <br /></td></tr>
+<tr class="separator:a71e324be5cee8f2d1ff6a0d6697ef753 inherit pro_methods_class_urho3_d_1_1_plugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object" id="r_aecf686841d86be7e4a2c0092b60d31ad"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>context_</b></td></tr>
@@ -352,17 +409,77 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aecf686841d86be7e4a2c0092b60d31ad inherit pro_attribs_class_urho3_d_1_1_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class managing lifetime of dynamically loaded library module. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>Urho3D/Plugins/<b>DynamicModule.h</b></li>
-<li>Urho3D/Plugins/<b>DynamicModule.cpp</b></li>
+<div class="textblock"><p>Similar to <a class="el" href="class_urho3_d_1_1_plugin.html" title="Base class for creating dynamically linked plugins.">Plugin</a>, but can act as executable entry point. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae7206b5047c7b006a46f7d7ef72d7bd2" name="ae7206b5047c7b006a46f7d7ef72d7bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7206b5047c7b006a46f7d7ef72d7bd2">&#9670;&#160;</a></span>IsExecutable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Urho3D::ExecutablePlugin::IsExecutable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Implement <a class="el" href="class_urho3_d_1_1_plugin.html" title="Base class for creating dynamically linked plugins.">Plugin</a>. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_plugin.html#a303b4466248b780c6c2a167954f3d8d1">Urho3D::Plugin</a>.</p>
+
+</div>
+</div>
+<a id="aa52912f4805d606231d2bcdf348c3329" name="aa52912f4805d606231d2bcdf348c3329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa52912f4805d606231d2bcdf348c3329">&#9670;&#160;</a></span>IsSuspendSupported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Urho3D::ExecutablePlugin::IsSuspendSupported </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return whether suspend/resume is supported by this plugin. </p>
+
+<p>Reimplemented from <a class="el" href="class_urho3_d_1_1_plugin.html#ac39e19d024372fbc495445ed7d6ab0d5">Urho3D::Plugin</a>.</p>
+
+<p>Reimplemented in <a class="el" href="class_urho3_d_1_1_scene_viewer_application.html#a83c739fa01c6a06f854097883d36c84c">Urho3D::SceneViewerApplication</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>Urho3D/Plugins/<b>Plugin.h</b></li>
+<li>Urho3D/Plugins/<b>Plugin.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
     <ul>
-        <li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="class_urho3_d_1_1_dynamic_module.html">DynamicModule</a></li>
+        <li class="navelem"><b>Urho3D</b></li><li class="navelem"><a class="el" href="class_urho3_d_1_1_executable_plugin.html">ExecutablePlugin</a></li>
     </ul>
 </div>
 </body>

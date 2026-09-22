@@ -2,8 +2,8 @@ var class_urho3_d_1_1_script_runtime_api =
 [
     [ "~ScriptRuntimeApi", "class_urho3_d_1_1_script_runtime_api.html#ab004719e1de75839912d3b26437acbf2", null ],
     [ "CloneGCHandle", "class_urho3_d_1_1_script_runtime_api.html#a1897efe52293de522ea246c8eb8f159e", null ],
-    [ "CompileResourceScriptPlugin", "class_urho3_d_1_1_script_runtime_api.html#a71c2f1ef4dac73e97765a4bd9927aab1", null ],
-    [ "CreatePluginApplication", "class_urho3_d_1_1_script_runtime_api.html#a6a9bd25e07248015e1f7db6d28e653dc", null ],
+    [ "CompileResourceScriptPlugin", "class_urho3_d_1_1_script_runtime_api.html#ac6f7e308f811be4f4f1431bd0e3dc22b", null ],
+    [ "CreatePlugin", "class_urho3_d_1_1_script_runtime_api.html#ae6338b3551e04edfc856e06b195b29d0", null ],
     [ "DereferenceAndDispose", "class_urho3_d_1_1_script_runtime_api.html#af4c36912855963564546aff61138fa36", null ],
     [ "Dispose", "class_urho3_d_1_1_script_runtime_api.html#abd1082e10c85e02c4e704ce8b8460322", null ],
     [ "FreeGCHandle", "class_urho3_d_1_1_script_runtime_api.html#a7d2bb84f7aae951f137de27f9a19b3fc", null ],

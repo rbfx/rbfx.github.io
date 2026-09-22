@@ -113,7 +113,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ResumeApplication</b>
 <tr class="separator:ace4dd7e0bb6c390ee46705c96b1818cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4bc45ff5dd526415d738efe4772c899" id="r_ae4bc45ff5dd526415d738efe4772c899"><td class="memItemLeft" align="right" valign="top"><a id="ae4bc45ff5dd526415d738efe4772c899" name="ae4bc45ff5dd526415d738efe4772c899"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>StopApplication</b> ()</td></tr>
-<tr class="memdesc:ae4bc45ff5dd526415d738efe4772c899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop plugin application for all loaded plugins. <br /></td></tr>
+<tr class="memdesc:ae4bc45ff5dd526415d738efe4772c899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop all loaded plugins. <br /></td></tr>
 <tr class="separator:ae4bc45ff5dd526415d738efe4772c899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40612460f8953d8897e8f0d408240fe8" id="r_a40612460f8953d8897e8f0d408240fe8"><td class="memItemLeft" align="right" valign="top"><a id="a40612460f8953d8897e8f0d408240fe8" name="a40612460f8953d8897e8f0d408240fe8"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsStarted</b> () const</td></tr>
@@ -123,10 +123,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsStarted</b> () cons
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>GetNumPlugins</b> () const</td></tr>
 <tr class="memdesc:ae7eefcf1c76a0430b6ffbde107005ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return number of loaded plugins. <br /></td></tr>
 <tr class="separator:ae7eefcf1c76a0430b6ffbde107005ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e9f2bb0886ee7d844117c081bdab423" id="r_a4e9f2bb0886ee7d844117c081bdab423"><td class="memItemLeft" align="right" valign="top"><a id="a4e9f2bb0886ee7d844117c081bdab423" name="a4e9f2bb0886ee7d844117c081bdab423"></a>
-<a class="el" href="class_urho3_d_1_1_plugin_application.html">PluginApplication</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetMainPlugin</b> () const</td></tr>
-<tr class="memdesc:a4e9f2bb0886ee7d844117c081bdab423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return main plugin. The result is valid after StartApplication. <br /></td></tr>
-<tr class="separator:a4e9f2bb0886ee7d844117c081bdab423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe90553a7ee915d5953d64c80f02d058" id="r_abe90553a7ee915d5953d64c80f02d058"><td class="memItemLeft" align="right" valign="top"><a id="abe90553a7ee915d5953d64c80f02d058" name="abe90553a7ee915d5953d64c80f02d058"></a>
+<a class="el" href="class_urho3_d_1_1_plugin.html">Plugin</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetMainPlugin</b> () const</td></tr>
+<tr class="memdesc:abe90553a7ee915d5953d64c80f02d058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return main plugin. The result is valid after StartApplication. <br /></td></tr>
+<tr class="separator:abe90553a7ee915d5953d64c80f02d058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_urho3_d_1_1_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_urho3_d_1_1_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_urho3_d_1_1_object.html">Urho3D::Object</a></td></tr>
 <tr class="memitem:a95a6cd1c5c12a458fda4b38f873a334d inherit pub_methods_class_urho3_d_1_1_object" id="r_a95a6cd1c5c12a458fda4b38f873a334d"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>Object</b> (<a class="el" href="class_urho3_d_1_1_context.html">Context</a> *context)</td></tr>
@@ -334,9 +334,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadPlugins</b> ()</t
 <tr class="memitem:ad87980c90a9984af0acfdc1f933e4162" id="r_ad87980c90a9984af0acfdc1f933e4162"><td class="memItemLeft" align="right" valign="top"><a id="ad87980c90a9984af0acfdc1f933e4162" name="ad87980c90a9984af0acfdc1f933e4162"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>UnloadPlugins</b> ()</td></tr>
 <tr class="separator:ad87980c90a9984af0acfdc1f933e4162"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1e1bad8cda742f337ae707fcfcb6cc0" id="r_ad1e1bad8cda742f337ae707fcfcb6cc0"><td class="memItemLeft" align="right" valign="top"><a id="ad1e1bad8cda742f337ae707fcfcb6cc0" name="ad1e1bad8cda742f337ae707fcfcb6cc0"></a>
-<a class="el" href="class_urho3_d_1_1_plugin_application.html">PluginApplication</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>FindMainPlugin</b> (const ea::string &amp;mainPlugin) const</td></tr>
-<tr class="separator:ad1e1bad8cda742f337ae707fcfcb6cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09aa33389023bcb31b42c0dbef45929b" id="r_a09aa33389023bcb31b42c0dbef45929b"><td class="memItemLeft" align="right" valign="top"><a id="a09aa33389023bcb31b42c0dbef45929b" name="a09aa33389023bcb31b42c0dbef45929b"></a>
+<a class="el" href="class_urho3_d_1_1_plugin.html">Plugin</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>FindMainPlugin</b> (const ea::string &amp;mainPlugin) const</td></tr>
+<tr class="separator:a09aa33389023bcb31b42c0dbef45929b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -355,9 +355,9 @@ ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_plugin_stack_1_1_plugin_in
 <tr class="memitem:a862de6cb6993a64d7eee3e352b36e2d8" id="r_a862de6cb6993a64d7eee3e352b36e2d8"><td class="memItemLeft" align="right" valign="top"><a id="a862de6cb6993a64d7eee3e352b36e2d8" name="a862de6cb6993a64d7eee3e352b36e2d8"></a>
 ea::vector&lt; <a class="el" href="struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html">PluginInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mainApplications_</b></td></tr>
 <tr class="separator:a862de6cb6993a64d7eee3e352b36e2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00182b594f3ad16aa66a2c233c2f5ff5" id="r_a00182b594f3ad16aa66a2c233c2f5ff5"><td class="memItemLeft" align="right" valign="top"><a id="a00182b594f3ad16aa66a2c233c2f5ff5" name="a00182b594f3ad16aa66a2c233c2f5ff5"></a>
-<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_plugin_application.html">PluginApplication</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mainApplication_</b></td></tr>
-<tr class="separator:a00182b594f3ad16aa66a2c233c2f5ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d6659c91c7341854242270212e900a" id="r_ac7d6659c91c7341854242270212e900a"><td class="memItemLeft" align="right" valign="top"><a id="ac7d6659c91c7341854242270212e900a" name="ac7d6659c91c7341854242270212e900a"></a>
+<a class="el" href="class_urho3_d_1_1_weak_ptr.html">WeakPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_plugin.html">Plugin</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mainApplication_</b></td></tr>
+<tr class="separator:ac7d6659c91c7341854242270212e900a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53f63e51cd138c5a3d060473885d4b69" id="r_a53f63e51cd138c5a3d060473885d4b69"><td class="memItemLeft" align="right" valign="top"><a id="a53f63e51cd138c5a3d060473885d4b69" name="a53f63e51cd138c5a3d060473885d4b69"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isStarted_</b> {}</td></tr>
 <tr class="separator:a53f63e51cd138c5a3d060473885d4b69"><td class="memSeparator" colspan="2">&#160;</td></tr>

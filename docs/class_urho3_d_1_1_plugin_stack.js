@@ -1,7 +1,7 @@
 var class_urho3_d_1_1_plugin_stack =
 [
     [ "PluginInfo", "struct_urho3_d_1_1_plugin_stack_1_1_plugin_info.html", null ],
-    [ "GetMainPlugin", "class_urho3_d_1_1_plugin_stack.html#a4e9f2bb0886ee7d844117c081bdab423", null ],
+    [ "GetMainPlugin", "class_urho3_d_1_1_plugin_stack.html#abe90553a7ee915d5953d64c80f02d058", null ],
     [ "GetNumPlugins", "class_urho3_d_1_1_plugin_stack.html#ae7eefcf1c76a0430b6ffbde107005ef6", null ],
     [ "IsStarted", "class_urho3_d_1_1_plugin_stack.html#a40612460f8953d8897e8f0d408240fe8", null ],
     [ "IsSuspendSupported", "class_urho3_d_1_1_plugin_stack.html#a8bdfb03771b6c29d18dac579f7fea201", null ],

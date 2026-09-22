@@ -938,7 +938,7 @@ var hierarchy =
           ] ]
         ] ],
         [ "Urho3D::DynamicIndexBuffer", "class_urho3_d_1_1_dynamic_index_buffer.html", null ],
-        [ "Urho3D::DynamicModule", "class_urho3_d_1_1_dynamic_module.html", null ],
+        [ "Urho3D::DynamicLibrary", "class_urho3_d_1_1_dynamic_library.html", null ],
         [ "Urho3D::DynamicVertexBuffer", "class_urho3_d_1_1_dynamic_vertex_buffer.html", null ],
         [ "Urho3D::Engine", "class_urho3_d_1_1_engine.html", null ],
         [ "Urho3D::File", "class_urho3_d_1_1_file.html", null ],
@@ -987,13 +987,13 @@ var hierarchy =
         [ "Urho3D::ParticleGraphSystem", "class_urho3_d_1_1_particle_graph_system.html", null ],
         [ "Urho3D::PipelineStateBuilder", "class_urho3_d_1_1_pipeline_state_builder.html", null ],
         [ "Urho3D::Plugin", "class_urho3_d_1_1_plugin.html", [
-          [ "Urho3D::ModulePlugin", "class_urho3_d_1_1_module_plugin.html", null ],
-          [ "Urho3D::ScriptBundlePlugin", "class_urho3_d_1_1_script_bundle_plugin.html", null ]
-        ] ],
-        [ "Urho3D::PluginApplication", "class_urho3_d_1_1_plugin_application.html", [
-          [ "Urho3D::MainPluginApplication", "class_urho3_d_1_1_main_plugin_application.html", [
+          [ "Urho3D::ExecutablePlugin", "class_urho3_d_1_1_executable_plugin.html", [
             [ "Urho3D::SceneViewerApplication", "class_urho3_d_1_1_scene_viewer_application.html", null ]
           ] ]
+        ] ],
+        [ "Urho3D::PluginInstance", "class_urho3_d_1_1_plugin_instance.html", [
+          [ "Urho3D::DynamicLibraryPluginInstance", "class_urho3_d_1_1_dynamic_library_plugin_instance.html", null ],
+          [ "Urho3D::ScriptBundlePluginInstance", "class_urho3_d_1_1_script_bundle_plugin_instance.html", null ]
         ] ],
         [ "Urho3D::PluginManager", "class_urho3_d_1_1_plugin_manager.html", null ],
         [ "Urho3D::PluginStack", "class_urho3_d_1_1_plugin_stack.html", null ],
@@ -1568,7 +1568,7 @@ var hierarchy =
       [ "Urho3D::SharedPtr< Urho3D::RigidBody2D >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::CollisionShape2D >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::ShaderProgramCompositor >", "class_urho3_d_1_1_shared_ptr.html", null ],
-      [ "Urho3D::SharedPtr< Urho3D::PluginApplication >", "class_urho3_d_1_1_shared_ptr.html", null ],
+      [ "Urho3D::SharedPtr< Urho3D::Plugin >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::PluginStack >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::DirectionAggregator >", "class_urho3_d_1_1_shared_ptr.html", null ],
       [ "Urho3D::SharedPtr< Urho3D::RaycastVehicleWheel >", "class_urho3_d_1_1_shared_ptr.html", null ],
@@ -1693,7 +1693,7 @@ var hierarchy =
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::Pass, Urho3D::Pass >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::PipelineStateBuilder, Urho3D::PipelineStateBuilder >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::PListFile, Urho3D::PListFile >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
-    [ "Urho3D::Detail::SharedPtrBase< Urho3D::PluginApplication, Urho3D::PluginApplication >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
+    [ "Urho3D::Detail::SharedPtrBase< Urho3D::Plugin, Urho3D::Plugin >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::PluginStack, Urho3D::PluginStack >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::PrefabResource, Urho3D::PrefabResource >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
     [ "Urho3D::Detail::SharedPtrBase< Urho3D::PropertySet2D, Urho3D::PropertySet2D >", "class_urho3_d_1_1_detail_1_1_shared_ptr_base.html", null ],
@@ -1988,7 +1988,7 @@ var hierarchy =
       [ "Urho3D::WeakPtr< ReplicatedPeer, RefCounted >", "class_urho3_d_1_1_weak_ptr.html", null ],
       [ "Urho3D::WeakPtr< Urho3D::NetworkObject >", "class_urho3_d_1_1_weak_ptr.html", null ],
       [ "Urho3D::WeakPtr< Urho3D::DynamicNavigationMesh >", "class_urho3_d_1_1_weak_ptr.html", null ],
-      [ "Urho3D::WeakPtr< Urho3D::PluginApplication >", "class_urho3_d_1_1_weak_ptr.html", null ],
+      [ "Urho3D::WeakPtr< Urho3D::Plugin >", "class_urho3_d_1_1_weak_ptr.html", null ],
       [ "Urho3D::WeakPtr< Urho3D::RaycastVehicle >", "class_urho3_d_1_1_weak_ptr.html", null ],
       [ "Urho3D::WeakPtr< Urho3D::ReflectionProbe >", "class_urho3_d_1_1_weak_ptr.html", null ],
       [ "Urho3D::WeakPtr< Urho3D::CubemapRenderer >", "class_urho3_d_1_1_weak_ptr.html", null ],
@@ -2052,7 +2052,7 @@ var hierarchy =
     [ "Urho3D::Detail::WeakPtrBase< Urho3D::Obstacle, Urho3D::Obstacle >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base.html", null ],
     [ "Urho3D::Detail::WeakPtrBase< Urho3D::PhysicsWorld, Urho3D::PhysicsWorld >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base.html", null ],
     [ "Urho3D::Detail::WeakPtrBase< Urho3D::PhysicsWorld2D, Urho3D::PhysicsWorld2D >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base.html", null ],
-    [ "Urho3D::Detail::WeakPtrBase< Urho3D::PluginApplication, Urho3D::PluginApplication >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base.html", null ],
+    [ "Urho3D::Detail::WeakPtrBase< Urho3D::Plugin, Urho3D::Plugin >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base.html", null ],
     [ "Urho3D::Detail::WeakPtrBase< Urho3D::RaycastVehicle, Urho3D::RaycastVehicle >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base.html", null ],
     [ "Urho3D::Detail::WeakPtrBase< Urho3D::RefCounted, Urho3D::RefCounted >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base.html", null ],
     [ "Urho3D::Detail::WeakPtrBase< Urho3D::ReflectionProbe, Urho3D::ReflectionProbe >", "class_urho3_d_1_1_detail_1_1_weak_ptr_base.html", null ],
