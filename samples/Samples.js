@@ -4069,8 +4069,9 @@ var SOCKFS = {
     if (family != 2) {
       throw new FS.ErrnoError(5);
     }
+    var flags = 2;
     type &= ~526336;
-    // Some applications may pass it; it makes no sense for a single process.
+    // SOCK_CLOEXEC makes no sense for a single process.
     // Emscripten only supports SOCK_STREAM and SOCK_DGRAM
     if (type != 1 && type != 2) {
       throw new FS.ErrnoError(28);
@@ -4103,7 +4104,7 @@ var SOCKFS = {
     var stream = FS.createStream({
       path: name,
       node,
-      flags: 2,
+      flags,
       seekable: false,
       stream_ops: SOCKFS.stream_ops
     });
@@ -5697,8 +5698,28 @@ function usesDestructorStack(argTypes) {
   return false;
 }
 
+function argsUseStackAlloc(argTypes) {
+  // Skip return value at index 0 - only arguments stack-allocate.
+  for (var i = 1; i < argTypes.length; ++i) {
+    if (argTypes[i] !== null && argTypes[i].argStackAlloc) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync) {
   var needsDestructorStack = usesDestructorStack(argTypes);
+  var argsNeedStack = argsUseStackAlloc(argTypes);
+  // JSPI-async invokers resume after the frame would be gone, so they
+  // defer through the destructors array instead.
+  var useStackFrame = argsNeedStack && !isAsync && !needsDestructorStack;
+  if (argsNeedStack && !useStackFrame) {
+    // A stack-allocating type must never see a null destructors argument
+    // without a bracketing frame; route it through the destructors array
+    // (it heap-allocates on that path).
+    needsDestructorStack = true;
+  }
   var argCount = argTypes.length - 2;
   var argsList = [];
   var argsListWired = [ "fn" ];
@@ -5715,8 +5736,17 @@ function createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync) {
   if (needsDestructorStack) {
     invokerFnBody += "var destructors = [];\n";
   }
+  if (useStackFrame) {
+    // The frame must be released on every completion, including a throwing
+    // argument conversion or callee: a skipped stackRestore permanently
+    // leaks wasm stack. `var` declarations hoist out of the try block.
+    invokerFnBody += "var sp = stackSave();\ntry {\n";
+  }
   var dtorStack = needsDestructorStack ? "destructors" : "null";
   var args1 = [ "humanName", "throwBindingError", "invoker", "fn", "runDestructors", "fromRetWire", "toClassParamWire" ];
+  if (useStackFrame) {
+    args1.push("stackSave", "stackRestore");
+  }
   if (isClassMethodFunc) {
     invokerFnBody += `var thisWired = toClassParamWire(${dtorStack}, this);\n`;
   }
@@ -5726,6 +5756,11 @@ function createJsInvoker(argTypes, isClassMethodFunc, returns, isAsync) {
     args1.push(argName);
   }
   invokerFnBody += (returns || isAsync ? "var rv = " : "") + `invoker(${argsListWired});\n`;
+  if (useStackFrame) {
+    // The callee has consumed the stack-allocated argument temporaries;
+    // release the frame before any post-call work.
+    invokerFnBody += "} finally {\nstackRestore(sp);\n}\n";
+  }
   if (needsDestructorStack) {
     invokerFnBody += "runDestructors(destructors);\n";
   } else {
@@ -5768,12 +5803,23 @@ function craftInvokerFunction(humanName, argTypes, classType, cppInvokerFunc, cp
   // Determine if we need to use a dynamic stack to store the destructors for the function parameters.
   // TODO: Remove this completely once all function invokers are being dynamically generated.
   var needsDestructorStack = usesDestructorStack(argTypes);
+  // Stack-allocating trivial value types get a stackSave/stackRestore
+  // bracket around the call; see createJsInvoker for the async carve-outs.
+  var argsNeedStack = argsUseStackAlloc(argTypes);
+  var useStackFrame = argsNeedStack && !isAsync && !needsDestructorStack;
+  if (argsNeedStack && !useStackFrame) {
+    needsDestructorStack = true;
+  }
   var returns = !argTypes[0].isVoid;
   // Build the arguments that will be passed into the closure around the invoker
   // function.
   var retType = argTypes[0];
   var instType = argTypes[1];
   var closureArgs = [ humanName, throwBindingError, cppInvokerFunc, cppTargetFunc, runDestructors, retType.fromWireType.bind(retType), instType?.toWireType.bind(instType) ];
+  if (useStackFrame) {
+    // Must mirror the `args1.push('stackSave', 'stackRestore')` in createJsInvoker.
+    closureArgs.push(stackSave, stackRestore);
+  }
   for (var i = 2; i < argCount; ++i) {
     var argType = argTypes[i];
     closureArgs.push(argType.toWireType.bind(argType));
@@ -6345,7 +6391,8 @@ var __emscripten_receive_on_main_thread_js = (funcIndex, emAsmAddr, callingThrea
   var rtn = func(...proxiedJSCallArgs);
   PThread.currentProxiedOperationCallerThread = 0;
   if (ctx) {
-    rtn.then(rtn => __emscripten_run_js_on_main_thread_done(ctx, ctxArgs, rtn));
+    // A PROXY_SYNC_ASYNC function may complete synchronously with a plain value.
+    Promise.resolve(rtn).then(rtn => __emscripten_run_js_on_main_thread_done(ctx, ctxArgs, rtn));
     return;
   }
   return rtn;
@@ -6704,10 +6751,15 @@ var runtimeKeepalivePop = () => {
 
 /** @param {number=} timeout */ var safeSetTimeout = (func, timeout) => {
   runtimeKeepalivePush();
-  return setTimeout(() => {
+  // Slot 0 is reserved so that, like setTimeout, ids are always non-zero.
+  safeSetTimeout.mapping ||= [ 0 ];
+  var id = safeSetTimeout.mapping.length;
+  safeSetTimeout.mapping[id] = setTimeout(() => {
+    safeSetTimeout.mapping[id] = undefined;
     runtimeKeepalivePop();
     callUserCallback(func);
   }, timeout);
+  return id;
 };
 
 var warnOnce = text => {
@@ -13458,7 +13510,7 @@ Module["FS_createLazyFile"] = FS_createLazyFile;
 var proxiedFunctionTable = [ _proc_exit, exitOnMainThread, pthreadCreateProxied, ___syscall_bind, ___syscall_fcntl64, ___syscall_fstat64, ___syscall_getcwd, ___syscall_getdents64, ___syscall_ioctl, ___syscall_lstat64, ___syscall_mkdirat, ___syscall_newfstatat, ___syscall_openat, ___syscall_recvfrom, ___syscall_rmdir, ___syscall_sendto, ___syscall_setsockopt, ___syscall_socket, ___syscall_stat64, ___syscall_unlinkat, _eglBindAPI, _eglChooseConfig, _eglCreateContext, _eglCreateWindowSurface, _eglDestroyContext, _eglDestroySurface, _eglGetConfigAttrib, _eglGetDisplay, _eglGetError, _eglInitialize, _eglMakeCurrent, _eglQueryString, _eglSwapBuffers, _eglSwapInterval, _eglTerminate, _eglWaitClient, _eglWaitNative, _emscripten_exit_fullscreen, getCanvasSizeMainThread, setCanvasElementSizeMainThread, _emscripten_exit_pointerlock, _emscripten_get_device_pixel_ratio, _emscripten_get_element_css_size, _emscripten_get_gamepad_status, _emscripten_get_num_gamepads, _emscripten_get_screen_size, _emscripten_request_fullscreen_strategy, _emscripten_request_pointerlock, _emscripten_sample_gamepad_data, _emscripten_set_beforeunload_callback_on_thread, _emscripten_set_blur_callback_on_thread, _emscripten_set_element_css_size, _emscripten_set_focus_callback_on_thread, _emscripten_set_fullscreenchange_callback_on_thread, _emscripten_set_gamepadconnected_callback_on_thread, _emscripten_set_gamepaddisconnected_callback_on_thread, _emscripten_set_keydown_callback_on_thread, _emscripten_set_keypress_callback_on_thread, _emscripten_set_keyup_callback_on_thread, _emscripten_set_mousedown_callback_on_thread, _emscripten_set_mouseenter_callback_on_thread, _emscripten_set_mouseleave_callback_on_thread, _emscripten_set_mousemove_callback_on_thread, _emscripten_set_mouseup_callback_on_thread, _emscripten_set_pointerlockchange_callback_on_thread, _emscripten_set_resize_callback_on_thread, _emscripten_set_touchcancel_callback_on_thread, _emscripten_set_touchend_callback_on_thread, _emscripten_set_touchmove_callback_on_thread, _emscripten_set_touchstart_callback_on_thread, _emscripten_set_visibilitychange_callback_on_thread, _emscripten_set_wheel_callback_on_thread, _emscripten_set_window_title, _environ_get, _environ_sizes_get, _fd_close, _fd_read, _fd_seek, _fd_write ];
 
 var ASM_CONSTS = {
-  1948469: $0 => {
+  1948405: $0 => {
     var str = UTF8ToString($0) + "\n\n" + "Abort/Retry/Ignore/AlwaysIgnore? [ariA] :";
     var reply = window.prompt(str, "i");
     if (reply === null) {
@@ -13466,10 +13518,10 @@ var ASM_CONSTS = {
     }
     return allocate(intArrayFromString(reply), "i8", ALLOC_NORMAL);
   },
-  1948694: ($0, $1) => {
+  1948630: ($0, $1) => {
     alert(UTF8ToString($0) + "\n\n" + UTF8ToString($1));
   },
-  1948751: () => {
+  1948687: () => {
     if (typeof (AudioContext) !== "undefined") {
       return true;
     } else if (typeof (webkitAudioContext) !== "undefined") {
@@ -13477,7 +13529,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1948898: () => {
+  1948834: () => {
     if ((typeof (navigator.mediaDevices) !== "undefined") && (typeof (navigator.mediaDevices.getUserMedia) !== "undefined")) {
       return true;
     } else if (typeof (navigator.webkitGetUserMedia) !== "undefined") {
@@ -13485,7 +13537,7 @@ var ASM_CONSTS = {
     }
     return false;
   },
-  1949132: $0 => {
+  1949068: $0 => {
     if (typeof (Module["SDL2"]) === "undefined") {
       Module["SDL2"] = {};
     }
@@ -13507,11 +13559,11 @@ var ASM_CONSTS = {
     }
     return SDL2.audioContext === undefined ? -1 : 0;
   },
-  1949625: () => {
+  1949561: () => {
     var SDL2 = Module["SDL2"];
     return SDL2.audioContext.sampleRate;
   },
-  1949693: ($0, $1, $2, $3) => {
+  1949629: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     var have_microphone = function(stream) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13552,7 +13604,7 @@ var ASM_CONSTS = {
       }, have_microphone, no_microphone);
     }
   },
-  1951345: ($0, $1, $2, $3) => {
+  1951281: ($0, $1, $2, $3) => {
     var SDL2 = Module["SDL2"];
     SDL2.audio.scriptProcessorNode = SDL2.audioContext["createScriptProcessor"]($1, 0, $0);
     SDL2.audio.scriptProcessorNode["onaudioprocess"] = function(e) {
@@ -13564,7 +13616,7 @@ var ASM_CONSTS = {
     };
     SDL2.audio.scriptProcessorNode["connect"](SDL2.audioContext["destination"]);
   },
-  1951755: ($0, $1) => {
+  1951691: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.capture.currentCaptureBuffer.numberOfChannels;
     for (var c = 0; c < numChannels; ++c) {
@@ -13583,7 +13635,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1952360: ($0, $1) => {
+  1952296: ($0, $1) => {
     var SDL2 = Module["SDL2"];
     var numChannels = SDL2.audio.currentOutputBuffer["numberOfChannels"];
     for (var c = 0; c < numChannels; ++c) {
@@ -13596,7 +13648,7 @@ var ASM_CONSTS = {
       }
     }
   },
-  1952840: $0 => {
+  1952776: $0 => {
     var SDL2 = Module["SDL2"];
     if ($0) {
       if (SDL2.capture.silenceTimer !== undefined) {
@@ -13634,7 +13686,7 @@ var ASM_CONSTS = {
       SDL2.audioContext = undefined;
     }
   },
-  1954012: ($0, $1, $2) => {
+  1953948: ($0, $1, $2) => {
     var w = $0;
     var h = $1;
     var pixels = $2;
@@ -13705,7 +13757,7 @@ var ASM_CONSTS = {
     }
     SDL2.ctx.putImageData(SDL2.image, 0, 0);
   },
-  1955481: ($0, $1, $2, $3, $4) => {
+  1955417: ($0, $1, $2, $3, $4) => {
     var w = $0;
     var h = $1;
     var hot_x = $2;
@@ -13742,19 +13794,19 @@ var ASM_CONSTS = {
     stringToUTF8(url, urlBuf, url.length + 1);
     return urlBuf;
   },
-  1956470: $0 => {
+  1956406: $0 => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = UTF8ToString($0);
     }
   },
-  1956553: () => {
+  1956489: () => {
     if (Module["canvas"]) {
       Module["canvas"].style["cursor"] = "none";
     }
   },
-  1956622: () => window.innerWidth,
-  1956652: () => window.innerHeight,
-  1956683: $0 => {
+  1956558: () => window.innerWidth,
+  1956588: () => window.innerHeight,
+  1956619: $0 => {
     try {
       const context = GL.getContext($0);
       if (!context) {
