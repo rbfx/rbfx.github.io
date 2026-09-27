@@ -558,6 +558,7 @@ var annotated_dup =
       [ "IKTrigonometricChain", "class_urho3_d_1_1_i_k_trigonometric_chain.html", "class_urho3_d_1_1_i_k_trigonometric_chain" ],
       [ "Image", "class_urho3_d_1_1_image.html", "class_urho3_d_1_1_image" ],
       [ "ImageCube", "class_urho3_d_1_1_image_cube.html", "class_urho3_d_1_1_image_cube" ],
+      [ "ImageMipMapParams", "struct_urho3_d_1_1_image_mip_map_params.html", "struct_urho3_d_1_1_image_mip_map_params" ],
       [ "ImGuiDiligentRendererEx", "class_urho3_d_1_1_im_gui_diligent_renderer_ex.html", null ],
       [ "IncrementalLightBaker", "class_urho3_d_1_1_incremental_light_baker.html", "class_urho3_d_1_1_incremental_light_baker" ],
       [ "IncrementalLightBakerSettings", "struct_urho3_d_1_1_incremental_light_baker_settings.html", "struct_urho3_d_1_1_incremental_light_baker_settings" ],

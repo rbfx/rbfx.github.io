@@ -1,5 +1,7 @@
 var NAVTREEINDEX53 =
 {
+"scene-animation.html":[0,0,2,3,1],
+"serializable-resource.html":[0,0,2,4,1],
 "serialization-and-resources.html":[0,0,2,4],
 "shake-component.html":[0,0,2,3,3],
 "standard-network-behaviors.html":[0,0,2,2,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX53 =
 "struct_urho3_d_1_1_calculate_animation_velocity_params.html":[6,0,2,111],
 "struct_urho3_d_1_1_calculate_animation_velocity_task.html":[6,0,2,112],
 "struct_urho3_d_1_1_calculate_animation_velocity_transformer_1_1_task_description.html":[6,0,2,113,0],
-"struct_urho3_d_1_1_calculate_animation_velocity_transformer_1_1_transformer_params.html":[6,0,2,113,1],
-"struct_urho3_d_1_1_camera_1_1_cached_inverse.html":[6,0,2,114,0],
-"struct_urho3_d_1_1_camera_1_1_cached_projection.html":[6,0,2,114,1]
+"struct_urho3_d_1_1_calculate_animation_velocity_transformer_1_1_transformer_params.html":[6,0,2,113,1]
 };

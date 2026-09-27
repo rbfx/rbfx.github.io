@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"struct_urho3_d_1_1_camera_1_1_cached_inverse.html":[6,0,2,114,0],
+"struct_urho3_d_1_1_camera_1_1_cached_projection.html":[6,0,2,114,1],
 "struct_urho3_d_1_1_camera_1_1_cached_projection.html#a1e7ca0a4c0185583edb7e6e9b717e6d9":[6,0,2,114,1,3],
 "struct_urho3_d_1_1_camera_1_1_cached_projection.html#a7c8924c5651e6e90aa7e52a01d566f9c":[6,0,2,114,1,1],
 "struct_urho3_d_1_1_camera_1_1_cached_projection.html#aa8131a980b681978b0514b3aa06b5d8b":[6,0,2,114,1,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX54 =
 "struct_urho3_d_1_1_edge_stopping_gauss_filter_parameters.html#acd5a8d814f8416718942f1c1b49409e9":[6,0,2,230,1],
 "struct_urho3_d_1_1_edge_stopping_gauss_filter_parameters.html#afb9cd0cb55398cc083a14ce70d29e9e8":[6,0,2,230,4],
 "struct_urho3_d_1_1_emission_light_tracing_settings.html":[6,0,2,231],
-"struct_urho3_d_1_1_emission_light_tracing_settings.html#a5b5952f0a3a47179badf1be720f80678":[6,0,2,231,0],
-"struct_urho3_d_1_1_empty_object.html":[6,0,2,232],
-"struct_urho3_d_1_1_empty_serializable_object.html":[6,0,2,233]
+"struct_urho3_d_1_1_emission_light_tracing_settings.html#a5b5952f0a3a47179badf1be720f80678":[6,0,2,231,0]
 };

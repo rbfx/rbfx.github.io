@@ -106,6 +106,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4fab626b201504b3e6f52e7cf9bba2a1" id="r_a4fab626b201504b3e6f52e7cf9bba2a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_image.html#a4fab626b201504b3e6f52e7cf9bba2a1">SaveFile</a> (const <a class="el" href="struct_urho3_d_1_1_file_identifier.html">FileIdentifier</a> &amp;fileName) const override</td></tr>
 <tr class="memdesc:a4fab626b201504b3e6f52e7cf9bba2a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the image to a file. Format of the image is determined by file extension. JPG is saved with maximum quality.  <br /></td></tr>
 <tr class="separator:a4fab626b201504b3e6f52e7cf9bba2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8836958707452d3d0bd4b8ef8ade1e7c" id="r_a8836958707452d3d0bd4b8ef8ade1e7c"><td class="memItemLeft" align="right" valign="top"><a id="a8836958707452d3d0bd4b8ef8ade1e7c" name="a8836958707452d3d0bd4b8ef8ade1e7c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetMipMapParams</b> (const <a class="el" href="struct_urho3_d_1_1_image_mip_map_params.html">ImageMipMapParams</a> &amp;mipParams)</td></tr>
+<tr class="memdesc:a8836958707452d3d0bd4b8ef8ade1e7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mipmap generation parameters. Does not affect existing mipmap levels. <br /></td></tr>
+<tr class="separator:a8836958707452d3d0bd4b8ef8ade1e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a409d2c88160a9e4f3e95004d2108df56" id="r_a409d2c88160a9e4f3e95004d2108df56"><td class="memItemLeft" align="right" valign="top"><a id="a409d2c88160a9e4f3e95004d2108df56" name="a409d2c88160a9e4f3e95004d2108df56"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>SetSize</b> (int width, int height, unsigned components)</td></tr>
 <tr class="memdesc:a409d2c88160a9e4f3e95004d2108df56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set 2D size and number of color components. Old image data will be destroyed and new data is undefined. Return true if successful. <br /></td></tr>
@@ -237,6 +241,10 @@ unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetData</b
 <tr class="separator:aa9565f68aace04792e112d62407c0000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab76609c41352debfcdce131a34b445c1" id="r_ab76609c41352debfcdce131a34b445c1"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_urho3_d_1_1_image.html#ab76609c41352debfcdce131a34b445c1">GetNumCompressedLevels</a> () const</td></tr>
 <tr class="separator:ab76609c41352debfcdce131a34b445c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25de40692ca11567a03cfab2dfd3964d" id="r_a25de40692ca11567a03cfab2dfd3964d"><td class="memItemLeft" align="right" valign="top"><a id="a25de40692ca11567a03cfab2dfd3964d" name="a25de40692ca11567a03cfab2dfd3964d"></a>
+const <a class="el" href="struct_urho3_d_1_1_image_mip_map_params.html">ImageMipMapParams</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetMipMapParams</b> () const</td></tr>
+<tr class="memdesc:a25de40692ca11567a03cfab2dfd3964d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return mipmap generation parameters. <br /></td></tr>
+<tr class="separator:a25de40692ca11567a03cfab2dfd3964d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f468ddfcf390ae960f81f75eba8d7df" id="r_a2f468ddfcf390ae960f81f75eba8d7df"><td class="memItemLeft" align="right" valign="top"><a id="a2f468ddfcf390ae960f81f75eba8d7df" name="a2f468ddfcf390ae960f81f75eba8d7df"></a>
 <a class="el" href="class_urho3_d_1_1_shared_ptr.html">SharedPtr</a>&lt; <a class="el" href="class_urho3_d_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetNextLevel</b> () const</td></tr>
 <tr class="memdesc:a2f468ddfcf390ae960f81f75eba8d7df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return next mip level by bilinear filtering. Note that if the image is already 1x1x1, will keep returning an image of that size. <br /></td></tr>
@@ -606,6 +614,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>sRGB_</b> {}</td></tr
 TextureFormat&#160;</td><td class="memItemRight" valign="bottom"><b>compressedFormat_</b> {}</td></tr>
 <tr class="memdesc:a28bcd83ff2416363bfac649ebdb91cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compressed format. <br /></td></tr>
 <tr class="separator:a28bcd83ff2416363bfac649ebdb91cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08a05bd1bdc9486b626a9a65de858eaf" id="r_a08a05bd1bdc9486b626a9a65de858eaf"><td class="memItemLeft" align="right" valign="top"><a id="a08a05bd1bdc9486b626a9a65de858eaf" name="a08a05bd1bdc9486b626a9a65de858eaf"></a>
+<a class="el" href="struct_urho3_d_1_1_image_mip_map_params.html">ImageMipMapParams</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mipParams_</b></td></tr>
+<tr class="memdesc:a08a05bd1bdc9486b626a9a65de858eaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mipmap generation parameters. <br /></td></tr>
+<tr class="separator:a08a05bd1bdc9486b626a9a65de858eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa13724a585a36835ed13842ab2ce3535" id="r_aa13724a585a36835ed13842ab2ce3535"><td class="memItemLeft" align="right" valign="top"><a id="aa13724a585a36835ed13842ab2ce3535" name="aa13724a585a36835ed13842ab2ce3535"></a>
 ea::shared_array&lt; unsigned char &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data_</b></td></tr>
 <tr class="memdesc:aa13724a585a36835ed13842ab2ce3535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel data. <br /></td></tr>

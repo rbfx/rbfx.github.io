@@ -402,6 +402,7 @@ var hierarchy =
     [ "Urho3D::IKNodeSegment", "struct_urho3_d_1_1_i_k_node_segment.html", null ],
     [ "Urho3D::IKSettings", "struct_urho3_d_1_1_i_k_settings.html", null ],
     [ "Urho3D::IKTrigonometricChain", "class_urho3_d_1_1_i_k_trigonometric_chain.html", null ],
+    [ "Urho3D::ImageMipMapParams", "struct_urho3_d_1_1_image_mip_map_params.html", null ],
     [ "Diligent::ImGuiDiligentRenderer", null, [
       [ "Urho3D::ImGuiDiligentRendererEx", "class_urho3_d_1_1_im_gui_diligent_renderer_ex.html", null ]
     ] ],

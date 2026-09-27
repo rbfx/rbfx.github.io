@@ -4,6 +4,7 @@ var class_urho3_d_1_1_texture =
     [ "~Texture", "class_urho3_d_1_1_texture.html#ae75d8ed56606f3c70c4c03ac7a6c8775", null ],
     [ "CheckTextureBudget", "class_urho3_d_1_1_texture.html#a0af2da2738e6f62ee40ae331a5891a03", null ],
     [ "CreateForImage", "class_urho3_d_1_1_texture.html#a7f7f24f09ce3441a11877cb003e1c8f8", null ],
+    [ "CreateMipMapParamsFromXML", "class_urho3_d_1_1_texture.html#a37478bd7f94008fc8b00df53188582f4", null ],
     [ "GetAddressMode", "class_urho3_d_1_1_texture.html#a9ade85b2e17860bee2652b704fa45a43", null ],
     [ "GetAnisotropy", "class_urho3_d_1_1_texture.html#ac3d7d92e015f66b7e5812c783f46a215", null ],
     [ "GetAutoResolve", "class_urho3_d_1_1_texture.html#afac4f70c3ea7c7e681ac36d8472af876", null ],
