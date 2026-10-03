@@ -1402,15 +1402,8 @@ var FS_stdin_getChar = () => {
       var BUFSIZE = 256;
       var buf = Buffer.alloc(BUFSIZE);
       var bytesRead = 0;
-      // For some reason we must suppress a closure warning here, even though
-      // fd definitely exists on process.stdin, and is even the proper way to
-      // get the fd of stdin,
-      // https://github.com/nodejs/help/issues/2136#issuecomment-523649904
-      // This started to happen after moving this logic out of library_tty.js,
-      // so it is related to the surrounding code in some unclear manner.
-      /** @suppress {missingProperties} */ var fd = process.stdin.fd;
       try {
-        bytesRead = fs.readSync(fd, buf, 0, BUFSIZE);
+        bytesRead = fs.readSync(process.stdin.fd, buf, 0, BUFSIZE);
       } catch (e) {
         // Cross-platform differences: on Windows, reading EOF throws an
         // exception, but on other OSes, reading EOF returns 0. Uniformize
@@ -1418,7 +1411,7 @@ var FS_stdin_getChar = () => {
         if (e.toString().includes("EOF")) bytesRead = 0; else throw e;
       }
       if (bytesRead > 0) {
-        result = buf.slice(0, bytesRead).toString("utf-8");
+        result = buf.toString("utf-8", 0, bytesRead);
       }
     } else if (globalThis.window?.prompt) {
       // Browser.
@@ -3539,8 +3532,8 @@ var FS = {
     return stream.stream_ops.ioctl(stream, cmd, arg);
   },
   readFile(path, opts = {}) {
-    opts.flags = opts.flags ?? 0;
-    opts.encoding = opts.encoding ?? "binary";
+    opts.flags ??= 0;
+    opts.encoding ??= "binary";
     if (opts.encoding !== "utf8" && opts.encoding !== "binary") {
       abort(`Invalid encoding type "${opts.encoding}"`);
     }
@@ -3556,7 +3549,7 @@ var FS = {
     return buf;
   },
   writeFile(path, data, opts = {}) {
-    opts.flags = opts.flags ?? 577;
+    opts.flags ??= 577;
     var stream = FS.open(path, opts.flags, opts.mode);
     data = FS_fileDataToTypedArray(data);
     FS.write(stream, data, 0, data.byteLength, undefined, opts.canOwn);
@@ -3712,13 +3705,6 @@ var FS = {
         FS.close(stream);
       }
     }
-  },
-  findObject(path, dontResolveLastLink) {
-    var ret = FS.analyzePath(path, dontResolveLastLink);
-    if (!ret.exists) {
-      return null;
-    }
-    return ret.object;
   },
   analyzePath(path, dontResolveLastLink) {
     // operate from within the context of the symlink's target
@@ -4034,6 +4020,130 @@ var FS = {
   }
 };
 
+var ERRNO_CODES = {
+  "EPERM": 63,
+  "ENOENT": 44,
+  "ESRCH": 71,
+  "EINTR": 27,
+  "EIO": 29,
+  "ENXIO": 60,
+  "E2BIG": 1,
+  "ENOEXEC": 45,
+  "EBADF": 8,
+  "ECHILD": 12,
+  "EAGAIN": 6,
+  "EWOULDBLOCK": 6,
+  "ENOMEM": 48,
+  "EACCES": 2,
+  "EFAULT": 21,
+  "ENOTBLK": 105,
+  "EBUSY": 10,
+  "EEXIST": 20,
+  "EXDEV": 75,
+  "ENODEV": 43,
+  "ENOTDIR": 54,
+  "EISDIR": 31,
+  "EINVAL": 28,
+  "ENFILE": 41,
+  "EMFILE": 33,
+  "ENOTTY": 59,
+  "ETXTBSY": 74,
+  "EFBIG": 22,
+  "ENOSPC": 51,
+  "ESPIPE": 70,
+  "EROFS": 69,
+  "EMLINK": 34,
+  "EPIPE": 64,
+  "EDOM": 18,
+  "ERANGE": 68,
+  "ENOMSG": 49,
+  "EIDRM": 24,
+  "ECHRNG": 106,
+  "EL2NSYNC": 156,
+  "EL3HLT": 107,
+  "EL3RST": 108,
+  "ELNRNG": 109,
+  "EUNATCH": 110,
+  "ENOCSI": 111,
+  "EL2HLT": 112,
+  "EDEADLK": 16,
+  "ENOLCK": 46,
+  "EBADE": 113,
+  "EBADR": 114,
+  "EXFULL": 115,
+  "ENOANO": 104,
+  "EBADRQC": 103,
+  "EBADSLT": 102,
+  "EDEADLOCK": 16,
+  "EBFONT": 101,
+  "ENOSTR": 100,
+  "ENODATA": 116,
+  "ETIME": 117,
+  "ENOSR": 118,
+  "ENONET": 119,
+  "ENOPKG": 120,
+  "EREMOTE": 121,
+  "ENOLINK": 47,
+  "EADV": 122,
+  "ESRMNT": 123,
+  "ECOMM": 124,
+  "EPROTO": 65,
+  "EMULTIHOP": 36,
+  "EDOTDOT": 125,
+  "EBADMSG": 9,
+  "ENOTUNIQ": 126,
+  "EBADFD": 127,
+  "EREMCHG": 128,
+  "ELIBACC": 129,
+  "ELIBBAD": 130,
+  "ELIBSCN": 131,
+  "ELIBMAX": 132,
+  "ELIBEXEC": 133,
+  "ENOSYS": 52,
+  "ENOTEMPTY": 55,
+  "ENAMETOOLONG": 37,
+  "ELOOP": 32,
+  "EOPNOTSUPP": 138,
+  "EPFNOSUPPORT": 139,
+  "ECONNRESET": 15,
+  "ENOBUFS": 42,
+  "EAFNOSUPPORT": 5,
+  "EPROTOTYPE": 67,
+  "ENOTSOCK": 57,
+  "ENOPROTOOPT": 50,
+  "ESHUTDOWN": 140,
+  "ECONNREFUSED": 14,
+  "EADDRINUSE": 3,
+  "ECONNABORTED": 13,
+  "ENETUNREACH": 40,
+  "ENETDOWN": 38,
+  "ETIMEDOUT": 73,
+  "EHOSTDOWN": 142,
+  "EHOSTUNREACH": 23,
+  "EINPROGRESS": 26,
+  "EALREADY": 7,
+  "EDESTADDRREQ": 17,
+  "EMSGSIZE": 35,
+  "EPROTONOSUPPORT": 66,
+  "ESOCKTNOSUPPORT": 137,
+  "EADDRNOTAVAIL": 4,
+  "ENETRESET": 39,
+  "EISCONN": 30,
+  "ENOTCONN": 53,
+  "ETOOMANYREFS": 141,
+  "EUSERS": 136,
+  "EDQUOT": 19,
+  "ESTALE": 72,
+  "ENOTSUP": 138,
+  "ENOMEDIUM": 148,
+  "EILSEQ": 25,
+  "EOVERFLOW": 61,
+  "ECANCELED": 11,
+  "ENOTRECOVERABLE": 56,
+  "EOWNERDEAD": 62,
+  "ESTRPIPE": 135
+};
+
 var SOCKFS = {
   websocketArgs: {},
   callbacks: {},
@@ -4346,12 +4456,21 @@ var SOCKFS = {
       };
     },
     poll(sock) {
-      if (sock.type === 1 && sock.server) {
+      if (sock.type === 1 && (sock.server || sock.listening)) {
+        if (sock.error) {
+          return 8;
+        }
+        if (!sock.server) {
+          return 16;
+        }
         // listen sockets should only say they're available for reading
         // if there are pending clients.
         return sock.pending.length ? (64 | 1) : 0;
       }
       var mask = 0;
+      if (sock.error) {
+        mask |= 8;
+      }
       var dest = sock.type === 1 ? // we only care about the socket state for connection-based sockets
       SOCKFS.websocket_sock_ops.getPeer(sock, sock.daddr, sock.dport) : null;
       if (sock.recv_queue.length || !dest || // connection-less sockets are always ready to read
@@ -4401,6 +4520,7 @@ var SOCKFS = {
       }
     },
     close(sock) {
+      sock.listening = false;
       // if we've spawned a listen server, close it
       if (sock.server) {
         try {
@@ -4474,7 +4594,7 @@ var SOCKFS = {
       if (!ENVIRONMENT_IS_NODE) {
         throw new FS.ErrnoError(138);
       }
-      if (sock.server) {
+      if (sock.server || sock.listening) {
         throw new FS.ErrnoError(28);
       }
       var WebSocketServer = require("ws").Server;
@@ -4483,6 +4603,7 @@ var SOCKFS = {
         host,
         port: sock.sport
       });
+      sock.listening = true;
       SOCKFS.emit("listen", sock.stream.fd);
       // Send Event with listen fd.
       sock.server.on("connection", ws => {
@@ -4510,18 +4631,22 @@ var SOCKFS = {
         sock.server = null;
       });
       sock.server.on("error", error => {
-        // Although the ws library may pass errors that may be more descriptive than
-        // ECONNREFUSED they are not necessarily the expected error code e.g.
-        // ENOTFOUND on getaddrinfo seems to be node.js specific, so using EHOSTUNREACH
-        // is still probably the most useful thing to do. This error shouldn't
-        // occur in a well written app as errors should get trapped in the compiled
-        // app's own getaddrinfo call.
-        sock.error = 23;
-        // Used in getsockopt for SOL_SOCKET/SO_ERROR test.
-        SOCKFS.emit("error", [ sock.stream.fd, sock.error, "EHOSTUNREACH: Host is unreachable" ]);
+        sock.error = (error.code && ERRNO_CODES[error.code]) || 29;
+        SOCKFS.emit("error", [ sock.stream.fd, sock.error, error.message || error.code || "Server error" ]);
+        if (sock.server) {
+          try {
+            sock.server.close();
+          } catch (e) {}
+          sock.server = null;
+        }
       });
     },
     accept(listensock) {
+      if (listensock.error) {
+        var err = listensock.error;
+        listensock.error = null;
+        throw new FS.ErrnoError(err);
+      }
       if (!listensock.server || !listensock.pending.length) {
         throw new FS.ErrnoError(28);
       }
@@ -4952,15 +5077,17 @@ var SYSCALLS = {
     (growMemViews(), HEAP64)[(((buf) + (24)) >> 3)] = BigInt(stat.size);
     (growMemViews(), HEAP32)[(((buf) + (32)) >> 2)] = 4096;
     (growMemViews(), HEAP32)[(((buf) + (36)) >> 2)] = stat.blocks;
-    var atime = stat.atime.getTime();
-    var mtime = stat.mtime.getTime();
-    var ctime = stat.ctime.getTime();
+    // Prefer `*Ms` properties if available (e.g. from NODEFS / host `fs.Stats`)
+    // for sub-millisecond precision; fall back to Date#getTime for other filesystems.
+    var atime = stat.atimeMs ?? stat.atime.getTime();
+    var mtime = stat.mtimeMs ?? stat.mtime.getTime();
+    var ctime = stat.ctimeMs ?? stat.ctime.getTime();
     (growMemViews(), HEAP64)[(((buf) + (40)) >> 3)] = BigInt(Math.floor(atime / 1e3));
-    (growMemViews(), HEAPU32)[(((buf) + (48)) >> 2)] = (atime % 1e3) * 1e3 * 1e3;
+    (growMemViews(), HEAPU32)[(((buf) + (48)) >> 2)] = Math.floor((atime % 1e3) * 1e6);
     (growMemViews(), HEAP64)[(((buf) + (56)) >> 3)] = BigInt(Math.floor(mtime / 1e3));
-    (growMemViews(), HEAPU32)[(((buf) + (64)) >> 2)] = (mtime % 1e3) * 1e3 * 1e3;
+    (growMemViews(), HEAPU32)[(((buf) + (64)) >> 2)] = Math.floor((mtime % 1e3) * 1e6);
     (growMemViews(), HEAP64)[(((buf) + (72)) >> 3)] = BigInt(Math.floor(ctime / 1e3));
-    (growMemViews(), HEAPU32)[(((buf) + (80)) >> 2)] = (ctime % 1e3) * 1e3 * 1e3;
+    (growMemViews(), HEAPU32)[(((buf) + (80)) >> 2)] = Math.floor((ctime % 1e3) * 1e6);
     (growMemViews(), HEAP64)[(((buf) + (88)) >> 3)] = BigInt(stat.ino);
     return 0;
   },
@@ -6299,12 +6426,12 @@ var maybeExit = () => {
   }
 };
 
-var callUserCallback = func => {
+var callUserCallback = (func, ...args) => {
   if (ABORT) {
     return;
   }
   try {
-    return func();
+    return func(...args);
   } catch (e) {
     handleException(e);
   } finally {
@@ -6732,7 +6859,7 @@ function _clock_time_get(clk_id, ignored_precision, ptime) {
     return 52;
   }
   // "now" is in ms, and wasi times are in ns.
-  var nsec = Math.round(now * 1e3 * 1e3);
+  var nsec = Math.round(now * 1e6);
   (growMemViews(), HEAP64)[((ptime) >> 3)] = BigInt(nsec);
   return 0;
 }
@@ -6751,14 +6878,12 @@ var runtimeKeepalivePop = () => {
 
 /** @param {number=} timeout */ var safeSetTimeout = (func, timeout) => {
   runtimeKeepalivePush();
-  // Slot 0 is reserved so that, like setTimeout, ids are always non-zero.
-  safeSetTimeout.mapping ||= [ 0 ];
-  var id = safeSetTimeout.mapping.length;
-  safeSetTimeout.mapping[id] = setTimeout(() => {
-    safeSetTimeout.mapping[id] = undefined;
+  var id = safeSetTimeout.nextId++;
+  safeSetTimeout.pending.set(id, setTimeout(() => {
+    safeSetTimeout.pending.delete(id);
     runtimeKeepalivePop();
     callUserCallback(func);
-  }, timeout);
+  }, timeout));
   return id;
 };
 
@@ -9341,7 +9466,7 @@ var _emscripten_glDrawElements = (mode, count, type, indices) => {
   // bind any client-side buffers
   GL.preDrawHandleClientVertexAttribBindings(vertexes);
   GLctx.drawElements(mode, count, type, indices);
-  GL.postDrawHandleClientVertexAttribBindings(count);
+  GL.postDrawHandleClientVertexAttribBindings();
   if (!GLctx.currentElementArrayBufferBinding) {
     GLctx.bindBuffer(34963, null);
   }
@@ -13439,6 +13564,10 @@ FS.createPreloadedFile = FS_createPreloadedFile;
 FS.preloadFile = FS_preloadFile;
 
 FS.staticInit();
+
+safeSetTimeout.pending = new Map;
+
+safeSetTimeout.nextId = 1;
 
 // Signal GL rendering layer that processing of a new frame is about to
 // start. This helps it optimize VBO double-buffering and reduce GPU stalls.
