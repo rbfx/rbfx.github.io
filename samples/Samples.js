@@ -1699,6 +1699,11 @@ var MEMFS = {
       attr.atime = new Date(node.atime);
       attr.mtime = new Date(node.mtime);
       attr.ctime = new Date(node.ctime);
+      // A Date only holds whole milliseconds: also return the exact times
+      // (e.g. as set by utimensat), which SYSCALLS.writeStat prefers.
+      attr.atimeMs = node.atime;
+      attr.mtimeMs = node.mtime;
+      attr.ctimeMs = node.ctime;
       // NOTE: In our implementation, st_blocks = Math.ceil(st_size/st_blksize),
       //       but this is not required by the standard.
       attr.blksize = 4096;
@@ -1732,14 +1737,11 @@ var MEMFS = {
       try {
         new_node = FS.lookupNode(new_dir, new_name);
       } catch (e) {}
-      if (new_node) {
-        if (FS.isDir(old_node.mode)) {
-          // if we're overwriting a directory at new_name, make sure it's empty.
-          for (var i in new_node.contents) {
-            throw new FS.ErrnoError(55);
-          }
+      if (new_node && FS.isDir(old_node.mode)) {
+        // if we're overwriting a directory at new_name, make sure it's empty.
+        for (var i in new_node.contents) {
+          throw new FS.ErrnoError(55);
         }
-        FS.hashRemoveNode(new_node);
       }
       // do the internal rewiring
       delete old_node.parent.contents[old_node.name];
@@ -2346,7 +2348,7 @@ var FS = {
   devices: {},
   streams: [],
   nextInode: 1,
-  nameTable: null,
+  nameTable: [],
   currentPath: "/",
   initialized: false,
   ignorePermissions: true,
@@ -2979,7 +2981,7 @@ var FS = {
     mode |= 16384;
     return FS.mknod(path, mode, 0);
   },
-  mkdirTree(path, mode) {
+  mkdirTree(path, mode = 511) {
     var dirs = path.split("/");
     var d = "";
     for (var dir of dirs) {
@@ -3115,6 +3117,11 @@ var FS = {
     // do the underlying fs rename
     try {
       old_dir.node_ops.rename(old_node, new_dir, new_name);
+      // The replaced node is stale now. Evict it only after the rename
+      // succeeded: backends like NODEFS report node.id as st_ino.
+      if (new_node) {
+        FS.hashRemoveNode(new_node);
+      }
       // update old node (we do this here to avoid each backend
       // needing to)
       old_node.parent = new_dir;
@@ -3191,7 +3198,7 @@ var FS = {
     }
     return link.node_ops.readlink(link);
   },
-  stat(path, dontFollow) {
+  stat(path, dontFollow = false) {
     var lookup = FS.lookupPath(path, {
       follow: !dontFollow
     });
@@ -3211,14 +3218,14 @@ var FS = {
   lstat(path) {
     return FS.stat(path, true);
   },
-  doChmod(stream, node, mode, dontFollow) {
+  doChmod(stream, node, mode, dontFollow = false) {
     FS.doSetAttr(stream, node, {
       mode: (mode & 4095) | (node.mode & ~4095),
       ctime: Date.now(),
       dontFollow
     });
   },
-  chmod(path, mode, dontFollow) {
+  chmod(path, mode, dontFollow = false) {
     var node;
     if (typeof path == "string") {
       var lookup = FS.lookupPath(path, {
@@ -3237,13 +3244,13 @@ var FS = {
     var stream = FS.getStreamChecked(fd);
     FS.doChmod(stream, stream.node, mode, false);
   },
-  doChown(stream, node, dontFollow) {
+  doChown(stream, node, dontFollow = false) {
     FS.doSetAttr(stream, node, {
       timestamp: Date.now(),
       dontFollow
     });
   },
-  chown(path, uid, gid, dontFollow) {
+  chown(path, uid, gid, dontFollow = false) {
     var node;
     if (typeof path == "string") {
       var lookup = FS.lookupPath(path, {
@@ -3300,7 +3307,7 @@ var FS = {
     }
     FS.doTruncate(stream, stream.node, len);
   },
-  utime(path, atime, mtime, dontFollow) {
+  utime(path, atime, mtime, dontFollow = false) {
     var lookup = FS.lookupPath(path, {
       follow: !dontFollow
     });
@@ -3678,7 +3685,7 @@ var FS = {
     var stderr = FS.open("/dev/stderr", 1);
   },
   staticInit() {
-    FS.nameTable = new Array(4096);
+    FS.nameTable.length = 4096;
     FS.mount(MEMFS, {}, "/");
     FS.createDefaultDirectories();
     FS.createDefaultDevices();
@@ -3706,7 +3713,7 @@ var FS = {
       }
     }
   },
-  analyzePath(path, dontResolveLastLink) {
+  analyzePath(path, dontResolveLastLink = false) {
     // operate from within the context of the symlink's target
     try {
       var lookup = FS.lookupPath(path, {
@@ -5047,7 +5054,7 @@ var syscallGetVarargP = syscallGetVarargI;
 
 var SYSCALLS = {
   currentUmask: 18,
-  calculateAt(dirfd, path, allowEmpty) {
+  calculateAt(dirfd, path, allowEmpty = false) {
     if (PATH.isAbs(path)) {
       return path;
     }
@@ -5077,8 +5084,9 @@ var SYSCALLS = {
     (growMemViews(), HEAP64)[(((buf) + (24)) >> 3)] = BigInt(stat.size);
     (growMemViews(), HEAP32)[(((buf) + (32)) >> 2)] = 4096;
     (growMemViews(), HEAP32)[(((buf) + (36)) >> 2)] = stat.blocks;
-    // Prefer `*Ms` properties if available (e.g. from NODEFS / host `fs.Stats`)
-    // for sub-millisecond precision; fall back to Date#getTime for other filesystems.
+    // Prefer `*Ms` properties if available (e.g. from MEMFS, or NODEFS / host
+    // `fs.Stats`) for sub-millisecond precision; fall back to Date#getTime for
+    // other filesystems.
     var atime = stat.atimeMs ?? stat.atime.getTime();
     var mtime = stat.mtimeMs ?? stat.mtime.getTime();
     var ctime = stat.ctimeMs ?? stat.ctime.getTime();
@@ -5410,7 +5418,7 @@ function ___syscall_mkdirat(dirfd, path, mode) {
     path = SYSCALLS.getStr(path);
     path = SYSCALLS.calculateAt(dirfd, path);
     mode &= ~SYSCALLS.currentUmask;
-    FS.mkdir(path, mode, 0);
+    FS.mkdir(path, mode);
     return 0;
   } catch (e) {
     if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
@@ -6887,15 +6895,6 @@ var runtimeKeepalivePop = () => {
   return id;
 };
 
-var warnOnce = text => {
-  warnOnce.shown ||= {};
-  if (!warnOnce.shown[text]) {
-    warnOnce.shown[text] = 1;
-    if (ENVIRONMENT_IS_NODE) text = "warning: " + text;
-    err(text);
-  }
-};
-
 var Browser = {
   useWebGL: false,
   isFullscreen: false,
@@ -7123,12 +7122,6 @@ var Browser = {
     CFS.apply(document, []);
     return true;
   },
-  safeSetTimeout(func, timeout) {
-    // Legacy function, this is used by the SDL2 port so we need to keep it
-    // around at least until that is updated.
-    // See https://github.com/libsdl-org/SDL/pull/6304
-    return safeSetTimeout(func, timeout);
-  },
   getMimetype(name) {
     return {
       "jpg": "image/jpeg",
@@ -7139,9 +7132,6 @@ var Browser = {
       "wav": "audio/wav",
       "mp3": "audio/mpeg"
     }[name.slice(name.lastIndexOf(".") + 1)];
-  },
-  getUserMedia(func) {
-    return navigator.mediaDevices.getUserMedia(func);
   },
   getMouseWheelDelta(event) {
     var delta = 0;
@@ -7255,14 +7245,11 @@ var Browser = {
     Browser.updateCanvasDimensions(canvas, width, height);
     if (!noUpdates) Browser.updateResizeListeners();
   },
-  windowedWidth: 0,
-  windowedHeight: 0,
   setFullscreenCanvasSize() {
     // check if SDL is available
     if (typeof SDL != "undefined") {
       var flags = (growMemViews(), HEAPU32)[((SDL.screen) >> 2)];
       flags = flags | 8388608;
-      // set SDL_FULLSCREEN flag
       (growMemViews(), HEAP32)[((SDL.screen) >> 2)] = flags;
     }
     Browser.updateCanvasDimensions(Browser.getCanvas());
@@ -7273,7 +7260,6 @@ var Browser = {
     if (typeof SDL != "undefined") {
       var flags = (growMemViews(), HEAPU32)[((SDL.screen) >> 2)];
       flags = flags & ~8388608;
-      // clear SDL_FULLSCREEN flag
       (growMemViews(), HEAP32)[((SDL.screen) >> 2)] = flags;
     }
     Browser.updateCanvasDimensions(Browser.getCanvas());
@@ -7599,7 +7585,6 @@ var GL = {
     var typeSize = GL.byteSizeByType[type - GL.byteSizeByTypeRoot];
     return size * typeSize * count;
   },
-  usedTempBuffers: [],
   preDrawHandleClientVertexAttribBindings: count => {
     GL.resetBufferBinding = false;
     // TODO: initial pass to detect ranges we need to upload, might not need
@@ -7632,7 +7617,7 @@ var GL = {
     // version field in above check.
     if (!canvas.getContextSafariWebGL2Fixed) {
       canvas.getContextSafariWebGL2Fixed = canvas.getContext;
-      /** @type {function(this:HTMLCanvasElement, string, (Object|null)=): (Object|null)} */ function fixedGetContext(ver, attrs) {
+      /** @type {function(this:HTMLCanvasElement, string, (Object|null)=): (RenderingContext|null)} */ function fixedGetContext(ver, attrs) {
         var gl = canvas.getContextSafariWebGL2Fixed(ver, attrs);
         return ((ver == "webgl") == (gl instanceof WebGLRenderingContext)) ? gl : null;
       }
@@ -9062,9 +9047,7 @@ var _emscripten_glBindVertexArray = vao => {
   GLctx.currentElementArrayBufferBinding = ibo ? (ibo.name | 0) : 0;
 };
 
-var _glBindVertexArray = _emscripten_glBindVertexArray;
-
-var _emscripten_glBindVertexArrayOES = _glBindVertexArray;
+var _emscripten_glBindVertexArrayOES = _emscripten_glBindVertexArray;
 
 var _emscripten_glBlendColor = (x0, x1, x2, x3) => GLctx.blendColor(x0, x1, x2, x3);
 
@@ -9363,9 +9346,7 @@ var _emscripten_glDeleteVertexArrays = (n, vaos) => {
   }
 };
 
-var _glDeleteVertexArrays = _emscripten_glDeleteVertexArrays;
-
-var _emscripten_glDeleteVertexArraysOES = _glDeleteVertexArrays;
+var _emscripten_glDeleteVertexArraysOES = _emscripten_glDeleteVertexArrays;
 
 var _emscripten_glDepthFunc = x0 => GLctx.depthFunc(x0);
 
@@ -9398,15 +9379,13 @@ var _emscripten_glDrawArraysInstanced = (mode, first, count, primcount) => {
   GLctx.drawArraysInstanced(mode, first, count, primcount);
 };
 
-var _glDrawArraysInstanced = _emscripten_glDrawArraysInstanced;
+var _emscripten_glDrawArraysInstancedANGLE = _emscripten_glDrawArraysInstanced;
 
-var _emscripten_glDrawArraysInstancedANGLE = _glDrawArraysInstanced;
+var _emscripten_glDrawArraysInstancedARB = _emscripten_glDrawArraysInstanced;
 
-var _emscripten_glDrawArraysInstancedARB = _glDrawArraysInstanced;
+var _emscripten_glDrawArraysInstancedEXT = _emscripten_glDrawArraysInstanced;
 
-var _emscripten_glDrawArraysInstancedEXT = _glDrawArraysInstanced;
-
-var _emscripten_glDrawArraysInstancedNV = _glDrawArraysInstanced;
+var _emscripten_glDrawArraysInstancedNV = _emscripten_glDrawArraysInstanced;
 
 var tempFixedLengthArray = [];
 
@@ -9418,11 +9397,9 @@ var _emscripten_glDrawBuffers = (n, bufs) => {
   GLctx.drawBuffers(bufArray);
 };
 
-var _glDrawBuffers = _emscripten_glDrawBuffers;
+var _emscripten_glDrawBuffersEXT = _emscripten_glDrawBuffers;
 
-var _emscripten_glDrawBuffersEXT = _glDrawBuffers;
-
-var _emscripten_glDrawBuffersWEBGL = _glDrawBuffers;
+var _emscripten_glDrawBuffersWEBGL = _emscripten_glDrawBuffers;
 
 var _emscripten_glDrawElements = (mode, count, type, indices) => {
   var buf;
@@ -9476,15 +9453,13 @@ var _emscripten_glDrawElementsInstanced = (mode, count, type, indices, primcount
   GLctx.drawElementsInstanced(mode, count, type, indices, primcount);
 };
 
-var _glDrawElementsInstanced = _emscripten_glDrawElementsInstanced;
+var _emscripten_glDrawElementsInstancedANGLE = _emscripten_glDrawElementsInstanced;
 
-var _emscripten_glDrawElementsInstancedANGLE = _glDrawElementsInstanced;
+var _emscripten_glDrawElementsInstancedARB = _emscripten_glDrawElementsInstanced;
 
-var _emscripten_glDrawElementsInstancedARB = _glDrawElementsInstanced;
+var _emscripten_glDrawElementsInstancedEXT = _emscripten_glDrawElementsInstanced;
 
-var _emscripten_glDrawElementsInstancedEXT = _glDrawElementsInstanced;
-
-var _emscripten_glDrawElementsInstancedNV = _glDrawElementsInstanced;
+var _emscripten_glDrawElementsInstancedNV = _emscripten_glDrawElementsInstanced;
 
 var _glDrawElements = _emscripten_glDrawElements;
 
@@ -9678,9 +9653,7 @@ var _emscripten_glGenVertexArrays = (n, arrays) => {
   GL.genObject(n, arrays, "createVertexArray", GL.vaos);
 };
 
-var _glGenVertexArrays = _emscripten_glGenVertexArrays;
-
-var _emscripten_glGenVertexArraysOES = _glGenVertexArrays;
+var _emscripten_glGenVertexArraysOES = _emscripten_glGenVertexArrays;
 
 var _emscripten_glGenerateMipmap = x0 => GLctx.generateMipmap(x0);
 
@@ -10237,9 +10210,7 @@ var _emscripten_glGetQueryObjectivEXT = (id, pname, params) => {
   (growMemViews(), HEAP32)[((params) >> 2)] = ret;
 };
 
-var _glGetQueryObjecti64vEXT = _emscripten_glGetQueryObjecti64vEXT;
-
-var _emscripten_glGetQueryObjectui64vEXT = _glGetQueryObjecti64vEXT;
+var _emscripten_glGetQueryObjectui64vEXT = _emscripten_glGetQueryObjecti64vEXT;
 
 var _emscripten_glGetQueryObjectuiv = (id, pname, params) => {
   if (!params) {
@@ -10259,9 +10230,7 @@ var _emscripten_glGetQueryObjectuiv = (id, pname, params) => {
   (growMemViews(), HEAP32)[((params) >> 2)] = ret;
 };
 
-var _glGetQueryObjectivEXT = _emscripten_glGetQueryObjectivEXT;
-
-var _emscripten_glGetQueryObjectuivEXT = _glGetQueryObjectivEXT;
+var _emscripten_glGetQueryObjectuivEXT = _emscripten_glGetQueryObjectivEXT;
 
 var _emscripten_glGetQueryiv = (target, pname, params) => {
   if (!params) {
@@ -10728,9 +10697,7 @@ var _emscripten_glGetVertexAttribIiv = (index, pname, params) => {
   emscriptenWebGLGetVertexAttrib(index, pname, params, 0);
 };
 
-var _glGetVertexAttribIiv = _emscripten_glGetVertexAttribIiv;
-
-var _emscripten_glGetVertexAttribIuiv = _glGetVertexAttribIiv;
+var _emscripten_glGetVertexAttribIuiv = _emscripten_glGetVertexAttribIiv;
 
 var _emscripten_glGetVertexAttribPointerv = (index, pname, pointer) => {
   if (!pointer) {
@@ -10844,9 +10811,7 @@ var _emscripten_glIsVertexArray = array => {
   return GLctx.isVertexArray(vao);
 };
 
-var _glIsVertexArray = _emscripten_glIsVertexArray;
-
-var _emscripten_glIsVertexArrayOES = _glIsVertexArray;
+var _emscripten_glIsVertexArrayOES = _emscripten_glIsVertexArray;
 
 var _emscripten_glLineWidth = x0 => GLctx.lineWidth(x0);
 
@@ -10928,14 +10893,14 @@ var heapObjectForWebGLType = type => {
   // Also the type HEAPU16 is not tested for explicitly, but any unrecognized type will return out HEAPU16.
   // (since most types are HEAPU16)
   type -= 5120;
-  if (type == 0) return (growMemViews(), HEAP8);
-  if (type == 1) return (growMemViews(), HEAPU8);
-  if (type == 2) return (growMemViews(), HEAP16);
-  if (type == 4) return (growMemViews(), HEAP32);
-  if (type == 6) return (growMemViews(), HEAPF32);
-  if (type == 5 || type == 28922 || type == 28520 || type == 30779 || type == 30782) return (growMemViews(), 
-  HEAPU32);
-  return (growMemViews(), HEAPU16);
+  if (type == 0) return growMemViews(), HEAP8;
+  if (type == 1) return growMemViews(), HEAPU8;
+  if (type == 2) return growMemViews(), HEAP16;
+  if (type == 4) return growMemViews(), HEAP32;
+  if (type == 6) return growMemViews(), HEAPF32;
+  if (type == 5 || type == 28922 || type == 28520 || type == 30779 || type == 30782) return growMemViews(), 
+  HEAPU32;
+  return growMemViews(), HEAPU16;
 };
 
 var toTypedArrayIndex = (pointer, heap) => pointer >>> (31 - Math.clz32(heap.BYTES_PER_ELEMENT));
@@ -11338,15 +11303,13 @@ var _emscripten_glVertexAttribDivisor = (index, divisor) => {
   GLctx.vertexAttribDivisor(index, divisor);
 };
 
-var _glVertexAttribDivisor = _emscripten_glVertexAttribDivisor;
+var _emscripten_glVertexAttribDivisorANGLE = _emscripten_glVertexAttribDivisor;
 
-var _emscripten_glVertexAttribDivisorANGLE = _glVertexAttribDivisor;
+var _emscripten_glVertexAttribDivisorARB = _emscripten_glVertexAttribDivisor;
 
-var _emscripten_glVertexAttribDivisorARB = _glVertexAttribDivisor;
+var _emscripten_glVertexAttribDivisorEXT = _emscripten_glVertexAttribDivisor;
 
-var _emscripten_glVertexAttribDivisorEXT = _glVertexAttribDivisor;
-
-var _emscripten_glVertexAttribDivisorNV = _glVertexAttribDivisor;
+var _emscripten_glVertexAttribDivisorNV = _emscripten_glVertexAttribDivisor;
 
 var _emscripten_glVertexAttribI4i = (x0, x1, x2, x3, x4) => GLctx.vertexAttribI4i(x0, x1, x2, x3, x4);
 
@@ -12927,6 +12890,8 @@ var _glBindSampler = _emscripten_glBindSampler;
 
 var _glBindTexture = _emscripten_glBindTexture;
 
+var _glBindVertexArray = _emscripten_glBindVertexArray;
+
 var _glBlendColor = _emscripten_glBlendColor;
 
 var _glBlendEquationSeparate = _emscripten_glBlendEquationSeparate;
@@ -12991,6 +12956,8 @@ var _glDeleteSync = _emscripten_glDeleteSync;
 
 var _glDeleteTextures = _emscripten_glDeleteTextures;
 
+var _glDeleteVertexArrays = _emscripten_glDeleteVertexArrays;
+
 var _glDepthFunc = _emscripten_glDepthFunc;
 
 var _glDepthMask = _emscripten_glDepthMask;
@@ -13003,11 +12970,17 @@ var _glDisable = _emscripten_glDisable;
 
 var _glDrawArrays = _emscripten_glDrawArrays;
 
+var _glDrawArraysInstanced = _emscripten_glDrawArraysInstanced;
+
 var _emscripten_glDrawArraysInstancedBaseInstanceWEBGL = (mode, first, count, instanceCount, baseInstance) => {
   GLctx.dibvbi["drawArraysInstancedBaseInstanceWEBGL"](mode, first, count, instanceCount, baseInstance);
 };
 
 var _glDrawArraysInstancedBaseInstanceWEBGL = _emscripten_glDrawArraysInstancedBaseInstanceWEBGL;
+
+var _glDrawBuffers = _emscripten_glDrawBuffers;
+
+var _glDrawElementsInstanced = _emscripten_glDrawElementsInstanced;
 
 var _emscripten_glDrawElementsInstancedBaseVertexBaseInstanceWEBGL = (mode, count, type, offset, instanceCount, baseVertex, baseinstance) => {
   GLctx.dibvbi["drawElementsInstancedBaseVertexBaseInstanceWEBGL"](mode, count, type, offset, instanceCount, baseVertex, baseinstance);
@@ -13042,6 +13015,8 @@ var _glGenQueries = _emscripten_glGenQueries;
 var _glGenSamplers = _emscripten_glGenSamplers;
 
 var _glGenTextures = _emscripten_glGenTextures;
+
+var _glGenVertexArrays = _emscripten_glGenVertexArrays;
 
 var _glGenerateMipmap = _emscripten_glGenerateMipmap;
 
@@ -13152,6 +13127,8 @@ var _glUniform1i = _emscripten_glUniform1i;
 var _glUniformBlockBinding = _emscripten_glUniformBlockBinding;
 
 var _glUseProgram = _emscripten_glUseProgram;
+
+var _glVertexAttribDivisor = _emscripten_glVertexAttribDivisor;
 
 var _glVertexAttribIPointer = _emscripten_glVertexAttribIPointer;
 
