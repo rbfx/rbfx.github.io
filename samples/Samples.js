@@ -14,7 +14,7 @@
 // after the generated code, you will need to define   var Module = {};
 // before the code. Then that object will be used in the code, and you
 // can continue to use Module afterwards as well.
-var Module = typeof Module != "undefined" ? Module : {};
+var Module = typeof Module !== "undefined" ? Module : {};
 
 // Determine the runtime environment we are in. You can customize this by
 // setting the ENVIRONMENT setting at compile time (see settings.js).
@@ -72,7 +72,7 @@ var quit_ = (status, toThrow) => {
 // before the page load. In non-MODULARIZE modes generate it here.
 var _scriptName = globalThis.document?.currentScript?.src;
 
-if (typeof __filename != "undefined") {
+if (typeof __filename !== "undefined") {
   // Node
   _scriptName = __filename;
 } else if (ENVIRONMENT_IS_WORKER) {
@@ -116,7 +116,7 @@ if (ENVIRONMENT_IS_NODE) {
   }
   programArgs = process.argv.slice(2);
   // MODULARIZE will export the module in the proper place outside, we don't need to export here
-  if (typeof module != "undefined") {
+  if (typeof module !== "undefined") {
     module["exports"] = Module;
   }
   quit_ = (status, toThrow) => {
@@ -188,7 +188,7 @@ var defaultPrintErr = console.error.bind(console);
 
 if (ENVIRONMENT_IS_NODE) {
   var utils = require("node:util");
-  var stringify = a => typeof a == "object" ? utils.inspect(a) : a;
+  var stringify = a => typeof a === "object" ? utils.inspect(a) : a;
   defaultPrint = (...args) => fs.writeSync(1, args.map(stringify).join(" ") + "\n");
   defaultPrintErr = (...args) => fs.writeSync(2, args.map(stringify).join(" ") + "\n");
 }
@@ -418,7 +418,6 @@ function updateMemoryViews() {
 // In non-standalone/normal mode, we create the memory here.
 // include: runtime_init_memory.js
 // Create the wasm memory. (Note: this only applies if IMPORTED_MEMORY is defined)
-// check for full engine support (use string 'subarray' to avoid closure compiler confusion)
 function initMemory() {
   if ((ENVIRONMENT_IS_PTHREAD)) {
     return;
@@ -446,7 +445,7 @@ function initMemory() {
 function preRun() {
   var preRun = Module["preRun"];
   if (preRun) {
-    if (typeof preRun == "function") preRun = [ preRun ];
+    if (typeof preRun === "function") preRun = [ preRun ];
     onPreRuns.push(...preRun);
   }
   // Begin ATPRERUNS hooks
@@ -469,7 +468,7 @@ function initRuntime() {
 function postRun() {
   var postRun = Module["postRun"];
   if (postRun) {
-    if (typeof postRun == "function") postRun = [ postRun ];
+    if (typeof postRun === "function") postRun = [ postRun ];
     onPostRuns.push(...postRun);
   }
   // Begin ATPOSTRUNS hooks
@@ -494,15 +493,7 @@ function postRun() {
   // a trap or not based on a hidden field within the object. So at the moment
   // we don't have a way of throwing a wasm trap from JS. TODO Make a JS API that
   // allows this in the wasm spec.
-  // Suppress closure compiler warning here. Closure compiler's builtin extern
-  // definition for WebAssembly.RuntimeError claims it takes no arguments even
-  // though it can.
-  // TODO(https://github.com/google/closure-compiler/pull/3913): Remove if/when upstream closure gets fixed.
-  /** @suppress {checkTypes} */ var e = new WebAssembly.RuntimeError(what);
-  // Throw the error whether or not MODULARIZE is set because abort is used
-  // in code paths apart from instantiation where an exception is expected
-  // to be thrown when abort is called.
-  throw e;
+  throw new WebAssembly.RuntimeError(what);
 }
 
 var wasmBinaryFile;
@@ -710,7 +701,7 @@ var stackAlloc = sz => __emscripten_stack_alloc(sz);
   var args = stackAlloc(bufSize);
   var b = ((args) >> 3);
   for (var arg of callArgs) {
-    if (typeof arg == "bigint") {
+    if (typeof arg === "bigint") {
       // The prefix is non-zero to indicate a bigint.
       (growMemViews(), HEAP64)[b++] = 1n;
       (growMemViews(), HEAP64)[b++] = arg;
@@ -1274,7 +1265,7 @@ var PATH_FS = {
     for (var i = args.length - 1; i >= -1 && !resolvedAbsolute; i--) {
       var path = (i >= 0) ? args[i] : FS.cwd();
       // Skip empty and invalid entries
-      if (typeof path != "string") {
+      if (typeof path !== "string") {
         throw new TypeError("Arguments to path.resolve must be strings");
       } else if (!path) {
         return "";
@@ -1564,7 +1555,7 @@ var MEMFS = {
   mount(mount) {
     return MEMFS.createNode(null, "/", 16895, 0);
   },
-  createNode(parent, name, mode, dev) {
+  createNode(parent, name, mode, dev = undefined) {
     if (FS.isBlkdev(mode) || FS.isFIFO(mode)) {
       // not supported
       throw new FS.ErrnoError(63);
@@ -1658,7 +1649,7 @@ var MEMFS = {
     // For small filesizes (<1MB), perform size*2 geometric increase, but for
     // large sizes, do a much more conservative size*1.125 increase to avoid
     // overshooting the allocation cap by a very large margin.
-    var CAPACITY_DOUBLING_MAX = 1024 * 1024;
+    const CAPACITY_DOUBLING_MAX = 1024 * 1024;
     newCapacity = Math.max(newCapacity, (prevCapacity * (prevCapacity < CAPACITY_DOUBLING_MAX ? 2 : 1.125)) >>> 0);
     if (prevCapacity) newCapacity = Math.max(newCapacity, 256);
     // At minimum allocate 256b for each file when expanding.
@@ -1699,11 +1690,6 @@ var MEMFS = {
       attr.atime = new Date(node.atime);
       attr.mtime = new Date(node.mtime);
       attr.ctime = new Date(node.ctime);
-      // A Date only holds whole milliseconds: also return the exact times
-      // (e.g. as set by utimensat), which SYSCALLS.writeStat prefers.
-      attr.atimeMs = node.atime;
-      attr.mtimeMs = node.mtime;
-      attr.ctimeMs = node.ctime;
       // NOTE: In our implementation, st_blocks = Math.ceil(st_size/st_blksize),
       //       but this is not required by the standard.
       attr.blksize = 4096;
@@ -1729,7 +1715,7 @@ var MEMFS = {
       }
       throw MEMFS.doesNotExistError;
     },
-    mknod(parent, name, mode, dev) {
+    mknod(parent, name, mode, dev = undefined) {
       return MEMFS.createNode(parent, name, mode, dev);
     },
     rename(old_node, new_dir, new_name) {
@@ -1869,7 +1855,7 @@ var MEMFS = {
 };
 
 var FS_modeStringToFlags = str => {
-  if (typeof str != "string") return str;
+  if (typeof str !== "string") return str;
   var flagModes = {
     "r": 0,
     "r+": 2,
@@ -1879,14 +1865,14 @@ var FS_modeStringToFlags = str => {
     "a+": 1024 | 64 | 2
   };
   var flags = flagModes[str];
-  if (typeof flags == "undefined") {
+  if (typeof flags === "undefined") {
     throw new Error(`Unknown file open mode: ${str}`);
   }
   return flags;
 };
 
 var FS_fileDataToTypedArray = data => {
-  if (typeof data == "string") {
+  if (typeof data === "string") {
     data = intArrayFromString(data, true);
   }
   if (!data.subarray) {
@@ -2305,7 +2291,7 @@ var preloadPlugins = [];
 
 var FS_handledByPreloadPlugin = async (byteArray, fullname) => {
   // Ensure plugins are ready.
-  if (typeof Browser != "undefined") Browser.init();
+  if (typeof Browser !== "undefined") Browser.init();
   for (var plugin of preloadPlugins) {
     if (plugin["canHandle"](fullname)) {
       return plugin["handle"](byteArray, fullname);
@@ -2325,7 +2311,7 @@ var FS_preloadFile = async (parent, name, url, canRead, canWrite, dontCreateFile
   addRunDependency(dep);
   try {
     var byteArray = url;
-    if (typeof url == "string") {
+    if (typeof url === "string") {
       byteArray = await asyncLoad(url);
     }
     byteArray = await FS_handledByPreloadPlugin(byteArray, fullname);
@@ -2352,7 +2338,6 @@ var FS = {
   currentPath: "/",
   initialized: false,
   ignorePermissions: true,
-  filesystems: null,
   syncFSRequests: 0,
   ErrnoError: class {
     name="ErrnoError";
@@ -2610,7 +2595,7 @@ var FS = {
     // if we failed to find it in the cache, call into the VFS
     return FS.lookup(parent, name);
   },
-  createNode(parent, name, mode, rdev) {
+  createNode(parent, name, mode, rdev = undefined) {
     var node = new FS.FSNode(parent, name, mode, rdev);
     FS.hashAddNode(node);
     return node;
@@ -2812,7 +2797,7 @@ var FS = {
     return mounts;
   },
   syncfs(populate, callback) {
-    if (typeof populate == "function") {
+    if (typeof populate === "function") {
       callback = populate;
       populate = false;
     }
@@ -2995,8 +2980,8 @@ var FS = {
       }
     }
   },
-  mkdev(path, mode, dev) {
-    if (typeof dev == "undefined") {
+  mkdev(path, mode, dev = undefined) {
+    if (typeof dev === "undefined") {
       dev = mode;
       mode = 438;
     }
@@ -3227,7 +3212,7 @@ var FS = {
   },
   chmod(path, mode, dontFollow = false) {
     var node;
-    if (typeof path == "string") {
+    if (typeof path === "string") {
       var lookup = FS.lookupPath(path, {
         follow: !dontFollow
       });
@@ -3252,7 +3237,7 @@ var FS = {
   },
   chown(path, uid, gid, dontFollow = false) {
     var node;
-    if (typeof path == "string") {
+    if (typeof path === "string") {
       var lookup = FS.lookupPath(path, {
         follow: !dontFollow
       });
@@ -3290,7 +3275,7 @@ var FS = {
       throw new FS.ErrnoError(28);
     }
     var node;
-    if (typeof path == "string") {
+    if (typeof path === "string") {
       var lookup = FS.lookupPath(path, {
         follow: true
       });
@@ -3329,7 +3314,7 @@ var FS = {
     }
     var node;
     var isDirPath;
-    if (typeof path == "object") {
+    if (typeof path === "object") {
       node = path;
     } else {
       isDirPath = path.endsWith("/");
@@ -3449,7 +3434,7 @@ var FS = {
     stream.ungotten = [];
     return stream.position;
   },
-  read(stream, buffer, offset, length, position) {
+  read(stream, buffer, offset, length, position = undefined) {
     if (length < 0 || position < 0) {
       throw new FS.ErrnoError(28);
     }
@@ -3465,7 +3450,7 @@ var FS = {
     if (!stream.stream_ops.read) {
       throw new FS.ErrnoError(28);
     }
-    var seeking = typeof position != "undefined";
+    var seeking = typeof position !== "undefined";
     if (!seeking) {
       position = stream.position;
     } else if (!stream.seekable) {
@@ -3475,7 +3460,7 @@ var FS = {
     if (!seeking) stream.position += bytesRead;
     return bytesRead;
   },
-  write(stream, buffer, offset, length, position, canOwn) {
+  write(stream, buffer, offset, length, position = undefined, canOwn = undefined) {
     if (length < 0 || position < 0) {
       throw new FS.ErrnoError(28);
     }
@@ -3495,7 +3480,7 @@ var FS = {
       // seek to the end before writing in append mode
       FS.llseek(stream, 0, 2);
     }
-    var seeking = typeof position != "undefined";
+    var seeking = typeof position !== "undefined";
     if (!seeking) {
       position = stream.position;
     } else if (!stream.seekable) {
@@ -3690,12 +3675,8 @@ var FS = {
     FS.createDefaultDirectories();
     FS.createDefaultDevices();
     FS.createSpecialDirectories();
-    FS.filesystems = {
-      "MEMFS": MEMFS,
-      "IDBFS": IDBFS
-    };
   },
-  init(input, output, error) {
+  init(input = undefined, output = undefined, error = undefined) {
     FS.initialized = true;
     // Allow Module.stdin etc. to provide defaults, if none explicitly passed to us here
     input ??= Module["stdin"];
@@ -3753,8 +3734,8 @@ var FS = {
     }
     return ret;
   },
-  createPath(parent, path, canRead, canWrite) {
-    parent = typeof parent == "string" ? parent : FS.getPath(parent);
+  createPath(parent, path, canRead = undefined, canWrite = undefined) {
+    parent = typeof parent === "string" ? parent : FS.getPath(parent);
     var parts = path.split("/").reverse();
     while (parts.length) {
       var part = parts.pop();
@@ -3769,15 +3750,15 @@ var FS = {
     }
     return current;
   },
-  createFile(parent, name, properties, canRead, canWrite) {
-    var path = PATH.join2(typeof parent == "string" ? parent : FS.getPath(parent), name);
+  createFile(parent, name, properties, canRead = undefined, canWrite = undefined) {
+    var path = PATH.join2(typeof parent === "string" ? parent : FS.getPath(parent), name);
     var mode = FS_getMode(canRead, canWrite);
     return FS.create(path, mode);
   },
-  createDataFile(parent, name, data, canRead, canWrite, canOwn) {
+  createDataFile(parent, name, data = undefined, canRead = undefined, canWrite = undefined, canOwn = undefined) {
     var path = name;
     if (parent) {
-      parent = typeof parent == "string" ? parent : FS.getPath(parent);
+      parent = typeof parent === "string" ? parent : FS.getPath(parent);
       path = name ? PATH.join2(parent, name) : parent;
     }
     var mode = FS_getMode(canRead, canWrite);
@@ -3792,8 +3773,8 @@ var FS = {
       FS.chmod(node, mode);
     }
   },
-  createDevice(parent, name, input, output) {
-    var path = PATH.join2(typeof parent == "string" ? parent : FS.getPath(parent), name);
+  createDevice(parent, name, input = undefined, output = undefined) {
+    var path = PATH.join2(typeof parent === "string" ? parent : FS.getPath(parent), name);
     var mode = FS_getMode(!!input, !!output);
     FS.createDevice.major ??= 64;
     var dev = FS.makedev(FS.createDevice.major++, 0);
@@ -3859,7 +3840,7 @@ var FS = {
       }
     }
   },
-  createLazyFile(parent, name, url, canRead, canWrite) {
+  createLazyFile(parent, name, url, canRead = undefined, canWrite = undefined) {
     // Lazy chunked Uint8Array (implements get and length from Uint8Array).
     // Actual getting is abstracted away for eventual reuse.
     class LazyUint8Array {
@@ -3917,10 +3898,10 @@ var FS = {
           // including this byte
           end = Math.min(end, datalength - 1);
           // if datalength-1 is selected, this is the last block
-          if (typeof lazyArray.chunks[chunkNum] == "undefined") {
+          if (typeof lazyArray.chunks[chunkNum] === "undefined") {
             lazyArray.chunks[chunkNum] = doXHR(start, end);
           }
-          if (typeof lazyArray.chunks[chunkNum] == "undefined") abort("doXHR failed!");
+          if (typeof lazyArray.chunks[chunkNum] === "undefined") abort("doXHR failed!");
           return lazyArray.chunks[chunkNum];
         });
         if (usesGzip || !datalength) {
@@ -4290,9 +4271,9 @@ var SOCKFS = {
     return `socket[${SOCKFS.nextname.current++}]`;
   },
   websocket_sock_ops: {
-    createPeer(sock, addr, port) {
+    createPeer(sock, addr, port = undefined) {
       var ws;
-      if (typeof addr == "object") {
+      if (typeof addr === "object") {
         ws = addr;
         addr = null;
         port = null;
@@ -4367,7 +4348,7 @@ var SOCKFS = {
       // if this is a bound dgram socket, send the port number first to allow
       // us to override the ephemeral port reported to us by remotePort on the
       // remote end.
-      if (sock.type === 2 && typeof sock.sport != "undefined") {
+      if (sock.type === 2 && typeof sock.sport !== "undefined") {
         peer.msg_send_queue.push(new Uint8Array([ 255, 255, 255, 255, "p".charCodeAt(0), "o".charCodeAt(0), "r".charCodeAt(0), "t".charCodeAt(0), ((sock.sport & 65280) >> 8), (sock.sport & 255) ]));
       }
       return peer;
@@ -4399,7 +4380,7 @@ var SOCKFS = {
         }
       }
       function handleMessage(data) {
-        if (typeof data == "string") {
+        if (typeof data === "string") {
           var encoder = new TextEncoder;
           // should be utf-8
           data = encoder.encode(data);
@@ -4545,7 +4526,7 @@ var SOCKFS = {
       return 0;
     },
     bind(sock, addr, port) {
-      if (typeof sock.saddr != "undefined" || typeof sock.sport != "undefined") {
+      if (typeof sock.saddr !== "undefined" || typeof sock.sport !== "undefined") {
         throw new FS.ErrnoError(28);
       }
       sock.saddr = addr;
@@ -4577,7 +4558,7 @@ var SOCKFS = {
       // if (!sock.addr && sock.type == 2) {
       // }
       // early out if we're already connected / in the middle of connecting
-      if (typeof sock.daddr != "undefined" && typeof sock.dport != "undefined") {
+      if (typeof sock.daddr !== "undefined" && typeof sock.dport !== "undefined") {
         var dest = SOCKFS.websocket_sock_ops.getPeer(sock, sock.daddr, sock.dport);
         if (dest) {
           if (dest.socket.readyState === dest.socket.CONNECTING) {
@@ -4968,7 +4949,7 @@ var inetPton6 = str => {
   offset = 0;
   z = 0;
   for (w = 0; w < words.length; w++) {
-    if (typeof words[w] == "string") {
+    if (typeof words[w] === "string") {
       if (words[w] === "Z") {
         // compressed zeros - write appropriate number of zero words
         for (z = 0; z < (8 - words.length + 1); z++) {
@@ -5038,7 +5019,7 @@ function ___syscall_bind(fd, addr, len, u1, u2, u3) {
     sock.sock_ops.bind(sock, info.addr, info.port);
     return 0;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5084,18 +5065,15 @@ var SYSCALLS = {
     (growMemViews(), HEAP64)[(((buf) + (24)) >> 3)] = BigInt(stat.size);
     (growMemViews(), HEAP32)[(((buf) + (32)) >> 2)] = 4096;
     (growMemViews(), HEAP32)[(((buf) + (36)) >> 2)] = stat.blocks;
-    // Prefer `*Ms` properties if available (e.g. from MEMFS, or NODEFS / host
-    // `fs.Stats`) for sub-millisecond precision; fall back to Date#getTime for
-    // other filesystems.
-    var atime = stat.atimeMs ?? stat.atime.getTime();
-    var mtime = stat.mtimeMs ?? stat.mtime.getTime();
-    var ctime = stat.ctimeMs ?? stat.ctime.getTime();
+    var atime = stat.atime.getTime();
+    var mtime = stat.mtime.getTime();
+    var ctime = stat.ctime.getTime();
     (growMemViews(), HEAP64)[(((buf) + (40)) >> 3)] = BigInt(Math.floor(atime / 1e3));
-    (growMemViews(), HEAPU32)[(((buf) + (48)) >> 2)] = Math.floor((atime % 1e3) * 1e6);
+    (growMemViews(), HEAPU32)[(((buf) + (48)) >> 2)] = (atime % 1e3) * 1e3 * 1e3;
     (growMemViews(), HEAP64)[(((buf) + (56)) >> 3)] = BigInt(Math.floor(mtime / 1e3));
-    (growMemViews(), HEAPU32)[(((buf) + (64)) >> 2)] = Math.floor((mtime % 1e3) * 1e6);
+    (growMemViews(), HEAPU32)[(((buf) + (64)) >> 2)] = (mtime % 1e3) * 1e3 * 1e3;
     (growMemViews(), HEAP64)[(((buf) + (72)) >> 3)] = BigInt(Math.floor(ctime / 1e3));
-    (growMemViews(), HEAPU32)[(((buf) + (80)) >> 2)] = Math.floor((ctime % 1e3) * 1e6);
+    (growMemViews(), HEAPU32)[(((buf) + (80)) >> 2)] = (ctime % 1e3) * 1e3 * 1e3;
     (growMemViews(), HEAP64)[(((buf) + (88)) >> 3)] = BigInt(stat.ino);
     return 0;
   },
@@ -5189,7 +5167,7 @@ function ___syscall_fcntl64(fd, cmd, varargs) {
     }
     return -28;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5199,7 +5177,7 @@ function ___syscall_fstat64(fd, buf) {
   try {
     return SYSCALLS.writeStat(buf, FS.fstat(fd));
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5217,7 +5195,7 @@ function ___syscall_getcwd(buf, size) {
     stringToUTF8(cwd, buf, size);
     return cwdLengthInBytes;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5273,7 +5251,7 @@ function ___syscall_getdents64(fd, dirp, count) {
     FS.llseek(stream, idx * struct_size, 0);
     return pos;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5396,7 +5374,7 @@ function ___syscall_ioctl(fd, op, varargs) {
       return -28;
     }
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5407,7 +5385,7 @@ function ___syscall_lstat64(path, buf) {
     path = SYSCALLS.getStr(path);
     return SYSCALLS.writeStat(buf, FS.lstat(path));
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5421,7 +5399,7 @@ function ___syscall_mkdirat(dirfd, path, mode) {
     FS.mkdir(path, mode);
     return 0;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5436,7 +5414,7 @@ function ___syscall_newfstatat(dirfd, path, buf, flags) {
     path = SYSCALLS.calculateAt(dirfd, path, allowEmpty);
     return SYSCALLS.writeStat(buf, nofollow ? FS.lstat(path) : FS.stat(path));
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5453,7 +5431,7 @@ function ___syscall_openat(dirfd, path, flags, varargs) {
     }
     return FS.open(path, flags, mode).fd;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5464,8 +5442,8 @@ var zeroMemory = (ptr, size) => (growMemViews(), HEAPU8).fill(0, ptr, ptr + size
   switch (family) {
    case 2:
     // The address may still be an unresolved hostname (e.g. a peer name
-    // recorded at connect time); map it to its (possibly fake) IP here so
-    // callers can pass names and IPs alike.
+    // recorded at connect time); map it to its fake IP here so callers can
+    // pass names and IPs alike. Real sockets only ever see numeric addresses.
     addr = inetPton4(DNS.lookup_name(addr));
     zeroMemory(sa, 16);
     if (addrlen) {
@@ -5509,7 +5487,7 @@ function ___syscall_recvfrom(fd, buf, len, flags, addr, alen) {
     (growMemViews(), HEAPU8).set(msg.buffer, buf);
     return msg.buffer.byteLength;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5521,7 +5499,7 @@ function ___syscall_rmdir(path) {
     FS.rmdir(path);
     return 0;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5538,7 +5516,7 @@ function ___syscall_sendto(fd, buf, len, flags, addr, alen) {
     // sendto an address
     return sock.sock_ops.sendmsg(sock, (growMemViews(), HEAP8), buf, len, dest.addr, dest.port);
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5550,7 +5528,7 @@ function ___syscall_setsockopt(fd, level, optname, optval, optlen, unused) {
     // validate the fd (and keep this syscall's catch reachable)
     return -50;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5561,7 +5539,7 @@ function ___syscall_socket(domain, type, protocol, u1, u2, u3) {
     var sock = SOCKFS.createSocket(domain, type, protocol);
     return sock.stream.fd;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5572,7 +5550,7 @@ function ___syscall_stat64(path, buf) {
     path = SYSCALLS.getStr(path);
     return SYSCALLS.writeStat(buf, FS.stat(path));
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5591,7 +5569,7 @@ function ___syscall_unlinkat(dirfd, path, flags) {
     }
     return 0;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return -e.errno;
   }
 }
@@ -5689,7 +5667,7 @@ var integerReadValueFromPointer = (name, width, signed) => {
     name,
     fromWireType,
     toWireType: (destructors, value) => {
-      if (typeof value == "number") {
+      if (typeof value === "number") {
         value = BigInt(value);
       }
       return value;
@@ -6049,7 +6027,7 @@ var embind__requireFunction = (signature, rawFunction, isAsync = false) => {
     return rtn;
   }
   var fp = makeDynCaller();
-  if (typeof fp != "function") {
+  if (typeof fp !== "function") {
     throwBindingError(`unknown function pointer with signature ${signature}: ${rawFunction}`);
   }
   return fp;
@@ -6181,7 +6159,7 @@ var __embind_register_memory_view = (rawType, dataTypeIndex, name) => {
 
 var __embind_register_std_string = (rawType, name) => {
   name = AsciiToString(name);
-  var stdStringIsUTF8 = true;
+  const stdStringIsUTF8 = true;
   registerType(rawType, {
     name,
     // For some method names we use string keys here since they are part of
@@ -6206,7 +6184,7 @@ var __embind_register_std_string = (rawType, name) => {
         value = new Uint8Array(value);
       }
       var length;
-      var valueIsOfTypeString = (typeof value == "string");
+      var valueIsOfTypeString = (typeof value === "string");
       // We accept `string` or array views with single byte elements
       if (!(valueIsOfTypeString || (ArrayBuffer.isView(value) && value.BYTES_PER_ELEMENT == 1))) {
         throwBindingError("Cannot pass non-string to std::string");
@@ -6359,7 +6337,7 @@ var __embind_register_std_wstring = (rawType, charSize, name) => {
       return str;
     },
     toWireType: (destructors, value) => {
-      if (!(typeof value == "string")) {
+      if (!(typeof value === "string")) {
         throwBindingError(`Cannot pass non-string to C++ string type ${name}`);
       }
       // assumes POINTER_SIZE alignment
@@ -6663,7 +6641,7 @@ var getStringOrSymbol = address => {
 };
 
 var __emval_create_invoker = (argCount, argTypesPtr, kind) => {
-  var GenericWireTypeSize = 8;
+  const GenericWireTypeSize = 8;
   var [retType, ...argTypes] = emval_lookupTypes(argCount, argTypesPtr);
   var toReturnWire = retType.toWireType.bind(retType);
   var argFromPtr = argTypes.map(type => type.readValueFromPointer.bind(type));
@@ -6973,7 +6951,7 @@ var Browser = {
         err(`warning: browser could not fully decode audio ${name}, trying slower base64 approach`);
         function encode64(data) {
           var BASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-          var PAD = "=";
+          const PAD = "=";
           var ret = "";
           var leftchar = 0;
           var leftbits = 0;
@@ -7045,7 +7023,7 @@ var Browser = {
       // This check of existence of GL is here to satisfy Closure compiler, which yells if variable GL is referenced below but GL object is not
       // actually compiled in because application is not doing any GL operations. TODO: Ideally if GL is not being used, this function
       // Browser.createContext() should not even be emitted.
-      if (typeof GL != "undefined") {
+      if (typeof GL !== "undefined") {
         contextHandle = GL.createContext(canvas, contextAttributes);
         if (contextHandle) {
           ctx = GL.getContext(contextHandle).GLctx;
@@ -7070,8 +7048,8 @@ var Browser = {
   requestFullscreen(lockPointer, resizeCanvas) {
     Browser.lockPointer = lockPointer;
     Browser.resizeCanvas = resizeCanvas;
-    if (typeof Browser.lockPointer == "undefined") Browser.lockPointer = true;
-    if (typeof Browser.resizeCanvas == "undefined") Browser.resizeCanvas = false;
+    if (typeof Browser.lockPointer === "undefined") Browser.lockPointer = true;
+    if (typeof Browser.resizeCanvas === "undefined") Browser.resizeCanvas = false;
     var canvas = Browser.getCanvas();
     function fullscreenChange() {
       Browser.isFullscreen = false;
@@ -7247,7 +7225,7 @@ var Browser = {
   },
   setFullscreenCanvasSize() {
     // check if SDL is available
-    if (typeof SDL != "undefined") {
+    if (typeof SDL !== "undefined") {
       var flags = (growMemViews(), HEAPU32)[((SDL.screen) >> 2)];
       flags = flags | 8388608;
       (growMemViews(), HEAP32)[((SDL.screen) >> 2)] = flags;
@@ -7257,7 +7235,7 @@ var Browser = {
   },
   setWindowedCanvasSize() {
     // check if SDL is available
-    if (typeof SDL != "undefined") {
+    if (typeof SDL !== "undefined") {
       var flags = (growMemViews(), HEAPU32)[((SDL.screen) >> 2)];
       flags = flags & ~8388608;
       (growMemViews(), HEAP32)[((SDL.screen) >> 2)] = flags;
@@ -7275,7 +7253,7 @@ var Browser = {
     }
     var w = wNative;
     var h = hNative;
-    if ((getFullscreenElement() === canvas.parentNode) && (typeof screen != "undefined")) {
+    if ((getFullscreenElement() === canvas.parentNode) && (typeof screen !== "undefined")) {
       var factor = Math.min(screen.width / w, screen.height / h);
       w = Math.round(w * factor);
       h = Math.round(h * factor);
@@ -7283,14 +7261,14 @@ var Browser = {
     if (Browser.resizeCanvas) {
       if (canvas.width != w) canvas.width = w;
       if (canvas.height != h) canvas.height = h;
-      if (typeof canvas.style != "undefined") {
+      if (typeof canvas.style !== "undefined") {
         canvas.style.removeProperty("width");
         canvas.style.removeProperty("height");
       }
     } else {
       if (canvas.width != wNative) canvas.width = wNative;
       if (canvas.height != hNative) canvas.height = hNative;
-      if (typeof canvas.style != "undefined") {
+      if (typeof canvas.style !== "undefined") {
         if (w != wNative || h != hNative) {
           canvas.style.setProperty("width", w + "px", "important");
           canvas.style.setProperty("height", h + "px", "important");
@@ -7411,7 +7389,7 @@ var getEmscriptenSupportedExtensions = ctx => {
 
 var registerPreMainLoop = f => {
   // Does nothing unless $MainLoop is included/used.
-  typeof MainLoop != "undefined" && MainLoop.preMainLoop.push(f);
+  typeof MainLoop !== "undefined" && MainLoop.preMainLoop.push(f);
 };
 
 var webglBufferSubData = (target, offset, size, data, src = (growMemViews(), HEAPU8)) => {
@@ -7644,7 +7622,7 @@ var GL = {
     // given a canvas without having to pass the parameters again.
     if (ctx.canvas) ctx.canvas.GLctxObject = context;
     GL.contexts[handle] = context;
-    if (typeof webGLContextAttributes.enableExtensionsByDefault == "undefined" || webGLContextAttributes.enableExtensionsByDefault) {
+    if (typeof webGLContextAttributes.enableExtensionsByDefault === "undefined" || webGLContextAttributes.enableExtensionsByDefault) {
       GL.initExtensions(context);
     }
     context.maxVertexAttribs = context.GLctx.getParameter(34921);
@@ -7676,7 +7654,7 @@ var GL = {
     if (GL.currentContext === GL.contexts[contextHandle]) {
       GL.currentContext = null;
     }
-    if (typeof JSEvents == "object") {
+    if (typeof JSEvents === "object") {
       // Release all JS event handlers on the DOM element that the GL context is
       // associated with since the context is now deleted.
       JSEvents.removeAllHandlersOnTarget(GL.contexts[contextHandle].GLctx.canvas);
@@ -8573,19 +8551,19 @@ var findEventTarget = target => {
   // since DOM events mostly can default to that. Specific callback registrations
   // override their own defaults.
   if (!target) return window;
-  if (typeof target == "number") target = specialHTMLTargets[target] || UTF8ToString(target);
-  if (target === "#window") return window; else if (target === "#document") return document; else if (target === "#screen") return screen; else if (target === "#canvas") return Module["canvas"]; else if (typeof target == "string") return globalThis.document?.getElementById(target);
+  if (typeof target === "number") target = specialHTMLTargets[target] || UTF8ToString(target);
+  if (target === "#window") return window; else if (target === "#document") return document; else if (target === "#screen") return screen; else if (target === "#canvas") return Module["canvas"]; else if (typeof target === "string") return globalThis.document?.getElementById(target);
   return target;
 };
 
 var findCanvasEventTarget = target => {
-  if (typeof target == "number") target = UTF8ToString(target);
+  if (typeof target === "number") target = UTF8ToString(target);
   if (!target || target === "#canvas") {
-    if (typeof GL != "undefined" && GL.offscreenCanvases["canvas"]) return GL.offscreenCanvases["canvas"];
+    if (typeof GL !== "undefined" && GL.offscreenCanvases["canvas"]) return GL.offscreenCanvases["canvas"];
     // TODO: Remove this line, target '#canvas' should refer only to Module['canvas'], not to GL.offscreenCanvases['canvas'] - but need stricter tests to be able to remove this line.
     return Module["canvas"];
   }
-  if (typeof GL != "undefined" && GL.offscreenCanvases[target]) return GL.offscreenCanvases[target];
+  if (typeof GL !== "undefined" && GL.offscreenCanvases[target]) return GL.offscreenCanvases[target];
   return findEventTarget(target);
 };
 
@@ -10184,7 +10162,7 @@ var _emscripten_glGetQueryObjecti64vEXT = (id, pname, params) => {
     param = GLctx.getQueryParameter(query, pname);
   }
   var ret;
-  if (typeof param == "boolean") {
+  if (typeof param === "boolean") {
     ret = param ? 1 : 0;
   } else {
     ret = param;
@@ -10202,7 +10180,7 @@ var _emscripten_glGetQueryObjectivEXT = (id, pname, params) => {
   var query = GL.queries[id];
   var param = GLctx.disjointTimerQueryExt["getQueryObjectEXT"](query, pname);
   var ret;
-  if (typeof param == "boolean") {
+  if (typeof param === "boolean") {
     ret = param ? 1 : 0;
   } else {
     ret = param;
@@ -10222,7 +10200,7 @@ var _emscripten_glGetQueryObjectuiv = (id, pname, params) => {
   var query = GL.queries[id];
   var param = GLctx.getQueryParameter(query, pname);
   var ret;
-  if (typeof param == "boolean") {
+  if (typeof param === "boolean") {
     ret = param ? 1 : 0;
   } else {
     ret = param;
@@ -10588,7 +10566,7 @@ var webglGetProgramUniformLocation = (program, location) => {
     // WebGLUniformLocation.
     // If an integer, we have not yet bound the location, so do it now. The
     // integer value specifies the array index we should bind to.
-    if (typeof webglLoc == "number") {
+    if (typeof webglLoc === "number") {
       program.uniformLocsById[location] = webglLoc = GLctx.getUniformLocation(program, program.uniformArrayNamesById[location] + (webglLoc > 0 ? `[${webglLoc}]` : ""));
     }
     // Else an already cached WebGLUniformLocation, return it.
@@ -10609,7 +10587,7 @@ var webglGetProgramUniformLocation = (program, location) => {
   program = GL.programs[program];
   webglPrepareUniformLocationsBeforeFirstUse(program);
   var data = GLctx.getUniform(program, webglGetProgramUniformLocation(program, location));
-  if (typeof data == "number" || typeof data == "boolean") {
+  if (typeof data === "number" || typeof data === "boolean") {
     switch (type) {
      case 0:
       (growMemViews(), HEAP32)[((params) >> 2)] = data;
@@ -10658,7 +10636,7 @@ var _emscripten_glGetUniformuiv = (program, location, params) => emscriptenWebGL
   var data = GLctx.getVertexAttrib(index, pname);
   if (pname == 34975) {
     (growMemViews(), HEAP32)[((params) >> 2)] = data && data["name"];
-  } else if (typeof data == "number" || typeof data == "boolean") {
+  } else if (typeof data === "number" || typeof data === "boolean") {
     switch (type) {
      case 0:
       (growMemViews(), HEAP32)[((params) >> 2)] = data;
@@ -11526,7 +11504,7 @@ var registerBeforeUnloadEventCallback = (target, userData, useCapture, callbackf
 
 function _emscripten_set_beforeunload_callback_on_thread(userData, callbackfunc, targetThread) {
   if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(49, 0, 1, userData, callbackfunc, targetThread);
-  if (typeof onbeforeunload == "undefined") return -1;
+  if (typeof onbeforeunload === "undefined") return -1;
   // beforeunload callback can only be registered on the main browser thread, because the page will go away immediately after returning from the handler,
   // and there is no time to start proxying it anywhere.
   if (targetThread !== 1) return -5;
@@ -11535,7 +11513,7 @@ function _emscripten_set_beforeunload_callback_on_thread(userData, callbackfunc,
 
 var registerFocusEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  var eventSize = 256;
+  const eventSize = 256;
   JSEvents.focusEvent ||= _malloc(eventSize);
   var focusEventHandlerFunc = e => {
     var nodeName = JSEvents.getNodeNameForTarget(e.target);
@@ -11600,7 +11578,7 @@ var fillFullscreenChangeEventData = eventStruct => {
 
 var registerFullscreenChangeEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  var eventSize = 276;
+  const eventSize = 276;
   JSEvents.fullscreenChangeEvent ||= _malloc(eventSize);
   var fullscreenChangeEventHandlerFunc = e => {
     var fullscreenChangeEvent = JSEvents.fullscreenChangeEvent;
@@ -11631,7 +11609,7 @@ function _emscripten_set_fullscreenchange_callback_on_thread(target, userData, u
 
 var registerGamepadEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  var eventSize = 1240;
+  const eventSize = 1240;
   JSEvents.gamepadEvent ||= _malloc(eventSize);
   var gamepadEventHandlerFunc = e => {
     var gamepadEvent = JSEvents.gamepadEvent;
@@ -11665,7 +11643,7 @@ function _emscripten_set_gamepaddisconnected_callback_on_thread(userData, useCap
 
 var registerKeyEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  var eventSize = 160;
+  const eventSize = 160;
   JSEvents.keyEvent ||= _malloc(eventSize);
   var keyEventHandlerFunc = e => {
     var keyEventData = JSEvents.keyEvent;
@@ -11750,7 +11728,7 @@ var fillMouseEventData = (eventStruct, e, target) => {
 
 var registerMouseEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  var eventSize = 64;
+  const eventSize = 64;
   JSEvents.mouseEvent ||= _malloc(eventSize);
   target = findEventTarget(target);
   var mouseEventHandlerFunc = e => {
@@ -11812,7 +11790,7 @@ var fillPointerlockChangeEventData = eventStruct => {
 
 var registerPointerlockChangeEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  var eventSize = 257;
+  const eventSize = 257;
   JSEvents.pointerlockChangeEvent ||= _malloc(eventSize);
   var pointerlockChangeEventHandlerFunc = e => {
     var pointerlockChangeEvent = JSEvents.pointerlockChangeEvent;
@@ -11844,7 +11822,7 @@ function _emscripten_set_pointerlockchange_callback_on_thread(target, userData, 
 
 var registerUiEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  var eventSize = 36;
+  const eventSize = 36;
   JSEvents.uiEvent ||= _malloc(eventSize);
   if (eventTypeId == 11 && !target) {
     target = document;
@@ -11898,7 +11876,7 @@ function _emscripten_set_resize_callback_on_thread(target, userData, useCapture,
 
 var registerTouchEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  var eventSize = 1552;
+  const eventSize = 1552;
   JSEvents.touchEvent ||= _malloc(eventSize);
   target = findEventTarget(target);
   var touchEventHandlerFunc = e => {
@@ -11998,7 +11976,7 @@ var fillVisibilityChangeEventData = eventStruct => {
 
 var registerVisibilityChangeEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  var eventSize = 8;
+  const eventSize = 8;
   JSEvents.visibilityChangeEvent ||= _malloc(eventSize);
   var visibilityChangeEventHandlerFunc = e => {
     var visibilityChangeEvent = JSEvents.visibilityChangeEvent;
@@ -12027,7 +12005,7 @@ function _emscripten_set_visibilitychange_callback_on_thread(userData, useCaptur
 
 var registerWheelEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
   targetThread = JSEvents.getTargetThreadForEventCallback(targetThread);
-  var eventSize = 96;
+  const eventSize = 96;
   JSEvents.wheelEvent ||= _malloc(eventSize);
   // The DOM Level 3 events spec event 'wheel'
   var wheelHandlerFunc = e => {
@@ -12056,7 +12034,7 @@ function _emscripten_set_wheel_callback_on_thread(target, userData, useCapture, 
   if (ENVIRONMENT_IS_PTHREAD) return proxyToMainThread(71, 0, 1, target, userData, useCapture, callbackfunc, targetThread);
   target = findEventTarget(target);
   if (!target) return -4;
-  if (typeof target.onwheel != "undefined") {
+  if (typeof target.onwheel !== "undefined") {
     return registerWheelEventCallback(target, userData, useCapture, callbackfunc, 9, "wheel", targetThread);
   } else {
     return -1;
@@ -12252,7 +12230,7 @@ function fetchXHR(fetch, onsuccess, onerror, onprogress, onreadystatechange) {
     // Specifies the maximum chunk size that a streaming fetch will transfer from
     // JS over to WebAssembly side. Used to cap a streaming fetch to avoid
     // overallocating WebAssembly memory needlessly.
-    var FETCH_STREAMING_MAX_CHUNK_SIZE = 8 * 1024 * 1024;
+    const FETCH_STREAMING_MAX_CHUNK_SIZE = 8 * 1024 * 1024;
     for (var bytePos = 0; bytePos < ptrLen || !ptrLen; ) {
       var sz = Math.min(ptrLen - bytePos, FETCH_STREAMING_MAX_CHUNK_SIZE);
       var ptr = 0;
@@ -12554,10 +12532,12 @@ var _emscripten_webgl_do_create_context = (target, attributes) => {
 
 var _emscripten_webgl_create_context = _emscripten_webgl_do_create_context;
 
-var _emscripten_webgl_destroy_context = contextHandle => {
+var _emscripten_webgl_do_destroy_context = contextHandle => {
   if (GL.currentContext == contextHandle) GL.currentContext = 0;
   GL.deleteContext(contextHandle);
 };
+
+var _emscripten_webgl_destroy_context = _emscripten_webgl_do_destroy_context;
 
 var _emscripten_webgl_do_get_current_context = () => GL.currentContext ? GL.currentContext.handle : 0;
 
@@ -12633,7 +12613,7 @@ function _fd_close(fd) {
     FS.close(stream);
     return 0;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return e.errno;
   }
 }
@@ -12659,7 +12639,7 @@ function _fd_close(fd) {
     ret += curr;
     if (curr < len) break;
     // nothing more to read
-    if (typeof offset != "undefined") {
+    if (typeof offset !== "undefined") {
       offset += curr;
     }
   }
@@ -12674,7 +12654,7 @@ function _fd_read(fd, iov, iovcnt, pnum) {
     (growMemViews(), HEAPU32)[((pnum) >> 2)] = num;
     return 0;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return e.errno;
   }
 }
@@ -12691,7 +12671,7 @@ function _fd_seek(fd, offset, whence, newOffset) {
     // reset readdir state
     return 0;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return e.errno;
   }
 }
@@ -12729,7 +12709,7 @@ function _fd_write(fd, iov, iovcnt, pnum) {
     (growMemViews(), HEAPU32)[((pnum) >> 2)] = num;
     return 0;
   } catch (e) {
-    if (typeof FS == "undefined" || !(e.name === "ErrnoError")) throw e;
+    if (typeof FS === "undefined" || !(e.name === "ErrnoError")) throw e;
     return e.errno;
   }
 }
@@ -13579,7 +13559,7 @@ Fetch.init();
   if (Module["thisProgram"]) thisProgram = Module["thisProgram"];
   var preInit = Module["preInit"];
   if (preInit) {
-    if (typeof preInit == "function") Module["preInit"] = preInit = [ preInit ];
+    if (typeof preInit === "function") Module["preInit"] = preInit = [ preInit ];
     // Written as a loop so that preInit functions that themselves add more
     // preInit functions.  Is this actually needed?
     while (preInit.length > 0) {

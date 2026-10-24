@@ -1,12 +1,12 @@
 
-  var Module = typeof Module != 'undefined' ? Module : {};
+  var Module = typeof Module !== 'undefined' ? Module : {};
 
   if (!Module['expectedDataFileDownloads']) Module['expectedDataFileDownloads'] = 0;
   Module['expectedDataFileDownloads']++;
   (() => {
     // Do not attempt to redownload the virtual filesystem data when in a pthread or a Wasm Worker context.
-    var isPthread = typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD;
-    var isWasmWorker = typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER;
+    var isPthread = typeof ENVIRONMENT_IS_PTHREAD !== 'undefined' && ENVIRONMENT_IS_PTHREAD;
+    var isWasmWorker = typeof ENVIRONMENT_IS_WASM_WORKER !== 'undefined' && ENVIRONMENT_IS_WASM_WORKER;
     if (isPthread || isWasmWorker) return;
     var isNode = globalThis.process && globalThis.process.versions && globalThis.process.versions.node && globalThis.process.type != 'renderer';
     async function loadPackage(metadata) {
@@ -88,7 +88,7 @@
         var PACKAGE_STORE_NAME = 'PACKAGES';
 
         async function openDatabase() {
-          if (typeof indexedDB == 'undefined') {
+          if (typeof indexedDB === 'undefined') {
             throw new Error('using IndexedDB to cache data can only be done on a web page or in a web worker');
           }
           return new Promise((resolve, reject) => {
