@@ -31,15 +31,15 @@ var class_urho3_d_1_1_base_integer_vector3 =
     [ "ToVector2", "class_urho3_d_1_1_base_integer_vector3.html#a9474e1c2842ebb3750d85505d5d3b144", null ],
     [ "ToVector3", "class_urho3_d_1_1_base_integer_vector3.html#affd59a5ba424cdc5a99250d8b161010b", null ],
     [ "ToVector4", "class_urho3_d_1_1_base_integer_vector3.html#abf2be7c6d19b721dd4752bb23caa07e8", null ],
-    [ "BACK", "class_urho3_d_1_1_base_integer_vector3.html#a65dce956abf2d95563a4a01f2ef0eecc", null ],
-    [ "DOWN", "class_urho3_d_1_1_base_integer_vector3.html#a6f09d1dee217b214089848568b32b2b8", null ],
-    [ "FORWARD", "class_urho3_d_1_1_base_integer_vector3.html#a23da22b54bfd8231ba8b688eb34774e2", null ],
-    [ "LEFT", "class_urho3_d_1_1_base_integer_vector3.html#a52788ead467133a61f52d83de3c8acf0", null ],
-    [ "ONE", "class_urho3_d_1_1_base_integer_vector3.html#a87b5a88ec33af6c8c63ac48d4e914108", null ],
-    [ "RIGHT", "class_urho3_d_1_1_base_integer_vector3.html#a58dc3b0994444857173525977fbb3f30", null ],
-    [ "UP", "class_urho3_d_1_1_base_integer_vector3.html#a06b7c5f8aa93be5d4fd9ad370ada61af", null ],
+    [ "BACK", "class_urho3_d_1_1_base_integer_vector3.html#aefcae7d21c0f51930f6bb69a7195d762", null ],
+    [ "DOWN", "class_urho3_d_1_1_base_integer_vector3.html#ae3c28c56076c6fc4f113b803aaf75a87", null ],
+    [ "FORWARD", "class_urho3_d_1_1_base_integer_vector3.html#af90306c899580bceb628fdb385cd155f", null ],
+    [ "LEFT", "class_urho3_d_1_1_base_integer_vector3.html#aec01c1801e559441a22e56f767dec2ef", null ],
+    [ "ONE", "class_urho3_d_1_1_base_integer_vector3.html#a4bc43b0af40fb1ec7d6a9a37c999c6fc", null ],
+    [ "RIGHT", "class_urho3_d_1_1_base_integer_vector3.html#a16cfc00fedcc355691a12cbaf75bd00f", null ],
+    [ "UP", "class_urho3_d_1_1_base_integer_vector3.html#adbd267dc831e2c915f7a0be710bd8e28", null ],
     [ "x_", "class_urho3_d_1_1_base_integer_vector3.html#a9ebcce90b825b1cf295de62b7855b4ba", null ],
     [ "y_", "class_urho3_d_1_1_base_integer_vector3.html#a22f2610c81cef81eaf54d86a939d940b", null ],
     [ "z_", "class_urho3_d_1_1_base_integer_vector3.html#a4ea956dd29509d96500afc5e7bdf0092", null ],
-    [ "ZERO", "class_urho3_d_1_1_base_integer_vector3.html#a8499c5f2719f029bdb20adf8bb096793", null ]
+    [ "ZERO", "class_urho3_d_1_1_base_integer_vector3.html#aaf02dba8d3febdce37ab4bb24b423789", null ]
 ];

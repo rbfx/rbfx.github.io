@@ -6,6 +6,6 @@ var class_urho3_d_1_1_i_d_family =
     [ "GetNextFreeObjectID", "class_urho3_d_1_1_i_d_family.html#a66e20cff21279474f974dc4c4337eacc", null ],
     [ "GetObjectID", "class_urho3_d_1_1_i_d_family.html#a4cb8f08a6e66474cbb321841ac541c0f", null ],
     [ "ReleaseObjectID", "class_urho3_d_1_1_i_d_family.html#ac0ba36c523c9bfb30e0304f367422c8d", null ],
-    [ "indexAllocator", "class_urho3_d_1_1_i_d_family.html#a0c02f17a486a9c916be50f4f0e5d412e", null ],
+    [ "indexAllocator", "class_urho3_d_1_1_i_d_family.html#aa440fefc015bf19379aa1e98cb5e77f6", null ],
     [ "objectId_", "class_urho3_d_1_1_i_d_family.html#a9d7b1978798cb0edf62315a6fc4adc8f", null ]
 ];

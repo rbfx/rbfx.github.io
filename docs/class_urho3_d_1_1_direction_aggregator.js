@@ -2,13 +2,7 @@ var class_urho3_d_1_1_direction_aggregator =
 [
     [ "AxisState", "struct_urho3_d_1_1_direction_aggregator_1_1_axis_state.html", null ],
     [ "InputVector", "class_urho3_d_1_1_direction_aggregator.html#aac1d8ff21587715d2f0c9c1572d1f199", null ],
-    [ "InputType", "class_urho3_d_1_1_direction_aggregator.html#a31a5eaea2873218e943513a76ba7e18b", [
-      [ "External", "class_urho3_d_1_1_direction_aggregator.html#a31a5eaea2873218e943513a76ba7e18bab206a1b4ea1097761f78e8876f6da779", null ],
-      [ "Keyboard", "class_urho3_d_1_1_direction_aggregator.html#a31a5eaea2873218e943513a76ba7e18ba6ce4d85a628a88bbdb3ac24a8e5a9c2e", null ],
-      [ "Touch", "class_urho3_d_1_1_direction_aggregator.html#a31a5eaea2873218e943513a76ba7e18baf0f31c9700c6b10d8a20dc487b2ae6a8", null ],
-      [ "JoystickAxis", "class_urho3_d_1_1_direction_aggregator.html#a31a5eaea2873218e943513a76ba7e18bad9dfb70649b07275b34921903c734eb7", null ],
-      [ "JoystickDPad", "class_urho3_d_1_1_direction_aggregator.html#a31a5eaea2873218e943513a76ba7e18ba997797ac6a6e2183fa6fe7c1df1e19ae", null ]
-    ] ],
+    [ "InputType", "class_urho3_d_1_1_direction_aggregator.html#a31a5eaea2873218e943513a76ba7e18b", null ],
     [ "DirectionAggregator", "class_urho3_d_1_1_direction_aggregator.html#a77cb78fbea5f0b904d095302fad50998", null ],
     [ "~DirectionAggregator", "class_urho3_d_1_1_direction_aggregator.html#af17ec40c160034277b31951bfda46bd7", null ],
     [ "GetDeadZone", "class_urho3_d_1_1_direction_aggregator.html#aac4531dade58795b76ac8b2c68a4199a", null ],

@@ -1,7 +1,7 @@
 var class_urho3_d_1_1_replicated_transform =
 [
-    [ "ClientData", "struct_urho3_d_1_1_replicated_transform_1_1_client_data.html", null ],
     [ "ServerData", "struct_urho3_d_1_1_replicated_transform_1_1_server_data.html", null ],
+    [ "ClientData", "struct_urho3_d_1_1_replicated_transform_1_1_client_data.html", null ],
     [ "InitializeFromSnapshot", "class_urho3_d_1_1_replicated_transform.html#ade9b178bd35a0c79e5f3e72bbb7a87a4", null ],
     [ "InitializeOnServer", "class_urho3_d_1_1_replicated_transform.html#a68f002a4c61fdc11aec4a7ad4afa35a5", null ],
     [ "InterpolateState", "class_urho3_d_1_1_replicated_transform.html#a6df9e029892e1f140f1a36c185d35be7", null ],

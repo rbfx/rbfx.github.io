@@ -1,7 +1,7 @@
 var class_urho3_d_1_1_replicated_animation =
 [
-    [ "ClientData", "struct_urho3_d_1_1_replicated_animation_1_1_client_data.html", null ],
     [ "ServerData", "struct_urho3_d_1_1_replicated_animation_1_1_server_data.html", null ],
+    [ "ClientData", "struct_urho3_d_1_1_replicated_animation_1_1_client_data.html", null ],
     [ "InitializeFromSnapshot", "class_urho3_d_1_1_replicated_animation.html#a7a288f2c5bd8f99fa73283a3a3674b90", null ],
     [ "InitializeOnServer", "class_urho3_d_1_1_replicated_animation.html#a8a2668c8314357190de94205d236bada", null ],
     [ "InitializeStandalone", "class_urho3_d_1_1_replicated_animation.html#a6871c60e8ca70800c6aed50a18005b40", null ],

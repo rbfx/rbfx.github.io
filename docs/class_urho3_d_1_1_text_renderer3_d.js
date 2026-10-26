@@ -1,7 +1,7 @@
 var class_urho3_d_1_1_text_renderer3_d =
 [
-    [ "CachedTextElement", "struct_urho3_d_1_1_text_renderer3_d_1_1_cached_text_element.html", "struct_urho3_d_1_1_text_renderer3_d_1_1_cached_text_element" ],
     [ "QueuedTextElement", "struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element.html", "struct_urho3_d_1_1_text_renderer3_d_1_1_queued_text_element" ],
+    [ "CachedTextElement", "struct_urho3_d_1_1_text_renderer3_d_1_1_cached_text_element.html", "struct_urho3_d_1_1_text_renderer3_d_1_1_cached_text_element" ],
     [ "TextCache", "class_urho3_d_1_1_text_renderer3_d.html#ab29b3f4cfa690d3f067dbde7ee44b76c", null ],
     [ "TextRenderer3D", "class_urho3_d_1_1_text_renderer3_d.html#a5c817404aae25059dee399a77f06eb10", null ],
     [ "AddText3D", "class_urho3_d_1_1_text_renderer3_d.html#a8f6b33bbbcad55be8162919bbcf229a4", null ],

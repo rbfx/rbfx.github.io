@@ -1,8 +1,8 @@
 var class_urho3_d_1_1_detail_1_1_signal_base =
 [
     [ "Handler", "class_urho3_d_1_1_detail_1_1_signal_base.html#a2940d2345a6f755fd82df90d1e47e38f", null ],
-    [ "Subscription", "class_urho3_d_1_1_detail_1_1_signal_base.html#af89c59dbb788cfc57aa06cd370c928a8", null ],
-    [ "SubscriptionVector", "class_urho3_d_1_1_detail_1_1_signal_base.html#ac37db3b12fc22438e3702bc3567d6940", null ],
+    [ "Subscription", "class_urho3_d_1_1_detail_1_1_signal_base.html#a1396bad00871e69e3250f792d04f9c7a", null ],
+    [ "SubscriptionVector", "class_urho3_d_1_1_detail_1_1_signal_base.html#a8da7fe36bfcd3d4eeed9f0b69e60d2dd", null ],
     [ "HasSubscriptions", "class_urho3_d_1_1_detail_1_1_signal_base.html#a0aef5ad50ee852150ca21cf1c0c73cad", null ],
     [ "operator()", "class_urho3_d_1_1_detail_1_1_signal_base.html#a0fdc742f6dc31bcce3027113c9bcc6e7", null ],
     [ "Unsubscribe", "class_urho3_d_1_1_detail_1_1_signal_base.html#a3374847b4bc8146bbbf2931801c80f3c", null ],

@@ -1,8 +1,8 @@
 var class_urho3_d_1_1_base_feedback_behavior =
 [
-    [ "ClientData", "struct_urho3_d_1_1_base_feedback_behavior_1_1_client_data.html", null ],
     [ "InputFrameData", "struct_urho3_d_1_1_base_feedback_behavior_1_1_input_frame_data.html", null ],
     [ "ServerData", "struct_urho3_d_1_1_base_feedback_behavior_1_1_server_data.html", null ],
+    [ "ClientData", "struct_urho3_d_1_1_base_feedback_behavior_1_1_client_data.html", null ],
     [ "CreateFrameOnClient", "class_urho3_d_1_1_base_feedback_behavior.html#a09db6c9320b1625c88e57e5e3baac9b7", null ],
     [ "InitializeFromSnapshot", "class_urho3_d_1_1_base_feedback_behavior.html#abf3df20bcf0645223e2814d71c23088b", null ],
     [ "InitializeOnServer", "class_urho3_d_1_1_base_feedback_behavior.html#ab2e1d1e5d1345a443b48a3da14b4d14b", null ],

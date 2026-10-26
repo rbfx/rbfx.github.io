@@ -1,8 +1,8 @@
 var class_urho3_d_1_1_reflection_probe_manager =
 [
-    [ "AutoQueueCache", "struct_urho3_d_1_1_reflection_probe_manager_1_1_auto_queue_cache.html", null ],
     [ "QueuedReflectionProbe", "struct_urho3_d_1_1_reflection_probe_manager_1_1_queued_reflection_probe.html", null ],
     [ "SpatialCache", "struct_urho3_d_1_1_reflection_probe_manager_1_1_spatial_cache.html", null ],
+    [ "AutoQueueCache", "struct_urho3_d_1_1_reflection_probe_manager_1_1_auto_queue_cache.html", null ],
     [ "DrawDebugGeometry", "class_urho3_d_1_1_reflection_probe_manager.html#a0875a3b50cca3d966069996dfa744aaf", null ],
     [ "GetReflectionProbes", "class_urho3_d_1_1_reflection_probe_manager.html#a3385ef831db9e9cb994ad06b979a9037", null ],
     [ "MarkProbeDirty", "class_urho3_d_1_1_reflection_probe_manager.html#a7d4e1587df85dad073f6a0fdbeb76e8b", null ],

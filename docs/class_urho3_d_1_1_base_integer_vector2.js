@@ -31,12 +31,12 @@ var class_urho3_d_1_1_base_integer_vector2 =
     [ "ToVector2", "class_urho3_d_1_1_base_integer_vector2.html#a7007935b76ecc4e2f2fc1758a5195d64", null ],
     [ "ToVector3", "class_urho3_d_1_1_base_integer_vector2.html#ab314029728bf2ae6473d4091eaa63398", null ],
     [ "ToVector4", "class_urho3_d_1_1_base_integer_vector2.html#aac0c86838e442927d67e3fb8b6d5d12a", null ],
-    [ "DOWN", "class_urho3_d_1_1_base_integer_vector2.html#a401c8f5a4f56256bc9b05acf7f9b062c", null ],
-    [ "LEFT", "class_urho3_d_1_1_base_integer_vector2.html#a89b08d9ea81448ac7fef15ff6cdf04b2", null ],
-    [ "ONE", "class_urho3_d_1_1_base_integer_vector2.html#a1f605fdb9e714de0964909d150b8440a", null ],
-    [ "RIGHT", "class_urho3_d_1_1_base_integer_vector2.html#a43c8e1e573f30de47e3eabdf8f62c82b", null ],
-    [ "UP", "class_urho3_d_1_1_base_integer_vector2.html#af4924951abc300140257f5ac2388f0ba", null ],
+    [ "DOWN", "class_urho3_d_1_1_base_integer_vector2.html#a483a35c91306d14077a6dc426aa8ff7e", null ],
+    [ "LEFT", "class_urho3_d_1_1_base_integer_vector2.html#ae15edd4fa03e714010000980721c0a08", null ],
+    [ "ONE", "class_urho3_d_1_1_base_integer_vector2.html#a1decce406cbf9070c04a0665faa91d80", null ],
+    [ "RIGHT", "class_urho3_d_1_1_base_integer_vector2.html#a8c6ed3953c81aa08da3564508cfb29e5", null ],
+    [ "UP", "class_urho3_d_1_1_base_integer_vector2.html#a855e0d0213afce9d2a19ad33dbb21f9f", null ],
     [ "x_", "class_urho3_d_1_1_base_integer_vector2.html#ad0c489124cb114db8b1fa6bda0357087", null ],
     [ "y_", "class_urho3_d_1_1_base_integer_vector2.html#addf0356096c470687e304a35db9212fd", null ],
-    [ "ZERO", "class_urho3_d_1_1_base_integer_vector2.html#aa47947de9796b351e7509f7520754c95", null ]
+    [ "ZERO", "class_urho3_d_1_1_base_integer_vector2.html#af6f4a35d0627263ec706b26272dbd71c", null ]
 ];

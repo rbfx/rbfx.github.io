@@ -54,15 +54,15 @@ var class_urho3_d_1_1_base_vector3 =
     [ "ToVector2", "class_urho3_d_1_1_base_vector3.html#ac817bdd21d3f3b4f0157ccd1cfe6003d", null ],
     [ "ToVector4", "class_urho3_d_1_1_base_vector3.html#a72d4fcf74c4278e7ad87cf58663fbdfe", null ],
     [ "ToXZ", "class_urho3_d_1_1_base_vector3.html#a0579910409b799d035392135c66336d4", null ],
-    [ "BACK", "class_urho3_d_1_1_base_vector3.html#a58daa164e661951a8ca39fd5e3210b4d", null ],
-    [ "DOWN", "class_urho3_d_1_1_base_vector3.html#af9ba87fdecd59c32b5ef689a03c8ebc3", null ],
-    [ "FORWARD", "class_urho3_d_1_1_base_vector3.html#ad1f3d87f4fea24714f7664a38a4e8240", null ],
-    [ "LEFT", "class_urho3_d_1_1_base_vector3.html#ae2fc1ef8f3605775f82bfd386e6d5c68", null ],
-    [ "ONE", "class_urho3_d_1_1_base_vector3.html#a4fb3019871dd0a0de00ff106564d8e53", null ],
-    [ "RIGHT", "class_urho3_d_1_1_base_vector3.html#a6f43938e3c1e51ffbf350f70d297f436", null ],
-    [ "UP", "class_urho3_d_1_1_base_vector3.html#a050c819f15005262c7643c5e696036bf", null ],
+    [ "BACK", "class_urho3_d_1_1_base_vector3.html#a1303004f1d2571f7d5f110768928b7d1", null ],
+    [ "DOWN", "class_urho3_d_1_1_base_vector3.html#afdc352fc91e6215138cc5fd8929d99db", null ],
+    [ "FORWARD", "class_urho3_d_1_1_base_vector3.html#ad8eb94e957741ba0272acb11fdc341d6", null ],
+    [ "LEFT", "class_urho3_d_1_1_base_vector3.html#a0f7e734cebc3bb836720c98428f1c0e7", null ],
+    [ "ONE", "class_urho3_d_1_1_base_vector3.html#aab9a4120a1bdf2132635e161b401a2ee", null ],
+    [ "RIGHT", "class_urho3_d_1_1_base_vector3.html#a0da6ae741c4e3c1760718d80838efa7a", null ],
+    [ "UP", "class_urho3_d_1_1_base_vector3.html#a899f42e8aac12fc94520d64ab0ead0e8", null ],
     [ "x_", "class_urho3_d_1_1_base_vector3.html#ab9b0da75be3ddee751a7cc623fb8bc16", null ],
     [ "y_", "class_urho3_d_1_1_base_vector3.html#a5e3d936393a929af5e780a863fbd4f4c", null ],
     [ "z_", "class_urho3_d_1_1_base_vector3.html#a5c0bb25ea9d024620801a4999f72b046", null ],
-    [ "ZERO", "class_urho3_d_1_1_base_vector3.html#a1690ea8bcf368c48e68fbdb07d3d4137", null ]
+    [ "ZERO", "class_urho3_d_1_1_base_vector3.html#a8fed9182f8f66def604dfc78a3abfe13", null ]
 ];

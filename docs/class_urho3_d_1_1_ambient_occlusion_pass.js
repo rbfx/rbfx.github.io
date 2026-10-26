@@ -1,8 +1,8 @@
 var class_urho3_d_1_1_ambient_occlusion_pass =
 [
     [ "Parameters", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_parameters.html", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_parameters" ],
-    [ "PipelineStateCache", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_pipeline_state_cache.html", null ],
     [ "TextureCache", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_texture_cache.html", null ],
+    [ "PipelineStateCache", "struct_urho3_d_1_1_ambient_occlusion_pass_1_1_pipeline_state_cache.html", null ],
     [ "CollectParameters", "class_urho3_d_1_1_ambient_occlusion_pass.html#a40b6750c7c6d7481b9ead24fd4ac5439", null ],
     [ "InitializeView", "class_urho3_d_1_1_ambient_occlusion_pass.html#af017f3299b641a0940f9bfadaccfe91d", null ],
     [ "Render", "class_urho3_d_1_1_ambient_occlusion_pass.html#ad330792d23d3bbe254c032fc0f982564", null ],
